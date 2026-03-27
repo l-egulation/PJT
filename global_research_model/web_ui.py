@@ -1,6 +1,13 @@
 import streamlit as st
-import time
-from app import agent  # 사용자님이 만든 6인 체제 에이전트 불러오기
+import sys
+import os
+
+# 현재 파일이 있는 폴더를 파이썬이 찾을 수 있게 경로에 추가합니다.
+current_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(current_dir)
+
+from app import agent  # 이제 app.py를 잘 찾을 수 있습니다!
+# 사용자님이 만든 6인 체제 에이전트 불러오기
 
 # 페이지 설정
 st.set_page_config(

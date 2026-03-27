@@ -1,6 +1,7 @@
 import streamlit as st
 import sys
 import os
+import time
 
 # 현재 파일이 있는 폴더를 파이썬이 찾을 수 있게 경로에 추가합니다.
 current_dir = os.path.dirname(os.path.abspath(__file__))

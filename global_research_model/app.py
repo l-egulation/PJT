@@ -3,7 +3,7 @@ import operator
 import sqlite3
 from typing import Annotated, List, TypedDict
 from dotenv import load_dotenv
-from langgraph_checkpoint_sqlite import SqliteSaver
+from langgraph.checkpoint.sqlite import SqliteSaver
 
 from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_upstage import ChatUpstage

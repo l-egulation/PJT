@@ -1,7 +1,9 @@
 import os
 import operator
+import sqlite3
 from typing import Annotated, List, TypedDict
 from dotenv import load_dotenv
+from langgraph_checkpoint_sqlite import SqliteSaver
 
 from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_upstage import ChatUpstage
@@ -163,4 +165,17 @@ workflow.add_edge("comp", "chief")
 
 workflow.add_edge("chief", END)
 
-agent = workflow.compile()
+# ===== 5. 체크포인터 설정 및 컴파일 (Phase 1 적용) =====
+
+# 1. DB 연결 (파일 이름은 자유롭게 정하셔도 됩니다)
+# check_same_thread=False는 스트림릿 같은 멀티스레드 환경에서 필수입니다!
+conn = sqlite3.connect("research_history.db", check_same_thread=False)
+
+# 2. 체크포인터 생성
+memory = SqliteSaver(conn)
+
+# 3. 체크포인터를 포함하여 그래프 컴파일
+# 이제 이 agent는 모든 단계의 '상태'를 기억하게 됩니다.
+agent = workflow.compile(checkpointer=memory)
+
+# (참고) 나중에 외부에서 이 agent를 불러올 때 사용합니다.

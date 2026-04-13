@@ -101,12 +101,12 @@ def parse_data(game_data):
 
 ###################################
 # ★ [핵심] 플레이어 역할 설정 ★
-# 1: 돌격대장 (모래 감수, 나무 파괴 직진)
-# 2: 폭탄마/해독가 (메가 장전 후 적 탱크 분쇄)
-# 3: 암살자 (가까운 적 우선 타격)
+# 1: 돌격대장 (모래/나무 무시하고 적 본진 직진)
+# 2: 수비수 (아군 포탑 방어, 베이스 근처 적 요격)
+# 3: 암살자 (내 위치에서 가장 가까운 적 요격)
 ###################################
-PLAYER_ROLE = 1
-NICKNAME = f'대전_이규재_{PLAYER_ROLE}' 
+PLAYER_ROLE = 2
+NICKNAME = f'대전2_김보경_카리스마샤크_{PLAYER_ROLE}' 
 game_data = init(NICKNAME)
 
 ###################################
@@ -136,6 +136,7 @@ def find_target(grid, target_mark):
                 return (r, c)
     return None
 
+# [Player 3 용도] 내 위치에서 가장 가까운 적 찾기
 def get_closest_enemy(r, c, grid):
     enemies_pos = []
     for i in range(len(grid)):
@@ -146,7 +147,18 @@ def get_closest_enemy(r, c, grid):
     enemies_pos.sort(key=lambda p: abs(r - p[0]) + abs(c - p[1]))
     return enemies_pos[0]
 
-# [NEW] 적 체력 60 이상인지 판별하는 유틸 함수
+# [Player 2 용도] 아군 베이스(H)에서 가장 가까운 적 찾기
+def get_closest_enemy_to_base(base_r, base_c, grid):
+    enemies_pos = []
+    for i in range(len(grid)):
+        for j in range(len(grid[0])):
+            if grid[i][j].startswith('E') and grid[i][j] != 'E': 
+                enemies_pos.append((i, j))
+    if not enemies_pos: return None
+    enemies_pos.sort(key=lambda p: abs(base_r - p[0]) + abs(base_c - p[1]))
+    return enemies_pos[0]
+
+# 적 체력 60 이상인지 판별하는 유틸 함수
 def should_use_mega(target_name, has_mega):
     if not has_mega: return False
     if target_name in enemies:
@@ -165,7 +177,6 @@ def check_opportunistic_shoot(r, c, grid, has_mega):
                     break
                     
                 if cell == 'X' or cell.startswith('E'):
-                    # ★ 적 체력 60 이상일 때만 메가 포탄 사용
                     use_mega = should_use_mega(cell, has_mega)
                     return FIRE_CMDS[d_idx] + (" M" if use_mega else "")
     return None
@@ -186,7 +197,6 @@ def get_attack_cmd(r, c, target_r, target_c, grid, has_mega):
             if cell == 'R' or cell == 'H' or cell.startswith('M') or cell == 'A':
                 return None
         
-        # ★ 타겟 체력 60 이상일 때만 메가 포탄 사용
         target_cell = grid[target_r][target_c]
         use_mega = should_use_mega(target_cell, has_mega)
         return FIRE_CMDS[d_idx] + (" M" if use_mega else "")
@@ -206,16 +216,12 @@ def get_best_actions(grid, start, target, target_type, has_mega):
         cost, _, r, c, actions = heapq.heappop(pq)
         if cost >= min_cost: continue
 
-        if target_type == 'F':
-            if abs(r - target[0]) + abs(c - target[1]) == 1:
-                return actions
-        else:
-            atk_cmd = get_attack_cmd(r, c, target[0], target[1], grid, has_mega)
-            if atk_cmd:
-                if cost + 1 < min_cost:
-                    min_cost = cost + 1
-                    best_path = actions + [atk_cmd]
-                continue
+        atk_cmd = get_attack_cmd(r, c, target[0], target[1], grid, has_mega)
+        if atk_cmd:
+            if cost + 1 < min_cost:
+                min_cost = cost + 1
+                best_path = actions + [atk_cmd]
+            continue
 
         for i in range(4):
             nr, nc = r + DIRS[i][0], c + DIRS[i][1]
@@ -233,19 +239,18 @@ def get_best_actions(grid, start, target, target_type, has_mega):
                     new_actions.append(MOVE_CMDS[i])
                     
                 elif cell == 'S':
-                    # ★ 돌격대장(1번)은 체력 감소 무시하고 모래를 비용 1로 간주하여 돌파
+                    # ★ 돌격대장(1번)은 체력 감소 무시하고 모래를 비용 1로 간주
                     new_cost += (1 if PLAYER_ROLE == 1 else 5)
                     new_actions.append(MOVE_CMDS[i])
                     
                 elif cell == 'T':
-                    # ★ 나무는 무조건 일반 포탄으로 파괴 (메가 낭비 금지)
-                    new_cost += 2
+                    # ★ 돌격대장은 나무 우회(2턴)보다 파괴 직진(1.5턴 취급)을 선호하도록 세팅
+                    new_cost += (1.5 if PLAYER_ROLE == 1 else 2)
                     new_actions.append(FIRE_CMDS[i])
                     new_actions.append(MOVE_CMDS[i])
                     
                 elif cell.startswith('E'):
                     new_cost += 2
-                    # ★ 길막하는 적 탱크도 체력 60 이상일 때만 메가 사용
                     use_mega = should_use_mega(cell, has_mega)
                     new_actions.append(FIRE_CMDS[i] + (" M" if use_mega else ""))
                     new_actions.append(MOVE_CMDS[i])
@@ -281,6 +286,7 @@ while game_data is not None:
 
     output = 'S'
 
+    # [전원 공통 행동] 보급소 옆에서 암호문을 받았고, 아직 메가를 안 얻었다면 누구나 즉시 해독!
     if len(codes) > 0 and not mega_obtained:
         output = "G " + decode_cipher(codes[0])
         mega_obtained = True
@@ -295,22 +301,26 @@ while game_data is not None:
             target_type = 'X'
 
             if PLAYER_ROLE == 1:
+                # [돌격대장] 무조건 적 본진 직진
                 target_pos = find_target(map_data, 'X')
             
             elif PLAYER_ROLE == 2:
-                if not mega_obtained and find_target(map_data, 'F'):
-                    target_pos = find_target(map_data, 'F')
-                    target_type = 'F'
-                else:
-                    target_pos = get_closest_enemy(my_pos[0], my_pos[1], map_data)
+                # [수비수] 아군 포탑(H) 기준 가장 가까운 적 추적
+                base_pos = find_target(map_data, 'H')
+                if base_pos:
+                    target_pos = get_closest_enemy_to_base(base_pos[0], base_pos[1], map_data)
                     target_type = 'E'
-                    if not target_pos:
-                        target_pos = find_target(map_data, 'X')
-                        target_type = 'X'
+                
+                # 아군 포탑이 없거나, 적이 전멸했다면 본진(X) 공격 합류
+                if not target_pos:
+                    target_pos = find_target(map_data, 'X')
+                    target_type = 'X'
             
             elif PLAYER_ROLE == 3:
+                # [암살자] 내 위치 기준 가장 가까운 적 추적
                 target_pos = get_closest_enemy(my_pos[0], my_pos[1], map_data)
                 target_type = 'E'
+                
                 if not target_pos:
                     target_pos = find_target(map_data, 'X')
                     target_type = 'X'

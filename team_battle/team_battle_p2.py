@@ -24,6 +24,7 @@ def init(nickname):
 
 def submit(string_to_send):
     try:
+        # ARGS 뒤에 명령어를 붙여서 전송 (띄어쓰기 오류 방지)
         send_data = ARGS + string_to_send + ' '
         sock.send(send_data.encode('utf-8'))
         return receive()
@@ -51,48 +52,52 @@ def close():
 ##############################
 # 입력 데이터 변수 정의
 ##############################
-map_data = [[]]
-my_allies = {}
-enemies = {}
-codes = []
+map_data = [[]]  
+my_allies = {}  
+enemies = {}  
+codes = []  
 
 def parse_data(game_data):
     game_data_rows = game_data.split('\n')
     row_index = 0
 
     header = game_data_rows[row_index].split(' ')
-    map_height = int(header[0]) if len(header) >= 1 else 0
-    map_width = int(header[1]) if len(header) >= 2 else 0
-    num_of_allies = int(header[2]) if len(header) >= 3 else 0
-    num_of_enemies = int(header[3]) if len(header) >= 4 else 0
-    num_of_codes = int(header[4]) if len(header) >= 5 else 0
+    map_height = int(header[0]) if len(header) >= 1 else 0 
+    map_width = int(header[1]) if len(header) >= 2 else 0  
+    num_of_allies = int(header[2]) if len(header) >= 3 else 0  
+    num_of_enemies = int(header[3]) if len(header) >= 4 else 0  
+    num_of_codes = int(header[4]) if len(header) >= 5 else 0  
     row_index += 1
 
     map_data.clear()
-    map_data.extend([[ '' for c in range(map_width)] for r in range(map_height)])
+    map_data.extend([[ '' for _ in range(map_width)] for _ in range(map_height)])
     for i in range(0, map_height):
-        col = game_data_rows[row_index + i].split(' ')
-        for j in range(0, len(col)):
-            map_data[i][j] = col[j]
+        if row_index + i < len(game_data_rows):
+            col = game_data_rows[row_index + i].split(' ')
+            for j in range(0, len(col)):
+                if j < map_width:
+                    map_data[i][j] = col[j]
     row_index += map_height
 
     my_allies.clear()
     for i in range(row_index, row_index + num_of_allies):
-        ally = game_data_rows[i].split(' ')
-        ally_name = ally.pop(0) if len(ally) >= 1 else '-'
-        my_allies[ally_name] = ally
+        if i < len(game_data_rows):
+            ally = game_data_rows[i].split(' ')
+            ally_name = ally.pop(0) if len(ally) >= 1 else '-'
+            my_allies[ally_name] = ally
     row_index += num_of_allies
 
     enemies.clear()
     for i in range(row_index, row_index + num_of_enemies):
-        enemy = game_data_rows[i].split(' ')
-        enemy_name = enemy.pop(0) if len(enemy) >= 1 else '-'
-        enemies[enemy_name] = enemy
+        if i < len(game_data_rows):
+            enemy = game_data_rows[i].split(' ')
+            enemy_name = enemy.pop(0) if len(enemy) >= 1 else '-'
+            enemies[enemy_name] = enemy
     row_index += num_of_enemies
 
     codes.clear()
     for i in range(row_index, row_index + num_of_codes):
-        if len(game_data_rows[i].strip()) > 0:
+        if i < len(game_data_rows) and len(game_data_rows[i].strip()) > 0:
             codes.append(game_data_rows[i].strip())
 
 ###################################
@@ -100,15 +105,17 @@ def parse_data(game_data):
 # 팀원 3명이 각각 1, 2, 3으로 다르게 설정해서 제출하세요!
 ###################################
 PLAYER_ROLE = 2  # 1: 돌격대장, 2: 암호해독/폭탄마, 3: 적 탱크 암살자
-NICKNAME = f'서울1_김싸피_{PLAYER_ROLE}' # 본인 지역/이름으로 수정
+NICKNAME = f'대전2_이규재_{PLAYER_ROLE}' # 본인 지역/이름으로 수정
 game_data = init(NICKNAME)
 
 ###################################
 # 알고리즘 함수 구현부
 ###################################
 DIRS = [(0,1), (1,0), (0,-1), (-1,0)] # 우, 하, 좌, 상
-MOVE_CMDS = ["RA", "DA", "LA", "UA"]
-FIRE_CMDS = ["RF", "DF", "LF", "UF"]
+
+# [수정완료] 서버가 요구하는 띄어쓰기 규정("R A", "R F") 완벽 적용
+MOVE_CMDS = ["R A", "D A", "L A", "U A"]
+FIRE_CMDS = ["R F", "D F", "L F", "U F"]
 
 mega_obtained = False
 
@@ -153,14 +160,15 @@ def get_attack_cmd(r, c, target_r, target_c, grid, has_mega):
         elif c > target_c: d_idx = 2 # 좌
         elif r > target_r: d_idx = 3 # 상
 
-        # 가는 길에 바위(R)나 아군(M, H)이 있으면 쏘지 않음
+        # 가는 길에 바위(R)나 아군(M, A, H)이 있으면 쏘지 않음
         for k in range(1, dist):
             check_r, check_c = r + DIRS[d_idx][0]*k, c + DIRS[d_idx][1]*k
             cell = grid[check_r][check_c]
-            if cell == 'R' or cell == 'H' or cell.startswith('M'):
+            if cell == 'R' or cell == 'H' or cell.startswith('M') or cell == 'A':
                 return None
-
-        cmd = FIRE_CMDS[d_idx] + ("M" if has_mega else "")
+        
+        # [수정완료] 메가 포탄 발사 시에도 "R F M" 처럼 띄어쓰기 유지
+        cmd = FIRE_CMDS[d_idx] + (" M" if has_mega else "")
         return cmd
     return None
 
@@ -176,7 +184,6 @@ def get_best_actions(grid, start, target, target_type, has_mega):
 
     while pq:
         cost, _, r, c, actions = heapq.heappop(pq)
-
         if cost >= min_cost: continue
 
         # Player 2가 보급소(F)를 타겟으로 잡았을 때, 인접(거리 1)하면 탐색 종료
@@ -199,7 +206,7 @@ def get_best_actions(grid, start, target, target_type, has_mega):
                 cell = grid[nr][nc]
 
                 # 절대 이동 불가 지형: 물(W), 바위(R), 보급소(F), 아군(M1, M2, H)
-                if cell in ['W', 'R', 'F', 'H'] or (cell.startswith('M') and cell != 'M'):
+                if cell in ['W', 'R', 'F', 'H'] or (cell.startswith('M') and cell != 'M') or cell == 'A':
                     continue
 
                 new_cost = cost
@@ -216,7 +223,7 @@ def get_best_actions(grid, start, target, target_type, has_mega):
                 # 나무(T) 또는 움직이는 적 탱크(E~): 부수고 지나가기 (2턴 소모)
                 elif cell == 'T' or cell.startswith('E'):
                     new_cost += 2
-                    new_actions.append(FIRE_CMDS[i] + ("M" if has_mega else ""))
+                    new_actions.append(FIRE_CMDS[i] + (" M" if has_mega else ""))
                     new_actions.append(MOVE_CMDS[i])
                 elif cell == 'X':
                     continue # X는 밟지 않고 위에서 저격 처리됨
@@ -232,17 +239,22 @@ def get_best_actions(grid, start, target, target_type, has_mega):
 ###################################
 while game_data is not None:
     parse_data(game_data)
-
-    # 내 위치 확인 (M)
+    
+    # [수정완료] 내 위치 찾기 안전장치 (M을 찾고 없으면 A를 찾음)
     my_pos = find_target(map_data, 'M')
+    if not my_pos:
+        my_pos = find_target(map_data, 'A')
+    
     if not my_pos:
         game_data = submit('S') # 죽었거나 예외 상황일 때 대기
         continue
 
-    # 메가 포탄 보유 여부 확인 (my_allies['M'] 데이터 활용)
+    # 메가 포탄 보유 여부 확인
     has_mega = False
     if 'M' in my_allies and len(my_allies['M']) >= 4:
         has_mega = int(my_allies['M'][3]) > 0
+    elif 'A' in my_allies and len(my_allies['A']) >= 4:
+        has_mega = int(my_allies['A'][3]) > 0
 
     output = 'S'
 
@@ -256,26 +268,23 @@ while game_data is not None:
         target_type = 'X'
 
         if PLAYER_ROLE == 1:
-            # 돌격대장: 무조건 X를 노린다.
             target_pos = find_target(map_data, 'X')
-
+        
         elif PLAYER_ROLE == 2:
-            # 해독가: 메가를 얻기 전엔 F를 찾고, 얻은 후엔 X를 노린다.
             if not mega_obtained and find_target(map_data, 'F'):
                 target_pos = find_target(map_data, 'F')
                 target_type = 'F'
             else:
                 target_pos = find_target(map_data, 'X')
-
+        
         elif PLAYER_ROLE == 3:
-            # 암살자: 가까운 적 탱크를 우선 처리하여 아군 보호. 없으면 X 공격 합류.
             target_pos = get_closest_enemy(my_pos[0], my_pos[1], map_data)
-            if target_pos:
-                target_type = 'E'
-            else:
+            target_type = 'E'
+            if not target_pos:
                 target_pos = find_target(map_data, 'X')
+                target_type = 'X'
 
-        # 타겟이 정해졌으면 매 턴마다 다익스트라(Dijkstra) 경로를 새로 계산하여 즉각 대응
+        # 매 턴마다 다익스트라(Dijkstra) 경로를 새로 계산
         if target_pos:
             actions = get_best_actions(map_data, my_pos, target_pos, target_type, has_mega)
             if actions:

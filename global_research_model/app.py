@@ -1,3 +1,4 @@
+import time
 import os
 import operator
 import sqlite3
@@ -49,6 +50,7 @@ def get_query(message):
 
 # [NEW] DART 전자공시 분석관
 def dart_analyst(state: State):
+    time.sleep(9.0)
     topic = get_query(state["messages"][0])
     dart = get_dart_client()
     
@@ -117,6 +119,7 @@ def dart_analyst(state: State):
 
 # [A] 국내 산업 분석
 def k_industry_analyst(state: State):
+    time.sleep(1.5) # API 호출 딜레이 추가
     topic = get_query(state["messages"][0])
     q = f"{topic} 국내 시장 점유율 정부 정책 산업 통찰력 2026"
     results = search_tool.invoke(q)
@@ -131,6 +134,7 @@ def k_industry_analyst(state: State):
 
 # [B] 글로벌 산업 분석
 def g_industry_analyst(state: State):
+    time.sleep(3.0) # 겹치지 않게 약간 차등을 둠
     topic = get_query(state["messages"][0])
     q = f"global {topic} industry standards US EU China policy 2026 report"
     results = search_tool.invoke(q)
@@ -145,6 +149,7 @@ def g_industry_analyst(state: State):
 
 # [C] 국내 기업 분석
 def k_corporate_analyst(state: State):
+    time.sleep(4.5)
     topic = get_query(state["messages"][0])
     q = f"{topic} 국내 공장 가동 실적 신규 투자 공시 2026"
     results = search_tool.invoke(q)
@@ -159,6 +164,7 @@ def k_corporate_analyst(state: State):
 
 # [D] 해외 기업 분석
 def g_corporate_analyst(state: State):
+    time.sleep(6.0)
     topic = get_query(state["messages"][0])
     q = f"{topic} overseas factory global partnership international sales 2026"
     results = search_tool.invoke(q)
@@ -173,6 +179,7 @@ def g_corporate_analyst(state: State):
 
 # [E] 경쟁 분석
 def competition_analyst(state: State):
+    time.sleep(7.5)
     topic = get_query(state["messages"][0])
     q = f"{topic} main global competitors technology comparison 2026"
     results = search_tool.invoke(q)

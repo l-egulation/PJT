@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 from langgraph.checkpoint.sqlite import SqliteSaver
 
 from langchain_community.tools.tavily_search import TavilySearchResults
-from langchain_upstage import ChatUpstage
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import AnyMessage, HumanMessage, SystemMessage
 from langgraph.graph import StateGraph, START, END
 
@@ -14,7 +14,10 @@ load_dotenv()
 
 # ===== 1. 설정 및 모델 (디테일을 위해 검색량 k=10으로 상향) =====
 search_tool = TavilySearchResults(k=10)
-model = ChatUpstage(model="solar-pro", temperature=0)
+model = ChatGoogleGenerativeAI(
+    model="gemini-2.5-flash",
+    temperature=0
+)
 
 # ===== 2. State 정의 (신입 사원들 자리 만들기) =====
 class State(TypedDict):

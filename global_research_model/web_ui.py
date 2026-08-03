@@ -40,7 +40,7 @@ with st.sidebar:
     
     # 🛡️ 지갑 방어 모드 (기존 동일)
     st.markdown("### 🛡️ 지갑 방어 모드")
-    user_upstage_key = st.text_input("Upstage API Key", type="password")
+    user_google_key = st.text_input("Gemini API Key", type="password")
     user_tavily_key = st.text_input("Tavily API Key", type="password")
     
     st.divider()
@@ -84,7 +84,10 @@ if run_button:
             status_text.info(f"🔍 '{target_topic}' 분석 시작...")
             
             try:
-                if user_upstage_key: os.environ["UPSTAGE_API_KEY"] = user_upstage_key
+                if user_google_key: 
+                    os.environ["GOOGLE_API_KEY"] = user_google_key
+                elif "GOOGLE_API_KEY" in st.secrets:
+                    os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
                 if user_tavily_key: os.environ["TAVILY_API_KEY"] = user_tavily_key
                 
                 # [수정] 고정된 thread_id 사용 (저장을 위해)

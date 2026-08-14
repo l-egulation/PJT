@@ -1,0 +1,11 @@
+logging:
+  level:
+    com.camon: DEBUG
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  data:
+    redis:
+      database: 0

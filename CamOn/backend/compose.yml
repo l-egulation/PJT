@@ -1,0 +1,97 @@
+services:
+  redis:
+    image: redis:7.4-alpine
+    container_name: camon-redis
+    command: redis-server --appendonly no
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    networks:
+      - camon-network
+    restart: unless-stopped
+
+  mysql:
+    image: mysql:8.4
+    container_name: camon-mysql
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root -p$$MYSQL_ROOT_PASSWORD"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - camon-network
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: camon-backend
+    env_file:
+      - .env
+    environment:
+      SERVER_PORT: 8080
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_NAME: ${MYSQL_DATABASE}
+      DB_USER: ${MYSQL_USER}
+      DB_PASSWORD: ${MYSQL_PASSWORD}
+      LIVEKIT_URL: ${LIVEKIT_URL}
+      LIVEKIT_API_KEY: ${LIVEKIT_API_KEY}
+      LIVEKIT_API_SECRET: ${LIVEKIT_API_SECRET}
+      SPRING_PROFILES_ACTIVE: local
+    ports:
+      - "${SERVER_PORT:-8080}:8080"
+    depends_on:
+      redis:
+        condition: service_healthy
+      mysql:
+        condition: service_healthy
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - camon-network
+    restart: unless-stopped
+
+  metabase:
+    image: metabase/metabase:v0.50.32
+    container_name: camon-metabase
+    profiles:
+      - analytics
+    environment:
+      MB_DB_FILE: /metabase-data/metabase.db
+      JAVA_TIMEZONE: Asia/Seoul
+    ports:
+      # Localhost-only by default. User-test participants cannot reach this port.
+      - "127.0.0.1:${METABASE_PORT:-3001}:3000"
+    volumes:
+      - metabase-data:/metabase-data
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - camon-network
+    restart: unless-stopped
+
+networks:
+  camon-network:
+    name: camon-network
+
+volumes:
+  mysql-data:
+  metabase-data:

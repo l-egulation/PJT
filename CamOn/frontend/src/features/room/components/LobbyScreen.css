@@ -1,0 +1,1451 @@
+/* 대기방 — Figma `03 · PIXEL ARCADE PLAZA · Screen Mockups` /
+ * `Screen / Lobby v2 · Standalone Cards` (node 1275:47) 이식.
+ *
+ * ── 해상도 대응 원칙 ──────────────────────────────────────────────
+ * 화면 전체를 축소/확대하지 않는다. 대신:
+ *   고정: 글자 크기, 외곽선, 그림자, 카드 내부 여백, 카드 사이 간격,
+ *         사이드 열 폭(416), 티켓/게임구성/하단버튼 높이, 바깥 여백
+ *   유동: 참가자 타일(2×2 그리드가 남는 폭·높이를 균등 분배) + 채팅 카드 높이
+ * 결과적으로 1440×1024에서는 Figma와 픽셀 단위로 같고, 그보다 넓/좁/짧은 화면에서는
+ * "여백은 그대로, 타일과 채팅만 늘었다 줄었다" 하며 스크롤 없이 한 화면에 들어간다.
+ *
+ * ── Figma 기준 수치 (1440×1024) ───────────────────────────────────
+ *   바깥 여백  좌우 72 · 콘텐츠 시작 y 134 · 아래 74
+ *   스테이지   856×816 (타일 416×394, 가로 gap 24 / 세로 gap 28)
+ *   사이드 열  416 폭, 134→950
+ *     티켓 135.44 → gap 28.56 → 게임구성 170 → gap 24 → 채팅 390
+ *     → gap 21 → 하단버튼 44 → 여유 3
+ *   스테이지↔사이드 gap 24 (952 - (72+856))
+ *
+ * absolute 자식의 left/top은 부모 *패딩 박스* 기준이므로, 외곽선 2px 카드 안에서는
+ * Figma 프레임 좌표에서 2를 뺀 값을 쓴다. 주석의 "Figma n"은 프레임 기준 원본 값.
+ */
+
+.lobby-screen {
+  /* Figma 확정 규격을 대기방 안에서만 적용한다.
+     (전역 --pap-border-width/--pap-shadow-offset은 게임 화면과 공유하므로 손대지 않는다) */
+  --pap-border-width: var(--pap-stroke-control);
+  --pap-shadow-offset: var(--pap-shadow-card);
+
+  /* 바깥 여백 — 화면이 짧아지면 아래 미디어쿼리에서 함께 줄어든다 */
+  --lobby-pad-x: 72px;
+  --lobby-pad-top: 134px;
+  --lobby-pad-bottom: 74px;
+
+  /* 배경 이미지는 화면 전체를 덮고, 비율이 안 맞아 잘리는 쪽은 정보가 없는 하늘/바닥이다.
+     혹시 이미지가 늦게 뜨더라도 아래 그라데이션이 같은 톤을 유지한다. */
+  background:
+    url('/assets/lobby-quiet-pixel-plaza-bg.png') center center / cover no-repeat,
+    linear-gradient(
+      #7bddfc 0%,
+      #89e2fd 15%,
+      #9ce9fa 30%,
+      #aaeef9 45%,
+      #bbf4f6 60%,
+      #84c3c7 70%,
+      #fddfbd 85%,
+      #fee7c3 100%
+    );
+}
+
+/* 화면이 짧으면(노트북 배율 200% 등) 위아래 여백을 먼저 줄인다 — 타일·채팅을 살리기 위해 */
+@media (max-height: 940px) {
+  .lobby-screen {
+    --lobby-pad-top: 104px;
+    --lobby-pad-bottom: 40px;
+  }
+}
+
+@media (max-height: 780px) {
+  .lobby-screen {
+    --lobby-pad-top: 88px;
+    --lobby-pad-bottom: 24px;
+  }
+}
+
+@media (max-width: 1320px) {
+  .lobby-screen {
+    --lobby-pad-x: 32px;
+  }
+}
+
+/* Figma `Background / Bottom Dot Cleanup` — 배경 하단 픽셀 노이즈를 덮는 띠.
+   배경이 화면을 덮으므로 이 띠도 화면 아래에 붙인다. */
+.lobby-screen__bg-bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 76px;
+  background: rgb(251 234 195 / 0.98);
+  pointer-events: none;
+}
+
+/* ---------- 로고 ---------- */
+
+.lobby-screen__logo-button {
+  position: absolute;
+  top: 41px;
+  left: 52px;
+  z-index: 2;
+  width: 172px;
+  height: 65px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.lobby-screen__logo {
+  display: block;
+  width: 172px;
+  height: 65px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  cursor: pointer;
+}
+
+@media (max-height: 780px) {
+  .lobby-screen__logo-button {
+    top: 20px;
+  }
+}
+
+/* 시연 모드 배지 — 로고(52 + 172 = 224px) 오른쪽에 붙인다. */
+.lobby-screen__demo-badge {
+  position: absolute;
+  top: 58px;
+  left: 236px;
+  z-index: 9;
+  margin: 0;
+  padding: 4px 10px;
+  border: var(--camon-stroke-2) solid var(--camon-color-ink);
+  border-radius: var(--camon-radius-6);
+  background: #ffd76a;
+  color: var(--camon-color-ink);
+  font-family: var(--camon-font);
+  font-size: 12px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+@media (max-height: 780px) {
+  .lobby-screen__demo-badge {
+    top: 37px;
+  }
+}
+
+.lobby-screen__header-actions {
+  position: absolute;
+  top: 48px;
+  right: var(--lobby-pad-x);
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ---------- 본문 2열 (스테이지 | 사이드) ---------- */
+
+/* className은 BackgroundMusic의 래퍼에 붙는다(음량 창이 버튼 기준으로 떠야 해서).
+   .background-music을 함께 적어 컴포넌트 기본값(position: relative)을 순서와 무관하게 덮는다. */
+.lobby-screen__music-toggle.background-music {
+  position: relative;
+  z-index: 2;
+}
+
+.lobby-screen__music-toggle:not(.background-music--compact) .background-music__toggle {
+  min-width: 104px;
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+/* 음량 창이 참가자 타일 위로 펼쳐지는데, 타일 내부 요소들이 z-index 3~4를 쓴다(준비 배지·
+   방장 왕관·이름 바 등). 래퍼 기본값 2로는 창이 그 아래로 깔리므로, 열려 있는 동안만 올린다.
+   방 설정 모달(z-index 10)보다는 낮게 둔다. */
+.lobby-screen__music-toggle.background-music--open {
+  z-index: 9;
+}
+
+.lobby-screen__leave {
+  --pap-shadow-offset: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  padding: 0;
+  border-radius: 8px;
+}
+
+.lobby-screen__leave svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-height: 780px) {
+  .lobby-screen__header-actions {
+    top: 27px;
+  }
+}
+
+.lobby-screen__body {
+  position: absolute;
+  top: var(--lobby-pad-top);
+  right: var(--lobby-pad-x);
+  bottom: var(--lobby-pad-bottom);
+  left: var(--lobby-pad-x);
+  display: grid;
+  /* 사이드 열은 Figma 폭 그대로 고정, 남는 폭은 전부 스테이지가 가져간다 */
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 416px);
+  gap: 24px;
+}
+
+/* ---------- 비디오 스테이지 (유동) ---------- */
+
+.lobby-screen__stage {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+}
+
+.lobby-screen__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 28px 24px; /* Figma 세로 28 / 가로 24 — 화면이 커져도 그대로 */
+  width: 100%;
+  height: 100%;
+}
+
+/* 3인 방: 세 번째 타일을 아래 줄 가운데에 (한 칸 폭 유지) */
+.lobby-screen__grid--3 > :nth-child(3) {
+  grid-column: 1 / -1;
+  width: calc((100% - 24px) / 2);
+  justify-self: center;
+}
+
+/* 2인 방: 한 줄만 쓰고 세로 가운데 정렬 */
+.lobby-screen__grid--2 {
+  grid-template-rows: minmax(0, 1fr);
+  align-content: center;
+}
+
+.lobby-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  border: var(--pap-stroke-control) solid var(--pap-ink);
+  border-radius: 8px;
+  background: var(--pap-white);
+  box-shadow: 5px 5px 0 rgb(43 24 51 / 0.52);
+}
+
+.lobby-tile--p1 {
+  --lobby-player-color: var(--pap-player-1);
+  border-color: var(--lobby-player-color);
+}
+
+.lobby-screen__music-toggle.background-music--compact {
+  top: 42px;
+}
+
+.lobby-tile--p2 {
+  --lobby-player-color: var(--pap-player-2);
+  border-color: var(--lobby-player-color);
+}
+
+.lobby-tile--p3 {
+  --lobby-player-color: var(--pap-player-3);
+  border-color: var(--lobby-player-color);
+}
+
+.lobby-tile--p4 {
+  --lobby-player-color: var(--pap-player-4);
+  border-color: var(--lobby-player-color);
+}
+
+/* 발화 중에는 상단 배지를 추가하지 않고 참여자 색상으로 카드 전체를 강조한다.
+   기본 테두리와 구분되도록 색을 밝히고, 같은 참여자 색상의 이중 네온 광원을 바깥에 더한다.
+   outline과 box-shadow는 카드 내부 크기나 영상 비율을 바꾸지 않는다. */
+.lobby-tile--speaking {
+  z-index: 1;
+  outline: 4px solid color-mix(
+    in srgb,
+    var(--lobby-player-color, var(--pap-arcade-blue)) 72%,
+    white 28%
+  );
+  outline-offset: 0;
+  box-shadow:
+    0 0 8px 3px color-mix(
+      in srgb,
+      var(--lobby-player-color, var(--pap-arcade-blue)) 72%,
+      transparent
+    ),
+    0 0 20px 7px color-mix(
+      in srgb,
+      var(--lobby-player-color, var(--pap-arcade-blue)) 42%,
+      transparent
+    ),
+    5px 5px 0 rgb(43 24 51 / 0.52);
+  animation: lobby-speaking-glow 900ms ease-in-out infinite alternate;
+}
+
+@keyframes lobby-speaking-glow {
+  from {
+    box-shadow:
+      0 0 6px 2px color-mix(
+        in srgb,
+        var(--lobby-player-color, var(--pap-arcade-blue)) 62%,
+        transparent
+      ),
+      0 0 15px 5px color-mix(
+        in srgb,
+        var(--lobby-player-color, var(--pap-arcade-blue)) 32%,
+        transparent
+      ),
+      5px 5px 0 rgb(43 24 51 / 0.52);
+  }
+
+  to {
+    box-shadow:
+      0 0 10px 4px color-mix(
+        in srgb,
+        var(--lobby-player-color, var(--pap-arcade-blue)) 82%,
+        transparent
+      ),
+      0 0 25px 9px color-mix(
+        in srgb,
+        var(--lobby-player-color, var(--pap-arcade-blue)) 48%,
+        transparent
+      ),
+      5px 5px 0 rgb(43 24 51 / 0.52);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lobby-tile--speaking {
+    animation: none;
+  }
+}
+
+/* 캠이 꺼졌거나 아직 붙지 않은 자리 — Figma는 크림 원 + 대표색 원 + 이니셜.
+   타일 크기가 유동이므로 절대좌표 대신 중앙 정렬 + Figma의 중심 오프셋(-34)을 쓴다. */
+.lobby-tile__avatar {
+  position: absolute;
+  inset: 0 0 64px;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.lobby-tile__avatar-ring {
+  grid-area: 1 / 1;
+  width: auto;
+  height: min(250px, 78%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--pap-plaza-cream);
+}
+
+.lobby-tile__avatar-initial {
+  grid-area: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  color: var(--pap-white);
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1;
+  /* Figma: 큰 원 중심 y=163, 이니셜 원 중심 y=129 → 34px 위 */
+  transform: translateY(-34px);
+}
+
+.lobby-tile--p1 .lobby-tile__avatar-initial { background: var(--pap-player-1); }
+.lobby-tile--p2 .lobby-tile__avatar-initial { background: var(--pap-player-2); }
+/* P3(옐로)는 밝아서 흰 글자가 안 읽힌다 — Figma도 이 타일만 잉크색 글자 */
+.lobby-tile--p3 .lobby-tile__avatar-initial {
+  background: var(--pap-player-3);
+  color: var(--pap-ink);
+}
+.lobby-tile--p4 .lobby-tile__avatar-initial { background: var(--pap-player-4); }
+
+.lobby-tile .lk-participant-tile {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  background: transparent;
+  /* LiveKit 기본 스타일이 타일에 radius를 넣어서 영상 네 모서리가 깎이고
+     그 자리에 카드 배경(크림)이 비쳤다. 영상은 각지게 꽉 채운다.
+     카드 바깥 모서리는 .lobby-tile의 radius 8 + overflow:hidden이 담당한다. */
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.lobby-tile .lk-participant-media-video {
+  border-radius: 0;
+  object-fit: cover;
+}
+
+/* LiveKit 기본 플레이스홀더(회색 사람 아이콘)는 쓰지 않는다 — 위 아바타가 대신한다 */
+.lobby-tile .lk-participant-placeholder {
+  display: none;
+}
+
+.lobby-tile .lk-participant-metadata {
+  display: none;
+}
+
+/* ---------- 영상 위 오버레이 배지 ---------- */
+
+/* 준비 완료 — 기존 스티커를 작게 다듬고 참여자 고유색을 입힌다.
+   방장 왕관과 같은 우측 상단 슬롯을 사용하지만 두 상태는 동시에 나타나지 않는다. */
+.lobby-tile__ready-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  box-sizing: border-box;
+  height: 28px;
+  padding: 0 9px 0 8px;
+  border: var(--pap-stroke-control) solid var(--pap-ink);
+  border-radius: 5px;
+  background: color-mix(
+    in srgb,
+    var(--lobby-player-color, var(--pap-selection-apricot)) 72%,
+    white 28%
+  );
+  color: var(--pap-ink);
+  box-shadow: var(--pap-shadow-icon) var(--pap-shadow-icon) 0 rgb(41 33 58 / 0.5);
+  font-family: var(--pap-font-pixel);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1;
+  white-space: nowrap;
+  transform: rotate(1deg);
+  pointer-events: none;
+}
+
+.lobby-tile__ready-badge svg {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  transform: translateY(-1px);
+}
+
+/* 아직 코스 결과 화면에 남아 있는 참가자 — 방을 떠난 게 아니라 자리를 지키고 있는 상태이므로
+   연결 끊김(회색 처리)과 달리 캠 화면을 살려 두고, 진행 중임을 알리는 색만 얹는다. */
+.lobby-tile--in-result {
+  border-color: var(--pap-festival-coral);
+}
+
+.lobby-tile__in-result {
+  position: absolute;
+  /* 영상 영역만 덮는다(하단 바 64 제외) — 누가 아직 결과를 보는지 이름이 계속 읽히게 */
+  inset: 0 0 64px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: rgb(43 24 51 / 0.5);
+  color: var(--pap-white);
+  font-size: 13px;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+/* 방장 — 영상 우측 상단 왕관 배지. 내 타일이든 남의 타일이든 방장이면 항상 표시. */
+.lobby-tile__host-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  border: var(--pap-stroke-control) solid var(--pap-ink);
+  border-radius: var(--pap-radius);
+  background: var(--pap-white);
+  color: var(--pap-host-gold);
+  box-shadow: var(--pap-shadow-icon) var(--pap-shadow-icon) 0 var(--pap-shadow-color);
+  transform: rotate(2deg);
+  pointer-events: none;
+}
+
+.lobby-tile__host-badge svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ---------- 타일 하단 정보 바 (높이 고정) ---------- */
+
+.lobby-tile__bar {
+  position: relative;
+  z-index: 4;
+  flex: none;
+  margin-top: auto;
+  box-sizing: border-box;
+  height: 64px;
+  border-top: var(--pap-stroke-control) solid var(--pap-ink);
+  background: var(--pap-plaza-cream);
+  color: var(--pap-ink);
+}
+
+.lobby-tile__name {
+  position: absolute;
+  top: 11px; /* Figma 13 */
+  left: 16px; /* Figma 18 */
+  /* 우측 캠·마이크 버튼(28+6+28) + 여백 16 + 간격까지 비워둔다 */
+  max-width: calc(100% - 110px);
+  overflow: hidden;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lobby-tile__role {
+  position: absolute;
+  top: 33px; /* Figma 35 */
+  left: 16px;
+  color: var(--pap-text-muted);
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* 준비 상태는 영상 좌측 상단 READY! 배지가 전담한다 — 하단 바의 체크/시계 아이콘은 제거했다. */
+
+/* 캠/마이크 토글 — 내 타일에 항상 보인다. 크기·외곽선·그림자를 채팅 전송 버튼과
+   같은 규격(28×28 · 외곽선 2 · radius 6 · 그림자 2 · 아이콘 16)으로 통일했다. */
+.lobby-tile__controls {
+  position: absolute;
+  top: 14px;
+  right: 16px; /* 상태 아이콘이 빠진 자리까지 당김 (Figma 우측 여백 16) */
+  display: inline-flex;
+  gap: 6px;
+}
+
+/* 강퇴만 오조작 위험이 있어 hover/포커스 때만 노출한다 */
+.lobby-tile__controls--remote {
+  justify-content: flex-start;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* 방장: 음량 버튼 왼쪽, 강퇴 버튼 오른쪽. */
+.lobby-tile__controls--remote-host {
+  width: 70px;
+  gap: 14px;
+}
+
+/* 일반 참가자: 강퇴 버튼이 없으므로 음량 버튼을 카드의 오른쪽 끝에 둔다. */
+.lobby-tile__controls--remote-guest {
+  width: 28px;
+}
+
+.lobby-tile:hover .lobby-tile__controls--remote,
+.lobby-tile:focus-within .lobby-tile__controls--remote {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 사용자가 이 브라우저에서 음소거한 상대는 카드에서 커서가 빠져도 상태 아이콘을 남긴다. */
+.lobby-tile__controls--remote:has(.participant-audio--muted) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lobby-tile__controls--remote:has(.participant-audio--open) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lobby-tile:has(.participant-audio--open) {
+  z-index: 7;
+}
+
+.lobby-tile__control {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: var(--pap-stroke-control) solid var(--pap-ink);
+  border-radius: var(--pap-radius);
+  background: var(--pap-white);
+  color: var(--pap-ink);
+  box-shadow: var(--pap-shadow-icon) var(--pap-shadow-icon) 0 rgb(41 33 58 / 0.5);
+  cursor: pointer;
+  transition: transform 60ms ease-out, box-shadow 60ms ease-out;
+}
+
+.lobby-tile__control svg {
+  width: 16px;
+  height: 16px;
+}
+
+.lobby-tile__control:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 rgb(41 33 58 / 0.5);
+}
+
+.lobby-tile__control:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 rgb(41 33 58 / 0.5);
+}
+
+/* 꺼진 상태 / 강퇴 hover — 코랄 배경 + 흰 아이콘 */
+.lobby-tile__control--off,
+.lobby-tile__control--kick:hover {
+  background: var(--pap-festival-coral);
+  color: var(--pap-white);
+}
+
+/* 강퇴 버튼은 아이콘만으로 의미가 모호하므로 hover/focus 때 즉시 짧은 설명을 보여준다. */
+.lobby-tile__control--kick::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 8px);
+  z-index: 6;
+  box-sizing: border-box;
+  min-width: 44px;
+  padding: 6px 8px;
+  border: 2px solid var(--pap-ink);
+  border-radius: 5px;
+  background: var(--pap-ink);
+  color: var(--pap-white);
+  box-shadow: 2px 2px 0 rgb(43 24 51 / 0.35);
+  font-family: var(--pap-font-pixel);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(3px);
+  transition: opacity 80ms ease-out, transform 80ms ease-out;
+  pointer-events: none;
+}
+
+.lobby-tile__control--kick:hover::after,
+.lobby-tile__control--kick:focus-visible::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- 타일 부가 상태 ---------- */
+
+.lobby-tile--offline {
+  border-color: rgb(43 24 51 / 0.35);
+}
+
+.lobby-tile--offline .lk-participant-tile,
+.lobby-tile--offline .lobby-tile__avatar {
+  filter: grayscale(1) brightness(0.75);
+}
+
+/* 재연결 대기 오버레이 — Figma `Shared / User Card / Reconnecting Overlay` (1839:51).
+   하트비트 재연결을 최대 15초간 확인하는 상태. 영상 영역만 덮는다. */
+.lobby-tile__offline {
+  position: absolute;
+  inset: 0 0 64px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 0 48px;
+  background: rgb(43 24 51 / 0.72);
+  color: #fffbf0;
+  text-align: center;
+  pointer-events: none;
+}
+
+.lobby-tile__offline svg {
+  width: 52px;
+  height: 52px;
+  animation: lobby-spin 1.4s steps(8, end) infinite;
+}
+
+@keyframes lobby-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lobby-tile__offline svg {
+    animation: none;
+  }
+}
+
+.lobby-tile__offline-title {
+  color: #fffbf0;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 25px;
+}
+
+.lobby-tile__offline-sub {
+  color: #fff0d1;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+/* 빈 자리 — Figma `Video / Empty P2` (1359:73) */
+.lobby-tile--empty {
+  align-items: center;
+  justify-content: center;
+  gap: 16px; /* Figma: P 라벨 top 152(28px) → 힌트 top 196 */
+  border: var(--pap-stroke-control) dashed #9c9487;
+  border-radius: 8px;
+  background: #fffbe8;
+  box-shadow: none;
+}
+
+.lobby-tile__empty-slot {
+  color: #8c857d;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.lobby-tile__empty-hint {
+  color: #948c85;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* ---------- 사이드 열 ---------- */
+
+.lobby-screen__side {
+  position: relative;
+  display: grid;
+  /* 티켓 · gap · 게임구성 · gap · 채팅(유동) · gap · 하단버튼 · 여유 */
+  grid-template-rows: 135.44px 28.56px 170px 24px minmax(0, 1fr) 21px 44px 3px;
+  min-width: 0;
+  min-height: 0;
+}
+
+/* 채팅을 위로 펼치면 게임 구성 자리를 채팅이 흡수한다 */
+.lobby-screen__side--chat-expanded {
+  grid-template-rows: 135.44px 28.56px 0 0 minmax(0, 1fr) 21px 44px 3px;
+}
+
+.lobby-screen__ticket { grid-row: 1; }
+.lobby-screen__course { grid-row: 3; }
+.lobby-screen__chat { grid-row: 5; }
+.lobby-screen__actions { grid-row: 7; }
+
+/* ---------- 참여 코드 티켓 (크기 고정) ---------- */
+
+.lobby-screen__ticket {
+  position: relative;
+  width: 100%;
+  max-width: 416px;
+  justify-self: center;
+  height: 135.44px;
+  background: url('/assets/lobby-participation-ticket.png') center / 100% 100% no-repeat;
+  /* 티켓은 사각형이 아니라 티켓 실루엣이라 box-shadow가 아니라 drop-shadow로 그린다 */
+  filter: drop-shadow(5px 5px 0 rgb(43 24 51 / 0.52));
+}
+
+/* 티켓 안쪽 내용물 (Figma `Lobby / Room Info` — 티켓 기준 36.76,24.19) */
+.lobby-screen__code-area {
+  position: absolute;
+  top: 24.19px;
+  left: 36.76px;
+  width: calc(100% - 36.76px);
+  height: 87.07px;
+}
+
+.lobby-screen__code-title {
+  position: absolute;
+  top: 0;
+  left: 3.87px;
+  font-size: 16.45px;
+  font-weight: 700;
+  line-height: 19.35px;
+  white-space: nowrap;
+}
+
+.lobby-screen__code-tiles {
+  position: absolute;
+  top: 25.15px;
+  left: 0;
+  display: flex;
+  gap: 7.74px; /* 타일 36.76 + 7.74 = Figma 타일 간격 44.5 */
+}
+
+.lobby-screen__code-tile {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 36.76px;
+  height: 42.57px;
+  border: 1.94px solid var(--pap-ink);
+  border-radius: 4.84px;
+  background: var(--pap-white);
+  box-shadow: 1.94px 1.94px 0 rgb(43 24 51 / 0.45);
+  font-size: 17.41px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* 홀수 타일은 크림 + 오른쪽, 짝수 타일은 밝은 하늘색 + 왼쪽으로 살짝 기울인다 (티켓 느낌) */
+.lobby-screen__code-tile:nth-child(odd) {
+  transform: rotate(2deg);
+}
+
+.lobby-screen__code-tile:nth-child(even) {
+  background: var(--pap-support-sky);
+  transform: rotate(-2deg);
+}
+
+/* 티켓 우측 청록 스텁 안에 코드/링크 복사 버튼.
+   스텁 중심을 배경 이미지에서 실측: code-area 기준 x 328.7 / y 43.2.
+   버튼 36 + 간격 6 + 버튼 36 = 78 → top = 43.2 - 39 */
+.lobby-screen__ticket-actions {
+  position: absolute;
+  top: 4.2px;
+  right: 31.78px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.lobby-screen__ticket-actions .lobby-screen__icon-btn {
+  width: 36px;
+  height: 36px;
+  border-width: var(--pap-stroke-control);
+  border-radius: var(--pap-radius);
+  background: var(--pap-ticket-cream);
+  box-shadow: var(--pap-shadow-icon) var(--pap-shadow-icon) 0 rgb(43 24 51 / 0.5);
+}
+
+.lobby-screen__ticket-actions .lobby-screen__icon-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ---------- 공용 작은 아이콘 버튼 ---------- */
+
+.lobby-screen__icon-btn {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0;
+  border: var(--pap-stroke-control) solid var(--pap-ink);
+  border-radius: var(--pap-radius);
+  background: var(--pap-white);
+  color: var(--pap-ink);
+  box-shadow: var(--pap-shadow-icon) var(--pap-shadow-icon) 0 rgb(43 24 51 / 0.5);
+  cursor: pointer;
+  transition: transform 60ms ease-out, box-shadow 60ms ease-out;
+}
+
+.lobby-screen__icon-btn svg {
+  width: 50%;
+  height: 50%;
+}
+
+.lobby-screen__icon-btn:hover:not(:disabled) {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 rgb(43 24 51 / 0.5);
+}
+
+.lobby-screen__icon-btn:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 rgb(43 24 51 / 0.5);
+}
+
+/* ---------- 사이드 카드 공통 ---------- */
+
+.lobby-screen__course,
+.lobby-screen__chat {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  border: var(--pap-stroke-control) solid var(--pap-ink);
+  border-radius: var(--pap-radius);
+  background: var(--pap-white);
+  box-shadow: 5px 5px 0 rgb(43 24 51 / 0.52);
+}
+
+/* ---------- 게임 구성 카드 (높이 170 고정) ---------- */
+
+.lobby-screen__course {
+  overflow: hidden;
+}
+
+/* h2라서 index.css의 전역 `h1,h2 { font-family: var(--heading) }`(시스템 산세리프)와
+   `color: var(--text-h)`가 상속을 덮어쓴다. 여기서 되돌린다. */
+.lobby-screen__panel-title {
+  position: absolute;
+  top: 16px; /* Figma 18 */
+  left: 14px; /* Figma 16 */
+  margin: 0;
+  color: var(--pap-ink);
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.lobby-screen__panel-sub {
+  position: absolute;
+  top: 21px;
+  left: 98px;
+  color: var(--pap-text-muted);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  white-space: nowrap;
+}
+
+/* `구성 변경` — Figma 316,14 76×30 */
+.lobby-screen__course-edit {
+  position: absolute;
+  top: 12px;
+  right: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 76px;
+  height: 30px;
+  padding: 0;
+  border: var(--pap-stroke-control) solid var(--pap-ink);
+  border-radius: var(--pap-radius);
+  background: var(--pap-white);
+  color: var(--pap-ink);
+  box-shadow: var(--pap-shadow-icon) var(--pap-shadow-icon) 0 rgb(43 24 51 / 0.5);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 60ms ease-out, box-shadow 60ms ease-out;
+}
+
+.lobby-screen__course-edit:hover:not(:disabled) {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 rgb(43 24 51 / 0.5);
+}
+
+.lobby-screen__course-edit:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 rgb(43 24 51 / 0.5);
+}
+
+/* 세트 카드 줄 — Figma 3장 기준(14/154/294, 104×91 → gap 36).
+ * 4세트 이상이면 카드를 줄이지 않고 좌우 스크롤로 넘긴다. 카드 크기는 항상 104×91 고정.
+ * 높이 104 = 카드 91 + 그림자 4 + 여유 3 + 스크롤바 6 (카드 아래 그림자가 잘리지 않게) */
+.lobby-screen__sets {
+  position: absolute;
+  top: 62px;
+  left: 14px;
+  display: flex;
+  gap: 36px;
+  width: calc(100% - 28px);
+  height: 104px;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  list-style: none;
+  /* 스크롤바는 평소 안 보이고, 목록에 마우스를 올리거나 포커스가 들어올 때만 나타난다 */
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+
+.lobby-screen__sets:hover,
+.lobby-screen__sets:focus-within {
+  scrollbar-color: rgb(43 24 51 / 0.35) transparent;
+}
+
+.lobby-screen__sets::-webkit-scrollbar {
+  height: 6px;
+}
+
+.lobby-screen__sets::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.lobby-screen__sets::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: transparent;
+}
+
+.lobby-screen__sets:hover::-webkit-scrollbar-thumb,
+.lobby-screen__sets:focus-within::-webkit-scrollbar-thumb {
+  background: rgb(43 24 51 / 0.35);
+}
+
+.lobby-screen__set {
+  position: relative;
+  flex: 0 0 104px;
+  box-sizing: border-box;
+  width: 104px;
+  height: 91px;
+  overflow: hidden;
+  border: var(--pap-stroke-control) solid var(--pap-arcade-blue);
+  border-radius: var(--pap-radius);
+  background: var(--pap-plaza-cream);
+  /* 다른 카드들처럼 단단한 픽셀 그림자. 작은 카드라 4px로 둔다 */
+  box-shadow: 4px 4px 0 rgb(43 24 51 / 0.28);
+  scroll-snap-align: start;
+}
+
+/* 세트 순서는 카드 좌상단 모서리에 얹는 배지로 뺐다.
+   이름/라운드가 쓸 수 있는 폭·높이를 확보해서 글자를 키우기 위함. */
+.lobby-screen__set-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 28px;
+  height: 19px;
+  border-bottom-right-radius: var(--pap-radius);
+  background: var(--pap-arcade-blue);
+  color: var(--pap-white);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.lobby-screen__set-name {
+  position: absolute;
+  top: 24px;
+  left: 8px;
+  display: block;
+  width: 84px;
+  height: 45px; /* 3줄 */
+  overflow: hidden;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+}
+
+.lobby-screen__set-rounds {
+  position: absolute;
+  top: 71px;
+  left: 8px;
+  color: var(--pap-text-muted);
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.lobby-screen__course-empty {
+  position: absolute;
+  top: 54px;
+  right: 14px;
+  bottom: 14px;
+  left: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 10px 18px;
+  border: 2px dashed rgb(43 24 51 / 0.34);
+  border-radius: var(--pap-radius);
+  color: var(--pap-text-muted);
+  font-size: 12px;
+  line-height: 19px;
+  text-align: center;
+}
+
+.lobby-screen__course-error {
+  position: absolute;
+  right: 14px;
+  bottom: 4px;
+  left: 14px;
+  z-index: 1;
+  margin: 0;
+  overflow: hidden;
+  color: var(--pap-danger, #c9485b);
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ---------- 채팅 카드 (높이 유동) ---------- */
+
+.lobby-screen__chat {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  /* 제목 19 + 구분선 53(+2) 아래에서 메시지 시작. 좌우/아래는 Figma 내부 여백 16 - 외곽선 2 */
+  padding: 53px 14px 16px;
+}
+
+.lobby-screen__chat .lobby-screen__panel-title {
+  top: 17px; /* Figma 19 */
+  left: 14px;
+}
+
+/* Figma `Chat / Header Divider` 16,53 384×2 */
+.lobby-screen__chat::before {
+  content: '';
+  position: absolute;
+  top: 51px;
+  left: 14px;
+  width: calc(100% - 28px);
+  height: 2px;
+  background: rgb(41 33 58 / 0.22);
+}
+
+/* Figma `Chat / Expand` 372,12.5 28×28 */
+.lobby-screen__chat-toggle {
+  position: absolute;
+  top: 10.5px;
+  right: 14px;
+  width: 28px;
+  height: 28px;
+}
+
+.lobby-screen__chat-toggle svg {
+  width: 57%;
+  height: 57%;
+}
+
+/* ---------- 하단 액션 (높이 44 고정) ---------- */
+
+.lobby-screen__actions {
+  display: grid;
+  grid-template-columns: 124px minmax(0, 1fr);
+  gap: 32px; /* 156 - 124 */
+  width: 100%;
+  height: 44px;
+}
+
+.lobby-screen__actions .pap-pixel-btn,
+.lobby-screen__start-wrap {
+  box-sizing: border-box;
+  width: 100%;
+  height: 44px;
+}
+
+.lobby-screen__actions .pap-pixel-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 12px;
+  border: var(--pap-stroke-control) solid var(--pap-ink);
+  border-radius: var(--pap-radius);
+  background: var(--pap-white);
+  box-shadow: 5px 5px 0 rgb(43 24 51 / 0.52);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.lobby-screen__actions .pap-pixel-btn:hover:not(:disabled) {
+  transform: translate(-1px, -1px);
+  box-shadow: 6px 6px 0 rgb(43 24 51 / 0.52);
+}
+
+.lobby-screen__actions .pap-pixel-btn:active:not(:disabled) {
+  transform: translate(5px, 5px);
+  box-shadow: 0 0 0 rgb(43 24 51 / 0.52);
+}
+
+.lobby-screen__actions .pap-pixel-btn svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+}
+
+/* 환경설정 — 아이콘 + 라벨, Figma 라벨 14px / 아이콘·글자 간격 6 */
+.lobby-screen__settings-btn {
+  gap: 6px;
+  font-size: 14px;
+}
+
+/* 주 액션(게임 시작 / 준비 하기) — 확정 규칙: 항상 아케이드 오렌지.
+   NOTE: 위 `.lobby-screen__actions .pap-pixel-btn`이 클래스 2개(0,2,0)라
+   `.lobby-screen__primary-btn` 단독(0,1,0)으로는 배경이 안 먹는다. 선택자를 맞춰야 한다. */
+.lobby-screen__actions .lobby-screen__primary-btn {
+  background: var(--pap-arcade-orange);
+}
+
+/* 준비 완료 — Figma `Lobby / Ready Complete Action` (1586:150).
+   메인 페이지 인원수 "선택됨"과 같은 살구색. 그림자는 5px 그대로 유지한다. */
+.lobby-screen__actions .lobby-screen__ready-btn--on {
+  background: var(--pap-selection-apricot);
+}
+
+/* 준비 버튼은 환경설정 라벨과 같은 크기를 사용한다. */
+.lobby-screen__actions .lobby-screen__ready-btn--on,
+.lobby-screen__actions .lobby-screen__primary-btn--ready {
+  font-size: 14px;
+}
+
+.lobby-screen__actions .lobby-screen__ready-btn--on svg,
+.lobby-screen__actions .lobby-screen__primary-btn--ready svg {
+  transform: translateY(-1px);
+}
+
+/* 주 액션(방장 시작 / 참가자 준비)을 감싸는 래퍼 — 안 눌리는 이유(data-hint)를 말풍선으로
+   띄우기 위해 position: relative가 필요하다. 그리드(124px 260px) 안이라 폭은 100%로 충분. */
+.lobby-screen__start-wrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.lobby-screen__start-wrap[data-hint]::after {
+  content: attr(data-hint);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  z-index: 10;
+  box-sizing: border-box;
+  padding: 6px 8px;
+  border: 2px solid var(--pap-ink);
+  border-radius: 5px;
+  background: var(--pap-ink);
+  color: var(--pap-white);
+  box-shadow: 2px 2px 0 rgb(43 24 51 / 0.35);
+  font-family: var(--pap-font-pixel);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translate(-50%, 3px);
+  transition: opacity 80ms ease-out, transform 80ms ease-out;
+  pointer-events: none;
+}
+
+.lobby-screen__start-wrap[data-hint]:hover::after,
+.lobby-screen__start-wrap[data-hint]:focus-within::after {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* ---------- 에러 ---------- */
+
+.lobby-screen__error {
+  margin: 0;
+  color: var(--pap-festival-coral);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+}
+
+/* 그리드 높이를 밀지 않도록 스테이지/사이드 위에 얹는다 */
+.lobby-screen__stage > .lobby-screen__error {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 0;
+  width: 100%;
+}
+
+.lobby-screen__side > .lobby-screen__error {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 100%;
+}
+
+/* 중간 폭에서는 사이드바가 320px까지 자연스럽게 줄어든다. 참여 코드와 액션 버튼도
+   같은 비율로 조밀해져 왼쪽 카메라 영역을 과도하게 밀어내지 않는다. */
+@media (max-width: 1100px) {
+  .lobby-screen {
+    --lobby-pad-x: 20px;
+  }
+
+  .lobby-screen__body {
+    gap: 18px;
+  }
+
+  .lobby-screen__code-area {
+    left: 24px;
+    width: calc(100% - 24px);
+  }
+
+  .lobby-screen__code-tiles {
+    gap: 4px;
+  }
+
+  .lobby-screen__code-tile {
+    width: 30px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .lobby-screen__ticket-actions {
+    right: 18px;
+  }
+
+  .lobby-screen__actions {
+    grid-template-columns: minmax(100px, 0.8fr) minmax(0, 1.5fr);
+    gap: 14px;
+  }
+}
+
+/* 태블릿·모바일에서는 두 열을 억지로 압축하지 않고 사이드 패널을 카메라 아래로 보낸다.
+   camon-stage의 기본 overflow:hidden도 세로 스크롤로 전환해 모든 컨트롤에 접근 가능하게 한다. */
+@media (max-width: 820px) {
+  .lobby-screen {
+    --lobby-pad-x: 18px;
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .lobby-screen__logo-button {
+    top: 24px;
+    left: 18px;
+    width: 144px;
+    height: auto;
+  }
+
+  .lobby-screen__logo {
+    width: 144px;
+    height: auto;
+  }
+
+  .lobby-screen__header-actions {
+    top: 28px;
+    right: 18px;
+  }
+
+  .lobby-screen__body {
+    position: relative;
+    inset: auto;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    width: calc(100% - 36px);
+    min-height: 0;
+    margin: 112px 18px 48px;
+  }
+
+  .lobby-screen__stage {
+    height: clamp(420px, 72vh, 660px);
+  }
+
+  .lobby-screen__grid {
+    gap: 16px 12px;
+  }
+
+  .lobby-screen__side {
+    width: 100%;
+    max-width: 560px;
+    height: 760px;
+    margin: 0 auto;
+  }
+
+  .lobby-screen__side--chat-expanded {
+    height: 590px;
+  }
+
+  .lobby-screen__bg-bottom {
+    position: fixed;
+  }
+}
+
+@media (max-width: 480px) {
+  .lobby-screen__logo {
+    width: 124px;
+  }
+
+  .lobby-screen__music-toggle {
+    min-width: 88px;
+    padding: 7px 9px;
+  }
+
+  .lobby-screen__body {
+    width: calc(100% - 24px);
+    margin-right: 12px;
+    margin-left: 12px;
+  }
+
+  .lobby-screen__stage {
+    height: 400px;
+  }
+
+  .lobby-screen__grid {
+    gap: 12px 8px;
+  }
+
+  .lobby-screen__code-area {
+    left: 18px;
+    width: calc(100% - 18px);
+  }
+
+  .lobby-screen__code-tile {
+    width: clamp(24px, 7vw, 28px);
+  }
+
+  .lobby-screen__code-tiles {
+    gap: 3px;
+  }
+
+  .lobby-screen__panel-sub {
+    display: none;
+  }
+
+  .lobby-screen__ticket-actions {
+    right: 12px;
+  }
+
+  .lobby-screen__actions {
+    grid-template-columns: minmax(96px, 0.8fr) minmax(0, 1.5fr);
+    gap: 10px;
+  }
+
+  .lobby-screen__actions .pap-pixel-btn {
+    padding: 0 8px;
+    font-size: 12px;
+  }
+}

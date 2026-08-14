@@ -1,0 +1,46 @@
+.video-call-room__connection-error {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff4444;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  z-index: 100;
+  font-size: 0.9rem;
+}
+
+.video-call-room__charades-microphone {
+  position: fixed;
+  top: 4rem;
+  left: 50%;
+  z-index: 100;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: rgb(20 20 20 / 88%);
+  color: #fff;
+  padding: 0.55rem 1rem;
+  font-size: 0.9rem;
+}
+
+.video-call-room__charades-presenter
+  .lk-control-bar
+  [data-lk-source='microphone'] {
+  cursor: not-allowed;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+/* 코스에서 게임과 게임 사이(서버가 다음 세션을 열기까지)의 대기 화면.
+   패널이 자기 종료 화면을 접은 뒤 빈 화면이 보이는 것을 막는다. */
+.video-call-room__intermission {
+  position: fixed;
+  inset: 0;
+  z-index: 45;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--pap-bg, #f4e9d8) 92%, transparent);
+  text-align: center;
+}

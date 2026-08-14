@@ -1,0 +1,1256 @@
+/* 세트 중간 결과 — 배경 그림(전광판 + 컨트롤 덱)에 글자만 얹는 화면.
+
+   좌표계: 배경 이미지(1487×1058, 비율 1.4055)에 그려진 두 개의 검은 판 위에 정확히 올려야 하므로,
+   화면을 꽉 채우는 대신 그림과 같은 비율의 무대(.set-result__stage)를 만들고 모든 위치를 %로 잡는다.
+   글자 크기는 --u(무대 너비의 1%) 단위로만 쓴다 — 뷰포트가 뭐든 그림과 글자의 비율이 안 변한다.
+   (px나 vw를 섞으면 창 크기에 따라 글자만 따로 커져서 판 밖으로 넘친다) */
+.set-result {
+  position: fixed;
+  inset: 0;
+  z-index: 45;
+  overflow: hidden;
+  background: #7cc6ee;
+}
+
+/* 그림은 1.4:1, 화면은 보통 16:9 — 무대를 화면보다 크게 잡아 덮고 위아래를 잘라낸다
+   (양옆에 흐린 띠를 두는 것보다 깔끔하다). 내용이 든 두 판은 y 26~79%라 잘리는 구간 밖이다. */
+.set-result__stage {
+  --u: calc(max(100vw, 100vh * 1.4055) / 100);
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: max(100vw, 100vh * 1.4055);
+  height: max(100vh, 100vw / 1.4055);
+  background: url('/assets/pixel-arcade-scoreboard-stage-v9-wide-control-deck.png') center / 100%
+    100% no-repeat;
+  image-rendering: pixelated;
+  font-family: var(--pap-font-body);
+  color: var(--pap-plaza-cream);
+  text-align: left;
+}
+
+/* 창이 정사각형에 가까우면 좌우가 너무 잘려 판이 화면 밖으로 나간다 — 그때만 폭에 맞춘다 */
+@media (max-aspect-ratio: 5 / 4) {
+  .set-result__stage {
+    --u: calc(100vw / 100);
+
+    width: 100vw;
+    height: calc(100vw / 1.4055);
+  }
+}
+
+/* 배경이 화려해서 결과가 안 읽힌다 — 가장자리를 눌러 두 판으로 시선을 모은다 */
+.set-result__stage::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 60% 65% at 50% 52%,
+    rgb(10 14 40 / 0.12) 0%,
+    rgb(10 14 40 / 0.45) 55%,
+    rgb(10 14 40 / 0.75) 100%
+  );
+  pointer-events: none;
+}
+
+/* ---- 위쪽 전광판: 이번 세트 결과 ---- */
+/* 배경 그림의 검은 판 안쪽 좌표(%). 판 자체는 x 20.4~79.6 / y 26.1~57.1 이고(그림 픽셀을 직접
+   스캔해 잰 값), 테두리 전구에 글자가 닿지 않게 1%씩 안으로 더 넣었다 */
+.set-result__board {
+  position: absolute;
+  left: 21.4%;
+  right: 21.4%;
+  top: 27.6%;
+  bottom: 44.4%;
+  display: flex;
+  flex-direction: column;
+}
+
+.set-result__board-title {
+  margin: 0 0 calc(var(--u) * 1.6);
+  font-family: var(--pap-font-pixel);
+  font-size: calc(var(--u) * 1.5);
+  text-align: center;
+  color: var(--pap-white);
+}
+
+/* 닌자 게임은 마지막까지 살아남은 순서를 즉시 읽을 수 있도록 막대 대신 단상으로 보여 준다. */
+.set-result__board--podium .set-result__board-title {
+  margin-bottom: calc(var(--u) * 0.8);
+}
+
+.set-result__podium {
+  position: relative;
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+  justify-content: center;
+  gap: calc(var(--u) * 0.7);
+  min-height: 0;
+  margin: 0;
+  padding: 0 calc(var(--u) * 1.2);
+  list-style: none;
+}
+
+.set-result__podium::before {
+  position: absolute;
+  inset: 0 5% 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0 18%,
+    color-mix(in srgb, var(--pap-white) 4%, transparent) 18% 18.3%
+  );
+  content: '';
+  pointer-events: none;
+}
+
+.set-result__podium-player {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(var(--u) * 12.8);
+  height: 100%;
+  justify-content: flex-end;
+  color: var(--c);
+}
+
+.set-result__podium-player::before {
+  position: absolute;
+  z-index: 0;
+  bottom: calc(var(--podium-height) - var(--u) * 2.15);
+  width: calc(100% + var(--u) * 1.9);
+  height: calc(var(--u) * 2.8);
+  border: calc(var(--u) * 0.2) solid color-mix(in srgb, var(--c) 76%, var(--pap-white));
+  border-radius: 42% 42% 32% 32%;
+  background: color-mix(in srgb, var(--c) 12%, #11162d);
+  box-shadow: 0 0 calc(var(--u) * 0.65) color-mix(in srgb, var(--c) 20%, transparent);
+  clip-path: inset(0 0 34%);
+  content: '';
+  opacity: 0;
+  animation: set-result-podium-handles 180ms steps(3, end) both;
+  animation-delay: calc(250ms + var(--podium-index) * 45ms);
+}
+
+.set-result__podium-player--1 {
+  order: 2;
+  --podium-height: calc(var(--u) * 13.5);
+}
+
+.set-result__podium-player--2 {
+  order: 1;
+  --podium-height: calc(var(--u) * 10.8);
+}
+
+.set-result__podium-player--3 {
+  order: 3;
+  --podium-height: calc(var(--u) * 8.5);
+}
+
+.set-result__podium-player--4 {
+  order: 4;
+  --podium-height: calc(var(--u) * 6.5);
+}
+
+.set-result__podium-label {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--u) * 0.55);
+  min-width: calc(var(--u) * 6.8);
+  margin-bottom: calc(var(--u) * 0.38);
+  padding: calc(var(--u) * 0.28) calc(var(--u) * 0.65);
+  border: 1px solid color-mix(in srgb, var(--c) 72%, var(--pap-white));
+  background: color-mix(in srgb, var(--c) 14%, #11162d);
+  box-shadow:
+    calc(var(--u) * 0.16) calc(var(--u) * 0.16) 0 rgb(0 0 0 / 0.34),
+    inset 0 1px 0 color-mix(in srgb, var(--c) 45%, transparent);
+  animation: set-result-podium-label-enter 180ms steps(3, end) both;
+  animation-delay: calc(300ms + var(--podium-index) * 45ms);
+}
+
+.set-result__podium-name {
+  max-width: 100%;
+  margin: 0;
+  overflow: hidden;
+  color: var(--pap-white);
+  font-family: var(--pap-font-pixel);
+  font-size: calc(var(--u) * 1.12);
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.set-result__podium-score {
+  margin: 0;
+  font-family: var(--pap-font-pixel);
+  font-size: calc(var(--u) * 1.06);
+}
+
+.set-result__podium-step {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 100%;
+  height: var(--podium-height);
+  flex: none;
+  place-items: center;
+  border: calc(var(--u) * 0.14) solid var(--c);
+  border-bottom-width: calc(var(--u) * 0.22);
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 calc(var(--u) * 1.8),
+      rgb(255 255 255 / 0.035) calc(var(--u) * 1.8) calc(var(--u) * 1.9)
+    ),
+    linear-gradient(rgb(255 255 255 / 0.15), transparent 24%, rgb(0 0 0 / 0.16)),
+    color-mix(in srgb, var(--c) 18%, #11162d);
+  box-shadow:
+    inset 0 calc(var(--u) * 0.24) 0 color-mix(in srgb, var(--c) 70%, transparent),
+    inset calc(var(--u) * 0.2) 0 0 rgb(255 255 255 / 0.05),
+    inset calc(var(--u) * -0.2) 0 0 rgb(0 0 0 / 0.2);
+  clip-path: polygon(0 0, 100% 0, 91% 100%, 9% 100%);
+  animation: set-result-podium-rise 430ms steps(9, end) both;
+  animation-delay: calc(var(--podium-index) * 45ms);
+}
+
+.set-result__podium-step::after {
+  position: absolute;
+  right: 8%;
+  bottom: calc(var(--u) * -0.12);
+  left: 8%;
+  height: calc(var(--u) * 0.45);
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0 8%,
+    color-mix(in srgb, var(--c) 72%, var(--pap-white)) 8% 12%,
+    transparent 12% 20%
+  );
+  content: '';
+  opacity: 0;
+  animation: set-result-podium-impact 280ms steps(4, end) both;
+  animation-delay: calc(360ms + var(--podium-index) * 45ms);
+}
+
+.set-result__podium-step b {
+  display: grid;
+  min-width: calc(var(--u) * 4.2);
+  min-height: calc(var(--u) * 2.1);
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--c) 72%, var(--pap-white));
+  background: color-mix(in srgb, var(--c) 12%, #11162d);
+  box-shadow:
+    calc(var(--u) * 0.14) calc(var(--u) * 0.14) 0 rgb(0 0 0 / 0.28),
+    inset 0 1px 0 color-mix(in srgb, var(--c) 48%, transparent);
+  color: var(--c);
+  font-family: var(--pap-font-pixel);
+  font-size: calc(var(--u) * 1.25);
+  font-weight: 400;
+}
+
+.set-result__podium-player--1 .set-result__podium-step {
+  box-shadow:
+    0 0 calc(var(--u) * 1.25) color-mix(in srgb, var(--c) 28%, transparent),
+    inset 0 calc(var(--u) * 0.24) 0 color-mix(in srgb, var(--c) 82%, transparent),
+    inset calc(var(--u) * 0.2) 0 0 rgb(255 255 255 / 0.06),
+    inset calc(var(--u) * -0.2) 0 0 rgb(0 0 0 / 0.2);
+}
+
+@keyframes set-result-podium-rise {
+  from {
+    opacity: 0;
+    transform: scaleY(0.06);
+    transform-origin: center bottom;
+  }
+
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+    transform-origin: center bottom;
+  }
+}
+
+@keyframes set-result-podium-handles {
+  from {
+    opacity: 0;
+    transform: scaleX(0.72);
+  }
+
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes set-result-podium-label-enter {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes set-result-podium-impact {
+  0% {
+    opacity: 0;
+    transform: scaleX(0.35);
+  }
+
+  40% {
+    opacity: 0.9;
+    transform: scaleX(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scaleX(1.15);
+  }
+}
+
+/* 닌자 결과 단상은 그래프와 같은 픽셀 셀이 바닥부터 쌓이는 형태로 표현한다. */
+.set-result__podium::before,
+.set-result__podium-player::before,
+.set-result__podium-step::after {
+  display: none;
+}
+
+.set-result__podium-label {
+  min-width: 0;
+  margin-bottom: calc(var(--u) * 0.42);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.set-result__podium-step,
+.set-result__podium-player--1 .set-result__podium-step {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column-reverse;
+  gap: calc(var(--u) * 0.16);
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  clip-path: none;
+  animation: none;
+}
+
+.set-result__podium-step i {
+  display: block;
+  width: 100%;
+  height: calc(var(--u) * 0.72);
+  flex: none;
+  border: 1px solid color-mix(in srgb, var(--c) 68%, var(--pap-white));
+  background:
+    linear-gradient(90deg, rgb(255 255 255 / 0.12), transparent 24%),
+    color-mix(in srgb, var(--c) 24%, #11162d);
+  box-shadow:
+    inset 0 calc(var(--u) * 0.1) 0 color-mix(in srgb, var(--c) 58%, transparent),
+    0 calc(var(--u) * 0.1) 0 rgb(0 0 0 / 0.24);
+  opacity: 0;
+  animation: set-result-podium-block-enter 105ms steps(2, end) both;
+  animation-delay: calc(var(--podium-index) * 40ms + var(--block-index) * 42ms);
+}
+
+.set-result__podium-step b {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  min-width: calc(var(--u) * 4.3);
+  min-height: calc(var(--u) * 2.05);
+  transform: translate(-50%, -50%);
+}
+
+@keyframes set-result-podium-block-enter {
+  from {
+    opacity: 0;
+    transform: translateY(calc(var(--u) * 0.42)) scaleX(0.82);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scaleX(1);
+  }
+}
+
+/* 최종 단상: 장식 오브젝트 대신 픽셀 베벨과 깊이로 완성도를 만든다. */
+.set-result__podium-step,
+.set-result__podium-player--1 .set-result__podium-step {
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: var(--podium-height);
+  place-items: center;
+  border: calc(var(--u) * 0.18) solid color-mix(in srgb, var(--c) 74%, var(--pap-white));
+  border-bottom-width: calc(var(--u) * 0.28);
+  background:
+    linear-gradient(90deg, rgb(255 255 255 / 0.08), transparent 18%, transparent 82%, rgb(0 0 0 / 0.16)),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 calc(var(--u) * 1.35),
+      color-mix(in srgb, var(--c) 13%, transparent) calc(var(--u) * 1.35) calc(var(--u) * 1.42)
+    ),
+    color-mix(in srgb, var(--c) 20%, #11162d);
+  box-shadow:
+    inset calc(var(--u) * 0.22) 0 0 rgb(255 255 255 / 0.05),
+    inset calc(var(--u) * -0.22) 0 0 rgb(0 0 0 / 0.2),
+    inset 0 calc(var(--u) * 0.3) 0 color-mix(in srgb, var(--c) 52%, transparent),
+    0 calc(var(--u) * 0.28) 0 rgb(0 0 0 / 0.34);
+  clip-path: inset(100% 0 0);
+  animation: set-result-podium-solid-rise 440ms steps(8, end) both;
+  animation-delay: calc(var(--podium-index) * 45ms);
+}
+
+.set-result__podium-step::before {
+  position: absolute;
+  z-index: 2;
+  top: calc(var(--u) * -0.22);
+  left: 50%;
+  width: calc(100% + var(--u) * 0.45);
+  height: calc(var(--u) * 0.42);
+  border: 1px solid color-mix(in srgb, var(--c) 82%, var(--pap-white));
+  background: color-mix(in srgb, var(--c) 55%, #ede7da);
+  box-shadow: 0 calc(var(--u) * 0.12) 0 rgb(0 0 0 / 0.25);
+  content: '';
+  transform: translateX(-50%);
+}
+
+.set-result__podium-step::after {
+  position: absolute;
+  right: calc(var(--u) * 0.42);
+  bottom: calc(var(--u) * 0.38);
+  left: calc(var(--u) * 0.42);
+  display: block;
+  height: calc(var(--u) * 0.16);
+  background: repeating-linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--c) 64%, var(--pap-white)) 0 calc(var(--u) * 0.48),
+    transparent calc(var(--u) * 0.48) calc(var(--u) * 0.72)
+  );
+  content: '';
+  opacity: 0.48;
+  animation: none;
+}
+
+.set-result__podium-step b {
+  position: relative;
+  top: auto;
+  left: auto;
+  min-width: calc(var(--u) * 4.5);
+  min-height: calc(var(--u) * 2.15);
+  border-color: color-mix(in srgb, var(--c) 70%, var(--pap-white));
+  background: color-mix(in srgb, var(--c) 13%, #0c1126);
+  transform: none;
+  animation: set-result-podium-rank-enter 160ms steps(3, end) both;
+  animation-delay: calc(300ms + var(--podium-index) * 45ms);
+}
+
+.set-result__podium-player--1 .set-result__podium-step {
+  box-shadow:
+    0 0 calc(var(--u) * 1.1) color-mix(in srgb, var(--c) 22%, transparent),
+    inset calc(var(--u) * 0.22) 0 0 rgb(255 255 255 / 0.06),
+    inset calc(var(--u) * -0.22) 0 0 rgb(0 0 0 / 0.2),
+    inset 0 calc(var(--u) * 0.3) 0 color-mix(in srgb, var(--c) 64%, transparent),
+    0 calc(var(--u) * 0.28) 0 rgb(0 0 0 / 0.34);
+}
+
+@keyframes set-result-podium-solid-rise {
+  from {
+    clip-path: inset(100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0);
+  }
+}
+
+@keyframes set-result-podium-rank-enter {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* 최종 선택안: 처음 시안처럼 정보와 높이에 집중한 가장 단순한 단상. */
+.set-result__podium::before,
+.set-result__podium-player::before,
+.set-result__podium-step::before,
+.set-result__podium-step::after {
+  display: none;
+}
+
+.set-result__podium-label {
+  display: flex;
+  min-width: 0;
+  margin-bottom: calc(var(--u) * 0.38);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.set-result__podium-step,
+.set-result__podium-player--1 .set-result__podium-step {
+  display: grid;
+  width: 100%;
+  height: var(--podium-height);
+  place-items: center;
+  border: calc(var(--u) * 0.14) solid var(--c);
+  border-bottom: 0;
+  background:
+    linear-gradient(rgb(255 255 255 / 0.08), transparent 28%),
+    color-mix(in srgb, var(--c) 18%, #11162d);
+  box-shadow: inset 0 calc(var(--u) * 0.2) 0 color-mix(in srgb, var(--c) 55%, transparent);
+  clip-path: inset(100% 0 0);
+  animation: set-result-podium-simple-rise 420ms steps(8, end) both;
+  animation-delay: calc(var(--podium-index) * 45ms);
+}
+
+.set-result__podium-step b {
+  position: static;
+  display: block;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--c);
+  font-size: calc(var(--u) * 1.35);
+  transform: none;
+  animation: set-result-podium-rank-enter 160ms steps(3, end) both;
+  animation-delay: calc(280ms + var(--podium-index) * 45ms);
+}
+
+@keyframes set-result-podium-simple-rise {
+  from {
+    clip-path: inset(100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0);
+  }
+}
+
+/* 심플한 형태를 유지하면서 전광판 속 실제 단상처럼 보이게 하는 최소 장식. */
+.set-result__podium::after {
+  position: absolute;
+  z-index: 0;
+  left: 7%;
+  right: 7%;
+  bottom: 0;
+  height: calc(var(--u) * 0.48);
+  border-top: calc(var(--u) * 0.12) solid rgb(255 255 255 / 0.2);
+  background: #0b1025;
+  box-shadow: 0 calc(var(--u) * 0.22) 0 rgb(0 0 0 / 0.32);
+  content: '';
+}
+
+.set-result__podium-step,
+.set-result__podium-player--1 .set-result__podium-step {
+  position: relative;
+  z-index: 1;
+  border-width: calc(var(--u) * 0.12);
+  border-bottom: 0;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 calc(var(--u) * 1.25),
+      rgb(255 255 255 / 0.025) calc(var(--u) * 1.25) calc(var(--u) * 1.33)
+    ),
+    linear-gradient(90deg, rgb(255 255 255 / 0.055), transparent 16% 84%, rgb(0 0 0 / 0.2)),
+    #11162d;
+  box-shadow:
+    inset 0 calc(var(--u) * 0.32) 0 color-mix(in srgb, var(--c) 72%, transparent),
+    inset calc(var(--u) * 0.22) 0 0 rgb(255 255 255 / 0.035),
+    inset calc(var(--u) * -0.22) 0 0 rgb(0 0 0 / 0.22);
+}
+
+.set-result__podium-step::before {
+  position: absolute;
+  left: calc(var(--u) * 0.28);
+  right: calc(var(--u) * 0.28);
+  top: calc(var(--u) * 0.28);
+  display: block;
+  height: calc(var(--u) * 0.1);
+  background: color-mix(in srgb, var(--c) 82%, var(--pap-white));
+  content: '';
+  opacity: 0.72;
+}
+
+.set-result__podium-step b {
+  min-width: calc(var(--u) * 3.6);
+  padding: calc(var(--u) * 0.32) calc(var(--u) * 0.48);
+  border: calc(var(--u) * 0.1) solid color-mix(in srgb, var(--c) 78%, var(--pap-white));
+  background: #0b1025;
+  box-shadow: calc(var(--u) * 0.14) calc(var(--u) * 0.14) 0 rgb(0 0 0 / 0.3);
+  font-size: calc(var(--u) * 1.18);
+  text-align: center;
+}
+
+.set-result__podium-player--1 .set-result__podium-step {
+  box-shadow:
+    0 0 calc(var(--u) * 0.8) color-mix(in srgb, var(--c) 20%, transparent),
+    inset 0 calc(var(--u) * 0.32) 0 color-mix(in srgb, var(--c) 78%, transparent),
+    inset calc(var(--u) * 0.22) 0 0 rgb(255 255 255 / 0.035),
+    inset calc(var(--u) * -0.22) 0 0 rgb(0 0 0 / 0.22);
+}
+
+/* 트로피 시안: 네모 단상 대신 하나의 단색 픽셀 자산을 참가자 색으로 칠한다. */
+.set-result__podium::after {
+  display: none;
+}
+
+.set-result__podium-label {
+  order: 2;
+  width: 100%;
+  justify-content: center;
+  margin-top: calc(var(--u) * 0.35);
+  margin-bottom: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  text-align: center;
+}
+
+.set-result__podium-step,
+.set-result__podium-player--1 .set-result__podium-step {
+  position: relative;
+  order: 1;
+  width: min(100%, calc(var(--podium-height) * 0.92));
+  height: var(--podium-height);
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  clip-path: none;
+  filter: drop-shadow(calc(var(--u) * 0.12) calc(var(--u) * 0.18) 0 rgb(0 0 0 / 0.38));
+  animation: set-result-trophy-rise 360ms steps(7, end) both;
+  animation-delay: calc(var(--podium-index) * 45ms);
+}
+
+.set-result__podium-step::before {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: url('/assets/result/pixel-flat-podium-v3.png') center / contain no-repeat;
+  box-shadow: none;
+  content: '';
+  image-rendering: pixelated;
+  opacity: 1;
+  transform: none;
+}
+
+.set-result__podium-step::after {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: var(--c);
+  box-shadow: none;
+  content: '';
+  image-rendering: pixelated;
+  mask: url('/assets/result/pixel-flat-podium-v3.png') center / contain no-repeat;
+  -webkit-mask: url('/assets/result/pixel-flat-podium-v3.png') center / contain no-repeat;
+  mix-blend-mode: multiply;
+  opacity: 0.9;
+  pointer-events: none;
+  transform: none;
+}
+
+.set-result__podium-step b {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: calc(var(--u) * 0.72);
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--c);
+  font-size: calc(var(--u) * 1.22);
+  text-shadow: calc(var(--u) * 0.08) calc(var(--u) * 0.08) 0 #0b1025;
+  text-align: center;
+  transform: translate(-50%, -100%);
+}
+
+.set-result__podium-player--1 .set-result__podium-step {
+  filter:
+    drop-shadow(0 0 calc(var(--u) * 0.38) color-mix(in srgb, var(--c) 30%, transparent))
+    drop-shadow(calc(var(--u) * 0.12) calc(var(--u) * 0.18) 0 rgb(0 0 0 / 0.38));
+}
+
+@keyframes set-result-trophy-rise {
+  from {
+    opacity: 0;
+    transform: translateY(calc(var(--u) * 1.2));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 이미지형 단상에는 이전 시안의 카드/단상 프레임을 사용하지 않는다. */
+.set-result__podium-player,
+.set-result__podium-step,
+.set-result__podium-player--1 .set-result__podium-step {
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+.set-result__podium-player::before {
+  display: none !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+.set-result__podium-step b {
+  border: 0 !important;
+  outline: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* 닌자 결과: 장식형 기둥 대신 정면형 픽셀 시상대를 사용한다. */
+.set-result__podium-step,
+.set-result__podium-player--1 .set-result__podium-step {
+  width: min(100%, calc(var(--u) * 11.6));
+  filter: drop-shadow(calc(var(--u) * 0.1) calc(var(--u) * 0.16) 0 rgb(0 0 0 / 0.34));
+}
+
+.set-result__podium-step::before {
+  z-index: 1;
+  background-image: url('/assets/result/pixel-flat-podium-v3.png');
+  background-position: center bottom;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  mix-blend-mode: screen;
+  opacity: 0.34;
+}
+
+.set-result__podium-step::after {
+  z-index: 0;
+  background: var(--c);
+  mask-image: url('/assets/result/pixel-flat-podium-v3.png');
+  mask-position: center bottom;
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: url('/assets/result/pixel-flat-podium-v3.png');
+  -webkit-mask-position: center bottom;
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mix-blend-mode: normal;
+  opacity: 0.92;
+}
+
+.set-result__podium-step b {
+  top: calc(var(--u) * 0.48);
+}
+
+/* 닌자 결과: 단순한 2D 단상 전면에 작은 메달만 결합한다. */
+.set-result__podium-step,
+.set-result__podium-player--1 .set-result__podium-step {
+  overflow: visible;
+  border: calc(var(--u) * 0.12) solid color-mix(in srgb, var(--c) 76%, #fff) !important;
+  border-bottom-width: calc(var(--u) * 0.28) !important;
+  background: var(--c) !important;
+  box-shadow: inset 0 calc(var(--u) * 0.72) 0 color-mix(in srgb, var(--c) 76%, #fff) !important;
+  clip-path: none;
+  filter: drop-shadow(calc(var(--u) * 0.12) calc(var(--u) * 0.18) 0 rgb(0 0 0 / 0.34));
+}
+
+.set-result__podium-step::before,
+.set-result__podium-step::after {
+  display: none;
+}
+
+.set-result__podium-medal {
+  position: absolute;
+  z-index: 2;
+  top: 38%;
+  left: 50%;
+  width: calc(var(--u) * 2.5);
+  height: calc(var(--u) * 3.35);
+  transform: translate(-50%, -50%);
+}
+
+.set-result__podium-medal::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: calc(var(--u) * 1.8);
+  height: calc(var(--u) * 2.1);
+  border-left: calc(var(--u) * 0.28) solid #fff7d6;
+  border-right: calc(var(--u) * 0.28) solid #fff7d6;
+  content: '';
+  transform: translateX(-50%);
+}
+
+.set-result__podium-medal::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: calc(var(--u) * 1.75);
+  aspect-ratio: 1;
+  border: calc(var(--u) * 0.18) solid #fff3b0;
+  border-radius: 50%;
+  background: #e6a84a;
+  box-shadow: inset 0 0 0 calc(var(--u) * 0.16) #ffd873;
+  content: '';
+  transform: translateX(-50%);
+}
+
+/* 닌자 결과 최종안: 초기형 평면 단상 */
+.set-result__podium-label {
+  order: 1;
+  flex-direction: row;
+  gap: calc(var(--u) * 0.42);
+  margin: 0 0 calc(var(--u) * 0.62);
+  white-space: nowrap;
+}
+
+.set-result__podium-step,
+.set-result__podium-player--1 .set-result__podium-step {
+  order: 2;
+  width: 100%;
+  overflow: visible;
+  border: calc(var(--u) * 0.16) solid var(--c) !important;
+  border-bottom: 0 !important;
+  background: color-mix(in srgb, var(--c) 14%, #11162d) !important;
+  box-shadow: inset 0 calc(var(--u) * 0.32) 0 color-mix(in srgb, var(--c) 68%, transparent) !important;
+  clip-path: none;
+  filter: none;
+  animation: set-result-podium-graph-rise 520ms steps(12, end) both;
+  animation-delay: calc(var(--podium-index) * 70ms);
+}
+
+.set-result__podium-step b {
+  position: static;
+  z-index: 1;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--c);
+  font-size: calc(var(--u) * 1.65);
+  transform: none;
+}
+
+@keyframes set-result-podium-graph-rise {
+  from {
+    opacity: 0.4;
+    clip-path: inset(100% 0 0);
+  }
+
+  to {
+    opacity: 1;
+    clip-path: inset(0);
+  }
+}
+
+.set-result__rows {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: calc(var(--u) * 0.6);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.set-result__row {
+  display: grid;
+  grid-template-columns: calc(var(--u) * 4) calc(var(--u) * 7) 1fr calc(var(--u) * 9);
+  align-items: center;
+  gap: calc(var(--u) * 0.8);
+}
+
+.set-result__rank {
+  font-family: var(--pap-font-pixel);
+  font-size: calc(var(--u) * 1.3);
+  color: var(--c);
+}
+
+.set-result__name {
+  font-family: var(--pap-font-pixel);
+  font-size: calc(var(--u) * 1.2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--pap-white);
+}
+
+/* 점수 막대 — 픽셀 톤을 지키려고 그라데이션 바 대신 정사각형 칸을 늘어놓는다 */
+.set-result__bar {
+  display: flex;
+  gap: calc(var(--u) * 0.25);
+}
+
+.set-result__cell {
+  flex: 1;
+  height: calc(var(--u) * 1.1);
+  background: rgb(255 255 255 / 0.08);
+  opacity: 0;
+  transform: scaleX(0.15);
+  transform-origin: left center;
+  transition:
+    opacity 90ms steps(2, end),
+    transform 90ms steps(2, end);
+}
+
+.set-result__cell--revealed {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.set-result__cell--on {
+  background: var(--c);
+}
+
+.set-result__cell--off {
+  background: rgb(255 255 255 / 0.08);
+}
+
+/* 칸 공개와 숫자 카운트가 동일한 JS 시간축을 사용한다. CSS 지연 애니메이션을 별도로
+   실행하지 않아 아래 행이나 동점 행에서도 중간 상태가 남거나 한꺼번에 튀지 않는다. */
+.set-result__row--settled .set-result__cell--on {
+  background: var(--c);
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.set-result__score {
+  display: flex;
+  justify-content: flex-end;
+  gap: calc(var(--u) * 0.6);
+  font-family: var(--pap-font-pixel);
+  font-size: calc(var(--u) * 1.2);
+  text-align: right;
+  color: var(--c);
+}
+
+.set-result__score--settled {
+  animation: set-result-score-settle 280ms steps(2, end);
+}
+
+@keyframes set-result-score-settle {
+  50% {
+    filter: brightness(1.8);
+    text-shadow: 0 0 calc(var(--u) * 0.8) var(--c);
+    transform: scale(1.08);
+  }
+}
+
+/* 내 줄만 살짝 밝게 — 전광판 위라 테두리를 두르면 판이 지저분해진다 */
+.set-result__row--me .set-result__name {
+  text-shadow: 0 0 calc(var(--u) * 0.8) var(--c);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .set-result__cell,
+  .set-result__podium-player,
+  .set-result__podium-label,
+  .set-result__podium-step,
+  .set-result__podium-step b,
+  .set-result__podium-step i,
+  .set-result__racer,
+  .set-result__score--settled {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* ---- 아래 컨트롤 덱: 누적 순위 + 다음 세트 ---- */
+/* 판 자체는 x 14.7~85.3 / y 60.7~78.8 */
+.set-result__deck {
+  position: absolute;
+  left: 15.9%;
+  right: 15.9%;
+  top: 62.2%;
+  bottom: 22.7%;
+  display: grid;
+  grid-template-columns: 1fr calc(var(--u) * 22);
+  gap: calc(var(--u) * 2);
+}
+
+/* 덱은 그림에 그려진 판 안에서만 늘어나야 한다 — 두 칸 모두 세로 flex로 두고 목록이
+   남는 높이를 먹게 해서, 내용이 늘어도 판 아래로 새지 않게 한다 */
+.set-result__totals,
+.set-result__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.set-result__deck-title {
+  margin: 0;
+  font-family: var(--pap-font-pixel);
+  font-size: calc(var(--u) * 1.2);
+  color: var(--pap-white);
+}
+
+.set-result__deck-sub {
+  margin: calc(var(--u) * 0.2) 0 0;
+  font-size: calc(var(--u) * 0.72);
+  line-height: 1.3;
+  color: rgb(255 253 245 / 0.7);
+}
+
+.set-result__race {
+  position: relative;
+  flex: none;
+  min-height: 0;
+  height: calc(var(--u) * 7.1);
+  margin: calc(var(--u) * 0.7) 0 0;
+  padding: 0;
+  border-top: 1px solid rgb(255 253 245 / 0.18);
+  border-bottom: 1px solid rgb(255 253 245 / 0.18);
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent calc(var(--u) * 2.6),
+      rgb(255 253 245 / 0.055) calc(var(--u) * 2.6),
+      rgb(255 253 245 / 0.055) calc(var(--u) * 2.7)
+    ),
+    rgb(255 255 255 / 0.025);
+  list-style: none;
+  overflow: hidden;
+}
+
+.set-result__racer {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: var(--race-position);
+  display: grid;
+  width: calc(var(--u) * 7.7);
+  justify-items: center;
+  color: var(--c);
+  transform: translate(-50%, -50%);
+  animation: set-result-racer-enter 680ms cubic-bezier(0.2, 0.82, 0.25, 1) both;
+  animation-delay: var(--race-delay);
+}
+
+.set-result__place {
+  position: relative;
+  margin-bottom: calc(var(--u) * 0.34);
+  padding: calc(var(--u) * 0.24) calc(var(--u) * 0.55);
+  border: 1px solid currentcolor;
+  background: #11162d;
+  font-family: var(--pap-font-pixel);
+  font-size: calc(var(--u) * 0.76);
+  line-height: 1;
+}
+
+.set-result__place::after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: calc(var(--u) * 0.35);
+  height: calc(var(--u) * 0.35);
+  border-right: 1px solid currentcolor;
+  border-bottom: 1px solid currentcolor;
+  background: #11162d;
+  content: '';
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.set-result__flag {
+  position: relative;
+  width: calc(var(--u) * 2.7);
+  height: calc(var(--u) * 2.75);
+}
+
+.set-result__flag img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.set-result__racer-info {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: baseline;
+  justify-content: center;
+  gap: calc(var(--u) * 0.35);
+  font-size: calc(var(--u) * 0.76);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.set-result__racer-info strong {
+  max-width: calc(var(--u) * 3.6);
+  overflow: hidden;
+  color: var(--pap-white);
+  font-weight: 400;
+  text-overflow: ellipsis;
+}
+
+.set-result__racer-info > span {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--u) * 0.18);
+  color: var(--c);
+  font-family: var(--pap-font-pixel);
+}
+
+.set-result__finish {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: calc(var(--u) * 0.55);
+  bottom: 0;
+  width: calc(var(--u) * 1.45);
+  background-color: rgb(255 253 245 / 0.1);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' shape-rendering='crispEdges'%3E%3Cpath fill='%23fffdf5' d='M0 0h6v6H0zM6 6h6v6H6z'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: calc(var(--u) * 0.72) calc(var(--u) * 0.72);
+  opacity: 0.65;
+}
+
+@keyframes set-result-racer-enter {
+  from {
+    opacity: 0;
+    transform: translate(calc(-50% - var(--u) * 4), -50%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.set-result__delta {
+  font-size: calc(var(--u) * 0.6);
+  font-style: normal;
+}
+
+.set-result__delta--up {
+  color: var(--pap-success-lime);
+}
+
+.set-result__delta--down {
+  color: var(--pap-festival-coral);
+}
+
+.set-result__delta--same {
+  opacity: 0.45;
+}
+
+/* 오른쪽 칸 — 세로 구분선으로 누적 순위와 갈라 놓는다(그림엔 선이 없어서 직접 그린다) */
+.set-result__next {
+  display: flex;
+  flex-direction: column;
+  padding-left: calc(var(--u) * 2);
+  border-left: 2px solid rgb(255 255 255 / 0.15);
+}
+
+.set-result__next-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: calc(var(--u) * 0.8);
+}
+
+.set-result__next-label {
+  font-size: calc(var(--u) * 0.75);
+  opacity: 0.7;
+}
+
+.set-result__set-count {
+  font-family: var(--pap-font-pixel);
+  font-size: calc(var(--u) * 0.7);
+  letter-spacing: 0.08em;
+  opacity: 0.6;
+}
+
+.set-result__next-game {
+  margin: calc(var(--u) * 0.5) 0 auto;
+  font-family: var(--pap-font-pixel);
+  font-size: calc(var(--u) * 1.3);
+  color: var(--pap-white);
+}
+
+.set-result__next-btn {
+  width: 100%;
+  padding: calc(var(--u) * 0.8) calc(var(--u) * 1.2);
+  font-size: calc(var(--u) * 1);
+}
+
+.set-result__next-wait {
+  margin: calc(var(--u) * 0.8) 0 0;
+  font-size: calc(var(--u) * 0.78);
+  opacity: 0.7;
+}
+
+.set-result__next--final .set-result__next-game {
+  margin-bottom: calc(var(--u) * 0.55);
+}
+
+.set-result__final-status {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--u) * 0.8);
+  min-height: calc(var(--u) * 3.35);
+  padding: calc(var(--u) * 0.65) calc(var(--u) * 0.9);
+  border: 1px solid rgb(235 168 70 / 0.58);
+  background: rgb(235 168 70 / 0.08);
+  margin-bottom: auto;
+}
+
+.set-result__final-copy {
+  display: grid;
+  gap: calc(var(--u) * 0.25);
+  min-width: 0;
+}
+
+.set-result__final-copy strong {
+  color: var(--pap-white);
+  font-family: var(--pap-font-pixel);
+  font-size: calc(var(--u) * 0.78);
+  font-weight: 400;
+}
+
+.set-result__final-copy small {
+  color: rgb(255 253 245 / 0.62);
+  font-size: calc(var(--u) * 0.58);
+  line-height: 1.35;
+}
+
+.set-result__next-timer {
+  margin: calc(var(--u) * 0.3) 0 0;
+  font-size: calc(var(--u) * 0.7);
+  text-align: center;
+  opacity: 0.6;
+}

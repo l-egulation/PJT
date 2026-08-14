@@ -1,0 +1,954 @@
+package com.camon.domain.game.charades.service;
+
+import com.camon.domain.game.charades.domain.CharadesGameState;
+import com.camon.domain.game.charades.domain.CharadesTurnStatus;
+import com.camon.domain.game.charades.dto.CharadesGuessRequest;
+import com.camon.domain.game.charades.dto.CharadesGuessResponse;
+import com.camon.domain.game.charades.dto.CharadesStateResponse;
+import com.camon.domain.game.charades.dto.CharadesWordResponse;
+import com.camon.domain.game.charades.repository.CharadesRedisRepository;
+import com.camon.domain.game.charades.ws.CharadesEventPublisher;
+import com.camon.domain.game.charades.ws.payload.CharadesAnswerRevealedPayload;
+import com.camon.domain.game.charades.ws.payload.CharadesGameEndedPayload;
+import com.camon.domain.game.charades.ws.payload.CharadesRankingEntry;
+import com.camon.domain.game.charades.ws.payload.CharadesRoundInvalidatedPayload;
+import com.camon.domain.game.charades.ws.payload.CharadesRoundScoredPayload;
+import com.camon.domain.game.charades.ws.payload.CharadesRoundStartedPayload;
+import com.camon.domain.game.charades.ws.payload.CharadesRoundTimeoutPayload;
+import com.camon.domain.game.charades.ws.payload.CharadesScoreEntry;
+import com.camon.domain.game.charades.ws.payload.CharadesTurnStartedPayload;
+import com.camon.domain.game.charades.ws.payload.ChatMessageReceivedPayload;
+import com.camon.domain.game.common.Mission;
+import com.camon.domain.game.common.demo.DemoScenario;
+import com.camon.domain.game.common.event.GameSessionFinishedEvent;
+import com.camon.domain.game.common.repository.MissionRepository;
+import com.camon.domain.game.common.repository.MissionTopicRepository;
+import com.camon.domain.game.common.repository.SaveRoundResult;
+import com.camon.domain.game.common.service.GameScoreService;
+import com.camon.domain.game.common.ws.GameEventPublisher;
+import com.camon.domain.room.domain.ConnectionStatus;
+import com.camon.domain.room.domain.Participant;
+import com.camon.domain.room.domain.Room;
+import com.camon.domain.room.repository.ParticipantRepository;
+import com.camon.domain.room.repository.RoomRepository;
+import com.camon.global.exception.BusinessException;
+import com.camon.global.exception.ErrorCode;
+import java.time.Duration;
+import java.time.Instant;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Optional;
+import java.util.Set;
+import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.stream.Collectors;
+import org.springframework.context.ApplicationEventPublisher;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.scheduling.TaskScheduler;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+@Slf4j
+@Service
+public class CharadesGameService {
+
+    static final int MIN_PLAYERS = 3;
+    static final int MAX_PLAYERS = 4;
+    static final Duration TURN_DURATION = Duration.ofMinutes(1);
+
+    private static final String MISSION_TYPE = "CHARADES";
+    private static final String TURN_STARTED_EVENT = "charades:turn-started";
+    private static final String ROUND_STARTED_EVENT = "charades:round-started";
+    private static final String CHAT_MESSAGE_EVENT = "chat:message-received";
+    private static final String ANSWER_REVEALED_EVENT = "charades:answer-revealed";
+    private static final String ROUND_TIMEOUT_EVENT = "charades:round-timeout";
+    private static final String ROUND_INVALIDATED_EVENT =
+        "charades:round-invalidated";
+    private static final String ROUND_SCORED_EVENT = "charades:round-scored";
+    private static final String GAME_ENDED_EVENT = "charades:game-ended";
+
+    private final RoomRepository roomRepository;
+    private final ParticipantRepository participantRepository;
+    private final MissionTopicRepository missionTopicRepository;
+    private final MissionRepository missionRepository;
+    private final CharadesRedisRepository charadesRedis;
+    private final CharadesAnswerMatcher answerMatcher;
+    private final GameScoreService gameScoreService;
+    private final GameEventPublisher gameEventPublisher;
+    private final CharadesEventPublisher charadesEventPublisher;
+    private final TaskScheduler taskScheduler;
+    private final ApplicationEventPublisher applicationEventPublisher;
+    private final Map<String, ScheduledFuture<?>> pendingTimeouts =
+        new ConcurrentHashMap<>();
+
+    public CharadesGameService(
+        RoomRepository roomRepository,
+        ParticipantRepository participantRepository,
+        MissionTopicRepository missionTopicRepository,
+        MissionRepository missionRepository,
+        CharadesRedisRepository charadesRedis,
+        CharadesAnswerMatcher answerMatcher,
+        GameScoreService gameScoreService,
+        GameEventPublisher gameEventPublisher,
+        CharadesEventPublisher charadesEventPublisher,
+        TaskScheduler taskScheduler,
+        ApplicationEventPublisher applicationEventPublisher
+    ) {
+        this.roomRepository = roomRepository;
+        this.participantRepository = participantRepository;
+        this.missionTopicRepository = missionTopicRepository;
+        this.missionRepository = missionRepository;
+        this.charadesRedis = charadesRedis;
+        this.answerMatcher = answerMatcher;
+        this.gameScoreService = gameScoreService;
+        this.gameEventPublisher = gameEventPublisher;
+        this.charadesEventPublisher = charadesEventPublisher;
+        this.taskScheduler = taskScheduler;
+        this.applicationEventPublisher = applicationEventPublisher;
+    }
+
+    // totalRounds는 코스가 정한다. 1라운드 = 참가자 전원이 한 번씩 표현자가 되는 것이므로,
+    // 4명이 2라운드면 표현 턴이 8번이다. (예전엔 단일 라운드 정책으로 1에 고정돼 있었다.)
+    @Transactional
+    public CharadesTurnStartedPayload startSession(
+        UUID roomId,
+        Long gameId,
+        Long topicId,
+        int totalRounds
+    ) {
+        Room room = resolveRoom(roomId);
+        List<Participant> participants = connectedParticipants(roomId);
+        validatePlayerCount(participants.size());
+        validateRoundCount(totalRounds);
+        // 시연 모드: 제시어를 DemoScenario 순서로 고정하려면 그 제시어들이 들어 있는 주제로
+        // 세션을 열어야 한다(제시어 조회가 세션의 topicId로 걸린다). 방장이 대기방에서 무슨
+        // 주제를 골랐든 시연 주제로 갈아끼운다.
+        Long sessionTopicId = resolveTopicId(room, gameId, topicId);
+        validateTopic(gameId, sessionTopicId);
+
+        List<Mission> missions = findTopicMissions(gameId, sessionTopicId);
+        // 제시어는 한 턴에 하나씩 소진되고 재사용되지 않으므로, 이 게임이 쓸 총 턴 수
+        // (인원 x 라운드)만큼 주제에 제시어가 있어야 중간에 끊기지 않는다.
+        int requiredMissionCount = participants.size() * totalRounds;
+        if (missions.size() < requiredMissionCount) {
+            throw new BusinessException(ErrorCode.CHARADES_NOT_ENOUGH_MISSIONS);
+        }
+
+        List<UUID> presenterOrder = participants.stream()
+            .map(Participant::participantId)
+            .toList();
+        int sessionSeq = room.currentSessionSeq();
+        cancelPendingTimeout(room.roomCode(), sessionSeq);
+        charadesRedis.initialize(
+            room.roomCode(),
+            sessionSeq,
+            totalRounds,
+            sessionTopicId,
+            presenterOrder
+        );
+
+        gameEventPublisher.publishStarted(
+            room.roomId(),
+            gameId,
+            sessionSeq,
+            totalRounds
+        );
+        return openTurn(
+            room,
+            sessionSeq,
+            1,
+            1,
+            presenterOrder.getFirst(),
+            true
+        );
+    }
+
+    public Optional<CharadesTurnStartedPayload> startNextTurn(UUID roomId) {
+        return startNextTurn(roomId, false);
+    }
+
+    private Optional<CharadesTurnStartedPayload> startNextTurn(
+        UUID roomId,
+        boolean restartCurrentRound
+    ) {
+        Room room = resolveRoom(roomId);
+        int sessionSeq = room.currentSessionSeq();
+        CharadesGameState state = charadesRedis.findState(
+            room.roomCode(),
+            sessionSeq
+        ).orElseThrow(() ->
+            new BusinessException(ErrorCode.CHARADES_SESSION_NOT_FOUND)
+        );
+        if (state.status() == CharadesTurnStatus.PLAYING) {
+            throw new BusinessException(ErrorCode.CHARADES_TURN_STILL_PLAYING);
+        }
+
+        List<UUID> presenterOrder = charadesRedis.getPresenterOrder(
+            room.roomCode(),
+            sessionSeq
+        );
+        int round = state.currentRound();
+        int turn = state.currentTurn();
+
+        while (round <= state.totalRounds()) {
+            turn++;
+            if (turn > presenterOrder.size()) {
+                round++;
+                turn = 1;
+            }
+            if (round > state.totalRounds()) {
+                saveCompletedRound(room, sessionSeq, state.currentRound());
+                return Optional.empty();
+            }
+
+            UUID candidate = presenterOrder.get(turn - 1);
+            if (isConnected(roomId, candidate)) {
+                if (round > state.currentRound()) {
+                    saveCompletedRound(room, sessionSeq, state.currentRound());
+                }
+                return Optional.of(
+                    openTurn(
+                        room,
+                        sessionSeq,
+                        round,
+                        turn,
+                        candidate,
+                        restartCurrentRound
+                            || round > state.currentRound()
+                    )
+                );
+            }
+        }
+        return Optional.empty();
+    }
+
+    @Transactional(readOnly = true)
+    public CharadesStateResponse getState(
+        UUID roomId,
+        Long gameId
+    ) {
+        Room room = resolveRoom(roomId);
+        int sessionSeq = room.currentSessionSeq();
+        CharadesGameState state = charadesRedis.findState(
+            room.roomCode(),
+            sessionSeq
+        ).orElseThrow(() ->
+            new BusinessException(ErrorCode.CHARADES_SESSION_NOT_FOUND)
+        );
+
+        requireCurrentGame(state, gameId);
+        return new CharadesStateResponse(
+            state.currentRound(),
+            state.totalRounds(),
+            state.currentTurn(),
+            state.totalTurnsInRound(),
+            state.presenterId(),
+            state.expiresAt(),
+            state.status()
+        );
+    }
+
+    @Transactional(readOnly = true)
+    public CharadesWordResponse getCurrentWord(
+        UUID roomId,
+        Long gameId,
+        UUID participantId
+    ) {
+        Room room = resolveRoom(roomId);
+        int sessionSeq = room.currentSessionSeq();
+        CharadesGameState state = charadesRedis.findState(
+            room.roomCode(),
+            sessionSeq
+        ).orElseThrow(() ->
+            new BusinessException(ErrorCode.CHARADES_SESSION_NOT_FOUND)
+        );
+
+        requireCurrentGame(state, gameId);
+        requirePlayingTurn(state);
+        if (!participantId.equals(state.presenterId())) {
+            throw new BusinessException(ErrorCode.CHARADES_NOT_PRESENTER);
+        }
+        requireNotExpired(state, Instant.now());
+        Mission mission = findCurrentMission(state, gameId);
+
+        return new CharadesWordResponse(
+            state.currentRound(),
+            state.currentTurn(),
+            mission.getKeyword(),
+            state.expiresAt()
+        );
+    }
+
+    @Transactional
+    public CharadesGuessResponse submitGuess(
+        UUID roomId,
+        Long gameId,
+        Participant participant,
+        CharadesGuessRequest request
+    ) {
+        Room room = resolveRoom(roomId);
+        int sessionSeq = room.currentSessionSeq();
+        CharadesGameState state = charadesRedis.findState(
+            room.roomCode(),
+            sessionSeq
+        ).orElseThrow(() ->
+            new BusinessException(ErrorCode.CHARADES_SESSION_NOT_FOUND)
+        );
+
+        requireCurrentGame(state, gameId);
+        requirePlayingTurn(state);
+        if (participant.participantId().equals(state.presenterId())) {
+            throw new BusinessException(
+                ErrorCode.CHARADES_PRESENTER_CANNOT_GUESS
+            );
+        }
+
+        Instant submittedAt = Instant.now();
+        requireNotExpired(state, submittedAt);
+        Mission mission = findCurrentMission(state, gameId);
+        boolean matches = answerMatcher.matches(
+            request.text(),
+            mission.getKeyword()
+        );
+        boolean correct = matches && charadesRedis.claimCorrectAnswer(
+            room.roomCode(),
+            sessionSeq,
+            participant.participantId(),
+            submittedAt
+        );
+
+        charadesEventPublisher.publish(
+            room.roomId(),
+            CHAT_MESSAGE_EVENT,
+            new ChatMessageReceivedPayload(
+                state.currentRound(),
+                state.currentTurn(),
+                participant.participantId(),
+                participant.nickname(),
+                request.text(),
+                submittedAt
+            )
+        );
+        if (correct) {
+            cancelPendingTimeout(room.roomCode(), sessionSeq);
+            charadesEventPublisher.publish(
+                room.roomId(),
+                ANSWER_REVEALED_EVENT,
+                new CharadesAnswerRevealedPayload(
+                    state.currentRound(),
+                    state.currentTurn(),
+                    state.presenterId(),
+                    participant.participantId(),
+                    submittedAt,
+                    mission.getKeyword()
+                )
+            );
+            advanceAfterTerminalTurn(room);
+        }
+
+        return new CharadesGuessResponse(
+            state.currentRound(),
+            state.currentTurn(),
+            correct
+        );
+    }
+
+    private CharadesTurnStartedPayload openTurn(
+        Room room,
+        int sessionSeq,
+        int round,
+        int turn,
+        UUID presenterId,
+        boolean announceRoundStarted
+    ) {
+        CharadesGameState state = charadesRedis.findState(
+            room.roomCode(),
+            sessionSeq
+        ).orElseThrow(() ->
+            new BusinessException(ErrorCode.CHARADES_SESSION_NOT_FOUND)
+        );
+        Set<Long> usedMissionIds =
+            charadesRedis.getUsedMissionIds(room.roomCode(), sessionSeq);
+        // 시연 모드에서는 제시어가 턴 순서대로 고정된다. 시연 목록이 동나면(턴이 목록보다 많은
+        // 경우) 평소처럼 남은 제시어에서 랜덤으로 뽑는다.
+        Mission mission = room.demoMode()
+            ? selectDemoMission(state.topicId(), usedMissionIds)
+            : selectUnusedMission(state.topicId(), usedMissionIds);
+        Instant expiresAt = Instant.ofEpochMilli(
+            Instant.now().plus(TURN_DURATION).toEpochMilli()
+        );
+        boolean opened = charadesRedis.openTurn(
+            room.roomCode(),
+            sessionSeq,
+            round,
+            turn,
+            presenterId,
+            mission.getMissionId(),
+            expiresAt
+        );
+        if (!opened) {
+            throw new BusinessException(ErrorCode.CHARADES_SESSION_NOT_FOUND);
+        }
+
+        CharadesTurnStartedPayload payload = new CharadesTurnStartedPayload(
+            round,
+            turn,
+            state.totalTurnsInRound(),
+            presenterId,
+            expiresAt
+        );
+        if (announceRoundStarted) {
+            charadesEventPublisher.publish(
+                room.roomId(),
+                ROUND_STARTED_EVENT,
+                new CharadesRoundStartedPayload(
+                    round,
+                    state.totalRounds(),
+                    state.totalTurnsInRound()
+                )
+            );
+        }
+        charadesEventPublisher.publish(
+            room.roomId(),
+            TURN_STARTED_EVENT,
+            payload
+        );
+        scheduleTimeout(
+            room,
+            sessionSeq,
+            round,
+            turn,
+            expiresAt
+        );
+        return payload;
+    }
+
+    public void handleParticipantLeft(
+        UUID roomId,
+        UUID participantId,
+        String reason,
+        int connectedCount
+    ) {
+        Room room = roomRepository.findById(roomId).orElse(null);
+        if (room == null) {
+            return;
+        }
+        int sessionSeq = room.currentSessionSeq();
+        CharadesGameState state = charadesRedis.findState(
+            room.roomCode(),
+            sessionSeq
+        ).orElse(null);
+        // 몸으로 말해요 세션이 열려 있지 않으면 내 차례가 아니다(다른 게임이 진행 중이거나
+        // 이미 끝났다) — GameParticipantLeaveHandler 계약대로 조용히 빠진다.
+        if (state == null || state.status() == CharadesTurnStatus.FINISHED) {
+            return;
+        }
+
+        if (connectedCount <= 1) {
+            finishGame(room);
+            return;
+        }
+        if (state.status() != CharadesTurnStatus.PLAYING
+            || !participantId.equals(state.presenterId())) {
+            return;
+        }
+        if (!charadesRedis.transitionStatus(
+            room.roomCode(),
+            sessionSeq,
+            CharadesTurnStatus.PLAYING,
+            CharadesTurnStatus.INVALIDATED
+        )) {
+            return;
+        }
+
+        cancelPendingTimeout(room.roomCode(), sessionSeq);
+        charadesEventPublisher.publish(
+            room.roomId(),
+            ROUND_INVALIDATED_EVENT,
+            new CharadesRoundInvalidatedPayload(
+                state.currentRound(),
+                state.currentTurn(),
+                participantId,
+                reason
+            )
+        );
+        advanceAfterTerminalTurn(room, true);
+    }
+
+    private void scheduleTimeout(
+        Room room,
+        int sessionSeq,
+        int round,
+        int turn,
+        Instant expiresAt
+    ) {
+        String key = timerKey(room.roomCode(), sessionSeq);
+        ScheduledFuture<?> future = taskScheduler.schedule(
+            () -> handleTimeout(
+                room,
+                sessionSeq,
+                round,
+                turn,
+                expiresAt
+            ),
+            expiresAt
+        );
+        pendingTimeouts.compute(key, (ignored, current) -> {
+            if (current != null) {
+                current.cancel(false);
+            }
+            return future;
+        });
+    }
+
+    void handleTimeout(
+        Room room,
+        int sessionSeq,
+        int round,
+        int turn,
+        Instant expiresAt
+    ) {
+        CharadesGameState state = charadesRedis.findState(
+            room.roomCode(),
+            sessionSeq
+        ).orElse(null);
+        if (!isScheduledTurn(state, round, turn, expiresAt)) {
+            return;
+        }
+        pendingTimeouts.remove(timerKey(room.roomCode(), sessionSeq));
+
+        Instant now = Instant.now();
+        if (now.isBefore(expiresAt)) {
+            scheduleTimeout(room, sessionSeq, round, turn, expiresAt);
+            return;
+        }
+        if (!charadesRedis.transitionStatus(
+            room.roomCode(),
+            sessionSeq,
+            CharadesTurnStatus.PLAYING,
+            CharadesTurnStatus.TIMEOUT
+        )) {
+            return;
+        }
+
+        charadesEventPublisher.publish(
+            room.roomId(),
+            ROUND_TIMEOUT_EVENT,
+            new CharadesRoundTimeoutPayload(
+                round,
+                turn,
+                resolveRevealWord(state)
+            )
+        );
+        advanceAfterTerminalTurn(room);
+    }
+
+    private void advanceAfterTerminalTurn(Room room) {
+        advanceAfterTerminalTurn(room, false);
+    }
+
+    private void advanceAfterTerminalTurn(
+        Room room,
+        boolean restartCurrentRound
+    ) {
+        if (startNextTurn(
+            room.roomId(),
+            restartCurrentRound
+        ).isEmpty()) {
+            finishGame(room);
+        }
+    }
+
+    private void finishGame(Room room) {
+        int sessionSeq = room.currentSessionSeq();
+        CharadesGameState state = charadesRedis.findState(
+            room.roomCode(),
+            sessionSeq
+        ).orElse(null);
+        if (state == null || state.status() == CharadesTurnStatus.FINISHED) {
+            return;
+        }
+        if (!charadesRedis.transitionStatus(
+            room.roomCode(),
+            sessionSeq,
+            state.status(),
+            CharadesTurnStatus.FINISHED
+        )) {
+            return;
+        }
+        cancelPendingTimeout(room.roomCode(), sessionSeq);
+        List<CharadesRankingEntry> finalRanking = buildFinalRanking(room, sessionSeq);
+        SaveRoundResult courseResult = gameScoreService.saveCourseRanking(
+            room.roomId(),
+            sessionSeq,
+            finalRanking.stream().collect(java.util.stream.Collectors.toMap(
+                CharadesRankingEntry::participantId,
+                CharadesRankingEntry::rank,
+                (left, right) -> left,
+                LinkedHashMap::new
+            ))
+        );
+        if (courseResult != SaveRoundResult.SUCCESS
+            && courseResult != SaveRoundResult.ALREADY_SAVED) {
+            throw new IllegalStateException(
+                "Failed to save charades course score: " + courseResult
+            );
+        }
+        charadesEventPublisher.publish(
+            room.roomId(),
+            GAME_ENDED_EVENT,
+            new CharadesGameEndedPayload(
+                state.totalRounds(),
+                Instant.now(),
+                finalRanking,
+                gameScoreService.getCourseTotals(room.roomId())
+            )
+        );
+        charadesRedis.clear(room.roomCode(), sessionSeq);
+        // 코스가 다음 칸으로 넘어갈 수 있도록 종료를 알린다(닌자 finishGame과 같은 계약).
+        applicationEventPublisher.publishEvent(
+            new GameSessionFinishedEvent(room.roomId(), sessionSeq)
+        );
+    }
+
+    private void saveCompletedRound(
+        Room room,
+        int sessionSeq,
+        int round
+    ) {
+        List<UUID> participantOrder = charadesRedis.getPresenterOrder(
+            room.roomCode(),
+            sessionSeq
+        );
+        Map<UUID, Long> earnedScores = charadesRedis.getRoundScores(
+            room.roomCode(),
+            sessionSeq,
+            round
+        );
+        LinkedHashMap<UUID, Long> roundScores = new LinkedHashMap<>();
+        participantOrder.forEach(participantId ->
+            roundScores.put(
+                participantId,
+                earnedScores.getOrDefault(participantId, 0L)
+            )
+        );
+
+        SaveRoundResult result = gameScoreService.saveRoundScores(
+            room.roomId(),
+            sessionSeq,
+            round,
+            roundScores
+        );
+        if (result == SaveRoundResult.ALREADY_SAVED) {
+            return;
+        }
+        if (result != SaveRoundResult.SUCCESS) {
+            throw new IllegalStateException(
+                "Failed to save charades round score: " + result
+            );
+        }
+
+        Map<UUID, Long> totals = gameScoreService.getSessionTotals(
+            room.roomId(),
+            sessionSeq
+        );
+        charadesEventPublisher.publish(
+            room.roomId(),
+            ROUND_SCORED_EVENT,
+            new CharadesRoundScoredPayload(
+                round,
+                buildRoundScoreEntries(participantOrder, roundScores, totals)
+            )
+        );
+    }
+
+    private List<CharadesScoreEntry> buildRoundScoreEntries(
+        List<UUID> participantOrder,
+        Map<UUID, Long> roundScores,
+        Map<UUID, Long> totals
+    ) {
+        Map<UUID, Integer> ranks = calculateRanks(participantOrder, totals);
+        return participantOrder.stream()
+            .map(participantId -> new CharadesScoreEntry(
+                participantId,
+                roundScores.getOrDefault(participantId, 0L),
+                totals.getOrDefault(participantId, 0L),
+                ranks.get(participantId)
+            ))
+            .sorted(
+                Comparator.comparingInt(CharadesScoreEntry::rank)
+                    .thenComparing(entry -> participantOrder.indexOf(
+                        entry.participantId()
+                    ))
+            )
+            .toList();
+    }
+
+    private List<CharadesRankingEntry> buildFinalRanking(
+        Room room,
+        int sessionSeq
+    ) {
+        List<UUID> participantOrder = charadesRedis.getPresenterOrder(
+            room.roomCode(),
+            sessionSeq
+        );
+        Map<UUID, Long> totals = gameScoreService.getSessionTotals(
+            room.roomId(),
+            sessionSeq
+        );
+        Map<UUID, Integer> ranks = calculateRanks(participantOrder, totals);
+        return participantOrder.stream()
+            .map(participantId -> new CharadesRankingEntry(
+                participantId,
+                totals.getOrDefault(participantId, 0L),
+                ranks.get(participantId)
+            ))
+            .sorted(
+                Comparator.comparingInt(CharadesRankingEntry::rank)
+                    .thenComparing(entry -> participantOrder.indexOf(
+                        entry.participantId()
+                    ))
+            )
+            .toList();
+    }
+
+    private static Map<UUID, Integer> calculateRanks(
+        List<UUID> participantOrder,
+        Map<UUID, Long> totals
+    ) {
+        List<UUID> sorted = new ArrayList<>(participantOrder);
+        sorted.sort(
+            Comparator.comparingLong(
+                (UUID participantId) ->
+                    totals.getOrDefault(participantId, 0L)
+            ).reversed()
+        );
+
+        LinkedHashMap<UUID, Integer> ranks = new LinkedHashMap<>();
+        Long previousScore = null;
+        int previousRank = 0;
+        for (int index = 0; index < sorted.size(); index++) {
+            UUID participantId = sorted.get(index);
+            long score = totals.getOrDefault(participantId, 0L);
+            int rank = previousScore != null && previousScore == score
+                ? previousRank
+                : index + 1;
+            ranks.put(participantId, rank);
+            previousScore = score;
+            previousRank = rank;
+        }
+        return Map.copyOf(ranks);
+    }
+
+    private static boolean isScheduledTurn(
+        CharadesGameState state,
+        int round,
+        int turn,
+        Instant expiresAt
+    ) {
+        return state != null
+            && state.status() == CharadesTurnStatus.PLAYING
+            && state.currentRound() == round
+            && state.currentTurn() == turn
+            && state.expiresAt() != null
+            && expiresAt.toEpochMilli() == state.expiresAt().toEpochMilli();
+    }
+
+    private void cancelPendingTimeout(String roomCode, int sessionSeq) {
+        ScheduledFuture<?> future = pendingTimeouts.remove(
+            timerKey(roomCode, sessionSeq)
+        );
+        if (future != null) {
+            future.cancel(false);
+        }
+    }
+
+    private static String timerKey(String roomCode, int sessionSeq) {
+        return roomCode + ":" + sessionSeq;
+    }
+
+    // 시연 모드에서 쓸 주제. 시연 제시어(악어/알파카/...)가 들어 있는 주제로 갈아끼운다 —
+    // 못 찾으면(주제 이름이 바뀌었다) 방장이 고른 주제를 그대로 쓰고 제시어는 랜덤이 된다.
+    private Long resolveTopicId(Room room, Long gameId, Long topicId) {
+        if (!room.demoMode()) {
+            return topicId;
+        }
+        return missionTopicRepository
+            .findByGameGameIdAndName(gameId, DemoScenario.CHARADES_TOPIC_NAME)
+            .map(topic -> {
+                log.info("[Charades] 시연 모드 : 주제를 '{}'로 고정하고 제시어는 {} 순서로 낸다",
+                    DemoScenario.CHARADES_TOPIC_NAME, DemoScenario.CHARADES_KEYWORDS);
+                return topic.getTopicId();
+            })
+            .orElseGet(() -> {
+                log.warn("[Charades] 시연 모드 : '{}' 주제를 못 찾아 원래 주제로 진행한다",
+                    DemoScenario.CHARADES_TOPIC_NAME);
+                return topicId;
+            });
+    }
+
+    // 시연용 제시어를 정해진 순서대로 하나 꺼낸다. 이미 나온 것과 목록에 없는 것은 건너뛴다.
+    private Mission selectDemoMission(Long topicId, Set<Long> usedMissionIds) {
+        Map<String, Mission> missionByKeyword = missionRepository
+            .findAllByTopicTopicIdAndMissionTypeAndIsActiveTrue(topicId, MISSION_TYPE)
+            .stream()
+            .filter(mission -> !usedMissionIds.contains(mission.getMissionId()))
+            .collect(Collectors.toMap(
+                Mission::getKeyword,
+                mission -> mission,
+                (first, ignored) -> first
+            ));
+        return DemoScenario.CHARADES_KEYWORDS.stream()
+            .map(missionByKeyword::get)
+            .filter(Objects::nonNull)
+            .findFirst()
+            // 시연 목록을 다 쓴 뒤의 턴은 평소 규칙(남은 제시어 중 랜덤)으로 이어간다.
+            .orElseGet(() -> selectUnusedMission(topicId, usedMissionIds));
+    }
+
+    private Mission selectUnusedMission(Long topicId, Set<Long> usedMissionIds) {
+        List<Mission> available = missionRepository
+            .findAllByTopicTopicIdAndMissionTypeAndIsActiveTrue(
+                topicId,
+                MISSION_TYPE
+            ).stream()
+            .filter(mission -> !usedMissionIds.contains(mission.getMissionId()))
+            .toList();
+        if (available.isEmpty()) {
+            throw new BusinessException(ErrorCode.CHARADES_NOT_ENOUGH_MISSIONS);
+        }
+        return available.get(ThreadLocalRandom.current().nextInt(available.size()));
+    }
+
+    private void requireCurrentGame(
+        CharadesGameState state,
+        Long gameId
+    ) {
+        if (!missionTopicRepository
+            .existsByTopicIdAndGameGameIdAndIsActiveTrue(
+                state.topicId(),
+                gameId
+            )) {
+            throw new BusinessException(ErrorCode.GAME_NOT_CURRENT);
+        }
+    }
+
+    private static void requirePlayingTurn(CharadesGameState state) {
+        if (state.status() != CharadesTurnStatus.PLAYING) {
+            throw new BusinessException(ErrorCode.CHARADES_TURN_NOT_PLAYING);
+        }
+    }
+
+    private static void requireNotExpired(
+        CharadesGameState state,
+        Instant now
+    ) {
+        if (state.expiresAt() == null || !now.isBefore(state.expiresAt())) {
+            throw new BusinessException(ErrorCode.CHARADES_TURN_EXPIRED);
+        }
+    }
+
+    // 끝난 턴의 제시어를 전원에게 공개하기 위한 조회. findCurrentMission과 달리 못 찾아도
+    // 예외를 던지지 않고 null을 준다 — 이 값은 타임아웃 이벤트에 얹히는 부가 정보일 뿐이라,
+    // 여기서 터지면 다음 표현자로 넘어가지 못하고 게임 자체가 멈춘다. 프론트는 word가 없을 때의
+    // 표시("아무도 못 맞혔어요")를 이미 갖고 있어서 null이면 그 화면으로 떨어진다.
+    //
+    // gameId 없이 topicId로 찾는 이유는 MissionRepository 쪽 주석 참고(스케줄러 콜백엔 gameId가 없다).
+    private String resolveRevealWord(CharadesGameState state) {
+        if (state == null || state.missionId() == null || state.topicId() == null) {
+            return null;
+        }
+        return missionRepository
+            .findByMissionIdAndTopicTopicIdAndMissionTypeAndIsActiveTrue(
+                state.missionId(),
+                state.topicId(),
+                MISSION_TYPE
+            )
+            .map(Mission::getKeyword)
+            .filter(keyword -> !keyword.isBlank())
+            .orElse(null);
+    }
+
+    private Mission findCurrentMission(
+        CharadesGameState state,
+        Long gameId
+    ) {
+        if (state.missionId() == null) {
+            throw new BusinessException(ErrorCode.CHARADES_WORD_NOT_FOUND);
+        }
+        Mission mission = missionRepository
+            .findByMissionIdAndGameGameIdAndTopicTopicIdAndMissionTypeAndIsActiveTrue(
+                state.missionId(),
+                gameId,
+                state.topicId(),
+                MISSION_TYPE
+            )
+            .orElseThrow(() ->
+                new BusinessException(ErrorCode.CHARADES_WORD_NOT_FOUND)
+            );
+        if (mission.getKeyword() == null || mission.getKeyword().isBlank()) {
+            throw new BusinessException(ErrorCode.CHARADES_WORD_NOT_FOUND);
+        }
+        return mission;
+    }
+
+    private List<Mission> findTopicMissions(Long gameId, Long topicId) {
+        return missionRepository
+            .findAllByGameGameIdAndTopicTopicIdAndMissionTypeAndIsActiveTrue(
+                gameId,
+                topicId,
+                MISSION_TYPE
+            );
+    }
+
+    private List<Participant> connectedParticipants(UUID roomId) {
+        return participantRepository.findAll(roomId).stream()
+            .filter(participant ->
+                participant.connectionStatus() == ConnectionStatus.CONNECTED
+            )
+            .toList();
+    }
+
+    private boolean isConnected(UUID roomId, UUID participantId) {
+        return participantRepository.findById(roomId, participantId)
+            .map(Participant::connectionStatus)
+            .filter(ConnectionStatus.CONNECTED::equals)
+            .isPresent();
+    }
+
+    private void validateTopic(Long gameId, Long topicId) {
+        if (gameId == null || topicId == null
+            || !missionTopicRepository
+                .existsByTopicIdAndGameGameIdAndIsActiveTrue(topicId, gameId)) {
+            throw new BusinessException(ErrorCode.CHARADES_TOPIC_NOT_FOUND);
+        }
+    }
+
+    private static void validateRoundCount(int totalRounds) {
+        // 코스 저장 시 games.min/max_rounds로 이미 검증되지만, 이 서비스는 코스 없이도
+        // 호출될 수 있는 진입점이라(테스트 등) 최소 조건은 스스로 지킨다.
+        if (totalRounds < 1) {
+            throw new BusinessException(ErrorCode.COURSE_INVALID_ROUND_COUNT);
+        }
+    }
+
+    private static void validatePlayerCount(int playerCount) {
+        if (playerCount < MIN_PLAYERS) {
+            throw new BusinessException(ErrorCode.CHARADES_NOT_ENOUGH_PLAYERS);
+        }
+        if (playerCount > MAX_PLAYERS) {
+            throw new BusinessException(ErrorCode.CHARADES_TOO_MANY_PLAYERS);
+        }
+    }
+
+    private Room resolveRoom(UUID roomId) {
+        return roomRepository.findById(roomId)
+            .orElseThrow(() -> new BusinessException(ErrorCode.ROOM_NOT_FOUND));
+    }
+}

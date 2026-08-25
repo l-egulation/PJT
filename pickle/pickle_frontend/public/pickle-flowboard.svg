@@ -1,0 +1,353 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1600" viewBox="0 0 2400 1600">
+  <defs>
+    <linearGradient id="boardBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffdf8"/>
+      <stop offset="0.62" stop-color="#fff7ec"/>
+      <stop offset="1" stop-color="#f6eadb"/>
+    </linearGradient>
+    <linearGradient id="phoneBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffdf9"/>
+      <stop offset="1" stop-color="#fff7ef"/>
+    </linearGradient>
+    <linearGradient id="peach" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffb99a"/>
+      <stop offset="1" stop-color="#ff805a"/>
+    </linearGradient>
+    <linearGradient id="brown" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4b2f21"/>
+      <stop offset="1" stop-color="#24150e"/>
+    </linearGradient>
+    <linearGradient id="clothCream" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8eee2"/>
+      <stop offset="1" stop-color="#e7d2bd"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#5a3824" flood-opacity="0.13"/>
+    </filter>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#6f4a31" flood-opacity="0.12"/>
+    </filter>
+    <pattern id="knit" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(28)">
+      <rect width="24" height="24" fill="#efe0cf"/>
+      <path d="M0 6h24M0 18h24" stroke="#d8c0aa" stroke-width="2" opacity="0.45"/>
+    </pattern>
+    <style>
+      .serif{font-family: Georgia, 'Times New Roman', serif}
+      .sans{font-family: Inter, Pretendard, 'Noto Sans KR', Arial, sans-serif}
+      .title{fill:#332116;font-weight:800}
+      .muted{fill:#8b7b6d}
+      .brown{fill:#3b2418}
+      .peachText{fill:#ff805a}
+      .line{stroke:#ead9ca;stroke-width:2}
+      .thin{stroke:#ead9ca;stroke-width:1.4}
+      .chip{fill:#fffaf4;stroke:#ead9ca;stroke-width:1.4}
+      .chipOn{fill:#3b2418}
+      .card{fill:#fffdf9;stroke:#ead9ca;stroke-width:1.5}
+      .tabText{font-size:14px;fill:#8b7b6d}
+      .screenLabel{font-size:24px;font-weight:800;fill:#352217}
+      .screenDesc{font-size:17px;fill:#7f7166}
+      .tiny{font-size:12px}
+      .small{font-size:14px}
+      .body{font-size:16px}
+      .body2{font-size:18px}
+      .h1{font-size:25px;font-weight:800}
+      .h2{font-size:21px;font-weight:800}
+      .btnText{font-size:17px;font-weight:800}
+    </style>
+  </defs>
+
+  <rect width="2400" height="1600" fill="url(#boardBg)"/>
+  <circle cx="190" cy="104" r="150" fill="#ffd9c8" opacity="0.28"/>
+  <circle cx="2180" cy="95" r="150" fill="#f2ddc6" opacity="0.38"/>
+  <circle cx="2100" cy="1470" r="170" fill="#f6d8bd" opacity="0.25"/>
+
+  <!-- Header app icons -->
+  <g transform="translate(116,58)" filter="url(#softShadow)">
+    <rect width="132" height="132" rx="30" fill="url(#brown)"/>
+    <text x="66" y="62" text-anchor="middle" class="serif" font-size="42" font-weight="800" fill="#fff8ef">pickle</text>
+    <text x="66" y="84" text-anchor="middle" class="sans" font-size="13" font-weight="800" fill="#ff9a76">pick your style</text>
+    <path d="M43 103h50M53 103c15-18 25-18 40 0" fill="none" stroke="#fff8ef" stroke-width="3" stroke-linecap="round"/>
+    <text x="108" y="30" class="sans" font-size="22" fill="#fff8ef">+</text>
+  </g>
+  <g transform="translate(285,58)" filter="url(#softShadow)">
+    <rect width="132" height="132" rx="30" fill="#ffe5d7" stroke="#e8cbb9"/>
+    <path d="M66 38c-9-13 12-20 12-2 0 8-12 11-12 20" fill="none" stroke="#332116" stroke-width="3" stroke-linecap="round"/>
+    <path d="M34 92h67M42 92c18-28 42-28 59 0" fill="none" stroke="#332116" stroke-width="4" stroke-linecap="round"/>
+    <text x="96" y="38" class="sans" font-size="22" fill="#6b5040">+</text>
+  </g>
+  <g transform="translate(1986,54)" filter="url(#softShadow)">
+    <rect x="58" y="10" width="128" height="132" rx="4" fill="#fff" stroke="#ead9ca" transform="rotate(10 122 76)"/>
+    <rect x="80" y="30" width="84" height="92" fill="#dac5af" transform="rotate(10 122 76)"/>
+    <path d="M108 47c20 16 42 16 62 0" fill="none" stroke="#f7eee4" stroke-width="10" transform="rotate(10 122 76)"/>
+    <circle cx="44" cy="96" r="42" fill="#ffb38f"/>
+    <text x="44" y="86" text-anchor="middle" class="sans" font-size="16" fill="#7b432c">pick</text>
+    <text x="44" y="105" text-anchor="middle" class="sans" font-size="16" fill="#7b432c">your</text>
+    <text x="44" y="124" text-anchor="middle" class="sans" font-size="16" fill="#7b432c">style</text>
+    <path d="M18 22c-9-13 12-20 12-2 0 8-12 11-12 20M-14 74h67M-6 74c18-28 42-28 59 0" transform="translate(20,34)" fill="none" stroke="#332116" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Header brand -->
+  <text x="1200" y="111" text-anchor="middle" class="serif" font-size="112" font-weight="800" fill="#332116">pickle</text>
+  <circle cx="1138" cy="38" r="9" fill="#ff805a"/>
+  <text x="1200" y="158" text-anchor="middle" class="serif" font-size="38" font-weight="700" fill="#ff805a">pick your style</text>
+  <text x="1200" y="205" text-anchor="middle" class="sans" font-size="24" fill="#74675f">내 옷장에서 오늘의 스타일을 골라주는 코디 추천 서비스</text>
+
+  <!-- Helper symbols -->
+  <g id="phoneChrome">
+    <rect width="300" height="520" rx="32" fill="url(#phoneBg)" stroke="#d9cabd" stroke-width="2.2" filter="url(#shadow)"/>
+    <text x="25" y="27" class="sans" font-size="10" font-weight="800" fill="#342117">9:41</text>
+    <circle cx="255" cy="24" r="3" fill="#342117"/>
+    <rect x="264" y="21" width="16" height="6" rx="2" fill="none" stroke="#342117" stroke-width="1.2"/>
+  </g>
+
+  <!-- Phone component positions -->
+  <!-- Row 1 -->
+  <g transform="translate(88,264)">
+    <use href="#phoneChrome"/>
+    <rect x="16" y="44" width="268" height="320" rx="18" fill="#f7eee4"/>
+    <path d="M16 44h268v320H16z" fill="url(#knit)" opacity="0.55"/>
+    <rect x="154" y="78" width="64" height="92" rx="2" fill="#fff8ef" transform="rotate(-12 186 124)" filter="url(#softShadow)"/>
+    <text x="186" y="116" text-anchor="middle" class="serif" font-size="16" font-style="italic" fill="#7d604f" transform="rotate(-12 186 124)">today's</text>
+    <text x="186" y="138" text-anchor="middle" class="serif" font-size="16" font-style="italic" fill="#7d604f" transform="rotate(-12 186 124)">best outfit</text>
+    <circle cx="218" cy="174" r="24" fill="#e99c7b" opacity="0.9"/>
+    <text x="150" y="245" text-anchor="middle" class="serif" font-size="58" font-weight="800" fill="#332116">pickle</text>
+    <text x="150" y="284" text-anchor="middle" class="serif" font-size="24" font-weight="700" fill="#ff805a">pick your style</text>
+    <rect x="30" y="412" width="240" height="44" rx="9" fill="url(#brown)"/>
+    <text x="150" y="440" text-anchor="middle" class="sans btnText" fill="#fff8ef">시작하기</text>
+    <text x="150" y="494" text-anchor="middle" class="sans tabText">나만의 스타일 파트너, pickle</text>
+    <text x="150" y="582" text-anchor="middle" class="sans screenLabel">1. 시작</text>
+    <text x="150" y="615" text-anchor="middle" class="sans screenDesc">브랜드 중심의 감각적인 온보딩</text>
+  </g>
+
+  <g transform="translate(443,264)">
+    <use href="#phoneChrome"/>
+    <rect x="57" y="54" width="186" height="7" rx="4" fill="#f0e5dc"/>
+    <rect x="57" y="54" width="60" height="7" rx="4" fill="#ff9d79"/>
+    <text x="30" y="60" class="sans small title">1/4</text>
+    <text x="38" y="120" class="sans h1 title">나의 취향을</text>
+    <text x="38" y="152" class="sans h1 title">알려주세요</text>
+    <text x="38" y="184" class="sans small muted">선택한 스타일을 바탕으로</text>
+    <text x="38" y="205" class="sans small muted">더 정밀한 추천을 드려요.</text>
+    <g class="sans body">
+      <rect x="34" y="246" width="100" height="44" rx="22" class="chip"/><text x="84" y="274" text-anchor="middle" fill="#5c4a3d">미니멀</text>
+      <rect x="154" y="246" width="112" height="44" rx="22" class="chipOn"/><text x="210" y="274" text-anchor="middle" fill="#fff8ef">꾸안꾸</text>
+      <rect x="34" y="309" width="100" height="44" rx="22" class="chip"/><text x="84" y="337" text-anchor="middle" fill="#5c4a3d">러블리</text>
+      <rect x="154" y="309" width="112" height="44" rx="22" class="chip"/><text x="210" y="337" text-anchor="middle" fill="#5c4a3d">스트릿</text>
+      <rect x="34" y="372" width="100" height="44" rx="22" class="chip"/><text x="84" y="400" text-anchor="middle" fill="#5c4a3d">포멀</text>
+      <rect x="154" y="372" width="112" height="44" rx="22" class="chip"/><text x="210" y="400" text-anchor="middle" fill="#5c4a3d">빈티지</text>
+      <rect x="34" y="435" width="100" height="44" rx="22" class="chip"/><text x="84" y="463" text-anchor="middle" fill="#5c4a3d">올드머니</text>
+      <rect x="154" y="435" width="112" height="44" rx="22" class="chip"/><text x="210" y="463" text-anchor="middle" fill="#5c4a3d">시크</text>
+    </g>
+    <rect x="34" y="480" width="232" height="48" rx="10" fill="url(#peach)"/>
+    <text x="150" y="511" text-anchor="middle" class="sans btnText" fill="#fff8ef">다음</text>
+    <g transform="translate(0,490)" class="sans tabText"><text x="36" y="16">홈</text><text x="91" y="16">추천</text><text x="148" y="16" fill="#ff805a">옷장</text><text x="204" y="16">룩북</text><text x="259" y="16">MY</text></g>
+    <text x="150" y="582" text-anchor="middle" class="sans screenLabel">2. 추구미 설정</text>
+    <text x="150" y="615" text-anchor="middle" class="sans screenDesc">감각적인 스타일 태그 선택</text>
+  </g>
+
+  <g transform="translate(798,264)">
+    <use href="#phoneChrome"/>
+    <rect x="57" y="54" width="186" height="7" rx="4" fill="#f0e5dc"/>
+    <rect x="57" y="54" width="92" height="7" rx="4" fill="#ff9d79"/>
+    <text x="30" y="60" class="sans small title">2/4</text>
+    <text x="150" y="116" text-anchor="middle" class="sans h1 title">옷장부터 채워볼까요?</text>
+    <rect x="65" y="160" width="170" height="130" rx="24" fill="#efe0ce" stroke="#d9c4b1"/>
+    <rect x="82" y="184" width="136" height="75" rx="8" fill="#d0b59d"/>
+    <path d="M96 200h108M105 200v52M132 200v52M159 200v52M186 200v52" stroke="#7e5a42" stroke-width="4" stroke-linecap="round"/>
+    <rect x="92" y="255" width="118" height="16" rx="8" fill="#b99377"/>
+    <text x="150" y="326" text-anchor="middle" class="sans small muted">내 옷장을 채워야</text>
+    <text x="150" y="348" text-anchor="middle" class="sans small muted">나에게 딱 맞는 코디를 추천받을 수 있어요.</text>
+    <rect x="34" y="391" width="232" height="48" rx="10" fill="url(#brown)"/>
+    <text x="150" y="422" text-anchor="middle" class="sans btnText" fill="#fff8ef">사진으로 등록</text>
+    <rect x="34" y="452" width="232" height="48" rx="10" fill="#fffdf9" stroke="#d8c8bb"/>
+    <text x="150" y="483" text-anchor="middle" class="sans btnText" fill="#3b2418">쇼핑몰 URL 참고 등록</text>
+    <g transform="translate(0,490)" class="sans tabText"><text x="36" y="16">홈</text><text x="91" y="16">추천</text><text x="148" y="16" fill="#ff805a">옷장</text><text x="204" y="16">룩북</text><text x="259" y="16">MY</text></g>
+    <text x="150" y="582" text-anchor="middle" class="sans screenLabel">3. 옷장 시작</text>
+    <text x="150" y="615" text-anchor="middle" class="sans screenDesc">옷 등록을 유도하는 첫 단계</text>
+  </g>
+
+  <g transform="translate(1153,264)">
+    <use href="#phoneChrome"/>
+    <text x="28" y="64" class="sans h2 title">내 옷장</text>
+    <text x="252" y="64" class="sans body title">⌕</text>
+    <g class="sans tiny">
+      <rect x="24" y="86" width="34" height="24" rx="12" fill="#3b2418"/><text x="41" y="102" text-anchor="middle" fill="#fff8ef">전체</text>
+      <text x="75" y="102" fill="#77685f">top</text><text x="118" y="102" fill="#77685f">bottom</text><text x="180" y="102" fill="#77685f">outer</text><text x="228" y="102" fill="#77685f">shoes</text>
+    </g>
+    <g class="sans small">
+      <rect x="24" y="120" width="120" height="158" rx="12" class="card"/>
+      <rect x="34" y="132" width="100" height="95" rx="10" fill="#ead7c4"/><path d="M61 139c10 18 36 18 46 0v80H61z" fill="#f7eee4"/>
+      <text x="36" y="251" fill="#3b2418" font-weight="800">크롭 니트</text><text x="36" y="270" fill="#77685f">아이보리</text>
+      <rect x="156" y="120" width="120" height="158" rx="12" class="card"/>
+      <rect x="166" y="132" width="100" height="95" rx="10" fill="#f0cdc6"/><path d="M196 143h40v74h-40z" fill="#e7a9a4"/>
+      <text x="168" y="251" fill="#3b2418" font-weight="800">니트 가디건</text><text x="168" y="270" fill="#77685f">핑크</text>
+      <rect x="24" y="292" width="120" height="158" rx="12" class="card"/>
+      <rect x="34" y="304" width="100" height="95" rx="10" fill="#f4eee5"/><path d="M63 315h44v78H63z" fill="#fff"/>
+      <text x="36" y="423" fill="#3b2418" font-weight="800">화이트 셔츠</text><text x="36" y="442" fill="#77685f">화이트</text>
+      <rect x="156" y="292" width="120" height="158" rx="12" class="card"/>
+      <rect x="166" y="304" width="100" height="95" rx="10" fill="#e5edf3"/><path d="M191 310h17l-4 82h-22zM224 310h17l9 82h-22z" fill="#9db8c9"/>
+      <text x="168" y="423" fill="#3b2418" font-weight="800">데님 팬츠</text><text x="168" y="442" fill="#77685f">연청</text>
+    </g>
+    <circle cx="255" cy="449" r="25" fill="url(#brown)"/><text x="255" y="458" text-anchor="middle" class="sans" font-size="30" fill="#fff8ef">+</text>
+    <g transform="translate(0,490)" class="sans tabText"><text x="36" y="16">홈</text><text x="91" y="16">추천</text><text x="148" y="16" fill="#ff805a">옷장</text><text x="204" y="16">룩북</text><text x="259" y="16">MY</text></g>
+    <text x="150" y="582" text-anchor="middle" class="sans screenLabel">4. 내 옷장</text>
+    <text x="150" y="615" text-anchor="middle" class="sans screenDesc">쇼핑몰처럼 탐색하는 옷장</text>
+  </g>
+
+  <g transform="translate(1508,264)">
+    <use href="#phoneChrome"/>
+    <text x="24" y="64" class="sans body title">‹</text><text x="150" y="64" text-anchor="middle" class="sans h2 title">옷 등록</text><text x="268" y="64" class="sans body title">✓</text>
+    <rect x="33" y="88" width="234" height="96" rx="12" fill="#fffdf9" stroke="#ffc0a7" stroke-dasharray="4 4"/>
+    <text x="150" y="131" text-anchor="middle" class="sans" font-size="28" fill="#5d4432">＋</text>
+    <text x="150" y="158" text-anchor="middle" class="sans small muted">사진 추가</text>
+    <g class="sans small">
+      <text x="33" y="214" fill="#5d4432" font-weight="800">쇼핑몰 URL</text><rect x="33" y="224" width="234" height="32" rx="8" class="card"/><text x="46" y="245" fill="#b8a99d">https://</text>
+      <text x="33" y="282" fill="#5d4432" font-weight="800">옷 이름</text><rect x="33" y="292" width="234" height="32" rx="8" class="card"/><text x="46" y="313" fill="#b8a99d">예) 크림 니트</text>
+      <text x="33" y="349" fill="#5d4432" font-weight="800">카테고리</text><rect x="33" y="359" width="234" height="34" rx="8" class="card"/><text x="46" y="381" fill="#8b7b6d">선택해주세요</text>
+      <text x="33" y="420" fill="#5d4432" font-weight="800">색상</text>
+      <circle cx="47" cy="449" r="14" fill="#f5eadc" stroke="#d6c2b2"/><circle cx="83" cy="449" r="14" fill="#f8bd96"/><circle cx="119" cy="449" r="14" fill="#f0837b"/><circle cx="155" cy="449" r="14" fill="#829dbb"/><circle cx="191" cy="449" r="14" fill="#1d1a18"/><circle cx="227" cy="449" r="14" fill="#f6f0e8" stroke="#d6c2b2"/>
+    </g>
+    <rect x="34" y="480" width="232" height="45" rx="10" fill="url(#peach)"/>
+    <text x="150" y="509" text-anchor="middle" class="sans btnText" fill="#fff8ef">저장하기</text>
+    <g transform="translate(0,490)" class="sans tabText"><text x="36" y="16">홈</text><text x="91" y="16">추천</text><text x="148" y="16" fill="#ff805a">옷장</text><text x="204" y="16">룩북</text><text x="259" y="16">MY</text></g>
+    <text x="150" y="582" text-anchor="middle" class="sans screenLabel">5. 옷 등록</text>
+    <text x="150" y="615" text-anchor="middle" class="sans screenDesc">감각적인 모바일 입력 폼</text>
+  </g>
+
+  <g transform="translate(1863,264)">
+    <use href="#phoneChrome"/>
+    <text x="26" y="64" class="sans h2 title">홈</text><text x="262" y="64" class="sans body title">⌂</text>
+    <rect x="24" y="90" width="252" height="116" rx="18" fill="#fff1df" stroke="#eed8c7"/>
+    <text x="47" y="128" class="sans h2 title">오늘 뭐 입지?</text><text x="47" y="158" class="sans small muted">5.20 화요일</text>
+    <text x="47" y="184" class="sans body2 title">☀ 22°C / 맑음</text><text x="196" y="184" class="sans body muted">›</text>
+    <text x="47" y="203" class="sans small title">TPO  출근 · 데이트</text>
+    <text x="24" y="250" class="sans h2 title">오늘의 Pick</text><rect x="220" y="232" width="52" height="24" rx="12" fill="#ffe2cd"/><text x="246" y="249" text-anchor="middle" class="sans tiny peachText" font-weight="800">추천</text>
+    <rect x="36" y="269" width="228" height="164" rx="16" class="card"/>
+    <path d="M80 293c18 25 50 25 68 0v95H80z" fill="#dbe8f1"/>
+    <path d="M137 388h64l25-94h-67z" fill="#fff3e1"/>
+    <path d="M192 303c36 28 45 64 20 95" fill="none" stroke="#d1a780" stroke-width="10" stroke-linecap="round"/>
+    <ellipse cx="204" cy="398" rx="24" ry="10" fill="#eee9df"/><ellipse cx="235" cy="398" rx="24" ry="10" fill="#eee9df"/>
+    <text x="150" y="462" text-anchor="middle" class="sans body title">산뜻하고 깔끔한 출근룩</text>
+    <rect x="36" y="480" width="228" height="42" rx="10" fill="#fffdf9" stroke="#d8c8bb"/>
+    <text x="150" y="507" text-anchor="middle" class="sans btnText" fill="#3b2418">추천 조건 설정하기</text>
+    <g transform="translate(0,490)" class="sans tabText"><text x="36" y="16" fill="#ff805a">홈</text><text x="91" y="16">추천</text><text x="148" y="16">옷장</text><text x="204" y="16">룩북</text><text x="259" y="16">MY</text></g>
+    <text x="150" y="582" text-anchor="middle" class="sans screenLabel">6. 홈</text>
+    <text x="150" y="615" text-anchor="middle" class="sans screenDesc">날씨와 오늘의 추천 코디</text>
+  </g>
+
+  <!-- Row 2 -->
+  <g transform="translate(88,946)">
+    <use href="#phoneChrome"/>
+    <text x="24" y="64" class="sans body title">‹</text><text x="150" y="64" text-anchor="middle" class="sans h2 title">추천 조건</text>
+    <text x="24" y="108" class="sans small title">TPO 상황</text>
+    <g class="sans tiny">
+      <rect x="24" y="122" width="42" height="48" rx="16" class="chipOn"/><text x="45" y="151" text-anchor="middle" fill="#fff8ef">출근</text>
+      <rect x="76" y="122" width="42" height="48" rx="16" class="chip"/><text x="97" y="151" text-anchor="middle" fill="#5d4a3d">데이트</text>
+      <rect x="128" y="122" width="42" height="48" rx="16" class="chip"/><text x="149" y="151" text-anchor="middle" fill="#5d4a3d">약속</text>
+      <rect x="180" y="122" width="42" height="48" rx="16" class="chip"/><text x="201" y="151" text-anchor="middle" fill="#5d4a3d">여행</text>
+      <rect x="232" y="122" width="42" height="48" rx="16" class="chip"/><text x="253" y="151" text-anchor="middle" fill="#5d4a3d">일상</text>
+    </g>
+    <text x="24" y="205" class="sans small title">분위기 Vibe</text>
+    <g class="sans tiny"><rect x="24" y="220" width="54" height="30" rx="15" class="chip"/><text x="51" y="240" text-anchor="middle" fill="#5d4a3d">차분한</text><rect x="86" y="220" width="50" height="30" rx="15" class="chip"/><text x="111" y="240" text-anchor="middle" fill="#5d4a3d">위트</text><rect x="144" y="220" width="58" height="30" rx="15" class="chip"/><text x="173" y="240" text-anchor="middle" fill="#5d4a3d">시크한</text><rect x="210" y="220" width="58" height="30" rx="15" class="chip"/><text x="239" y="240" text-anchor="middle" fill="#5d4a3d">러블리</text></g>
+    <text x="24" y="287" class="sans small title">날씨 반영</text><text x="24" y="325" class="sans body2 peachText">☀ 22°C / 맑음</text><line x1="36" y1="356" x2="260" y2="356" stroke="#f0d7c3" stroke-width="5" stroke-linecap="round"/><circle cx="146" cy="356" r="10" fill="#ff9a76"/>
+    <text x="24" y="406" class="sans small title">선호 스타일</text>
+    <g class="sans tiny"><rect x="24" y="421" width="68" height="30" rx="15" class="chipOn"/><text x="58" y="441" text-anchor="middle" fill="#fff8ef">미니멀</text><rect x="102" y="421" width="68" height="30" rx="15" class="chipOn"/><text x="136" y="441" text-anchor="middle" fill="#fff8ef">꾸안꾸</text><rect x="180" y="421" width="38" height="30" rx="15" class="chip"/><text x="199" y="441" text-anchor="middle" fill="#5d4a3d">＋</text><rect x="24" y="461" width="58" height="30" rx="15" class="chip"/><text x="53" y="481" text-anchor="middle" fill="#5d4a3d">러블리</text><rect x="92" y="461" width="56" height="30" rx="15" class="chip"/><text x="120" y="481" text-anchor="middle" fill="#5d4a3d">포멀</text><rect x="158" y="461" width="68" height="30" rx="15" class="chip"/><text x="192" y="481" text-anchor="middle" fill="#5d4a3d">올드머니</text></g>
+    <rect x="34" y="481" width="232" height="44" rx="10" fill="url(#brown)"/><text x="150" y="509" text-anchor="middle" class="sans btnText" fill="#fff8ef">추천받기</text>
+    <g transform="translate(0,490)" class="sans tabText"><text x="36" y="16">홈</text><text x="91" y="16" fill="#ff805a">추천</text><text x="148" y="16">옷장</text><text x="204" y="16">룩북</text><text x="259" y="16">MY</text></g>
+    <text x="150" y="582" text-anchor="middle" class="sans screenLabel">7. 추천 조건</text>
+    <text x="150" y="615" text-anchor="middle" class="sans screenDesc">게임형 필터와 패션 감성 결합</text>
+  </g>
+
+  <g transform="translate(443,946)">
+    <use href="#phoneChrome"/>
+    <text x="24" y="64" class="sans body title">‹</text><text x="150" y="64" text-anchor="middle" class="sans h2 title">추천 결과</text><text x="262" y="64" class="sans body peachText">♥</text>
+    <rect x="32" y="82" width="236" height="236" rx="18" class="card"/>
+    <text x="150" y="115" text-anchor="middle" class="sans small title">오늘의 추천 코디</text>
+    <path d="M64 140c22 26 60 26 82 0v94H64z" fill="#dbe8f1"/>
+    <path d="M140 232h76l22-92h-84z" fill="#fff1df"/>
+    <path d="M175 158c36 20 54 50 30 75" fill="none" stroke="#d2a47d" stroke-width="13" stroke-linecap="round"/>
+    <ellipse cx="178" cy="259" rx="27" ry="11" fill="#eee9df"/><ellipse cx="224" cy="259" rx="27" ry="11" fill="#eee9df"/>
+    <circle cx="99" cy="295" r="8" fill="#f5eadc"/><circle cx="124" cy="295" r="8" fill="#d6c1aa"/><circle cx="149" cy="295" r="8" fill="#dbe8f1"/><circle cx="174" cy="295" r="8" fill="#e7d2bd"/>
+    <text x="32" y="352" class="sans small title">왜 추천했나요?</text><text x="32" y="380" class="sans small muted">산뜻한 셔츠와 아이보리 팬츠 조합이</text><text x="32" y="401" class="sans small muted">맑은 날 출근룩에 잘 어울려요.</text>
+    <g class="sans small"><rect x="32" y="425" width="110" height="38" rx="9" fill="url(#brown)"/><text x="87" y="449" text-anchor="middle" fill="#fff8ef" font-weight="800">오늘 입기</text><rect x="158" y="425" width="110" height="38" rx="9" class="card"/><text x="213" y="449" text-anchor="middle" fill="#3b2418" font-weight="800">저장하기</text><rect x="32" y="473" width="110" height="38" rx="9" class="card"/><text x="87" y="497" text-anchor="middle" fill="#3b2418" font-weight="800">다시 추천</text><rect x="158" y="473" width="110" height="38" rx="9" class="card"/><text x="213" y="497" text-anchor="middle" fill="#3b2418" font-weight="800">공유하기</text></g>
+    <g transform="translate(0,490)" class="sans tabText"><text x="36" y="16">홈</text><text x="91" y="16" fill="#ff805a">추천</text><text x="148" y="16">옷장</text><text x="204" y="16">룩북</text><text x="259" y="16">MY</text></g>
+    <text x="150" y="582" text-anchor="middle" class="sans screenLabel">8. 추천 결과</text>
+    <text x="150" y="615" text-anchor="middle" class="sans screenDesc">가장 중요한 코디 제안 화면</text>
+  </g>
+
+  <g transform="translate(798,946)">
+    <use href="#phoneChrome"/>
+    <text x="24" y="64" class="sans body title">‹</text><text x="150" y="64" text-anchor="middle" class="sans h2 title">코디 평가</text>
+    <path d="M113 85c20-22 54-15 62 14 9 35-30 55-63 35" fill="none" stroke="#7a5d46" stroke-width="3" stroke-linecap="round"/>
+    <text x="150" y="166" text-anchor="middle" class="sans h2 title">오늘 추천된 코디는</text><text x="150" y="194" text-anchor="middle" class="sans h2 title">어땠나요?</text>
+    <text x="150" y="250" text-anchor="middle" class="sans" font-size="46" fill="#ff956e">★★★★★</text>
+    <g class="sans small">
+      <text x="32" y="302" fill="#5d4432" font-weight="800">날씨 적합도</text><rect x="32" y="316" width="68" height="32" rx="16" class="chip"/><text x="66" y="337" text-anchor="middle" fill="#5d4a3d">낮음</text><rect x="116" y="316" width="68" height="32" rx="16" class="chipOn"/><text x="150" y="337" text-anchor="middle" fill="#fff8ef">적당함</text><rect x="200" y="316" width="68" height="32" rx="16" class="chip"/><text x="234" y="337" text-anchor="middle" fill="#5d4a3d">높음</text>
+      <text x="32" y="378" fill="#5d4432" font-weight="800">활동성</text><rect x="32" y="392" width="68" height="32" rx="16" class="chip"/><text x="66" y="413" text-anchor="middle" fill="#5d4a3d">낮음</text><rect x="116" y="392" width="68" height="32" rx="16" class="chipOn"/><text x="150" y="413" text-anchor="middle" fill="#fff8ef">적당함</text><rect x="200" y="392" width="68" height="32" rx="16" class="chip"/><text x="234" y="413" text-anchor="middle" fill="#5d4a3d">높음</text>
+      <text x="32" y="454" fill="#5d4432" font-weight="800">다시 입을 의향</text><rect x="32" y="468" width="68" height="32" rx="16" class="chip"/><text x="66" y="489" text-anchor="middle" fill="#5d4a3d">아니요</text><rect x="116" y="468" width="68" height="32" rx="16" class="chip"/><text x="150" y="489" text-anchor="middle" fill="#5d4a3d">보통</text><rect x="200" y="468" width="68" height="32" rx="16" class="chipOn"/><text x="234" y="489" text-anchor="middle" fill="#fff8ef">네!</text>
+    </g>
+    <rect x="34" y="481" width="232" height="44" rx="10" fill="url(#brown)"/><text x="150" y="509" text-anchor="middle" class="sans btnText" fill="#fff8ef">완료</text>
+    <g transform="translate(0,490)" class="sans tabText"><text x="36" y="16">홈</text><text x="91" y="16" fill="#ff805a">추천</text><text x="148" y="16">옷장</text><text x="204" y="16">룩북</text><text x="259" y="16">MY</text></g>
+    <text x="150" y="582" text-anchor="middle" class="sans screenLabel">9. 코디 평가</text>
+    <text x="150" y="615" text-anchor="middle" class="sans screenDesc">인터랙티브한 평가 UI</text>
+  </g>
+
+  <g transform="translate(1153,946)">
+    <use href="#phoneChrome"/>
+    <text x="24" y="64" class="sans body title">‹</text><text x="150" y="64" text-anchor="middle" class="sans h2 title">플래너</text><text x="262" y="64" class="sans body title">›</text>
+    <text x="36" y="106" class="sans body title">2025년 5월</text>
+    <g class="sans tiny" text-anchor="middle">
+      <text x="45" y="143" fill="#ff805a">일</text><text x="80" y="143">월</text><text x="115" y="143">화</text><text x="150" y="143">수</text><text x="185" y="143">목</text><text x="220" y="143">금</text><text x="255" y="143">토</text>
+      <text x="45" y="181">4</text><text x="80" y="181">5</text><text x="115" y="181">6</text><text x="150" y="181">7</text><text x="185" y="181">8</text><text x="220" y="181">9</text><text x="255" y="181">10</text>
+      <text x="45" y="219" fill="#ff805a">11</text><text x="80" y="219">12</text><text x="115" y="219">13</text><text x="150" y="219">14</text><text x="185" y="219">15</text><text x="220" y="219">16</text><text x="255" y="219">17</text>
+      <text x="45" y="257">18</text><text x="80" y="257">19</text><circle cx="115" cy="251" r="18" fill="#3b2418"/><text x="115" y="257" fill="#fff8ef">20</text><text x="150" y="257">21</text><text x="185" y="257">22</text><text x="220" y="257">23</text><text x="255" y="257">24</text>
+      <text x="45" y="295">25</text><text x="80" y="295">26</text><text x="115" y="295">27</text><text x="150" y="295">28</text><text x="185" y="295">29</text><text x="220" y="295">30</text><text x="255" y="295">31</text>
+    </g>
+    <rect x="32" y="328" width="236" height="145" rx="16" class="card"/>
+    <text x="52" y="362" class="sans body title">5.20 (화) 오늘의 코디</text>
+    <path d="M62 388c14 18 39 18 53 0v60H62z" fill="#dbe8f1"/><path d="M122 448h46l14-60h-52z" fill="#fff1df"/><path d="M178 397c26 16 37 36 22 54" fill="none" stroke="#d2a47d" stroke-width="9" stroke-linecap="round"/><ellipse cx="215" cy="451" rx="20" ry="8" fill="#eee9df"/>
+    <text x="52" y="508" class="sans small muted">☀ 22°C  ·  맑음  ·  출근</text>
+    <rect x="34" y="481" width="232" height="44" rx="10" fill="url(#peach)"/><text x="150" y="509" text-anchor="middle" class="sans btnText" fill="#fff8ef">오늘 코디 평가하기</text>
+    <g transform="translate(0,490)" class="sans tabText"><text x="36" y="16">홈</text><text x="91" y="16">추천</text><text x="148" y="16">옷장</text><text x="204" y="16" fill="#ff805a">룩북</text><text x="259" y="16">MY</text></g>
+    <text x="150" y="582" text-anchor="middle" class="sans screenLabel">10. 플래너</text>
+    <text x="150" y="615" text-anchor="middle" class="sans screenDesc">달력형 코디 기록</text>
+  </g>
+
+  <g transform="translate(1508,946)">
+    <use href="#phoneChrome"/>
+    <text x="24" y="64" class="sans body title">‹</text><text x="150" y="64" text-anchor="middle" class="sans h2 title">룩북</text>
+    <g class="sans tiny"><rect x="25" y="83" width="46" height="24" rx="12" class="chipOn"/><text x="48" y="100" text-anchor="middle" fill="#fff8ef">전체</text><text x="87" y="100" fill="#77685f">미니멀</text><text x="148" y="100" fill="#77685f">꾸안꾸</text><text x="208" y="100" fill="#77685f">러블리</text></g>
+    <g>
+      <rect x="24" y="124" width="110" height="160" rx="12" class="card"/><rect x="34" y="134" width="90" height="118" rx="10" fill="#d5c6b8"/><path d="M56 148c18 18 48 18 66 0v94H56z" fill="#f2e6d8"/><text x="113" y="270" class="sans body peachText">♡</text>
+      <rect x="150" y="124" width="110" height="160" rx="12" class="card"/><rect x="160" y="134" width="90" height="118" rx="10" fill="#ead8cf"/><path d="M181 148c15 19 42 19 58 0v94H181z" fill="#fff7ee"/><text x="239" y="270" class="sans body peachText">♡</text>
+      <rect x="24" y="300" width="110" height="160" rx="12" class="card"/><rect x="34" y="310" width="90" height="118" rx="10" fill="#c1d5df"/><path d="M55 324c16 16 45 16 61 0v94H55z" fill="#9fbacb"/><text x="113" y="446" class="sans body peachText">♡</text>
+      <rect x="150" y="300" width="110" height="160" rx="12" class="card"/><rect x="160" y="310" width="90" height="118" rx="10" fill="#eee0d4"/><path d="M181 324c16 18 46 18 62 0v94H181z" fill="#fff"/><text x="239" y="446" class="sans body peachText">♡</text>
+    </g>
+    <rect x="38" y="469" width="224" height="36" rx="10" fill="#fffdf9" stroke="#d8c8bb"/><text x="150" y="492" text-anchor="middle" class="sans small title">내 옷장으로 비슷하게 만들기</text>
+    <g transform="translate(0,490)" class="sans tabText"><text x="36" y="16">홈</text><text x="91" y="16">추천</text><text x="148" y="16">옷장</text><text x="204" y="16" fill="#ff805a">룩북</text><text x="259" y="16">MY</text></g>
+    <text x="150" y="582" text-anchor="middle" class="sans screenLabel">11. 룩북</text>
+    <text x="150" y="615" text-anchor="middle" class="sans screenDesc">패션 피드형 참고 화면</text>
+  </g>
+
+  <g transform="translate(1863,946)">
+    <use href="#phoneChrome"/>
+    <text x="262" y="64" class="sans body title">⚙</text>
+    <circle cx="68" cy="112" r="42" fill="#fff1df" stroke="#ead9ca"/>
+    <path d="M45 106c16 14 40 14 56 0" fill="none" stroke="#7a4d2d" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="58" cy="102" r="4" fill="#3b2418"/><circle cx="80" cy="102" r="4" fill="#3b2418"/><circle cx="69" cy="116" r="5" fill="#7a4d2d"/>
+    <text x="124" y="102" class="sans h2 title">pickle lover</text><text x="124" y="126" class="sans small muted">@pick_me</text>
+    <rect x="124" y="146" width="128" height="32" rx="8" class="card"/><text x="188" y="167" text-anchor="middle" class="sans small title">프로필 편집</text>
+    <text x="32" y="221" class="sans body title">나의 스타일</text><g class="sans tiny"><rect x="32" y="239" width="58" height="30" rx="15" class="chip"/><text x="61" y="259" text-anchor="middle" fill="#5d4a3d">미니멀</text><rect x="98" y="239" width="62" height="30" rx="15" class="chip"/><text x="129" y="259" text-anchor="middle" fill="#5d4a3d">꾸안꾸</text><rect x="168" y="239" width="56" height="30" rx="15" class="chip"/><text x="196" y="259" text-anchor="middle" fill="#5d4a3d">시크한</text><text x="242" y="259" class="sans body title">＋</text></g>
+    <g class="sans"><text x="65" y="331" text-anchor="middle" class="h2 title">128</text><text x="65" y="356" text-anchor="middle" class="small muted">내 옷장</text><text x="150" y="331" text-anchor="middle" class="h2 title">36</text><text x="150" y="356" text-anchor="middle" class="small muted">저장한 코디</text><text x="235" y="331" text-anchor="middle" class="h2 title">52</text><text x="235" y="356" text-anchor="middle" class="small muted">평가한 코디</text></g>
+    <rect x="28" y="391" width="244" height="86" rx="16" fill="#fff7ef" stroke="#ead9ca"/>
+    <text x="47" y="423" class="sans small title">아바타로 나의 스타일 보기</text><rect x="48" y="438" width="54" height="38" rx="10" fill="#ffe0ce"/><path d="M64 447h24v25H64z" fill="#443024"/><text x="118" y="458" class="sans tiny muted">다양한 코디를</text><text x="118" y="475" class="sans tiny muted">미리 입어볼 수 있어요.</text><rect x="190" y="444" width="64" height="28" rx="8" class="card"/><text x="222" y="463" text-anchor="middle" class="sans tiny title">체험하기</text>
+    <g transform="translate(0,490)" class="sans tabText"><text x="36" y="16">홈</text><text x="91" y="16">추천</text><text x="148" y="16">옷장</text><text x="204" y="16">룩북</text><text x="259" y="16" fill="#ff805a">MY</text></g>
+    <text x="150" y="582" text-anchor="middle" class="sans screenLabel">12. MY</text>
+    <text x="150" y="615" text-anchor="middle" class="sans screenDesc">프로필과 스타일 기록</text>
+  </g>
+
+  <rect x="740" y="1510" width="920" height="54" rx="27" fill="#fffdf9" stroke="#ead9ca"/>
+  <text x="1200" y="1545" text-anchor="middle" class="sans" font-size="22" fill="#6f625a">
+    나만의 스타일을 고르는 즐거운 하루, <tspan fill="#ff805a" font-weight="800">pickle</tspan>과 함께해요.
+  </text>
+</svg>

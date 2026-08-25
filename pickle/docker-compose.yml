@@ -1,0 +1,65 @@
+services:
+  backend:
+    build:
+      context: ./pickle_backend
+      dockerfile: Dockerfile
+    environment:
+      SECRET_KEY: ${SECRET_KEY:-local-development-key-change-in-production}
+      DEBUG: ${DEBUG:-True}
+      DATABASE_URL: ${DATABASE_URL:-}
+      CLOUDINARY_URL: ${CLOUDINARY_URL:-}
+      KAKAO_REST_API_KEY: ${KAKAO_REST_API_KEY:-${VITE_KAKAO_REST_API_KEY:-}}
+      KAKAO_CLIENT_SECRET: ${KAKAO_CLIENT_SECRET:-}
+      GMS_API_KEY: ${GMS_API_KEY:-}
+      GMS_OPENAI_BASE_URL: ${GMS_OPENAI_BASE_URL:-https://gms.ssafy.io/gmsapi/api.openai.com/v1}
+      GMS_VISION_MODEL: ${GMS_VISION_MODEL:-gpt-4o-mini}
+    working_dir: /app
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py loaddata /app/fixtures/demo_data.json &&
+             python manage.py seed_ml_data &&
+             python manage.py train_recommender &&
+             python manage.py runserver 0.0.0.0:8000"
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./pickle_backend:/app
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import socket; s = socket.create_connection(('127.0.0.1', 8000), 2); s.close()",
+        ]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 10s
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./pickle_frontend
+      dockerfile: Dockerfile
+    environment:
+      VITE_API_BASE_URL: http://127.0.0.1:8000/api/v1
+      VITE_KAKAO_REST_API_KEY: ${VITE_KAKAO_REST_API_KEY:-}
+      VITE_KAKAO_REDIRECT_URI: ${VITE_KAKAO_REDIRECT_URI:-}
+    working_dir: /app
+    command: npm run dev -- --host 0.0.0.0
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./pickle_frontend:/app
+      - frontend_node_modules:/app/node_modules
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  frontend_node_modules:

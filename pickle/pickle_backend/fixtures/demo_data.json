@@ -1,0 +1,23 @@
+[
+  {"model":"styles.styletag","pk":1,"fields":{"name":"Minimal","slug":"minimal"}},
+  {"model":"styles.styletag","pk":2,"fields":{"name":"Casual","slug":"casual"}},
+  {"model":"styles.styletag","pk":3,"fields":{"name":"Lovely","slug":"lovely"}},
+  {"model":"styles.styletag","pk":4,"fields":{"name":"Street","slug":"street"}},
+  {"model":"styles.styletag","pk":5,"fields":{"name":"Classic","slug":"classic"}},
+  {"model":"accounts.user","pk":1,"fields":{"password":"pbkdf2_sha256$1000000$QY0n9bM1OFySTT5nF2BKgf$JY+V2zxodiejbyOhIeuvKEpOZ2rLAI8nsOOtPXwRWyY=","last_login":null,"is_superuser":false,"username":"demo","first_name":"","last_name":"","email":"demo@example.com","is_staff":false,"is_active":true,"date_joined":"2026-06-22T00:00:00Z","gender":"unisex","preferred_colors":"ivory,blue","groups":[],"user_permissions":[]}},
+  {"model":"accounts.user","pk":2,"fields":{"password":"pbkdf2_sha256$1000000$QY0n9bM1OFySTT5nF2BKgf$JY+V2zxodiejbyOhIeuvKEpOZ2rLAI8nsOOtPXwRWyY=","last_login":null,"is_superuser":false,"username":"stylist","first_name":"","last_name":"","email":"stylist@example.com","is_staff":false,"is_active":true,"date_joined":"2026-06-22T00:00:00Z","gender":"unisex","preferred_colors":"black,white","groups":[],"user_permissions":[]}},
+  {"model":"accounts.userstyletag","pk":1,"fields":{"user":1,"tag":1}},
+  {"model":"accounts.userstyletag","pk":2,"fields":{"user":1,"tag":2}},
+  {"model":"accounts.userstyletag","pk":3,"fields":{"user":2,"tag":5}},
+  {"model":"accounts.streak","pk":1,"fields":{"user":1,"current_count":3,"longest_count":7,"last_recorded_date":"2026-06-22"}},
+  {"model":"accounts.streak","pk":2,"fields":{"user":2,"current_count":1,"longest_count":4,"last_recorded_date":"2026-06-22"}},
+  {"model":"closet.clothingitem","pk":1,"fields":{"owner":1,"name":"Ivory linen shirt","category":"top","color":"ivory","material":"linen","season":"summer","image":"","processed_image":"","shopping_url":"","memo":"","created_at":"2026-06-22T00:00:00Z","updated_at":"2026-06-22T00:00:00Z"}},
+  {"model":"closet.clothingitem","pk":2,"fields":{"owner":1,"name":"Blue oxford shirt","category":"top","color":"blue","material":"cotton","season":"all","image":"","processed_image":"","shopping_url":"","memo":"","created_at":"2026-06-22T00:01:00Z","updated_at":"2026-06-22T00:01:00Z"}},
+  {"model":"closet.clothingitem","pk":3,"fields":{"owner":1,"name":"Beige wide pants","category":"bottom","color":"beige","material":"cotton","season":"all","image":"","processed_image":"","shopping_url":"","memo":"","created_at":"2026-06-22T00:02:00Z","updated_at":"2026-06-22T00:02:00Z"}},
+  {"model":"closet.clothingitem","pk":4,"fields":{"owner":1,"name":"Black slacks","category":"bottom","color":"black","material":"wool","season":"fall","image":"","processed_image":"","shopping_url":"","memo":"","created_at":"2026-06-22T00:03:00Z","updated_at":"2026-06-22T00:03:00Z"}},
+  {"model":"closet.clothingitem","pk":5,"fields":{"owner":1,"name":"White sneakers","category":"shoes","color":"white","material":"leather","season":"all","image":"","processed_image":"","shopping_url":"","memo":"","created_at":"2026-06-22T00:04:00Z","updated_at":"2026-06-22T00:04:00Z"}},
+  {"model":"closet.clothingitem","pk":6,"fields":{"owner":1,"name":"Navy cardigan","category":"outer","color":"navy","material":"cotton","season":"spring","image":"","processed_image":"","shopping_url":"","memo":"","created_at":"2026-06-22T00:05:00Z","updated_at":"2026-06-22T00:05:00Z"}},
+  {"model":"style_qna.stylerequest","pk":1,"fields":{"requester":1,"title":"What goes with my ivory shirt?","body":"I need a comfortable outfit for a weekend exhibition.","target_item":1,"tpo":"daily","status":"open","created_at":"2026-06-22T01:00:00Z","updated_at":"2026-06-22T01:00:00Z"}},
+  {"model":"style_qna.stylerequest","pk":2,"fields":{"requester":2,"title":"Summer interview outfit","body":"Please suggest a neat outfit that is not too formal.","target_item":null,"tpo":"formal","status":"open","created_at":"2026-06-22T02:00:00Z","updated_at":"2026-06-22T02:00:00Z"}},
+  {"model":"style_qna.stylesuggestion","pk":1,"fields":{"request":1,"stylist":2,"title":"Use calm neutral colors","comment":"Pair it with the beige pants and white sneakers.","items":[3,5],"shopping_links":[],"is_accepted":false,"created_at":"2026-06-22T03:00:00Z"}}
+]

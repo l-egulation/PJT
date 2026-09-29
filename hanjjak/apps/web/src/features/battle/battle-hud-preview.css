@@ -1,0 +1,157 @@
+body { background: #26160d; }
+.battle-hud-preview { width: 100%; max-width: none; padding: 0; }
+.battle-hud-preview:not(.is-live-warning-preview) .boss-arrival-warning,
+.battle-hud-preview:not(.is-live-warning-preview) .boss-warning-content,
+.battle-hud-preview:not(.is-live-warning-preview) .boss-warning-aura { animation-play-state: paused; animation-delay: -1s; }
+
+.tutorial-preview-navigator {
+  position: fixed;
+  z-index: 520;
+  top: 10px;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: min(1420px, calc(100% - 20px));
+  padding: 8px 10px;
+  border: 2px solid #6f432a;
+  border-radius: 13px;
+  color: #3a2619;
+  background: rgba(255, 244, 218, .97);
+  box-shadow: 0 5px 0 rgba(48, 27, 16, .28), 0 10px 24px rgba(30, 17, 10, .3);
+  transform: translateX(-50%);
+  font-family: var(--hanjjak-font-ui);
+}
+
+.tutorial-preview-navigator.is-collapsed {
+  left: 12px;
+  width: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+}
+
+.tutorial-preview-navigator > strong {
+  flex: 0 0 auto;
+  padding: 0 4px;
+  color: #7a3e2c;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.tutorial-preview-navigator > div {
+  display: flex;
+  flex: 1 1 auto;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.tutorial-preview-navigator button {
+  flex: 0 0 auto;
+  padding: 7px 11px;
+  border: 1px solid #b79265;
+  border-radius: 8px;
+  color: #5b402c;
+  background: #fffaf0;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 850;
+  white-space: nowrap;
+}
+
+.tutorial-preview-navigator .tutorial-preview-menu-toggle {
+  border-color: #75442e;
+  color: #fff8e7;
+  background: #7a5036;
+}
+
+.tutorial-preview-navigator.is-collapsed .tutorial-preview-menu-toggle {
+  padding: 8px 12px;
+  box-shadow: 0 4px 0 rgba(48, 27, 16, .28), 0 8px 18px rgba(30, 17, 10, .25);
+}
+
+.tutorial-preview-navigator button.active {
+  border-color: #8f3f34;
+  color: #fff8e7;
+  background: #cf5a50;
+  box-shadow: inset 0 2px rgba(255,255,255,.2);
+}
+
+.tutorial-preview-navigator .tutorial-preview-toggle {
+  border-color: #70503a;
+  color: #fff8e7;
+  background: #77523a;
+}
+
+.tutorial-character-content {
+  width: min(1180px, calc(100% - 48px));
+  min-height: min(720px, calc(100vh - 150px));
+  margin: 112px auto 28px;
+  padding: 28px;
+  border: 3px solid #8b6040;
+  border-radius: 20px;
+  background: #fff4d9;
+  box-shadow: 0 12px 0 rgba(54, 30, 17, .3), 0 18px 38px rgba(42, 23, 12, .25);
+}
+
+.tutorial-preview-window-stage {
+  position: fixed;
+  z-index: 120;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(47, 28, 15, .28);
+  backdrop-filter: blur(3px) saturate(.92);
+}
+
+.tutorial-preview-window {
+  position: relative;
+  display: block;
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .tutorial-preview-navigator { gap: 6px; padding: 6px; }
+  .tutorial-preview-navigator > strong { display: none; }
+  .tutorial-preview-navigator button { padding: 6px 9px; font-size: 10px; }
+}
+
+/* The equipment screen keeps a 1100px design canvas at narrow widths. Scale the
+   whole preview window so its unscaled child is not clipped before transform. */
+@media (max-width: 920px) {
+  .tutorial-preview-window-stage .equipment-window.tutorial-preview-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1100px;
+    min-width: 1100px;
+    height: 690px;
+    overflow: visible;
+    transform: translate(-50%, -50%) scale(.64);
+    transform-origin: center;
+  }
+
+  .tutorial-preview-window-stage .equipment-window .equipment-screen {
+    overflow: visible;
+  }
+
+  .tutorial-preview-window-stage .equipment-window .equipment-paper {
+    transform: none;
+  }
+}
+
+@media (max-width: 760px), (max-height: 600px) {
+  .tutorial-preview-window-stage .equipment-window.tutorial-preview-window { transform: translate(-50%, -50%) scale(.56); }
+}
+
+@media (max-width: 640px) {
+  .tutorial-preview-window-stage .equipment-window.tutorial-preview-window { transform: translate(-50%, -50%) scale(.48); }
+}
+
+@media (max-width: 520px) {
+  .tutorial-preview-window-stage .equipment-window.tutorial-preview-window { transform: translate(-50%, -50%) scale(.38); }
+}

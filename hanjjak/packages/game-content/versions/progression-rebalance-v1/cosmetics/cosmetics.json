@@ -1,0 +1,1860 @@
+{
+  "authority": "applied",
+  "contentVersion": "progression-rebalance-v1",
+  "singleRiceCost": 5000,
+  "gradeProbabilityMillionths": {
+    "NORMAL": 500000,
+    "RARE": 350000,
+    "EPIC": 140000,
+    "LEGENDARY": 10000
+  },
+  "starThresholdsByGrade": {
+    "NORMAL": [
+      1,
+      480,
+      720,
+      1200,
+      2400
+    ],
+    "RARE": [
+      1,
+      168,
+      252,
+      420,
+      840
+    ],
+    "EPIC": [
+      1,
+      134,
+      202,
+      336,
+      672
+    ],
+    "LEGENDARY": [
+      1,
+      2,
+      3,
+      5,
+      10
+    ]
+  },
+  "cosmetics": [
+    {
+      "cosmeticId": "cosmetic-001",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "NORMAL",
+      "slot": "HEAD",
+      "setId": "cosmetic-set-01"
+    },
+    {
+      "cosmeticId": "cosmetic-002",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "NORMAL",
+      "slot": "TOP",
+      "setId": "cosmetic-set-01"
+    },
+    {
+      "cosmeticId": "cosmetic-003",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "NORMAL",
+      "slot": "BOTTOM",
+      "setId": "cosmetic-set-01"
+    },
+    {
+      "cosmeticId": "cosmetic-004",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "NORMAL",
+      "slot": "GLOVES",
+      "setId": "cosmetic-set-01"
+    },
+    {
+      "cosmeticId": "cosmetic-005",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "NORMAL",
+      "slot": "SHOES",
+      "setId": "cosmetic-set-01"
+    },
+    {
+      "cosmeticId": "cosmetic-006",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "NORMAL",
+      "slot": "CAPE",
+      "setId": "cosmetic-set-01"
+    },
+    {
+      "cosmeticId": "cosmetic-007",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "NORMAL",
+      "slot": "HEAD",
+      "setId": "cosmetic-set-02"
+    },
+    {
+      "cosmeticId": "cosmetic-008",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "NORMAL",
+      "slot": "TOP",
+      "setId": "cosmetic-set-02"
+    },
+    {
+      "cosmeticId": "cosmetic-009",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "NORMAL",
+      "slot": "BOTTOM",
+      "setId": "cosmetic-set-02"
+    },
+    {
+      "cosmeticId": "cosmetic-010",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "NORMAL",
+      "slot": "GLOVES",
+      "setId": "cosmetic-set-02"
+    },
+    {
+      "cosmeticId": "cosmetic-011",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "NORMAL",
+      "slot": "SHOES",
+      "setId": "cosmetic-set-02"
+    },
+    {
+      "cosmeticId": "cosmetic-012",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "NORMAL",
+      "slot": "CAPE",
+      "setId": "cosmetic-set-02"
+    },
+    {
+      "cosmeticId": "cosmetic-013",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "NORMAL",
+      "slot": "HEAD",
+      "setId": "cosmetic-set-03"
+    },
+    {
+      "cosmeticId": "cosmetic-014",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "NORMAL",
+      "slot": "TOP",
+      "setId": "cosmetic-set-03"
+    },
+    {
+      "cosmeticId": "cosmetic-015",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "NORMAL",
+      "slot": "BOTTOM",
+      "setId": "cosmetic-set-03"
+    },
+    {
+      "cosmeticId": "cosmetic-016",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "NORMAL",
+      "slot": "GLOVES",
+      "setId": "cosmetic-set-03"
+    },
+    {
+      "cosmeticId": "cosmetic-017",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "NORMAL",
+      "slot": "SHOES",
+      "setId": "cosmetic-set-03"
+    },
+    {
+      "cosmeticId": "cosmetic-018",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "NORMAL",
+      "slot": "CAPE",
+      "setId": "cosmetic-set-03"
+    },
+    {
+      "cosmeticId": "cosmetic-019",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "NORMAL",
+      "slot": "HEAD",
+      "setId": "cosmetic-set-04"
+    },
+    {
+      "cosmeticId": "cosmetic-020",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "NORMAL",
+      "slot": "TOP",
+      "setId": "cosmetic-set-04"
+    },
+    {
+      "cosmeticId": "cosmetic-021",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "NORMAL",
+      "slot": "BOTTOM",
+      "setId": "cosmetic-set-04"
+    },
+    {
+      "cosmeticId": "cosmetic-022",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "NORMAL",
+      "slot": "GLOVES",
+      "setId": "cosmetic-set-04"
+    },
+    {
+      "cosmeticId": "cosmetic-023",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "NORMAL",
+      "slot": "SHOES",
+      "setId": "cosmetic-set-04"
+    },
+    {
+      "cosmeticId": "cosmetic-024",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "NORMAL",
+      "slot": "CAPE",
+      "setId": "cosmetic-set-04"
+    },
+    {
+      "cosmeticId": "cosmetic-025",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "RARE",
+      "slot": "HEAD",
+      "setId": "cosmetic-set-05"
+    },
+    {
+      "cosmeticId": "cosmetic-026",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "RARE",
+      "slot": "TOP",
+      "setId": "cosmetic-set-05"
+    },
+    {
+      "cosmeticId": "cosmetic-027",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "RARE",
+      "slot": "BOTTOM",
+      "setId": "cosmetic-set-05"
+    },
+    {
+      "cosmeticId": "cosmetic-028",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "RARE",
+      "slot": "GLOVES",
+      "setId": "cosmetic-set-05"
+    },
+    {
+      "cosmeticId": "cosmetic-029",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "RARE",
+      "slot": "SHOES",
+      "setId": "cosmetic-set-05"
+    },
+    {
+      "cosmeticId": "cosmetic-030",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "RARE",
+      "slot": "CAPE",
+      "setId": "cosmetic-set-05"
+    },
+    {
+      "cosmeticId": "cosmetic-031",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "RARE",
+      "slot": "HEAD",
+      "setId": "cosmetic-set-06"
+    },
+    {
+      "cosmeticId": "cosmetic-032",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "RARE",
+      "slot": "TOP",
+      "setId": "cosmetic-set-06"
+    },
+    {
+      "cosmeticId": "cosmetic-033",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "RARE",
+      "slot": "BOTTOM",
+      "setId": "cosmetic-set-06"
+    },
+    {
+      "cosmeticId": "cosmetic-034",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "RARE",
+      "slot": "GLOVES",
+      "setId": "cosmetic-set-06"
+    },
+    {
+      "cosmeticId": "cosmetic-035",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "RARE",
+      "slot": "SHOES",
+      "setId": "cosmetic-set-06"
+    },
+    {
+      "cosmeticId": "cosmetic-036",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "RARE",
+      "slot": "CAPE",
+      "setId": "cosmetic-set-06"
+    },
+    {
+      "cosmeticId": "cosmetic-037",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "RARE",
+      "slot": "HEAD",
+      "setId": "cosmetic-set-07"
+    },
+    {
+      "cosmeticId": "cosmetic-038",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "RARE",
+      "slot": "TOP",
+      "setId": "cosmetic-set-07"
+    },
+    {
+      "cosmeticId": "cosmetic-039",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "RARE",
+      "slot": "BOTTOM",
+      "setId": "cosmetic-set-07"
+    },
+    {
+      "cosmeticId": "cosmetic-040",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "RARE",
+      "slot": "GLOVES",
+      "setId": "cosmetic-set-07"
+    },
+    {
+      "cosmeticId": "cosmetic-041",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "RARE",
+      "slot": "SHOES",
+      "setId": "cosmetic-set-07"
+    },
+    {
+      "cosmeticId": "cosmetic-042",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "RARE",
+      "slot": "CAPE",
+      "setId": "cosmetic-set-07"
+    },
+    {
+      "cosmeticId": "cosmetic-043",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "EPIC",
+      "slot": "HEAD",
+      "setId": "cosmetic-set-08"
+    },
+    {
+      "cosmeticId": "cosmetic-044",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "EPIC",
+      "slot": "TOP",
+      "setId": "cosmetic-set-08"
+    },
+    {
+      "cosmeticId": "cosmetic-045",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "EPIC",
+      "slot": "BOTTOM",
+      "setId": "cosmetic-set-08"
+    },
+    {
+      "cosmeticId": "cosmetic-046",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "EPIC",
+      "slot": "GLOVES",
+      "setId": "cosmetic-set-08"
+    },
+    {
+      "cosmeticId": "cosmetic-047",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "EPIC",
+      "slot": "SHOES",
+      "setId": "cosmetic-set-08"
+    },
+    {
+      "cosmeticId": "cosmetic-048",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "EPIC",
+      "slot": "CAPE",
+      "setId": "cosmetic-set-08"
+    },
+    {
+      "cosmeticId": "cosmetic-049",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "EPIC",
+      "slot": "HEAD",
+      "setId": "cosmetic-set-09"
+    },
+    {
+      "cosmeticId": "cosmetic-050",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "EPIC",
+      "slot": "TOP",
+      "setId": "cosmetic-set-09"
+    },
+    {
+      "cosmeticId": "cosmetic-051",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "EPIC",
+      "slot": "BOTTOM",
+      "setId": "cosmetic-set-09"
+    },
+    {
+      "cosmeticId": "cosmetic-052",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "EPIC",
+      "slot": "GLOVES",
+      "setId": "cosmetic-set-09"
+    },
+    {
+      "cosmeticId": "cosmetic-053",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "EPIC",
+      "slot": "SHOES",
+      "setId": "cosmetic-set-09"
+    },
+    {
+      "cosmeticId": "cosmetic-054",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "EPIC",
+      "slot": "CAPE",
+      "setId": "cosmetic-set-09"
+    },
+    {
+      "cosmeticId": "cosmetic-055",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "EPIC",
+      "slot": "HEAD",
+      "setId": "cosmetic-set-10"
+    },
+    {
+      "cosmeticId": "cosmetic-056",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "EPIC",
+      "slot": "TOP",
+      "setId": "cosmetic-set-10"
+    },
+    {
+      "cosmeticId": "cosmetic-057",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "EPIC",
+      "slot": "BOTTOM",
+      "setId": "cosmetic-set-10"
+    },
+    {
+      "cosmeticId": "cosmetic-058",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "EPIC",
+      "slot": "GLOVES",
+      "setId": "cosmetic-set-10"
+    },
+    {
+      "cosmeticId": "cosmetic-059",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "EPIC",
+      "slot": "SHOES",
+      "setId": "cosmetic-set-10"
+    },
+    {
+      "cosmeticId": "cosmetic-060",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "EPIC",
+      "slot": "CAPE",
+      "setId": "cosmetic-set-10"
+    },
+    {
+      "cosmeticId": "cosmetic-061",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "LEGENDARY",
+      "slot": "HEAD",
+      "setId": "cosmetic-set-11"
+    },
+    {
+      "cosmeticId": "cosmetic-062",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "LEGENDARY",
+      "slot": "TOP",
+      "setId": "cosmetic-set-11"
+    },
+    {
+      "cosmeticId": "cosmetic-063",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "LEGENDARY",
+      "slot": "BOTTOM",
+      "setId": "cosmetic-set-11"
+    },
+    {
+      "cosmeticId": "cosmetic-064",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "LEGENDARY",
+      "slot": "GLOVES",
+      "setId": "cosmetic-set-11"
+    },
+    {
+      "cosmeticId": "cosmetic-065",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "LEGENDARY",
+      "slot": "SHOES",
+      "setId": "cosmetic-set-11"
+    },
+    {
+      "cosmeticId": "cosmetic-066",
+      "displayName": null,
+      "imageUrl": null,
+      "grade": "LEGENDARY",
+      "slot": "CAPE",
+      "setId": "cosmetic-set-11"
+    }
+  ],
+  "sets": [
+    {
+      "setId": "cosmetic-set-01",
+      "displayName": null,
+      "grade": "NORMAL",
+      "bannerId": null,
+      "boxItemId": null,
+      "members": {
+        "HEAD": "cosmetic-001",
+        "TOP": "cosmetic-002",
+        "BOTTOM": "cosmetic-003",
+        "GLOVES": "cosmetic-004",
+        "SHOES": "cosmetic-005",
+        "CAPE": "cosmetic-006"
+      },
+      "effects": [
+        {
+          "star": 1,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 20,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 20,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 20,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 2,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 40,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 40,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 40,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 3,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 60,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 60,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 60,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 4,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 80,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 80,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 80,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 5,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 100,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 100,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 100,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setId": "cosmetic-set-02",
+      "displayName": null,
+      "grade": "NORMAL",
+      "bannerId": null,
+      "boxItemId": null,
+      "members": {
+        "HEAD": "cosmetic-007",
+        "TOP": "cosmetic-008",
+        "BOTTOM": "cosmetic-009",
+        "GLOVES": "cosmetic-010",
+        "SHOES": "cosmetic-011",
+        "CAPE": "cosmetic-012"
+      },
+      "effects": [
+        {
+          "star": 1,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 20,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 20,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 20,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 2,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 40,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 40,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 40,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 3,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 60,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 60,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 60,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 4,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 80,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 80,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 80,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 5,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 100,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 100,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 100,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setId": "cosmetic-set-03",
+      "displayName": null,
+      "grade": "NORMAL",
+      "bannerId": null,
+      "boxItemId": null,
+      "members": {
+        "HEAD": "cosmetic-013",
+        "TOP": "cosmetic-014",
+        "BOTTOM": "cosmetic-015",
+        "GLOVES": "cosmetic-016",
+        "SHOES": "cosmetic-017",
+        "CAPE": "cosmetic-018"
+      },
+      "effects": [
+        {
+          "star": 1,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 20,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 20,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 20,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 2,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 40,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 40,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 40,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 3,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 60,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 60,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 60,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 4,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 80,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 80,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 80,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 5,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 100,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 100,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 100,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setId": "cosmetic-set-04",
+      "displayName": null,
+      "grade": "NORMAL",
+      "bannerId": null,
+      "boxItemId": null,
+      "members": {
+        "HEAD": "cosmetic-019",
+        "TOP": "cosmetic-020",
+        "BOTTOM": "cosmetic-021",
+        "GLOVES": "cosmetic-022",
+        "SHOES": "cosmetic-023",
+        "CAPE": "cosmetic-024"
+      },
+      "effects": [
+        {
+          "star": 1,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 20,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 20,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 20,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 2,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 40,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 40,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 40,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 3,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 60,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 60,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 60,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 4,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 80,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 80,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 80,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 5,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 100,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 100,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 100,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setId": "cosmetic-set-05",
+      "displayName": null,
+      "grade": "RARE",
+      "bannerId": null,
+      "boxItemId": null,
+      "members": {
+        "HEAD": "cosmetic-025",
+        "TOP": "cosmetic-026",
+        "BOTTOM": "cosmetic-027",
+        "GLOVES": "cosmetic-028",
+        "SHOES": "cosmetic-029",
+        "CAPE": "cosmetic-030"
+      },
+      "effects": [
+        {
+          "star": 1,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 25,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 25,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 25,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 2,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 50,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 50,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 50,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 3,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 75,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 75,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 75,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 4,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 100,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 100,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 100,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 5,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 125,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 125,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 125,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setId": "cosmetic-set-06",
+      "displayName": null,
+      "grade": "RARE",
+      "bannerId": null,
+      "boxItemId": null,
+      "members": {
+        "HEAD": "cosmetic-031",
+        "TOP": "cosmetic-032",
+        "BOTTOM": "cosmetic-033",
+        "GLOVES": "cosmetic-034",
+        "SHOES": "cosmetic-035",
+        "CAPE": "cosmetic-036"
+      },
+      "effects": [
+        {
+          "star": 1,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 25,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 25,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 25,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 2,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 50,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 50,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 50,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 3,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 75,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 75,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 75,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 4,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 100,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 100,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 100,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 5,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 125,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 125,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 125,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setId": "cosmetic-set-07",
+      "displayName": null,
+      "grade": "RARE",
+      "bannerId": null,
+      "boxItemId": null,
+      "members": {
+        "HEAD": "cosmetic-037",
+        "TOP": "cosmetic-038",
+        "BOTTOM": "cosmetic-039",
+        "GLOVES": "cosmetic-040",
+        "SHOES": "cosmetic-041",
+        "CAPE": "cosmetic-042"
+      },
+      "effects": [
+        {
+          "star": 1,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 25,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 25,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 25,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 2,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 50,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 50,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 50,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 3,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 75,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 75,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 75,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 4,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 100,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 100,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 100,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 5,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 125,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 125,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 125,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setId": "cosmetic-set-08",
+      "displayName": null,
+      "grade": "EPIC",
+      "bannerId": null,
+      "boxItemId": null,
+      "members": {
+        "HEAD": "cosmetic-043",
+        "TOP": "cosmetic-044",
+        "BOTTOM": "cosmetic-045",
+        "GLOVES": "cosmetic-046",
+        "SHOES": "cosmetic-047",
+        "CAPE": "cosmetic-048"
+      },
+      "effects": [
+        {
+          "star": 1,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 30,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 30,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 30,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 2,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 60,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 60,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 60,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 3,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 90,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 90,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 90,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 4,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 120,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 120,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 120,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 5,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 150,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 150,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 150,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setId": "cosmetic-set-09",
+      "displayName": null,
+      "grade": "EPIC",
+      "bannerId": null,
+      "boxItemId": null,
+      "members": {
+        "HEAD": "cosmetic-049",
+        "TOP": "cosmetic-050",
+        "BOTTOM": "cosmetic-051",
+        "GLOVES": "cosmetic-052",
+        "SHOES": "cosmetic-053",
+        "CAPE": "cosmetic-054"
+      },
+      "effects": [
+        {
+          "star": 1,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 30,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 30,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 30,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 2,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 60,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 60,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 60,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 3,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 90,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 90,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 90,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 4,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 120,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 120,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 120,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 5,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 150,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 150,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 150,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setId": "cosmetic-set-10",
+      "displayName": null,
+      "grade": "EPIC",
+      "bannerId": null,
+      "boxItemId": null,
+      "members": {
+        "HEAD": "cosmetic-055",
+        "TOP": "cosmetic-056",
+        "BOTTOM": "cosmetic-057",
+        "GLOVES": "cosmetic-058",
+        "SHOES": "cosmetic-059",
+        "CAPE": "cosmetic-060"
+      },
+      "effects": [
+        {
+          "star": 1,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 30,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 30,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 30,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 2,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 60,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 60,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 60,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 3,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 90,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 90,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 90,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 4,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 120,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 120,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 120,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 5,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 150,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 150,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 150,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setId": "cosmetic-set-11",
+      "displayName": null,
+      "grade": "LEGENDARY",
+      "bannerId": "cosmetic-banner-01",
+      "boxItemId": "cosmetic-selector-box-01",
+      "members": {
+        "HEAD": "cosmetic-061",
+        "TOP": "cosmetic-062",
+        "BOTTOM": "cosmetic-063",
+        "GLOVES": "cosmetic-064",
+        "SHOES": "cosmetic-065",
+        "CAPE": "cosmetic-066"
+      },
+      "effects": [
+        {
+          "star": 1,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 25,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 25,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 25,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 2,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 50,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 50,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 50,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 3,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 75,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 75,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 75,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 4,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 100,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 100,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 100,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        },
+        {
+          "star": 5,
+          "effects": [
+            {
+              "statId": "attackPercent",
+              "value": 125,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "maxHpPercent",
+              "value": 125,
+              "unit": "BASIS_POINTS"
+            },
+            {
+              "statId": "defensePenetrationPercent",
+              "value": 125,
+              "unit": "BASIS_POINTS"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

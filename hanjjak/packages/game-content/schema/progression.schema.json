@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hanjjak.local/schema/progression.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["authority", "contentVersion", "levelRange", "stages"],
+  "properties": {
+    "authority": { "enum": ["working", "applied"] },
+    "contentVersion": { "type": "string", "minLength": 1 },
+    "levelRange": {
+      "anyOf": [
+        { "type": "null" },
+        { "type": "object", "additionalProperties": false, "required": ["min", "max"], "properties": { "min": { "const": 1 }, "max": { "enum": [79, 200] } } }
+      ]
+    },
+    "stages": { "type": "array", "minItems": 40, "maxItems": 100, "items": { "$ref": "#/$defs/stage" } }
+  },
+  "$defs": {
+    "stage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["stageId", "normalExperience", "bossExperience", "normalRice", "bossRice", "firstClear"],
+      "properties": {
+        "stageId": { "type": "string", "pattern": "^stage\\.[0-9]{2}-[0-9]{2}$" },
+        "normalExperience": { "type": "integer", "minimum": 1 },
+        "bossExperience": { "type": "integer", "minimum": 1 },
+        "normalRice": { "type": "integer", "minimum": 0 },
+        "bossRice": { "type": "integer", "minimum": 0 },
+        "firstClear": {
+          "anyOf": [
+            { "type": "null" },
+            { "type": "object", "additionalProperties": false, "required": ["rice", "items", "directSkillId"], "properties": {
+              "rice": { "type": "integer", "minimum": 0 },
+              "items": { "type": "array", "items": { "$ref": "#/$defs/item" } },
+              "directSkillId": { "type": ["string", "null"] }
+            } }
+          ]
+        }
+      }
+    },
+    "item": {
+      "type": "object", "additionalProperties": false, "required": ["itemId", "quantity"],
+      "properties": { "itemId": { "type": "string", "minLength": 1 }, "quantity": { "type": "integer", "minimum": 1 } }
+    }
+  }
+}

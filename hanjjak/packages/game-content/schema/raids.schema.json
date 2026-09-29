@@ -1,0 +1,284 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "raids.schema.json",
+  "type": "object",
+  "properties": {
+    "authority": {
+      "$ref": "#/$defs/ContentAuthority"
+    },
+    "contentVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "unlockStageId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "settlementTimeZone": {
+      "type": "string",
+      "const": "Asia/Seoul"
+    },
+    "settlementLocalTime": {
+      "type": "string",
+      "const": "17:30"
+    },
+    "sealTarget": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "attemptLimitTicks": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2147483647
+    },
+    "escalationIntervalTicks": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2147483647
+    },
+    "escalationBasisPoints": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2147483647
+    },
+    "bossInitialAttack": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2147483647
+    },
+    "bossInitialDefense": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2147483647
+    },
+    "gradeDamageThresholds": {
+      "$ref": "#/$defs/RaidGradeThresholds"
+    },
+    "sealContributions": {
+      "$ref": "#/$defs/RaidSealContributions"
+    },
+    "personalRewards": {
+      "$ref": "#/$defs/RaidPersonalRewards"
+    },
+    "successfulRankRewards": {
+      "$ref": "#/$defs/RaidRankRewards"
+    },
+    "failedRankRewards": {
+      "$ref": "#/$defs/RaidRankRewards"
+    }
+  },
+  "required": [
+    "authority",
+    "contentVersion",
+    "unlockStageId",
+    "settlementTimeZone",
+    "settlementLocalTime",
+    "sealTarget",
+    "attemptLimitTicks",
+    "escalationIntervalTicks",
+    "escalationBasisPoints",
+    "bossInitialAttack",
+    "bossInitialDefense",
+    "gradeDamageThresholds",
+    "sealContributions",
+    "personalRewards",
+    "successfulRankRewards",
+    "failedRankRewards"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "ContentAuthority": {
+      "type": "string",
+      "enum": [
+        "working",
+        "applied"
+      ]
+    },
+    "RaidGradeThresholds": {
+      "type": "object",
+      "properties": {
+        "D": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "C": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "B": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "A": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "S": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "SS": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "SSS": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "D",
+        "C",
+        "B",
+        "A",
+        "S",
+        "SS",
+        "SSS"
+      ],
+      "additionalProperties": false
+    },
+    "RaidPersonalRewards": {
+      "type": "object",
+      "properties": {
+        "PARTICIPATION": {
+          "$ref": "#/$defs/RaidRewardBundleContent"
+        },
+        "D": {
+          "$ref": "#/$defs/RaidRewardBundleContent"
+        },
+        "C": {
+          "$ref": "#/$defs/RaidRewardBundleContent"
+        },
+        "B": {
+          "$ref": "#/$defs/RaidRewardBundleContent"
+        },
+        "A": {
+          "$ref": "#/$defs/RaidRewardBundleContent"
+        },
+        "S": {
+          "$ref": "#/$defs/RaidRewardBundleContent"
+        },
+        "SS": {
+          "$ref": "#/$defs/RaidRewardBundleContent"
+        },
+        "SSS": {
+          "$ref": "#/$defs/RaidRewardBundleContent"
+        }
+      },
+      "required": [
+        "PARTICIPATION",
+        "D",
+        "C",
+        "B",
+        "A",
+        "S",
+        "SS",
+        "SSS"
+      ],
+      "additionalProperties": false
+    },
+    "RaidRankRewards": {
+      "type": "object",
+      "properties": {
+        "FIRST": {
+          "$ref": "#/$defs/RaidRewardBundleContent"
+        },
+        "SECOND_TO_TENTH": {
+          "$ref": "#/$defs/RaidRewardBundleContent"
+        },
+        "ELEVENTH_TO_HUNDREDTH": {
+          "$ref": "#/$defs/RaidRewardBundleContent"
+        },
+        "REST": {
+          "$ref": "#/$defs/RaidRewardBundleContent"
+        }
+      },
+      "required": [
+        "FIRST",
+        "SECOND_TO_TENTH",
+        "ELEVENTH_TO_HUNDREDTH",
+        "REST"
+      ],
+      "additionalProperties": false
+    },
+    "RaidRewardBundleContent": {
+      "type": "object",
+      "properties": {
+        "cosmeticTickets": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "gemBoxes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "rice": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "cosmeticTickets",
+        "gemBoxes",
+        "rice"
+      ],
+      "additionalProperties": false
+    },
+    "RaidSealContributions": {
+      "type": "object",
+      "properties": {
+        "PARTICIPATION": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        },
+        "D": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        },
+        "C": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        },
+        "B": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        },
+        "A": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        },
+        "S": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        },
+        "SS": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        },
+        "SSS": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        }
+      },
+      "required": [
+        "PARTICIPATION",
+        "D",
+        "C",
+        "B",
+        "A",
+        "S",
+        "SS",
+        "SSS"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

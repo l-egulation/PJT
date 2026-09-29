@@ -1,0 +1,999 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: hanjjak
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: deployer
+  namespace: hanjjak
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: deployer
+  namespace: hanjjak
+rules:
+  - apiGroups: [""]
+    resources: ["configmaps", "pods", "pods/log", "services"]
+    verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+  - apiGroups: ["apps"]
+    resources: ["deployments", "deployments/scale", "statefulsets"]
+    verbs: ["get", "list", "watch", "create", "update", "patch"]
+  - apiGroups: ["batch"]
+    resources: ["cronjobs", "jobs"]
+    verbs: ["get", "list", "watch", "create", "delete"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: deployer
+  namespace: hanjjak
+subjects:
+  - kind: ServiceAccount
+    name: deployer
+    namespace: hanjjak
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: deployer
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: application-config
+  namespace: hanjjak
+data:
+  POSTGRES_DB: hanjjak
+  POSTGRES_USER: hanjjak
+  PUBLIC_ORIGIN: https://game.example.com
+  OFFLINE_REWARD_TEST_ALL_ACCOUNTS: "true"
+  OFFLINE_REWARD_TEST_REWARD_MULTIPLIER: "0.5"
+  OFFLINE_REWARD_TEST_GRACE_PERIOD_SECONDS: "0"
+  OFFLINE_REWARD_TEST_BUCKET_SECONDS: "60"
+  OFFLINE_REWARD_TEST_ACCRUAL_CAP_SECONDS: "28800"
+  BASIC_AUTH_ENABLED: "false"
+  BASIC_AUTH_USERNAME: hanjjak
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres
+  namespace: hanjjak
+spec:
+  type: ClusterIP
+  clusterIP: None
+  selector:
+    app.kubernetes.io/name: postgres
+  ports:
+    - name: postgres
+      port: 5432
+      targetPort: postgres
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: postgres
+  namespace: hanjjak
+spec:
+  serviceName: postgres
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: postgres
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: postgres
+    spec:
+      automountServiceAccountToken: false
+      terminationGracePeriodSeconds: 60
+      containers:
+        - name: postgres
+          image: postgres:17.11-alpine
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: postgres
+              containerPort: 5432
+          envFrom:
+            - configMapRef:
+                name: application-config
+          env:
+            - name: POSTGRES_PASSWORD_FILE
+              value: /var/run/hanjjak-secrets/db-password
+          readinessProbe:
+            exec:
+              command: ["sh", "-c", "pg_isready -U \"$POSTGRES_USER\" -d \"$POSTGRES_DB\""]
+            periodSeconds: 5
+            timeoutSeconds: 3
+            failureThreshold: 12
+          livenessProbe:
+            exec:
+              command: ["sh", "-c", "pg_isready -U \"$POSTGRES_USER\" -d \"$POSTGRES_DB\""]
+            periodSeconds: 10
+            timeoutSeconds: 3
+            failureThreshold: 6
+          resources:
+            requests:
+              cpu: 250m
+              memory: 512Mi
+            limits:
+              cpu: "2"
+              memory: 2Gi
+          volumeMounts:
+            - name: postgres-data
+              mountPath: /var/lib/postgresql/data
+            - name: db-password
+              mountPath: /var/run/hanjjak-secrets
+              readOnly: true
+      volumes:
+        - name: db-password
+          secret:
+            secretName: db-password
+            items:
+              - key: password
+                path: db-password
+  volumeClaimTemplates:
+    - metadata:
+        name: postgres-data
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        storageClassName: local-path
+        resources:
+          requests:
+            storage: 20Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: game-api
+  namespace: hanjjak
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: game-api
+  ports:
+    - name: http
+      port: 8080
+      targetPort: http
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: game-api
+  namespace: hanjjak
+spec:
+  replicas: 0
+  minReadySeconds: 10
+  progressDeadlineSeconds: 300
+  revisionHistoryLimit: 5
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: game-api
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: game-api
+    spec:
+      automountServiceAccountToken: false
+      terminationGracePeriodSeconds: 60
+      containers:
+        - name: game-api
+          image: docker.io/hanjjak/game-api:bootstrap
+          imagePullPolicy: Never
+          ports:
+            - name: http
+              containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: application-config
+            - secretRef:
+                name: application-secrets
+          env:
+            - name: DB_URL
+              value: jdbc:postgresql://postgres:5432/$(POSTGRES_DB)
+            - name: DB_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: application-config
+                  key: POSTGRES_USER
+            - name: DB_PASSWORD_FILE
+              value: /var/run/hanjjak-secrets/db-password
+            - name: BATTLE_COMPATIBILITY_API_ENABLED
+              value: "false"
+            - name: AUTH_ALLOWED_ORIGINS
+              valueFrom:
+                configMapKeyRef:
+                  name: application-config
+                  key: PUBLIC_ORIGIN
+            - name: SERVER_FORWARD_HEADERS_STRATEGY
+              value: framework
+            - name: SERVER_SERVLET_SESSION_COOKIE_SECURE
+              value: "true"
+            - name: SPRING_FLYWAY_ENABLED
+              value: "false"
+            - name: ADMIN_ALLOWED_ORIGINS
+              valueFrom:
+                configMapKeyRef:
+                  name: application-config
+                  key: PUBLIC_ORIGIN
+            - name: ADMIN_GITLAB_PUBLIC_BASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: application-config
+                  key: PUBLIC_ORIGIN
+            - name: ADMIN_GITLAB_SUCCESS_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: application-config
+                  key: PUBLIC_ORIGIN
+            - name: ADMIN_GITLAB_FAILURE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: application-config
+                  key: PUBLIC_ORIGIN
+            - name: ADMIN_SESSION_COOKIE_SECURE
+              value: "true"
+            - name: DEPLOY_COMMIT_SHA
+              value: k3s-migration-9c74938
+            - name: SOCIAL_LOGIN_PUBLIC_BASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: application-config
+                  key: PUBLIC_ORIGIN
+            - name: SOCIAL_LOGIN_SUCCESS_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: application-config
+                  key: PUBLIC_ORIGIN
+            - name: SOCIAL_LOGIN_FAILURE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: application-config
+                  key: PUBLIC_ORIGIN
+          startupProbe:
+            httpGet:
+              path: /actuator/health/liveness
+              port: http
+            periodSeconds: 5
+            timeoutSeconds: 3
+            failureThreshold: 24
+          readinessProbe:
+            httpGet:
+              path: /actuator/health/readiness
+              port: http
+            periodSeconds: 5
+            timeoutSeconds: 3
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /actuator/health/liveness
+              port: http
+            periodSeconds: 10
+            timeoutSeconds: 3
+            failureThreshold: 3
+          lifecycle:
+            preStop:
+              exec:
+                command: ["sh", "-c", "sleep 15"]
+          resources:
+            requests:
+              cpu: 250m
+              memory: 512Mi
+            limits:
+              cpu: "2"
+              memory: 1536Mi
+          volumeMounts:
+            - name: db-password
+              mountPath: /var/run/hanjjak-secrets
+              readOnly: true
+      volumes:
+        - name: db-password
+          secret:
+            secretName: db-password
+            items:
+              - key: password
+                path: db-password
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: web-assets
+  namespace: hanjjak
+spec:
+  accessModes: ["ReadWriteOnce"]
+  storageClassName: local-path
+  resources:
+    requests:
+      storage: 2Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: web
+  namespace: hanjjak
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: web
+    app.kubernetes.io/slot: blue
+  ports:
+    - name: http
+      port: 8080
+      targetPort: http
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: admin-console
+  namespace: hanjjak
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: admin-console
+  ports:
+    - name: http
+      port: 8080
+      targetPort: http
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: admin-console
+  namespace: hanjjak
+spec:
+  replicas: 0
+  minReadySeconds: 5
+  progressDeadlineSeconds: 180
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: admin-console
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: admin-console
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - name: admin-console
+          image: docker.io/hanjjak/admin-console:bootstrap
+          imagePullPolicy: Never
+          ports:
+            - name: http
+              containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            periodSeconds: 3
+            timeoutSeconds: 2
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            periodSeconds: 10
+            timeoutSeconds: 2
+            failureThreshold: 3
+          resources:
+            requests:
+              cpu: 50m
+              memory: 64Mi
+            limits:
+              cpu: 500m
+              memory: 256Mi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-blue
+  namespace: hanjjak
+spec:
+  replicas: 0
+  minReadySeconds: 5
+  progressDeadlineSeconds: 180
+  revisionHistoryLimit: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: web
+      app.kubernetes.io/slot: blue
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: web
+        app.kubernetes.io/slot: blue
+    spec:
+      automountServiceAccountToken: false
+      terminationGracePeriodSeconds: 30
+      initContainers:
+        - name: web-assets
+          image: docker.io/hanjjak/web:bootstrap
+          command: ["sh", "-c"]
+          args:
+            - >-
+              set -eu; src=/usr/share/nginx/html/assets; tmp="$(mktemp -d /asset-store/.incoming.XXXXXX)";
+              cp -a "$src/." "$tmp/";
+              find "$tmp" -type f -exec sh -eu -c 'tmp="$1"; shift; for file do rel="${file#"$tmp/"}"; mkdir -p "/asset-store/$(dirname "$rel")"; mv -f "$file" "/asset-store/$rel"; done' sh "$tmp" {} +;
+              rm -rf "$tmp"
+          volumeMounts:
+            - name: web-assets
+              mountPath: /asset-store
+      containers:
+        - name: web
+          image: docker.io/hanjjak/web:bootstrap
+          imagePullPolicy: Never
+          ports:
+            - name: http
+              containerPort: 8080
+          env:
+            - name: BASIC_AUTH_ENABLED
+              valueFrom:
+                configMapKeyRef:
+                  name: application-config
+                  key: BASIC_AUTH_ENABLED
+            - name: BASIC_AUTH_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  name: application-config
+                  key: BASIC_AUTH_USERNAME
+            - name: BASIC_AUTH_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: application-secrets
+                  key: BASIC_AUTH_PASSWORD
+                  optional: true
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            periodSeconds: 3
+            timeoutSeconds: 2
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            periodSeconds: 10
+            timeoutSeconds: 2
+            failureThreshold: 3
+          lifecycle:
+            preStop:
+              exec:
+                command: ["sh", "-c", "sleep 10"]
+          resources:
+            requests:
+              cpu: 50m
+              memory: 64Mi
+            limits:
+              cpu: 500m
+              memory: 256Mi
+          volumeMounts:
+            - name: web-assets
+              mountPath: /usr/share/nginx/html/assets
+              readOnly: true
+      volumes:
+        - name: web-assets
+          persistentVolumeClaim:
+            claimName: web-assets
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-green
+  namespace: hanjjak
+spec:
+  replicas: 0
+  minReadySeconds: 5
+  progressDeadlineSeconds: 180
+  revisionHistoryLimit: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: web
+      app.kubernetes.io/slot: green
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: web
+        app.kubernetes.io/slot: green
+    spec:
+      automountServiceAccountToken: false
+      terminationGracePeriodSeconds: 30
+      initContainers:
+        - name: web-assets
+          image: docker.io/hanjjak/web:bootstrap
+          command: ["sh", "-c"]
+          args:
+            - >-
+              set -eu; src=/usr/share/nginx/html/assets; tmp="$(mktemp -d /asset-store/.incoming.XXXXXX)";
+              cp -a "$src/." "$tmp/";
+              find "$tmp" -type f -exec sh -eu -c 'tmp="$1"; shift; for file do rel="${file#"$tmp/"}"; mkdir -p "/asset-store/$(dirname "$rel")"; mv -f "$file" "/asset-store/$rel"; done' sh "$tmp" {} +;
+              rm -rf "$tmp"
+          volumeMounts:
+            - name: web-assets
+              mountPath: /asset-store
+      containers:
+        - name: web
+          image: docker.io/hanjjak/web:bootstrap
+          imagePullPolicy: Never
+          ports:
+            - name: http
+              containerPort: 8080
+          env:
+            - name: BASIC_AUTH_ENABLED
+              valueFrom:
+                configMapKeyRef:
+                  name: application-config
+                  key: BASIC_AUTH_ENABLED
+            - name: BASIC_AUTH_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  name: application-config
+                  key: BASIC_AUTH_USERNAME
+            - name: BASIC_AUTH_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: application-secrets
+                  key: BASIC_AUTH_PASSWORD
+                  optional: true
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            periodSeconds: 3
+            timeoutSeconds: 2
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            periodSeconds: 10
+            timeoutSeconds: 2
+            failureThreshold: 3
+          lifecycle:
+            preStop:
+              exec:
+                command: ["sh", "-c", "sleep 10"]
+          resources:
+            requests:
+              cpu: 50m
+              memory: 64Mi
+            limits:
+              cpu: 500m
+              memory: 256Mi
+          volumeMounts:
+            - name: web-assets
+              mountPath: /usr/share/nginx/html/assets
+              readOnly: true
+      volumes:
+        - name: web-assets
+          persistentVolumeClaim:
+            claimName: web-assets
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudflared
+  namespace: hanjjak
+spec:
+  replicas: 0
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: cloudflared
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: cloudflared
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - name: cloudflared
+          image: cloudflare/cloudflared:2026.8.3
+          args: ["tunnel", "--no-autoupdate", "--metrics", "0.0.0.0:2000", "run", "--token-file", "/var/run/hanjjak-secrets/token"]
+          readinessProbe:
+            httpGet:
+              path: /ready
+              port: 2000
+            periodSeconds: 5
+            timeoutSeconds: 3
+            failureThreshold: 12
+          livenessProbe:
+            httpGet:
+              path: /ready
+              port: 2000
+            periodSeconds: 10
+            timeoutSeconds: 3
+            failureThreshold: 3
+          resources:
+            requests:
+              cpu: 50m
+              memory: 64Mi
+            limits:
+              cpu: 500m
+              memory: 256Mi
+          volumeMounts:
+            - name: tunnel-token
+              mountPath: /var/run/hanjjak-secrets
+              readOnly: true
+      volumes:
+        - name: tunnel-token
+          secret:
+            secretName: cloudflare-token
+            items:
+              - key: token
+                path: token
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: postgres-backup
+  namespace: hanjjak
+spec:
+  schedule: "17 18 * * *"
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  jobTemplate:
+    spec:
+      ttlSecondsAfterFinished: 86400
+      template:
+        metadata:
+          labels:
+            app.kubernetes.io/name: postgres-backup
+        spec:
+          automountServiceAccountToken: false
+          restartPolicy: OnFailure
+          containers:
+            - name: backup
+              image: postgres:17.11-alpine
+              command: ["sh", "-c"]
+              args:
+                - >-
+                  set -eu;
+                  export PGPASSWORD="$(cat /var/run/hanjjak-secrets/db-password)";
+                  target="/backups/hanjjak-$(date -u +%Y%m%dT%H%M%SZ).dump";
+                  pg_dump --host=postgres --username="$POSTGRES_USER" --dbname="$POSTGRES_DB" --format=custom --no-owner --no-privileges --file="$target";
+                  test -s "$target";
+                  find /backups -type f -name 'hanjjak-*.dump' -mtime +"$BACKUP_RETENTION_DAYS" -delete
+              envFrom:
+                - configMapRef:
+                    name: application-config
+              env:
+                - name: BACKUP_RETENTION_DAYS
+                  value: "14"
+              resources:
+                requests:
+                  cpu: 50m
+                  memory: 64Mi
+                limits:
+                  cpu: 500m
+                  memory: 512Mi
+              volumeMounts:
+                - name: backups
+                  mountPath: /backups
+                - name: db-password
+                  mountPath: /var/run/hanjjak-secrets
+                  readOnly: true
+          volumes:
+            - name: backups
+              hostPath:
+                path: /var/backups/hanjjak
+                type: Directory
+            - name: db-password
+              secret:
+                secretName: db-password
+                items:
+                  - key: password
+                    path: db-password
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-dns
+  namespace: hanjjak
+spec:
+  podSelector: {}
+  policyTypes: ["Egress"]
+  egress:
+    - to:
+        - namespaceSelector:
+            matchLabels:
+              kubernetes.io/metadata.name: kube-system
+      ports:
+        - protocol: UDP
+          port: 53
+        - protocol: TCP
+          port: 53
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-cloudflared
+  namespace: hanjjak
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/name: cloudflared
+  policyTypes: ["Egress"]
+  egress:
+    - to:
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: web
+      ports:
+        - protocol: TCP
+          port: 8080
+    - to:
+        - ipBlock:
+            cidr: 0.0.0.0/0
+      ports:
+        - protocol: TCP
+          port: 443
+        - protocol: TCP
+          port: 7844
+        - protocol: UDP
+          port: 7844
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-web
+  namespace: hanjjak
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/name: web
+  policyTypes: ["Ingress", "Egress"]
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: cloudflared
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: deployment-smoke
+      ports:
+        - protocol: TCP
+          port: 8080
+  egress:
+    - to:
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: game-api
+      ports:
+        - protocol: TCP
+          port: 8080
+    - to:
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: admin-console
+      ports:
+        - protocol: TCP
+          port: 8080
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-game-api
+  namespace: hanjjak
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/name: game-api
+  policyTypes: ["Ingress", "Egress"]
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: web
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: admin-console
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: deployment-smoke
+      ports:
+        - protocol: TCP
+          port: 8080
+  egress:
+    - to:
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: postgres
+      ports:
+        - protocol: TCP
+          port: 5432
+    - to:
+        - ipBlock:
+            cidr: 0.0.0.0/0
+      ports:
+        - protocol: TCP
+          port: 443
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-admin-console
+  namespace: hanjjak
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/name: admin-console
+  policyTypes: ["Ingress", "Egress"]
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: web
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: deployment-smoke
+      ports:
+        - protocol: TCP
+          port: 8080
+  egress:
+    - to:
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: game-api
+      ports:
+        - protocol: TCP
+          port: 8080
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-postgres
+  namespace: hanjjak
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/name: postgres
+  policyTypes: ["Ingress"]
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: game-api
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: event-consumers
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: migration
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: postgres-backup
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: backfill
+      ports:
+        - protocol: TCP
+          port: 5432
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-database-jobs
+  namespace: hanjjak
+spec:
+  podSelector:
+    matchExpressions:
+      - key: app.kubernetes.io/name
+        operator: In
+        values: ["migration", "postgres-backup", "backfill"]
+  policyTypes: ["Egress"]
+  egress:
+    - to:
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: postgres
+      ports:
+        - protocol: TCP
+          port: 5432
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-deployment-smoke
+  namespace: hanjjak
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/name: deployment-smoke
+  policyTypes: ["Egress"]
+  egress:
+    - to:
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: web
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: game-api
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: admin-console
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-event-consumers
+  namespace: hanjjak
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/name: event-consumers
+  policyTypes: ["Egress"]
+  egress:
+    - to:
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: postgres
+      ports:
+        - protocol: TCP
+          port: 5432
+    - to:
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: kafka
+      ports:
+        - protocol: TCP
+          port: 9092
+    - to:
+        - namespaceSelector:
+            matchLabels:
+              kubernetes.io/metadata.name: kube-system
+      ports:
+        - protocol: UDP
+          port: 53
+        - protocol: TCP
+          port: 53
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-kafka
+  namespace: hanjjak
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/name: kafka
+  policyTypes: ["Ingress"]
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: event-consumers
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: kafka
+      ports:
+        - protocol: TCP
+          port: 9092
+        - protocol: TCP
+          port: 9093

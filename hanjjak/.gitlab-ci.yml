@@ -1,0 +1,193 @@
+stages: [verify, image, deploy]
+
+default:
+  interruptible: true
+  tags: [verify-isolated]
+
+.node-verify:
+  image:
+    name: node:24.12.0-bookworm@sha256:929c026d5a4e4a59685b3c1dbc1a8c3eb090aa95373d3a4fd668daa2493c8331
+  variables:
+    PNPM_STORE_DIR: "$CI_PROJECT_DIR/.pnpm-store"
+  before_script: ["corepack enable", "pnpm install --frozen-lockfile --store-dir $PNPM_STORE_DIR"]
+  cache:
+    key:
+      files: [pnpm-lock.yaml]
+      prefix: "$CI_PROJECT_ID-pnpm"
+    paths: [.pnpm-store/]
+    policy: pull-push
+
+.contracts-content:
+  extends: .node-verify
+  stage: verify
+  script:
+    - pnpm --filter @hanjjak/contracts typecheck
+    - pnpm --filter @hanjjak/contracts drift
+    - pnpm --filter @hanjjak/contracts build
+    - pnpm --filter @hanjjak/content-validator test
+    - pnpm --filter @hanjjak/content-validator validate
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_COMMIT_REF_PROTECTED == "true"'
+    - changes:
+        - .gitlab-ci.yml
+        - .nvmrc
+        - package.json
+        - pnpm-lock.yaml
+        - pnpm-workspace.yaml
+        - packages/contracts/**/*
+        - packages/game-content/**/*
+        - tools/content-validator/**/*
+    - when: never
+
+.web-verify:
+  extends: .node-verify
+  stage: verify
+  script:
+    - pnpm --filter @hanjjak/web typecheck
+    - pnpm --filter @hanjjak/web test
+    - pnpm --filter @hanjjak/web build
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_COMMIT_REF_PROTECTED == "true"'
+    - changes:
+        - .gitlab-ci.yml
+        - .nvmrc
+        - package.json
+        - pnpm-lock.yaml
+        - pnpm-workspace.yaml
+        - apps/web/**/*
+        - packages/client-sdk/**/*
+        - packages/contracts/**/*
+        - packages/localization/**/*
+        - packages/ui/**/*
+    - when: never
+
+.jvm-verify:
+  stage: verify
+  image:
+    name: eclipse-temurin:21.0.12_8-jdk@sha256:1f79c73404fb0cccf9a3459eda22892f368d994b1028d6fb1ae871c1f49749a6
+  services:
+    - name: postgres:17.11-alpine@sha256:18cfe3ef5e6815560c98237d6216d1e5119702fb0f3894c8785dd58b8bbe5d73
+      alias: postgres
+  tags: [verify-docker-isolated]
+  variables:
+    GRADLE_USER_HOME: "$CI_PROJECT_DIR/.gradle-user-home"
+    POSTGRES_DB: hanjjak_test
+    POSTGRES_USER: hanjjak
+    POSTGRES_PASSWORD: test-only
+    TEST_DATABASE_URL: jdbc:postgresql://postgres:5432/hanjjak_test
+    TEST_DATABASE_USER: hanjjak
+    TEST_DATABASE_PASSWORD: test-only
+  cache:
+    key: "$CI_PROJECT_ID-jvm-$CI_COMMIT_REF_SLUG"
+    fallback_keys:
+      - "$CI_PROJECT_ID-jvm-$CI_DEFAULT_BRANCH"
+      - "$CI_PROJECT_ID-jvm-gradle"
+    paths:
+      - .gradle-user-home/caches/build-cache-1/
+      - .gradle-user-home/caches/modules-2/
+    policy: pull-push
+  script: ["bash ./gradlew --no-daemon check"]
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_COMMIT_REF_PROTECTED == "true"'
+    - changes:
+        - .gitlab-ci.yml
+        - .java-version
+        - "*.gradle.kts"
+        - gradle.properties
+        - gradle/**/*
+        - gradlew
+        - gradlew.bat
+        - apps/game-api/**/*
+        - apps/market-worker/**/*
+        - apps/event-consumers/**/*
+        - apps/market-benchmark/**/*
+        - apps/balance-lab/**/*
+        - modules/**/*
+        - packages/sim-core/**/*
+        - packages/game-content/**/*
+    - when: never
+
+contracts-content: { extends: .contracts-content }
+web: { extends: .web-verify }
+jvm: { extends: .jvm-verify }
+deployment-scripts:
+  stage: verify
+  image:
+    name: alpine/k8s:1.36.4
+    entrypoint: [""]
+  script: ["bash ./infra/k8s/check-deployment-scripts.sh"]
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_COMMIT_REF_PROTECTED == "true"'
+    - changes:
+        - .gitlab-ci.yml
+        - infra/k8s/**/*
+    - when: never
+
+
+.docker-image:
+  stage: image
+  script:
+    - bash ./infra/k8s/build-local-image.sh
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_COMMIT_REF_PROTECTED == "true"'
+  tags: [container-build]
+
+image-game-api:
+  extends: .docker-image
+  variables: { IMAGE_NAME: game-api, DOCKERFILE: apps/game-api/Dockerfile, IMAGE_TAG: $CI_COMMIT_SHA }
+image-web:
+  extends: .docker-image
+  variables: { IMAGE_NAME: web, DOCKERFILE: apps/web/Dockerfile, IMAGE_TAG: $CI_COMMIT_SHA }
+image-admin-console:
+  extends: .docker-image
+  variables: { IMAGE_NAME: admin-console, DOCKERFILE: apps/admin-console/Dockerfile, IMAGE_TAG: $CI_COMMIT_SHA }
+image-event-consumers:
+  extends: .docker-image
+  # The installed host helper predates the event-consumers repository name.
+  # Keep the artifact isolated with a suffix until the helper is reinstalled.
+  variables: { IMAGE_NAME: web, DOCKERFILE: apps/event-consumers/Dockerfile, IMAGE_TAG: "${CI_COMMIT_SHA}-event-consumers" }
+
+.production:
+  stage: deploy
+  image:
+    name: alpine/k8s:1.36.4
+    entrypoint: [""]
+  variables:
+    KUBECONFIG: /run/secrets/kubeconfig
+    K8S_NAMESPACE: hanjjak
+    EVENT_CONSUMERS_DEPLOY_ENABLED: "true"
+  before_script:
+    - export IMAGE_TAG="$CI_COMMIT_SHA"
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_COMMIT_REF_PROTECTED == "true"'
+      when: manual
+      allow_failure: true
+    - when: never
+  tags: [production-k3s]
+  resource_group: production
+  interruptible: false
+
+deploy-production:
+  extends: .production
+  needs: [contracts-content, web, jvm, deployment-scripts, image-game-api, image-web, image-admin-console, image-event-consumers]
+  script: ["bash ./infra/k8s/deploy.sh"]
+  resource_group: production
+  interruptible: false
+  environment: { name: production }
+backfill-production:
+  extends: .production
+  needs: [image-game-api]
+  script: ["bash ./infra/k8s/backfill.sh"]
+  resource_group: production
+  interruptible: false
+  environment: { name: production }
+
+rollback-production:
+  extends: .production
+  when: manual
+  before_script:
+    - export ROLLBACK_IMAGE_TAG="${ROLLBACK_IMAGE_TAG:?ROLLBACK_IMAGE_TAG is required}"
+  script: ["bash ./infra/k8s/rollback.sh"]
+  resource_group: production
+  interruptible: false
+  environment: { name: production }

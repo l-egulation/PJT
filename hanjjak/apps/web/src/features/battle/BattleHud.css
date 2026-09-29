@@ -1,0 +1,511 @@
+.cozy-paper {
+  border: 16px solid transparent;
+  color: var(--cozy-ink, #2d1a0e);
+  background: transparent;
+  border-image: var(--cozy-paper-image) 48 fill / 16px / 0 stretch;
+  filter: drop-shadow(0 5px 1px rgba(55, 27, 10, .28));
+}
+
+body:has(.battle-screen-live) { background: #efc77e; }
+body:has(.battle-screen-live) .auth-bar { display: none; }
+/* HUD 가 붙는 상자의 정본. 전투와 다른 화면이 같은 값을 본다. */
+:root { --cozy-hud-max-width: 1600px; --cozy-hud-max-height: 900px; }
+.game-shell:has(.battle-screen-live) { max-width: var(--cozy-hud-max-width); padding: 0; }
+.game-shell.cozy-management-shell { position: relative; width: 100%; max-width: none; height: 100dvh; min-height: 640px; padding: 0; overflow: hidden; }
+body:has(.cozy-management-shell) {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 8%, rgba(255, 249, 205, .78), transparent 32%),
+    linear-gradient(180deg, #f6d99b 0 34%, #d99351 100%);
+}
+body:has(.cozy-management-shell) .auth-bar { display: none; }
+/*
+ * HUD 는 어느 화면에서든 같은 상자에 붙는다. 전투 무대는 가로 1600px, 세로 900px
+ * 에서 멈추는데 랭킹·치장뽑기는 배경을 화면 끝까지 깔려고 그 제한을 풀어 두었다.
+ * 그래서 화면을 옮길 때마다 내 정보와 아래 메뉴가 좌우·위아래로 튀었다. 배경은
+ * 그대로 화면을 채우되, HUD 만 전투와 같은 상자 안에 가둔다.
+ */
+.cozy-shared-navigation {
+  position: absolute;
+  z-index: 30;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: min(100%, var(--cozy-hud-max-width));
+  max-height: var(--cozy-hud-max-height);
+  color: var(--cozy-ink, #2d1a0e);
+  transform: translateX(-50%);
+  font-family: var(--hanjjak-font-ui);
+  pointer-events: none;
+}
+/* 같은 프로필 막대·상단 메뉴·성장 메뉴가 전투 화면에서는 0.9배인데 나머지 화면에서는
+   원래 크기로 떠서, 화면을 옮길 때마다 크기가 튀었다. 전투 화면 크기로 맞춘다. */
+.cozy-shared-navigation > .cozy-profile-summary,
+.cozy-shared-navigation > .cozy-utility-nav,
+.cozy-shared-navigation > .cozy-growth-nav { zoom: var(--cozy-hud-zoom, .9); }
+.cozy-shared-navigation :is(button, summary, select) { pointer-events: auto; }
+.cozy-management-content { position: absolute; z-index: 1; inset: 108px 18px 120px; padding: 10px; overflow: auto; overscroll-behavior: contain; scrollbar-gutter: stable; }
+.cozy-management-content > :first-child { min-height: 100%; }
+.battle-stage-shell.cozy-battle-stage-shell { height: 100dvh; min-height: 640px; max-height: var(--cozy-hud-max-height); border: 0; box-shadow: none; }
+/* The stage is sized to the viewport, so nothing below it should ever scroll; the management
+   shell already does this and the battle screen was the one page left without it. */
+body:has(.battle-screen-live) { overflow: hidden; }
+/* The HUD panels were drawn for a roomier window. At full size they crowd the scene, so every
+   panel is zoomed down together — the chat stays at full size because it is read, not glanced at. */
+.battle-stage-shell.cozy-battle-stage-shell { --cozy-hud-zoom: .9; }
+.cozy-battle-stage-shell > .cozy-profile-summary,
+.cozy-battle-stage-shell > .cozy-history,
+.cozy-battle-stage-shell > .cozy-stage-cluster,
+.cozy-battle-stage-shell > .cozy-utility-nav,
+.cozy-battle-stage-shell > .picture-in-picture-shell,
+.cozy-battle-stage-shell > .battle-kitchen > .cozy-rewards,
+.cozy-battle-stage-shell > .battle-kitchen > .cozy-player-status,
+.cozy-battle-stage-shell > .battle-kitchen > .cozy-growth-nav,
+.cozy-battle-stage-shell .cozy-idle-status,
+.cozy-battle-stage-shell .battle-failure-analysis,
+.cozy-battle-stage-shell .battle-retry-notice { zoom: var(--cozy-hud-zoom); }
+.cozy-battle-stage-shell .battle-kitchen { height: 100%; min-height: 100%; }
+.cozy-battle-stage-shell .battle-connection { top: 166px; left: 30px; }
+.cozy-battle-stage-shell .battle-failure-analysis { top: 214px; left: 30px; }
+.cozy-battle-stage-shell .battle-retry-notice { top: 174px; left: 30px; }
+.cozy-idle-status { position: absolute; z-index: 13; top: 174px; left: 50%; max-width: 390px; overflow: hidden; color: #fff8e8; font-size: 9px; font-weight: 900; text-shadow: 0 2px 2px rgba(61, 31, 12, .76); text-overflow: ellipsis; white-space: nowrap; transform: translateX(-50%); }
+.cozy-idle-status.error { color: #ff9f8c; }
+
+.cozy-profile-summary,
+.cozy-history-trigger,
+.cozy-stage-progress,
+.cozy-rewards,
+.cozy-player-status,
+.cozy-growth-nav,
+.cozy-history-panel { image-rendering: pixelated; }
+
+.cozy-profile-summary {
+  position: absolute;
+  z-index: 13;
+  top: 18px;
+  left: 18px;
+  display: grid;
+  grid-template-columns: 66px minmax(112px, 1fr);
+  align-items: center;
+  width: 264px;
+  min-height: 96px;
+  box-sizing: border-box;
+  padding: 16px 20px 14px 14px;
+  border: 0;
+  border-image: none;
+  background: url("../../shared/assets/cozy-hud-v1/paper/profile-history-shell-dedicated-v2.png") center / 100% 100% no-repeat;
+  text-align: left;
+}
+
+.cozy-profile-avatar { width: 64px; height: 64px; object-fit: contain; object-position: center 24%; image-rendering: pixelated; }
+.cozy-profile-copy { display: grid; gap: 5px; min-width: 0; }
+.cozy-profile-copy strong { overflow: hidden; font-size: 20px; font-weight: 1000; letter-spacing: -.04em; line-height: 1.15; text-align: left; text-overflow: ellipsis; white-space: nowrap; }
+.cozy-profile-copy small { display: flex; align-items: center; justify-content: flex-start; gap: 8px; font-size: 17px; font-weight: 950; line-height: 1.15; font-variant-numeric: tabular-nums; }
+.cozy-rice-coin { display: inline-block; width: 25px; height: 25px; background-image: var(--cozy-profile-icons); background-position: 100% 0; background-size: 500% 100%; image-rendering: pixelated; }
+
+.cozy-history { position: absolute; z-index: 16; top: 94px; left: 18px; }
+.cozy-history-trigger {
+  display: grid;
+  grid-template-columns: 48px auto 22px;
+  align-items: center;
+  gap: 8px;
+  min-width: 218px;
+  min-height: 74px;
+  box-sizing: border-box;
+  padding: 14px 18px 13px 15px;
+  border: 0;
+  border-image: none;
+  background: url("../../shared/assets/cozy-hud-v1/paper/profile-history-shell-dedicated-v2.png") center / 100% 100% no-repeat;
+  font-size: 20px;
+  font-weight: 1000;
+}
+.cozy-history-trigger img { width: 46px; height: 46px; object-fit: contain; image-rendering: pixelated; }
+.cozy-history-trigger b { font-size: 31px; line-height: 1; }
+.cozy-history-panel {
+  --cozy-paper-image: url("../../shared/assets/cozy-hud-v1/paper/reward-panel-shell-9slice.png");
+  position: absolute;
+  top: calc(100% - 2px);
+  left: 14px;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  width: min(620px, calc(100vw - 70px));
+  height: min(465px, calc(100vh - 190px));
+  min-height: 250px;
+  box-sizing: border-box;
+  padding: 16px 20px 20px;
+  border: 18px solid transparent;
+  border-image: var(--cozy-paper-image) 48 fill / 18px / 0 stretch;
+  background: transparent;
+  text-align: left;
+}
+.cozy-history-panel > header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 0 4px 12px; border-bottom: 2px dashed #c99b72; }
+.cozy-history-panel h3 { margin: 0; font-size: 27px; letter-spacing: -.05em; }
+.cozy-history-panel header span { color: #8a6549; font-size: 11px; font-weight: 800; }
+.cozy-history-panel header button { width: 38px; height: 38px; border: 0; color: #3a2417; background: transparent; font-size: 32px; font-weight: 900; }
+.cozy-history-panel ol { min-height: 0; max-height: none; margin: 0; padding: 0 6px 0 0; overflow: auto; list-style: none; }
+.cozy-history-panel li { display: grid; grid-template-columns: 46px minmax(0, 1fr); gap: 12px; align-items: start; min-height: 112px; padding: 14px 4px; border-bottom: 1px dashed #d5b18d; }
+.cozy-history-panel li > img { width: 42px; height: 42px; object-fit: contain; image-rendering: pixelated; }
+.cozy-history-panel li > div { min-width: 0; }
+.cozy-history-entry-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding-bottom: 8px; border-bottom: 1px solid rgba(185, 149, 112, .46); }
+.cozy-history-panel li p { display: flex; flex: 1; gap: 9px; margin: 0; align-items: baseline; }
+.cozy-history-panel li p strong { color: #9f3f2c; font-size: 13px; }
+.cozy-history-panel li p b { font-size: 16px; }
+.cozy-history-panel li.is-stage_cleared p strong { color: #657d32; }
+.cozy-history-panel li.is-stage_failed p strong { color: #a44435; }
+.cozy-history-panel li span { display: block; overflow: hidden; color: #5f4939; font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
+.cozy-history-panel li small { display: block; margin-top: 5px; color: #80624a; font-size: 9px; }
+.cozy-history-result { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; margin: 8px 0 0; }
+.cozy-history-result div { display: grid; gap: 2px; min-width: 0; padding: 6px 8px; background: rgba(248, 237, 218, .66); }
+.cozy-history-result dt { color: #8b705d; font-size: 9px; font-weight: 850; white-space: nowrap; }
+.cozy-history-result dd { overflow: hidden; margin: 0; color: #3f2c21; font-size: 10px; font-weight: 950; text-overflow: ellipsis; white-space: nowrap; }
+.cozy-history-gains { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; margin: 7px 0 0; }
+.cozy-history-gains div { display: grid; gap: 1px; min-width: 0; padding: 6px 8px; background: rgba(239, 216, 181, .76); }
+.cozy-history-gains dt { color: #765942; font-size: 8px; font-weight: 900; white-space: nowrap; }
+.cozy-history-gains dd { margin: 0; color: #9f3f2c; font-size: 10px; font-weight: 1000; white-space: nowrap; }
+.cozy-history-panel li .cozy-history-reward-items { display: flex; align-items: baseline; gap: 7px; overflow: hidden; margin-top: 7px; color: #80624a; font-size: 8px; white-space: nowrap; }
+.cozy-history-reward-items > b { flex: none; color: #6d4f39; font-size: 8px; }
+.cozy-history-panel li .cozy-history-reward-items > span { min-width: 0; color: #674c38; font-size: 9px; font-weight: 850; }
+.cozy-history-entry-header time { display: grid; flex: none; justify-items: end; gap: 1px; color: #7b6655; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.cozy-history-entry-header time small { margin: 0; color: #92745e; font-size: 8px; font-weight: 850; }
+.cozy-history-entry-header time b { font-size: 9px; font-weight: 900; }
+.cozy-history-message { margin: 14px 4px 0; color: #6f5946; font-size: 12px; }
+.cozy-history-message button { border: 0; color: var(--cozy-coral-dark, #c73f4c); background: transparent; font-weight: 900; }
+
+.cozy-utility-nav { position: absolute; z-index: 13; top: 18px; right: 18px; display: grid; grid-template-columns: repeat(var(--cozy-utility-columns), 62px); gap: 8px; }
+.cozy-utility-nav button { position: relative; display: grid; place-items: center; width: 62px; height: 62px; min-height: 62px; padding: 9px; border: 0; border-radius: 10px; color: #4a2c1d; background: url("../../shared/assets/cozy-hud-v1/controls/utility-button-shell.png") center / 100% 100% no-repeat; filter: drop-shadow(0 4px 1px rgba(25, 13, 7, .34)); }
+.cozy-utility-nav button::after { position: absolute; inset: 5px; content: ""; border: 2px solid transparent; border-radius: 8px; pointer-events: none; transition: border-color .15s ease, box-shadow .15s ease; }
+/* 무언가 와 있다는 표시. 숫자까지는 안쪽에서 읽는다. */
+.cozy-utility-dot { position: absolute; z-index: 2; top: 7px; right: 7px; width: 14px; height: 14px; border: 2px solid #fff6e2; border-radius: 50%; background: #e0564a; box-shadow: 0 1px 2px rgba(58, 26, 12, .45); }
+.cozy-utility-nav button:hover:not(:disabled) { transform: translateY(-2px); filter: brightness(1.07) saturate(1.08) drop-shadow(0 6px 1px rgba(35, 17, 8, .28)); }
+.cozy-utility-nav button:active:not(:disabled) { transform: translateY(1px); }
+.cozy-utility-nav img { width: 42px; height: 42px; object-fit: contain; image-rendering: pixelated; filter: drop-shadow(0 2px 0 rgba(65, 38, 20, .24)); }
+.cozy-utility-nav button[data-route="cosmetics"] img { width: 48px; height: 48px; }
+.cozy-utility-nav button.has-full-art { padding: 0; overflow: hidden; background: none; }
+.cozy-utility-nav button.has-full-art img { width: 100%; height: 100%; border-radius: 10px; filter: none; }
+.cozy-utility-nav button:disabled { cursor: not-allowed; filter: grayscale(.38) drop-shadow(0 4px 1px rgba(25, 13, 7, .25)); opacity: .66; }
+.cozy-utility-nav button.active:not(:disabled) { transform: translateY(1px); filter: brightness(1.02) saturate(1.18) drop-shadow(0 2px 1px rgba(35, 17, 8, .4)); }
+.cozy-utility-nav button.active:not(:disabled)::after { border-color: rgba(211, 91, 78, .92); box-shadow: inset 0 0 0 2px rgba(255, 246, 210, .72); }
+
+/* 콘텐츠 선택은 종이 상자를 따로 그리지 않는다. 명패·카드 그림이 곧 상자라서
+   흐린 전투 화면 위에 그림만 얹는다. 그림 안쪽 자리(그림 높이 대비 %)는 아래에 적었다.
+   카드 1024x1536 기준: 삽화칸 10.7~56%, 속지 56.5~90%, 단추 75.2~85.3%.
+   명패·단추 2172x724 기준: 실제 판때기는 세로 20.4~79.6%(=59.2%)만 차지한다. */
+.cozy-content-picker-backdrop {
+  position: fixed;
+  z-index: 90;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: clamp(8px, 1.6vw, 20px);
+  background: rgba(33, 24, 18, .42);
+  backdrop-filter: blur(9px) saturate(.72);
+  pointer-events: auto;
+  animation: cozy-content-backdrop-in .18s ease-out both;
+}
+.cozy-content-picker {
+  display: grid;
+  justify-items: center;
+  gap: clamp(4px, 1.2vh, 12px);
+  max-width: 100%;
+  max-height: 100%;
+  color: #3b281c;
+  animation: cozy-content-dialog-in .22s cubic-bezier(.2,.8,.2,1) both;
+}
+.cozy-content-picker > header { position: relative; display: flex; align-items: center; justify-content: center; width: 100%; }
+.cozy-content-picker h2 {
+  display: grid;
+  place-items: center;
+  width: min(400px, 46vw);
+  aspect-ratio: 2172 / 724;
+  margin: 0;
+  /* 판때기 안쪽 면의 한가운데(세로 46.8%)에 맞춰 앉힌다. */
+  padding-bottom: .6%;
+  background: center / 100% 100% no-repeat;
+  color: #6b432a;
+  font-size: clamp(20px, 2.6vw, 34px);
+  font-weight: 950;
+  letter-spacing: -.03em;
+  text-shadow: 0 2px 0 rgba(255, 249, 228, .85);
+}
+.cozy-content-picker-close { position: absolute; top: 50%; right: 0; display: grid; place-items: center; width: min(110px, 13vh); transform: translateY(-50%); aspect-ratio: 1; padding: 0; border: 0; border-radius: 0; background: transparent; transition: transform .14s ease, filter .14s ease; }
+.cozy-content-picker-close img { width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated; }
+.cozy-content-picker-close:hover { transform: translateY(-50%) scale(1.06); filter: brightness(1.08); }
+.cozy-content-picker-grid { display: flex; justify-content: center; gap: clamp(10px, 2.2vh, 26px); min-height: 0; margin-top: clamp(-26px, -2.4vh, -10px); }
+.cozy-content-card {
+  container-type: size;
+  position: relative;
+  flex: 0 0 auto;
+  height: min(74vh, 560px);
+  aspect-ratio: 1024 / 1536;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: center / 100% 100% no-repeat;
+  color: #3b281c;
+  text-align: center;
+  transition: transform .16s ease, filter .16s ease;
+}
+.cozy-content-card:hover:not(:disabled) { transform: translateY(-5px); filter: brightness(1.05); }
+.cozy-content-card-art { position: absolute; top: 33.3%; left: 50%; width: 48cqw; height: 48cqw; object-fit: contain; image-rendering: pixelated; transform: translate(-50%, -50%); filter: drop-shadow(0 .8cqh 0 rgba(38, 22, 12, .28)); }
+.cozy-content-card-copy { position: absolute; top: 61.5%; left: 8%; display: grid; gap: .6cqh; width: 84%; }
+.cozy-content-card-copy strong { font-size: 9.4cqw; line-height: 1.1; letter-spacing: -.03em; }
+.cozy-content-card-copy small { color: #7b5b41; font-size: 4.4cqw; font-weight: 850; }
+.cozy-content-card-action {
+  position: absolute;
+  top: 82%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 82cqw;
+  /* 판때기가 그림 속 단추 자리를 세로로 한 픽셀 모자라게 덮어 테두리가 겹쳐 보였다.
+     세로만 5% 늘려 완전히 덮는다. 도트 그림이라 이 정도는 눈에 띄지 않는다. */
+  aspect-ratio: 2172 / 762;
+  padding-top: 1%;
+  background: center / 100% 100% no-repeat;
+  color: #fff6e0;
+  font-size: 5cqw;
+  font-weight: 900;
+  text-shadow: 0 2px 0 rgba(62, 40, 24, .5);
+  transform: translate(-50%, -50%);
+}
+.cozy-content-card:disabled { cursor: not-allowed; filter: grayscale(.22) brightness(.96); }
+.cozy-content-card.is-raid .cozy-content-card-action { color: #fdf6e8; }
+@keyframes cozy-content-backdrop-in { from { opacity: 0; } }
+@keyframes cozy-content-dialog-in { from { opacity: 0; transform: translateY(10px) scale(.97); } }
+@media (min-width: 621px) {
+}
+
+.cozy-stage-cluster {
+  position: absolute;
+  z-index: 12;
+  top: 24px;
+  left: 50%;
+  width: min(420px, calc(100% - 760px));
+  min-width: 390px;
+  transform: translateX(-50%);
+}
+.cozy-stage-progress {
+  --cozy-paper-image: url("../../shared/assets/cozy-hud-v1/paper/stage-progress-shell-9slice.png");
+  width: 100%;
+  min-height: 84px;
+  padding: 1px 16px 3px;
+  border-width: 13px;
+  border-image-width: 13px;
+}
+.cozy-stage-heading { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 25px; text-align: center; }
+.cozy-stage-heading > strong { font-size: 19px; font-weight: 1000; letter-spacing: .02em; white-space: nowrap; }
+.cozy-stage-heading > time { display: flex; align-items: baseline; gap: 6px; padding: 3px 10px; border: 2px solid #8e2933; border-radius: 6px; color: #fff3d8; background: #bd3f49; box-shadow: inset 0 -2px 0 rgba(102, 24, 32, .28), 0 2px 0 rgba(91, 54, 34, .18); font-variant-numeric: tabular-nums; font-weight: 1000; white-space: nowrap; }
+.cozy-stage-heading > time small { color: #fff3d8; font-size: 11px; font-weight: 1000; }
+.cozy-stage-heading > time b { color: #fff8dc; font-size: 18px; font-weight: 1000; line-height: 1; text-shadow: 0 2px #7b252d; }
+.cozy-stage-actions { position: relative; z-index: 4; display: flex; align-items: center; justify-content: center; gap: 9px; margin-top: 8px; }
+.cozy-stage-picker { position: relative; }
+.cozy-stage-picker-button { display: flex; align-items: center; gap: 5px; min-height: 36px; padding: 3px 12px; border: 2px solid #a88a67; border-radius: 5px; color: #654b38; background: #f7ecd1; cursor: pointer; font: inherit; font-size: 13px; font-weight: 1000; white-space: nowrap; }
+.cozy-stage-picker-button:hover { border-color: #c73f4c; color: #8e303a; background: #ffe1d9; }
+.cozy-stage-picker summary { position: relative; display: flex; align-items: center; gap: 5px; min-height: 36px; padding: 3px 12px; border: 2px solid #a88a67; border-radius: 5px; color: #654b38; background: #f7ecd1; cursor: pointer; list-style: none; font-size: 13px; font-weight: 1000; white-space: nowrap; }
+.cozy-stage-picker summary::-webkit-details-marker { display: none; }
+.cozy-stage-picker summary span { font-size: 20px; line-height: .7; }
+.cozy-stage-mode { display: grid; place-items: center; min-width: 53px; min-height: 36px; padding: 3px 10px; border: 2px solid #a88a67; border-radius: 5px; color: #654b38; background: #f7ecd1; cursor: pointer; font-size: 13px; font-weight: 1000; }
+.cozy-stage-mode.active { border-color: var(--cozy-coral-dark, #c73f4c); color: #8e303a; background: #ffe1d9; box-shadow: inset 0 -2px 0 rgba(145, 47, 57, .16); }
+.cozy-stage-mode:disabled { cursor: not-allowed; filter: grayscale(.55); opacity: .52; }
+.cozy-boss-health { display: grid; gap: 5px; width: min(372px, calc(100% - 34px)); margin: 7px auto 0; padding: 7px 10px 8px; border: 2px solid rgba(255, 224, 163, .78); border-radius: 9px; color: #fff8e7; background: rgba(40, 20, 12, .9); box-shadow: 0 3px 0 rgba(25, 10, 5, .58), 0 5px 14px rgba(25, 10, 5, .32), inset 0 1px 0 rgba(255, 244, 211, .16); text-shadow: 0 2px 2px #1f0b06; backdrop-filter: blur(4px); }
+.cozy-boss-health-copy { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding-inline: 2px; font-size: 12px; font-weight: 1000; }
+.cozy-boss-health-copy strong { overflow: hidden; color: #fff0bd; font-size: 14px; text-overflow: ellipsis; white-space: nowrap; }
+.cozy-boss-health-copy span { flex: none; color: #fffaf0; font-variant-numeric: tabular-nums; }
+.cozy-boss-health-track { height: 14px; overflow: hidden; border: 2px solid #190a06; border-radius: 999px; background: rgba(19, 8, 5, .96); box-shadow: 0 2px 0 rgba(13, 5, 3, .52), inset 0 2px 0 rgba(0, 0, 0, .34), 0 0 0 1px rgba(255, 219, 155, .2); }
+.cozy-boss-health-track i { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #9e2524, #ef5548 72%, #ff8d60); box-shadow: inset 0 2px 0 rgba(255, 215, 173, .38); transition: width .16s linear; }
+.cozy-stage-picker-panel { position: absolute; z-index: 30; top: calc(100% + 8px); left: 50%; display: grid; width: 296px; padding: 11px; border: 2px solid #6f4b31; background: #fff6dc; box-shadow: 0 8px 0 rgba(56, 29, 13, .28); transform: translateX(-50%); }
+/* 한 챕터는 열 칸이다. 두 줄 다섯 칸으로 놓으면 한눈에 들어온다. */
+.cozy-stage-picker-panel ul { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; margin: 0; padding: 0; list-style: none; }
+/* 번호는 한 덩어리다. 하이픈에서 줄이 갈리면 "2-" 와 "2" 로 읽힌다. */
+.cozy-stage-picker-panel li button { display: grid; place-items: center; width: 100%; min-height: 38px; border: 2px solid rgba(124, 91, 63, .34); border-radius: 8px; color: #4a3221; background: #fffdf4; font: inherit; font-size: 13px; font-weight: 950; white-space: nowrap; }
+.cozy-stage-picker-panel li button:hover:not(:disabled) { border-color: #e08574; background: #fff3e6; }
+.cozy-stage-picker-panel li button.is-current { border-color: #e0564a; color: #b83f36; background: #ffeee4; }
+.cozy-stage-picker-panel li button:disabled { cursor: not-allowed; filter: grayscale(.4); opacity: .48; }
+.cozy-stage-picker-panel label { display: grid; gap: 5px; color: #705440; font-size: 10px; font-weight: 900; }
+.cozy-stage-picker-panel select { width: 100%; padding: 8px 10px; border: 1px solid #a98d6c; color: #2f1e14; background: #fffaf0; font-weight: 900; }
+.cozy-stage-meter { display: grid; grid-template-columns: 31px minmax(0, 1fr) auto; align-items: center; gap: 9px; margin-top: 2px; }
+.cozy-stage-meter > img { width: 32px; height: 32px; object-fit: contain; image-rendering: pixelated; }
+.cozy-stage-meter > b { min-width: 42px; font-size: 14px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.cozy-stage-meter.boss-only { grid-template-columns: 31px minmax(0, 1fr); }
+.cozy-stage-boss-only { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; min-width: 0; color: #8e303a; }
+.cozy-stage-boss-only strong { font-size: 15px; font-weight: 1000; }
+.cozy-stage-track { height: 13px; overflow: hidden; border: 2px solid #2d2019; border-radius: 2px; background: #4c4b48; box-shadow: inset 0 2px 0 rgba(0,0,0,.2); }
+.cozy-stage-track i { display: block; height: 100%; background: #e85852 url("../../shared/assets/cozy-hud-v1/controls/progress-fill-coral-9slice.png") center / 100% 100% no-repeat; transition: width .16s linear; }
+
+.cozy-rewards {
+  --cozy-paper-image: url("../../shared/assets/cozy-hud-v1/paper/reward-panel-shell-9slice.png");
+  position: absolute;
+  z-index: 11;
+  top: 174px;
+  right: 18px;
+  width: 246px;
+  padding: 4px 10px 12px;
+  border-width: 16px;
+  border-image-width: 16px;
+}
+.cozy-rewards:not([open]) { padding-bottom: 3px; }
+.cozy-rewards summary { position: relative; display: grid; grid-template-columns: 1fr auto 20px; grid-template-areas: "title count arrow"; gap: 8px; align-items: center; min-height: 42px; cursor: pointer; list-style: none; }
+.cozy-rewards summary::-webkit-details-marker { display: none; }
+.cozy-rewards summary > span { grid-area: title; font-size: 19px; font-weight: 1000; }
+.cozy-reward-count { grid-area: count; display: grid; place-items: center; min-width: 24px; height: 24px; padding: 0 5px; border-radius: 50%; color: #fff; background: var(--cozy-coral, #ef5866); font-size: 11px; font-variant-numeric: tabular-nums; }
+.cozy-rewards summary > i { grid-area: arrow; width: 10px; height: 10px; border-right: 3px solid #332116; border-bottom: 3px solid #332116; transform: rotate(225deg); }
+.cozy-rewards:not([open]) summary > i { transform: rotate(45deg); }
+.cozy-rewards ul { margin: 8px 0 0; padding: 0; list-style: none; }
+.cozy-rewards li { display: grid; grid-template-columns: 48px minmax(0, 1fr) auto; align-items: center; gap: 10px; min-height: 70px; border-top: 1px dashed #cba47e; }
+.cozy-reward-icon { display: grid; place-items: center; width: 44px; height: 44px; }
+.cozy-reward-icon img { width: 44px; height: 44px; object-fit: contain; image-rendering: pixelated; }
+.cozy-reward-icon .cozy-rice-coin { width: 40px; height: 40px; }
+.cozy-reward-icon > b { font-size: 26px; }
+.cozy-rewards li strong { display: -webkit-box; overflow: hidden; font-size: 15px; line-height: 1.18; overflow-wrap: anywhere; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.cozy-rewards li em { font-size: 15px; font-style: normal; font-weight: 1000; font-variant-numeric: tabular-nums; }
+.cozy-rewards li > small { grid-column: 2 / -1; margin-top: -9px; color: #a44232; font-size: 8px; }
+.cozy-rewards-empty { display: grid; justify-items: center; gap: 7px; padding: 18px 4px 8px; border-top: 1px dashed #cba47e; color: #816a57; font-size: 10px; text-align: center; }
+.cozy-rewards-empty img { width: 54px; height: 54px; object-fit: contain; image-rendering: pixelated; opacity: .72; }
+.cozy-reward-pager { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 5px; color: #7d6049; font-size: 9px; font-weight: 900; }
+.cozy-reward-pager button { display: grid; place-items: center; width: 24px; height: 22px; border: 1px solid #b99b79; color: #473022; background: #fff7e5; font-size: 18px; line-height: 1; }
+
+.cozy-player-status {
+  --cozy-paper-image: url("../../shared/assets/cozy-hud-v1/paper/status-panel-shell-9slice.png");
+  position: absolute;
+  z-index: 12;
+  /* 성장 메뉴의 윗변이 104px 이다. 딱 붙여 두었더니 조금만 어긋나도 덮였다. */
+  bottom: 124px;
+  left: 50%;
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  width: min(650px, calc(100% - 560px));
+  min-width: 570px;
+  min-height: 66px;
+  padding: 1px 15px 1px 4px;
+  border-width: 12px;
+  border-image-width: 12px;
+  transform: translateX(-50%);
+}
+.cozy-level { display: flex; align-items: baseline; justify-content: center; gap: 5px; border-right: 1px dashed #c6a17d; }
+.cozy-level small { font-size: 13px; font-weight: 1000; }
+.cozy-level strong { font-size: 28px; line-height: 1; }
+.cozy-level small,
+.cozy-level strong { transform: translateY(5px); }
+.cozy-status-bars { display: grid; align-content: center; gap: 4px; padding-left: 12px; }
+.cozy-status-row { display: grid; grid-template-columns: 20px 31px minmax(0, 1fr) 154px; align-items: center; gap: 6px; font-size: 10px; }
+.cozy-status-row > img { width: 18px; height: 18px; object-fit: contain; image-rendering: pixelated; }
+.cozy-status-row > b { font-size: 12px; }
+.cozy-status-row > span { font-weight: 850; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.cozy-status-row > span strong { color: var(--cozy-sky, #22b7e6); font-size: 12px; }
+.cozy-status-track { height: 11px; overflow: hidden; border: 2px solid #281c15; border-radius: 2px; background: #3f3d3a; box-shadow: inset 0 2px 0 rgba(0,0,0,.22); }
+.cozy-status-track i { display: block; height: 100%; transition: width .16s linear; }
+.cozy-status-track.hp i { background: #e75f56 url("../../shared/assets/cozy-hud-v1/controls/progress-fill-coral-9slice.png") center / 100% 100% no-repeat; }
+.cozy-status-track.exp i { background: var(--cozy-sky, #22b7e6); box-shadow: inset 0 2px 0 rgba(255,255,255,.3); }
+
+.cozy-growth-nav {
+  --cozy-paper-image: url("../../shared/assets/cozy-hud-v1/paper/bottom-nav-shell-9slice.png");
+  position: absolute;
+  z-index: 13;
+  bottom: 14px;
+  left: 50%;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(76px, 1fr));
+  width: min(680px, calc(100% - 330px));
+  min-width: 560px;
+  min-height: 84px;
+  padding: 1px 6px;
+  border-width: 13px;
+  border-image-width: 13px;
+  transform: translateX(-50%);
+}
+/* 이름은 읽어 주는 쪽에만 남기고 화면에는 그림만 둔다. 다섯 칸이 서로 다른 아이콘이라
+   글씨가 없어도 무엇인지 읽힌다. */
+.cozy-growth-nav button { position: relative; display: grid; place-items: center; gap: 0; min-width: 0; border: 0; border-right: 1px dashed #c4a07d; color: #2d1d13; background: transparent; font-size: 12px; font-weight: 1000; }
+.cozy-growth-nav button:last-child { border-right: 0; }
+.cozy-growth-nav button:hover:not(:disabled) { background: rgba(239, 88, 102, .1); }
+.cozy-growth-nav button > img { width: 54px; height: 54px; object-fit: contain; image-rendering: pixelated; }
+.cozy-growth-nav button:first-child > img { width: 60px; height: 60px; object-position: center 28%; }
+.cozy-growth-nav button:disabled { cursor: not-allowed; filter: grayscale(.42); opacity: .66; }
+.cozy-growth-nav button > small { position: absolute; top: 4px; right: 7px; padding: 2px 4px; border: 1px solid #9e3540; border-radius: 999px; color: #fff8e8; background: var(--cozy-coral, #ef5866); font-size: 7px; font-weight: 900; line-height: 1; }
+
+@media (max-width: 1180px) {
+  .cozy-utility-nav { grid-template-columns: repeat(var(--cozy-utility-columns), 55px); gap: 5px; }
+  .cozy-utility-nav button { width: 55px; height: 55px; min-height: 55px; padding: 8px; }
+  .cozy-utility-nav img { width: 38px; height: 38px; }
+  .cozy-stage-cluster { width: 400px; min-width: 380px; }
+  .cozy-player-status { width: min(580px, calc(100% - 500px)); min-width: 540px; }
+  .cozy-growth-nav { width: min(680px, calc(100% - 290px)); }
+}
+
+@media (max-width: 900px) {
+  .battle-stage-shell.cozy-battle-stage-shell { min-height: 760px; max-height: none; }
+  .cozy-profile-summary { width: 244px; }
+  .cozy-stage-cluster { top: 124px; width: calc(100% - 32px); min-width: 0; }
+  .cozy-idle-status { top: 270px; }
+  .cozy-history { top: 102px; }
+  .cozy-utility-nav { right: 12px; }
+  .cozy-rewards { top: 216px; right: 12px; }
+  .cozy-player-status { right: 16px; bottom: 108px; left: 16px; width: auto; min-width: 0; transform: none; }
+  .cozy-growth-nav { width: calc(100% - 32px); min-width: 0; }
+  .cozy-management-content { right: 12px; bottom: 108px; left: 12px; padding: 6px; }
+}
+
+@media (max-width: 620px) {
+  .battle-stage-shell.cozy-battle-stage-shell { min-height: 980px; }
+  .cozy-profile-summary { top: 10px; left: 10px; width: 226px; min-height: 86px; grid-template-columns: 58px minmax(0, 1fr); padding: 13px 17px 12px 12px; }
+  .cozy-profile-avatar { width: 56px; height: 56px; }
+  .cozy-utility-nav { top: 92px; left: 10px; right: 10px; grid-template-columns: repeat(var(--cozy-utility-columns), 1fr); }
+  .cozy-utility-nav button { width: auto; height: 54px; min-height: 54px; }
+  .cozy-stage-cluster { top: 170px; }
+  .cozy-stage-heading { justify-content: flex-start; gap: 7px; margin-top: 17px; }
+  .cozy-stage-heading > time { gap: 3px; padding-left: 7px; }
+  .cozy-stage-picker summary { width: 36px; padding: 4px; overflow: hidden; color: transparent; }
+  .cozy-stage-picker summary span { position: absolute; inset: 0; display: grid; place-items: center; color: #2c1c12; }
+  .cozy-stage-mode { min-width: 44px; padding: 3px 6px; font-size: 11px; }
+  .cozy-idle-status { top: 312px; max-width: calc(100% - 44px); }
+  .cozy-history { top: 92px; left: 10px; right: auto; }
+  .cozy-history-trigger { min-width: 118px; grid-template-columns: 29px auto 13px; font-size: 12px; }
+  .cozy-history-trigger img { width: 28px; height: 28px; }
+  .cozy-history-panel { right: auto; left: 0; width: calc(100vw - 20px); }
+  .cozy-history-panel li { grid-template-columns: 38px minmax(0, 1fr); }
+  .cozy-history-entry-header { gap: 8px; }
+  .cozy-history-entry-header time b { font-size: 8px; }
+  .cozy-history-result { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cozy-rewards { top: auto; right: 10px; bottom: 226px; width: calc(100% - 20px); max-height: 238px; overflow: auto; }
+  .cozy-player-status { bottom: 108px; grid-template-columns: 68px minmax(0, 1fr); }
+  .cozy-level strong { font-size: 24px; }
+  .cozy-status-row { grid-template-columns: 18px 28px minmax(70px, 1fr); }
+  .cozy-status-row > span { grid-column: 3; font-size: 9px; }
+  .cozy-growth-nav { bottom: 8px; grid-template-columns: repeat(5, 1fr); }
+  .cozy-growth-nav button { grid-template-rows: 35px auto; font-size: 9px; }
+  .cozy-growth-nav button > img { width: 34px; height: 34px; }
+  .cozy-management-content { inset: 160px 8px 96px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cozy-utility-nav button,
+  .cozy-stage-track i,
+  .cozy-status-track i { transition: none; }
+}
+
+/*
+ * 전투 기록은 이름과 값을 위아래로 쌓아 두 줄씩 잡아먹으면서도 글씨는 9px 이었다.
+ * 한 줄에 이름은 왼쪽, 값은 오른쪽으로 두고 글씨를 키운다.
+ */
+.cozy-history-result,
+.cozy-history-gains { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 14px; margin-top: 10px; }
+.cozy-history-result div,
+.cozy-history-gains div { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; align-items: baseline; padding: 7px 11px; border-radius: 7px; }
+.cozy-history-result dt { font-size: 14px; }
+.cozy-history-result dd { justify-self: end; font-size: 15px; }
+.cozy-history-gains dt { font-size: 13px; }
+.cozy-history-gains dd { justify-self: end; font-size: 15px; }
+.cozy-history-panel li { min-height: 0; }
+.cozy-history-panel li p strong { font-size: 16px; }
+.cozy-history-panel li p b { font-size: 19px; }
+.cozy-history-panel li span { font-size: 14px; }
+.cozy-history-entry-header time small { font-size: 11px; }
+.cozy-history-entry-header time b { font-size: 13px; }
+.cozy-history-panel li .cozy-history-reward-items { margin-top: 9px; font-size: 12px; }
+.cozy-history-reward-items > b { font-size: 12px; }
+.cozy-history-panel li .cozy-history-reward-items > span { font-size: 13px; }
+.cozy-history-close img { width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated; }
+.cozy-history-close { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; color: #3a2417; background: rgba(255, 248, 225, .5); cursor: pointer; }
+.cozy-history-close svg { width: 22px; height: 22px; }
+.cozy-history-close:hover { background: rgba(255, 236, 190, .9); }

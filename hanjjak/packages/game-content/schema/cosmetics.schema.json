@@ -1,0 +1,341 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hanjjak.local/schema/cosmetics.schema.json",
+  "type": "object",
+  "required": [
+    "authority",
+    "contentVersion",
+    "singleRiceCost",
+    "gradeProbabilityMillionths",
+    "starThresholdsByGrade",
+    "cosmetics",
+    "sets"
+  ],
+  "properties": {
+    "authority": {
+      "enum": [
+        "working",
+        "applied"
+      ]
+    },
+    "contentVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "singleRiceCost": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "gradeProbabilityMillionths": {
+      "type": "object",
+      "required": [
+        "NORMAL",
+        "RARE",
+        "EPIC",
+        "LEGENDARY"
+      ],
+      "properties": {
+        "NORMAL": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "RARE": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "EPIC": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "LEGENDARY": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "starThresholdsByGrade": {
+      "type": "object",
+      "required": [
+        "NORMAL",
+        "RARE",
+        "EPIC",
+        "LEGENDARY"
+      ],
+      "properties": {
+        "NORMAL": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "const": 1
+            }
+          ],
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "minItems": 5,
+          "maxItems": 5
+        },
+        "RARE": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "const": 1
+            }
+          ],
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "minItems": 5,
+          "maxItems": 5
+        },
+        "EPIC": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "const": 1
+            }
+          ],
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "minItems": 5,
+          "maxItems": 5
+        },
+        "LEGENDARY": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "const": 1
+            }
+          ],
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "minItems": 5,
+          "maxItems": 5
+        }
+      },
+      "additionalProperties": false
+    },
+    "cosmetics": {
+      "type": "array",
+      "minItems": 66,
+      "maxItems": 66,
+      "items": {
+        "$ref": "#/$defs/cosmetic"
+      }
+    },
+    "sets": {
+      "type": "array",
+      "minItems": 11,
+      "maxItems": 11,
+      "items": {
+        "$ref": "#/$defs/set"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "slot": {
+      "enum": [
+        "HEAD",
+        "TOP",
+        "BOTTOM",
+        "GLOVES",
+        "SHOES",
+        "CAPE"
+      ]
+    },
+    "grade": {
+      "enum": [
+        "NORMAL",
+        "RARE",
+        "EPIC",
+        "LEGENDARY"
+      ]
+    },
+    "effect": {
+      "type": "object",
+      "required": [
+        "statId",
+        "value",
+        "unit"
+      ],
+      "properties": {
+        "statId": {
+          "enum": [
+            "attackPercent",
+            "maxHpPercent",
+            "defensePenetrationPercent",
+            "basicAttackDamagePercent",
+            "criticalChancePoint",
+            "attackSpeedPercent",
+            "buffDurationSeconds"
+          ]
+        },
+        "value": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unit": {
+          "enum": [
+            "BASIS_POINTS",
+            "PERCENTAGE_POINTS",
+            "SECONDS"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "cosmetic": {
+      "type": "object",
+      "required": [
+        "cosmeticId",
+        "displayName",
+        "imageUrl",
+        "grade",
+        "slot",
+        "setId"
+      ],
+      "properties": {
+        "cosmeticId": {
+          "type": "string",
+          "pattern": "^cosmetic-[0-9]{3}$"
+        },
+        "displayName": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "imageUrl": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "grade": {
+          "$ref": "#/$defs/grade"
+        },
+        "slot": {
+          "$ref": "#/$defs/slot"
+        },
+        "setId": {
+          "type": "string",
+          "pattern": "^cosmetic-set-[0-9]{2}$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "set": {
+      "type": "object",
+      "required": [
+        "setId",
+        "displayName",
+        "grade",
+        "bannerId",
+        "boxItemId",
+        "members",
+        "effects"
+      ],
+      "properties": {
+        "setId": {
+          "type": "string",
+          "pattern": "^cosmetic-set-[0-9]{2}$"
+        },
+        "displayName": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "grade": {
+          "$ref": "#/$defs/grade"
+        },
+        "bannerId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "boxItemId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "members": {
+          "type": "object",
+          "required": [
+            "HEAD",
+            "TOP",
+            "BOTTOM",
+            "GLOVES",
+            "SHOES",
+            "CAPE"
+          ],
+          "properties": {
+            "HEAD": {
+              "type": "string"
+            },
+            "TOP": {
+              "type": "string"
+            },
+            "BOTTOM": {
+              "type": "string"
+            },
+            "GLOVES": {
+              "type": "string"
+            },
+            "SHOES": {
+              "type": "string"
+            },
+            "CAPE": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "effects": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "required": [
+              "star",
+              "effects"
+            ],
+            "properties": {
+              "star": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "effects": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/effect"
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "active": {
+          "type": "boolean",
+          "description": "false면 뽑기 풀과 도감에서 제외한다. 생략하면 true다."
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

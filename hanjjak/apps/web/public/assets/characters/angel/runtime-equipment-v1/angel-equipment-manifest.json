@@ -1,0 +1,813 @@
+{
+  "schemaVersion": "hanjjak.hero-equipment-atlas/v1",
+  "packageId": "angel-final-v1-runtime",
+  "status": "runtime-package-structural-pass-user-visual-approval-not-checked",
+  "coordinateSpace": {
+    "origin": [
+      0,
+      0
+    ],
+    "frameWidth": 928,
+    "frameHeight": 672,
+    "autoCrop": false
+  },
+  "atlasGrid": {
+    "columns": 4,
+    "rows": 5,
+    "width": 3712,
+    "height": 3360,
+    "motionOrder": [
+      "rest",
+      "run2",
+      "strike1",
+      "thrust1",
+      "death1"
+    ],
+    "frameOrder": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "frameKeyPattern": "{motion}_{frame:02}",
+  "frames": {
+    "rest_01": {
+      "motion": "rest",
+      "frame": 1,
+      "column": 0,
+      "row": 0,
+      "x": 0,
+      "y": 0,
+      "width": 928,
+      "height": 672
+    },
+    "rest_02": {
+      "motion": "rest",
+      "frame": 2,
+      "column": 1,
+      "row": 0,
+      "x": 928,
+      "y": 0,
+      "width": 928,
+      "height": 672
+    },
+    "rest_03": {
+      "motion": "rest",
+      "frame": 3,
+      "column": 2,
+      "row": 0,
+      "x": 1856,
+      "y": 0,
+      "width": 928,
+      "height": 672
+    },
+    "rest_04": {
+      "motion": "rest",
+      "frame": 4,
+      "column": 3,
+      "row": 0,
+      "x": 2784,
+      "y": 0,
+      "width": 928,
+      "height": 672
+    },
+    "run2_01": {
+      "motion": "run2",
+      "frame": 1,
+      "column": 0,
+      "row": 1,
+      "x": 0,
+      "y": 672,
+      "width": 928,
+      "height": 672
+    },
+    "run2_02": {
+      "motion": "run2",
+      "frame": 2,
+      "column": 1,
+      "row": 1,
+      "x": 928,
+      "y": 672,
+      "width": 928,
+      "height": 672
+    },
+    "run2_03": {
+      "motion": "run2",
+      "frame": 3,
+      "column": 2,
+      "row": 1,
+      "x": 1856,
+      "y": 672,
+      "width": 928,
+      "height": 672
+    },
+    "run2_04": {
+      "motion": "run2",
+      "frame": 4,
+      "column": 3,
+      "row": 1,
+      "x": 2784,
+      "y": 672,
+      "width": 928,
+      "height": 672
+    },
+    "strike1_01": {
+      "motion": "strike1",
+      "frame": 1,
+      "column": 0,
+      "row": 2,
+      "x": 0,
+      "y": 1344,
+      "width": 928,
+      "height": 672
+    },
+    "strike1_02": {
+      "motion": "strike1",
+      "frame": 2,
+      "column": 1,
+      "row": 2,
+      "x": 928,
+      "y": 1344,
+      "width": 928,
+      "height": 672
+    },
+    "strike1_03": {
+      "motion": "strike1",
+      "frame": 3,
+      "column": 2,
+      "row": 2,
+      "x": 1856,
+      "y": 1344,
+      "width": 928,
+      "height": 672
+    },
+    "strike1_04": {
+      "motion": "strike1",
+      "frame": 4,
+      "column": 3,
+      "row": 2,
+      "x": 2784,
+      "y": 1344,
+      "width": 928,
+      "height": 672
+    },
+    "thrust1_01": {
+      "motion": "thrust1",
+      "frame": 1,
+      "column": 0,
+      "row": 3,
+      "x": 0,
+      "y": 2016,
+      "width": 928,
+      "height": 672
+    },
+    "thrust1_02": {
+      "motion": "thrust1",
+      "frame": 2,
+      "column": 1,
+      "row": 3,
+      "x": 928,
+      "y": 2016,
+      "width": 928,
+      "height": 672
+    },
+    "thrust1_03": {
+      "motion": "thrust1",
+      "frame": 3,
+      "column": 2,
+      "row": 3,
+      "x": 1856,
+      "y": 2016,
+      "width": 928,
+      "height": 672
+    },
+    "thrust1_04": {
+      "motion": "thrust1",
+      "frame": 4,
+      "column": 3,
+      "row": 3,
+      "x": 2784,
+      "y": 2016,
+      "width": 928,
+      "height": 672
+    },
+    "death1_01": {
+      "motion": "death1",
+      "frame": 1,
+      "column": 0,
+      "row": 4,
+      "x": 0,
+      "y": 2688,
+      "width": 928,
+      "height": 672
+    },
+    "death1_02": {
+      "motion": "death1",
+      "frame": 2,
+      "column": 1,
+      "row": 4,
+      "x": 928,
+      "y": 2688,
+      "width": 928,
+      "height": 672
+    },
+    "death1_03": {
+      "motion": "death1",
+      "frame": 3,
+      "column": 2,
+      "row": 4,
+      "x": 1856,
+      "y": 2688,
+      "width": 928,
+      "height": 672
+    },
+    "death1_04": {
+      "motion": "death1",
+      "frame": 4,
+      "column": 3,
+      "row": 4,
+      "x": 2784,
+      "y": 2688,
+      "width": 928,
+      "height": 672
+    }
+  },
+  "selectionContract": {
+    "mode": "independent-per-slot",
+    "allowCrossSetMixing": true,
+    "slots": [
+      "cape",
+      "clothing",
+      "shoe",
+      "weapon",
+      "glove",
+      "hat"
+    ],
+    "rule": "Resolve one item per slot, then draw its atlas cell wherever slot.<id> appears in drawOrderByFrame."
+  },
+  "atlases": {
+    "cape": {
+      "slot": "cape",
+      "variant": "angel-wings",
+      "image": "atlases/cape-atlas-4x5.png",
+      "motionSheets": {
+        "rest": "motion-sheets/cape/rest-4f.png",
+        "run2": "motion-sheets/cape/run2-4f.png",
+        "strike1": "motion-sheets/cape/strike1-4f.png",
+        "thrust1": "motion-sheets/cape/thrust1-4f.png",
+        "death1": "motion-sheets/cape/death1-4f.png"
+      },
+      "sha256": "38272323a29a25cb819fe4b398b0ef12850043e367484bf5e39541d9d97a857d",
+      "nonemptyFrames": 20
+    },
+    "base-body": {
+      "technical": true,
+      "image": "atlases/base-body-atlas-4x5.png",
+      "motionSheets": {
+        "rest": "motion-sheets/base-body/rest-4f.png",
+        "run2": "motion-sheets/base-body/run2-4f.png",
+        "strike1": "motion-sheets/base-body/strike1-4f.png",
+        "thrust1": "motion-sheets/base-body/thrust1-4f.png",
+        "death1": "motion-sheets/base-body/death1-4f.png"
+      },
+      "sha256": "ec2f822d10814b50d14e953f5b03969bac3ab237992c74ecd3866d06b46c8da1",
+      "nonemptyFrames": 20
+    },
+    "clothing": {
+      "slot": "clothing",
+      "variant": "angel-white-robe",
+      "image": "atlases/clothing-atlas-4x5.png",
+      "motionSheets": {
+        "rest": "motion-sheets/clothing/rest-4f.png",
+        "run2": "motion-sheets/clothing/run2-4f.png",
+        "strike1": "motion-sheets/clothing/strike1-4f.png",
+        "thrust1": "motion-sheets/clothing/thrust1-4f.png",
+        "death1": "motion-sheets/clothing/death1-4f.png"
+      },
+      "sha256": "62815f90167c47f3d9bd5a4bace9a537f7f7f1715251bf9d2d45dc5407bfcf25",
+      "nonemptyFrames": 20
+    },
+    "base-feet-front": {
+      "technical": true,
+      "image": "atlases/base-feet-front-atlas-4x5.png",
+      "motionSheets": {
+        "rest": "motion-sheets/base-feet-front/rest-4f.png",
+        "run2": "motion-sheets/base-feet-front/run2-4f.png",
+        "strike1": "motion-sheets/base-feet-front/strike1-4f.png",
+        "thrust1": "motion-sheets/base-feet-front/thrust1-4f.png",
+        "death1": "motion-sheets/base-feet-front/death1-4f.png"
+      },
+      "sha256": "a99a26ba12da37250054fc2bdeaf08d8ac475c29bd35c85566901a64fbca77e1",
+      "nonemptyFrames": 19
+    },
+    "base-arms": {
+      "technical": true,
+      "image": "atlases/base-arms-atlas-4x5.png",
+      "motionSheets": {
+        "rest": "motion-sheets/base-arms/rest-4f.png",
+        "run2": "motion-sheets/base-arms/run2-4f.png",
+        "strike1": "motion-sheets/base-arms/strike1-4f.png",
+        "thrust1": "motion-sheets/base-arms/thrust1-4f.png",
+        "death1": "motion-sheets/base-arms/death1-4f.png"
+      },
+      "sha256": "e620d67110d1a0dde1b52c7c3cc42f7aa0b4c6feae0a7ba49f2b3f29cc77b417",
+      "nonemptyFrames": 20
+    },
+    "shoe-left": {
+      "slot": "shoe",
+      "variant": "angel-ankle-rings",
+      "sublayer": "screen-left",
+      "image": "atlases/shoe-left-atlas-4x5.png",
+      "motionSheets": {
+        "rest": "motion-sheets/shoe-left/rest-4f.png",
+        "run2": "motion-sheets/shoe-left/run2-4f.png",
+        "strike1": "motion-sheets/shoe-left/strike1-4f.png",
+        "thrust1": "motion-sheets/shoe-left/thrust1-4f.png",
+        "death1": "motion-sheets/shoe-left/death1-4f.png"
+      },
+      "sha256": "00c2f121bfa6e270e4829faa65a4971a9e12712a8376c350e919cd01565c4a02",
+      "nonemptyFrames": 20
+    },
+    "shoe-right": {
+      "slot": "shoe",
+      "variant": "angel-ankle-rings",
+      "sublayer": "screen-right",
+      "image": "atlases/shoe-right-atlas-4x5.png",
+      "motionSheets": {
+        "rest": "motion-sheets/shoe-right/rest-4f.png",
+        "run2": "motion-sheets/shoe-right/run2-4f.png",
+        "strike1": "motion-sheets/shoe-right/strike1-4f.png",
+        "thrust1": "motion-sheets/shoe-right/thrust1-4f.png",
+        "death1": "motion-sheets/shoe-right/death1-4f.png"
+      },
+      "sha256": "24ef6babf4569fa2da3f8bd608fb426fff54fdebd852300fcdf69a341ec94191",
+      "nonemptyFrames": 19
+    },
+    "weapon-01": {
+      "slot": "weapon",
+      "variant": "angel-feather-sword",
+      "image": "atlases/weapon-01-atlas-4x5.png",
+      "motionSheets": {
+        "rest": "motion-sheets/weapon-01/rest-4f.png",
+        "run2": "motion-sheets/weapon-01/run2-4f.png",
+        "strike1": "motion-sheets/weapon-01/strike1-4f.png",
+        "thrust1": "motion-sheets/weapon-01/thrust1-4f.png",
+        "death1": "motion-sheets/weapon-01/death1-4f.png"
+      },
+      "sha256": "783fad27e0b6f3e81881d82c0ef906816e82cd44b5d9d954f34862e526474547",
+      "nonemptyFrames": 20
+    },
+    "weapon-02": {
+      "slot": "weapon",
+      "variant": "angel-halo-staff",
+      "image": "atlases/weapon-02-atlas-4x5.png",
+      "motionSheets": {
+        "rest": "motion-sheets/weapon-02/rest-4f.png",
+        "run2": "motion-sheets/weapon-02/run2-4f.png",
+        "strike1": "motion-sheets/weapon-02/strike1-4f.png",
+        "thrust1": "motion-sheets/weapon-02/thrust1-4f.png",
+        "death1": "motion-sheets/weapon-02/death1-4f.png"
+      },
+      "sha256": "22438ff9069f2e5e959c9ba96919bcb02e6540c65e8aeb7296ccb3389d52172c",
+      "nonemptyFrames": 20
+    },
+    "weapon-03": {
+      "slot": "weapon",
+      "variant": "angel-light-spear",
+      "image": "atlases/weapon-03-atlas-4x5.png",
+      "motionSheets": {
+        "rest": "motion-sheets/weapon-03/rest-4f.png",
+        "run2": "motion-sheets/weapon-03/run2-4f.png",
+        "strike1": "motion-sheets/weapon-03/strike1-4f.png",
+        "thrust1": "motion-sheets/weapon-03/thrust1-4f.png",
+        "death1": "motion-sheets/weapon-03/death1-4f.png"
+      },
+      "sha256": "94ca7cdd3715d3220c764215cb099179d26a9900a1deb997a0e2a6fafe84e744",
+      "nonemptyFrames": 20
+    },
+    "base-hands": {
+      "technical": true,
+      "image": "atlases/base-hands-atlas-4x5.png",
+      "motionSheets": {
+        "rest": "motion-sheets/base-hands/rest-4f.png",
+        "run2": "motion-sheets/base-hands/run2-4f.png",
+        "strike1": "motion-sheets/base-hands/strike1-4f.png",
+        "thrust1": "motion-sheets/base-hands/thrust1-4f.png",
+        "death1": "motion-sheets/base-hands/death1-4f.png"
+      },
+      "sha256": "0e3471d4aedbbb060699f9cbb4b8084c00220a38f219ff17c543fa2e0410012c",
+      "nonemptyFrames": 20
+    },
+    "glove-left": {
+      "slot": "glove",
+      "variant": "angel-wrist-rings",
+      "sublayer": "screen-left",
+      "image": "atlases/glove-left-atlas-4x5.png",
+      "motionSheets": {
+        "rest": "motion-sheets/glove-left/rest-4f.png",
+        "run2": "motion-sheets/glove-left/run2-4f.png",
+        "strike1": "motion-sheets/glove-left/strike1-4f.png",
+        "thrust1": "motion-sheets/glove-left/thrust1-4f.png",
+        "death1": "motion-sheets/glove-left/death1-4f.png"
+      },
+      "sha256": "086b71be2c7ceec2afdf60ca0a4d517cfa6dc1e91474a1533134832c2422415b",
+      "nonemptyFrames": 20
+    },
+    "glove-right": {
+      "slot": "glove",
+      "variant": "angel-wrist-rings",
+      "sublayer": "screen-right",
+      "image": "atlases/glove-right-atlas-4x5.png",
+      "motionSheets": {
+        "rest": "motion-sheets/glove-right/rest-4f.png",
+        "run2": "motion-sheets/glove-right/run2-4f.png",
+        "strike1": "motion-sheets/glove-right/strike1-4f.png",
+        "thrust1": "motion-sheets/glove-right/thrust1-4f.png",
+        "death1": "motion-sheets/glove-right/death1-4f.png"
+      },
+      "sha256": "cc63bc0eeff4ce156393759f0f29d40990516544f455a9733ee3e7228ef0430e",
+      "nonemptyFrames": 15
+    },
+    "hat": {
+      "slot": "hat",
+      "variant": "angel-halo",
+      "image": "atlases/hat-atlas-4x5.png",
+      "motionSheets": {
+        "rest": "motion-sheets/hat/rest-4f.png",
+        "run2": "motion-sheets/hat/run2-4f.png",
+        "strike1": "motion-sheets/hat/strike1-4f.png",
+        "thrust1": "motion-sheets/hat/thrust1-4f.png",
+        "death1": "motion-sheets/hat/death1-4f.png"
+      },
+      "sha256": "558b4f0b3bfcd46670ff2b3ff29ec870e1e11d72780c4a3d177c3b72482a59b9",
+      "nonemptyFrames": 20
+    }
+  },
+  "items": [
+    {
+      "id": "angel-halo",
+      "setId": "angel-final-v1",
+      "slot": "hat",
+      "atlas": "hat"
+    },
+    {
+      "id": "angel-white-robe",
+      "setId": "angel-final-v1",
+      "slot": "clothing",
+      "atlas": "clothing"
+    },
+    {
+      "id": "angel-wings",
+      "setId": "angel-final-v1",
+      "slot": "cape",
+      "atlas": "cape"
+    },
+    {
+      "id": "angel-wrist-rings",
+      "setId": "angel-final-v1",
+      "slot": "glove",
+      "atlases": [
+        "glove-left",
+        "glove-right"
+      ]
+    },
+    {
+      "id": "angel-ankle-rings",
+      "setId": "angel-final-v1",
+      "slot": "shoe",
+      "atlases": [
+        "shoe-left",
+        "shoe-right"
+      ]
+    },
+    {
+      "id": "angel-feather-sword",
+      "setId": "angel-final-v1",
+      "slot": "weapon",
+      "atlas": "weapon-01"
+    },
+    {
+      "id": "angel-halo-staff",
+      "setId": "angel-final-v1",
+      "slot": "weapon",
+      "atlas": "weapon-02"
+    },
+    {
+      "id": "angel-light-spear",
+      "setId": "angel-final-v1",
+      "slot": "weapon",
+      "atlas": "weapon-03"
+    }
+  ],
+  "drawOrderByFrame": {
+    "rest_01": [
+      "slot.cape",
+      "base.body",
+      "slot.clothing",
+      "base.feet-front",
+      "base.arms",
+      "slot.shoe.screen-left",
+      "slot.shoe.screen-right",
+      "slot.weapon",
+      "base.hands",
+      "slot.glove.screen-left",
+      "slot.glove.screen-right",
+      "slot.hat"
+    ],
+    "rest_02": [
+      "slot.cape",
+      "base.body",
+      "slot.clothing",
+      "base.feet-front",
+      "base.arms",
+      "slot.shoe.screen-left",
+      "slot.shoe.screen-right",
+      "slot.weapon",
+      "base.hands",
+      "slot.glove.screen-left",
+      "slot.glove.screen-right",
+      "slot.hat"
+    ],
+    "rest_03": [
+      "slot.cape",
+      "base.body",
+      "slot.clothing",
+      "base.feet-front",
+      "base.arms",
+      "slot.shoe.screen-left",
+      "slot.shoe.screen-right",
+      "slot.weapon",
+      "base.hands",
+      "slot.glove.screen-left",
+      "slot.glove.screen-right",
+      "slot.hat"
+    ],
+    "rest_04": [
+      "slot.cape",
+      "base.body",
+      "slot.clothing",
+      "base.feet-front",
+      "base.arms",
+      "slot.shoe.screen-left",
+      "slot.shoe.screen-right",
+      "slot.weapon",
+      "base.hands",
+      "slot.glove.screen-left",
+      "slot.glove.screen-right",
+      "slot.hat"
+    ],
+    "run2_01": [
+      "slot.cape",
+      "base.body",
+      "slot.clothing",
+      "base.feet-front",
+      "base.arms",
+      "slot.shoe.screen-left",
+      "slot.shoe.screen-right",
+      "slot.weapon",
+      "base.hands",
+      "slot.glove.screen-left",
+      "slot.glove.screen-right",
+      "slot.hat"
+    ],
+    "run2_02": [
+      "slot.cape",
+      "base.body",
+      "slot.clothing",
+      "base.feet-front",
+      "base.arms",
+      "slot.shoe.screen-left",
+      "slot.shoe.screen-right",
+      "slot.weapon",
+      "base.hands",
+      "slot.glove.screen-left",
+      "slot.glove.screen-right",
+      "slot.hat"
+    ],
+    "run2_03": [
+      "slot.cape",
+      "base.body",
+      "slot.clothing",
+      "base.feet-front",
+      "base.arms",
+      "slot.shoe.screen-left",
+      "slot.shoe.screen-right",
+      "slot.weapon",
+      "base.hands",
+      "slot.glove.screen-left",
+      "slot.glove.screen-right",
+      "slot.hat"
+    ],
+    "run2_04": [
+      "slot.cape",
+      "base.body",
+      "slot.clothing",
+      "base.feet-front",
+      "base.arms",
+      "slot.shoe.screen-left",
+      "slot.shoe.screen-right",
+      "slot.weapon",
+      "base.hands",
+      "slot.glove.screen-left",
+      "slot.glove.screen-right",
+      "slot.hat"
+    ],
+    "strike1_01": [
+      "slot.cape",
+      "base.feet-front",
+      "slot.weapon",
+      "base.body",
+      "slot.shoe.screen-left",
+      "slot.shoe.screen-right",
+      "slot.clothing",
+      "base.arms",
+      "base.hands",
+      "slot.glove.screen-left",
+      "slot.hat"
+    ],
+    "strike1_02": [
+      "slot.cape",
+      "slot.weapon",
+      "base.body",
+      "slot.clothing",
+      "base.feet-front",
+      "base.arms",
+      "slot.shoe.screen-left",
+      "slot.shoe.screen-right",
+      "base.hands",
+      "slot.glove.screen-left",
+      "slot.glove.screen-right",
+      "slot.hat"
+    ],
+    "strike1_03": [
+      "slot.cape",
+      "base.feet-front",
+      "base.body",
+      "slot.shoe.screen-left",
+      "slot.shoe.screen-right",
+      "slot.clothing",
+      "base.arms",
+      "slot.weapon",
+      "base.hands",
+      "slot.glove.screen-left",
+      "slot.glove.screen-right",
+      "slot.hat"
+    ],
+    "strike1_04": [
+      "slot.cape",
+      "base.body",
+      "slot.clothing",
+      "base.feet-front",
+      "base.arms",
+      "slot.shoe.screen-left",
+      "slot.shoe.screen-right",
+      "slot.weapon",
+      "base.hands",
+      "slot.glove.screen-left",
+      "slot.glove.screen-right",
+      "slot.hat"
+    ],
+    "thrust1_01": [
+      "slot.cape",
+      "base.body",
+      "slot.clothing",
+      "base.feet-front",
+      "base.arms",
+      "slot.shoe.screen-left",
+      "slot.shoe.screen-right",
+      "slot.weapon",
+      "base.hands",
+      "slot.glove.screen-left",
+      "slot.glove.screen-right",
+      "slot.hat"
+    ],
+    "thrust1_02": [
+      "slot.cape",
+      "base.body",
+      "slot.clothing",
+      "base.feet-front",
+      "slot.shoe.screen-left",
+      "slot.shoe.screen-right",
+      "slot.weapon",
+      "base.arms",
+      "base.hands",
+      "slot.glove.screen-left",
+      "slot.hat"
+    ],
+    "thrust1_03": [
+      "slot.cape",
+      "base.body",
+      "slot.clothing",
+      "base.feet-front",
+      "slot.shoe.screen-left",
+      "slot.shoe.screen-right",
+      "slot.glove.screen-left",
+      "slot.weapon",
+      "base.arms",
+      "base.hands",
+      "slot.hat"
+    ],
+    "thrust1_04": [
+      "slot.cape",
+      "base.body",
+      "slot.clothing",
+      "base.feet-front",
+      "slot.shoe.screen-left",
+      "slot.shoe.screen-right",
+      "slot.weapon",
+      "base.arms",
+      "base.hands",
+      "slot.glove.screen-left",
+      "slot.hat"
+    ],
+    "death1_01": [
+      "slot.cape",
+      "base.body",
+      "slot.clothing",
+      "base.feet-front",
+      "base.arms",
+      "slot.shoe.screen-left",
+      "slot.shoe.screen-right",
+      "slot.weapon",
+      "base.hands",
+      "slot.glove.screen-left",
+      "slot.glove.screen-right",
+      "slot.hat"
+    ],
+    "death1_02": [
+      "slot.cape",
+      "base.body",
+      "slot.clothing",
+      "base.feet-front",
+      "base.arms",
+      "slot.shoe.screen-left",
+      "slot.shoe.screen-right",
+      "slot.weapon",
+      "base.hands",
+      "slot.glove.screen-left",
+      "slot.glove.screen-right",
+      "slot.hat"
+    ],
+    "death1_03": [
+      "slot.cape",
+      "base.body",
+      "slot.clothing",
+      "base.feet-front",
+      "base.arms",
+      "slot.shoe.screen-left",
+      "slot.shoe.screen-right",
+      "slot.weapon",
+      "base.hands",
+      "slot.glove.screen-left",
+      "slot.glove.screen-right",
+      "slot.hat"
+    ],
+    "death1_04": [
+      "slot.cape",
+      "base.body",
+      "slot.clothing",
+      "base.arms",
+      "slot.shoe.screen-left",
+      "slot.hat",
+      "slot.glove.screen-left",
+      "slot.weapon",
+      "base.hands"
+    ]
+  },
+  "defaultLoadout": {
+    "cape": "angel-wings",
+    "clothing": "angel-white-robe",
+    "shoe": "angel-ankle-rings",
+    "weapon": "angel-feather-sword",
+    "glove": "angel-wrist-rings",
+    "hat": "angel-halo"
+  },
+  "sourceTiffs": {
+    "rest": {
+      "path": "art/char/hero-motions-4f/parts-designs/angel-final-v1/user-final-motion-viewer-v1/sources/rest_천사_통합.tiff",
+      "sha256": "d385fdda57dcffb511a53629397ed43610f69cda9cddc84c5e4d23e1eb9d19fe"
+    },
+    "run2": {
+      "path": "art/char/hero-motions-4f/parts-designs/angel-final-v1/user-final-motion-viewer-v1/sources/run_천사_통합.tiff",
+      "sha256": "23e101411445d7221f9eacdc2a7d10e9fb0c256f243deb1d98ab7e29b88e72c3"
+    },
+    "strike1": {
+      "path": "art/char/hero-motions-4f/parts-designs/angel-final-v1/user-final-motion-viewer-v1/sources/strike_천사_통합.tiff",
+      "sha256": "c703a0e0dae44d3c627ba26bcf1261c4426aa836b3c68edcf57c0f2f8cde0a4b"
+    },
+    "thrust1": {
+      "path": "art/char/hero-motions-4f/parts-designs/angel-final-v1/user-final-motion-viewer-v1/sources/thrust_천사_통합.tiff",
+      "sha256": "067792248567e0536649e893d185782b603c977eafa4fe2e20a46452004bbe7f"
+    },
+    "death1": {
+      "path": "art/char/hero-motions-4f/parts-designs/angel-final-v1/user-final-motion-viewer-v1/sources/death_천사_통합.tiff",
+      "sha256": "4cfa2c09446fe0eadb2e5684b541f2048d78d1728f74a4582369eaab67ef6894"
+    }
+  },
+  "limitations": [
+    "Five motions / 20 frames only; run1 remains on hold.",
+    "A different set can be mixed only after it exports the same frame keys and slot contract.",
+    "No engine-specific loader exists in this repository; this manifest is the runtime handoff contract."
+  ]
+}

@@ -1,0 +1,48 @@
+.battle-history-screen { border-top: 4px solid #8f4a31; }
+.battle-history-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding: 26px 0 22px; border-bottom: 1px solid #d8caba; }
+.battle-history-heading h2 { margin-bottom: 7px; font-size: clamp(28px, 4vw, 44px); letter-spacing: -.05em; }
+.battle-history-heading p:not(.eyebrow) { margin: 0; color: #746557; }
+.battle-history-heading > strong { min-width: 130px; padding: 14px 18px; color: #d9ccbf; background: #4d392d; text-align: right; }
+.battle-history-heading > strong span { color: #fff8ef; font-size: 28px; }
+.battle-history-message { display: grid; place-items: center; gap: 8px; min-height: 260px; margin-top: 22px; padding: 24px; color: #766658; border: 1px solid #c9b6a2; background: #fffaf4; text-align: center; }
+.battle-history-message.error { color: #80230f; border-color: #c07b69; }
+.battle-history-message button { border: 0; border-radius: 10px; padding: 10px 14px; color: #fff; background: #a4472d; font-weight: 800; }
+.battle-history-list { display: grid; gap: 10px; margin: 22px 0 0; padding: 0; list-style: none; }
+.battle-history-item { display: grid; grid-template-columns: 42px minmax(0, 1fr) auto; gap: 16px; align-items: start; padding: 18px; border: 1px solid #d8caba; background: #fffaf4; }
+.battle-history-item.is-stage_failed { border-left: 4px solid #a83d21; background: #fff7f3; }
+.battle-history-item.is-stage_cleared { border-left: 4px solid #74983e; }
+.battle-history-mark { display: grid; place-items: center; width: 38px; height: 38px; border: 2px solid #65452e; border-radius: 50%; color: #fff8ef; background: #8f4a31; font-weight: 950; }
+.is-stage_cleared .battle-history-mark { background: #668638; }
+.is-stage_failed .battle-history-mark { background: #a83d21; }
+.battle-history-copy { min-width: 0; }
+.battle-history-copy > div { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
+.battle-history-copy span { color: #a4472d; font-size: 11px; font-weight: 900; letter-spacing: .06em; }
+.battle-history-copy strong { font-size: 17px; }
+.battle-history-copy p { margin: 6px 0 0; color: #65564b; }
+.battle-history-copy dl { display: flex; flex-wrap: wrap; gap: 1px; margin: 12px 0 0; }
+.battle-history-copy dl div { display: flex; gap: 8px; min-width: 120px; padding: 7px 10px; background: #f1e5d8; }
+.battle-history-copy dt { color: #7d6d60; font-size: 10px; font-weight: 800; }
+.battle-history-copy dd { margin: 0; font-size: 11px; font-weight: 900; }
+.battle-history-copy .battle-history-result { display: grid; grid-template-columns: repeat(2, minmax(120px, 1fr)); gap: 6px; }
+.battle-history-copy .battle-history-result div { justify-content: space-between; }
+.battle-history-rewards { margin-top: 12px; padding: 10px; border: 1px solid #d8caba; background: #fffdf8; }
+.battle-history-rewards > strong { font-size: 11px; }
+.battle-history-gains { display: grid; grid-template-columns: repeat(3, minmax(90px, 1fr)); gap: 6px; margin: 8px 0 0; }
+.battle-history-copy .battle-history-gains div { display: flex; justify-content: space-between; gap: 8px; min-width: 0; padding: 8px 10px; background: #f6ead9; }
+.battle-history-gains dd { color: #8f3d27; }
+.battle-history-reward-items { margin-top: 9px; padding-top: 8px; border-top: 1px dashed #d8caba; }
+.battle-history-reward-items > span { display: block; margin-bottom: 6px; color: #7d6d60; font-size: 10px; font-weight: 800; letter-spacing: 0; }
+.battle-history-rewards ul { display: grid; gap: 5px; margin: 8px 0 0; padding: 0; list-style: none; }
+.battle-history-rewards li { display: flex; justify-content: space-between; gap: 16px; font-size: 11px; }
+.battle-history-rewards li span { color: #65564b; font-size: inherit; font-weight: 700; letter-spacing: 0; }
+.battle-history-rewards li b { white-space: nowrap; }
+.battle-history-rewards p { margin-top: 8px; font-size: 11px; }
+.battle-history-item time { color: #806e5f; font-size: 11px; white-space: nowrap; }
+@media (max-width: 700px) {
+  .battle-history-heading { align-items: stretch; flex-direction: column; }
+  .battle-history-heading > strong { width: 100%; text-align: left; }
+  .battle-history-item { grid-template-columns: 38px minmax(0, 1fr); }
+  .battle-history-item time { grid-column: 2; }
+  .battle-history-copy .battle-history-result { grid-template-columns: 1fr; }
+  .battle-history-gains { grid-template-columns: 1fr; }
+}

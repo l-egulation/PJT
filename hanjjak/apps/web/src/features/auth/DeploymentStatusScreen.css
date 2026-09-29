@@ -1,0 +1,173 @@
+.deployment-screen {
+  position: fixed;
+  inset: 0;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  max-width: none;
+  margin: 0;
+  padding: 32px 20px;
+  overflow: auto;
+  color: #3d2518;
+  background: #2b150a url("./assets/auth-background-vintage.png") center / cover no-repeat;
+  font-family: var(--hanjjak-font-ui);
+}
+
+.deployment-screen__shade {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(circle at 50% 38%, rgba(255, 227, 167, .3), rgba(35, 14, 5, .68) 92%);
+  pointer-events: none;
+}
+
+.deployment-notice {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  width: min(760px, 100%);
+  min-height: 390px;
+  padding: 68px clamp(28px, 7vw, 76px) 54px;
+  background: url("./assets/auth-vintage-title-paper.png") center / 100% 100% no-repeat;
+  filter: drop-shadow(0 24px 22px rgba(33, 13, 3, .4));
+  text-align: center;
+}
+
+.deployment-notice::before,
+.deployment-notice::after {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  content: "";
+  background: repeating-linear-gradient(90deg, #80512f 0 18px, transparent 18px 25px);
+  opacity: .65;
+}
+
+.deployment-notice::before { top: 45px; }
+.deployment-notice::after { bottom: 36px; }
+
+.deployment-notice__pin {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  width: 28px;
+  height: 46px;
+  border: 3px solid #603c25;
+  border-radius: 5px 5px 9px 9px;
+  background: linear-gradient(90deg, #d8a85f, #f1d28b 48%, #aa6c36);
+  box-shadow: 0 4px 0 rgba(58, 26, 8, .25);
+  transform: translateX(-50%) rotate(2deg);
+}
+
+.deployment-notice__eyebrow {
+  margin: 0 0 13px;
+  color: #986234;
+  font: 900 12px/1.2 var(--hanjjak-font-ui);
+  letter-spacing: .18em;
+}
+
+.deployment-notice__sprout {
+  position: relative;
+  width: 70px;
+  height: 58px;
+  margin-bottom: 9px;
+}
+
+.deployment-notice__sprout::before {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  width: 5px;
+  height: 35px;
+  border-radius: 999px;
+  background: #6e5335;
+  content: "";
+  transform: rotate(8deg);
+}
+
+.deployment-notice__sprout i {
+  position: absolute;
+  top: 3px;
+  width: 28px;
+  height: 18px;
+  border-radius: 100% 0 100% 0;
+  background: #6c8243;
+  transform: rotate(-27deg);
+}
+
+.deployment-notice__sprout i:first-child { left: 9px; }
+.deployment-notice__sprout i:nth-child(2) { right: 8px; transform: scaleX(-1) rotate(-27deg); background: #82994d; }
+.deployment-notice__sprout b {
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  width: 44px;
+  height: 10px;
+  border-radius: 50%;
+  background: #9a693e;
+  transform: translateX(-50%);
+}
+
+.deployment-notice h1 {
+  margin: 0;
+  color: #3d2518;
+  font-size: clamp(46px, 7vw, 78px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -.12em;
+  text-shadow: 0 2px 0 rgba(255, 244, 211, .8);
+}
+
+.deployment-notice__copy {
+  margin: 20px 0 22px;
+  color: #62432c;
+  font-size: clamp(17px, 2vw, 22px);
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.deployment-progress {
+  display: flex;
+  gap: 9px;
+  margin-bottom: 18px;
+}
+
+.deployment-progress i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d5b58a;
+}
+
+.deployment-progress i:nth-child(2) { background: #b86d39; }
+.deployment-progress i:nth-child(3) { background: #d5b58a; }
+
+.deployment-notice > small {
+  color: #8a6344;
+  font: 700 13px/1.4 var(--hanjjak-font-ui);
+}
+
+@media (max-width: 560px) {
+  .deployment-notice {
+    min-height: 360px;
+    padding: 58px 24px 48px;
+  }
+
+  .deployment-notice::before { top: 36px; }
+  .deployment-notice::after { bottom: 27px; }
+  .deployment-notice h1 { font-size: clamp(40px, 13vw, 58px); }
+  .deployment-notice__copy { margin: 16px 0 18px; font-size: 16px; }
+  .deployment-notice__eyebrow { font-size: 10px; letter-spacing: .1em; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .deployment-progress i { animation: deployment-pulse 1.35s ease-in-out infinite; }
+  .deployment-progress i:nth-child(2) { animation-delay: .18s; }
+  .deployment-progress i:nth-child(3) { animation-delay: .36s; }
+}
+
+@keyframes deployment-pulse {
+  0%, 100% { opacity: .45; transform: scale(.82); }
+  50% { opacity: 1; transform: scale(1.15); }
+}

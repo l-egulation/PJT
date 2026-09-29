@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hanjjak.local/schema/material-drops.schema.json",
+  "type": "object",
+  "required": ["authority", "contentVersion", "dropChanceBasisPoints", "quantityPerSuccess", "normalEnemyRolls", "bossRolls", "chapterGenerationWeights"],
+  "properties": {
+    "authority": { "enum": ["working", "applied"] },
+    "contentVersion": { "type": "string", "minLength": 1 },
+    "dropChanceBasisPoints": { "type": "integer", "minimum": 0, "maximum": 10000 },
+    "quantityPerSuccess": { "type": "integer", "minimum": 1 },
+    "normalEnemyRolls": { "type": "integer", "minimum": 0 },
+    "bossRolls": { "type": "integer", "minimum": 0 },
+    "chapterGenerationWeights": {
+      "type": "object", "required": ["1", "2", "3", "4"], "additionalProperties": false,
+      "properties": {
+        "1": { "$ref": "#/$defs/weights" }, "2": { "$ref": "#/$defs/weights" }, "3": { "$ref": "#/$defs/weights" },
+        "4": { "$ref": "#/$defs/weights" }, "5": { "$ref": "#/$defs/weights" }, "6": { "$ref": "#/$defs/weights" },
+        "7": { "$ref": "#/$defs/weights" }, "8": { "$ref": "#/$defs/weights" }, "9": { "$ref": "#/$defs/weights" },
+        "10": { "$ref": "#/$defs/weights" }
+      }
+    },
+    "chapters": {
+      "type": "object", "required": ["1", "2", "3", "4"], "additionalProperties": false,
+      "properties": {
+        "1": { "$ref": "#/$defs/chapter" }, "2": { "$ref": "#/$defs/chapter" }, "3": { "$ref": "#/$defs/chapter" },
+        "4": { "$ref": "#/$defs/chapter" }, "5": { "$ref": "#/$defs/chapter" }, "6": { "$ref": "#/$defs/chapter" },
+        "7": { "$ref": "#/$defs/chapter" }, "8": { "$ref": "#/$defs/chapter" }, "9": { "$ref": "#/$defs/chapter" },
+        "10": { "$ref": "#/$defs/chapter" }
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "weights": { "type": "array", "minItems": 4, "maxItems": 4, "items": { "type": "integer", "minimum": 0 } },
+    "chapter": { "type": "object", "additionalProperties": false, "required": ["mode", "normalQuantity", "bossQuantity", "generationWeights"], "properties": { "mode": { "enum": ["GUARANTEED", "CHANCE"] }, "normalQuantity": { "type": "integer", "minimum": 0 }, "bossQuantity": { "type": "integer", "minimum": 0 }, "generationWeights": { "$ref": "#/$defs/weights" } } }
+  }
+}

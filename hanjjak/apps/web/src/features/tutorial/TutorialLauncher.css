@@ -1,0 +1,61 @@
+/*
+ * 전투 기록 단추 바로 아래 자리. 같은 종이·같은 폭으로 왼쪽 세로줄을 이룬다.
+ * HUD 는 통째로 zoom 으로 줄어들므로 이웃과 같은 배율을 써야 자리가 맞는다.
+ */
+.cozy-battle-stage-shell > .cozy-tutorial-launcher { zoom: var(--cozy-hud-zoom, 1); }
+
+.cozy-tutorial-launcher {
+  position: absolute;
+  z-index: 15;
+  /* 전투 기록은 94px 에서 시작해 74px 높이다. 8px 만 띄운다. */
+  top: 176px;
+  left: 18px;
+}
+
+.cozy-tutorial-trigger {
+  display: grid;
+  grid-template-columns: 48px auto 22px;
+  align-items: center;
+  gap: 8px;
+  min-width: 218px;
+  min-height: 74px;
+  padding: 14px 18px 13px 15px;
+  border: 0;
+  border-image: none;
+  background: url("../../shared/assets/cozy-hud-v1/paper/profile-history-shell-dedicated-v2.png") center / 100% 100% no-repeat;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 1000;
+  image-rendering: pixelated;
+}
+
+.cozy-tutorial-trigger:hover { filter: drop-shadow(0 5px 1px rgba(55, 27, 10, .28)) brightness(1.05); }
+.cozy-tutorial-trigger:active { transform: translateY(1px); }
+.cozy-tutorial-trigger:focus-visible { outline: 3px solid rgba(217, 84, 76, .72); outline-offset: 3px; }
+
+/* 안내자 한짝의 설명 자세. 3열 2행 시트에서 가운데 윗칸을 얼굴 그림으로 쓴다. */
+.cozy-tutorial-guide {
+  width: 46px;
+  height: 46px;
+  background: url("./assets/adventurer-poses.png") 50% 0 / 300% 200% no-repeat;
+  image-rendering: pixelated;
+}
+
+.cozy-tutorial-trigger b { font-size: 31px; line-height: 1; }
+
+@media (max-width: 900px) {
+  /* 스테이지 판이 화면 폭을 다 쓰고 233px 까지 내려온다. 그 아래로 비켜 선다. */
+  .cozy-tutorial-launcher { top: 262px; }
+}
+
+@media (max-width: 620px) {
+  /* 위쪽은 마을 메뉴와 스테이지 판이 폭을 다 쓴다. 그 아래 빈 자리로 내려온다. */
+  .cozy-tutorial-launcher { top: 312px; left: 10px; }
+  .cozy-tutorial-trigger { min-width: 132px; grid-template-columns: 29px auto 13px; gap: 6px; padding: 12px 12px 11px 11px; font-size: 12px; }
+  .cozy-tutorial-guide { width: 28px; height: 28px; }
+  .cozy-tutorial-trigger b { font-size: 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cozy-tutorial-trigger:active { transform: none; }
+}

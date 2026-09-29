@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: event-consumers
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/hanjjak}
+    username: ${DB_USER:hanjjak}
+    password: ${DB_PASSWORD:local-only}
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      acks: all
+      enable-idempotence: true
+      retries: ${KAFKA_PRODUCER_RETRIES:10}
+    consumer:
+      group-id: ${KAFKA_CONSUMER_GROUP:event-consumers}
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
+      max-poll-records: ${KAFKA_MAX_POLL_RECORDS:500}
+    listener:
+      type: batch
+      ack-mode: ${KAFKA_ACK_MODE:BATCH}
+      concurrency: ${KAFKA_CONSUMER_CONCURRENCY:1}
+
+events:
+  kafka:
+    enabled: ${EVENTS_KAFKA_ENABLED:true}
+    topic: ${DOMAIN_EVENTS_TOPIC:domain-events.v1}
+    publisher:
+      enabled: ${OUTBOX_KAFKA_PUBLISHER_ENABLED:true}
+      batch-size: ${OUTBOX_KAFKA_BATCH_SIZE:1000}
+    consumer:
+      price-snapshot:
+        enabled: ${PRICE_SNAPSHOT_CONSUMER_ENABLED:true}
+      economy-metrics:
+        enabled: ${ECONOMY_METRICS_CONSUMER_ENABLED:true}
+        group-id: ${ECONOMY_METRICS_CONSUMER_GROUP:economy-metrics}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      probes:
+        enabled: true

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>타락한 젓가락 군주 · HD 모션 v3</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, Pretendard, system-ui, sans-serif; background: #090814; color: #f7f1ff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; padding: 28px; background: radial-gradient(circle at 50% -10%, #40246b 0, #151126 34%, #090814 72%); }
+    main { width: min(1280px, 100%); margin: auto; }
+    header { display: flex; gap: 18px; align-items: end; justify-content: space-between; flex-wrap: wrap; }
+    h1 { margin: 0; font-size: clamp(28px, 5vw, 54px); letter-spacing: -.04em; }
+    .eyebrow { color: #ae9ad1; font-size: 12px; letter-spacing: .17em; text-transform: uppercase; }
+    .summary { margin: 8px 0 0; color: #cfc4e2; }
+    .status { border: 1px solid #7c65a9; border-radius: 999px; padding: 8px 12px; color: #d9cbf4; background: #221a35; font-size: 12px; }
+    .panel { margin-top: 24px; padding: 18px; border: 1px solid #3c3156; border-radius: 20px; background: #11101de8; box-shadow: 0 24px 80px #0009; }
+    .controls, .downloads { display: flex; flex-wrap: wrap; gap: 9px; }
+    button, input { accent-color: #a978ff; }
+    button { border: 1px solid #5b4b7a; border-radius: 10px; padding: 10px 14px; background: #211a34; color: inherit; cursor: pointer; }
+    button:hover, button:focus-visible { border-color: #ae8af7; }
+    button.active { border-color: #d4b5ff; background: linear-gradient(135deg, #6642a5, #3a275e); }
+    .stage { display: grid; place-items: center; min-height: min(70vw, 820px); margin-top: 16px; overflow: hidden; border: 1px solid #312841; border-radius: 16px; background: radial-gradient(ellipse at 50% 78%, #302653 0, #13101f 48%, #08070d 80%); }
+    .stage.light { background: #edeaf4; }
+    .stage.green { background: #20a84c; }
+    .stage canvas { width: min(768px, 100%); height: auto; image-rendering: auto; filter: drop-shadow(0 24px 22px #0008); }
+    .speed { display: flex; align-items: center; gap: 10px; min-width: min(420px, 100%); padding: 8px 12px; border: 1px solid #352b48; border-radius: 10px; background: #171322; }
+    .speed input { flex: 1; min-width: 120px; }
+    .speed output { min-width: 48px; text-align: right; font-variant-numeric: tabular-nums; }
+    .readout { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; margin-top: 14px; }
+    .timeline { height: 8px; overflow: hidden; border-radius: 999px; background: #29223a; }
+    .timeline > div { height: 100%; width: 0; background: linear-gradient(90deg, #607bff, #bc7aff, #ffc15a); }
+    .time { min-width: 120px; text-align: right; color: #d9ccec; font-variant-numeric: tabular-nums; }
+    .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; color: #b9abc9; font-size: 13px; }
+    .meta span { border: 1px solid #352b48; border-radius: 999px; padding: 6px 9px; background: #171322; }
+    .downloads { margin-top: 18px; gap: 16px; }
+    a { color: #d0b0ff; }
+    @media (max-width: 650px) { body { padding: 14px; } .panel { padding: 11px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <div class="eyebrow">Raid boss high-resolution prototype</div>
+        <h1>타락한 젓가락 군주 · HD</h1>
+        <p class="summary">동작별 독립 원화 · 48 실제 키포즈 · 768px 프레임 · 9216×3072 RGBA 시트</p>
+      </div>
+      <div class="status">candidate · 전투 정책 미확정</div>
+    </header>
+    <section class="panel">
+      <div class="controls" id="motions"></div>
+      <div class="controls" style="margin-top:9px">
+        <button data-bg="dark" class="active">어두운 배경</button>
+        <button data-bg="light">밝은 배경</button>
+        <button data-bg="green">크로마키</button>
+        <button id="restart">처음부터</button>
+        <button id="pause" aria-pressed="false">일시정지</button>
+        <label class="speed">재생 속도 <input id="speed" type="range" min="0.1" max="2" step="0.1" value="0.4"><output id="speed-value">0.4×</output></label>
+      </div>
+      <div class="stage" id="stage"><canvas id="preview" width="768" height="768" role="img" aria-label="타락한 젓가락 군주 HD 애니메이션"></canvas></div>
+      <div class="readout">
+        <div class="timeline"><div id="progress"></div></div>
+        <div class="time" id="time"></div>
+      </div>
+      <div class="meta">
+        <span id="motion-name"></span><span>12 actual poses</span><span>768×768 per frame</span><span>smooth display scaling</span>
+      </div>
+      <div class="downloads">
+        <a id="gif-download" download>현재 GIF 내려받기</a>
+        <a href="10-fallen-hero-final-motion-v3-hd/fallen-hero-final-motion-sprite-sheet-12x4-768-v3.png">9216×3072 시트 보기</a>
+        <a href="10-fallen-hero-final-motion-v3-hd/fallen-hero-final-motion-sprite-sheet-12x4-768-v3.json">JSON 메타데이터 보기</a>
+        <a href="10-fallen-hero-final-motion-v3-hd/background-removal-edge-check-5x.png">배경 제거 5배 검사본</a>
+      </div>
+    </section>
+  </main>
+  <script>
+    const root = "10-fallen-hero-final-motion-v3-hd";
+    const motions = [
+      { id: "idle", label: "대기", duration: 1200 },
+      { id: "dash-slash", label: "돌진 베기", duration: 900 },
+      { id: "spin-slash", label: "회전 베기", duration: 1020 },
+      { id: "blade-rain", label: "낙하검 결계", duration: 1740 }
+    ];
+    const controls = document.querySelector("#motions");
+    const preview = document.querySelector("#preview");
+    const context = preview.getContext("2d");
+    const stage = document.querySelector("#stage");
+    const progress = document.querySelector("#progress");
+    const time = document.querySelector("#time");
+    const motionName = document.querySelector("#motion-name");
+    const gifDownload = document.querySelector("#gif-download");
+    const speed = document.querySelector("#speed");
+    const speedValue = document.querySelector("#speed-value");
+    const pauseButton = document.querySelector("#pause");
+    const atlas = new Image();
+    atlas.src = `${root}/fallen-hero-final-motion-sprite-sheet-12x4-768-v3.png`;
+    let selected = 1;
+    let startedAt = performance.now();
+    let paused = false;
+    let pausedAt = 0;
+    let playbackRate = Number(speed.value);
+    controls.innerHTML = motions.map((motion, index) => `<button data-motion="${index}">${motion.label}</button>`).join("");
+
+    function play(index = selected) {
+      selected = index;
+      startedAt = performance.now();
+      pausedAt = 0;
+      const motion = motions[selected];
+      preview.setAttribute("aria-label", `타락한 젓가락 군주 HD ${motion.label}`);
+      motionName.textContent = `${motion.label} · ${(motion.duration / 1000).toFixed(2)}초`;
+      gifDownload.href = `${root}/${motion.id}-hd.gif`;
+      gifDownload.textContent = `${motion.label} HD GIF 내려받기`;
+      controls.querySelectorAll("[data-motion]").forEach(button => button.classList.toggle("active", Number(button.dataset.motion) === selected));
+    }
+    function frameAt(elapsed, motion) {
+      const frameDuration = motion.duration / 12;
+      return Math.min(11, Math.floor(elapsed / frameDuration));
+    }
+    function draw(frameIndex) {
+      if (!atlas.complete) return;
+      context.clearRect(0, 0, 768, 768);
+      context.drawImage(atlas, frameIndex * 768, selected * 768, 768, 768, 0, 0, 768, 768);
+    }
+    function tick(now) {
+      const duration = motions[selected].duration;
+      const elapsed = paused ? pausedAt : (now - startedAt) * playbackRate;
+      const cycleElapsed = elapsed % duration;
+      const current = cycleElapsed / duration;
+      draw(frameAt(cycleElapsed, motions[selected]));
+      progress.style.width = `${current * 100}%`;
+      time.textContent = `${(current * duration / 1000).toFixed(2)} / ${(duration / 1000).toFixed(2)}초`;
+      requestAnimationFrame(tick);
+    }
+    controls.querySelectorAll("[data-motion]").forEach(button => button.addEventListener("click", () => play(Number(button.dataset.motion))));
+    document.querySelector("#restart").addEventListener("click", () => play());
+    pauseButton.addEventListener("click", () => {
+      paused = !paused;
+      if (paused) {
+        pausedAt = (performance.now() - startedAt) * playbackRate;
+      } else {
+        startedAt = performance.now() - pausedAt / playbackRate;
+      }
+      pauseButton.textContent = paused ? "계속 재생" : "일시정지";
+      pauseButton.setAttribute("aria-pressed", String(paused));
+    });
+    speed.addEventListener("input", () => {
+      const now = performance.now();
+      const elapsed = paused ? pausedAt : (now - startedAt) * playbackRate;
+      playbackRate = Number(speed.value);
+      speedValue.value = `${playbackRate.toFixed(1)}×`;
+      if (paused) pausedAt = elapsed;
+      else startedAt = now - elapsed / playbackRate;
+    });
+    document.querySelectorAll("[data-bg]").forEach(button => button.addEventListener("click", () => {
+      stage.className = `stage ${button.dataset.bg === "dark" ? "" : button.dataset.bg}`;
+      document.querySelectorAll("[data-bg]").forEach(item => item.classList.toggle("active", item === button));
+    }));
+    play();
+    requestAnimationFrame(tick);
+  </script>
+</body>
+</html>

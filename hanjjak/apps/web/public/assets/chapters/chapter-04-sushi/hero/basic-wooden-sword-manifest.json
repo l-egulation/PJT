@@ -1,0 +1,561 @@
+{
+  "schema_version": 1,
+  "set": "basic-wooden-sword",
+  "name_ko": "기본 나무검",
+  "bucket": "장비",
+  "status": "complete",
+  "approval_note": "사용자가 디자인과 strike1_01/02 수제 검 레이어를 확정했고, 2026-09-10 교정 무기 제거본을 직접 제공했다.",
+  "canvas": [
+    928,
+    672
+  ],
+  "layer_order": [
+    "weapon",
+    "base"
+  ],
+  "base_source": "art/char/hero-motions-4f/frame/noweapon/{frame}_noweapon.png",
+  "base_processing": "Keep the connected hero component and remove detached effects/artifacts.",
+  "base_corrections": {
+    "frames": [
+      "strike1_01",
+      "strike1_02"
+    ],
+    "manifest": "art/char/hero-motions-4f/work/기본나무검/noweapon-correction-2026-09-10/manifest.json",
+    "manifest_sha256": "6219987b6e92461ad42a84070bd93644cc8464b922ce862e6f358255bf34572e"
+  },
+  "effects": "removed",
+  "motions": [
+    "rest",
+    "run2",
+    "strike1",
+    "thrust1",
+    "death1"
+  ],
+  "reach_from_grip_to_tip": 220.0,
+  "reach_note": "220px는 자동 배치 18프레임 기준이며 strike1_01/02는 사용자 수제 레이어 원본 좌표를 유지한다.",
+  "source": "art/char/hero-motions-4f/work/기본나무검/design/basic-wooden-sword-design-v6-longer-transparent.png",
+  "source_sha256": "da2b051df566b288cd27a9ccff146bed467bbb31c2b77cc2dc6f2a7075be4b0e",
+  "manual_sources": {
+    "strike1_01": "art/char/hero-motions-4f/work/기본나무검/manual-edit-2026-09-09/manual-layers/strike1_01-weapon.png",
+    "strike1_02": "art/char/hero-motions-4f/work/기본나무검/manual-edit-2026-09-09/manual-layers/strike1_02-weapon.png"
+  },
+  "tools": [
+    "tools/extend_weapon_blade.py",
+    "tools/import_basic_wooden_sword_tiff.py",
+    "tools/import_basic_wooden_sword_noweapon_tiff.py",
+    "tools/promote_basic_wooden_sword_noweapon_correction.py",
+    "tools/build_basic_wooden_sword.py"
+  ],
+  "counts": {
+    "bases": 20,
+    "layers": 20,
+    "worn": 20,
+    "frames": 20,
+    "preview": 18,
+    "reports": 1
+  },
+  "verified": {
+    "allPlacementsPassed": true,
+    "clippedPixels": 0,
+    "opaqueBasePixelsChanged": 0,
+    "lockedBasePixelsChanged": 0,
+    "pixelsChangedOutsideWeapon": 0
+  },
+  "assets": [
+    {
+      "path": "bases/death1_01.png",
+      "sha256": "9e57a2d0f127613480096d5aa607ece82b72ff3fa994a53604d4ae0cfe5ca077",
+      "bytes": 76242
+    },
+    {
+      "path": "bases/death1_02.png",
+      "sha256": "8051d91e14223ea5c5d4723e962a6b3a1500b0cf5f8a40d06d402a45b884840f",
+      "bytes": 94760
+    },
+    {
+      "path": "bases/death1_03.png",
+      "sha256": "92e603118ff2c58f522230bbd634794fdb44401cbb4866dc43b92e1413582a86",
+      "bytes": 119558
+    },
+    {
+      "path": "bases/death1_04.png",
+      "sha256": "61798f222b6577ffd643649513f9dfc15d7671b2a582592e7c3e738aa8883461",
+      "bytes": 83168
+    },
+    {
+      "path": "bases/rest_01.png",
+      "sha256": "822c5be71b4aa11b1d403f8c53ed7ec76fa40a934e62ad77a8c53985bece0f73",
+      "bytes": 72706
+    },
+    {
+      "path": "bases/rest_02.png",
+      "sha256": "7f802bb4ab2772f4a2c5a42a8ea7f7af37f146a9121a2ee0359d671e61e569c4",
+      "bytes": 79749
+    },
+    {
+      "path": "bases/rest_03.png",
+      "sha256": "bc1698a6611a01c0ccdec14c904b34bca1c3057aa09838ecb115390600da014f",
+      "bytes": 84475
+    },
+    {
+      "path": "bases/rest_04.png",
+      "sha256": "c4dea69bb11c8f4b188c2b43c6033dad43a5f6072e54d637690daf3689e1980e",
+      "bytes": 86768
+    },
+    {
+      "path": "bases/run2_01.png",
+      "sha256": "7bac6b400b85760799373fc1c760f00b101326089902168a8c3eb1ee6c21aed1",
+      "bytes": 104884
+    },
+    {
+      "path": "bases/run2_02.png",
+      "sha256": "ee8ef8722487a303835fbbf338eed7545bf94d8de21259bc143b0058553ca9ea",
+      "bytes": 107990
+    },
+    {
+      "path": "bases/run2_03.png",
+      "sha256": "a737a5233077efa67513bffd07672a5b01273c3b655e5886b1c01d9fb3f52d53",
+      "bytes": 106767
+    },
+    {
+      "path": "bases/run2_04.png",
+      "sha256": "e96c8d137988efce6e650bf852185e4db8c66892df5d98b0c1214bf30632734a",
+      "bytes": 109537
+    },
+    {
+      "path": "bases/strike1_01.png",
+      "sha256": "12e97feddf27498702cd7c7102027957d3f231c416951c6bd5c237e4fff7e6d4",
+      "bytes": 102481
+    },
+    {
+      "path": "bases/strike1_02.png",
+      "sha256": "b0473701f4e16a5c5844e3d397a0919078839201b63af8b04cdd09a0e41c8b61",
+      "bytes": 102343
+    },
+    {
+      "path": "bases/strike1_03.png",
+      "sha256": "f0167099f84f61d3c052b04f004a666b81657b99296f6edf3b530207e078568f",
+      "bytes": 96263
+    },
+    {
+      "path": "bases/strike1_04.png",
+      "sha256": "9f004d2b4553d401ff050d0675e8b80b03d429eff507d5ee6fe9d059344a98a2",
+      "bytes": 106031
+    },
+    {
+      "path": "bases/thrust1_01.png",
+      "sha256": "111e57b9a2dbe2575cf65bb2c20d439c0441d319213aea23bb262642c7377148",
+      "bytes": 87734
+    },
+    {
+      "path": "bases/thrust1_02.png",
+      "sha256": "ec6eab8f33b6accc8db8d01e9890ac920064a35c11d66e870203607019e63cfe",
+      "bytes": 104873
+    },
+    {
+      "path": "bases/thrust1_03.png",
+      "sha256": "4640aca3530f8a9251ed7beb7e2223de12542e3c28186e23e07b098afede559b",
+      "bytes": 103760
+    },
+    {
+      "path": "bases/thrust1_04.png",
+      "sha256": "a4242aab68ba90f53f8e74d89f6360df9c7c6b614ac57ce12ffe5c2ab5d718f4",
+      "bytes": 117510
+    },
+    {
+      "path": "layers/death1_01-weapon.png",
+      "sha256": "f70a345f9765925a429748c6fbeeeeba25e59dd0c237288da990d325e729b4c0",
+      "bytes": 35849
+    },
+    {
+      "path": "layers/death1_02-weapon.png",
+      "sha256": "9d9ff2a468f554d9e864629dfa61eb8717972bbb91734e28ad15b1788d8f6fa3",
+      "bytes": 35885
+    },
+    {
+      "path": "layers/death1_03-weapon.png",
+      "sha256": "9ad74d99064a486332b2744695fba31db31c38c4f276448c0d22b52da969b02a",
+      "bytes": 36118
+    },
+    {
+      "path": "layers/death1_04-weapon.png",
+      "sha256": "5d5cb20796643ccd43b80227ac928b800ed4910b475984001b98af68f40adb4e",
+      "bytes": 29939
+    },
+    {
+      "path": "layers/rest_01-weapon.png",
+      "sha256": "63b9d63d00825ccc88533ef47387debd11444b2c67540e36700ae07a8bb3600b",
+      "bytes": 35917
+    },
+    {
+      "path": "layers/rest_02-weapon.png",
+      "sha256": "96c4ca6659b64092ab29ffaadd48f611acff0e42bc32bb0f75d7ec698de0a30e",
+      "bytes": 35990
+    },
+    {
+      "path": "layers/rest_03-weapon.png",
+      "sha256": "d7b526a73ebebb1d5458f5ae1a5d3897eb3d9aac84a3839744b312968e961f3e",
+      "bytes": 35991
+    },
+    {
+      "path": "layers/rest_04-weapon.png",
+      "sha256": "e44b5cb06bcc0117076362dd3813e1a2fd6a2783872a0cbd4a9b85e858d2df5f",
+      "bytes": 36043
+    },
+    {
+      "path": "layers/run2_01-weapon.png",
+      "sha256": "5d06a9a037b010718631517c7a26cf0867b4947089da35c572f9d224fda2d44e",
+      "bytes": 35050
+    },
+    {
+      "path": "layers/run2_02-weapon.png",
+      "sha256": "fcc2069fefddeec93fbc8667daf48c5859fb5701454bd3acc0d51c9ba9de4207",
+      "bytes": 35362
+    },
+    {
+      "path": "layers/run2_03-weapon.png",
+      "sha256": "36856c98b8c9c65c36555c0c2bfe4d0982da0de1b7374571ec6d03ade444c066",
+      "bytes": 35949
+    },
+    {
+      "path": "layers/run2_04-weapon.png",
+      "sha256": "5e5179c0f4ad6dfecd622f2e940633c829d37f3c30e1f9264a53189d5491a61b",
+      "bytes": 35770
+    },
+    {
+      "path": "layers/strike1_01-weapon.png",
+      "sha256": "edb0cb2cd9d6f41f3204841dbef858bab611e98e3b39e91085edea23634ecf75",
+      "bytes": 17022
+    },
+    {
+      "path": "layers/strike1_02-weapon.png",
+      "sha256": "b92f07b1d2d22ea431bab3789ce0787c2dd813f81b7bcf3dc5246c556dc3877e",
+      "bytes": 18239
+    },
+    {
+      "path": "layers/strike1_03-weapon.png",
+      "sha256": "ea48197970464e39e2992f07b955a21a7598683b74e7c3e73b3c05ed87cc5c6c",
+      "bytes": 31905
+    },
+    {
+      "path": "layers/strike1_04-weapon.png",
+      "sha256": "9281926b8cd9221ae7e78da2eb07738c460612af9f07abe9ac1f3de47f88a162",
+      "bytes": 31715
+    },
+    {
+      "path": "layers/thrust1_01-weapon.png",
+      "sha256": "57ab969c24eaea3f20bc8e128fafa3fc64d99e217470cf724059d8dabd31ab8b",
+      "bytes": 29780
+    },
+    {
+      "path": "layers/thrust1_02-weapon.png",
+      "sha256": "a00c54dd6273320135318a148981a03d90e8925783b3a8c7f9f2c8c262bd8929",
+      "bytes": 29804
+    },
+    {
+      "path": "layers/thrust1_03-weapon.png",
+      "sha256": "b7df6c55d4f8fa3f8322c95ec712fd20184354767e5932895d9f61fb8eb80b66",
+      "bytes": 29941
+    },
+    {
+      "path": "layers/thrust1_04-weapon.png",
+      "sha256": "ae317aa5f088eb5411fa54dc9d64fd7ef2fa799d3f2a9d03449bdb5eb40e052f",
+      "bytes": 29942
+    },
+    {
+      "path": "worn/death1_01-weapon.png",
+      "sha256": "1ea5c6b5313fb201dfbba285713863d117bf9508ffe4179a8c1df61fe2c8ef33",
+      "bytes": 103580
+    },
+    {
+      "path": "worn/death1_02-weapon.png",
+      "sha256": "0a458d3ad638d3c0fa6e0515c54846bb5eadf10702f4facb47b9549a51fb986c",
+      "bytes": 121426
+    },
+    {
+      "path": "worn/death1_03-weapon.png",
+      "sha256": "253878cd95613b2791246fa61c79baef3778c076e47cfa0016eea8b77bc3f17e",
+      "bytes": 146369
+    },
+    {
+      "path": "worn/death1_04-weapon.png",
+      "sha256": "4896d8af3aa2aed2decb96428f9cad510d68eef37fe31ef8a63be1144f6d9a59",
+      "bytes": 102579
+    },
+    {
+      "path": "worn/rest_01-weapon.png",
+      "sha256": "6ccd46b5728360f66b1463643221ab29ac660c121d813073a1992b24ea40760c",
+      "bytes": 98266
+    },
+    {
+      "path": "worn/rest_02-weapon.png",
+      "sha256": "d0c481cfb549eb0a42157ea8cc5aaf522968c960b6e3876248ff4429974dc750",
+      "bytes": 106077
+    },
+    {
+      "path": "worn/rest_03-weapon.png",
+      "sha256": "b81b5f4eebe3854d16b6790b27cde433bc8b439e0b21d701247d6092f034e8a8",
+      "bytes": 110639
+    },
+    {
+      "path": "worn/rest_04-weapon.png",
+      "sha256": "aa42f71c7a3cd90dfdcec45398d540539f8a6009b822e1b0095f42bdf77a5da2",
+      "bytes": 113331
+    },
+    {
+      "path": "worn/run2_01-weapon.png",
+      "sha256": "6e1261db937c1aa4eea18bc3aa2ba0e7be9ebf9173c67c5af90e3c0c1ee26096",
+      "bytes": 131416
+    },
+    {
+      "path": "worn/run2_02-weapon.png",
+      "sha256": "00b0ca9c627d1cc04e2c663cca5904dbab259ae2715fb12649e86fb6168a7dbd",
+      "bytes": 134262
+    },
+    {
+      "path": "worn/run2_03-weapon.png",
+      "sha256": "9473f9793df3574de20cb50615a46bfd35c3285923d4798778a62dd2b056b440",
+      "bytes": 133422
+    },
+    {
+      "path": "worn/run2_04-weapon.png",
+      "sha256": "a6a888beae82e7f37f2f5efd4bd89ab0d581d0e957efd43f018172c004208eab",
+      "bytes": 136282
+    },
+    {
+      "path": "worn/strike1_01-weapon.png",
+      "sha256": "9f8aa1628011c09b9718993d7b2c451c83dbe1811c4fe713beb3dc9cad10d562",
+      "bytes": 112914
+    },
+    {
+      "path": "worn/strike1_02-weapon.png",
+      "sha256": "774a720e214365ef4e818c06a2c0cd6def31a55ccc4fd92b99c3cbf7b19cbe7c",
+      "bytes": 110711
+    },
+    {
+      "path": "worn/strike1_03-weapon.png",
+      "sha256": "54806638a0e7ed66d7395641ea45fd62f7e0a5865f2e71dc0e15911c81fbf93e",
+      "bytes": 118922
+    },
+    {
+      "path": "worn/strike1_04-weapon.png",
+      "sha256": "42c4cd96aa4cccff3b01fe28d0e4e6553c0a615578b8193102a81e93fe0858c1",
+      "bytes": 128648
+    },
+    {
+      "path": "worn/thrust1_01-weapon.png",
+      "sha256": "5f53a8a3ea51c7f2cbf1e5c5fbfcf01c90da3fa74affb6f153aad2208e6921ea",
+      "bytes": 107933
+    },
+    {
+      "path": "worn/thrust1_02-weapon.png",
+      "sha256": "592121f947c13b4bc38925e86953c08dc97a7db55cce411e1fb842386a8b0d30",
+      "bytes": 124133
+    },
+    {
+      "path": "worn/thrust1_03-weapon.png",
+      "sha256": "ac78b1e63d2241b96507f7ac3e32f7c81d84db6c9a46184a484a47cf0a2e7fea",
+      "bytes": 123495
+    },
+    {
+      "path": "worn/thrust1_04-weapon.png",
+      "sha256": "03b48daef4588f02ec3d5b225dc25df5feba9b247b5f810352893f6a683b1caf",
+      "bytes": 137939
+    },
+    {
+      "path": "frames/death1_01.png",
+      "sha256": "1ea5c6b5313fb201dfbba285713863d117bf9508ffe4179a8c1df61fe2c8ef33",
+      "bytes": 103580
+    },
+    {
+      "path": "frames/death1_02.png",
+      "sha256": "0a458d3ad638d3c0fa6e0515c54846bb5eadf10702f4facb47b9549a51fb986c",
+      "bytes": 121426
+    },
+    {
+      "path": "frames/death1_03.png",
+      "sha256": "253878cd95613b2791246fa61c79baef3778c076e47cfa0016eea8b77bc3f17e",
+      "bytes": 146369
+    },
+    {
+      "path": "frames/death1_04.png",
+      "sha256": "4896d8af3aa2aed2decb96428f9cad510d68eef37fe31ef8a63be1144f6d9a59",
+      "bytes": 102579
+    },
+    {
+      "path": "frames/rest_01.png",
+      "sha256": "6ccd46b5728360f66b1463643221ab29ac660c121d813073a1992b24ea40760c",
+      "bytes": 98266
+    },
+    {
+      "path": "frames/rest_02.png",
+      "sha256": "d0c481cfb549eb0a42157ea8cc5aaf522968c960b6e3876248ff4429974dc750",
+      "bytes": 106077
+    },
+    {
+      "path": "frames/rest_03.png",
+      "sha256": "b81b5f4eebe3854d16b6790b27cde433bc8b439e0b21d701247d6092f034e8a8",
+      "bytes": 110639
+    },
+    {
+      "path": "frames/rest_04.png",
+      "sha256": "aa42f71c7a3cd90dfdcec45398d540539f8a6009b822e1b0095f42bdf77a5da2",
+      "bytes": 113331
+    },
+    {
+      "path": "frames/run2_01.png",
+      "sha256": "6e1261db937c1aa4eea18bc3aa2ba0e7be9ebf9173c67c5af90e3c0c1ee26096",
+      "bytes": 131416
+    },
+    {
+      "path": "frames/run2_02.png",
+      "sha256": "00b0ca9c627d1cc04e2c663cca5904dbab259ae2715fb12649e86fb6168a7dbd",
+      "bytes": 134262
+    },
+    {
+      "path": "frames/run2_03.png",
+      "sha256": "9473f9793df3574de20cb50615a46bfd35c3285923d4798778a62dd2b056b440",
+      "bytes": 133422
+    },
+    {
+      "path": "frames/run2_04.png",
+      "sha256": "a6a888beae82e7f37f2f5efd4bd89ab0d581d0e957efd43f018172c004208eab",
+      "bytes": 136282
+    },
+    {
+      "path": "frames/strike1_01.png",
+      "sha256": "9f8aa1628011c09b9718993d7b2c451c83dbe1811c4fe713beb3dc9cad10d562",
+      "bytes": 112914
+    },
+    {
+      "path": "frames/strike1_02.png",
+      "sha256": "774a720e214365ef4e818c06a2c0cd6def31a55ccc4fd92b99c3cbf7b19cbe7c",
+      "bytes": 110711
+    },
+    {
+      "path": "frames/strike1_03.png",
+      "sha256": "54806638a0e7ed66d7395641ea45fd62f7e0a5865f2e71dc0e15911c81fbf93e",
+      "bytes": 118922
+    },
+    {
+      "path": "frames/strike1_04.png",
+      "sha256": "42c4cd96aa4cccff3b01fe28d0e4e6553c0a615578b8193102a81e93fe0858c1",
+      "bytes": 128648
+    },
+    {
+      "path": "frames/thrust1_01.png",
+      "sha256": "5f53a8a3ea51c7f2cbf1e5c5fbfcf01c90da3fa74affb6f153aad2208e6921ea",
+      "bytes": 107933
+    },
+    {
+      "path": "frames/thrust1_02.png",
+      "sha256": "592121f947c13b4bc38925e86953c08dc97a7db55cce411e1fb842386a8b0d30",
+      "bytes": 124133
+    },
+    {
+      "path": "frames/thrust1_03.png",
+      "sha256": "ac78b1e63d2241b96507f7ac3e32f7c81d84db6c9a46184a484a47cf0a2e7fea",
+      "bytes": 123495
+    },
+    {
+      "path": "frames/thrust1_04.png",
+      "sha256": "03b48daef4588f02ec3d5b225dc25df5feba9b247b5f810352893f6a683b1caf",
+      "bytes": 137939
+    },
+    {
+      "path": "preview/death1.apng",
+      "sha256": "9f3fbbf8d419ef09eaa51c5c9e8cef9bc12d9111224a167a29ed2da6396121e5",
+      "bytes": 703813
+    },
+    {
+      "path": "preview/death1.gif",
+      "sha256": "cce3cf8357f4579bb87e4ca6f8388aa7e5ace007c0d303627fe07eae26d6c691",
+      "bytes": 133468
+    },
+    {
+      "path": "preview/death1.webp",
+      "sha256": "f83c9ccd7fe8d1783ff2090355d303fca8b020df5836411cab55a4499a452ce6",
+      "bytes": 292344
+    },
+    {
+      "path": "preview/overview-20-frames.png",
+      "sha256": "e2e1a16f46cc08dfd40185580137ab08b6e8259cd02ab3402cf5629ba146e156",
+      "bytes": 366542
+    },
+    {
+      "path": "preview/rest.apng",
+      "sha256": "b32ca4f9f49c09846f3f1e8282512da1c5559a7686db02dbf1706dd5f011c9fb",
+      "bytes": 598451
+    },
+    {
+      "path": "preview/rest.gif",
+      "sha256": "8a05ce3f2cb798d68fd99e77e2b143beca610c7bc41c3fcc9b0edfab82bcdf73",
+      "bytes": 131516
+    },
+    {
+      "path": "preview/rest.webp",
+      "sha256": "37e3e08b480cf7314ad3564e7cd7aa73b764391054a13ec222621576bf93711c",
+      "bytes": 260442
+    },
+    {
+      "path": "preview/run2.apng",
+      "sha256": "c48beb2ced1207da6adba4f6b9994c6598a544e68a254f60daa819aae25365fe",
+      "bytes": 761379
+    },
+    {
+      "path": "preview/run2.gif",
+      "sha256": "dc5017a47c1af22c2db809bd781a879ff2e76ef57f7252d402efa7d8c14a42dc",
+      "bytes": 140476
+    },
+    {
+      "path": "preview/run2.webp",
+      "sha256": "f7933b5858ba70b392ef2b5b826d74c8433c0ae54b8403d8480d7263aad2f966",
+      "bytes": 292854
+    },
+    {
+      "path": "preview/strike1.apng",
+      "sha256": "9c7bd4e472aba1c2b18597c30ee51559cd54a2d5df7509088df70330d70372eb",
+      "bytes": 661283
+    },
+    {
+      "path": "preview/strike1.gif",
+      "sha256": "e8dcdad9e0ffc46b1dfd99864143a0d6b8f14c96dacc61fa81ac86033472ac4f",
+      "bytes": 118953
+    },
+    {
+      "path": "preview/strike1.webp",
+      "sha256": "72f5f5fa3ae674e4186dd28130ae76b227d58ddcb2bd3d8524072403567e110e",
+      "bytes": 259286
+    },
+    {
+      "path": "preview/thrust1.apng",
+      "sha256": "4e48c0783a3add7df2c441a354f668645b838f0674a51435ec21b158ed17d107",
+      "bytes": 715935
+    },
+    {
+      "path": "preview/thrust1.gif",
+      "sha256": "14089053079cdaee44f983d2d5fe100c9acc5c6fcc7d91a9d490df4c676f704a",
+      "bytes": 138267
+    },
+    {
+      "path": "preview/thrust1.webp",
+      "sha256": "7010e6ab053c93e815ad253ca468c6430646e40d7139d9f93eadb9ac528b384b",
+      "bytes": 277278
+    },
+    {
+      "path": "preview/weapon-only-sprite-sheet-4x5.png",
+      "sha256": "6434e7efdc50d575a26ab37f0f1558d6df7bb9dacd8edbbf627d0bffab03139a",
+      "bytes": 626054
+    },
+    {
+      "path": "preview/worn-sprite-sheet-4x5.png",
+      "sha256": "25f0ad85e872ce421f868783f9d349fcccc2772f06ff8a0840fcda1155e0a895",
+      "bytes": 2387703
+    },
+    {
+      "path": "reports/placement-report.json",
+      "sha256": "d633fb18a9a30b61e5db4a06c8df379c580cacef9b3ad610174c617e68099f62",
+      "bytes": 18738
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hanjjak.local/schema/skills.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["authority", "contentVersion", "mvpMaxGrade", "levelRange", "successRatesBasisPoints", "grades", "skills"],
+  "properties": {
+    "authority": { "const": "applied" },
+    "contentVersion": { "type": "string", "minLength": 1 },
+    "mvpMaxGrade": { "enum": ["NORMAL", "RARE", "EPIC", "LEGENDARY"] },
+    "levelRange": {
+      "type": "object", "additionalProperties": false, "required": ["min", "max"],
+      "properties": { "min": { "const": 1 }, "max": { "const": 10 } }
+    },
+    "successRatesBasisPoints": {
+      "type": "object", "additionalProperties": false,
+      "required": ["2", "3", "4", "5", "6", "7", "8", "9", "10"],
+      "properties": {
+        "2": { "type": "integer", "minimum": 1, "maximum": 10000 },
+        "3": { "type": "integer", "minimum": 1, "maximum": 10000 },
+        "4": { "type": "integer", "minimum": 1, "maximum": 10000 },
+        "5": { "type": "integer", "minimum": 1, "maximum": 10000 },
+        "6": { "type": "integer", "minimum": 1, "maximum": 10000 },
+        "7": { "type": "integer", "minimum": 1, "maximum": 10000 },
+        "8": { "type": "integer", "minimum": 1, "maximum": 10000 },
+        "9": { "type": "integer", "minimum": 1, "maximum": 10000 },
+        "10": { "type": "integer", "minimum": 1, "maximum": 10000 }
+      }
+    },
+    "grades": {
+      "type": "object", "additionalProperties": false, "required": ["NORMAL", "RARE", "EPIC", "LEGENDARY"],
+      "properties": {
+        "NORMAL": { "$ref": "#/$defs/grade" }, "RARE": { "$ref": "#/$defs/grade" },
+        "EPIC": { "$ref": "#/$defs/grade" }, "LEGENDARY": { "$ref": "#/$defs/grade" }
+      }
+    },
+    "skills": { "type": "array", "minItems": 6, "maxItems": 6, "items": { "$ref": "#/$defs/skill" } }
+  },
+  "$defs": {
+    "grade": {
+      "type": "object", "additionalProperties": false,
+      "required": ["enhancementRiceCoefficient", "promotionRiceCost", "bookRequirements"],
+      "properties": {
+        "enhancementRiceCoefficient": { "type": "integer", "minimum": 1 },
+        "promotionRiceCost": { "type": "integer", "minimum": 0 },
+        "bookRequirements": {
+          "type": "object", "additionalProperties": false,
+          "propertyNames": { "enum": ["NORMAL", "RARE", "EPIC", "LEGENDARY"] },
+          "patternProperties": { ".*": { "type": "integer", "minimum": 1 } },
+          "minProperties": 1, "maxProperties": 4
+        }
+      }
+    },
+    "skill": {
+      "type": "object", "additionalProperties": false,
+      "required": ["skillId", "name", "active", "effects"],
+      "properties": {
+        "skillId": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "active": { "type": "boolean" },
+        "effects": {
+          "type": "object", "additionalProperties": false, "required": ["NORMAL", "RARE", "EPIC", "LEGENDARY"],
+          "properties": {
+            "NORMAL": { "$ref": "#/$defs/effect" }, "RARE": { "$ref": "#/$defs/effect" },
+            "EPIC": { "$ref": "#/$defs/effect" }, "LEGENDARY": { "$ref": "#/$defs/effect" }
+          }
+        }
+      }
+    },
+    "effect": {
+      "type": "object", "additionalProperties": false, "required": ["baseValue", "stepValue"],
+      "properties": { "baseValue": { "type": "integer", "minimum": 1 }, "stepValue": { "type": "integer", "minimum": 1 } }
+    }
+  }
+}

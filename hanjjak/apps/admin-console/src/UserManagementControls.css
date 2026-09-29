@@ -1,0 +1,32 @@
+.user-management { margin-top: 1.5rem; border: 1px solid rgba(36, 44, 64, .12); border-radius: 18px; padding: 1.4rem; background: #fff; box-shadow: 0 14px 36px rgba(38, 43, 69, .08); }
+.user-management-heading { display: flex; justify-content: space-between; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; }
+.user-management-heading h2 { margin: .2rem 0 .4rem; }
+.user-management-heading p { margin: 0; color: #687083; }
+.management-version { color: #6f7890; font-size: .82rem; white-space: nowrap; }
+.management-note, .management-help { color: #667085; font-size: .88rem; line-height: 1.5; }
+.management-feedback { border: 1px solid #a8dec6; background: #eefbf4; color: #176746; padding: .7rem .85rem; border-radius: 10px; margin: .75rem 0; }
+.management-tabs { display: flex; flex-wrap: wrap; gap: .45rem; border-bottom: 1px solid #e4e7ec; padding-bottom: .8rem; margin-bottom: 1rem; }
+.management-tab { border: 1px solid #d8dce5; border-radius: 999px; padding: .55rem .85rem; background: #fff; color: #424b61; cursor: pointer; font: inherit; }
+.management-tab.active { background: #273b68; border-color: #273b68; color: #fff; }
+.management-form { display: grid; gap: 1rem; }
+.management-form fieldset { border: 1px solid #e4e7ec; border-radius: 12px; padding: 1rem; display: grid; gap: .8rem; min-inline-size: 0; }
+.management-form legend { font-weight: 700; padding: 0 .3rem; }
+.management-form label { display: grid; gap: .35rem; color: #3e4658; font-weight: 600; }
+.management-form input, .management-form select { box-sizing: border-box; border: 1px solid #cfd4df; border-radius: 8px; padding: .65rem .7rem; font: inherit; min-height: 2.65rem; background: #fff; }
+.management-form input:focus, .management-form select:focus, .management-tab:focus-visible, .segmented button:focus-visible, .reason-presets button:focus-visible { outline: 3px solid rgba(51, 111, 213, .26); outline-offset: 2px; }
+.management-form small { color: #70788b; font-weight: 400; }
+.management-fields { display: grid; gap: .8rem; }
+.management-fields.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.management-current { display: flex; align-items: baseline; gap: .65rem; padding: .8rem .9rem; background: #f5f7fb; border-radius: 10px; color: #4b5568; }
+.management-current strong { color: #273b68; white-space: nowrap; }
+.segmented { display: flex; flex-wrap: wrap; gap: .5rem; }
+.segmented button, .reason-presets button { border: 1px solid #cfd4df; border-radius: 8px; background: #fff; color: #4b5568; padding: .55rem .75rem; font: inherit; cursor: pointer; }
+.segmented button.selected { border-color: #273b68; background: #eef2fb; color: #273b68; font-weight: 700; }
+.segmented button.selected.positive { border-color: #20845b; background: #eefbf4; color: #176746; }
+.segmented button.selected.danger { border-color: #be4d58; background: #fff1f2; color: #9d2935; }
+.reason-field { background: #fffcf4; }
+.reason-presets { display: flex; flex-wrap: wrap; gap: .45rem; }
+.reason-presets button { font-size: .85rem; }
+.management-actions { display: flex; justify-content: flex-end; gap: .65rem; }
+.management-actions button { min-width: 8rem; }
+@media (max-width: 620px) { .user-management { padding: 1rem; } .user-management-heading { display: block; } .management-version { display: block; margin-top: .5rem; } .management-fields.two { grid-template-columns: 1fr; } .management-current { display: grid; gap: .2rem; } .management-actions { justify-content: stretch; } .management-actions button { flex: 1; min-width: 0; } }

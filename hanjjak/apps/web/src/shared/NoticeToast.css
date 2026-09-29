@@ -1,0 +1,36 @@
+.notice-toast {
+  position: fixed;
+  z-index: 200;
+  top: 50%;
+  left: 50%;
+  padding: 14px 30px 13px;
+  border: 3px solid #7a5334;
+  border-radius: 14px;
+  color: #fff6e2;
+  background: rgba(56, 33, 18, .92);
+  box-shadow: inset 0 0 0 2px rgba(255, 240, 202, .22), 0 12px 26px rgba(30, 15, 5, .34);
+  font-family: var(--hanjjak-font-ui);
+  font-size: 26px;
+  font-weight: 950;
+  letter-spacing: -.02em;
+  /* 짧은 알림은 한 줄로 두되, 긴 문장은 화면 안에서 접힌다. */
+  width: max-content;
+  max-width: min(560px, calc(100vw - 48px));
+  text-align: center;
+  text-shadow: 0 2px rgba(20, 9, 2, .5);
+  /* 알림이 떠 있는 동안에도 아래 화면은 그대로 쓸 수 있어야 한다. */
+  pointer-events: none;
+  animation: notice-toast-life 1.6s ease-out forwards;
+}
+.notice-toast-success { border-color: #6f9a3f; background: rgba(46, 66, 25, .92); color: #f2ffd9; }
+.notice-toast-failure { border-color: #a8483a; background: rgba(80, 27, 20, .92); color: #ffe6dc; }
+
+@keyframes notice-toast-life {
+  0% { opacity: 0; transform: translate(-50%, calc(-50% + 14px)) scale(.94); }
+  12% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  70% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, calc(-50% - 16px)) scale(.98); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .notice-toast { animation: none; opacity: 1; transform: translate(-50%, -50%); }
+}

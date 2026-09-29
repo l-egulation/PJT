@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>타락한 젓가락 군주 · 모션 v2</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, Pretendard, system-ui, sans-serif; background: #090814; color: #f7f1ff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; padding: 28px; background: radial-gradient(circle at 50% -10%, #37205d 0, #151126 34%, #090814 72%); }
+    main { width: min(1040px, 100%); margin: auto; }
+    header { display: flex; gap: 18px; align-items: end; justify-content: space-between; flex-wrap: wrap; }
+    h1 { margin: 0; font-size: clamp(26px, 5vw, 48px); letter-spacing: -.04em; }
+    .eyebrow { color: #a897cb; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; }
+    .summary { margin: 8px 0 0; color: #cfc4e2; }
+    .status { border: 1px solid #7c65a9; border-radius: 999px; padding: 8px 12px; color: #d9cbf4; background: #221a35; font-size: 12px; }
+    .panel { margin-top: 24px; padding: 18px; border: 1px solid #3c3156; border-radius: 20px; background: #11101dcf; box-shadow: 0 24px 80px #0009; }
+    .controls { display: flex; flex-wrap: wrap; gap: 9px; }
+    button, select { border: 1px solid #5b4b7a; border-radius: 10px; padding: 10px 14px; background: #211a34; color: inherit; cursor: pointer; }
+    button:hover, button:focus-visible { border-color: #9e7ee8; }
+    button.active { border-color: #d4b5ff; background: linear-gradient(135deg, #56378b, #3a275e); box-shadow: 0 0 0 1px #bb8cff40 inset; }
+    .stage { display: grid; place-items: center; min-height: min(62vw, 560px); margin-top: 16px; overflow: hidden; border: 1px solid #312841; border-radius: 16px; background: radial-gradient(ellipse at 50% 76%, #2e2550 0, #13101f 46%, #08070d 78%); }
+    .stage.light { background: #eeeaf5; }
+    .stage.green { background: #00a94f; }
+    .stage img { width: min(512px, 100%); height: auto; image-rendering: pixelated; filter: drop-shadow(0 22px 22px #0009); }
+    .readout { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; margin-top: 14px; }
+    .timeline { height: 8px; overflow: hidden; border-radius: 999px; background: #29223a; }
+    .timeline > div { height: 100%; width: 0; background: linear-gradient(90deg, #5e78ff, #b878ff, #ffba55); }
+    .time { min-width: 110px; text-align: right; color: #d9ccec; font-variant-numeric: tabular-nums; }
+    .details { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 18px; }
+    .detail { padding: 13px; border: 1px solid #322944; border-radius: 12px; background: #171322; }
+    .detail strong { display: block; margin-bottom: 4px; color: #f1e6ff; }
+    .detail span { color: #aa9cbe; font-size: 13px; }
+    .downloads { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 18px; }
+    a { color: #caa9ff; }
+    @media (max-width: 650px) { body { padding: 16px; } .details { grid-template-columns: 1fr; } .panel { padding: 12px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <div class="eyebrow">Raid boss visual prototype</div>
+        <h1>타락한 젓가락 군주</h1>
+        <p class="summary">실제 키포즈 10장 · 가변 프레임 타이밍 · 투명 GIF / RGBA 스프라이트 시트</p>
+      </div>
+      <div class="status">candidate · 전투 정책 미확정</div>
+    </header>
+
+    <section class="panel">
+      <div class="controls" id="motion-controls"></div>
+      <div class="controls" style="margin-top: 9px">
+        <button data-bg="dark" class="active">어두운 배경</button>
+        <button data-bg="light">밝은 배경</button>
+        <button data-bg="green">크로마키</button>
+        <button id="restart">처음부터</button>
+      </div>
+      <div class="stage" id="stage"><img id="preview" alt="타락한 젓가락 군주 애니메이션"></div>
+      <div class="readout">
+        <div class="timeline"><div id="progress"></div></div>
+        <div class="time" id="time"></div>
+      </div>
+      <div class="details">
+        <div class="detail"><strong id="motion-name"></strong><span id="motion-note"></span></div>
+        <div class="detail"><strong>10 actual poses</strong><span>합성 크로스페이드 없이 생성된 서로 다른 키포즈를 사용합니다.</span></div>
+        <div class="detail"><strong>Reference cadence</strong><span>짧은 예비 동작, 급가속, 큰 타격 잔상, 빠른 회수 순서입니다.</span></div>
+      </div>
+      <div class="downloads">
+        <a id="gif-download" download>현재 GIF 내려받기</a>
+        <a href="10-fallen-hero-final-motion-v2/fallen-hero-final-motion-sprite-sheet-10x4-v2.png">스프라이트 시트 보기</a>
+        <a href="10-fallen-hero-final-motion-v2/fallen-hero-final-motion-sprite-sheet-10x4-v2.json">JSON 메타데이터 보기</a>
+      </div>
+    </section>
+  </main>
+  <script>
+    const motions = [
+      { id: "idle", label: "대기", duration: 1200, note: "호흡·망토·후광의 작은 순환" },
+      { id: "dash-slash", label: "돌진 베기", duration: 900, note: "0.30초 안에 가속해 수평 잔상으로 관통" },
+      { id: "spin-slash", label: "회전 베기", duration: 1000, note: "짧은 웅크림 뒤 전신 원형 참격" },
+      { id: "blade-rain", label: "낙하검 결계", duration: 1600, note: "부유·검 소환·지면 결계·회수" }
+    ];
+    const root = "10-fallen-hero-final-motion-v2";
+    const controls = document.querySelector("#motion-controls");
+    const preview = document.querySelector("#preview");
+    const stage = document.querySelector("#stage");
+    const progress = document.querySelector("#progress");
+    const time = document.querySelector("#time");
+    const motionName = document.querySelector("#motion-name");
+    const motionNote = document.querySelector("#motion-note");
+    const gifDownload = document.querySelector("#gif-download");
+    let motionIndex = 1;
+    let cycle = 0;
+    let startedAt = performance.now();
+
+    controls.innerHTML = motions.map((item, index) =>
+      `<button data-motion="${index}">${item.label}</button>`
+    ).join("");
+
+    function play(index = motionIndex) {
+      motionIndex = index;
+      cycle += 1;
+      startedAt = performance.now();
+      const motion = motions[motionIndex];
+      preview.src = `${root}/${motion.id}.gif?cycle=${cycle}`;
+      preview.alt = `타락한 젓가락 군주 ${motion.label}`;
+      motionName.textContent = `${motion.label} · ${(motion.duration / 1000).toFixed(2)}초`;
+      motionNote.textContent = motion.note;
+      gifDownload.href = `${root}/${motion.id}.gif`;
+      gifDownload.textContent = `${motion.label} GIF 내려받기`;
+      controls.querySelectorAll("[data-motion]").forEach(button => {
+        button.classList.toggle("active", Number(button.dataset.motion) === motionIndex);
+      });
+    }
+
+    function tick(now) {
+      const duration = motions[motionIndex].duration;
+      const current = ((now - startedAt) % duration) / duration;
+      progress.style.width = `${current * 100}%`;
+      time.textContent = `${(current * duration / 1000).toFixed(2)} / ${(duration / 1000).toFixed(2)}초`;
+      requestAnimationFrame(tick);
+    }
+
+    document.querySelector("#restart").addEventListener("click", () => play());
+    controls.querySelectorAll("[data-motion]").forEach(button => {
+      button.addEventListener("click", () => play(Number(button.dataset.motion)));
+    });
+    document.querySelectorAll("[data-bg]").forEach(button => {
+      button.addEventListener("click", () => {
+        stage.className = `stage ${button.dataset.bg === "dark" ? "" : button.dataset.bg}`;
+        document.querySelectorAll("[data-bg]").forEach(item => item.classList.toggle("active", item === button));
+      });
+    });
+    play();
+    requestAnimationFrame(tick);
+  </script>
+</body>
+</html>

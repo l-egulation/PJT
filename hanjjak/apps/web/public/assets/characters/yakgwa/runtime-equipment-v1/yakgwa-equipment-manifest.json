@@ -1,0 +1,798 @@
+{
+  "schemaVersion": "hanjjak.hero-equipment-atlas/v1",
+  "packageId": "moonlit-yakgwa-guardian-runtime",
+  "status": "qa-failed",
+  "technicalStatus": "structural-and-zero-pixel-recomposition-pass",
+  "coordinateSpace": {
+    "origin": [
+      0,
+      0
+    ],
+    "frameWidth": 928,
+    "frameHeight": 672,
+    "autoCrop": false
+  },
+  "atlasGrid": {
+    "columns": 4,
+    "rows": 5,
+    "width": 3712,
+    "height": 3360,
+    "motionOrder": [
+      "rest",
+      "run2",
+      "strike1",
+      "thrust1",
+      "death1"
+    ],
+    "frameOrder": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "frameKeyPattern": "{motion}_{frame:02}",
+  "frames": {
+    "rest_04": {
+      "motion": "rest",
+      "frame": 4,
+      "column": 3,
+      "row": 0,
+      "x": 2784,
+      "y": 0,
+      "width": 928,
+      "height": 672
+    },
+    "rest_03": {
+      "motion": "rest",
+      "frame": 3,
+      "column": 2,
+      "row": 0,
+      "x": 1856,
+      "y": 0,
+      "width": 928,
+      "height": 672
+    },
+    "rest_02": {
+      "motion": "rest",
+      "frame": 2,
+      "column": 1,
+      "row": 0,
+      "x": 928,
+      "y": 0,
+      "width": 928,
+      "height": 672
+    },
+    "rest_01": {
+      "motion": "rest",
+      "frame": 1,
+      "column": 0,
+      "row": 0,
+      "x": 0,
+      "y": 0,
+      "width": 928,
+      "height": 672
+    },
+    "run2_01": {
+      "motion": "run2",
+      "frame": 1,
+      "column": 0,
+      "row": 1,
+      "x": 0,
+      "y": 672,
+      "width": 928,
+      "height": 672
+    },
+    "run2_02": {
+      "motion": "run2",
+      "frame": 2,
+      "column": 1,
+      "row": 1,
+      "x": 928,
+      "y": 672,
+      "width": 928,
+      "height": 672
+    },
+    "run2_03": {
+      "motion": "run2",
+      "frame": 3,
+      "column": 2,
+      "row": 1,
+      "x": 1856,
+      "y": 672,
+      "width": 928,
+      "height": 672
+    },
+    "run2_04": {
+      "motion": "run2",
+      "frame": 4,
+      "column": 3,
+      "row": 1,
+      "x": 2784,
+      "y": 672,
+      "width": 928,
+      "height": 672
+    },
+    "strike1_01": {
+      "motion": "strike1",
+      "frame": 1,
+      "column": 0,
+      "row": 2,
+      "x": 0,
+      "y": 1344,
+      "width": 928,
+      "height": 672
+    },
+    "strike1_02": {
+      "motion": "strike1",
+      "frame": 2,
+      "column": 1,
+      "row": 2,
+      "x": 928,
+      "y": 1344,
+      "width": 928,
+      "height": 672
+    },
+    "strike1_03": {
+      "motion": "strike1",
+      "frame": 3,
+      "column": 2,
+      "row": 2,
+      "x": 1856,
+      "y": 1344,
+      "width": 928,
+      "height": 672
+    },
+    "strike1_04": {
+      "motion": "strike1",
+      "frame": 4,
+      "column": 3,
+      "row": 2,
+      "x": 2784,
+      "y": 1344,
+      "width": 928,
+      "height": 672
+    },
+    "thrust1_01": {
+      "motion": "thrust1",
+      "frame": 1,
+      "column": 0,
+      "row": 3,
+      "x": 0,
+      "y": 2016,
+      "width": 928,
+      "height": 672
+    },
+    "thrust1_02": {
+      "motion": "thrust1",
+      "frame": 2,
+      "column": 1,
+      "row": 3,
+      "x": 928,
+      "y": 2016,
+      "width": 928,
+      "height": 672
+    },
+    "thrust1_03": {
+      "motion": "thrust1",
+      "frame": 3,
+      "column": 2,
+      "row": 3,
+      "x": 1856,
+      "y": 2016,
+      "width": 928,
+      "height": 672
+    },
+    "thrust1_04": {
+      "motion": "thrust1",
+      "frame": 4,
+      "column": 3,
+      "row": 3,
+      "x": 2784,
+      "y": 2016,
+      "width": 928,
+      "height": 672
+    },
+    "death1_01": {
+      "motion": "death1",
+      "frame": 1,
+      "column": 0,
+      "row": 4,
+      "x": 0,
+      "y": 2688,
+      "width": 928,
+      "height": 672
+    },
+    "death1_02": {
+      "motion": "death1",
+      "frame": 2,
+      "column": 1,
+      "row": 4,
+      "x": 928,
+      "y": 2688,
+      "width": 928,
+      "height": 672
+    },
+    "death1_03": {
+      "motion": "death1",
+      "frame": 3,
+      "column": 2,
+      "row": 4,
+      "x": 1856,
+      "y": 2688,
+      "width": 928,
+      "height": 672
+    },
+    "death1_04": {
+      "motion": "death1",
+      "frame": 4,
+      "column": 3,
+      "row": 4,
+      "x": 2784,
+      "y": 2688,
+      "width": 928,
+      "height": 672
+    }
+  },
+  "selectionContract": {
+    "mode": "independent-per-slot",
+    "allowCrossSetMixing": true,
+    "slots": [
+      "hat",
+      "clothing",
+      "cape",
+      "glove",
+      "shoe",
+      "weapon"
+    ],
+    "rule": "Resolve one item per slot and draw every listed sublayer wherever its token appears in drawOrderByFrame."
+  },
+  "atlases": {
+    "cape-back": {
+      "slot": "cape",
+      "variant": "moonlit-yakgwa-cape",
+      "sublayer": "back",
+      "image": "atlases/cape-back-atlas-4x5.png",
+      "motionSheets": {
+        "rest": "motion-sheets/cape-back/rest-4f.png",
+        "run2": "motion-sheets/cape-back/run2-4f.png",
+        "strike1": "motion-sheets/cape-back/strike1-4f.png",
+        "thrust1": "motion-sheets/cape-back/thrust1-4f.png",
+        "death1": "motion-sheets/cape-back/death1-4f.png"
+      },
+      "sha256": "107a3a5f0e3a216a5035571d608a21ca11a7ade703d8fbb21ad6839ae6accbe9",
+      "nonemptyFrames": 20
+    },
+    "base-body": {
+      "technical": true,
+      "image": "atlases/base-body-atlas-4x5.png",
+      "motionSheets": {
+        "rest": "motion-sheets/base-body/rest-4f.png",
+        "run2": "motion-sheets/base-body/run2-4f.png",
+        "strike1": "motion-sheets/base-body/strike1-4f.png",
+        "thrust1": "motion-sheets/base-body/thrust1-4f.png",
+        "death1": "motion-sheets/base-body/death1-4f.png"
+      },
+      "sha256": "626e1536bd69243c86d21a67f9daf5d699065fbe605712ed804138757e842ff8",
+      "nonemptyFrames": 20
+    },
+    "clothing-01": {
+      "slot": "clothing",
+      "variant": "moonlit-yakgwa-clothing",
+      "sublayer": "part-01",
+      "image": "atlases/clothing-01-atlas-4x5.png",
+      "motionSheets": {
+        "rest": "motion-sheets/clothing-01/rest-4f.png",
+        "run2": "motion-sheets/clothing-01/run2-4f.png",
+        "strike1": "motion-sheets/clothing-01/strike1-4f.png",
+        "thrust1": "motion-sheets/clothing-01/thrust1-4f.png",
+        "death1": "motion-sheets/clothing-01/death1-4f.png"
+      },
+      "sha256": "ee529d8d35d738d88a6acf1df9c522fdd88869d8711d4a792f052b386ae89d87",
+      "nonemptyFrames": 20
+    },
+    "clothing-02": {
+      "slot": "clothing",
+      "variant": "moonlit-yakgwa-clothing",
+      "sublayer": "part-02",
+      "image": "atlases/clothing-02-atlas-4x5.png",
+      "motionSheets": {
+        "rest": "motion-sheets/clothing-02/rest-4f.png",
+        "run2": "motion-sheets/clothing-02/run2-4f.png",
+        "strike1": "motion-sheets/clothing-02/strike1-4f.png",
+        "thrust1": "motion-sheets/clothing-02/thrust1-4f.png",
+        "death1": "motion-sheets/clothing-02/death1-4f.png"
+      },
+      "sha256": "9f59a5fde712ef3604d9679cfad20fa78e3d286bbcc4cf7d21dabb2b3d8db765",
+      "nonemptyFrames": 15
+    },
+    "clothing-03": {
+      "slot": "clothing",
+      "variant": "moonlit-yakgwa-clothing",
+      "sublayer": "part-03",
+      "image": "atlases/clothing-03-atlas-4x5.png",
+      "motionSheets": {
+        "rest": "motion-sheets/clothing-03/rest-4f.png",
+        "run2": "motion-sheets/clothing-03/run2-4f.png",
+        "strike1": "motion-sheets/clothing-03/strike1-4f.png",
+        "thrust1": "motion-sheets/clothing-03/thrust1-4f.png",
+        "death1": "motion-sheets/clothing-03/death1-4f.png"
+      },
+      "sha256": "168cd885536ff7a093045b6cd235fff7f7df33dca0f91db55579d9241a70a54a",
+      "nonemptyFrames": 13
+    },
+    "base-arms": {
+      "technical": true,
+      "image": "atlases/base-arms-atlas-4x5.png",
+      "motionSheets": {
+        "rest": "motion-sheets/base-arms/rest-4f.png",
+        "run2": "motion-sheets/base-arms/run2-4f.png",
+        "strike1": "motion-sheets/base-arms/strike1-4f.png",
+        "thrust1": "motion-sheets/base-arms/thrust1-4f.png",
+        "death1": "motion-sheets/base-arms/death1-4f.png"
+      },
+      "sha256": "21556265f7e21d436b4d703a1a64ab6388c91fd454a2cc89c8e2b85c8898c133",
+      "nonemptyFrames": 20
+    },
+    "glove-palm": {
+      "slot": "glove",
+      "variant": "moonlit-yakgwa-glove",
+      "sublayer": "weapon-hand",
+      "image": "atlases/glove-palm-atlas-4x5.png",
+      "motionSheets": {
+        "rest": "motion-sheets/glove-palm/rest-4f.png",
+        "run2": "motion-sheets/glove-palm/run2-4f.png",
+        "strike1": "motion-sheets/glove-palm/strike1-4f.png",
+        "thrust1": "motion-sheets/glove-palm/thrust1-4f.png",
+        "death1": "motion-sheets/glove-palm/death1-4f.png"
+      },
+      "sha256": "dc8035625996af6b0af14f88a171bd624a5e7456962967bbceb485742b283a80",
+      "nonemptyFrames": 20
+    },
+    "weapon-back": {
+      "slot": "weapon",
+      "variant": "moonlit-yakgwa-weapon",
+      "sublayer": "back",
+      "image": "atlases/weapon-back-atlas-4x5.png",
+      "motionSheets": {
+        "rest": "motion-sheets/weapon-back/rest-4f.png",
+        "run2": "motion-sheets/weapon-back/run2-4f.png",
+        "strike1": "motion-sheets/weapon-back/strike1-4f.png",
+        "thrust1": "motion-sheets/weapon-back/thrust1-4f.png",
+        "death1": "motion-sheets/weapon-back/death1-4f.png"
+      },
+      "sha256": "296515cd392a70ccee5d3dc3278e5c863c7f3c2fa02208668f3190a1a8e69afd",
+      "nonemptyFrames": 2
+    },
+    "weapon-front": {
+      "slot": "weapon",
+      "variant": "moonlit-yakgwa-weapon",
+      "sublayer": "front",
+      "image": "atlases/weapon-front-atlas-4x5.png",
+      "motionSheets": {
+        "rest": "motion-sheets/weapon-front/rest-4f.png",
+        "run2": "motion-sheets/weapon-front/run2-4f.png",
+        "strike1": "motion-sheets/weapon-front/strike1-4f.png",
+        "thrust1": "motion-sheets/weapon-front/thrust1-4f.png",
+        "death1": "motion-sheets/weapon-front/death1-4f.png"
+      },
+      "sha256": "13744dae87257f9cfb133d738d699cfe1031d58aabe3bfddfe8544f78b3db57e",
+      "nonemptyFrames": 19
+    },
+    "glove-back": {
+      "slot": "glove",
+      "variant": "moonlit-yakgwa-glove",
+      "sublayer": "other-hand",
+      "image": "atlases/glove-back-atlas-4x5.png",
+      "motionSheets": {
+        "rest": "motion-sheets/glove-back/rest-4f.png",
+        "run2": "motion-sheets/glove-back/run2-4f.png",
+        "strike1": "motion-sheets/glove-back/strike1-4f.png",
+        "thrust1": "motion-sheets/glove-back/thrust1-4f.png",
+        "death1": "motion-sheets/glove-back/death1-4f.png"
+      },
+      "sha256": "3d3fc4fed340db8deaf35ae04238cff56f9436089701669a455137b9a312ff57",
+      "nonemptyFrames": 20
+    },
+    "shoe-01": {
+      "slot": "shoe",
+      "variant": "moonlit-yakgwa-shoe",
+      "sublayer": "part-01",
+      "image": "atlases/shoe-01-atlas-4x5.png",
+      "motionSheets": {
+        "rest": "motion-sheets/shoe-01/rest-4f.png",
+        "run2": "motion-sheets/shoe-01/run2-4f.png",
+        "strike1": "motion-sheets/shoe-01/strike1-4f.png",
+        "thrust1": "motion-sheets/shoe-01/thrust1-4f.png",
+        "death1": "motion-sheets/shoe-01/death1-4f.png"
+      },
+      "sha256": "c4b1da7ee28b816c714f5235850c1ac80a43d470f5d1f7265cda7c6910be4bd9",
+      "nonemptyFrames": 20
+    },
+    "shoe-02": {
+      "slot": "shoe",
+      "variant": "moonlit-yakgwa-shoe",
+      "sublayer": "part-02",
+      "image": "atlases/shoe-02-atlas-4x5.png",
+      "motionSheets": {
+        "rest": "motion-sheets/shoe-02/rest-4f.png",
+        "run2": "motion-sheets/shoe-02/run2-4f.png",
+        "strike1": "motion-sheets/shoe-02/strike1-4f.png",
+        "thrust1": "motion-sheets/shoe-02/thrust1-4f.png",
+        "death1": "motion-sheets/shoe-02/death1-4f.png"
+      },
+      "sha256": "4e0f05650b650f345b20e445c96a13b92fd4ebce95a79a316a8c21a438f1db18",
+      "nonemptyFrames": 19
+    },
+    "hat": {
+      "slot": "hat",
+      "variant": "moonlit-yakgwa-hat",
+      "image": "atlases/hat-atlas-4x5.png",
+      "motionSheets": {
+        "rest": "motion-sheets/hat/rest-4f.png",
+        "run2": "motion-sheets/hat/run2-4f.png",
+        "strike1": "motion-sheets/hat/strike1-4f.png",
+        "thrust1": "motion-sheets/hat/thrust1-4f.png",
+        "death1": "motion-sheets/hat/death1-4f.png"
+      },
+      "sha256": "a53bf742d0b860932eb72c31d953fa4d075d422e9a22ab8d39dd922c11b4cc42",
+      "nonemptyFrames": 20
+    }
+  },
+  "items": [
+    {
+      "id": "moonlit-yakgwa-hat",
+      "setId": "moonlit-yakgwa-guardian",
+      "slot": "hat",
+      "atlas": "hat"
+    },
+    {
+      "id": "moonlit-yakgwa-clothing",
+      "setId": "moonlit-yakgwa-guardian",
+      "slot": "clothing",
+      "atlases": [
+        "clothing-01",
+        "clothing-02",
+        "clothing-03"
+      ]
+    },
+    {
+      "id": "moonlit-yakgwa-cape",
+      "setId": "moonlit-yakgwa-guardian",
+      "slot": "cape",
+      "atlas": "cape-back"
+    },
+    {
+      "id": "moonlit-yakgwa-glove",
+      "setId": "moonlit-yakgwa-guardian",
+      "slot": "glove",
+      "atlases": [
+        "glove-palm",
+        "glove-back"
+      ]
+    },
+    {
+      "id": "moonlit-yakgwa-shoe",
+      "setId": "moonlit-yakgwa-guardian",
+      "slot": "shoe",
+      "atlases": [
+        "shoe-01",
+        "shoe-02"
+      ]
+    },
+    {
+      "id": "moonlit-yakgwa-weapon",
+      "setId": "moonlit-yakgwa-guardian",
+      "slot": "weapon",
+      "atlases": [
+        "weapon-back",
+        "weapon-front"
+      ]
+    }
+  ],
+  "drawOrderByFrame": {
+    "rest_04": [
+      "slot.cape.back",
+      "base.body",
+      "slot.clothing.part-01",
+      "base.arms",
+      "slot.glove.weapon-hand",
+      "slot.weapon.front",
+      "slot.glove.other-hand",
+      "slot.shoe.part-01",
+      "slot.shoe.part-02",
+      "slot.hat"
+    ],
+    "rest_03": [
+      "slot.cape.back",
+      "base.body",
+      "slot.clothing.part-01",
+      "base.arms",
+      "slot.glove.weapon-hand",
+      "slot.weapon.front",
+      "slot.glove.other-hand",
+      "slot.shoe.part-01",
+      "slot.shoe.part-02",
+      "slot.hat"
+    ],
+    "rest_02": [
+      "slot.cape.back",
+      "base.body",
+      "slot.clothing.part-01",
+      "base.arms",
+      "slot.glove.weapon-hand",
+      "slot.weapon.front",
+      "slot.glove.other-hand",
+      "slot.shoe.part-01",
+      "slot.shoe.part-02",
+      "slot.hat"
+    ],
+    "rest_01": [
+      "slot.cape.back",
+      "base.body",
+      "slot.clothing.part-01",
+      "base.arms",
+      "slot.glove.weapon-hand",
+      "slot.weapon.front",
+      "slot.glove.other-hand",
+      "slot.shoe.part-01",
+      "slot.shoe.part-02",
+      "slot.hat"
+    ],
+    "run2_01": [
+      "slot.cape.back",
+      "base.body",
+      "slot.clothing.part-01",
+      "slot.clothing.part-02",
+      "base.arms",
+      "slot.glove.weapon-hand",
+      "slot.weapon.front",
+      "slot.glove.other-hand",
+      "slot.shoe.part-01",
+      "slot.shoe.part-02",
+      "slot.hat"
+    ],
+    "run2_02": [
+      "slot.cape.back",
+      "base.body",
+      "slot.shoe.part-01",
+      "slot.clothing.part-01",
+      "slot.clothing.part-02",
+      "base.arms",
+      "slot.glove.weapon-hand",
+      "slot.weapon.front",
+      "slot.glove.other-hand",
+      "slot.shoe.part-02",
+      "slot.hat"
+    ],
+    "run2_03": [
+      "slot.cape.back",
+      "base.body",
+      "slot.clothing.part-01",
+      "slot.clothing.part-02",
+      "slot.clothing.part-03",
+      "base.arms",
+      "slot.glove.weapon-hand",
+      "slot.weapon.front",
+      "slot.glove.other-hand",
+      "slot.shoe.part-01",
+      "slot.shoe.part-02",
+      "slot.hat"
+    ],
+    "run2_04": [
+      "slot.cape.back",
+      "base.body",
+      "slot.clothing.part-01",
+      "slot.clothing.part-02",
+      "slot.clothing.part-03",
+      "base.arms",
+      "slot.glove.weapon-hand",
+      "slot.weapon.front",
+      "slot.glove.other-hand",
+      "slot.shoe.part-01",
+      "slot.shoe.part-02",
+      "slot.hat"
+    ],
+    "strike1_01": [
+      "slot.cape.back",
+      "slot.glove.weapon-hand",
+      "slot.weapon.back",
+      "base.body",
+      "slot.clothing.part-01",
+      "slot.clothing.part-02",
+      "slot.clothing.part-03",
+      "base.arms",
+      "slot.glove.other-hand",
+      "slot.shoe.part-01",
+      "slot.shoe.part-02",
+      "slot.hat"
+    ],
+    "strike1_02": [
+      "slot.cape.back",
+      "slot.weapon.back",
+      "base.body",
+      "slot.clothing.part-01",
+      "slot.clothing.part-02",
+      "slot.clothing.part-03",
+      "base.arms",
+      "slot.glove.weapon-hand",
+      "slot.weapon.front",
+      "slot.glove.other-hand",
+      "slot.shoe.part-01",
+      "slot.shoe.part-02",
+      "slot.hat"
+    ],
+    "strike1_03": [
+      "slot.cape.back",
+      "base.body",
+      "slot.clothing.part-01",
+      "slot.clothing.part-02",
+      "slot.clothing.part-03",
+      "base.arms",
+      "slot.glove.weapon-hand",
+      "slot.weapon.front",
+      "slot.glove.other-hand",
+      "slot.shoe.part-01",
+      "slot.shoe.part-02",
+      "slot.hat"
+    ],
+    "strike1_04": [
+      "slot.cape.back",
+      "base.body",
+      "slot.clothing.part-01",
+      "slot.clothing.part-02",
+      "slot.clothing.part-03",
+      "base.arms",
+      "slot.glove.weapon-hand",
+      "slot.weapon.front",
+      "slot.glove.other-hand",
+      "slot.shoe.part-01",
+      "slot.shoe.part-02",
+      "slot.hat"
+    ],
+    "thrust1_01": [
+      "slot.cape.back",
+      "base.body",
+      "slot.clothing.part-01",
+      "slot.clothing.part-02",
+      "slot.clothing.part-03",
+      "base.arms",
+      "slot.glove.weapon-hand",
+      "slot.weapon.front",
+      "slot.glove.other-hand",
+      "slot.shoe.part-01",
+      "slot.shoe.part-02",
+      "slot.hat"
+    ],
+    "thrust1_02": [
+      "slot.cape.back",
+      "base.body",
+      "slot.clothing.part-01",
+      "slot.clothing.part-02",
+      "slot.clothing.part-03",
+      "base.arms",
+      "slot.glove.weapon-hand",
+      "slot.weapon.front",
+      "slot.glove.other-hand",
+      "slot.shoe.part-01",
+      "slot.shoe.part-02",
+      "slot.hat"
+    ],
+    "thrust1_03": [
+      "slot.cape.back",
+      "base.body",
+      "slot.clothing.part-01",
+      "slot.clothing.part-02",
+      "slot.clothing.part-03",
+      "base.arms",
+      "slot.glove.weapon-hand",
+      "slot.weapon.front",
+      "slot.glove.other-hand",
+      "slot.shoe.part-01",
+      "slot.shoe.part-02",
+      "slot.hat"
+    ],
+    "thrust1_04": [
+      "slot.cape.back",
+      "base.body",
+      "slot.clothing.part-01",
+      "slot.clothing.part-02",
+      "slot.clothing.part-03",
+      "base.arms",
+      "slot.glove.weapon-hand",
+      "slot.weapon.front",
+      "slot.glove.other-hand",
+      "slot.shoe.part-01",
+      "slot.shoe.part-02",
+      "slot.hat"
+    ],
+    "death1_01": [
+      "slot.cape.back",
+      "base.body",
+      "slot.clothing.part-01",
+      "base.arms",
+      "slot.glove.weapon-hand",
+      "slot.weapon.front",
+      "slot.glove.other-hand",
+      "slot.shoe.part-01",
+      "slot.shoe.part-02",
+      "slot.hat"
+    ],
+    "death1_02": [
+      "slot.cape.back",
+      "base.body",
+      "slot.clothing.part-01",
+      "slot.clothing.part-02",
+      "slot.clothing.part-03",
+      "base.arms",
+      "slot.glove.weapon-hand",
+      "slot.weapon.front",
+      "slot.glove.other-hand",
+      "slot.shoe.part-01",
+      "slot.shoe.part-02",
+      "slot.hat"
+    ],
+    "death1_03": [
+      "slot.cape.back",
+      "base.body",
+      "slot.clothing.part-01",
+      "slot.clothing.part-02",
+      "slot.clothing.part-03",
+      "base.arms",
+      "slot.glove.weapon-hand",
+      "slot.weapon.front",
+      "slot.glove.other-hand",
+      "slot.shoe.part-01",
+      "slot.shoe.part-02",
+      "slot.hat"
+    ],
+    "death1_04": [
+      "slot.cape.back",
+      "base.body",
+      "slot.clothing.part-01",
+      "slot.clothing.part-02",
+      "slot.clothing.part-03",
+      "base.arms",
+      "slot.glove.weapon-hand",
+      "slot.weapon.front",
+      "slot.glove.other-hand",
+      "slot.shoe.part-01",
+      "slot.hat"
+    ]
+  },
+  "defaultLoadout": {
+    "hat": "moonlit-yakgwa-hat",
+    "clothing": "moonlit-yakgwa-clothing",
+    "cape": "moonlit-yakgwa-cape",
+    "glove": "moonlit-yakgwa-glove",
+    "shoe": "moonlit-yakgwa-shoe",
+    "weapon": "moonlit-yakgwa-weapon"
+  },
+  "sourceTiffs": {
+    "rest": {
+      "fileName": "rest_약과_통합.tiff",
+      "sha256": "40d87a784c447dca1f8b4b2da0ba2eb9cd3ceadcacd8c70360b794af557c1a6c"
+    },
+    "run2": {
+      "fileName": "run_약과_통합.tiff",
+      "sha256": "6f123cb09b5b6e687a659fa398342ac7419837968ccb796381de1e9e2726092d"
+    },
+    "strike1": {
+      "fileName": "제목 없음.tiff",
+      "sha256": "73443563eefab603532d04f7c7c9cafa09f3579a6db227e586a2dcf708ffb8bd"
+    },
+    "thrust1": {
+      "fileName": "thrust_약과_통합1.tiff",
+      "sha256": "1a83532b543d2af1d34f50527a363f48c0d710c64d0e9a51416d234d56210d1d"
+    },
+    "death1": {
+      "fileName": "death_약과_통합.tiff",
+      "sha256": "4ae063647594971a2a9513c6a86ace9400c3fdedca462dea8baaaddbd37e6819"
+    }
+  },
+  "limitations": [
+    "Five motions / 20 frames only; run1 is not included.",
+    "Technical structure and exact default-loadout recomposition pass; runtime browser review and user visual approval are NOT-CHECKED.",
+    "The glove and weapon slots have front/back sublayers whose per-frame draw order must be honored."
+  ]
+}

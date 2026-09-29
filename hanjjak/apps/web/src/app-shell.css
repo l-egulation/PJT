@@ -1,0 +1,52 @@
+.game-shell { max-width: 1480px; padding: 16px 22px 56px; }
+.app-shell-header { display: grid; grid-template-columns: minmax(100px, 1fr) auto; margin-bottom: 14px; }
+.app-shell-header h1 { font-family: var(--hanjjak-font-ui); font-size: 32px; }
+.app-shell-header nav { position: relative; align-items: center; overflow: visible; padding: 5px 7px; border-color: #d7c8ae; border-radius: 16px; background: #eee7db; }
+.app-shell-header nav > button, .content-menu > summary { min-height: 42px; display: grid; place-items: center; border: 0; border-radius: 11px; padding: 9px 14px; color: #796858; background: transparent; font-weight: 850; white-space: nowrap; }
+.content-menu { position: relative; }
+.content-menu > summary { grid-template-columns: auto auto; gap: 6px; cursor: pointer; list-style: none; }
+.content-menu > summary::-webkit-details-marker { display: none; }
+.content-menu[open] > summary, .content-menu.active > summary { color: #fff; background: #58372a; }
+.content-menu-list { position: absolute; z-index: 30; top: calc(100% + 9px); left: 50%; display: grid; width: 230px; padding: 7px; border: 1px solid #c8af8f; background: #fff8e9; box-shadow: 0 14px 30px rgba(63,38,21,.2); transform: translateX(-50%); }
+.content-menu-list::before { position: absolute; top: -6px; left: 50%; width: 10px; height: 10px; content: ""; border-top: 1px solid #c8af8f; border-left: 1px solid #c8af8f; background: #fff8e9; transform: translateX(-50%) rotate(45deg); }
+.app-shell-header .content-menu-list button { display: grid; justify-items: start; gap: 3px; width: 100%; min-height: 58px; border: 0; border-radius: 0; padding: 10px 12px; color: #5f4b3a; background: transparent; text-align: left; }
+.app-shell-header .content-menu-list button:hover:not(:disabled), .app-shell-header .content-menu-list button.active { color: #7a2f1f; background: #f4e4cf; }
+.content-menu-list button + button { border-top: 1px dashed #d5c1a7; }
+.content-menu-list button strong { font-size: 13px; }.content-menu-list button small { color: #947f6d; font-size: 10px; }
+.content-menu-list button:disabled { cursor: not-allowed; opacity: .5; }
+.picture-in-picture-compact { position: absolute; z-index: 14; top: 92px; right: 18px; display: block; width: 62px; margin: 0; padding: 0; border: 0; background: transparent; }
+.picture-in-picture-compact .picture-in-picture-toolbar { display: block; }
+.picture-in-picture-compact .picture-in-picture-toolbar button { display: grid; place-items: center; width: 62px; min-width: 62px; height: 62px; min-height: 62px; padding: 0; overflow: hidden; border: 0; border-radius: 10px; color: #4a2c1d; background: transparent; filter: drop-shadow(0 4px 1px rgba(25,13,7,.34)); }
+.picture-in-picture-compact .picture-in-picture-toolbar button:hover:not(:disabled) { transform: translateY(-2px); filter: brightness(1.07) saturate(1.08) drop-shadow(0 6px 1px rgba(35,17,8,.28)); }
+.picture-in-picture-compact .picture-in-picture-toolbar button:active:not(:disabled) { transform: translateY(1px); }
+.picture-in-picture-compact .picture-in-picture-toolbar button:disabled { cursor: not-allowed; filter: grayscale(.5) drop-shadow(0 4px 1px rgba(50,26,11,.22)); opacity: .62; }
+/* 같은 62px 칸이지만 이 그림은 테두리가 칸의 97%를 채우고, 옆 설정 단추는 92%다.
+   그래서 이것만 커 보였다. 94%로 줄여 테두리 크기를 맞춘다. */
+.picture-in-picture-compact .picture-in-picture-toolbar img { width: 94%; height: 94%; object-fit: contain; image-rendering: pixelated; }
+.picture-in-picture-compact .picture-in-picture-message { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+.picture-in-picture-compact.active .picture-in-picture-toolbar button { color: #bf5549; filter: drop-shadow(0 4px 1px rgba(35,17,8,.34)) brightness(1.03) saturate(1.16); }
+.picture-in-picture-compact.is-hidden { display: none; }
+.growth-nav { position: relative; z-index: 12; display: grid; grid-template-columns: repeat(5, minmax(90px, 1fr)); width: min(760px, calc(100% - 40px)); margin: -10px auto 0; border: 1px solid #c8af8f; background: #f6e8c9; box-shadow: 0 7px 0 rgba(80,50,28,.2); }
+.growth-nav button { display: grid; justify-items: center; gap: 4px; min-height: 72px; border: 0; border-right: 1px dashed #bca687; color: #3f2d21; background: transparent; font-size: 11px; font-weight: 900; }
+.growth-nav button:last-child { border-right: 0; }.growth-nav button:hover { background: #ead5ae; }
+.growth-nav i { display: grid; place-items: center; width: 28px; height: 28px; border: 2px solid #65452e; border-radius: 50%; font-size: 10px; font-style: normal; }
+@media (max-width: 1240px) {
+  .app-shell-header { grid-template-columns: 1fr; gap: 12px; }.app-shell-header nav { overflow-x: auto; justify-content: flex-start; }
+}
+@media (max-width: 1180px) {
+  .picture-in-picture-compact { top: 86px; width: 55px; }
+  .picture-in-picture-compact .picture-in-picture-toolbar button { width: 55px; min-width: 55px; height: 55px; min-height: 55px; padding: 8px; }
+  .picture-in-picture-compact .picture-in-picture-toolbar img { width: 100%; height: 100%; }
+}
+@media (max-width: 900px) {
+  .picture-in-picture-compact { right: 12px; }
+}
+@media (max-width: 700px) {
+  .game-shell { padding-inline: 12px; }.app-shell-header { display: flex; align-items: stretch; }
+  .app-shell-header nav { overflow-x: auto; }.app-shell-header nav > button, .content-menu > summary { padding-inline: 12px; }
+  .content-menu-list { position: fixed; top: 126px; left: 50%; width: min(280px, calc(100vw - 28px)); }
+  .picture-in-picture-compact { top: 156px; right: 10px; width: 55px; }
+  .picture-in-picture-compact .picture-in-picture-toolbar button { width: 55px; min-width: 55px; height: 54px; min-height: 54px; padding: 8px; }
+  .picture-in-picture-compact .picture-in-picture-toolbar img { width: 100%; height: 100%; }
+  .growth-nav { width: calc(100% - 16px); grid-template-columns: repeat(5, minmax(0, 1fr)); }.growth-nav button { min-width: 0; min-height: 62px; }.growth-nav span { font-size: 9px; }
+}

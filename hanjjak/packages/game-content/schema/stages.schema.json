@@ -1,0 +1,201 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hanjjak.local/schema/stages.schema.json",
+  "type": "object",
+  "required": [
+    "authority",
+    "contentVersion",
+    "stages"
+  ],
+  "properties": {
+    "authority": {
+      "enum": [
+        "working",
+        "applied"
+      ]
+    },
+    "contentVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stages": {
+      "type": "array",
+      "minItems": 40,
+      "maxItems": 100,
+      "items": {
+        "$ref": "#/$defs/stage"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "stage": {
+      "type": "object",
+      "required": [
+        "id",
+        "chapter",
+        "number",
+        "enemyLevel",
+        "referenceQ",
+        "referenceSkill",
+        "normalHp",
+        "normalAttack",
+        "bossType",
+        "bossHp",
+        "bossAttack",
+        "enemyDefense",
+        "pattern"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^stage\\.[0-9]{2}-[0-9]{2}$"
+        },
+        "chapter": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "number": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "normalMonsterIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "bossMonsterId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "backgroundId": {
+          "enum": [
+            "fried-station",
+            "bakery-shop",
+            "oven-cellar",
+            "butter-dough-molding-room",
+            "ruby-jam-injection-room",
+            "cookie-tin-packaging-warehouse",
+            "biscuit-royal-banquet-hall",
+            "sushi-morning",
+            "sushi-lunch",
+            "sushi-evening",
+            "sushi-predawn",
+            "jeon-iron-griddle",
+            "scallion-batter-table",
+            "makgeolli-crock-courtyard",
+            "rainy-market-jeon-stall",
+            "steam-teapot-locomotive-roundhouse",
+            "bubble-tea-after-hours-cafe",
+            "cocktail-shaker-circus-workshop",
+            "vending-machine-rainy-delivery-yard",
+            "chimaek-cheering-deck",
+            "home-run-hotdog-concession",
+            "bullpen-tteokbokki-pocha",
+            "night-homeplate-food-festival",
+            "yuseong-campus-lobby",
+            "yuseong-campus-front",
+            "yuseong-campus-cafeteria",
+            "yuseong-campus-walking-trail",
+            "melon-glasshouse",
+            "pineapple-plantation",
+            "durian-riverside-packing-house",
+            "watermelon-irrigation-field",
+            "red-lantern-banquet-hall",
+            "wok-kitchen",
+            "dim-sum-teahouse",
+            "mala-night-market"
+          ]
+        },
+        "enemyLevel": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "referenceQ": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "referenceSkill": {
+          "type": "string"
+        },
+        "normalHp": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "normalAttack": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "bossType": {
+          "enum": [
+            "STANDARD",
+            "ATTACK_CHECK",
+            "HP_CHECK",
+            "PENETRATION_CHECK"
+          ]
+        },
+        "bossHp": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "bossAttack": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "enemyDefense": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "pattern": {
+          "type": "string"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": [
+              "normalMonsterIds"
+            ],
+            "properties": {
+              "number": {
+                "maximum": 9
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "normalMonsterIds": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "required": [
+              "normalMonsterIds"
+            ],
+            "properties": {
+              "number": {
+                "const": 10
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "normalMonsterIds": {
+                "maxItems": 0
+              }
+            }
+          }
+        }
+      ],
+      "additionalProperties": false
+    }
+  }
+}

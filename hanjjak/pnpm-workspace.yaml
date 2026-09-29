@@ -1,0 +1,11 @@
+packages:
+  - apps/web
+  - apps/admin-console
+  - packages/contracts
+  - packages/client-sdk
+  - packages/ui
+  - packages/localization
+  - tools/fixtures
+  - tools/content-validator
+allowBuilds:
+  esbuild: true

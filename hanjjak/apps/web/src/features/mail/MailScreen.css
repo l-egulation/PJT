@@ -1,0 +1,175 @@
+/*
+ * 메시지함은 거래소 정산 쌀을 받는 곳이다. 읽을 것이 한 줄짜리 목록뿐이라
+ * 종이도 짧은 쪽(reward-panel-shell-short)을 9조각으로 늘여 쓴다.
+ */
+.mail-screen {
+  position: fixed;
+  z-index: 40;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: clamp(12px, 2vw, 28px);
+  zoom: .72;
+  background: rgba(47, 28, 15, .28);
+  backdrop-filter: blur(3px) saturate(.92);
+  color: #3a2416;
+  font-family: var(--hanjjak-font-ui);
+}
+
+.mail-paper {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  box-sizing: border-box;
+  /* 마이페이지와 같은 크기. zoom 이 .72 이므로 값은 미리 나눠 둔다. */
+  width: min(880px, calc((100vw - 300px) / .72));
+  height: min(980px, calc((100dvh - 32px) / .72));
+  padding: 16px 24px 22px;
+  border: 30px solid transparent;
+  border-image: var(--paper-short-sheet) 48 fill / 30px / 0 stretch;
+  filter: drop-shadow(0 12px 0 rgba(73, 50, 35, .24)) drop-shadow(0 22px 28px rgba(29, 17, 9, .34));
+}
+
+.mail-sidebar {
+  position: absolute;
+  top: calc(clamp(84px, 12vh, 112px) + 16px);
+  right: calc(100% - 51px);
+  z-index: 4;
+  width: clamp(180px, 18vw, 218px);
+}
+.mail-sidebar nav { display: grid; gap: 0; }
+.mail-sidebar nav button {
+  position: relative;
+  width: 100%;
+  min-height: clamp(100px, 14vh, 124px);
+  border: 0;
+  border-radius: 0;
+  padding: 8px 31px 11px 24px;
+  color: #3c2118;
+  background-color: transparent;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  filter: saturate(.82) drop-shadow(0 4px 0 rgba(55, 45, 34, .18));
+  cursor: pointer;
+  font: inherit;
+  font-size: clamp(19px, 1.8vw, 24px);
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .46);
+}
+.mail-sidebar nav button.mail-tab-red {
+  background-image: url("../profile/assets-cozy-pixel-v2/bookmark-tab-red.png");
+  filter: saturate(.75) drop-shadow(0 4px 0 rgba(92, 47, 37, .18));
+  text-shadow: 0 1px 0 rgba(255, 247, 226, .58);
+}
+.mail-sidebar nav button.mail-tab-blue {
+  color: #263b41;
+  background-image: url("../profile/assets-cozy-pixel-v2/bookmark-tab-blue.png");
+}
+.mail-sidebar nav button + button { margin-top: -24px; }
+.mail-sidebar nav button:hover { filter: saturate(.92) brightness(1.05) drop-shadow(0 3px 0 rgba(55, 45, 34, .2)); }
+.mail-sidebar nav button.is-active { transform: translateX(8px); filter: saturate(.98) brightness(1.04) drop-shadow(0 5px 0 rgba(69, 44, 32, .24)); }
+/* 받을 것이 몇 통인지. 탭 위에 작게 얹는다. */
+.mail-sidebar nav button em {
+  position: absolute;
+  top: 22%;
+  right: 26px;
+  display: grid;
+  place-items: center;
+  min-width: 26px;
+  height: 26px;
+  padding: 0 6px;
+  border: 2px solid #fff6e4;
+  border-radius: 999px;
+  color: #fff8ef;
+  background: #e0564a;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 950;
+}
+
+.mail-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto auto;
+  align-items: center;
+  gap: clamp(10px, 1.4vw, 20px);
+  padding-bottom: clamp(10px, 1.4vh, 16px);
+  border-bottom: var(--paper-rule);
+}
+.mail-heading h2 { display: flex; align-items: center; gap: 11px; margin: 0; font-size: clamp(37px, 3.6vw, 54px); font-weight: 950; letter-spacing: -.03em; text-shadow: 0 2px #fff3d8; }
+.mail-heading h2 img { width: clamp(35px, 3.4vw, 48px); height: clamp(35px, 3.4vw, 48px); object-fit: contain; image-rendering: pixelated; }
+.mail-summary { display: flex; align-items: center; gap: 7px; margin: 0; padding: 5px 14px; border: 2px solid rgba(139, 99, 63, .42); border-radius: 999px; background: rgba(255, 248, 226, .92); white-space: nowrap; }
+.mail-summary img { width: 26px; height: 26px; image-rendering: pixelated; }
+.mail-summary span { color: #7a5a42; font-size: clamp(15px, 1.3vw, 19px); font-weight: 800; }
+.mail-summary strong { color: #3a2416; font-size: clamp(22px, 2vw, 28px); font-variant-numeric: tabular-nums; }
+
+.mail-claim-all {
+  min-height: clamp(52px, 6.6vh, 64px);
+  padding: 0 clamp(14px, 1.6vw, 24px);
+  border: 2px solid #b0453d;
+  border-radius: 12px;
+  color: #fff7e6;
+  background: linear-gradient(#ec7a6b, #d95b52);
+  box-shadow: inset 0 2px 0 rgba(255, 244, 226, .32);
+  font: inherit;
+  font-size: clamp(18px, 1.6vw, 24px);
+  font-weight: 950;
+  text-shadow: 0 2px 0 rgba(122, 50, 36, .5);
+}
+.mail-claim-all:hover:not(:disabled) { filter: brightness(1.05); transform: translateY(-1px); }
+.mail-claim-all:disabled { cursor: not-allowed; filter: grayscale(.4); opacity: .5; }
+
+.mail-close { display: grid; place-items: center; width: 62px; aspect-ratio: 1; padding: 0; border: 0; background: transparent; }
+.mail-close img { width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated; }
+.mail-close:hover { filter: brightness(1.06); transform: scale(1.05); }
+
+.mail-body { min-height: 0; padding-top: clamp(10px, 1.4vh, 16px); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #c99c70 transparent; }
+.mail-list { display: grid; gap: 8px; margin: 0; padding: 0 4px 0 0; list-style: none; }
+.mail-list li {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: clamp(8px, 1vw, 14px);
+  min-height: clamp(60px, 7.5vh, 72px);
+  padding: 4px clamp(18px, 2vw, 27px) 5px clamp(15px, 1.8vw, 23px);
+  border: 1px solid rgba(122, 88, 57, .23);
+  border-radius: 20px;
+  background: rgba(255, 250, 234, .9);
+}
+/* 이미 받은 줄은 기록으로만 남는다. 눈이 아직 받을 것에 먼저 가게 낮춰 둔다. */
+.mail-list li.is-claimed { border-color: rgba(168, 130, 88, .24); background: rgba(243, 235, 219, .6); color: #8a7461; }
+.mail-list img { width: 36px; height: 36px; object-fit: contain; image-rendering: pixelated; }
+.mail-list li.is-claimed img { filter: grayscale(.5); opacity: .7; }
+.mail-row-copy { display: grid; gap: 2px; min-width: 0; }
+.mail-row-copy strong { overflow: hidden; font-size: clamp(19px, 1.78vw, 25px); font-weight: 900; text-overflow: ellipsis; white-space: nowrap; }
+.mail-row-copy small { color: #8b6c4e; font-size: clamp(13px, 1.15vw, 17px); font-weight: 800; }
+.mail-row-amount { color: #c9473f; font-size: clamp(22px, 2vw, 28px); font-weight: 950; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.mail-list li.is-claimed .mail-row-amount { color: #9a8878; }
+.mail-list li button {
+  min-width: clamp(86px, 9vw, 116px);
+  min-height: clamp(46px, 5.8vh, 56px);
+  border: 2px solid #7c5a3c;
+  border-radius: 10px;
+  color: #fff8ea;
+  background: linear-gradient(#c58a4e, #a56b35);
+  box-shadow: inset 0 2px 0 rgba(255, 244, 226, .28);
+  font: inherit;
+  font-size: clamp(17px, 1.5vw, 22px);
+  font-weight: 950;
+}
+.mail-list li button:hover:not(:disabled) { filter: brightness(1.06); }
+.mail-list li button:disabled { cursor: not-allowed; filter: grayscale(.4); opacity: .5; }
+.mail-row-done { min-width: clamp(86px, 9vw, 116px); color: #9a8878; font-size: clamp(17px, 1.5vw, 22px); font-weight: 900; text-align: center; }
+
+.mail-empty { display: grid; place-items: center; gap: 12px; min-height: 60%; margin: 0; color: #8b6c4e; font-size: clamp(19px, 1.78vw, 25px); font-weight: 800; text-align: center; }
+.mail-empty.is-error { color: #b94038; }
+.mail-empty button { min-height: 44px; padding: 0 18px; border: 2px solid #795740; border-radius: 10px; color: #fff8e9; background: #b95043; font: inherit; font-weight: 900; }
+
+@media (max-width: 720px) {
+  .mail-heading { grid-template-columns: minmax(0, 1fr) auto; row-gap: 8px; }
+  .mail-heading h2 { grid-column: 1; }
+  .mail-close { grid-column: 2; grid-row: 1; }
+  .mail-summary, .mail-claim-all { grid-row: 2; }
+  .mail-list li { grid-template-columns: 34px minmax(0, 1fr) auto; row-gap: 6px; }
+  .mail-list li button, .mail-row-done { grid-column: 2 / -1; justify-self: end; }
+}

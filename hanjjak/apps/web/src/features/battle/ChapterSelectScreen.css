@@ -1,0 +1,205 @@
+/*
+ * 2층 상가형 챕터 선택. 배경 한 장이 640x360 비율로 그려져 있고 가게 열 자리는
+ * 그 그림 안에 이미 정해져 있다. 그래서 이 화면의 모든 자리는 배경 상자를 기준
+ * 삼은 비율(%)이다 — 창이 커지거나 작아져도 가게가 벽면 칸을 벗어나지 않는다.
+ */
+.chapter-select-backdrop {
+  position: fixed;
+  z-index: 90;
+  inset: 0;
+  display: grid;
+  background: #2a1c12;
+  animation: chapter-select-fade .18s ease-out both;
+}
+
+.chapter-select {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  animation: chapter-select-rise .22s cubic-bezier(.2, .8, .2, 1) both;
+}
+
+.chapter-select-stage {
+  container-type: size;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #3b281c;
+  font-family: var(--hanjjak-font-ui);
+  image-rendering: pixelated;
+}
+
+/* ── 위 줄 ─────────────────────────────────────────────── */
+.chapter-select-topbar { position: absolute; z-index: 7; top: 0; right: 0; left: 0; display: grid; grid-template-columns: 1fr auto 1fr; align-items: start; padding: .6cqh 2.4cqw 0; }
+.chapter-select-player { display: flex; align-items: center; gap: 1.2cqw; justify-self: start; margin: 0; padding: .9cqh 2cqw; border: .5cqh solid #a9865f; border-radius: 1.6cqh; color: #4a3220; background: rgba(255, 250, 235, .93); font-size: 3.4cqh; font-weight: 950; }
+.chapter-select-player > img { width: 4.4cqh; height: 4.4cqh; object-fit: contain; image-rendering: pixelated; }
+.chapter-select-stage h2 {
+  grid-column: 2;
+  display: grid;
+  place-items: center;
+  width: 30cqw;
+  aspect-ratio: 2172 / 724;
+  margin: 0;
+  /* 판때기 안쪽 면의 한가운데. 콘텐츠 선택 명패와 같은 값이다. */
+  padding-bottom: .6%;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: #6b432a;
+  font-size: 5.4cqh;
+  font-weight: 950;
+  letter-spacing: -.03em;
+  text-shadow: 0 .4cqh 0 rgba(255, 249, 228, .85);
+}
+.chapter-select-close { grid-column: 3; justify-self: end; width: 8.4cqh; aspect-ratio: 1; margin-top: 1.4cqh; padding: 0; border: 0; background: transparent; transition: transform .14s ease, filter .14s ease; }
+.chapter-select-close img { width: 100%; height: 100%; object-fit: contain; }
+.chapter-select-close:hover { transform: scale(1.06); filter: brightness(1.08); }
+
+/* ── 가게 ───────────────────────────────────────────────── */
+.chapter-select-shops { position: absolute; inset: 0; z-index: 2; padding-top: 3cqh; margin: 0; padding: 0; list-style: none; }
+.chapter-shop { position: absolute; }
+.chapter-shop > button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+/* 가게 그림 자체가 단추다. 사각 카드나 테두리를 덧씌우지 않는다(에셋 문서 v2). */
+.chapter-shop-art {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: 50% 100%;
+  image-rendering: pixelated;
+  transform-origin: 50% 100%;
+  transition: transform .09s ease-out, filter .09s ease-out;
+}
+.chapter-shop > button:hover:not(:disabled) .chapter-shop-art { transform: scale(1.06); }
+.chapter-shop > button:active .chapter-shop-art { transform: scale(1.02); transition-duration: .06s; }
+.chapter-shop.is-selected { z-index: 2; }
+.chapter-shop.is-selected .chapter-shop-art { transform: scale(1.06); }
+.chapter-shop:hover { z-index: 3; }
+.chapter-shop.is-locked .chapter-shop-art { opacity: .62; transform: none; }
+.chapter-shop > button:focus-visible { outline: .5cqh solid #ffd86a; outline-offset: .4cqh; border-radius: .8cqh; }
+
+.chapter-shop-badge { position: absolute; top: -3.4cqh; left: 50%; z-index: 4; display: grid; place-items: center; width: 7cqh; aspect-ratio: 1; transform: translateX(-50%); }
+.chapter-shop-badge img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.chapter-shop-badge b { position: relative; color: #fff6e2; font-size: 3.5cqh; font-weight: 950; text-shadow: 0 .3cqh 0 rgba(87, 45, 17, .68); }
+.chapter-shop-mark { position: absolute; z-index: 5; width: 4.6cqh; height: 4.6cqh; object-fit: contain; }
+.chapter-shop-mark.is-lock { top: -3cqh; left: calc(50% - 7.6cqh); }
+.chapter-shop-mark.is-check { top: -3cqh; left: calc(50% + 3.4cqh); }
+
+/* ── 아래 줄 ───────────────────────────────────────────── */
+.chapter-select-footer {
+  position: absolute;
+  z-index: 3;
+  right: 6cqw;
+  bottom: 3.4cqh;
+  left: 6cqw;
+  display: grid;
+  /*
+   * 이름 칸만 남는 폭을 먹고, 권장 레벨과 쪽수는 글자 폭만 차지한다. 고정 폭으로
+   * 두면 "121~139" 같은 긴 값이 칸을 넘어 이동 단추 밑으로 깔린다.
+   */
+  grid-template-columns: auto minmax(0, 1fr) auto auto auto;
+  align-items: center;
+  gap: 1.4cqw;
+  box-sizing: border-box;
+  min-height: 16cqh;
+  padding: 1.4cqh 2.4cqw;
+  border: .6cqh solid #b79263;
+  border-radius: 2cqh;
+  background: rgba(255, 249, 233, .95);
+  box-shadow: 0 .8cqh 0 rgba(92, 58, 30, .24);
+}
+.chapter-select-footer-art { width: 9cqh; height: 9cqh; object-fit: contain; object-position: 50% 100%; image-rendering: pixelated; }
+.chapter-select-footer p { display: grid; gap: .3cqh; margin: 0; }
+.chapter-select-footer small { color: #8b6c4e; white-space: nowrap; font-size: 2cqh; font-weight: 900; letter-spacing: .02em; }
+.chapter-select-footer-name small { color: #cf4a46; }
+.chapter-select-footer-name strong { overflow: hidden; color: #3a2416; font-size: 4.8cqh; text-overflow: ellipsis; white-space: nowrap; font-weight: 950; letter-spacing: -.03em; }
+.chapter-select-footer-level { justify-self: start; padding-left: 1.6cqw; border-left: 1px solid rgba(120, 88, 58, .34); text-align: center; white-space: nowrap; }
+.chapter-select-footer-level strong { color: #3a2416; font-size: 3.8cqh; font-weight: 950; }
+.chapter-select-enter {
+  display: grid;
+  place-items: center;
+  width: 19cqw;
+  aspect-ratio: 2172 / 762;
+  padding: 0;
+  padding-top: 1%;
+  border: 0;
+  background-color: transparent;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: #fff6e0;
+  font: inherit;
+  font-size: 4cqh;
+  font-weight: 900;
+  text-shadow: 0 .3cqh 0 rgba(62, 40, 24, .5);
+  transition: transform .14s ease, filter .14s ease;
+}
+.chapter-select-enter:hover:not(:disabled) { transform: translateY(-.4cqh); filter: brightness(1.05); }
+.chapter-select-enter:disabled { cursor: not-allowed; filter: grayscale(.2) brightness(.97); }
+.chapter-select-footer-count { text-align: right; color: #7a5c40; font-size: 2.8cqh; font-weight: 950; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* ── 스테이지 목록 ─────────────────────────────────────── */
+.chapter-stage-sheet {
+  position: absolute;
+  z-index: 6;
+  inset: 26cqh 24cqw 26cqh;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 1.6cqh;
+  box-sizing: border-box;
+  padding: 1.6cqh 2cqw;
+  border: .5cqh solid #b79263;
+  border-radius: 1.6cqh;
+  background: rgba(255, 249, 233, .98);
+  box-shadow: 0 1.6cqh 3cqh rgba(40, 22, 9, .4);
+}
+.chapter-stage-sheet > header { display: flex; align-items: center; justify-content: space-between; gap: 2cqw; padding-bottom: 1.2cqh; border-bottom: 2px solid rgba(120, 88, 58, .34); }
+.chapter-stage-sheet > header strong { color: #3a2416; font-size: 3.4cqh; font-weight: 950; }
+/* 게임 글꼴에 × 글자가 없어 빈 동그라미로 보였다. 선 두 개로 직접 그린다. */
+.chapter-stage-sheet > header button { position: relative; width: 5cqh; height: 5cqh; border: 0; border-radius: 50%; overflow: hidden; color: transparent; background: rgba(226, 208, 178, .7); font: inherit; }
+.chapter-stage-sheet > header button::before,
+.chapter-stage-sheet > header button::after { position: absolute; top: 50%; left: 50%; width: 2.6cqh; height: .6cqh; content: ""; border-radius: .4cqh; background: #6b4a33; }
+.chapter-stage-sheet > header button::before { transform: translate(-50%, -50%) rotate(45deg); }
+.chapter-stage-sheet > header button::after { transform: translate(-50%, -50%) rotate(-45deg); }
+.chapter-stage-sheet > header button:hover { background: rgba(226, 208, 178, 1); }
+.chapter-stage-sheet ul { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1.4cqh 1.2cqw; min-height: 0; margin: 0; padding: 0; overflow-y: auto; list-style: none; }
+.chapter-stage-sheet li button {
+  display: grid;
+  place-items: center;
+  gap: .4cqh;
+  width: 100%;
+  min-height: 7cqh;
+  padding: .6cqh .5cqw;
+  border: 2px solid rgba(124, 91, 63, .32);
+  border-radius: 1.4cqh;
+  color: #4a3221;
+  background: rgba(255, 253, 244, .9);
+  font: inherit;
+}
+.chapter-stage-sheet li button b { font-size: 3cqh; font-weight: 950; }
+.chapter-stage-sheet li button small { color: #8b6c4e; font-size: 2.1cqh; font-weight: 800; }
+.chapter-stage-sheet li button:hover:not(:disabled) { border-color: #e08574; background: #fff3e6; }
+.chapter-stage-sheet li button.is-current { border-color: #e0564a; color: #b83f36; background: #ffeee4; }
+.chapter-stage-sheet li button:disabled { cursor: not-allowed; filter: grayscale(.4); opacity: .5; }
+
+@keyframes chapter-select-fade { from { opacity: 0; } }
+@keyframes chapter-select-rise { from { opacity: 0; transform: translateY(1.4vh) scale(.98); } }
+@media (prefers-reduced-motion: reduce) {
+  .chapter-select-backdrop, .chapter-select { animation: none; }
+  .chapter-shop-art { transition: none; }
+}

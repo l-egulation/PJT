@@ -1,0 +1,53 @@
+package com.hanjjak.chat.infrastructure
+
+import com.hanjjak.chat.application.ChatBlockedAccountView
+import com.hanjjak.chat.application.ChatReportView
+import com.hanjjak.chat.application.ChatRepository
+import com.hanjjak.chat.domain.*
+import org.springframework.jdbc.core.simple.JdbcClient
+import java.sql.Timestamp
+import java.time.Instant
+import java.util.UUID
+
+class JdbcChatRepository(private val jdbc: JdbcClient) : ChatRepository {
+    override fun stateVersion(accountId: UUID): Long = jdbc.sql("select state_version from account where id=:account").param("account", accountId).query(Long::class.java).single()
+    override fun account(accountId: UUID): ChatRepository.AccountView = jdbc.sql("select c.nickname,mp.material_type from character c left join material_preference mp on mp.account_id=c.account_id where c.account_id=:account").param("account", accountId).query { row, _ -> ChatRepository.AccountView(row.getString("nickname"), row.getString("material_type")) }.single()
+    override fun command(accountId: UUID, idempotencyKey: UUID): ChatRepository.StoredCommand? = jdbc.sql("select command_id,fingerprint,result_json::text from command_record where account_id=:account and idempotency_key=:key").params(mapOf("account" to accountId, "key" to idempotencyKey)).query { row, _ -> ChatRepository.StoredCommand(row.getObject("command_id", UUID::class.java), row.getString("fingerprint"), row.getString("result_json")) }.optional().orElse(null)
+    override fun saveCommand(commandId: UUID, accountId: UUID, idempotencyKey: UUID, fingerprint: String, resultJson: String) { jdbc.sql("insert into command_record(command_id,account_id,idempotency_key,fingerprint,status,result_json,expires_at) values (:command,:account,:key,:fingerprint,'SUCCEEDED',cast(:result as jsonb),now()+interval '7 days')").params(mapOf("command" to commandId, "account" to accountId, "key" to idempotencyKey, "fingerprint" to fingerprint, "result" to resultJson)).update() }
+    override fun isChatBanned(accountId: UUID, now: Instant): Boolean = jdbc.sql("select exists(select 1 from chat_ban where account_id=:account and (banned_until is null or banned_until>:now))").params(mapOf("account" to accountId, "now" to Timestamp.from(now))).query(Boolean::class.java).single()
+
+    override fun listMessages(accountId: UUID, cursor: Instant?, limit: Int): List<ChatMessage> {
+        val where = if (cursor == null) "1=1" else "created_at < :cursor"
+        val params = mutableMapOf<String, Any>("limit" to limit)
+        if (cursor != null) params["cursor"] = Timestamp.from(cursor)
+        return jdbc.sql("select m.message_id,m.account_id,c.nickname,mp.material_type,m.body,m.created_at,m.event_id from chat_message m join character c on c.account_id=m.account_id left join material_preference mp on mp.account_id=m.account_id where $where and m.deleted=false order by m.created_at desc,m.event_id desc limit :limit").params(params).query(::mapMessage).list()
+    }
+    override fun createMessage(message: ChatMessage) { jdbc.sql("insert into chat_message(message_id,account_id,body,created_at,event_id) values (:id,:account,:body,:created,:event)").params(mapOf("id" to message.messageId, "account" to message.accountId, "body" to message.body, "created" to Timestamp.from(message.createdAt), "event" to message.eventId)).update() }
+    override fun findMessage(messageId: UUID): ChatMessage? = jdbc.sql("select m.message_id,m.account_id,c.nickname,mp.material_type,m.body,m.created_at,m.event_id from chat_message m join character c on c.account_id=m.account_id left join material_preference mp on mp.account_id=m.account_id where m.message_id=:id and m.deleted=false").param("id", messageId).query(::mapMessage).optional().orElse(null)
+
+    override fun listBoard(accountId: UUID, cursor: Instant?, limit: Int): List<ChatBoardPost> {
+        val where = if (cursor == null) "1=1" else "p.created_at < :cursor"
+        val params = mutableMapOf<String, Any>("limit" to limit)
+        if (cursor != null) params["cursor"] = Timestamp.from(cursor)
+        return jdbc.sql("select p.*,c.nickname from chat_board_post p join character c on c.account_id=p.account_id where $where and p.status <> 'DELETED' order by p.created_at desc,p.post_id desc limit :limit").params(params).query(::mapPost).list()
+    }
+    override fun expireBoards(now: Instant) { jdbc.sql("update chat_board_post set status='EXPIRED' where status='ACTIVE' and expires_at<=:now").param("now", Timestamp.from(now)).update() }
+    override fun createBoard(post: ChatBoardPost) { jdbc.sql("insert into chat_board_post(post_id,account_id,intent,item_id,quantity,unit_price,body,status,created_at,expires_at) values (:id,:account,:intent,:item,:quantity,:price,:body,:status,:created,:expires)").params(mapOf("id" to post.postId, "account" to post.accountId, "intent" to post.intent.name, "item" to post.itemId, "quantity" to post.quantity, "price" to post.unitPrice, "body" to post.body, "status" to post.status.name, "created" to Timestamp.from(post.createdAt), "expires" to Timestamp.from(post.expiresAt))).update() }
+    override fun closeBoard(accountId: UUID, postId: UUID, now: Instant): ChatBoardPost? = jdbc.sql("update chat_board_post set status='CLOSED' where post_id=:post and account_id=:account and status='ACTIVE' returning *").params(mapOf("post" to postId, "account" to accountId)).query(::mapPost).optional().orElse(null)
+    override fun messageExists(messageId: UUID): Boolean = jdbc.sql("select exists(select 1 from chat_message where message_id=:id)").param("id", messageId).query(Boolean::class.java).single()
+    override fun boardExists(postId: UUID): Boolean = jdbc.sql("select exists(select 1 from chat_board_post where post_id=:id and status <> 'DELETED')").param("id", postId).query(Boolean::class.java).single()
+    override fun createReport(reportId: UUID, reporter: UUID, targetType: String, targetId: UUID, reason: String, now: Instant): Boolean = jdbc.sql("insert into chat_report(report_id,reporter_account_id,target_type,target_id,reason,created_at) values (:report,:reporter,:type,:target,:reason,:created) on conflict do nothing").params(mapOf("report" to reportId, "reporter" to reporter, "type" to targetType, "target" to targetId, "reason" to reason, "created" to Timestamp.from(now))).update() == 1
+    override fun block(accountId: UUID, blockedAccountId: UUID) { jdbc.sql("insert into chat_block(account_id,blocked_account_id) values (:account,:blocked) on conflict do nothing").params(mapOf("account" to accountId, "blocked" to blockedAccountId)).update() }
+    override fun unblock(accountId: UUID, blockedAccountId: UUID) { jdbc.sql("delete from chat_block where account_id=:account and blocked_account_id=:blocked").params(mapOf("account" to accountId, "blocked" to blockedAccountId)).update() }
+    override fun listReports(limit: Int): List<ChatReportView> = jdbc.sql("select r.report_id,r.reporter_account_id,r.target_type,r.target_id,r.reason,r.created_at,coalesce(m.body,p.body) as target_body,coalesce(m.account_id,p.account_id) as target_account_id,coalesce(mc.nickname,pc.nickname) as target_nickname from chat_report r left join chat_message m on r.target_type='MESSAGE' and m.message_id=r.target_id left join character mc on mc.account_id=m.account_id left join chat_board_post p on r.target_type='BOARD_POST' and p.post_id=r.target_id left join character pc on pc.account_id=p.account_id order by r.created_at asc,r.report_id asc limit :limit").param("limit", limit.coerceIn(1, 100)).query { row, _ -> ChatReportView(row.getObject("report_id", UUID::class.java), row.getObject("reporter_account_id", UUID::class.java), row.getString("target_type"), row.getObject("target_id", UUID::class.java), row.getString("reason"), row.getTimestamp("created_at").toInstant(), row.getString("target_body"), row.getObject("target_account_id", UUID::class.java), row.getString("target_nickname")) }.list()
+    override fun findBoard(postId: UUID): ChatBoardPost? = jdbc.sql("select p.*,c.nickname from chat_board_post p join character c on c.account_id=p.account_id where p.post_id=:id").param("id", postId).query(::mapPost).optional().orElse(null)
+    override fun banAccount(accountId: UUID, until: Instant?, reason: String) { jdbc.sql("insert into chat_ban(account_id,banned_until,reason) values (:account,:until,:reason) on conflict(account_id) do update set banned_until=excluded.banned_until,reason=excluded.reason").params(mapOf("account" to accountId, "until" to until?.let(Timestamp::from), "reason" to reason)).update() }
+    override fun unbanAccount(accountId: UUID) { jdbc.sql("delete from chat_ban where account_id=:account").param("account", accountId).update() }
+    override fun listBlockedAccounts(accountId: UUID): List<ChatBlockedAccountView> = jdbc.sql("select b.blocked_account_id,c.nickname,b.created_at from chat_block b join character c on c.account_id=b.blocked_account_id where b.account_id=:account order by b.created_at desc").param("account", accountId).query { row, _ -> ChatBlockedAccountView(row.getObject("blocked_account_id", UUID::class.java), row.getString("nickname"), row.getTimestamp("created_at").toInstant()) }.list()
+    override fun isBlocked(accountId: UUID, blockedAccountId: UUID): Boolean = jdbc.sql("select exists(select 1 from chat_block where account_id=:account and blocked_account_id=:blocked)").params(mapOf("account" to accountId, "blocked" to blockedAccountId)).query(Boolean::class.java).single()
+    override fun moderateMessage(messageId: UUID): Boolean = jdbc.sql("update chat_message set deleted=true where message_id=:message and deleted=false").param("message", messageId).update() == 1
+    override fun moderateBoard(postId: UUID): Boolean = jdbc.sql("update chat_board_post set status='DELETED' where post_id=:post and status <> 'DELETED'").param("post", postId).update() == 1
+
+    private fun mapMessage(row: java.sql.ResultSet, rowNum: Int) = ChatMessage(row.getObject("message_id", UUID::class.java), row.getObject("account_id", UUID::class.java), row.getString("nickname"), row.getString("material_type"), row.getString("body"), row.getTimestamp("created_at").toInstant(), row.getObject("event_id", UUID::class.java))
+    private fun mapPost(row: java.sql.ResultSet, rowNum: Int) = ChatBoardPost(row.getObject("post_id", UUID::class.java), row.getObject("account_id", UUID::class.java), row.getString("nickname"), ChatIntent.valueOf(row.getString("intent")), row.getString("item_id"), row.getLong("quantity"), row.getObject("unit_price") as Long?, row.getString("body"), ChatPostStatus.valueOf(row.getString("status")), row.getTimestamp("created_at").toInstant(), row.getTimestamp("expires_at").toInstant())
+}

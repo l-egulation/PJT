@@ -1,0 +1,57 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: backfill
+  namespace: hanjjak
+  labels:
+    app.kubernetes.io/name: backfill
+spec:
+  backoffLimit: 0
+  ttlSecondsAfterFinished: 86400
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: backfill
+    spec:
+      automountServiceAccountToken: false
+      restartPolicy: Never
+      containers:
+        - name: backfill
+          image: docker.io/hanjjak/game-api:bootstrap
+          imagePullPolicy: Never
+          args:
+            - backfill-progression-rewards
+            - --apply
+            - --until-complete
+            - --batch-size=100
+          envFrom:
+            - configMapRef:
+                name: application-config
+          env:
+            - name: DB_URL
+              value: jdbc:postgresql://postgres:5432/$(POSTGRES_DB)
+            - name: DB_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: application-config
+                  key: POSTGRES_USER
+            - name: DB_PASSWORD_FILE
+              value: /var/run/hanjjak-secrets/db-password
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: "1"
+              memory: 1Gi
+          volumeMounts:
+            - name: db-password
+              mountPath: /var/run/hanjjak-secrets
+              readOnly: true
+      volumes:
+        - name: db-password
+          secret:
+            secretName: db-password
+            items:
+              - key: password
+                path: db-password

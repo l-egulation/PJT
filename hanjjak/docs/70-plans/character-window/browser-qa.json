@@ -1,0 +1,50 @@
+{
+  "apiMode": "MOCKED all API routes; real Chromium UI",
+  "checks": [
+    "Default ability tab, single native modal",
+    "Stat tooltip visible on hover and focus with excluded source reason",
+    "Pending battle completes behind dialog, one cycle request, ability query refreshes level 7 → 8",
+    "Selection only previews; explicit equip commits and displays server equipment",
+    "Per-piece next-star command, lost response retry uses same key, server set minimum updates to 1",
+    "One piece advances to 2 while server set stays at minimum 1",
+    "Registration success refreshes ability value 143 → 161",
+    "Escape restores character trigger; reopen resets ability tab; battle selection/result retained",
+    "Gacha opens existing screen; return opens costume tab without unmounting battle",
+    "390px mobile modal stays inside viewport without horizontal content overflow",
+    "Native modal keyboard focus wraps inside dialog",
+    "Locked cosmetic tab shows unlock condition without cosmetic API calls"
+  ],
+  "statsCalls": 11,
+  "battleCalls": 1,
+  "commands": [
+    {
+      "path": "/api/v1/cosmetics/equipment/HEAD",
+      "key": "09afdc9c-5213-4589-862b-f8efedf5be89",
+      "body": {
+        "cosmeticId": "other-head"
+      }
+    },
+    {
+      "path": "/api/v1/cosmetics/item-HEAD/registrations",
+      "key": "19469b7d-096c-4d4e-8808-8ba252156063",
+      "body": {
+        "mode": "UNTIL_NEXT_STAR"
+      }
+    },
+    {
+      "path": "/api/v1/cosmetics/item-HEAD/registrations",
+      "key": "19469b7d-096c-4d4e-8808-8ba252156063",
+      "body": {
+        "mode": "UNTIL_NEXT_STAR"
+      }
+    },
+    {
+      "path": "/api/v1/cosmetics/item-HEAD/registrations",
+      "key": "c7c444c9-b6ab-40b5-9e16-3f61528d5e7b",
+      "body": {
+        "mode": "UNTIL_NEXT_STAR"
+      }
+    }
+  ],
+  "pageErrors": []
+}

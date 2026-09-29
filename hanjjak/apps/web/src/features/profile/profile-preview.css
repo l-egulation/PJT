@@ -1,0 +1,38 @@
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.profile-preview-underlay {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  color: #fff8e7;
+  background:
+    radial-gradient(circle at 18% 19%, rgba(255, 222, 116, .92) 0 4%, transparent 4.4%),
+    radial-gradient(circle at 81% 24%, rgba(116, 194, 224, .8) 0 10%, transparent 21%),
+    linear-gradient(118deg, #6f3f25 0 22%, #b66f3f 22% 43%, #83b9bf 43% 62%, #9c5a31 62% 100%);
+  font-family: var(--hanjjak-font-ui);
+  text-shadow: 0 2px 0 rgba(61, 39, 22, .3);
+}
+
+.profile-preview-underlay > div {
+  display: grid;
+  gap: 5px;
+  text-align: center;
+}
+
+.profile-preview-underlay strong { font-size: 44px; }
+.profile-preview-underlay span { font-size: 20px; }
+
+.profile-preview-underlay button {
+  min-height: 48px;
+  border: 2px solid rgba(63, 39, 23, .55);
+  border-radius: 14px;
+  padding: 8px 22px;
+  color: #432b1e;
+  background: #fff5df;
+  cursor: pointer;
+  font: inherit;
+}

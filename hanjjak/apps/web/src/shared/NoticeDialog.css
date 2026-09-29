@@ -1,0 +1,11 @@
+.notice-dialog-backdrop { position: fixed; z-index: 150; inset: 0; display: grid; place-items: center; padding: 20px; background: rgba(40, 25, 14, .48); backdrop-filter: blur(3px); }
+.notice-dialog { display: grid; gap: 16px; width: min(480px, calc(100vw - 40px)); border: 4px double #8f6b4c; border-radius: 18px; padding: 30px 34px 26px; color: #352219; background: linear-gradient(rgba(255, 252, 240, .96), rgba(255, 241, 210, .98)), url("../features/character/assets-cozy-pixel/character-backdrop-coarse.png") center / cover; box-shadow: inset 0 0 0 5px rgba(255, 255, 255, .5), 0 20px 40px rgba(35, 18, 8, .38); text-align: center; font-family: var(--hanjjak-font-ui); }
+.notice-dialog h3 { margin: 0; color: #3b2518; font-size: 32px; font-weight: 950; }
+.notice-dialog p { margin: 0; color: #4c3424; font-size: 20px; font-weight: 900; line-height: 1.55; overflow-wrap: anywhere; }
+.notice-dialog .notice-dialog-detail { color: #8a6d5a; font-size: 14px; font-weight: 800; }
+.notice-dialog-actions { display: flex; justify-content: center; gap: 10px; }
+.notice-dialog-actions > button { min-width: 128px; min-height: 48px; border: 3px solid #744b32; border-radius: 10px; padding: 8px 18px; font-size: 19px; font-weight: 950; box-shadow: inset 0 0 0 2px rgba(255, 255, 255, .42), 0 3px rgba(68, 43, 28, .24); }
+.notice-dialog-secondary { color: #3d291e; background: #fff5df; }
+.notice-dialog-primary { color: #fff; background: linear-gradient(#f3675e, #d7463f); text-shadow: 0 2px rgba(94, 39, 28, .4); }
+.notice-dialog-actions > button:focus-visible { outline: 4px solid rgba(232, 75, 63, .38); outline-offset: 2px; }
+.notice-dialog-actions > button:disabled { filter: grayscale(.35); opacity: .45; }

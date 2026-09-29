@@ -1,0 +1,21 @@
+/* 겹쳐 그리는 치장 레이어.
+   겹치기를 절대 위치가 아니라 그리드 한 칸으로 하는 이유가 있다. 이 span은 부르는 쪽의
+   클래스를 함께 달고 그 클래스가 position을 정하는 경우가 많은데(치장 탭·능력치 탭은
+   absolute), 여기서 position을 잡으면 서로 덮어써서 캐릭터가 엉뚱한 곳으로 간다.
+   비율은 레이어 원본 519x376이다. 높이를 auto로 둔 자리에서도 그림이 서게 한다. */
+.cosmetic-hero-layers {
+  display: grid;
+  aspect-ratio: 519 / 376;
+}
+/* 매니페스트 세트는 캔버스 한 장으로 그린다. 낱장 레이어와 같은 규칙을 줘야
+   같은 자리에 같은 크기로 선다. */
+.cosmetic-hero-canvas,
+.cosmetic-hero-layers > img {
+  display: block;
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: 50% 100%;
+  image-rendering: pixelated;
+}

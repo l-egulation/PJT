@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>흑화한 젓가락 보스 — 암흑 반월 회전베기</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, Pretendard, system-ui, sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; color: #f7f3ff; background: radial-gradient(circle at 50% 0%, #28184a, #0d0918 48%, #06050b); }
+    main { width: min(1180px, calc(100% - 32px)); margin: 0 auto; padding: 42px 0 64px; }
+    header { display: flex; justify-content: space-between; gap: 24px; align-items: end; margin-bottom: 24px; }
+    h1 { margin: 0; font-size: clamp(26px, 4vw, 48px); letter-spacing: -.04em; }
+    .eyebrow { margin: 0 0 8px; color: #bda3ff; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    .meta { color: #bcb3ca; text-align: right; line-height: 1.6; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .card { border: 1px solid #ffffff1f; border-radius: 22px; overflow: hidden; background: #120e20cc; box-shadow: 0 24px 80px #0008; }
+    .stage { min-height: 530px; display: grid; place-items: center; position: relative; transition: background .2s; }
+    .stage.checker { background-color: #191522; background-image: linear-gradient(45deg,#ffffff10 25%,transparent 25%),linear-gradient(-45deg,#ffffff10 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#ffffff10 75%),linear-gradient(-45deg,transparent 75%,#ffffff10 75%); background-size: 28px 28px; background-position: 0 0,0 14px,14px -14px,-14px 0; }
+    .stage.dark { background: radial-gradient(circle, #2a1a4a, #090713 70%); }
+    .stage.light { background: radial-gradient(circle, #f0eafa, #afa6bd); }
+    .sprite { width: min(512px, 92%); aspect-ratio: 1; background-image: url('dark-chopsticks-crescent-slash-spritesheet.png'); background-size: 600% 400%; background-repeat: no-repeat; image-rendering: pixelated; filter: drop-shadow(0 18px 28px #0009); }
+    .gif { width: min(512px, 92%); height: auto; image-rendering: pixelated; filter: drop-shadow(0 18px 28px #0009); }
+    .toolbar { display: flex; flex-wrap: wrap; gap: 10px; padding: 15px; border-top: 1px solid #ffffff14; }
+    button, select, input { accent-color: #8b5cf6; }
+    button, select { color: #f7f3ff; border: 1px solid #ffffff22; background: #211832; border-radius: 11px; padding: 10px 13px; font: inherit; cursor: pointer; }
+    button:hover, select:hover { border-color: #a78bfa; }
+    .scrub { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 12px; padding: 0 15px 16px; color: #bcb3ca; }
+    input[type="range"] { width: 100%; }
+    h2 { margin: 0; padding: 16px 18px; font-size: 15px; color: #dcd3ea; border-bottom: 1px solid #ffffff14; }
+    .note { margin: 18px 2px 0; color: #aaa0b7; line-height: 1.65; }
+    code { color: #d8c9ff; }
+    @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } header { align-items: start; flex-direction: column; } .meta { text-align: left; } .stage { min-height: 360px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <p class="eyebrow">Raid Boss Attack Preview</p>
+        <h1>암흑 반월 회전베기</h1>
+      </div>
+      <div class="meta">24 keyframes · 48-frame GIF<br>256 × 256 px per frame · transparent RGBA</div>
+    </header>
+    <section class="grid">
+      <article class="card">
+        <h2>Sprite sheet player</h2>
+        <div class="stage checker" id="spriteStage"><div class="sprite" id="sprite"></div></div>
+        <div class="toolbar">
+          <button id="toggle">일시정지</button>
+          <button id="restart">처음부터</button>
+          <select id="speed" aria-label="재생 속도">
+            <option value="0.5">0.5×</option>
+            <option value="0.75">0.75×</option>
+            <option value="1" selected>1×</option>
+            <option value="1.25">1.25×</option>
+            <option value="1.5">1.5×</option>
+            <option value="2">2×</option>
+          </select>
+          <select class="background" aria-label="배경">
+            <option value="checker">투명 체크</option><option value="dark">어두운 배경</option><option value="light">밝은 배경</option>
+          </select>
+        </div>
+        <div class="scrub"><span>프레임</span><input id="frame" type="range" min="0" max="23" value="0"><output id="frameOut">01 / 24</output></div>
+      </article>
+      <article class="card">
+        <h2>Exported GIF</h2>
+        <div class="stage checker" id="gifStage"><img class="gif" src="dark-chopsticks-crescent-slash.gif" alt="흑화한 젓가락 보스의 암흑 반월 회전베기"></div>
+        <div class="toolbar">
+          <select class="background" aria-label="배경">
+            <option value="checker">투명 체크</option><option value="dark">어두운 배경</option><option value="light">밝은 배경</option>
+          </select>
+        </div>
+      </article>
+    </section>
+    <p class="note">시트 순서는 왼쪽→오른쪽, 위→아래입니다. 게임에서는 <code>dark-chopsticks-crescent-slash.json</code>의 가변 프레임 시간을 사용하세요. GIF는 핵심 포즈 사이를 보간한 48프레임 확인용입니다.</p>
+  </main>
+  <script>
+    const durations = [70,70,80,90,45,40,35,30,25,25,25,25,30,30,25,25,35,40,45,50,60,65,70,75];
+    const sprite = document.querySelector('#sprite');
+    const slider = document.querySelector('#frame');
+    const output = document.querySelector('#frameOut');
+    const toggle = document.querySelector('#toggle');
+    const speed = document.querySelector('#speed');
+    let index = 0, playing = true, timer;
+    function draw() {
+      const col = index % 6, row = Math.floor(index / 6);
+      sprite.style.backgroundPosition = `${col * 20}% ${row * (100 / 3)}%`;
+      slider.value = index;
+      output.value = `${String(index + 1).padStart(2, '0')} / 24`;
+    }
+    function schedule() {
+      clearTimeout(timer);
+      if (!playing) return;
+      timer = setTimeout(() => { index = (index + 1) % 24; draw(); schedule(); }, durations[index] / Number(speed.value));
+    }
+    toggle.addEventListener('click', () => { playing = !playing; toggle.textContent = playing ? '일시정지' : '재생'; schedule(); });
+    document.querySelector('#restart').addEventListener('click', () => { index = 0; playing = true; toggle.textContent = '일시정지'; draw(); schedule(); });
+    speed.addEventListener('change', schedule);
+    slider.addEventListener('input', () => { index = Number(slider.value); playing = false; toggle.textContent = '재생'; draw(); schedule(); });
+    document.querySelectorAll('.background').forEach(select => select.addEventListener('change', () => { select.closest('.card').querySelector('.stage').className = `stage ${select.value}`; }));
+    draw(); schedule();
+  </script>
+</body>
+</html>

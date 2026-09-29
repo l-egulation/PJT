@@ -1,0 +1,25 @@
+.offline-reward-panel {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 30;
+  width: min(280px, calc(100vw - 32px));
+  padding: 18px 18px 16px;
+  border: 2px solid var(--cozy-line);
+  border-radius: 16px;
+  color: var(--cozy-ink);
+  background: var(--cozy-paper);
+  box-shadow: 0 16px 40px rgba(45, 26, 14, .24);
+}
+.offline-reward-panel h2 { margin: 0; font-size: 22px; font-weight: 950; letter-spacing: -.03em; }
+.offline-reward-panel__time { margin: 4px 0 12px; color: var(--cozy-muted); font-size: 12px; font-weight: 800; }
+.offline-reward-panel__list { display: grid; gap: 4px; padding: 0; margin: 0 0 14px; list-style: none; }
+/* Icon, name, amount — the name takes the slack so every count lines up down the right edge. */
+.offline-reward-panel__list li { display: grid; grid-template-columns: 26px minmax(0, 1fr) auto; align-items: center; gap: 9px; padding: 6px 9px; border-radius: 8px; background: var(--cozy-paper-soft); }
+.offline-reward-panel__list i { display: grid; place-items: center; width: 26px; height: 26px; }
+.offline-reward-panel__list img { width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated; }
+.offline-reward-panel__list span { min-width: 0; overflow: hidden; font-size: 13px; font-weight: 800; text-overflow: ellipsis; white-space: nowrap; }
+.offline-reward-panel__list strong { font-size: 14px; font-weight: 950; font-variant-numeric: tabular-nums; }
+.offline-reward-panel button { width: 100%; padding: 11px 14px; border: 0; border-radius: 9px; color: #fff8ef; background: var(--cozy-coral-dark); font-weight: 900; }
+.offline-reward-panel button:disabled { opacity: .55; }
+.offline-reward-panel [role="alert"] { margin: 0 0 10px; color: var(--cozy-coral-dark); font-size: 12px; }

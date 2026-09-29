@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hanjjak.local/schema/gem-dungeons.schema.json",
+  "type": "object",
+  "required": ["authority", "contentVersion", "durationTicks", "completionWindowSeconds", "bosses"],
+  "properties": {
+    "authority": { "enum": ["applied", "beta"] },
+    "contentVersion": { "type": "string", "minLength": 1 },
+    "durationTicks": { "const": 150 },
+    "completionWindowSeconds": { "const": 15 },
+    "bosses": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["bossType", "stages"],
+        "properties": {
+          "bossType": { "enum": ["SURVIVAL", "BERSERK", "ARMORED"] },
+          "stages": {
+            "type": "array",
+            "minItems": 10,
+            "maxItems": 10,
+            "items": {
+              "type": "object",
+              "required": ["stage", "bossHp", "bossAttack", "defense", "strikeDamage"],
+              "properties": {
+                "stage": { "type": "integer", "minimum": 1, "maximum": 10 },
+                "bossHp": { "type": "integer", "minimum": 1 },
+                "bossAttack": { "type": "integer", "minimum": 0 },
+                "defense": { "type": "integer", "minimum": 0 },
+                "strikeDamage": { "type": "integer", "minimum": 0 }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

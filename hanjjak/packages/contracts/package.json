@@ -1,0 +1,17 @@
+{
+  "name": "@hanjjak/contracts",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsp compile . && node scripts/rename-raid-schema.mjs",
+    "drift": "node scripts/check-raid-schema-drift.mjs",
+    "typecheck": "tsp compile . --no-emit",
+    "test": "tsp compile . --no-emit && node scripts/assert-raid-openapi.mjs"
+  },
+  "devDependencies": {
+    "@typespec/compiler": "1.15.0",
+    "@typespec/http": "1.15.0",
+    "@typespec/json-schema": "1.15.0",
+    "@typespec/openapi3": "1.15.0"
+  }
+}

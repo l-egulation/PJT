@@ -1,0 +1,34 @@
+.inventory-qa-stage {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background-position: center;
+  background-size: cover;
+}
+
+.inventory-qa-stage-copy {
+  display: grid;
+  gap: 8px;
+  padding: 22px 28px;
+  border: 3px solid rgba(75, 43, 24, .72);
+  border-radius: 16px;
+  color: #3f271a;
+  background: rgba(255, 244, 210, .82);
+  box-shadow: 0 8px 0 rgba(58, 31, 15, .2);
+  text-align: center;
+}
+
+.inventory-qa-stage-copy strong { font-size: 32px; }
+.inventory-qa-stage-copy span { font-weight: 800; }
+
+.inventory-qa-open {
+  min-width: 220px;
+  min-height: 64px;
+  border: 4px solid #5c3423;
+  border-radius: 16px;
+  color: #fff8ed;
+  background: linear-gradient(#f67870, #d84a49);
+  font-size: 24px;
+  font-weight: 900;
+}

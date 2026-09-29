@@ -1,0 +1,18 @@
+{
+  "authority": "working",
+  "contentVersion": "raid-mvp-v1-working",
+  "unlockStageId": "stage.01-02",
+  "settlementTimeZone": "Asia/Seoul",
+  "settlementLocalTime": "17:30",
+  "sealTarget": 50000,
+  "attemptLimitTicks": 3000,
+  "escalationIntervalTicks": 50,
+  "escalationBasisPoints": 500,
+  "bossInitialAttack": 14,
+  "bossInitialDefense": 1,
+  "gradeDamageThresholds": { "D": 6955, "C": 12916, "B": 19871, "A": 29807, "S": 43716, "SS": 63587, "SSS": 89420 },
+  "sealContributions": { "PARTICIPATION": 0, "D": 100, "C": 167, "B": 233, "A": 300, "S": 367, "SS": 433, "SSS": 500 },
+  "personalRewards": { "PARTICIPATION": { "cosmeticTickets": 5, "gemBoxes": 3, "rice": 5000 }, "D": { "cosmeticTickets": 6, "gemBoxes": 3, "rice": 5750 }, "C": { "cosmeticTickets": 7, "gemBoxes": 4, "rice": 6500 }, "B": { "cosmeticTickets": 7, "gemBoxes": 4, "rice": 7250 }, "A": { "cosmeticTickets": 8, "gemBoxes": 5, "rice": 8000 }, "S": { "cosmeticTickets": 9, "gemBoxes": 5, "rice": 8750 }, "SS": { "cosmeticTickets": 10, "gemBoxes": 6, "rice": 9500 }, "SSS": { "cosmeticTickets": 10, "gemBoxes": 6, "rice": 10000 } },
+  "successfulRankRewards": { "FIRST": { "cosmeticTickets": 11, "gemBoxes": 7, "rice": 11000 }, "SECOND_TO_TENTH": { "cosmeticTickets": 10, "gemBoxes": 6, "rice": 10000 }, "ELEVENTH_TO_HUNDREDTH": { "cosmeticTickets": 9, "gemBoxes": 5, "rice": 9000 }, "REST": { "cosmeticTickets": 8, "gemBoxes": 5, "rice": 8000 } },
+  "failedRankRewards": { "FIRST": { "cosmeticTickets": 8, "gemBoxes": 5, "rice": 7700 }, "SECOND_TO_TENTH": { "cosmeticTickets": 7, "gemBoxes": 4, "rice": 7000 }, "ELEVENTH_TO_HUNDREDTH": { "cosmeticTickets": 6, "gemBoxes": 4, "rice": 6300 }, "REST": { "cosmeticTickets": 6, "gemBoxes": 4, "rice": 5600 } }
+}

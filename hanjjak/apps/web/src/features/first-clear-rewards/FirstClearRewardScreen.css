@@ -1,0 +1,20 @@
+.first-clear-reward-screen { display: grid; gap: 16px; max-width: 780px; margin: 0 auto; padding: 26px; color: #2d1a0e; background: #fff6dc; border: 2px solid #9d7654; box-shadow: 0 7px 0 rgba(64, 35, 18, .24); font-family: "Hanjjak Jua", Pretendard, "Noto Sans KR", sans-serif; }
+.first-clear-reward-screen > header { display: flex; align-items: baseline; gap: 10px; padding-bottom: 12px; border-bottom: 2px dashed #c99b72; }
+.first-clear-reward-screen > header p { margin: 0; color: #8a6549; font-size: 13px; font-weight: 900; }
+.first-clear-reward-screen h2 { margin: 0; font-size: 27px; letter-spacing: -.04em; }
+.first-clear-reward-screen > header span { margin-left: auto; color: #9f3f2c; font-size: 13px; font-weight: 900; }
+.first-clear-reward-screen ol { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.first-clear-reward-screen li { display: grid; gap: 11px; padding: 16px; border: 1px solid #cba47e; background: #fffaf0; box-shadow: inset 0 -2px 0 rgba(185, 149, 112, .18); }
+.first-clear-reward-screen li > header { display: flex; justify-content: space-between; gap: 12px; color: #654b38; }
+.first-clear-reward-screen li > header strong { color: #8e303a; font-size: 18px; }
+.first-clear-reward-screen li > header span { font-size: 12px; font-weight: 900; }
+.first-clear-reward-screen dl { display: grid; gap: 7px; margin: 0; }
+.first-clear-reward-screen dl div { display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 9px; font-size: 13px; }
+.first-clear-reward-screen dt { color: #80624a; font-weight: 900; }
+.first-clear-reward-screen dd { margin: 0; overflow-wrap: anywhere; font-weight: 800; }
+.first-clear-reward-screen li button, .first-clear-reward-screen [role="alert"] button { justify-self: end; padding: 9px 14px; border: 2px solid #8e2933; border-radius: 5px; color: #fff8e8; background: #bd3f49; box-shadow: inset 0 -2px 0 rgba(102, 24, 32, .28); font: inherit; font-weight: 1000; }
+.first-clear-reward-screen button:disabled { cursor: wait; opacity: .65; }
+.first-clear-reward-error { margin: 0; padding: 10px 12px; border: 1px solid #b95645; color: #8e303a; background: #ffe1d9; font-weight: 900; }
+.first-clear-reward-empty { margin: 0; padding: 28px 8px; color: #816a57; text-align: center; }
+.first-clear-reward-content { top: 174px; }
+@media (max-width: 620px) { .first-clear-reward-content { top: 220px; } .first-clear-reward-screen { margin: 0; padding: 18px; } .first-clear-reward-screen h2 { font-size: 23px; } .first-clear-reward-screen dl div { grid-template-columns: 1fr; gap: 2px; } }

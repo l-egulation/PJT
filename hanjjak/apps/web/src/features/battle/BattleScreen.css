@@ -1,0 +1,371 @@
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+.battle-screen-live { border: 0; }
+.battle-stage-shell { position: relative; min-height: 760px; overflow: hidden; border: 1px solid #8b5f35; background: #b66f35; box-shadow: 0 20px 54px rgba(67, 39, 20, .16); }
+.battle-stage-toolbar { position: absolute; top: 22px; left: 50%; z-index: 8; width: min(570px, calc(100% - 380px)); padding: 13px 24px 12px; color: #4a3524; border: 1px solid #d3b986; background: #f6e9cb; box-shadow: 0 7px 0 rgba(72, 43, 24, .26); transform: translateX(-50%); }
+.battle-stage-toolbar::before, .battle-stage-toolbar::after, .battle-loot::before, .battle-player-hud::before { position: absolute; inset: 5px; pointer-events: none; content: ""; border: 1px dashed rgba(113, 78, 44, .26); }
+.stage-picker { position: relative; z-index: 1; display: grid; grid-template-columns: auto minmax(180px, 260px); gap: 10px; align-items: center; justify-content: center; font-size: 11px; font-weight: 900; }
+.stage-picker select { width: 100%; border: 1px solid #967650; border-radius: 6px; padding: 7px 32px 7px 12px; color: #34251a; background: #fff8e9; font-weight: 900; }
+.stage-checkpoints { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(5, 1fr); margin: 12px 4px 7px; padding: 0; list-style: none; }
+.stage-checkpoints::before { position: absolute; top: 9px; right: 10%; left: 10%; height: 2px; content: ""; background: #aa987d; }
+.stage-checkpoints li { position: relative; z-index: 1; display: grid; justify-items: center; gap: 2px; color: #806f5d; font-size: 9px; font-weight: 900; }
+.stage-checkpoints i { display: grid; place-items: center; width: 18px; height: 18px; border: 2px solid #8f7b62; border-radius: 50%; background: #efe2c7; color: #fff; font-size: 9px; font-style: normal; }
+.stage-checkpoints li.complete i { border-color: #8b641b; background: #dca824; }
+.stage-checkpoints li.current i { border-color: #a4472d; background: #f3d89b; box-shadow: 0 0 0 4px rgba(164, 71, 45, .16); }
+.stage-toolbar-meta { position: relative; z-index: 1; display: flex; justify-content: center; gap: 18px; padding: 5px 0; border-top: 1px solid rgba(113, 78, 44, .24); font-size: 11px; }
+.stage-toolbar-meta strong { color: #2f2117; }
+.idle-mode-tabs { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; margin-top: 4px; border: 1px solid #d3c09d; border-radius: 7px; overflow: hidden; }
+.idle-mode-tabs button { min-height: 32px; border: 0; color: #685746; background: rgba(255,255,255,.24); font-size: 11px; font-weight: 900; }
+.idle-mode-tabs button + button { border-left: 1px solid #d3c09d; }
+.idle-mode-tabs button.active { color: #fff8ec; background: #68422d; }
+.idle-mode-tabs button:disabled { opacity: .42; }
+.idle-mode-status { position: relative; z-index: 1; min-height: 16px; margin: 5px 0 0; color: #75624e; font-size: 9px; font-weight: 800; text-align: center; }
+.idle-mode-status.error { color: #9a3d2e; }
+.stage-latest-failure { position: absolute; top: 24px; right: 24px; z-index: 9; display: grid; gap: 4px; width: min(220px, calc(100% - 48px)); padding: 10px 12px; color: #f8ecd8; border: 1px solid rgba(255,255,255,.16); background: rgba(49,34,25,.92); }
+.stage-latest-failure strong { color: #e5a85d; font-size: 10px; letter-spacing: .08em; }
+.stage-latest-failure span { font-size: 10px; line-height: 1.45; }
+.stage-latest-failure button { justify-self: start; border: 0; padding: 4px 8px; color: #fff; background: #a4472d; font-size: 10px; font-weight: 800; }
+.battle-kitchen { position: relative; min-height: 760px; overflow: hidden; background: linear-gradient(#80501f 0 7%, #c68b42 7% 11%, #dfbd7d 11% 52%, #6d4827 52% 55%, #76502f 55% 100%); }
+.kitchen-backdrop { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(53,28,13,.65) 0 9%, transparent 9% 91%, rgba(53,28,13,.62) 91%), repeating-linear-gradient(0deg, transparent 0 74px, rgba(115,71,32,.2) 74px 77px), repeating-linear-gradient(90deg, transparent 0 88px, rgba(115,71,32,.16) 88px 91px); }
+.kitchen-backdrop::before { position: absolute; top: 31%; right: 10%; left: 10%; height: 18px; content: ""; border: 7px solid #5a3318; background: #9b632c; box-shadow: 0 16px 0 rgba(48,28,15,.28), 180px -48px 0 -4px #6f461f, 260px -48px 0 -4px #6f461f, -220px -42px 0 -4px #6f461f; }
+.kitchen-backdrop::after { position: absolute; right: 0; bottom: 0; left: 0; height: 47%; content: ""; background: radial-gradient(circle at 12% 74%, rgba(37,20,11,.32) 0 18px, transparent 20px), radial-gradient(circle at 72% 34%, rgba(37,20,11,.27) 0 13px, transparent 15px), radial-gradient(circle at 88% 82%, rgba(37,20,11,.25) 0 22px, transparent 24px), repeating-linear-gradient(12deg, rgba(255,255,255,.025) 0 2px, transparent 2px 9px), #805735; box-shadow: inset 0 14px 32px rgba(37,20,11,.45); }
+.kitchen-backdrop i { position: absolute; z-index: 1; top: 17%; width: 10px; height: 76px; border-radius: 5px; background: #332014; box-shadow: 0 68px 0 10px #ffd47a, 0 68px 18px 14px rgba(255,208,102,.62); }
+.kitchen-backdrop i:nth-child(1) { left: 16%; }.kitchen-backdrop i:nth-child(2) { left: 50%; }.kitchen-backdrop i:nth-child(3) { right: 16%; }
+.battle-connection { position: absolute; top: 24px; left: 24px; z-index: 5; display: flex; align-items: center; gap: 7px; margin: 0; padding: 7px 10px; color: #ead8c0; border: 1px solid rgba(255,255,255,.14); background: rgba(45,27,16,.72); font-size: 10px; font-weight: 800; }
+.battle-connection i { width: 7px; height: 7px; border-radius: 50%; background: #b74b33; }.battle-connection.connected i { background: #91b54f; box-shadow: 0 0 8px rgba(145,181,79,.7); }
+.battle-connection.retrying i { background: #dca824; box-shadow: 0 0 8px rgba(220,168,36,.72); }
+.battle-floor { position: absolute; z-index: 3; right: 250px; bottom: 118px; left: 250px; display: grid; grid-template-columns: minmax(150px, .8fr) minmax(340px, 1.5fr); align-items: end; gap: 40px; min-height: 330px; }
+.hero-position { display: grid; justify-items: center; }
+.chopstick-hero { position: relative; width: 118px; height: 220px; filter: drop-shadow(0 14px 6px rgba(31,17,9,.38)); transform-origin: 50% 100%; }
+.hero-body { position: absolute; top: 15px; left: 48px; width: 30px; height: 170px; border: 4px solid #57351a; border-radius: 14px 14px 10px 10px; background: linear-gradient(90deg, #e9b66a, #ffd891 45%, #b97939); box-shadow: inset 0 -16px rgba(117,67,29,.18); }
+.hero-eye { position: absolute; top: 50px; width: 5px; height: 9px; border-radius: 50%; background: #1d160f; }.hero-eye.left { left: 6px; }.hero-eye.right { right: 6px; }
+.hero-arm { position: absolute; top: 91px; right: -34px; width: 38px; height: 8px; border: 3px solid #57351a; border-radius: 8px; background: #dc984e; transform: rotate(-13deg); }
+.hero-leg { position: absolute; bottom: -29px; width: 8px; height: 34px; border: 3px solid #57351a; border-radius: 8px; background: #dc984e; }.hero-leg.left { left: 3px; transform: rotate(8deg); }.hero-leg.right { right: 3px; transform: rotate(-8deg); }
+.hero-shield { position: absolute; top: 93px; left: 23px; width: 37px; height: 48px; border: 4px solid #493023; border-radius: 48% 48% 52% 52%; background: linear-gradient(145deg, #c7cad0, #686b70); box-shadow: inset -7px -6px rgba(0,0,0,.18); }
+.hero-sword { position: absolute; top: 70px; right: 2px; width: 10px; height: 106px; border: 3px solid #38261b; background: linear-gradient(90deg, #d9e1e1, #fff 55%, #8b9496); transform: rotate(38deg); transform-origin: 50% 100%; clip-path: polygon(50% 0, 100% 12%, 100% 86%, 0 86%, 0 12%); }
+.hero-sword i { position: absolute; bottom: 10px; left: -12px; width: 29px; height: 7px; border: 2px solid #38261b; background: #c99639; }
+.chopstick-hero.is-fighting { animation: hero-ready .65s ease-in-out infinite alternate; }
+.monster-party { display: flex; align-items: flex-end; justify-content: space-around; gap: 20px; }
+.food-monster { position: relative; width: clamp(96px, 11vw, 145px); aspect-ratio: 1; border: 5px solid #5a3519; border-radius: 48%; background: #c48032; box-shadow: inset -14px -18px rgba(79,43,17,.22), 0 14px 7px rgba(35,20,10,.32); transform-origin: 50% 100%; }
+.food-monster-dumpling { background: radial-gradient(circle at 35% 30%, #ffd27c 0 5px, transparent 6px), radial-gradient(circle at 70% 24%, #e2a851 0 4px, transparent 5px), #dca74d; }
+.food-monster-patty { background: radial-gradient(circle at 25% 30%, #76924e 0 5px, transparent 6px), radial-gradient(circle at 67% 62%, #d06835 0 5px, transparent 6px), #8c5d2c; }
+.food-monster-leaf { border-radius: 48% 48% 43% 43%; background: linear-gradient(55deg, transparent 45%, #8c5c29 46% 53%, transparent 54%), #607840; }
+.monster-eye { position: absolute; top: 40%; width: 9px; height: 12px; border-radius: 50%; background: #17120d; }.monster-eye.left { left: 30%; }.monster-eye.right { right: 30%; }
+.monster-eye::after { position: absolute; top: 2px; left: 2px; width: 3px; height: 3px; content: ""; border-radius: 50%; background: #fff4cf; }
+.monster-mouth { position: absolute; top: 57%; left: 50%; width: 22px; height: 14px; border: 4px solid #3b2114; border-top: 0; border-radius: 0 0 50% 50%; transform: translateX(-50%); }
+.monster-foot { position: absolute; bottom: -13px; width: 27px; height: 15px; border: 4px solid #5a3519; border-radius: 50%; background: inherit; }.monster-foot.left { left: 15%; }.monster-foot.right { right: 15%; }
+.food-monster.is-active { animation: monster-bob .48s ease-in-out infinite alternate; }
+.battle-retry-notice { position: absolute; top: 84px; left: 24px; z-index: 7; display: grid; gap: 3px; max-width: 320px; padding: 10px 13px; color: #fff4dc; border: 1px solid rgba(255,221,153,.42); background: rgba(108,54,32,.9); box-shadow: 0 6px 18px rgba(45,27,16,.25); }
+.battle-retry-notice strong { font-size: 12px; }
+.battle-retry-notice span { font-size: 10px; }
+.battle-loot { position: absolute; z-index: 6; top: 118px; right: 18px; width: 230px; max-height: 445px; overflow: auto; color: #4a3524; border: 1px solid #d3b986; background: #f4e6c8; box-shadow: 0 9px 0 rgba(72,43,24,.24); }
+.battle-loot summary { position: sticky; top: 0; z-index: 2; display: grid; gap: 2px; padding: 17px 18px 13px; cursor: pointer; background: #f4e6c8; list-style: none; }
+.battle-loot summary::-webkit-details-marker { display: none; }.battle-loot summary::after { position: absolute; top: 20px; right: 19px; width: 8px; height: 8px; content: ""; border: solid #4a3524; border-width: 0 2px 2px 0; transform: rotate(-135deg); }.battle-loot:not([open]) summary::after { top: 17px; transform: rotate(45deg); }
+.battle-loot summary span { font-size: 18px; font-weight: 950; }.battle-loot summary small { color: #876f58; font-size: 9px; }
+.battle-loot-list { position: relative; z-index: 1; margin: 0; padding: 0 15px 15px; list-style: none; }
+.battle-loot-list li { display: grid; grid-template-columns: 34px minmax(0,1fr) auto; gap: 8px; align-items: center; min-height: 58px; border-top: 1px dashed #b6a181; }
+.battle-loot-list li small { grid-column: 2 / -1; margin-top: -8px; color: #9a4d35; font-size: 8px; }.battle-loot-list .loot-empty { display: block; min-height: 0; padding: 16px 2px; color: #85715b; font-size: 10px; line-height: 1.5; }
+.loot-mark { display: grid; place-items: center; width: 30px; height: 30px; border: 2px solid #6c492a; border-radius: 50%; color: #fff5d9; background: #9a5b31; font-size: 10px; font-weight: 950; }.loot-mark.rice { color: #614016; background: #e8bc50; }
+.battle-loot-list strong { font-size: 11px; }.battle-loot-list b { font-size: 11px; }
+.battle-player-hud { position: absolute; z-index: 7; right: 270px; bottom: 34px; left: 20%; display: grid; grid-template-columns: 120px 1fr; min-height: 80px; color: #f8ecd8; border: 1px solid #2f2118; background: rgba(49,34,25,.95); box-shadow: 0 9px 0 rgba(30,17,10,.3); }
+.level-ticket { position: relative; z-index: 1; display: flex; align-items: baseline; justify-content: center; gap: 8px; margin: -1px 0 -1px -1px; padding: 18px 10px; color: #352217; background: #f3e3bd; clip-path: polygon(0 0, 93% 0, 100% 15%, 94% 30%, 100% 45%, 94% 60%, 100% 75%, 94% 90%, 100% 100%, 0 100%); }
+.level-ticket small { font-size: 11px; font-weight: 950; }.level-ticket strong { font-size: 34px; }
+.hud-bars { position: relative; z-index: 1; display: grid; gap: 9px; padding: 16px 20px; }
+.hud-row { display: grid; grid-template-columns: 34px minmax(100px, 1fr) minmax(120px, auto); gap: 10px; align-items: center; font-size: 11px; }.hud-row b { color: #dac4aa; }.hud-row span { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.hud-track { height: 14px; overflow: hidden; border: 2px solid #21160f; background: #17100c; }.hud-track i { display: block; height: 100%; transition: width .18s linear; }.hud-track.hp i { background: linear-gradient(90deg, #b53c2d, #ea6651); }.hud-track.exp i { background: linear-gradient(90deg, #188bb0, #31bce5); }
+@keyframes hero-ready { to { transform: translateY(-5px) rotate(-1deg); } }
+@keyframes monster-bob { to { transform: translateY(-7px) rotate(2deg); } }
+@media (max-width: 1080px) {
+  .battle-stage-toolbar { width: min(560px, calc(100% - 290px)); left: 42%; }
+  .battle-floor { right: 215px; left: 215px; grid-template-columns: 130px minmax(300px, 1fr); gap: 22px; }
+  .battle-loot { width: 205px; }
+  .battle-player-hud { right: 230px; left: 8%; }
+}
+@media (max-width: 820px) {
+  .battle-stage-shell, .battle-kitchen { min-height: 920px; }
+  .battle-stage-toolbar { top: 18px; left: 50%; width: calc(100% - 32px); }
+  .battle-connection { top: 230px; }
+  .stage-latest-failure { top: 230px; right: 16px; }
+  .battle-retry-notice { top: 272px; left: 14px; }
+  .battle-floor { top: 290px; right: 20px; bottom: auto; left: 20px; grid-template-columns: 120px 1fr; min-height: 270px; }
+  .battle-loot { top: auto; right: 16px; bottom: 18px; width: calc(42% - 18px); max-height: 250px; }
+  .battle-player-hud { right: calc(42% + 10px); bottom: 18px; left: 16px; grid-template-columns: 92px 1fr; }
+  .hud-row { grid-template-columns: 30px 1fr; }.hud-row span { grid-column: 2; }
+}
+@media (max-width: 590px) {
+  .battle-stage-shell, .battle-kitchen { min-height: 1010px; }
+  .stage-picker { grid-template-columns: 1fr; gap: 4px; }
+  .battle-connection { top: 250px; left: 14px; }
+  .stage-latest-failure { top: 250px; right: 14px; left: 14px; width: auto; }
+  .battle-connection { top: 330px; }
+  .battle-retry-notice { top: 292px; }
+  .battle-floor { top: 330px; grid-template-columns: 84px 1fr; gap: 12px; }
+  .chopstick-hero { transform: scale(.78); }.chopstick-hero.is-fighting { animation: none; }
+  .monster-party { gap: 7px; }.food-monster { border-width: 3px; }.monster-eye { width: 6px; height: 8px; }.monster-mouth { width: 14px; height: 9px; border-width: 3px; }
+  .battle-player-hud { right: 14px; bottom: 250px; left: 14px; grid-template-columns: 80px 1fr; }.level-ticket strong { font-size: 26px; }
+  .battle-loot { right: 14px; bottom: 14px; left: 14px; width: auto; }
+}
+@media (prefers-reduced-motion: reduce) { .chopstick-hero.is-fighting, .food-monster.is-active { animation: none; } }
+
+/* Chapter 1 — Sungsimdang bakery spaces and supplied production sprites. */
+.battle-kitchen {
+  isolation: isolate;
+  background-color: #6b4028;
+  background-image: linear-gradient(180deg, rgba(255, 239, 190, .08), rgba(82, 39, 18, .05)), var(--battle-background);
+  background-position: center;
+  background-size: cover;
+}
+.kitchen-backdrop { z-index: 0; background: linear-gradient(180deg, rgba(255, 239, 191, .12), transparent 44%, rgba(118, 62, 24, .04)); }
+.kitchen-backdrop::before, .kitchen-backdrop::after { display: none; content: none; }
+/*
+ * 좌우 여백을 같게 둬야 젓가락과 몬스터가 화면 한가운데에서 붙는다. 오른쪽만
+ * 획득 패널 자리를 비워 두었던 탓에 둘이 그 절반만큼 왼쪽으로 쏠려 있었다.
+ */
+.battle-floor { --encounter-step: 95px; right: 260px; bottom: 160px; left: 260px; grid-template-columns: repeat(2, minmax(0, 360px)); justify-content: center; gap: 0; min-height: 400px; }
+.hero-position, .monster-party { will-change: transform; }
+.has-boss-warning .battle-floor { opacity: .12; transition: opacity .16s ease-out; }
+.hero-position { position: relative; z-index: 4; }
+.monster-party { position: relative; z-index: 3; }
+.persistent-battle-field-anchor { position: absolute; inset: 0; pointer-events: none; }
+.persistent-battle-field { position: absolute; z-index: 2; right: 0; bottom: var(--battle-field-bottom, 64px); left: 0; height: 1px; pointer-events: none; }
+.persistent-battle-field .skill-vfx-dot-target { top: auto; right: auto; bottom: 0; left: calc(50% + 35px); width: var(--battle-field-size, 200px); aspect-ratio: 1; transform: translate(-50%, 80%); transform-origin: center; }
+.battle-floor.is-engaged .hero-position, .battle-floor.is-approaching .hero-position { transform: translateX(var(--encounter-step)); }
+.battle-floor.is-engaged .monster-party, .battle-floor.is-approaching .monster-party { transform: translateX(calc(-1 * var(--encounter-step))); }
+.battle-floor.is-approaching .monster-party { animation: monster-approach .65s ease-in-out both; }
+.battle-floor.is-stage-opening .hero-position { animation: hero-stage-entry .65s ease-out both; }
+.master-hero, .battle-monster, .hero-position > .dungeon-current-character { position: relative; display: grid; place-items: end center; width: min(28vw, 300px); height: 360px; }
+/* 치장 레이어의 잉크는 원본 519x376 안에서 x 30.8~52.2%, 위 14.6%에 있다. 칸 아래로
+   맞춰 그리면 머리끝이 칸 바닥에서 51.4% 높이, 가로 중심이 41.4%에 온다. 이펙트를 그 자리에
+   붙인다. 예전에는 칸 맨 위(top 1%)에 붙어 캐릭터와 동떨어져 떠 있었다. */
+.hero-position > .dungeon-current-character { --hero-crown-x: 41.4%; }
+.hero-position > .dungeon-current-character > .hero-crown-vfx,
+.dungeon-player-fighter > .dungeon-current-character > .hero-crown-vfx { top: auto; bottom: 51.4%; left: var(--hero-crown-x, 41.4%); width: 56%; aspect-ratio: 2 / 1; transform: translateX(-50%); }
+/* 치장을 입은 한짝도 기본 젓가락과 같은 칸을 그대로 쓴다. */
+.hero-position > .dungeon-current-character > .cosmetic-hero-layers,
+.hero-position > .dungeon-current-character > .cosmetic-hero-canvas,
+.hero-position > .dungeon-current-character > img { width: 100%; height: 100%; aspect-ratio: auto; object-fit: contain; object-position: center bottom; filter: drop-shadow(0 15px 8px rgba(25, 11, 4, .42)); }
+.master-hero { --hero-crown-x: 39.3%; }
+.master-hero img { position: relative; z-index: 2; width: 100%; height: 100%; object-fit: contain; object-position: center bottom; user-select: none; filter: drop-shadow(0 15px 8px rgba(25, 11, 4, .42)); }
+.master-hero .skill-vfx { z-index: 3; }
+.master-hero > .hero-crown-vfx { position: absolute; z-index: 3; bottom: 52%; left: var(--hero-crown-x); width: 56%; aspect-ratio: 2 / 1; pointer-events: none; transform: translateX(-50%); }
+/* 머리 위 이펙트는 치장을 입었든 안 입었든 같은 크기, 같은 자리다. 치장 칸에만
+   이 규칙이 빠져 있어서 이펙트가 작아진 채 옆으로 벌어져 있었다. */
+.master-hero > .hero-crown-vfx .skill-vfx-haste-caster,
+.master-hero > .hero-crown-vfx .skill-vfx-basic-amp-caster,
+.dungeon-current-character > .hero-crown-vfx .skill-vfx-haste-caster,
+.dungeon-current-character > .hero-crown-vfx .skill-vfx-basic-amp-caster { top: auto; right: auto; bottom: 0; width: 50%; }
+.master-hero > .hero-crown-vfx .skill-vfx-haste-caster,
+.dungeon-current-character > .hero-crown-vfx .skill-vfx-haste-caster { left: 0; }
+.master-hero > .hero-crown-vfx .skill-vfx-basic-amp-caster,
+.dungeon-current-character > .hero-crown-vfx .skill-vfx-basic-amp-caster { bottom: 6%; left: 47%; width: 56%; }
+.dungeon-current-character .skill-vfx { z-index: 3; }
+.hero-shadow, .monster-shadow { position: absolute; z-index: 1; bottom: 10px; left: 50%; width: 52%; height: 24px; border-radius: 50%; background: rgba(27, 12, 4, .38); filter: blur(5px); transform: translateX(-50%); }
+.master-hero .hero-shadow { bottom: 18px; }
+.battle-monster .monster-shadow { bottom: var(--monster-shadow-bottom); left: var(--monster-vfx-center-x); width: var(--monster-shadow-width); }
+.monster-party { display: grid; place-items: end center; }
+.battle-monster { width: min(27vw, 310px); transform: translateY(-64px); }
+/* 보스도 잡몹과 같은 바닥선에 선다. 예전에는 -189px 만큼 더 띄워 두어서
+   젓가락 발끝보다 123px 위에 떠 있었다. */
+.battle-monster.is-boss { transform: translateY(-64px); }
+/*
+ * 칸 크기는 몬스터마다 다르다. 앵커가 그 크기를 그대로 쓰면 칸이 큰 몬스터가
+ * `.battle-monster` 의 고정 높이를 넘겨 아래로 삐져나가고, 발끝이 바닥선에서
+ * 내려앉는다. 앵커는 상자를 채우게 두고 스프라이트만 바닥 기준으로 띄운다.
+ */
+.monster-visual-anchor { position: relative; width: 100%; height: 100%; }
+.monster-sprite { position: absolute; bottom: 0; left: 50%; z-index: 2; margin-left: calc(var(--monster-cell) / -2); width: var(--monster-cell); height: var(--monster-cell); background-image: var(--monster-sheet); background-repeat: no-repeat; background-size: var(--monster-sheet-width) var(--monster-sheet-height); background-position: 0 0; filter: drop-shadow(0 13px 7px rgba(25, 11, 4, .45)); image-rendering: pixelated; transform: scale(var(--monster-scale)) translateY(var(--monster-ground)); transform-origin: center bottom; }
+.battle-monster.motion-idle .monster-sprite { animation: monster-idle .72s steps(4) infinite; }
+.battle-monster.motion-move .monster-sprite { background-position-y: calc(var(--monster-cell) * -1); animation: monster-move .44s steps(4) infinite, monster-arrive .42s ease-out both; }
+.battle-monster.motion-attack .monster-sprite { background-position-y: calc(var(--monster-cell) * -2); animation: monster-attack .4s steps(4) 1, monster-lunge .4s ease-in-out 1; }
+.battle-monster.motion-hit .monster-sprite { background-position-y: calc(var(--monster-cell) * -3); animation: monster-hit .32s steps(4) 1; }
+.battle-monster.motion-death .monster-sprite { background-position: 0 calc(var(--monster-cell) * -4); animation: monster-death .6s steps(4) 1 both; }
+.battle-monster .skill-vfx { z-index: 5; }
+.battle-monster .skill-vfx-heavy-target,
+.battle-monster .skill-vfx-dot-target,
+.battle-monster .skill-vfx-basic-target { top: auto; right: auto; bottom: var(--monster-vfx-center-bottom); left: var(--monster-vfx-center-x); aspect-ratio: 1; transform: translate(-50%, 50%); }
+.battle-monster .skill-vfx-heavy-target { width: var(--monster-heavy-vfx-size); }
+.battle-monster .skill-vfx-dot-target { bottom: var(--monster-shadow-bottom); width: var(--monster-dot-vfx-size); transform: translate(-50%, 50%) scaleY(.58); transform-origin: center; }
+.battle-monster .skill-vfx-basic-target { width: var(--monster-basic-vfx-size); overflow: visible; }
+.battle-monster .skill-vfx-basic-target::before { position: absolute; top: 46%; left: 4%; width: 92%; height: 9%; border-radius: 100% 10% 100% 8%; background: linear-gradient(90deg, transparent 0, #f6b84e 14%, #fffdf0 32% 78%, transparent 100%); box-shadow: 0 0 7px #fff, 0 0 16px rgba(246,196,93,.82); content: ""; }
+/* 한쪽 끝을 축으로 돌리면 반대쪽 끝이 몬스터 머리 위로 치솟는다. 가운데를 축으로
+   돌려 위아래로 고르게 뻗고, 몬스터 한가운데를 지나게 한다. */
+.battle-monster .skill-vfx-basic-target.skill-vfx-up-right::before { transform-origin: center; animation: basic-strike-up-right 240ms cubic-bezier(.12,.8,.16,1) both; }
+.battle-monster .skill-vfx-basic-target.skill-vfx-up-left::before { transform-origin: center; animation: basic-strike-up-left 240ms cubic-bezier(.12,.8,.16,1) both; }
+.actor-health-bar { position: absolute; z-index: 7; top: auto; bottom: var(--monster-health-bottom); left: var(--monster-vfx-center-x); width: 145px; color: #fff5dc; font-size: 10px; text-shadow: 0 1px 2px #1f0e07; transform: translateX(-50%); }
+.actor-health-bar span { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 4px; }
+.actor-health-bar span b { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.actor-health-bar span small { flex: none; font-size: 9px; font-variant-numeric: tabular-nums; }
+.actor-health-bar > i { display: block; height: 10px; overflow: hidden; border: 2px solid rgba(29, 14, 7, .9); border-radius: 999px; background: rgba(24, 12, 7, .82); box-shadow: 0 2px 4px rgba(19, 8, 3, .32); }
+.actor-health-bar > i > em { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #a92f28, #ef6550); transition: width .16s linear; }
+.persistent-damage-stack { position: absolute; z-index: 9; bottom: var(--battle-damage-bottom); left: calc(50% + var(--battle-damage-x, 0px)); width: 1px; height: 1px; pointer-events: none; }
+.monster-damage { position: absolute; bottom: 0; left: 0; display: grid; justify-items: center; color: #fff3ce; font-size: 30px; font-weight: 1000; line-height: .95; text-shadow: 0 3px 0 #442012, 0 0 12px rgba(255, 244, 210, .58); white-space: nowrap; translate: -50% 0; transform-origin: center; animation: damage-stamp .9s ease-out both; }
+.monster-damage span { display: block; }
+.monster-damage.damage-lane-dot { left: 80px; }
+.monster-damage.damage-basic { color: #fff4d2; }
+.monster-damage.damage-basic-critical { color: #ffe35c; font-size: 36px; text-shadow: 0 3px 0 #8a4b0d, 0 0 18px #ffc83d; }
+.monster-damage.damage-heavy { color: #ff9b3d; font-size: 34px; text-shadow: 0 3px 0 #7a2d0d, 0 0 18px rgba(255, 95, 21, .82); }
+.monster-damage.damage-heavy span { padding-inline: 9px; border-right: 3px solid #ffd07a; border-left: 3px solid #ffd07a; transform: skewX(-7deg); }
+.monster-damage.damage-heavy-critical { color: #ffd84a; font-size: 39px; text-shadow: 2px 3px 0 #b43c0b, -2px 0 0 #fff0a2, 0 0 22px #ff6a18; }
+.monster-damage.damage-dot { color: #d99cff; font-size: 25px; text-shadow: 0 2px 0 #51246b, 0 0 14px #9d50d4; }
+.master-hero.motion-strike1[data-frame="1"] img { transform: translateX(-6.5%); }
+.master-hero.motion-strike1[data-frame="2"] img { transform: translateX(-7.7%); }
+.master-hero.motion-strike1[data-frame="3"] img { transform: translateX(-7.5%); }
+.master-hero.motion-strike1[data-frame="4"] img { transform: translateX(-8.9%); }
+.master-hero.motion-thrust1[data-frame="1"] img { transform: translateX(10.9%); }
+.master-hero.motion-thrust1[data-frame="2"] img { transform: translateX(8.2%); }
+.master-hero.motion-thrust1[data-frame="3"] img { transform: translateX(7.2%); }
+.master-hero.motion-thrust1[data-frame="4"] img { transform: translateX(4.4%); }
+.master-hero.motion-death1 img { filter: grayscale(.35) drop-shadow(0 15px 8px rgba(25, 11, 4, .42)); }
+.boss-arrival-warning { position: absolute; inset: 0; z-index: 24; display: grid; place-items: center; overflow: hidden; pointer-events: none; animation: boss-warning-scene 2.8s ease-in-out both; }
+.boss-arrival-warning.is-final { animation-duration: 4.2s; }
+.boss-warning-vignette { position: absolute; inset: 0; background: radial-gradient(circle at 50% 48%, rgba(108, 9, 16, .18) 0 20%, rgba(18, 5, 6, .72) 62%, rgba(5, 2, 2, .9) 100%), repeating-linear-gradient(115deg, transparent 0 50px, rgba(255, 50, 37, .08) 52px 55px); backdrop-filter: blur(2px) saturate(.7); }
+.boss-arrival-warning.is-final .boss-warning-vignette { background: radial-gradient(circle at 50% 48%, rgba(188, 33, 16, .2) 0 18%, rgba(20, 4, 4, .78) 64%, rgba(2, 1, 1, .94) 100%), repeating-linear-gradient(112deg, transparent 0 38px, rgba(255, 188, 45, .08) 40px 43px); backdrop-filter: blur(3px) saturate(.58); }
+.boss-warning-content { position: relative; display: grid; justify-items: center; width: min(900px, 86vw); max-height: calc(100% - 24px); transform-origin: center; animation: boss-warning-content 2.8s cubic-bezier(.18,.82,.22,1) both; }
+.is-final .boss-warning-content { animation-duration: 4.2s; }
+.boss-warning-kicker { z-index: 3; margin: 0 0 10px; color: #ffdf77; font-family: var(--hanjjak-font-ui); font-size: clamp(30px, 4.1vw, 64px); font-weight: 1000; letter-spacing: .16em; line-height: 1; text-shadow: 0 4px 0 #61140f, 0 0 22px rgba(255, 72, 35, .92); }
+.is-final .boss-warning-kicker { margin-bottom: 14px; color: #fff1a8; font-size: clamp(38px, 5vw, 78px); text-shadow: 0 5px 0 #6d160d, 0 0 15px #ff3b18, 0 0 36px #ffb21c; }
+.boss-warning-portrait { position: relative; width: clamp(220px, min(29vw, 48vh), 390px); aspect-ratio: 1; }
+.is-final .boss-warning-portrait { width: clamp(250px, min(32vw, 52vh), 430px); }
+.boss-warning-aura { position: absolute; inset: 0; z-index: 2; width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 0 18px rgba(255, 48, 24, .78)); animation: boss-warning-aura 1.1s ease-out both; }
+.is-final .boss-warning-aura { filter: drop-shadow(0 0 24px rgba(255, 60, 20, .92)); }
+.boss-warning-crop { position: absolute; inset: 20%; z-index: 1; overflow: hidden; border-radius: 50%; }
+.is-final .boss-warning-crop { inset: 18%; }
+.boss-warning-sprite { position: absolute; top: var(--boss-portrait-top); left: var(--boss-portrait-left); width: var(--boss-portrait-size); height: var(--boss-portrait-size); background-image: var(--boss-sheet); background-repeat: no-repeat; background-position: var(--boss-portrait-frame-x, 0%) 0; background-size: 400% 500%; filter: drop-shadow(0 9px 7px rgba(0,0,0,.68)); image-rendering: pixelated; }
+.boss-warning-nameplate { position: relative; z-index: 4; display: grid; place-items: center; width: min(650px, 80vw); min-height: clamp(120px, 19vh, 170px); margin-top: clamp(-70px, -8vh, -48px); color: #fff5df; text-align: center; }
+.boss-warning-nameplate > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: fill; filter: drop-shadow(0 7px 0 rgba(32, 4, 6, .58)); }
+.boss-warning-nameplate strong { position: absolute; top: calc(50% + 8px); left: 50%; z-index: 1; font-family: var(--hanjjak-font-ui); font-size: clamp(34px, 4vw, 56px); line-height: 1; text-shadow: 0 3px 0 #53141a; white-space: nowrap; transform: translate(-50%, -50%); }
+.is-final .boss-warning-nameplate { width: min(690px, 82vw); min-height: clamp(128px, 20vh, 180px); margin-top: clamp(-78px, -9vh, -54px); color: #fff3b0; }
+.is-final .boss-warning-nameplate > img { filter: sepia(.18) saturate(1.3) drop-shadow(0 0 10px #f6a91b) drop-shadow(0 8px 0 rgba(32, 4, 6, .72)); }
+.is-final .boss-warning-nameplate strong { font-size: clamp(38px, 4.6vw, 62px); text-shadow: 0 4px 0 #65110c, 0 0 15px #ffad1f; }
+.battle-stage-toolbar { background: rgba(246, 233, 203, .94); backdrop-filter: blur(8px); }
+.battle-loot { background: rgba(244, 230, 200, .93); backdrop-filter: blur(8px); }
+.battle-loot summary { background: rgba(244, 230, 200, .95); }
+.battle-failure-analysis { position: absolute; z-index: 8; top: 112px; left: 18px; width: 260px; padding: 15px 16px; color: #4b2f23; border: 1px solid #d4ae72; background: rgba(255, 239, 207, .96); box-shadow: 0 8px 0 rgba(71, 39, 22, .3); backdrop-filter: blur(8px); }
+.battle-failure-analysis header { display: grid; gap: 3px; padding-bottom: 10px; border-bottom: 1px dashed #b88f61; }
+.battle-failure-analysis header span { color: #9a422e; font-size: 9px; font-weight: 950; letter-spacing: .1em; }
+.battle-failure-analysis header strong { font-size: 16px; }
+.battle-failure-analysis p { margin: 10px 0; font-size: 11px; line-height: 1.45; }
+.battle-failure-analysis dl { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; margin: 0 0 10px; }
+.battle-failure-analysis dl div { padding: 7px 5px; background: rgba(112, 70, 36, .09); text-align: center; }
+.battle-failure-analysis dt { color: #876a52; font-size: 8px; }
+.battle-failure-analysis dd { margin: 2px 0 0; font-size: 11px; font-weight: 950; font-variant-numeric: tabular-nums; }
+.battle-failure-analysis > small { display: block; color: #6d503b; font-size: 9px; line-height: 1.45; }
+@keyframes monster-idle { to { background-position-x: calc(var(--monster-sheet-width) * -1); } }
+@keyframes monster-move { to { background-position-x: calc(var(--monster-sheet-width) * -1); } }
+@keyframes monster-attack { from { background-position-x: 0; } to { background-position-x: calc(var(--monster-sheet-width) * -1); } }
+@keyframes monster-hit { from { background-position-x: 0; } to { background-position-x: calc(var(--monster-sheet-width) * -1); } }
+@keyframes monster-death { from { background-position-x: 0; opacity: 1; } to { background-position-x: calc(var(--monster-sheet-width) * -1); opacity: .25; } }
+@keyframes monster-arrive { from { transform: translateX(90px) scale(var(--monster-scale)) translateY(var(--monster-ground)); opacity: .25; } }
+@keyframes hero-stage-entry { from { transform: translateX(calc(-100% - 80px)); opacity: .2; } to { transform: translateX(var(--encounter-step)); opacity: 1; } }
+@keyframes monster-lunge { 45% { transform: translateX(-45px) scale(var(--monster-scale)) translateY(var(--monster-ground)); } }
+@keyframes damage-stamp { from { transform: scale(.82); opacity: 0; } 12%, 74% { transform: scale(1); opacity: 1; } to { transform: scale(1); opacity: 0; } }
+@keyframes basic-strike-up-right { from { transform: rotate(-34deg) scaleX(.04); opacity: 0; } 22% { opacity: 1; } 62% { transform: rotate(-34deg) scaleX(1); opacity: 1; } to { transform: rotate(-34deg) scaleX(1.04); opacity: 0; } }
+@keyframes basic-strike-up-left { from { transform: rotate(34deg) scaleX(.04); opacity: 0; } 22% { opacity: 1; } 62% { transform: rotate(34deg) scaleX(1); opacity: 1; } to { transform: rotate(34deg) scaleX(1.04); opacity: 0; } }
+@keyframes boss-warning-scene { 0% { opacity: 0; } 9%, 82% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes boss-warning-content { 0% { transform: scale(.74); opacity: 0; } 12% { transform: scale(1.04); opacity: 1; } 20%, 85% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.03); opacity: 0; } }
+@keyframes boss-warning-aura { from { transform: rotate(-12deg) scale(.72); opacity: 0; } 70% { opacity: 1; } to { transform: rotate(0) scale(1); opacity: 1; } }
+@media (min-width: 821px) and (max-width: 1080px) {
+  .battle-floor { --encounter-step: 81px; grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 820px) {
+  .battle-floor { --encounter-step: 36px; grid-template-columns: 1fr 1fr; top: 242px; right: 15px; left: 15px; min-height: 320px; }
+  .master-hero, .battle-monster { width: min(40vw, 260px); height: 310px; }
+  .battle-failure-analysis { top: 220px; }
+}
+@media (max-width: 590px) {
+  .battle-floor { --encounter-step: 26px; top: 282px; grid-template-columns: 1fr 1fr; }
+  .master-hero, .battle-monster { width: 42vw; height: 260px; }
+  .master-hero img { width: 125%; max-width: none; }
+  .actor-health-bar { width: 118px; }
+  .battle-failure-analysis { top: 260px; right: 14px; left: 14px; width: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .monster-sprite, .master-hero img, .monster-damage, .hero-position, .monster-party, .boss-arrival-warning, .boss-warning-content, .boss-warning-aura, .skill-vfx-basic-target::before { animation: none !important; }
+  .battle-floor.is-approaching .hero-position { transform: translateX(var(--encounter-step)); }
+  .battle-floor.is-approaching .monster-party { transform: translateX(calc(-1 * var(--encounter-step))); }
+}
+
+/* 처음 깬 스테이지의 보상. 한 번뿐인 일이라 화면 한가운데에서 알린다. */
+.cozy-first-clear-backdrop { position: fixed; z-index: 80; inset: 0; display: grid; place-items: center; padding: clamp(12px, 2vw, 28px); background: rgba(32, 20, 11, .5); backdrop-filter: blur(4px) saturate(.9); animation: cozy-first-clear-in .18s ease-out both; }
+.cozy-first-clear-notice {
+  position: relative;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: auto auto auto minmax(0, 1fr) auto auto;
+  width: min(760px, 100%);
+  max-height: 100%;
+  padding: clamp(22px, 3.4vh, 34px) clamp(26px, 2.8vw, 44px) clamp(20px, 3vh, 30px);
+  color: #3f2718;
+  background: var(--paper-sheet) center / 100% 100% no-repeat;
+  filter: drop-shadow(0 10px 0 rgba(73, 50, 35, .28)) drop-shadow(0 20px 28px rgba(29, 17, 9, .38));
+  font-family: var(--hanjjak-font-ui);
+  text-align: center;
+  animation: cozy-first-clear-rise .22s cubic-bezier(.2, .8, .2, 1) both;
+}
+/* 트로피와 제목은 한 줄이다. 상을 받는 자리라는 것이 먼저 읽혀야 한다. */
+.cozy-first-clear-notice h2 { display: flex; align-items: center; justify-content: center; gap: clamp(8px, 1vw, 14px); margin: 0; color: #35210f; font-size: clamp(24px, 2.3vw, 36px); font-weight: 950; letter-spacing: -.03em; }
+.cozy-first-clear-notice h2 img { width: clamp(34px, 3.2vw, 48px); height: clamp(34px, 3.2vw, 48px); object-fit: contain; image-rendering: pixelated; }
+.cozy-first-clear-stage { justify-self: center; margin: clamp(7px, 1.2vh, 12px) 0 0; border-radius: 999px; padding: clamp(3px, .5vh, 6px) clamp(16px, 1.6vw, 24px); color: #fff6e6; background: #d2635c; font-size: clamp(12px, 1.05vw, 16px); font-weight: 900; letter-spacing: .08em; }
+/* 몇 종을 받았는지, 스킬이 열렸는지 — 세기 전에 한눈에 말한다. */
+.cozy-first-clear-summary { display: flex; align-items: center; justify-content: center; gap: clamp(12px, 1.6vw, 24px); margin: clamp(12px, 2vh, 20px) 0 clamp(10px, 1.6vh, 16px); border: 2px solid rgba(168, 130, 88, .34); border-radius: 12px; padding: clamp(7px, 1.1vh, 12px) clamp(12px, 1.4vw, 20px); background: rgba(247, 236, 210, .62); color: #5c4230; font-size: clamp(13px, 1.15vw, 18px); font-weight: 900; }
+.cozy-first-clear-summary span { display: inline-flex; align-items: center; gap: 7px; }
+.cozy-first-clear-summary b { color: #c9473f; font-size: clamp(17px, 1.5vw, 23px); font-weight: 950; }
+.cozy-first-clear-summary img { width: clamp(22px, 2vw, 30px); height: clamp(22px, 2vw, 30px); object-fit: contain; image-rendering: pixelated; }
+.cozy-first-clear-summary > i { width: 2px; height: 1.2em; background: rgba(150, 116, 79, .45); }
+.cozy-first-clear-scroll { min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding-right: 6px; scrollbar-width: thin; scrollbar-color: #c99c70 transparent; }
+/* 보상이 예닐곱 개면 한 줄씩 쌓여 창이 끝없이 길어졌다. 카드로 늘어놓아 가로로 읽는다. */
+.cozy-first-clear-lines { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(7px, .8vw, 11px); margin: 0; padding: 0; list-style: none; text-align: center; }
+.cozy-first-clear-lines li { display: grid; grid-template-rows: auto auto auto; align-content: start; justify-items: center; gap: 4px; min-height: 0; padding: clamp(9px, 1.4vh, 14px) 6px clamp(8px, 1.2vh, 12px); border: 2px solid rgba(168, 130, 88, .42); border-radius: 12px; background: rgba(255, 252, 243, .92); }
+.cozy-first-clear-lines img { width: clamp(38px, 3.4vw, 50px); height: clamp(38px, 3.4vw, 50px); object-fit: contain; image-rendering: pixelated; }
+.cozy-first-clear-lines li > i { width: clamp(38px, 3.4vw, 50px); height: clamp(38px, 3.4vw, 50px); border-radius: 10px; background: rgba(196, 168, 129, .38); }
+/* 이름은 두 줄까지 흘려 둔다. 말줄임표로 자르면 무엇을 받았는지 알 수 없다. */
+.cozy-first-clear-lines strong { color: #4a3120; font-size: clamp(11px, .95vw, 15px); font-weight: 900; line-height: 1.18; word-break: keep-all; }
+.cozy-first-clear-lines b { color: #c9473f; font-size: clamp(15px, 1.3vw, 21px); font-weight: 950; }
+.cozy-first-clear-lines small { color: #7d6350; font-size: clamp(10px, .82vw, 13px); font-weight: 800; }
+.cozy-first-clear-lines li.is-empty { grid-column: 1 / -1; grid-template-rows: auto; }
+.cozy-first-clear-more { display: flex; align-items: center; justify-content: center; gap: 7px; margin: clamp(6px, 1vh, 10px) 0 0; color: #8a6b52; font-size: clamp(11px, .95vw, 15px); font-weight: 900; }
+.cozy-first-clear-foot { display: flex; align-items: center; justify-content: space-between; gap: clamp(12px, 1.6vw, 24px); margin-top: clamp(10px, 1.6vh, 18px); padding-top: clamp(10px, 1.6vh, 18px); border-top: 2px solid rgba(168, 130, 88, .34); text-align: left; }
+.cozy-first-clear-bag { display: flex; align-items: center; gap: clamp(8px, 1vw, 14px); margin: 0; min-width: 0; color: #5c4230; font-size: clamp(13px, 1.15vw, 18px); font-weight: 900; }
+.cozy-first-clear-bag img { width: clamp(34px, 3vw, 46px); height: clamp(34px, 3vw, 46px); flex: none; object-fit: contain; image-rendering: pixelated; }
+.cozy-first-clear-bag b { color: #c9473f; font-size: clamp(17px, 1.5vw, 23px); font-weight: 950; }
+.cozy-first-clear-bag small { display: block; color: #8a6b52; font-size: clamp(10px, .88vw, 14px); font-weight: 800; }
+.cozy-first-clear-actions { display: flex; flex: none; gap: clamp(8px, .9vw, 14px); }
+.cozy-first-clear-cta, .cozy-first-clear-later { min-height: clamp(44px, 5.6vh, 56px); min-width: clamp(104px, 11vw, 146px); border-radius: 14px; padding: 0 clamp(14px, 1.4vw, 22px); font: inherit; font-size: clamp(15px, 1.35vw, 21px); font-weight: 950; }
+.cozy-first-clear-cta { border: 2px solid #b0453d; color: #fff7e6; background: linear-gradient(#ec7a6b, #d95b52); box-shadow: inset 0 2px 0 rgba(255, 244, 226, .34); text-shadow: 0 2px 0 rgba(122, 50, 36, .5); }
+.cozy-first-clear-cta:hover { filter: brightness(1.05); transform: translateY(-1px); }
+.cozy-first-clear-later { border: 2px solid rgba(154, 118, 80, .6); color: #6b4c33; background: rgba(255, 251, 240, .95); }
+.cozy-first-clear-later:hover { background: #fffdf5; }
+.cozy-first-clear-close { position: absolute; top: clamp(14px, 2vh, 22px); right: clamp(16px, 1.8vw, 26px); display: grid; place-items: center; width: clamp(38px, 3.4vw, 50px); height: clamp(38px, 3.4vw, 50px); border: 0; padding: 0; background: transparent; }
+.cozy-first-clear-close img { width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated; }
+.cozy-first-clear-close:hover { filter: brightness(1.08); }
+.cozy-first-clear-unlock { margin: 10px 0 0; color: #2f6f4a; font-size: clamp(13px, 1.05vw, 17px); font-weight: 900; }
+@keyframes cozy-first-clear-in { from { opacity: 0; } }
+@keyframes cozy-first-clear-rise { from { opacity: 0; transform: translateY(12px) scale(.97); } }
+@media (prefers-reduced-motion: reduce) { .cozy-first-clear-backdrop, .cozy-first-clear-notice { animation: none; } }
+
+/* 오른쪽 아래에 붙는 스킬 재사용 표시. 아래 성장 메뉴 위로 올라오되 전투를 가리지 않는다. */
+.battle-skill-cooldowns {
+  position: absolute;
+  z-index: 14;
+  right: clamp(12px, 1.4vw, 24px);
+  bottom: clamp(96px, 11vh, 132px);
+  display: flex;
+  gap: clamp(5px, .5vw, 9px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  pointer-events: none;
+}
+.battle-skill-cooldowns li { position: relative; display: grid; place-items: center; width: clamp(38px, 3.1vw, 52px); aspect-ratio: 1; overflow: hidden; border: 2px solid rgba(70, 43, 24, .75); border-radius: 11px; background: rgba(32, 19, 10, .45); box-shadow: 0 3px 0 rgba(24, 12, 4, .35); }
+/* 그림과 숫자는 같은 칸에 겹친다. 숫자에만 자리를 주면 그림이 다음 줄로 밀려 잘린다. */
+.battle-skill-cooldowns li > .skill-artwork,
+.battle-skill-cooldowns li > b { grid-area: 1 / 1; }
+/* compact 기본값이 이 칸보다 커서 넘쳤다. 칸을 기준으로 다시 재운다. */
+.battle-skill-cooldowns li .skill-artwork,
+.battle-skill-cooldowns li .skill-artwork.compact { width: 84%; max-width: 84%; height: 84%; max-height: 84%; object-fit: contain; }
+/* 재사용 중에는 회색으로 눕히고, 남은 만큼 아래에서 덮어 둔다. */
+.battle-skill-cooldowns li.is-cooling .skill-artwork { filter: grayscale(.75) brightness(.9); }
+.battle-skill-cooldowns li > i { position: absolute; right: 0; bottom: 0; left: 0; height: calc((1 - var(--skill-cooldown-progress, 1)) * 100%); background: rgba(18, 9, 3, .3); transition: height .12s linear; pointer-events: none; }
+.battle-skill-cooldowns li.is-ready > i { display: none; }
+.battle-skill-cooldowns li > b { position: relative; z-index: 2; grid-area: 1 / 1; color: #fff4de; font-family: var(--hanjjak-font-ui); font-size: clamp(16px, 1.3vw, 22px); font-weight: 950; text-shadow: 0 2px 0 rgba(20, 9, 2, .8), 0 0 6px rgba(0, 0, 0, .6); }
+.battle-skill-cooldowns li.is-ready { border-color: rgba(255, 214, 122, .9); box-shadow: 0 3px 0 rgba(24, 12, 4, .35), 0 0 10px rgba(255, 199, 92, .45); }
+.battle-skill-ready { position: absolute; inset: 0; }

@@ -1,0 +1,8 @@
+{
+  "name": "@hanjjak/content-validator",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "tsc", "typecheck": "tsc --noEmit", "test": "vitest run", "validate": "tsx src/validate.ts", "generate": "tsx src/generate.ts" },
+  "dependencies": { "ajv": "8.17.1" },
+  "devDependencies": { "@types/node": "24.10.0", "tsx": "4.20.6", "typescript": "7.0.2", "vitest": "4.1.11" }
+}

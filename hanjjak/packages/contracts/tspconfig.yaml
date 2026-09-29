@@ -1,0 +1,13 @@
+emit:
+  - "@typespec/openapi3"
+  - "@typespec/json-schema"
+options:
+  "@typespec/openapi3":
+    emitter-output-dir: "{project-root}/generated/openapi"
+    output-file: "openapi.yaml"
+    omit-unreachable-types: true
+  "@typespec/json-schema":
+    emitter-output-dir: "{project-root}/../../packages/game-content/schema"
+    file-type: "json"
+    int64-strategy: "number"
+    emitAllRefs: true

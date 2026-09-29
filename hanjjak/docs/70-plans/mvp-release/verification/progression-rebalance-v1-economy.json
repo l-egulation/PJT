@@ -1,0 +1,12 @@
+{
+  "accountCount": 100,
+  "market": {"volume": 7286467, "grossAmount": 6892453350, "sellerFee": 689245335, "unmatchedQuantity": 2892596, "systemSellerQuantity": 0},
+  "rice": {"supply": 6001902370, "consumption": 787862265},
+  "chapterOneM1PerFullCycle": 50,
+  "stageTenRepeatItems": 0,
+  "cohorts": [
+    {"kind": "MARKET_USE", "accountCount": 25, "filledOrders": 2385024, "requestedOrders": 3396405, "marketUseAccepted": true, "p50ChapterFourMinutes": 2322.4, "p90ChapterFourMinutes": 2428.4}
+,    {"kind": "NO_MARKET", "accountCount": 25, "filledOrders": 0, "requestedOrders": 0, "marketUseAccepted": false, "p50ChapterFourMinutes": 2599.3, "p90ChapterFourMinutes": 2661.5}
+,    {"kind": "MARKET_LIQUIDITY_SHORTAGE", "accountCount": 50, "filledOrders": 4901443, "requestedOrders": 6782658, "marketUseAccepted": false, "p50ChapterFourMinutes": 2333.2, "p90ChapterFourMinutes": 2467.2}
+  ]
+}

@@ -1,0 +1,307 @@
+/* 보석 창 v4 — 승인된 목업(프리셋 / 직접 합성 / 일괄 합성) 그대로 옮긴 화면.
+   왼쪽은 작업 칸, 오른쪽은 보유 보석 또는 예상 결과. 머리글에 탭을 가운데로 둔다. */
+
+.gem-management-dialog { width: var(--paper-width); height: var(--paper-min-height); max-width: none; max-height: none; padding: 0; border: 0; overflow: hidden; color: transparent; background: transparent; }
+.gem-management-dialog::backdrop { background: rgba(47,28,15,.28); backdrop-filter: blur(3px) saturate(.92); }
+.gem-management-screen { container: gemwin / size; display: grid; width: 100%; height: 100%; min-height: 0; padding: 0; border: 0; place-items: stretch; overflow: hidden; background: transparent; }
+.gem-management-window { position: relative; display: grid; grid-template-rows: auto minmax(0,1fr); width: 100%; height: 100%; min-height: 0; padding: var(--paper-pad-top) var(--paper-pad-inline) var(--paper-pad-bottom); overflow: hidden; color: var(--paper-ink); background: var(--paper-sheet) center / 100% 100% no-repeat; filter: drop-shadow(0 14px 9px rgba(48,26,12,.34)); }
+
+/* ── 머리글 ─────────────────────────────────────────────── */
+/* 닫기는 언제나 머리글 오른쪽 위 모서리에. 가운데 높이에 매달아 두었더니 보유 수가
+   늘거나 머리글이 두 줄이 될 때 자리를 잃었다. */
+.gem-management-window .paper-close { top: 6px; right: 6px; z-index: 20; transform: none; }
+.gem-management-window .paper-close:hover { transform: scale(1.05); }
+
+.gem-management-window .gems-heading { position: relative; display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); align-items: center; gap: 16px; min-height: 0; padding: var(--paper-heading-pad); border-bottom: var(--paper-rule); }
+.gem-management-window .gems-title-copy { display: flex; align-items: center; gap: var(--paper-title-gap); padding: 0; }
+.gem-management-window .gems-title-copy > .gem-glyph,
+.gem-management-window .gems-title-copy > img { flex: none; width: var(--paper-title-icon); height: var(--paper-title-icon); object-fit: contain; image-rendering: pixelated; }
+.gem-management-window .gems-title-copy h2 { margin: 0; font-size: var(--paper-title-size); font-weight: 950; line-height: .95; letter-spacing: -.04em; text-shadow: 0 2px #fff3d8; }
+/* 탭은 캐릭터·거래소 창과 같은 판때기 그림을 쓴다. 비율은 620x189(≈3.2:1)다. */
+.gem-management-window .gem-management-tabs { display: grid; grid-auto-columns: clamp(116px, 11vw, 152px); grid-auto-flow: column; gap: 10px; padding: 0; border: 0; background: none; box-shadow: none; }
+.gem-management-window .gem-management-tabs button { position: relative; display: grid; place-items: center; aspect-ratio: 3.2; min-height: 0; padding: 0 9%; border: 0; border-radius: 0; color: #4a2f20; background: var(--paper-tab-default) center / 100% 100% no-repeat; font: inherit; font-size: clamp(15px, 1.2vw, 20px); font-weight: 900; }
+/* 캐릭터 창과 같은 모습: 구분선이 판때기 높이의 3/4 지점을 지난다. */
+.gem-management-window .gem-management-tabs button { transform: translateY(32%); }
+.gem-management-window .gem-management-tabs button:hover:not(:disabled) { filter: brightness(1.05); }
+.gem-management-window .gem-management-tabs button.active { color: #fff9e9; background-image: var(--paper-tab-selected); text-shadow: 0 2px 0 rgba(104, 47, 35, .42); }
+.gem-management-window .gem-management-tabs button span { position: absolute; top: -2px; right: -4px; display: grid; min-width: 18px; height: 18px; padding: 0 4px; border-radius: 99px; place-items: center; color: #fff8ec; background: #ee5865; font-size: 9px; }
+.gem-management-window .gem-ticket { display: flex; align-items: center; justify-self: end; gap: 9px; padding: 4px 6px; border: 0; background: none; box-shadow: none; }
+.gem-management-window .gem-ticket small { color: #5b3f2c; font-size: 17px; font-weight: 900; }
+.gem-management-window .gem-ticket img { width: 34px; height: 34px; image-rendering: pixelated; }
+.gem-management-window .gem-ticket strong { color: #3a2418; font-size: 24px; line-height: 1; }
+/* 세어 놓은 자리 바로 옆에서 연다. 인벤토리까지 다녀오지 않아도 되게. */
+.gem-management-window .gem-ticket-open { min-height: 36px; margin-left: 4px; padding: 0 14px; border: 2px solid #a8552f; border-radius: 9px; color: #fff6e2; background: linear-gradient(#f0894c, #d3612f); box-shadow: inset 0 0 0 2px rgba(255,236,200,.32), 0 2px rgba(122,58,26,.28); font-family: var(--hanjjak-font-ui); font-size: 17px; font-weight: 950; }
+.gem-management-window .gem-ticket-open:hover:not(:disabled) { filter: brightness(1.06); }
+.gem-management-window .gem-ticket-open:disabled { filter: grayscale(.5); opacity: .45; }
+.gem-management-window > .domain-result { position: absolute; z-index: 20; bottom: 24px; left: 50%; margin: 0; padding: 9px 16px; border: 2px solid #6b462e; border-radius: 6px; color: #fff8ea; background: rgba(56,35,23,.94); transform: translateX(-50%); }
+.gem-management-window > .domain-message { align-self: center; justify-self: center; }
+
+/* ── 두 칸 짜임새 ────────────────────────────────────────── */
+.gem-management-window .gem-preset-page { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,.82fr); grid-template-rows: minmax(0,1fr); gap: 18px; min-height: 0; padding: 6px 10px 8px; }
+.gem-management-window .gem-paper-panel { min-width: 0; min-height: 0; border: 2px solid rgba(178,142,102,.5); border-radius: 10px; background: rgba(255,252,242,.55); box-shadow: inset 0 0 20px rgba(215,174,118,.1); }
+.gem-management-window .gem-panel-heading { display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 4px 2px 0; }
+.gem-management-window .gem-panel-heading h3 { display: flex; align-items: center; gap: 9px; margin: 0; font-size: 29px; font-weight: 950; letter-spacing: -.03em; }
+.gem-management-window .gem-panel-heading h3::before { flex: none; width: 22px; height: 22px; content: ""; background: url("../character/assets-cozy-pixel/sprout-icon-32.png") center / contain no-repeat; image-rendering: pixelated; }
+.gem-management-window .gem-panel-heading > strong { margin-left: auto; color: #6b4a33; font-size: 23px; }
+.gem-management-window .gem-warning { margin: 0 0 8px; padding: 8px 11px; border-left: 3px solid #b8482b; color: #80230f; background: #f8ded2; font-size: 12px; font-weight: 800; }
+
+/* ── 왼쪽: 프리셋 ───────────────────────────────────────── */
+.gem-management-window .gem-loadout-panel { display: grid; grid-template-rows: auto auto minmax(0,1fr) auto auto; gap: 10px; padding: 14px 16px 13px; }
+.gem-management-window .gem-preset-tabs button { min-height: 0; }
+.gem-management-window .gem-preset-tabs { display: grid; grid-auto-rows: 34px; grid-auto-columns: minmax(96px,1fr); grid-auto-flow: column; grid-template-columns: none; gap: 8px; margin: 0; padding-bottom: 2px; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; scrollbar-color: #c99c70 transparent; }
+.gem-management-window .gem-preset-tab-shell { position: relative; display: grid; min-width: 0; min-height: 0; height: 100%; border: 2px solid #cbb08d; border-radius: 8px; background: rgba(250,242,226,.9); }
+.gem-management-window .gem-preset-tab-shell.active { border-color: #e4606a; color: #d8434c; background: #fff2ef; }
+.gem-management-window .gem-preset-tab-shell > button[role="tab"] { display: grid; width: 100%; height: 100%; padding: 3px 16px 4px 12px; border: 0; border-radius: 6px; place-items: center; color: inherit; background: transparent; font: inherit; font-size: 17px; font-weight: 950; text-align: center; }
+.gem-management-window .gem-preset-tab-shell > input { align-self: center; min-width: 0; margin: 3px 22px 3px 6px; padding: 5px; border: 1px solid #92553b; border-radius: 4px; color: #382317; background: #fffdf5; font: inherit; font-size: 14px; font-weight: 900; }
+.gem-management-window .gem-preset-edit { position: absolute; z-index: 2; top: 1px; right: 3px; display: grid; width: 18px; height: 18px; padding: 0; border: 0; border-radius: 0; place-items: center; color: #c6707a; background: none; font: 900 13px/1 var(--hanjjak-font-ui); }
+.gem-management-window .gem-preset-edit:hover,.gem-management-window .gem-preset-edit:focus-visible { color: #c13f4c; transform: scale(1.12); }
+.gem-management-window .gem-preset-tab-shell.unlock { border-style: dashed; place-items: center; background: rgba(249,240,224,.6); }
+.gem-management-window .gem-preset-plus { display: grid; width: 100%; height: 100%; padding: 0; border: 0; place-items: center; color: #a86649; background: none; }
+.gem-management-window .gem-preset-plus > span { position: relative; display: block; width: 20px; height: 20px; }
+.gem-management-window .gem-preset-plus > span::before,.gem-management-window .gem-preset-plus > span::after { position: absolute; top: 50%; left: 50%; width: 18px; height: 3px; border-radius: 2px; content: ""; background: currentColor; transform: translate(-50%,-50%); }
+.gem-management-window .gem-preset-plus > span::after { transform: translate(-50%,-50%) rotate(90deg); }
+.gem-management-window .gem-unlock-confirm { position: absolute; z-index: 30; top: 50%; left: 50%; width: 248px; padding: 13px; border: 2px solid #805237; border-radius: 7px; color: #422a1b; background: #fff5d8; box-shadow: 0 8px 18px rgba(59,32,17,.3); transform: translate(-50%,-50%); text-align: center; }
+.gem-management-window .gem-unlock-confirm p { margin: 0 0 10px; font-size: 13px; line-height: 1.45; }
+.gem-management-window .gem-unlock-confirm p strong { color: #d34350; font-size: 15px; }
+.gem-management-window .gem-unlock-confirm > div { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.gem-management-window .gem-unlock-confirm button { min-height: 34px; border: 1px solid #916247; border-radius: 5px; color: #493020; background: #fffaf0; font: inherit; font-weight: 900; }
+.gem-management-window .gem-unlock-confirm button:first-child { color: #fff8ea; background: #d64a56; }
+
+.gem-management-window .gem-slot-zone { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); grid-template-rows: repeat(2,minmax(0,1fr)); gap: 12px; min-height: 0; padding: 2px; }
+.gem-management-window .gem-slot-card { position: relative; display: grid; grid-template-rows: minmax(0,1fr) auto auto; align-content: center; justify-items: center; gap: 5px; min-width: 0; min-height: 0; padding: 12px 8px 10px; border: 2px solid #d3bb97; border-radius: 10px; color: #3a2418; background: rgba(253,247,233,.9); box-shadow: inset 0 -3px 0 rgba(160,116,72,.08); overflow: hidden; }
+.gem-management-window .gem-slot-card em { position: absolute; top: 6px; left: 8px; color: #8a6a51; font: 900 15px/1 var(--hanjjak-font-ui); font-style: normal; }
+.gem-management-window .gem-slot-card .gem-glyph { align-self: center; width: 82px; height: 82px; }
+.gem-management-window .gem-slot-card small { overflow: hidden; max-width: 100%; color: #4b3524; font-size: 14px; font-weight: 900; text-overflow: ellipsis; white-space: nowrap; }
+.gem-management-window .gem-slot-card.empty { border-style: dashed; color: #a8916f; background: rgba(248,240,224,.55); }
+.gem-management-window .gem-slot-card.empty .gem-slot-plus { color: #c9ae8c; font: 900 44px/1 var(--hanjjak-font-ui); }
+.gem-management-window .gem-slot-card.next { border-color: #ef7d84; border-style: dashed; background: #fff2f0; }
+.gem-management-window .gem-slot-card.next .gem-slot-plus { color: #ef8b91; }
+.gem-management-window .gem-slot-next { padding: 3px 10px; border: 1px solid #f0949a; border-radius: 99px; color: #d8434c !important; background: #ffe6e4; font-size: 12px; }
+.gem-management-window .gem-slot-card.filled:hover:not(:disabled) { border-color: #ee5865; background: #fff4ef; }
+.gem-management-window .gem-slot-card:disabled { opacity: 1; }
+
+.gem-management-window .gem-context-assignments { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 7px; min-height: 0; }
+.gem-management-window .gem-context-assignments button { display: flex; align-items: center; justify-content: center; min-width: 0; min-height: 36px; padding: 4px 6px; border: 2px solid #cbb08d; border-radius: 999px; color: #4b3524; background: rgba(250,242,226,.9); font: inherit; font-size: clamp(11px,1.05vw,14px); font-weight: 950; white-space: nowrap; }
+.gem-management-window .gem-context-assignments button.active { border-color: #e4606a; color: #d8434c; background: #fff2ef; }
+
+.gem-management-window .gem-applied-effects { display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 12px; min-height: 64px; margin: 0; padding: 9px 12px; border: 2px solid rgba(178,142,102,.5); border-radius: 9px; background: rgba(250,242,226,.7); }
+.gem-management-window .gem-applied-effects > strong { display: flex; flex: none; align-items: center; gap: 7px; font-size: 16px; }
+.gem-management-window .gem-applied-effects > strong::before { flex: none; width: 18px; height: 18px; content: ""; background: url("../character/assets-cozy-pixel/sprout-icon-32.png") center / contain no-repeat; image-rendering: pixelated; }
+.gem-management-window .gem-applied-effects > div { display: flex; align-items: center; gap: 5px 12px; flex-wrap: wrap; min-width: 0; }
+.gem-management-window .gem-applied-effects > div::-webkit-scrollbar { display: none; }
+.gem-management-window .gem-applied-effects span { display: grid; grid-template-columns: auto minmax(0,1fr); align-items: center; gap: 0 7px; min-width: max-content; }
+.gem-management-window .gem-applied-effects span img { grid-row: 1/3; width: 21px; height: 21px; object-fit: contain; image-rendering: pixelated; }
+.gem-management-window .gem-applied-effects small { color: #4b3524; font-size: 12px; font-weight: 900; white-space: nowrap; }
+.gem-management-window .gem-applied-effects b { color: #d8434c; font-size: 15px; }
+.gem-management-window .gem-applied-effects .empty { color: #9b7a60; font-size: 13px; }
+.gem-management-window .gem-save-button { min-width: 168px; min-height: 50px; padding: 6px 18px; border: 2px solid #b8404b; border-radius: 8px; color: #fff7e8; background: linear-gradient(#ef6b70,#d8434c); box-shadow: inset 0 -4px rgba(100,29,34,.2); font: inherit; font-size: 19px; font-weight: 950; text-shadow: 0 2px rgba(92,31,31,.32); }
+.gem-management-window .gem-save-button:disabled { filter: grayscale(.35); opacity: .45; }
+
+/* ── 오른쪽: 보유 보석 ──────────────────────────────────── */
+.gem-management-window .gem-inventory-panel { display: grid; grid-template-rows: auto auto minmax(0,1fr) auto; gap: 10px; padding: 14px 16px 13px; overflow: hidden; }
+.gem-management-window .gem-filter { display: grid; grid-template-columns: repeat(4,1fr); gap: 9px; }
+.gem-management-window .gem-filter button { min-height: 44px; padding: 4px 6px; border: 2px solid #cbb08d; border-radius: 8px; color: #4b3524; background: rgba(250,242,226,.9); font: inherit; font-size: 17px; font-weight: 950; }
+.gem-management-window .gem-filter button.active { border-color: #e4606a; color: #d8434c; background: #fff2ef; }
+.gem-management-window .gem-tile-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); grid-auto-rows: 126px; align-content: start; gap: 10px; min-height: 0; padding-right: 3px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #c99c70 transparent; }
+.gem-management-window .gem-tile { position: relative; display: grid; grid-template-rows: auto auto; align-content: center; justify-items: center; gap: 7px; min-width: 0; min-height: 0; padding: 9px 6px 8px; border: 2px solid #d3bb97; border-radius: 10px; color: #3a2418; background: rgba(253,247,233,.92); box-shadow: inset 0 -3px 0 rgba(160,116,72,.08); font: inherit; transition: border-color .14s ease, transform .14s ease; }
+.gem-management-window .gem-tile .gem-glyph { width: 74px; height: 74px; }
+.gem-management-window .gem-tile:hover:not(.blocked) { border-color: #ef8b91; transform: translateY(-2px); }
+.gem-management-window .gem-tile.selected { border-color: #e4606a; background: #fff2ef; }
+.gem-management-window .gem-tile.focused { box-shadow: inset 0 0 0 2px rgba(228,96,106,.45); }
+.gem-management-window .gem-tile.blocked { filter: saturate(.45) brightness(.86); background: rgba(226,212,187,.92); }
+.gem-management-window .gem-tile-marker { position: absolute; z-index: 2; top: -7px; left: -7px; display: grid; min-width: 26px; height: 26px; padding: 0 5px; border: 2px solid #fff4ef; border-radius: 7px; place-items: center; color: #fff7ef; background: #e8535c; font: 900 15px/1 var(--hanjjak-font-ui); }
+.gem-management-window .gem-tile-marker.check { right: -7px; left: auto; }
+.gem-management-window .gem-tile-level { display: grid; min-width: 62px; min-height: 24px; padding: 2px 10px; border-radius: 6px; place-items: center; color: #5b3f2c; background: #e9dcc0; font-size: 14px; font-weight: 900; letter-spacing: -.02em; }
+
+.gem-management-window .gem-inventory-detail { display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 14px; min-height: 96px; padding: 12px 16px; border: 2px solid rgba(178,142,102,.5); border-radius: 9px; background: rgba(250,242,226,.7); }
+.gem-management-window .gem-inventory-detail > .gem-glyph { width: 68px; height: 68px; }
+.gem-management-window .gem-detail-copy { display: grid; gap: 2px; min-width: 0; }
+.gem-management-window .gem-detail-copy > strong { overflow: hidden; font-size: 17px; text-overflow: ellipsis; white-space: nowrap; }
+.gem-management-window .gem-detail-copy > b { color: #d8434c; font-size: 20px; line-height: 1.1; }
+.gem-management-window .gem-detail-chips { display: flex; gap: 7px; flex-wrap: wrap; margin-top: 3px; }
+.gem-management-window .gem-detail-chip { display: inline-flex; align-items: center; gap: 4px; padding: 3px 9px; border: 1px solid #bda98b; border-radius: 5px; background: rgba(255,252,243,.9); font-size: 12px; font-weight: 900; white-space: nowrap; }
+.gem-management-window .gem-detail-chip.ok { border-color: #8db863; color: #497028; background: #eef7e2; }
+.gem-management-window .gem-detail-chip.no { border-color: #c9a08a; color: #96533a; background: #f9ece5; }
+.gem-management-window .gem-lock-button { display: grid; width: 54px; height: 54px; padding: 0; border: 2px solid #b08a63; border-radius: 50%; place-items: center; color: #8a6a4c; background: rgba(255,250,236,.95); box-shadow: 0 3px 0 rgba(120,84,52,.3); }
+.gem-management-window .gem-lock-button svg { width: 30px; height: 30px; }
+.gem-management-window .gem-lock-button:hover:not(:disabled) { background: #fffdf4; }
+.gem-management-window .gem-lock-button.is-locked { border-color: #c8323f; color: #fff4ef; background: linear-gradient(180deg,#f4606b,#d94250); box-shadow: 0 3px 0 rgba(150,42,50,.45); }
+.gem-management-window .gem-lock-button:disabled { opacity: .5; }
+.gem-management-window .gem-detail-hint { grid-column: 1/-1; margin: 0; color: #7d634d; font-size: 13px; font-weight: 800; text-align: center; }
+
+/* ── 왼쪽: 직접 합성 ────────────────────────────────────── */
+/* 머리글과 탭은 위에 두고, 그 아래 재료·안내·단추는 남는 높이를 나눠 갖는다.
+   위에만 몰려 있으면 아래가 휑하다. */
+.gem-management-window .gem-fusion-panel { display: grid; grid-template-rows: auto auto minmax(0, 1fr) auto auto; align-content: stretch; gap: 12px; padding: 14px 18px 16px; }
+.gem-management-window .gem-fusion-equation { align-self: center; }
+.gem-management-window .gem-fusion-layout.batch .gem-fusion-panel { gap: 10px; padding-bottom: 12px; }
+.gem-management-window .gem-fusion-modes { display: grid; grid-template-columns: repeat(2,minmax(0,168px)); justify-content: center; gap: 10px; }
+.gem-management-window .gem-fusion-modes button { min-height: 44px; padding: 5px 12px; border: 2px solid #cbb08d; border-radius: 8px; color: #4b3524; background: rgba(250,242,226,.9); font: inherit; font-size: 17px; font-weight: 950; }
+.gem-management-window .gem-fusion-modes button.active { border-color: #e4606a; color: #d8434c; background: #fff2ef; }
+.gem-management-window .gem-fusion-result-label { display: grid; justify-items: end; margin: 6px 0 0; padding-right: 4px; }
+.gem-management-window .gem-fusion-result-label span { display: grid; min-width: 150px; min-height: 40px; padding: 4px 16px; border: 2px solid #cbb08d; border-radius: 8px; place-items: center; color: #4b3524; background: rgba(250,242,226,.9); font-size: 17px; font-weight: 950; }
+.gem-management-window .gem-fusion-layout .gem-fusion-equation { display: grid; grid-template-columns: minmax(0,1fr) 30px minmax(0,1fr) 30px minmax(0,1fr) 38px minmax(0,1fr); align-items: center; gap: 4px; margin: 0; }
+.gem-management-window .gem-fusion-layout .gem-fusion-ingredient,.gem-management-window .gem-fusion-layout .gem-fusion-result { position: relative; display: grid; grid-template-rows: minmax(0,1fr) auto; align-content: center; justify-items: center; gap: 6px; min-width: 0; min-height: 172px; padding: 14px 8px 11px; border: 2px solid #d3bb97; border-radius: 10px; color: #3a2418; background: rgba(253,247,233,.92); font: inherit; text-align: center; }
+.gem-management-window .gem-fusion-layout button.gem-fusion-ingredient { cursor: pointer; }
+.gem-management-window .gem-fusion-layout .gem-fusion-ingredient.active { border-color: #ef8b91; background: #fff4ef; }
+.gem-management-window .gem-fusion-layout .gem-fusion-ingredient > em { align-self: center; color: #c9ae8c; font: 900 40px/1 var(--hanjjak-font-ui); font-style: normal; }
+.gem-management-window .gem-fusion-layout .gem-fusion-ingredient .gem-glyph,.gem-management-window .gem-fusion-layout .gem-fusion-result .gem-glyph { align-self: center; width: 104px; height: 104px; }
+.gem-management-window .gem-fusion-layout .gem-fusion-result { border-color: #e8c569; background: linear-gradient(#fff3cd,#ffe6a6); box-shadow: inset 0 0 24px rgba(240,190,88,.45); }
+.gem-management-window .gem-fusion-layout .gem-fusion-result .gem-tile-level { background: #f2dfab; }
+.gem-management-window .gem-fusion-layout .gem-fusion-operator { color: #6b4a33; font-size: 28px; font-weight: 950; text-align: center; }
+.gem-management-window .gem-fusion-equation.revealed .gem-fusion-ingredient,.gem-management-window .gem-fusion-equation.revealed .gem-fusion-operator { opacity: .22; filter: grayscale(.8); }
+.gem-management-window .gem-fusion-hint { display: grid; min-height: 44px; margin: 0; padding: 6px 12px; border: 2px solid #d3bb97; border-radius: 8px; place-items: center; color: #4b3524; background: rgba(246,238,220,.85); font-size: 17px; font-weight: 900; }
+.gem-management-window .gem-fusion-layout .gem-fuse-button { justify-self: center; width: min(290px,100%); min-height: 66px; margin-top: 4px; border: 3px solid #b8404b; border-radius: 12px; color: #fff7e8; background: linear-gradient(#ef6b70,#d8434c); box-shadow: inset 0 -5px rgba(100,29,34,.22); font: inherit; font-size: 30px; font-weight: 950; text-shadow: 0 2px rgba(92,31,31,.32); }
+.gem-management-window .gem-fuse-button:disabled { filter: grayscale(.5); opacity: .42; }
+
+/* ── 왼쪽: 일괄 합성 ────────────────────────────────────── */
+/* 머리글과 적용 단추가 빠져 칸은 셋이다 — 방식 고르기, 단계 목록, 허용 종류.
+   길어지는 것은 단계 목록뿐이므로 그 줄만 남는 높이를 갖는다. */
+.gem-management-window .gem-fusion-layout.batch .gem-fusion-panel { grid-template-rows: auto minmax(0,1fr) auto; }
+/* 머리글 · 목표 레벨 고르기 · 단계 목록. 목록만 남는 높이를 가져간다. */
+.gem-management-window .gem-batch-box { display: grid; grid-template-rows: auto auto minmax(0,1fr); gap: 7px; min-height: 0; padding: 9px 12px; border: 2px solid rgba(178,142,102,.5); border-radius: 9px; background: rgba(250,242,226,.62); }
+.gem-management-window .gem-batch-box h4 { display: flex; align-items: center; gap: 7px; margin: 0; font-size: 19px; font-weight: 950; }
+.gem-management-window .gem-batch-box h4::before { flex: none; width: 18px; height: 18px; content: ""; background: url("../character/assets-cozy-pixel/sprout-icon-32.png") center / contain no-repeat; image-rendering: pixelated; }
+/* 보석은 7레벨까지라 단계가 6줄이다. 칸을 넘치면 이 목록만 스크롤한다. */
+.gem-management-window .gem-batch-steps { display: grid; grid-auto-rows: min-content; gap: 7px; min-height: 0; max-height: 100%; padding-right: 4px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #c99c70 transparent; }
+/* 목표 레벨 고르기. 고른 레벨까지 1레벨부터 이어 올린다. */
+.gem-management-window .gem-batch-target { display: grid; grid-auto-flow: column; gap: 6px; }
+.gem-management-window .gem-batch-target button { min-height: 34px; border: 2px solid #cbb08d; border-radius: 8px; color: #6b4a33; background: rgba(250,242,226,.9); font: inherit; font-size: 15px; font-weight: 950; }
+.gem-management-window .gem-batch-target button:hover { border-color: #e4606a; background: #fff2ef; }
+.gem-management-window .gem-batch-target button.active { border-color: #d8434c; color: #fff6ef; background: #e4606a; }
+.gem-management-window .gem-batch-step { display: grid; grid-template-columns: 104px minmax(0,1fr) 84px 68px; align-items: center; gap: 10px; min-height: 54px; padding: 4px 12px; border: 2px solid #d3bb97; border-radius: 9px; background: rgba(253,247,233,.92); }
+.gem-management-window .gem-batch-step.disabled { border-color: #ccbfa8; background: rgba(229,220,203,.75); color: #8d7f6c; }
+.gem-management-window .gem-batch-step input { width: 22px; height: 22px; accent-color: #e24b52; }
+.gem-management-window .gem-batch-step > b { font-size: 17px; font-weight: 950; white-space: nowrap; }
+.gem-management-window .gem-batch-step-flow { display: flex; align-items: center; justify-content: center; gap: 10px; min-width: 0; }
+.gem-management-window .gem-batch-step-flow > span { display: grid; justify-items: center; gap: 2px; }
+.gem-management-window .gem-batch-step-flow .gem-glyph { width: 46px; height: 46px; }
+.gem-management-window .gem-batch-step-flow .gem-tile-level { min-width: 46px; min-height: 18px; padding: 0 7px; font-size: 11px; }
+.gem-management-window .gem-batch-step-flow > i { color: #8a6a51; font-size: 19px; font-style: normal; }
+.gem-management-window .gem-batch-step-count { display: grid; justify-items: center; gap: 1px; padding-left: 10px; border-left: 1px solid #d3bb97; }
+.gem-management-window .gem-batch-step-count small { color: #7d634d; font-size: 12px; font-weight: 800; }
+.gem-management-window .gem-batch-step-count b { font-size: 17px; }
+.gem-management-window .gem-batch-step-count.result b { color: #d8434c; }
+.gem-management-window .gem-batch-step-short { padding-left: 10px; border-left: 1px solid #cdbfa8; color: #a07a5f; font-size: 14px; font-weight: 900; text-align: center; }
+.gem-management-window .gem-batch-options-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 7px; }
+.gem-management-window .gem-batch-options-grid label { display: flex; align-items: center; gap: 9px; min-height: 38px; padding: 5px 11px; border: 2px solid #d3bb97; border-radius: 8px; background: rgba(253,247,233,.92); font-size: 15px; font-weight: 900; }
+.gem-management-window .gem-batch-options-grid input { width: 21px; height: 21px; accent-color: #e24b52; }
+.gem-management-window .gem-options-apply { width: 100%; min-height: 46px; border: 2px solid #b8404b; border-radius: 9px; color: #fff8ea; background: linear-gradient(#ef6b70,#d8434c); box-shadow: inset 0 -4px rgba(100,29,34,.2); font: inherit; font-size: 19px; font-weight: 950; }
+.gem-management-window .gem-options-apply:disabled { filter: grayscale(.4); opacity: .5; }
+
+/* ── 오른쪽: 예상 결과 ──────────────────────────────────── */
+.gem-management-window .gem-batch-preview { display: grid; grid-template-rows: auto minmax(0,1fr) auto auto auto; gap: 10px; padding: 14px 16px 13px; overflow: hidden; }
+.gem-management-window .gem-batch-preview-list { display: grid; grid-auto-rows: min-content; gap: 10px; min-height: 0; padding-right: 3px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #c99c70 transparent; }
+.gem-management-window .gem-batch-preview-step { display: grid; gap: 8px; padding: 11px 13px; border: 2px solid rgba(178,142,102,.5); border-radius: 9px; background: rgba(250,242,226,.62); }
+.gem-management-window .gem-batch-step-title { justify-self: start; padding: 4px 14px; border: 2px solid #cbb08d; border-radius: 7px; background: rgba(253,247,233,.92); font-size: 16px; font-weight: 950; }
+.gem-management-window .gem-batch-preview-flow { display: grid; grid-template-columns: minmax(0,1fr) 34px minmax(0,1fr); align-items: center; gap: 6px; }
+.gem-management-window .gem-batch-preview-flow > i { color: #8a6a51; font-size: 24px; font-style: normal; text-align: center; }
+.gem-management-window .gem-batch-cluster { display: grid; align-content: center; justify-items: center; gap: 7px; min-height: 96px; padding: 9px 8px; border: 2px solid #d3bb97; border-radius: 9px; background: rgba(253,247,233,.85); }
+.gem-management-window .gem-batch-cluster-gems { display: grid; justify-content: center; justify-items: center; gap: 2px; max-width: 100%; }
+.gem-management-window .gem-batch-cluster-gems .gem-glyph { width: 34px; height: 34px; }
+.gem-management-window .gem-batch-cluster-gems em { color: #8a6a51; font-size: 13px; font-style: normal; font-weight: 900; }
+.gem-management-window .gem-batch-totals { display: grid; grid-template-columns: 1fr 1fr; align-items: center; min-height: 74px; padding: 9px 12px; border: 2px solid rgba(178,142,102,.5); border-radius: 9px; background: rgba(250,242,226,.7); }
+.gem-management-window .gem-batch-totals span { display: grid; justify-items: center; gap: 2px; }
+.gem-management-window .gem-batch-totals span + span { border-left: 1px solid #d3bb97; }
+.gem-management-window .gem-batch-totals small { color: #5b3f2c; font-size: 14px; font-weight: 900; }
+.gem-management-window .gem-batch-totals b { font-size: 26px; }
+.gem-management-window .gem-batch-warning { display: grid; min-height: 44px; margin: 0; padding: 6px 12px; border: 2px solid #e5c98d; border-radius: 8px; place-items: center; color: #8a5a1c; background: #fdf1d5; font-size: 15px; font-weight: 900; }
+.gem-management-window .gem-batch-actions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+.gem-management-window .gem-batch-cancel { min-height: 58px; border: 2px solid #b38a62; border-radius: 10px; color: #4b3121; background: rgba(255,250,236,.92); font: inherit; font-size: 21px; font-weight: 950; }
+.gem-management-window .gem-batch-actions .gem-fuse-button { justify-self: stretch; width: 100%; min-height: 58px; margin: 0; font-size: 23px; }
+
+/* ── 합성 결과 알림 ─────────────────────────────────────── */
+.gem-management-window .gem-reward-popover { position: absolute; z-index: 40; inset: 0; display: grid; place-items: center; background: rgba(54,32,19,.42); }
+.gem-management-window .gem-reward-popover > div { display: grid; width: min(390px,92%); padding: 22px; border: 3px solid #88593d; border-radius: 10px; justify-items: center; gap: 8px; color: #382317; background: #fff3d4; box-shadow: 0 16px 30px rgba(45,24,12,.4); text-align: center; }
+.gem-management-window .gem-reward-popover span { color: #d8434c; font-size: 15px; font-weight: 950; }
+.gem-management-window .gem-reward-popover .gem-glyph { width: 82px; height: 82px; }
+.gem-management-window .gem-reward-popover h4 { margin: 0; font-size: 18px; line-height: 1.4; }
+.gem-management-window .gem-reward-popover button { min-width: 130px; min-height: 44px; margin-top: 6px; border: 2px solid #b8404b; border-radius: 8px; color: #fff8ea; background: linear-gradient(#ef6b70,#d8434c); font: inherit; font-size: 17px; font-weight: 950; }
+
+/* 창 크기에 맞춘다. 화면 너비가 아니라 창 너비를 본다(대화상자라 둘이 다르다). */
+@container gemwin (max-width: 820px) {
+  .gem-management-window .gems-heading { grid-template-columns: minmax(0,1fr) auto auto; grid-template-rows: auto auto; }
+  .gem-management-window .gem-management-tabs { grid-column: 1/-2; grid-row: 2; grid-auto-columns: minmax(0,1fr); }
+  .gem-management-window .gem-ticket { grid-column: 2; grid-row: 1; }
+  .gem-management-window .gem-preset-page { grid-template-columns: 1fr; grid-template-rows: auto auto; gap: 12px; overflow-y: auto; }
+  .gem-management-window .gem-inventory-panel,.gem-management-window .gem-batch-preview { min-height: 430px; }
+  .gem-management-window .gem-fusion-layout .gem-fuse-button { font-size: 24px; }
+}
+@container gemwin (max-width: 600px) {
+  .gem-management-window .gem-preset-page { padding-inline: 4px; }
+  .gem-management-window .gem-slot-zone { grid-template-columns: repeat(2,minmax(0,1fr)); grid-template-rows: repeat(3,minmax(96px,1fr)); }
+  .gem-management-window .gem-applied-effects { grid-template-columns: 1fr; }
+  .gem-management-window .gem-save-button { width: 100%; }
+  .gem-management-window .gem-batch-step { grid-template-columns: auto minmax(0,1fr) auto; }
+  .gem-management-window .gem-batch-step-flow { display: none; }
+  .gem-management-window .gem-batch-options-grid { grid-template-columns: 1fr; }
+}
+
+/* 화면 글꼴에 화살표 글자가 없어 직접 그린다. */
+.gem-management-window .gem-arrow { position: relative; display: inline-block; width: 20px; height: 3px; background: currentColor; vertical-align: middle; }
+.gem-management-window .gem-arrow::after { position: absolute; top: 50%; right: 0; width: 8px; height: 8px; border-top: 3px solid currentColor; border-right: 3px solid currentColor; content: ""; transform: translateY(-50%) rotate(45deg); }
+.gem-management-window .gem-batch-step-flow > .gem-arrow { color: #8a6a51; }
+.gem-management-window .gem-arrow.big { width: 26px; height: 4px; color: #8a6a51; }
+.gem-management-window .gem-arrow.big::after { width: 11px; height: 11px; border-width: 4px; }
+
+/* 합성 결과는 옵션이 무작위라 색을 칠하지 않고 그림자와 물음표로 보여준다. */
+.gem-management-window .gem-glyph.silhouette img { filter: grayscale(1) brightness(.42) contrast(1.15) drop-shadow(0 2px 1px rgba(67,31,13,.25)); }
+.gem-management-window .gem-fusion-result .gem-glyph i { font-size: 46px; text-shadow: 0 2px 0 rgba(70,38,18,.45); }
+
+/* 일괄 합성은 단계 목록이 주인공이라 종이 여백을 조금 줄여 목록에 준다. */
+.gem-management-window { padding: calc(var(--paper-pad-top) - 10px) var(--paper-pad-inline) calc(var(--paper-pad-bottom) - 8px); }
+
+.gem-management-window .gem-tile.blank { border-style: dashed; border-color: #ddcbaa; background: rgba(248,241,226,.45); box-shadow: none; pointer-events: none; }
+
+/* 창이 1320px보다 좁아지면 전투 연결 이름이 잘린다. 한 줄을 더 내준다. */
+@container gemwin (max-width: 1180px) {
+  .gem-management-window .gem-context-assignments button { min-height: 34px; padding: 4px 5px; }
+  .gem-management-window .gem-slot-card { padding: 8px 6px 7px; }
+  .gem-management-window .gem-slot-card .gem-glyph { width: 58px; height: 58px; }
+  .gem-management-window .gem-slot-card small { font-size: 12px; }
+  .gem-management-window .gem-tile .gem-glyph { width: 58px; height: 58px; }
+  .gem-management-window .gem-tile-grid { grid-auto-rows: 104px; }
+  .gem-management-window .gem-panel-heading h3 { font-size: 24px; }
+  .gem-management-window .gem-fusion-layout .gem-fusion-ingredient,.gem-management-window .gem-fusion-layout .gem-fusion-result { min-height: 132px; }
+  .gem-management-window .gem-fusion-layout .gem-fusion-ingredient .gem-glyph,.gem-management-window .gem-fusion-layout .gem-fusion-result .gem-glyph { width: 72px; height: 72px; }
+}
+
+/* 창 높이가 790px보다 낮으면(노트북 창) 칸이 눌린다. 보석과 여백을 한 단계 줄인다. */
+@container gemwin (max-height: 720px) {
+  .gem-management-window .gem-panel-heading { min-height: 32px; padding-top: 2px; }
+  .gem-management-window .gem-panel-heading h3 { font-size: 24px; }
+  .gem-management-window .gem-preset-tabs { grid-auto-rows: 30px; }
+  .gem-management-window .gem-preset-tab-shell > button[role="tab"] { font-size: 16px; }
+  .gem-management-window .gem-slot-card { padding: 7px 6px 6px; }
+  .gem-management-window .gem-slot-card .gem-glyph { width: 54px; height: 54px; }
+  .gem-management-window .gem-slot-card em { top: 4px; left: 6px; font-size: 12px; }
+  .gem-management-window .gem-slot-card small { font-size: 11px; }
+  .gem-management-window .gem-slot-zone { gap: 8px; }
+  .gem-management-window .gem-context-assignments button { min-height: 32px; }
+  .gem-management-window .gem-applied-effects { min-height: 52px; padding: 6px 10px; }
+  .gem-management-window .gem-save-button { min-height: 42px; font-size: 17px; }
+  .gem-management-window .gem-filter button { min-height: 38px; font-size: 15px; }
+  .gem-management-window .gem-tile-grid { grid-auto-rows: 100px; gap: 8px; }
+  .gem-management-window .gem-tile .gem-glyph { width: 54px; height: 54px; }
+  .gem-management-window .gem-tile-level { min-width: 54px; min-height: 21px; font-size: 12px; }
+  .gem-management-window .gem-inventory-detail { min-height: 78px; padding: 8px 12px; }
+  .gem-management-window .gem-inventory-detail > .gem-glyph { width: 54px; height: 54px; }
+  .gem-management-window .gem-lock-button { width: 46px; height: 46px; }
+  .gem-management-window .gem-lock-button svg { width: 26px; height: 26px; }
+  .gem-management-window .gem-fusion-modes button { min-height: 40px; font-size: 15px; }
+  .gem-management-window .gem-fusion-result-label span { min-height: 34px; font-size: 15px; }
+  .gem-management-window .gem-fusion-layout .gem-fusion-ingredient,.gem-management-window .gem-fusion-layout .gem-fusion-result { min-height: 120px; padding: 10px 6px 8px; }
+  .gem-management-window .gem-fusion-layout .gem-fusion-ingredient .gem-glyph,.gem-management-window .gem-fusion-layout .gem-fusion-result .gem-glyph { width: 66px; height: 66px; }
+  .gem-management-window .gem-fusion-hint { min-height: 36px; font-size: 15px; }
+  .gem-management-window .gem-fusion-layout .gem-fuse-button { min-height: 52px; font-size: 24px; }
+  .gem-management-window .gem-batch-step { min-height: 50px; }
+  .gem-management-window .gem-batch-step-flow .gem-glyph { width: 38px; height: 38px; }
+  .gem-management-window .gem-batch-options-grid label { min-height: 34px; font-size: 14px; }
+  .gem-management-window .gem-batch-cluster { min-height: 84px; }
+  .gem-management-window .gem-batch-cluster-gems .gem-glyph { width: 30px; height: 30px; }
+  .gem-management-window .gem-batch-totals { min-height: 62px; }
+  .gem-management-window .gem-batch-totals b { font-size: 22px; }
+  .gem-management-window .gem-batch-warning { min-height: 38px; font-size: 13px; }
+  .gem-management-window .gem-batch-cancel,.gem-management-window .gem-batch-actions .gem-fuse-button { min-height: 48px; font-size: 19px; }
+  .gem-management-window .gem-options-apply { min-height: 42px; font-size: 17px; }
+}

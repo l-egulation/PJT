@@ -1,0 +1,140 @@
+name: ${COMPOSE_PROJECT_NAME:-hanjjak}
+
+services:
+  postgres:
+    image: postgres:17.11-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD_FILE: /run/secrets/db_password
+    secrets:
+      - db_password
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$${POSTGRES_USER}\" -d \"$${POSTGRES_DB}\""]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    networks: [backend]
+
+  game-api:
+    image: hanjjak/game-api:${IMAGE_TAG}
+    restart: unless-stopped
+    environment:
+      DB_URL: jdbc:postgresql://postgres:5432/${POSTGRES_DB}
+      DB_USER: ${POSTGRES_USER}
+      DB_PASSWORD_FILE: /run/secrets/db_password
+      SERVER_FORWARD_HEADERS_STRATEGY: framework
+      SERVER_SHUTDOWN: graceful
+      AUTH_ALLOWED_ORIGINS: ${PUBLIC_ORIGIN}
+      BATTLE_COMPATIBILITY_API_ENABLED: ${BATTLE_COMPATIBILITY_API_ENABLED:-false}
+      ADMIN_ALLOWED_ORIGINS: ${PUBLIC_ORIGIN}
+      ADMIN_GITLAB_OAUTH_ENABLED: ${ADMIN_GITLAB_OAUTH_ENABLED:-false}
+      ADMIN_GITLAB_OAUTH_CLIENT_ID: ${ADMIN_GITLAB_OAUTH_CLIENT_ID:-}
+      ADMIN_GITLAB_OAUTH_CLIENT_SECRET: ${ADMIN_GITLAB_OAUTH_CLIENT_SECRET:-}
+      ADMIN_GITLAB_ALLOWED_USERNAMES: ${ADMIN_GITLAB_ALLOWED_USERNAMES:-}
+      ADMIN_GITLAB_PUBLIC_BASE_URL: ${PUBLIC_ORIGIN}
+      ADMIN_GITLAB_SUCCESS_URL: ${PUBLIC_ORIGIN}/admin/
+      ADMIN_GITLAB_FAILURE_URL: ${PUBLIC_ORIGIN}/admin/
+      ADMIN_SESSION_COOKIE_SECURE: "true"
+      DEPLOY_COMMIT_SHA: ${IMAGE_TAG}
+      CONTENT_VERSION: ${CONTENT_VERSION:-v1}
+      CONTENT_AUTHORITY: ${CONTENT_AUTHORITY:-working}
+      SERVER_SERVLET_SESSION_COOKIE_SECURE: "true"
+      GMAIL_USERNAME: ${GMAIL_USERNAME}
+      GMAIL_APP_PASSWORD: ${GMAIL_APP_PASSWORD}
+      PASSWORD_RESET_TOKEN_LIFETIME: ${PASSWORD_RESET_TOKEN_LIFETIME:-30m}
+      PASSWORD_RESET_RATE_LIMIT_MAX_REQUESTS: ${PASSWORD_RESET_RATE_LIMIT_MAX_REQUESTS:-3}
+      PASSWORD_RESET_RATE_LIMIT_WINDOW: ${PASSWORD_RESET_RATE_LIMIT_WINDOW:-15m}
+      SOCIAL_LOGIN_PUBLIC_BASE_URL: ${PUBLIC_ORIGIN}
+      SOCIAL_LOGIN_SUCCESS_URL: ${PUBLIC_ORIGIN}
+      SOCIAL_LOGIN_FAILURE_URL: ${PUBLIC_ORIGIN}
+      GOOGLE_OAUTH_ENABLED: ${GOOGLE_OAUTH_ENABLED:-false}
+      GOOGLE_OAUTH_CLIENT_ID: ${GOOGLE_OAUTH_CLIENT_ID:-}
+      GOOGLE_OAUTH_CLIENT_SECRET: ${GOOGLE_OAUTH_CLIENT_SECRET:-}
+      KAKAO_OAUTH_ENABLED: ${KAKAO_OAUTH_ENABLED:-false}
+      KAKAO_OAUTH_CLIENT_ID: ${KAKAO_OAUTH_CLIENT_ID:-}
+      KAKAO_OAUTH_CLIENT_SECRET: ${KAKAO_OAUTH_CLIENT_SECRET:-}
+      NAVER_OAUTH_ENABLED: ${NAVER_OAUTH_ENABLED:-false}
+      NAVER_OAUTH_CLIENT_ID: ${NAVER_OAUTH_CLIENT_ID:-}
+      NAVER_OAUTH_CLIENT_SECRET: ${NAVER_OAUTH_CLIENT_SECRET:-}
+      SSAFY_GITLAB_OAUTH_ENABLED: ${SSAFY_GITLAB_OAUTH_ENABLED:-false}
+      SSAFY_GITLAB_OAUTH_CLIENT_ID: ${SSAFY_GITLAB_OAUTH_CLIENT_ID:-}
+      SSAFY_GITLAB_OAUTH_CLIENT_SECRET: ${SSAFY_GITLAB_OAUTH_CLIENT_SECRET:-}
+    secrets:
+      - db_password
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "/bin/bash", "-c", "exec 3<>/dev/tcp/127.0.0.1/8080; printf 'GET /actuator/health/readiness HTTP/1.1\\r\\nHost: localhost\\r\\nConnection: close\\r\\n\\r\\n' >&3; grep -q '\"status\":\"UP\"' <&3"]
+      interval: 10s
+      timeout: 5s
+      start_period: 30s
+      retries: 12
+    networks: [backend, api-egress]
+
+  web:
+    image: hanjjak/web:${IMAGE_TAG}
+    restart: unless-stopped
+    environment:
+      BASIC_AUTH_ENABLED: ${BASIC_AUTH_ENABLED:-false}
+      BASIC_AUTH_USERNAME: ${BASIC_AUTH_USERNAME:-hanjjak}
+      BASIC_AUTH_PASSWORD: ${BASIC_AUTH_PASSWORD:-}
+    depends_on:
+      game-api:
+        condition: service_healthy
+      admin-console:
+        condition: service_healthy
+    ports:
+      - "${WEB_BIND_ADDRESS:-127.0.0.1}:${WEB_PORT:-18080}:8080"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:8080/healthz"]
+      interval: 10s
+      timeout: 3s
+      retries: 6
+    networks: [frontend, backend]
+
+  admin-console:
+    image: hanjjak/admin-console:${IMAGE_TAG}
+    restart: unless-stopped
+    depends_on:
+      game-api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:8080/healthz"]
+      interval: 10s
+      timeout: 3s
+      retries: 6
+    networks: [backend]
+
+  cloudflared:
+    image: cloudflare/cloudflared:2026.8.3
+    profiles: [tunnel]
+    restart: unless-stopped
+    command: ["tunnel", "--no-autoupdate", "run", "--token-file", "/run/secrets/cloudflare_tunnel_token"]
+    secrets:
+      - cloudflare_tunnel_token
+    depends_on:
+      web:
+        condition: service_healthy
+    networks: [frontend, tunnel-egress]
+
+volumes:
+  postgres-data:
+
+networks:
+  frontend:
+    internal: true
+  backend:
+    internal: true
+  tunnel-egress:
+  api-egress:
+
+secrets:
+  db_password:
+    file: ${POSTGRES_PASSWORD_FILE}
+  cloudflare_tunnel_token:
+    file: ${TUNNEL_TOKEN_FILE}

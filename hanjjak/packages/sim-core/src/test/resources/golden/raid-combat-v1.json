@@ -1,0 +1,43 @@
+{
+  "contentVersion": "raid-golden-v1",
+  "tickDurationMilliseconds": 100,
+  "input": {
+    "seed": 1,
+    "player": { "attack": 100, "maxHp": 1000000, "penetration": 20 },
+    "bossInitialAttack": 0,
+    "bossInitialDefense": 100,
+    "maxTicks": 60
+  },
+  "result": {
+    "elapsedTicks": 60,
+    "totalDamage": 1093,
+    "remainingPlayerHp": 1000000,
+    "playerDied": false
+  },
+  "events": [
+    { "sequence": 1, "logicalTick": 0, "type": "BATTLE_STARTED" },
+    { "sequence": 2, "logicalTick": 0, "type": "PLAYER_HIT", "damage": 73 },
+    { "sequence": 3, "logicalTick": 0, "type": "BOSS_HIT", "damage": 0 },
+    { "sequence": 4, "logicalTick": 4, "type": "PLAYER_HIT", "damage": 73 },
+    { "sequence": 5, "logicalTick": 8, "type": "PLAYER_HIT", "damage": 73 },
+    { "sequence": 6, "logicalTick": 10, "type": "BOSS_HIT", "damage": 0 },
+    { "sequence": 7, "logicalTick": 12, "type": "PLAYER_HIT", "damage": 73 },
+    { "sequence": 8, "logicalTick": 16, "type": "PLAYER_HIT", "damage": 73 },
+    { "sequence": 9, "logicalTick": 20, "type": "PLAYER_HIT", "damage": 73 },
+    { "sequence": 10, "logicalTick": 20, "type": "BOSS_HIT", "damage": 0 },
+    { "sequence": 11, "logicalTick": 24, "type": "PLAYER_HIT", "damage": 73 },
+    { "sequence": 12, "logicalTick": 28, "type": "PLAYER_HIT", "damage": 73 },
+    { "sequence": 13, "logicalTick": 30, "type": "BOSS_HIT", "damage": 0 },
+    { "sequence": 14, "logicalTick": 32, "type": "PLAYER_HIT", "damage": 73 },
+    { "sequence": 15, "logicalTick": 36, "type": "PLAYER_HIT", "damage": 73 },
+    { "sequence": 16, "logicalTick": 40, "type": "PLAYER_HIT", "damage": 73 },
+    { "sequence": 17, "logicalTick": 40, "type": "BOSS_HIT", "damage": 0 },
+    { "sequence": 18, "logicalTick": 44, "type": "PLAYER_HIT", "damage": 73 },
+    { "sequence": 19, "logicalTick": 48, "type": "PLAYER_HIT", "damage": 73 },
+    { "sequence": 20, "logicalTick": 50, "type": "ESCALATION", "escalationStage": 1, "bossAttack": 0, "bossDefense": 105 },
+    { "sequence": 21, "logicalTick": 50, "type": "BOSS_HIT", "damage": 0 },
+    { "sequence": 22, "logicalTick": 52, "type": "PLAYER_HIT", "damage": 71 },
+    { "sequence": 23, "logicalTick": 56, "type": "PLAYER_HIT", "damage": 71 },
+    { "sequence": 24, "logicalTick": 60, "type": "TIME_LIMIT_REACHED" }
+  ]
+}

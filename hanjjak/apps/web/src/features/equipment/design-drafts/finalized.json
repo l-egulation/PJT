@@ -1,0 +1,19 @@
+{
+  "screen": "equipment-growth",
+  "finalizedAt": "2026-09-10",
+  "sourceMockups": [
+    "equipment-growth-approved-v1.png",
+    "equipment-market-modal-approved-v1.png"
+  ],
+  "implementation": {
+    "framework": "React + TypeScript",
+    "component": "../EquipmentScreen.tsx",
+    "stylesheet": "../../../styles.css"
+  },
+  "layout": "single-board-six-row",
+  "notes": [
+    "No enhancement progress bars; use +N강.",
+    "Show only the lowest purchasable market price excluding the current user's listings.",
+    "Use the approved rice-grain-shaped gold asset for rice currency."
+  ]
+}

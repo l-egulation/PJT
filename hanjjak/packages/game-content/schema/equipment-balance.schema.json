@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hanjjak.local/schema/equipment-balance.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["authority", "contentVersion", "compatibilityOnly", "enhancementMaterials", "enhancementRice", "promotion"],
+  "properties": {
+    "authority": { "enum": ["working", "applied"] },
+    "contentVersion": { "type": "string", "minLength": 1 },
+    "compatibilityOnly": { "type": "boolean" },
+    "enhancementMaterials": { "type": "object", "additionalProperties": false, "required": ["NORMAL", "RARE", "EPIC", "LEGENDARY"], "properties": { "NORMAL": { "$ref": "#/$defs/materials" }, "RARE": { "$ref": "#/$defs/materials" }, "EPIC": { "$ref": "#/$defs/materials" }, "LEGENDARY": { "$ref": "#/$defs/materials" } } },
+    "enhancementRice": { "type": "object", "additionalProperties": false, "required": ["NORMAL", "RARE", "EPIC", "LEGENDARY"], "properties": { "NORMAL": { "$ref": "#/$defs/steps" }, "RARE": { "$ref": "#/$defs/steps" }, "EPIC": { "$ref": "#/$defs/steps" }, "LEGENDARY": { "$ref": "#/$defs/steps" } } },
+    "promotion": { "type": "object", "additionalProperties": false, "required": ["NORMAL", "RARE", "EPIC", "LEGENDARY"], "properties": { "NORMAL": { "$ref": "#/$defs/promotion" }, "RARE": { "$ref": "#/$defs/promotion" }, "EPIC": { "$ref": "#/$defs/promotion" }, "LEGENDARY": { "$ref": "#/$defs/promotion" } } }
+  },
+  "$defs": {
+    "steps": { "type": "array", "minItems": 29, "maxItems": 29, "items": { "type": "integer", "minimum": 0 } },
+    "materials": { "type": "object", "propertyNames": { "pattern": "^M[1-5]$" }, "additionalProperties": { "$ref": "#/$defs/steps" } },
+    "promotion": { "type": "object", "additionalProperties": false, "required": ["requiredStageId", "materials", "rice", "resultGrade"], "properties": { "requiredStageId": { "type": "string", "minLength": 1 }, "materials": { "type": "object", "propertyNames": { "pattern": "^M[1-5]$" }, "additionalProperties": { "type": "integer", "minimum": 0 } }, "rice": { "type": "integer", "minimum": 0 }, "resultGrade": { "enum": ["NORMAL", "RARE", "EPIC", "LEGENDARY"] } } }
+  }
+}

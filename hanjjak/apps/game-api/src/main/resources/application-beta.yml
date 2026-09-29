@@ -1,0 +1,16 @@
+# Preserved accelerated beta verification profile.
+#
+# The applied v2 service now uses the same timings and values. This profile intentionally keeps the
+# original beta content identifier and beta authority for historical replay and comparison.
+#
+# Running without this profile loads the applied v2 content identifier from application.yml.
+# Owner doc: docs/60-content/gems/beta-accelerated.md
+hanjjak:
+  gem-dungeon:
+    rotation-period-seconds: 3600
+    content-resource: classpath:gem-dungeons/gem-dungeons-beta.json
+    content-authority: beta
+    ticket:
+      regen-seconds: 3600
+      max-stock: 3
+      initial-grant: 3

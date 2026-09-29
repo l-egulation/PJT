@@ -1,0 +1,12 @@
+{
+  "name": "@hanjjak/fixtures",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "market": "node market-fixture.mjs",
+    "market-plaza": "node market-plaza-fixture.mjs"
+  },
+  "dependencies": {
+    "pg": "8.16.3"
+  }
+}

@@ -1,0 +1,181 @@
+.price-level-guide {
+  --price-guide-ink: #342218;
+  --price-guide-muted: #745e4b;
+  --price-guide-line: rgba(83, 57, 38, .24);
+  --price-guide-border: #b69b78;
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+  max-height: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  color: var(--price-guide-ink);
+  font-family: var(--hanjjak-font-ui);
+}
+
+.price-level-guide-header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.price-level-guide-eyebrow {
+  margin: 0 0 4px;
+  color: #a15b44;
+  font-family: var(--hanjjak-font-ui);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+.price-level-guide h3 {
+  margin: 0;
+  color: #342218;
+  font-size: 21px;
+}
+
+.price-level-guide-summary,
+.price-level-guide-limit-note,
+.price-level-guide-selection,
+.price-level-guide-page-hint,
+.price-level-guide-status,
+.price-level-guide-empty {
+  margin: 0;
+  color: var(--price-guide-muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.price-level-guide-summary { margin-top: 4px; }
+
+
+
+.price-level-guide-limit-note { margin-bottom: 5px; }
+.price-level-guide-selection { margin-bottom: 5px; }
+.price-level-guide-selection strong { color: #c64f46; font-variant-numeric: tabular-nums; }
+.price-level-guide-warning { margin: 8px 0; padding: 8px 10px; border-left: 3px solid #bd4b3e; color: #842f25; background: #fbe2d6; font-size: 13px; line-height: 1.5; }
+.price-level-guide-status { padding: 16px 8px; text-align: center; }
+.price-level-guide-empty { padding: 20px 8px; text-align: center; }
+
+.price-level-guide-error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 10px;
+  padding: 9px 10px;
+  border: 1px solid #c07b69;
+  color: #80230f;
+  background: #fff0e8;
+  font-size: 13px;
+}
+
+.price-level-guide button {
+  border: 2px solid #8f6e50;
+  border-radius: 7px;
+  padding: 7px 10px;
+  color: #4c3324;
+  background: #fff6e3;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.price-level-guide button:hover:not(:disabled) { background: #f5e3c3; }
+.price-level-guide button:disabled { cursor: not-allowed; opacity: .42; }
+
+.price-level-guide-table-wrap {
+  flex: 1 1 0;
+  min-height: 0;
+  max-width: 100%;
+  margin-top: 12px;
+  overflow-x: auto;
+  overflow-y: auto;
+  scrollbar-color: #b69872 transparent;
+}
+
+.price-level-guide-table {
+  width: 100%;
+  min-width: 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-family: var(--hanjjak-font-ui);
+  font-variant-numeric: tabular-nums;
+}
+.price-level-guide-col-item { width: 28%; }
+.price-level-guide-col-stock { width: 20%; }
+.price-level-guide-col-available { width: 22%; }
+.price-level-guide-col-price { width: 18%; }
+.price-level-guide-table.with-allocation .price-level-guide-col-item { width: 25%; }
+.price-level-guide-table.with-allocation .price-level-guide-col-stock { width: 18%; }
+.price-level-guide-table.with-allocation .price-level-guide-col-available { width: 20%; }
+.price-level-guide-table.with-allocation .price-level-guide-col-allocation { width: 19%; }
+.price-level-guide-table.with-allocation .price-level-guide-col-price { width: 18%; }
+
+.price-level-guide-table caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.price-level-guide-table th,
+.price-level-guide-table td { padding: 7px 6px; border-bottom: 1px solid var(--price-guide-line); color: #604b3a; font-size: 13px; text-align: right; vertical-align: middle; }
+.price-level-guide-table thead th { padding-top: 7px; padding-bottom: 8px; border-bottom: 2px solid #8f6e50; color: #5f4937; font-size: 12px; font-weight: 900; overflow-wrap: anywhere; }
+.price-level-guide-table thead th:first-child,
+.price-level-guide-table tbody th { text-align: left; }
+.price-level-guide-table tbody th strong { color: #342218; font-size: 14px; }
+.price-level-guide-table tbody th small,
+.price-level-guide-table td small { display: block; margin-top: 2px; color: #9c654b; font-size: 11px; font-weight: 800; }
+.price-level-guide-table tbody tr.in-limit { background: rgba(231, 239, 217, .68); }
+.price-level-guide-table tbody tr.in-limit:hover { background: #e3edcf; }
+.price-level-guide-table tbody tr.selected { background: #f9d7b8; box-shadow: inset 4px 0 #cf594d; }
+.price-level-guide-table tbody tr.has-request .price-level-guide-request { color: #a23d35; font-weight: 900; }
+.price-level-guide-table tbody tr.selected td:last-child strong { color: #a23d35; }
+.price-level-guide-item { display: flex; align-items: center; gap: 8px; min-width: 0; text-align: left; }
+.price-level-guide-item-art { display: grid; flex: 0 0 44px; place-items: center; width: 44px; height: 44px; }
+.price-level-guide-item-art img { width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated; }
+.price-level-guide-item-copy { display: block; min-width: 0; }
+.price-level-guide-item-copy strong { display: block; overflow-wrap: anywhere; }
+.price-level-guide-item-copy small { white-space: nowrap; }
+.price-level-guide-price { max-width: 100%; padding: 4px; border: 0; border-radius: 5px; color: #342218; background: transparent; font: inherit; overflow-wrap: anywhere; }
+.price-level-guide-price:hover:not(:disabled) { background: #f5e3c3; }
+.price-level-guide-price:focus-visible { outline: 3px solid #e2a854; }
+.price-level-guide-price strong { display: block; color: #342218; }
+.price-level-guide-own { color: #8c4b35 !important; font-weight: 900; }
+.price-level-guide-request { color: #a23d35 !important; }
+
+.price-level-guide-page-hint {
+  margin-top: 8px;
+  color: #8e5c38;
+  font-size: 12px;
+}
+
+.price-level-guide-paging {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--price-guide-line);
+  color: #80644e;
+  font-family: var(--hanjjak-font-ui);
+  font-size: 11px;
+}
+
+.price-level-guide-paging button { flex: 0 0 auto; width: 34px; min-height: 30px; border: 2px solid #8f6e50; border-radius: 8px; color: #4c3324; background: #fff6e3; font: inherit; font-size: 19px; font-weight: 950; }
+.price-level-guide-paging button:disabled { opacity: .35; }
+.price-level-guide-paging span { min-width: 82px; color: #705743; text-align: center; font-variant-numeric: tabular-nums; }
+.price-level-guide-paging strong { color: #cf493f; font-size: 17px; }
+
+@media (max-width: 720px) {
+  .price-level-guide { max-height: none; }
+  .price-level-guide-header { display: grid; grid-template-columns: minmax(0, 1fr); }
+  .price-level-guide-table th, .price-level-guide-table td { padding: 7px 3px; font-size: 12px; overflow-wrap: anywhere; }
+  .price-level-guide-table tbody th strong { font-size: 13px; }
+}
+
+@media (max-width: 420px) {
+  .price-level-guide-error,
+  .price-level-guide-paging { align-items: stretch; flex-direction: column; }
+  .price-level-guide-error button,
+  .price-level-guide-paging button { width: 100%; }
+}

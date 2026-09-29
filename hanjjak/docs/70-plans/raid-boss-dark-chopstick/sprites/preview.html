@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>한짝 레이드 보스 5초 애니메이션 미리보기</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #100d16; color: #f7efff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 28px; background: radial-gradient(circle at top, #322142, #100d16 48%); }
+    main { width: min(930px, 100%); margin: auto; }
+    h1 { margin: 0 0 8px; font-size: clamp(24px, 4vw, 40px); }
+    p { color: #c9bdd3; margin: 6px 0; }
+    .panel { margin-top: 22px; border: 1px solid #4e3b5c; border-radius: 16px; padding: 18px; background: #18131fee; box-shadow: 0 18px 50px #0008; }
+    .controls { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0; }
+    button { border: 1px solid #75538e; border-radius: 9px; padding: 9px 14px; background: #2d2038; color: inherit; cursor: pointer; }
+    button.active { border-color: #f160df; background: #63346f; }
+    select { border: 1px solid #75538e; border-radius: 9px; padding: 9px 12px; background: #21172a; color: inherit; }
+    figure { width: min(512px, 100%); margin: 12px auto 0; overflow: hidden; border: 1px solid #44374d; border-radius: 12px; background: #08070b; }
+    figure img { width: 100%; aspect-ratio: 1; object-fit: contain; display: block; image-rendering: pixelated; }
+    figcaption { padding: 9px 11px; background: #241b2c; color: #ddd0e8; font-size: 13px; }
+    .timeline { height: 8px; margin-top: 12px; border-radius: 999px; overflow: hidden; background: #34293d; }
+    .timeline > div { width: 0; height: 100%; background: linear-gradient(90deg, #c42cc4, #ff4f9d); }
+    .time { margin-top: 7px; text-align: center; font-variant-numeric: tabular-nums; color: #e8dced; }
+    .downloads { display: grid; gap: 6px; margin-top: 18px; }
+    a { color: #ef9de7; }
+    body.light figure { background: #ece8f0; }
+    body.green figure { background: #00b85a; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>레이드 보스 5초 애니메이션</h1>
+    <p>한 번에 GIF 하나만 재생해 디코딩 부하를 줄였습니다.</p>
+    <p>512×512 셀 · 모션당 8개 실제 키포즈 / 64프레임 · 12.8fps · 정확히 5초마다 반복</p>
+
+    <section class="panel">
+      <label>보스 <select id="boss"></select></label>
+      <div class="controls" id="actions"></div>
+      <div class="controls">
+        <button data-background="dark">어두운 배경</button>
+        <button data-background="light">밝은 배경</button>
+        <button data-background="green">초록 배경</button>
+        <button id="restart">처음부터 재생</button>
+      </div>
+      <figure>
+        <img id="animation" alt="선택한 보스 애니메이션">
+        <figcaption id="caption"></figcaption>
+      </figure>
+      <div class="timeline"><div id="progress"></div></div>
+      <div class="time" id="time">0.00 / 5.00초</div>
+      <div class="downloads" id="downloads"></div>
+    </section>
+  </main>
+  <script>
+    const bosses = [
+      { slug: "01-abyss-ember-sovereign", name: "심연 불씨 군주", labels: ["대기", "초승달 참격", "심연 기둥", "흑염 파편 방사"] },
+      { slug: "07-blighted-bamboo-lich", name: "병든 대나무 리치", labels: ["대기", "망령 뿌리", "음식 망령 돌진", "독무 고리"] },
+      { slug: "10-fallen-hero-final-ascension", name: "타락한 영웅 최종각성", labels: ["대기", "대검 연계", "추적 에너지 깃털", "전장 낙하검"] }
+    ];
+    const actions = ["idle", "attack-1", "attack-2", "attack-3"];
+    const bossSelect = document.querySelector("#boss");
+    const actionRoot = document.querySelector("#actions");
+    const animation = document.querySelector("#animation");
+    const caption = document.querySelector("#caption");
+    const progress = document.querySelector("#progress");
+    const time = document.querySelector("#time");
+    const downloads = document.querySelector("#downloads");
+    let bossIndex = 0;
+    let actionIndex = 0;
+    let startedAt = performance.now();
+    let cycle = 0;
+
+    bossSelect.innerHTML = bosses.map((boss, index) => `<option value="${index}">${boss.name}</option>`).join("");
+
+    function play() {
+      const boss = bosses[bossIndex];
+      const action = actions[actionIndex];
+      startedAt = performance.now();
+      cycle += 1;
+      animation.src = `${boss.slug}/${action}-5s.gif?play=${cycle}`;
+      animation.alt = `${boss.name} ${boss.labels[actionIndex]}`;
+      caption.textContent = `${boss.name} · ${boss.labels[actionIndex]} · 64프레임 · 5초`;
+      actionRoot.innerHTML = actions.map((_, index) => `<button class="${index === actionIndex ? "active" : ""}" data-action="${index}">${boss.labels[index]}</button>`).join("");
+      actionRoot.querySelectorAll("[data-action]").forEach((button) => button.addEventListener("click", () => {
+        actionIndex = Number(button.dataset.action);
+        play();
+      }));
+      downloads.innerHTML = `
+        <a href="${boss.slug}/${action}-5s.gif" download>현재 GIF 내려받기</a>
+        <a href="${boss.slug}/${boss.slug}-sprite-sheet-64f-512.png">8192×8192 전체 시트 보기</a>
+        <a href="${boss.slug}/${boss.slug}-sprite-sheet-64f-512.json">프레임 메타데이터 보기</a>`;
+    }
+
+    function tick(now) {
+      const elapsed = now - startedAt;
+      if (elapsed >= 5000) play();
+      const current = Math.min((performance.now() - startedAt) / 5000, 1);
+      progress.style.width = `${current * 100}%`;
+      time.textContent = `${(current * 5).toFixed(2)} / 5.00초`;
+      requestAnimationFrame(tick);
+    }
+
+    bossSelect.addEventListener("change", () => { bossIndex = Number(bossSelect.value); actionIndex = 0; play(); });
+    document.querySelector("#restart").addEventListener("click", play);
+    document.querySelectorAll("[data-background]").forEach((button) => button.addEventListener("click", () => {
+      document.body.classList.remove("light", "green");
+      if (button.dataset.background !== "dark") document.body.classList.add(button.dataset.background);
+    }));
+
+    play();
+    requestAnimationFrame(tick);
+  </script>
+</body>
+</html>

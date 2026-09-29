@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>한짝 · 기본공격 피격 VFX 비교실</title>
+  <meta name="description" content="strike1 모션과 동기화된 몬스터 중심 기본공격 피격 VFX 5안 비교 화면">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #190f0a;
+      --ink-soft: #332017;
+      --paper: #f5e7c8;
+      --paper-dim: #cbb894;
+      --line: rgba(242, 218, 172, .17);
+      --panel: rgba(31, 19, 13, .92);
+      --panel-2: rgba(51, 31, 20, .78);
+      --gold: #f6c45d;
+      --ember: #f16a3d;
+      --mint: #80b88f;
+      --impact-ms: 200;
+      --cycle-ms: 1000;
+      --radius: 12px;
+      --space-1: 6px;
+      --space-2: 10px;
+      --space-3: 16px;
+      --space-4: 24px;
+      --space-5: 36px;
+      --font-ui: "Noto Sans KR", system-ui, sans-serif;
+      --font-display: "Black Han Sans", "Noto Sans KR", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { min-width: 320px; background: var(--ink); }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      color: var(--paper);
+      background:
+        linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px),
+        radial-gradient(circle at 50% -20%, #56321f 0, #21130d 42%, #110a07 82%);
+      background-size: 28px 28px, 28px 28px, auto;
+      font-family: var(--font-ui);
+    }
+    button, select, input { font: inherit; }
+    button { color: inherit; }
+    button:focus-visible, input:focus-visible, select:focus-visible {
+      outline: 3px solid #fff0b7;
+      outline-offset: 3px;
+    }
+    .app-shell { width: min(1580px, 100%); margin: 0 auto; padding: 22px clamp(14px, 2.4vw, 38px) 42px; }
+    .topbar { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+    .eyebrow { margin: 0 0 7px; color: var(--gold); font-size: 11px; font-weight: 900; letter-spacing: .18em; }
+    h1 { margin: 0; font-family: var(--font-display); font-size: clamp(28px, 4vw, 58px); font-weight: 400; line-height: .98; letter-spacing: .015em; }
+    .lede { max-width: 680px; margin: 10px 0 0; color: var(--paper-dim); font-size: 13px; line-height: 1.6; }
+    .status-chip { flex: none; display: inline-flex; align-items: center; gap: 8px; padding: 8px 11px; border: 1px solid rgba(246,196,93,.35); color: #ffe4a7; background: rgba(246,196,93,.08); font-size: 11px; font-weight: 800; }
+    .status-chip::before { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 12px var(--gold); content: ""; }
+
+    .control-deck { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; padding: 18px 0 16px; }
+    .variant-tabs { display: flex; min-width: 0; gap: 7px; overflow-x: auto; scrollbar-width: thin; }
+    .variant-tab { min-width: 158px; padding: 11px 13px; border: 1px solid var(--line); border-radius: 5px; background: rgba(255,255,255,.025); text-align: left; cursor: pointer; transition: border-color .18s, background .18s, transform .18s; }
+    .variant-tab:hover { transform: translateY(-1px); border-color: rgba(246,196,93,.45); }
+    .variant-tab[aria-selected="true"] { border-color: var(--gold); background: rgba(246,196,93,.12); box-shadow: inset 0 -3px 0 var(--gold); }
+    .variant-tab small { display: block; color: #a99372; font-size: 9px; font-weight: 900; letter-spacing: .13em; }
+    .variant-tab strong { display: block; margin-top: 3px; font-size: 13px; }
+    .playback { display: flex; align-items: stretch; gap: 7px; }
+    .icon-button, .speed-button, .bound-button { min-height: 44px; border: 1px solid var(--line); border-radius: 5px; background: var(--panel-2); cursor: pointer; }
+    .icon-button { min-width: 76px; padding: 0 14px; font-weight: 900; }
+    .speed-button { min-width: 58px; padding: 0 10px; color: var(--paper-dim); }
+    .speed-button[aria-pressed="true"], .bound-button[aria-pressed="true"] { border-color: var(--mint); color: #c6f2d1; background: rgba(128,184,143,.12); }
+
+    .lab { border: 1px solid var(--line); background: rgba(15, 9, 6, .72); }
+    .lab-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 20px; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--line); background: var(--panel); }
+    .lab-title { display: flex; align-items: baseline; gap: 10px; min-width: 0; }
+    .lab-title b { font-size: 16px; }
+    .lab-title span { overflow: hidden; color: var(--paper-dim); font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
+    .metric-row { display: flex; gap: 16px; margin: 0; }
+    .metric-row div { display: grid; grid-template-columns: auto auto; gap: 4px 7px; align-items: baseline; }
+    .metric-row dt { color: #a99372; font-size: 9px; font-weight: 800; letter-spacing: .1em; }
+    .metric-row dd { margin: 0; color: #fff0bf; font-size: 12px; font-weight: 900; font-variant-numeric: tabular-nums; }
+
+    .battle-lanes { display: grid; grid-template-columns: repeat(5, minmax(245px, 1fr)); min-height: 390px; overflow-x: auto; }
+    .lane { position: relative; min-width: 245px; min-height: 390px; overflow: hidden; border-right: 1px solid var(--line); background: linear-gradient(180deg, rgba(84,47,28,.2), transparent 54%); }
+    .lane:last-child { border-right: 0; }
+    .lane::after { position: absolute; right: 0; bottom: 48px; left: 0; height: 2px; background: linear-gradient(90deg, transparent, rgba(246,196,93,.22), transparent); content: ""; }
+    .lane-meta { position: absolute; z-index: 12; top: 13px; right: 13px; left: 13px; display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+    .lane-meta strong { display: block; max-width: 155px; font-size: 12px; line-height: 1.25; }
+    .lane-meta small { display: block; margin-top: 2px; color: #a99372; font-size: 9px; }
+    .size-tag { flex: none; padding: 4px 6px; border: 1px solid rgba(255,255,255,.15); color: #d8c8aa; font-size: 9px; font-weight: 900; }
+    .duel { position: absolute; inset: 52px 0 50px; }
+    .hero { position: absolute; z-index: 5; bottom: 1px; left: -25px; width: 164px; height: 119px; transform-origin: 50% 90%; }
+    .hero img { display: block; width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated; filter: drop-shadow(0 8px 5px rgba(0,0,0,.55)); }
+    .hero.is-striking { animation: hero-drive 400ms cubic-bezier(.18,.82,.28,1) both; }
+    .monster-anchor { position: absolute; z-index: 4; right: 11px; bottom: 1px; display: grid; place-items: end center; width: calc(100% - 72px); height: 288px; }
+    .monster-wrap { position: relative; transform-origin: center bottom; transition: width .2s, height .2s; }
+    .monster-clip { position: absolute; inset: 0; z-index: 2; overflow: hidden; }
+    .monster-art { position: absolute; max-width: none; image-rendering: pixelated; filter: drop-shadow(0 10px 5px rgba(0,0,0,.56)); pointer-events: none; }
+    .monster-shadow { position: absolute; bottom: -8px; left: 50%; width: 72%; height: 13px; border-radius: 50%; background: rgba(0,0,0,.42); filter: blur(3px); transform: translateX(-50%); }
+    .hitbox { position: absolute; z-index: 8; inset: 0; display: grid; place-items: center; overflow: hidden; border: 1px dashed transparent; pointer-events: none; }
+    .show-bounds .hitbox { border-color: rgba(102,220,180,.7); background: rgba(102,220,180,.035); }
+    .show-bounds .hitbox::before { position: absolute; top: 50%; left: 50%; width: 7px; height: 7px; border: 1px solid #83e8c2; border-radius: 50%; transform: translate(-50%,-50%); content: ""; }
+    .effect-bound { position: relative; width: 82%; aspect-ratio: 1; max-height: 82%; transform: scale(var(--effect-scale, 1)); }
+    .vfx { position: absolute; inset: 0; opacity: 0; }
+    .vfx.play { animation-duration: 520ms; animation-fill-mode: both; animation-timing-function: cubic-bezier(.13,.82,.2,1); }
+    .is-paused .hero, .is-paused .monster-wrap, .is-paused .vfx, .is-paused .vfx::before, .is-paused .vfx::after, .is-paused .grain { animation-play-state: paused !important; }
+
+    /* A: 매 타격마다 우상향 / 좌상향을 번갈아 긋는 단일 칼궤적 */
+    .vfx-slash::before { position: absolute; top: 47%; left: 4%; width: 92%; height: 9%; border-radius: 100% 10% 100% 8%; background: linear-gradient(90deg, transparent 0, #f6b84e 14%, #fffdf0 32% 78%, transparent 100%); box-shadow: 0 0 7px #fff, 0 0 16px rgba(246,196,93,.82); content: ""; }
+    .vfx-slash::after { display: none; }
+    .vfx-slash.play { animation-name: vfx-fade; }
+    .vfx-slash.slash-up-right.play::before { transform-origin: left center; animation: slash-up-right 240ms cubic-bezier(.12,.8,.16,1) both; }
+    .vfx-slash.slash-up-left.play::before { transform-origin: right center; animation: slash-up-left 240ms cubic-bezier(.12,.8,.16,1) both; }
+
+    /* B: 붉은 붓자국 두 획 */
+    .vfx-brush::before, .vfx-brush::after { position: absolute; top: 46%; left: 3%; width: 94%; height: 15%; background: linear-gradient(90deg, transparent, #ffcc7b 8%, #e94027 26% 78%, transparent); clip-path: polygon(0 44%, 13% 9%, 78% 24%, 100% 0, 89% 52%, 100% 100%, 66% 72%, 9% 90%); filter: drop-shadow(0 0 7px rgba(255,56,24,.8)); content: ""; transform: rotate(39deg) scaleX(.1); }
+    .vfx-brush::after { transform: rotate(-39deg) scaleX(.1); }
+    .vfx-brush.play { animation-name: vfx-fade; }
+    .vfx-brush.play::before { animation: brush-a 460ms steps(5,end) both; }
+    .vfx-brush.play::after { animation: brush-b 460ms 45ms steps(5,end) both; }
+
+    /* C: 명랑한 만화식 타격 별 */
+    .vfx-burst::before { position: absolute; inset: 8%; background: radial-gradient(circle, #fff8c8 0 12%, #ffc743 13% 25%, #f15b36 26% 38%, transparent 39%); clip-path: polygon(50% 0,60% 34%,84% 9%,70% 39%,100% 35%,72% 52%,96% 72%,65% 65%,68% 100%,50% 70%,31% 98%,35% 64%,4% 76%,29% 52%,0 37%,34% 39%); filter: drop-shadow(0 0 7px rgba(255,181,48,.7)); content: ""; }
+    .vfx-burst::after { position: absolute; inset: 34%; border: max(2px, .035em) solid #fffbe9; border-radius: 50%; box-shadow: 0 -2.1em 0 -0.9em #ffde71, 0 2.1em 0 -0.9em #ffde71, 2.1em 0 0 -0.9em #ffde71, -2.1em 0 0 -0.9em #ffde71; content: ""; }
+    .vfx-burst.play { animation-name: burst-pop; }
+
+    /* D: 중심을 정확히 읽을 수 있는 동심원 */
+    .vfx-ripple::before, .vfx-ripple::after { position: absolute; inset: 18%; border: max(2px, .025em) solid #fff1b4; border-radius: 50%; box-shadow: 0 0 10px #ff9b45, inset 0 0 9px rgba(255,185,72,.8); content: ""; }
+    .vfx-ripple::after { inset: 30%; border-color: #fff; }
+    .vfx-ripple.play { animation-name: vfx-fade; }
+    .vfx-ripple.play::before { animation: ring-out 520ms ease-out both; }
+    .vfx-ripple.play::after { animation: ring-out 420ms 55ms ease-out both; }
+
+    /* E: 쌀알 파편. 음식 몬스터 세계관을 가장 직접적으로 반영 */
+    .vfx-grain::before { position: absolute; top: 47%; left: 8%; width: 84%; height: 8%; border-radius: 100%; background: linear-gradient(90deg, transparent, #fff8df 18% 78%, transparent); box-shadow: 0 0 10px #f6b84e; content: ""; transform: rotate(-25deg); }
+    .grain { position: absolute; top: 50%; left: 50%; width: 13%; height: 5%; border-radius: 80% 30% 80% 30%; background: #fff8d9; box-shadow: 0 0 7px #ffbc4f; opacity: 0; }
+    .vfx-grain.play { animation-name: vfx-fade; }
+    .vfx-grain.play .grain { animation: grain-fly 500ms var(--delay) cubic-bezier(.12,.66,.2,1) both; transform: rotate(var(--r)); --dx: 0px; --dy: -42px; }
+    .grain:nth-child(2) { --r: 38deg; --dx: 37px !important; --dy: -29px !important; --delay: 15ms; }
+    .grain:nth-child(3) { --r: 78deg; --dx: 45px !important; --dy: 15px !important; --delay: 30ms; }
+    .grain:nth-child(4) { --r: 132deg; --dx: -36px !important; --dy: 28px !important; --delay: 45ms; }
+    .grain:nth-child(5) { --r: 166deg; --dx: -44px !important; --dy: -16px !important; --delay: 22ms; }
+    .grain:nth-child(6) { --r: 204deg; --dx: 8px !important; --dy: 42px !important; --delay: 38ms; }
+
+    .lane-foot { position: absolute; z-index: 11; right: 12px; bottom: 14px; left: 12px; display: flex; align-items: center; justify-content: space-between; color: #a99372; font-size: 9px; font-variant-numeric: tabular-nums; }
+    .scale-bar { display: flex; align-items: center; gap: 5px; }
+    .scale-bar i { display: block; width: var(--bar); height: 3px; background: var(--mint); box-shadow: 0 0 8px rgba(128,184,143,.45); }
+
+    .timeline-panel { display: grid; grid-template-columns: 150px minmax(0, 1fr) 240px; gap: 16px; align-items: center; padding: 15px 16px 17px; border-top: 1px solid var(--line); background: var(--panel); }
+    .frame-readout strong { display: block; font-size: 13px; }
+    .frame-readout span { color: var(--gold); font-size: 11px; font-weight: 900; font-variant-numeric: tabular-nums; }
+    .timeline { position: relative; height: 44px; }
+    .timeline-track { position: absolute; top: 17px; right: 0; left: 0; height: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,.12); background: rgba(0,0,0,.35); }
+    .timeline-track::before { position: absolute; inset: 0; width: 40%; background: linear-gradient(90deg, rgba(246,196,93,.18), rgba(241,106,61,.28)); content: ""; }
+    .timeline-fill { width: 0; height: 100%; background: #f5dfaa; box-shadow: 0 0 12px #f6c45d; }
+    .impact-mark { position: absolute; top: 2px; bottom: 2px; left: 20%; width: 1px; background: var(--ember); }
+    .impact-mark::before { position: absolute; top: -1px; left: 5px; color: #ff9b73; font-size: 8px; font-weight: 900; white-space: nowrap; content: "HIT · 200ms"; }
+    .frame-marks { position: absolute; right: 0; bottom: 0; left: 0; display: flex; justify-content: space-between; color: #8f7b60; font-size: 8px; }
+    .bound-button { padding: 0 12px; min-height: 42px; color: var(--paper-dim); font-size: 11px; font-weight: 800; }
+
+    .notes { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(280px, .6fr); gap: 18px; padding-top: 18px; }
+    .variant-note, .rules { min-width: 0; padding: 16px; border-top: 2px solid var(--gold); background: rgba(255,255,255,.028); }
+    .notes h2 { margin: 0 0 8px; font-size: 14px; }
+    .notes p { margin: 0; color: var(--paper-dim); font-size: 11px; line-height: 1.65; }
+    .rules { border-color: var(--mint); }
+    .rules ul { display: grid; gap: 6px; margin: 0; padding: 0; list-style: none; }
+    .rules li { display: grid; grid-template-columns: 58px 1fr; gap: 8px; color: var(--paper-dim); font-size: 10px; line-height: 1.45; }
+    .rules b { color: #c6f2d1; }
+    .mechanic-lab { margin-top: 18px; border: 1px solid var(--line); background: rgba(15,9,6,.76); }
+    .mechanic-head { display: flex; align-items: end; justify-content: space-between; gap: 18px; padding: 16px; border-bottom: 1px solid var(--line); }
+    .mechanic-head h2 { margin: 0; font-size: 16px; }
+    .mechanic-head p { max-width: 720px; margin: 5px 0 0; color: var(--paper-dim); font-size: 10px; line-height: 1.55; }
+    .sim-toggle { flex: none; min-height: 44px; padding: 0 15px; border: 1px solid var(--gold); border-radius: 5px; background: rgba(246,196,93,.1); cursor: pointer; font-weight: 900; }
+    .mechanic-grid { display: grid; grid-template-columns: minmax(280px,.78fr) minmax(460px,1.22fr); min-height: 310px; }
+    .sim-stage { position: relative; display: grid; place-items: center; min-height: 310px; overflow: hidden; border-right: 1px solid var(--line); background: radial-gradient(circle at 50% 62%, rgba(104,58,31,.4), transparent 52%); }
+    .sim-stage::after { position: absolute; right: 8%; bottom: 56px; left: 8%; height: 2px; background: linear-gradient(90deg, transparent, rgba(246,196,93,.28), transparent); content: ""; }
+    .sim-monster { position: relative; z-index: 2; width: 246px; height: 169px; margin-top: 36px; }
+    .sim-monster-sprite { position: absolute; inset: 0; overflow: hidden; }
+    .sim-monster-sprite img { position: absolute; width: 1270px; height: 1588px; left: -36px; top: -135px; max-width: none; image-rendering: pixelated; filter: drop-shadow(0 10px 5px rgba(0,0,0,.58)); }
+    .sim-monster-sprite[data-frame="1"] img { left: -36px; }
+    .sim-monster-sprite[data-frame="2"] img { left: -353px; }
+    .sim-monster-sprite[data-frame="3"] img { left: -671px; }
+    .sim-monster-sprite[data-frame="4"] img { left: -988px; }
+    .sim-monster-sprite[data-state="idle"] img { top: -135px; }
+    .sim-monster-sprite[data-state="attack"] img { top: -769px; }
+    .sim-monster-sprite[data-state="hit"] img { top: -1087px; }
+    .sim-state { position: absolute; z-index: 4; top: 16px; left: 16px; display: grid; gap: 3px; }
+    .sim-state small { color: #a99372; font-size: 9px; font-weight: 900; letter-spacing: .12em; }
+    .sim-state strong { color: #fff0bf; font-size: 16px; }
+    .pending-chip { position: absolute; z-index: 4; top: 18px; right: 16px; padding: 5px 8px; border: 1px solid rgba(241,106,61,.5); color: #ffb397; background: rgba(241,106,61,.12); font-size: 9px; font-weight: 900; opacity: 0; }
+    .pending-chip.on { opacity: 1; }
+    .sim-clock { position: absolute; z-index: 4; bottom: 18px; left: 50%; color: var(--paper-dim); font-size: 10px; font-variant-numeric: tabular-nums; transform: translateX(-50%); }
+    .sim-report { display: grid; grid-template-rows: auto auto 1fr; min-width: 0; padding: 16px; }
+    .scorecards { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; }
+    .scorecard { padding: 12px; border-top: 2px solid var(--mint); background: rgba(255,255,255,.035); }
+    .scorecard.warn { border-color: var(--ember); }
+    .scorecard small { display: block; color: #a99372; font-size: 9px; }
+    .scorecard strong { display: block; margin-top: 2px; font-size: 22px; font-variant-numeric: tabular-nums; }
+    .sim-track { position: relative; height: 58px; margin: 14px 0 8px; border-bottom: 1px solid var(--line); }
+    .sim-track::before { position: absolute; top: 20px; right: 0; left: 0; height: 5px; background: rgba(255,255,255,.08); content: ""; }
+    .sim-playhead { position: absolute; z-index: 3; top: 8px; bottom: 0; left: 0; width: 1px; background: #fff0b7; box-shadow: 0 0 10px #f6c45d; }
+    .tick-labels { position: absolute; right: 0; bottom: 0; left: 0; display: flex; justify-content: space-between; color: #806d56; font-size: 8px; }
+    .event-dot { position: absolute; top: 16px; width: 10px; height: 10px; border: 2px solid var(--ink); border-radius: 50%; background: var(--gold); transform: translateX(-50%); }
+    .event-dot.mob { top: 30px; background: var(--ember); }
+    .event-log { display: grid; align-content: start; gap: 5px; max-height: 92px; margin: 0; padding: 0; overflow-y: auto; list-style: none; }
+    .event-log li { display: grid; grid-template-columns: 48px 72px 1fr; gap: 8px; color: var(--paper-dim); font-size: 9px; line-height: 1.4; }
+    .event-log time { color: #fff0bf; font-variant-numeric: tabular-nums; }
+    .event-log b { color: #c6f2d1; }
+    footer { padding-top: 18px; color: #796751; font-size: 9px; line-height: 1.5; }
+
+    @keyframes hero-drive { 0% { transform: translateX(-7px) scale(.98); } 25% { transform: translateX(-2px) rotate(-2deg); } 50% { transform: translateX(25px) rotate(2deg) scale(1.025); } 76%,100% { transform: translateX(6px); } }
+    @keyframes vfx-fade { 0% { opacity: 0; } 8%,60% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes slash-up-right { 0% { transform: rotate(-34deg) scaleX(.04); opacity: 0; } 22% { opacity: 1; } 62% { transform: rotate(-34deg) scaleX(1); opacity: 1; } 100% { transform: rotate(-34deg) scaleX(1.04); opacity: 0; } }
+    @keyframes slash-up-left { 0% { transform: rotate(34deg) scaleX(.04); opacity: 0; } 22% { opacity: 1; } 62% { transform: rotate(34deg) scaleX(1); opacity: 1; } 100% { transform: rotate(34deg) scaleX(1.04); opacity: 0; } }
+    @keyframes brush-a { 0% { transform: rotate(39deg) scaleX(.08); opacity: 0; } 42%,66% { transform: rotate(39deg) scaleX(1); opacity: 1; } 100% { opacity: 0; } }
+    @keyframes brush-b { 0% { transform: rotate(-39deg) scaleX(.08); opacity: 0; } 42%,66% { transform: rotate(-39deg) scaleX(1); opacity: 1; } 100% { opacity: 0; } }
+    @keyframes burst-pop { 0% { transform: scale(.08) rotate(-12deg); opacity: 0; } 22% { transform: scale(1.12) rotate(3deg); opacity: 1; } 48% { transform: scale(.91); opacity: 1; } 100% { transform: scale(1.18) rotate(8deg); opacity: 0; } }
+    @keyframes ring-out { 0% { transform: scale(.12); opacity: 0; } 18% { opacity: 1; } 100% { transform: scale(1.45); opacity: 0; } }
+    @keyframes grain-fly { 0% { translate: -50% -50%; scale: .2; opacity: 0; } 22% { opacity: 1; } 100% { translate: calc(-50% + var(--dx)) calc(-50% + var(--dy)); scale: 1; opacity: 0; } }
+
+    @media (max-width: 1024px) {
+      .control-deck { grid-template-columns: 1fr; }
+      .playback { justify-content: flex-end; }
+      .timeline-panel { grid-template-columns: 130px minmax(0,1fr); }
+      .bound-button { grid-column: 1 / -1; }
+    }
+    @media (max-width: 768px) {
+      .app-shell { padding-top: 16px; }
+      .topbar { align-items: flex-start; }
+      .status-chip { display: none; }
+      .lab-head { grid-template-columns: 1fr; gap: 8px; }
+      .metric-row { flex-wrap: wrap; }
+      .notes { grid-template-columns: 1fr; }
+      .mechanic-grid { grid-template-columns: 1fr; }
+      .sim-stage { border-right: 0; border-bottom: 1px solid var(--line); }
+    }
+    @media (max-width: 520px) {
+      .topbar { display: block; }
+      .playback { display: grid; grid-template-columns: 1fr repeat(3, auto); }
+      .battle-lanes { grid-template-columns: repeat(5, 232px); }
+      .timeline-panel { grid-template-columns: 1fr; }
+      .timeline { width: 100%; }
+      .mechanic-head { align-items: stretch; flex-direction: column; }
+      .scorecards { grid-template-columns: 1fr; }
+      .sim-report { padding: 12px; }
+    }
+    @media (min-width: 1440px) { .lane { min-width: 260px; } }
+    @media (prefers-color-scheme: light) {
+      :root { color-scheme: dark; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero.is-striking, .vfx.play, .vfx.play::before, .vfx.play::after, .vfx.play .grain { animation-duration: 1ms !important; animation-delay: 0ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">COMBAT VFX LAB · CANDIDATE</p>
+        <h1 data-pretext contenteditable="true">기본공격, 어디서 터져야 맛있을까?</h1>
+        <p class="lede" data-pretext contenteditable="true">실제 strike1 4프레임과 다섯 크기의 몬스터를 같은 시계로 재생합니다. 모든 후보는 타격 프레임 진입과 동시에 몬스터의 보이는 영역 중앙에서 시작합니다.</p>
+      </div>
+      <span class="status-chip">A안 확정 · 저장됨</span>
+    </header>
+
+    <main>
+      <section class="control-deck" aria-label="이펙트 및 재생 제어">
+        <nav class="variant-tabs" role="tablist" aria-label="기본공격 피격 이펙트 시안"></nav>
+        <div class="playback">
+          <button class="icon-button" id="playButton" type="button" aria-label="애니메이션 일시 정지">일시정지</button>
+          <button class="speed-button" type="button" data-speed="0.5" aria-pressed="false">0.5×</button>
+          <button class="speed-button" type="button" data-speed="1" aria-pressed="true">1×</button>
+          <button class="speed-button" type="button" data-speed="1.5" aria-pressed="false">1.5×</button>
+        </div>
+      </section>
+
+      <section class="lab" aria-labelledby="labTitle">
+        <header class="lab-head">
+          <div class="lab-title"><b id="labTitle">A · 백금 교대베기</b><span id="labSubtitle">우상향 ↔ 좌상향 교대</span></div>
+          <dl class="metric-row">
+            <div><dt>STRIKE</dt><dd>400ms</dd></div>
+            <div><dt>IMPACT</dt><dd>200ms</dd></div>
+            <div><dt>VFX</dt><dd id="vfxDuration">240ms</dd></div>
+          </dl>
+        </header>
+        <div class="battle-lanes" id="battleLanes" aria-label="몬스터 크기별 이펙트 비교"></div>
+        <div class="timeline-panel">
+          <div class="frame-readout"><strong>strike1 · <span id="frameLabel">FRAME 01</span></strong><span id="timeLabel">0000ms</span></div>
+          <div class="timeline" aria-label="strike1 및 이펙트 재생 타임라인">
+            <div class="timeline-track"><div class="timeline-fill" id="timelineFill"></div></div>
+            <i class="impact-mark" aria-hidden="true"></i>
+            <div class="frame-marks"><span>0</span><span>100</span><span>200</span><span>300</span><span>400ms</span><span>반복 1000ms</span></div>
+          </div>
+          <button class="bound-button" id="boundButton" type="button" aria-pressed="false">중앙 범위 표시</button>
+        </div>
+      </section>
+
+      <section class="notes" aria-label="선택 시안 설명과 배치 규칙">
+        <article class="variant-note">
+          <h2 id="noteTitle" data-pretext contenteditable="true">A안 · 백금 교대베기</h2>
+          <p id="noteBody" data-pretext contenteditable="true">오른쪽 위로 베는 사선과 왼쪽 위로 베는 사선을 타격마다 번갈아 재생합니다. 240ms 안에 한 획만 지나가 반복 공격에서도 겹치지 않으며, 몬스터 자체는 흔들지 않습니다.</p>
+        </article>
+        <aside class="rules">
+          <h2>고정 배치 규칙</h2>
+          <ul>
+            <li><b>중심</b><span>보이는 몬스터 바운드의 정중앙</span></li>
+            <li><b>크기</b><span>바운드 짧은 변의 82%, 내부 클리핑</span></li>
+            <li><b>시작</b><span>strike1 3프레임 진입, 200ms</span></li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="mechanic-lab" aria-labelledby="mechanicTitle">
+        <header class="mechanic-head">
+          <div>
+            <h2 id="mechanicTitle">피격 예약 메커니즘 · 4초 검산</h2>
+            <p>공격 앞 절반은 즉시 취소, 적중 이후는 공격 종료 직후 피격 예약. 피해는 즉시 계산하되 몬스터 공격 피해는 250ms 적중 프레임에서 한 번만 발생합니다.</p>
+          </div>
+          <button class="sim-toggle" id="simButton" type="button">4초 다시 재생</button>
+        </header>
+        <div class="mechanic-grid">
+          <div class="sim-stage">
+            <div class="sim-state"><small>MONSTER STATE</small><strong id="simState">ATTACK · 되감기</strong></div>
+            <span class="pending-chip" id="pendingChip">HIT 예약됨</span>
+            <div class="sim-monster"><span class="sim-monster-sprite" id="simMonster" data-state="attack" data-frame="1"><img src="../../../apps/web/public/assets/chapters/chapter-02-cookie-gift-set/monsters/cookie-tin-bulwark-knight/cookie-tin-bulwark-knight-sprite-sheet-5x4.png" alt="피격 예약 시뮬레이션용 쿠키통 철벽기사"></span></div>
+            <span class="sim-clock" id="simClock">0.00 / 4.00초</span>
+          </div>
+          <div class="sim-report">
+            <div class="scorecards">
+              <div class="scorecard"><small>공격 모션 완주</small><strong id="attackComplete">0 / 2</strong></div>
+              <div class="scorecard warn"><small>되감기 중 끊김</small><strong id="attackInterrupted">0 / 1</strong></div>
+              <div class="scorecard"><small>피격 모션 완주</small><strong id="hitComplete">0 / 4</strong></div>
+            </div>
+            <div class="sim-track" id="simTrack" aria-label="4초 전투 사건 타임라인">
+              <i class="sim-playhead" id="simPlayhead"></i>
+              <span class="event-dot" style="left:3.75%" title="0.15초 주인공 타격"></span>
+              <span class="event-dot" style="left:28.75%" title="1.15초 주인공 타격"></span>
+              <span class="event-dot" style="left:53.75%" title="2.15초 주인공 타격"></span>
+              <span class="event-dot" style="left:78.75%" title="3.15초 주인공 타격"></span>
+              <span class="event-dot mob" style="left:44%" title="1.76초 몬스터 적중"></span>
+              <span class="event-dot mob" style="left:76.5%" title="3.06초 몬스터 적중"></span>
+              <div class="tick-labels"><span>0초</span><span>1초</span><span>2초</span><span>3초</span><span>4초</span></div>
+            </div>
+            <ol class="event-log" id="eventLog" aria-live="polite"></ol>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>선택 상태: A안 백금 교대베기 확정 · B~E안은 비교 이력 · 피격 예약 메커니즘은 후보 검증 자료 · 근거: docs/30-domain/combat/ssot.md, docs/30-domain/player/ux/ssot.md</footer>
+  </div>
+
+  <script>
+    const ROOT = "../../../apps/web/public/assets";
+    const HERO_ROOT = `${ROOT}/chapters/chapter-01-sushi/hero`;
+    const variants = [
+      { id: "slash", key: "A", name: "백금 교대베기", short: "우상향 ↔ 좌상향 교대", duration: 240, body: "오른쪽 위로 베는 사선과 왼쪽 위로 베는 사선을 타격마다 번갈아 재생합니다. 240ms 안에 한 획만 지나가 반복 공격에서도 겹치지 않으며, 몬스터 자체는 흔들지 않습니다." },
+      { id: "brush", key: "B", name: "적묵 교차베기", short: "묵직한 붓자국 두 획", duration: 505, body: "두 붓자국이 45ms 간격으로 교차해 손맛을 강조합니다. 붉은 잔상이 오래 남아 강한 타격으로 읽히므로, 기본공격을 조금 더 공격적으로 보이게 할 때 적합합니다." },
+      { id: "burst", key: "C", name: "바삭 충격별", short: "명랑한 만화식 임팩트", duration: 500, body: "한 번 크게 팽창한 뒤 사라지는 만화식 충격별입니다. 작은 몬스터에서도 적중 순간이 가장 잘 보이며, 한짝의 가볍고 유쾌한 음식 세계관과 잘 맞습니다." },
+      { id: "ripple", key: "D", name: "울림 동심원", short: "중앙 판독이 가장 정확", duration: 520, body: "중심에서 두 개의 얇은 원이 퍼져나갑니다. 타격 방향보다 적중 위치를 강조하고, 복잡한 몬스터 실루엣 위에서도 이펙트 중심과 크기 비례를 가장 쉽게 검수할 수 있습니다." },
+      { id: "grain", key: "E", name: "쌀알 파편", short: "한짝 세계관 특화안", duration: 520, body: "짧은 칼빛 뒤로 쌀알 모양 파편 여섯 개가 흩어집니다. 음식형 몬스터와의 접점이 강하고 개성이 뚜렷하지만, 반복 속도가 빨라지면 다른 안보다 시각 정보량이 많습니다." },
+    ];
+    const monsters = [
+      { name: "토요빵", kind: "XS · 일반", sheet: `${ROOT}/chapters/chapter-01-sungsimdang/monsters/toyo-bread/toyo-bread-sprite-sheet-5x4.png`, cell: 192, x: 50, y: 99, w: 92, h: 62, scale: 1.15, bar: 36 },
+      { name: "튀김소보로", kind: "S · 일반", sheet: `${ROOT}/chapters/chapter-01-sungsimdang/monsters/fried-soboro/fried-soboro-sprite-sheet-5x4.png`, cell: 192, x: 55, y: 88, w: 81, h: 73, scale: 1.25, bar: 49 },
+      { name: "쿠키통 철벽기사", kind: "M · 중간보스", sheet: `${ROOT}/chapters/chapter-02-cookie-gift-set/monsters/cookie-tin-bulwark-knight/cookie-tin-bulwark-knight-sprite-sheet-5x4.png`, cell: 512, x: 58, y: 217, w: 396, h: 273, scale: .62, bar: 68 },
+      { name: "선물 골렘", kind: "L · 보스", sheet: `${ROOT}/chapters/chapter-02-cookie-gift-set/monsters/royal-assortment-gift-golem/royal-assortment-gift-golem-sprite-sheet-5x4.png`, cell: 512, x: 32, y: 152, w: 448, h: 338, scale: .56, bar: 84 },
+      { name: "대뱃살초밥", kind: "XL · 보스", sheet: `${ROOT}/chapters/chapter-03-sushi/monsters/fatty-tuna-nigiri-boss/fatty-tuna-nigiri-boss-sprite-sheet-5x4.png`, cell: 512, x: 68, y: 256, w: 376, h: 234, scale: .78, bar: 100 },
+    ];
+    const state = { variant: variants[0], paused: false, speed: 1, epoch: performance.now(), lastCycle: -1, frozenElapsed: 0, slashRight: false };
+    const tabRoot = document.querySelector(".variant-tabs");
+    const lanes = document.getElementById("battleLanes");
+
+    const effectMarkup = (id) => id === "grain"
+      ? `<span class="vfx vfx-grain" aria-hidden="true"><i class="grain"></i><i class="grain"></i><i class="grain"></i><i class="grain"></i><i class="grain"></i><i class="grain"></i></span>`
+      : `<span class="vfx vfx-${id}" aria-hidden="true"></span>`;
+
+    function renderTabs() {
+      tabRoot.innerHTML = variants.map(v => `<button class="variant-tab" id="tab-${v.id}" type="button" role="tab" aria-controls="battleLanes" aria-selected="${v.id === state.variant.id}" data-variant="${v.id}"><small>${v.key} · CONCEPT</small><strong>${v.name}</strong></button>`).join("");
+      tabRoot.querySelectorAll("button").forEach(button => button.addEventListener("click", () => selectVariant(button.dataset.variant)));
+    }
+    function renderLanes() {
+      lanes.innerHTML = monsters.map((m, index) => {
+        const width = Math.round(m.w * m.scale);
+        const height = Math.round(m.h * m.scale);
+        const imgWidth = Math.round(m.cell * 4 * m.scale);
+        const left = Math.round(-m.x * m.scale);
+        const top = Math.round(-m.y * m.scale);
+        return `<article class="lane" aria-label="${m.name}, ${m.kind}">
+          <header class="lane-meta"><div><strong>${m.name}</strong><small>${width} × ${height}px 보이는 영역</small></div><span class="size-tag">${m.kind}</span></header>
+          <div class="duel">
+            <div class="hero"><img src="${HERO_ROOT}/strike1_01.png" alt="기본 나무검 strike1 프레임"></div>
+            <div class="monster-anchor">
+              <div class="monster-wrap" style="width:${width}px;height:${height}px" data-monster="${index}">
+                <span class="monster-shadow"></span>
+                <span class="monster-clip"><img class="monster-art" src="${m.sheet}" alt="${m.name}" style="width:${imgWidth}px;height:${Math.round(m.cell * 5 * m.scale)}px;left:${left}px;top:${top}px"></span>
+                <span class="hitbox"><span class="effect-bound">${effectMarkup(state.variant.id)}</span></span>
+              </div>
+            </div>
+          </div>
+          <div class="lane-foot"><span>VFX ${Math.round(Math.min(width, height) * .82)}px</span><span class="scale-bar">SIZE <i style="--bar:${m.bar}px"></i></span></div>
+        </article>`;
+      }).join("");
+    }
+    function selectVariant(id) {
+      state.variant = variants.find(v => v.id === id) || variants[0];
+      document.getElementById("labTitle").textContent = `${state.variant.key} · ${state.variant.name}`;
+      document.getElementById("labSubtitle").textContent = state.variant.short;
+      document.getElementById("noteTitle").textContent = `${state.variant.key}안 · ${state.variant.name}`;
+      document.getElementById("noteBody").textContent = state.variant.body;
+      document.getElementById("vfxDuration").textContent = `${state.variant.duration}ms`;
+      renderTabs();
+      document.querySelectorAll(".effect-bound").forEach(bound => { bound.innerHTML = effectMarkup(state.variant.id); });
+      restart();
+    }
+    function restart() {
+      state.epoch = performance.now();
+      state.lastCycle = -1;
+      impactCycle = -1;
+      state.slashRight = false;
+      state.frozenElapsed = 0;
+      document.querySelectorAll(".hero").forEach(el => el.classList.remove("is-striking"));
+      document.querySelectorAll(".monster-wrap").forEach(el => el.classList.remove("hit"));
+      document.querySelectorAll(".vfx").forEach(el => el.classList.remove("play"));
+    }
+    function triggerCycle() {
+      document.querySelectorAll(".hero").forEach(el => { el.classList.remove("is-striking"); void el.offsetWidth; el.classList.add("is-striking"); el.style.animationDuration = `${400 / state.speed}ms`; });
+    }
+    function triggerImpact() {
+      state.slashRight = !state.slashRight;
+      document.querySelectorAll(".vfx").forEach(el => {
+        el.classList.remove("play", "slash-up-right", "slash-up-left");
+        if (el.classList.contains("vfx-slash")) el.classList.add(state.slashRight ? "slash-up-right" : "slash-up-left");
+        void el.offsetWidth;
+        el.classList.add("play");
+        el.style.animationDuration = `${state.variant.duration / state.speed}ms`;
+      });
+    }
+    let impactCycle = -1;
+    function animate(now) {
+      const cycleDuration = 1000 / state.speed;
+      const rawElapsed = Math.max(0, state.paused ? state.frozenElapsed : now - state.epoch);
+      const cycle = Math.floor(rawElapsed / cycleDuration);
+      const elapsed = (rawElapsed % cycleDuration) * state.speed;
+      if (cycle !== state.lastCycle) { state.lastCycle = cycle; triggerCycle(); }
+      if (elapsed >= 200 && impactCycle !== cycle) { impactCycle = cycle; triggerImpact(); }
+      const frame = Math.min(3, Math.floor(Math.min(elapsed, 399) / 100));
+      document.querySelectorAll(".hero img").forEach(img => { const next = `${HERO_ROOT}/strike1_${String(frame + 1).padStart(2,"0")}.png`; if (!img.src.endsWith(next.replace("../../../", "/"))) img.src = next; });
+      document.getElementById("frameLabel").textContent = `FRAME ${String(frame + 1).padStart(2,"0")}`;
+      document.getElementById("timeLabel").textContent = `${String(Math.round(elapsed)).padStart(4,"0")}ms`;
+      document.getElementById("timelineFill").style.width = `${Math.min(100, elapsed / 1000 * 100)}%`;
+      requestAnimationFrame(animate);
+    }
+
+    document.getElementById("playButton").addEventListener("click", event => {
+      if (!state.paused) { state.frozenElapsed = performance.now() - state.epoch; state.paused = true; document.body.classList.add("is-paused"); event.currentTarget.textContent = "재생"; event.currentTarget.setAttribute("aria-label", "애니메이션 재생"); }
+      else { state.epoch = performance.now() - state.frozenElapsed; state.paused = false; document.body.classList.remove("is-paused"); event.currentTarget.textContent = "일시정지"; event.currentTarget.setAttribute("aria-label", "애니메이션 일시 정지"); }
+    });
+    document.querySelectorAll(".speed-button").forEach(button => button.addEventListener("click", () => {
+      state.speed = Number(button.dataset.speed);
+      document.querySelectorAll(".speed-button").forEach(item => item.setAttribute("aria-pressed", String(item === button)));
+      restart();
+    }));
+    document.getElementById("boundButton").addEventListener("click", event => {
+      const enabled = lanes.classList.toggle("show-bounds");
+      event.currentTarget.setAttribute("aria-pressed", String(enabled));
+      event.currentTarget.textContent = enabled ? "중앙 범위 숨기기" : "중앙 범위 표시";
+    });
+
+    const SIM = {
+      duration: 4,
+      step: .01,
+      heroFirstHit: .15,
+      heroCd: 1,
+      mobCd: 1.3,
+      anim: { idle: .84, attack: .5, hit: .36, death: .6 },
+      frames: { idle: 4, attack: 4, hit: 4, death: 4 },
+    };
+    const WINDUP = SIM.anim.attack / 2;
+
+    function buildSimulation() {
+      const mob = { state: "attack", t: 0, cd: SIM.mobCd, pending: false, dealt: false };
+      const counts = { attackComplete: 0, attackInterrupted: 0, hitComplete: 0 };
+      const events = [{ at: 0, kind: "attack", label: "공격 시작", detail: "되감기 1~2프레임" }];
+      const snapshots = [];
+      let nextHeroHit = SIM.heroFirstHit;
+
+      for (let tick = 0; tick <= Math.round(SIM.duration / SIM.step); tick += 1) {
+        const now = Number((tick * SIM.step).toFixed(2));
+        if (tick > 0) {
+          mob.t += SIM.step;
+          mob.cd -= SIM.step;
+
+          if (mob.state === "hit" && mob.t + 1e-7 >= SIM.anim.hit) {
+            mob.state = "idle";
+            mob.t = 0;
+            counts.hitComplete += 1;
+            events.push({ at: now, kind: "complete", label: "피격 완주", detail: `${counts.hitComplete}번째 피격 모션 종료` });
+          }
+          if (mob.state === "attack") {
+            if (!mob.dealt && mob.t + 1e-7 >= WINDUP) {
+              mob.dealt = true;
+              events.push({ at: now, kind: "damage", label: "몬스터 적중", detail: "3프레임에서 피해 1회" });
+            }
+            if (mob.t + 1e-7 >= SIM.anim.attack) {
+              counts.attackComplete += 1;
+              events.push({ at: now, kind: "complete", label: "공격 완주", detail: mob.pending ? "예약 피격으로 즉시 연결" : "대기로 복귀" });
+              mob.state = mob.pending ? "hit" : "idle";
+              mob.t = 0;
+              mob.pending = false;
+              mob.dealt = false;
+            }
+          }
+        }
+
+        if (now + 1e-7 >= nextHeroHit && nextHeroHit <= SIM.duration) {
+          events.push({ at: now, kind: "hero", label: "주인공 타격", detail: `${nextHeroHit.toFixed(2)}초 예정 타격` });
+          if (mob.state === "attack" && mob.t + 1e-7 >= WINDUP) {
+            mob.pending = true;
+            events.push({ at: now, kind: "pending", label: "피격 예약", detail: "공격 복구 뒤 재생" });
+          } else {
+            if (mob.state === "attack") {
+              counts.attackInterrupted += 1;
+              events.push({ at: now, kind: "cancel", label: "공격 취소", detail: "되감기 중 선제 타격" });
+            }
+            mob.state = "hit";
+            mob.t = 0;
+            mob.pending = false;
+            mob.dealt = false;
+          }
+          nextHeroHit = Number((nextHeroHit + SIM.heroCd).toFixed(2));
+        }
+
+        if (mob.state === "idle" && mob.cd <= 1e-7) {
+          mob.state = "attack";
+          mob.t = 0;
+          mob.cd = SIM.mobCd;
+          mob.dealt = false;
+          events.push({ at: now, kind: "attack", label: "공격 시작", detail: "쿨타임은 상태와 무관하게 진행" });
+        }
+
+        snapshots.push({ at: now, state: mob.state, t: mob.t, pending: mob.pending, counts: { ...counts } });
+      }
+      return { snapshots, events, final: counts };
+    }
+
+    const simulation = buildSimulation();
+    if (simulation.final.attackComplete !== 2 || simulation.final.attackInterrupted !== 1 || simulation.final.hitComplete !== 4) {
+      console.error("피격 예약 검산 불일치", simulation.final);
+    }
+    const simEpoch = { value: performance.now() };
+    const simMonster = document.getElementById("simMonster");
+    const simEventLog = document.getElementById("eventLog");
+    const stateKorean = { idle: "IDLE · 대기", attack: "ATTACK", hit: "HIT · 피격" };
+
+    function renderSimulation(now) {
+      const elapsed = Math.min(SIM.duration, Math.max(0, (now - simEpoch.value) / 1000));
+      const snapshot = simulation.snapshots[Math.min(simulation.snapshots.length - 1, Math.floor(elapsed / SIM.step))];
+      const frameCount = SIM.frames[snapshot.state] || 4;
+      const motionDuration = SIM.anim[snapshot.state] || SIM.anim.idle;
+      const frame = snapshot.state === "idle"
+        ? Math.floor((snapshot.t % motionDuration) / motionDuration * frameCount) + 1
+        : Math.min(frameCount, Math.floor(snapshot.t / motionDuration * frameCount) + 1);
+      simMonster.dataset.state = snapshot.state;
+      simMonster.dataset.frame = String(frame);
+      const phase = snapshot.state === "attack" ? (snapshot.t < WINDUP ? " · 되감기" : " · 적중/복구") : "";
+      document.getElementById("simState").textContent = `${stateKorean[snapshot.state]}${phase}`;
+      document.getElementById("pendingChip").classList.toggle("on", snapshot.pending);
+      document.getElementById("simClock").textContent = `${elapsed.toFixed(2)} / 4.00초`;
+      document.getElementById("simPlayhead").style.left = `${elapsed / SIM.duration * 100}%`;
+      document.getElementById("attackComplete").textContent = `${snapshot.counts.attackComplete} / 2`;
+      document.getElementById("attackInterrupted").textContent = `${snapshot.counts.attackInterrupted} / 1`;
+      document.getElementById("hitComplete").textContent = `${snapshot.counts.hitComplete} / 4`;
+      const visibleEvents = simulation.events.filter(event => event.at <= elapsed + 1e-7).slice(-5).reverse();
+      simEventLog.innerHTML = visibleEvents.map(event => `<li><time>${event.at.toFixed(2)}s</time><b>${event.label}</b><span>${event.detail}</span></li>`).join("");
+      if (elapsed < SIM.duration) requestAnimationFrame(renderSimulation);
+    }
+    document.getElementById("simButton").addEventListener("click", () => {
+      simEpoch.value = performance.now();
+      requestAnimationFrame(renderSimulation);
+    });
+
+    renderTabs();
+    renderLanes();
+    requestAnimationFrame(animate);
+    requestAnimationFrame(renderSimulation);
+
+    // FALLBACK: vendor/pretext.js missing, using CDN with a non-blocking CSS fallback.
+    (async () => {
+      try {
+        const { prepare, layout } = await import("https://esm.sh/@chenglou/pretext@0.0.9");
+        await document.fonts.ready;
+        const prepared = new Map();
+        const elements = document.querySelectorAll("[data-pretext]");
+        const reprepare = el => prepared.set(el, prepare(el.textContent, getComputedStyle(el).font));
+        elements.forEach(el => {
+          reprepare(el);
+          if (el.contentEditable === "true") new MutationObserver(() => { reprepare(el); relayout(); }).observe(el, { characterData: true, subtree: true, childList: true });
+        });
+        function relayout() {
+          prepared.forEach((handle, el) => {
+            const lineHeight = parseFloat(getComputedStyle(el).lineHeight) || 20;
+            el.style.minHeight = `${layout(handle, el.clientWidth, lineHeight).height}px`;
+          });
+        }
+        new ResizeObserver(relayout).observe(document.body);
+        relayout();
+      } catch (error) { console.info("Pretext CDN unavailable; native responsive flow remains active.", error); }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "authority": "applied",
+  "contentVersion": "skill-v1-applied",
+  "mvpMaxGrade": "EPIC",
+  "levelRange": { "min": 1, "max": 10 },
+  "successRatesBasisPoints": { "2": 7000, "3": 6500, "4": 6000, "5": 5000, "6": 4500, "7": 4000, "8": 3000, "9": 2500, "10": 2000 },
+  "grades": {
+    "NORMAL": { "enhancementRiceCoefficient": 90, "promotionRiceCost": 0, "bookRequirements": { "NORMAL": 1 } },
+    "RARE": { "enhancementRiceCoefficient": 180, "promotionRiceCost": 4050, "bookRequirements": { "NORMAL": 2, "RARE": 1 } },
+    "EPIC": { "enhancementRiceCoefficient": 360, "promotionRiceCost": 8100, "bookRequirements": { "NORMAL": 4, "RARE": 2, "EPIC": 1 } },
+    "LEGENDARY": { "enhancementRiceCoefficient": 720, "promotionRiceCost": 16200, "bookRequirements": { "NORMAL": 8, "RARE": 4, "EPIC": 2, "LEGENDARY": 1 } }
+  },
+  "skills": [
+    { "skillId": "active_heavy", "name": "한짝의 일격", "active": true, "effects": {
+      "NORMAL": { "baseValue": 200, "stepValue": 10 }, "RARE": { "baseValue": 320, "stepValue": 15 }, "EPIC": { "baseValue": 480, "stepValue": 20 }, "LEGENDARY": { "baseValue": 700, "stepValue": 25 }
+    } },
+    { "skillId": "active_dot", "name": "마! 쫄이나", "active": true, "effects": {
+      "NORMAL": { "baseValue": 250, "stepValue": 15 }, "RARE": { "baseValue": 420, "stepValue": 20 }, "EPIC": { "baseValue": 640, "stepValue": 25 }, "LEGENDARY": { "baseValue": 920, "stepValue": 30 }
+    } },
+    { "skillId": "active_haste", "name": "잘게 더 잘게!", "active": true, "effects": {
+      "NORMAL": { "baseValue": 20, "stepValue": 1 }, "RARE": { "baseValue": 32, "stepValue": 1 }, "EPIC": { "baseValue": 45, "stepValue": 1 }, "LEGENDARY": { "baseValue": 60, "stepValue": 1 }
+    } },
+    { "skillId": "active_basic_amp", "name": "화력 최대로!", "active": true, "effects": {
+      "NORMAL": { "baseValue": 20, "stepValue": 1 }, "RARE": { "baseValue": 32, "stepValue": 1 }, "EPIC": { "baseValue": 45, "stepValue": 1 }, "LEGENDARY": { "baseValue": 60, "stepValue": 1 }
+    } },
+    { "skillId": "passive_critical", "name": "회심의 간", "active": false, "effects": {
+      "NORMAL": { "baseValue": 5, "stepValue": 1 }, "RARE": { "baseValue": 16, "stepValue": 1 }, "EPIC": { "baseValue": 28, "stepValue": 1 }, "LEGENDARY": { "baseValue": 40, "stepValue": 1 }
+    } },
+    { "skillId": "passive_all_damage", "name": "오늘의 특선", "active": false, "effects": {
+      "NORMAL": { "baseValue": 5, "stepValue": 1 }, "RARE": { "baseValue": 16, "stepValue": 1 }, "EPIC": { "baseValue": 28, "stepValue": 1 }, "LEGENDARY": { "baseValue": 40, "stepValue": 1 }
+    } }
+  ]
+}

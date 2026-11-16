@@ -1,0 +1,99 @@
+{
+  "format": "stage2-fan-tweens-v1",
+  "userRequest": "주먹쪽이 또 끊기네 추가혀",
+  "method": "averaged signed distance field silhouette; colours from the earlier frame, else the later, else nearest; no blending; approved crossbow at the averaged position",
+  "reason": "frames 18-24 change 4.5k-5.3k px per step vs 3.6k-3.9k elsewhere; no source drawing exists in between",
+  "releaseCutKept": "24->25",
+  "frames": [
+    {
+      "file": "clean/t18-19.png",
+      "between": [
+        18,
+        19
+      ],
+      "crossbowPosition": [
+        139,
+        20
+      ],
+      "pixelsFromEarlier": 11675,
+      "pixelsFromLater": 745,
+      "pixelsNearest": 0,
+      "sha256": "63e98fff11c989391e30bca815fc5cbc184a1323110992c5d27f8a1047d67ea4"
+    },
+    {
+      "file": "clean/t19-20.png",
+      "between": [
+        19,
+        20
+      ],
+      "crossbowPosition": [
+        139,
+        20
+      ],
+      "pixelsFromEarlier": 12423,
+      "pixelsFromLater": 694,
+      "pixelsNearest": 0,
+      "sha256": "5e8835a4afd5f22e43aaeeeef07ac084ef1a76dd3bd428d8eb4891f3ba0aeeb0"
+    },
+    {
+      "file": "clean/t20-21.png",
+      "between": [
+        20,
+        21
+      ],
+      "crossbowPosition": [
+        139,
+        19
+      ],
+      "pixelsFromEarlier": 12843,
+      "pixelsFromLater": 694,
+      "pixelsNearest": 0,
+      "sha256": "97db53fe1ec8148eccb46e7ff68b12a7a1d1dc3edb827a220fc03009bb803cb0"
+    },
+    {
+      "file": "clean/t21-22.png",
+      "between": [
+        21,
+        22
+      ],
+      "crossbowPosition": [
+        139,
+        18
+      ],
+      "pixelsFromEarlier": 12940,
+      "pixelsFromLater": 686,
+      "pixelsNearest": 0,
+      "sha256": "49847dbdde627c17f8d43a2e523d9398e720a1d12341679d53a6d8a2a7b025bd"
+    },
+    {
+      "file": "clean/t22-23.png",
+      "between": [
+        22,
+        23
+      ],
+      "crossbowPosition": [
+        139,
+        16
+      ],
+      "pixelsFromEarlier": 13140,
+      "pixelsFromLater": 407,
+      "pixelsNearest": 0,
+      "sha256": "6e70a4e88a450d8f2e53e892bc1ca3a3cb72296710a5c55485b2356cfcb56a39"
+    },
+    {
+      "file": "clean/t23-24.png",
+      "between": [
+        23,
+        24
+      ],
+      "crossbowPosition": [
+        139,
+        14
+      ],
+      "pixelsFromEarlier": 12917,
+      "pixelsFromLater": 360,
+      "pixelsNearest": 0,
+      "sha256": "9e0c0da2dec0c52ee0fae595eb94a3d13565bc39b840cc49302fc52406553c30"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:Style src="LocomotionWindow.uss" />
+    <ui:ScrollView class="locomotion-editor">
+        <ui:Label text="Lab 실제 전투 실행 제어" class="heading" />
+        <ui:Label text="Play Mode의 초기화된 Lab 전투만 명시적으로 연결합니다. 본 게임에는 연결하지 않으며 선택만으로 전투를 변경하지 않습니다. 연결 중에는 이 창이 유일한 수동 tick 소유자이고 키보드 대신 아래 입력을 사용합니다. 다른 시나리오/A-B 도구는 연결 해제 후 사용하세요." class="description" />
+        <uie:ObjectField name="runtime" label="Lab 전투" />
+        <ui:VisualElement class="actions">
+            <ui:Button name="bind" text="수동 실행 연결 · 일시정지" />
+            <ui:Button name="release" text="연결 해제 · 자동 실행 반환" />
+        </ui:VisualElement>
+        <ui:VisualElement class="actions">
+            <ui:Button name="run" text="Run" />
+            <ui:Button name="pause" text="Pause" />
+            <ui:Button name="step" text="실제 1 tick" />
+            <ui:Button name="reset" text="Reset · 새 epoch" />
+        </ui:VisualElement>
+        <ui:Label name="clock" class="description" />
+        <ui:VisualElement name="localSettings">
+            <ui:Slider name="slowFactor" label="로컬 시뮬레이션 속도" low-value="0.05" high-value="1" value="1" show-input-field="true" />
+            <ui:Label text="슬로모션은 기존 Time.fixedDeltaTime 간격을 그대로 사용하고 tick 빈도만 조정합니다. 기본 공격 공속·Time.timeScale은 변경하지 않습니다. Editor callback의 처리 한도를 넘은 시간은 backlog로 모두 보존합니다. 일시정지 중 새 시간은 쌓지 않으며 Reset만 backlog를 비웁니다." class="description" />
+            <ui:Toggle name="visualOutput" label="선택한 Lab 카메라 시각 출력" value="true" />
+        </ui:VisualElement>
+        <ui:Label name="outputState" class="description" />
+        <ui:VisualElement name="inputs">
+            <ui:Label text="실제 전투 입력" class="heading" />
+            <ui:DropdownField name="axis" label="이동 방향" value="없음" />
+            <ui:Toggle name="specialHeld" label="특수 누름 유지" />
+            <ui:VisualElement class="actions">
+                <ui:Button name="basic" text="기본 공격" />
+                <ui:Button name="special" text="특수" />
+                <ui:Button name="releaseSpecial" text="특수 해제" />
+                <ui:Button name="dash" text="대시" />
+                <ui:Button name="jump" text="점프" />
+                <ui:Button name="drop" text="발판 통과" />
+                <ui:Button name="swap" text="무기 교체" />
+            </ui:VisualElement>
+            <ui:Label text="Run 중 버튼은 다음 실제 tick에 입력 edge를 1회 보냅니다. 이 창이 Pause 중이면 버튼 입력과 함께 실제 1 tick을 요청한 뒤 다시 멈춥니다. 외부 정지를 우회하지 않으며 외부 입력 제한은 기존 전투 입력 규칙이 처리합니다. Pause/Reset/연결 해제 시 예약 입력과 유지 입력을 폐기합니다." class="description" />
+        </ui:VisualElement>
+        <ui:Label text="읽기 전용 전투 지표" class="heading" />
+        <ui:Label name="metrics" class="description" />
+        <ui:Label text="표시 버전은 진행 중 행동이 캡처한 버전입니다. 유휴 상태의 다음 행동/전체 콘텐츠 버전으로 해석하지 않습니다. 시각 출력 토글은 카메라 cullingMask만 임시 변경하며 Renderer.enabled·Cue 수명·충돌/피해·추적 구도·소리는 변경하지 않습니다." class="description" />
+        <ui:Label name="status" class="description" />
+    </ui:ScrollView>
+</ui:UXML>

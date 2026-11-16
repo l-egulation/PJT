@@ -1,0 +1,120 @@
+{
+  "status": "현재 구현된 장면 1~5 / 시골 도착은 확정 헐떡임만 준비",
+  "shared": {
+    "typewriterCharactersPerSecond": 28,
+    "storyBars": {
+      "top": 28,
+      "bottom": 28
+    },
+    "lockPlayerMovementDuringDialogue": true,
+    "defaultCharacterCanvas": [
+      128,
+      128
+    ],
+    "defaultFootPivot": [
+      64,
+      120
+    ]
+  },
+  "scenes": [
+    {
+      "id": 1,
+      "folder": "01_접수업무",
+      "requires": [],
+      "steps": [
+        "직원 위치로 걷기",
+        "greeting 순서대로 대화",
+        "대화 닫기, 기록 확인 입력 대기",
+        "record 표시",
+        "handoff 순서대로 대화",
+        "접수 업무 완료"
+      ],
+      "next": 2
+    },
+    {
+      "id": 2,
+      "folder": "02_할머니회상",
+      "requires": [
+        1
+      ],
+      "steps": [
+        "intro",
+        "fadeOut 800ms, 중간 400ms에서 회상으로 전환",
+        "lines[0]",
+        "lines[1]",
+        "부적 전달 애니메이션",
+        "lines[2]",
+        "lines[3]",
+        "fadeBack 800ms",
+        "outro"
+      ],
+      "handoff": {
+        "heroDelayMs": 450,
+        "transferAtMs": 1050,
+        "totalMs": 2050,
+        "talismanFollowsActiveHand": true,
+        "handOverTalismanSorting": true,
+        "skipDuringAnimation": false
+      },
+      "next": 3
+    },
+    {
+      "id": 3,
+      "folder": "03_지도확인",
+      "requires": [
+        2
+      ],
+      "steps": [
+        "지도 상세 표시",
+        "overview",
+        "relief",
+        "무대사 1300ms, 작은 분기 강조",
+        "discovery",
+        "지도 닫기",
+        "outro"
+      ],
+      "next": 4
+    },
+    {
+      "id": 4,
+      "folder": "04_예측담당자",
+      "requires": [
+        3
+      ],
+      "steps": [
+        "담당자 책상 옆으로 걷기",
+        "담당자 쪽 바라보기",
+        "lines 순서대로 대화",
+        "할머니 기록 확인 목표"
+      ],
+      "next": 5
+    },
+    {
+      "id": 5,
+      "folder": "05_할머니기록",
+      "requires": [
+        4
+      ],
+      "steps": [
+        "intro",
+        "read",
+        "첫 소실 700ms / 반응 1200ms",
+        "firstReaction",
+        "두 번째 소실 650ms / 세 번째 1350ms / anomaly 2050ms",
+        "anomaly",
+        "realization",
+        "책 닫기",
+        "outro",
+        "출발 목표"
+      ],
+      "skipDuringLoss": false,
+      "next": 6
+    },
+    {
+      "id": 6,
+      "folder": "06_시골도착",
+      "status": "아직 장면 연결 전. 확정 헐떡임만 포함",
+      "planned": "고정 카메라에서 왼쪽 달려오기 → 할머니!!! → 문 앞 정지 → 헐떡임"
+    }
+  ]
+}

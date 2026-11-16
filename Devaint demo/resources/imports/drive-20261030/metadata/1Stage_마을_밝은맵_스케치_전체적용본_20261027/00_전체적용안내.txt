@@ -1,0 +1,56 @@
+1Stage 마을 · 최신 2차 밝은맵 + 스케치 전체 적용본 (2026-10-27)
+
+[최신 다운로드]
+전체139PNG ZIP: 기존1차119PNG + 신규2차20PNG를 모두 포함합니다.
+https://drive.google.com/file/d/1tRplJsUSVGoPfKU9rCyBwE9L41whbiDl/view
+파일 목록/복원 manifest:
+https://drive.google.com/file/d/1NjOxdpwii7gUQyJifELKdnpXUESSw5v9/view
+코드 대응 체크포인트:
+https://drive.google.com/file/d/1yOkQ3IvGZxos4YwEERbgp_VfRkWw2EuK/view
+패키지 검사 결과:
+https://drive.google.com/file/d/1kM-m2VuS1ZJxP5GouU2nkrEyikLcHrnj/view
+
+최신139PNG ZIP만 받으면 기존1차119PNG ZIP을 따로 받을 필요가 없습니다.
+기존1차 ZIP과 제작 원본은 같은 공유 폴더에 보존되어 있으며 과거 버전입니다.
+
+[포함 범위]
+밝은 원본69장, 등록 스케치39장, 확정 스케치 지형9장, A 슈퍼점프 컬러/스케치2장에
+2차 밝은 지형6장과 밝음/스케치 구조물·식생14장을 더한 전체139장입니다.
+마을 하늘·구름·원경·중경·지하·건물·수풀·지형·일반 발판·A 슈퍼점프를 포함합니다.
+캐릭터·몬스터·전투 이펙트·UI는 각 전용 공유본/기존 에셋 받기 절차를 사용합니다.
+
+[중요: Git 최신 코드와 함께 적용]
+Unity6000.6.5f1을 사용합니다.
+GitLab main 머지 기준: d589302a57ae7e94b84b0bcc926c0b16625e537e
+대응 소스 커밋: 8728b831c3f425913ab31faa728355fa9279070d
+작업 브랜치: experiment/stage1-village-reference (보존)
+관련 MR: !29 / !30 (main 머지 완료)
+
+2차 B형 경계·완전 스케치→혼합→완전 밝음, 전체 맵 앞 약2/3 스케치 영향,
+구조물/식생 묶음 배치와 접지, 큰 돌/연결 발판, 통과 가능한 뒤쪽 흙벽,
+흙색을 유지한 배경벽 채도 보정, 카메라 수직 오프셋150,
+점프 표시 보간·체력바 위치 보정은 최신 main의 씬·셰이더·런타임·JSON·.meta를 함께 써야 재현됩니다.
+PNG만 교체하거나 예전 셰이더를 유지하면 현재 화면과 달라질 수 있습니다.
+이 자료는 현재 적용본을 공유하는 것이며 추가 미술 검토와 별개입니다.
+
+[복원]
+1) Unity를 닫고 저장소의 최신 main 코드를 받습니다.
+2) stage1-village-phase2-current-images.zip과 같은 이름의 .json manifest를 받습니다.
+3) 저장소 루트에서 아래처럼 실행합니다. 다운로드한 실제 경로를 사용하세요.
+
+python tools/restore_assets.py "C:/Downloads/stage1-village-phase2-current-images.zip" --manifest "C:/Downloads/stage1-village-phase2-current-images.json"
+
+같은 파일은 건너뛰며 알 수 없는 로컬 편집을 강제로 덮어쓰지 않습니다.
+ZIP의 unity/Assets/... 상대 경로와 기존 .meta를 유지합니다.
+전체 투명 캔버스·피벗·접촉선을 보존하며 그림을32x32에 맞춰 다시 자르지 않습니다.
+
+ZIP SHA-256:
+04a2d5663db155caf80786adbce78893678993f61af30386247debb436181a00
+
+[실제 Unity 미리보기]
+밝음: bright-map-phase2-current.png
+https://drive.google.com/file/d/1eJqZd4To5h_Xm3IXqLsEnNsSw7jw4S-1/view
+스케치: sketch-map-phase2-current.png
+https://drive.google.com/file/d/16NFAswsE2BG8tsHJWE_brDlmuNKVZuS0/view
+같은 카메라에서 촬영한 실제 Unity 렌더이며 HUD를 포함한 전체 지도 이미지가 아닙니다.
+이름에 phase2가 없는 이전 미리보기와 ZIP은1차 자료로 보존합니다.

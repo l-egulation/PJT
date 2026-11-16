@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DEVIANT · UI 배치 편집기</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#1a211e;color:#fff0da;font:15px 'Malgun Gothic',sans-serif}main{max-width:1740px;padding:28px;margin:auto}h1{font-size:28px;margin:0 0 10px}p{line-height:1.7;color:#c2cbbf}a{color:#7ee1ce}nav,.controls{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:17px 0}label{display:inline-flex;align-items:center;gap:6px}input,select,button{accent-color:#00cabe;font:inherit}select,button{background:#2a342e;color:#fff0da;border:1px solid #69786a;border-radius:5px;padding:7px}button{cursor:pointer}fieldset{flex:1;min-width:330px;border:1px solid #526054;border-radius:6px;padding:12px}legend{padding:0 9px}canvas{width:100%;display:block;background:#f8eddc;border:1px solid #4b594e}.checker{background:repeating-conic-gradient(#535353 0% 25%,#616161 0% 50%) 0/32px 32px}.dark{background:#161a19}small{color:#b8c5b8}summary{cursor:pointer;padding:12px 0}.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px}.gallery img{width:100%;display:block}.gallery a{border:1px solid #58665a;padding:10px;text-decoration:none}.palette-fields{display:flex;gap:7px;flex-wrap:wrap}.palette-fields select{max-width:130px}.meta{font-size:13px;margin-top:10px;color:#bac7ba}#error{color:#ffb1a5}
+</style>
+<link rel="stylesheet" href="editor.css">
+<main><header><div><h1>DEVIANT · UI 배치 편집기</h1><p>에셋을 클릭해 이동하고 모서리를 끌어 크기를 조절하세요. 오른쪽 목록에서 묶음도 선택할 수 있습니다.</p></div><a href="../EDITOR.md">사용 안내</a></header>
+<div class="editor-toolbar">
+<label><input id="edit-mode" type="checkbox" checked>편집</label>
+<button id="undo" title="Ctrl+Z">되돌리기</button><button id="redo" title="Ctrl+Shift+Z">다시 실행</button>
+<span class="gap"></span><label>확대 <select id="zoom"><option value="fit">화면 맞춤</option value=".5">50%</option><option value=".75">75%</option><option value="1">100%</option><option value="1.5">150%</option><option value="2">200%</option></select></label>
+<label><input id="grid" type="checkbox">격자</label><label><input id="snap" type="checkbox">8px 맞춤</label>
+<span class="gap"></span><button id="save-layout" class="primary">배치 JSON 저장</button><label class="file-label">배치 불러오기<input id="load-layout" class="hidden-input" type="file" accept=".json,application/json"></label>
+<select id="png-kind" aria-label="PNG 배경"><option value="transparent">투명 PNG</option><option value="background">배경 포함 PNG</option></select><button id="export-png">PNG 저장</button>
+<label class="file-label">게임 화면 넣기<input id="background-file" class="hidden-input" type="file" accept="image/png,image/jpeg,image/webp"></label><button id="clear-background">배경 지우기</button>
+<button id="reset-layout">기본 배치</button></div>
+<details id="simulation"><summary>무기·팔레트·체력 조건 바꾸기</summary>
+<nav>
+<label>체력 <input id="hp" type="range" min="0" max="100" value="82"><output id="hp-value">82</output></label>
+<label>팔레트 칸 <select id="slots"><option>3</option><option>4</option><option>5</option></select></label>
+<label><input id="reveal" type="checkbox" checked>출발 팔레트</label>
+<button id="play">런 시작 연출 · 3.5초</button>
+<label><input id="parts" type="checkbox">장착 잉크 문양</label>
+<label><input id="boss" type="checkbox">보스 전투</label>
+<button id="background">배경 전환</button></nav>
+<div class="controls" id="weapon-controls"></div>
+</details>
+<div id="editor-notice" role="status" aria-live="polite"></div>
+<div class="editor-layout"><section class="canvas-area"><div id="viewport"><div id="stage-wrap"><canvas id="stage" width="1670" height="942" aria-label="전투 UI 배치"></canvas><canvas id="selection" width="1670" height="942" tabindex="0" aria-label="클릭하여 에셋 선택, 방향키로 이동"></canvas></div></div>
+<div class="editor-status"><span>1670 × 942 · Shift 클릭: 여러 개 선택 · 방향키: 1px / Shift: 10px · Alt 클릭: 겹친 에셋 선택</span><span id="save-state">준비 중</span></div><p id="error" role="status"></p></section>
+<aside class="inspector"><h2 id="selection-name">에셋을 선택하세요</h2><p id="selection-info">화면 또는 아래 목록에서 선택할 수 있습니다.</p>
+<div id="edit-properties"><div class="fields">
+<label class="field">X<input id="prop-x" type="number" step="1"></label><label class="field">Y<input id="prop-y" type="number" step="1"></label>
+<label class="field">너비<input id="prop-w" type="number" min="1" step="1"></label><label class="field">높이<input id="prop-h" type="number" min="1" step="1"></label>
+<label class="field">회전 °<input id="prop-rotation" type="number" step="1"></label><label class="field">불투명도 %<input id="prop-opacity" type="number" min="0" max="100" step="1"></label></div>
+<div class="checks"><label><input id="aspect-lock" type="checkbox" checked>가로·세로 비율 유지</label><label><input id="prop-hidden" type="checkbox">숨김</label><label><input id="prop-locked" type="checkbox">잠금</label></div>
+<div id="text-properties"><label class="field">텍스트<textarea id="prop-text" maxlength="500"></textarea></label><div class="fields"><label class="field">글자 크기<input id="prop-font" type="number" min="4" max="500"></label><label class="field">색상<input id="prop-color" type="color"></label></div></div>
+<div class="actions"><button id="bring-front">맨 앞으로</button><button id="send-back">맨 뒤로</button><button id="duplicate">복제</button><button id="remove">지우기</button><button id="reset-selected">선택 초기화</button></div>
+<div class="actions"><button data-align="left">왼쪽 맞춤</button><button data-align="center-x">가로 중앙</button><button data-align="top">위 맞춤</button><button data-align="center-y">세로 중앙</button></div></div>
+<h3>화면의 에셋 · 묶음</h3><input id="layer-search" type="search" placeholder="이름으로 찾기" aria-label="화면 에셋 검색"><div id="layer-list"></div>
+<details><summary>에셋 추가</summary><input id="asset-search" type="search" placeholder="무기·프레임·물방울 검색" aria-label="추가 에셋 검색"><select id="asset-list" size="5" aria-label="추가할 에셋"></select><div class="actions"><button id="add-asset">선택 에셋 추가</button><button id="add-text">텍스트 추가</button></div></details>
+<p class="help">배치는 이 브라우저에 자동 저장됩니다. 완성한 배치는 JSON으로도 저장해 두세요. 게임에 적용할 때 이 파일을 사용할 수 있습니다.</p></aside></div>
+<p>지도는 재화·버튼 줄 아래에 놓이며, 출발 카드와 같은 <b>313 : 201</b> 비율입니다. 체력 채움 PNG 자체가 빨간색입니다.<br>프레임·그림은 독립 투명 PNG, 숫자·단축키·이름·지도 경로는 실시간 표시입니다. 이 화면은 에셋 조립 검토용이며 Unity 실행 화면은 아닙니다.</p>
+<nav><a href="index.html?layout=matched-weapons">사용자 배치 열기</a><a href="../runtime/layout-edited.json" download>맞춘 배치 JSON</a><a href="../ASSET-LIST.md">전체 에셋 목록</a><a href="../runtime/catalog.json">무기·스킬·잉크 연결</a><a href="../runtime/layout.json">배치·상태·가져오기</a><a href="../README.md">적용 안내</a></nav>
+<div class="gallery">
+<a href="guns-small-scale.png">총 4종 · 작은 크기 비교<img src="guns-small-scale.png" alt="장식을 줄인 총 아이콘 전후와 작은 HUD 크기"></a>
+<a href="corrected-parts.png">수정 부품<img src="corrected-parts.png" alt="빨간 체력과 확장 팔레트"></a>
+<a href="weapons-13.png">무기 10종 · 외형 13종<img src="weapons-13.png" alt="검 4종 둔기 3종 원거리 3종과 발사기 스킬 외형"></a>
+<a href="skills-40.png">특수공격 40종 · 발사기 스킬 포함<img src="skills-40.png" alt="스킬 조합 아이콘"></a>
+<a href="ink-parts-54.png">잉크 54종<img src="ink-parts-54.png" alt="실제 잉크 ID별 아이콘"></a></div>
+<details><summary>상태와 팔레트 확장 확인</summary><img src="state-matrix.png" style="width:100%" alt="3~5칸, 쿨타임, 충전, 빈 슬롯"><img src="ranged-four-slots.png" style="width:100%" alt="발사기와 수리검 4칸 조립"></details></main>
+<script src="preview-data.js"></script><script src="../runtime/ui-model.js"></script><script src="editor-core.js"></script><script src="editor.js"></script><script src="preview.js"></script></html>

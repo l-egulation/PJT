@@ -1,0 +1,2431 @@
+{
+  "sprites": [
+    {
+      "id": "health-plaque",
+      "label": "체력 프레임",
+      "file": "runtime/sprites/health-plaque.png",
+      "size": [
+        1840,
+        392
+      ],
+      "origin": "retained-standalone-art",
+      "source": "source/generated/health-plaque.png",
+      "sha256": "6dd14bde93192ffc1b483eed5c6b0a153d4f88dbf335e4dfa77b27eb86142a7d",
+      "sourceSha256": "ce015815a36c6ae0896d67f8f4f0c7e52d7423c9d3a3199cdb0f53c33cf2d044",
+      "upstream": "ui/combat-hud-rebuilt-20261106/runtime/sprites/health-plaque.png"
+    },
+    {
+      "id": "weapon-disc",
+      "label": "무기·스킬 공용 원형 슬롯",
+      "file": "runtime/sprites/weapon-disc.png",
+      "size": [
+        999,
+        1012
+      ],
+      "origin": "retained-standalone-art",
+      "source": "source/generated/weapon-disc.png",
+      "sha256": "cc641c7f0d555e4f973db2c9f0f64581a989e1e57455cb9159f7369b25b759a9",
+      "sourceSha256": "d5f9e6c7beb4d42b9c1826629622a9b64a066700b0f0a0c525a1e54788fa016e",
+      "upstream": "ui/combat-hud-rebuilt-20261106/runtime/sprites/weapon-disc.png"
+    },
+    {
+      "id": "run-card",
+      "label": "출발 팔레트 카드",
+      "file": "runtime/sprites/run-card.png",
+      "size": [
+        1449,
+        848
+      ],
+      "origin": "retained-standalone-art",
+      "source": "source/generated/run-card.png",
+      "sha256": "11a73e13cf0b314f015aff93cb8a72cd622405d506b9a5c9229260abe6e58276",
+      "sourceSha256": "e27af763ad59e869f56184bb614ea2511e6eaeb920f6291eb264a7699282fdf5",
+      "upstream": "ui/combat-hud-rebuilt-20261106/runtime/sprites/run-card.png"
+    },
+    {
+      "id": "heading-plaque",
+      "label": "출발 팔레트 제목판",
+      "file": "runtime/sprites/heading-plaque.png",
+      "size": [
+        1762,
+        332
+      ],
+      "origin": "retained-standalone-art",
+      "source": "source/generated/heading-plaque.png",
+      "sha256": "46e8055374f15f516808f62334fc0b7007175b8c8582068148240292705ea92f",
+      "sourceSha256": "362ea796c322ec316196f4d1d53efecba31504f33c374748394c31d08911c734",
+      "upstream": "ui/combat-hud-rebuilt-20261106/runtime/sprites/heading-plaque.png"
+    },
+    {
+      "id": "button-frame",
+      "label": "버튼·키캡 바탕",
+      "file": "runtime/sprites/button-frame.png",
+      "size": [
+        700,
+        694
+      ],
+      "origin": "retained-standalone-art",
+      "source": "source/generated/button-frame.png",
+      "sha256": "29783885e0880255e5c2df5aafe2561482edcacea0f241324399947c53f95129",
+      "sourceSha256": "0a6f191a45b44caf254475ddf940130a4520726274f197539b96f343f0611403",
+      "upstream": "ui/combat-hud-rebuilt-20261106/runtime/sprites/button-frame.png"
+    },
+    {
+      "id": "weapon-sword",
+      "label": "검 아이콘",
+      "file": "runtime/sprites/weapon-sword.png",
+      "size": [
+        641,
+        636
+      ],
+      "origin": "retained-standalone-art",
+      "source": "source/generated/weapon-sword.png",
+      "sha256": "84ea064a029441c0e4c277a9d8fdc44cb44a3d9d6ec18e3db9c1f90e25bcb494",
+      "sourceSha256": "db357aa64c84dec85e2bdfce433a47b76dcd03db96417aef4d5bd5c400d786c2",
+      "upstream": "ui/combat-hud-rebuilt-20261106/runtime/sprites/weapon-sword.png"
+    },
+    {
+      "id": "weapon-hammer",
+      "label": "망치 아이콘",
+      "file": "runtime/sprites/weapon-hammer.png",
+      "size": [
+        733,
+        760
+      ],
+      "origin": "retained-standalone-art",
+      "source": "source/generated/weapon-hammer.png",
+      "sha256": "5e91f276de61f9581bcd9d42ffcee7c368594fb206cf390b32eb8c8e83069412",
+      "sourceSha256": "2a2509614f7f24207e9dad89a160b49f2dda9a3d1f90e2719e3b0e9780f6d80d",
+      "upstream": "ui/combat-hud-rebuilt-20261106/runtime/sprites/weapon-hammer.png"
+    },
+    {
+      "id": "skill-slash",
+      "label": "검 기본 공격",
+      "file": "runtime/sprites/skill-slash.png",
+      "size": [
+        457,
+        414
+      ],
+      "origin": "retained-standalone-art",
+      "source": "source/generated/skill-slash.png",
+      "sha256": "01add4aa84ba86d8066fc93f0be824d484205f8d08644ba103bb01f3e08f6001",
+      "sourceSha256": "f73fb2e6f34826a029899ab5c251ba8ff15c676d39b627fcdc340fc19661417a",
+      "upstream": "ui/combat-hud-rebuilt-20261106/runtime/sprites/skill-slash.png"
+    },
+    {
+      "id": "skill-swirl",
+      "label": "회전 스킬",
+      "file": "runtime/sprites/skill-swirl.png",
+      "size": [
+        785,
+        807
+      ],
+      "origin": "retained-standalone-art",
+      "source": "source/generated/skill-swirl.png",
+      "sha256": "5485decdcc9e15204810da138e5148bda4e610532018006b50586a23285442cb",
+      "sourceSha256": "8718d12e814be0b6e1f8b9b7eb00b5514f1b34ae892b94cfe1a945e61381a1fb",
+      "upstream": "ui/combat-hud-rebuilt-20261106/runtime/sprites/skill-swirl.png"
+    },
+    {
+      "id": "drop-blue",
+      "label": "파랑 물방울",
+      "file": "runtime/sprites/drop-blue.png",
+      "size": [
+        485,
+        639
+      ],
+      "origin": "retained-standalone-art",
+      "source": "source/generated/drop-blue.png",
+      "sha256": "7fbd09cf9a9778a714154d1cab256c96fd9f62203a4921f47ee788c2442c6d93",
+      "sourceSha256": "f2404b7381446508007a3b417f963e7f0a504b43c8b35ab0cce28338835be1fd",
+      "upstream": "ui/combat-hud-rebuilt-20261106/runtime/sprites/drop-blue.png"
+    },
+    {
+      "id": "drop-yellow",
+      "label": "노랑 물방울",
+      "file": "runtime/sprites/drop-yellow.png",
+      "size": [
+        496,
+        670
+      ],
+      "origin": "retained-standalone-art",
+      "source": "source/generated/drop-yellow.png",
+      "sha256": "3e98484a4766d47a6ff76b779e2af31b04e3cb79724b3ff9f42fe2a97ee42ea5",
+      "sourceSha256": "398e0afbc40de14e8757336241635cedf55b10411c9eaa0f016b1cc2e934ab17",
+      "upstream": "ui/combat-hud-rebuilt-20261106/runtime/sprites/drop-yellow.png"
+    },
+    {
+      "id": "drop-red",
+      "label": "빨강 물방울",
+      "file": "runtime/sprites/drop-red.png",
+      "size": [
+        467,
+        623
+      ],
+      "origin": "retained-standalone-art",
+      "source": "source/generated/drop-red.png",
+      "sha256": "489b327b622c8ce040d89ddbe5bd28539f807a6833351b3f420f6758a9197ee9",
+      "sourceSha256": "bfca0fc41c1f371282e68b5b674b724609b19ba7c393fa263db6b6b37848b0b6",
+      "upstream": "ui/combat-hud-rebuilt-20261106/runtime/sprites/drop-red.png"
+    },
+    {
+      "id": "drop-green",
+      "label": "초록 물방울",
+      "file": "runtime/sprites/drop-green.png",
+      "size": [
+        443,
+        581
+      ],
+      "origin": "retained-standalone-art",
+      "source": "source/generated/drop-green.png",
+      "sha256": "7cb57dcee9bad384b2f9389f9137be218f3f038f60642638c803fa109740b0c9",
+      "sourceSha256": "eb2d47ff54c81deb583a0657491527d121ef6519018da99a865fbc796f54eba8",
+      "upstream": "ui/combat-hud-rebuilt-20261106/runtime/sprites/drop-green.png"
+    },
+    {
+      "id": "skill-impact",
+      "label": "망치 기본 공격",
+      "file": "runtime/sprites/skill-impact.png",
+      "size": [
+        989,
+        977
+      ],
+      "origin": "retained-standalone-art",
+      "source": "source/generated/skill-impact.png",
+      "sha256": "85e10ddb9f497dacf31d5c7ecc0f352647ee4ae9e04121f70dccdd65d13b5e2e",
+      "sourceSha256": "fae7015bbd92da7f613c480d815727e26da1e964c973723ad1adc9f8d0568871",
+      "upstream": "ui/combat-hud-rebuilt-20261106/runtime/sprites/skill-impact.png"
+    },
+    {
+      "id": "hero-portrait",
+      "label": "캐릭터 초상",
+      "file": "runtime/sprites/hero-portrait.png",
+      "size": [
+        819,
+        723
+      ],
+      "origin": "retained-standalone-art",
+      "source": "source/generated/hero-portrait.png",
+      "sha256": "fe0935ae0cbc581f9c832302fbe941f1bcfe14c8aba3d88dede1b9745a08c2d9",
+      "sourceSha256": "128518467251bf24984e4676db6be8ba19dc4aa0233399c7fb10f13b45536338",
+      "upstream": "ui/combat-hud-rebuilt-20261106/runtime/sprites/hero-portrait.png"
+    },
+    {
+      "id": "gold-coin",
+      "label": "골드",
+      "file": "runtime/sprites/gold-coin.png",
+      "size": [
+        716,
+        719
+      ],
+      "origin": "retained-standalone-art",
+      "source": "source/generated/gold-coin.png",
+      "sha256": "28c213a82b860654fe8af175b711046af56654ee6efe778b297dd3931b1495ed",
+      "sourceSha256": "d55801fd1111b26dd3c3a90ebc7bb97159f5446e9662d07c0a42a7e815a43c8d",
+      "upstream": "ui/combat-hud-rebuilt-20261106/runtime/sprites/gold-coin.png"
+    },
+    {
+      "id": "bag-glyph",
+      "label": "인벤토리",
+      "file": "runtime/sprites/bag-glyph.png",
+      "size": [
+        718,
+        740
+      ],
+      "origin": "retained-standalone-art",
+      "source": "source/generated/bag-glyph.png",
+      "sha256": "bec8be35bf6f7807b3f3cfdc4ee5cb75cf0f44031603fc6de5c771e95e88fcac",
+      "sourceSha256": "5efa471861b6054f56fa9c30dabcba5c5a15b78b08fa60c8d07ac3d540bf1563",
+      "upstream": "ui/combat-hud-rebuilt-20261106/runtime/sprites/bag-glyph.png"
+    },
+    {
+      "id": "radial-ring-clean",
+      "label": "얇은 원형 링",
+      "file": "runtime/sprites/radial-ring-clean.png",
+      "size": [
+        934,
+        943
+      ],
+      "origin": "retained-standalone-art",
+      "source": "source/generated/radial-ring-clean.png",
+      "sha256": "00881fedf8cdb4bf31ad17316117f103db231cd980a137a7897585e11724bf75",
+      "sourceSha256": "5429283f6f1ef12a36e33949fbb4de8a93dd76c0889c1ee9734200a25e21c38f",
+      "upstream": "ui/combat-hud-rebuilt-20261106/runtime/sprites/radial-ring-clean.png"
+    },
+    {
+      "id": "progress-ring-mask",
+      "label": "진행률 원형 마스크",
+      "file": "runtime/sprites/progress-ring-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "authored-ui-primitive",
+      "source": "source/primitives/progress-ring-mask.svg",
+      "sha256": "1718eff8ede60f806dba6e098f736a7d13df16f8126082a57967278c6ec5da3f",
+      "sourceSha256": "3f401c45f5eed5cd35f333b17c877b7ae3f52593f2837754edbddd1dc7525ee2",
+      "upstream": "ui/combat-hud-rebuilt-20261106/runtime/sprites/progress-ring-mask.png"
+    },
+    {
+      "id": "pause-glyph",
+      "label": "일시정지",
+      "file": "runtime/sprites/pause-glyph.png",
+      "size": [
+        64,
+        80
+      ],
+      "origin": "authored-ui-primitive",
+      "source": "source/primitives/pause-glyph.svg",
+      "sha256": "c31c247cd2ba336c5ec069a4360a02e4f7d36e454ed4bcbdf9099d02019696bd",
+      "sourceSha256": "3d48aa02f5814a93aa34430dad5dc92a057bc8c88f7306ff7d7c618c875f76ee",
+      "upstream": "ui/combat-hud-rebuilt-20261106/runtime/sprites/pause-glyph.png"
+    },
+    {
+      "id": "corner-accent",
+      "label": "카드 모서리 강조",
+      "file": "runtime/sprites/corner-accent.png",
+      "size": [
+        64,
+        64
+      ],
+      "origin": "authored-ui-primitive",
+      "source": "source/primitives/corner-accent.svg",
+      "sha256": "706e547174a092b54a115f22e4e096c06f183349f5a131e72d3aaa9a5a2cea1b",
+      "sourceSha256": "61c9874057a2cd49b8ca9160fbed526e582d35e12e15c6f0d06944c170a7df33",
+      "upstream": "ui/combat-hud-rebuilt-20261106/runtime/sprites/corner-accent.png"
+    },
+    {
+      "id": "chevron",
+      "label": "제목 화살표",
+      "file": "runtime/sprites/chevron.png",
+      "size": [
+        24,
+        40
+      ],
+      "origin": "authored-ui-primitive",
+      "source": "source/primitives/chevron.svg",
+      "sha256": "98c4b5362fdc69e65126750bd5189faa7ef75f36aaf95a7fd90a9263bbe756c0",
+      "sourceSha256": "4cc4142ebbc49554319277e51f5151a3b72c41ed7942f36f258c05f1c308f3fa",
+      "upstream": "ui/combat-hud-rebuilt-20261106/runtime/sprites/chevron.png"
+    },
+    {
+      "id": "divider",
+      "label": "카드 구분선",
+      "file": "runtime/sprites/divider.png",
+      "size": [
+        480,
+        8
+      ],
+      "origin": "authored-ui-primitive",
+      "source": "source/primitives/divider.svg",
+      "sha256": "4c318976625b3e299f3cdacc29e0183e7001321d679f8dbc635aa51f1f69aec9",
+      "sourceSha256": "3a13f3e8dbdb701a447fd5f92447a4cf2144195d8bc4422f3fb93ac090996f51",
+      "upstream": "ui/combat-hud-rebuilt-20261106/runtime/sprites/divider.png"
+    },
+    {
+      "id": "weapon-whip",
+      "label": "채찍",
+      "file": "runtime/sprites/weapon-whip.png",
+      "size": [
+        726,
+        689
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/weapon-whip.png",
+      "sha256": "857e81e1c083ca17d6662d6b64b4195b8225b39b269ba4f3b90e3c46d6a57b68",
+      "transparentTrim": [
+        409,
+        168,
+        1135,
+        857
+      ],
+      "sourceSha256": "ef429a0081da490420e00f1eb8cb7bb2aae47c3a94ab98e128e6a0a0a081ca63"
+    },
+    {
+      "id": "weapon-rapier",
+      "label": "레이피어",
+      "file": "runtime/sprites/weapon-rapier.png",
+      "size": [
+        729,
+        738
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/weapon-rapier.png",
+      "sha256": "ab1e37d4cc6d56b7c198d69f5d8caa1fd5a59c1d0c336770f9518c92c4c4b521",
+      "transparentTrim": [
+        457,
+        129,
+        1186,
+        867
+      ],
+      "sourceSha256": "ec1ca7d80f1500fa2a4c46b712689388d01f6adb5d39f27fbf67188132dfefe7"
+    },
+    {
+      "id": "weapon-dagger",
+      "label": "한손 단검",
+      "file": "runtime/sprites/weapon-dagger.png",
+      "size": [
+        596,
+        602
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/weapon-dagger.png",
+      "sha256": "30c28317c2c9093705755b9b10cd6188f8bc033fcea1039cf544266390a5a5b5",
+      "transparentTrim": [
+        490,
+        220,
+        1086,
+        822
+      ],
+      "sourceSha256": "21fc12773b0254063c31fedb7540ef8a8bfbaba5af6034d92706a0a3be8b3ea0"
+    },
+    {
+      "id": "weapon-shield",
+      "label": "방패",
+      "file": "runtime/sprites/weapon-shield.png",
+      "size": [
+        618,
+        619
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/weapon-shield.png",
+      "sha256": "4d430fb3511958596b12efceeeb7fd280b7123deedf9372ed4acd21985ee5029",
+      "transparentTrim": [
+        458,
+        202,
+        1076,
+        821
+      ],
+      "sourceSha256": "10ace0f619aa7045d751df93ffb6a8d4cca609641056a888b35b1f01b49708e0"
+    },
+    {
+      "id": "weapon-greatsword",
+      "label": "대검",
+      "file": "runtime/sprites/weapon-greatsword.png",
+      "size": [
+        935,
+        917
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/weapon-greatsword.png",
+      "sha256": "e54f89887e9810c50a9156fd53260b438103d7bd6bd05622866855e2cd0b3913",
+      "transparentTrim": [
+        328,
+        69,
+        1263,
+        986
+      ],
+      "sourceSha256": "a7665e7cdb3dbb3f0f1d4e700e40c22bccd7e49c3de36c9c499191915f44891e"
+    },
+    {
+      "id": "weapon-shuriken",
+      "label": "수리검",
+      "file": "runtime/sprites/weapon-shuriken.png",
+      "size": [
+        698,
+        721
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/weapon-shuriken.png",
+      "sha256": "9702e9ac05fc24e1f4e54ec3ef62fbcf6b5311a4c5c07a37f75b777422cbf926",
+      "transparentTrim": [
+        419,
+        144,
+        1117,
+        865
+      ],
+      "sourceSha256": "3607008d0ad740bed95a071fdff27965e90564f1e8c5a0427b3a9989d8db6af4"
+    },
+    {
+      "id": "weapon-bomb",
+      "label": "폭탄",
+      "file": "runtime/sprites/weapon-bomb.png",
+      "size": [
+        548,
+        726
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/weapon-bomb.png",
+      "sha256": "09130315f2bfd291996aab50409b9a5b9e9d2b5d88440e4bb42044a66178a9ae",
+      "transparentTrim": [
+        539,
+        131,
+        1087,
+        857
+      ],
+      "sourceSha256": "db5340051d69deaaea47244589f4a8739251cd50bff97ead69ee13bb62170756"
+    },
+    {
+      "id": "minimap-frame-compact",
+      "label": "미니맵 · 출발 카드와 같은 비율",
+      "file": "runtime/sprites/minimap-frame-compact.png",
+      "size": [
+        1448,
+        836
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/minimap-frame-compact.png",
+      "sha256": "98adf5b4719149349663e67c7ef90ab0ea5d1310684591b1e1e1339d32d1365e",
+      "transparentTrim": [
+        59,
+        85,
+        1507,
+        921
+      ],
+      "sourceSha256": "a5a5ca154a09c1106d4c5b0c9e4a67606c71a743b9da225bf5d4f0e5bd5e8703"
+    },
+    {
+      "id": "pigment-currency",
+      "label": "안료 재화 · 새 원화",
+      "file": "runtime/sprites/pigment-currency.png",
+      "size": [
+        867,
+        918
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/pigment-currency.png",
+      "sha256": "1c63b965e2952ac28992f3297b153e19be78017caa6ebd368769892c33cb98fd",
+      "transparentTrim": [
+        184,
+        180,
+        1051,
+        1098
+      ],
+      "sourceSha256": "077fc7efff806467c2e16997647dd3f13fba34180e809d9622716178c2fe6322"
+    },
+    {
+      "id": "drop-purple",
+      "label": "보라 잉크",
+      "file": "runtime/sprites/drop-purple.png",
+      "size": [
+        485,
+        640
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/drop-purple.png",
+      "sha256": "3ea28b437d3e4af74bd37d8a3559aabcf142e12b2f48149b9c38a0559dfcb6f2",
+      "transparentTrim": [
+        383,
+        331,
+        868,
+        971
+      ],
+      "sourceSha256": "2c17422424f06dbd5ace2dda7186d33d6703b823cc8f5df11377d8c1886e289d"
+    },
+    {
+      "id": "drop-colorless",
+      "label": "무색 범용 칸",
+      "file": "runtime/sprites/drop-colorless.png",
+      "size": [
+        487,
+        641
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/drop-colorless.png",
+      "sha256": "0851effaa4eba3564705cbc2bf8efef0dcd3773a1f5dc56b047302db0d95c054",
+      "transparentTrim": [
+        381,
+        331,
+        868,
+        972
+      ],
+      "sourceSha256": "20671e5c37524c20ce64e12f638a4536718be806e1f6ae450bf6d9862571df1d"
+    },
+    {
+      "id": "action-wave",
+      "label": "action-wave",
+      "file": "runtime/sprites/action-wave.png",
+      "size": [
+        658,
+        586
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/action-wave.png",
+      "sha256": "b8ad0f5857d3dd4453db5b3a31797aa2a5afe8ee171143c2dc2e23834086799a",
+      "transparentTrim": [
+        426,
+        244,
+        1084,
+        830
+      ],
+      "sourceSha256": "7632e50f1be55ba0cf61ec362fb19172b0747368c2c8e91b691d044347d34e9f"
+    },
+    {
+      "id": "action-dash",
+      "label": "action-dash",
+      "file": "runtime/sprites/action-dash.png",
+      "size": [
+        603,
+        491
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/action-dash.png",
+      "sha256": "66cb193481fda70bd54237af491c07ca7704ab03f6aeba4369bcff6978b77a58",
+      "transparentTrim": [
+        475,
+        270,
+        1078,
+        761
+      ],
+      "sourceSha256": "b4de7c5037238ef2b3ebaa3f90ecc3c966a1ae9c67c0327ece8b52875710369e"
+    },
+    {
+      "id": "action-echo",
+      "label": "action-echo",
+      "file": "runtime/sprites/action-echo.png",
+      "size": [
+        650,
+        557
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/action-echo.png",
+      "sha256": "6a63678a35d7334b4e85fc069ae34719f4ae81e86528d3123b03b64f6c9b2f7b",
+      "transparentTrim": [
+        472,
+        252,
+        1122,
+        809
+      ],
+      "sourceSha256": "7f7f8072456a0434c67e2a75044f7cba4106515e96fa0799242409f126431102"
+    },
+    {
+      "id": "action-bind",
+      "label": "action-bind",
+      "file": "runtime/sprites/action-bind.png",
+      "size": [
+        720,
+        655
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/action-bind.png",
+      "sha256": "73892cb76b7928607580c8cea8d8d578cb2b430f2085b70542fe3c7a41bb8b42",
+      "transparentTrim": [
+        407,
+        185,
+        1127,
+        840
+      ],
+      "sourceSha256": "83901248f9e21543940d4d074a4fba2f324572783467347f63cec5620e8bc8b5"
+    },
+    {
+      "id": "action-net",
+      "label": "action-net",
+      "file": "runtime/sprites/action-net.png",
+      "size": [
+        643,
+        637
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/action-net.png",
+      "sha256": "3197c34f1fa55d83f9e2c1c6feaeaee4acfe42c9f05966f6b44d859804089d3b",
+      "transparentTrim": [
+        437,
+        214,
+        1080,
+        851
+      ],
+      "sourceSha256": "faf71e0acc338cdf7751248dbb108081b437071a4c5d7879176a71687239686c"
+    },
+    {
+      "id": "action-thrust",
+      "label": "action-thrust",
+      "file": "runtime/sprites/action-thrust.png",
+      "size": [
+        732,
+        628
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/action-thrust.png",
+      "sha256": "2b94b68b77f52c311e760c3a2495b0509b476b60deaa30615ab7be0739fcb8e2",
+      "transparentTrim": [
+        417,
+        195,
+        1149,
+        823
+      ],
+      "sourceSha256": "e55a35c7ce355694c906ef81bf85a61e44ef8fb7b84312862d005f8e307041ce"
+    },
+    {
+      "id": "action-stealth",
+      "label": "action-stealth",
+      "file": "runtime/sprites/action-stealth.png",
+      "size": [
+        691,
+        462
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/action-stealth.png",
+      "sha256": "1297d4b6658933cea81d787af62803611b2e2cf6aea889a774f78b1fc18fde88",
+      "transparentTrim": [
+        424,
+        313,
+        1115,
+        775
+      ],
+      "sourceSha256": "8322d434f1fed44ecf1db86fcafcde6ca561a3dc1368a8ba5d6b4827b8a23b21"
+    },
+    {
+      "id": "action-mist",
+      "label": "action-mist",
+      "file": "runtime/sprites/action-mist.png",
+      "size": [
+        821,
+        600
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/action-mist.png",
+      "sha256": "3309e5eb8d672c1d0112a4b9072909ab4d1e17dcdbdae252451e2c4dc6b8a170",
+      "transparentTrim": [
+        357,
+        222,
+        1178,
+        822
+      ],
+      "sourceSha256": "5b347a75eec2b8a59366d2de3a009209cb67a5c939661b1a56a77a2b0737412d"
+    },
+    {
+      "id": "action-shockwave",
+      "label": "action-shockwave",
+      "file": "runtime/sprites/action-shockwave.png",
+      "size": [
+        734,
+        567
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/action-shockwave.png",
+      "sha256": "739ee67415bd7a3c081f708bf5a74a47b08652987a16dd6064f1f9bdd978a3fd",
+      "transparentTrim": [
+        400,
+        265,
+        1134,
+        832
+      ],
+      "sourceSha256": "f5670dd5372a42247f8f3bb4a9065b6e74781ab442edcb78286ab4cf2c960df4"
+    },
+    {
+      "id": "action-guard",
+      "label": "action-guard",
+      "file": "runtime/sprites/action-guard.png",
+      "size": [
+        615,
+        411
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/action-guard.png",
+      "sha256": "e783a2578da2630b77b121c7723b9db7b6e0fbf051332c9d14669334dd9b5b14",
+      "transparentTrim": [
+        458,
+        307,
+        1073,
+        718
+      ],
+      "sourceSha256": "3f9571c1899bf0c23d2399a0e90a5db3389b33dc30ee70954385d21d1c7d7a06"
+    },
+    {
+      "id": "action-decoy",
+      "label": "action-decoy",
+      "file": "runtime/sprites/action-decoy.png",
+      "size": [
+        591,
+        647
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/action-decoy.png",
+      "sha256": "471a50b47ef28da70597fe3a43f5e56c16110d43a4aa0d2f6af695e5bbea8892",
+      "transparentTrim": [
+        473,
+        189,
+        1064,
+        836
+      ],
+      "sourceSha256": "c71cb2cbc552fe0d85a1af4597aeb2d85ac97ef6c6222e24587d1d56b3505e8f"
+    },
+    {
+      "id": "action-mark",
+      "label": "action-mark",
+      "file": "runtime/sprites/action-mark.png",
+      "size": [
+        663,
+        729
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/action-mark.png",
+      "sha256": "f5ac401a3ca66ab34269fc0f06b4e07e522eeb9d222bc4413578ef8f6ec39da6",
+      "transparentTrim": [
+        436,
+        149,
+        1099,
+        878
+      ],
+      "sourceSha256": "ea60b94af2103733277d66a61cc4367bcbaed0c50a40ab58c719174f77eea5c7"
+    },
+    {
+      "id": "action-timer",
+      "label": "action-timer",
+      "file": "runtime/sprites/action-timer.png",
+      "size": [
+        586,
+        718
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/action-timer.png",
+      "sha256": "f287362594689e336bddc30a729f87ff2847bffceacf8d099b772a4929651b94",
+      "transparentTrim": [
+        473,
+        148,
+        1059,
+        866
+      ],
+      "sourceSha256": "abe41653879bb32cabc4e2fd800ea0d5c00f1ce105ad60cce4e09f11d546ea36"
+    },
+    {
+      "id": "action-ball",
+      "label": "action-ball",
+      "file": "runtime/sprites/action-ball.png",
+      "size": [
+        596,
+        332
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/action-ball.png",
+      "sha256": "699a3b587c3308678cec6060cfa3d7514cf2271de904549f89844e71f1a1cd78",
+      "transparentTrim": [
+        469,
+        352,
+        1065,
+        684
+      ],
+      "sourceSha256": "ad8d44b0b452ae858c183b3ef27038d5450fdb89904e93993b52d0710fc38c9a"
+    },
+    {
+      "id": "action-pellets",
+      "label": "action-pellets",
+      "file": "runtime/sprites/action-pellets.png",
+      "size": [
+        832,
+        626
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/action-pellets.png",
+      "sha256": "044a8dd9cd1b33a9dd86e7c655307fe9ecf508430fd087bb6041b892d1a9b80e",
+      "transparentTrim": [
+        351,
+        204,
+        1183,
+        830
+      ],
+      "sourceSha256": "44845fe9ad0946ab201da009aefec1a5e7fd5632c7ba3f6d9acfee142a150194"
+    },
+    {
+      "id": "action-grenade",
+      "label": "action-grenade",
+      "file": "runtime/sprites/action-grenade.png",
+      "size": [
+        601,
+        584
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/action-grenade.png",
+      "sha256": "f6920fba8f2d1804a65ca6743dedcbd4c43434eb46a61f5d3516e84b9b3747f5",
+      "transparentTrim": [
+        471,
+        219,
+        1072,
+        803
+      ],
+      "sourceSha256": "1f4f046ae834e5df6ef37a072735d271d8a70c7ce562c3bd2e81c109de57c2d9"
+    },
+    {
+      "id": "action-missile",
+      "label": "action-missile",
+      "file": "runtime/sprites/action-missile.png",
+      "size": [
+        572,
+        575
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/action-missile.png",
+      "sha256": "8f742dd6b205a083e9bf39b7b6c107ae17ebe4c470df5fb54dca8570f7a4bc46",
+      "transparentTrim": [
+        508,
+        228,
+        1080,
+        803
+      ],
+      "sourceSha256": "be3fc2eacf56a2c57c6920b63627f130d53925a1f683bd68104d78dbc402fdc4"
+    },
+    {
+      "id": "action-teleport",
+      "label": "action-teleport",
+      "file": "runtime/sprites/action-teleport.png",
+      "size": [
+        664,
+        534
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/action-teleport.png",
+      "sha256": "f40d3da13ef73fb04ee6b945d2bf2590646a7247821b7d42c0dfbee09879e33e",
+      "transparentTrim": [
+        435,
+        250,
+        1099,
+        784
+      ],
+      "sourceSha256": "1dbf17dea66e3080820c7aa01e29e1ef39f35c4f675f15577d42fd1cecbe3774"
+    },
+    {
+      "id": "action-heal",
+      "label": "action-heal",
+      "file": "runtime/sprites/action-heal.png",
+      "size": [
+        571,
+        503
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/action-heal.png",
+      "sha256": "045de1fd41a716ce1d0c5fc3d598a633007cf39adb5a57e68ea116ec5ba62605",
+      "transparentTrim": [
+        482,
+        276,
+        1053,
+        779
+      ],
+      "sourceSha256": "e0bc219db60aca139a481cb45e022ed5d53e83150185a392f657909a3a50a2af"
+    },
+    {
+      "id": "action-lightning",
+      "label": "action-lightning",
+      "file": "runtime/sprites/action-lightning.png",
+      "size": [
+        587,
+        657
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/action-lightning.png",
+      "sha256": "96b92788ccc1e6b703c40c25459a4bb9da35aa83bd8fd480a536b515c925643c",
+      "transparentTrim": [
+        506,
+        198,
+        1093,
+        855
+      ],
+      "sourceSha256": "8b3b5be2bf121ceccba24bc36c3c32e1400efbbdd5423666ab3bc2bcbaec12dc"
+    },
+    {
+      "id": "action-poison",
+      "label": "action-poison",
+      "file": "runtime/sprites/action-poison.png",
+      "size": [
+        520,
+        772
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/action-poison.png",
+      "sha256": "2f52739cd01137e1aa21c18d43fd3f81b4acfc4c78a11df770294920113fcaa4",
+      "transparentTrim": [
+        508,
+        140,
+        1028,
+        912
+      ],
+      "sourceSha256": "899a8a856dd3e9e33bb6f7ab4a752e399fa8e36a483c1e564977acb86403e99a"
+    },
+    {
+      "id": "action-beam-clean",
+      "label": "action-beam-clean",
+      "file": "runtime/sprites/action-beam-clean.png",
+      "size": [
+        958,
+        971
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/action-beam-clean.png",
+      "sha256": "e689fd50c3419584ff05178e843ff6f2b4a52d2edb5902829a52cd7fdcf52361",
+      "transparentTrim": [
+        155,
+        153,
+        1113,
+        1124
+      ],
+      "sourceSha256": "872e7a953cffe5eb55f48f08465acec6b4541189c3aa6aa40552a3fba6ce841d"
+    },
+    {
+      "id": "weapon-launcher",
+      "label": "발사기",
+      "file": "runtime/sprites/weapon-launcher.png",
+      "size": [
+        621,
+        599
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/weapon-launcher-simple.png",
+      "sha256": "b326dd7b71820be7fc35d9abcbc1444f72029bbe958b171794f0fc4a6a533963",
+      "transparentTrim": [
+        507,
+        232,
+        1128,
+        831
+      ],
+      "sourceSha256": "aafd57e32a7ebc5ecb7bf044d637b300ebb4992cd604d08ab4346181707b81ef"
+    },
+    {
+      "id": "weapon-launcher-laser",
+      "label": "레이저",
+      "file": "runtime/sprites/weapon-launcher-laser.png",
+      "size": [
+        962,
+        802
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/weapon-launcher-laser-simple.png",
+      "sha256": "606e97cc47422918115c636bffd8d892f9ae5fe223941e240b0f67a93d7c2e0b",
+      "transparentTrim": [
+        174,
+        266,
+        1136,
+        1068
+      ],
+      "sourceSha256": "dc23858f68462aa1620aa9a12fd029be345abaef1bbe47f4f1663c64cdab397b"
+    },
+    {
+      "id": "weapon-launcher-shotgun",
+      "label": "샷건",
+      "file": "runtime/sprites/weapon-launcher-shotgun.png",
+      "size": [
+        1213,
+        838
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/weapon-launcher-shotgun-simple.png",
+      "sha256": "7215cdfb0d814352d8577b9acb267c178fee795e66005cbe1120d51cf0b4a830",
+      "transparentTrim": [
+        159,
+        109,
+        1372,
+        947
+      ],
+      "sourceSha256": "5aca766204e89fe2b5d502f5821688ce7c0864b5f7ec71cb4bbc73a8c2064bbe"
+    },
+    {
+      "id": "weapon-launcher-grenade",
+      "label": "유탄발사기",
+      "file": "runtime/sprites/weapon-launcher-grenade.png",
+      "size": [
+        1081,
+        803
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/weapon-launcher-grenade-simple.png",
+      "sha256": "eb297912288dc99f011cf9e24522af4d2d82c425daad71ee0f6b833b46963d44",
+      "transparentTrim": [
+        233,
+        130,
+        1314,
+        933
+      ],
+      "sourceSha256": "91bdc73d28427715d00f25d68633fe59e9c61b3efa505593cee37b100fbbcf17"
+    },
+    {
+      "id": "health-fill-red",
+      "label": "빨간 체력 채움",
+      "file": "runtime/sprites/health-fill-red.png",
+      "size": [
+        680,
+        48
+      ],
+      "origin": "authored-ui-primitive",
+      "source": "source/primitives/health-fill-red.svg",
+      "sha256": "0ad3b8f142f3a693086b6314de302fe90d1d8648124da871606dd118cb7b3422"
+    },
+    {
+      "id": "ring-selected",
+      "label": "선택 무기 링",
+      "file": "runtime/sprites/ring-selected.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "authored-ui-primitive",
+      "source": "source/primitives/ring-selected.svg",
+      "sha256": "4ddd8a5f2e94261aa46fe0bff613e82ce4ac1d96609c758df71c0e1850eaf70d"
+    },
+    {
+      "id": "ring-idle",
+      "label": "대기 무기 링",
+      "file": "runtime/sprites/ring-idle.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "authored-ui-primitive",
+      "source": "source/primitives/ring-idle.svg",
+      "sha256": "7fe2d66ae4146dd77af42e6505f8569bade6ace30a580b57c15b254bab413ba7"
+    },
+    {
+      "id": "ring-cooldown",
+      "label": "쿨타임 링",
+      "file": "runtime/sprites/ring-cooldown.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "authored-ui-primitive",
+      "source": "source/primitives/ring-cooldown.svg",
+      "sha256": "8ab77119b698f87f57979b6fd57ceab2bc4658b0b6d275de0362193aab13c5ee"
+    },
+    {
+      "id": "ring-charge",
+      "label": "차징 진행 링",
+      "file": "runtime/sprites/ring-charge.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "authored-ui-primitive",
+      "source": "source/primitives/ring-charge.svg",
+      "sha256": "e805db76748fd75625c1709be98c484fd4cc663f0e939d4039343c8ba952c7cf"
+    },
+    {
+      "id": "palette-tray-3",
+      "label": "3칸 팔레트 받침",
+      "file": "runtime/sprites/palette-tray-3.png",
+      "size": [
+        342,
+        98
+      ],
+      "origin": "authored-ui-primitive",
+      "source": "source/primitives/palette-tray-3.svg",
+      "sha256": "0fdb328317c47bcbffa266861b6084d345a34171efbc27631770b106d3415150"
+    },
+    {
+      "id": "palette-tray-4",
+      "label": "4칸 팔레트 받침",
+      "file": "runtime/sprites/palette-tray-4.png",
+      "size": [
+        426,
+        98
+      ],
+      "origin": "authored-ui-primitive",
+      "source": "source/primitives/palette-tray-4.svg",
+      "sha256": "7199ceb706a1db0991925c41d948358ceda926f1244022d4fa5fead6416385f1"
+    },
+    {
+      "id": "palette-tray-5",
+      "label": "5칸 팔레트 받침",
+      "file": "runtime/sprites/palette-tray-5.png",
+      "size": [
+        510,
+        98
+      ],
+      "origin": "authored-ui-primitive",
+      "source": "source/primitives/palette-tray-5.svg",
+      "sha256": "fed162707e2b7874916b4c3fb2d8787e115f30edc183b0bef3e080f94ae61e83"
+    },
+    {
+      "id": "charge-pip-ready",
+      "label": "사용 가능 스킬 횟수",
+      "file": "runtime/sprites/charge-pip-ready.png",
+      "size": [
+        24,
+        24
+      ],
+      "origin": "authored-ui-primitive",
+      "source": "source/primitives/charge-pip-ready.svg",
+      "sha256": "38e20a0b4fc41a96210ccbb7caa311eb909837068fc36072ed36b9d5857aa97c"
+    },
+    {
+      "id": "charge-pip-empty",
+      "label": "회복 중 스킬 횟수",
+      "file": "runtime/sprites/charge-pip-empty.png",
+      "size": [
+        24,
+        24
+      ],
+      "origin": "authored-ui-primitive",
+      "source": "source/primitives/charge-pip-empty.svg",
+      "sha256": "2b66b778a939ad1de6b9dd2c8df89f4f974012d31d41c8dfa0932730f04f21e5"
+    },
+    {
+      "id": "slot-empty",
+      "label": "빈 잉크 칸",
+      "file": "runtime/sprites/slot-empty.png",
+      "size": [
+        80,
+        100
+      ],
+      "origin": "authored-ui-primitive",
+      "source": "source/primitives/slot-empty.svg",
+      "sha256": "843df0ca48c6d1d0fa85f5c31b352fb486a046d5e4802495a35967bdf5a33073"
+    },
+    {
+      "id": "slot-locked",
+      "label": "잠긴 잉크 칸",
+      "file": "runtime/sprites/slot-locked.png",
+      "size": [
+        80,
+        100
+      ],
+      "origin": "authored-ui-primitive",
+      "source": "source/primitives/slot-locked.svg",
+      "sha256": "44ee3a1e8703e55ca287bebf754f6512f1daeb6cc84551d734ce1ca178e82a21"
+    },
+    {
+      "id": "state-unavailable",
+      "label": "사용 불가",
+      "file": "runtime/sprites/state-unavailable.png",
+      "size": [
+        100,
+        100
+      ],
+      "origin": "authored-ui-primitive",
+      "source": "source/primitives/state-unavailable.svg",
+      "sha256": "d7d78320c2b4ef5049bdf5a06fc2ea0a8d42c3475629fd464af319b2b77bf447"
+    },
+    {
+      "id": "state-empty-weapon",
+      "label": "빈 무기 칸",
+      "file": "runtime/sprites/state-empty-weapon.png",
+      "size": [
+        100,
+        100
+      ],
+      "origin": "authored-ui-primitive",
+      "source": "source/primitives/state-empty-weapon.svg",
+      "sha256": "126ce61f50a78f3397ea7ac9f535672e2b01fd76231fea9930878b4e7e49e99c"
+    },
+    {
+      "id": "state-ready",
+      "label": "차징 완료",
+      "file": "runtime/sprites/state-ready.png",
+      "size": [
+        96,
+        96
+      ],
+      "origin": "authored-ui-primitive",
+      "source": "source/primitives/state-ready.svg",
+      "sha256": "2dad842a92bbc0faceb4b0855eaab1aadabb620ca106e552f169894833df269d"
+    },
+    {
+      "id": "special-base_sword_default",
+      "label": "강베기",
+      "file": "runtime/sprites/special-base_sword_default.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "f6ae2eec52421e4da780f9a9ad829bc3d218c5f466e5d7dd235ef001e25fc471",
+      "category": "skill"
+    },
+    {
+      "id": "special-base_sword_range",
+      "label": "검기",
+      "file": "runtime/sprites/special-base_sword_range.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "b23842a356fdaeb7a0036716a5e904c4304f372ec93bc02c7d53f681b3bc6445",
+      "category": "skill"
+    },
+    {
+      "id": "special-base_sword_movement",
+      "label": "돌진 찌르기",
+      "file": "runtime/sprites/special-base_sword_movement.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "1341697182d69962098273d9ae9bd035ed6aea8b5e4683a22c809aea454488ff",
+      "category": "skill"
+    },
+    {
+      "id": "special-base_sword_follow_up",
+      "label": "잔상",
+      "file": "runtime/sprites/special-base_sword_follow_up.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "7c1366786566b1a01ba3ecc48c4800b8e7215e8ed1738bd41f73de2298ca58ff",
+      "category": "skill"
+    },
+    {
+      "id": "special-whip_default",
+      "label": "휘감기",
+      "file": "runtime/sprites/special-whip_default.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "9c3e8dbf8cc9d6c7ed042ab18d3fc4a407832800ab8c47a21ed103d3d85d6a37",
+      "category": "skill"
+    },
+    {
+      "id": "special-whip_range",
+      "label": "가시 그물",
+      "file": "runtime/sprites/special-whip_range.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "edfa1539fb327a67ad5328300a52d90a774ffe44a90a8d5aea989a704792b678",
+      "category": "skill"
+    },
+    {
+      "id": "special-whip_movement",
+      "label": "매듭 접근",
+      "file": "runtime/sprites/special-whip_movement.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "b03626ff21a175547ec796387a1dd43bcc42ada83018bd6069a375fff675e6b0",
+      "category": "skill"
+    },
+    {
+      "id": "special-whip_follow_up",
+      "label": "매듭 조이기",
+      "file": "runtime/sprites/special-whip_follow_up.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "6b0a40f189675a45ea8bae76672757c7e4633d8b732f7e3d2f4aa4fdb8d6f236",
+      "category": "skill"
+    },
+    {
+      "id": "special-rapier_default",
+      "label": "모아찌르기",
+      "file": "runtime/sprites/special-rapier_default.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "b36bb8bdcbeafa2ce5a7185256320ad7732b1e601de395b958066438964ca61c",
+      "category": "skill"
+    },
+    {
+      "id": "special-rapier_range",
+      "label": "장침",
+      "file": "runtime/sprites/special-rapier_range.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "329dc8b8d00d8df465f32b189ffc997daa9832f88b06cb4278c88424d6905e73",
+      "category": "skill"
+    },
+    {
+      "id": "special-rapier_movement",
+      "label": "흘려찌르기",
+      "file": "runtime/sprites/special-rapier_movement.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "ee56f3c91bfd33d90c3ca036c2c64b7c97ca9ef4b94e359748ff31921c81a83f",
+      "category": "skill"
+    },
+    {
+      "id": "special-rapier_follow_up",
+      "label": "섬광 연침",
+      "file": "runtime/sprites/special-rapier_follow_up.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "65de97120d8daffc18149f136c44c34812719756b08855d781cbc14b93cf584a",
+      "category": "skill"
+    },
+    {
+      "id": "special-dagger_default",
+      "label": "숨죽이기",
+      "file": "runtime/sprites/special-dagger_default.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "b01d947d3ca53a2920ad13e4cee9783d54710d97205b7becd4e3537208cd4afd",
+      "category": "skill"
+    },
+    {
+      "id": "special-dagger_range",
+      "label": "먹안개",
+      "file": "runtime/sprites/special-dagger_range.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "7ffed22685357f8af2e718ed494edac445a60070287aaca1c1eb7691f8638652",
+      "category": "skill"
+    },
+    {
+      "id": "special-dagger_movement",
+      "label": "삼연 도약",
+      "file": "runtime/sprites/special-dagger_movement.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "a43395706ae1198711b0b5d6352181fe3cb5423e552b10ad62cb500430e1cfee",
+      "category": "skill"
+    },
+    {
+      "id": "special-dagger_follow_up",
+      "label": "그림자 난무",
+      "file": "runtime/sprites/special-dagger_follow_up.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "26946387a0e1c5eaed4c91142a7e2a65951fd98e2e476129b3c485a822b76511",
+      "category": "skill"
+    },
+    {
+      "id": "special-hammer_default",
+      "label": "횡강타",
+      "file": "runtime/sprites/special-hammer_default.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "3aa5034b26d1e9f6aed0e4bacf1cfdc7e123834e66a459add4e45462edaf13ff",
+      "category": "skill"
+    },
+    {
+      "id": "special-hammer_range",
+      "label": "지축 강타",
+      "file": "runtime/sprites/special-hammer_range.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "53545b1242713ca1a5583cebafdbe801dbfd2c5d597c044305f8a58869c76845",
+      "category": "skill"
+    },
+    {
+      "id": "special-hammer_movement",
+      "label": "몰아치기",
+      "file": "runtime/sprites/special-hammer_movement.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "2160193a119067d6ce379d8c8c0685779cd823cf2342e3d60fb5f4f4b8044486",
+      "category": "skill"
+    },
+    {
+      "id": "special-hammer_follow_up",
+      "label": "여진",
+      "file": "runtime/sprites/special-hammer_follow_up.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "f5c7a4b12331350d3a10e1b96459b663ab477933473db1314cbb5a797b34043f",
+      "category": "skill"
+    },
+    {
+      "id": "special-shield_default",
+      "label": "받아치기",
+      "file": "runtime/sprites/special-shield_default.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "2b0defb85fd5ac098a486f5f690f2a8be1f38edf301160b78bb6c7e0dcda54f8",
+      "category": "skill"
+    },
+    {
+      "id": "special-shield_range",
+      "label": "수호막",
+      "file": "runtime/sprites/special-shield_range.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "f933d7ff5ac4d9b50111b08485c6704986a4c3f5753ff19d053626948329ea41",
+      "category": "skill"
+    },
+    {
+      "id": "special-shield_movement",
+      "label": "방패 밀기",
+      "file": "runtime/sprites/special-shield_movement.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "53a4f9db86da444270e22d5dc8af58e11e1c07bdadd3534384644c6dd2547b46",
+      "category": "skill"
+    },
+    {
+      "id": "special-shield_follow_up",
+      "label": "미끼 방패",
+      "file": "runtime/sprites/special-shield_follow_up.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "1734b576eac623706cb5bfee44e09879162b5bfdd4952747aca3fd0a1127644b",
+      "category": "skill"
+    },
+    {
+      "id": "special-greatsword_default",
+      "label": "모아내려찍기",
+      "file": "runtime/sprites/special-greatsword_default.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "0d10309f158c9b4c1bcd74614c8419bbcb4f04d7f38605495e6602e6cb907935",
+      "category": "skill"
+    },
+    {
+      "id": "special-greatsword_range",
+      "label": "반월참",
+      "file": "runtime/sprites/special-greatsword_range.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "acb8f1455d9ebab433fc145a938523036b7869e521d252af3797dbab0a43fc7c",
+      "category": "skill"
+    },
+    {
+      "id": "special-greatsword_movement",
+      "label": "회전 전진",
+      "file": "runtime/sprites/special-greatsword_movement.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "f69623e72d3b12d59c0fe7d8255a717f5a44f3142cce4429a3e1266bdced4066",
+      "category": "skill"
+    },
+    {
+      "id": "special-greatsword_follow_up",
+      "label": "낙인 대검",
+      "file": "runtime/sprites/special-greatsword_follow_up.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "5ef7af1c3e15107bde06bc4bc191154c200f989b26b293315c77a7609e86fa38",
+      "category": "skill"
+    },
+    {
+      "id": "launcher-ball",
+      "label": "차징 후 발사",
+      "file": "runtime/sprites/launcher-ball.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "b9eac8e99b4e5fcea81d3afbaf714ba2296a06293bb928422f1586bd158c6913",
+      "category": "skill"
+    },
+    {
+      "id": "launcher-laser",
+      "label": "레이저",
+      "file": "runtime/sprites/launcher-laser.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "96b531aa1f495285d2d34e74aa0617b726b868108b4791dd7cd0cf881c1c97bb",
+      "category": "skill"
+    },
+    {
+      "id": "launcher-shotgun",
+      "label": "샷건",
+      "file": "runtime/sprites/launcher-shotgun.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "a87783147b7e8488996188208c4a98aae5d605a0a7405e30ee05ac78a187aaea",
+      "category": "skill"
+    },
+    {
+      "id": "launcher-grenade",
+      "label": "유탄포",
+      "file": "runtime/sprites/launcher-grenade.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "0c0fff33431b888ec6ff53f547c8de9285176e1187d1d5383cb2ddb9ea094eb6",
+      "category": "skill"
+    },
+    {
+      "id": "special-shuriken_default",
+      "label": "관통 수리검",
+      "file": "runtime/sprites/special-shuriken_default.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "537f4d8a070c2adbcf82e30b7bd7a55810fba77148456c140cb5cf86845bd805",
+      "category": "skill"
+    },
+    {
+      "id": "special-shuriken_range",
+      "label": "폭발 수리검",
+      "file": "runtime/sprites/special-shuriken_range.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "84a3cbdaebac09c6e095a77ced245164de6393e929c62b04b1712ee83837f938",
+      "category": "skill"
+    },
+    {
+      "id": "special-shuriken_movement",
+      "label": "뒤로 이동 · 복귀",
+      "file": "runtime/sprites/special-shuriken_movement.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "08beed7d216f7e6d442e0429601c90d0693661243865ac7dade2e2abab954dab",
+      "category": "skill"
+    },
+    {
+      "id": "special-shuriken_follow_up",
+      "label": "전진 회전 수리검",
+      "file": "runtime/sprites/special-shuriken_follow_up.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "f007cf42a9d9c32eea5d538d7fdf12bc4b3891167c93de252c2b339d2703e3bc",
+      "category": "skill"
+    },
+    {
+      "id": "special-bomb_default",
+      "label": "3연속 투척",
+      "file": "runtime/sprites/special-bomb_default.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "6615526be25d1fd80d3c1502d741ffea2a8b734e245f9297f31413ae50d0e7a8",
+      "category": "skill"
+    },
+    {
+      "id": "special-bomb_range",
+      "label": "대형 폭탄",
+      "file": "runtime/sprites/special-bomb_range.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "e60bc65579f0ebd3f82992421e84045d58197ac3bb1bc0bd4e65e5704d658fb5",
+      "category": "skill"
+    },
+    {
+      "id": "special-bomb_movement",
+      "label": "미사일 변신",
+      "file": "runtime/sprites/special-bomb_movement.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "1bb22cbb6b542ed7b3377985e3df16f300449691047bad495e4a5e84d6fbd23e",
+      "category": "skill"
+    },
+    {
+      "id": "special-bomb_follow_up",
+      "label": "착지 시한폭탄",
+      "file": "runtime/sprites/special-bomb_follow_up.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "db996aefd2f617388f5f954021081254fc26008fc863f26529a6c4019cce3f9c",
+      "category": "skill"
+    },
+    {
+      "id": "part-ink3_red_01",
+      "label": "덧칠",
+      "file": "runtime/sprites/part-ink3_red_01.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "4b7642b27f3ce17f39b92ace35e9396f27deac3ab5fa6eb22181ba68e09b677f",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_red_02",
+      "label": "집중 공격",
+      "file": "runtime/sprites/part-ink3_red_02.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "5dca48af98d2e270b623cac4d6e7109cdf5cecf4a5c3382f66dc94cc28fd6e35",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_red_03",
+      "label": "힘 실어 건네기",
+      "file": "runtime/sprites/part-ink3_red_03.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "0b139a6b330906daa641a2d85214ca4023b64d368fa8e82f592da5dc466addc0",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_red_04",
+      "label": "터지는 잉크",
+      "file": "runtime/sprites/part-ink3_red_04.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "ff12118aa80891933ab9f84d2bdfd7158601ce2f6dfc6a75faeea2053db7f7c1",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_red_05",
+      "label": "사방으로 튀는 잉크",
+      "file": "runtime/sprites/part-ink3_red_05.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "4ed0b714934ffd1c905ab9acfb4a816809de7bb082b0024959e3e42a7b2ee493",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_red_06",
+      "label": "기세를 몰아",
+      "file": "runtime/sprites/part-ink3_red_06.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "e7b1dca140e787b3839d6a30262cbcb81c26c68de8a67a342be6a8b885452c5d",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_red_07",
+      "label": "붉은 낙관",
+      "file": "runtime/sprites/part-ink3_red_07.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "5a8e75645b1f078342fb46c3c92d964e639d0e88be6c6c1335b477992cd738d0",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_red_08",
+      "label": "결정타",
+      "file": "runtime/sprites/part-ink3_red_08.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "ee64c77044a3465674968150380a545804de24450f24a96afbb24618b5732999",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_red_09",
+      "label": "농묵",
+      "file": "runtime/sprites/part-ink3_red_09.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "961abc24de7590ed66963ecde843cd12b8f95f705ba4c26373bfe2e96cce5bc3",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_red_10",
+      "label": "밑줄 긋기",
+      "file": "runtime/sprites/part-ink3_red_10.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "be45bebbf4f3cc9df13755b0f00738a21ba6acb1de9ff50692965671e739754a",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_yellow_01",
+      "label": "전기 발자국",
+      "file": "runtime/sprites/part-ink3_yellow_01.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "9f0a6f21a0f6e03d4ce0a28cb6e441760b0e31db486349da6cc9822ba06383e9",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_yellow_02",
+      "label": "뛰어난 발걸음",
+      "file": "runtime/sprites/part-ink3_yellow_02.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "41a4017880850edebffdde5697e269fc790fa70d842d189eac533998eac986ef",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_yellow_03",
+      "label": "몸통 박치기",
+      "file": "runtime/sprites/part-ink3_yellow_03.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "48f9c898691ad54b7ff22fe5e25f7a8ca8668782a601912321fd5953c44f53fb",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_yellow_04",
+      "label": "휘몰아치기",
+      "file": "runtime/sprites/part-ink3_yellow_04.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "69a9f2ab0805d13ad636ddc52382ae0c4746e896d8389c52624dcdd7f3ee06e1",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_yellow_05",
+      "label": "전기 장판",
+      "file": "runtime/sprites/part-ink3_yellow_05.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "9b8b6eeb0da25c8a80b59e05d1e81aa8efe0bffbb63e45d27e18bd4d51971029",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_yellow_06",
+      "label": "신난다",
+      "file": "runtime/sprites/part-ink3_yellow_06.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "4b867f8ce05dcc683ff1650f67c441157e1f83c354c562ed0b542634ee13f012",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_yellow_07",
+      "label": "끊어 치기",
+      "file": "runtime/sprites/part-ink3_yellow_07.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "e6e1779264e804c57f32b5e8cac1fea5b3c426024ded18c44aecb36b4cea5789",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_yellow_08",
+      "label": "번개 표식",
+      "file": "runtime/sprites/part-ink3_yellow_08.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "c472871901337ddc469e11a4a4ddd47518a8665b8afdc6e5a0fac423a24c0e7f",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_yellow_09",
+      "label": "번지는 표식",
+      "file": "runtime/sprites/part-ink3_yellow_09.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "2dd586d38726129fee38aef24d21f6bd0416852ea6aaf356e1db10797c61c0e6",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_yellow_10",
+      "label": "질주 충전",
+      "file": "runtime/sprites/part-ink3_yellow_10.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "0445c3520476be94dce90666e4fb328d51555f3b631edad7bf9d17e31fc6dc37",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_yellow_11",
+      "label": "내달린 획",
+      "file": "runtime/sprites/part-ink3_yellow_11.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "fb6e6b49ea8bf5ac48b4b0839ada3a2b2669929b1eef026e43dd7e76c74f1550",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_yellow_12",
+      "label": "옮겨 쓰기",
+      "file": "runtime/sprites/part-ink3_yellow_12.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "5f2402f82d07eff47b0d112541366178b1a4c4987cb9008e76a1a7d874ea1693",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_green_01",
+      "label": "든든한 배리어",
+      "file": "runtime/sprites/part-ink3_green_01.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "bb5205828491fa1733f70f6950ea9c52b0f23130dbb20353196f723ec4fb13e4",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_green_02",
+      "label": "보호막 교체",
+      "file": "runtime/sprites/part-ink3_green_02.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "eadd9f957a30488a823fa4082b784f2ad3022d5b53a8532290ce0615e17e681b",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_green_03",
+      "label": "가시갑옷",
+      "file": "runtime/sprites/part-ink3_green_03.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "7aa359913390af729d15bc8f7108df5820e4d098321453c1dd2b30476f945a3b",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_green_04",
+      "label": "전투 식량",
+      "file": "runtime/sprites/part-ink3_green_04.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "0ab634575f9245de9fb41618276e8890292b44ea30a98f72cc0fea5ae383015b",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_green_05",
+      "label": "티끌 모아 태산",
+      "file": "runtime/sprites/part-ink3_green_05.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "f586ec12be318a2a247815ff1aba96f485489b40e1719d36998f623701f2aedb",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_green_06",
+      "label": "풀컨디션",
+      "file": "runtime/sprites/part-ink3_green_06.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "20ed93ec30872278af1d774ebdca69f4e157550942f1a679ae176355989d72d4",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_green_07",
+      "label": "초록 수액",
+      "file": "runtime/sprites/part-ink3_green_07.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "5a8365a2ed66bfeadadb6df2e0616909110fa0046f540b102cfe0f1c7ea00bcd",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_green_08",
+      "label": "단단한 껍질",
+      "file": "runtime/sprites/part-ink3_green_08.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "a16d083f4624d10781059023a4015a77c9518bafbcee5b07ad38a983e5ff889e",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_green_09",
+      "label": "되갚는 잉크",
+      "file": "runtime/sprites/part-ink3_green_09.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "67b981b56ee83553d6f0b24906b9fbadd4491dd04e08d034acdc9eb507d133ac",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_green_10",
+      "label": "갑옷 깁기",
+      "file": "runtime/sprites/part-ink3_green_10.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "defc26a3b9a50998d61bfcab1a0350f9f0eaf5c2ca46aa18810f5ed9878a06c7",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_blue_01",
+      "label": "범위 증폭",
+      "file": "runtime/sprites/part-ink3_blue_01.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "08fd16ae749f5ca94f86a72c3d01bad6bbb7a3b87b9e3033d962ff29102fdbbd",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_blue_02",
+      "label": "교대 타격",
+      "file": "runtime/sprites/part-ink3_blue_02.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "9e88362d6659a38a70e2a5ab12d4db2f9eb6fed988be5269dbbc22e1cd23c102",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_blue_03",
+      "label": "여의봉",
+      "file": "runtime/sprites/part-ink3_blue_03.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "25fb359b1b922d304f15db55d54637300fe7e034003ef26236e4e9fab486bf71",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_blue_04",
+      "label": "난무",
+      "file": "runtime/sprites/part-ink3_blue_04.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "423b98b496ca7bfc948672d18a297f6ad3eb12c6a5fce079e1631af8b43c5d3f",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_blue_05",
+      "label": "공명",
+      "file": "runtime/sprites/part-ink3_blue_05.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "293f058b5a9f56a7e176417102cbe353eb72ee855a98f9fa09a6b38f82c74911",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_blue_06",
+      "label": "학살",
+      "file": "runtime/sprites/part-ink3_blue_06.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "9bff4c083175a83115cb2e56d76403f5811046863d4148afbd05f8c642f4e3cd",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_blue_07",
+      "label": "푸른 순환",
+      "file": "runtime/sprites/part-ink3_blue_07.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "5ea94bc0ffad2a73cd4c8da99812e97914fad3bc03dec863e69558324756c5f6",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_blue_08",
+      "label": "색 번짐",
+      "file": "runtime/sprites/part-ink3_blue_08.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "94c601681ee756fa2ce26415220517ec34d217d8c599bd10a0a6b471375855b5",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_blue_09",
+      "label": "겹쳐 쓰기",
+      "file": "runtime/sprites/part-ink3_blue_09.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "382ef50697c000ba8630cd4ddd02d9d4a817a63c95b1c54c4918116eb4be2ac4",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_blue_10",
+      "label": "정리 정돈",
+      "file": "runtime/sprites/part-ink3_blue_10.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "640767026eb82b8fae1b86119183a70f0e43a36a005f5e4b0d3326d12c81a4d9",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_blue_11",
+      "label": "앞당긴 획",
+      "file": "runtime/sprites/part-ink3_blue_11.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "220d9303b3b399c0a7920b01088e899cfc5a405fefcf7aeb796dbe0024533627",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_purple_01",
+      "label": "먹물 늪",
+      "file": "runtime/sprites/part-ink3_purple_01.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "c5e1325c8864c3f3bc1a0ca3b32331a520bf63139b0ba2cb47b7a47a90237bdf",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_purple_02",
+      "label": "잔류 폭발",
+      "file": "runtime/sprites/part-ink3_purple_02.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "24333b0fb6131d3458b2ac52a3a6d5cb55b4bc442d148734991d30a04e1c0051",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_purple_03",
+      "label": "선제 제압",
+      "file": "runtime/sprites/part-ink3_purple_03.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "cd606b7f70b8d4eb63812f3e668e41cf6bc55dc60765c19faad7cb19df8a742d",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_purple_04",
+      "label": "뇌진탕",
+      "file": "runtime/sprites/part-ink3_purple_04.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "90affd296bc90cc9bd4331d8d3832bee3db589fbee5908ea750be544d791e7a5",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_purple_05",
+      "label": "사약",
+      "file": "runtime/sprites/part-ink3_purple_05.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "8451fa20e49c0256c4991c0d38f6bb80e2547f9c7c2bc3eadde965f1433ec365",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_purple_06",
+      "label": "종합 병원",
+      "file": "runtime/sprites/part-ink3_purple_06.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "9bc8e73e7c5cdc3873004e8fcfd46409c225d474aeb1ceb9cd501dc7adb0ddc1",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_purple_07",
+      "label": "쪽빛 족쇄",
+      "file": "runtime/sprites/part-ink3_purple_07.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "58c9f56493796a3570f837cca02d10427a2d4f091a237eb7bba20f5335cacfae",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_purple_08",
+      "label": "보랏빛 낙인",
+      "file": "runtime/sprites/part-ink3_purple_08.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "95d4dc1152065c5257eb1d5ab9873bd291f27a5381e3b428186b4cc51ab8955f",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_purple_09",
+      "label": "독폭탄",
+      "file": "runtime/sprites/part-ink3_purple_09.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "45236ec082046a03f0dcf0adc234cce502ddb55d9261b1bb33e68ff8dbc24bb6",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_purple_10",
+      "label": "넘어뜨리기",
+      "file": "runtime/sprites/part-ink3_purple_10.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "8093280654644b3a165a1ecff696cc2a5433641b0e79fe7a4d033fa7a7b268eb",
+      "category": "ink-part"
+    },
+    {
+      "id": "part-ink3_purple_11",
+      "label": "약점 찌르기",
+      "file": "runtime/sprites/part-ink3_purple_11.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "modular-composite",
+      "source": "runtime/composition-recipes.json",
+      "sha256": "a099129322bb0f63b8248358c6fd0183db278cb682d49a32c9fa85115c06fbca",
+      "category": "ink-part"
+    }
+  ]
+}

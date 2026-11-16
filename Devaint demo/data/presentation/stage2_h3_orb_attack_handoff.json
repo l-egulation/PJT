@@ -1,0 +1,26 @@
+{
+  "schema": "stage2-h3-separate-orb-handoff-v1",
+  "status": "body-float-reused-orb-static-and-prompt-ready",
+  "approval": "orb-design-and-motion-pending-user-review",
+  "output": "outputs/waterway/h3-orb-attack-handoff-20261101",
+  "generatedSource": "C:/Users/SSAFY/.codex/generated_images/01a18def-9c96-7602-bc0f-d707e8e958ed/exec-18eefb1b-598c-4477-941c-595ee23c7b94.png",
+  "generationPrompt": "outputs/waterway/h3-orb-attack-handoff-20261101/generation-prompt.txt",
+  "bodyBase": "outputs/waterway/pixel-base-step1-20261031/H3/native/base-frame.png",
+  "approvedFloat": "outputs/waterway/h3-float-travel-20261101/B",
+  "combatReference": "data/combat/stage2_waterway_patterns.json",
+  "orbCanvas": [64,64],
+  "orbVisibleHeight": 40,
+  "orbInputScale": 8,
+  "orbPaletteRgb": [[41,37,47],[128,88,110],[113,130,139],[217,198,171]],
+  "bodyCanvas": [384,224],
+  "orbCenterInBodyCanvas": [134,99],
+  "mapReference": "outputs/waterway/pixel-base-step1-20261031/references/C-game.png",
+  "mapOffset": [238,94],
+  "oneLine": "본체는 기존 부유를 유지하고, 몸 앞 공중에 잉크 구 한 개가 응축된 뒤 손 접촉 없이 완만한 곡선으로 발사된다.",
+  "phaseProposal": [
+    {"name":"공 생성·전조","seconds":0.85,"action":"몸 앞쪽 고정 위치에서 작은 잉크 덩어리가 최대40px 공으로 자란다. 준비 후반 목표를 고정한다."},
+    {"name":"분리·발사","seconds":0.2,"action":"완성된 공이 살짝 압축되며 왼쪽 발사 시작을 보인다. 이후 비행은 별도 투사체가 담당한다."},
+    {"name":"회복","seconds":0.9,"action":"앞쪽 생성 위치는 비워 두고 본체는 기존 부유를 유지한다. 즉시 다음 공을 만들지 않는다."}
+  ],
+  "prompt": "Animate ONLY the isolated ink orb, using the supplied white-background orb image as the reference for its MAXIMUM fully formed shape. There is NO character in this asset. Do not add a caster, hands, arms, feet, staff or any other anatomy. The existing shroud character will keep its approved floating loop separately.\n\nThis is ONE formation-and-launch VFX cycle, about1.95s total. The reference orb is the fully formed target, not a requirement for the first animation frame. Begin with an EMPTY pure-white canvas. During FORMATION,0.85s, small solid ink clusters coalesce at the SAME fixed center, logical(32,32), growing into the supplied heavy orb. Keep the center stationary, not drifting or orbiting. Reach the full40px maximum height during late preparation and let the broad ink planes churn or sag very slightly. Preserve the tiny attached lower sag and the compact heavy mass; no disconnected particle storm.\n\nDuring LAUNCH,0.20s, the orb compresses slightly, then moves only8 logical pixels toward the LEFT, showing one crisp release cue. Keep the full orb inside the canvas until release; do not stretch it into a beam or trail. Remove it from this local formation layer at the END of the launch cue. Actual continued flight on a shallow arc will use a separate projectile sprite in the game; do not draw a long flight trajectory, impact or floor effect here. During RECOVERY,0.90s, leave the local canvas entirely EMPTY. Do not recreate the orb immediately and do not loop a second attack inside the clip.\n\nUse the exact supplied FOUR colors only: deep ink-purple#29252f, muted dusty plum#80586e, blue-gray#71828b, dull cream#d9c6ab. Keep broad readable flat pixel clusters and the original heavy ink design. No bright aura, neon rim, black outer outline, gradient, blur, antialiasing, dithering, glass gloss, fine texture, smoke, flame, magic runes, flashes, text, grid, ground shadow or scenery. Solid ink pixels must remain filled.\n\nKeep the full512x512 pure-white input canvas, exactly8x the64x64 logical-pixel canvas. The complete orb is40px tall,320 input pixels. Preserve its maximum size and the centered framing; use the existing padding for the8px left launch cue. Maintain aligned8x8 pixel blocks. Do not zoom, crop, recenter or mirror. One chronological local formation/launch cycle. Timing and orb appearance are art review proposals; no damage or projectile-physics balance is fixed by this clip."
+}

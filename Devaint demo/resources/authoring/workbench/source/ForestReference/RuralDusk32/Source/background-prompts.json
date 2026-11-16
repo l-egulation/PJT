@@ -1,0 +1,14 @@
+{
+  "mode": "built-in image_gen",
+  "reference": "02_게임용/near_forest.png",
+  "jobs": [
+    {
+      "id": "dusk_sky",
+      "prompt": "Use case: stylized-concept. Make a separate SKY ONLY background plate for a 2D side-scrolling pixel-art rural dusk forest game. Reference image is COLOR/PIXEL TEXTURE guidance only. Wide 3:2 canvas, preferably 1536x1024. Soft muted amber, peach, dusty apricot sunset sky with a few long low-contrast cloud wisps. No trees, foliage, hills, mountains, ground, sun disk, foreground, text or borders. Keep saturation restrained so ochre trees and a white-hooded player will read clearly over it. Discrete small pixel clusters, no smooth photo gradients, no blur. Fill whole canvas, opaque. Quiet horizontally continuous cloud rhythm, edges match in sky hue and cloud heights for horizontal scrolling. This is the independent sky layer underneath a transparent forest layer."
+    },
+    {
+      "id": "close_woods",
+      "prompt": "Use case: stylized-concept. Produce a game-ready TRANSPARENT forest layer, using reference image only for warm rural autumn dusk palette and fine pixel-art texture. Redesign the forest: the player should feel INSIDE a nearby leafy woodland, not looking at a panorama or at a few gigantic tree trunks. Wide 3:2 canvas preferably1536x1024. Across the width use about14 to18 varied medium and slender deciduous trunks at staggered depths, with modest dark brown trunk widths, branching limbs and interwoven olive/ochre foliage. No single dominant giant tree, no trunk thicker than5 percent of canvas width. Many distinct trunks visible through clustered leaves. Leaf crowns continue beyond the upper edge, trees feel near because of richer detail and overlapping layers, NOT by enlarging trees. Irregular bushes, small saplings and fern-like undergrowth occupy the lower40 percent, with some bush mounds rising to the mid-height, conceal trunk bases; dense woodland continues to bottom edge. Do not draw a walkable floor or horizon. Keep midframe gentle contrast and readable openings for action-game platforms. Transparent gaps between trunks and canopy must genuinely reveal the separate sky behind: no sky paint, no orange opaque backdrop, no distant mountains. Approximately25 percent open transparent gaps distributed irregularly, not a framed central window. Low contrast muted warm brown/ochre/olive, soft warm edge light, much less saturated than golden gameplay grass. Crisp small coherent pixel clusters, no brush blur, no black thick cartoon outlines. Full-bleed continuous forest strip touching left/right edges with compatible foliage densities for scrolling, not isolated sticker trees, no border, no characters, no platforms, no text. Actual RGBA transparency in all background openings; preserve trees and undergrowth opaque."
+    }
+  ]
+}

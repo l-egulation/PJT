@@ -1,0 +1,38 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>네 무기 · 로브와 공통 모션 수정</title>
+<style>
+:root{color-scheme:light dark;--foreground:light-dark(#19232d,#eef3f6);--background:light-dark(#fafafa,#19232d);--secondary:light-dark(#dce3e7,#3b4b57);--border:light-dark(#8998a0,#71828e);--muted-foreground:light-dark(#4b5c66,#bac9d2)}
+body{font:15px/1.6 system-ui,sans-serif;background:var(--background);color:var(--foreground);max-width:1000px;margin:24px auto;padding:0 16px}
+.viz-controls,.viz-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.form-label{display:flex;gap:8px;align-items:center}.btn,.form-select{font:inherit;padding:7px 10px}.form-check{display:flex;gap:8px;align-items:center}.text-small{font-size:13px}.text-muted{color:var(--muted-foreground)}
+</style><h1>기본검 · 채찍 · 레이피어 · 단검</h1>
+<div id="ink-four-motion-review">
+  <div class="viz-controls">
+    <label class="form-label">모션
+      <select class="form-select" data-control="motion" aria-label="전체 모션">
+        <option value="auto">전체 순서 재생</option>
+        <option value="idle">대기</option><option value="walk">걷기</option>
+        <option value="run">달리기</option><option value="jump">점프</option>
+        <option value="fall">낙하·착지</option><option value="dash">대시</option>
+        <option value="combo">공격 연속</option><option value="death">죽음</option>
+      </select>
+    </label>
+    <button class="btn" type="button" data-control="play">일시정지</button>
+    <label class="form-label">속도
+      <select class="form-select" data-control="speed" aria-label="재생 속도">
+        <option value="1">1배속</option><option value="0.5">0.5배속</option><option value="0.25">0.25배속</option>
+      </select>
+    </label>
+    <label class="form-check"><input class="form-check-input" type="checkbox" data-control="effects" checked><span class="form-check-label">이펙트</span></label>
+  </div>
+  <div class="viz-row"><span data-control="stage" aria-live="polite">대기</span></div>
+  <div class="ink-motion-grid" data-control="weapons"></div>
+  <div class="text-small text-muted" data-control="status" role="status">불러오는 중…</div>
+</div>
+<style>
+#ink-four-motion-review .ink-motion-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-top:12px}
+#ink-four-motion-review figure{margin:0;min-width:0}
+#ink-four-motion-review canvas{width:100%;height:auto;display:block;image-rendering:pixelated;background:var(--secondary)}
+#ink-four-motion-review figcaption{display:flex;align-items:baseline;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+#ink-four-motion-review .ink-frame{color:var(--muted-foreground)}
+@media(max-width:480px){#ink-four-motion-review .ink-motion-grid{grid-template-columns:minmax(0,1fr)}}
+</style>
+<script src="data.js"></script><script src="viewer.js"></script></html>

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes">
+    <title>{{{ PRODUCT_NAME }}} | Deviant</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: "Pretendard", "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #11100f;
+        color: #f4efe5;
+      }
+
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        background: #11100f;
+      }
+
+      #unity-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(circle at 50% 40%, #2b2520 0%, #171513 55%, #0d0c0b 100%);
+      }
+
+      #unity-canvas {
+        width: 100%;
+        height: 100%;
+        background: #171513;
+      }
+
+      #unity-container:fullscreen {
+        width: 100vw;
+        height: 100vh;
+        background: #000;
+      }
+
+      #unity-container:fullscreen #unity-canvas {
+        max-width: 100vw;
+        max-height: 100vh;
+      }
+
+      #unity-loading-bar {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: min(560px, calc(100vw - 48px));
+        box-sizing: border-box;
+        transform: translate(-50%, -50%);
+        padding: 28px 30px 24px;
+        border: 1px solid rgba(239, 211, 155, 0.28);
+        border-radius: 16px;
+        background: rgba(24, 21, 18, 0.94);
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+      }
+
+      #unity-loading-brand {
+        margin-bottom: 18px;
+        color: #d9b56e;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+      }
+
+      #unity-loading-message {
+        margin-bottom: 18px;
+        color: #fff8e9;
+        font-size: clamp(16px, 2.2vw, 20px);
+        font-weight: 700;
+        line-height: 1.4;
+      }
+
+      #unity-progress-row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 9px;
+      }
+
+      #unity-progress-label {
+        color: #bdb2a1;
+        font-size: 12px;
+      }
+
+      #unity-progress-percent {
+        color: #f0c87d;
+        font-variant-numeric: tabular-nums;
+        font-size: 22px;
+        font-weight: 800;
+      }
+
+      #unity-progress-track {
+        width: 100%;
+        height: 10px;
+        overflow: hidden;
+        border-radius: 999px;
+        background: #393127;
+      }
+
+      #unity-progress-bar-full {
+        width: 0%;
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(90deg, #bf7f3f 0%, #f2d38d 100%);
+        box-shadow: 0 0 18px rgba(242, 211, 141, 0.42);
+        transition: width 160ms ease-out;
+      }
+
+      #unity-loading-details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 8px 16px;
+        margin-top: 13px;
+        color: #afa394;
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      #unity-download-speed,
+      #unity-loading-eta {
+        font-variant-numeric: tabular-nums;
+      }
+
+      #unity-loading-hint {
+        margin-top: 14px;
+        color: #766c60;
+        font-size: 11px;
+        line-height: 1.5;
+      }
+
+      #unity-warning {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 2;
+      }
+
+      #unity-fullscreen-button {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        box-sizing: border-box;
+        min-width: 128px;
+        height: 48px;
+        padding: 0 16px;
+        cursor: pointer;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 8px;
+        background: rgba(20, 18, 16, 0.78);
+        color: #f4efe5;
+        font-family: inherit;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1;
+        white-space: nowrap;
+      }
+
+      #unity-fullscreen-button .fullscreen-icon {
+        font-size: 22px;
+      }
+
+      #unity-fullscreen-button:hover {
+        background: rgba(79, 59, 38, 0.9);
+      }
+
+      #unity-container:fullscreen #unity-fullscreen-button {
+        display: none;
+      }
+
+      #unity-loading-bar.is-error #unity-loading-message {
+        color: #ffb5a8;
+      }
+
+      #unity-loading-bar.is-error #unity-progress-bar-full {
+        background: #c85f54;
+        box-shadow: 0 0 18px rgba(200, 95, 84, 0.35);
+      }
+
+      @media (max-width: 600px) {
+        #unity-loading-bar {
+          padding: 22px 20px 19px;
+        }
+
+        #unity-loading-details {
+          flex-direction: column;
+          gap: 3px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" width={{{ WIDTH }}} height={{{ HEIGHT }}} tabindex="-1"></canvas>
+      <section id="unity-loading-bar" aria-live="polite" aria-label="게임 로딩">
+        <div id="unity-loading-brand">Deviant</div>
+        <div id="unity-loading-message">네트워크에서 게임 데이터 다운로드 중</div>
+        <div id="unity-progress-row">
+          <span id="unity-progress-label">다운로드 진행률</span>
+          <span id="unity-progress-percent">0%</span>
+        </div>
+        <div id="unity-progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+        <div id="unity-loading-details">
+          <span id="unity-download-speed">현재 다운로드 속도 측정 중...</span>
+          <span id="unity-loading-eta"></span>
+        </div>
+        <div id="unity-loading-hint">네트워크 상태와 브라우저 캐시에 따라 표시 시간이 달라질 수 있습니다.</div>
+      </section>
+      <div id="unity-warning"></div>
+      <button id="unity-fullscreen-button" type="button" aria-label="전체화면"><span class="fullscreen-icon" aria-hidden="true">⛶</span><span>전체화면</span></button>
+    </div>
+    <script>
+      var canvas = document.querySelector("#unity-canvas");
+      var unityContainer = document.querySelector("#unity-container");
+      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      var canvasDesignWidth = canvas.width;
+      var canvasDesignHeight = canvas.height;
+      var isMobileDevice = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var loadingMessage = document.querySelector("#unity-loading-message");
+      var progressFill = document.querySelector("#unity-progress-bar-full");
+      var progressPercent = document.querySelector("#unity-progress-percent");
+      var progressTrack = document.querySelector("#unity-progress-track");
+      var downloadSpeed = document.querySelector("#unity-download-speed");
+      var loadingEta = document.querySelector("#unity-loading-eta");
+
+      var transferState = {
+        transfers: [],
+        receivedBytes: 0,
+        totalBytes: 0,
+        activeTransfers: 0,
+        smoothedBytesPerSecond: 0,
+        lastSampleAt: performance.now(),
+        lastSampleBytes: 0
+      };
+
+      function finitePositive(value) {
+        return Number.isFinite(value) && value > 0 ? value : 0;
+      }
+
+      function syncTransferTotals() {
+        transferState.receivedBytes = transferState.transfers.reduce(function (sum, item) {
+          return sum + item.receivedBytes;
+        }, 0);
+        transferState.totalBytes = transferState.transfers.reduce(function (sum, item) {
+          return sum + item.totalBytes;
+        }, 0);
+      }
+
+      function formatBytes(bytes) {
+        if (bytes >= 1000000) return (bytes / 1000000).toFixed(1) + " MB";
+        if (bytes >= 1000) return (bytes / 1000).toFixed(0) + " KB";
+        return Math.max(0, Math.round(bytes)) + " B";
+      }
+
+      function formatDuration(seconds) {
+        if (!Number.isFinite(seconds) || seconds <= 0) return "";
+        if (seconds < 60) return Math.max(1, Math.ceil(seconds)) + "초 남음";
+        var minutes = Math.floor(seconds / 60);
+        var remainingSeconds = Math.ceil(seconds % 60);
+        return minutes + "분 " + remainingSeconds + "초 남음";
+      }
+
+      function beginTransfer() {
+        var transfer = { receivedBytes: 0, totalBytes: 0, active: true };
+        transferState.transfers.push(transfer);
+        transferState.activeTransfers += 1;
+        return transfer;
+      }
+
+      function addTransferBytes(transfer, bytes) {
+        transfer.receivedBytes = Math.max(transfer.receivedBytes, finitePositive(bytes));
+        syncTransferTotals();
+      }
+
+      function setTransferProgress(transfer, loadedBytes, totalBytes) {
+        transfer.receivedBytes = Math.max(transfer.receivedBytes, finitePositive(loadedBytes));
+        transfer.totalBytes = Math.max(transfer.totalBytes, finitePositive(totalBytes));
+        syncTransferTotals();
+      }
+
+      function endTransfer(transfer) {
+        if (!transfer || !transfer.active) return;
+        transfer.active = false;
+        transferState.activeTransfers = Math.max(0, transferState.activeTransfers - 1);
+      }
+
+      function updateDownloadDetails() {
+        var now = performance.now();
+        var elapsed = (now - transferState.lastSampleAt) / 1000;
+        if (elapsed >= 0.25) {
+          var delta = Math.max(0, transferState.receivedBytes - transferState.lastSampleBytes);
+          if (delta > 0) {
+            var currentBytesPerSecond = delta / elapsed;
+            transferState.smoothedBytesPerSecond = transferState.smoothedBytesPerSecond === 0
+              ? currentBytesPerSecond
+              : transferState.smoothedBytesPerSecond * 0.7 + currentBytesPerSecond * 0.3;
+          }
+          transferState.lastSampleAt = now;
+          transferState.lastSampleBytes = transferState.receivedBytes;
+        }
+
+        if (transferState.smoothedBytesPerSecond > 0) {
+          downloadSpeed.textContent = "현재 다운로드 속도 " + formatBytes(transferState.smoothedBytesPerSecond) + "/s";
+          var remainingBytes = transferState.totalBytes - transferState.receivedBytes;
+          loadingEta.textContent = remainingBytes > 0
+            ? formatDuration(remainingBytes / transferState.smoothedBytesPerSecond)
+            : "";
+        } else if (transferState.activeTransfers > 0) {
+          downloadSpeed.textContent = "현재 다운로드 속도 측정 중...";
+          loadingEta.textContent = "";
+        } else {
+          downloadSpeed.textContent = "다운로드 속도 확인 중...";
+          loadingEta.textContent = "";
+        }
+      }
+
+      function observeFetchDownloads() {
+        if (typeof window.fetch !== "function") return;
+        var nativeFetch = window.fetch.bind(window);
+        window.fetch = function (input, init) {
+          var transfer = beginTransfer();
+          return nativeFetch(input, init).then(function (response) {
+            var contentLength = response && response.headers ? Number(response.headers.get("Content-Length")) : 0;
+            setTransferProgress(transfer, 0, contentLength);
+            if (!response || !response.body || typeof response.clone !== "function" || typeof response.body.getReader !== "function") {
+              endTransfer(transfer);
+              return response;
+            }
+
+            try {
+              var reader = response.clone().body.getReader();
+              var readNext = function () {
+                return reader.read().then(function (result) {
+                  if (result.done) {
+                    endTransfer(transfer);
+                    return;
+                  }
+                  if (result.value) addTransferBytes(transfer, transfer.receivedBytes + result.value.byteLength);
+                  return readNext();
+                }).catch(function () {
+                  endTransfer(transfer);
+                });
+              };
+              readNext();
+            } catch (error) {
+              endTransfer(transfer);
+            }
+            return response;
+          }).catch(function (error) {
+            endTransfer(transfer);
+            throw error;
+          });
+        };
+      }
+
+      function observeXhrDownloads() {
+        var Xhr = window.XMLHttpRequest;
+        if (!Xhr || !Xhr.prototype) return;
+        var nativeSend = Xhr.prototype.send;
+        Xhr.prototype.send = function () {
+          var xhr = this;
+          var transfer = beginTransfer();
+          var finished = false;
+          var finish = function () {
+            if (finished) return;
+            finished = true;
+            if (xhr.response && xhr.response.byteLength) setTransferProgress(transfer, xhr.response.byteLength, xhr.response.byteLength);
+            endTransfer(transfer);
+          };
+          xhr.addEventListener("progress", function (event) {
+            setTransferProgress(transfer, event.loaded, event.lengthComputable ? event.total : 0);
+          });
+          xhr.addEventListener("loadend", finish);
+          xhr.addEventListener("error", finish);
+          xhr.addEventListener("abort", finish);
+          try {
+            return nativeSend.apply(this, arguments);
+          } catch (error) {
+            finish();
+            throw error;
+          }
+        };
+      }
+
+      function setLoadingError(message) {
+        loadingBar.classList.add("is-error");
+        loadingMessage.textContent = message;
+        downloadSpeed.textContent = "네트워크 연결을 확인해 주세요.";
+        loadingEta.textContent = "";
+      }
+
+      function updateUnityProgress(progress) {
+        var safeProgress = Math.max(0, Math.min(1, Number(progress) || 0));
+        var percent = Math.round(safeProgress * 100);
+        progressFill.style.width = percent + "%";
+        progressPercent.textContent = percent + "%";
+        progressTrack.setAttribute("aria-valuenow", String(percent));
+        if (safeProgress < 1) loadingMessage.textContent = "네트워크에서 게임 데이터 다운로드 중";
+      }
+
+      observeFetchDownloads();
+      observeXhrDownloads();
+      window.setInterval(updateDownloadDetails, 250);
+
+      function unityShowBanner(msg, type) {
+        var warningBanner = document.querySelector("#unity-warning");
+        var div = document.createElement("div");
+        div.innerHTML = msg;
+        div.style = type === "error"
+          ? "background: #a33b32; color: white; padding: 10px;"
+          : "background: #e6bf6a; color: #21170e; padding: 10px;";
+        warningBanner.appendChild(div);
+        if (type !== "error") {
+          window.setTimeout(function () {
+            if (div.parentNode === warningBanner) warningBanner.removeChild(div);
+          }, 5000);
+        }
+      }
+
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/{{{ LOADER_FILENAME }}}";
+      var config = {
+        arguments: [],
+        dataUrl: buildUrl + "/{{{ DATA_FILENAME }}}",
+        frameworkUrl: buildUrl + "/{{{ FRAMEWORK_FILENAME }}}",
+#if USE_WASM
+        codeUrl: buildUrl + "/{{{ CODE_FILENAME }}}",
+#endif
+#if SYMBOLS_FILENAME
+        symbolsUrl: buildUrl + "/{{{ SYMBOLS_FILENAME }}}",
+#endif
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: {{{ JSON.stringify(COMPANY_NAME) }}},
+        productName: {{{ JSON.stringify(PRODUCT_NAME) }}},
+        productVersion: {{{ JSON.stringify(PRODUCT_VERSION) }}},
+        showBanner: unityShowBanner
+      };
+
+      if (isMobileDevice) {
+        unityContainer.className = "unity-mobile";
+        canvas.className = "unity-mobile";
+      } else {
+        canvas.style.width = "{{{ WIDTH }}}px";
+        canvas.style.height = "{{{ HEIGHT }}}px";
+      }
+
+#if BACKGROUND_FILENAME
+      canvas.style.background = "url('" + buildUrl + "/{{{ BACKGROUND_FILENAME.replace(/'/g, '%27') }}}') center / cover";
+#endif
+
+      function isGameFullscreen() {
+        var fullscreenElement = document.fullscreenElement;
+        return !!(fullscreenElement && (fullscreenElement === unityContainer || fullscreenElement.contains(canvas)));
+      }
+
+      function resizeFullscreenCanvas() {
+        var isFullscreen = isGameFullscreen();
+        fullscreenButton.hidden = isFullscreen;
+        if (isFullscreen) fullscreenButton.blur();
+
+        if (!isFullscreen) {
+          canvas.style.width = isMobileDevice ? "" : canvasDesignWidth + "px";
+          canvas.style.height = isMobileDevice ? "" : canvasDesignHeight + "px";
+          return;
+        }
+
+        var availableWidth = window.innerWidth || unityContainer.clientWidth;
+        var availableHeight = window.innerHeight || unityContainer.clientHeight;
+        var scale = Math.min(availableWidth / canvasDesignWidth, availableHeight / canvasDesignHeight);
+        canvas.style.width = Math.floor(canvasDesignWidth * scale) + "px";
+        canvas.style.height = Math.floor(canvasDesignHeight * scale) + "px";
+      }
+
+      document.addEventListener("fullscreenchange", resizeFullscreenCanvas);
+      window.addEventListener("resize", resizeFullscreenCanvas);
+
+      fullscreenButton.onclick = function () {
+        fullscreenButton.blur();
+        if (document.fullscreenElement) document.exitFullscreen();
+        else if (unityContainer.requestFullscreen) unityContainer.requestFullscreen();
+      };
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = function () {
+        createUnityInstance(canvas, config, updateUnityProgress).then(function () {
+          loadingMessage.textContent = "게임 준비 완료";
+          downloadSpeed.textContent = "다운로드 완료";
+          loadingEta.textContent = "";
+          window.setTimeout(function () { loadingBar.style.display = "none"; }, 180);
+        }).catch(function (message) {
+          setLoadingError("게임을 불러오지 못했습니다.");
+          unityShowBanner(message, "error");
+        });
+      };
+      script.onerror = function () {
+        setLoadingError("Unity 로더를 불러오지 못했습니다.");
+      };
+      document.body.appendChild(script);
+    </script>
+  </body>
+</html>

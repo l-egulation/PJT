@@ -1,0 +1,495 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10f78a0e71c01c64eb8f0eaf89ca34bc, type: 3}
+  m_Name: Chapter1MonstersV4
+  m_EditorClassIdentifier: ForestCombatV2::ForestCombatV2.Chapter1MonsterCatalog
+  clips:
+  - species: 01_field_mouse
+    motion: attack
+    displayName: "\uACE1\uC2DD \uB4E4\uC950"
+    frames:
+    - {fileID: 5783252684977280232, guid: 9be94c1a5d80d504abf6abee79de6057, type: 3}
+    - {fileID: -9035663735351803338, guid: 9be94c1a5d80d504abf6abee79de6057, type: 3}
+    - {fileID: -1657576289296442546, guid: 9be94c1a5d80d504abf6abee79de6057, type: 3}
+    - {fileID: 3500979998361932036, guid: 9be94c1a5d80d504abf6abee79de6057, type: 3}
+    - {fileID: 4043176745472751585, guid: 9be94c1a5d80d504abf6abee79de6057, type: 3}
+    - {fileID: 7286490419867630379, guid: 9be94c1a5d80d504abf6abee79de6057, type: 3}
+    - {fileID: 2016960165440521447, guid: 9be94c1a5d80d504abf6abee79de6057, type: 3}
+    - {fileID: 445622858156318109, guid: 9be94c1a5d80d504abf6abee79de6057, type: 3}
+    seconds:
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    loop: 0
+  - species: 01_field_mouse
+    motion: death
+    displayName: "\uACE1\uC2DD \uB4E4\uC950"
+    frames:
+    - {fileID: 4518332181823482820, guid: a2f3ea0aeb27e224081aae43358366c2, type: 3}
+    - {fileID: 5740944983364502618, guid: a2f3ea0aeb27e224081aae43358366c2, type: 3}
+    - {fileID: 4290805839517495807, guid: a2f3ea0aeb27e224081aae43358366c2, type: 3}
+    - {fileID: 4515712291941001389, guid: a2f3ea0aeb27e224081aae43358366c2, type: 3}
+    seconds:
+    - 0.2
+    - 0.2
+    - 0.2
+    - 0.2
+    loop: 0
+  - species: 01_field_mouse
+    motion: hurt
+    displayName: "\uACE1\uC2DD \uB4E4\uC950"
+    frames:
+    - {fileID: 2497800036489831119, guid: f5cc819e4b0ecae419c56e02f6cf7b94, type: 3}
+    seconds:
+    - 0.5
+    loop: 0
+  - species: 01_field_mouse
+    motion: move
+    displayName: "\uACE1\uC2DD \uB4E4\uC950"
+    frames:
+    - {fileID: 5544498622586875559, guid: 15b0d2f5ac4644c4e8138484f9024d4f, type: 3}
+    - {fileID: 7715768140397341342, guid: 15b0d2f5ac4644c4e8138484f9024d4f, type: 3}
+    - {fileID: -5727899223391071043, guid: 15b0d2f5ac4644c4e8138484f9024d4f, type: 3}
+    - {fileID: 1129595782074901503, guid: 15b0d2f5ac4644c4e8138484f9024d4f, type: 3}
+    - {fileID: 6782024711090363775, guid: 15b0d2f5ac4644c4e8138484f9024d4f, type: 3}
+    - {fileID: -8648497851416118055, guid: 15b0d2f5ac4644c4e8138484f9024d4f, type: 3}
+    - {fileID: -4587543268389264124, guid: 15b0d2f5ac4644c4e8138484f9024d4f, type: 3}
+    - {fileID: -1408353821638480925, guid: 15b0d2f5ac4644c4e8138484f9024d4f, type: 3}
+    seconds:
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    loop: 1
+  - species: 02_mole
+    motion: attack
+    displayName: "\uBC2D \uB450\uB354\uC9C0"
+    frames:
+    - {fileID: 780604640738930931, guid: 688815b97eb50414ebf5b43934abec34, type: 3}
+    - {fileID: -4443828471424480103, guid: 688815b97eb50414ebf5b43934abec34, type: 3}
+    - {fileID: 4565501843764710160, guid: 688815b97eb50414ebf5b43934abec34, type: 3}
+    - {fileID: 3780586311169998197, guid: 688815b97eb50414ebf5b43934abec34, type: 3}
+    - {fileID: 2601479857027455543, guid: 688815b97eb50414ebf5b43934abec34, type: 3}
+    - {fileID: 3176419872269478455, guid: 688815b97eb50414ebf5b43934abec34, type: 3}
+    - {fileID: 4288229366503248880, guid: 688815b97eb50414ebf5b43934abec34, type: 3}
+    - {fileID: 4553942748250062112, guid: 688815b97eb50414ebf5b43934abec34, type: 3}
+    seconds:
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.06
+    - 0.14
+    - 0.1
+    - 0.1
+    - 0.1
+    loop: 0
+  - species: 02_mole
+    motion: death
+    displayName: "\uBC2D \uB450\uB354\uC9C0"
+    frames:
+    - {fileID: 125115084293747777, guid: ee73fdd8737276344b0ee24f4916e9b4, type: 3}
+    - {fileID: 2671169974157574140, guid: ee73fdd8737276344b0ee24f4916e9b4, type: 3}
+    - {fileID: 2317095494926553666, guid: ee73fdd8737276344b0ee24f4916e9b4, type: 3}
+    - {fileID: 2765519409360219198, guid: ee73fdd8737276344b0ee24f4916e9b4, type: 3}
+    seconds:
+    - 0.2
+    - 0.2
+    - 0.2
+    - 0.2
+    loop: 0
+  - species: 02_mole
+    motion: hurt
+    displayName: "\uBC2D \uB450\uB354\uC9C0"
+    frames:
+    - {fileID: -1063884114715404417, guid: 574cce25ece019b41ab92ad1859098a7, type: 3}
+    seconds:
+    - 0.5
+    loop: 0
+  - species: 02_mole
+    motion: move
+    displayName: "\uBC2D \uB450\uB354\uC9C0"
+    frames:
+    - {fileID: 5395967497986378957, guid: 011fde051aa016b43b6620aaf434485f, type: 3}
+    - {fileID: 7781279644568775104, guid: 011fde051aa016b43b6620aaf434485f, type: 3}
+    - {fileID: -2620746728505227381, guid: 011fde051aa016b43b6620aaf434485f, type: 3}
+    - {fileID: -2094912972235724112, guid: 011fde051aa016b43b6620aaf434485f, type: 3}
+    - {fileID: 5290132497293676864, guid: 011fde051aa016b43b6620aaf434485f, type: 3}
+    - {fileID: -5309970300977949705, guid: 011fde051aa016b43b6620aaf434485f, type: 3}
+    - {fileID: 5552496056907921428, guid: 011fde051aa016b43b6620aaf434485f, type: 3}
+    - {fileID: 6375363084734035785, guid: 011fde051aa016b43b6620aaf434485f, type: 3}
+    seconds:
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    loop: 1
+  - species: 05_boar
+    motion: attack
+    displayName: "\uC0B0\uBE44\uD0C8 \uBA67\uB3FC\uC9C0"
+    frames:
+    - {fileID: 1142886071569443467, guid: 2adb2a3e2525d2d4abb9d0e2bdfea7c4, type: 3}
+    - {fileID: 5160216669845569202, guid: 2adb2a3e2525d2d4abb9d0e2bdfea7c4, type: 3}
+    - {fileID: 1758728399875346028, guid: 2adb2a3e2525d2d4abb9d0e2bdfea7c4, type: 3}
+    - {fileID: 8969161402626868982, guid: 2adb2a3e2525d2d4abb9d0e2bdfea7c4, type: 3}
+    - {fileID: 7076416840329857939, guid: 2adb2a3e2525d2d4abb9d0e2bdfea7c4, type: 3}
+    - {fileID: -273766875059228317, guid: 2adb2a3e2525d2d4abb9d0e2bdfea7c4, type: 3}
+    - {fileID: 8396549175483792843, guid: 2adb2a3e2525d2d4abb9d0e2bdfea7c4, type: 3}
+    - {fileID: 5011755995363081568, guid: 2adb2a3e2525d2d4abb9d0e2bdfea7c4, type: 3}
+    seconds:
+    - 0.2
+    - 0.25
+    - 0.15
+    - 0.15
+    - 0.15
+    - 0.15
+    - 0.15
+    - 0.4
+    loop: 0
+  - species: 05_boar
+    motion: death
+    displayName: "\uC0B0\uBE44\uD0C8 \uBA67\uB3FC\uC9C0"
+    frames:
+    - {fileID: -1054606717072708156, guid: b5739e87d93adff4a89cc34ec57f87c0, type: 3}
+    - {fileID: 6740279439572516581, guid: b5739e87d93adff4a89cc34ec57f87c0, type: 3}
+    - {fileID: -6678661310079750285, guid: b5739e87d93adff4a89cc34ec57f87c0, type: 3}
+    - {fileID: 969429824140704511, guid: b5739e87d93adff4a89cc34ec57f87c0, type: 3}
+    seconds:
+    - 0.2
+    - 0.2
+    - 0.2
+    - 0.2
+    loop: 0
+  - species: 05_boar
+    motion: hurt
+    displayName: "\uC0B0\uBE44\uD0C8 \uBA67\uB3FC\uC9C0"
+    frames:
+    - {fileID: 2112882894730695804, guid: 8078742be5b218d4eb91bcd960a1f107, type: 3}
+    seconds:
+    - 0.5
+    loop: 0
+  - species: 05_boar
+    motion: move
+    displayName: "\uC0B0\uBE44\uD0C8 \uBA67\uB3FC\uC9C0"
+    frames:
+    - {fileID: 47086011238341667, guid: 0cd8b261fd1b3d74baa8acb007fc1c37, type: 3}
+    - {fileID: 3738399378990527972, guid: 0cd8b261fd1b3d74baa8acb007fc1c37, type: 3}
+    - {fileID: -7753297630798834548, guid: 0cd8b261fd1b3d74baa8acb007fc1c37, type: 3}
+    - {fileID: -8409481234974046515, guid: 0cd8b261fd1b3d74baa8acb007fc1c37, type: 3}
+    - {fileID: 8912428263497526146, guid: 0cd8b261fd1b3d74baa8acb007fc1c37, type: 3}
+    - {fileID: -40168598538484891, guid: 0cd8b261fd1b3d74baa8acb007fc1c37, type: 3}
+    - {fileID: 9128792694796601944, guid: 0cd8b261fd1b3d74baa8acb007fc1c37, type: 3}
+    - {fileID: -5504056491751094614, guid: 0cd8b261fd1b3d74baa8acb007fc1c37, type: 3}
+    seconds:
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    loop: 1
+  - species: 07_scarecrow
+    motion: attack
+    displayName: "\uBC2D \uD5C8\uC218\uC544\uBE44"
+    frames:
+    - {fileID: -7395805894162675338, guid: 6444b9864f3c37a47b93c7c7f4ac383f, type: 3}
+    - {fileID: 3390872938871610859, guid: 6444b9864f3c37a47b93c7c7f4ac383f, type: 3}
+    - {fileID: -5422002990710343111, guid: 6444b9864f3c37a47b93c7c7f4ac383f, type: 3}
+    - {fileID: -4939964787781799028, guid: 6444b9864f3c37a47b93c7c7f4ac383f, type: 3}
+    - {fileID: 7889986904849502480, guid: 6444b9864f3c37a47b93c7c7f4ac383f, type: 3}
+    - {fileID: -2067005876532230883, guid: 6444b9864f3c37a47b93c7c7f4ac383f, type: 3}
+    - {fileID: 4986079246063314168, guid: 6444b9864f3c37a47b93c7c7f4ac383f, type: 3}
+    - {fileID: 5375786873005595281, guid: 6444b9864f3c37a47b93c7c7f4ac383f, type: 3}
+    seconds:
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.06
+    - 0.14
+    - 0.1
+    - 0.1
+    - 0.1
+    loop: 0
+  - species: 07_scarecrow
+    motion: death
+    displayName: "\uBC2D \uD5C8\uC218\uC544\uBE44"
+    frames:
+    - {fileID: 8289061305472702435, guid: 9f0652bbe0b17d24981c7fcf08f96574, type: 3}
+    - {fileID: -1651029756332580035, guid: 9f0652bbe0b17d24981c7fcf08f96574, type: 3}
+    - {fileID: -3575127302588712596, guid: 9f0652bbe0b17d24981c7fcf08f96574, type: 3}
+    - {fileID: 8578446235620362218, guid: 9f0652bbe0b17d24981c7fcf08f96574, type: 3}
+    seconds:
+    - 0.2
+    - 0.2
+    - 0.2
+    - 0.2
+    loop: 0
+  - species: 07_scarecrow
+    motion: hurt
+    displayName: "\uBC2D \uD5C8\uC218\uC544\uBE44"
+    frames:
+    - {fileID: -1510447380360060884, guid: ca624904feb3c704b8504d993b3c71ae, type: 3}
+    seconds:
+    - 0.5
+    loop: 0
+  - species: 07_scarecrow
+    motion: move
+    displayName: "\uBC2D \uD5C8\uC218\uC544\uBE44"
+    frames:
+    - {fileID: -3425494693093848090, guid: b974eb7a3311eaf4dba5cec12065a1fd, type: 3}
+    - {fileID: -8051606984776546731, guid: b974eb7a3311eaf4dba5cec12065a1fd, type: 3}
+    - {fileID: -5139326512683267868, guid: b974eb7a3311eaf4dba5cec12065a1fd, type: 3}
+    - {fileID: 8713021033461306174, guid: b974eb7a3311eaf4dba5cec12065a1fd, type: 3}
+    - {fileID: 7182385553299082209, guid: b974eb7a3311eaf4dba5cec12065a1fd, type: 3}
+    - {fileID: -1929968319466538710, guid: b974eb7a3311eaf4dba5cec12065a1fd, type: 3}
+    - {fileID: -1468056195218436465, guid: b974eb7a3311eaf4dba5cec12065a1fd, type: 3}
+    - {fileID: 726619210412692780, guid: b974eb7a3311eaf4dba5cec12065a1fd, type: 3}
+    seconds:
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    loop: 1
+  - species: 08_hay_bale
+    motion: attack
+    displayName: "\uAD74\uB7EC\uB2E4\uB2C8\uB294 \uC9DA\uB2E8"
+    frames:
+    - {fileID: -686147669208571373, guid: 9e76c301b7c47ca40871832985dfabc7, type: 3}
+    - {fileID: 511494419434905140, guid: 9e76c301b7c47ca40871832985dfabc7, type: 3}
+    - {fileID: 6433651177379546395, guid: 9e76c301b7c47ca40871832985dfabc7, type: 3}
+    - {fileID: 3857023838886513502, guid: 9e76c301b7c47ca40871832985dfabc7, type: 3}
+    - {fileID: 308975232174384263, guid: 9e76c301b7c47ca40871832985dfabc7, type: 3}
+    - {fileID: 126043672419414103, guid: 9e76c301b7c47ca40871832985dfabc7, type: 3}
+    - {fileID: -3710300249888867504, guid: 9e76c301b7c47ca40871832985dfabc7, type: 3}
+    - {fileID: -3693665520465225102, guid: 9e76c301b7c47ca40871832985dfabc7, type: 3}
+    seconds:
+    - 0.1
+    - 0.1
+    - 1
+    - 0.14
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    loop: 0
+  - species: 08_hay_bale
+    motion: death
+    displayName: "\uAD74\uB7EC\uB2E4\uB2C8\uB294 \uC9DA\uB2E8"
+    frames:
+    - {fileID: 5502319851713804130, guid: 9bb69d4725a1013439ab4a28a9dfbe16, type: 3}
+    - {fileID: 8605775182675521068, guid: 9bb69d4725a1013439ab4a28a9dfbe16, type: 3}
+    - {fileID: -3544650836893245446, guid: 9bb69d4725a1013439ab4a28a9dfbe16, type: 3}
+    - {fileID: -4107976749222146664, guid: 9bb69d4725a1013439ab4a28a9dfbe16, type: 3}
+    seconds:
+    - 0.2
+    - 0.2
+    - 0.2
+    - 0.2
+    loop: 0
+  - species: 08_hay_bale
+    motion: hurt
+    displayName: "\uAD74\uB7EC\uB2E4\uB2C8\uB294 \uC9DA\uB2E8"
+    frames:
+    - {fileID: 6507626333160114900, guid: 1741e8a679eaef542954bf57f2995b86, type: 3}
+    seconds:
+    - 0.5
+    loop: 0
+  - species: 08_hay_bale
+    motion: move
+    displayName: "\uAD74\uB7EC\uB2E4\uB2C8\uB294 \uC9DA\uB2E8"
+    frames:
+    - {fileID: 7916069987643315550, guid: d4d7f3ce8c75be047b7551d4203017b2, type: 3}
+    - {fileID: -7934619167861363157, guid: d4d7f3ce8c75be047b7551d4203017b2, type: 3}
+    - {fileID: 7262299378921765472, guid: d4d7f3ce8c75be047b7551d4203017b2, type: 3}
+    - {fileID: -1903013569574900045, guid: d4d7f3ce8c75be047b7551d4203017b2, type: 3}
+    - {fileID: 4560907089424930593, guid: d4d7f3ce8c75be047b7551d4203017b2, type: 3}
+    - {fileID: 157435977770726634, guid: d4d7f3ce8c75be047b7551d4203017b2, type: 3}
+    - {fileID: -5631684929317634381, guid: d4d7f3ce8c75be047b7551d4203017b2, type: 3}
+    - {fileID: -1234466335266894817, guid: d4d7f3ce8c75be047b7551d4203017b2, type: 3}
+    seconds:
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    loop: 1
+  - species: 10_water_bucket
+    motion: attack
+    displayName: "\uC6B0\uBB3C \uB450\uB808\uBC15"
+    frames:
+    - {fileID: 6093338325369386694, guid: 2eca8e683da6d5d49b53e5a16ddfd98c, type: 3}
+    - {fileID: 6873914810248741539, guid: 2eca8e683da6d5d49b53e5a16ddfd98c, type: 3}
+    - {fileID: -8032091312360501769, guid: 2eca8e683da6d5d49b53e5a16ddfd98c, type: 3}
+    - {fileID: 4048139486778935751, guid: 2eca8e683da6d5d49b53e5a16ddfd98c, type: 3}
+    - {fileID: -2044335281687247045, guid: 2eca8e683da6d5d49b53e5a16ddfd98c, type: 3}
+    - {fileID: 7633648936911581961, guid: 2eca8e683da6d5d49b53e5a16ddfd98c, type: 3}
+    - {fileID: 2349959875086616301, guid: 2eca8e683da6d5d49b53e5a16ddfd98c, type: 3}
+    - {fileID: 3085776966260271806, guid: 2eca8e683da6d5d49b53e5a16ddfd98c, type: 3}
+    seconds:
+    - 0.1
+    - 0.14
+    - 0.22
+    - 0.07
+    - 0.16
+    - 0.14
+    - 0.1
+    - 0.1
+    loop: 0
+  - species: 10_water_bucket
+    motion: death
+    displayName: "\uC6B0\uBB3C \uB450\uB808\uBC15"
+    frames:
+    - {fileID: -8166392227189812483, guid: 64eb953bc80e33c4489bfb933618ac2a, type: 3}
+    - {fileID: -2820429380403672941, guid: 64eb953bc80e33c4489bfb933618ac2a, type: 3}
+    - {fileID: 6991637019823446514, guid: 64eb953bc80e33c4489bfb933618ac2a, type: 3}
+    - {fileID: 517309558505708121, guid: 64eb953bc80e33c4489bfb933618ac2a, type: 3}
+    seconds:
+    - 0.2
+    - 0.2
+    - 0.2
+    - 0.2
+    loop: 0
+  - species: 10_water_bucket
+    motion: hurt
+    displayName: "\uC6B0\uBB3C \uB450\uB808\uBC15"
+    frames:
+    - {fileID: -7964454920232752780, guid: d87624ca015689849a30f4d52c928309, type: 3}
+    seconds:
+    - 0.5
+    loop: 0
+  - species: 10_water_bucket
+    motion: move
+    displayName: "\uC6B0\uBB3C \uB450\uB808\uBC15"
+    frames:
+    - {fileID: -6250011324390376129, guid: 756ad7b9ea99a564d82835c8412bfd6e, type: 3}
+    - {fileID: 5699792230369848378, guid: 756ad7b9ea99a564d82835c8412bfd6e, type: 3}
+    - {fileID: 558855899684979419, guid: 756ad7b9ea99a564d82835c8412bfd6e, type: 3}
+    - {fileID: -6955201346629572721, guid: 756ad7b9ea99a564d82835c8412bfd6e, type: 3}
+    - {fileID: -1714179949038454105, guid: 756ad7b9ea99a564d82835c8412bfd6e, type: 3}
+    - {fileID: -8519276945666594768, guid: 756ad7b9ea99a564d82835c8412bfd6e, type: 3}
+    - {fileID: 3493915155269180914, guid: 756ad7b9ea99a564d82835c8412bfd6e, type: 3}
+    - {fileID: 7644052755008442273, guid: 756ad7b9ea99a564d82835c8412bfd6e, type: 3}
+    seconds:
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    loop: 1
+  - species: 01_field_mouse
+    motion: idle
+    displayName: "\uACE1\uC2DD \uB4E4\uC950"
+    frames:
+    - {fileID: 9118655309621518143, guid: e34bdc10c3fc27c40bad7909322bd3ce, type: 3}
+    - {fileID: -3166067112472532463, guid: e34bdc10c3fc27c40bad7909322bd3ce, type: 3}
+    - {fileID: 5930294568737661585, guid: e34bdc10c3fc27c40bad7909322bd3ce, type: 3}
+    - {fileID: 5030448595868690797, guid: e34bdc10c3fc27c40bad7909322bd3ce, type: 3}
+    seconds:
+    - 0.25
+    - 0.25
+    - 0.25
+    - 0.25
+    loop: 1
+  - species: 02_mole
+    motion: idle
+    displayName: "\uBC2D \uB450\uB354\uC9C0"
+    frames:
+    - {fileID: 7926038068659833555, guid: 17008d11c50ad8641a9eb4f9fe10d7a0, type: 3}
+    - {fileID: 2412907864833546284, guid: 17008d11c50ad8641a9eb4f9fe10d7a0, type: 3}
+    - {fileID: 480688413619205500, guid: 17008d11c50ad8641a9eb4f9fe10d7a0, type: 3}
+    - {fileID: 1522623850439301143, guid: 17008d11c50ad8641a9eb4f9fe10d7a0, type: 3}
+    seconds:
+    - 0.2
+    - 0.2
+    - 0.2
+    - 0.2
+    loop: 1
+  - species: 05_boar
+    motion: idle
+    displayName: "\uC0B0\uBE44\uD0C8 \uBA67\uB3FC\uC9C0"
+    frames:
+    - {fileID: 1392453956953850939, guid: 4e3608a4a75ec8f48a9139f0655b3259, type: 3}
+    - {fileID: 6293921922058476193, guid: 4e3608a4a75ec8f48a9139f0655b3259, type: 3}
+    - {fileID: -6528560146895142380, guid: 4e3608a4a75ec8f48a9139f0655b3259, type: 3}
+    - {fileID: -2334048924834061939, guid: 4e3608a4a75ec8f48a9139f0655b3259, type: 3}
+    seconds:
+    - 0.2
+    - 0.2
+    - 0.2
+    - 0.2
+    loop: 1
+  - species: 07_scarecrow
+    motion: idle
+    displayName: "\uBC2D \uD5C8\uC218\uC544\uBE44"
+    frames:
+    - {fileID: 7444154738681460671, guid: 0350e656b5ffbd54e9e07fd03feed3f7, type: 3}
+    - {fileID: -6604721676127675737, guid: 0350e656b5ffbd54e9e07fd03feed3f7, type: 3}
+    - {fileID: 8897969918248639579, guid: 0350e656b5ffbd54e9e07fd03feed3f7, type: 3}
+    - {fileID: 456569911303251192, guid: 0350e656b5ffbd54e9e07fd03feed3f7, type: 3}
+    seconds:
+    - 0.2
+    - 0.2
+    - 0.2
+    - 0.2
+    loop: 1
+  - species: 08_hay_bale
+    motion: idle
+    displayName: "\uAD74\uB7EC\uB2E4\uB2C8\uB294 \uC9DA\uB2E8"
+    frames:
+    - {fileID: 3587721607928024814, guid: 57fd52b524b803a40a5ba58466ef450f, type: 3}
+    - {fileID: 5246749997506517016, guid: 57fd52b524b803a40a5ba58466ef450f, type: 3}
+    - {fileID: 851066964087229059, guid: 57fd52b524b803a40a5ba58466ef450f, type: 3}
+    - {fileID: 127015564678424617, guid: 57fd52b524b803a40a5ba58466ef450f, type: 3}
+    seconds:
+    - 0.2
+    - 0.2
+    - 0.2
+    - 0.2
+    loop: 1
+  - species: 10_water_bucket
+    motion: idle
+    displayName: "\uC6B0\uBB3C \uB450\uB808\uBC15"
+    frames:
+    - {fileID: 5109014811491687115, guid: cca3d9833d237ae4fb81b3d4a28e1dc4, type: 3}
+    - {fileID: 8641456184702851989, guid: cca3d9833d237ae4fb81b3d4a28e1dc4, type: 3}
+    - {fileID: -7641120561853113994, guid: cca3d9833d237ae4fb81b3d4a28e1dc4, type: 3}
+    - {fileID: 3181936351555476442, guid: cca3d9833d237ae4fb81b3d4a28e1dc4, type: 3}
+    seconds:
+    - 0.2
+    - 0.2
+    - 0.2
+    - 0.2
+    loop: 1

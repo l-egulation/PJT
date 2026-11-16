@@ -1,0 +1,163 @@
+{
+  "format": "stage2-homing-D-cleanup-review-v1",
+  "status": "D-timing-selected-cleanup-review",
+  "source": "../../source/homing-aether-01/aether-original.png",
+  "frameBase": "../../source/homing-aether-01/frames/",
+  "frameNumbering": "zero-based row-major; source index 5 = first row sixth column",
+  "sourceCellSize": [
+    640,
+    360
+  ],
+  "logicalCanvas": [
+    384,
+    256
+  ],
+  "commonTransform": {
+    "sourceAnchor": [
+      320,
+      337
+    ],
+    "outputPivot": [
+      192,
+      232
+    ],
+    "scale": 0.75,
+    "rasterOffset": [
+      -48,
+      -21
+    ],
+    "destinationSize": [
+      480,
+      270
+    ],
+    "resampling": "nearest-neighbor",
+    "perFrameAutoFit": false,
+    "perFrameFootLock": false,
+    "note": "Same affine transform for every frame. Native source boot motion remains visible; no per-frame bone/leg locking."
+  },
+  "previewMatte": {
+    "D": "none; use exported V2 RGBA directly",
+    "BEFORE": "none; use preserved V1 RGBA directly"
+  },
+  "excluded": {
+    "frame0": "Smaller than generated animation; retain as source but exclude from all playback.",
+    "performanceVariantsOnly": "D/E exclude 01~03 leg settling and 22~35 automatic return. R deliberately shows all 01~35 for source comparison."
+  },
+  "candidates": [
+    {
+      "id": "D",
+      "name": "외곽 추가 정리 · V2",
+      "sourceFrames": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "durationsMs": [
+        520,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        300
+      ],
+      "phasesMs": {
+        "prepare": 940,
+        "release": 60,
+        "settle": 400,
+        "hold": 300
+      },
+      "projectileCueMs": 1000,
+      "note": "로브·소매·후드 가장자리 1~2픽셀의 밝은 잔색과 드문 돌출 픽셀을 추가 정리했습니다. 가면·손·석궁·D 타이밍 유지.",
+      "frameCount": 18,
+      "totalMs": 1700,
+      "repeat": false,
+      "clean": true,
+      "version": "homing-d-v2"
+    },
+    {
+      "id": "BEFORE",
+      "name": "이전 정리본 · V1",
+      "sourceFrames": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "durationsMs": [
+        520,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        300
+      ],
+      "phasesMs": {
+        "prepare": 940,
+        "release": 60,
+        "settle": 400,
+        "hold": 300
+      },
+      "projectileCueMs": 1000,
+      "note": "직전에 확인한 첫 배경제거본입니다. 동일한 D 타이밍으로 V2와 비교할 수 있습니다.",
+      "frameCount": 18,
+      "totalMs": 1700,
+      "repeat": false,
+      "clean": true,
+      "version": "homing-d"
+    }
+  ],
+  "cleanedMotion": "../../runtime/homing-d-v2/motion.json"
+}

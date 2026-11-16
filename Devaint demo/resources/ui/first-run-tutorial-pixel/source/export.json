@@ -1,0 +1,151 @@
+{
+  "operation": "nearest-neighbour native-size export with fixed palette; not native low-res generation",
+  "source": "generated-atlas.png",
+  "alpha": [
+    0,
+    255
+  ],
+  "palette": [
+    "#2c2d2c",
+    "#f3e8cb",
+    "#cbbb9f",
+    "#a25bcb",
+    "#294d5b",
+    "#377184",
+    "#d8a934",
+    "#97b07d",
+    "#827e76",
+    "#b97870",
+    "#181a1a"
+  ],
+  "unity": {
+    "filter": "Point",
+    "mipmaps": false,
+    "compression": "None",
+    "integerScale": true
+  },
+  "preview": {
+    "scale": 2,
+    "slotTint": "#a25bcb",
+    "brushTint": "#6b794f",
+    "runtimeMasksRemainWhite": true
+  },
+  "userSwordEdit": {
+    "path": "sword-user-edit.json",
+    "sha256": "0a4d3f2db8ccdf92301cd173b37b09a5397652c37ee77dc86060ecff025417d1"
+  },
+  "userCharacterEdit": {
+    "path": "hero-user-edit.json",
+    "sha256": "ccdc799c47a4734c02e735e6d0dec85f524f4887b1ed38bd37598287a39c067a"
+  },
+  "additionalSprites": [
+    {
+      "name": "grass-line",
+      "width": 344,
+      "height": 15
+    },
+    {
+      "name": "slot-empty",
+      "width": 32,
+      "height": 24
+    }
+  ],
+  "sprites": [
+    {
+      "name": "sketch",
+      "width": 32,
+      "height": 32,
+      "origin": "authored native grid"
+    },
+    {
+      "name": "sword",
+      "width": 32,
+      "height": 32,
+      "origin": "authored native grid"
+    },
+    {
+      "name": "hammer",
+      "width": 32,
+      "height": 32,
+      "origin": "authored native grid"
+    },
+    {
+      "name": "ink",
+      "width": 32,
+      "height": 32,
+      "origin": "authored native grid"
+    },
+    {
+      "name": "lock",
+      "width": 16,
+      "height": 16,
+      "origin": "converted generated concept"
+    },
+    {
+      "name": "arrow",
+      "width": 24,
+      "height": 16,
+      "origin": "converted generated concept"
+    },
+    {
+      "name": "curved-arrow",
+      "width": 32,
+      "height": 24,
+      "origin": "authored native grid"
+    },
+    {
+      "name": "broken-sword",
+      "width": 32,
+      "height": 32,
+      "origin": "authored native grid"
+    },
+    {
+      "name": "keycap",
+      "width": 24,
+      "height": 24,
+      "origin": "native grid frame"
+    },
+    {
+      "name": "panel",
+      "width": 48,
+      "height": 48,
+      "origin": "native grid frame"
+    },
+    {
+      "name": "slot",
+      "width": 32,
+      "height": 24,
+      "origin": "authored native grid"
+    },
+    {
+      "name": "brush",
+      "width": 64,
+      "height": 16,
+      "origin": "authored native grid"
+    },
+    {
+      "name": "hero-idle",
+      "width": 64,
+      "height": 64,
+      "origin": "user-finished native pixels"
+    },
+    {
+      "name": "hero-punch",
+      "width": 96,
+      "height": 64,
+      "origin": "user-finished native pixels"
+    },
+    {
+      "name": "gauge",
+      "width": 64,
+      "height": 8,
+      "origin": "native grid frame"
+    },
+    {
+      "name": "gauge-fill",
+      "width": 64,
+      "height": 8,
+      "origin": "native grid frame"
+    }
+  ]
+}

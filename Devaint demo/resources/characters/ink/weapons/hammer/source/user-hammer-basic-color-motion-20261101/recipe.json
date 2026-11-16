@@ -1,0 +1,43 @@
+{
+  "inputSet": "user-hammer-basic-provisional-20261101",
+  "builder": "tools/refine_hammer_provisional.py",
+  "paletteReference": "characters/ink/weapons/hammer/runtime/user-hammer-normal-reused-20261031/idle_01.png",
+  "paletteReferenceSha256": "477af5e2387c3e85e11e186b0117cb48ef02955f5fd3c93fa9dcc75f32b049b0",
+  "approvedPalette": [
+    "#1b1616",
+    "#fdeeda",
+    "#025673",
+    "#d2b396",
+    "#02648c",
+    "#eba516"
+  ],
+  "spatialPixelization": false,
+  "colorOperation": "Nearest actual approved material RGB, preserving neutral gray attack polygons; no pose/alpha change in 1280x720 source.",
+  "motionOperation": "Locate each boot below its yellow ankle accent instead of selecting largest dark lower-body components. Normalize both actual boots to the established pivot.",
+  "timingOperation": "Second-hit lift 60/70/170 -> 80/100/120ms, same 300ms. First hit unchanged; both contact times unchanged.",
+  "detailExport": {
+    "canvas": [
+      896,
+      768
+    ],
+    "pivotPixels": [
+      384,
+      604
+    ],
+    "ppu": 128
+  },
+  "nativeExport": {
+    "canvas": [
+      224,
+      192
+    ],
+    "pivotPixels": [
+      96,
+      151
+    ],
+    "ppu": 32
+  },
+  "approval": "pending-user-art-review",
+  "gameIntegration": "not-deployed",
+  "originalAssetsPreserved": true
+}

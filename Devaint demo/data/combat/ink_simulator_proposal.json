@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "status": "browser_experiment_not_product_rules",
+  "purpose": "50종 파츠를 비교하기 위한 독립 브라우저 모델. 전투 모션·판정·AI는 간이 실험이며 Unity 동작을 재현하지 않는다.",
+  "defaults": {
+    "scenario": "pack", "enemyAI": false, "markMode": "hit", "marksOnExtra": false,
+    "marksPerHit": 1, "markCap": 6, "markDuration": 8, "markConsume": "all",
+    "detonationDamage": 0, "chainLimit": 2, "internalCooldown": 0.25,
+    "modifierPolicy": "strongest", "allowDuplicates": false, "bossCcScale": 0.25,
+    "ccRecovery": 0, "respawn": false, "autoAim": true, "profiles": ["balanced", "balanced"]
+  },
+  "model": {
+    "worldWidth": 18, "worldHeight": 10, "playerX": 2, "playerY": 4,
+    "playerHealth": 100, "moveSpeed": 3, "enemyMoveSpeed": 1,
+    "enemyAttackDamage": 6, "enemySkillDamage": 10,
+    "enemyAttackRange": 1, "enemySkillRange": 5, "enemyAttackCooldown": 2,
+    "enemySkillCooldown": 5, "enemyWindup": 0.6, "enemyHitRadius": 0.8,
+    "respawnDelay": 2, "maxStep": 0.02, "eventBudget": 512,
+    "eventLogLimit": 400, "scheduledLimit": 512, "targetRadius": 0.3
+  },
+  "profiles": [
+    {"id":"balanced","name":"균형형 · 시험","basicDamage":10,"basicReach":2,"basicRadius":0.65,"basicDuration":0.5,"skillDamage":35,"skillReach":2.5,"skillRadius":1,"skillDuration":0.7,"cooldown":5},
+    {"id":"fast","name":"빠른 근접 · 시험","basicDamage":5,"basicReach":1.5,"basicRadius":0.55,"basicDuration":0.22,"skillDamage":20,"skillReach":2,"skillRadius":0.8,"skillDuration":0.5,"cooldown":4},
+    {"id":"heavy","name":"강한 근접 · 시험","basicDamage":22,"basicReach":2.5,"basicRadius":1,"basicDuration":0.9,"skillDamage":60,"skillReach":3,"skillRadius":1.5,"skillDuration":1.1,"cooldown":7},
+    {"id":"ranged","name":"긴 사거리 · 시험","basicDamage":8,"basicReach":7,"basicRadius":0.35,"basicDuration":0.4,"skillDamage":28,"skillReach":8,"skillRadius":0.7,"skillDuration":0.65,"cooldown":5}
+  ],
+  "scenarios": {
+    "single":{"name":"단일 허수아비","health":1000,"boss":false,"positions":[[3.5,4]]},
+    "pack":{"name":"밀집 무리","health":120,"boss":false,"positions":[[3.5,4],[4.2,4.4],[4.8,3.7],[5.5,4.2]]},
+    "spread":{"name":"분산 무리","health":150,"boss":false,"positions":[[3.5,4],[7,2],[10,7],[14,4]]},
+    "boss":{"name":"보스 · CC 배율 실험","health":2000,"boss":true,"positions":[[3.5,4]]}
+  },
+  "notes": [
+    "적중당 표식 1개·8초·전환 적중 시 전량 소비는 미정 사항을 시험하기 위한 기본 설정이다. 수동 부여 모드로 바꿀 수 있다.",
+    "추가타는 적중·처치를 발동하되 기본 연쇄 깊이 2, 파츠별 내부 쿨타임 0.25초를 실험한다. 화면에서 변경 가능하다.",
+    "동일 효과는 기본적으로 강한 값만 적용하고, 합산 실험으로 바꿀 수 있다. 동일 파츠의 중복 장착도 실험 옵션이다.",
+    "범위는 2D 평면의 전방 띠와 원형 근사다. 몬스터 이동·기본 공격·조준 스킬은 CC 차이를 보기 위한 간이 AI다.",
+    "표식 격발 파츠는 격발 적중 무기에서 발동한다. 지연 공격은 발동 원본 무기와 대상의 생명을 유지한다."
+  ]
+}

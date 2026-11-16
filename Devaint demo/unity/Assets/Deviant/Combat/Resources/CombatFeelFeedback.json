@@ -1,0 +1,115 @@
+{
+  "schema": 1,
+  "enabled": true,
+  "hitStopSeconds": 0.045,
+  "heavyHitStopSeconds": 0.075,
+  "heavyDamageThreshold": 100.0,
+  "shakeSeconds": 0.14,
+  "shakeDistance": 0,
+  "flashSeconds": 0.045,
+  "burstSeconds": 0.34,
+  "inkParticles": 0,
+  "centeredImpact": false,
+  "inkSwordTrail": true,
+  "flashDirections": 2,
+  "impactSeconds": 0.14,
+  "directionDelay": 0,
+  "impactScale": 1.3,
+  "particleSpread": 2.5,
+  "particleSize": 0.125,
+  "hitStopEnabled": true,
+  "killPop": true,
+  "damageNumbers": true,
+  "impactRing": false,
+  "heavyCleave": true,
+  "underfootHealthBars": true,
+  "continuousSwordTrail": true,
+  "compactHud": true,
+  "whipTrail": true,
+  "playerHurtOpacity": 0.5,
+  "playerHurtBorder": 0.16,
+  "playerHurtSeconds": 0.9,
+  "playerHurtRiseSeconds": 0.15,
+  "impactRingVariants": [
+    1,
+    4
+  ],
+  "pixelEffects": true,
+  "pixelHits": true,
+  "contactFlash": false,
+  "effectColor": "#ffffff",
+  "effectCore": "#ffffff",
+  "liftGravity": 28.125,
+  "actions": [
+    {
+      "action": "base_sword_basic_0",
+      "hitStop": 0,
+      "shakeDistance": 0,
+      "shakeSeconds": 0.12,
+      "flashSeconds": 0.06,
+      "lift": 0,
+      "heavy": false
+    },
+    {
+      "action": "base_sword_basic_1",
+      "hitStop": 0,
+      "shakeDistance": 0,
+      "shakeSeconds": 0.12,
+      "flashSeconds": 0.07,
+      "lift": 0,
+      "heavy": false
+    },
+    {
+      "action": "hammer_basic_0",
+      "hitStop": 0.07,
+      "shakeDistance": 0.09375,
+      "shakeSeconds": 0.12,
+      "flashSeconds": 0.09,
+      "lift": 0.8125,
+      "heavy": true
+    },
+    {
+      "action": "hammer_basic_1",
+      "hitStop": 0.07,
+      "shakeDistance": 0.09375,
+      "shakeSeconds": 0.12,
+      "flashSeconds": 0.09,
+      "lift": 0.8125,
+      "heavy": true
+    },
+    {
+      "action": "base_sword_default",
+      "hitStop": 0.06,
+      "shakeDistance": 0.125,
+      "shakeSeconds": 0.15,
+      "flashSeconds": 0.07,
+      "lift": 0.625,
+      "heavy": true
+    },
+    {
+      "action": "mvp_effect",
+      "hitStop": 0,
+      "shakeDistance": 0,
+      "shakeSeconds": 0.14,
+      "flashSeconds": 0.045,
+      "lift": 0,
+      "heavy": false
+    }
+  ],
+  "kill": {
+    "hitStop": 0.06,
+    "shakeDistance": 0.0625,
+    "shakeSeconds": 0.11,
+    "fly": 1.75,
+    "lift": 0.6875
+  },
+  "recoil": {
+    "basic": 0.2,
+    "big": 0.34,
+    "basicSeconds": 0.18,
+    "bigSeconds": 0.26
+  },
+  "combatCamera": {
+    "zoom": 0
+  }
+}

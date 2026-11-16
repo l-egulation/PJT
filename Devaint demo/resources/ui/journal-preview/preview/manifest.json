@@ -1,0 +1,782 @@
+{
+  "status": "HTML review only; no Unity deployment",
+  "date": "2026-11-02",
+  "baseResolution": [
+    960,
+    540
+  ],
+  "activeSpriteCount": 48,
+  "authoritativeStylesheet": "faithful.css",
+  "generationPrompts": "../source/generation-prompts.json",
+  "exportBounds": "../source/exports.json",
+  "assets": [
+    {
+      "id": "title",
+      "file": "assets/refined/title.png",
+      "source": "../source/controls-source.png",
+      "sourceRect": [
+        82,
+        150,
+        450,
+        118
+      ],
+      "size": [
+        240,
+        56
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "2758254e659934a57b30ce401f320742ced8dbf421f00c949cd511c31e4dbff3"
+    },
+    {
+      "id": "primary",
+      "file": "assets/refined/primary.png",
+      "source": "../source/controls-source.png",
+      "sourceRect": [
+        594,
+        150,
+        414,
+        116
+      ],
+      "size": [
+        240,
+        56
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "fbbb6cdd4694c193d8115c78a50deeab13af7a9ea9cab51b2f853a410ebc1884"
+    },
+    {
+      "id": "secondary",
+      "file": "assets/refined/secondary.png",
+      "source": "../source/controls-source.png",
+      "sourceRect": [
+        1048,
+        152,
+        402,
+        112
+      ],
+      "size": [
+        240,
+        56
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "a846f1402b7daac1e4dba7d5f0f5debcc8ddb6e24c243dac21ee89cee66b9eea"
+    },
+    {
+      "id": "tab-active",
+      "file": "assets/refined/tab-active.png",
+      "source": "../source/controls-source.png",
+      "sourceRect": [
+        90,
+        395,
+        432,
+        106
+      ],
+      "size": [
+        240,
+        56
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "7577931d4d91a392e81209cfa643e68fa5a3ca52c37ad92bc98edad79a002d57"
+    },
+    {
+      "id": "tab",
+      "file": "assets/refined/tab.png",
+      "source": "../source/controls-source.png",
+      "sourceRect": [
+        596,
+        394,
+        412,
+        106
+      ],
+      "size": [
+        240,
+        56
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "6638b9cc1332c76973c02a64697e34f6f78da803094c6b6c67b67433e8bb6803"
+    },
+    {
+      "id": "disabled",
+      "file": "assets/refined/disabled.png",
+      "source": "../source/controls-source.png",
+      "sourceRect": [
+        1048,
+        399,
+        402,
+        113
+      ],
+      "size": [
+        240,
+        56
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "330a96e488ad9752a5e652a5280e5a36646c5672858daa709f6c6036767ec35a"
+    },
+    {
+      "id": "card",
+      "file": "assets/refined/card.png",
+      "source": "../source/controls-source.png",
+      "sourceRect": [
+        84,
+        592,
+        522,
+        318
+      ],
+      "size": [
+        320,
+        200
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "c59b16c8b4e8b4b1b792eb08027ffa3dfd45303d3a8678bf1566fa378590d395"
+    },
+    {
+      "id": "slot",
+      "file": "assets/refined/slot.png",
+      "source": "../source/controls-source.png",
+      "sourceRect": [
+        732,
+        618,
+        286,
+        280
+      ],
+      "size": [
+        72,
+        72
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "0d77cdb6cc339d8b6682a25df2a7828a99f698cbf20e7ff6823d5612a2fcb99d"
+    },
+    {
+      "id": "slot-active",
+      "file": "assets/refined/slot-active.png",
+      "source": "../source/controls-source.png",
+      "sourceRect": [
+        1140,
+        618,
+        288,
+        280
+      ],
+      "size": [
+        72,
+        72
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "eb1f68fc141373d8c6a7356d95083afbaf19b745eeb69ec8eed99cd6adb59d15"
+    },
+    {
+      "id": "ink2_red_01",
+      "file": "assets/refined/parts/ink2_red_01.png",
+      "source": "../source/ink-source.png",
+      "sourceRect": [
+        78,
+        40,
+        188,
+        252
+      ],
+      "size": [
+        40,
+        56
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "56947c0be90c926b9a1835fff3e1916ac1a3b32bdc4ec71d4cb8b8fbacf8aed6"
+    },
+    {
+      "id": "ink2_red_04",
+      "file": "assets/refined/parts/ink2_red_04.png",
+      "source": "../source/ink-source.png",
+      "sourceRect": [
+        78,
+        302,
+        188,
+        252
+      ],
+      "size": [
+        40,
+        56
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "f956ff0b19fcf21127409bf2875dc95fe28d91621f6f52bb6fd6acc0ad100932"
+    },
+    {
+      "id": "ink2_red_07",
+      "file": "assets/refined/parts/ink2_red_07.png",
+      "source": "../source/ink-source.png",
+      "sourceRect": [
+        78,
+        564,
+        188,
+        252
+      ],
+      "size": [
+        40,
+        56
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "74d96fbeee32f4f6a4864ba82080f9adb318cf60d5677c4b0f7775dc8a2dec95"
+    },
+    {
+      "id": "ink2_red_10",
+      "file": "assets/refined/parts/ink2_red_10.png",
+      "source": "../source/ink-source.png",
+      "sourceRect": [
+        78,
+        826,
+        188,
+        252
+      ],
+      "size": [
+        40,
+        56
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "4156682a3216fc4e46c31f64122cca7384dc8e71d951ca02865a8e99efda7332"
+    },
+    {
+      "id": "ink2_yellow_01",
+      "file": "assets/refined/parts/ink2_yellow_01.png",
+      "source": "../source/ink-source.png",
+      "sourceRect": [
+        344,
+        40,
+        188,
+        252
+      ],
+      "size": [
+        40,
+        56
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "fe1ba4ebbb1d8d20b72558fbe9c1bdb207a1add9174b4cac5c290298c318513c"
+    },
+    {
+      "id": "ink2_yellow_04",
+      "file": "assets/refined/parts/ink2_yellow_04.png",
+      "source": "../source/ink-source.png",
+      "sourceRect": [
+        344,
+        302,
+        188,
+        252
+      ],
+      "size": [
+        40,
+        56
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "a69fda0356934dd4864428ee8bebff11a13024b87b0b9c608863a9dcf903b002"
+    },
+    {
+      "id": "ink2_yellow_07",
+      "file": "assets/refined/parts/ink2_yellow_07.png",
+      "source": "../source/ink-source.png",
+      "sourceRect": [
+        344,
+        564,
+        188,
+        252
+      ],
+      "size": [
+        40,
+        56
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "9e674bb93367090b110b2fb8ff9f7d826e7c9aa432827bb780c8ecec65cc962a"
+    },
+    {
+      "id": "ink2_yellow_09",
+      "file": "assets/refined/parts/ink2_yellow_09.png",
+      "source": "../source/ink-source.png",
+      "sourceRect": [
+        344,
+        826,
+        188,
+        252
+      ],
+      "size": [
+        40,
+        56
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "a5609c9dea146e94f2431f501aace4174b1ad5aa170696138cde2da5cb1a8a39"
+    },
+    {
+      "id": "ink2_green_03",
+      "file": "assets/refined/parts/ink2_green_03.png",
+      "source": "../source/ink-source.png",
+      "sourceRect": [
+        608,
+        40,
+        188,
+        252
+      ],
+      "size": [
+        40,
+        56
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "faaccd03c3fcb3cbeff35c8751dbd90be9498991c6c5c36913fd8c348a4d8360"
+    },
+    {
+      "id": "ink2_green_04",
+      "file": "assets/refined/parts/ink2_green_04.png",
+      "source": "../source/ink-source.png",
+      "sourceRect": [
+        608,
+        302,
+        188,
+        252
+      ],
+      "size": [
+        40,
+        56
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "2e94e0aa5f78e20e6c80bbc6576653e0ca8b82fe1b232bf4c52543dbf9468408"
+    },
+    {
+      "id": "ink2_green_07",
+      "file": "assets/refined/parts/ink2_green_07.png",
+      "source": "../source/ink-source.png",
+      "sourceRect": [
+        608,
+        564,
+        188,
+        252
+      ],
+      "size": [
+        40,
+        56
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "6e2c7469f28b0320b83163dc50af68c1bed659aafb1b8144d127112040331d47"
+    },
+    {
+      "id": "ink2_green_09",
+      "file": "assets/refined/parts/ink2_green_09.png",
+      "source": "../source/ink-source.png",
+      "sourceRect": [
+        608,
+        826,
+        188,
+        252
+      ],
+      "size": [
+        40,
+        56
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "8554486d13c200c665f2b6ff7cb86dc6be21c03b95780ef994e821f425813422"
+    },
+    {
+      "id": "ink2_blue_02",
+      "file": "assets/refined/parts/ink2_blue_02.png",
+      "source": "../source/ink-source.png",
+      "sourceRect": [
+        873,
+        40,
+        188,
+        252
+      ],
+      "size": [
+        40,
+        56
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "2311f256ae85453d7c32308c3d25b1177eade1487784f5fe93a6e55859992545"
+    },
+    {
+      "id": "ink2_blue_04",
+      "file": "assets/refined/parts/ink2_blue_04.png",
+      "source": "../source/ink-source.png",
+      "sourceRect": [
+        873,
+        302,
+        188,
+        252
+      ],
+      "size": [
+        40,
+        56
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "158fe730191695e79df5ddaa9e35603415972f684168ce618e8fba11763746b1"
+    },
+    {
+      "id": "ink2_blue_08",
+      "file": "assets/refined/parts/ink2_blue_08.png",
+      "source": "../source/ink-source.png",
+      "sourceRect": [
+        873,
+        564,
+        188,
+        252
+      ],
+      "size": [
+        40,
+        56
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "46cf9c274ab012685c9e3219b0d5f484d96c7d559fe872e789f7705bf8620948"
+    },
+    {
+      "id": "ink2_blue_09",
+      "file": "assets/refined/parts/ink2_blue_09.png",
+      "source": "../source/ink-source.png",
+      "sourceRect": [
+        873,
+        826,
+        188,
+        252
+      ],
+      "size": [
+        40,
+        56
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "d925dc748b3f62805f394776be61b17aa4f5bf503e3d9e7c4de6755c873a8e69"
+    },
+    {
+      "id": "ink2_purple_01",
+      "file": "assets/refined/parts/ink2_purple_01.png",
+      "source": "../source/ink-source.png",
+      "sourceRect": [
+        1138,
+        40,
+        188,
+        252
+      ],
+      "size": [
+        40,
+        56
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "3bcdecb0c0014f7c454211bcc3868380cc5213f0831c6d1f59a78e5dee59f236"
+    },
+    {
+      "id": "ink2_purple_04",
+      "file": "assets/refined/parts/ink2_purple_04.png",
+      "source": "../source/ink-source.png",
+      "sourceRect": [
+        1138,
+        302,
+        188,
+        252
+      ],
+      "size": [
+        40,
+        56
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "73c69135086e11148b9fa2a88b3907e8f8e1daf755e92c911477f1fafdc4c3aa"
+    },
+    {
+      "id": "ink2_purple_07",
+      "file": "assets/refined/parts/ink2_purple_07.png",
+      "source": "../source/ink-source.png",
+      "sourceRect": [
+        1138,
+        564,
+        188,
+        252
+      ],
+      "size": [
+        40,
+        56
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "0e7a9b8262998eec2a42a5884e6e597df314c9d83970f928b784a2c39528080d"
+    },
+    {
+      "id": "ink2_purple_09",
+      "file": "assets/refined/parts/ink2_purple_09.png",
+      "source": "../source/ink-source.png",
+      "sourceRect": [
+        1138,
+        826,
+        188,
+        252
+      ],
+      "size": [
+        40,
+        56
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "a7fb4c2c8f39e789f5b497437711bff3449045ff88dd8254d4d0e4e7fe3f7ee5"
+    },
+    {
+      "id": "paper",
+      "file": "assets/refined/paper.png",
+      "source": "../source/paper-source.png",
+      "sourceRect": [
+        0,
+        0,
+        1683,
+        935
+      ],
+      "size": [
+        960,
+        540
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "d163409e06726ee0d8220edf238aac80b4905591f016a21ea4e0e5aca01728ee"
+    },
+    {
+      "id": "pause-vignette",
+      "file": "assets/refined/pause-vignette.png",
+      "source": "../source/menu-art-source.png",
+      "sourceRect": [
+        200,
+        0,
+        1140,
+        545
+      ],
+      "size": [
+        480,
+        300
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "6b808bca9e74e77dcfe506434c3350f6fe83077372f129fc83e5c76eea1aa620"
+    },
+    {
+      "id": "title-logo",
+      "file": "assets/refined/title-logo.png",
+      "source": "../source/menu-art-source.png",
+      "sourceRect": [
+        160,
+        550,
+        1220,
+        474
+      ],
+      "size": [
+        520,
+        230
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "9b3a3041800278ca9bbfcdaac07ecd8967782b9b0b4d9283bef9951d858cecd0"
+    },
+    {
+      "id": "coin",
+      "file": "assets/refined/coin.png",
+      "source": "../source/utility-source.png",
+      "sourceRect": [
+        145,
+        145,
+        320,
+        325
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "151af05ff50e4ce5254109b4407aeacd29e694c607a592a4848b7ff046cb0181"
+    },
+    {
+      "id": "heart",
+      "file": "assets/refined/heart.png",
+      "source": "../source/utility-source.png",
+      "sourceRect": [
+        605,
+        155,
+        330,
+        310
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "a3ae5859005ac1f65fa7566f625277023582124661560204feb6411a034bb577"
+    },
+    {
+      "id": "bag",
+      "file": "assets/refined/bag.png",
+      "source": "../source/utility-source.png",
+      "sourceRect": [
+        1090,
+        140,
+        310,
+        340
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "7779a6c8779a0c0227418d42374a7317b0b329f10fbe1564b9abe8511c3e3cd5"
+    },
+    {
+      "id": "slots",
+      "file": "assets/refined/slots.png",
+      "source": "../source/utility-source.png",
+      "sourceRect": [
+        130,
+        570,
+        360,
+        350
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "33af4eea60b3c8e93d6b5ce10270877e31068ae5731a03f3a107c1231b3e4889"
+    },
+    {
+      "id": "time",
+      "file": "assets/refined/time.png",
+      "source": "../source/utility-source.png",
+      "sourceRect": [
+        650,
+        565,
+        225,
+        345
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "766cb2015a0a9bc3bc7bc81dc1738cb1529e0dd314898a7154005d779d53ba2f"
+    },
+    {
+      "id": "kills",
+      "file": "assets/refined/kills.png",
+      "source": "../source/utility-source.png",
+      "sourceRect": [
+        1110,
+        605,
+        285,
+        310
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "caffdbacd9b462864ca88f8c625a78d43eefffc2d182f7f54ff4f6ae9d1df327"
+    },
+    {
+      "id": "sword",
+      "file": "assets/refined/sword.png",
+      "source": "../source/weapons-source.png",
+      "sourceRect": [
+        150,
+        120,
+        470,
+        490
+      ],
+      "size": [
+        80,
+        80
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "b4a848620586ea4eb7844c9151fe2af855221c9ae3cfef69b68308fce67aae2d"
+    },
+    {
+      "id": "hammer",
+      "file": "assets/refined/hammer.png",
+      "source": "../source/weapons-source.png",
+      "sourceRect": [
+        850,
+        120,
+        480,
+        490
+      ],
+      "size": [
+        80,
+        80
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "623ad847764ca7575b06b7edc75ffc4d899e75b3f416236c807caec437690a5c"
+    },
+    {
+      "id": "launcher",
+      "file": "assets/refined/launcher.png",
+      "source": "../source/weapons-source.png",
+      "sourceRect": [
+        1570,
+        140,
+        490,
+        470
+      ],
+      "size": [
+        80,
+        80
+      ],
+      "origin": "built-in image_gen; separate component export",
+      "sha256": "08122a4f24249e8a8f7be5ca3d078be6f33cea1735ebfb903cb0c659cb214b26"
+    },
+    {
+      "id": "spine",
+      "file": "assets/refined/spine.png",
+      "origin": "reused project or existing generated component",
+      "size": [
+        40,
+        480
+      ],
+      "sha256": "f9237fb6e42594e73a60acea73b49127d8b183a2eb6e41285d6cd925a4befdf3"
+    },
+    {
+      "id": "village-sketch",
+      "file": "assets/refined/village-sketch.png",
+      "origin": "reused project or existing generated component",
+      "size": [
+        1086,
+        600
+      ],
+      "sha256": "2779a4225708bafd23a8c2c7f90843555854cac74d930b04a2e0fd50c024a1c9"
+    },
+    {
+      "id": "death",
+      "file": "assets/drawn/death.png",
+      "origin": "reused project or existing generated component",
+      "size": [
+        560,
+        180
+      ],
+      "sha256": "32f2cd175b696103dbc00e8dbf21348fda4a16179593d3d257613f1773e063df"
+    },
+    {
+      "id": "clear",
+      "file": "assets/drawn/clear.png",
+      "origin": "reused project or existing generated component",
+      "size": [
+        560,
+        180
+      ],
+      "sha256": "d00cc3d17bf745fa5b35cf4255cc031d96a099b7738db954a8a55899248a20fe"
+    },
+    {
+      "id": "ink",
+      "file": "assets/refined/pigment.png",
+      "origin": "A hub design paint palette, regenerated with built-in image_gen",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "f3d80dab704bfbf0638afd7c605fd74b70fa9cb8953b421e77dbf3edd1e5eca1",
+      "source": "../source/pigment-source.png"
+    },
+    {
+      "id": "map",
+      "file": "assets/density/map.png",
+      "origin": "reused project or existing generated component",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "0a9a3eaf689c6dc0e2f7ddab151d70a6f84d71b0d567b1a88008cfaf44114176"
+    },
+    {
+      "id": "stamp",
+      "file": "assets/density/stamp.png",
+      "origin": "reused project or existing generated component",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "1c5b7ed763e86fe09efdb0b3df0e9c59c65e492d068a6a7434a3d91c2fba41d3"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "schema": "stage2-m3-stab-timing-v1",
+  "status": "faster-four-hit-pixel-attack-approved-by-user",
+  "approval": "approved-by-user",
+  "source": "outputs/waterway/m3-stab-reuse-20261101",
+  "output": "outputs/waterway/m3-stab-fast-20261101",
+  "thrustDurationsMs": [20,20,30],
+  "withdrawDurationsMs": [20,30,30],
+  "policy": "User requested faster thrusts. Reuse every source pixel, frame order, four-hit count, windup550ms, recovery800ms and review gap600ms exactly. Only thrust100->70ms and withdrawal120->80ms change for art review. No combat data or Unity changes."
+}

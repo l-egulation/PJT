@@ -1,0 +1,139 @@
+{
+ "format": "stage2-boss-motion-v8",
+ "id": "p3-rain",
+ "name": "흑화 Blue 순차 폭발 화살비",
+ "use": "3페이즈 ArrowRain",
+ "canvas": [
+  384,
+  256
+ ],
+ "pivot": [
+  192,
+  232
+ ],
+ "frames": [
+  "01.png",
+  "02.png",
+  "03.png",
+  "04.png",
+  "05.png",
+  "06.png",
+  "07.png",
+  "08.png",
+  "10.png",
+  "12.png",
+  "14.png",
+  "16.png",
+  "18.png",
+  "20.png",
+  "22.png",
+  "24.png",
+  "25.png",
+  "26.png",
+  "27.png",
+  "28.png",
+  "29.png",
+  "30.png",
+  "31.png",
+  "32.png",
+  "33.png",
+  "34.png",
+  "35.png"
+ ],
+ "sheet": {
+  "file": "sheet.png",
+  "columns": 8,
+  "cell": [
+   384,
+   256
+  ],
+  "order": "frames, left-to-right then top-to-bottom"
+ },
+ "sequence": [
+  "01.png",
+  "02.png",
+  "03.png",
+  "04.png",
+  "05.png",
+  "06.png",
+  "07.png",
+  "08.png",
+  "10.png",
+  "12.png",
+  "14.png",
+  "16.png",
+  "18.png",
+  "20.png",
+  "22.png",
+  "24.png",
+  "25.png",
+  "26.png",
+  "27.png",
+  "28.png",
+  "29.png",
+  "30.png",
+  "31.png",
+  "32.png",
+  "33.png",
+  "34.png",
+  "35.png"
+ ],
+ "durationsMs": [
+  60,
+  60,
+  60,
+  60,
+  60,
+  60,
+  60,
+  120,
+  120,
+  120,
+  120,
+  120,
+  120,
+  120,
+  120,
+  70,
+  70,
+  70,
+  70,
+  70,
+  70,
+  70,
+  70,
+  70,
+  70,
+  70,
+  70
+ ],
+ "totalMs": 2220,
+ "loop": false,
+ "workFolder": "phase3/3_순차폭발화살비",
+ "footShiftPx": {},
+ "projectilePixelsRemoved": {},
+ "status": "user-approved-not-unity-integrated",
+ "gameCueKeys": [
+  [
+   0,
+   0
+  ],
+  [
+   0.5,
+   0.36
+  ],
+  [
+   2.38,
+   1.59
+  ],
+  [
+   2.45,
+   1.66
+  ],
+  [
+   3.0,
+   2.22
+  ]
+ ],
+ "gameCueNote": "0.36 두 팔 듦, 1.66 주먹 내리찍기 -> 전조 0.5초에 들고 첫 기둥 폭발 2.45초에 내리찍기"
+}

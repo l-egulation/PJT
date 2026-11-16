@@ -1,0 +1,7 @@
+640×360 / PPU32 / 타일32×32 / 확정 주인공128캔버스 원본 사용
+황혼 우선, 황금·비취 전환 지원. 실제 타일맵과 별도4층 배경. 지형은640px 구간 단위의 결정적 패턴으로 오른쪽에 계속 이어짐. 점프440px/s, 중력900px/s², 공중발판96px 상승. 개별24종타일과 공중발판 저장.
+원거리/중간 배경은 미러 반복 연결. 자동 생성된 타일은 픽셀 단위 수작업 확정본이 아니며 연결 검증 결과를 함께 확인.
+
+V20: inside corner12×12 local grass patch added from imagegen context edit. Foreground transparent margins trimmed without rescaling, silhouette bottom anchor363px, spacing240px with variation. Character and movement unchanged.
+
+V21: 지형 구간640→2048px, 구간 내 높이 변화 구역1곳(깊이/높이32px). 낮은 구간384~512px, 긴 평지 중심. 공중발판96→256/320/384px, 32px 타일 반복 배치. 확정 아트·모서리 풀·전경·캐릭터 유지. 전투 시스템/적 배치는 이번 변경 범위 아님.

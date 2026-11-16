@@ -1,0 +1,1479 @@
+{
+  "sets": [
+    {
+      "form": "hammer",
+      "gameplayForm": "hammer",
+      "launcherMode": -1,
+      "clips": [
+        {
+          "name": "idle",
+          "frames": [
+            "CharacterApproved11/hammer/F000",
+            "CharacterApproved11/hammer/F001",
+            "CharacterApproved11/hammer/F002",
+            "CharacterApproved11/hammer/F003"
+          ],
+          "seconds": [
+            0.18,
+            0.14,
+            0.18,
+            0.14
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "walk",
+          "frames": [
+            "CharacterApproved11/hammer/F004",
+            "CharacterApproved11/hammer/F005",
+            "CharacterApproved11/hammer/F006",
+            "CharacterApproved11/hammer/F007",
+            "CharacterApproved11/hammer/F008",
+            "CharacterApproved11/hammer/F009",
+            "CharacterApproved11/hammer/F010",
+            "CharacterApproved11/hammer/F011"
+          ],
+          "seconds": [
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "run",
+          "frames": [
+            "CharacterApproved11/hammer/F012",
+            "CharacterApproved11/hammer/F013",
+            "CharacterApproved11/hammer/F014",
+            "CharacterApproved11/hammer/F015",
+            "CharacterApproved11/hammer/F016",
+            "CharacterApproved11/hammer/F017"
+          ],
+          "seconds": [
+            0.065,
+            0.055,
+            0.065,
+            0.055,
+            0.065,
+            0.055
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump",
+          "frames": [
+            "CharacterApproved11/hammer/F018",
+            "CharacterApproved11/hammer/F019",
+            "CharacterApproved11/hammer/F020",
+            "CharacterApproved11/hammer/F021",
+            "CharacterApproved11/hammer/F022",
+            "CharacterApproved11/hammer/F023",
+            "CharacterApproved11/hammer/F024",
+            "CharacterApproved11/hammer/F025",
+            "CharacterApproved11/hammer/F026",
+            "CharacterApproved11/hammer/F027",
+            "CharacterApproved11/hammer/F028"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "dash",
+          "frames": [
+            "CharacterApproved11/hammer/F029",
+            "CharacterApproved11/hammer/F030",
+            "CharacterApproved11/hammer/F031",
+            "CharacterApproved11/hammer/F032",
+            "CharacterApproved11/hammer/F033"
+          ],
+          "seconds": [
+            0.03,
+            0.055,
+            0.055,
+            0.05,
+            0.08
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "death",
+          "frames": [
+            "CharacterApproved11/hammer/F034",
+            "CharacterApproved11/hammer/F035",
+            "CharacterApproved11/hammer/F036",
+            "CharacterApproved11/hammer/F037",
+            "CharacterApproved11/hammer/F038",
+            "CharacterApproved11/hammer/F039",
+            "CharacterApproved11/hammer/F040",
+            "CharacterApproved11/hammer/F041",
+            "CharacterApproved11/hammer/F042",
+            "CharacterApproved11/hammer/F043",
+            "CharacterApproved11/hammer/F044",
+            "CharacterApproved11/hammer/F045"
+          ],
+          "seconds": [
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.04,
+            0.04,
+            0.06,
+            0.06,
+            0.18
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "CharacterApproved11/hammer/F018",
+            "CharacterApproved11/hammer/F019"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "CharacterApproved11/hammer/F020",
+            "CharacterApproved11/hammer/F021"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "CharacterApproved11/hammer/F022"
+          ],
+          "seconds": [
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "CharacterApproved11/hammer/F023"
+          ],
+          "seconds": [
+            0.06
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "CharacterApproved11/hammer/F024",
+            "CharacterApproved11/hammer/F025"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "land",
+          "frames": [
+            "CharacterApproved11/hammer/F026",
+            "CharacterApproved11/hammer/F027",
+            "CharacterApproved11/hammer/F028"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "attack1",
+          "frames": [
+            "CharacterBasicOutline/hammer-a/00",
+            "CharacterBasicOutline/hammer-a/01",
+            "CharacterBasicOutline/hammer-a/02",
+            "CharacterBasicOutline/hammer-a/03",
+            "CharacterBasicOutline/hammer-a/04",
+            "CharacterBasicOutline/hammer-a/05",
+            "CharacterBasicOutline/hammer-a/06",
+            "CharacterBasicOutline/hammer-a/07",
+            "CharacterBasicOutline/hammer-a/08"
+          ],
+          "seconds": [
+            0.031428571,
+            0.031428571,
+            0.031428571,
+            0.031428571,
+            0.031428571,
+            0.031428571,
+            0.031428571,
+            0.06,
+            0.06
+          ],
+          "contact": -1,
+          "sourceImpact": 0.22,
+          "fxStart": -1
+        },
+        {
+          "name": "attack2",
+          "frames": [
+            "CharacterBasicOutline/hammer-a/09",
+            "CharacterBasicOutline/hammer-a/10",
+            "CharacterBasicOutline/hammer-a/11",
+            "CharacterBasicOutline/hammer-a/12",
+            "CharacterBasicOutline/hammer-a/13",
+            "CharacterBasicOutline/hammer-a/14",
+            "CharacterBasicOutline/hammer-a/15",
+            "CharacterBasicOutline/hammer-a/16",
+            "CharacterBasicOutline/hammer-a/17",
+            "CharacterBasicOutline/hammer-a/18",
+            "CharacterBasicOutline/hammer-a/19",
+            "CharacterBasicOutline/hammer-a/20"
+          ],
+          "seconds": [
+            0.055,
+            0.055,
+            0.055,
+            0.055,
+            0.055,
+            0.055,
+            0.058333333,
+            0.058333333,
+            0.058333333,
+            0.058333333,
+            0.058333333,
+            0.058333333
+          ],
+          "contact": -1,
+          "sourceImpact": 0.33,
+          "fxStart": -1
+        },
+        {
+          "name": "attack_default_slam",
+          "frames": [
+            "CharacterHammerReview/hammer/hammer_default_01",
+            "CharacterHammerReview/hammer/hammer_default_02",
+            "CharacterHammerReview/hammer/hammer_default_03",
+            "CharacterHammerReview/hammer/hammer_default_04",
+            "CharacterHammerReview/hammer/hammer_default_05",
+            "CharacterHammerReview/hammer/hammer_default_06",
+            "CharacterHammerReview/hammer/hammer_default_07",
+            "CharacterHammerReview/hammer/hammer_default_08",
+            "CharacterHammerReview/hammer/hammer_default_09",
+            "CharacterHammerReview/hammer/hammer_default_10",
+            "CharacterHammerReview/hammer/hammer_default_11",
+            "CharacterHammerReview/hammer/hammer_default_12",
+            "CharacterHammerReview/hammer/hammer_default_13",
+            "CharacterHammerReview/hammer/hammer_default_14"
+          ],
+          "seconds": [
+            0.06,
+            0.09,
+            0.11,
+            0.08,
+            0.02,
+            0.02,
+            0.02,
+            0.07,
+            0.05,
+            0.06,
+            0.06,
+            0.08,
+            0.13,
+            0.1
+          ],
+          "contact": -1,
+          "sourceImpact": 0.4,
+          "fxStart": -1
+        },
+        {
+          "name": "attack_range_slam",
+          "frames": [
+            "CharacterHammerReview/hammer/hammer_default_01",
+            "CharacterHammerReview/hammer/hammer_default_02",
+            "CharacterHammerReview/hammer/hammer_default_03",
+            "CharacterHammerReview/hammer/hammer_default_04",
+            "CharacterHammerReview/hammer/hammer_default_05",
+            "CharacterHammerReview/hammer/hammer_default_06",
+            "CharacterHammerReview/hammer/hammer_default_07",
+            "CharacterHammerReview/hammer/hammer_default_08",
+            "CharacterHammerReview/hammer/hammer_default_09",
+            "CharacterHammerReview/hammer/hammer_default_10",
+            "CharacterHammerReview/hammer/hammer_default_11",
+            "CharacterHammerReview/hammer/hammer_default_12",
+            "CharacterHammerReview/hammer/hammer_default_13",
+            "CharacterHammerReview/hammer/hammer_default_14"
+          ],
+          "seconds": [
+            0.06,
+            0.09,
+            0.21,
+            0.08,
+            0.02,
+            0.02,
+            0.02,
+            0.07,
+            0.05,
+            0.06,
+            0.06,
+            0.08,
+            0.13,
+            0.15
+          ],
+          "contact": -1,
+          "sourceImpact": 0.5,
+          "fxStart": -1
+        },
+        {
+          "name": "attack_rush_push",
+          "frames": [
+            "CharacterWeaponSkills/hammer/hammer_movement_01",
+            "CharacterWeaponSkills/hammer/hammer_movement_02",
+            "CharacterWeaponSkills/hammer/hammer_movement_03",
+            "CharacterWeaponSkills/hammer/hammer_movement_04",
+            "CharacterWeaponSkills/hammer/hammer_movement_05",
+            "CharacterWeaponSkills/hammer/hammer_movement_06",
+            "CharacterWeaponSkills/hammer/hammer_movement_07",
+            "CharacterWeaponSkills/hammer/hammer_movement_08",
+            "CharacterWeaponSkills/hammer/hammer_movement_09",
+            "CharacterWeaponSkills/hammer/hammer_movement_10",
+            "CharacterWeaponSkills/hammer/hammer_movement_11",
+            "CharacterWeaponSkills/hammer/hammer_movement_12",
+            "CharacterWeaponSkills/hammer/hammer_movement_13",
+            "CharacterWeaponSkills/hammer/hammer_movement_14"
+          ],
+          "seconds": [
+            0.04,
+            0.05,
+            0.05,
+            0.06,
+            0.04,
+            0.04,
+            0.04,
+            0.18,
+            0.08,
+            0.04,
+            0.05,
+            0.06,
+            0.06,
+            0.06
+          ],
+          "contact": -1,
+          "sourceImpact": 0.2,
+          "fxStart": -1
+        }
+      ],
+      "effects": [
+        {
+          "attack": "attack1",
+          "frames": [
+            "EffectsApproved11/hammer/attack1/F000",
+            "EffectsApproved11/hammer/attack1/F001",
+            "EffectsApproved11/hammer/attack1/F002",
+            "EffectsApproved11/hammer/attack1/F003",
+            "EffectsApproved11/hammer/attack1/F004",
+            "EffectsApproved11/hammer/attack1/F005",
+            "EffectsApproved11/hammer/attack1/F006",
+            "EffectsApproved11/hammer/attack1/F007"
+          ],
+          "seconds": [
+            0.01,
+            0.01,
+            0.01,
+            0.03,
+            0.03,
+            0.04,
+            0.04,
+            0.04
+          ],
+          "flipX": false,
+          "x": [
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0
+          ],
+          "y": [
+            4.71875,
+            4.71875,
+            4.71875,
+            4.71875,
+            4.71875,
+            4.71875,
+            4.71875,
+            4.71875
+          ]
+        },
+        {
+          "attack": "attack2",
+          "frames": [
+            "EffectsApproved11/hammer/attack2/F000",
+            "EffectsApproved11/hammer/attack2/F001",
+            "EffectsApproved11/hammer/attack2/F002",
+            "EffectsApproved11/hammer/attack2/F003",
+            "EffectsApproved11/hammer/attack2/F004",
+            "EffectsApproved11/hammer/attack2/F005",
+            "EffectsApproved11/hammer/attack2/F006",
+            "EffectsApproved11/hammer/attack2/F007"
+          ],
+          "seconds": [
+            0.01,
+            0.01,
+            0.01,
+            0.03,
+            0.03,
+            0.04,
+            0.04,
+            0.04
+          ],
+          "flipX": false,
+          "x": [
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0
+          ],
+          "y": [
+            4.71875,
+            4.71875,
+            4.71875,
+            4.71875,
+            4.71875,
+            4.71875,
+            4.71875,
+            4.71875
+          ]
+        }
+      ],
+      "iconUvRect": [
+        0.3080357142857143,
+        0.21354166666666663,
+        0.3125,
+        0.3333333333333333
+      ]
+    },
+    {
+      "form": "shield",
+      "gameplayForm": "shield",
+      "launcherMode": -1,
+      "clips": [
+        {
+          "name": "idle",
+          "frames": [
+            "CharacterApproved11/shield/F000",
+            "CharacterApproved11/shield/F001",
+            "CharacterApproved11/shield/F002",
+            "CharacterApproved11/shield/F003"
+          ],
+          "seconds": [
+            0.18,
+            0.14,
+            0.18,
+            0.14
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "walk",
+          "frames": [
+            "CharacterApproved11/shield/F004",
+            "CharacterApproved11/shield/F005",
+            "CharacterApproved11/shield/F006",
+            "CharacterApproved11/shield/F007",
+            "CharacterApproved11/shield/F008",
+            "CharacterApproved11/shield/F009",
+            "CharacterApproved11/shield/F010",
+            "CharacterApproved11/shield/F011"
+          ],
+          "seconds": [
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "run",
+          "frames": [
+            "CharacterApproved11/shield/F012",
+            "CharacterApproved11/shield/F013",
+            "CharacterApproved11/shield/F014",
+            "CharacterApproved11/shield/F015",
+            "CharacterApproved11/shield/F016",
+            "CharacterApproved11/shield/F017"
+          ],
+          "seconds": [
+            0.065,
+            0.055,
+            0.065,
+            0.055,
+            0.065,
+            0.055
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump",
+          "frames": [
+            "CharacterApproved11/shield/F018",
+            "CharacterApproved11/shield/F019",
+            "CharacterApproved11/shield/F020",
+            "CharacterApproved11/shield/F021",
+            "CharacterApproved11/shield/F022",
+            "CharacterApproved11/shield/F023",
+            "CharacterApproved11/shield/F024",
+            "CharacterApproved11/shield/F025",
+            "CharacterApproved11/shield/F026",
+            "CharacterApproved11/shield/F027",
+            "CharacterApproved11/shield/F028"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "dash",
+          "frames": [
+            "CharacterApproved11/shield/F029",
+            "CharacterApproved11/shield/F030",
+            "CharacterApproved11/shield/F031",
+            "CharacterApproved11/shield/F032",
+            "CharacterApproved11/shield/F033"
+          ],
+          "seconds": [
+            0.03,
+            0.055,
+            0.055,
+            0.05,
+            0.08
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "death",
+          "frames": [
+            "CharacterApproved11/shield/F034",
+            "CharacterApproved11/shield/F035",
+            "CharacterApproved11/shield/F036",
+            "CharacterApproved11/shield/F037",
+            "CharacterApproved11/shield/F038",
+            "CharacterApproved11/shield/F039",
+            "CharacterApproved11/shield/F040",
+            "CharacterApproved11/shield/F041",
+            "CharacterApproved11/shield/F042",
+            "CharacterApproved11/shield/F043",
+            "CharacterApproved11/shield/F044",
+            "CharacterApproved11/shield/F045"
+          ],
+          "seconds": [
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.04,
+            0.04,
+            0.06,
+            0.06,
+            0.18
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "CharacterApproved11/shield/F018",
+            "CharacterApproved11/shield/F019"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "CharacterApproved11/shield/F020",
+            "CharacterApproved11/shield/F021"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "CharacterApproved11/shield/F022"
+          ],
+          "seconds": [
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "CharacterApproved11/shield/F023"
+          ],
+          "seconds": [
+            0.06
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "CharacterApproved11/shield/F024",
+            "CharacterApproved11/shield/F025"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "land",
+          "frames": [
+            "CharacterApproved11/shield/F026",
+            "CharacterApproved11/shield/F027",
+            "CharacterApproved11/shield/F028"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "attack1",
+          "frames": [
+            "CharacterApproved11/shield/F046",
+            "CharacterApproved11/shield/F047",
+            "CharacterApproved11/shield/F048",
+            "CharacterApproved11/shield/F049",
+            "CharacterApproved11/shield/F050",
+            "CharacterApproved11/shield/F051"
+          ],
+          "seconds": [
+            0.05,
+            0.09,
+            0.11,
+            0.1,
+            0.11,
+            0.14
+          ],
+          "contact": -1,
+          "sourceImpact": 0.25,
+          "fxStart": 0.25
+        }
+      ],
+      "effects": [
+        {
+          "attack": "attack1",
+          "frames": [
+            "EffectsApproved11/shield/attack1/F000",
+            "EffectsApproved11/shield/attack1/F001",
+            "EffectsApproved11/shield/attack1/F002",
+            "EffectsApproved11/shield/attack1/F003",
+            "EffectsApproved11/shield/attack1/F004",
+            "EffectsApproved11/shield/attack1/F005",
+            "EffectsApproved11/shield/attack1/F006",
+            "EffectsApproved11/shield/attack1/F007"
+          ],
+          "seconds": [
+            0.01,
+            0.01,
+            0.01,
+            0.04,
+            0.04,
+            0.04,
+            0.04,
+            0.04
+          ],
+          "flipX": false,
+          "x": [
+            -2.59375,
+            -2.59375,
+            -2.59375,
+            -2.59375,
+            -2.59375,
+            -2.59375,
+            -2.59375,
+            -2.59375
+          ],
+          "y": [
+            3.8125,
+            3.8125,
+            3.8125,
+            3.8125,
+            3.8125,
+            3.8125,
+            3.8125,
+            3.8125
+          ]
+        }
+      ],
+      "iconUvRect": [
+        0.35,
+        0.23750000000000004,
+        0.3,
+        0.4
+      ]
+    },
+    {
+      "form": "greatsword",
+      "gameplayForm": "greatsword",
+      "launcherMode": -1,
+      "clips": [
+        {
+          "name": "idle",
+          "frames": [
+            "CharacterApproved11/greatsword/F000",
+            "CharacterApproved11/greatsword/F001",
+            "CharacterApproved11/greatsword/F002",
+            "CharacterApproved11/greatsword/F003"
+          ],
+          "seconds": [
+            0.18,
+            0.14,
+            0.18,
+            0.14
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "walk",
+          "frames": [
+            "CharacterApproved11/greatsword/F004",
+            "CharacterApproved11/greatsword/F005",
+            "CharacterApproved11/greatsword/F006",
+            "CharacterApproved11/greatsword/F007",
+            "CharacterApproved11/greatsword/F008",
+            "CharacterApproved11/greatsword/F009",
+            "CharacterApproved11/greatsword/F010",
+            "CharacterApproved11/greatsword/F011"
+          ],
+          "seconds": [
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "run",
+          "frames": [
+            "CharacterApproved11/greatsword/F012",
+            "CharacterApproved11/greatsword/F013",
+            "CharacterApproved11/greatsword/F014",
+            "CharacterApproved11/greatsword/F015",
+            "CharacterApproved11/greatsword/F016",
+            "CharacterApproved11/greatsword/F017"
+          ],
+          "seconds": [
+            0.065,
+            0.055,
+            0.065,
+            0.055,
+            0.065,
+            0.055
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump",
+          "frames": [
+            "CharacterApproved11/greatsword/F018",
+            "CharacterApproved11/greatsword/F019",
+            "CharacterApproved11/greatsword/F020",
+            "CharacterApproved11/greatsword/F021",
+            "CharacterApproved11/greatsword/F022",
+            "CharacterApproved11/greatsword/F023",
+            "CharacterApproved11/greatsword/F024",
+            "CharacterApproved11/greatsword/F025",
+            "CharacterApproved11/greatsword/F026",
+            "CharacterApproved11/greatsword/F027",
+            "CharacterApproved11/greatsword/F028"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "dash",
+          "frames": [
+            "CharacterApproved11/greatsword/F029",
+            "CharacterApproved11/greatsword/F030",
+            "CharacterApproved11/greatsword/F031",
+            "CharacterApproved11/greatsword/F032",
+            "CharacterApproved11/greatsword/F033"
+          ],
+          "seconds": [
+            0.03,
+            0.055,
+            0.055,
+            0.05,
+            0.08
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "death",
+          "frames": [
+            "CharacterApproved11/greatsword/F034",
+            "CharacterApproved11/greatsword/F035",
+            "CharacterApproved11/greatsword/F036",
+            "CharacterApproved11/greatsword/F037",
+            "CharacterApproved11/greatsword/F038",
+            "CharacterApproved11/greatsword/F039",
+            "CharacterApproved11/greatsword/F040",
+            "CharacterApproved11/greatsword/F041",
+            "CharacterApproved11/greatsword/F042",
+            "CharacterApproved11/greatsword/F043",
+            "CharacterApproved11/greatsword/F044",
+            "CharacterApproved11/greatsword/F045"
+          ],
+          "seconds": [
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.04,
+            0.04,
+            0.06,
+            0.06,
+            0.18
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "CharacterApproved11/greatsword/F018",
+            "CharacterApproved11/greatsword/F019"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "CharacterApproved11/greatsword/F020",
+            "CharacterApproved11/greatsword/F021"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "CharacterApproved11/greatsword/F022"
+          ],
+          "seconds": [
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "CharacterApproved11/greatsword/F023"
+          ],
+          "seconds": [
+            0.06
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "CharacterApproved11/greatsword/F024",
+            "CharacterApproved11/greatsword/F025"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "land",
+          "frames": [
+            "CharacterApproved11/greatsword/F026",
+            "CharacterApproved11/greatsword/F027",
+            "CharacterApproved11/greatsword/F028"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "attack1",
+          "frames": [
+            "CharacterGreatswordReviewed/basic-1-00",
+            "CharacterGreatswordReviewed/basic-1-01",
+            "CharacterGreatswordReviewed/basic-1-02",
+            "CharacterGreatswordReviewed/basic-1-03",
+            "CharacterGreatswordReviewed/basic-1-04",
+            "CharacterGreatswordReviewed/basic-1-05",
+            "CharacterGreatswordReviewed/basic-1-06",
+            "CharacterGreatswordReviewed/basic-1-07"
+          ],
+          "seconds": [
+            0.07,
+            0.06,
+            0.1,
+            0.04,
+            0.02,
+            0.04,
+            0.06,
+            0.06
+          ],
+          "contact": -1,
+          "sourceImpact": 0.27,
+          "fxStart": -1,
+          "stepIds": [
+            "greatsword-attack1-reviewed-000",
+            "greatsword-attack1-reviewed-001",
+            "greatsword-attack1-reviewed-002",
+            "greatsword-attack1-reviewed-003",
+            "greatsword-attack1-reviewed-004",
+            "greatsword-attack1-reviewed-005",
+            "greatsword-attack1-reviewed-006",
+            "greatsword-attack1-reviewed-007"
+          ]
+        },
+        {
+          "name": "attack2",
+          "frames": [
+            "CharacterGreatswordReviewed/basic-2-00",
+            "CharacterGreatswordReviewed/basic-2-01",
+            "CharacterGreatswordReviewed/basic-2-02",
+            "CharacterGreatswordReviewed/basic-2-03",
+            "CharacterGreatswordReviewed/basic-2-04",
+            "CharacterGreatswordReviewed/basic-2-05",
+            "CharacterGreatswordReviewed/basic-2-06"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.02,
+            0.04,
+            0.02,
+            0.04,
+            0.06
+          ],
+          "contact": -1,
+          "sourceImpact": 0.1,
+          "fxStart": -1,
+          "stepIds": [
+            "greatsword-attack2-reviewed-000",
+            "greatsword-attack2-reviewed-001",
+            "greatsword-attack2-reviewed-002",
+            "greatsword-attack2-reviewed-003",
+            "greatsword-attack2-reviewed-004",
+            "greatsword-attack2-reviewed-005",
+            "greatsword-attack2-reviewed-006"
+          ]
+        },
+        {
+          "name": "attack3",
+          "frames": [
+            "CharacterGreatswordReviewed/basic-3-00",
+            "CharacterGreatswordReviewed/basic-3-01",
+            "CharacterGreatswordReviewed/basic-3-02",
+            "CharacterGreatswordReviewed/basic-3-03",
+            "CharacterGreatswordReviewed/basic-3-04",
+            "CharacterGreatswordReviewed/basic-3-05",
+            "CharacterGreatswordReviewed/basic-3-06",
+            "CharacterGreatswordReviewed/basic-3-07",
+            "CharacterGreatswordReviewed/basic-3-08",
+            "CharacterGreatswordReviewed/basic-3-09",
+            "CharacterGreatswordReviewed/basic-3-10",
+            "CharacterGreatswordReviewed/basic-3-11",
+            "CharacterGreatswordReviewed/basic-3-12"
+          ],
+          "seconds": [
+            0.04,
+            0.06,
+            0.04,
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.25
+          ],
+          "contact": -1,
+          "sourceImpact": 0.16,
+          "fxStart": -1,
+          "stepIds": [
+            "greatsword-attack3-reviewed-000",
+            "greatsword-attack3-reviewed-001",
+            "greatsword-attack3-reviewed-002",
+            "greatsword-attack3-reviewed-003",
+            "greatsword-attack3-reviewed-004",
+            "greatsword-attack3-reviewed-005",
+            "greatsword-attack3-reviewed-006",
+            "greatsword-attack3-reviewed-007",
+            "greatsword-attack3-reviewed-008",
+            "greatsword-attack3-reviewed-009",
+            "greatsword-attack3-reviewed-010",
+            "greatsword-attack3-reviewed-011",
+            "greatsword-attack3-reviewed-012"
+          ]
+        },
+        {
+          "name": "attack_charge_slam",
+          "frames": [
+            "CharacterGreatswordReviewed/charge-01",
+            "CharacterGreatswordReviewed/charge-06",
+            "CharacterGreatswordReviewed/charge-10",
+            "CharacterGreatswordReviewed/charge-12",
+            "CharacterGreatswordReviewed/charge-15",
+            "CharacterGreatswordReviewed/charge-46",
+            "CharacterGreatswordReviewed/charge-48",
+            "CharacterGreatswordReviewed/charge-50",
+            "CharacterGreatswordReviewed/charge-52",
+            "CharacterGreatswordReviewed/charge-55",
+            "CharacterGreatswordReviewed/charge-58",
+            "CharacterGreatswordReviewed/charge-59",
+            "CharacterGreatswordReviewed/charge-60",
+            "CharacterGreatswordReviewed/charge-62",
+            "CharacterGreatswordReviewed/charge-64",
+            "CharacterGreatswordReviewed/charge-67",
+            "CharacterGreatswordReviewed/charge-69",
+            "CharacterGreatswordReviewed/charge-75",
+            "CharacterGreatswordReviewed/charge-78",
+            "CharacterGreatswordReviewed/charge-81",
+            "CharacterGreatswordReviewed/charge-86"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.04,
+            0.04,
+            0.12,
+            0.04,
+            0.04,
+            0.06,
+            0.08,
+            0.02,
+            0.02,
+            0.02,
+            0.1,
+            0.04,
+            0.04,
+            0.04,
+            0.07,
+            0.06,
+            0.05,
+            0.04,
+            0.2
+          ],
+          "contact": -1,
+          "sourceImpact": 0.56,
+          "fxStart": -1,
+          "stepIds": [
+            "greatsword-attack_charge_slam-reviewed-000",
+            "greatsword-attack_charge_slam-reviewed-001",
+            "greatsword-attack_charge_slam-reviewed-002",
+            "greatsword-attack_charge_slam-reviewed-003",
+            "greatsword-attack_charge_slam-reviewed-004",
+            "greatsword-attack_charge_slam-reviewed-005",
+            "greatsword-attack_charge_slam-reviewed-006",
+            "greatsword-attack_charge_slam-reviewed-007",
+            "greatsword-attack_charge_slam-reviewed-008",
+            "greatsword-attack_charge_slam-reviewed-009",
+            "greatsword-attack_charge_slam-reviewed-010",
+            "greatsword-attack_charge_slam-reviewed-011",
+            "greatsword-attack_charge_slam-reviewed-012",
+            "greatsword-attack_charge_slam-reviewed-013",
+            "greatsword-attack_charge_slam-reviewed-014",
+            "greatsword-attack_charge_slam-reviewed-015",
+            "greatsword-attack_charge_slam-reviewed-016",
+            "greatsword-attack_charge_slam-reviewed-017",
+            "greatsword-attack_charge_slam-reviewed-018",
+            "greatsword-attack_charge_slam-reviewed-019",
+            "greatsword-attack_charge_slam-reviewed-020"
+          ]
+        },
+        {
+          "name": "attack_spin_advance",
+          "frames": [
+            "CharacterGreatswordReviewed/spin-01",
+            "CharacterGreatswordReviewed/spin-04",
+            "CharacterGreatswordReviewed/spin-06",
+            "CharacterGreatswordReviewed/spin-07",
+            "CharacterGreatswordReviewed/spin-13",
+            "CharacterGreatswordReviewed/spin-14",
+            "CharacterGreatswordReviewed/spin-15",
+            "CharacterGreatswordReviewed/spin-16",
+            "CharacterGreatswordReviewed/spin-25",
+            "CharacterGreatswordReviewed/spin-17",
+            "CharacterGreatswordReviewed/spin-18",
+            "CharacterGreatswordReviewed/spin-19",
+            "CharacterGreatswordReviewed/spin-20",
+            "CharacterGreatswordReviewed/spin-21",
+            "CharacterGreatswordReviewed/spin-13",
+            "CharacterGreatswordReviewed/spin-14",
+            "CharacterGreatswordReviewed/spin-15",
+            "CharacterGreatswordReviewed/spin-16",
+            "CharacterGreatswordReviewed/spin-25",
+            "CharacterGreatswordReviewed/spin-17",
+            "CharacterGreatswordReviewed/spin-18",
+            "CharacterGreatswordReviewed/spin-19",
+            "CharacterGreatswordReviewed/spin-20",
+            "CharacterGreatswordReviewed/spin-21",
+            "CharacterGreatswordReviewed/spin-13",
+            "CharacterGreatswordReviewed/spin-14",
+            "CharacterGreatswordReviewed/spin-15",
+            "CharacterGreatswordReviewed/spin-16",
+            "CharacterGreatswordReviewed/spin-25",
+            "CharacterGreatswordReviewed/spin-17",
+            "CharacterGreatswordReviewed/spin-18",
+            "CharacterGreatswordReviewed/spin-19",
+            "CharacterGreatswordReviewed/spin-20",
+            "CharacterGreatswordReviewed/spin-21",
+            "CharacterGreatswordReviewed/spin-13",
+            "CharacterGreatswordReviewed/spin-14",
+            "CharacterGreatswordReviewed/spin-15",
+            "CharacterGreatswordReviewed/spin-16",
+            "CharacterGreatswordReviewed/spin-25",
+            "CharacterGreatswordReviewed/spin-17",
+            "CharacterGreatswordReviewed/spin-18",
+            "CharacterGreatswordReviewed/spin-19",
+            "CharacterGreatswordReviewed/spin-20",
+            "CharacterGreatswordReviewed/spin-21",
+            "CharacterGreatswordReviewed/spin-22",
+            "CharacterGreatswordReviewed/spin-06",
+            "CharacterGreatswordReviewed/spin-04",
+            "CharacterGreatswordReviewed/spin-01"
+          ],
+          "seconds": [
+            0.06,
+            0.06,
+            0.04,
+            0.04,
+            0.04,
+            0.04,
+            0.06,
+            0.06,
+            0.04,
+            0.04,
+            0.06,
+            0.06,
+            0.06,
+            0.04,
+            0.04,
+            0.04,
+            0.06,
+            0.06,
+            0.04,
+            0.04,
+            0.06,
+            0.06,
+            0.06,
+            0.04,
+            0.04,
+            0.04,
+            0.06,
+            0.06,
+            0.04,
+            0.04,
+            0.06,
+            0.06,
+            0.06,
+            0.04,
+            0.04,
+            0.04,
+            0.06,
+            0.06,
+            0.04,
+            0.04,
+            0.06,
+            0.06,
+            0.06,
+            0.04,
+            0.04,
+            0.06,
+            0.08,
+            0.12
+          ],
+          "contact": -1,
+          "sourceImpact": 0.2,
+          "fxStart": -1,
+          "stepIds": [
+            "greatsword-attack_spin_advance-reviewed-000",
+            "greatsword-attack_spin_advance-reviewed-001",
+            "greatsword-attack_spin_advance-reviewed-002",
+            "greatsword-attack_spin_advance-reviewed-003",
+            "greatsword-attack_spin_advance-reviewed-004",
+            "greatsword-attack_spin_advance-reviewed-005",
+            "greatsword-attack_spin_advance-reviewed-006",
+            "greatsword-attack_spin_advance-reviewed-007",
+            "greatsword-attack_spin_advance-reviewed-008",
+            "greatsword-attack_spin_advance-reviewed-009",
+            "greatsword-attack_spin_advance-reviewed-010",
+            "greatsword-attack_spin_advance-reviewed-011",
+            "greatsword-attack_spin_advance-reviewed-012",
+            "greatsword-attack_spin_advance-reviewed-013",
+            "greatsword-attack_spin_advance-reviewed-014",
+            "greatsword-attack_spin_advance-reviewed-015",
+            "greatsword-attack_spin_advance-reviewed-016",
+            "greatsword-attack_spin_advance-reviewed-017",
+            "greatsword-attack_spin_advance-reviewed-018",
+            "greatsword-attack_spin_advance-reviewed-019",
+            "greatsword-attack_spin_advance-reviewed-020",
+            "greatsword-attack_spin_advance-reviewed-021",
+            "greatsword-attack_spin_advance-reviewed-022",
+            "greatsword-attack_spin_advance-reviewed-023",
+            "greatsword-attack_spin_advance-reviewed-024",
+            "greatsword-attack_spin_advance-reviewed-025",
+            "greatsword-attack_spin_advance-reviewed-026",
+            "greatsword-attack_spin_advance-reviewed-027",
+            "greatsword-attack_spin_advance-reviewed-028",
+            "greatsword-attack_spin_advance-reviewed-029",
+            "greatsword-attack_spin_advance-reviewed-030",
+            "greatsword-attack_spin_advance-reviewed-031",
+            "greatsword-attack_spin_advance-reviewed-032",
+            "greatsword-attack_spin_advance-reviewed-033",
+            "greatsword-attack_spin_advance-reviewed-034",
+            "greatsword-attack_spin_advance-reviewed-035",
+            "greatsword-attack_spin_advance-reviewed-036",
+            "greatsword-attack_spin_advance-reviewed-037",
+            "greatsword-attack_spin_advance-reviewed-038",
+            "greatsword-attack_spin_advance-reviewed-039",
+            "greatsword-attack_spin_advance-reviewed-040",
+            "greatsword-attack_spin_advance-reviewed-041",
+            "greatsword-attack_spin_advance-reviewed-042",
+            "greatsword-attack_spin_advance-reviewed-043",
+            "greatsword-attack_spin_advance-reviewed-044",
+            "greatsword-attack_spin_advance-reviewed-045",
+            "greatsword-attack_spin_advance-reviewed-046",
+            "greatsword-attack_spin_advance-reviewed-047"
+          ]
+        },
+        {
+          "name": "attack_summon_sword",
+          "frames": [
+            "CharacterApproved11/greatsword/F000",
+            "CharacterGreatswordReviewed/range-load",
+            "CharacterGreatswordReviewed/range-hit",
+            "CharacterApproved11/greatsword/F000"
+          ],
+          "seconds": [
+            0.175,
+            0.275,
+            0.115,
+            0.485
+          ],
+          "contact": -1,
+          "sourceImpact": 0.45,
+          "fxStart": -1,
+          "stepIds": [
+            "greatsword-attack_summon_sword-reviewed-000",
+            "greatsword-attack_summon_sword-reviewed-001",
+            "greatsword-attack_summon_sword-reviewed-002",
+            "greatsword-attack_summon_sword-reviewed-003"
+          ]
+        },
+        {
+          "name": "attack_throw_sword",
+          "frames": [
+            "CharacterApproved11/greatsword/F000",
+            "CharacterGreatswordReviewed/throw-load",
+            "CharacterGreatswordReviewed/throw-release",
+            "CharacterGreatswordReviewed/throw-settle"
+          ],
+          "seconds": [
+            0.065,
+            0.165,
+            0.09,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": 0.23,
+          "fxStart": -1,
+          "stepIds": [
+            "greatsword-attack_throw_sword-reviewed-000",
+            "greatsword-attack_throw_sword-reviewed-001",
+            "greatsword-attack_throw_sword-reviewed-002",
+            "greatsword-attack_throw_sword-reviewed-003"
+          ]
+        }
+      ],
+      "effects": [],
+      "iconUvRect": [
+        0.3794642857142857,
+        0.23958333333333337,
+        0.45089285714285715,
+        0.3333333333333333
+      ]
+    }
+  ]
+}

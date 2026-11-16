@@ -1,0 +1,150 @@
+{
+  "schema": "deviant-modular-terrain-design-v1",
+  "status": "art-approved",
+  "productionAtlasReady": false,
+  "gameIntegration": "not-applied",
+  "sourceMainCommit": "add1e8a9b464f8acdf8c2db8b3fadf34f8362e72",
+  "units": {
+    "pixelsPerUnit": 32,
+    "cellPx": [
+      32,
+      32
+    ],
+    "artSubdivisionPx": 16,
+    "spritePivot": [
+      0.5,
+      0.5
+    ],
+    "tileAnchor": [
+      0.5,
+      0.5
+    ],
+    "scale": [
+      1,
+      1
+    ],
+    "worldY": "up",
+    "forestDataY": "down",
+    "blockRoomY": "up",
+    "newLandingEdgePx": 0,
+    "preservePlatformYOffset": true
+  },
+  "solid": {
+    "brickPx": [
+      32,
+      16
+    ],
+    "halfBrickPx": [
+      16,
+      16
+    ],
+    "rimDepthPx": 16,
+    "mortarPx": 1,
+    "includesMortar": true,
+    "opaqueOccupiedCell": true,
+    "neighborBits": [
+      "N",
+      "NE",
+      "E",
+      "SE",
+      "S",
+      "SW",
+      "W",
+      "NW"
+    ],
+    "normalizeDiagonal": "Keep only if both adjacent cardinal neighbors are occupied",
+    "canonicalForms": 47,
+    "rotationOfShading": false,
+    "clippedToCell": true,
+    "phaseAnchor": "final-world-pixel-origin",
+    "borderOwnership": "each visible contour and quadrant once",
+    "oneCellShelfPx": 32,
+    "oneCellPillarPx": 32
+  },
+  "oneWay": {
+    "canvasPx": [
+      32,
+      32
+    ],
+    "visibleHeightPx": 12,
+    "plankHeightPx": 8,
+    "detailHeightPx": 4,
+    "colliderHeightPx": 4,
+    "contactEdgePx": 0,
+    "material": "wood-and-iron",
+    "endpointStates": [
+      "free",
+      "wall"
+    ],
+    "variants": [
+      "single-free-free",
+      "single-wall-free",
+      "single-free-wall",
+      "single-wall-wall",
+      "left-free",
+      "left-wall",
+      "middle-a",
+      "middle-b",
+      "middle-c",
+      "right-free",
+      "right-wall"
+    ],
+    "widthFormula": "N*32; endcaps are inside first and last cell",
+    "horizontalPartialCellsAllowed": false
+  },
+  "background": {
+    "wallModuleU": [
+      1,
+      1
+    ],
+    "columnBodyU": [
+      1,
+      1
+    ],
+    "archClearWidthsU": [
+      4,
+      6,
+      8
+    ],
+    "archColumnWidthU": 1,
+    "archTotalWidthsU": [
+      6,
+      8,
+      10
+    ],
+    "remainder": "whole 1u wall panels; never stretch or crop an arch",
+    "structureWorldLocked": true,
+    "parallax": "distant scenery only",
+    "foregroundOccluder": false
+  },
+  "approvalGates": [
+    "native PNG assembly",
+    "actual room topology + mirrors + exits + passage joins",
+    "source pixel edges and alpha",
+    "Unity landing/collision and camera verification"
+  ],
+  "sources": [
+    {
+      "file": "data/map/block_rooms.json",
+      "line": 3
+    },
+    {
+      "file": "unity/Assets/ForestCombatV2/Runtime/Chapter1TeamTerrainPalette.cs",
+      "line": 13
+    },
+    {
+      "file": "unity/Assets/ForestCombatV2/Runtime/Chapter1TeamTerrain.cs",
+      "line": 56
+    },
+    {
+      "file": "unity/Assets/ForestCombatV2/Runtime/ForestCombatWorld.cs",
+      "line": 220
+    },
+    {
+      "file": "unity/Assets/MeadowDuskV3/MapVer2/Scenes/Chapter1Procedural.unity",
+      "line": 198
+    }
+  ],
+  "approvedAt": "2026-11-11",
+  "authoritativeStyle": "../STYLE-GUIDE.md"
+}

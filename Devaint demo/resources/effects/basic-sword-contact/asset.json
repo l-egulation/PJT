@@ -1,0 +1,27 @@
+{
+  "format": "deviant-resource-asset-v1",
+  "id": "effects.basic-sword-contact",
+  "path": "effects/basic-sword-contact",
+  "name": "누락 검 접촉광의 대체 후보",
+  "status": "review-candidates",
+  "approval": "pending-user-art-review",
+  "gameIntegration": "not-applied",
+  "files": [
+    "runtime/needed-art-candidate/00.png",
+    "runtime/needed-art-candidate/01.png",
+    "runtime/needed-art-candidate/02.png",
+    "runtime/needed-art-candidate/03.png",
+    "runtime/needed-art-candidate/04.png",
+    "runtime/needed-art-candidate/05.png",
+    "source/needed-art-candidate/generated/basic-sword-hit-candidate.png",
+    "source/needed-art-candidate/prompts/basic-sword-hit-candidate.txt"
+  ],
+  "workingSets": {
+    "needed-art": {
+      "approval": "pending-user-art-review",
+      "gameIntegration": "not-applied",
+      "consumerSelection": "not-added-to-unity-deployment",
+      "layoutPathFromResourceRoot": "authoring/needed-assets/source/output-layout.json"
+    }
+  }
+}

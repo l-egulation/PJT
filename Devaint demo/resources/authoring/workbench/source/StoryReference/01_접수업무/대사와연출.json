@@ -1,0 +1,55 @@
+{
+  "id": "reception-work-01",
+  "status": "review-draft",
+  "scope": "시골 출발 전 첫 접수 업무 장면만",
+  "note": "주인공의 첫 대사는 기준 자료 문구. 시민 대사와 업무 마무리는 검토용 연결 대사이며 새 세계관 설정이 아니다.",
+  "staffX": 474,
+  "floorY": 312,
+  "citizen": {
+    "file": "01_접수업무/citizen_reception.png",
+    "x": 554,
+    "y": 312,
+    "facing": -1,
+    "sortingOrder": 40,
+    "height": 64,
+    "pivotX": 64,
+    "pivotY": 120
+  },
+  "greeting": [
+    {
+      "speaker": "시민",
+      "text": "여기 적힌 내용만으로는 제가 찾는 기록인지 모르겠어요."
+    },
+    {
+      "speaker": "주인공",
+      "text": "찾으시는 기록이 여기서 끊기네요. 앞의 자료도 같이 볼까요?"
+    },
+    {
+      "speaker": "시민",
+      "text": "네, 부탁드릴게요."
+    }
+  ],
+  "record": {
+    "speaker": "주인공",
+    "text": "앞선 자료가 남아 있네. 끊긴 부분부터 이어서 확인하면 되겠어.",
+    "record": {
+      "title": "앞쪽 기록",
+      "heading": "공개 열람 자료",
+      "text": "이전 자료에서 이어지는 내용을 찾았다."
+    }
+  },
+  "handoff": [
+    {
+      "speaker": "주인공",
+      "text": "앞쪽 기록을 찾았어요. 이 부분부터 이어서 보시면 돼요."
+    },
+    {
+      "speaker": "시민",
+      "text": "찾아주셔서 고맙습니다."
+    }
+  ],
+  "repeat": {
+    "speaker": "시민",
+    "text": "덕분에 찾았어요. 고맙습니다."
+  }
+}

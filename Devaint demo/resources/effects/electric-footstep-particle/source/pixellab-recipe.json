@@ -1,0 +1,153 @@
+{
+  "name": "Footstep Electric Micro Spark",
+  "notes": "Small reusable ground electric spark particle; spawn copies at footstep positions. Art candidate only; no gameplay rules or Unity integration.",
+  "canvas": {
+    "w": 32,
+    "h": 32
+  },
+  "frames": 8,
+  "fps": 16,
+  "loop": false,
+  "origin": [
+    16,
+    16
+  ],
+  "ramps": {
+    "main": [
+      "#264cba",
+      "#347fe8",
+      "#53cfff",
+      "#b0f4ff",
+      "#f5ffff"
+    ]
+  },
+  "outline": {
+    "mode": "none"
+  },
+  "dither": 0,
+  "tones": 5,
+  "seed": 42,
+  "layers": [
+    {
+      "id": "micro_bolt",
+      "type": "bolt",
+      "start": [
+        7,
+        20
+      ],
+      "end": [
+        24,
+        11
+      ],
+      "segments": 8,
+      "jag": 0.22,
+      "branches": 1,
+      "branch_length": 0.32,
+      "width": {
+        "keys": [
+          [
+            0,
+            0.5
+          ],
+          [
+            0.14,
+            0.65
+          ],
+          [
+            0.86,
+            0.5
+          ],
+          [
+            1,
+            0.4
+          ]
+        ]
+      },
+      "soft": 0.65,
+      "progress": {
+        "keys": [
+          [
+            0,
+            0.35
+          ],
+          [
+            0.14,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "flicker": 2,
+      "intensity": {
+        "keys": [
+          [
+            0,
+            0.8
+          ],
+          [
+            0.14,
+            1
+          ],
+          [
+            0.86,
+            0.9
+          ],
+          [
+            1,
+            0.7
+          ]
+        ]
+      },
+      "dissolve": {
+        "keys": [
+          [
+            0,
+            0
+          ],
+          [
+            0.8,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "life": [
+        0,
+        1
+      ],
+      "outline": false
+    },
+    {
+      "id": "spark_tip",
+      "type": "rays",
+      "x": 23,
+      "y": 11,
+      "count": 4,
+      "length": {
+        "from": 2,
+        "to": 0
+      },
+      "inner": 0,
+      "width": 1,
+      "jitter": 0,
+      "alternate": 0,
+      "soft": 0,
+      "tip_fade": 0,
+      "spin": 0,
+      "life": [
+        0.14,
+        0.58
+      ],
+      "outline": false
+    }
+  ],
+  "core": [
+    "micro_bolt"
+  ]
+}

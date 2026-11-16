@@ -1,0 +1,107 @@
+{
+  "status": "사용자 리터치 확정",
+  "canvas": [
+    128,
+    128
+  ],
+  "motions": {
+    "대기": {
+      "frames": 12,
+      "source": "대기"
+    },
+    "걷기": {
+      "frames": 12,
+      "source": "걷기"
+    },
+    "달리기": {
+      "frames": 12,
+      "source": "달리기"
+    },
+    "점프": {
+      "frames": 12,
+      "source": "점프"
+    },
+    "낙하착지": {
+      "frames": 12,
+      "source": "낙하착지"
+    },
+    "대시": {
+      "frames": 12,
+      "source": "대시"
+    },
+    "죽음_2": {
+      "frames": 12,
+      "source": "죽음_2"
+    }
+  },
+  "attack": {
+    "id": "B",
+    "name": "B 확정 · 양손 두 타",
+    "description": "1타 가로베기 → 2타 내려베기 · 가로 4프레임은 입력 시간 만료 시에만 사용",
+    "fxStep": 30,
+    "D": [
+      [
+        16,
+        60
+      ],
+      [
+        20,
+        70
+      ],
+      [
+        28,
+        110
+      ],
+      [
+        36,
+        80
+      ]
+    ],
+    "H": [
+      [
+        15,
+        65
+      ],
+      [
+        19,
+        145
+      ],
+      [
+        27,
+        65
+      ],
+      [
+        36,
+        85
+      ]
+    ],
+    "impact": [
+      2,
+      1
+    ],
+    "totals": [
+      320,
+      360
+    ],
+    "impactMs": [
+      130,
+      65
+    ],
+    "combo": {
+      "order": [
+        "H",
+        "D"
+      ],
+      "secondClickWindowMs": 300,
+      "firstActiveFrames": 3,
+      "firstRecoveryFrame": 4,
+      "bufferSecondClick": true
+    }
+  },
+  "attack_source": "공격_양손",
+  "effects": {
+    "enabled": false,
+    "status": "사용자 요청으로 제거 후 확정"
+  },
+  "user_retouch_sha256": "6af79a399f335a3270e0482d6f129608a9441f404c4f577d4a65ce362cfdc2d2"
+}

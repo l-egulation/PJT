@@ -1,0 +1,112 @@
+{
+  "canvas": [
+    384,
+    256
+  ],
+  "groundAnchor": [
+    192,
+    232
+  ],
+  "assets": [
+    {
+      "id": "blue-idle",
+      "file": "blue-idle.png",
+      "visibleBounds": [
+        155,
+        93,
+        229,
+        232
+      ],
+      "bodyHeight": 139,
+      "lift": 0,
+      "opaqueColors": 17
+    },
+    {
+      "id": "rose-idle",
+      "file": "rose-idle.png",
+      "visibleBounds": [
+        136,
+        112,
+        248,
+        232
+      ],
+      "bodyHeight": 120,
+      "lift": 0,
+      "opaqueColors": 15
+    },
+    {
+      "id": "rose-shot",
+      "file": "rose-shot.png",
+      "visibleBounds": [
+        142,
+        45,
+        242,
+        184
+      ],
+      "bodyHeight": 139,
+      "lift": 48,
+      "opaqueColors": 14
+    },
+    {
+      "id": "blue-roar-01",
+      "file": "blue-roar-01.png",
+      "visibleBounds": [
+        156,
+        70,
+        229,
+        223
+      ],
+      "bodyHeight": 153,
+      "lift": 9,
+      "opaqueColors": 17
+    },
+    {
+      "id": "fused-blue-idle",
+      "file": "fused-blue-idle.png",
+      "visibleBounds": [
+        139,
+        17,
+        246,
+        232
+      ],
+      "bodyHeight": 179,
+      "lift": 0,
+      "opaqueColors": 18
+    },
+    {
+      "id": "fused-blue-arrival-04",
+      "file": "fused-blue-arrival-04.png",
+      "visibleBounds": [
+        99,
+        6,
+        285,
+        237
+      ],
+      "bodyHeight": 179,
+      "lift": 0,
+      "opaqueColors": 18
+    },
+    {
+      "id": "player",
+      "file": "player.png",
+      "visibleBounds": [
+        159,
+        168,
+        225,
+        232
+      ],
+      "bodyHeight": 64,
+      "lift": 0,
+      "opaqueColors": 6
+    }
+  ],
+  "projectiles": [
+    {
+      "file": "rose-arrow.png",
+      "size": [
+        32,
+        10
+      ]
+    }
+  ]
+}

@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Deviant · 정비소 증강 검토</title><style>html{color-scheme:light dark}body{margin:0;padding:24px;background:light-dark(#e9ede7,#101511)}.preview{max-width:1120px;margin:auto}@media(max-width:500px){body{padding:8px}}</style></head><body><div class="preview">
+<div id="deviant-augment-workbench" lang="ko">
+  <style>
+    #deviant-augment-workbench{color-scheme:light dark;--paper:light-dark(#f7f4ed,#171b1a);--surface:light-dark(#fffdf8,#222825);--text:light-dark(#212c27,#edf0e8);--sub:light-dark(#536158,#b2bdb3);--line:light-dark(#d4dcd2,#414b43);--safe:light-dark(#226245,#a3d0ad);--risk:light-dark(#94501e,#edbb81);--wash:light-dark(#e8eee4,#303c32);font-family:'Malgun Gothic','Apple SD Gothic Neo',system-ui,sans-serif;color:var(--text);font-size:15px;line-height:1.65;overflow-wrap:anywhere}
+    #deviant-augment-workbench *{box-sizing:border-box}
+    #deviant-augment-workbench [hidden]{display:none!important}
+    #deviant-augment-workbench .aw-shell{background:var(--paper);padding:30px;border-radius:20px}
+    #deviant-augment-workbench .aw-header{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;border-bottom:1px solid var(--line);padding-bottom:22px}
+    #deviant-augment-workbench .aw-brand{letter-spacing:.22em;font-size:12px;font-weight:650;color:var(--sub)}
+    #deviant-augment-workbench h1{font-size:30px;letter-spacing:-.06em;line-height:1.25;margin:9px 0 8px;font-weight:700}
+    #deviant-augment-workbench .aw-subtitle{margin:0;color:var(--sub);font-size:13px}
+    #deviant-augment-workbench .aw-stamp{border:1px solid var(--line);padding:5px 10px;border-radius:6px;white-space:nowrap;font-size:12px;color:var(--sub)}
+    #deviant-augment-workbench button,#deviant-augment-workbench select{font:inherit;color:inherit}
+    #deviant-augment-workbench button{cursor:pointer}
+    #deviant-augment-workbench button:focus-visible,#deviant-augment-workbench select:focus-visible{outline:3px solid var(--risk);outline-offset:4px}
+    #deviant-augment-workbench .aw-tabs{display:flex;gap:6px;flex-wrap:wrap;margin:20px 0}
+    #deviant-augment-workbench .aw-tab{border:0;border-radius:7px;background:transparent;color:var(--sub);padding:10px 15px;font-weight:600}
+    #deviant-augment-workbench .aw-tab[aria-selected=true]{background:var(--text);color:var(--paper)}
+    #deviant-augment-workbench .aw-toolbar{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:0 0 20px}
+    #deviant-augment-workbench .aw-heading{font-size:17px;font-weight:650;margin:0}
+    #deviant-augment-workbench .aw-caption{font-size:12px;color:var(--sub);margin:3px 0 0}
+    #deviant-augment-workbench .aw-action{background:var(--surface);border:1px solid var(--line);border-radius:7px;padding:9px 14px;min-height:44px}
+    #deviant-augment-workbench .aw-action:hover{background:var(--wash)}
+    #deviant-augment-workbench .aw-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:stretch}
+    #deviant-augment-workbench .aw-card{background:var(--surface);border:1px solid var(--line);border-radius:12px;display:flex;flex-direction:column;overflow:hidden;position:relative}
+    #deviant-augment-workbench .aw-card::before{content:'';height:4px;background:var(--risk)}
+    #deviant-augment-workbench .aw-card[data-kind=safe]::before{background:var(--safe)}
+    #deviant-augment-workbench .aw-card.aw-chosen{outline:2px solid var(--text);outline-offset:3px}
+    #deviant-augment-workbench .aw-card-inner{padding:20px;display:flex;flex-direction:column;flex:1;gap:15px}
+    #deviant-augment-workbench .aw-card-top{display:flex;align-items:center;justify-content:space-between;gap:8px;color:var(--sub);font-size:11px;letter-spacing:.03em}
+    #deviant-augment-workbench .aw-kind{font-weight:700;color:var(--risk)}
+    #deviant-augment-workbench [data-kind=safe] .aw-kind{color:var(--safe)}
+    #deviant-augment-workbench .aw-name{font-size:21px;line-height:1.4;letter-spacing:-.055em;margin:0;font-weight:700;min-height:59px;word-break:keep-all;overflow-wrap:anywhere}
+    #deviant-augment-workbench .aw-play{font-size:12px;color:var(--sub);margin:5px 0 0;min-height:40px}
+    #deviant-augment-workbench .aw-effect{padding-top:12px;border-top:1px solid var(--line)}
+    #deviant-augment-workbench .aw-effect-label{font-size:11px;font-weight:650;color:var(--safe);display:block;margin-bottom:5px}
+    #deviant-augment-workbench .aw-effect.aw-cost .aw-effect-label{color:var(--risk)}
+    #deviant-augment-workbench .aw-effect p{margin:0;font-size:15px;line-height:1.8;word-break:keep-all}
+    #deviant-augment-workbench .aw-cost{margin-top:auto}
+    #deviant-augment-workbench .aw-note{font-size:12px;color:var(--sub);margin:8px 0 0;line-height:1.8;word-break:keep-all}
+    #deviant-augment-workbench .aw-notes{color:var(--sub);font-size:12px}
+    #deviant-augment-workbench .aw-notes summary{cursor:pointer;min-height:32px;display:list-item;padding:5px 0}
+    #deviant-augment-workbench .aw-effect strong{font-weight:700}
+    #deviant-augment-workbench .aw-pick{background:var(--text);color:var(--paper);border:1px solid transparent;padding:11px 12px;border-radius:7px;width:100%;font-weight:600;margin-top:auto;min-height:44px}
+    #deviant-augment-workbench .aw-pick:hover{opacity:.86}
+    #deviant-augment-workbench .aw-pick[aria-pressed=true]{background:var(--wash);color:var(--text);border-color:var(--line)}
+    #deviant-augment-workbench .aw-result{margin:20px 0 0;padding:15px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:14px;min-height:57px}
+    #deviant-augment-workbench .aw-result strong{font-weight:650}
+    #deviant-augment-workbench .aw-settings{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:15px;font-size:12px;color:var(--sub)}
+    #deviant-augment-workbench .aw-filter{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 18px}
+    #deviant-augment-workbench .aw-filter button{border:1px solid var(--line);border-radius:20px;background:transparent;padding:7px 12px;font-size:12px;min-height:38px}
+    #deviant-augment-workbench .aw-filter button[aria-pressed=true]{background:var(--text);color:var(--paper);border-color:var(--text)}
+    #deviant-augment-workbench .aw-catalog .aw-name{font-size:18px;min-height:51px}
+    #deviant-augment-workbench .aw-catalog .aw-card-inner{padding:17px;gap:12px}
+    #deviant-augment-workbench .aw-foot{margin-top:24px;padding-top:16px;border-top:1px solid var(--line);display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap;color:var(--sub);font-size:11px}
+    #deviant-augment-workbench .aw-foot p{margin:0;max-width:620px}
+    @media(max-width:780px){#deviant-augment-workbench .aw-shell{padding:22px}#deviant-augment-workbench .aw-options{grid-template-columns:repeat(2,minmax(0,1fr))}#deviant-augment-workbench .aw-options:not(.aw-catalog)>:first-child{grid-column:1/-1}#deviant-augment-workbench .aw-options:not(.aw-catalog)>:first-child .aw-name,#deviant-augment-workbench .aw-options:not(.aw-catalog)>:first-child .aw-play{min-height:0}}
+    @media(max-width:500px){#deviant-augment-workbench .aw-shell{padding:18px 14px;border-radius:12px}#deviant-augment-workbench h1{font-size:25px}#deviant-augment-workbench .aw-options{grid-template-columns:minmax(0,1fr)}#deviant-augment-workbench .aw-card-inner{padding:18px}#deviant-augment-workbench .aw-name,#deviant-augment-workbench .aw-play{min-height:0}#deviant-augment-workbench .aw-stamp{display:none}#deviant-augment-workbench .aw-tab{padding:10px 12px}#deviant-augment-workbench .aw-filter button{min-height:44px}}
+  </style>
+  <main class="aw-shell">
+    <header class="aw-header">
+      <div><div class="aw-brand">DEVIANT / AUGMENT STUDY</div><h1>정비소 · 증강 작업대</h1><p class="aw-subtitle">확실한 성장 하나, 대가가 있는 선택 둘.</p></div>
+      <span class="aw-stamp">Unity 시험 적용 · 수치 검토용</span>
+    </header>
+    <nav class="aw-tabs" role="tablist" aria-label="증강 보기">
+      <button type="button" class="aw-tab" id="aw-draw-tab" role="tab" aria-selected="true" aria-controls="aw-draw">3장 선택 체험</button>
+      <button type="button" class="aw-tab" id="aw-library-tab" role="tab" aria-selected="false" aria-controls="aw-library">전체 후보 39종</button>
+    </nav>
+    <section id="aw-draw" role="tabpanel" aria-labelledby="aw-draw-tab">
+      <div class="aw-toolbar"><div><h2 class="aw-heading">이번 정비소의 제안</h2><p class="aw-caption">안정형 1장 + 서로 다른 계열의 도박형 2장</p></div><button type="button" class="aw-action" id="aw-redraw">다른 제안 보기 ↻</button></div>
+      <div id="aw-offer" class="aw-options"></div>
+      <div id="aw-result" class="aw-result" role="status" aria-live="polite">세 장 중 마음에 드는 증강을 선택해 보세요.</div>
+      <p class="aw-settings">체험용 추첨이며 실제 획득 확률은 미정입니다.</p>
+    </section>
+    <section id="aw-library" role="tabpanel" aria-labelledby="aw-library-tab" hidden>
+      <div class="aw-toolbar"><div><h2 class="aw-heading">증강 후보 도감</h2><p class="aw-caption" id="aw-count" aria-live="polite">39종 · 안정형 12 / 도박형 27</p></div></div>
+      <div class="aw-filter" role="group" aria-label="후보 계열 필터">
+        <button type="button" data-filter="all" aria-pressed="true">전체 39</button>
+        <button type="button" data-filter="new" aria-pressed="false">이번 채용 2</button>
+        <button type="button" data-filter="safe" aria-pressed="false">안정형 12</button>
+        <button type="button" data-filter="special" aria-pressed="false">특수 기믹 4</button>
+        <button type="button" data-filter="slow" aria-pressed="false">이동속도 대가 3</button>
+        <button type="button" data-filter="weapon" aria-pressed="false">무기 소모 6</button>
+        <button type="button" data-filter="combat" aria-pressed="false">전투 습관 13</button>
+        <button type="button" data-filter="fun" aria-pressed="false">유쾌한 한 방 1</button>
+      </div>
+      <div id="aw-catalog" class="aw-options aw-catalog"></div>
+    </section>
+    <footer class="aw-foot"><p>증강 효과를 비교하는 기획 검토 화면입니다. ‘무기 공격’은 기본 공격과 스킬로 직접 주는 피해를 뜻합니다. ‘잔량’은 도면을 더 쓸 수 있는 양입니다. 효과는 각 카드에 적힌 수치가 기준입니다. 이동속도는 걷기에만 적용하며, 대시·점프 성능은 그대로입니다. 같은 능력치의 증강 수치는 더해서 적용합니다. ‘내구도 대기’ 카드는 도면 내구도 구현 전까지 게임에서 제안하지 않습니다.</p><span>12 STABLE / 27 RISK</span></footer>
+  </main>
+  <script>
+  (()=>{
+    const root=document.getElementById('deviant-augment-workbench');
+    const groups={"safe": "안정 성장", "special": "특수 기믹", "slow": "이동속도 대가", "weapon": "무기 소모", "combat": "전투 습관", "fun": "유쾌한 한 방"};
+    const augments=[
+  {
+    "id": "S01",
+    "group": "safe",
+    "name": "정석대로 갑시다",
+    "gain": "주는 피해가 20% 증가합니다.",
+    "cost": "불이익이 없습니다.",
+    "play": "어떤 무기를 써도 확실하게 강해집니다.",
+    "note": "공통 피해 증가 12%에 8%를 더한 최종 수치입니다.",
+    "runtime": "implemented",
+    "effect": {
+      "damage": 0.2
+    }
+  },
+  {
+    "id": "S02",
+    "group": "safe",
+    "name": "두꺼운 종이",
+    "gain": "주는 피해가 12% 증가합니다. 최대 체력이 20% 늘고, 늘어난 만큼 체력을 회복합니다.",
+    "cost": "불이익이 없습니다.",
+    "play": "공격과 생존을 함께 챙깁니다.",
+    "runtime": "implemented",
+    "effect": {
+      "damage": 0.12,
+      "maxHealth": 0.2
+    }
+  },
+  {
+    "id": "S03",
+    "group": "safe",
+    "name": "보호 코팅",
+    "gain": "주는 피해가 12% 증가합니다. 받는 피해는 12% 줄어듭니다.",
+    "cost": "불이익이 없습니다.",
+    "play": "더 세게 때리고 덜 아픕니다.",
+    "runtime": "implemented",
+    "effect": {
+      "damage": 0.12,
+      "incoming": -0.12
+    }
+  },
+  {
+    "id": "S04",
+    "group": "safe",
+    "name": "손에 익은 필체",
+    "gain": "주는 피해가 12% 증가합니다. 기본 공격 속도가 15% 빨라집니다.",
+    "cost": "불이익이 없습니다.",
+    "play": "기본 공격이 더 경쾌해집니다.",
+    "note": "기본 공격의 시작부터 끝까지 동작 속도가 15% 빨라집니다. 스킬 속도는 바꾸지 않습니다.",
+    "runtime": "implemented",
+    "effect": {
+      "damage": 0.12,
+      "basicSpeed": 0.15
+    }
+  },
+  {
+    "id": "S05",
+    "group": "safe",
+    "name": "빠른 교정",
+    "gain": "주는 피해가 12% 증가합니다. 스킬 대기시간이 15% 줄어듭니다.",
+    "cost": "불이익이 없습니다.",
+    "play": "스킬을 더 자주 쓸 수 있습니다.",
+    "note": "스킬 충전 대기시간을 15% 줄입니다. 잉크의 대기시간 감소와는 합연산합니다.",
+    "runtime": "implemented",
+    "effect": {
+      "damage": 0.12,
+      "skillCooldown": 0.15
+    }
+  },
+  {
+    "id": "S07",
+    "group": "safe",
+    "batch": "stable",
+    "name": "알뜰한 필사",
+    "gain": "주는 피해가 12% 증가합니다. 공격할 때 도면을 20% 덜 소모합니다.",
+    "cost": "불이익이 없습니다.",
+    "play": "새로 얻은 무기도 더 오래 쓸 수 있습니다.",
+    "note": "소모량에 소수가 생길 때 반올림하는 방법은 아직 정하지 않았습니다.",
+    "runtime": "excluded_until_durability"
+  },
+  {
+    "id": "S08",
+    "group": "safe",
+    "batch": "stable",
+    "name": "다음 장도 든든하게",
+    "gain": "주는 피해가 12% 증가합니다. 도면을 다 쓰면 최대 체력의 15%만큼 보호막을 얻습니다.",
+    "cost": "불이익이 없습니다.",
+    "play": "다 쓴 도면이 다음 싸움의 안전장치가 됩니다.",
+    "note": "전투에서 도면을 다 썼을 때만 발동합니다. 이 보호막은 최대 체력의 15%까지만 채워집니다. 무기를 바꿔도 남아 있습니다.",
+    "runtime": "excluded_until_durability"
+  },
+  {
+    "id": "S09",
+    "group": "safe",
+    "batch": "stable",
+    "name": "회복용 여백",
+    "gain": "주는 피해가 12% 증가합니다. 체력을 회복할 때 회복량이 30% 늘어납니다.",
+    "cost": "불이익이 없습니다.",
+    "play": "같은 회복으로 더 많이 채웁니다.",
+    "note": "이 증강만으로 체력이 회복되지는 않습니다. 다른 회복량 증가·감소와는 합연산합니다. 예를 들어 대용량 잉크병과 함께 가지면 회복량은 80%입니다.",
+    "runtime": "implemented",
+    "effect": {
+      "damage": 0.12,
+      "healing": 0.3
+    }
+  },
+  {
+    "id": "S10",
+    "group": "safe",
+    "batch": "stable",
+    "name": "가벼운 발걸음",
+    "gain": "주는 피해가 12% 증가합니다. 이동속도가 15% 빨라집니다.",
+    "cost": "불이익이 없습니다.",
+    "play": "다음 무기와 공격 기회에 더 빨리 닿습니다.",
+    "note": "걷기 속도만 바꿉니다. 대시 거리·속도와 점프 성능은 유지하는 안입니다.",
+    "runtime": "implemented",
+    "effect": {
+      "damage": 0.12,
+      "walkSpeed": 0.15
+    }
+  },
+  {
+    "id": "S12",
+    "group": "safe",
+    "batch": "stable",
+    "name": "착실한 마침표",
+    "gain": "주는 피해가 12% 증가합니다. 같은 적을 세 번 맞힐 때마다, 세 번째 공격 피해의 60%를 한 번 더 줍니다.",
+    "cost": "불이익이 없습니다.",
+    "play": "무기를 바꿔도 쌓아 둔 횟수는 남습니다.",
+    "note": "적마다 따로 셉니다. 한 번의 공격은 한 번만 세며, 추가 피해는 횟수에 넣지 않습니다.",
+    "runtime": "implemented",
+    "effect": {
+      "damage": 0.12,
+      "sameEnemyHits": 3,
+      "sameEnemyExtra": 0.6
+    }
+  },
+  {
+    "id": "S13",
+    "group": "safe",
+    "batch": "stable",
+    "name": "끝까지 읽기",
+    "gain": "주는 피해가 12% 증가합니다. 체력이 30% 이하인 적에게는 피해가 추가로 35% 증가합니다.",
+    "cost": "불이익이 없습니다.",
+    "play": "쓰러지기 직전인 적을 확실하게 마무리합니다.",
+    "note": "공격이 맞기 직전의 적 체력을 기준으로 계산하는 안입니다.",
+    "runtime": "implemented",
+    "effect": {
+      "damage": 0.12,
+      "executeThreshold": 0.3,
+      "executeDamage": 0.35
+    }
+  },
+  {
+    "id": "S14",
+    "group": "safe",
+    "batch": "stable",
+    "name": "큰 글씨도 문제없다",
+    "gain": "주는 피해가 12% 증가합니다. 엘리트와 보스에게는 무기 공격 피해가 추가로 25% 증가합니다.",
+    "cost": "불이익이 없습니다.",
+    "play": "강한 적을 상대할 때 더 든든합니다.",
+    "runtime": "implemented",
+    "effect": {
+      "damage": 0.12,
+      "eliteBossWeaponDamage": 0.25
+    }
+  },
+  {
+    "id": "W01",
+    "group": "weapon",
+    "name": "화력은 수명과 반비례",
+    "gain": "무기로 주는 피해가 40% 증가합니다.",
+    "cost": "공격할 때 도면을 60% 더 소모합니다.",
+    "play": "빨리 소모하는 대신 강하게 때립니다.",
+    "runtime": "excluded_until_durability"
+  },
+  {
+    "id": "W04",
+    "group": "weapon",
+    "name": "중고가 더 좋아",
+    "gain": "도면 잔량이 줄수록 무기 피해가 증가합니다. 최대 60%까지 강해집니다.",
+    "cost": "도면 잔량이 절반보다 많으면 무기 피해가 15% 줄어듭니다.",
+    "play": "많이 쓴 무기일수록 강해집니다.",
+    "note": "잔량에 따라 피해가 얼마나 오르는지는 아직 정하지 않았습니다.",
+    "runtime": "excluded_until_durability"
+  },
+  {
+    "id": "W05",
+    "group": "weapon",
+    "name": "구두쇠의 명작",
+    "gain": "공격할 때 도면을 40% 덜 소모합니다.",
+    "cost": "무기로 주는 피해가 25% 줄어듭니다.",
+    "play": "덜 세지만 오래 씁니다.",
+    "runtime": "excluded_until_durability"
+  },
+  {
+    "id": "W07",
+    "group": "weapon",
+    "name": "한 우물만 팝니다",
+    "gain": "같은 무기로 계속 공격하면 피해가 증가합니다. 최대 50%까지 강해집니다.",
+    "cost": "공격할 때 도면을 40% 더 소모합니다. 다른 무기로 공격하면 쌓인 강화가 모두 사라집니다.",
+    "play": "한 무기로 밀어붙이되 도면도 더 빨리 씁니다.",
+    "note": "도면 소모량 증가는 처음부터 모든 무기 공격에 적용합니다. 공격 한 번에 오르는 피해 수치는 아직 정하지 않았습니다.",
+    "batch": "tuned",
+    "runtime": "excluded_until_durability"
+  },
+  {
+    "id": "W08",
+    "group": "weapon",
+    "name": "이번엔 너다",
+    "gain": "다른 무기로 바꿔 공격하면, 교대 직후 첫 공격의 피해가 45% 증가합니다.",
+    "cost": "같은 무기로 계속 공격하면 두 번째부터 피해가 20% 줄어듭니다.",
+    "play": "교대할 때마다 첫 한 방이 강해집니다.",
+    "batch": "tuned",
+    "note": "예를 들어 A로 공격한 뒤 B로 공격하면 B의 첫 공격이 강해집니다. 다시 A로 공격하면 A의 첫 공격이 강해집니다. 한 무기의 모든 공격이 계속 강해지는 효과는 아닙니다.",
+    "runtime": "implemented",
+    "effect": {
+      "switchFirstDamage": 0.45,
+      "repeatAttackDamage": -0.2
+    }
+  },
+  {
+    "id": "C01",
+    "group": "combat",
+    "name": "종이갑옷",
+    "gain": "주는 피해가 35% 증가합니다.",
+    "cost": "받는 피해도 25% 증가합니다.",
+    "play": "더 아프게 맞기 전에 먼저 쓰러뜨립니다.",
+    "runtime": "implemented",
+    "effect": {
+      "damage": 0.35,
+      "incoming": 0.25
+    }
+  },
+  {
+    "id": "C02",
+    "group": "combat",
+    "name": "잉크가 아니라 피였네",
+    "gain": "무기로 준 피해의 일부만큼 체력을 회복합니다. 한 번에 최대 3까지만 회복하며, 회복 후 1초 동안은 다시 회복할 수 없습니다.",
+    "cost": "최대 체력이 30% 줄어듭니다. 받는 피해도 25% 증가합니다.",
+    "play": "공격으로 회복하지만 한 번 크게 맞으면 위험합니다.",
+    "note": "피해의 10%를 회복하는 시험값입니다. 적의 체력을 실제로 줄인 양이 기준입니다. 1초는 내부 쿨타임의 시험값입니다. 두 무기가 같은 회복 제한을 공유합니다. 여러 적을 한꺼번에 맞혀도 한 번에 최대 3만 회복합니다. 추가 피해·잉크 효과의 피해로는 회복하지 않습니다.",
+    "batch": "tuned",
+    "runtime": "implemented",
+    "effect": {
+      "maxHealth": -0.3,
+      "incoming": 0.25,
+      "leechRatio": 0.1,
+      "leechMaxHeal": 3,
+      "leechCooldown": 1
+    }
+  },
+  {
+    "id": "C03",
+    "group": "combat",
+    "name": "마감 직전",
+    "gain": "체력이 30% 이하일 때 주는 피해가 60% 증가합니다.",
+    "cost": "체력이 30%를 넘으면 주는 피해가 10% 줄어듭니다.",
+    "play": "위태로울 때 가장 강합니다.",
+    "runtime": "implemented",
+    "effect": {
+      "lowHealthThreshold": 0.3,
+      "lowHealthDamage": 0.6,
+      "highHealthDamage": -0.1
+    }
+  },
+  {
+    "id": "C04",
+    "group": "combat",
+    "name": "무사고 장인",
+    "gain": "피해를 받지 않는 동안 주는 피해가 점점 증가합니다. 최대 30%까지 강해집니다.",
+    "cost": "피해를 받으면 쌓인 강화가 모두 사라집니다. 이후 5초 동안 주는 피해가 20% 줄어듭니다.",
+    "play": "맞지 않고 버틸수록 강해집니다.",
+    "note": "적과의 거리 조건은 없습니다. 피해를 받지 않는 1초마다 5%씩 오르는 시험값입니다. 피격 후 5초 동안 피해가 줄고, 감소 시간이 끝나면 강화는 0부터 다시 쌓입니다.",
+    "batch": "tuned",
+    "runtime": "implemented",
+    "effect": {
+      "unhurtMaxDamage": 0.3,
+      "unhurtGainPerSecond": 0.05,
+      "hurtDamage": -0.2,
+      "hurtSeconds": 5
+    }
+  },
+  {
+    "id": "C05",
+    "group": "combat",
+    "name": "딱 한 놈만",
+    "gain": "주변에 적이 한 명뿐이면 주는 피해가 60% 증가합니다.",
+    "cost": "주변에 적이 두 명 이상이면 주는 피해가 20% 줄어듭니다.",
+    "play": "적을 한 명씩 떼어 내서 싸웁니다.",
+    "note": "내 위치에서 6칸 안의 살아 있는 적을 셉니다(시험값). 주변에 적이 없으면 효과가 없습니다.",
+    "runtime": "implemented",
+    "effect": {
+      "nearbyRadius": 6,
+      "aloneDamage": 0.6,
+      "crowdDamage": -0.2
+    }
+  },
+  {
+    "id": "C07",
+    "group": "combat",
+    "name": "천천히, 아주 세게",
+    "gain": "기본 공격 피해가 65% 증가합니다.",
+    "cost": "기본 공격 속도가 30% 느려집니다.",
+    "play": "한 번의 기회에 묵직하게 때립니다.",
+    "runtime": "implemented",
+    "effect": {
+      "basicDamage": 0.65,
+      "basicSpeed": -0.3
+    }
+  },
+  {
+    "id": "C08",
+    "group": "combat",
+    "name": "평타가 본업",
+    "gain": "기본 공격 피해가 50% 증가합니다.",
+    "cost": "스킬 피해가 50% 줄어듭니다.",
+    "play": "스킬보다 기본 공격에 집중합니다.",
+    "runtime": "implemented",
+    "effect": {
+      "basicDamage": 0.5,
+      "skillDamage": -0.5
+    }
+  },
+  {
+    "id": "M01",
+    "group": "slow",
+    "fresh": true,
+    "name": "느리지만 확실하게",
+    "gain": "주는 피해가 40% 증가합니다.",
+    "cost": "이동속도가 20% 느려집니다.",
+    "play": "느리게 움직이고 강하게 때립니다.",
+    "runtime": "implemented",
+    "effect": {
+      "damage": 0.4,
+      "walkSpeed": -0.2
+    }
+  },
+  {
+    "id": "M02",
+    "group": "slow",
+    "fresh": true,
+    "name": "걸어다니는 성벽",
+    "gain": "받는 피해가 45% 줄어듭니다.",
+    "cost": "이동속도가 25% 느려집니다.",
+    "play": "느려지는 대신 훨씬 단단해집니다.",
+    "batch": "tuned",
+    "runtime": "implemented",
+    "effect": {
+      "incoming": -0.45,
+      "walkSpeed": -0.25
+    }
+  },
+  {
+    "id": "M04",
+    "group": "slow",
+    "fresh": true,
+    "name": "제자리 인쇄소",
+    "gain": "세 번 맞힐 때마다, 세 번째 무기 공격의 피해를 한 번 더 줍니다.",
+    "cost": "이동속도가 20% 느려집니다.",
+    "play": "느린 발 대신 추가 타격을 얻습니다.",
+    "note": "한 번의 공격은 한 번만 셉니다. 추가 피해는 횟수에 넣지 않습니다. 무기를 바꿔도 횟수는 이어집니다. 추가 피해는 세 번째 공격 피해의 100%입니다.",
+    "runtime": "implemented",
+    "effect": {
+      "walkSpeed": -0.2,
+      "attackHits": 3,
+      "attackExtra": 1.0
+    }
+  },
+  {
+    "id": "W09",
+    "group": "weapon",
+    "name": "폐기물 재활용",
+    "gain": "도면을 다 쓰면 최대 체력의 30%를 회복합니다.",
+    "cost": "다른 방법으로 회복하는 체력은 50% 줄어듭니다.",
+    "play": "도면을 끝까지 쓰는 것이 회복 수단이 됩니다.",
+    "note": "전투에서 도면을 다 썼을 때만 발동합니다.",
+    "runtime": "excluded_until_durability"
+  },
+  {
+    "id": "C09",
+    "group": "combat",
+    "fresh": true,
+    "name": "스킬이 본업",
+    "gain": "스킬 피해가 60% 증가합니다.",
+    "cost": "기본 공격 피해가 35% 줄어듭니다.",
+    "play": "기본 공격보다 스킬에 집중합니다.",
+    "runtime": "implemented",
+    "effect": {
+      "skillDamage": 0.6,
+      "basicDamage": -0.35
+    }
+  },
+  {
+    "id": "C10",
+    "group": "combat",
+    "fresh": true,
+    "name": "다섯 번째는 진심",
+    "gain": "다섯 번 공격할 때마다, 다섯 번째 무기 공격의 피해가 250% 증가합니다.",
+    "cost": "나머지 네 번의 무기 공격은 피해가 20% 줄어듭니다.",
+    "play": "하나, 둘, 셋, 넷, 쾅.",
+    "note": "공격을 시작할 때 한 번씩 셉니다. 무기를 바꿔도 횟수는 이어집니다. 추가 피해는 횟수에 넣지 않습니다.",
+    "runtime": "implemented",
+    "effect": {
+      "everyAttack": 5,
+      "everyAttackDamage": 2.5,
+      "otherAttackDamage": -0.2
+    }
+  },
+  {
+    "id": "C11",
+    "group": "combat",
+    "fresh": true,
+    "name": "정면 승부",
+    "gain": "적의 정면에서 때리면 무기 공격 피해가 50% 증가합니다.",
+    "cost": "내 등 뒤에서 맞으면 받는 피해가 40% 증가합니다.",
+    "play": "마주 보고 싸우되 포위당하면 위험합니다.",
+    "note": "맞는 대상이 바라보는 좌우 방향을 기준으로 합니다. 정면과 후면의 경계(같은 x)는 정면으로 봅니다(시험값).",
+    "runtime": "implemented",
+    "effect": {
+      "frontWeaponDamage": 0.5,
+      "backIncoming": 0.4
+    }
+  },
+  {
+    "id": "C12",
+    "group": "combat",
+    "fresh": true,
+    "name": "행운의 대가",
+    "gain": "치명타 확률이 35%p 증가합니다.",
+    "cost": "최대 체력이 20% 줄어듭니다.",
+    "play": "얇아진 목숨으로 큰 한 방을 노립니다.",
+    "note": "치명타 피해는 기존 규칙(두 배)을 따릅니다. 치명타 확률은 다른 효과와 더하며 100%를 넘지 않습니다.",
+    "runtime": "implemented",
+    "effect": {
+      "critChance": 0.35,
+      "maxHealth": -0.2
+    }
+  },
+  {
+    "id": "X01",
+    "group": "special",
+    "batch": "special",
+    "name": "유령 작가",
+    "gain": "도면을 다 쓸 때마다 유령이 한 마리 생깁니다. 유령은 시간 제한 없이 나를 따라다니며 공격합니다. 최대 세 마리까지 모을 수 있습니다.",
+    "cost": "내 무기 공격 피해가 20% 줄어듭니다.",
+    "play": "새 무기로 싸우는 동안 유령들도 함께 싸웁니다.",
+    "note": "각 유령은 자신을 만든 도면의 마지막 무기 공격을 1초마다 60% 위력으로 반복하는 안입니다. 공격 수치는 생성 시점에 정하며 무기를 바꿔도 유지합니다. 유령은 도면을 소모하거나 다른 유령·추가 효과를 만들지 않습니다. 세 마리를 모은 뒤의 추가 생성 처리와 런 사이 유지 여부는 아직 정하지 않았습니다.",
+    "runtime": "excluded_until_durability"
+  },
+  {
+    "id": "X08",
+    "group": "special",
+    "batch": "special",
+    "name": "반송 봉투",
+    "gain": "공격으로 적의 탄환을 쳐내면 적에게 되돌려 보냅니다. 되돌려 보낸 탄환은 피해가 두 배가 됩니다.",
+    "cost": "내 무기 공격 피해가 20% 줄어듭니다. 적의 탄환에 맞으면 받는 피해가 30% 증가합니다.",
+    "play": "날아오는 탄환을 공격으로 받아칩니다.",
+    "note": "반사할 수 있는 탄환에만 적용합니다. 광선과 지형 공격은 제외합니다. 한 번 반사한 탄환은 다시 반사하지 않습니다. 근접 공격 판정으로만 쳐낼 수 있습니다.",
+    "runtime": "implemented",
+    "effect": {
+      "weaponDamage": -0.2,
+      "projectileIncoming": 0.3,
+      "reflectDamageMultiplier": 2.0
+    }
+  },
+  {
+    "id": "X09",
+    "group": "special",
+    "batch": "special",
+    "name": "위험한 책갈피",
+    "gain": "스킬 피해가 70% 증가합니다. 스킬을 쓴 자리에 책갈피가 생깁니다.",
+    "cost": "3초 뒤 책갈피가 있는 자리로 강제로 돌아갑니다. 그 자리가 위험해져도 돌아갑니다.",
+    "play": "공격하러 나가되 돌아올 자리는 정해집니다.",
+    "note": "책갈피는 최대 한 개입니다. 책갈피가 남아 있을 때 스킬을 다시 써도 위치와 복귀 시각은 바뀌지 않습니다. 도착점이 막혀 있으면 가장 가까운 설 수 있는 자리로 돌아갑니다(시험안).",
+    "runtime": "implemented",
+    "effect": {
+      "skillDamage": 0.7,
+      "bookmarkSeconds": 3
+    }
+  },
+  {
+    "id": "X11",
+    "group": "special",
+    "batch": "special",
+    "name": "피로 쓴 계약",
+    "gain": "스킬 피해가 80% 증가합니다. 스킬을 써도 도면 잔량은 줄지 않습니다.",
+    "cost": "스킬을 쓸 때마다 최대 체력의 4%를 대신 씁니다. 남은 체력이 비용보다 적거나 같으면 스킬을 쓸 수 없습니다.",
+    "play": "도면 대신 내 체력으로 스킬을 씁니다.",
+    "note": "스킬도 도면을 소모하는 구조일 때 사용할 수 있는 후보입니다. 스킬이 실제로 발동할 때 체력을 씁니다. 이 체력 소모는 피격이나 반격 효과를 발동하지 않는 안입니다.",
+    "runtime": "excluded_until_durability"
+  },
+  {
+    "id": "F02",
+    "group": "fun",
+    "name": "사인해 주세요",
+    "gain": "같은 적을 세 번 맞히면 큰 추가 피해를 줍니다.",
+    "cost": "세 번째 공격 전에 다른 적을 때리면 쌓은 표시가 사라집니다. 기본 공격 피해가 15% 줄어듭니다.",
+    "play": "한 적에게 서명을 끝까지 완성합니다.",
+    "note": "세 번째 공격 피해의 150%를 추가 피해로 주는 시험값입니다. 서명을 완성하면 표시는 처음부터 다시 쌓입니다. 한 번의 공격은 한 번만 셉니다.",
+    "runtime": "implemented",
+    "effect": {
+      "basicDamage": -0.15,
+      "signHits": 3,
+      "signExtra": 1.5
+    }
+  },
+  {
+    "id": "C13",
+    "name": "대용량 잉크병",
+    "group": "combat",
+    "batch": "adopted",
+    "gain": "최대 체력이 100% 증가합니다.",
+    "cost": "모든 체력 회복량이 50% 줄어듭니다.",
+    "play": "체력통은 커지지만 다시 채우기는 어렵습니다.",
+    "note": "최대 체력이 늘어난 만큼 현재 체력도 늘어납니다. 다른 회복량 증가·감소와는 합연산합니다.",
+    "runtime": "implemented",
+    "effect": {
+      "maxHealth": 1.0,
+      "healing": -0.5
+    }
+  },
+  {
+    "id": "C14",
+    "name": "성장통",
+    "group": "combat",
+    "batch": "adopted",
+    "gain": "적을 10마리 처치할 때마다 기존 최대 체력의 10%만큼 최대 체력이 늘어납니다. 최종적으로 기존 최대 체력의 150%까지 성장합니다.",
+    "cost": "선택하는 즉시 최대 체력이 기존의 30%로 줄어듭니다. 초반에는 크게 약해진 체력으로 버텨야 합니다.",
+    "play": "체력 100이라면 30에서 시작해 150까지 키웁니다.",
+    "note": "모든 비율은 이 증강을 선택하기 전의 최대 체력이 기준입니다. 기준이 100이면 30 → 40 → 50 순서로 성장합니다. 70마리 처치하면 원래 체력 100으로 돌아오고, 120마리 처치하면 최대치 150에 도달합니다. 최종 체력은 원래의 1.5배이며, 기존 수치에 150%를 더하는 뜻은 아닙니다. 최대 체력이 늘어난 만큼 현재 체력도 늘어납니다.",
+    "runtime": "implemented",
+    "effect": {
+      "growthStartRatio": 0.3,
+      "growthKills": 10,
+      "growthStepRatio": 0.1,
+      "growthFinalRatio": 1.5
+    }
+  }
+];
+    const byId=id=>augments.find(a=>a.id===id);
+    const initial={tab:'library',filter:'new',offer:['S02','X01','C09'],chosen:null};
+    let state={...initial};
+    const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const readable=s=>esc(s).replace(/([.!?])\s+/g,'$1<br>').replace(/([+-]?\d+(?:\.\d+)?%p?)/g,'<strong>$1</strong>');
+    function card(a,pick){
+      const safe=a.group==='safe',chosen=state.chosen===a.id;
+      const note=a.note||'';
+      return `<article class="aw-card${pick&&chosen?' aw-chosen':''}" data-kind="${safe?'safe':'risk'}" data-id="${a.id}" aria-label="${esc(a.name)}"><div class="aw-card-inner"><div class="aw-card-top"><span class="aw-kind">${safe?'안정형':'도박형'} · ${groups[a.group]}</span><span>${a.runtime==='excluded_until_durability'?'내구도 대기 · ':''}${a.batch==='adopted'?'채용 · ':''}${a.id}</span></div><div><h3 class="aw-name">${esc(a.name)}</h3><p class="aw-play">${esc(a.play)}</p></div><div class="aw-effect"><span class="aw-effect-label">효과</span><p>${readable(a.gain)}</p></div><div class="aw-effect aw-cost"><span class="aw-effect-label">${safe?'안정성':'대가'}</span><p>${readable(a.cost)}</p></div>${note?`<details class="aw-notes"><summary>세부 규칙</summary><p class="aw-note">${readable(note)}</p></details>`:''}${pick?`<button type="button" class="aw-pick" data-pick="${a.id}" aria-pressed="${chosen}" aria-label="${esc(a.name)} 선택">${chosen?'선택한 증강 ✓':'이 증강 선택'}</button>`:''}</div></article>`;
+    }
+    function save(){
+      if(window.openai?.setWidgetState)window.openai.setWidgetState({modelContent:{selectedAugment:state.chosen?byId(state.chosen):null,offer:state.offer.map(id=>byId(id).name)},privateContent:{...state}}).catch(()=>{});
+    }
+    function restore(saved){
+      const s=saved?.privateContent;
+      if(!s)return;
+      const offer=Array.isArray(s.offer)?s.offer.map(byId):[];
+      const validOffer=offer.length===3&&offer.every(Boolean)&&new Set(s.offer).size===3&&offer[0].group==='safe'&&offer[1].group!=='safe'&&offer[2].group!=='safe'&&offer[1].group!==offer[2].group;
+      state={tab:s.tab==='library'?'library':'draw',filter:['all','new',...Object.keys(groups)].includes(s.filter)?s.filter:'all',offer:validOffer?s.offer:initial.offer,chosen:validOffer&&s.offer.includes(s.chosen)?s.chosen:null};
+    }
+    function renderOffer(){
+      root.querySelector('#aw-offer').innerHTML=state.offer.map(id=>card(byId(id),true)).join('');
+      const selected=byId(state.chosen);
+      root.querySelector('#aw-result').innerHTML=selected?`선택한 증강 · <strong>${esc(selected.name)}</strong> — ${esc(selected.play)}`:'세 장 중 마음에 드는 증강을 선택해 보세요.';
+    }
+    function renderCatalog(){
+      const visible=augments.filter(a=>state.filter==='all'||(state.filter==='new'?a.batch==='adopted':a.group===state.filter));
+      root.querySelector('#aw-catalog').innerHTML=visible.map(a=>card(a,false)).join('');
+      root.querySelector('#aw-count').textContent=state.filter==='all'?'39종 · 안정형 12 / 도박형 27':`${state.filter==='new'?'이번에 채용한 증강':groups[state.filter]} · ${visible.length}종`;
+      root.querySelectorAll('[data-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter===state.filter)));
+    }
+    function render(){
+      ['draw','library'].forEach(name=>{
+        root.querySelector(`#aw-${name}`).hidden=state.tab!==name;
+        root.querySelector(`#aw-${name}-tab`).setAttribute('aria-selected',String(state.tab===name));
+      });
+      renderOffer();renderCatalog();
+    }
+    function draw(){
+      const sample=items=>items[Math.floor(Math.random()*items.length)];
+      const safe=sample(augments.filter(a=>a.group==='safe'));
+      const risk=augments.filter(a=>a.group!=='safe');
+      const first=sample(risk),second=sample(risk.filter(a=>a.group!==first.group));
+      state.offer=[safe.id,first.id,second.id];state.chosen=null;renderOffer();save();
+    }
+    root.addEventListener('click',e=>{
+      const button=e.target.closest('button');if(!button)return;
+      if(button.matches('[data-pick]')){state.chosen=button.dataset.pick;renderOffer();save();root.querySelector(`[data-pick="${state.chosen}"]`).focus();}
+      else if(button.id==='aw-redraw')draw();
+      else if(button.matches('[data-filter]')){state.filter=button.dataset.filter;renderCatalog();save();}
+      else if(button.getAttribute('role')==='tab'){state.tab=button.id==='aw-draw-tab'?'draw':'library';render();save();}
+    });
+    root.querySelector('.aw-tabs').addEventListener('keydown',e=>{
+      if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;
+      e.preventDefault();const tabs=[...root.querySelectorAll('[role=tab]')];
+      const index=tabs.indexOf(e.target);const next=e.key==='Home'?0:e.key==='End'?1:(index+1)%2;
+      tabs[next].click();tabs[next].focus();
+    });
+    window.addEventListener('openai:set_globals',e=>{if(e.detail?.globals?.widgetState){restore(e.detail.globals.widgetState);render();}});
+    restore(window.openai?.widgetState);render();
+  })();
+  </script>
+</div>
+
+</div></body></html>

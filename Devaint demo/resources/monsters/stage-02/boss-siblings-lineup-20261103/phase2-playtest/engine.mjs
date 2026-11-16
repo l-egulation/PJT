@@ -1,0 +1,94 @@
+export const U=32,FLOOR=444,W=960;
+export const overlap=(a,b)=>a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.y+a.h>b.y;
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+// Swept arrow rectangle projected onto the target and arrow axes.
+function arrowOverlaps(s, oldX, oldY, target) {
+ const speed=Math.hypot(s.vx,s.vy);
+ const ux=speed?s.vx/speed:1,uy=speed?s.vy/speed:0;
+ const dx=(s.x+oldX-target.x*2-target.w)/2,dy=(s.y+oldY-target.y*2-target.h)/2;
+ const length=(s.w+Math.hypot(s.x-oldX,s.y-oldY))/2,width=s.h/2;
+ return [[1,0],[0,1],[ux,uy],[-uy,ux]].every(([x,y])=>
+  Math.abs(dx*x+dy*y)<target.w/2*Math.abs(x)+target.h/2*Math.abs(y)
+   +length*Math.abs(ux*x+uy*y)+width*Math.abs(-uy*x+ux*y));
+}
+export class Battle {
+ constructor(V,P,random=Math.random){this.V=V;this.P=P;this.random=random;this.invincible=false;this.mode=0;this.mobile=false;this.reviveSeconds=V.ReviveSeconds;this.shieldMax=V.RevivalShieldHp??100;this.exchangeHp={rose:V.ExchangeRoseHp,blue:V.ExchangeBlueHp};this.reset();}
+ reset(){this.t=0;this.state='ready';this.player={x:480,y:FLOOR,vx:0,vy:0,face:-1,hp:100,ground:true,jumps:0,dashEnd:0,dashReady:0,inv:0,root:0,stun:0,cast:null,combo:0,comboEnd:0,specialReady:0};this.rose={id:'rose',x:48,hp:this.V.RoseHp,max:this.V.RoseHp,stun:0};this.blue={id:'blue',x:912,hp:this.V.BlueHp,max:this.V.BlueHp,stun:0};this.shots=[];this.zones=[];this.effects=[];this.events=[];this.pattern=null;this.lastPattern=0;this.restAt=.8;this.exchange=null;this.revival=null;this.push=null;this.hits=0;this.revives=0;this.message='2페이즈 시작을 누르세요';this.serial=0;}
+ start(){this.reset();this.state='active';this.message='Rose를 쓰러뜨리세요 · Blue는 반복 부활합니다';}
+ log(s){this.message=s;this.events.unshift({time:this.t,text:s});this.events.length=Math.min(10,this.events.length);}
+ body(){const p=this.player,b=this.P.hurtbox;return {x:p.x+p.face*b.offset_unity_facing_right[0]*U-b.size_unity[0]*U/2,y:p.y-b.size_unity[1]*U,w:b.size_unity[0]*U,h:b.size_unity[1]*U};}
+ bossBox(b){return {x:b.x-this.V.BossHurtWidth*U/2,y:(b.y??FLOOR)-this.V.BossHurtHeight*U,w:this.V.BossHurtWidth*U,h:this.V.BossHurtHeight*U};}
+ hurt(n,label,stun=0){const p=this.player;if(this.state!=='active'||this.invincible||this.t<p.inv||this.t<p.dashEnd-(this.P.movement.dashDuration-this.P.movement.dashInvulnerability))return false;p.hp=Math.max(0,p.hp-n);p.inv=this.t+.3;if(stun){p.stun=Math.max(p.stun,this.t+stun);p.cast=null;}this.hits++;this.fx('damage',p.x,p.y-75,{text:'−'+n});if(!p.hp){this.state='dead';this.log('런 종료 · 개발용 리셋으로 재시험');}return true;}
+ fx(kind,x,y,extra={}){this.effects.push({kind,x,y,born:this.t,life:.35,...extra});}
+ vulnerable(b){if(!b.hp||this.state!=='active')return false;if(this.revival&&b.id==='rose')return this.revival.shieldHp<=0;if(!this.exchange)return true;return this.exchange.stage==='impact'&&this.exchange.hit===b.id;}
+ damageBoss(id,n,force=false){if(!force&&this.revival?.shieldHp>0&&id==='rose')return this.damageShield(n);const b=this[id];if(!b.hp||(!force&&!this.vulnerable(b)))return false;b.hp=Math.max(this.revival&&id==='rose'?1:0,b.hp-n);b.flash=this.t+.09;this.fx('damage',b.x,FLOOR-115,{text:'−'+Math.round(n)});if(!b.hp){if(id==='rose')this.absorb();else this.revive();}return true;}
+ shieldBox(){return {x:this.blue.x-94,y:FLOOR-166,w:188,h:166};}
+ damageShield(n){const r=this.revival;if(!r||r.shieldHp<=0)return false;r.shieldHp=Math.max(0,r.shieldHp-n);r.flash=this.t+.1;this.fx('damage',this.blue.x,FLOOR-180,{text:'방어막 −'+Math.round(n)});if(!r.shieldHp){this.fx('shieldBreak',this.blue.x,FLOOR-80,{life:.25});this.log('방어막 파괴! 치료가 끝나기 전에 Rose를 공격하세요');}return true;}
+ revive(){this.revival={start:this.t,home:this.rose.x,shieldHp:this.shieldMax};this.blue.x=clamp(this.blue.x,110,W-110);this.rose.x=clamp(this.blue.x+(this.blue.x<W/2?48:-48),40,W-40);this.rose.y=FLOOR;this.rose.land=null;this.blue.y=FLOOR;this.blue.hidden=false;this.exchange=null;this.pattern=null;this.restAt=Infinity;this.revives++;this.log('Blue 치료 6초 · 공유 방어막 HP 100을 깨면 Rose 공격 가능');}
+ absorb(){this.state='absorb';this.absorbAt=this.t;this.absorbFrom=this.player.x;this.blue.x=this.rose.x;this.blue.y=FLOOR;this.pattern=null;this.revival=null;this.exchange=null;this.shots=[];this.zones=[];this.player.cast=null;this.player.root=this.player.stun=0;this.log('Rose 사망 · 중앙 이동 → Blue 흡수 / 3페이즈 전환');}
+ relocate(b,x,y=FLOOR){this.fx('ghost',b.x,b.y??FLOOR,{boss:b.id,life:.22});b.x=clamp(x,80,W-80);b.y=y;b.arrive=this.t;this.fx('arrival',b.x,y,{boss:b.id,life:.25});}
+ stage(n){const p=this.player,side=p.x<W/2?1:-1,sign=this.random()<.5?-1:1;
+ if(n===1){this.relocate(this.rose,p.x+side*200,FLOOR-112);this.relocate(this.blue,Math.abs(clamp(p.x-side*300,80,880)-p.x)<150?p.x+side*400:p.x-side*300);}
+ if(n===2){this.relocate(this.blue,p.x+side*220);this.relocate(this.rose,Math.abs(clamp(p.x-side*230,80,880)-p.x)<150?p.x+side*460:p.x-side*230);}
+ if(n===3){const gap=(this.V.ExchangeMinGap+this.random()*(this.V.ExchangeMaxGap-this.V.ExchangeMinGap))*U,center=clamp(p.x+sign*70,80+gap/2,880-gap/2);this.relocate(this.rose,center-sign*gap/2);this.relocate(this.blue,center+sign*gap/2);}
+ if(n===4){const near=clamp(p.x-side*150,80,880),far=clamp(p.x+side*350,80,880);this.relocate(this.rose,near);this.relocate(this.blue,far);}
+ }
+ tickBosses(){const c=this.pattern;if(c?.id===2&&!c.done.has('blue-return')){const a=this.t-c.start,drop=clamp((a-(this.V.RootTell-this.V.BlueDropSeconds))/this.V.BlueDropSeconds,0,1);this.blue.y=FLOOR-this.V.BlueDropHeight*U*(1-drop*drop);this.blue.hidden=a<this.V.RootTell-this.V.BlueDropSeconds;if(!this.blue.hidden&&c.rootX===null){c.rootX=this.player.x;this.blue.x=c.rootX;}}else this.blue.hidden=false;if(!this.mobile)return;for(const b of [this.rose,this.blue]){if(b.land){const a=clamp((this.t-b.land.start)/.32,0,1);b.y=b.land.y+(FLOOR-b.land.y)*a*a;if(a>=1){b.land=null;b.open=this.t+.9;this.fx('arrival',b.x,FLOOR,{boss:b.id,life:.2});}}}
+ if(c?.id===1)this.event(c,'rose-return',this.V.StunArrowTell+this.V.DuoReturnDelay,()=>this.relocate(this.rose,c.roseHome));
+ }
+ begin(n){if(this.state!=='active'||this.revival)return;this.lastPattern=n;const roseHome=this.rose.x,blueHome=this.blue.x;if(this.mobile){for(const b of [this.rose,this.blue]){b.land=null;b.y=FLOOR;b.open=0;}if(n!==4)this.stage(n);}this.blue.hidden=false;const c=this.pattern={roseHome,blueHome,id:n,start:this.t,done:new Set(),rootX:null,aim:{x:this.player.x,y:this.player.y-32}};this.restAt=Infinity;this.rose.face=Math.sign(this.player.x-this.rose.x)||1;this.blue.face=Math.sign(this.player.x-this.blue.x)||-1;
+ if(n===3)this.exchange={stage:'tell',start:this.t};
+ if(n===4){const roseLeft=this.rose.x<this.blue.x;c.swaps=[{boss:'rose',from:this.rose.x,to:roseLeft?740:220},{boss:'blue',from:this.blue.x,to:roseLeft?220:740}];for(const m of c.swaps)this.relocate(this[m.boss],m.to);c.flanks=[this.rose,this.blue].map(b=>({owner:b.id,x:b.x<W/2?0:W-this.V.SwapWidth*U,y:FLOOR-this.V.SwapHeight*U,w:this.V.SwapWidth*U,h:this.V.SwapHeight*U,hit:false}));c.snipeAim={x:this.player.x,y:this.player.y-32};}
+ if(n===2){this.fx('ghost',this.blue.x,FLOOR,{boss:'blue',life:.22});this.blue.hidden=true;this.blue.y=FLOOR-this.V.BlueDropHeight*U;this.log('Blue 소멸 · 위에서 떨어져 속박 시전');}
+ this.log(['','① 스턴 화살 · 추적 폭탄','② Blue 낙하 속박 · 고속 유도 단발','③ 투사체 교환 · 부술 탄 선택','④ 중앙 유도 → 조준 회피 → 발밑 폭발'][n]);return c;}
+ event(c,key,at,fn){if(this.t-c.start>=at&&!c.done.has(key)){c.done.add(key);fn();}}
+ fire(b,speed,damage,stun=0){const y=(b.y??FLOOR)-U,aim=this.mobile&&b.y<FLOOR?Math.atan2(this.player.y-32-y,this.player.x-b.x):b.face>0?0:Math.PI;this.shots.push({id:++this.serial,kind:'arrow',owner:b.id,x:b.x+b.face*25,y,vx:Math.cos(aim)*speed*U,vy:Math.sin(aim)*speed*U,w:U,h:.3*U,damage,stun,born:this.t});b.fire=this.t;}
+ fireHoming(){const b=this.rose,x=b.x,y=(b.y??FLOOR)-60,aim=Math.atan2(this.player.y-32-y,this.player.x-x);this.shots.push({id:++this.serial,kind:'homing',owner:'rose',x,y,vx:Math.cos(aim)*this.V.DuoShotSpeed*U,vy:Math.sin(aim)*this.V.DuoShotSpeed*U,w:this.V.ArrowWidth*U,h:this.V.ArrowHeight*U,damage:this.V.DuoShotDamage,stun:0,born:this.t,homingSeconds:this.V.DuoHomingSeconds,turnRate:this.V.DuoTurnDegrees*Math.PI/180,life:this.V.DuoShotLife});b.fire=this.t;}
+ end(){if(this.mobile)for(const b of [this.rose,this.blue])b.open=this.t+.9;this.pattern=null;this.waiting=true;}
+ tickPattern(){const c=this.pattern,V=this.V;if(!c){if(this.revival||this.exchange)return;if(this.waiting){if(this.shots.length||this.zones.length||this.t<Math.max(this.rose.stun,this.blue.stun))return;this.waiting=false;this.restAt=this.t+V.EarlyPhaseRest;}if(this.t>=this.restAt){const ns=[1,2,3,4].filter(n=>n!==this.lastPattern);this.begin(this.mode||ns[Math.floor(this.random()*ns.length)]);}return;}
+ const a=this.t-c.start;
+ if(c.id===1){if(a<V.BombAt-V.BombLockBefore)c.aim={x:this.player.x,y:this.player.y-32};this.event(c,'arrow',V.StunArrowTell,()=>this.fire(this.rose,V.StunArrowSpeed,V.StunArrowDamage,V.StunArrowSeconds));this.event(c,'lock',V.BombAt-V.BombLockBefore,()=>{c.lock={...c.aim};this.log('폭탄 위치 고정 · 0.5초 후 폭발');});this.event(c,'bomb',V.BombAt,()=>{const pos=c.lock||c.aim,s=V.BombSize*U;this.fx('bomb',pos.x,pos.y,{size:s,life:.24});if(overlap(this.body(),{x:pos.x-s/2,y:pos.y-s/2,w:s,h:s}))this.hurt(V.BombDamage,'폭탄');});if(a>=V.BombAt+.15)this.end();}
+ if(c.id===2){this.event(c,'shot',V.RootTell,()=>this.fireHoming());this.event(c,'root',V.RootTell,()=>{this.blue.y=FLOOR;this.blue.hidden=false;this.fx('rootImpact',c.rootX,FLOOR,{life:.32});this.zones.push({x:c.rootX,start:this.t,until:this.t+V.RootLife,used:false});this.log('낙하 속박! Rose 유도 화살 1발');});this.event(c,'blue-return',V.RootTell+.12,()=>this.relocate(this.blue,c.blueHome));if(a>=V.RootTell+V.RootLife)this.end();}
+ if(c.id===3){this.event(c,'exchange',V.ExchangeTell,()=>{this.exchange.stage='flight';this.exchange.flightAt=this.t;this.exchange.baseSpeed=(Math.abs(this.rose.x-this.blue.x)-2*V.ExchangeSpawnOffset*U)/(2*V.ExchangeMeetSeconds*(1+.5*V.ExchangeAcceleration*V.ExchangeMeetSeconds));this.exchange.speed=this.exchange.baseSpeed;this.exchange.items=[{owner:'rose',target:'blue',x:this.rose.x+Math.sign(this.blue.x-this.rose.x)*V.ExchangeSpawnOffset*U,y:FLOOR-U,hp:this.exchangeHp.rose,max:this.exchangeHp.rose,impactDamage:V.ExchangeRoseImpactDamage,dir:Math.sign(this.blue.x-this.rose.x),active:true},{owner:'blue',target:'rose',x:this.blue.x+Math.sign(this.rose.x-this.blue.x)*V.ExchangeSpawnOffset*U,y:FLOOR-U,hp:this.exchangeHp.blue,max:this.exchangeHp.blue,impactDamage:V.ExchangeBlueImpactDamage,dir:Math.sign(this.rose.x-this.blue.x),active:true}];});}
+ if(c.id===4){
+ if(a>=V.SwapTrackAt&&a<V.SwapLockAt)c.snipeAim={x:this.player.x,y:this.player.y-32};
+ this.event(c,'flanks',V.SwapTell,()=>this.log('양옆 마법! 중앙으로 이동'));
+ if(a>=V.SwapTell&&a<V.SwapAreaEnd)for(const z of c.flanks){const w=z.w*clamp((a-V.SwapTell)/V.SwapExpandSeconds,0,1),area={...z,x:z.x===0?0:W-w,w};if(!z.hit&&overlap(this.body(),area)&&this.hurt(V.SwapDamage,z.owner==='rose'?'화살비':'마법 분출'))z.hit=true;}
+ this.event(c,'lock',V.SwapLockAt,()=>{c.snipeLock={...c.snipeAim};this.log('Rose 조준 고정! 대시로 사선을 피하세요');});
+ this.event(c,'snipe',V.SwapShotAt,()=>{const q=c.snipeLock??c.snipeAim,x=this.rose.x,y=FLOOR-72,ang=Math.atan2(q.y-y,q.x-x);this.shots.push({id:++this.serial,kind:'snipe',owner:'rose',x,y,vx:Math.cos(ang)*V.SwapShotSpeed*U,vy:Math.sin(ang)*V.SwapShotSpeed*U,w:42,h:8,damage:V.SwapShotDamage,stun:0,unparryable:true,piercing:true,born:this.t});this.rose.fire=this.t;c.blast={x:this.player.x,y:FLOOR-48};this.log('Blue 발밑 표식! 멈추지 말고 벗어나세요');});
+ this.event(c,'blast',V.SwapBlastAt,()=>{const q=c.blast;this.fx('bomb',q.x,q.y,{size:112,life:.2});if(overlap(this.body(),{x:q.x-56,y:FLOOR-104,w:112,h:104}))this.hurt(V.SwapBlastDamage,'발밑 폭발');});
+ this.event(c,'opening',V.SwapOpeningAt,()=>{for(const b of [this.rose,this.blue])b.open=this.t+V.SwapOpeningSeconds;this.log('협공 종료 · 1.5초 반격 기회');});
+ if(a>=V.SwapOpeningAt+V.SwapOpeningSeconds){this.pattern=null;this.waiting=false;this.restAt=this.t;}
+ }
+
+ }
+ tickExchange(dt){const e=this.exchange;if(!e||e.stage==='tell')return;if(e.stage==='impact'){if(this.t>=e.until){this.exchange=null;if(this.pattern?.id===3){this.end();this.waiting=false;this.restAt=this.t;}}return;}
+ const list=e.items.filter(s=>s.active);if(!list.length){this.exchange=null;this.log('교환 탄 모두 파괴 · 무적 해제');if(this.pattern?.id===3)this.end();return;}
+ if(list.length===1&&!e.finishing){const s=list[0];e.finishing=true;e.speed=Math.abs(this[s.target].x-s.x)/this.V.ExchangeSurvivorSeconds;this.log('한쪽 탄 파괴 성공 · 남은 탄 가속 반격');}
+ if(list.length===2)e.speed=e.baseSpeed*(1+this.V.ExchangeAcceleration*Math.max(0,this.t-e.flightAt));
+ for(const s of list)s.x+=s.dir*(e.speed??this.V.ExchangeSpeed*U)*dt;
+ if(list.length===2&&list[0].dir*(list[0].x-list[1].x)>=0){this.hurt(this.V.ExchangeDamage,'전장 폭발');this.fx('wave',W/2,FLOOR-60,{life:.25});this.exchange=null;this.log('교환 탄 중앙 충돌 · 전장 전체 폭발');if(this.pattern?.id===3)this.end();return;}
+ if(list.length===1){const s=list[0],b=this[s.target];if(s.dir*(s.x-b.x)>=0){e.stage='impact';e.hit=b.id;e.until=this.t+this.V.ExchangeStun;b.stun=e.until;this.fx('bomb',b.x,FLOOR-45,{size:80});this[this[s.owner].id].hp=Math.min(this[s.owner].max,this[s.owner].hp+this.V.ExchangeHeal);this.damageBoss(b.id,s.impactDamage??s.max,true);this.log('반격탄 적중 · '+(b.id==='rose'?'Rose':'Blue')+' '+(s.impactDamage??s.max)+' 피해 / 발사자 100 회복');}}
+ }
+ hitExchange(box,n,hit){const e=this.exchange;if(e?.stage!=='flight')return;for(const s of e.items){const key='shot'+s.owner;if(s.active&&!hit.has(key)&&overlap(box,{x:s.x-U,y:s.y-U,w:2*U,h:2*U})){hit.add(key);s.hp=Math.max(0,s.hp-n);this.fx('damage',s.x,s.y-45,{text:'−'+Math.round(n)});if(!s.hp){s.active=false;this.fx('shatter',s.x,s.y);this.log((s.owner==='rose'?'Rose 화살':'Blue 구체')+' 파괴');}}}
+ }
+ attack(special=false){const p=this.player;if(this.state!=='active'||p.cast||this.t<p.stun||this.push||this.t<p.dashEnd||special&&this.t<p.specialReady)return;const i=special?0:this.t<p.comboEnd?p.combo:0,d=special?this.P.special:this.P.basics[i];p.cast={special,data:d,index:i,start:this.t,dir:p.face,hit:new Set()};if(special)p.specialReady=this.t+d.cooldown;}
+ tickSword(){const p=this.player,c=p.cast;if(!c)return;const a=this.t-c.start,d=c.special?c.data.hits[0]:c.data,b=d.box,impact=c.special?d.time:c.data.impact,active=d.active;const box={x:p.x+c.dir*b.x*U-b.width*U/2,y:p.y-(b.y+b.height/2)*U,w:b.width*U,h:b.height*U};c.box=box;c.live=a>=impact&&a<impact+active;
+ if(c.live){const n=d.damage*(this.P.variance.minimum+this.random()*(this.P.variance.maximum-this.P.variance.minimum));this.hitExchange(box,n,c.hit);if(this.revival&&(this.revival.shieldHp>0||c.hit.has('reviveShield'))){if(!c.hit.has('reviveShield')&&overlap(box,this.shieldBox())){c.hit.add('reviveShield');this.damageShield(n);}}else for(const boss of [this.rose,this.blue])if(!c.hit.has(boss.id)&&overlap(box,this.bossBox(boss))&&this.damageBoss(boss.id,n))c.hit.add(boss.id);}
+ if(a>=(c.special?c.data.end:c.data.duration)){p.cast=null;if(!c.special){p.combo=(c.index+1)%this.P.basics.length;p.comboEnd=this.t+this.P.lateCombo;}}
+ }
+ blocked(){return this.t<this.player.root||this.t<this.player.stun;}
+ jump(){const p=this.player;if(this.state!=='active'||this.blocked()||this.push)return;if(p.jumps<2){p.vy=-this.P.movement.secondJumpVelocity*U;p.jumps++;p.ground=false;p.cast=null;}}
+ dash(){const p=this.player;if(this.state!=='active'||this.blocked()||this.push||this.t<p.dashReady)return;p.cast=null;p.dashEnd=this.t+this.P.movement.dashDuration;p.dashReady=p.dashEnd+this.P.movement.dashRecovery;}
+ tickPlayer(dt,input){const p=this.player,M=this.P.movement;if(this.push){const a=(this.t-this.push.at)/this.V.PushSeconds;p.x=this.push.from+(480-this.push.from)*clamp(a,0,1);if(a>=1){p.stun=this.t+this.push.after;this.push=null;}}
+ else {const axis=(input.has('d')||input.has('ArrowRight')?1:0)-(input.has('a')||input.has('ArrowLeft')?1:0);if(axis)p.face=axis;p.vx=this.blocked()?0:this.t<p.dashEnd?p.face*M.dashSpeed*U:axis*(p.cast?(p.cast.special?this.P.special.inputSpeed:2.5):M.runSpeed)*U;p.x=clamp(p.x+p.vx*dt,15,W-15);}
+ if(this.t<p.dashEnd&&!this.blocked())p.vy=0;else p.vy+=(p.vy<0?M.riseGravity:M.fallGravity)*U*dt;p.y+=p.vy*dt;if(p.y>=FLOOR){p.y=FLOOR;p.vy=0;p.ground=true;p.jumps=0;}else p.ground=false;
+ }
+ tickZones(){this.zones=this.zones.filter(z=>this.t<z.until);for(const z of this.zones)if(!z.used&&overlap(this.body(),{x:z.x-this.V.RootWidth*U/2,y:FLOOR-.12*U,w:this.V.RootWidth*U,h:.12*U})&&this.t>=this.player.inv){z.used=true;if(this.t<this.player.dashEnd-(this.P.movement.dashDuration-this.P.movement.dashInvulnerability)){this.log('대시로 낙하 속박 회피');continue;}this.player.root=this.t+this.V.RootSeconds;this.fx('root',this.player.x,this.player.y,{life:this.V.RootSeconds});this.log('속박 2초 · 같은 지대에서 재속박 없음');}this.zones=this.zones.filter(z=>this.t<z.until);}
+ tickShots(dt){for(const s of this.shots){if(s.kind==='homing'&&!s.reflected&&this.t-s.born<s.homingSeconds){const aim=Math.atan2(this.player.y-32-s.y,this.player.x-s.x),angle=Math.atan2(s.vy,s.vx),delta=Math.atan2(Math.sin(aim-angle),Math.cos(aim-angle)),next=angle+clamp(delta,-s.turnRate*dt,s.turnRate*dt);s.vx=Math.cos(next)*this.V.DuoShotSpeed*U;s.vy=Math.sin(next)*this.V.DuoShotSpeed*U;}const old=s.x,oldY=s.y;s.x+=s.vx*dt;s.y+=(s.vy||0)*dt;const hits=target=>arrowOverlaps(s,old,oldY,target);const c=this.player.cast;if(s.reflected){for(const b of [this.rose,this.blue])if(hits(this.bossBox(b))&&this.damageBoss(b.id,s.damage)){s.remove=true;break;}continue;}if(c?.live&&!c.special&&!s.unparryable&&hits(c.box)){s.reflected=true;s.vx=-s.vx;s.vy=-s.vy;this.fx('parry',s.x,s.y);this.log('화살 패링 · 반사');continue;}if(!s.hitPlayer&&hits(this.body())){const damaged=this.hurt(s.damage,'화살',s.stun);if(s.piercing)s.hitPlayer=damaged;else s.remove=true;}}this.shots=this.shots.filter(s=>!s.remove&&(!s.life||this.t-s.born<s.life)&&s.x>-40&&s.x<W+40&&s.y<FLOOR+20&&s.y>-40);}
+ step(dt,input=new Set()){if(this.state==='ready'||this.state==='dead'||this.state==='complete')return;this.t+=dt;if(this.state==='absorb'){const a=this.t-this.absorbAt;this.player.x=this.absorbFrom+(480-this.absorbFrom)*clamp(a/this.V.PushSeconds,0,1);this.player.y=FLOOR;if(a>2.3){this.state='complete';this.blue.hp=this.V.FusedBlueHp;this.log('2페이즈 종료 · 흡수형 Blue HP 2000 / 3페이즈 전투는 미포함');}return;}
+ this.tickPlayer(dt,input);this.tickBosses();this.tickSword();if(this.state!=='active')return;this.tickShots(dt);this.tickZones();if(this.state!=='active')return;
+ if(this.revival){if(this.t-this.revival.start>=this.reviveSeconds){this.blue.hp=this.V.BlueHp;this.rose.x=this.revival.home;this.revival=null;this.pattern=null;this.waiting=true;this.log('Blue 완전 부활 · 협공 재개');}}
+ else{this.tickPattern();if(this.state==='active')this.tickExchange(dt);}this.effects=this.effects.filter(e=>this.t-e.born<e.life);
+ }
+}

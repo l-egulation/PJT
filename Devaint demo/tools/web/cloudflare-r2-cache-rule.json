@@ -1,0 +1,23 @@
+{
+  "ref": "deviant_r2_versioned_unityweb",
+  "description": "Cache versioned Deviant Unity Web assets",
+  "expression": "(http.host eq \"deviant-assets.verte.kr\" and starts_with(http.request.uri.path, \"/releases/\") and ends_with(http.request.uri.path, \".unityweb\") and http.request.method in {\"GET\" \"HEAD\"})",
+  "action": "set_cache_settings",
+  "action_parameters": {
+    "cache": true,
+    "edge_ttl": {
+      "mode": "override_origin",
+      "default": 604800,
+      "status_code_ttl": [
+        {
+          "status_code_range": { "from": 400, "to": 599 },
+          "value": -1
+        }
+      ]
+    },
+    "browser_ttl": {
+      "mode": "respect_origin"
+    }
+  },
+  "enabled": true
+}

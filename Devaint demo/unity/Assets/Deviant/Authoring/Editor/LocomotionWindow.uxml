@@ -1,0 +1,31 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:Style src="LocomotionWindow.uss" />
+    <ui:ScrollView class="locomotion-editor">
+        <ui:Label text="이동 · 대시 · 점프 물리 실험" class="heading" />
+        <ui:Label text="수치를 편집한 뒤 플레이 중인 전투에 전체 프로필을 리셋 적용합니다. 원본 저장은 별도이며, 진행 중 공중 운동에 새 값을 섞지 않습니다. 기술별 이동·점프 횟수 2·입력 예약 0.08초는 편집하지 않습니다." class="description" />
+        <ui:Label name="source" class="description" />
+        <uie:ObjectField name="runtime" label="적용할 전투" />
+        <ui:FloatField name="runSpeed" label="일반 이동 (unit/s)" />
+        <ui:FloatField name="dashSpeed" label="대시 평균 속도 (unit/s)" />
+        <ui:FloatField name="dashDuration" label="대시 시간 (s)" />
+        <ui:FloatField name="dashHoldFraction" label="대시 최고속 유지 (시간 비율 0~0.9)" />
+        <ui:FloatField name="dashEaseOutPower" label="대시 감속 곡선 (1 일정, 2 quad, 3 cubic)" />
+        <ui:FloatField name="dashRecovery" label="대시 회복 (시작부터 s)" />
+        <ui:FloatField name="dashInvulnerability" label="대시 무적 (s)" />
+        <ui:FloatField name="dashJumpCarrySpeed" label="점프 취소 수평 속도 (unit/s)" />
+        <ui:FloatField name="dashJumpCarryDuration" label="점프 취소 유지 (s)" />
+        <ui:FloatField name="firstJumpVelocity" label="첫 점프 수직속도 (unit/s)" />
+        <ui:FloatField name="secondJumpVelocity" label="두 번째 점프 수직속도 (unit/s)" />
+        <ui:FloatField name="riseGravity" label="상승 중력 (unit/s²)" />
+        <ui:FloatField name="fallGravity" label="하강 중력 (unit/s²)" />
+        <ui:Label name="diff" class="description" />
+        <ui:VisualElement class="actions">
+            <ui:Button name="apply" text="전투 리셋 후 적용" />
+            <ui:Button name="save" text="원본 저장 · 생성물 갱신" />
+            <ui:Button name="reload" text="원본 재로드 (편집 폐기)" />
+        </ui:VisualElement>
+        <ui:Label name="state" class="description" />
+        <ui:Label name="status" class="description" />
+        <ui:Label text="Undo/Redo는 편집 값에 적용됩니다. 리셋·파일 저장을 되돌리지는 않습니다. 대시 거리에는 지형 접촉과 기존 물리 스텝 오차가 반영됩니다. 적용한 수치의 비교는 Sword and Dash A-B 창에서 실행합니다." class="description" />
+    </ui:ScrollView>
+</ui:UXML>

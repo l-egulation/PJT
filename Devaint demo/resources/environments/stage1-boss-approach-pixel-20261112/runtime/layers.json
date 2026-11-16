@@ -1,0 +1,39 @@
+{
+  "format": "stage1-boss-approach-pixel-v1",
+  "pixelsPerUnit": 32,
+  "dot": "2x2 px",
+  "filterMode": "Point",
+  "compression": "None",
+  "mipmaps": false,
+  "contact": "bottom row on the floor contact line; the colonnade's top 8px tuck under the 6u hall ceiling",
+  "references": [
+    "environments/stage1-clockroom-original-assets-20261112/source/corridor-rear.png",
+    "environments/stage1-clockroom-monumental-20261111/preview/a-arena.png"
+  ],
+  "layers": [
+    {
+      "file": "runtime/approach-colonnade.png",
+      "width": 440,
+      "height": 208,
+      "pivot": "bottom-left",
+      "sortingOrder": -46,
+      "role": "one repeating module of the low colonnade along the boss approach hall (tile horizontally)"
+    },
+    {
+      "file": "runtime/boss-room-towers.png",
+      "width": 960,
+      "height": 486,
+      "pivot": "bottom-left",
+      "sortingOrder": -45,
+      "role": "boss room rear: two towers joined by the top beam, 30u wide"
+    },
+    {
+      "file": "runtime/boss-room-rose-window.png",
+      "width": 960,
+      "height": 486,
+      "pivot": "bottom-left",
+      "sortingOrder": -95,
+      "role": "faint rose window behind the boss, drawn between the mountains and the village bands"
+    }
+  ]
+}

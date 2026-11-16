@@ -1,0 +1,186 @@
+{
+  "format": "stage2-intro-cutscene-draft-v1",
+  "dialogueStatus": "user-revised-20261107",
+  "arena": "data/combat/chapter2_rose_blue_arena.json (bottom-left-y-up-unit, 32px)",
+  "duration": 22.3,
+  "times": {
+    "barsIn": 0,
+    "walkStart": 0.3,
+    "walkEnd": 2.6,
+    "appear": 2.95,
+    "lookRose": 3.15,
+    "lookBlue": 3.5,
+    "roseStep": 7.4,
+    "roseTurn": 11.1,
+    "blueFlinch": 16.15,
+    "castStart": 16.4,
+    "bubbleStart": 17.95,
+    "bubbleFormed": 18.55,
+    "floorEraseStart": 18.75,
+    "floorEraseEnd": 19.55,
+    "platformsStart": 19.3,
+    "machineStart": 19.95,
+    "liftEnd": 21.25,
+    "bubblePop": 21.25,
+    "vanish": 18.5,
+    "barsOut": 21.55,
+    "roseEyeGlint": 9.5
+  },
+  "positions": {
+    "playerEnterX": 96,
+    "playerStopX": 480,
+    "roseX": 300,
+    "blueX": 660,
+    "roseStepPx": 14,
+    "blueStepBackPx": 8
+  },
+  "dialogue": [
+    {
+      "id": "rose-laugh",
+      "from": 3.6,
+      "to": 5,
+      "speaker": "rose",
+      "text": "크크큭...",
+      "cps": 9,
+      "fx": [
+        {
+          "fx": "wave"
+        }
+      ]
+    },
+    {
+      "id": "rose-praise",
+      "from": 5.05,
+      "to": 7.3,
+      "speaker": "rose",
+      "text": "여기까지 오다니..\n제법이구나.!",
+      "enter": "pop"
+    },
+    {
+      "id": "rose-block",
+      "from": 7.4,
+      "to": 9.4,
+      "speaker": "rose",
+      "text": "이 이상은\n지나갈 수 없다!",
+      "enter": "slam",
+      "fx": [
+        {
+          "fx": "shake"
+        }
+      ]
+    },
+    {
+      "id": "blue-silent",
+      "from": 10.15,
+      "to": 11,
+      "speaker": "blue",
+      "text": "...",
+      "type": "instant"
+    },
+    {
+      "id": "rose-ah",
+      "from": 11.1,
+      "to": 11.9,
+      "speaker": "rose",
+      "text": "아.",
+      "cps": 6,
+      "fx": [
+        {
+          "fx": "droop"
+        }
+      ]
+    },
+    {
+      "id": "rose-sulk",
+      "from": 12,
+      "to": 14.4,
+      "speaker": "rose",
+      "text": "진짜 너무하네.",
+      "fx": [
+        {
+          "fx": "droop"
+        }
+      ]
+    },
+    {
+      "id": "rose-mood",
+      "from": 14.55,
+      "to": 15.3,
+      "speaker": "rose",
+      "text": "얼마만인데 이정도\n기분은 좀 내줄 수 있"
+    },
+    {
+      "id": "blue-start",
+      "from": 15.3,
+      "to": 16.9,
+      "speaker": "blue",
+      "text": "시작한다. 준비해.",
+      "type": "instant",
+      "enter": "slam",
+      "cover": "rose-mood"
+    },
+    {
+      "id": "rose-wait",
+      "from": 17.8,
+      "to": 18.22,
+      "speaker": "rose",
+      "text": "야..야! 잠깐만!\n나 아직 ㅈ",
+      "exit": {
+        "type": "fade",
+        "seconds": 0.25
+      },
+      "cps": 24,
+      "fx": [
+        {
+          "fx": "shake"
+        }
+      ]
+    }
+  ],
+  "cues": [
+    {
+      "time": 0,
+      "name": "입장"
+    },
+    {
+      "time": 2.95,
+      "name": "양옆 등장"
+    },
+    {
+      "time": 3.6,
+      "name": "로즈의 허세"
+    },
+    {
+      "time": 7.4,
+      "name": "막아서기"
+    },
+    {
+      "time": 9.5,
+      "name": "로즈 눈 반짝·블루의 침묵"
+    },
+    {
+      "time": 11.1,
+      "name": "로즈의 투정"
+    },
+    {
+      "time": 15.3,
+      "name": "블루가 말 끊기"
+    },
+    {
+      "time": 16.4,
+      "name": "마법 시작"
+    },
+    {
+      "time": 17.95,
+      "name": "방울 포획·말 끊김"
+    },
+    {
+      "time": 18.75,
+      "name": "환각 전장"
+    },
+    {
+      "time": 21.25,
+      "name": "전투 개시"
+    }
+  ]
+}

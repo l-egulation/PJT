@@ -1,0 +1,156 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>대도서관 접수실 · 1차 확정</title><style>
+*{box-sizing:border-box}body{margin:0;background:#0d1728;color:#ede5d4;font:15px system-ui}header{max-width:1000px;margin:22px auto;padding:0 20px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}h1{font-size:20px;margin:0 auto 0 0}button{background:#233956;border:1px solid #627b98;color:inherit;border-radius:6px;padding:9px 14px;cursor:pointer}main{margin:auto;max-width:1000px;padding:0 20px}.view{width:100%;background:#091323;overflow:hidden;position:relative;outline:1px solid #425570}canvas{display:block;width:100%;image-rendering:pixelated}#ref{display:none}body.compare #ref{display:block}body.compare main{max-width:1960px}body.compare .views{display:grid;grid-template-columns:1fr 1fr;gap:12px}.caption{padding:8px;color:#c3d1e6;font-size:13px}footer{margin:15px 0;color:#acbdd5;font-size:13px}#message{color:#f4cd81;min-height:24px}canvas:fullscreen{object-fit:contain;width:100vw;height:100vh;background:#091323}a{color:#a4cdfb}
+.scene-stage{position:relative;aspect-ratio:16/9}.scene-stage>#scene{width:100%;height:100%}.text-overlay{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;image-rendering:auto!important}#sceneFull:fullscreen{width:100vw;height:100vh;background:#091323;display:flex;align-items:center;justify-content:center}#sceneFull:fullscreen .scene-stage{width:min(100vw,177.777778vh);flex:none}</style><header><h1>대도서관 · 접수실 1차 확정</h1><button id="pause">동작 멈춤</button><button id="reset">중앙으로</button><button id="deskDemo">책상 대화</button><button id="full">전체화면</button></header><main><div class="views"><div class="view"><div id="sceneFull"><div class="scene-stage"><canvas id="scene" width="960" height="540" tabindex="0"></canvas><canvas id="textOverlay" class="text-overlay" width="960" height="540" aria-hidden="true"></canvas></div></div><div class="caption">접수실 · 1차 확정</div></div></div><footer>← → / A D 이동 · 책상·수레·포탈 근처에서 E · 화면 클릭으로 이동 · 부유/흔들림은 검토용 실시간 동작</footer><div id="message"></div></main><script>
+__HIGH_RESOLUTION_TEXT__
+__SPEECH_MODULE__
+__PIXEL_MOTION_MODULE__
+__INK_SCENE_MODULE__
+__LIBRARY_BACKGROUND_MOTION__
+const DATA=__DATA__;
+const c=document.getElementById('scene'),ctx=c.getContext('2d');ctx.imageSmoothingEnabled=false;
+const textLayer=new HighResolutionTextLayer(c,document.getElementById('textOverlay'));ctx.highResolutionText=textLayer;
+const load=src=>new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>resolve(im);im.onerror=reject;im.src=src});
+let imgs,hero,walk,x=512,target=null,keys=new Set(),paused=false,t=0,last=0,ready=false,portalActivated=false;
+const msg=document.getElementById('message');
+let speech=null,sceneUI=null,dialogueKind=null;
+const inkEffects=new LibraryInkEffects(ctx);
+function startDialogue(kind){if(!speech)return;keys.clear();target=null;dialogueKind=kind;speech.begin(DATA.dialogue[kind]);}
+function advanceDialogue(){if(!speech||!speech.active)return;speech.next();if(!speech.active&&dialogueKind==='desk')state.objectiveComplete=true;}
+const state=window.reviewState={ready:false,heroX:x,floorY:416,heroScale:1,cameraX:0,interactionCount:0,frames:0,objectiveComplete:false};
+const depthSprites=new Map(),portalOverlays=[],lampMasks=new Map(),pixelMotion=new PixelMotionBank(),deskFocus=new Map();
+const libraryMotion=new LibraryBackgroundMotion();
+let portalOutline,portalFocus;
+// Cache an integer-pixel contour from the exact sprite or animation pose.
+function pixelContour(source,radius,color,ringOnly=false){
+ const raster=document.createElement('canvas');raster.width=source.width;raster.height=source.height;const rc=raster.getContext('2d');rc.drawImage(source,0,0);
+ const px=rc.getImageData(0,0,source.width,source.height),pad=4,pw=source.width+pad*2,ph=source.height+pad*2;
+ const solid=(xx,yy)=>xx>=0&&yy>=0&&xx<source.width&&yy<source.height&&px.data[(yy*source.width+xx)*4+3]>200;
+ const cv=document.createElement('canvas');cv.width=pw;cv.height=ph;const ct=cv.getContext('2d'),out=ct.createImageData(pw,ph);
+ for(let yy=0;yy<ph;yy++)for(let xx=0;xx<pw;xx++){
+  const sx=xx-pad,sy=yy-pad;let distance=99;
+  for(let dy=-radius;dy<=radius;dy++)for(let dx=-radius;dx<=radius;dx++)if(solid(sx+dx,sy+dy))distance=Math.min(distance,Math.max(Math.abs(dx),Math.abs(dy)));
+  if(distance>radius||(ringOnly&&distance<radius))continue;
+  out.data.set([...color,255],(yy*pw+xx)*4);
+ }
+ ct.putImageData(out,0,0);return cv;
+}
+function prepareEffects(){
+ DATA.layers.filter(o=>o.motion==='libraryShelf'||o.motion==='libraryBook').forEach(o=>libraryMotion.build(o,imgs[o.asset]));
+ DATA.layers.filter(o=>o.asset==='28_library_mid_static'||o.asset==='02_pillar_left'||o.asset==='03_pillar_right').forEach(o=>depthSprites.set(o.asset,libraryDepthAppearance(imgs[o.asset],o)));
+ DATA.layers.filter(o=>o.motion==='sway'||o.motion==='float').forEach(o=>{if(!pixelMotion.items.has(o.asset))pixelMotion.build(o.asset,imgs[o.asset])});
+ for(const name of ['05_book_desk','08_floating_book','09_quill']){
+  const moving=pixelMotion.items.get(name),poses=moving?moving.frames:[imgs[name]];
+  deskFocus.set(name,{frames:poses.map(pose=>pixelContour(pose,3,[255,255,255],true)),padding:4+(moving?moving.padding:0)});
+ }
+ DATA.layers.forEach(o=>{if(o.depth==='distant'&&!depthSprites.has(o.asset)){
+  const src=imgs[o.asset],off=document.createElement('canvas');off.width=src.width;off.height=src.height;const oc=off.getContext('2d');oc.imageSmoothingEnabled=false;
+  if(o.fogColor){oc.fillStyle=o.fogColor;oc.fillRect(0,0,off.width,off.height)}
+  oc.filter=`saturate(${o.saturation})${o.preBlur?' blur('+o.preBlur+'px)':''}`;oc.drawImage(src,0,0);oc.filter='none';oc.globalCompositeOperation='source-atop';
+  if(o.blueTint){oc.globalAlpha=o.blueTint;oc.fillStyle='#90b8e8';oc.fillRect(0,0,off.width,off.height)}
+  if(o.fogColor){oc.globalAlpha=o.fogOpacity;oc.fillStyle=o.fogColor;oc.fillRect(0,0,off.width,off.height)}
+  depthSprites.set(o.asset,off);
+ }});
+ DATA.layers.filter(o=>o.glow).forEach(o=>{if(lampMasks.has(o.asset))return;
+  const im=imgs[o.asset],cv=document.createElement('canvas');cv.width=im.width;cv.height=im.height;const lc=cv.getContext('2d');lc.drawImage(im,0,0);const pixels=lc.getImageData(0,0,im.width,im.height);
+  for(let i=0;i<pixels.data.length;i+=4){const d=pixels.data,light=d[i]>210&&d[i+1]>195&&d[i+2]>160&&d[i+3]>200;d[i]=255;d[i+1]=238;d[i+2]=193;d[i+3]=light?210:0;}lc.putImageData(pixels,0,0);lampMasks.set(o.asset,cv);
+ });
+ const portal=DATA.layers.find(o=>o.motion==='portal'),src=imgs[portal.asset];
+ const raster=document.createElement('canvas');raster.width=portal.w;raster.height=portal.h;const rc=raster.getContext('2d');rc.imageSmoothingEnabled=false;rc.drawImage(src,0,0,portal.w,portal.h);const px=rc.getImageData(0,0,portal.w,portal.h);
+ portalOutline=pixelContour(src,1,[36,46,67]);
+ portalFocus=pixelContour(src,3,[255,255,255],true);
+ for(let frame=0;frame<8;frame++){
+  const off=document.createElement('canvas');off.width=portal.w;off.height=portal.h;const oc=off.getContext('2d'),out=oc.createImageData(off.width,off.height);
+  for(let y=0;y<off.height;y++)for(let xx=0;xx<off.width;xx++){
+   const i=(y*off.width+xx)*4,r=px.data[i],g=px.data[i+1],b=px.data[i+2];
+   // A color-derived interior mask keeps all animation off the ivory frame/gold ring.
+   if(px.data[i+3]>200&&xx>off.width*.22&&xx<off.width*.78&&b>r*1.5&&b>g*1.2){
+    const band=(y*0.11+xx*.075+frame*Math.PI/4),pulse=Math.max(0,Math.sin(band));
+    out.data[i]=35;out.data[i+1]=150;out.data[i+2]=255;out.data[i+3]=Math.round(16+pulse*65);
+   }
+  }
+  oc.putImageData(out,0,0);portalOverlays.push(off);
+ }
+}
+function drawSway(o,sprite){
+ pixelMotion.draw(ctx,o.asset,t,o.phase);
+}
+function lampHalo(o,time){
+ const pulse=0.5+0.5*Math.sin(time*(o.depth==='distant'?1.8:2.2)+o.phase);
+ return {pulse,cx:o.w/2,cy:o.glassCenterY??o.h*.68,r:o.w*1.15*(o.depth==='distant'?(0.40+1.80*pulse):1)};
+}
+function lampDrift(o,time){return {x:o.floatX?Math.round(Math.sin(time*(o.floatRate||.7)*.73+o.phase)*o.floatX):0,y:o.floatY?Math.round(Math.sin(time*(o.floatRate||.7)+o.phase)*o.floatY):0};}
+function drawPortal(o){
+ const index=Math.floor(t*7.5)%8,strength=portalActivated?1:0.65;
+ ctx.save();ctx.globalCompositeOperation='screen';
+ ctx.globalAlpha=strength;ctx.drawImage(portalOverlays[index],0,0);ctx.restore();
+ // Crisp stepped runes rise within the narrow ink opening, without touching the frame.
+ const tick=Math.floor(t*8);
+ for(let n=0;n<6;n++){
+  const yy=Math.round(o.h*.87-((tick*2+n*27)%(o.h*.64))),xx=Math.round(o.w*.5+Math.sin(n*2+tick*.12)*o.w*.055);
+  ctx.globalAlpha=0.3+0.35*(.5+.5*Math.sin(t*2+n));ctx.fillStyle=n%2?'#a9e9ff':'#479dff';
+  ctx.fillRect(xx,yy-2,1,5);ctx.fillRect(xx-2,yy,5,1);
+ }
+ ctx.globalAlpha=1;
+ if(portalActivated){ctx.save();ctx.globalCompositeOperation='screen';ctx.globalAlpha=.2+.12*Math.sin(t*9);ctx.fillStyle='#64c7ff';ctx.fillRect(Math.round(o.w*.43),Math.round(o.h*.2),Math.round(o.w*.13),Math.round(o.h*.75));ctx.restore()}
+}
+Promise.all([Promise.all(Object.entries(DATA.sprites).map(async([n,s])=>[n,await load(s)])),load(DATA.hero),Promise.all(DATA.walk.map(load))]).then(([entries,h,w])=>{imgs=Object.fromEntries(entries);hero=h;walk=w;prepareEffects();sceneUI=new LibrarySceneUI(ctx,imgs);speech=new HeadSpeech(ctx,imgs.speech_body,imgs.speech_tail,DATA.speechConfig,imgs);window.speechReview=speech;ready=true;state.ready=true;requestAnimationFrame(frame)}).catch(e=>{msg.textContent='이미지 로드 실패: '+e.message;state.error=e.message});
+function frame(now){const dt=Math.min((now-last)/1000||0,0.05);last=now;if(!paused)t+=dt*1.6;
+ let dir=keys.has('arrowright')||keys.has('d')?1:keys.has('arrowleft')||keys.has('a')?-1:0;
+ if(!dir&&target!==null){if(Math.abs(target-x)<3)target=null;else dir=Math.sign(target-x)}
+ if(speech&&speech.active){dir=0;target=null}
+ if(dir)x=Math.max(26,Math.min(934,x+dir*115*dt));state.heroX=x;state.frames++;state.deskNear=Math.abs(x-775)<98;
+ textLayer.begin();
+ ctx.fillStyle='#08152a';ctx.fillRect(0,0,960,540);
+ DATA.layers.forEach((o,i)=>{if(i===DATA.heroInsert){const sprite=dir?walk[Math.floor(t*12)%12]:hero;ctx.save();ctx.translate(Math.round(x),416);if(dir<0)ctx.scale(-1,1);ctx.drawImage(sprite,-64,-120);ctx.restore()}
+ if(i===2){ctx.fillStyle='#08152a';ctx.fillRect(0,448,960,92)}
+ const drift=lampDrift(o,t);
+ ctx.save();ctx.translate(o.x+drift.x,o.y+drift.y);
+ if(o.blur)ctx.filter=`blur(${o.blur}px)`;
+ ctx.globalAlpha=(o.opacity||1)*(o.motion==='lantern'?0.95+0.05*Math.sin(t*1.6+o.phase):1);
+ if(o.glow){ctx.save();ctx.filter='none';const {pulse,cx,cy,r}=lampHalo(o,t),blue=o.depth==='distant';const glow=ctx.createRadialGradient(cx,cy,1,cx,cy,r);glow.addColorStop(0,blue?'rgba(100,218,255,'+(0.46+0.28*pulse)+')':'rgba(255,224,156,'+(0.22+0.13*pulse)+')');glow.addColorStop(.38,blue?'rgba(75,163,255,'+(0.12+0.13*pulse)+')':'rgba(255,211,135,.09)');glow.addColorStop(1,blue?'rgba(68,150,255,0)':'rgba(255,211,135,0)');ctx.fillStyle=glow;ctx.fillRect(cx-r,cy-r,r*2,r*2);ctx.restore();}
+ const sprite=depthSprites.get(o.asset)||imgs[o.asset];
+ if(state.deskNear&&deskFocus.has(o.asset)){
+  const focus=deskFocus.get(o.asset),index=focus.frames.length===1?0:pixelMotion.frameIndex(t,o.phase);
+  ctx.drawImage(focus.frames[index],-focus.padding,-focus.padding);
+ }
+ if(o.motion==='portal'){
+  state.portalNear=Math.abs(x-126)<69;
+  if(state.portalNear||portalActivated)ctx.drawImage(portalFocus,-4,-4);
+  ctx.drawImage(portalOutline,-4,-4);
+ }
+ if(o.motion==='sway'){
+  if(sprite.width!==o.w||sprite.height!==o.h){const key=o.asset+'_'+o.w+'x'+o.h;if(!depthSprites.has(key)){const off=document.createElement('canvas');off.width=o.w;off.height=o.h;const oc=off.getContext('2d');oc.imageSmoothingEnabled=false;oc.drawImage(sprite,0,0,o.w,o.h);depthSprites.set(key,off)}drawSway(o,depthSprites.get(key))}else drawSway(o,sprite);
+ }else if(o.motion==='libraryShelf'||o.motion==='libraryBook'){
+  libraryMotion.draw(ctx,o,t);
+ }else if(o.motion==='wisp'){
+  inkEffects.drawWisp(o,t);
+ }else if(o.motion==='float'){
+  pixelMotion.draw(ctx,o.asset,t,o.phase);
+ }else ctx.drawImage(sprite,0,0,o.w,o.h);
+ if(o.asset==='26_library_far_bright')inkEffects.drawInk(t,true);
+ if(o.glow&&o.depth==='distant')inkEffects.drawFlame(o,t);
+ else if(o.glow){ctx.save();ctx.filter='none';ctx.globalCompositeOperation='screen';ctx.globalAlpha=0.18+0.48*(0.5+0.5*Math.sin(t*2.2+o.phase));ctx.drawImage(lampMasks.get(o.asset),0,0,o.w,o.h);ctx.restore();}
+ if(o.motion==='portal')drawPortal(o);
+ ctx.restore()});
+ const near=Math.abs(x-126)<69,nearDesk=state.deskNear,nearCart=Math.abs(x-333)<55;
+ sceneUI.objective(state.objectiveComplete);
+ if(!speech.active&&(near||nearDesk||nearCart)){const px=near?128:nearDesk?775:333,py=near?137:286,label=near?'포탈 살펴보기':nearDesk?'접수 안내서와 대화':'책 수레 살펴보기';sceneUI.interaction(px,py,label);}
+ speech.update(dt);speech.draw(x);state.textRendering={separate:textLayer.enabled,width:textLayer.canvas?.width||960,height:textLayer.canvas?.height||540,drawCount:textLayer.drawCount};state.dialogueActive=speech.active;state.bubble=speech.lastBox;
+ msg.textContent=speech.active?'E / Space / 클릭: 글자 모두 보기 · 다음 대사 | Esc: 닫기':portalActivated?'포탈의 잉크 문양이 반응합니다. 방 전환은 연결하지 않은 검토 화면입니다.':near?'E 키로 포탈 반응을 확인하세요.':nearDesk?'E 키로 접수 안내서와 대화하세요.':nearCart?'E 키로 책 수레를 살펴보세요.':'';
+ requestAnimationFrame(frame)}
+addEventListener('keydown',e=>{const key=e.key.toLowerCase();if(speech&&speech.active){if(['e',' ','escape','arrowleft','arrowright','a','d'].includes(key))e.preventDefault();if(e.repeat)return;if(key==='escape')speech.close();else if(key==='e'||key===' ')advanceDialogue();return}if(['ArrowLeft','ArrowRight','a','d','A','D','e','E'].includes(e.key)){e.preventDefault();keys.add(key);target=null}if(key==='e'&&!e.repeat){if(Math.abs(x-775)<98)startDialogue('desk');else if(Math.abs(x-333)<55)startDialogue('cart');else if(Math.abs(x-126)<69){portalActivated=true;state.interactionCount++;setTimeout(()=>portalActivated=false,2200)}}});addEventListener('keyup',e=>keys.delete(e.key.toLowerCase()));addEventListener('blur',()=>keys.clear());
+c.onclick=e=>{if(speech&&speech.active){advanceDialogue();return}const r=c.getBoundingClientRect();target=(e.clientX-r.left)/r.width*960;c.focus()};
+
+document.getElementById('pause').onclick=e=>{paused=!paused;e.target.textContent=paused?'동작 재생':'동작 멈춤'};
+document.getElementById('reset').onclick=()=>{x=512;target=null;keys.clear();if(speech)speech.close()};document.getElementById('full').onclick=()=>{const stage=document.getElementById('sceneFull')||c;stage.requestFullscreen()};
+document.getElementById('deskDemo').onclick=()=>{x=721;startDialogue('desk');c.focus()};
+window.reviewTest={moveTo(value){x=Math.max(26,Math.min(934,value));target=null},getLayerPositions(){return DATA.layers.map(o=>[o.asset,o.x,o.y])}};
+// Integer physical scaling keeps a uniform pixel grid. At fractional scales,
+// interpolation avoids alternating pixel widths and dropped fine detail.
+function displaySampling(cssWidth,nativeWidth,dpr){const scale=cssWidth*dpr/nativeWidth;return scale>=1&&Math.abs(scale-Math.round(scale))<.001?'pixelated':'auto'}
+if(typeof ResizeObserver!=='undefined'){
+ const displays=[c];
+ const fitSampling=()=>{textLayer.resize();displays.forEach(cv=>{const r=cv.getBoundingClientRect(),w=Math.min(r.width,r.height*cv.width/cv.height);cv.style.imageRendering=displaySampling(w,cv.width,window.devicePixelRatio||1)})};
+ const observer=new ResizeObserver(fitSampling);displays.forEach(cv=>observer.observe(cv));addEventListener('resize',fitSampling);addEventListener('fullscreenchange',fitSampling);fitSampling();
+}
+</script></html>

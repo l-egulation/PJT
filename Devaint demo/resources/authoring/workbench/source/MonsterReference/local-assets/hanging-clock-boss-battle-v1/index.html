@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>보스전 · 시계탑 집행자</title><link rel="stylesheet" href="style.css"></head>
+<body><main>
+<header><a class="brand" href="#">Deviant <span>전투 작업실</span></a><div class="status"><i></i> 수정판 V12 · 벽 없는 전투장 · 잉크 방울·끝 잉크·잉크 시계판 전조 · 고속 바늘 · 무게감 붕괴·대형 흙먼지 · 팔 정리 · Unity 테스트방 적용</div></header>
+<section class="heading"><div><p class="eyebrow">CHAPTER 01 / THE HANGING CLOCK</p><h1>보스전 <span>시계탑 집행자</span></h1><p class="lead">종이 울리기 전에. 전조를 읽고, 빈틈에 파고드세요.</p></div><div class="actions"><button id="play" class="primary">직접 도전 <span>↗</span></button><button id="demo">자동 시연</button></div></section>
+<div class="game-scroll"><section class="stage" aria-label="시계탑 보스 전투">
+<canvas id="game" width="960" height="540" tabindex="0" aria-label="A D 이동, Space 2단 점프, Shift 대시, J 공격. P 일시정지"></canvas>
+<div id="loading">보스전 에셋을 불러오는 중…</div>
+<div id="result" hidden><p id="result-kicker"></p><h2 id="result-title"></h2><p id="result-copy"></p><button id="retry" class="primary">다시 도전</button></div>
+</section></div>
+<section class="controlbar"><div class="keys"><span><kbd>A</kbd><kbd>D</kbd> 이동</span><span><kbd>Space</kbd> 2단 점프</span><span><kbd>Shift</kbd> 대시</span><span><kbd>J</kbd> / 클릭 공격</span><span><kbd>P</kbd> 일시정지</span><span><kbd>R</kbd> 재도전</span></div><div><button id="pause" class="text-btn">일시정지</button><button id="sound" class="text-btn">소리 켜기</button><button id="fullscreen" class="text-btn">전체 화면 ⛶</button></div></section>
+<div class="touch" aria-label="터치 조작"><button data-key="left">←</button><button data-key="right">→</button><button data-key="jump">점프</button><button data-key="dash">대시</button><button data-key="attack">공격</button></div>
+<section class="pattern-grid">
+<article data-pattern="fist"><div class="number">01</div><h2>긴 주먹</h2><p>천장 사슬이 늘어나면 <b>반대쪽 끝으로.</b><br>주먹이 멈춘 순간부터 반격할 수 있어요.</p><div class="timeline"><b style="flex:10">전조 1.0</b><i style="flex:3">뻗기 .3</i><span style="flex:3">유지 .3</span><span style="flex:5">회수 .5</span></div><button class="practice" data-mode="fist">이 패턴 연습 ↗</button></article>
+<article data-pattern="needle"><div class="number">02</div><h2>시계침 낙하</h2><p>화면 위에서 검은 잉크가 흘러내리면 <b>옆으로.</b><br>한번 찍힌 위치는 따라오지 않아요.</p><div class="timeline"><b>표식 1.0</b><i>낙하 .3</i><span>소멸 .5 × 13개</span></div><button class="practice" data-mode="needle">이 패턴 연습 ↗</button></article>
+<article data-pattern="mixer"><div class="number">03</div><h2>시간의 믹서기</h2><p>긴 바늘이 회전하며 다가오면 <b>진행 방향을 확인.</b><br>도착 쪽 끝에는 3유닛의 공간이 남아요.</p><div class="timeline"><b>예고 1.0</b><i style="flex:3">이동 4.5</i><span>복귀 1.0</span></div><button class="practice" data-mode="mixer">이 패턴 연습 ↗</button></article>
+</section>
+<details class="lab"><summary>전투 확인 도구 <span>속도 · 판정 · 광폭화</span></summary><div class="lab-controls"><label>재생 <select id="speed"><option value="0.5">0.5배</option><option value="1" selected>1배</option><option value="1.25">1.25배</option></select></label><label><input type="checkbox" id="hitboxes"> 판정 보기</label><button id="enrage">120초 광폭화 확인</button><button id="stun">기절 확인</button><button id="death">사망 연출 확인</button><button id="timeout">240초 제한 확인</button></div><p>자동 시연은 무적입니다. 직접 도전·패턴 연습은 피해를 받습니다. 속도 조절은 미리보기 전체 재생 속도이며 광폭화와 별개예요.</p></details>
+<section class="notes"><div><p class="eyebrow">COMBAT NOTES</p><h2>공격이 끝나면, 내 차례.</h2><p>주먹과 몸통은 체력을 공유합니다. 닿는 것만으로는 피해를 받지 않으며, 같은 공격이 여러 부위에 걸쳐도 한 번만 적중합니다. 흰 점멸·파편·짧은 정지와 소리로 타격을 표시했습니다.</p><p>2분에 광폭화, 4분에 즉사. 광폭화는 다음 패턴부터 1.25배로 빨라집니다. 사망·광폭화 연출과 체력·기본 공격 수치는 이 HTML의 임시 시안입니다.</p></div><div class="spec-note"><h3>이번 시안의 기준</h3><ul><li>들보에 매달림 / 양옆 벽 없는 30유닛 전투장(고정 카메라 끝이 경계) / 복원된 분리 부품</li><li>잉크·먼지·파편은 새로 만든 최대 3색 픽셀 FX</li><li>출현 → 3패턴 → 광폭화 → 처치·재도전</li><li>시계침 13개는 각 1초 전조를 보장해 마지막 착지 4.9초, 다음 패턴 8.9초로 해석했습니다. 명세의 합계 4.6·8.6초와 차이가 있어 최종 조율 대상입니다.</li><li>긴 주먹은 1초 전조·26유닛 범위(반대쪽 끝 4유닛 안전)를 유지합니다. 구석에서 회피 불가능한 공격이 나오지 않도록 플레이어 위치를 보고 출발 쪽을 선택합니다. 공격 후에는 중앙으로 복귀해 다음 전조에 대비하세요.</li></ul><a href="assets/asset-manifest.json" download>스프라이트·클립 정보 ↓</a><a href="boss-battle-preview.zip" download>실행 파일·에셋 묶음 ↓</a></div></section>
+<details class="references"><summary>참고한 보스전과 적용 방식</summary><div id="research">출처 자료를 정리하는 중입니다.</div><p>동작과 전조의 구조를 참고하고, 시각 에셋은 우리 보스 부품과 직접 제작한 픽셀 FX로 구성했습니다.</p></details>
+<footer>Deviant <span>시계탑 집행자 · 독립 HTML 전투 시안 / 2026.10.29</span></footer>
+</main><script type="module" src="app.mjs?rev=open-arena-v12"></script></body></html>

@@ -1,0 +1,38 @@
+{
+  "schema": "stage2-normal-attack-handoff-v1",
+  "status": "M3-input-and-prompt-ready-awaiting-user-review-and-return",
+  "activeId": "M3",
+  "name": "먹침필경사",
+  "source": "outputs/waterway/pixel-base-step1-20261031/M3/native/base-frame.png",
+  "palette": "outputs/waterway/pixel-base-step1-20261031/M3/palette.json",
+  "combatReference": "data/combat/stage2_waterway_patterns.json",
+  "output": "outputs/waterway/normal-attack-handoff-20261101/M3",
+  "canvas": [384,224],
+  "scale": 4,
+  "background": "#ffffff",
+  "oneLine": "다가와 발을 버티고 긴 침을 뒤로 당겼다가, 같은 방향으로 와다다 빠르게 연속 찌른 뒤 몸을 낮추며 회복한다.",
+  "combatPhaseIndices": [0,1,2,1,2,1,2,1,3],
+  "phaseProposal": [
+    {"name":"전조","seconds":0.55,"action":"제자리에서 발을 버티고 몸을 낮추며 얼굴·앞몸과 긴 침을 뒤로 당긴다."},
+    {"name":"찌르기1","seconds":0.1,"action":"얼굴·앞몸과 긴 침을 왼쪽으로 빠르게 뻗는다."},
+    {"name":"회수1","seconds":0.12,"action":"침과 앞몸을 빠르게 당겨 다음 찌르기를 준비한다."},
+    {"name":"찌르기2","seconds":0.1,"action":"같은 높이·방향으로 다시 빠르게 찌른다."},
+    {"name":"회수2","seconds":0.12,"action":"길이를 유지한 침을 몸과 함께 회수한다."},
+    {"name":"찌르기3","seconds":0.1,"action":"발은 버틴 채 앞몸을 짧고 빠르게 뻗는다."},
+    {"name":"회수3","seconds":0.12,"action":"마지막 찌르기 전에 앞몸과 침을 당긴다."},
+    {"name":"찌르기4","seconds":0.1,"action":"같은 공격선을 따라 마지막으로 한 번 찌른다."},
+    {"name":"최종 회복","seconds":0.8,"action":"긴장이 풀리며 몸과 침이 조금 처졌다가 원래 기본자세로 돌아온다."}
+  ],
+  "motionNoteKo": "이번에는 걷기와 분리해서 제자리 공격만 요청합니다. 얼굴·앞몸에 붙은 긴 침을 같은 높이로 빠르게 왕복시키고 발은 원래 지면에서 버팁니다. 침은 일정한 길이의 단단한 한 덩어리로 몸에 계속 연결되어야 합니다. 4연타는 기존 기획의 첫 시험안이며 보고 바꿀 수 있습니다.",
+  "effectNoteKo": "본체·침 동작부터 요청합니다. 침을 발사하거나 늘이지 않고, 잔상·잉크탄·분사·번쩍임·바닥 효과는 넣지 않습니다. 준비와 회복은 읽히게, 연타는 빠른 뻗기와 회수의 박자가 구분되게 요청합니다.",
+  "timingPolicy": "Existing art proposal: anticipation0.55s +4x0.10s thrusts +3x0.12s withdrawals + final recovery0.8s =2.11s. Expanded phase indices follow the existing4-hit/3-gap proposal, not new combat values. User can revise the attack count or rhythm after review. Approach locomotion is separate.",
+  "effectPolicy": "Attached physical needle thrust only. No projectile, telescoping needle, duplicated spear, ink, trails, flashes or scenery.",
+  "queue": [
+    {"id":"K4","name":"등짐분사수","oneLine":"A19장 채택 · 전방 잉크 분사 자세0.65초 고정."},
+    {"id":"B3","name":"쐐기보행기","oneLine":"다리 무보충19장 채택 · 앞부분 들기 후 한 번 내려찍기."},
+    {"id":"M3","name":"먹침필경사","oneLine":"발을 버티고 긴 침을 빠르게 연속 찌르기 · 우선4연타 제안."},
+    {"id":"R-selected","name":"신호투척수","oneLine":"플레이어 위치를 조준 고정하고 손의 소품을 포물선으로 투척."},
+    {"id":"H3","name":"늘어진수의","oneLine":"큰 잉크 공을 만들어 던지고 착탄한 바닥에 지속 피해 장판 생성."}
+  ],
+  "prompt": "Animate ONE LEFT-facing stationary rapid NEEDLE-THRUST COMBO using the exact supplied pixel-art character. Start and finish in its original neutral posture. The character braces its existing feet in place while its face and forebody drive the long attached needle rapidly back and forth on the same horizontal attack line. Do FOUR distinct thrusts, with a short withdrawal between them.\n\nANTICIPATION, about0.55s: stop all stepping, brace the original feet and lower the body slightly. Draw the face/forebody and its attached needle backward toward the RIGHT by about8-10 logical pixels. This is a clear loaded pose before the first thrust. Preserve the original low, slightly turned LEFT-facing view.\n\nFAST FOUR-HIT BURST, about0.76s: thrust LEFT, withdraw, thrust LEFT, withdraw, thrust LEFT, withdraw, then thrust LEFT once more. Each sharp thrust is about0.10s, each of the three withdrawals about0.12s. Use about12-18 logical pixels of local forward forebody motion from neutral at full reach. Keep the feet braced on their original ground contacts and the abdomen centered; the forebody compresses and extends without the whole character traveling across the canvas. Show a crisp fully extended stab pose and a distinct retracted pose for each beat. Do not hold a single extended pose for the whole combo. No walking between thrusts and no turning or changing attack height.\n\nRECOVERY, about0.8s: after the fourth thrust, let the face/forebody and needle settle slightly lower under the released tension, then return to the exact starting posture. Keep the needle connected and rigid even when it tilts slightly with the forebody. Do not start another combo immediately.\n\nCRITICAL NEEDLE RULE: the long cream/plum needle is physically attached to the original face/forebody in EVERY frame. Its length, thickness and shape stay constant. Move it with the face as one rigid assembly; never lengthen, retract like a telescope, bend, detach, shoot, duplicate or replace it. Keep the complete tip visible at both maximum retraction and full extension. Preserve the original body design, cream mask and slit, muted plum body, feet/support count and the9 colors actually used in the supplied reference. Do not add hands, weapons or limbs. Preserve the gaps between existing legs and keep solid parts filled.\n\nUse readable anticipation, sharp fast repeated strikes and a relaxed recovery, with crisp solid pixel clusters and slightly stepped game-animation timing. No outlines, blur, antialiasing, gradients, dithering, soft edge fringe or added colors. Character motion only: no ink, projectiles, flashes, motion trails, impact effects, shadows, scenery, targets, text or grid.\n\nKeep the full1536x896 white input canvas, exactly4x the384x224 logical-pixel canvas. The neutral character including its needle is198x59 logical pixels; preserve this actual size. Maintain aligned4x4 blocks, the original camera, ground line and screen anchor. Use the existing LEFT and RIGHT white padding for the local thrust/retraction. Do not crop the needle tip, auto-trim, zoom, shrink the character, recenter it or mirror the view. Pure-white background (#FFFFFF), identical full-canvas framing, one chronological attack sequence, about2.11s total."
+}

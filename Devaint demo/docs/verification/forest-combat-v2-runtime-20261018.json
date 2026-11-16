@@ -1,0 +1,648 @@
+{
+  "pass": true,
+  "unityVersion": "6000.6.4f1",
+  "scene": "Chapter1ForestCombat",
+  "checks": [
+    {
+      "name": "Applied forest geometry installed",
+      "evidence": "73 collider rectangles; 38 foliage platforms",
+      "pass": true
+    },
+    {
+      "name": "Merged R16 catalog and approved character resources loaded",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "Actual controller walks at merged speed5",
+      "evidence": "(8.92, -24.00)",
+      "pass": true
+    },
+    {
+      "name": "First jump retains R16 height3",
+      "evidence": "3.000002",
+      "pass": true
+    },
+    {
+      "name": "Second jump works in the forest",
+      "evidence": "5.942135",
+      "pass": true
+    },
+    {
+      "name": "Landing returns feet to tile baseline",
+      "evidence": "(6.88, -24.00)",
+      "pass": true
+    },
+    {
+      "name": "Merged dash moves through the new map",
+      "evidence": "3.125001",
+      "pass": true
+    },
+    {
+      "name": "S basic attack applies actual combat damage",
+      "evidence": "100 -> 90",
+      "pass": true
+    },
+    {
+      "name": "Basic hit does not repeat across active frames",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "D special uses merged skill/hit logic",
+      "evidence": "100 -> 70",
+      "pass": true
+    },
+    {
+      "name": "Q swaps to approved whip character",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "Enemy AI attacks and damages player",
+      "evidence": "90",
+      "pass": true
+    },
+    {
+      "name": "Down+Space drop-through enters foliage platform",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "Drop-through clears the platform without sticking",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "Area 1 has a safe landing",
+      "evidence": "(6.88, -24.00)",
+      "pass": true
+    },
+    {
+      "name": "Area 2 has a safe landing",
+      "evidence": "(111.00, -32.00)",
+      "pass": true
+    },
+    {
+      "name": "Area 3 has a safe landing",
+      "evidence": "(184.00, -50.00)",
+      "pass": true
+    },
+    {
+      "name": "Area 4 has a safe landing",
+      "evidence": "(260.00, -26.00)",
+      "pass": true
+    },
+    {
+      "name": "Area 5 has a safe landing",
+      "evidence": "(347.00, -40.00)",
+      "pass": true
+    },
+    {
+      "name": "Area 6 has a safe landing",
+      "evidence": "(432.00, -40.00)",
+      "pass": true
+    },
+    {
+      "name": "Area 7 has a safe landing",
+      "evidence": "(496.00, -42.00)",
+      "pass": true
+    },
+    {
+      "name": "Area 8 has a safe landing",
+      "evidence": "(608.00, -28.00)",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 14 -> 10",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 10 -> 15",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 15 -> 19",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 19 -> 28",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 28 -> 33",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 33 -> 38",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 38 -> 45",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 45 -> 40",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 40 -> 34",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 34 -> 29",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 29 -> 21",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 21 -> 16",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 16 -> 11",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 11 -> 6",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 6 -> 3",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 3 -> 17",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 follows intermediate terraces 17 -> 42",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 follows intermediate terraces 42 -> 60",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 60 -> 52",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 52 -> 48",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 48 -> 53",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 53 -> 61",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 61 -> 54",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 54 -> 62",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 62 -> 63",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 63 -> 57",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 57 -> 49",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 49 -> 44",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 44 -> 37",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 37 -> 27",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 27 -> 23",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "R16 traverses route link 23 -> 30",
+      "evidence": "",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(19.30, -24.00) -> 19.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 10",
+      "evidence": "(20.67, -22.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(27.30, -22.00) -> 27.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 15",
+      "evidence": "(28.67, -24.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(63.30, -24.00) -> 63.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 19",
+      "evidence": "(64.67, -26.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(71.30, -26.00) -> 71.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 28",
+      "evidence": "(72.68, -28.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(79.30, -28.00) -> 79.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 33",
+      "evidence": "(80.68, -30.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(87.30, -30.00) -> 87.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 38",
+      "evidence": "(88.68, -32.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(127.30, -32.00) -> 127.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 45",
+      "evidence": "(128.68, -34.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(231.30, -34.00) -> 231.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 40",
+      "evidence": "(232.67, -32.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(239.30, -32.00) -> 239.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 34",
+      "evidence": "(240.67, -30.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(247.30, -30.00) -> 247.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 29",
+      "evidence": "(248.67, -28.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(255.30, -28.00) -> 255.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 21",
+      "evidence": "(256.67, -26.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(263.30, -26.00) -> 263.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 16",
+      "evidence": "(264.67, -24.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(271.30, -24.00) -> 271.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 11",
+      "evidence": "(272.67, -22.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(279.30, -22.00) -> 279.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 6",
+      "evidence": "(280.67, -20.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(287.30, -20.00) -> 287.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 3",
+      "evidence": "(288.67, -18.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(299.50, -18.00) -> 299.5",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 17",
+      "evidence": "(304.67, -24.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(307.30, -24.00) -> 307.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 24",
+      "evidence": "(308.67, -27.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(311.30, -27.00) -> 311.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 35",
+      "evidence": "(312.67, -30.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(315.30, -30.00) -> 315.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 42",
+      "evidence": "(316.67, -33.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(319.30, -33.00) -> 319.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 47",
+      "evidence": "(320.67, -36.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(323.30, -36.00) -> 323.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 56",
+      "evidence": "(324.67, -39.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(327.30, -39.00) -> 327.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 60",
+      "evidence": "(328.67, -40.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(367.30, -40.00) -> 367.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 52",
+      "evidence": "(368.67, -38.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(375.30, -38.00) -> 375.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 48",
+      "evidence": "(376.67, -36.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(391.30, -36.00) -> 391.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 53",
+      "evidence": "(392.67, -38.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(399.30, -38.00) -> 399.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 61",
+      "evidence": "(400.67, -40.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(455.30, -40.00) -> 455.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 54",
+      "evidence": "(456.67, -38.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(463.30, -38.00) -> 463.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 62",
+      "evidence": "(464.67, -40.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(471.30, -40.00) -> 471.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 63",
+      "evidence": "(472.67, -42.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(523.30, -42.00) -> 523.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 57",
+      "evidence": "(523.30, -39.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(516.50, -39.00) -> 516.5",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 49",
+      "evidence": "(514.96, -36.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(514.50, -36.00) -> 514.5",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 44",
+      "evidence": "(516.04, -33.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(516.50, -33.00) -> 516.5",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 37",
+      "evidence": "(514.96, -30.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(514.50, -30.00) -> 514.5",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 27",
+      "evidence": "(516.04, -27.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(527.30, -27.00) -> 527.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 23",
+      "evidence": "(528.67, -26.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(567.30, -26.00) -> 567.3",
+      "pass": true
+    },
+    {
+      "name": "Continuous R16 route lands on link 30",
+      "evidence": "(568.68, -28.00)",
+      "pass": true
+    },
+    {
+      "name": "Continuous route reaches its launch point",
+      "evidence": "(638.00, -28.00) -> 638",
+      "pass": true
+    },
+    {
+      "name": "Continuous start-to-exit traversal completed without wall climbing",
+      "evidence": "(638.00, -28.00)",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

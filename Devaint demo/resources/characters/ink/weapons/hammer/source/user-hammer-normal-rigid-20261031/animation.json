@@ -1,0 +1,1725 @@
+{
+  "canvas": [
+    224,
+    192
+  ],
+  "pivot": [
+    96,
+    151
+  ],
+  "ppu": 32,
+  "bodyOffset": [
+    32,
+    30
+  ],
+  "bodySourcePivot": [
+    64,
+    121
+  ],
+  "weaponGripNative": [
+    6.5,
+    24.0
+  ],
+  "weaponScale": 2.35,
+  "sequences": {
+    "idle": [
+      {
+        "frame": "idle_01",
+        "ms": 100,
+        "motion": "idle"
+      },
+      {
+        "frame": "idle_02",
+        "ms": 100,
+        "motion": "idle"
+      },
+      {
+        "frame": "idle_03",
+        "ms": 100,
+        "motion": "idle"
+      },
+      {
+        "frame": "idle_04",
+        "ms": 100,
+        "motion": "idle"
+      },
+      {
+        "frame": "idle_05",
+        "ms": 100,
+        "motion": "idle"
+      },
+      {
+        "frame": "idle_06",
+        "ms": 100,
+        "motion": "idle"
+      },
+      {
+        "frame": "idle_07",
+        "ms": 100,
+        "motion": "idle"
+      },
+      {
+        "frame": "idle_08",
+        "ms": 100,
+        "motion": "idle"
+      },
+      {
+        "frame": "idle_09",
+        "ms": 100,
+        "motion": "idle"
+      },
+      {
+        "frame": "idle_10",
+        "ms": 100,
+        "motion": "idle"
+      },
+      {
+        "frame": "idle_11",
+        "ms": 100,
+        "motion": "idle"
+      },
+      {
+        "frame": "idle_12",
+        "ms": 100,
+        "motion": "idle"
+      }
+    ],
+    "walk": [
+      {
+        "frame": "walk_01",
+        "ms": 80,
+        "motion": "walk"
+      },
+      {
+        "frame": "walk_02",
+        "ms": 80,
+        "motion": "walk"
+      },
+      {
+        "frame": "walk_03",
+        "ms": 80,
+        "motion": "walk"
+      },
+      {
+        "frame": "walk_04",
+        "ms": 80,
+        "motion": "walk"
+      },
+      {
+        "frame": "walk_05",
+        "ms": 80,
+        "motion": "walk"
+      },
+      {
+        "frame": "walk_06",
+        "ms": 80,
+        "motion": "walk"
+      },
+      {
+        "frame": "walk_07",
+        "ms": 80,
+        "motion": "walk"
+      },
+      {
+        "frame": "walk_08",
+        "ms": 80,
+        "motion": "walk"
+      },
+      {
+        "frame": "walk_09",
+        "ms": 80,
+        "motion": "walk"
+      },
+      {
+        "frame": "walk_10",
+        "ms": 80,
+        "motion": "walk"
+      },
+      {
+        "frame": "walk_11",
+        "ms": 80,
+        "motion": "walk"
+      },
+      {
+        "frame": "walk_12",
+        "ms": 80,
+        "motion": "walk"
+      }
+    ],
+    "run": [
+      {
+        "frame": "run_01",
+        "ms": 60,
+        "motion": "run"
+      },
+      {
+        "frame": "run_02",
+        "ms": 60,
+        "motion": "run"
+      },
+      {
+        "frame": "run_03",
+        "ms": 60,
+        "motion": "run"
+      },
+      {
+        "frame": "run_04",
+        "ms": 60,
+        "motion": "run"
+      },
+      {
+        "frame": "run_05",
+        "ms": 60,
+        "motion": "run"
+      },
+      {
+        "frame": "run_06",
+        "ms": 60,
+        "motion": "run"
+      },
+      {
+        "frame": "run_07",
+        "ms": 60,
+        "motion": "run"
+      },
+      {
+        "frame": "run_08",
+        "ms": 60,
+        "motion": "run"
+      },
+      {
+        "frame": "run_09",
+        "ms": 60,
+        "motion": "run"
+      },
+      {
+        "frame": "run_10",
+        "ms": 60,
+        "motion": "run"
+      },
+      {
+        "frame": "run_11",
+        "ms": 60,
+        "motion": "run"
+      },
+      {
+        "frame": "run_12",
+        "ms": 60,
+        "motion": "run"
+      }
+    ],
+    "jump": [
+      {
+        "frame": "jump_01",
+        "ms": 60,
+        "motion": "jump"
+      },
+      {
+        "frame": "jump_02",
+        "ms": 70,
+        "motion": "jump"
+      },
+      {
+        "frame": "jump_03",
+        "ms": 70,
+        "motion": "jump"
+      },
+      {
+        "frame": "jump_04",
+        "ms": 60,
+        "motion": "jump"
+      },
+      {
+        "frame": "jump_05",
+        "ms": 70,
+        "motion": "jump"
+      },
+      {
+        "frame": "jump_06",
+        "ms": 80,
+        "motion": "jump"
+      },
+      {
+        "frame": "jump_07",
+        "ms": 100,
+        "motion": "jump"
+      },
+      {
+        "frame": "jump_08",
+        "ms": 70,
+        "motion": "jump"
+      },
+      {
+        "frame": "jump_09",
+        "ms": 60,
+        "motion": "jump"
+      },
+      {
+        "frame": "jump_10",
+        "ms": 60,
+        "motion": "jump"
+      },
+      {
+        "frame": "jump_11",
+        "ms": 70,
+        "motion": "jump"
+      },
+      {
+        "frame": "jump_12",
+        "ms": 90,
+        "motion": "jump"
+      }
+    ],
+    "fall-land": [
+      {
+        "frame": "fall-land_01",
+        "ms": 70,
+        "motion": "fall-land"
+      },
+      {
+        "frame": "fall-land_02",
+        "ms": 60,
+        "motion": "fall-land"
+      },
+      {
+        "frame": "fall-land_03",
+        "ms": 60,
+        "motion": "fall-land"
+      },
+      {
+        "frame": "fall-land_04",
+        "ms": 60,
+        "motion": "fall-land"
+      },
+      {
+        "frame": "fall-land_05",
+        "ms": 50,
+        "motion": "fall-land"
+      },
+      {
+        "frame": "fall-land_06",
+        "ms": 50,
+        "motion": "fall-land"
+      },
+      {
+        "frame": "fall-land_07",
+        "ms": 70,
+        "motion": "fall-land"
+      },
+      {
+        "frame": "fall-land_08",
+        "ms": 60,
+        "motion": "fall-land"
+      },
+      {
+        "frame": "fall-land_09",
+        "ms": 70,
+        "motion": "fall-land"
+      },
+      {
+        "frame": "fall-land_10",
+        "ms": 70,
+        "motion": "fall-land"
+      },
+      {
+        "frame": "fall-land_11",
+        "ms": 70,
+        "motion": "fall-land"
+      },
+      {
+        "frame": "fall-land_12",
+        "ms": 80,
+        "motion": "fall-land"
+      }
+    ],
+    "dash": [
+      {
+        "frame": "dash_01",
+        "ms": 30,
+        "motion": "dash"
+      },
+      {
+        "frame": "dash_02",
+        "ms": 30,
+        "motion": "dash"
+      },
+      {
+        "frame": "dash_03",
+        "ms": 30,
+        "motion": "dash"
+      },
+      {
+        "frame": "dash_04",
+        "ms": 30,
+        "motion": "dash"
+      },
+      {
+        "frame": "dash_05",
+        "ms": 30,
+        "motion": "dash"
+      },
+      {
+        "frame": "dash_06",
+        "ms": 30,
+        "motion": "dash"
+      },
+      {
+        "frame": "dash_07",
+        "ms": 30,
+        "motion": "dash"
+      },
+      {
+        "frame": "dash_08",
+        "ms": 30,
+        "motion": "dash"
+      },
+      {
+        "frame": "dash_09",
+        "ms": 30,
+        "motion": "dash"
+      },
+      {
+        "frame": "dash_10",
+        "ms": 30,
+        "motion": "dash"
+      },
+      {
+        "frame": "dash_11",
+        "ms": 30,
+        "motion": "dash"
+      },
+      {
+        "frame": "dash_12",
+        "ms": 30,
+        "motion": "dash"
+      }
+    ],
+    "death": [
+      {
+        "frame": "death_01",
+        "ms": 80,
+        "motion": "death"
+      },
+      {
+        "frame": "death_02",
+        "ms": 90,
+        "motion": "death"
+      },
+      {
+        "frame": "death_03",
+        "ms": 90,
+        "motion": "death"
+      },
+      {
+        "frame": "death_04",
+        "ms": 100,
+        "motion": "death"
+      },
+      {
+        "frame": "death_05",
+        "ms": 100,
+        "motion": "death"
+      },
+      {
+        "frame": "death_06",
+        "ms": 90,
+        "motion": "death"
+      },
+      {
+        "frame": "death_07",
+        "ms": 90,
+        "motion": "death"
+      },
+      {
+        "frame": "death_08",
+        "ms": 70,
+        "motion": "death"
+      },
+      {
+        "frame": "death_09",
+        "ms": 70,
+        "motion": "death"
+      },
+      {
+        "frame": "death_10",
+        "ms": 90,
+        "motion": "death"
+      },
+      {
+        "frame": "death_11",
+        "ms": 100,
+        "motion": "death"
+      },
+      {
+        "frame": "death_12",
+        "ms": 180,
+        "motion": "death"
+      }
+    ],
+    "all": [
+      {
+        "frame": "idle_01",
+        "ms": 100,
+        "motion": "idle"
+      },
+      {
+        "frame": "idle_02",
+        "ms": 100,
+        "motion": "idle"
+      },
+      {
+        "frame": "idle_03",
+        "ms": 100,
+        "motion": "idle"
+      },
+      {
+        "frame": "idle_04",
+        "ms": 100,
+        "motion": "idle"
+      },
+      {
+        "frame": "idle_05",
+        "ms": 100,
+        "motion": "idle"
+      },
+      {
+        "frame": "idle_06",
+        "ms": 100,
+        "motion": "idle"
+      },
+      {
+        "frame": "idle_07",
+        "ms": 100,
+        "motion": "idle"
+      },
+      {
+        "frame": "idle_08",
+        "ms": 100,
+        "motion": "idle"
+      },
+      {
+        "frame": "idle_09",
+        "ms": 100,
+        "motion": "idle"
+      },
+      {
+        "frame": "idle_10",
+        "ms": 100,
+        "motion": "idle"
+      },
+      {
+        "frame": "idle_11",
+        "ms": 100,
+        "motion": "idle"
+      },
+      {
+        "frame": "idle_12",
+        "ms": 100,
+        "motion": "idle"
+      },
+      {
+        "frame": "walk_01",
+        "ms": 80,
+        "motion": "walk"
+      },
+      {
+        "frame": "walk_02",
+        "ms": 80,
+        "motion": "walk"
+      },
+      {
+        "frame": "walk_03",
+        "ms": 80,
+        "motion": "walk"
+      },
+      {
+        "frame": "walk_04",
+        "ms": 80,
+        "motion": "walk"
+      },
+      {
+        "frame": "walk_05",
+        "ms": 80,
+        "motion": "walk"
+      },
+      {
+        "frame": "walk_06",
+        "ms": 80,
+        "motion": "walk"
+      },
+      {
+        "frame": "walk_07",
+        "ms": 80,
+        "motion": "walk"
+      },
+      {
+        "frame": "walk_08",
+        "ms": 80,
+        "motion": "walk"
+      },
+      {
+        "frame": "walk_09",
+        "ms": 80,
+        "motion": "walk"
+      },
+      {
+        "frame": "walk_10",
+        "ms": 80,
+        "motion": "walk"
+      },
+      {
+        "frame": "walk_11",
+        "ms": 80,
+        "motion": "walk"
+      },
+      {
+        "frame": "walk_12",
+        "ms": 80,
+        "motion": "walk"
+      },
+      {
+        "frame": "run_01",
+        "ms": 60,
+        "motion": "run"
+      },
+      {
+        "frame": "run_02",
+        "ms": 60,
+        "motion": "run"
+      },
+      {
+        "frame": "run_03",
+        "ms": 60,
+        "motion": "run"
+      },
+      {
+        "frame": "run_04",
+        "ms": 60,
+        "motion": "run"
+      },
+      {
+        "frame": "run_05",
+        "ms": 60,
+        "motion": "run"
+      },
+      {
+        "frame": "run_06",
+        "ms": 60,
+        "motion": "run"
+      },
+      {
+        "frame": "run_07",
+        "ms": 60,
+        "motion": "run"
+      },
+      {
+        "frame": "run_08",
+        "ms": 60,
+        "motion": "run"
+      },
+      {
+        "frame": "run_09",
+        "ms": 60,
+        "motion": "run"
+      },
+      {
+        "frame": "run_10",
+        "ms": 60,
+        "motion": "run"
+      },
+      {
+        "frame": "run_11",
+        "ms": 60,
+        "motion": "run"
+      },
+      {
+        "frame": "run_12",
+        "ms": 60,
+        "motion": "run"
+      },
+      {
+        "frame": "jump_01",
+        "ms": 60,
+        "motion": "jump"
+      },
+      {
+        "frame": "jump_02",
+        "ms": 70,
+        "motion": "jump"
+      },
+      {
+        "frame": "jump_03",
+        "ms": 70,
+        "motion": "jump"
+      },
+      {
+        "frame": "jump_04",
+        "ms": 60,
+        "motion": "jump"
+      },
+      {
+        "frame": "jump_05",
+        "ms": 70,
+        "motion": "jump"
+      },
+      {
+        "frame": "jump_06",
+        "ms": 80,
+        "motion": "jump"
+      },
+      {
+        "frame": "jump_07",
+        "ms": 100,
+        "motion": "jump"
+      },
+      {
+        "frame": "jump_08",
+        "ms": 70,
+        "motion": "jump"
+      },
+      {
+        "frame": "jump_09",
+        "ms": 60,
+        "motion": "jump"
+      },
+      {
+        "frame": "jump_10",
+        "ms": 60,
+        "motion": "jump"
+      },
+      {
+        "frame": "jump_11",
+        "ms": 70,
+        "motion": "jump"
+      },
+      {
+        "frame": "jump_12",
+        "ms": 90,
+        "motion": "jump"
+      },
+      {
+        "frame": "fall-land_01",
+        "ms": 70,
+        "motion": "fall-land"
+      },
+      {
+        "frame": "fall-land_02",
+        "ms": 60,
+        "motion": "fall-land"
+      },
+      {
+        "frame": "fall-land_03",
+        "ms": 60,
+        "motion": "fall-land"
+      },
+      {
+        "frame": "fall-land_04",
+        "ms": 60,
+        "motion": "fall-land"
+      },
+      {
+        "frame": "fall-land_05",
+        "ms": 50,
+        "motion": "fall-land"
+      },
+      {
+        "frame": "fall-land_06",
+        "ms": 50,
+        "motion": "fall-land"
+      },
+      {
+        "frame": "fall-land_07",
+        "ms": 70,
+        "motion": "fall-land"
+      },
+      {
+        "frame": "fall-land_08",
+        "ms": 60,
+        "motion": "fall-land"
+      },
+      {
+        "frame": "fall-land_09",
+        "ms": 70,
+        "motion": "fall-land"
+      },
+      {
+        "frame": "fall-land_10",
+        "ms": 70,
+        "motion": "fall-land"
+      },
+      {
+        "frame": "fall-land_11",
+        "ms": 70,
+        "motion": "fall-land"
+      },
+      {
+        "frame": "fall-land_12",
+        "ms": 80,
+        "motion": "fall-land"
+      },
+      {
+        "frame": "dash_01",
+        "ms": 30,
+        "motion": "dash"
+      },
+      {
+        "frame": "dash_02",
+        "ms": 30,
+        "motion": "dash"
+      },
+      {
+        "frame": "dash_03",
+        "ms": 30,
+        "motion": "dash"
+      },
+      {
+        "frame": "dash_04",
+        "ms": 30,
+        "motion": "dash"
+      },
+      {
+        "frame": "dash_05",
+        "ms": 30,
+        "motion": "dash"
+      },
+      {
+        "frame": "dash_06",
+        "ms": 30,
+        "motion": "dash"
+      },
+      {
+        "frame": "dash_07",
+        "ms": 30,
+        "motion": "dash"
+      },
+      {
+        "frame": "dash_08",
+        "ms": 30,
+        "motion": "dash"
+      },
+      {
+        "frame": "dash_09",
+        "ms": 30,
+        "motion": "dash"
+      },
+      {
+        "frame": "dash_10",
+        "ms": 30,
+        "motion": "dash"
+      },
+      {
+        "frame": "dash_11",
+        "ms": 30,
+        "motion": "dash"
+      },
+      {
+        "frame": "dash_12",
+        "ms": 30,
+        "motion": "dash"
+      },
+      {
+        "frame": "death_01",
+        "ms": 80,
+        "motion": "death"
+      },
+      {
+        "frame": "death_02",
+        "ms": 90,
+        "motion": "death"
+      },
+      {
+        "frame": "death_03",
+        "ms": 90,
+        "motion": "death"
+      },
+      {
+        "frame": "death_04",
+        "ms": 100,
+        "motion": "death"
+      },
+      {
+        "frame": "death_05",
+        "ms": 100,
+        "motion": "death"
+      },
+      {
+        "frame": "death_06",
+        "ms": 90,
+        "motion": "death"
+      },
+      {
+        "frame": "death_07",
+        "ms": 90,
+        "motion": "death"
+      },
+      {
+        "frame": "death_08",
+        "ms": 70,
+        "motion": "death"
+      },
+      {
+        "frame": "death_09",
+        "ms": 70,
+        "motion": "death"
+      },
+      {
+        "frame": "death_10",
+        "ms": 90,
+        "motion": "death"
+      },
+      {
+        "frame": "death_11",
+        "ms": 100,
+        "motion": "death"
+      },
+      {
+        "frame": "death_12",
+        "ms": 180,
+        "motion": "death"
+      }
+    ]
+  },
+  "placements": [
+    {
+      "frame": "idle_01",
+      "hand": [
+        58,
+        102
+      ],
+      "angle": -7,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/대기/01.png"
+    },
+    {
+      "frame": "idle_02",
+      "hand": [
+        58,
+        102
+      ],
+      "angle": -7,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/대기/02.png"
+    },
+    {
+      "frame": "idle_03",
+      "hand": [
+        59,
+        102
+      ],
+      "angle": -7,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/대기/03.png"
+    },
+    {
+      "frame": "idle_04",
+      "hand": [
+        59,
+        102
+      ],
+      "angle": -7,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/대기/04.png"
+    },
+    {
+      "frame": "idle_05",
+      "hand": [
+        58,
+        102
+      ],
+      "angle": -7,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/대기/05.png"
+    },
+    {
+      "frame": "idle_06",
+      "hand": [
+        57,
+        102
+      ],
+      "angle": -7,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/대기/06.png"
+    },
+    {
+      "frame": "idle_07",
+      "hand": [
+        56,
+        102
+      ],
+      "angle": -7,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/대기/07.png"
+    },
+    {
+      "frame": "idle_08",
+      "hand": [
+        57,
+        102
+      ],
+      "angle": -7,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/대기/08.png"
+    },
+    {
+      "frame": "idle_09",
+      "hand": [
+        58,
+        102
+      ],
+      "angle": -7,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/대기/09.png"
+    },
+    {
+      "frame": "idle_10",
+      "hand": [
+        58,
+        102
+      ],
+      "angle": -7,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/대기/10.png"
+    },
+    {
+      "frame": "idle_11",
+      "hand": [
+        59,
+        102
+      ],
+      "angle": -7,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/대기/11.png"
+    },
+    {
+      "frame": "idle_12",
+      "hand": [
+        59,
+        102
+      ],
+      "angle": -7,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/대기/12.png"
+    },
+    {
+      "frame": "walk_01",
+      "hand": [
+        60,
+        102
+      ],
+      "angle": -9,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/걷기/01.png"
+    },
+    {
+      "frame": "walk_02",
+      "hand": [
+        64,
+        101
+      ],
+      "angle": -22,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/걷기/02.png"
+    },
+    {
+      "frame": "walk_03",
+      "hand": [
+        66,
+        102
+      ],
+      "angle": -26,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/걷기/03.png"
+    },
+    {
+      "frame": "walk_04",
+      "hand": [
+        68,
+        102
+      ],
+      "angle": -20,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/걷기/04.png"
+    },
+    {
+      "frame": "walk_05",
+      "hand": [
+        70,
+        103
+      ],
+      "angle": -10,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/걷기/05.png"
+    },
+    {
+      "frame": "walk_06",
+      "hand": [
+        68,
+        103
+      ],
+      "angle": -9,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/걷기/06.png"
+    },
+    {
+      "frame": "walk_07",
+      "hand": [
+        65,
+        103
+      ],
+      "angle": -9,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/걷기/07.png"
+    },
+    {
+      "frame": "walk_08",
+      "hand": [
+        62,
+        102
+      ],
+      "angle": -7,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/걷기/08.png"
+    },
+    {
+      "frame": "walk_09",
+      "hand": [
+        59,
+        101
+      ],
+      "angle": -9,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/걷기/09.png"
+    },
+    {
+      "frame": "walk_10",
+      "hand": [
+        56,
+        102
+      ],
+      "angle": -9,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/걷기/10.png"
+    },
+    {
+      "frame": "walk_11",
+      "hand": [
+        53,
+        101
+      ],
+      "angle": -3,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/걷기/11.png"
+    },
+    {
+      "frame": "walk_12",
+      "hand": [
+        55,
+        102
+      ],
+      "angle": -8,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/걷기/12.png"
+    },
+    {
+      "frame": "run_01",
+      "hand": [
+        59,
+        97
+      ],
+      "angle": -5,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/달리기/01.png"
+    },
+    {
+      "frame": "run_02",
+      "hand": [
+        54,
+        92
+      ],
+      "angle": 5,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/달리기/02.png"
+    },
+    {
+      "frame": "run_03",
+      "hand": [
+        53,
+        92
+      ],
+      "angle": 7,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/달리기/03.png"
+    },
+    {
+      "frame": "run_04",
+      "hand": [
+        53,
+        96
+      ],
+      "angle": 7,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/달리기/04.png"
+    },
+    {
+      "frame": "run_05",
+      "hand": [
+        55,
+        101
+      ],
+      "angle": 0,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/달리기/05.png"
+    },
+    {
+      "frame": "run_06",
+      "hand": [
+        62,
+        101
+      ],
+      "angle": -12,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/달리기/06.png"
+    },
+    {
+      "frame": "run_07",
+      "hand": [
+        68,
+        98
+      ],
+      "angle": -6,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/달리기/07.png"
+    },
+    {
+      "frame": "run_08",
+      "hand": [
+        74,
+        94
+      ],
+      "angle": 2,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/달리기/08.png"
+    },
+    {
+      "frame": "run_09",
+      "hand": [
+        76,
+        94
+      ],
+      "angle": -4,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/달리기/09.png"
+    },
+    {
+      "frame": "run_10",
+      "hand": [
+        74,
+        98
+      ],
+      "angle": -6,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/달리기/10.png"
+    },
+    {
+      "frame": "run_11",
+      "hand": [
+        69,
+        101
+      ],
+      "angle": -13,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/달리기/11.png"
+    },
+    {
+      "frame": "run_12",
+      "hand": [
+        61,
+        99
+      ],
+      "angle": -9,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/달리기/12.png"
+    },
+    {
+      "frame": "jump_01",
+      "hand": [
+        58,
+        102
+      ],
+      "angle": 11,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/벽차기_1차_20261025/jump_master/F01.png"
+    },
+    {
+      "frame": "jump_02",
+      "hand": [
+        55,
+        102
+      ],
+      "angle": 10,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/벽차기_1차_20261025/jump_master/F02.png"
+    },
+    {
+      "frame": "jump_03",
+      "hand": [
+        51,
+        101
+      ],
+      "angle": 13,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/벽차기_1차_20261025/jump_master/F03.png"
+    },
+    {
+      "frame": "jump_04",
+      "hand": [
+        58,
+        97
+      ],
+      "angle": -12,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/벽차기_1차_20261025/jump_master/F04.png"
+    },
+    {
+      "frame": "jump_05",
+      "hand": [
+        55,
+        80
+      ],
+      "angle": -5,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/벽차기_1차_20261025/jump_master/F05.png"
+    },
+    {
+      "frame": "jump_06",
+      "hand": [
+        52,
+        69
+      ],
+      "angle": 2,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/벽차기_1차_20261025/jump_master/F06.png"
+    },
+    {
+      "frame": "jump_07",
+      "hand": [
+        51,
+        64
+      ],
+      "angle": 8,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/벽차기_1차_20261025/jump_master/F07.png"
+    },
+    {
+      "frame": "jump_08",
+      "hand": [
+        51,
+        74
+      ],
+      "angle": 5,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/점프/08.png"
+    },
+    {
+      "frame": "jump_09",
+      "hand": [
+        50,
+        91
+      ],
+      "angle": 10,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/점프/09.png"
+    },
+    {
+      "frame": "jump_10",
+      "hand": [
+        49,
+        99
+      ],
+      "angle": 18,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/점프/10.png"
+    },
+    {
+      "frame": "jump_11",
+      "hand": [
+        54,
+        102
+      ],
+      "angle": 11,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/점프/11.png"
+    },
+    {
+      "frame": "jump_12",
+      "hand": [
+        58,
+        102
+      ],
+      "angle": 11,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/점프/12.png"
+    },
+    {
+      "frame": "fall-land_01",
+      "hand": [
+        51,
+        66
+      ],
+      "angle": 6,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/낙하착지/01.png"
+    },
+    {
+      "frame": "fall-land_02",
+      "hand": [
+        51,
+        69
+      ],
+      "angle": 6,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/낙하착지/02.png"
+    },
+    {
+      "frame": "fall-land_03",
+      "hand": [
+        51,
+        74
+      ],
+      "angle": 6,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/낙하착지/03.png"
+    },
+    {
+      "frame": "fall-land_04",
+      "hand": [
+        50,
+        78
+      ],
+      "angle": 10,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/낙하착지/04.png"
+    },
+    {
+      "frame": "fall-land_05",
+      "hand": [
+        50,
+        91
+      ],
+      "angle": 10,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/낙하착지/05.png"
+    },
+    {
+      "frame": "fall-land_06",
+      "hand": [
+        49,
+        95
+      ],
+      "angle": 22,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/낙하착지/06.png"
+    },
+    {
+      "frame": "fall-land_07",
+      "hand": [
+        49,
+        99
+      ],
+      "angle": 18,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/낙하착지/07.png"
+    },
+    {
+      "frame": "fall-land_08",
+      "hand": [
+        50,
+        101
+      ],
+      "angle": 16,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/낙하착지/08.png"
+    },
+    {
+      "frame": "fall-land_09",
+      "hand": [
+        52,
+        102
+      ],
+      "angle": 13,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/낙하착지/09.png"
+    },
+    {
+      "frame": "fall-land_10",
+      "hand": [
+        54,
+        102
+      ],
+      "angle": 11,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/낙하착지/10.png"
+    },
+    {
+      "frame": "fall-land_11",
+      "hand": [
+        58,
+        102
+      ],
+      "angle": 9,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/낙하착지/11.png"
+    },
+    {
+      "frame": "fall-land_12",
+      "hand": [
+        58,
+        102
+      ],
+      "angle": 11,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/낙하착지/12.png"
+    },
+    {
+      "frame": "dash_01",
+      "hand": [
+        59,
+        100
+      ],
+      "angle": -4,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/대시/01.png"
+    },
+    {
+      "frame": "dash_02",
+      "hand": [
+        56,
+        98
+      ],
+      "angle": 2,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/대시/02.png"
+    },
+    {
+      "frame": "dash_03",
+      "hand": [
+        53,
+        95
+      ],
+      "angle": 17,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/대시/03.png"
+    },
+    {
+      "frame": "dash_04",
+      "hand": [
+        52,
+        92
+      ],
+      "angle": 26,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/대시/04.png"
+    },
+    {
+      "frame": "dash_05",
+      "hand": [
+        52,
+        93
+      ],
+      "angle": 26,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/대시/05.png"
+    },
+    {
+      "frame": "dash_06",
+      "hand": [
+        52,
+        93
+      ],
+      "angle": 26,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/대시/06.png"
+    },
+    {
+      "frame": "dash_07",
+      "hand": [
+        53,
+        93
+      ],
+      "angle": 24,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/대시/07.png"
+    },
+    {
+      "frame": "dash_08",
+      "hand": [
+        52,
+        93
+      ],
+      "angle": 24,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/대시/08.png"
+    },
+    {
+      "frame": "dash_09",
+      "hand": [
+        53,
+        93
+      ],
+      "angle": 21,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/대시/09.png"
+    },
+    {
+      "frame": "dash_10",
+      "hand": [
+        56,
+        99
+      ],
+      "angle": 0,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/대시/10.png"
+    },
+    {
+      "frame": "dash_11",
+      "hand": [
+        59,
+        101
+      ],
+      "angle": -5,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/대시/11.png"
+    },
+    {
+      "frame": "dash_12",
+      "hand": [
+        58,
+        100
+      ],
+      "angle": -4,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/대시/12.png"
+    },
+    {
+      "frame": "death_01",
+      "hand": [
+        58,
+        102
+      ],
+      "angle": -7,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/죽음_2/01.png"
+    },
+    {
+      "frame": "death_02",
+      "hand": [
+        59,
+        103
+      ],
+      "angle": -9,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/죽음_2/02.png"
+    },
+    {
+      "frame": "death_03",
+      "hand": [
+        60,
+        103
+      ],
+      "angle": -9,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/죽음_2/03.png"
+    },
+    {
+      "frame": "death_04",
+      "hand": [
+        60,
+        103
+      ],
+      "angle": 13,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/죽음_2/04.png"
+    },
+    {
+      "frame": "death_05",
+      "hand": [
+        58,
+        104
+      ],
+      "angle": 35,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/죽음_2/05.png"
+    },
+    {
+      "frame": "death_06",
+      "hand": [
+        55,
+        104
+      ],
+      "angle": -7,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/죽음_2/06.png"
+    },
+    {
+      "frame": "death_07",
+      "hand": [
+        51,
+        104
+      ],
+      "angle": 0,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/죽음_2/07.png"
+    },
+    {
+      "frame": "death_08",
+      "hand": [
+        45,
+        105
+      ],
+      "angle": 16,
+      "released": false,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/죽음_2/08.png"
+    },
+    {
+      "frame": "death_09",
+      "hand": [
+        45,
+        109
+      ],
+      "angle": -15,
+      "released": true,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/죽음_2/09.png"
+    },
+    {
+      "frame": "death_10",
+      "hand": [
+        46,
+        109
+      ],
+      "angle": -12,
+      "released": true,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/죽음_2/10.png"
+    },
+    {
+      "frame": "death_11",
+      "hand": [
+        47,
+        112
+      ],
+      "angle": -10,
+      "released": true,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/죽음_2/11.png"
+    },
+    {
+      "frame": "death_12",
+      "hand": [
+        47,
+        112
+      ],
+      "angle": -10,
+      "released": true,
+      "bodySource": "02_에셋/캐릭터/잉크/공통몸체/04_확정본/죽음_2/12.png"
+    }
+  ],
+  "silhouettePolicy": "Rigid planar faces with short straight chamfers, native polygon rasterization."
+}

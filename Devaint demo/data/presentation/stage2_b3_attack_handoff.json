@@ -1,0 +1,33 @@
+{
+  "schema": "stage2-normal-attack-handoff-v1",
+  "status": "B3-input-and-prompt-ready-awaiting-user-review-and-return",
+  "activeId": "B3",
+  "name": "쐐기보행기",
+  "source": "outputs/waterway/pixel-base-step1-20261031/B3/native/base-frame.png",
+  "palette": "outputs/waterway/pixel-base-step1-20261031/B3/palette.json",
+  "combatReference": "data/combat/stage2_waterway_patterns.json",
+  "output": "outputs/waterway/normal-attack-handoff-20261101/B3",
+  "canvas": [384,224],
+  "scale": 4,
+  "background": "#ffffff",
+  "oneLine": "몸을 낮춰 돌진해 접근한 뒤 멈추고, 후방 지지대로 버티며 앞몸을 들어 쐐기를 앞아래로 내리찍는다.",
+  "phaseProposal": [
+    {"name":"돌진 전조","seconds":0.6,"action":"앞쐐기를 바닥 가까이 낮추고 뒤 지지대를 접어 왼쪽 돌진을 예고한다."},
+    {"name":"접근 돌진","seconds":0.35,"action":"몸을 낮춘 채 빠르게 지지대를 밀어내는 제자리 돌진 동작. 실제 수평 전진은 이후 게임 이동으로 연결한다."},
+    {"name":"찍기 전조","seconds":0.45,"action":"제동하고 후방 지지대를 버틴다. 앞쐐기와 앞몸을 들어 바닥과의 빈 공간을 보여준 뒤 잠깐 버틴다."},
+    {"name":"내리찍기","seconds":0.15,"action":"들어 올린 앞부분을 빠르게 앞아래로 한 번 내리찍는다. 후방 지지대는 바닥을 버틴다."},
+    {"name":"회복","seconds":0.9,"action":"쐐기를 내린 낮은 자세를 잠깐 유지하고 하중을 다시 지지대로 나눠 원래 기본자세로 돌아온다."}
+  ],
+  "motionNoteKo": "돌진과 찍기를 구분합니다. 돌진은 제자리 동작으로 요청하고 실제 전진은 이후 연결합니다. 제동 후 앞몸을 들어 올리는 두 번째 전조가 읽혀야 합니다. 다섯 지면 접점의 지지대 구조를 유지하고 후방 지지대가 하중을 받으며 앞몸만 기울어지게 합니다.",
+  "effectNoteKo": "본체와 지지대의 동작부터 제작합니다. 돌진 잔상·먼지·충격파·바닥 균열·잉크 효과는 이번 이미지에 넣지 않습니다. 낮게 준비 → 잠깐 버팀 → 빠른 찍기 → 무거운 회복의 박자를 읽히게 요청합니다.",
+  "timingPolicy": "Existing B3 combat proposal:0.6/0.35/0.45/0.15/0.9 seconds, total2.45 seconds. Art guidance subject to user review. Charge locomotion is in-place for extraction; world translation and damage are not implemented. No combat data changes.",
+  "effectPolicy": "Character-only charge/brake/front-body-lift/slam/recovery. No motion trails, dust, impact shockwave, floor cracks, ink spray, puddles or generated scenery.",
+  "queue": [
+    {"id":"K4","name":"등짐분사수","oneLine":"A19장 채택 · 멈춰 노즐을 들고 짧은 전방 잉크 분사."},
+    {"id":"B3","name":"쐐기보행기","oneLine":"돌진해 접근한 뒤 제동하고, 앞몸을 들어 앞아래로 내리찍기."},
+    {"id":"M3","name":"먹침필경사","oneLine":"빠르게 접근해 멈춘 뒤 긴 침으로 와다다 연속 찌르기."},
+    {"id":"R-selected","name":"신호투척수","oneLine":"플레이어 위치를 조준 고정하고 손의 소품을 포물선으로 투척."},
+    {"id":"H3","name":"늘어진수의","oneLine":"큰 잉크 공을 만들어 던지고, 착탄한 바닥에 잠시 지속 피해 장판 생성."}
+  ],
+  "prompt": "Animate the exact supplied pixel-art creature performing ONE LEFT-facing charge-and-front-slam attack, about2.45 seconds. Start and finish in the exact supplied neutral posture. Use strong readable key poses and weighty, slightly stepped pixel-game timing: deliberate anticipation, quick impact and a slow heavy recovery. Avoid uniformly smooth floaty motion.\n\n1. CHARGE ANTICIPATION, about0.6s: lower the cream front wedge close to the ground, compress the existing orange supports and load the rear supports. Clearly prepare to rush LEFT. Keep the original slightly turned side view.\n\n2. CHARGE MOTION, about0.35s: keep the body low while the existing supports make a short rapid pushing motion, then clearly brake. Perform this rush animation IN PLACE, with the creature staying at the same screen location; horizontal world movement will be applied separately in the game. Do not slide across the canvas or move the camera.\n\n3. SLAM ANTICIPATION, about0.45s: after braking, stop the stepping motion. Plant the rear supports firmly, shift the weight backward and tilt the front wedge and forebody upward as a connected rigid assembly, roughly20-30 degrees. Show a clear air gap between the lifted front wedge and the ground, and briefly hold this raised silhouette before the strike. The rear supports bear the weight. Do not raise the entire creature into the air.\n\n4. FRONT SLAM, about0.15s: drive the lifted front wedge and forebody sharply DOWN and slightly FORWARD toward the LEFT, striking the original ground line ONCE. The rear supports remain braced. Show a fast, decisive impact pose. Do not jump, spin, flip, bite or slam repeatedly.\n\n5. RECOVERY, about0.9s: briefly hold the low heavy landed pose, then slowly restore the original support positions and the exact starting neutral posture. Let the weight settle before recovering. No immediate second charge or second slam.\n\nPreserve the reference creature's exact construction: the same broad cream front wedge, teal rear plates, orange jointed supports, proportions and original10 character colors. Preserve the reference's five ground-contact support structure; supports may lift for the action but must not disappear, multiply, turn into human limbs or change their attachment points. Keep all plates attached and rigid in shape; do not stretch or melt the wedge or turn it into an animal skull. Keep the solid colored plates fully filled without accidental white holes. Preserve intentional gaps between the existing supports.\n\nCharacter motion only: no ink, projectiles, dust, smoke, speed trails, glowing edges, shockwaves, ground cracks, shadows, targets or scenery. No outlines, antialiasing, gradients, blur, dithering, added colors or realistic texture. Preserve crisp aligned4x4 pixel clusters.\n\nThe supplied1536x896 full canvas is exactly4x a384x224 logical-pixel canvas. Lock the character scale, screen anchor, camera and ground line throughout. Keep the entire raised wedge, rear plates and every support inside the original full canvas with generous padding. No zoom, crop, auto-trim, canvas resizing, mirroring, text or grid. Keep a solid pure-white background (#FFFFFF). Export chronological full-canvas frames or a continuous single attack with identical framing."
+}

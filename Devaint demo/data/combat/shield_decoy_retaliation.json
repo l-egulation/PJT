@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "actionId": "shield_follow_up",
+  "status": "approved_unity_implemented",
+  "baseActionSource": "data/combat/melee_weapon_design.json",
+  "implementation": {
+    "browser": "tools/combat/shield_decoy_retaliation.cjs",
+    "unity": "unity/Assets/Deviant/Combat/Runtime/Unity/ShieldDecoyRuntime.cs"
+  },
+  "retaliation": {
+    "fixedDamage": 265,
+    "radiusUnits": 3,
+    "trigger": "destroyed_by_damage_or_expired",
+    "hitsPerTarget": 1,
+    "targets": "enemies_including_bosses",
+    "extraDamageScaling": false,
+    "expiry": "burst_once",
+    "replacement": "discard_without_burst",
+    "overkill": "does_not_scale_damage"
+  }
+}

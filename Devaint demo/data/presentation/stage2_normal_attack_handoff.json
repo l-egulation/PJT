@@ -1,0 +1,29 @@
+{
+  "schema": "stage2-normal-attack-handoff-v1",
+  "status": "K4-input-and-prompt-ready-awaiting-user-review-and-return",
+  "activeId": "K4",
+  "name": "등짐분사수",
+  "source": "outputs/waterway/pixel-base-step1-20261031/K4/native/base-frame.png",
+  "palette": "outputs/waterway/pixel-base-step1-20261031/K4/palette.json",
+  "combatReference": "data/combat/stage2_waterway_patterns.json",
+  "output": "outputs/waterway/normal-attack-handoff-20261101/K4",
+  "canvas": [384,224],
+  "scale": 4,
+  "background": "#ffffff",
+  "oneLine": "다가오다 멈춰 노즐을 들고 전방에 짧고 넓은 잉크를 분사한 뒤, 노즐을 내리며 빈틈을 보인다.",
+  "phaseProposal": [
+    {"name":"전조","seconds":0.55,"action":"제자리에서 무릎을 낮추고 노즐을 허리 높이로 들어 왼쪽 수평 방향을 보여준다."},
+    {"name":"분사 동작","seconds":0.65,"action":"양발을 버티고 노즐 방향을 고정한다. 시작 반동 뒤 어깨·몸통만 작게 떨린다."},
+    {"name":"회복","seconds":0.7,"action":"힘이 빠져 노즐이 아래로 내려오고 원래 기본자세로 돌아온다."}
+  ],
+  "timingPolicy": "Existing combat design proposal copied for art guidance. A single approximately1.9s action, not a looping walk. Returned frames and timing remain subject to user review; do not edit gameplay values or declare runtime integration.",
+  "effectPolicy": "Generate the character/nozzle action first. The short leftward ink stream is a separate future effect, not omitted from the intended attack. No stream, droplets or floor puddles in this character-only input request.",
+  "queue": [
+    {"id":"K4","name":"등짐분사수","oneLine":"멈춰 노즐을 들고 짧은 전방 잉크 분사."},
+    {"id":"B3","name":"쐐기보행기","oneLine":"돌진해 접근한 뒤 제동하고, 앞몸을 들어 앞아래로 내리찍기."},
+    {"id":"M3","name":"먹침필경사","oneLine":"빠르게 접근해 멈춘 뒤 긴 침으로 와다다 연속 찌르기."},
+    {"id":"R-selected","name":"신호투척수","oneLine":"플레이어 위치를 조준 고정하고 손의 소품을 포물선으로 투척."},
+    {"id":"H3","name":"늘어진수의","oneLine":"큰 잉크 공을 만들어 던지고, 착탄한 바닥에 잠시 지속 피해 장판 생성."}
+  ],
+  "prompt": "Animate the exact supplied pixel-art character performing ONE stationary LEFT-facing short-range ink-spray attack. Start in the supplied neutral pose, perform a readable anticipation, a braced spray action and a relaxed recovery back to that same neutral pose. About 1.9 seconds total, with smooth sequential intermediate poses. This is one attack, not a walking loop.\n\nANTICIPATION, about 0.55s: keep both boots at their reference ground contacts. Bend the knees slightly and settle the weight. With the existing hands still gripping the original nozzle, raise it from its downward-left resting angle to waist height, pointing horizontally LEFT. The arm and shoulder movement must clearly show the attack direction. Keep the original slightly turned side view; do not rotate into a full profile or front view.\n\nSPRAY ACTION, about 0.65s: hold the nozzle aimed LEFT at waist height. Give the torso and shoulders a small backward recoil of 2-3 logical pixels at the start, then a restrained approximately1-pixel vibration while bracing. Keep the boots planted, the mask rigid and the nozzle length constant. The single backpack tank remains securely attached to the torso, moving with it without changing shape. Keep the hands, grips, nozzle and hose physically connected throughout. The hose may bend gently with the arms. Do not detach, duplicate or switch any equipment.\n\nRECOVERY, about 0.7s: ease out of the recoil, let the shoulders relax and lower the nozzle back to its original downward-left angle. Return naturally to the exact supplied neutral posture, size and location. Show the recovery clearly instead of immediately firing again. No walking, charging, stepping, jumping, turning or sliding. Do not move across the canvas.\n\nCHARACTER MOTION ONLY: show the nozzle aiming, bracing and recoil, but do not draw the ink stream, projectiles, droplets, splash, smoke, flashes or floor puddles. The actual ink stream will be a separate effect. Do not add enemies, targets, scenery or shadows.\n\nPreserve this exact coral-red suit, cream single backpack tank, dark mask, yellow face slit, hose, nozzle, gloves and boots. Keep the same anatomy, proportions, equipment silhouette and existing11 character colors. Use crisp solid pixel clusters, with no outlines, new colors, antialiasing, gradients, blur, dithering, texture or soft edge fringe. Keep cloth, knees and equipment fully filled; do not introduce white holes inside solid colored parts. Preserve the intentional white gaps between limbs and equipment.\n\nThe supplied full canvas is1536x896, exactly4x a384x224 logical-pixel canvas. Preserve aligned4x4 blocks and the original character scale. Lock the camera, framing and ground line. Keep the complete backpack, nozzle, hose and both boots inside every frame, with the existing full-canvas padding. No zoom, crop, auto-trim, canvas resizing, mirroring, text or grid. Keep a solid pure-white background (#FFFFFF). Export the attack in chronological order using identical full-canvas frames; do not duplicate the endpoint as a pause."
+}

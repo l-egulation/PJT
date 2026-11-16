@@ -1,0 +1,164 @@
+{
+  "kind": "focused-sound-decisions",
+  "bombExplosion": {
+    "candidate": "B3",
+    "file": "source/focused-mixes-01/B3.wav",
+    "sha256": "822a47da3fe91fdce647b2196cb4103857468f142e35ae09c70bfdf7aa827af1",
+    "status": "user-confirmed; applied-locally",
+    "instruction": "폭탄 b3할게",
+    "mix": {
+      "id": "B3",
+      "label": "큰 물풍선 방향",
+      "file": "B3.wav",
+      "duration": 1.05,
+      "sha256": "822a47da3fe91fdce647b2196cb4103857468f142e35ae09c70bfdf7aa827af1",
+      "peak": 0.47998046875,
+      "sources": [
+        "Magic_Spells/water_blast_projectile_spell_04.wav",
+        "Water/water_splash_object_body_05.wav"
+      ],
+      "edit": {
+        "kind": "layered-water-release",
+        "mainStart": 0.09939583333333334,
+        "wetStart": 0.25066666666666665,
+        "wetOnset": 0.025,
+        "mainGain": 0.72,
+        "wetGain": 0.82,
+        "decay": 0.175,
+        "noExplosionRecording": true,
+        "noThud": true,
+        "noCartoonPop": true,
+        "noSyntheticNoise": true
+      }
+    }
+  },
+  "smoke": {
+    "status": "user-confirmed; applied-locally",
+    "rejected": [
+      "focused-mixes-01/S1",
+      "focused-mixes-01/S2",
+      "focused-mixes-01/S3",
+      "smoke-release-08/S16",
+      "smoke-release-08/S17",
+      "smoke-release-09/S01",
+      "smoke-release-09/S02",
+      "smoke-release-09/S03",
+      "smoke-release-09/S04",
+      "smoke-release-09/S05",
+      "smoke-release-09/S06",
+      "smoke-release-09/S07",
+      "smoke-release-09/S08",
+      "smoke-release-09/S09",
+      "smoke-release-09/S10"
+    ],
+    "currentCandidates": [
+      "A07-smoother"
+    ],
+    "currentAudition": "preview/smoke-release-14.html",
+    "basedOn": "smoke-release-13/A07-louder",
+    "structure": {
+      "burstSeconds": 0,
+      "totalSeconds": 0.78,
+      "tailFadeSeconds": 0.27
+    },
+    "spreadPreservedFrom": "smoke-release-06",
+    "instruction": "연막탄은 이걸로 확정하고 선택 파일에서 별표한 스킬들이랑 같이 게임에 적용",
+    "previousConfirmations": [
+      {
+        "status": "user-confirmed; not applied",
+        "rejected": [
+          "focused-mixes-01/S1",
+          "focused-mixes-01/S2",
+          "focused-mixes-01/S3"
+        ],
+        "currentCandidates": [
+          "S16",
+          "S17"
+        ],
+        "currentAudition": "preview/smoke-release-08.html",
+        "basedOn": [
+          "S14",
+          "S15"
+        ],
+        "structure": {
+          "burstSeconds": 0,
+          "totalSeconds": 1.1,
+          "spreadStart": 0.025
+        },
+        "spreadPreservedFrom": "smoke-release-06",
+        "direction": "user-confirmed: spread only; no burst",
+        "instruction": "연막탄은 이걸로 하고",
+        "confirmedRevision": "smoke-release-08",
+        "confirmationScope": "latest spread-only audition; specific variant number not stated",
+        "confirmedFiles": [
+          {
+            "file": "source/smoke-release-08/S16.wav",
+            "sha256": "c652210a4cd8ab061f69d09ec78b1dfae24c096bf3531ead8537332a5d6a877f"
+          },
+          {
+            "file": "source/smoke-release-08/S17.wav",
+            "sha256": "2a772b7feb3f77a4c024262f17c798727500e94742962190d083f6c3ab0a4e75"
+          }
+        ]
+      }
+    ],
+    "confirmedRevision": "smoke-release-14",
+    "confirmedFiles": [
+      {
+        "file": "source/smoke-release-14/smoke14-07-smoother.wav",
+        "sha256": "d837c9ea1022198144c1bbe3c0292e21cb8d4df6f3a98bc84a3797e07e9e627d"
+      }
+    ],
+    "runtime": "SelectedSkillAudio/dagger_range__activated_01"
+  },
+  "confirmationSemantics": "All stars are confirmations, including multiple stars. Missing browser state is unknown, not pending.",
+  "explosionAssignments": {
+    "status": "user-confirmed; applied-locally",
+    "large": {
+      "actions": [
+        "bomb_range_special",
+        "bomb_move_special",
+        "bomb_followup_special"
+      ],
+      "sourceAction": "bomb_range_special",
+      "candidate": 8,
+      "sourceRevision": 11,
+      "audio": "r11/380a9a7cdb2eb0736ec9",
+      "file": "source/audio/r11-380a9a7cdb2eb0736ec9.wav",
+      "sha256": "380a9a7cdb2eb0736ec917ef5814536a52c993bf290bde4dd1cce0565720dffe",
+      "gain": 0.8
+    },
+    "normal": {
+      "actions": [
+        "bomb_basic_review",
+        "bomb_basic_special",
+        "shuriken_range_special"
+      ],
+      "candidate": "B3",
+      "file": "source/focused-mixes-01/B3.wav",
+      "sha256": "822a47da3fe91fdce647b2196cb4103857468f142e35ae09c70bfdf7aa827af1",
+      "gain": 0.8
+    },
+    "throwGainAdjustment": {
+      "actions": [
+        "bomb_range_special",
+        "bomb_followup_special"
+      ],
+      "multiplier": 2,
+      "decibels": 6.0206
+    }
+  },
+  "importedSkillSelection": {
+    "file": "source/selections/user-skill-selections-revision12.json",
+    "sha256": "88317317af3573dba5d52ead4b7493f084e43bc2482ab65b734141bc25d4749c",
+    "revision": 12,
+    "rule": "all stars confirmed; revisions and multiple stars preserved; only smoke explicitly reopened"
+  },
+  "gameApplication": {
+    "scope": "40 skills, 41 approved variants; selected explosion assignments",
+    "status": "applied-locally",
+    "manifest": "data/audio/skill-selections.json",
+    "variantPolicy": "greatsword_default stars 6 and 7 alternate",
+    "unselectedLauncherBasic": "retain current sound"
+  }
+}

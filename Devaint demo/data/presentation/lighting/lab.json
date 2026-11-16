@@ -1,0 +1,18 @@
+{
+  "schema": 5,
+  "profiles": [
+    {"id": "indoor", "color": [0.68, 0.76, 1.0], "intensity": 0.28},
+    {"id": "sunset", "color": [1.0, 0.66, 0.43], "intensity": 0.65},
+    {"id": "warm-room", "color": [1.0, 0.78, 0.56], "intensity": 0.46}
+  ],
+  "emitters": [
+    {"id": "lantern", "color": [1.0, 0.68, 0.30], "intensity": 1.4, "radius": 6.0, "normalDistance": 2.0, "shadowStrength": 0.8, "shadowSoftness": 0.55, "shadowFalloff": 0.5, "lightFalloff": 0.6, "flickerAmplitude": 0.05, "flickerPeriod": 0.7},
+    {"id": "window", "color": [0.62, 0.78, 1.0], "intensity": 0.8, "radius": 7.0, "normalDistance": 3.0, "shadowStrength": 0.7, "shadowSoftness": 0.7, "shadowFalloff": 0.5, "lightFalloff": 0.65, "flickerAmplitude": 0.0, "flickerPeriod": 1.0}
+  ],
+  "pendulum": {"length": 1.4, "gravity": 9.81, "damping": 1.1, "maxAngleDegrees": 45.0, "maxAngularSpeed": 4.0, "bodyImpulseScale": 0.12, "attackImpulse": 1.8},
+  "suspension": {"style": "chain", "segments": 24, "linkPitch": 0.1, "chainWidth": 0.13, "ropeWidth": 0.045, "linkOverlap": 1.55, "maxBend": 0.12, "lagScale": 0.045, "response": 10.0},
+  "windowBeam": {"angleDegrees": -30.0, "length": 10.0, "edgeFeather": 0.18, "beamOpacity": 0.08, "endFade": 1.5},
+  "zones": [
+    {"id": "lab-warm-zone", "profile": "warm-room", "bounds": [0.5, -1.0, 7.0, 4.0], "priority": 1, "blendWidth": 0.8, "exitHysteresis": 0.35, "transitionSeconds": 0.3}
+  ]
+}

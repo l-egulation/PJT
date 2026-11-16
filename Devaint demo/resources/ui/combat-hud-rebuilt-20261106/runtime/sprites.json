@@ -1,0 +1,483 @@
+{
+  "format": "deviant-standalone-ui-sprites-v1",
+  "sprites": [
+    {
+      "id": "health-plaque",
+      "label": "체력 프레임",
+      "file": "runtime/sprites/health-plaque.png",
+      "size": [
+        1840,
+        392
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/health-plaque.png",
+      "transparentTrim": [
+        40,
+        205,
+        1880,
+        597
+      ],
+      "completeStandalone": true,
+      "sha256": "6dd14bde93192ffc1b483eed5c6b0a153d4f88dbf335e4dfa77b27eb86142a7d"
+    },
+    {
+      "id": "weapon-disc",
+      "label": "무기·스킬 공용 원형 슬롯",
+      "file": "runtime/sprites/weapon-disc.png",
+      "size": [
+        999,
+        1012
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/weapon-disc.png",
+      "transparentTrim": [
+        123,
+        124,
+        1122,
+        1136
+      ],
+      "completeStandalone": true,
+      "sha256": "cc641c7f0d555e4f973db2c9f0f64581a989e1e57455cb9159f7369b25b759a9"
+    },
+    {
+      "id": "run-card",
+      "label": "출발 팔레트 카드",
+      "file": "runtime/sprites/run-card.png",
+      "size": [
+        1449,
+        848
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/run-card.png",
+      "transparentTrim": [
+        56,
+        81,
+        1505,
+        929
+      ],
+      "completeStandalone": true,
+      "sha256": "11a73e13cf0b314f015aff93cb8a72cd622405d506b9a5c9229260abe6e58276"
+    },
+    {
+      "id": "minimap-frame",
+      "label": "미니맵 프레임",
+      "file": "runtime/sprites/minimap-frame.png",
+      "size": [
+        1924,
+        620
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/minimap-frame.png",
+      "transparentTrim": [
+        78,
+        67,
+        2002,
+        687
+      ],
+      "completeStandalone": true,
+      "sha256": "6ce8ca0873081bd66a2a00b7c37189e31a68cd4fd6033f9edc6f3e58aece7517"
+    },
+    {
+      "id": "palette-tray",
+      "label": "팔레트 받침",
+      "file": "runtime/sprites/palette-tray.png",
+      "size": [
+        1589,
+        350
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/palette-tray.png",
+      "transparentTrim": [
+        291,
+        187,
+        1880,
+        537
+      ],
+      "completeStandalone": true,
+      "sha256": "508924aa71c3e895663084e913d87728b412a64cdaef576b6ed4125e5f1a0e55"
+    },
+    {
+      "id": "heading-plaque",
+      "label": "출발 팔레트 제목판",
+      "file": "runtime/sprites/heading-plaque.png",
+      "size": [
+        1762,
+        332
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/heading-plaque.png",
+      "transparentTrim": [
+        205,
+        195,
+        1967,
+        527
+      ],
+      "completeStandalone": true,
+      "sha256": "46e8055374f15f516808f62334fc0b7007175b8c8582068148240292705ea92f"
+    },
+    {
+      "id": "button-frame",
+      "label": "버튼·키캡 바탕",
+      "file": "runtime/sprites/button-frame.png",
+      "size": [
+        700,
+        694
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/button-frame.png",
+      "transparentTrim": [
+        282,
+        278,
+        982,
+        972
+      ],
+      "completeStandalone": true,
+      "sha256": "29783885e0880255e5c2df5aafe2561482edcacea0f241324399947c53f95129"
+    },
+    {
+      "id": "weapon-sword",
+      "label": "검 아이콘",
+      "file": "runtime/sprites/weapon-sword.png",
+      "size": [
+        641,
+        636
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/weapon-sword.png",
+      "transparentTrim": [
+        465,
+        206,
+        1106,
+        842
+      ],
+      "completeStandalone": true,
+      "sha256": "84ea064a029441c0e4c277a9d8fdc44cb44a3d9d6ec18e3db9c1f90e25bcb494"
+    },
+    {
+      "id": "weapon-hammer",
+      "label": "망치 아이콘",
+      "file": "runtime/sprites/weapon-hammer.png",
+      "size": [
+        733,
+        760
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/weapon-hammer.png",
+      "transparentTrim": [
+        411,
+        134,
+        1144,
+        894
+      ],
+      "completeStandalone": true,
+      "sha256": "5e91f276de61f9581bcd9d42ffcee7c368594fb206cf390b32eb8c8e83069412"
+    },
+    {
+      "id": "skill-slash",
+      "label": "검 기본 공격",
+      "file": "runtime/sprites/skill-slash.png",
+      "size": [
+        457,
+        414
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/skill-slash.png",
+      "transparentTrim": [
+        542,
+        306,
+        999,
+        720
+      ],
+      "completeStandalone": true,
+      "sha256": "01add4aa84ba86d8066fc93f0be824d484205f8d08644ba103bb01f3e08f6001"
+    },
+    {
+      "id": "skill-swirl",
+      "label": "회전 스킬",
+      "file": "runtime/sprites/skill-swirl.png",
+      "size": [
+        785,
+        807
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/skill-swirl.png",
+      "transparentTrim": [
+        372,
+        112,
+        1157,
+        919
+      ],
+      "completeStandalone": true,
+      "sha256": "5485decdcc9e15204810da138e5148bda4e610532018006b50586a23285442cb"
+    },
+    {
+      "id": "drop-blue",
+      "label": "파랑 물방울",
+      "file": "runtime/sprites/drop-blue.png",
+      "size": [
+        485,
+        639
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/drop-blue.png",
+      "transparentTrim": [
+        383,
+        332,
+        868,
+        971
+      ],
+      "completeStandalone": true,
+      "sha256": "7fbd09cf9a9778a714154d1cab256c96fd9f62203a4921f47ee788c2442c6d93"
+    },
+    {
+      "id": "drop-yellow",
+      "label": "노랑 물방울",
+      "file": "runtime/sprites/drop-yellow.png",
+      "size": [
+        496,
+        670
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/drop-yellow.png",
+      "transparentTrim": [
+        376,
+        301,
+        872,
+        971
+      ],
+      "completeStandalone": true,
+      "sha256": "3e98484a4766d47a6ff76b779e2af31b04e3cb79724b3ff9f42fe2a97ee42ea5"
+    },
+    {
+      "id": "drop-red",
+      "label": "빨강 물방울",
+      "file": "runtime/sprites/drop-red.png",
+      "size": [
+        467,
+        623
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/drop-red.png",
+      "transparentTrim": [
+        391,
+        325,
+        858,
+        948
+      ],
+      "completeStandalone": true,
+      "sha256": "489b327b622c8ce040d89ddbe5bd28539f807a6833351b3f420f6758a9197ee9"
+    },
+    {
+      "id": "drop-green",
+      "label": "초록 물방울",
+      "file": "runtime/sprites/drop-green.png",
+      "size": [
+        443,
+        581
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/drop-green.png",
+      "transparentTrim": [
+        403,
+        344,
+        846,
+        925
+      ],
+      "completeStandalone": true,
+      "sha256": "7cb57dcee9bad384b2f9389f9137be218f3f038f60642638c803fa109740b0c9"
+    },
+    {
+      "id": "skill-impact",
+      "label": "망치 기본 공격",
+      "file": "runtime/sprites/skill-impact.png",
+      "size": [
+        989,
+        977
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/skill-impact.png",
+      "transparentTrim": [
+        137,
+        135,
+        1126,
+        1112
+      ],
+      "completeStandalone": true,
+      "sha256": "85e10ddb9f497dacf31d5c7ecc0f352647ee4ae9e04121f70dccdd65d13b5e2e"
+    },
+    {
+      "id": "hero-portrait",
+      "label": "캐릭터 초상",
+      "file": "runtime/sprites/hero-portrait.png",
+      "size": [
+        819,
+        723
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/hero-portrait.png",
+      "transparentTrim": [
+        358,
+        148,
+        1177,
+        871
+      ],
+      "completeStandalone": true,
+      "sha256": "fe0935ae0cbc581f9c832302fbe941f1bcfe14c8aba3d88dede1b9745a08c2d9"
+    },
+    {
+      "id": "gold-coin",
+      "label": "골드",
+      "file": "runtime/sprites/gold-coin.png",
+      "size": [
+        716,
+        719
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/gold-coin.png",
+      "transparentTrim": [
+        407,
+        157,
+        1123,
+        876
+      ],
+      "completeStandalone": true,
+      "sha256": "28c213a82b860654fe8af175b711046af56654ee6efe778b297dd3931b1495ed"
+    },
+    {
+      "id": "bag-glyph",
+      "label": "인벤토리",
+      "file": "runtime/sprites/bag-glyph.png",
+      "size": [
+        718,
+        740
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/bag-glyph.png",
+      "transparentTrim": [
+        301,
+        242,
+        1019,
+        982
+      ],
+      "completeStandalone": true,
+      "sha256": "bec8be35bf6f7807b3f3cfdc4ee5cb75cf0f44031603fc6de5c771e95e88fcac"
+    },
+    {
+      "id": "radial-ring-clean",
+      "label": "얇은 원형 링",
+      "file": "runtime/sprites/radial-ring-clean.png",
+      "size": [
+        934,
+        943
+      ],
+      "origin": "new-image-generation",
+      "source": "source/generated/radial-ring-clean.png",
+      "transparentTrim": [
+        183,
+        132,
+        1117,
+        1075
+      ],
+      "completeStandalone": true,
+      "sha256": "00881fedf8cdb4bf31ad17316117f103db231cd980a137a7897585e11724bf75"
+    },
+    {
+      "id": "pigment-existing-game",
+      "label": "기존 게임 안료",
+      "file": "runtime/sprites/pigment-existing-game.png",
+      "size": [
+        32,
+        32
+      ],
+      "origin": "existing-game-asset",
+      "source": "source/pigment-existing-game.png",
+      "transparentTrim": null,
+      "completeStandalone": true,
+      "sha256": "8e55e2bcef3ad8f8eba8ae09d513af4d64428636be72cc0dd3e3b40724fea063"
+    },
+    {
+      "id": "progress-ring-mask",
+      "label": "진행률 원형 마스크",
+      "file": "runtime/sprites/progress-ring-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "origin": "authored-ui-primitive",
+      "source": "source/primitives/progress-ring-mask.svg",
+      "transparentTrim": null,
+      "completeStandalone": true,
+      "sha256": "1718eff8ede60f806dba6e098f736a7d13df16f8126082a57967278c6ec5da3f"
+    },
+    {
+      "id": "health-fill-mask",
+      "label": "체력 100% 채움 마스크",
+      "file": "runtime/sprites/health-fill-mask.png",
+      "size": [
+        680,
+        48
+      ],
+      "origin": "authored-ui-primitive",
+      "source": "source/primitives/health-fill-mask.svg",
+      "transparentTrim": null,
+      "completeStandalone": true,
+      "sha256": "b556ea297735fa4e58f94865c6dd3804c19e9c883f15e64b50564895f6712ba4"
+    },
+    {
+      "id": "pause-glyph",
+      "label": "일시정지",
+      "file": "runtime/sprites/pause-glyph.png",
+      "size": [
+        64,
+        80
+      ],
+      "origin": "authored-ui-primitive",
+      "source": "source/primitives/pause-glyph.svg",
+      "transparentTrim": null,
+      "completeStandalone": true,
+      "sha256": "c31c247cd2ba336c5ec069a4360a02e4f7d36e454ed4bcbdf9099d02019696bd"
+    },
+    {
+      "id": "corner-accent",
+      "label": "카드 모서리 강조",
+      "file": "runtime/sprites/corner-accent.png",
+      "size": [
+        64,
+        64
+      ],
+      "origin": "authored-ui-primitive",
+      "source": "source/primitives/corner-accent.svg",
+      "transparentTrim": null,
+      "completeStandalone": true,
+      "sha256": "706e547174a092b54a115f22e4e096c06f183349f5a131e72d3aaa9a5a2cea1b"
+    },
+    {
+      "id": "chevron",
+      "label": "제목 화살표",
+      "file": "runtime/sprites/chevron.png",
+      "size": [
+        24,
+        40
+      ],
+      "origin": "authored-ui-primitive",
+      "source": "source/primitives/chevron.svg",
+      "transparentTrim": null,
+      "completeStandalone": true,
+      "sha256": "98c4b5362fdc69e65126750bd5189faa7ef75f36aaf95a7fd90a9263bbe756c0"
+    },
+    {
+      "id": "divider",
+      "label": "카드 구분선",
+      "file": "runtime/sprites/divider.png",
+      "size": [
+        480,
+        8
+      ],
+      "origin": "authored-ui-primitive",
+      "source": "source/primitives/divider.svg",
+      "transparentTrim": null,
+      "completeStandalone": true,
+      "sha256": "4c318976625b3e299f3cdacc29e0183e7001321d679f8dbc635aa51f1f69aec9"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema":"stage2-pixel-idles-v1",
+  "status":"eight-monster-idle-art-review-no-runtime",
+  "base":"outputs/waterway/pixel-base-step1-20261031",
+  "canvas":[384,224],
+  "baseline":192,
+  "keyActiveGroups":[[],[0],[0,1],[1]],
+  "method":"Copy selected original pixels upward1px. Vacated edges expose the next original row. Restricted destination colors and explicit lock rectangles protect anatomy/equipment. No generation, new colors, interpolation, frame scaling, or whole-body bob.",
+  "assets":[
+    {"id":"K4","name":"등짐분사수","role":"근거리","reuse":"outputs/waterway/k4-pixel-idle-v1-20261031","durations":[620,180,520,180],"description":"검토한 얼굴·어깨1px 대기 그대로. 발·등통·끈·손·호스·노즐 고정."},
+    {"id":"B3","name":"쐐기보행기","role":"근거리","durations":[800,200,800,200],"description":"쐐기와 다섯 접점은 고정하고 관절·후면 판 안쪽 명암만1px 변화.","locks":[[0,85,180,100]],"groups":[
+      {"name":"앞 지지대 관절 명암","rects":[[92,56,106,84]],"colors":["d47c51","a95b40"],"receive":["d47c51","a95b40"],"outside":false},
+      {"name":"후면 판 내부 명암","rects":[[135,24,157,51]],"colors":["536e70","415359"],"receive":["758d89","536e70","415359"],"outside":false}
+    ]},
+    {"id":"M3","name":"먹침필경사","role":"근거리","durations":[650,170,610,170],"description":"낮은 등판의 두 부분이1px 호흡. 얼굴·긴 침 전체와 발 고정.","locks":[[0,0,119,59],[0,46,198,59]],"groups":[
+      {"name":"얼굴 뒤 등판","rects":[[119,11,145,29]],"colors":["c095ac","a37c91","815d74"],"receive":["c095ac","a37c91","815d74"],"outside":true},
+      {"name":"뒤쪽 등판","rects":[[145,26,178,43]],"colors":["c095ac","a37c91","815d74"],"receive":["c095ac","a37c91","815d74"],"outside":true}
+    ]},
+    {"id":"H3","name":"늘어진수의","role":"원거리","durations":[740,210,740,210],"description":"수의 안쪽 주름과 늘어진 두 손끝이1px 후행. 가면·몸 전체 위치·수의 끝 고정.","locks":[[0,0,54,30],[0,125,54,151]],"groups":[
+      {"name":"안쪽 주름","rects":[[18,33,40,58],[22,91,42,119]],"colors":["aa7c8e","80586e"],"receive":["f6e5c7","d9c6ab","b4a991","aa7c8e","80586e"],"outside":false},
+      {"name":"두 손끝","rects":[[0,66,10,80],[23,65,34,80]],"colors":["29252f"],"receive":["29252f","f6e5c7","d9c6ab","b4a991","aa7c8e","80586e"],"outside":true}
+    ]},
+    {"id":"R-selected","name":"신호투척수","role":"원거리","durations":[620,180,520,180],"description":"보라색 어깨와 얼굴 안쪽이1px 호흡. 모자 외형·물건·손·앞치마·발 고정.","locks":[[0,60,98,106]],"groups":[
+      {"name":"양어깨","rects":[[8,39,20,57],[64,38,79,58]],"colors":["8b748e","614c69"],"receive":["8b748e","614c69"],"outside":true},
+      {"name":"얼굴 안쪽","rects":[[8,12,33,33]],"colors":["25242b","eaaa16"],"receive":null,"outside":true,"fillRows":true}
+    ]},
+    {"id":"A3","name":"편측거구","role":"엘리트","durations":[850,220,810,220],"description":"양어깨와 작은 얼굴의 느린1px 호흡. 거대한 팔·주먹·하체·발 고정.","locks":[[0,68,183,155]],"groups":[
+      {"name":"양어깨","rects":[[35,28,64,54],[125,22,151,47]],"colors":["ddbd79","bd9958","8e7449"],"receive":["ddbd79","bd9958","8e7449"],"outside":true},
+      {"name":"작은 얼굴","rects":[[68,14,86,34]],"colors":["f1dfbe"],"receive":null,"outside":true,"fillRows":true}
+    ]},
+    {"id":"I4-rose","name":"남매·자주색 전방","role":"보스","durations":[680,180,560,180],"description":"어깨와 가면만1px 호흡. 석궁·두 손·후드·옷자락·발 고정.","locks":[[0,38,117,102]],"groups":[
+      {"name":"양어깨","rects":[[58,27,70,37],[81,24,98,37]],"colors":["c67d82","9e5d69","70424f"],"receive":["c67d82","9e5d69","70424f"],"outside":true},
+      {"name":"가면","rects":[[61,7,79,26]],"colors":["f4dfba","c7ad88","8d765b","eaaa16"],"receive":null,"outside":true,"fillRows":true}
+    ]},
+    {"id":"I4-blue","name":"남매·푸른색 후방","role":"보스","durations":[740,200,660,200],"description":"어깨와 가면만1px 호흡. 손바닥·잉크 구체·후드·옷자락·발 고정.","locks":[[0,30,14,54],[0,54,82,127]],"groups":[
+      {"name":"양어깨","rects":[[15,31,29,44],[38,28,55,46]],"colors":["638eaf","416482"],"receive":["638eaf","416482"],"outside":true},
+      {"name":"가면","rects":[[14,7,32,28]],"colors":["f4dfba","c7ad88","8d765b","eaaa16"],"receive":null,"outside":true,"fillRows":true}
+    ]}
+  ]
+}

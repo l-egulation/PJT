@@ -1,0 +1,11 @@
+{
+  "schema":"stage2-walk-retouch-v2",
+  "status":"pixel-retouch-art-review-no-runtime",
+  "prior":"outputs/waterway/walk-review-20261031",
+  "base":"outputs/waterway/pixel-base-step1-20261031",
+  "output":"outputs/waterway/walk-retouch-v2-20261031",
+  "paletteAuthority":"Only opaque RGBA colors actually used in each selected pixel base. No shared global palette.",
+  "cleanup":{"brightLumaThreshold":160,"smallBrightAreaMax":8,"baseHighlightProtectionRadius":2,"isolatedAlphaAreaMax":2,"whiteMatteOpaqueErrorMin":18,"whiteMatteResidualMax":8,"whiteMatteAlphaMax":0.85},
+  "materialZones":[{"baseId":"B3","box":[0,180,145,224],"lumaAbove":100,"color":"#54393f","reason":"The selected base front foot is dark mauve, not a bright bone/green rim. Restore the material without adding a contour."}],
+  "thrower":{"id":"R-selected","upperBodyCutY":172,"heldAssemblyMinX":205,"heldAssemblyMaxY":182,"legMinX":161,"legMaxX":223,"maxBodyOffset":2,"legColors":["#25242b","#574338","#c4b499","#b4a797","#8c8179","#614c69"],"method":"Restore the selected base upper body, held arm, hand and object as a rigid assembly. Retain returned leg pixels below the apron, excluding moved-object/apron-trail colors. Small bounded head-derived offsets move the upper assembly as a unit; do not switch hands or rotate/resize the object."}
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "tool": "built-in image_gen",
+  "asset": "backing-ink-green",
+  "request": "Regenerate the empty green backing to remove the translucent erased emblem; match other blank ink backings.",
+  "prompt": "Use case: precise-object-edit. Game UI transparent PNG asset. Edit target/reference 1 is the BLUE blank ink droplet. Make a fresh GREEN version of this identical blank item backing. Preserve the exact square canvas, centered tall teardrop silhouette, generous transparent outer padding, smooth thick dark charcoal ink outline, subtle flat paper pigment texture and clean hand-drawn fantasy game style of reference 1. Replace only the blue interior with medium soft green around #70B967 matching reference 2. Reference 2 is a defective GREEN blank asset: use its hue only, NOT its defective central alpha. The entire interior of the new droplet MUST be fully opaque uniformly filled green with only extremely gentle pigment variation. Absolutely NO internal emblem, white ring, highlight, glow, spot, cutout, transparency hole or erased-symbol ghost anywhere inside the droplet. No letters, numbers, badge, shadows or other elements. True transparent background only OUTSIDE the dark outlined teardrop. This is an EMPTY ink slot backing, not an equipped ink emblem. Output a single square standalone transparent PNG, matching reference1 outline thickness and visible footprint, about 66% canvas width and 86% canvas height.",
+  "reference": "../../runtime/items/backing-ink-blue.png",
+  "before": "backing-ink-green-before.png",
+  "generated": "backing-ink-green-generated.png",
+  "runtime": "../../runtime/items/backing-ink-green.png",
+  "generatedSha256": "b117669344fe5836be5531bfa793182a8ec14228c598c3da7decd8d085f6fc1e",
+  "pixelProcessing": "None; generated PNG bytes are copied unchanged.",
+  "beforeSha256": "2871da99485d28e66ac5a1b9caae74e72a0b1c9bd9bb03226313522963795f0f"
+}

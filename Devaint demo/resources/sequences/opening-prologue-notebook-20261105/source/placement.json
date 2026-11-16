@@ -1,0 +1,20 @@
+{
+  "coordinateSystem": "pixels, top-left origin",
+  "canvas": {"file":"notebook.png","width":600,"height":420},
+  "pages": [
+    {"file":"page-01-village.png","x":30,"y":110,"width":540,"height":200},
+    {"file":"page-02-residents.png","x":100,"y":110,"width":400,"height":200},
+    {"file":"page-03-map.png","x":30,"y":90,"width":540,"height":240}
+  ],
+  "redCircle": {
+    "width":80,"height":60,
+    "relativeToMap":{"x":345,"y":98},
+    "relativeToNotebook":{"x":375,"y":188},
+    "frameDirectory":"빨간_원_프레임",
+    "framePattern":"red-circle-{01..06}.png",
+    "frameDurationMs":85,
+    "repeat":false,
+    "holdLastFrame":true
+  },
+  "unityImport":{"textureType":"Sprite","filterMode":"Point","compression":"None","mipMaps":false}
+}

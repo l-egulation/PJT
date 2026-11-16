@@ -1,0 +1,73 @@
+{
+  "schema": "stage2-normal-attack-handoff-v1",
+  "status": "B3-high-lift-slam-retry-awaiting-user-review-and-return",
+  "activeId": "B3",
+  "name": "쐐기보행기",
+  "source": "outputs/waterway/pixel-base-step1-20261031/B3/native/base-frame.png",
+  "palette": "outputs/waterway/pixel-base-step1-20261031/B3/palette.json",
+  "combatReference": "data/combat/stage2_waterway_patterns.json",
+  "output": "outputs/waterway/b3-high-lift-retry-20261101",
+  "canvas": [
+    384,
+    224
+  ],
+  "scale": 4,
+  "background": "#ffffff",
+  "oneLine": "뒷지지대만 버틴 채 앞몸 전체를 크게 세우고 잠깐 버텼다가, 무게를 실어 앞아래로 한 번 내리찍는다.",
+  "phaseProposal": [
+    {
+      "name": "크게 들기·버팀",
+      "seconds": 0.45,
+      "action": "후방 지지대만 버티고 앞몸 전체를 원래보다60~70도 크게 세운다. 앞/중간 지지대가 바닥에서 떨어지고 쐐기 아래 큰 빈 공간이 보이는 자세를 잠깐 유지한다."
+    },
+    {
+      "name": "내리찍기",
+      "seconds": 0.15,
+      "action": "세웠던 앞몸과 쐐기를 빠르게 앞아래로 한 번 내리찍는다."
+    },
+    {
+      "name": "회복",
+      "seconds": 0.9,
+      "action": "낮게 찍힌 자세에서 무게를 버틴 뒤 원래 기본자세로 돌아온다."
+    }
+  ],
+  "motionNoteKo": "이번에는 큰 들기와 찍기만1.5초 클립으로 먼저 요청합니다. 최종 공격의 돌진은 유지하며 이후 연결합니다. 쐐기 끝이나 목만 까딱하지 않고 몸 앞쪽2/3와 붙어 있는 앞/중간 지지대 전체가 올라가야 합니다. 후방 지지대만 원래 지면을 버티고, 들린 앞몸 아래에 큰 빈 공간이 생겨야 합니다.",
+  "effectNoteKo": "흰 기본자세가 생성 시작 입력입니다. 추가 최대 들기 그림은 목표 자세를 설명하는 참고 시안이며 최종 픽셀 프레임이 아닙니다. 본체 들기/찍기만 요청하고 먼지·잔상·충격파·잉크 효과는 분리합니다.",
+  "timingPolicy": "Production split only: request the existing final3 combat phases0.45/0.15/0.9 seconds,1.5s total. Keep the full charge-and-slam combat design unchanged; charge footage will be connected separately. High-lift60-70deg is an art pose target, not a new combat system or runtime change.",
+  "effectPolicy": "Character-only charge/brake/front-body-lift/slam/recovery. No motion trails, dust, impact shockwave, floor cracks, ink spray, puddles or generated scenery.",
+  "queue": [
+    {
+      "id": "K4",
+      "name": "등짐분사수",
+      "oneLine": "A19장 채택 · 멈춰 노즐을 들고 짧은 전방 잉크 분사."
+    },
+    {
+      "id": "B3",
+      "name": "쐐기보행기",
+      "oneLine": "돌진해 접근한 뒤 제동하고, 앞몸을 들어 앞아래로 내리찍기."
+    },
+    {
+      "id": "M3",
+      "name": "먹침필경사",
+      "oneLine": "빠르게 접근해 멈춘 뒤 긴 침으로 와다다 연속 찌르기."
+    },
+    {
+      "id": "R-selected",
+      "name": "신호투척수",
+      "oneLine": "플레이어 위치를 조준 고정하고 손의 소품을 포물선으로 투척."
+    },
+    {
+      "id": "H3",
+      "name": "늘어진수의",
+      "oneLine": "큰 잉크 공을 만들어 던지고, 착탄한 바닥에 잠시 지속 피해 장판 생성."
+    }
+  ],
+  "prompt": "Animate the exact supplied character performing ONE LARGE REAR-UP AND FRONT-BODY SLAM, about1.5 seconds. Start and finish in the supplied low neutral pose. Focus only on raising the body, holding the raised silhouette, slamming and recovering. The charge segment will be connected separately; do not spend this clip walking or running.\n\nMOST IMPORTANT: the ENTIRE FRONT TWO-THIRDS OF THE BODY must rise dramatically, roughly60-70 degrees upward relative to its low resting body. The whole forebody should become almost upright, balanced on the original RIGHT/rear supports. Lift the front and middle supports completely OFF the floor and tuck them beneath the raised body. The cream wedge tip must end high above the floor, with a huge clearly visible white air gap beneath the entire forebody. Aim for the front wedge tip to rise at least one original standing-body height above the ground. Use the supplemental maximum-lift pose guide for the target silhouette if multiple reference images are supported. The neutral input defines the original character scale and identity.\n\n1. BIG LIFT AND READABLE HOLD, about0.45s: plant the rear supports at their original ground contacts. Shift weight onto them and rotate the complete connected forebody upward, including its attached front/middle supports. Briefly HOLD the maximum raised pose before striking. This must be a large whole-body weight shift, not a small head nod, a jaw opening, a front-plate-only hinge or slightly longer front legs. The rear supports stay grounded; the creature must not jump bodily into the air.\n\n2. HEAVY SLAM, about0.15s: swing that whole raised forebody sharply DOWN and slightly LEFT. The cream front wedge strikes the original ground line once. Make the impact decisive and much faster than the preparation. The rear supports brace throughout. No spin, flip or repeated impacts.\n\n3. RECOVERY, about0.9s: briefly stay low under the landed weight, then slowly restore the exact original neutral support positions and body posture. Do not immediately start another lift or introduce a walking loop.\n\nPreserve the exact original cream wedge, teal rear plates, orange jointed supports, original support/limb count, attachment points and original10 character colors. Keep the same slightly turned LEFT-facing view. Lift and articulate existing parts; do not enlarge the creature, extend its limbs, stretch the wedge, melt or detach plates, add human arms, make a new animal or add armor. Keep the solid plates filled and retain intentional gaps between supports. Use crisp solid pixel clusters and stepped weighty game timing, without outlines, gradients, antialiasing, blur, dithering, new colors or soft edges.\n\nNo charge/running segment in this clip, no ink, dust, smoke, trails, shockwaves, ground cracks, shadows, targets, scenery, text or grid. Solid pure-white background (#FFFFFF). Keep the original1536x896 canvas, exactly4x the384x224 logical grid. The neutral body is180x100 logical pixels: preserve that actual size, never auto-fit the raised pose by shrinking it. Lock the camera, rear-foot ground anchor, ground line and framing. Use the existing empty headroom for the big lift. Keep all parts inside the full canvas in every pose. No zoom, crop, auto-trim, mirroring or canvas resizing. Export chronological full-canvas frames or one continuous action with identical framing.",
+  "combatPhaseIndices": [
+    2,
+    3,
+    4
+  ],
+  "poseGuide": "outputs/waterway/b3-high-lift-retry-20261101/generated/maximum-lift-guide.png",
+  "rejectedReturn": "outputs/waterway/b3-high-lift-retry-20261101/references/11677b4f-2cd9-41de-b653-a4f8e178f4ec.png"
+}

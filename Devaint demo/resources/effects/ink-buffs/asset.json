@@ -1,0 +1,47 @@
+{
+  "format": "deviant-resource-asset-v1",
+  "id": "effects.ink-buffs",
+  "path": "effects/ink-buffs",
+  "name": "잉크 버프·상태이상 픽셀 FX(이속·방어막·대쉬 방어막·회복·기본 공격력·스킬 쿨감·스킬 피해·속박·슬로우)",
+  "status": "user-selected",
+  "gameIntegration": "unity-combat-ink-status-visuals",
+  "style": "1배 32px = 1u 픽셀 FX, 표식 7색(CombatArena.MvpMarkColors) 기반 5단 색계단, 디더 반투명",
+  "sources": [
+    "source/preview_template.html: 새로 작성한 캔버스 픽셀 효과 코드(2026-11-12)",
+    "preview: characters/ink/common/runtime/forest-character/idle 와 monsters/stage-01/normal/broom-stalker/runtime/approved-motion/idle/frames PNG를 바이트 그대로 data URI로 내장"
+  ],
+  "regenerate": "python effects/ink-buffs/source/tools/build_preview.py && node effects/ink-buffs/source/tools/export_runtime.mjs (리소스 저장소 루트 기준)",
+  "files": [
+    "README.md",
+    "asset.json",
+    "preview/ink_buff_fx_candidates.html",
+    "runtime/blue-flames-back.png",
+    "runtime/blue-flames-front.png",
+    "runtime/cdr-clock.png",
+    "runtime/chain-back.png",
+    "runtime/chain-front.png",
+    "runtime/chain-in.png",
+    "runtime/chain-snap.png",
+    "runtime/dash-shield-break.png",
+    "runtime/dash-shield.png",
+    "runtime/heal-crosses.png",
+    "runtime/red-flames-back.png",
+    "runtime/red-flames-front.png",
+    "runtime/sheets.json",
+    "runtime/shield-front.png",
+    "runtime/shield-gain.png",
+    "runtime/shield-hit.png",
+    "runtime/slow-snail.png",
+    "runtime/speed-wind.png",
+    "source/preview_template.html",
+    "source/tools/build_preview.py",
+    "source/tools/export_runtime.mjs"
+  ],
+  "selection": "README.md 확정 선택(사용자 확정 2026-11-12). 미리보기의 나머지 후보는 비교용",
+  "runtimeManifest": "runtime/sheets.json",
+  "sheetFormat": {
+    "sheet": "투명 PNG, 열 = 프레임, 행 = 변형(sheets.json variants)",
+    "pixelsPerUnit": 32,
+    "pivot": "셀 왼쪽 위 기준 px, anchor feet/head"
+  }
+}

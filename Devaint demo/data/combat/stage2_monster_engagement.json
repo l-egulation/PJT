@@ -1,0 +1,78 @@
+{
+  "schema": "stage2-monster-engagement-v1",
+  "status": "approved-subset-design-runtime-integrated",
+  "firstAttackDelay": {
+    "minimumSeconds": 0.3,
+    "maximumSeconds": 0.8,
+    "sampling": "independent-uniform-once-per-combat-entry",
+    "noRerollEveryFrame": true,
+    "extraDelayBeforeFirstWindup": true,
+    "normalWindupStillRequired": true,
+    "notAppliedToEveryAttack": true
+  },
+  "monsters": {
+    "K4": {
+      "firstAttackDelaySource": "common firstAttackDelay",
+      "maxAttackStartFootHeightDifferenceUnits": 2,
+      "heightGate": "absolute vertical distance between foot pivots <= 2; start eligibility only",
+      "damageBoxUnaffected": true
+    },
+    "B3": {
+      "firstAttackDelaySource": "common firstAttackDelay",
+      "maxAttackStartFootHeightDifferenceUnits": 2,
+      "heightGate": "absolute vertical distance between foot pivots <= 2; start eligibility only",
+      "damageBoxUnaffected": true
+    },
+    "M3": {
+      "firstAttackDelaySource": "common firstAttackDelay",
+      "maxAttackStartFootHeightDifferenceUnits": 2,
+      "heightGate": "absolute vertical distance between foot pivots <= 2; start eligibility only",
+      "damageBoxUnaffected": true
+    },
+    "R-selected": {
+      "firstAttackDelaySource": "common firstAttackDelay",
+      "pointBlankBehavior": "do-not-retreat-continue-throw",
+      "closeRangeAttackSuppression": false,
+      "otherTargetFloorAndTrajectoryValidityChecksStillApply": true
+    },
+    "H3": {
+      "firstAttackDelaySource": "common firstAttackDelay",
+      "pointBlankBehavior": "do-not-retreat-continue-throw",
+      "closeRangeAttackSuppression": false,
+      "otherTargetFloorAndTrajectoryValidityChecksStillApply": true
+    }
+  },
+  "unresolved": [
+    "first-attack re-roll boundary when the player enters the owner room"
+  ],
+  "newAttackVisibility": {
+    "requireAttackPartVisible": true,
+    "requireWindupVisible": true,
+    "offscreenApproachMovementAllowed": true,
+    "checkAt": "new-windup-start",
+    "notAReasonToCancelAlreadyReleasedProjectilesOrPlacedHazards": true
+  },
+  "simultaneousBodyAttacks": {
+    "limitMode": "unlimited",
+    "maximum": null,
+    "globalAttackSlotQueue": false,
+    "perMonsterCooldownStillRequired": true,
+    "perMonsterFirstAttackDelayStillRequired": true
+  },
+  "roomPolicySource": "docs/design/world/chapters/chapter2-layout.md; normal enemies stay engaged across rooms and corridors and stop attacking only while the player is in the boss room",
+  "movementRegion": {
+    "mode": "spawn-floor-region-only",
+    "pursueOntoOtherFloors": false,
+    "autoJumpToOtherFloors": false,
+    "dropToOtherFloorsForPursuit": false,
+    "regionDefinition": "logical authored floor region where the monster is placed; not an arbitrary distance radius",
+    "attackAcrossFloors": "existing attack eligibility and projectile rules still apply",
+    "visualBobDoesNotChangeRegion": true,
+    "appliesTo": ["R-selected", "H3"],
+    "meleePursuitOverride": {
+      "species": ["K4", "B3", "M3"],
+      "source": "data/combat/enemy_pursuit.json",
+      "rule": "after engagement these walkers leave the spawn floor region and route across floors with jumps, drop-throughs and ledge falls; attack eligibility is unchanged; off screen they give up and walk back (enemy_pursuit.json screenLeash)"
+    }
+  }
+}

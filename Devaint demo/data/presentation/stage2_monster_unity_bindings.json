@@ -1,0 +1,24 @@
+{
+  "scope": "Chapter2 selected bodies and world-space effects; provisional attack settings are in data/combat/chapter2_normal_attacks.json",
+  "resources": "monsters/stage-02/normal-approved/runtime/unity",
+  "canvas": [
+    512,
+    384
+  ],
+  "pivotPixels": [
+    320,
+    260
+  ],
+  "pixelsPerUnit": 32,
+  "hitPoseMs": 150,
+  "mapping": {
+    "01_thorn-root": "M3",
+    "02_broom-stalker": "K4",
+    "03_gutter-spitter": "R-selected",
+    "draft_06_stationary_turret": "H3",
+    "draft_07_heavy_charger": "B3"
+  },
+  "unmapped": "existing elite/boss art",
+  "combat": "existing placeholder actor AI, damage and collision unchanged; stage2 pattern implementation separate",
+  "attackOverrides": "data/combat/presentation/chapter2_attack_fx.json"
+}

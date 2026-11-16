@@ -1,0 +1,399 @@
+{
+  "actionId": "hammer_movement",
+  "status": "cleanup_review",
+  "canvas": [
+    224,
+    192
+  ],
+  "pivot": [
+    96,
+    151
+  ],
+  "ppu": 32,
+  "detailExport": {
+    "canvas": [
+      896,
+      768
+    ],
+    "pivot": [
+      384,
+      604
+    ],
+    "ppu": 128
+  },
+  "sourceSelection": {
+    "status": "candidate1_selected_hold_timing_preview",
+    "frames": [
+      {
+        "sourceFrame": 1,
+        "startMs": 0,
+        "durationMs": 40,
+        "phase": "PREP"
+      },
+      {
+        "sourceFrame": 7,
+        "startMs": 40,
+        "durationMs": 50,
+        "phase": "PREP"
+      },
+      {
+        "sourceFrame": 9,
+        "startMs": 90,
+        "durationMs": 50,
+        "phase": "PREP"
+      },
+      {
+        "sourceFrame": 11,
+        "startMs": 140,
+        "durationMs": 60,
+        "phase": "PREP"
+      },
+      {
+        "sourceFrame": 13,
+        "startMs": 200,
+        "durationMs": 40,
+        "phase": "PUSH / HOLD"
+      },
+      {
+        "sourceFrame": 15,
+        "startMs": 240,
+        "durationMs": 40,
+        "phase": "PUSH / HOLD"
+      },
+      {
+        "sourceFrame": 21,
+        "startMs": 280,
+        "durationMs": 40,
+        "phase": "PUSH / HOLD"
+      },
+      {
+        "sourceFrame": 22,
+        "startMs": 320,
+        "durationMs": 180,
+        "phase": "PUSH / HOLD"
+      },
+      {
+        "sourceFrame": 24,
+        "startMs": 500,
+        "durationMs": 80,
+        "phase": "STOP / RECOVER"
+      },
+      {
+        "sourceFrame": 25,
+        "startMs": 580,
+        "durationMs": 40,
+        "phase": "STOP / RECOVER"
+      },
+      {
+        "sourceFrame": 26,
+        "startMs": 620,
+        "durationMs": 50,
+        "phase": "STOP / RECOVER"
+      },
+      {
+        "sourceFrame": 28,
+        "startMs": 670,
+        "durationMs": 60,
+        "phase": "STOP / RECOVER"
+      },
+      {
+        "sourceFrame": 30,
+        "startMs": 730,
+        "durationMs": 60,
+        "phase": "STOP / RECOVER"
+      },
+      {
+        "sourceFrame": 31,
+        "startMs": 790,
+        "durationMs": 60,
+        "phase": "STOP / RECOVER"
+      }
+    ],
+    "actionDurationMs": 850,
+    "reviewPauseMs": 650,
+    "holdSourceFrame": 22,
+    "holdStartMs": 320,
+    "holdEndMs": 500,
+    "integrationNote": "For game integration, sustain the braced push until actual movement ends (including early collision), then stop/recover. Preview only; runtime and combat values unchanged.",
+    "cleanupPending": [
+      "robe waist seam",
+      "hammer bright marks",
+      "dust",
+      "background",
+      "scale alignment"
+    ]
+  },
+  "durationMs": 850,
+  "checks": [
+    {
+      "sourceFrame": 1,
+      "sourceSha256": "1c353639ea011f92042e76f09e938cedb659ff3f9e1e2ff9c6b312dfbb84bbe8",
+      "waistPixels": 0,
+      "hammerPixels": 12532,
+      "anchor": [
+        533.5,
+        620
+      ],
+      "scale": 0.145,
+      "durationMs": 40
+    },
+    {
+      "sourceFrame": 7,
+      "sourceSha256": "4cc3d437920681771ff89f8f67da93c306908dcb5359d76ef0d7dee703061d51",
+      "waistPixels": 0,
+      "hammerPixels": 16271,
+      "anchor": [
+        533.5,
+        620
+      ],
+      "scale": 0.145,
+      "durationMs": 50
+    },
+    {
+      "sourceFrame": 9,
+      "sourceSha256": "503305907ca3e5607138030b07b2ed2bc3bc8290f06d3026dd436c7849bc8048",
+      "waistPixels": 912,
+      "hammerPixels": 17632,
+      "anchor": [
+        533.5,
+        620
+      ],
+      "scale": 0.145,
+      "durationMs": 50
+    },
+    {
+      "sourceFrame": 11,
+      "sourceSha256": "6b639b81d3cef2253321ca4e58b41fd89a7ebd5c67020a1e70680bafc62e0d35",
+      "waistPixels": 842,
+      "hammerPixels": 19225,
+      "anchor": [
+        533.5,
+        620
+      ],
+      "scale": 0.145,
+      "durationMs": 60
+    },
+    {
+      "sourceFrame": 13,
+      "sourceSha256": "e056e2a339205aade35c3900efecef96e05b3a66d1d66bf8f634e035e9ba5562",
+      "waistPixels": 915,
+      "hammerPixels": 29773,
+      "anchor": [
+        533.5,
+        620
+      ],
+      "scale": 0.145,
+      "durationMs": 40
+    },
+    {
+      "sourceFrame": 15,
+      "sourceSha256": "83dca75f45b0574ea0398c2fcced08a4ccc62ac1d92713f99d8c2169da57e56b",
+      "waistPixels": 1055,
+      "hammerPixels": 32344,
+      "anchor": [
+        533.5,
+        620
+      ],
+      "scale": 0.145,
+      "durationMs": 40
+    },
+    {
+      "sourceFrame": 21,
+      "sourceSha256": "8685ce8c61cc08a86951af2ada0bceb252d5c467cf7482bff937b50a6dcd1669",
+      "waistPixels": 162,
+      "hammerPixels": 33315,
+      "anchor": [
+        533.5,
+        620
+      ],
+      "scale": 0.145,
+      "durationMs": 40
+    },
+    {
+      "sourceFrame": 22,
+      "sourceSha256": "e2e4920326b37dd17cd4a82a27684392100dd144f82775938a5ced1e14462ac4",
+      "waistPixels": 1630,
+      "hammerPixels": 51052,
+      "anchor": [
+        533.5,
+        620
+      ],
+      "scale": 0.145,
+      "durationMs": 180
+    },
+    {
+      "sourceFrame": 24,
+      "sourceSha256": "6332352079b9b1ccf007baa6e48cd72778c9ff7cf25002dc642216c16b63c2fc",
+      "waistPixels": 1434,
+      "hammerPixels": 48951,
+      "anchor": [
+        533.5,
+        620
+      ],
+      "scale": 0.145,
+      "durationMs": 80
+    },
+    {
+      "sourceFrame": 25,
+      "sourceSha256": "1a5add86bc6508fdfdee56f58f994e9b8667aeba2802e9d4571b344e4ff944f4",
+      "waistPixels": 1501,
+      "hammerPixels": 48121,
+      "anchor": [
+        533.5,
+        620
+      ],
+      "scale": 0.145,
+      "durationMs": 40
+    },
+    {
+      "sourceFrame": 26,
+      "sourceSha256": "cb194f4ebe2f706f125108656ce39da6b1b15c6e99a532a020cbdef947366300",
+      "waistPixels": 1502,
+      "hammerPixels": 48045,
+      "anchor": [
+        533.5,
+        620
+      ],
+      "scale": 0.145,
+      "durationMs": 50
+    },
+    {
+      "sourceFrame": 28,
+      "sourceSha256": "b3a6c62265229e6898c94f2db423a4c2ade2c661634aba526d9cbe06b1336f40",
+      "waistPixels": 1670,
+      "hammerPixels": 45612,
+      "anchor": [
+        533.5,
+        620
+      ],
+      "scale": 0.145,
+      "durationMs": 60
+    },
+    {
+      "sourceFrame": 30,
+      "sourceSha256": "0334905b582355e05413281434f4e6529631a5f142e03f4ad24c3752fd9e558b",
+      "waistPixels": 0,
+      "hammerPixels": 26016,
+      "anchor": [
+        533.5,
+        620
+      ],
+      "scale": 0.145,
+      "durationMs": 60
+    },
+    {
+      "sourceFrame": 31,
+      "sourceSha256": "4be313eda3c621f8731fbd209c5c63e732ec6f202cf6a905c0afb187a6ae68f6",
+      "waistPixels": 0,
+      "hammerPixels": 19353,
+      "anchor": [
+        533.5,
+        620
+      ],
+      "scale": 0.145,
+      "durationMs": 60
+    }
+  ],
+  "unityApplied": false,
+  "scarfCleanup": [
+    {
+      "frame": "hammer_movement_01",
+      "sourceFrame": 1,
+      "isolatedBrightScarfPixelsRemoved": 0,
+      "interiorScarfPixelsRecolored": 12,
+      "outsideTargetExact": true
+    },
+    {
+      "frame": "hammer_movement_02",
+      "sourceFrame": 7,
+      "isolatedBrightScarfPixelsRemoved": 3,
+      "interiorScarfPixelsRecolored": 109,
+      "outsideTargetExact": true
+    },
+    {
+      "frame": "hammer_movement_03",
+      "sourceFrame": 9,
+      "isolatedBrightScarfPixelsRemoved": 0,
+      "interiorScarfPixelsRecolored": 95,
+      "outsideTargetExact": true
+    },
+    {
+      "frame": "hammer_movement_04",
+      "sourceFrame": 11,
+      "isolatedBrightScarfPixelsRemoved": 25,
+      "interiorScarfPixelsRecolored": 95,
+      "outsideTargetExact": true
+    },
+    {
+      "frame": "hammer_movement_05",
+      "sourceFrame": 13,
+      "isolatedBrightScarfPixelsRemoved": 6,
+      "interiorScarfPixelsRecolored": 23,
+      "outsideTargetExact": true
+    },
+    {
+      "frame": "hammer_movement_06",
+      "sourceFrame": 15,
+      "isolatedBrightScarfPixelsRemoved": 3,
+      "interiorScarfPixelsRecolored": 22,
+      "outsideTargetExact": true
+    },
+    {
+      "frame": "hammer_movement_07",
+      "sourceFrame": 21,
+      "isolatedBrightScarfPixelsRemoved": 7,
+      "interiorScarfPixelsRecolored": 42,
+      "outsideTargetExact": true
+    },
+    {
+      "frame": "hammer_movement_08",
+      "sourceFrame": 22,
+      "isolatedBrightScarfPixelsRemoved": 36,
+      "interiorScarfPixelsRecolored": 51,
+      "outsideTargetExact": true
+    },
+    {
+      "frame": "hammer_movement_09",
+      "sourceFrame": 24,
+      "isolatedBrightScarfPixelsRemoved": 9,
+      "interiorScarfPixelsRecolored": 64,
+      "outsideTargetExact": true
+    },
+    {
+      "frame": "hammer_movement_10",
+      "sourceFrame": 25,
+      "isolatedBrightScarfPixelsRemoved": 10,
+      "interiorScarfPixelsRecolored": 62,
+      "outsideTargetExact": true
+    },
+    {
+      "frame": "hammer_movement_11",
+      "sourceFrame": 26,
+      "isolatedBrightScarfPixelsRemoved": 11,
+      "interiorScarfPixelsRecolored": 54,
+      "outsideTargetExact": true
+    },
+    {
+      "frame": "hammer_movement_12",
+      "sourceFrame": 28,
+      "isolatedBrightScarfPixelsRemoved": 33,
+      "interiorScarfPixelsRecolored": 29,
+      "outsideTargetExact": true
+    },
+    {
+      "frame": "hammer_movement_13",
+      "sourceFrame": 30,
+      "isolatedBrightScarfPixelsRemoved": 10,
+      "interiorScarfPixelsRecolored": 94,
+      "outsideTargetExact": true
+    },
+    {
+      "frame": "hammer_movement_14",
+      "sourceFrame": 31,
+      "isolatedBrightScarfPixelsRemoved": 0,
+      "interiorScarfPixelsRecolored": 28,
+      "outsideTargetExact": true
+    }
+  ],
+  "priorSet": "user-hammer-rush-cleaned-20261101"
+}

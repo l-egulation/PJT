@@ -1,0 +1,1077 @@
+{
+  "schema": 1,
+  "status": "accepted_runtime_design",
+  "purpose": "합의한 53종 색상 잉크. 범위 증폭과 여의봉은 ink3_blue_01로 통합하며 파츠별 +0~+5 값은 ink_color_parts_tuning.json이 소유한다.",
+  "terms": {
+    "markBurst": "표식 터트리기",
+    "baseReference": "장착 무기 기본 콤보 각 타격 피해의 산술평균",
+    "bind": "속박: 이동만 막고 공격은 허용",
+    "stun": "기절: 시전 중이던 공격을 취소하고 이동·새 공격을 막음"
+  },
+  "colorRoles": [
+    {
+      "color": "red",
+      "name": "빨강",
+      "role": "직접 피해",
+      "summary": "추가타·다음 공격 강화처럼 피해를 직접 더한다."
+    },
+    {
+      "color": "yellow",
+      "name": "노랑",
+      "role": "이동으로 피해",
+      "summary": "걷기·대시·전기장과 공속·이속 증가를 피해로 연결한다."
+    },
+    {
+      "color": "green",
+      "name": "초록",
+      "role": "체력으로 피해",
+      "summary": "보호막·체력 상태와 피격 반격을 피해로 연결한다. 회복은 전투 누적으로만 얻는다."
+    },
+    {
+      "color": "blue",
+      "name": "파랑",
+      "role": "공격하기 쉽게",
+      "summary": "공격 범위·사거리와 남은 특수 쿨타임 감소로 공격 기회를 늘린다."
+    },
+    {
+      "color": "purple",
+      "name": "보라",
+      "role": "CC로 피해",
+      "summary": "속박·기절·독을 걸고 그 상태를 피해로 연결한다."
+    }
+  ],
+  "triggers": [
+    {
+      "id": "passive",
+      "name": "상시",
+      "description": "트리거 없이 적용한다. 마지막으로 실제 공격을 시작한 무기의 팔레트 효과만 적용한다."
+    },
+    {
+      "id": "hit",
+      "name": "몬스터 적중 시",
+      "description": "원타격과 추가타의 적중. 지속 피해·장판 피해는 적중으로 세지 않는다."
+    },
+    {
+      "id": "kill",
+      "name": "몬스터 처치 시",
+      "description": "몬스터 한 생명당 한 번."
+    },
+    {
+      "id": "switch",
+      "name": "스위칭 시",
+      "description": "이 잉크를 낀 무기에서 다른 무기로 바꿀 때. 바꾸기 전 무기의 잉크 효과를 먼저 모두 처리한 뒤 다른 무기로 바꾸고, 바꿔 든 무기가 자동 공격한다."
+    },
+    {
+      "id": "mark_burst",
+      "name": "표식 터트릴 시",
+      "description": "표식을 쌓은 무기가 아닌 무기로 맞혀 쌓인 표식을 모두 터트릴 때. 역순으로 터지는 연쇄의 마지막 빨강 표식이 터질 때 한 번 발동한다."
+    },
+    {
+      "id": "mark_pop",
+      "name": "색 표식이 터질 때",
+      "description": "표식 연쇄에서 그 순번 색의 표식이 터질 때. 그 색까지 표식이 쌓여 있어야 한다."
+    },
+    {
+      "id": "move",
+      "name": "이동 시",
+      "description": "걷기·대시의 실제 가로 이동 거리. 넉백·순간이동·위치 보정은 제외한다."
+    },
+    {
+      "id": "dash",
+      "name": "대시 시",
+      "description": "대시 중 몬스터와 겹쳤을 때. 대시 한 번에 몬스터마다 한 번."
+    },
+    {
+      "id": "damaged",
+      "name": "피격 시",
+      "description": "몬스터 공격으로 실제 체력 피해를 받았을 때. 보호막에 모두 막힌 피해·낙사·자해는 제외한다."
+    },
+    {
+      "id": "bind_end",
+      "name": "속박이 풀릴 때",
+      "description": "몬스터에게 걸린 속박이 시간이 다 되어 풀릴 때. 처치로 사라진 속박은 제외한다."
+    }
+  ],
+  "rules": [
+    {
+      "source": "user",
+      "text": "회복은 처치·적중 누적과 표식 터트리기로만 얻는다. 시간 경과·스위칭·상시 회복 파츠는 두지 않는다. 몬스터를 처치하거나 때리지 않으면 회복이 오르지 않는다. 표식으로 회복하는 파츠는 자체 쿨타임 15초를 둔다."
+    },
+    {
+      "source": "draft",
+      "text": "보호막을 만드는 파츠는 자체 쿨타임 15초 이상을 둔다. 스위칭 보호막 15초는 사용자 결정이고, 다른 보호막 파츠로 넓힌 하한은 초안이다."
+    },
+    {
+      "source": "user",
+      "text": "지속 피해(독·기절 지속 피해)와 장판 피해(전기장)를 허용한다."
+    },
+    {
+      "source": "user",
+      "text": "전기장은 노랑 파츠가 함께 쓰는 하나의 효과다. 이동 중 남기는 작은 전기장과 표식을 터트린 자리의 전기장은 크기·유지시간만 다르고 피해 방식은 같다."
+    },
+    {
+      "source": "draft",
+      "text": "같은 몬스터는 겹친 전기장 수와 관계없이 0.5초에 한 번만 전기장 피해를 받는다."
+    },
+    {
+      "source": "draft",
+      "text": "지속 피해·전기장 피해는 적중 트리거를 발동하지 않고 표식을 쌓지 않는다. 이 피해로 처치하면 처치 트리거는 발동한다."
+    },
+    {
+      "source": "user",
+      "text": "반경으로 대상을 찾는 잉크 효과(전기장·폭발·전류·느려짐 장판·표식 옮겨 묻히기 등)는 몬스터 몸 중심이 아니라 켜져 있는 피격 영역의 가장 가까운 점까지 거리를 잰다. 피격 영역이 없거나 꺼져 있으면 몸 중심을 쓰고, 같은 반경 안 대상 순서도 이 거리로 정한다. 옮겨 쓰기·파도·대시처럼 상자로 쓸고 지나가는 효과는 그 상자가 피격 영역과 겹치는지로 판정한다. 모든 몬스터에 같은 규칙을 쓰며 반경 값은 바꾸지 않는다. 시계 보스는 몸통(믹서기 중에는 믹서기)·주먹 피격 영역 중 켜진 것만 대상으로 하고, 모두 꺼져 있으면(전투 전·믹서기 출입·사망) 범위 잉크도 닿지 않는다."
+    },
+    {
+      "source": "user",
+      "text": "전기장은 깔린 동안 반경에 맞춘 번개 장판이 바닥에서 계속 지직거리는 전용 표현으로 보이고 전기장이 끝나면 사라진다. 이동 시 속도 증가 표현은 쓰지 않는다."
+    },
+    {
+      "source": "user",
+      "text": "독은 다시 걸면 지속시간만 갱신한다. 팔레트 슬롯 강화 단계에 따라 최대 중첩 수가 늘어난다."
+    },
+    {
+      "source": "draft",
+      "text": "독은 대상마다 하나이며 최대 5중첩이다. 적용 파츠의 상한까지 1중첩을 더하고 기존의 높은 중첩을 줄이지 않는다. 독이 지속되는 동안 더 높은 틱 피해와 그 출처를 유지하며 만료·독폭탄으로 제거되면 초기화한다."
+    },
+    {
+      "source": "user",
+      "text": "처치 폭발(ink3_red_05)은 반경 6 안의 적에게 기본 공격 피해 100%를 준다. 반경 2·40%에서 범위를 3배로 넓히고 피해를 올렸으며, 강화표는 기존 오름 비율을 유지해 100→110→130→160→200→250%다(사용자 결정 2026-11-10)."
+    },
+    {
+      "source": "user",
+      "text": "독폭탄은 독이 계속 쌓이도록 자체 쿨타임을 두고, 쿨타임마다 독에 걸린 몬스터를 맞히면 걸린 독을 지우며 남은 독 피해를 한 번에 준다."
+    },
+    {
+      "source": "user",
+      "text": "보스에게는 CC 지속시간에 기존 배율 25%를 적용하고, CC에 붙은 피해는 100% 적용한다."
+    },
+    {
+      "source": "user",
+      "text": "쿨타임 감소는 진행 중인 남은 쿨타임에서 뺀다. 0 아래로 내리지 않고 다음 사용으로 저장하지 않는다."
+    },
+    {
+      "source": "user",
+      "text": "표식은 기본으로 쌓이지 않는다. \"표식 터트릴 시\" 파츠나 색 번짐을 장착하면 원타격에 표식을 묻히는 기능이 함께 생긴다. 표식을 묻히는 기능이 이미 있으면 다른 파츠가 추가로 발동시키지 않으므로 원타격당 표식은 1개다."
+    },
+    {
+      "source": "draft",
+      "text": "\"색 표식이 터질 때\" 파츠도 \"표식 터트릴 시\" 파츠처럼 표식을 묻히는 기능을 켠다. 붉은 낙관은 표식 피해만 늘리고 표식 기능을 켜지 않는다."
+    },
+    {
+      "source": "draft",
+      "text": "두 무기 중 한쪽에만 표식 기능을 켜는 파츠가 있어도 두 무기의 원타격이 모두 표식을 묻힌다. 표식은 무기를 바꿔 때려야 터지므로 한쪽만 묻히면 혼자 터트릴 수 없기 때문이다."
+    },
+    {
+      "source": "user",
+      "text": "표식은 최대 7개이고 쌓인 순서대로 빨·주·노·초·파·남·보 색이 붙는다. 몬스터 체력바 옆 숫자가 쌓인 수만큼 하나씩 올라가고, 가장 최근에 쌓인 색으로 표시한다. 7개가 찬 뒤 맞히면 유지시간만 갱신한다. 표식이 쌓일 때마다 그 몬스터의 표식 전체 유지시간을 8초로 갱신한다."
+    },
+    {
+      "source": "user",
+      "text": "표식을 쌓은 무기가 아닌 무기의 원타격이 표식이 있는 몬스터에 적중하면 그 몬스터의 남은 표식을 모두 터트린다. 터트린 타격은 터트린 뒤 자기 무기의 표식 1개를 새로 남긴다."
+    },
+    {
+      "source": "user",
+      "text": "표식은 쌓인 역순(보→남→파→초→노→주→빨)으로 0.08초마다 하나씩 터지며, 하나마다 이펙트와 기준 피해 15%를 준다. 연쇄 전체를 추가타 1회로 보고, \"표식 터트릴 시\" 파츠는 마지막 빨강이 터질 때 한 번 발동한다. 연쇄 중 몬스터가 죽으면 연쇄가 멈춘다."
+    },
+    {
+      "source": "draft",
+      "text": "연쇄의 첫 표식 피해만 추가타로서 적중 트리거를 발동하고, 나머지 표식 피해는 적중 트리거를 발동하지 않는다. 표식 피해로 처치하면 처치 트리거는 발동한다. 연쇄가 몬스터의 죽음으로 멈추면 남은 색 표식 파츠와 \"표식 터트릴 시\" 파츠는 발동하지 않는다."
+    },
+    {
+      "source": "draft",
+      "text": "표식 연쇄에서 발동하는 파츠는 표식을 터트린 무기의 팔레트를 본다. 표식이 터지는 도중에 무기를 바꿔도 터트린 순간의 팔레트를 유지한다."
+    },
+    {
+      "source": "existing",
+      "text": "기준 피해는 장착 무기 기본 콤보 각 타격 피해의 산술평균이다."
+    },
+    {
+      "source": "draft",
+      "text": "2026-11-05 추가 11종(농묵·밑줄 긋기·내달린 획·옮겨 쓰기·되갚는 잉크·갑옷 깁기·겹쳐 쓰기·정리 정돈·앞당긴 획·넘어뜨리기·약점 찌르기)은 사용자가 고른 시험 초안이다. 겹쳐 쓰기는 충전이 무기 자원이므로 마지막으로 공격한 무기와 관계없이 이 잉크를 낀 무기에 적용한다."
+    },
+    {
+      "source": "user",
+      "text": "슬롯 강화 비용은 각 슬롯의 현재 단계에 따라 50/100/180/350/600G이며 +5까지 누적 1,280G다. 파츠 교체·정비소 이동은 단계와 다음 비용을 바꾸지 않는다."
+    },
+    {
+      "source": "user",
+      "text": "덧칠은 자기 자신이 만든 추가타에 재발동하지 않는다. 단독 +5는 원타격의 50%를 한 번 추가한다. 다른 잉크가 만든 추가타에 반응하는 기존 규칙은 유지한다."
+    }
+  ],
+  "parts": [
+    {
+      "id": "ink3_red_01",
+      "name": "추가타",
+      "color": "red",
+      "trigger": "hit",
+      "kind": "extra_hit",
+      "description": "공격 적중 시 그 공격 피해의 20%(최대 50%)로 추가타 1회 발동. 다른 잉크가 만든 추가타 적중에도 발동. 이 잉크의 추가타로는 다시 발동하지 않음. 0.25초에 1회만 발동.",
+      "playerText": "맞힐 때마다 20% 피해로 한 번 더 때린다.",
+      "params": {
+        "ratio": 0.2
+      },
+      "cooldownSeconds": 0.25,
+      "duplicate": true,
+      "limits": "적중 시 추가타 20→50%. 덧칠은 자기 자신이 만든 추가타에 재발동하지 않는다. 단독 +5는 원타격의 50%를 한 번 추가한다. 다른 잉크가 만든 추가타에 반응하는 기존 규칙은 유지한다."
+    },
+    {
+      "id": "ink3_red_02",
+      "name": "집중 공격",
+      "color": "red",
+      "trigger": "hit",
+      "kind": "focus_stack_damage",
+      "description": "같은 적을 때릴 때마다 피해 2%(최대 14%)씩 증가. 최대 5번 쌓여 총 10%(최대 70%). 다른 적을 때리거나 2초 동안 공격이 없으면 처음부터 다시 쌓임.",
+      "playerText": "같은 적을 계속 때리면 피해가 4%씩 오른다. (최대 20%)",
+      "params": {
+        "amountPerStack": 0.02,
+        "maxStacks": 5,
+        "resetSeconds": 2
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "같은 적에게 5중첩을 유지하면 총 10→70%. 대상 변경·2초 공백에 취약한 보스전 성장형."
+    },
+    {
+      "id": "ink3_red_03",
+      "name": "교체 강타",
+      "color": "red",
+      "trigger": "switch",
+      "kind": "next_attack_power",
+      "description": "이 무기에서 다른 무기로 바꿀 때, 바꿔 든 무기의 첫 공격 피해 35%(최대 65%) 증가. 2초에 1회만 발동.",
+      "playerText": "무기 교체 시 첫 공격의 피해가 30% 늘어난다.",
+      "params": {
+        "amount": 0.35
+      },
+      "cooldownSeconds": 2,
+      "duplicate": false,
+      "limits": "교대 후 한 번 소비하는 높은 초기 보너스. 연속 공격 전체에는 적용하지 않는다."
+    },
+    {
+      "id": "ink3_red_04",
+      "name": "표식 폭발",
+      "color": "red",
+      "trigger": "mark_burst",
+      "kind": "burst_extra_hit",
+      "description": "표식을 묻힌 적을 다른 무기로 때려 표식을 터트리면, 기본 공격 피해의 30%(최대 180%)로 추가 폭발. 원래 표식 피해와 별도. 같은 적에게는 0.5초에 1회만 발동.",
+      "playerText": "표식을 터트린 적에게 60% 피해를 한 번 더 준다.",
+      "params": {
+        "ratio": 0.3
+      },
+      "cooldownSeconds": 0.5,
+      "duplicate": false,
+      "limits": "표식 축적과 교대가 필요한 단발 보상. 기본 표식 피해와 별도로 한 번 발동."
+    },
+    {
+      "id": "ink3_red_05",
+      "name": "처치 폭발",
+      "color": "red",
+      "trigger": "kill",
+      "kind": "kill_area_hit",
+      "description": "적 처치 시 그 자리에서 잉크 폭발. 반경 6 안의 적에게 기본 공격 피해의 100%(최대 250%) 피해. 0.5초에 1회만 발동.",
+      "playerText": "적을 처치하면 넓은 주변 적에게 100% 피해를 준다.",
+      "params": {
+        "ratio": 1.0,
+        "radius": 6
+      },
+      "cooldownSeconds": 0.5,
+      "duplicate": true,
+      "limits": "보스 단독전에서 발동하기 어려운 대신 잡몹 연쇄 정리에 투자 가치 부여. 반경 6 고정."
+    },
+    {
+      "id": "ink3_red_06",
+      "name": "처치 공격력",
+      "color": "red",
+      "trigger": "kill",
+      "kind": "kill_stack_attack_power",
+      "description": "적 처치마다 공격력 0.3%(최대 1.5%)씩 누적 증가. 증가량은 15%(최대 60%)까지이며, 최대 강화 시 40마리 처치로 한도 도달. 강화하면 지금까지의 처치 수로 다시 계산.",
+      "playerText": "적을 처치할 때마다 공격력이 0.5% 오른다. (최대 30%)",
+      "params": {
+        "amountPerKill": 0.003,
+        "cap": 0.15
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "처치당 공격력은 +5에서 1.5%, 상한 60%로 40처치에 완성. 강화 후 누적 처치 수로 보너스를 재계산한다."
+    },
+    {
+      "id": "ink3_red_07",
+      "name": "표식 강화",
+      "color": "red",
+      "trigger": "passive",
+      "kind": "mark_damage_bonus",
+      "description": "표식이 터질 때의 피해 25%(최대 120%) 증가. 다른 잉크가 표식을 터트릴 때 더하는 피해에는 적용 안 됨.",
+      "playerText": "표식이 터질 때 주는 피해가 50% 늘어난다.",
+      "params": {
+        "amount": 0.25
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "표식 자체의 피해만 증폭. 표식 폭발 파츠의 추가 피해에는 다시 곱하지 않는다."
+    },
+    {
+      "id": "ink3_red_08",
+      "name": "결정타",
+      "color": "red",
+      "trigger": "hit",
+      "kind": "execute_damage",
+      "description": "체력 30% 이하인 적에게 주는 피해 40%(최대 75%) 증가. 강화해도 체력 30% 기준은 그대로.",
+      "playerText": "체력 30% 이하인 적에게 주는 피해가 35% 늘어난다.",
+      "params": {
+        "threshold": 0.3,
+        "amount": 0.4
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "처형 구간의 확실한 보상. 대상 체력 조건은 강화해도 30%로 고정."
+    },
+    {
+      "id": "ink3_red_09",
+      "name": "광폭화",
+      "color": "red",
+      "trigger": "passive",
+      "kind": "risky_attack_power",
+      "description": "주는 피해 30%(최대 60%) 증가. 대신 받는 피해도 15% 증가.",
+      "playerText": "주는 피해가 25% 늘지만, 받는 피해도 15% 는다.",
+      "params": {
+        "amount": 0.3,
+        "damageTaken": 0.15
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "받는 피해 +15%를 고정 대가로 유지. 높은 초기 화력과 비교적 완만한 성장."
+    },
+    {
+      "id": "ink3_red_10",
+      "name": "스킬 표적",
+      "color": "red",
+      "trigger": "hit",
+      "condition": "special",
+      "kind": "underline_mark",
+      "description": "스킬로 맞힌 적은 4초 동안 표적 상태. 이 무기의 기본 공격으로 표적을 때리면 피해 15%(최대 60%) 증가.",
+      "playerText": "스킬로 맞힌 적에게 4초간 기본 공격 피해가 25% 늘어난다.",
+      "params": {
+        "amount": 0.15,
+        "duration": 4
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "특수 원타격으로 4초간 밑줄을 만든 뒤 기본 공격으로 회수. 밑줄 부여 기능을 기준으로 한 수치안."
+    },
+    {
+      "id": "ink3_yellow_01",
+      "name": "전기 발자국",
+      "color": "yellow",
+      "trigger": "move",
+      "kind": "electric_field",
+      "description": "1.5만큼 움직일 때마다 지나간 자리에 반경 0.75의 전기장 생성, 2초 유지. 전기장 위의 적에게 0.5초마다 기본 공격 피해의 8%(최대 32%) 피해. 전기장이 겹쳐도 피해 간격은 그대로.",
+      "playerText": "움직이면 발자국에 전기가 남아 닿은 적에게 피해를 준다.",
+      "params": {
+        "distance": 1.5,
+        "radius": 0.75,
+        "duration": 2,
+        "interval": 0.5,
+        "ratio": 0.08
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "1.5u 이동당 반경 0.75·2초 장판. 틱 0.5초 고정, 장판 중첩으로 틱 빈도 증가 불가."
+    },
+    {
+      "id": "ink3_yellow_02",
+      "name": "신속",
+      "color": "yellow",
+      "trigger": "passive",
+      "kind": "attack_and_move_speed",
+      "description": "공격 속도 10%(최대 50%), 이동 속도 10%(최대 25%) 증가.",
+      "playerText": "공격 속도와 이동 속도가 10% 빨라진다.",
+      "params": {
+        "attackSpeed": 0.1,
+        "moveSpeed": 0.1
+      },
+      "cooldownSeconds": 0,
+      "duplicate": true,
+      "limits": "공격 속도 +10→50%, 이동 속도 +10→25%. 덧칠과 같은 등급의 지속 화력 선택지이며 실제 DPS는 공격 모션과 적중 효과의 쿨타임에 따라 달라진다."
+    },
+    {
+      "id": "ink3_yellow_03",
+      "name": "몸통 박치기",
+      "color": "yellow",
+      "trigger": "dash",
+      "kind": "dash_hit",
+      "description": "대시로 적과 부딪히면 기본 공격 피해의 110%(최대 200%) 피해. 대시 1회에 같은 적은 1번만 적중. 대시 횟수와 무적 시간은 변화 없음.",
+      "playerText": "대시로 부딪힌 적에게 기본 공격만큼 피해를 준다.",
+      "params": {
+        "ratio": 1.1
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "대시 한 번에 대상당 한 번. 대시 횟수·무적시간은 고정."
+    },
+    {
+      "id": "ink3_yellow_04",
+      "name": "휘몰아치기",
+      "color": "yellow",
+      "trigger": "switch",
+      "kind": "attack_and_move_speed",
+      "description": "무기를 바꾸면 3초 동안 공격 속도와 이동 속도 30%(최대 50%) 증가. 바꾼 직후 첫 공격의 준비 동작 50% 단축. 3초에 1회만 발동.",
+      "playerText": "무기 교체 시 3초간 공격·이동 속도가 30% 빨라지고, 바꿔 든 공격이 더 빨리 나간다.",
+      "params": {
+        "attackSpeed": 0.3,
+        "moveSpeed": 0.3,
+        "duration": 3,
+        "switchWindupReduction": 0.5
+      },
+      "cooldownSeconds": 3,
+      "duplicate": false,
+      "limits": "교대 후 3초 지속. 첫 교대 준비시간 감소 50% 고정으로 조작 가치를 보존."
+    },
+    {
+      "id": "ink3_yellow_05",
+      "name": "전기 장판",
+      "color": "yellow",
+      "trigger": "mark_burst",
+      "kind": "electric_field",
+      "description": "표식을 묻힌 적을 다른 무기로 때려 터트리면, 그 자리에 반경 2의 전기장 생성, 3초 유지. 전기장 위의 적에게 0.5초마다 기본 공격 피해의 10%(최대 45%) 피해, 끝까지 맞으면 총 60%(최대 270%). 3초에 1회만 발동.",
+      "playerText": "표식을 터트린 자리에 3초간 전기장을 깐다.",
+      "params": {
+        "radius": 2,
+        "duration": 3,
+        "interval": 0.5,
+        "ratio": 0.1
+      },
+      "cooldownSeconds": 3,
+      "duplicate": false,
+      "limits": "반경 2·3초·틱 0.5초 고정. 여섯 틱을 모두 맞힐 때 대상당 60→270%."
+    },
+    {
+      "id": "ink3_yellow_06",
+      "name": "신난다",
+      "color": "yellow",
+      "trigger": "kill",
+      "kind": "moving_attack_power",
+      "description": "적 처치 시 4초 동안 이동 속도 15%(최대 25%) 증가, 움직이며 하는 공격의 피해 10%(최대 30%) 증가. 강화해도 4초는 그대로.",
+      "playerText": "적을 처치하면 4초간 빨라지고, 달리며 한 공격이 15% 더 아프다.",
+      "params": {
+        "moveSpeed": 0.15,
+        "amount": 0.1,
+        "duration": 4
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "처치 후 4초, 이동하며 공격하는 조건. 지속시간은 늘리지 않는다."
+    },
+    {
+      "id": "ink3_yellow_07",
+      "name": "교체 연계",
+      "color": "yellow",
+      "trigger": "hit",
+      "kind": "hit_recovery_cancel",
+      "description": "기본 공격 적중 시, 공격 뒤 멈칫하는 시간 없이 다른 무기의 기본 공격으로 바로 연결 가능. 이렇게 이어 친 공격의 피해 10%(최대 35%) 증가. 같은 무기로는 연결 불가. 이어 친 공격의 준비 동작은 그대로.",
+      "playerText": "기본 공격이 맞으면 후딜 없이 바로 다른 무기로 공격할 수 있다.",
+      "params": {
+        "amount": 0.1
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "장착 무기 기본 공격 명중 후 후딜레이를 다른 무기의 기본 공격으로만 취소한다. 같은 무기 연계는 불가하며 다음 공격의 준비 시간은 유지한다. 취소로 이어진 다른 무기 기본 공격 1회에 강화 단계별 피해 보너스를 적용한다."
+    },
+    {
+      "id": "ink3_yellow_08",
+      "name": "연쇄 번개",
+      "color": "yellow",
+      "trigger": "mark_pop",
+      "markIndex": 3,
+      "kind": "chain_lightning",
+      "description": "표식을 3개 이상 쌓은 뒤 터트리면, 노랑 표식이 터질 때 반경 3 안의 다른 적 최대 2명에게 번개. 번개 피해는 기본 공격 피해의 20%(최대 80%). 강화해도 번개가 튀는 적 수는 그대로.",
+      "playerText": "노랑 표식이 터지면 주변 적 2마리에게 전기가 튄다.",
+      "params": {
+        "ratio": 0.2,
+        "count": 2,
+        "radius": 3
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "노랑 표식 조건, 다른 적 최대 2명·반경 3 고정. 대상 수와 피해를 동시에 늘리지 않는다."
+    },
+    {
+      "id": "ink3_yellow_09",
+      "name": "번지는 표식",
+      "color": "yellow",
+      "trigger": "mark_burst",
+      "kind": "mark_chain_spread",
+      "description": "표식이 터지는 도중 적이 죽으면, 남은 표식이 반경 2.5(최대 4) 안의 다른 적에게 옮겨 가 마저 폭발. 강화 시 옮겨 간 표식의 피해 최대 60% 증가. 다시 다른 적에게 옮겨 가도 피해는 더 커지지 않음.",
+      "playerText": "표식이 터지다 적이 죽으면, 남은 표식이 옆 적에게 옮겨 터진다.",
+      "params": {
+        "radius": 2.5,
+        "amount": 0.0
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "처치 뒤 남은 표식 전이는 +0부터 가능. 전이 보너스는 최초 표식 기준에 한 번만 적용하며 재전이 때 복리로 늘지 않는다."
+    },
+    {
+      "id": "ink3_yellow_10",
+      "name": "질주 충전",
+      "color": "yellow",
+      "trigger": "move",
+      "kind": "move_charge",
+      "description": "3만큼 움직일 때마다 전기 1개 충전, 최대 3개. 공격 적중 시 충전 1개당 기본 공격 피해의 10%(최대 25%)로 추가타, 가득 차 있으면 총 30%(최대 75%). 2초 동안 멈춰 있으면 충전 소멸.",
+      "playerText": "움직이면 기가 쌓이고(최대 3), 맞히면 기 하나당 15% 추가 피해를 준다.",
+      "params": {
+        "distance": 3,
+        "maxStacks": 3,
+        "ratio": 0.1,
+        "resetSeconds": 2
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "3u 이동당 충전·최대 3개·2초 정지 시 소멸 고정. 완충 총 피해 30→75%."
+    },
+    {
+      "id": "ink3_yellow_11",
+      "name": "대시 강타",
+      "color": "yellow",
+      "trigger": "passive",
+      "kind": "dash_followup",
+      "description": "대시 중이나 대시가 끝나고 0.5초 안의 공격은 피해 20%(최대 60%) 증가, 준비 동작 30% 단축.",
+      "playerText": "대시 중이나 직후의 공격은 30% 더 아프고 더 빨리 나간다.",
+      "params": {
+        "amount": 0.2,
+        "windupReduction": 0.3,
+        "duration": 0.5
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "대시 중 또는 종료 0.5초 내 공격 조건. 준비시간 감소 30% 고정."
+    },
+    {
+      "id": "ink3_yellow_12",
+      "name": "교체 순간이동",
+      "color": "yellow",
+      "trigger": "switch",
+      "kind": "switch_slide",
+      "description": "무기를 바꾸면 앞으로 최대 2만큼 순간이동. 지나간 자리의 적에게 기본 공격 피해의 80%(최대 150%) 피해. 강화해도 이동 거리는 그대로. 2초에 1회만 발동.",
+      "playerText": "무기 교체 시 앞으로 미끄러지며 지나간 적에게 50% 피해를 준다.",
+      "params": {
+        "distance": 2,
+        "ratio": 0.8
+      },
+      "cooldownSeconds": 2,
+      "duplicate": false,
+      "limits": "교대 시 최대 2u 순간이동과 통과 피해. 이동 거리는 고정하여 조작감을 유지."
+    },
+    {
+      "id": "ink3_green_01",
+      "name": "든든한 배리어",
+      "color": "green",
+      "trigger": "passive",
+      "kind": "shielded_attack_power",
+      "description": "보호막이 있는 동안 주는 피해 10%(최대 65%) 증가. 보호막이 깨지면 효과 즉시 종료.",
+      "playerText": "보호막이 있는 동안 주는 피해가 20% 늘어난다.",
+      "params": {
+        "amount": 0.1
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "보호막 생성 파츠가 필요한 조건부 화력. 보호막이 깨지면 즉시 비활성화."
+    },
+    {
+      "id": "ink3_green_02",
+      "name": "교체 보호막",
+      "color": "green",
+      "trigger": "switch",
+      "kind": "shield",
+      "description": "무기를 바꾸면 체력 18(최대 35)만큼의 보호막 생성, 5초 유지. 보호막은 겹쳐 쌓이지 않음. 15초에 1회만 발동.",
+      "playerText": "무기 교체 시 5초간 보호막 15를 얻는다.",
+      "params": {
+        "amount": 18.0,
+        "duration": 5
+      },
+      "cooldownSeconds": 15,
+      "duplicate": false,
+      "limits": "교대 시 5초 보호막. 자체 쿨타임 15초 고정, 반복 교대로 중첩 불가."
+    },
+    {
+      "id": "ink3_green_03",
+      "name": "가시갑옷",
+      "color": "green",
+      "trigger": "damaged",
+      "kind": "homing_counter",
+      "description": "적에게 맞아 체력이 깎이면, 때린 적에게 기본 공격 피해의 100%(최대 200%)로 반격. 1초에 1회만 발동.",
+      "playerText": "나를 때린 적에게 80% 피해의 유도탄을 쏜다.",
+      "params": {
+        "ratio": 1.0
+      },
+      "cooldownSeconds": 1,
+      "duplicate": false,
+      "limits": "실제 체력 피해를 받아야 발동하는 반격. 보장 적중은 유지하되 피격 위험을 고려해 4→3등급 제안."
+    },
+    {
+      "id": "ink3_green_04",
+      "name": "처치 회복",
+      "color": "green",
+      "trigger": "kill",
+      "every": 5,
+      "kind": "heal",
+      "description": "적 5마리 처치마다 체력 1(최대 7) 회복.",
+      "playerText": "적을 5마리 처치할 때마다 체력 6을 회복한다.",
+      "params": {
+        "amount": 1.0
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "몬스터 5마리 처치마다 1/2/3/4/5/7HP 회복. 처치 조건 고정, 비전투 회복 없음."
+    },
+    {
+      "id": "ink3_green_05",
+      "name": "적중 회복",
+      "color": "green",
+      "trigger": "hit",
+      "every": 50,
+      "kind": "heal",
+      "description": "공격 50회 적중마다 체력 4(최대 10) 회복. 추가타는 횟수에 포함, 독과 전기장 피해는 제외.",
+      "playerText": "50번 때릴 때마다 체력 5를 회복한다.",
+      "params": {
+        "amount": 4.0
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "원타격·추가타 50적중 조건 고정. 지속·장판 피해는 적중 누적에서 제외."
+    },
+    {
+      "id": "ink3_green_06",
+      "name": "풀컨디션",
+      "color": "green",
+      "trigger": "passive",
+      "kind": "high_health_attack_power",
+      "description": "체력 80% 이상일 때 주는 피해 20%(최대 75%) 증가. 체력이 80% 아래로 떨어지면 효과 즉시 종료.",
+      "playerText": "체력이 80% 이상이면 주는 피해가 15% 늘어난다.",
+      "params": {
+        "threshold": 0.8,
+        "amount": 0.2
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "현재 체력 80% 이상일 때 공격 피해 +20→75%. 조건을 유지하는 보상을 높였으며 체력이 기준 아래로 떨어지면 즉시 비활성화한다."
+    },
+    {
+      "id": "ink3_green_07",
+      "name": "초록 표식 회복",
+      "color": "green",
+      "trigger": "mark_pop",
+      "markIndex": 4,
+      "kind": "heal",
+      "description": "표식을 4개 이상 쌓은 뒤 터트리면, 초록 표식이 터질 때 체력 5(최대 12) 회복. 15초에 1회만 발동.",
+      "playerText": "초록 표식이 터지면 체력 3을 회복한다.",
+      "params": {
+        "amount": 5.0
+      },
+      "cooldownSeconds": 15,
+      "duplicate": false,
+      "limits": "네 번째 초록 표식이 터질 때 회복. 자체 쿨타임 15초로 고정하며 표식 연쇄가 빨라도 회복 빈도는 늘어나지 않는다."
+    },
+    {
+      "id": "ink3_green_08",
+      "name": "피격 보호막",
+      "color": "green",
+      "trigger": "damaged",
+      "kind": "hit_guard_shield",
+      "description": "적에게 맞아 체력이 깎이면, 다음 공격 1번을 막는 체력 10(최대 20)만큼의 보호막 생성. 시간이 지나도 사라지지 않는 보호막. 20초에 1회만 발동.",
+      "playerText": "체력이 깎이면 다음 피격을 10까지 막는 보호막을 얻는다.",
+      "params": {
+        "amount": 10.0
+      },
+      "cooldownSeconds": 20,
+      "duplicate": false,
+      "limits": "실제 체력 피해 뒤 다음 피격 한 번을 막는 보호막 10→20HP. 시간 만료 없음·한 번 피격 시 소멸·쿨타임 20초 고정."
+    },
+    {
+      "id": "ink3_green_09",
+      "name": "복수 일격",
+      "color": "green",
+      "trigger": "damaged",
+      "kind": "stored_retaliation",
+      "description": "적에게 맞으면 받은 피해의 150%(최대 400%)를 저장. 3초 안에 공격하면 처음 맞은 적에게 저장한 만큼 추가 피해. 저장한 피해는 겹쳐 쌓이지 않음. 3초에 1회만 발동.",
+      "playerText": "맞은 피해의 2배를 3초 안에 다음 공격에 실어 돌려준다.",
+      "params": {
+        "ratio": 1.5,
+        "duration": 3
+      },
+      "cooldownSeconds": 3,
+      "duplicate": false,
+      "limits": "받은 실제 체력 피해 기준. 3초 안에 다음 원타격 첫 대상에게 한 번 사용, 저장 중첩 불가."
+    },
+    {
+      "id": "ink3_green_10",
+      "name": "처치 보호막",
+      "color": "green",
+      "trigger": "kill",
+      "every": 10,
+      "kind": "shield",
+      "description": "적 10마리 처치마다 체력 5(최대 20)만큼의 보호막 생성, 8초 유지. 15초에 1회만 발동.",
+      "playerText": "적을 10마리 처치할 때마다 8초간 보호막 12를 얻는다.",
+      "params": {
+        "amount": 5.0,
+        "duration": 8
+      },
+      "cooldownSeconds": 15,
+      "duplicate": false,
+      "limits": "10처치마다 보호막 5→20HP, 8초 유지·15초 쿨타임. 보스 단독전에서 공급이 끊기는 점을 고려해 1등급으로 조정."
+    },
+    {
+      "id": "ink3_blue_01",
+      "name": "범위 확장",
+      "color": "blue",
+      "trigger": "passive",
+      "kind": "all_geometry",
+      "description": "공격 범위와 사거리 25%(최대 50%) 증가. 근접 공격은 판정 크기, 범위 공격은 반경, 멀리 쏘는 공격은 사거리 증가. 강화 시 기본 공격과 스킬의 피해도 최대 30% 증가. 날아가는 공격의 속도는 그대로.",
+      "playerText": "공격 범위가 20% 넓어진다.",
+      "params": {
+        "amount": 0.25,
+        "ratio": 0.0
+      },
+      "cooldownSeconds": 0,
+      "duplicate": true,
+      "limits": "범위 증폭과 여의봉을 통합. 근접 공격 판정은 좌우상하, 범위 공격은 반경, 직선 공격은 사거리를 표의 비율만큼 늘린다. 범위와 사거리에 중복 곱하지 않는다. 피해 증가는 장착 무기의 기본·특수 원타격에만 적용한다. 투사체 속도는 유지한다."
+    },
+    {
+      "id": "ink3_blue_02",
+      "name": "교체 쿨감",
+      "color": "blue",
+      "trigger": "switch",
+      "kind": "cooldown_reduce",
+      "description": "무기를 바꾸면 바꿔 든 무기의 스킬 쿨타임 0.8초(최대 2초) 감소. 3초에 1회만 발동.",
+      "playerText": "무기 교체 시 바꿔 든 무기의 스킬 쿨타임이 1초 줄어든다.",
+      "params": {
+        "seconds": 0.8,
+        "target": "incoming_weapon"
+      },
+      "cooldownSeconds": 3,
+      "duplicate": false,
+      "limits": "교대 시 들어오는 무기만 적용. 자체 쿨타임 3초 고정."
+    },
+    {
+      "id": "ink3_blue_04",
+      "name": "적중 쿨감",
+      "color": "blue",
+      "trigger": "hit",
+      "kind": "cooldown_reduce",
+      "description": "공격 적중마다 스킬 쿨타임 0.08초(최대 0.3초) 감소. 0.25초에 1회만 발동, 1초에 0.32초(최대 1.2초)까지 감소.",
+      "playerText": "맞힐 때마다 스킬 쿨타임이 0.1초 줄어든다.",
+      "params": {
+        "seconds": 0.08,
+        "target": "equipped_weapon"
+      },
+      "cooldownSeconds": 0.25,
+      "duplicate": false,
+      "limits": "0.25초마다 최대 한 번. 초당 최대 감소량 0.32→1.2초로 제한."
+    },
+    {
+      "id": "ink3_blue_05",
+      "name": "표식 쿨감",
+      "color": "blue",
+      "trigger": "mark_burst",
+      "kind": "cooldown_reduce",
+      "description": "표식을 묻힌 적을 다른 무기로 때려 터트리면, 두 무기의 스킬 쿨타임 0.4초(최대 2초)씩 감소. 0.5초에 1회만 발동.",
+      "playerText": "표식을 터트리면 두 무기의 스킬 쿨타임이 0.6초씩 줄어든다.",
+      "params": {
+        "seconds": 0.4,
+        "target": "both_weapons"
+      },
+      "cooldownSeconds": 0.5,
+      "duplicate": false,
+      "limits": "표식 폭발 한 번에 두 무기에 적용. 자체 쿨타임 0.5초, 남은 시간 0 아래로 감소하지 않는다."
+    },
+    {
+      "id": "ink3_blue_06",
+      "name": "학살",
+      "color": "blue",
+      "trigger": "kill",
+      "kind": "area_radius",
+      "description": "적 처치 시 4초 동안 공격 범위 30%(최대 65%) 증가.",
+      "playerText": "적을 처치하면 4초간 공격 범위가 35% 넓어진다.",
+      "params": {
+        "amount": 0.3,
+        "duration": 4
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "처치 후 4초만 유지. 상시 범위 증폭보다 큰 수치로 조건 보상."
+    },
+    {
+      "id": "ink3_blue_07",
+      "name": "파랑 표식 쿨감",
+      "color": "blue",
+      "trigger": "mark_pop",
+      "markIndex": 5,
+      "kind": "cooldown_reduce",
+      "description": "표식을 5개 이상 쌓은 뒤 터트리면, 파랑 표식이 터질 때 두 무기의 스킬 쿨타임 1초(최대 2.2초)씩 감소.",
+      "playerText": "파랑 표식이 터지면 두 무기의 스킬 쿨타임이 1초씩 줄어든다.",
+      "params": {
+        "seconds": 1.0,
+        "target": "both_weapons"
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "다섯 번째 표식 조건을 만족하면 높은 초기 보상. 공명 성장형의 최대치와 발동 빈도로 비교."
+    },
+    {
+      "id": "ink3_blue_08",
+      "name": "표식 전염",
+      "color": "blue",
+      "trigger": "hit",
+      "kind": "mark_spread",
+      "description": "공격 적중 시 반경 2(최대 3.5) 안의 다른 적 1명에게도 표식 전염. +3 강화부터 2명, +5 강화에서 3명. 옮겨 묻은 표식은 다시 번지지 않음.",
+      "playerText": "공격이 표식을 남기고, 가까운 적 1마리에게도 표식이 번진다.",
+      "params": {
+        "radius": 2.0,
+        "count": 1.0
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "추가 대상 수는 +0~+2 1명, +3~+4 2명, +5 3명. 대상당 표식 1개 고정, 전파로 재전파하지 않는다."
+    },
+    {
+      "id": "ink3_blue_09",
+      "name": "스킬 추가 충전",
+      "color": "blue",
+      "trigger": "passive",
+      "kind": "extra_skill_charge",
+      "description": "이 무기의 스킬을 1번 더 모아 두기 가능. 강화 시 스킬이 다시 차는 시간 10%(최대 25%) 단축. 모아 둔 스킬은 하나씩 차례로 충전.",
+      "playerText": "스킬을 한 번 더 쌓아 둘 수 있다. (충전 +1)",
+      "params": {
+        "count": 1.0,
+        "rechargeReduction": 0.1
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "+0부터 추가 충전 1회 제공. 강화는 회복 시간만 개선. 동시 충전 없이 순차 회복, 회복 시간에 0.90→0.75를 곱한다."
+    },
+    {
+      "id": "ink3_blue_10",
+      "name": "처치 쿨감",
+      "color": "blue",
+      "trigger": "kill",
+      "kind": "cooldown_reduce",
+      "description": "적 처치 시 처치한 무기의 스킬 쿨타임 0.4초(최대 1초) 감소.",
+      "playerText": "적을 처치하면 스킬 쿨타임이 0.5초 줄어든다.",
+      "params": {
+        "seconds": 0.4,
+        "target": "equipped_weapon"
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "처치를 만든 무기의 특수에만 적용. 남은 쿨타임 0 아래로 감소하지 않는다."
+    },
+    {
+      "id": "ink3_blue_11",
+      "name": "교체 범위 확장",
+      "color": "blue",
+      "trigger": "switch",
+      "kind": "next_attack_geometry",
+      "description": "무기를 바꾼 뒤 첫 공격의 범위와 사거리 45%(최대 80%) 증가. 2초에 1회만 발동.",
+      "playerText": "무기 교체 시 첫 공격의 사거리와 범위가 40% 늘어난다.",
+      "params": {
+        "amount": 0.45
+      },
+      "cooldownSeconds": 2,
+      "duplicate": false,
+      "limits": "첫 공격 한 번에만 적용. 자체 쿨타임 2초 고정."
+    },
+    {
+      "id": "ink3_purple_01",
+      "name": "적중 속박",
+      "color": "purple",
+      "trigger": "hit",
+      "kind": "bind",
+      "description": "공격 적중 시 적을 0.8초(최대 1.1초) 동안 속박, 기본 공격 피해의 35%(최대 75%) 피해. 속박된 적은 이동 불가, 공격은 가능. 보스는 속박 시간 25%로 감소. 속박이 풀리고 1초 뒤부터 다시 속박 가능. 1초에 1회만 발동.",
+      "playerText": "맞힌 적을 0.8초 속박하고 30% 피해를 준다.",
+      "params": {
+        "duration": 0.8,
+        "ratio": 0.35
+      },
+      "cooldownSeconds": 1,
+      "duplicate": false,
+      "limits": "자체 쿨타임 1초, 속박 종료 후 재적용 대기 1초. 보스 속박 시간은 표의 25%."
+    },
+    {
+      "id": "ink3_purple_02",
+      "name": "속박 폭발",
+      "color": "purple",
+      "trigger": "bind_end",
+      "kind": "area_hit",
+      "description": "적의 속박이 풀릴 때 그 자리에서 폭발, 반경 2 안의 적에게 기본 공격 피해의 30%(최대 140%) 피해. 속박된 채로 적이 죽으면 폭발 없음.",
+      "playerText": "속박된 적이 풀릴 때 주변에 50% 폭발이 일어난다.",
+      "params": {
+        "ratio": 0.3,
+        "radius": 2
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "속박 파츠 필요. 반경 2 고정, 처치로 속박이 사라지면 발동하지 않는다."
+    },
+    {
+      "id": "ink3_purple_03",
+      "name": "적중 기절",
+      "color": "purple",
+      "trigger": "hit",
+      "kind": "stun",
+      "description": "공격 적중 시 적을 0.6초(최대 1초) 동안 기절. 기절한 적은 하던 공격이 끊기고 이동 불가. 같은 적은 5초, 엘리트와 보스는 20초 뒤에 다시 기절 가능(기절을 건 때부터 계산). 보스는 기절 시간 25%로 감소.",
+      "playerText": "처음 때린 적을 0.5초 기절시킨다.",
+      "params": {
+        "duration": 0.6
+      },
+      "cooldownSeconds": 5,
+      "duplicate": false,
+      "limits": "적중 시 기절을 걸며 같은 대상에게 다시 발동할 수 있다. 대상별 내부 쿨타임은 일반 5초, 엘리트·보스 20초이며 기절을 건 시점부터 센다. 보스 기절 지속시간은 표의 25%를 적용한다.",
+      "eliteCooldownSeconds": 20
+    },
+    {
+      "id": "ink3_purple_04",
+      "name": "기절 추가 피해",
+      "color": "purple",
+      "trigger": "passive",
+      "kind": "stunned_dot",
+      "description": "기절한 적에게 0.25초마다 기본 공격 피해의 6%(최대 28%) 피해.",
+      "playerText": "기절한 적은 기절하는 동안 계속 피해를 받는다.",
+      "params": {
+        "interval": 0.25,
+        "ratio": 0.06
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "기절 파츠 필요. 틱 0.25초 고정. 보스의 짧은 기절 구간에서는 실제 발동 틱 수로 평가."
+    },
+    {
+      "id": "ink3_purple_05",
+      "name": "독 공격",
+      "color": "purple",
+      "trigger": "hit",
+      "kind": "poison",
+      "description": "공격 적중 시 적에게 3초 동안 독. 독은 0.5초마다 기본 공격 피해의 6%(최대 10%) 피해. 다시 맞히면 독 1겹 추가, 시간은 처음부터 다시. 독은 1겹까지, +2 강화에서 2겹, +4 강화에서 3겹까지 누적.",
+      "playerText": "맞힌 적을 3초간 중독시킨다.",
+      "params": {
+        "duration": 3,
+        "interval": 0.5,
+        "ratio": 0.06,
+        "maxStacks": 1.0
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "3초 지속·틱 0.5초. 최대 중첩 1/1/2/2/3/3, 다시 걸면 1중첩 추가와 시간 갱신. 중첩 성장을 포함해 1→2등급 제안."
+    },
+    {
+      "id": "ink3_purple_06",
+      "name": "상태 이상 폭발",
+      "color": "purple",
+      "trigger": "mark_burst",
+      "kind": "cc_count_hit",
+      "description": "표식을 묻힌 적을 다른 무기로 때려 터트리면, 적에게 걸린 속박, 기절, 독, 둔화 하나마다 기본 공격 피해의 15%(최대 75%) 추가 피해. 4가지 모두 걸려 있으면 총 60%(최대 300%). 독이 여러 겹이어도 1가지로 계산. 0.5초에 1회만 발동.",
+      "playerText": "표식을 터트린 적의 상태 이상 하나당 25% 피해를 준다.",
+      "params": {
+        "ratioPerState": 0.15
+      },
+      "cooldownSeconds": 0.5,
+      "duplicate": false,
+      "limits": "속박·기절·독·둔화 최대 네 종류, 총 60→300%. 같은 상태 중첩은 한 종류로 계산."
+    },
+    {
+      "id": "ink3_purple_07",
+      "name": "남색 표식 속박",
+      "color": "purple",
+      "trigger": "mark_pop",
+      "markIndex": 6,
+      "kind": "bind",
+      "description": "표식을 6개 이상 쌓은 뒤 터트리면, 남색 표식이 터질 때 적을 0.7초(최대 1.1초) 동안 속박, 기본 공격 피해의 40%(최대 85%) 피해. 보스는 속박 시간만 25%로 감소, 피해는 그대로.",
+      "playerText": "남색 표식이 터지면 적을 0.6초 속박하고 20% 피해를 준다.",
+      "params": {
+        "duration": 0.7,
+        "ratio": 0.4
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "여섯 번째 표식 조건. 보스 속박 시간 25%, 피해는 100%. 잔류 폭발과 연계."
+    },
+    {
+      "id": "ink3_purple_08",
+      "name": "보라 표식 독",
+      "color": "purple",
+      "trigger": "mark_pop",
+      "markIndex": 7,
+      "kind": "poison",
+      "description": "표식을 7개 쌓은 뒤 터트리면, 보라 표식이 터질 때 적에게 독 1겹. 독은 3초 동안 0.5초마다 1겹당 기본 공격 피해의 5%(최대 15%) 피해. 독은 3겹까지, +3 강화에서 4겹, +5 강화에서 5겹까지 누적.",
+      "playerText": "보라 표식이 터지면 적에게 중독을 1겹 쌓는다. (최대 5겹)",
+      "params": {
+        "duration": 3,
+        "interval": 0.5,
+        "ratio": 0.05,
+        "maxStacks": 3.0
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "일곱 번째 표식 조건. 최대 중첩 3/3/3/4/4/5, 한 번 발동에 1중첩 추가. 3초 지속·틱 0.5초 고정."
+    },
+    {
+      "id": "ink3_purple_09",
+      "name": "독폭탄",
+      "color": "purple",
+      "trigger": "hit",
+      "kind": "poison_burst",
+      "description": "독에 걸린 적을 때리면 독을 한꺼번에 터트려 남은 독 피해의 100%(최대 180%)를 즉시 피해. 2초에 1회만 발동.",
+      "playerText": "중독된 적을 때리면 남은 중독 피해를 한 번에 터트린다.",
+      "params": {
+        "ratio": 1.0
+      },
+      "cooldownSeconds": 2,
+      "duplicate": false,
+      "limits": "2초 쿨타임, 독을 지우고 남은 틱 피해에 비율을 곱한다. 독 수치와 곱연산하는 완성 파츠로 2→3등급 제안."
+    },
+    {
+      "id": "ink3_purple_10",
+      "name": "대시 기절",
+      "color": "purple",
+      "trigger": "dash",
+      "kind": "stun",
+      "description": "대시로 적과 부딪히면 적을 0.5초(최대 0.9초) 동안 기절. 같은 적은 3초 뒤에 다시 기절 가능. 보스는 기절 시간 25%로 감소.",
+      "playerText": "대시로 부딪힌 적을 0.4초 기절시킨다.",
+      "params": {
+        "duration": 0.5
+      },
+      "cooldownSeconds": 3,
+      "duplicate": false,
+      "limits": "대상별 쿨타임 3초, 보스 시간 25%. 근접 대시 위험과 피해 부재를 고려해 3→2등급 제안."
+    },
+    {
+      "id": "ink3_purple_11",
+      "name": "약점 공격",
+      "color": "purple",
+      "trigger": "passive",
+      "kind": "controlled_damage",
+      "description": "속박되거나 기절한 적에게 주는 피해 15%(최대 60%) 증가. 추가타, 독, 장판 피해에는 적용 안 됨.",
+      "playerText": "속박되거나 기절한 적에게 주는 피해가 25% 늘어난다.",
+      "params": {
+        "amount": 0.15
+      },
+      "cooldownSeconds": 0,
+      "duplicate": false,
+      "limits": "다른 CC 파츠가 필요. 추가타·독·장판 피해에는 적용하지 않는다."
+    }
+  ],
+  "statusVisuals": [
+    "`사용자 결정` 2026-11-06 확정. 그림 원본은 resources `effects/ink-status`, 게임 연결은 `InkStatusVisuals`다.",
+    "표식: 머리 위에 잉크 방울을 쌓인 순번 색으로 한 줄 띄운다(새 표식이 오른쪽, 외곽선 없음). 하나가 터질 때마다 그 방울이 머리 위에서 작게 튀어 사라지고, 몸통 가운데에서 그 색 잉크가 몬스터 뒤로 넓게 튀며, 몬스터 몸이 그 색으로 물들었다가 0.2초에 걸쳐 빠진다.",
+    "속박: 몸통을 꼰 잉크 밧줄 세 줄이 감는다. 앞쪽 반은 몬스터 앞, 뒤쪽 반은 몬스터 뒤에 그린다.",
+    "기절: 머리 위(표식 줄이 있으면 그 위)에 금빛 별 고리가 돈다.",
+    "중독: 몬스터 몸 범위 안 무작위 자리에서 보라 독 해골 거품이 중첩당 초당 2.5개 맺혀 떠오르다 터지고, 중독 동안 몸을 보라로 물들인다.",
+    "밑줄 긋기는 버프 스킬로 바꿀 예정이라 상태 표시를 두지 않는다."
+  ],
+  "openQuestions": [
+    "대시 충돌 판정 크기와 대시 무적과의 관계",
+    "유도 잉크·에너지 기·번개의 전용 시각 표현",
+    "지속·장판 피해의 처치 보상 귀속(마지막으로 공격한 무기 기준인지 설치한 무기 기준인지)",
+    "옮겨 쓰기의 연속 미끄러짐 모션(현재는 벽 앞에서 멈추는 순간 이동)과 추가 11종의 전용 이펙트"
+  ],
+  "aliases": {
+    "ink3_blue_03": "ink3_blue_01"
+  }
+}

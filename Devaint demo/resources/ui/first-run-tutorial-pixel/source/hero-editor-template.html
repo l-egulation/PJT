@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>튜토리얼 캐릭터 픽셀 편집기</title>
+<style>
+:root{color-scheme:dark;--bg:#202321;--card:#2a2e2b;--line:#454d45;--text:#f4ecdc;--muted:#b8c1b5;--accent:#d4c291}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.5 system-ui,sans-serif}button,input{font:inherit}button{background:#373e37;color:var(--text);border:1px solid var(--line);border-radius:7px;padding:8px 12px;cursor:pointer}button:hover{background:#454e43}button[aria-pressed=true]{border-color:var(--accent);background:#50523f}button:disabled{opacity:.35;cursor:default}button:focus-visible,input:focus-visible{outline:2px solid #e6c37b;outline-offset:3px}header{max-width:1440px;margin:auto;padding:24px 26px 14px}h1{margin:0;font-size:23px}header p{margin:5px 0 0;color:var(--muted)}.layout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:16px;max-width:1440px;margin:auto;padding:0 26px 24px}aside,.work{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}h2{font-size:14px;margin:0 0 10px}.frames{display:grid;gap:10px}.frame{padding:10px;text-align:left;width:100%}.frame-title{display:flex;justify-content:space-between;gap:8px}.frame-title small{color:var(--muted)}.frame canvas{display:block;margin:12px auto 4px;max-width:100%;image-rendering:pixelated}.palette{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.swatch{padding:6px;font-size:11px}.swatch i{display:block;height:30px;border:1px solid #767a6e;border-radius:3px;margin-bottom:5px}.section{border-top:1px solid var(--line);padding-top:16px;margin-top:16px}.custom{display:flex;align-items:center;gap:10px;margin-top:12px}.custom input{width:48px;height:34px;background:none;border:0}.hint{font-size:12px;color:var(--muted);margin:10px 0 0}.toolbar,.files,.viewbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.toolbar{padding-bottom:12px;border-bottom:1px solid var(--line)}.viewbar{padding:12px 0;color:var(--muted)}.viewbar label{display:flex;align-items:center;gap:8px}.viewbar input[type=range]{width:130px}.stage{border:1px solid var(--line);border-radius:8px;background:#1d201e;overflow:auto;max-height:70vh;min-height:300px;display:grid;place-items:center;padding:24px}#board{display:block;image-rendering:pixelated;touch-action:none;cursor:crosshair;flex-shrink:0}canvas{image-rendering:pixelated}.files{padding-top:14px}.primary{background:#d4c291;color:#25291f;border-color:#d4c291}.primary:hover{background:#e2d2a5}.status{font-size:12px;color:var(--muted);min-height:20px;margin-top:10px}.previewline{display:flex;align-items:flex-start;gap:20px;flex-wrap:wrap;margin-top:16px}.previewline canvas{border:1px solid var(--line);background:#222622}.previewline small{display:block;color:var(--muted);margin-bottom:5px}.toast{color:#f4d79b}input[type=file]{display:none}@media(max-width:800px){header{padding:18px 14px 12px}.layout{grid-template-columns:1fr;padding:0 14px 18px}aside{display:grid;grid-template-columns:1fr 1fr;gap:16px}.section{border:0;margin:0;padding:0}.frames{grid-template-columns:1fr 1fr;grid-column:1/-1}.stage{padding:12px}.hint{grid-column:1/-1}}@media(max-width:470px){aside{display:block}.frames{display:block}.frame{margin-bottom:8px}.section{margin-top:14px}.toolbar button{padding:10px}.stage{justify-items:start}h1{font-size:20px}}
+</style>
+</head>
+<body>
+<header><h1>튜토리얼 캐릭터 픽셀 편집기</h1><p>실제 캐릭터 6색 팔레트 · 원본 크기 그대로 편집 · 투명 PNG 저장</p><a href="../authoring/sword-pixel-editor.html" style="color:#e8dec4">칼 편집기 열기</a></header>
+<main class="layout">
+<aside>
+  <div><h2>편집할 그림</h2><div id="frames" class="frames"></div></div>
+  <section class="section"><h2>캐릭터 팔레트</h2><div id="palette" class="palette"></div><div class="custom"><input id="color" type="color" aria-label="선택 색상"><span id="hex"></span></div><p class="hint">스포이트로 기존 픽셀 색을 선택할 수 있어요.</p></section>
+  <section class="section"><h2>작업 파일</h2><button id="saveProject">편집 파일 저장</button> <button id="loadProject">편집 파일 열기</button><p class="hint">두 그림을 함께 보관하는 JSON 파일입니다.</p><button id="saveHtml" style="margin-top:10px">수정본을 HTML로 저장</button><p class="hint">수정한 그림이 포함된 새 HTML을 만듭니다.</p></section>
+  <p class="hint">B 펜 · E 지우개 · G 채우기 · I 스포이트<br>Ctrl/⌘ Z 되돌리기 · Shift Z 다시 실행<br>우클릭: 색 추출</p>
+</aside>
+<section class="work">
+  <div class="toolbar" role="toolbar" aria-label="그리기 도구">
+    <button data-tool="pen" aria-pressed="true">펜 B</button><button data-tool="eraser" aria-pressed="false">지우개 E</button><button data-tool="fill" aria-pressed="false">채우기 G</button><button data-tool="pick" aria-pressed="false">스포이트 I</button>
+    <button id="undo">되돌리기</button><button id="redo">다시 실행</button>
+  </div>
+  <div class="viewbar"><strong id="dimensions"></strong><label>확대 <input id="zoom" type="range" min="3" max="14" step="1" value="6"><span id="zoomValue">6×</span></label><label><input id="grid" type="checkbox" checked>격자</label><span id="coords">—</span></div>
+  <div class="stage"><canvas id="board" aria-label="픽셀 편집 캔버스"></canvas></div>
+  <div class="files"><button id="savePng" class="primary">현재 PNG 저장</button><button id="openPng">PNG 불러오기</button><button id="reset">이 그림 초기화</button></div>
+  <div class="status" id="status" role="status"></div>
+  <div class="previewline"><div><small>실제 크기 1×</small><canvas id="native"></canvas></div><div><small>게임 표시 미리보기 2×</small><canvas id="preview"></canvas></div></div>
+</section>
+</main>
+<input id="projectFile" type="file" accept="application/json,.json"><input id="pngFile" type="file" accept="image/png">
+<script id="editor-seed" type="application/json">__EDITOR_SEED__</script>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id),seed=JSON.parse($('editor-seed').textContent);
+const decode=s=>Uint8ClampedArray.from(atob(s),c=>c.charCodeAt(0));
+const encode=data=>{let str='';for(let i=0;i<data.length;i+=8192)str+=String.fromCharCode(...data.subarray(i,i+8192));return btoa(str)};
+const frames=seed.frames.map(f=>({...f,data:decode(f.rgba),original:decode(f.rgba),undo:[],redo:[]}));
+let selected=0,tool='pen',color=seed.palette[0].hex,zoom=6,stroke=false,last=null;
+const canvas=$('board'),ctx=canvas.getContext('2d'),buffer=document.createElement('canvas'),bufferCtx=buffer.getContext('2d');
+const current=()=>frames[selected];
+const key='deviant-hero-editor-'+seed.documentId;
+function pack(){return{format:'deviant-hero-pixel-editor-v1',documentId:seed.documentId,palette:seed.palette,frames:frames.map(f=>({id:f.id,label:f.label,width:f.width,height:f.height,rgba:encode(f.data)}))}}
+function notify(message){$('status').textContent=message}
+function persist(){try{localStorage.setItem(key,JSON.stringify(pack()));notify('브라우저 임시 저장됨 · 파일로 보관하려면 PNG 또는 편집 파일 저장')}catch{notify('파일로 보관하려면 PNG 또는 편집 파일을 저장해 주세요.')}}
+function loadData(value){if(value.format!=='deviant-hero-pixel-editor-v1'||!Array.isArray(value.frames)||value.frames.length!==frames.length)throw Error('이 편집기의 작업 파일이 아닙니다.');const next=frames.map(f=>{const x=value.frames.find(v=>v.id===f.id);if(!x||x.width!==f.width||x.height!==f.height)throw Error('원본 이미지 규격이 다릅니다.');const data=decode(x.rgba);if(data.length!==f.width*f.height*4)throw Error('픽셀 데이터가 올바르지 않습니다.');return data});frames.forEach((f,i)=>{f.data=next[i];f.undo=[];f.redo=[]})}
+try{const saved=localStorage.getItem(key);if(saved)loadData(JSON.parse(saved))}catch{}
+function checker(context,w,h,size){context.fillStyle='#444943';context.fillRect(0,0,w,h);context.fillStyle='#383d38';for(let y=0;y<h;y+=size)for(let x=0;x<w;x+=size)if(((x/size+y/size)&1)===0)context.fillRect(x,y,size,size)}
+function nativeBuffer(f){buffer.width=f.width;buffer.height=f.height;bufferCtx.putImageData(new ImageData(f.data,f.width,f.height),0,0)}
+function renderTo(target,f,scale){target.width=f.width*scale;target.height=f.height*scale;const c=target.getContext('2d');c.imageSmoothingEnabled=false;checker(c,target.width,target.height,Math.max(4,scale*4));nativeBuffer(f);c.drawImage(buffer,0,0,target.width,target.height)}
+function draw(){const f=current();renderTo(canvas,f,zoom);if($('grid').checked){ctx.strokeStyle='rgba(245,239,217,.15)';ctx.lineWidth=1;ctx.beginPath();for(let x=0;x<=f.width;x++){ctx.moveTo(x*zoom+.5,0);ctx.lineTo(x*zoom+.5,canvas.height)}for(let y=0;y<=f.height;y++){ctx.moveTo(0,y*zoom+.5);ctx.lineTo(canvas.width,y*zoom+.5)}ctx.stroke()}renderTo($('native'),f,1);renderTo($('preview'),f,2);frames.forEach((v,i)=>{renderTo($('thumb-'+i),v,2);$('frame-'+i).setAttribute('aria-pressed',String(i===selected))});$('dimensions').textContent=f.label+' · '+f.width+' × '+f.height+' px';$('undo').disabled=!f.undo.length;$('redo').disabled=!f.redo.length}
+function setColor(hex){color=hex.toLowerCase();$('color').value=color;$('hex').textContent=color;document.querySelectorAll('[data-color]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.color===color)))}
+function setTool(value){tool=value;document.querySelectorAll('[data-tool]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.tool===tool)))}
+function remember(){const f=current();f.undo.push(f.data.slice());if(f.undo.length>60)f.undo.shift();f.redo=[]}
+function history(redo){const f=current(),from=redo?f.redo:f.undo,to=redo?f.undo:f.redo;if(!from.length)return;to.push(f.data.slice());f.data=from.pop();draw();persist()}
+function point(event){const b=canvas.getBoundingClientRect(),f=current();return{x:Math.floor((event.clientX-b.left)/b.width*f.width),y:Math.floor((event.clientY-b.top)/b.height*f.height)}}
+function inside(p){const f=current();return p.x>=0&&p.x<f.width&&p.y>=0&&p.y<f.height}
+function rgba(){return tool==='eraser'?[0,0,0,0]:[parseInt(color.slice(1,3),16),parseInt(color.slice(3,5),16),parseInt(color.slice(5,7),16),255]}
+function pixel(p,value){if(!inside(p))return;const i=(p.y*current().width+p.x)*4;current().data.set(value,i)}
+function pick(p){if(!inside(p))return;const f=current(),i=(p.y*f.width+p.x)*4;if(!f.data[i+3]){notify('투명한 픽셀입니다.');return}setColor('#'+[f.data[i],f.data[i+1],f.data[i+2]].map(x=>x.toString(16).padStart(2,'0')).join(''))}
+function line(a,b){const value=rgba();let x=a.x,y=a.y,dx=Math.abs(b.x-x),dy=-Math.abs(b.y-y),sx=x<b.x?1:-1,sy=y<b.y?1:-1,error=dx+dy;for(;;){pixel({x,y},value);if(x===b.x&&y===b.y)break;const twice=2*error;if(twice>=dy){error+=dy;x+=sx}if(twice<=dx){error+=dx;y+=sy}}}
+function fill(p){const f=current(),index=p.y*f.width+p.x,start=Array.from(f.data.slice(index*4,index*4+4)),value=rgba();if(start.every((v,i)=>v===value[i]))return;remember();const queue=[index],seen=new Uint8Array(f.width*f.height);while(queue.length){const k=queue.pop();if(seen[k])continue;seen[k]=1;const i=k*4;if(!start.every((v,j)=>f.data[i+j]===v))continue;f.data.set(value,i);const x=k%f.width,y=Math.floor(k/f.width);if(x)queue.push(k-1);if(x+1<f.width)queue.push(k+1);if(y)queue.push(k-f.width);if(y+1<f.height)queue.push(k+f.width)}draw();persist()}
+canvas.addEventListener('contextmenu',e=>e.preventDefault());
+canvas.addEventListener('pointerdown',e=>{if(stroke||![0,2].includes(e.button))return;const p=point(e);if(!inside(p))return;e.preventDefault();if(e.button===2||tool==='pick'){pick(p);return}if(tool==='fill'){fill(p);return}remember();stroke=true;last=p;canvas.setPointerCapture(e.pointerId);line(p,p);draw()});
+canvas.addEventListener('pointermove',e=>{const p=point(e);$('coords').textContent=inside(p)?`X ${p.x} · Y ${p.y}`:'—';if(stroke){const f=current(),clamped={x:Math.max(0,Math.min(f.width-1,p.x)),y:Math.max(0,Math.min(f.height-1,p.y))};line(last,clamped);last=clamped;draw()}});
+function finish(){if(!stroke)return;stroke=false;last=null;persist()}
+canvas.addEventListener('pointerup',finish);canvas.addEventListener('pointercancel',finish);canvas.addEventListener('lostpointercapture',finish);
+function download(blob,name){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+function savePng(){nativeBuffer(current());buffer.toBlob(blob=>{if(blob)download(blob,current().id+'.png')},'image/png')}
+$('savePng').onclick=savePng;
+$('saveProject').onclick=()=>download(new Blob([JSON.stringify(pack())],{type:'application/json'}),'tutorial-hero-edit.json');
+$('saveHtml').onclick=()=>{const copy=document.documentElement.cloneNode(true),data=pack();data.documentId='saved-'+Date.now();copy.querySelector('#editor-seed').textContent=JSON.stringify(data);download(new Blob(['<!doctype html>\n'+copy.outerHTML],{type:'text/html;charset=utf-8'}),'캐릭터_픽셀_편집기_수정본.html')};
+$('loadProject').onclick=()=>$('projectFile').click();
+$('projectFile').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{loadData(JSON.parse(await file.text()));draw();persist()}catch(error){notify(error.message)}e.target.value=''};
+$('openPng').onclick=()=>$('pngFile').click();
+$('pngFile').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{const im=await createImageBitmap(file),f=current();if(im.width!==f.width||im.height!==f.height){im.close();throw Error(`이 그림은 ${f.width}×${f.height}px PNG가 필요합니다.`)}remember();buffer.width=f.width;buffer.height=f.height;bufferCtx.clearRect(0,0,f.width,f.height);bufferCtx.drawImage(im,0,0);f.data=bufferCtx.getImageData(0,0,f.width,f.height).data;im.close();draw();persist()}catch(error){notify(error.message)}e.target.value=''};
+$('reset').onclick=()=>{if(!confirm('선택한 그림을 이 HTML의 초기 상태로 되돌릴까요?'))return;remember();current().data=current().original.slice();draw();persist()};
+$('undo').onclick=()=>history(false);$('redo').onclick=()=>history(true);
+$('zoom').oninput=e=>{zoom=+e.target.value;$('zoomValue').textContent=zoom+'×';draw()};$('grid').onchange=draw;$('color').oninput=e=>setColor(e.target.value);
+document.querySelectorAll('[data-tool]').forEach(b=>b.onclick=()=>setTool(b.dataset.tool));
+$('frames').replaceChildren();frames.forEach((f,i)=>{const b=document.createElement('button');b.id='frame-'+i;b.className='frame';b.setAttribute('aria-pressed',String(i===selected));const row=document.createElement('div');row.className='frame-title';const title=document.createElement('strong');title.textContent=f.label;const size=document.createElement('small');size.textContent=f.width+' × '+f.height;row.append(title,size);const thumb=document.createElement('canvas');thumb.id='thumb-'+i;b.append(row,thumb);b.onclick=()=>{finish();selected=i;draw()};$('frames').append(b)});
+$('palette').replaceChildren();seed.palette.forEach(p=>{const b=document.createElement('button');b.className='swatch';b.dataset.color=p.hex;const sample=document.createElement('i');sample.style.background=p.hex;const title=document.createElement('span');title.textContent=p.label;b.append(sample,title);b.title=p.hex;b.onclick=()=>setColor(p.hex);$('palette').append(b)});
+document.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName))return;const k=e.key.toLowerCase();if((e.ctrlKey||e.metaKey)&&k==='z'){e.preventDefault();history(e.shiftKey);return}if((e.ctrlKey||e.metaKey)&&k==='y'){e.preventDefault();history(true);return}if(e.ctrlKey||e.metaKey||e.altKey)return;const tools={b:'pen',e:'eraser',g:'fill',i:'pick'};if(tools[k]){e.preventDefault();setTool(tools[k])}});
+setColor(color);draw();notify('원하는 픽셀을 클릭하거나 드래그해 수정하세요.');
+})();
+</script>
+</body></html>

@@ -1,0 +1,117 @@
+{
+  "pass": true,
+  "method": "Node VM executing original approved game movement/collision/motion code at 120Hz. Main run starts once and uses no teleport. Cave shaft tests start individually. Not Unity player-controller verification.",
+  "checks": [
+    {
+      "pass": true,
+      "name": "Continuous start-to-end run using unchanged approved movement",
+      "evidence": {
+        "end": 20370.666666667275,
+        "zones": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "landings": 29,
+        "routeTrace": [
+          {
+            "zone": 1,
+            "x": 221.41666666666666,
+            "y": 288,
+            "seconds": 0
+          },
+          {
+            "zone": 2,
+            "x": 2560.333333333323,
+            "y": 352,
+            "seconds": 13.758333333333333
+          },
+          {
+            "zone": 3,
+            "x": 5120.250000000045,
+            "y": 704,
+            "seconds": 28.975
+          },
+          {
+            "zone": 4,
+            "x": 7680.166666667259,
+            "y": 256,
+            "seconds": 47.875
+          },
+          {
+            "zone": 5,
+            "x": 10240.08333333316,
+            "y": 192,
+            "seconds": 63.575
+          },
+          {
+            "zone": 6,
+            "x": 12801.416666665396,
+            "y": 896,
+            "seconds": 78.64166666666667
+          },
+          {
+            "zone": 7,
+            "x": 15361.333333330967,
+            "y": 1024,
+            "seconds": 94.34166666666667
+          },
+          {
+            "zone": 8,
+            "x": 17921.249999998512,
+            "y": 320,
+            "seconds": 114.475
+          }
+        ]
+      }
+    },
+    {
+      "pass": true,
+      "name": "Smooth camera throughout jumps, cliffs and landing",
+      "evidence": {
+        "maximumStepPx": 4.165987354104288,
+        "simulationHz": 120
+      }
+    },
+    {
+      "pass": true,
+      "name": "Double-jump cave return shaft: 능선 아래 굴",
+      "evidence": {
+        "x": 6656,
+        "y": 192,
+        "roof": 192
+      }
+    },
+    {
+      "pass": true,
+      "name": "Double-jump cave return shaft: 뿌리 아래 긴 통로",
+      "evidence": {
+        "x": 10176,
+        "y": 192,
+        "roof": 192
+      }
+    },
+    {
+      "pass": true,
+      "name": "Double-jump cave return shaft: 깊은 숲의 되돌아오는 길",
+      "evidence": {
+        "x": 16832,
+        "y": 384,
+        "roof": 384
+      }
+    },
+    {
+      "pass": true,
+      "name": "Original character PNGs, timing and 17 gameplay functions preserved; camera change authorized",
+      "evidence": {
+        "files": 47,
+        "changed": []
+      }
+    }
+  ]
+}

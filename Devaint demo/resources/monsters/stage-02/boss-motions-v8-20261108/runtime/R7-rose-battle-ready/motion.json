@@ -1,0 +1,65 @@
+{
+ "format": "stage2-boss-motion-v8",
+ "id": "R7-rose-battle-ready",
+ "name": "전환 R7 로즈 전투 자세 진입",
+ "use": "1→2 전환 컷씬 12.05~14.4초",
+ "canvas": [
+  384,
+  256
+ ],
+ "pivot": [
+  192,
+  232
+ ],
+ "frames": [
+  "04.png",
+  "05.png",
+  "06.png",
+  "07.png",
+  "08.png",
+  "09.png",
+  "10.png",
+  "11.png",
+  "12.png",
+  "35.png"
+ ],
+ "sheet": {
+  "file": "sheet.png",
+  "columns": 8,
+  "cell": [
+   384,
+   256
+  ],
+  "order": "frames, left-to-right then top-to-bottom"
+ },
+ "sequence": [
+  "04.png",
+  "05.png",
+  "06.png",
+  "07.png",
+  "08.png",
+  "09.png",
+  "10.png",
+  "11.png",
+  "12.png",
+  "35.png"
+ ],
+ "durationsMs": [
+  80,
+  70,
+  50,
+  90,
+  90,
+  70,
+  60,
+  50,
+  70,
+  400
+ ],
+ "totalMs": 1030,
+ "loop": false,
+ "workFolder": "cutscene/전환_R7_Rose-전투자세진입",
+ "footShiftPx": {},
+ "projectilePixelsRemoved": {},
+ "status": "user-approved-not-unity-integrated"
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "smoke-release-revision11",
+  "status": "pending; not applied",
+  "items": [
+    {
+      "id": "A07-front",
+      "number": 7,
+      "file": "smoke11-07-front.wav",
+      "sha256": "1b8d3c08f0b17df2a09a541c3a017da549fd68cedc225051a02df7152effc9f7",
+      "duration": 0.55,
+      "status": "pending",
+      "source": {
+        "file": "../smoke-release-10/smoke10-07.wav",
+        "sha256": "3f79db2ee3ebf92ba1f151c33a46f0572a4947c92c18605e146c4e6b27bf3fed"
+      },
+      "edit": {
+        "cropSeconds": [
+          0,
+          0.55
+        ],
+        "fadeStartSeconds": 0.065,
+        "fadeEndSeconds": 0.55,
+        "curve": "cosine power 2.2",
+        "addedSound": false,
+        "playbackRate": 1,
+        "normalization": false
+      }
+    }
+  ]
+}

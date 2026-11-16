@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement style="padding-left: 8px; padding-right: 8px; padding-top: 8px; flex-grow: 1;">
+        <ui:Label text="Combat Command Outcomes · 읽기 전용" style="-unity-font-style: bold;" />
+        <uie:ObjectField name="runtime" label="전투" />
+        <ui:VisualElement style="flex-direction: row;">
+            <ui:Button name="bind" text="현재 세션 연결" />
+            <ui:Button name="stop" text="관측 중지" />
+            <ui:Button name="poll" text="결과 조회" />
+        </ui:VisualElement>
+        <ui:Label name="status" style="white-space: normal;" />
+        <ui:ScrollView style="flex-grow: 1;"><ui:Label name="outcomes" style="white-space: normal;" /></ui:ScrollView>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,112 @@
+{
+  "referenceResolution": [
+    640,
+    360
+  ],
+  "pixelsPerUnit": 32,
+  "pixelCoordinateOrigin": "top-left",
+  "positionConversion": "worldX=pixelX/32; worldY=-pixelY/32; add a shared origin offset if needed",
+  "viewport": {
+    "width": 640,
+    "height": 360,
+    "ppu": 32,
+    "floorScreenY": 288,
+    "worldFloorY": 312,
+    "cameraTop": 24,
+    "cameraUnityY": 3.375,
+    "subtitle": {
+      "x": 88,
+      "y": 294,
+      "width": 464,
+      "height": 38
+    },
+    "storyBars": {
+      "top": 28,
+      "bottom": 28
+    },
+    "deadZoneLeft": 250,
+    "deadZoneRight": 360,
+    "initialAnchor": 274
+  },
+  "hero": {
+    "speed": 140,
+    "gravity": 980,
+    "jumpVelocity": -380,
+    "footPivot": [
+      64,
+      120
+    ]
+  },
+  "atmosphere": {
+    "ambient": 0,
+    "heroRadius": 0,
+    "heroStrength": 0,
+    "parallaxRate": 0.4,
+    "cityOffsetX": -8,
+    "cityY": 36,
+    "lamps": {
+      "reception": [
+        {
+          "x": 14,
+          "y": 193,
+          "radius": 72,
+          "strength": 0.26
+        },
+        {
+          "x": 160,
+          "y": 192,
+          "radius": 72,
+          "strength": 0.26
+        },
+        {
+          "x": 946,
+          "y": 192,
+          "radius": 72,
+          "strength": 0.26
+        }
+      ],
+      "hall": [
+        {
+          "x": 741,
+          "y": 135,
+          "radius": 72,
+          "strength": 0.26
+        },
+        {
+          "x": 486,
+          "y": 149,
+          "radius": 72,
+          "strength": 0,
+          "window": true
+        }
+      ]
+    },
+    "windows": {
+      "hall": {
+        "x": 438,
+        "y": 56,
+        "width": 80,
+        "height": 184
+      },
+      "reception": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 432
+      }
+    }
+  },
+  "assetRules": {
+    "ppu": 32,
+    "runtimeScale": 1,
+    "integerPositions": true,
+    "doorClearBay": {
+      "from": 1216,
+      "to": 1376
+    },
+    "backgroundPlaceholdersRemoved": true
+  },
+  "sorting": "order<30 배경 → 인물 → order>=30 전경 순서. 각 그룹 안에서는 order 오름차순.",
+  "spriteOrigin": "배경·소품의 배치 x,y는 좌상단. 캐릭터 x,y는 발 피벗.",
+  "memoryBackground": "memory_home.png 원본 448×288을 회상 논리 공간 320×206으로 배치하고 framing으로 클립. 캐릭터 배율은 1배."
+}

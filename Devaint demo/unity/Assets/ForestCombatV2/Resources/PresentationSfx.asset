@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51cf739e1b914688835c7f0db3e65b2b, type: 3}
+  m_Name: PresentationSfx
+  m_EditorClassIdentifier:
+  entries:
+  - id: unlock
+    clip: {fileID: 8300000, guid: 110a885275ef552f8ee994bdb89f301e, type: 3}
+    volume: 0.8
+  - id: pigment-pickup
+    clip: {fileID: 8300000, guid: f16439ee53ce59038d812b9247353fc0, type: 3}
+    volume: 0.4
+  - id: gold-pickup
+    clip: {fileID: 8300000, guid: 1a90d2975e90bde418f0f2737caa588b, type: 3}
+    volume: 0.4
+  - id: altar-appear
+    clip: {fileID: 8300000, guid: a06420df22441e942ba2e8e186a105b8, type: 3}
+    volume: 0.8
+  - id: altar-acquire
+    clip: {fileID: 8300000, guid: 0bca5d048dcb7a94390782aa7999823e, type: 3}
+    volume: 0.4
+  - id: altar-discard
+    clip: {fileID: 8300000, guid: 4c21d9bdad8e4274293f3ca94c23e7f5, type: 3}
+    volume: 0.8
+  - id: ink-destroy
+    clip: {fileID: 8300000, guid: e695c93006e6503cb3597a1346ea5771, type: 3}
+    volume: 0.8
+  - id: exit-open
+    clip: {fileID: 8300000, guid: a06420df22441e942ba2e8e186a105b8, type: 3}
+    volume: 0.8
+  - id: story-world-erase
+    clip: {fileID: 8300000, guid: de0e1600bd2d53249e8f9ea5a1b26b99, type: 3}
+    volume: 0.8
+  - id: story-collapse
+    clip: {fileID: 8300000, guid: dd9d860bd6235744889db21b904a2193, type: 3}
+    volume: 0.8
+  - id: story-ink-awaken
+    clip: {fileID: 8300000, guid: 7d6e4d7a6db957dda5dc0e73f14f9cb7, type: 3}
+    volume: 0.8
+  - id: story-ink-sacrifice
+    clip: {fileID: 8300000, guid: d83c93d1e1dcfec428810a7fde38efb7, type: 3}
+    volume: 0.8
+  - id: player-death
+    clip: {fileID: 8300000, guid: a0b519dfe6e14efa846b55b2486576da, type: 3}
+    volume: 0.15

@@ -1,0 +1,408 @@
+{
+  "version": 2,
+  "status": "엘리트 갈고리→할퀴기 C 연계는 1차 확정. 보스 두 공격의 의도·이벤트를 보존한다. 현재 보스 생성 입력과 추가 동작은 boss-action-plan.json을 따르며 모션 제작·게임 적용은 미완료.",
+  "bossGenerationPlan": "boss-action-plan.json",
+  "timingPolicy": "시간은 첫 제작용 기준값이다. 프레임 선정 후 조정하며 실전 밸런스 확정값으로 취급하지 않는다.",
+  "common": {
+    "facing": "screen-left; keep each supplied reference orientation",
+    "rootTranslation": "none; body articulates over planted feet",
+    "palette": "stage1-ink-master-v1; six exact RGB colors plus binary transparency",
+    "camera": "fixed camera, scale, view angle and foot baseline",
+    "generatedContent": "monster only; no player, warning marks, damage numbers or arena",
+    "frameCount": "Elite combo C: 34 frames / 2830ms; boss frame selection pending.",
+    "vfxResponsibility": "낙하 예고·시침·지면 균열·플레이어 끌림과 피격은 본체 모션과 게임에서 동기화한다.",
+    "thirdBossAttack": "잉크 포효: 몸을 웅크렸다 젖히며 근거리 폭발. 현재 정의는 boss-action-plan.json의 B03 참조."
+  },
+  "clips": [
+    {
+      "id": "E01",
+      "name": "갈고리 투척·회수",
+      "monster": "우물 도르래 수문장",
+      "nativeCanvas": [
+        128,
+        128
+      ],
+      "bodyHeightPx": 112,
+      "prompt": "prompts/04_well-warden-hook-cast.txt",
+      "input": "local-assets/large-attack-definitions/elite-common-centered-4x.png",
+      "movingHand": "existing curved hook hand",
+      "fixedHand": "ordinary non-hook claw stays low; no striking",
+      "durationMs": 1000,
+      "phases": [
+        {
+          "pose": "준비",
+          "ms": 300,
+          "motion": "발을 고정하고 무릎을 굽힌다. 갈고리·손목 소켓·팔꿈치를 자신의 어깨 쪽으로 크게 당기며 상체를 공격 반대쪽으로 기울인다. 빈손은 낮게 유지한다."
+        },
+        {
+          "pose": "예고 정지",
+          "ms": 150,
+          "motion": "갈고리가 몸 뒤에 있는 긴장 자세를 유지한다. 준비 중 판정은 없다."
+        },
+        {
+          "pose": "투척",
+          "ms": 100,
+          "motion": "뒤로 기울었던 상체를 전방으로 짧게 내지르며 같은 갈고리 어깨와 팔을 한 번에 편다. 갈고리가 손목 소켓에서 빠르게 방출되고, 본체의 발 위치는 유지한다."
+        },
+        {
+          "pose": "최대 도달",
+          "ms": 100,
+          "motion": "갈고리 팔은 앞으로, 줄은 팽팽하게 유지한다. 실제 거리·접촉에 따라 게임에서 이 자세를 유지할 수 있다."
+        },
+        {
+          "pose": "회수",
+          "ms": 300,
+          "motion": "상체를 뒤로 당기며 도르래를 돌린다. 갈고리가 원래 팔로 돌아온다. 적중 시 같은 구간에 주인공 끌림을 맞춘다."
+        },
+        {
+          "pose": "연결 자세",
+          "ms": 50,
+          "motion": "갈고리는 낮게, 빈손도 낮게 둔 준비 상태로 정리한다. 성공 시 E02로 바로 이어진다."
+        }
+      ],
+      "events": [
+        {
+          "at": "투척 시작",
+          "event": "갈고리 포획 판정 활성화; 준비 중에는 비활성"
+        },
+        {
+          "at": "포획 성공",
+          "event": "대상 확정 후 회수 구간에 끌림 동기화; 아직 후속 타격 피해는 발생하지 않음"
+        },
+        {
+          "at": "회수 종료",
+          "event": "대상을 반대 손이 닿는 가까운 위치에 연결; E02 재생"
+        }
+      ],
+      "successEnd": "E02 시작 자세로 바로 연결. 대기 루프를 끼우지 않는다.",
+      "missEnd": "갈고리만 회수하고 기본 자세로 복귀. E02는 재생하지 않는다.",
+      "restrictions": [
+        "갈고리와 빈손의 역할 교환 금지",
+        "갈고리 중복 생성 금지",
+        "손·팔 길이 변형 금지",
+        "투척 모션에서 빈손 타격 금지"
+      ],
+      "inputPadding": {
+        "logicalCanvas": [
+          256,
+          192
+        ],
+        "sourceCanvas": [
+          128,
+          128
+        ],
+        "sourceOffset": [
+          64,
+          56
+        ],
+        "integerScale": 4,
+        "note": "가로 중앙 배치. 두 엘리트 클립은 같은 이미지·원점·배율을 사용한다. 양쪽 여백과 머리 위 여백을 확보하고, 최종 추출 때 128×128 게임 원점에 정렬한다."
+      },
+      "attackId": "EL-ATK-01",
+      "attackLabel": "엘리트 공격 1 · 갈고리 포획 연계",
+      "generationStep": 1,
+      "generationLabel": "생성 동작 1/2",
+      "selectedComboPrefix": {
+        "editor": "approved/04_well-warden/attack/hook-until-pull.json",
+        "frames": 18,
+        "durationMs": 1600,
+        "note": "확정 C 연계의 앞 18장. 회수 후 기본 자세로 돌아가지 않고 E02로 연결한다."
+      }
+    },
+    {
+      "id": "E02",
+      "name": "포획 후 반대 손 할퀴기",
+      "monster": "우물 도르래 수문장",
+      "nativeCanvas": [
+        128,
+        128
+      ],
+      "bodyHeightPx": 112,
+      "prompt": "prompts/04_well-warden-followup-strike.txt",
+      "input": "local-assets/elite-claw-followup-input-v2/followup-start-4x-white.png",
+      "movingHand": "organic fingered claw starting on SCREEN RIGHT; crosses the front of the chest toward SCREEN LEFT",
+      "fixedHand": "metal hook and cuff on SCREEN LEFT stay retracted on their own side",
+      "durationMs": 1000,
+      "phases": [
+        {
+          "pose": "빈손 뒤로 당김",
+          "ms": 300,
+          "motion": "회수한 갈고리를 자기 쪽에 두고, 화면 오른쪽 손가락 달린 손을 뒤로 당기며 팔꿈치를 어깨보다 조금 높인다. 양발은 고정한다."
+        },
+        {
+          "pose": "할퀴기 준비 정지",
+          "ms": 150,
+          "motion": "손가락을 펼친 준비 자세를 짧게 보여준다."
+        },
+        {
+          "pose": "대각선 할퀴기",
+          "ms": 100,
+          "motion": "같은 빈손이 가슴 앞을 가로질러 화면 왼쪽 가까운 대상 상체 높이를 대각선 아래로 빠르게 할퀸다."
+        },
+        {
+          "pose": "타격 여운",
+          "ms": 100,
+          "motion": "손이 낮고 앞쪽에서 멈추며 몸통과 도르래가 뒤따른다."
+        },
+        {
+          "pose": "회복",
+          "ms": 350,
+          "motion": "할퀴기가 끝난 뒤에만 천천히 전투 자세로 돌아온다."
+        }
+      ],
+      "events": [
+        {
+          "at": "타격 여운 시작; 초안 약 550ms",
+          "event": "빈손 접촉 위치에서 근접 피해 판정. 포획 연계의 피해는 이 타격에서 처리한다."
+        },
+        {
+          "at": "타격 판정 처리 직후",
+          "event": "포획 상태 해제와 피격 반응을 게임에서 연결한다."
+        }
+      ],
+      "start": "혼합 갈고리 공격 18번째 A28 회수 자세에서 바로 시작. 대기 자세를 끼우지 않는다.",
+      "end": "한 번 할퀸 뒤 자연스럽게 전투 자세로 회복. 기본 대기 연결 보정은 생성 후 검토.",
+      "restrictions": [
+        "갈고리를 휘두르거나 던지지 않음",
+        "빈손을 갈고리로 바꾸지 않음",
+        "타격 직전에 대기 자세로 튀지 않음",
+        "한 번 할퀴는 동안 중복 피해 판정 방지"
+      ],
+      "inputPadding": {
+        "logicalCanvas": [
+          256,
+          192
+        ],
+        "sourceCanvas": [
+          320,
+          180
+        ],
+        "sourceOffset": [
+          -30,
+          11
+        ],
+        "integerScale": 4,
+        "note": "A28 시작 프레임은 native 픽셀 크기를 유지해 여백을 자르고 발을 y176·뒷발 오른쪽 x174로 정렬한다. 기본형 끝 참조도 같은 1024×768 캔버스와 4배 배율을 사용한다. 실제 게임 크기 보정은 생성 후 별도다."
+      },
+      "attackId": "EL-ATK-01",
+      "attackLabel": "엘리트 공격 1 · 갈고리 포획 연계",
+      "generationStep": 2,
+      "generationLabel": "생성 동작 2/2",
+      "endInput": "local-assets/elite-claw-followup-input-v2/followup-end-4x-white.png",
+      "generationPromptWithEndReference": "local-assets/elite-claw-followup-input-v2/aether-prompt.txt",
+      "generationReview": {
+        "editor": "approved/04_well-warden/attack/editor.json",
+        "status": "user-approved first pass",
+        "selectedCandidate": "C",
+        "frameCount": 34,
+        "durationMs": 2830,
+        "followupStartIndex": 18,
+        "followupEditor": "approved/04_well-warden/attack/claw-followup.json"
+      }
+    },
+    {
+      "id": "B01",
+      "name": "낙하시침",
+      "monster": "양주먹 시계탑 집행자",
+      "nativeCanvas": [
+        256,
+        256
+      ],
+      "bodyHeightPx": 208,
+      "prompt": "prompts/05_clock-executioner-needle-rain.txt",
+      "input": "local-assets/large-attack-definitions/boss-two-fists-4x-padded.png",
+      "durationMs": 2050,
+      "variableHold": "발동 유지 자세는 게임에서 연장할 수 있다. durationMs에는 추가 유지 시간이 포함되지 않는다.",
+      "phases": [
+        {
+          "pose": "힘 모으기",
+          "ms": 450,
+          "motion": "두 주먹을 서로 떼어 둔 채 몸통 양옆으로 크게 들어 올린다. 팔꿈치를 굽히고 가슴을 세우며 발은 고정한다."
+        },
+        {
+          "pose": "예고 유지",
+          "ms": 900,
+          "motion": "두 팔을 좌우로 벌린 큰 자세를 유지한다. 작은 시계바늘 움직임은 보조다. 바닥 낙점 표시를 먼저 보여준다."
+        },
+        {
+          "pose": "발동 자세",
+          "ms": 100,
+          "motion": "무릎과 어깨를 짧게 낮춰 힘을 내보낸다. 두 주먹은 떨어져 있으며 머리 위에서 모으지 않는다."
+        },
+        {
+          "pose": "회복",
+          "ms": 600,
+          "motion": "두 주먹을 무겁게 내리고 몸이 조금 처진 뒤 기본 자세로 돌아온다. 실제 회복은 모든 낙하 차례가 끝난 뒤 시작한다."
+        }
+      ],
+      "events": [
+        {
+          "at": "예고 유지 시작",
+          "event": "게임에서 바닥 낙점을 표시한다. 발동 전에 위치를 고정하고 추적을 끝낸다."
+        },
+        {
+          "at": "발동 자세 시작",
+          "event": "본체에 탄을 그리지 않고, 게임의 상공 시침 오브젝트 낙하를 시작한다."
+        },
+        {
+          "at": "각 시침 착지",
+          "event": "미리 표시한 착지 구역에만 피해 판정. 예고 표시 자체에는 피해가 없다."
+        }
+      ],
+      "effectScheduleProposal": "한 차례는 두 낙점부터 검토한다. 매 차례 약 0.9초의 바닥 예고를 둔다. 여러 차례 낙하를 사용하면 발동 자세를 유지하고 다음 차례도 새로 예고한다. 최종 낙하 횟수는 미정이다.",
+      "avoidance": "넓게 남겨 둔 표시 없는 바닥으로 이동",
+      "restrictions": [
+        "작은 시계 변화만으로 예고하지 않음",
+        "보스의 발 위치를 이동시키지 않음",
+        "바닥 예고·시침·플레이어를 에테르 본체 출력에 넣지 않음",
+        "낙점 고정 이후 추적하지 않음",
+        "예고·낙하 도중 지면 파쇄를 중첩하지 않음"
+      ],
+      "inputPadding": {
+        "logicalCanvas": [
+          256,
+          320
+        ],
+        "sourceCanvas": [
+          256,
+          256
+        ],
+        "sourceOffset": [
+          0,
+          64
+        ],
+        "integerScale": 4,
+        "note": "제작 입력에만 위쪽 여백 추가. 최종 게임 캔버스는 256×256을 유지하고 프레임 추출 시 원점 정렬."
+      },
+      "attackId": "BO-ATK-01",
+      "attackLabel": "보스 공격 1 · 낙하시침",
+      "generationStep": 1,
+      "generationLabel": "생성 동작 1/1"
+    },
+    {
+      "id": "B02",
+      "name": "양손 지면 파쇄",
+      "monster": "양주먹 시계탑 집행자",
+      "nativeCanvas": [
+        256,
+        256
+      ],
+      "bodyHeightPx": 208,
+      "prompt": "prompts/05_clock-executioner-two-fist-slam.txt",
+      "input": "local-assets/large-attack-definitions/boss-two-fists-4x-padded.png",
+      "durationMs": 2020,
+      "phases": [
+        {
+          "pose": "양손 모아 들기",
+          "ms": 500,
+          "motion": "두 돌주먹을 머리 위로 올려 나란히 붙인다. 팔꿈치는 굽히고 두 팔이 각 어깨에 이어져 보이게 한다."
+        },
+        {
+          "pose": "높은 자세 유지",
+          "ms": 400,
+          "motion": "붙인 두 주먹을 머리 위에 유지하며 멈춘다. 발은 고정하고 낙점과 균열 진행 방향을 예고한다."
+        },
+        {
+          "pose": "양손 강타",
+          "ms": 120,
+          "motion": "허리와 무릎을 굽혀 붙인 두 주먹으로 같은 바닥 지점을 동시에 내려친다. 점프·전진·한손 타격은 하지 않는다."
+        },
+        {
+          "pose": "바닥 접촉 여운",
+          "ms": 200,
+          "motion": "양주먹을 바닥에 붙인 낮은 자세로 멈춘다. 타격 충격에 어깨와 머리가 짧게 뒤늦게 흔들린다."
+        },
+        {
+          "pose": "무거운 회수",
+          "ms": 650,
+          "motion": "두 주먹을 힘들게 뽑듯 천천히 들어 올린다. 이 동안 몸이 낮게 노출된다."
+        },
+        {
+          "pose": "기본 자세 연결",
+          "ms": 150,
+          "motion": "두 팔을 원래 위치로 내리고 상체를 세운다."
+        }
+      ],
+      "events": [
+        {
+          "at": "양손 모아 들기 시작",
+          "event": "가까운 직접 낙점과 균열 진행 방향 예고. 준비 중 피해 없음."
+        },
+        {
+          "at": "바닥 접촉 여운 시작; 초안 약 1020ms",
+          "event": "두 주먹 접촉 지점의 직접 타격 판정과 전방 균열 선두 생성을 동기화한다."
+        },
+        {
+          "at": "균열 선두 진행",
+          "event": "앞쪽으로 순서대로 발생하는 낮은 지면 피해. 지나간 지면은 빠르게 해제한다. 한꺼번에 전 구간에 피해를 주지 않는다."
+        }
+      ],
+      "avoidance": "주먹 직접 낙점을 벗어난 뒤 낮은 균열을 점프로 넘음",
+      "restrictions": [
+        "두 주먹이 같은 낙점에 동시에 접촉",
+        "한 주먹만 때리지 않음",
+        "갈고리 생성 금지",
+        "몸통 통째 확대·축소 금지",
+        "Aether 본체 출력에 균열·주인공·예고 표시를 넣지 않음",
+        "낙하시침과 중첩하지 않음"
+      ],
+      "inputPadding": {
+        "logicalCanvas": [
+          256,
+          320
+        ],
+        "sourceCanvas": [
+          256,
+          256
+        ],
+        "sourceOffset": [
+          0,
+          64
+        ],
+        "integerScale": 4,
+        "note": "제작 입력에만 위쪽 여백 추가. 최종 게임 캔버스는 256×256을 유지하고 프레임 추출 시 원점 정렬."
+      },
+      "attackId": "BO-ATK-02",
+      "attackLabel": "보스 공격 2 · 양손 지면 파쇄",
+      "generationStep": 1,
+      "generationLabel": "생성 동작 1/1"
+    }
+  ],
+  "generationPolicy": {
+    "rule": "서로 다른 동작이 이어지는 공격은 동작별로 따로 생성한 뒤 연결한다.",
+    "unit": "게임의 공격 패턴과 에테르 생성 동작을 구분한다. 하나의 공격에 여러 생성 클립이 들어갈 수 있다.",
+    "splitExample": "갈고리 투척·회수 / 반대 손 타격은 분리한다.",
+    "singleAction": "한 동작의 준비·예고 정지·발동·회복은 한 클립에 둔다. 정지 시간은 게임에서 제어한다.",
+    "continuity": "분리된 동작은 같은 입력 이미지·배율·방향·발 원점을 사용한다. 이전 동작의 끝과 다음 동작의 시작 자세를 맞추고, 연결 시 대기 루프를 끼우지 않는다."
+  },
+  "attacks": [
+    {
+      "id": "EL-ATK-01",
+      "monster": "우물 도르래 수문장",
+      "name": "갈고리 포획 연계",
+      "generationClips": [
+        "E01",
+        "E02"
+      ],
+      "connection": "E01 투척·회수 → 포획 성공 때만 E02 빈손 타격. 빗나가면 E01에서 종료."
+    },
+    {
+      "id": "BO-ATK-01",
+      "monster": "양주먹 시계탑 집행자",
+      "name": "낙하시침",
+      "generationClips": [
+        "B01"
+      ],
+      "connection": "본체 동작 하나. 바닥 예고·상공 시침은 게임에서 동기화."
+    },
+    {
+      "id": "BO-ATK-02",
+      "monster": "양주먹 시계탑 집행자",
+      "name": "양손 지면 파쇄",
+      "generationClips": [
+        "B02"
+      ],
+      "connection": "본체 동작 하나. 지면 균열은 접촉 프레임에서 시작."
+    }
+  ]
+}

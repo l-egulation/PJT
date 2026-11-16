@@ -1,0 +1,476 @@
+{
+ "format": "stage2-phase3-aether-handoff-v1",
+ "status": "all-four-phase3-motions-approved",
+ "mainCommit": "7f2fbe8ed",
+ "resourceCommit": "5490d3b741cf6416aa01ba136fe240e884f6fce6",
+ "mainPinnedResources": "faa32eab7ea6233d69c6aa6c2d2f1454273dad14",
+ "referencePathBase": "resource repository root",
+ "references": [
+  {
+   "id": "fused-idle",
+   "file": "preview/assets/fused-idle.png",
+   "source": "monsters/stage-02/boss-motion-size-review-20261106/runtime/fused-idle/00.png",
+   "sha256": "0e9a137b80718ba4ae083da68f3a78fc1091e9a66deed1ec6a45348f1499d466",
+   "canvas": [
+    384,
+    256
+   ],
+   "pivot": [
+    192,
+    232
+   ],
+   "sourceScalePercentAlreadyBaked": 100,
+   "additionalScalePercent": 100,
+   "fullBounds": [
+    139,
+    17,
+    246,
+    232
+   ],
+   "bodyBoundsLargestOpaqueComponent": [
+    145,
+    54,
+    240,
+    232
+   ]
+  },
+  {
+   "id": "fused-arrival",
+   "file": "preview/assets/fused-arrival.png",
+   "source": "monsters/stage-02/boss-motion-size-review-20261106/runtime/fused-arrival/00.png",
+   "sha256": "f6fd685ab78609d22264a9865937ef9fd634328b3b974ac3c7131ebc64c8a39a",
+   "canvas": [
+    384,
+    256
+   ],
+   "pivot": [
+    192,
+    232
+   ],
+   "sourceScalePercentAlreadyBaked": 97,
+   "additionalScalePercent": 100,
+   "fullBounds": [
+    127,
+    13,
+    282,
+    230
+   ],
+   "bodyBoundsLargestOpaqueComponent": [
+    127,
+    56,
+    282,
+    230
+   ]
+  },
+  {
+   "id": "blue-roar",
+   "file": "preview/assets/blue-roar.png",
+   "source": "monsters/stage-02/boss-motion-size-review-20261106/runtime/blue-roar/00.png",
+   "sha256": "cf7d62c6256baa300eb3d9025b4209129a3608936da3310f33d262adf038cdae",
+   "canvas": [
+    384,
+    256
+   ],
+   "pivot": [
+    192,
+    232
+   ],
+   "sourceScalePercentAlreadyBaked": 106,
+   "additionalScalePercent": 100,
+   "fullBounds": [
+    153,
+    60,
+    231,
+    222
+   ],
+   "bodyBoundsLargestOpaqueComponent": [
+    153,
+    60,
+    231,
+    222
+   ]
+  },
+  {
+   "id": "player",
+   "file": "preview/assets/player.png",
+   "source": "monsters/stage-02/boss-motion-size-review-20261106/runtime/player/00.png",
+   "sha256": "8f7a2fe9eb18599c1608da735f82541bec36b763c4a1844f54073afaff151f5c",
+   "canvas": [
+    384,
+    256
+   ],
+   "pivot": [
+    192,
+    232
+   ],
+   "sourceScalePercentAlreadyBaked": 100,
+   "additionalScalePercent": 100,
+   "fullBounds": [
+    159,
+    168,
+    225,
+    232
+   ],
+   "bodyBoundsLargestOpaqueComponent": [
+    159,
+    168,
+    225,
+    232
+   ]
+  }
+ ],
+ "input": {
+  "file": "source/homing-start-white-3x.png",
+  "canvas": [
+   1536,
+   1152
+  ],
+  "background": "#FFFFFF",
+  "interpolation": "nearest-neighbor",
+  "integerScale": 3,
+  "sourceCanvas": [
+   384,
+   256
+  ],
+  "sourcePivot": [
+   192,
+   232
+  ],
+  "sourcePasteOffsetLogical": [
+   64,
+   64
+  ],
+  "inputPivot": [
+   768,
+   888
+  ],
+  "inputGroundY": 888,
+  "sourceScalePercentAlreadyBaked": 100,
+  "autoFitPerFrame": false,
+  "opaquePixelsRepainted": false
+ },
+ "endImage": null,
+ "endImageReason": "Let Aether articulate the existing casting arm naturally; the prompt holds the final extended pose. No forced arrival/roar end pose.",
+ "timelineProposalMs": {
+  "idle": [
+   0,
+   150
+  ],
+  "prepare": [
+   150,
+   750
+  ],
+  "anticipationHold": [
+   750,
+   900
+  ],
+  "release": [
+   900,
+   1000
+  ],
+  "clothSettle": [
+   1000,
+   1200
+  ],
+  "finalHold": [
+   1200,
+   1800
+  ]
+ },
+ "runtimeContract": {
+  "HomingTellSeconds": 1,
+  "releaseAtSeconds": 1,
+  "bodyClipIsNotProjectileLifetime": true,
+  "combatTuningChanged": false
+ },
+ "aetherSourceSheet": "source/homing-aether-01/aether-original.png",
+ "selectedSourceFrames": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21
+ ],
+ "playbackSequence": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17
+ ],
+ "perFrameDurationsMs": [
+  520,
+  60,
+  60,
+  60,
+  60,
+  60,
+  60,
+  60,
+  60,
+  50,
+  50,
+  50,
+  50,
+  50,
+  50,
+  50,
+  50,
+  300
+ ],
+ "futureMatteProcessing": {
+  "status": "applied-to-D-see-runtime-manifest",
+  "manifest": "runtime/homing-d-v2/motion.json"
+ },
+ "generation": {
+  "mode": "deterministic-approved-pixel-reuse",
+  "imageApiCalled": false
+ },
+ "room": {
+  "source": "monsters/stage-02/boss-phase2-cutscene-20261106/preview/assets/room.png",
+  "sha256": "e5a53d82d62e73591533f29d18d7637e7036c69b29865d30ba3d451eaa32c7a0",
+  "display": "reference-renderer two-row floor repair on canvas only"
+ },
+ "review": {
+  "logicalScreen": [
+   960,
+   540
+  ],
+  "playerVisibleHeight": 64,
+  "bossScale": 1,
+  "backgrounds": [
+   "white",
+   "gray",
+   "black",
+   "approved-map"
+  ],
+  "scope": "asset-review HTML/composite, not Unity capture"
+ },
+ "identityLocks": {
+  "mask": "rigid inanimate pale mask; preserve reference markings; no mouth, lips, jaw articulation, blinking or expressions",
+  "existingArmCount": 1,
+  "existingArm": "image-left arm with pale hand raised beside mask",
+  "oppositeArm": "anatomically absent, never hidden, revealed, regrown or implied under robe",
+  "allPatternsUseOnlyExistingArm": true
+ },
+ "sourceExtraction": "source/homing-aether-01/extraction.json",
+ "timingCandidates": "preview/homing-candidates/candidates.json",
+ "previousTimingCandidates": "preview/homing-candidates-v1/candidates.json",
+ "selectedCandidate": "D",
+ "cleanedMotion": "runtime/homing-d-v2/motion.json",
+ "cleanupPreview": "preview/homing-cleanup/index.html",
+ "previousCleanedMotion": "runtime/homing-d/motion.json",
+ "approvedHomingMotion": "runtime/homing-d-v2/motion.json",
+ "nextAttackInput": "source/bounce-aether/input.json",
+ "bounceAttempts": [
+  {
+   "aetherSourceSheet": "source/bounce-aether-01/aether-original.png",
+   "extraction": "source/bounce-aether-01/extraction.json",
+   "timingCandidates": "preview/bounce-candidates/candidates.json",
+   "candidates": [
+    "A",
+    "B",
+    "R(reference)"
+   ],
+   "peakFrames": [
+    7,
+    14,
+    19,
+    25,
+    30
+   ],
+   "releaseCuesMs": [
+    500,
+    1000,
+    1500,
+    2000,
+    2500
+   ],
+   "commonTransform": {
+    "destinationSize": [
+     666,
+     374
+    ],
+    "rasterOffset": [
+     -141,
+     -59
+    ],
+    "note": "Bounce cells are ~96% of approved size; homing 0.75 transform does not apply."
+   },
+   "userSelection": null,
+   "cleanup": null,
+   "attempt": 1,
+   "superseded": "user asked for crisper motion; regenerate with prompt v3"
+  },
+  {
+   "attempt": 2,
+   "prompt": "source/bounce-aether/prompt.txt (v3 crisp)",
+   "aetherSourceSheet": "source/bounce-aether-02/aether-original.png",
+   "extraction": "source/bounce-aether-02/extraction.json",
+   "timingCandidates": "preview/bounce-v3-candidates/candidates.json",
+   "candidates": [
+    "A",
+    "B",
+    "C"
+   ],
+   "peakFrames": [
+    6,
+    12,
+    17,
+    23,
+    28
+   ],
+   "releaseCuesMs": [
+    500,
+    1000,
+    1500,
+    2000,
+    2500
+   ],
+   "commonTransform": {
+    "destinationSize": [
+     666,
+     374
+    ],
+    "rasterOffset": [
+     -141,
+     -59
+    ]
+   },
+   "userFeedback": "이거 ㄱㄱ",
+   "userSelection": "A",
+   "cleanup": "runtime/bounce-a/motion.json",
+   "userSelectionText": "A로 정리",
+   "cleanupPreview": "preview/bounce-cleanup/index.html",
+   "approved": true,
+   "approvalText": "A 확정"
+  }
+ ],
+ "bouncePrompt": "source/bounce-aether/prompt.txt (v3 crisp)",
+ "approvedMotions": {
+  "Homing": "runtime/homing-d-v2/motion.json",
+  "Bounce": "runtime/bounce-a/motion.json",
+  "ArrowRain": "runtime/rain-a-x2/motion.json",
+  "ExpandingFan": "runtime/fan-final/motion.json"
+ },
+ "nextPattern": null,
+ "rain": {
+  "input": "source/rain-aether/input.json",
+  "prompt": "source/rain-aether/prompt.txt",
+  "inputPreview": "preview/rain-input/index.html",
+  "aetherOutputReceived": true,
+  "aetherSourceSheet": "source/rain-aether-01/aether-original.png",
+  "cleanAll": "preview/rain-candidates/clean-all.json",
+  "timingCandidates": "preview/rain-candidates/candidates.json",
+  "candidates": [
+   "A",
+   "A-trim-x1.5",
+   "A-trim-x2",
+   "A-x1.5",
+   "A-x2",
+   "A2",
+   "A3",
+   "B"
+  ],
+  "cueFrames": [
+   5,
+   28
+  ],
+  "cuesMs": [
+   400,
+   2450
+  ],
+  "userSelection": "A-x2",
+  "inGamePreview": "preview/rain-sim/index.html",
+  "userFeedback": [
+   "A가 맞는거 같고 처음에 ... 확! 이런게 없어서 아쉽네 프레임 좀만 줄여봐 앞부분",
+   "흠 자연스러운건 A긴한데 뭔가 확이 없는데 배속은 어때?",
+   "앞부분덜고배속까지 해봐 그리고 덜 때 자연스럽게 덜어봐 최대한"
+  ],
+  "approved": true,
+  "approvalText": "A-x2. A · 앞부분 2배속 으로 가자",
+  "runtime": "runtime/rain-a-x2/motion.json"
+ },
+ "fan": {
+  "input": "source/fan-aether/input.json",
+  "prompt": "source/fan-aether/prompt.txt",
+  "inputPreview": "preview/fan-input/index.html",
+  "aetherOutputReceived": true,
+  "promptVersion": 4,
+  "previousPrompts": [
+   "source/fan-aether/previous/prompt-v1-zoomed-face.txt",
+   "source/fan-aether/previous/prompt-v2-framing-plain.txt",
+   "source/fan-aether/previous/prompt-v3-storm-flailing.txt"
+  ],
+  "note": "v4: one eruption sweep, motionless arm in billowing cloth, slow clench, one release; no drawn effects; do not attach the 8x head reference",
+  "receivedAttempts": [
+   "source/fan-aether-01/ (v2, preserved only)",
+   "source/fan-aether-02/ (v3, preserved only)"
+  ],
+  "aetherSourceSheet": "source/fan-aether-03/aether-original.png",
+  "cleanAll": "preview/fan-candidates/clean-all.json",
+  "timingCandidates": "preview/fan-candidates/candidates.json",
+  "inGamePreview": "preview/fan-sim/index.html",
+  "candidates": [
+   "A",
+   "B",
+   "B2",
+   "B3",
+   "B4",
+   "B5"
+  ],
+  "cueFrames": [
+   6,
+   19,
+   25
+  ],
+  "cuesMs": [
+   500,
+   2500,
+   3000
+  ],
+  "userSelection": "B4",
+  "userFeedback": [
+   "손 크기 줄이기 가넝? 마지막쯤에? 그리고 약간 외곽 좀 덜 정리 됐다",
+   "오케이 하겠는데 그 줄이니까 손부분이랑 옷 소매 부분 사이가 비어서 그 부분 보강해줘",
+   "빠른 분출은 좋으나 뒤에가 끊겨 프레임 추가 해도 될 듯",
+   "ㅇㅋ 좀 자연스러워졌으나 주먹쪽이 또 끊기네 추가혀"
+  ],
+  "handShrink": {
+   "frames": "25-31",
+   "scale": 0.7,
+   "wristBridge": true
+  },
+  "edgePolish": true,
+  "tweens": "preview/fan-candidates/tweens.json",
+  "approved": true,
+  "approvalText": "B4로 확정",
+  "runtime": "runtime/fan-final/motion.json"
+ }
+}

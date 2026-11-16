@@ -1,0 +1,106 @@
+{
+  "schema": "stage2-thrower-walk-candidates-v1",
+  "status": "awaiting-user-candidate-choice",
+  "sourceFile": "C:/Users/SSAFY/Downloads/1d9cdca8-c9ce-458e-b4a8-96b1201d850e.png",
+  "output": "outputs/waterway/thrower-walk-candidates-20261101",
+  "base": "outputs/waterway/pixel-base-step1-20261031/R-selected",
+  "inputPrompt": "outputs/waterway/walk-retry-white-20261101/R-selected/prompt-white.txt",
+  "grid": [
+    10,
+    10
+  ],
+  "cellSize": [
+    1280,
+    720
+  ],
+  "canvas": [
+    384,
+    224
+  ],
+  "baseline": 192,
+  "targetReferenceHeight": 106,
+  "scaleReferenceFrameZeroBased": 0,
+  "anchorReferenceRange": [
+    4,
+    86
+  ],
+  "supersampleGrid": 4,
+  "coverageMinimum": 0.5,
+  "matte": {
+    "opaqueRmsMax": 25,
+    "compositeRmsMax": 12,
+    "alphaMinimum": 0.8,
+    "matteAdvantage": 8
+  },
+  "pinholeCleanup": {
+    "maxPinholeArea": 4,
+    "ankleRepairZone": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "maxAnkleHoleArea": 0
+  },
+  "palettePolicy": "Only the12 actual opaque colors of the selected thrower base; binary alpha; one fixed scale/offset for all candidates. Small noise and enclosed holes may be cleaned. Preserve original carried-hand placement and full legs; no body-part composites, new poses, per-frame scaling or foot pinning.",
+  "candidates": [
+    {
+      "id": "A",
+      "name": "초반 보행",
+      "start": 14,
+      "end": 31,
+      "cycleMs": 900,
+      "recommended": false,
+      "description": "초반 연속18장. 소품과 다리의 움직임을 기본0.9초로 비교."
+    },
+    {
+      "id": "B",
+      "name": "중반 보행",
+      "start": 31,
+      "end": 47,
+      "cycleMs": 900,
+      "recommended": false,
+      "description": "중반 연속17장. A/C와 같은0.9초에 다른 발 교대 구간을 비교."
+    },
+    {
+      "id": "C",
+      "name": "후반 보행",
+      "start": 57,
+      "end": 73,
+      "cycleMs": 900,
+      "recommended": true,
+      "description": "후반 연속17장. 소품·본체·발의 끝과 시작 연결이 비교적 안정적인 기본안."
+    },
+    {
+      "id": "D",
+      "name": "C를 조금 빠르게",
+      "start": 57,
+      "end": 73,
+      "cycleMs": 720,
+      "recommended": false,
+      "description": "C와 픽셀·순서가 같은17장. 시간만0.72초로 줄인 약1.25배 속도 비교안."
+    }
+  ],
+  "interiorRecovery": {
+    "sourceRgbMinMax": 230,
+    "minCoverage": 0.75
+  },
+  "eyeTint": {
+    "region": [
+      125,
+      80,
+      190,
+      125
+    ],
+    "fromRgb": [
+      214,
+      166,
+      80
+    ],
+    "toRgb": [
+      234,
+      170,
+      22
+    ]
+  }
+}

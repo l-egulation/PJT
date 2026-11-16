@@ -1,0 +1,47 @@
+{
+  "poseGenerator": "imagegen CLI gpt-image-2",
+  "poseSource": "reference-native.png",
+  "poseOutput": "hold-pose-cli.png",
+  "holdAnimation": {
+    "provider": "PixelLab PixMiniMax",
+    "job": "3498d034-b993-4520-83f4-ca1cce1101f6",
+    "seed": 311912
+  },
+  "prepareAnimation": {
+    "provider": "PixelLab PixMiniMax",
+    "job": "f1bcddec-e6b7-48c6-b59d-70fcdd99c34b",
+    "seed": 311913
+  },
+  "requirements": [
+    "right-hand rapier drawn back; point faces forward",
+    "slight forward crouch",
+    "robe and scarf flutter; no necklace",
+    "same palette, scale and feet; no hit during hold"
+  ],
+  "nativeCanvas": [
+    256,
+    144
+  ],
+  "loopOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    3,
+    2,
+    1
+  ],
+  "handCorrection": "imagegen CLI gpt-image-2 edit with original idle reference; compact black mittens, no fingers",
+  "palette": [
+    "#fdeeDA",
+    "#1b1616",
+    "#025673",
+    "#d2b396",
+    "#eba516",
+    "#02648c"
+  ],
+  "sourceSha256": "0b68ddad6843799676a212063bbbddaca126a1259ccc71316a2b2e158bf7a415",
+  "posePrompt": "Loaded fencing stance facing right. Anatomical right hand nearer camera draws a solid-black rapier back to hip; blade points forward right. Slight forward crouch with planted feet. Cream hood, black face, two amber eyes, split cream robe and teal scarf. Preserve original shape, scale and baseline.",
+  "handPrompt": "Both hands must be compact rounded solid-black mittens, no fingers, no claws, matching the original idle reference. Preserve weapon grip and all other pixels."
+}

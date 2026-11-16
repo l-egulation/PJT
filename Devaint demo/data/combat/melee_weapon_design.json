@@ -1,0 +1,2903 @@
+{
+  "version": 1,
+  "status": "user_approved_skill_balance_20261109",
+  "unity_applied": false,
+  "integration_scope": "combat_v2_test_scene_only_full_game_migration_pending",
+  "test_scene_code_wired": true,
+  "unit": "Unity_unit",
+  "time_unit": "seconds",
+  "damage_internal": "float",
+  "scope": {
+    "sword": [
+      "base_sword",
+      "whip",
+      "rapier",
+      "dagger"
+    ],
+    "blunt": [
+      "hammer",
+      "shield",
+      "greatsword"
+    ],
+    "excluded": [
+      "spear",
+      "unnamed_blunt_form",
+      "ranged",
+      "fourth_category"
+    ]
+  },
+  "exclusive_augment_definitions": [],
+  "common_contract": "../../docs/design/equipment/weapons/forms/melee.md#공통-구현-계약",
+  "forms": [
+    {
+      "id": "base_sword",
+      "name": "검",
+      "category": "검",
+      "role": "기준형: 읽기 쉬운 2타와 직선 공격",
+      "provenance": "user_fixed",
+      "basic": {
+        "hit_sources": [
+          "actions/base_sword_basic_0.json",
+          null
+        ],
+        "damages": [
+          null,
+          65
+        ],
+        "motion_durations": [
+          null,
+          0.37
+        ],
+        "local_hit_times": [
+          null,
+          0.13
+        ],
+        "shapes": [
+          null,
+          {
+            "kind": "box",
+            "size": [
+              3.1875,
+              2
+            ],
+            "right_offset": [
+              1.0625,
+              1.0
+            ],
+            "left_offset": [
+              -1.0625,
+              1.0
+            ],
+            "reach_from_body_front": 2,
+            "bottom": 0
+          }
+        ],
+        "active_seconds": 0.08,
+        "input_move_speed": 2.5,
+        "late_combo_seconds": 0.3,
+        "target_policy": "all_once_per_hit",
+        "normal_enemy_stagger": 0.3,
+        "boss_stagger": 0,
+        "vertical": "normal",
+        "cancel": "valid_jump_or_dash"
+      },
+      "specials": [
+        {
+          "id": "base_sword_default",
+          "slot": "default",
+          "name": "강베기",
+          "provenance": "user_fixed",
+          "cooldown": 5,
+          "activation_time": 0.155,
+          "motion_end": 0.37,
+          "hits": [
+            {
+              "time": 0.155,
+              "damage": 175,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  7.15625,
+                  2.5
+                ],
+                "right_offset": [
+                  3.046875,
+                  1.25
+                ],
+                "left_offset": [
+                  -3.046875,
+                  1.25
+                ],
+                "reach_from_body_front": 5.96875,
+                "bottom": 0
+              },
+              "active": 0.1,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            }
+          ],
+          "input_move_speed": 0,
+          "facing": "windup_start",
+          "vertical": "normal",
+          "movement": null,
+          "independent_effect": null,
+          "invulnerability": [],
+          "rules": "기존 사용자 확정값. 추가 경직/밀기 없음."
+        },
+        {
+          "id": "base_sword_range",
+          "slot": "range",
+          "name": "검기",
+          "provenance": "user_fixed",
+          "cooldown": 6,
+          "activation_time": 0.2,
+          "motion_end": 0.5,
+          "action_tracks": {
+            "schemaVersion": 1,
+            "id": "base_sword_range",
+            "sourceTimeMode": 0,
+            "activation": "contact",
+            "bodyEnd": "body-end",
+            "timeline": {
+              "frames": [
+                {
+                  "id": "windup",
+                  "seconds": 0.2
+                },
+                {
+                  "id": "recovery",
+                  "seconds": 0.3
+                }
+              ],
+              "markers": [
+                {
+                  "id": "body-start",
+                  "anchor": 1,
+                  "reference": "windup",
+                  "offset": 0
+                },
+                {
+                  "id": "contact",
+                  "anchor": 1,
+                  "reference": "recovery",
+                  "offset": 0
+                },
+                {
+                  "id": "wave-end",
+                  "anchor": 3,
+                  "reference": "contact",
+                  "offset": 0.875
+                },
+                {
+                  "id": "body-end",
+                  "anchor": 2,
+                  "reference": "recovery",
+                  "offset": 0
+                }
+              ]
+            },
+            "control": {
+              "start": "body-start",
+              "end": "body-end",
+              "horizontal": 0,
+              "vertical": 0
+            },
+            "motion": null,
+            "effect": {
+              "id": "wave",
+              "kind": 0,
+              "start": "contact",
+              "end": "wave-end"
+            },
+            "hits": [
+              {
+                "id": "wave",
+                "start": "contact",
+                "end": "wave-end",
+                "anchor": 2,
+                "box": {
+                  "width": 1,
+                  "height": 2,
+                  "x": 0,
+                  "y": 0
+                }
+              }
+            ]
+          },
+          "hits": [
+            {
+              "time": 0.2,
+              "damage": 250,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  1,
+                  2
+                ],
+                "right_offset": [
+                  0,
+                  0
+                ],
+                "left_offset": [
+                  0,
+                  0
+                ],
+                "coordinate_frame": "effect_center"
+              },
+              "active": 0.875,
+              "control": {},
+              "anchor": "projectile",
+              "targets": "all"
+            }
+          ],
+          "input_move_speed": 0,
+          "facing": "windup_start",
+          "vertical": "normal",
+          "movement": null,
+          "independent_effect": {
+            "type": "projectile",
+            "speed": 16,
+            "distance": 14,
+            "lifetime": 0.875,
+            "right_spawn": [
+              1.15625,
+              1
+            ],
+            "left_spawn": [
+              -1.15625,
+              1
+            ]
+          },
+          "invulnerability": [],
+          "rules": "피해250, 쿨타임6초. 속도16, 생성점부터 중심 이동14unit, 적 무제한 관통/대상당1회. 고체 충돌 소멸."
+        },
+        {
+          "id": "base_sword_movement",
+          "slot": "movement",
+          "name": "돌진 찌르기",
+          "provenance": "user_fixed",
+          "cooldown": 6,
+          "activation_time": 0.15,
+          "motion_end": 0.6,
+          "action_tracks": {
+            "schemaVersion": 1,
+            "id": "base_sword_movement",
+            "sourceTimeMode": 0,
+            "activation": "contact",
+            "bodyEnd": "body-end",
+            "timeline": {
+              "frames": [
+                {
+                  "id": "windup",
+                  "seconds": 0.15
+                },
+                {
+                  "id": "dash",
+                  "seconds": 0.1333333333
+                },
+                {
+                  "id": "recovery",
+                  "seconds": 0.25
+                }
+              ],
+              "markers": [
+                {
+                  "id": "body-start",
+                  "anchor": 1,
+                  "reference": "windup",
+                  "offset": 0
+                },
+                {
+                  "id": "contact",
+                  "anchor": 1,
+                  "reference": "dash",
+                  "offset": 0
+                },
+                {
+                  "id": "dash-end",
+                  "anchor": 3,
+                  "reference": "contact",
+                  "offset": 0.1333333333
+                },
+                {
+                  "id": "body-end",
+                  "anchor": 2,
+                  "reference": "recovery",
+                  "offset": 0
+                }
+              ]
+            },
+            "control": {
+              "start": "body-start",
+              "end": "body-end",
+              "horizontal": 0,
+              "vertical": 1
+            },
+            "motion": {
+              "id": "dash",
+              "start": "contact",
+              "end": "dash-end"
+            },
+            "hits": [
+              {
+                "id": "thrust",
+                "start": "contact",
+                "end": "dash-end",
+                "anchor": 0,
+                "box": {
+                  "width": 2.1875,
+                  "height": 1,
+                  "x": 0.5625,
+                  "y": 1
+                }
+              }
+            ]
+          },
+          "hits": [
+            {
+              "time": 0.15,
+              "damage": 250,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  1.0,
+                  1
+                ],
+                "right_offset": [
+                  1.15625,
+                  1.0
+                ],
+                "left_offset": [
+                  -1.15625,
+                  1.0
+                ],
+                "reach_from_body_front": 1,
+                "bottom": 0.5
+              },
+              "active": 0.2,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            }
+          ],
+          "input_move_speed": 0,
+          "facing": "windup_input_else_facing",
+          "vertical": "freeze_during_movement_then_fall_from_zero",
+          "movement": {
+            "start": 0.15,
+            "duration": 0.2,
+            "distance": 6,
+            "speed": 45.0,
+            "wall_recovery": 0.25
+          },
+          "independent_effect": null,
+          "invulnerability": [],
+          "rules": "피해250, 쿨타임6초. 벽 접촉 시 이동/판정 종료 후 회복0.25초. 무적 없음."
+        },
+        {
+          "id": "base_sword_follow_up",
+          "slot": "follow_up",
+          "name": "잔상",
+          "provenance": "user_fixed",
+          "cooldown": 8,
+          "activation_time": 0.2,
+          "motion_end": 0.5,
+          "action_tracks": {
+            "schemaVersion": 1,
+            "id": "base_sword_follow_up",
+            "sourceTimeMode": 0,
+            "activation": "contact",
+            "bodyEnd": "body-end",
+            "timeline": {
+              "frames": [
+                {
+                  "id": "windup",
+                  "seconds": 0.2
+                },
+                {
+                  "id": "recovery",
+                  "seconds": 0.3
+                }
+              ],
+              "markers": [
+                {
+                  "id": "body-start",
+                  "anchor": 1,
+                  "reference": "windup",
+                  "offset": 0
+                },
+                {
+                  "id": "contact",
+                  "anchor": 1,
+                  "reference": "recovery",
+                  "offset": 0
+                },
+                {
+                  "id": "primary-end",
+                  "anchor": 3,
+                  "reference": "contact",
+                  "offset": 0.08
+                },
+                {
+                  "id": "echo-start",
+                  "anchor": 3,
+                  "reference": "contact",
+                  "offset": 0.3
+                },
+                {
+                  "id": "echo-end",
+                  "anchor": 3,
+                  "reference": "echo-start",
+                  "offset": 0.08
+                },
+                {
+                  "id": "body-end",
+                  "anchor": 2,
+                  "reference": "recovery",
+                  "offset": 0
+                }
+              ]
+            },
+            "control": {
+              "start": "body-start",
+              "end": "body-end",
+              "horizontal": 0,
+              "vertical": 0
+            },
+            "motion": null,
+            "hits": [
+              {
+                "id": "primary",
+                "start": "contact",
+                "end": "primary-end",
+                "anchor": 0,
+                "box": {
+                  "width": 3,
+                  "height": 2,
+                  "x": 2,
+                  "y": 1
+                }
+              },
+              {
+                "id": "echo",
+                "start": "echo-start",
+                "end": "echo-end",
+                "anchor": 1,
+                "box": {
+                  "width": 3,
+                  "height": 2,
+                  "x": 2,
+                  "y": 1
+                }
+              }
+            ]
+          },
+          "hits": [
+            {
+              "time": 0.2,
+              "damage": 175,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  2.46875,
+                  2
+                ],
+                "right_offset": [
+                  1.421875,
+                  1.0
+                ],
+                "left_offset": [
+                  -1.421875,
+                  1.0
+                ],
+                "reach_from_body_front": 2,
+                "bottom": 0
+              },
+              "active": 0.08,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            },
+            {
+              "time": 0.5,
+              "damage": 175,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  2.46875,
+                  2
+                ],
+                "right_offset": [
+                  1.421875,
+                  1.0
+                ],
+                "left_offset": [
+                  -1.421875,
+                  1.0
+                ],
+                "reach_from_body_front": 2,
+                "bottom": 0
+              },
+              "active": 0.08,
+              "control": {},
+              "anchor": "saved_primary_world_pose",
+              "targets": "all"
+            }
+          ],
+          "input_move_speed": 0,
+          "facing": "windup_start",
+          "vertical": "normal",
+          "movement": null,
+          "independent_effect": {
+            "type": "scheduled_world_hit",
+            "schedule_at": 0.2,
+            "fire_at": 0.5,
+            "end_at": 0.58
+          },
+          "invulnerability": [],
+          "rules": "본타35+잔상35=70. 본타 발동 시 위치/방향/스탯 저장. 본타 이후 취소/교체해도 잔상 유지."
+        }
+      ]
+    },
+    {
+      "id": "whip",
+      "name": "채찍",
+      "category": "검",
+      "role": "긴 거리와 속박, 낮은 기본 DPS",
+      "provenance": "delegated_initial_design",
+      "basic": {
+        "damages": [
+          65,
+          80
+        ],
+        "motion_durations": [
+          0.5,
+          0.7
+        ],
+        "local_hit_times": [
+          0.25,
+          0.3
+        ],
+        "shapes": [
+          {
+            "kind": "box",
+            "size": [
+              6.46875,
+              2
+            ],
+            "right_offset": [
+              2.98438,
+              1
+            ],
+            "left_offset": [
+              -2.98438,
+              1
+            ],
+            "reach_from_body_front": 5.5625,
+            "bottom": 0
+          },
+          {
+            "kind": "box",
+            "size": [
+              5.96875,
+              2
+            ],
+            "right_offset": [
+              3.01563,
+              1
+            ],
+            "left_offset": [
+              -3.01563,
+              1
+            ],
+            "reach_from_body_front": 5.34375,
+            "bottom": 0
+          }
+        ],
+        "active_seconds": 0.08,
+        "input_move_speed": 2.5,
+        "fastest_cycle": 1.2,
+        "late_combo_seconds": 0.3,
+        "target_policy": "all_once_per_hit",
+        "normal_enemy_stagger": 0.3,
+        "boss_stagger": 0,
+        "vertical": "normal",
+        "cancel": "valid_jump_or_dash"
+      },
+      "specials": [
+        {
+          "id": "whip_default",
+          "slot": "default",
+          "name": "휘감기",
+          "provenance": "delegated_initial_design",
+          "cooldown": 5,
+          "activation_time": 0.25,
+          "motion_end": 0.6,
+          "hits": [
+            {
+              "time": 0.25,
+              "damage": 200,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  5.1875,
+                  1.5
+                ],
+                "right_offset": [
+                  2.0625,
+                  1.0
+                ],
+                "left_offset": [
+                  -2.0625,
+                  1.0
+                ],
+                "reach_from_body_front": 4,
+                "bottom": 0.25
+              },
+              "active": 0.08,
+              "control": {
+                "root": 1.2
+              },
+              "anchor": "actor",
+              "targets": "all"
+            }
+          ],
+          "input_move_speed": 0,
+          "facing": "windup_start",
+          "vertical": "normal",
+          "movement": null,
+          "independent_effect": null,
+          "invulnerability": [],
+          "rules": "전방 판정 범위 안의 모든 적에게 피해와 속박을 적용한다. 보스의 속박 규칙은 유지한다. 대상이 없어도 발동하고 쿨타임을 소비한다."
+        },
+        {
+          "id": "whip_range",
+          "slot": "range",
+          "name": "가시 그물",
+          "provenance": "delegated_initial_design",
+          "cooldown": 8,
+          "activation_time": 0.35,
+          "motion_end": 0.8,
+          "hits": [
+            {
+              "time": 0.35,
+              "damage": 275,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  10.53125,
+                  4.96875
+                ],
+                "right_offset": [
+                  4.73438,
+                  2.48438
+                ],
+                "left_offset": [
+                  -4.73438,
+                  2.48438
+                ],
+                "reach_from_body_front": 9.34375,
+                "bottom": 0
+              },
+              "active": 0.1,
+              "control": {
+                "root": 0.8
+              },
+              "anchor": "actor",
+              "targets": "all"
+            }
+          ],
+          "input_move_speed": 0,
+          "facing": "windup_start",
+          "vertical": "normal",
+          "movement": null,
+          "independent_effect": null,
+          "invulnerability": [],
+          "rules": "전방 다수 속박. 기본형보다 단일 피해/지속은 낮고 범위가 넓다."
+        },
+        {
+          "id": "whip_movement",
+          "slot": "movement",
+          "name": "매듭 접근",
+          "provenance": "delegated_initial_design",
+          "cooldown": 7,
+          "activation_time": 0.15,
+          "motion_end": 0.5,
+          "hits": [
+            {
+              "time": 0.15,
+              "damage": 300,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  6.1875,
+                  2
+                ],
+                "right_offset": [
+                  2.5625,
+                  1.0
+                ],
+                "left_offset": [
+                  -2.5625,
+                  1.0
+                ],
+                "reach_from_body_front": 5,
+                "bottom": 0
+              },
+              "active": 0.08,
+              "control": {
+                "root": 0.6
+              },
+              "anchor": "actor",
+              "targets": "all"
+            }
+          ],
+          "input_move_speed": 0,
+          "facing": "windup_start",
+          "vertical": "normal",
+          "movement": {
+            "type": "target_dash_recast",
+            "start": 0,
+            "max_distance": 0,
+            "speed": 50,
+            "target_gap": 0.25,
+            "recast_window": 3,
+            "collision": "sweep_full_body_stop_before_solid"
+          },
+          "independent_effect": null,
+          "invulnerability": [],
+          "rules": "전방 판정 범위 안의 모든 적에게 피해와 속박을 적용한다. 처음 적중한 최근접 적을 접근 기준으로 정하며 3초 안에 특수 새 입력으로 그 적에게 접근한다. 속도50, 거리 상한 없음, 몸 간격0.25. 추가 피해·쿨타임·대시 소비·무적 없음. 대상 사망·유실·취소·교체·만료 시 접근 불가, 벽 앞 정지. 대상이 없어도 본 기술은 발동하고 쿨타임을 소비한다."
+        },
+        {
+          "id": "whip_follow_up",
+          "slot": "follow_up",
+          "name": "매듭 조이기",
+          "provenance": "delegated_initial_design",
+          "cooldown": 8,
+          "activation_time": 0.25,
+          "motion_end": 0.6,
+          "hits": [
+            {
+              "time": 0.25,
+              "damage": 150,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  5.1875,
+                  1.5
+                ],
+                "right_offset": [
+                  2.0625,
+                  1.0
+                ],
+                "left_offset": [
+                  -2.0625,
+                  1.0
+                ],
+                "reach_from_body_front": 4,
+                "bottom": 0.25
+              },
+              "active": 0.08,
+              "control": {
+                "root": 0.6
+              },
+              "anchor": "actor",
+              "targets": "all"
+            },
+            {
+              "time": 0.85,
+              "damage": 225,
+              "shape": null,
+              "active": 0.01,
+              "control": {},
+              "anchor": "marked_target",
+              "targets": "all_marked"
+            }
+          ],
+          "input_move_speed": 0,
+          "facing": "windup_start",
+          "vertical": "normal",
+          "movement": null,
+          "independent_effect": {
+            "type": "target_mark",
+            "schedule_at": 0.25,
+            "fire_at": 0.85,
+            "targets": "all_primary_hit_targets"
+          },
+          "invulnerability": [],
+          "rules": "첫 타격 범위 안의 모든 적에게 표식을 건다. 각 대상은 0.60초 뒤 살아 있으면 범위 밖이나 차폐 뒤에서도 조임 피해를 한 번 받는다. 죽은 대상의 표식은 끝나며 새 적에게 전이하지 않는다. 대상이 없어도 발동하고 쿨타임을 소비한다."
+        }
+      ]
+    },
+    {
+      "id": "rapier",
+      "name": "레이피어",
+      "category": "검",
+      "role": "좁고 빠른 찌르기, 정밀한 재배치",
+      "provenance": "delegated_initial_design",
+      "basic": {
+        "damages": [
+          40,
+          40,
+          85
+        ],
+        "motion_durations": [
+          0.22,
+          0.22,
+          0.36
+        ],
+        "local_hit_times": [
+          0.1,
+          0.1,
+          0.12
+        ],
+        "shapes": [
+          {
+            "kind": "box",
+            "size": [
+              3.71875,
+              0.8125
+            ],
+            "right_offset": [
+              1.70313,
+              1
+            ],
+            "left_offset": [
+              -1.70313,
+              1
+            ],
+            "reach_from_body_front": 2.90625,
+            "bottom": 0.59375
+          },
+          {
+            "kind": "box",
+            "size": [
+              3.875,
+              0.8125
+            ],
+            "right_offset": [
+              1.65625,
+              1
+            ],
+            "left_offset": [
+              -1.65625,
+              1
+            ],
+            "reach_from_body_front": 2.9375,
+            "bottom": 0.59375
+          },
+          {
+            "kind": "box",
+            "size": [
+              4.34375,
+              0.8125
+            ],
+            "right_offset": [
+              1.92188,
+              1
+            ],
+            "left_offset": [
+              -1.92188,
+              1
+            ],
+            "reach_from_body_front": 3.4375,
+            "bottom": 0.59375
+          }
+        ],
+        "active_seconds": 0.06,
+        "input_move_speed": 2.5,
+        "fastest_cycle": 0.8,
+        "late_combo_seconds": 0.3,
+        "target_policy": "all_once_per_hit",
+        "normal_enemy_stagger": 0.3,
+        "boss_stagger": 0,
+        "vertical": "normal",
+        "cancel": "valid_jump_or_dash"
+      },
+      "specials": [
+        {
+          "id": "rapier_default",
+          "slot": "default",
+          "name": "모아찌르기",
+          "provenance": "delegated_initial_design",
+          "cooldown": 8,
+          "activation_time": 0.2,
+          "motion_end": 0.53,
+          "hits": [
+            {
+              "time": 0.2,
+              "damage": 255,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  4.25,
+                  0.8125
+                ],
+                "right_offset": [
+                  1.875,
+                  1
+                ],
+                "left_offset": [
+                  -1.875,
+                  1
+                ],
+                "reach_from_body_front": 3.34375,
+                "bottom": 0.59375
+              },
+              "active": 0.08,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            }
+          ],
+          "input_move_speed": 0,
+          "facing": "windup_start",
+          "vertical": "normal",
+          "movement": null,
+          "independent_effect": null,
+          "invulnerability": [],
+          "rules": "버튼 유지0.20~0.80초에 피해255→450 선형 보간. 일찍 놓으면0.20초 발동,0.80초 자동 발동. 판정0.08+회복0.25, 범위 안 모든 적. 쿨타임8초는 실제 발동부터 시작.",
+          "charge": {
+            "min_hold": 0.2,
+            "max_hold": 0.8,
+            "min_damage": 255,
+            "max_damage": 450,
+            "active": 0.08,
+            "recovery": 0.25,
+            "max_motion": 1.13
+          }
+        },
+        {
+          "id": "rapier_range",
+          "slot": "range",
+          "name": "장침",
+          "provenance": "delegated_initial_design",
+          "cooldown": 7,
+          "activation_time": 0.3,
+          "motion_end": 0.7,
+          "hits": [
+            {
+              "time": 0.3,
+              "damage": 350,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  9.34375,
+                  1
+                ],
+                "right_offset": [
+                  4.35938,
+                  1
+                ],
+                "left_offset": [
+                  -4.35938,
+                  1
+                ],
+                "reach_from_body_front": 8.375,
+                "bottom": 0.5
+              },
+              "active": 0.08,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            }
+          ],
+          "input_move_speed": 0,
+          "facing": "windup_start",
+          "vertical": "normal",
+          "movement": null,
+          "independent_effect": null,
+          "invulnerability": [],
+          "rules": "전방8.375unit 직선에 즉시 판정. 투사체 아님. 경로 모든 적1회, 고체 차폐."
+        },
+        {
+          "id": "rapier_movement",
+          "slot": "movement",
+          "name": "흘려찌르기",
+          "provenance": "delegated_initial_design",
+          "cooldown": 6,
+          "activation_time": 0.1,
+          "motion_end": 0.45,
+          "hits": [
+            {
+              "time": 0.1,
+              "damage": 275,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  2.3875,
+                  1
+                ],
+                "right_offset": [
+                  0.6625,
+                  1.0
+                ],
+                "left_offset": [
+                  -0.6625,
+                  1.0
+                ],
+                "reach_from_body_front": 1.2,
+                "bottom": 0.5
+              },
+              "active": 0.15,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            }
+          ],
+          "input_move_speed": 0,
+          "facing": "windup_input_else_facing",
+          "vertical": "normal",
+          "movement": {
+            "type": "target_teleport_strike",
+            "start": 0.1,
+            "max_distance": 15,
+            "target_gap": 0.25,
+            "target_radius": 15,
+            "wall_policy": "teleport_endpoint_clear",
+            "collision": "skip_path_sweep_require_clear_endpoint"
+          },
+          "independent_effect": null,
+          "invulnerability": [],
+          "rules": "360도 반경15unit 안 최근접 적을 벽 차폐와 무관하게 이동 기준으로 선택한다. 0.10초에 적 정면으로 순간이동한 뒤 현재 판정 범위 안 모든 적에게275피해를 준다. 몸 간격0.25, 도착 고체 겹침 시 이동하지 않는다. 대상이 없어도 제자리에서 찌르기와 쿨타임을 발동하며 판정 범위 안으로 들어온 적은 맞는다. 무적 없음."
+        },
+        {
+          "id": "rapier_follow_up",
+          "slot": "follow_up",
+          "name": "섬광 연침",
+          "provenance": "delegated_initial_design",
+          "cooldown": 9,
+          "activation_time": 0.1,
+          "motion_end": 0.95,
+          "hits": [
+            {
+              "time": 0.15,
+              "damage": 110,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  2.9875,
+                  1.5
+                ],
+                "right_offset": [
+                  0.9625,
+                  1.0
+                ],
+                "left_offset": [
+                  -0.9625,
+                  1.0
+                ],
+                "reach_from_body_front": 1.8,
+                "bottom": 0.25
+              },
+              "active": 0.04,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            },
+            {
+              "time": 0.27,
+              "damage": 110,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  2.9875,
+                  1.5
+                ],
+                "right_offset": [
+                  0.9625,
+                  1.0
+                ],
+                "left_offset": [
+                  -0.9625,
+                  1.0
+                ],
+                "reach_from_body_front": 1.8,
+                "bottom": 0.25
+              },
+              "active": 0.04,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            },
+            {
+              "time": 0.39,
+              "damage": 110,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  2.9875,
+                  1.5
+                ],
+                "right_offset": [
+                  0.9625,
+                  1.0
+                ],
+                "left_offset": [
+                  -0.9625,
+                  1.0
+                ],
+                "reach_from_body_front": 1.8,
+                "bottom": 0.25
+              },
+              "active": 0.04,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            },
+            {
+              "time": 0.51,
+              "damage": 110,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  2.9875,
+                  1.5
+                ],
+                "right_offset": [
+                  0.9625,
+                  1.0
+                ],
+                "left_offset": [
+                  -0.9625,
+                  1.0
+                ],
+                "reach_from_body_front": 1.8,
+                "bottom": 0.25
+              },
+              "active": 0.04,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            },
+            {
+              "time": 0.63,
+              "damage": 110,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  2.9875,
+                  1.5
+                ],
+                "right_offset": [
+                  0.9625,
+                  1.0
+                ],
+                "left_offset": [
+                  -0.9625,
+                  1.0
+                ],
+                "reach_from_body_front": 1.8,
+                "bottom": 0.25
+              },
+              "active": 0.04,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            }
+          ],
+          "input_move_speed": 0,
+          "facing": "windup_start",
+          "vertical": "freeze_0.10_to_0.67_then_fall_from_zero",
+          "vertical_freeze": [
+            0.1,
+            0.67
+          ],
+          "movement": {
+            "type": "target_teleport_strike",
+            "start": 0.1,
+            "max_distance": 5,
+            "target_radius": 5,
+            "target_gap": 0.25,
+            "collision": "sweep_full_body_stop_before_solid"
+          },
+          "independent_effect": null,
+          "invulnerability": [
+            [
+              0.1,
+              0.67
+            ]
+          ],
+          "rules": "360도 반경5unit 안 차폐되지 않은 최근접 적의 바라보는 쪽 바로 앞으로0.10초에 순간이동 후 적을 마주보고 그 자리에서5회 찌르기. 대상 없으면 제자리에서 연속 찌르기를 발동하고 쿨타임을 소비한다. 각 타격은 범위 안 모든 적에게 적용한다. 몸 간격0.25. 원문2.5초 대신 최초 테스트는0.95초 모션. 몸 전체 스윕으로 벽 이전에 정지, 적 관통. 각 타격 때 범위 재검사. 대시 취소 시 미발생 직접 타격/무적 즉시 종료."
+        }
+      ]
+    },
+    {
+      "id": "dagger",
+      "name": "한손 단검",
+      "category": "검",
+      "role": "짧은 거리, 은신과 충전형 기동",
+      "provenance": "user_2026_10_16_four_hit_B_A_A_A",
+      "basic": {
+        "damages": [
+          30,
+          35,
+          50,
+          85
+        ],
+        "motion_durations": [
+          0.165,
+          0.165,
+          0.26,
+          0.41
+        ],
+        "local_hit_times": [
+          0.045,
+          0.045,
+          0.1,
+          0.255
+        ],
+        "shapes": [
+          {
+            "kind": "box",
+            "size": [
+              3.0625,
+              3.21875
+            ],
+            "right_offset": [
+              1.00313,
+              1.80938
+            ],
+            "left_offset": [
+              -1.00313,
+              1.80938
+            ],
+            "reach_from_body_front": 1.87813,
+            "bottom": 0.2
+          },
+          {
+            "kind": "box",
+            "size": [
+              3.0625,
+              3.21875
+            ],
+            "right_offset": [
+              1.00313,
+              1.80938
+            ],
+            "left_offset": [
+              -1.00313,
+              1.80938
+            ],
+            "reach_from_body_front": 1.87813,
+            "bottom": 0.2
+          },
+          {
+            "kind": "box",
+            "size": [
+              3.0625,
+              3.21875
+            ],
+            "right_offset": [
+              1.00313,
+              1.80938
+            ],
+            "left_offset": [
+              -1.00313,
+              1.80938
+            ],
+            "reach_from_body_front": 1.87813,
+            "bottom": 0.2
+          },
+          {
+            "kind": "box",
+            "size": [
+              3.0625,
+              3.21875
+            ],
+            "right_offset": [
+              1.00313,
+              1.80938
+            ],
+            "left_offset": [
+              -1.00313,
+              1.80938
+            ],
+            "reach_from_body_front": 1.87813,
+            "bottom": 0.2
+          }
+        ],
+        "active_seconds": 0.06,
+        "input_move_speed": 2.5,
+        "fastest_cycle": 1.0,
+        "late_combo_seconds": 0.3,
+        "target_policy": "all_once_per_hit",
+        "normal_enemy_stagger": 0.3,
+        "boss_stagger": 0,
+        "vertical": "normal",
+        "cancel": "valid_jump_or_dash"
+      },
+      "specials": [
+        {
+          "id": "dagger_default",
+          "slot": "default",
+          "name": "숨죽이기",
+          "provenance": "delegated_initial_design",
+          "cooldown": 6,
+          "activation_time": 0.1,
+          "motion_end": 0.35,
+          "hits": [],
+          "input_move_speed": 0,
+          "facing": "windup_start",
+          "vertical": "normal",
+          "movement": null,
+          "independent_effect": {
+            "type": "stealth",
+            "duration": 3,
+            "unique_owner": true
+          },
+          "invulnerability": [
+            [
+              0.1,
+              0.3
+            ]
+          ],
+          "rules": "0.10초에 은신3초, 0.10~0.30초 회피 무적. 공격 시작에 은신 해제, 대시/무기 교체/피격 자체는 해제하지 않는다. 확정된 적 공격과 장판은 맞는다."
+        },
+        {
+          "id": "dagger_range",
+          "slot": "range",
+          "name": "먹안개",
+          "provenance": "delegated_initial_design",
+          "cooldown": 10,
+          "activation_time": 0.15,
+          "motion_end": 0.5,
+          "hits": [
+            {
+              "time": 0.65,
+              "damage": 30,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  10,
+                  5
+                ],
+                "right_offset": [
+                  0,
+                  2.5
+                ],
+                "left_offset": [
+                  0,
+                  2.5
+                ],
+                "radius_from_root": 5,
+                "bottom": 0
+              },
+              "active": 0.001,
+              "control": {},
+              "anchor": "saved_primary_world_pose",
+              "targets": "all"
+            },
+            {
+              "time": 1.15,
+              "damage": 30,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  10,
+                  5
+                ],
+                "right_offset": [
+                  0,
+                  2.5
+                ],
+                "left_offset": [
+                  0,
+                  2.5
+                ],
+                "radius_from_root": 5,
+                "bottom": 0
+              },
+              "active": 0.001,
+              "control": {},
+              "anchor": "saved_primary_world_pose",
+              "targets": "all"
+            },
+            {
+              "time": 1.65,
+              "damage": 30,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  10,
+                  5
+                ],
+                "right_offset": [
+                  0,
+                  2.5
+                ],
+                "left_offset": [
+                  0,
+                  2.5
+                ],
+                "radius_from_root": 5,
+                "bottom": 0
+              },
+              "active": 0.001,
+              "control": {},
+              "anchor": "saved_primary_world_pose",
+              "targets": "all"
+            },
+            {
+              "time": 2.15,
+              "damage": 30,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  10,
+                  5
+                ],
+                "right_offset": [
+                  0,
+                  2.5
+                ],
+                "left_offset": [
+                  0,
+                  2.5
+                ],
+                "radius_from_root": 5,
+                "bottom": 0
+              },
+              "active": 0.001,
+              "control": {},
+              "anchor": "saved_primary_world_pose",
+              "targets": "all"
+            },
+            {
+              "time": 2.65,
+              "damage": 30,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  10,
+                  5
+                ],
+                "right_offset": [
+                  0,
+                  2.5
+                ],
+                "left_offset": [
+                  0,
+                  2.5
+                ],
+                "radius_from_root": 5,
+                "bottom": 0
+              },
+              "active": 0.001,
+              "control": {},
+              "anchor": "saved_primary_world_pose",
+              "targets": "all"
+            },
+            {
+              "time": 3.15,
+              "damage": 30,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  10,
+                  5
+                ],
+                "right_offset": [
+                  0,
+                  2.5
+                ],
+                "left_offset": [
+                  0,
+                  2.5
+                ],
+                "radius_from_root": 5,
+                "bottom": 0
+              },
+              "active": 0.001,
+              "control": {},
+              "anchor": "saved_primary_world_pose",
+              "targets": "all"
+            },
+            {
+              "time": 3.65,
+              "damage": 30,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  10,
+                  5
+                ],
+                "right_offset": [
+                  0,
+                  2.5
+                ],
+                "left_offset": [
+                  0,
+                  2.5
+                ],
+                "radius_from_root": 5,
+                "bottom": 0
+              },
+              "active": 0.001,
+              "control": {},
+              "anchor": "saved_primary_world_pose",
+              "targets": "all"
+            },
+            {
+              "time": 4.15,
+              "damage": 30,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  10,
+                  5
+                ],
+                "right_offset": [
+                  0,
+                  2.5
+                ],
+                "left_offset": [
+                  0,
+                  2.5
+                ],
+                "radius_from_root": 5,
+                "bottom": 0
+              },
+              "active": 0.001,
+              "control": {},
+              "anchor": "saved_primary_world_pose",
+              "targets": "all"
+            }
+          ],
+          "input_move_speed": 0,
+          "facing": "windup_start",
+          "vertical": "normal",
+          "movement": null,
+          "independent_effect": {
+            "type": "smoke",
+            "shape": {
+              "kind": "box",
+              "size": [
+                10,
+                5
+              ],
+              "right_offset": [
+                0,
+                2.5
+              ],
+              "left_offset": [
+                0,
+                2.5
+              ],
+              "radius_from_root": 5,
+              "bottom": 0
+            },
+            "duration": 4,
+            "position": "activation_world_pose",
+            "damage": 0
+          },
+          "invulnerability": [
+            [
+              0.15,
+              0.35
+            ]
+          ],
+          "rules": "발동 위치에 폭10/높이5 연막4초. 영역 안의 적에게 생성0.5초 뒤부터0.5초마다30피해, 만료 시각 포함8틱·총240. 매 틱 범위/고체 차폐 재검사, 특수 피해 배율은 발동 시 저장. 영역 피해는 기습을 소비하거나 은신을 해제하지 않는다. 영역 밖에서 연막 은신 해제, 공격 후 같은 연막 재은신 불가. 최초 생성0.20초 회피 무적, 재진입 무적 없음. 발동 후 취소/교체에도 연막·피해 유지, 동일 시전자 재설치·사망·리셋 시 이전 연막 제거."
+        },
+        {
+          "id": "dagger_movement",
+          "slot": "movement",
+          "name": "삼연 도약",
+          "provenance": "delegated_initial_design",
+          "cooldown": 4,
+          "activation_time": 0.08,
+          "motion_end": 0.38,
+          "hits": [
+            {
+              "time": 0.08,
+              "damage": 180,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  1.9875,
+                  1.5
+                ],
+                "right_offset": [
+                  0.4625,
+                  1.0
+                ],
+                "left_offset": [
+                  -0.4625,
+                  1.0
+                ],
+                "reach_from_body_front": 0.8,
+                "bottom": 0.25
+              },
+              "active": 0.15,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            }
+          ],
+          "input_move_speed": 0,
+          "facing": "windup_input_else_facing",
+          "vertical": "freeze_during_movement_then_fall_from_zero",
+          "movement": {
+            "start": 0.08,
+            "duration": 0.15,
+            "distance": 6,
+            "speed": 40.0,
+            "wall_recovery": 0.15
+          },
+          "independent_effect": null,
+          "invulnerability": [],
+          "rules": "3충전. 새 입력당180피해 돌진1회, 충전당4초 순차 회복.6unit/0.15초, 적 관통, 벽 종료 후 회복0.15초. 무적 없음. 추가 사용으로 진행 중 회복 타이머를 리셋하지 않는다.",
+          "charges": {
+            "capacity": 3,
+            "recovery": "sequential",
+            "recharge_seconds": 4,
+            "min_activation_interval": 0.3
+          }
+        },
+        {
+          "id": "dagger_follow_up",
+          "slot": "follow_up",
+          "name": "그림자 난무",
+          "provenance": "delegated_initial_design",
+          "cooldown": 8,
+          "activation_time": 0.15,
+          "motion_end": 0.95,
+          "hits": [
+            {
+              "time": 0.15,
+              "damage": 105,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  3.0625,
+                  2.1875
+                ],
+                "right_offset": [
+                  1.0125,
+                  1.09375
+                ],
+                "left_offset": [
+                  -1.0125,
+                  1.09375
+                ],
+                "reach_from_body_front": 1.8875,
+                "bottom": 0
+              },
+              "active": 0.04,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            },
+            {
+              "time": 0.27,
+              "damage": 105,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  3.0625,
+                  2.1875
+                ],
+                "right_offset": [
+                  1.0125,
+                  1.09375
+                ],
+                "left_offset": [
+                  -1.0125,
+                  1.09375
+                ],
+                "reach_from_body_front": 1.8875,
+                "bottom": 0
+              },
+              "active": 0.04,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            },
+            {
+              "time": 0.39,
+              "damage": 105,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  3.0625,
+                  2.1875
+                ],
+                "right_offset": [
+                  1.0125,
+                  1.09375
+                ],
+                "left_offset": [
+                  -1.0125,
+                  1.09375
+                ],
+                "reach_from_body_front": 1.8875,
+                "bottom": 0
+              },
+              "active": 0.04,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            },
+            {
+              "time": 0.51,
+              "damage": 105,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  3.0625,
+                  2.1875
+                ],
+                "right_offset": [
+                  1.0125,
+                  1.09375
+                ],
+                "left_offset": [
+                  -1.0125,
+                  1.09375
+                ],
+                "reach_from_body_front": 1.8875,
+                "bottom": 0
+              },
+              "active": 0.04,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            },
+            {
+              "time": 0.63,
+              "damage": 105,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  3.0625,
+                  2.1875
+                ],
+                "right_offset": [
+                  1.0125,
+                  1.09375
+                ],
+                "left_offset": [
+                  -1.0125,
+                  1.09375
+                ],
+                "reach_from_body_front": 1.8875,
+                "bottom": 0
+              },
+              "active": 0.04,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            },
+            {
+              "time": 0.75,
+              "damage": 105,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  3.0625,
+                  2.1875
+                ],
+                "right_offset": [
+                  1.0125,
+                  1.09375
+                ],
+                "left_offset": [
+                  -1.0125,
+                  1.09375
+                ],
+                "reach_from_body_front": 1.8875,
+                "bottom": 0
+              },
+              "active": 0.04,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            }
+          ],
+          "input_move_speed": 0,
+          "facing": "windup_start",
+          "vertical": "normal",
+          "movement": null,
+          "independent_effect": null,
+          "invulnerability": [],
+          "rules": "6타 각21, 총126. 캐릭터 부착 직접 판정이며 매 타격 범위 재검사. 대시 취소 시 미래 타격 제거. 무적 없음, 공중 수직 운동 유지. 쿨타임8초."
+        }
+      ]
+    },
+    {
+      "id": "hammer",
+      "name": "망치",
+      "category": "둔기",
+      "role": "느린 강타와 적 밀기·기절",
+      "provenance": "delegated_initial_design",
+      "basic": {
+        "damages": [
+          215,
+          220
+        ],
+        "motion_durations": [
+          0.96,
+          0.59
+        ],
+        "local_hit_times": [
+          0.8,
+          0.29
+        ],
+        "shapes": [
+          {
+            "kind": "box",
+            "size": [
+              3.3875,
+              2.2
+            ],
+            "right_offset": [
+              1.1625,
+              1.1
+            ],
+            "left_offset": [
+              -1.1625,
+              1.1
+            ],
+            "reach_from_body_front": 2.2,
+            "bottom": 0
+          },
+          {
+            "kind": "box",
+            "size": [
+              3.3875,
+              2.2
+            ],
+            "right_offset": [
+              1.1625,
+              1.1
+            ],
+            "left_offset": [
+              -1.1625,
+              1.1
+            ],
+            "reach_from_body_front": 2.2,
+            "bottom": 0
+          }
+        ],
+        "active_seconds": 0.1,
+        "input_move_speed": 0,
+        "fastest_cycle": 1.55,
+        "late_combo_seconds": 0.3,
+        "target_policy": "all_once_per_hit",
+        "normal_enemy_stagger": 0.3,
+        "boss_stagger": 0,
+        "vertical": "normal",
+        "cancel": "valid_jump_or_dash"
+      },
+      "specials": [
+        {
+          "id": "hammer_default",
+          "slot": "default",
+          "name": "횡강타",
+          "provenance": "delegated_initial_design",
+          "cooldown": 6,
+          "activation_time": 0.4,
+          "motion_end": 0.95,
+          "hits": [
+            {
+              "time": 0.4,
+              "damage": 400,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  5,
+                  2.1875
+                ],
+                "right_offset": [
+                  1.5,
+                  1.1
+                ],
+                "left_offset": [
+                  -1.5,
+                  1.1
+                ],
+                "reach_from_body_front": 3.34375,
+                "bottom": 0.00625
+              },
+              "active": 0.12,
+              "control": {
+                "push_distance": 1.5,
+                "push_seconds": 0.2
+              },
+              "anchor": "actor",
+              "targets": "all"
+            }
+          ],
+          "input_move_speed": 0,
+          "facing": "windup_start",
+          "vertical": "normal",
+          "movement": null,
+          "independent_effect": null,
+          "invulnerability": [],
+          "rules": "일반 적을 고정 공격 방향으로1.5unit 밀기. 벽 앞 정지/추가 피해 없음. 보스는 피해만."
+        },
+        {
+          "id": "hammer_range",
+          "slot": "range",
+          "name": "지축 강타",
+          "provenance": "delegated_initial_design",
+          "cooldown": 10,
+          "activation_time": 1.0,
+          "motion_end": 1.6,
+          "hits": [
+            {
+              "time": 1.0,
+              "damage": 225,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  10,
+                  2
+                ],
+                "right_offset": [
+                  0,
+                  1
+                ],
+                "left_offset": [
+                  0,
+                  1
+                ],
+                "radius_from_root": 5,
+                "bottom": 0
+              },
+              "active": 0.12,
+              "control": {
+                "stun": 1.0
+              },
+              "anchor": "actor",
+              "targets": "screen"
+            }
+          ],
+          "input_move_speed": 0,
+          "facing": "windup_start",
+          "vertical": "grounded_required",
+          "movement": null,
+          "independent_effect": null,
+          "invulnerability": [],
+          "rules": "발동 순간 카메라 화면 안에 몸이 걸친 살아 있는 모든 적에게 적중(고체 차폐 무시, 화면 암전 연출 기준). 카메라가 없으면 폭10 박스로 대체. 지상 전용, 발동 순간 접지 필요. 일반 적/보스 모두1초 기절."
+        },
+        {
+          "id": "hammer_movement",
+          "slot": "movement",
+          "name": "몰아치기",
+          "provenance": "delegated_initial_design",
+          "cooldown": 8,
+          "activation_time": 0.2,
+          "motion_end": 0.85,
+          "hits": [
+            {
+              "time": 0.2,
+              "damage": 205,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  2.3875,
+                  1.8
+                ],
+                "right_offset": [
+                  0.6625,
+                  1.0
+                ],
+                "left_offset": [
+                  -0.6625,
+                  1.0
+                ],
+                "reach_from_body_front": 1.2,
+                "bottom": 0.1
+              },
+              "active": 0.3,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            }
+          ],
+          "input_move_speed": 0,
+          "facing": "windup_input_else_facing",
+          "vertical": "freeze_during_movement_then_fall_from_zero",
+          "movement": {
+            "start": 0.2,
+            "duration": 0.3,
+            "distance": 6,
+            "speed": 20.0,
+            "wall_recovery": 0.35,
+            "primary_push": true,
+            "primary_end_damage": 205,
+            "primary_end_requires_alive": true
+          },
+          "independent_effect": null,
+          "invulnerability": [],
+          "rules": "6unit/0.30초 이동하며 경로의 모든 적에게205피해를 한 번 준다. 일반 적은 함께 밀며, 본타에 맞고 살아 있는 각 적에게 종료 시 추가205피해를 한 번 준다. 첫 적중 대상이 보스이면 이동을 즉시 끝내고 보스 위치는 바꾸지 않는다. 한 대상이 죽어도 다른 생존 피격 대상의 종료 피해는 유지한다. 벽 조기 종료에도 각 생존 피격 대상에게 종료 피해를 적용한다."
+        },
+        {
+          "id": "hammer_follow_up",
+          "slot": "follow_up",
+          "name": "여진",
+          "provenance": "delegated_initial_design",
+          "cooldown": 9,
+          "activation_time": 0.6,
+          "motion_end": 1.1,
+          "hits": [
+            {
+              "time": 0.6,
+              "damage": 205,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  8,
+                  1.5
+                ],
+                "right_offset": [
+                  0,
+                  0.75
+                ],
+                "left_offset": [
+                  0,
+                  0.75
+                ],
+                "radius_from_root": 4,
+                "bottom": 0
+              },
+              "active": 0.08,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            },
+            {
+              "time": 0.9,
+              "damage": 75,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  8,
+                  1.5
+                ],
+                "right_offset": [
+                  0,
+                  0.75
+                ],
+                "left_offset": [
+                  0,
+                  0.75
+                ],
+                "radius_from_root": 4,
+                "bottom": 0
+              },
+              "active": 0.06,
+              "control": {},
+              "anchor": "saved_primary_world_pose",
+              "targets": "all"
+            },
+            {
+              "time": 1.2,
+              "damage": 75,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  8,
+                  1.5
+                ],
+                "right_offset": [
+                  0,
+                  0.75
+                ],
+                "left_offset": [
+                  0,
+                  0.75
+                ],
+                "radius_from_root": 4,
+                "bottom": 0
+              },
+              "active": 0.06,
+              "control": {},
+              "anchor": "saved_primary_world_pose",
+              "targets": "all"
+            },
+            {
+              "time": 1.5,
+              "damage": 75,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  8,
+                  1.5
+                ],
+                "right_offset": [
+                  0,
+                  0.75
+                ],
+                "left_offset": [
+                  0,
+                  0.75
+                ],
+                "radius_from_root": 4,
+                "bottom": 0
+              },
+              "active": 0.06,
+              "control": {},
+              "anchor": "saved_primary_world_pose",
+              "targets": "all"
+            }
+          ],
+          "input_move_speed": 0,
+          "facing": "windup_start",
+          "vertical": "grounded_required",
+          "movement": null,
+          "independent_effect": {
+            "type": "scheduled_world_hits",
+            "schedule_at": 0.6,
+            "fire_times": [
+              0.9,
+              1.2,
+              1.5
+            ],
+            "end_at": 1.56
+          },
+          "invulnerability": [],
+          "rules": "지상 전용. 본타41+여진3회각15=86. 본타 발동 위치·스탯 저장, 이후 취소·교체에도 여진 유지. 각 틱 대상당1회, 추가 기절 없음."
+        }
+      ]
+    },
+    {
+      "id": "shield",
+      "name": "방패",
+      "category": "둔기",
+      "role": "낮은 공격량을 패링·보호·도발로 보완",
+      "provenance": "delegated_initial_design",
+      "basic": {
+        "damages": [
+          85
+        ],
+        "motion_durations": [
+          0.6
+        ],
+        "local_hit_times": [
+          0.25
+        ],
+        "shapes": [
+          {
+            "kind": "box",
+            "size": [
+              2.4875,
+              2
+            ],
+            "right_offset": [
+              0.7125,
+              1.0
+            ],
+            "left_offset": [
+              -0.7125,
+              1.0
+            ],
+            "reach_from_body_front": 1.3,
+            "bottom": 0
+          }
+        ],
+        "active_seconds": 0.1,
+        "input_move_speed": 2.5,
+        "fastest_cycle": 0.6,
+        "late_combo_seconds": 0.3,
+        "target_policy": "all_once_per_hit",
+        "normal_enemy_stagger": 0.3,
+        "boss_stagger": 0,
+        "vertical": "normal",
+        "cancel": "valid_jump_or_dash"
+      },
+      "specials": [
+        {
+          "id": "shield_default",
+          "slot": "default",
+          "name": "받아치기",
+          "provenance": "delegated_initial_design",
+          "cooldown": 1.2,
+          "activation_time": 0,
+          "motion_end": 0.45,
+          "hits": [],
+          "input_move_speed": 0,
+          "facing": "windup_start",
+          "vertical": "normal",
+          "movement": null,
+          "independent_effect": {
+            "type": "parry",
+            "window": 0.2,
+            "frontal_angle": 180,
+            "melee_reflect_base": 130,
+            "projectile": "reverse_once"
+          },
+          "invulnerability": [],
+          "rules": "시작부터[0,0.20) 전방180도 패링. 창 개방부터 실패 쿨타임1.20초. 첫 성공 즉시 창을 닫고 성공 시점부터 고정0.60초 재무장, 성공 후0.10초 회복. 근접 반격130×특수피해배율을 공격자 한 명에게1회 적용한다. 투사체는 방향·소유자 반전, 원본 피해를 적 HP 단위로 5배 환산하고 특수배율1회 적용, 추가 근접 반격 없음·재반사 금지. 후방·레이저·장판·낙사 패링 불가. 투사체 전방 확장0.75unit. 성공 재무장 하한은 쿨타임 환급·공속·쿨감으로 단축하지 않는다."
+        },
+        {
+          "id": "shield_range",
+          "slot": "range",
+          "name": "수호막",
+          "provenance": "delegated_initial_design",
+          "cooldown": 10,
+          "activation_time": 0.1,
+          "motion_end": 0.5,
+          "action_tracks": {
+            "schemaVersion": 1,
+            "id": "shield_range",
+            "sourceTimeMode": 0,
+            "activation": "contact",
+            "bodyEnd": "body-end",
+            "timeline": {
+              "frames": [
+                {
+                  "id": "windup",
+                  "seconds": 0.1
+                },
+                {
+                  "id": "recovery",
+                  "seconds": 0.4
+                }
+              ],
+              "markers": [
+                {
+                  "id": "body-start",
+                  "anchor": 1,
+                  "reference": "windup",
+                  "offset": 0
+                },
+                {
+                  "id": "contact",
+                  "anchor": 1,
+                  "reference": "recovery",
+                  "offset": 0
+                },
+                {
+                  "id": "guard-end",
+                  "anchor": 3,
+                  "reference": "contact",
+                  "offset": 3
+                },
+                {
+                  "id": "body-end",
+                  "anchor": 2,
+                  "reference": "recovery",
+                  "offset": 0
+                }
+              ]
+            },
+            "control": {
+              "start": "body-start",
+              "end": "body-end",
+              "horizontal": 0,
+              "vertical": 0
+            },
+            "motion": null,
+            "defense": {
+              "id": "guard",
+              "kind": 0,
+              "start": "contact",
+              "end": "guard-end"
+            },
+            "hits": []
+          },
+          "hits": [],
+          "input_move_speed": 0,
+          "facing": "windup_start",
+          "vertical": "normal",
+          "movement": null,
+          "independent_effect": {
+            "type": "owner_guard",
+            "duration": 3,
+            "shield_hp": 30,
+            "damage_reduction": 0.4,
+            "stack": "replace_shield_refresh_max_duration"
+          },
+          "invulnerability": [],
+          "rules": "시전자에게3초 보호막30와 일반 공격 피해40% 감소. 피해 감소 후 남은 피해를 보호막→HP 순 처리. 보호막이 먼저 깨져도 감소효과는3초까지. 동종 중복 시 양을 더하지 않고 새30/남은시간 중 긴 값으로 갱신. 수치는 특수 피해 증가로 늘지 않음. 낙사 피해는 감소/보호막을 우회. 사용 후 교체/대시에도 유지."
+        },
+        {
+          "id": "shield_movement",
+          "slot": "movement",
+          "name": "방패 밀기",
+          "provenance": "delegated_initial_design",
+          "cooldown": 8,
+          "activation_time": 0.15,
+          "motion_end": 0.8,
+          "hits": [
+            {
+              "time": 0.15,
+              "damage": 275,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  4,
+                  4.5
+                ],
+                "right_offset": [
+                  0,
+                  2.25
+                ],
+                "left_offset": [
+                  0,
+                  2.25
+                ],
+                "reach_from_body_front": 1.34375,
+                "bottom": 0
+              },
+              "active": 0.3,
+              "control": {
+                "push_with_caster": true
+              },
+              "anchor": "actor",
+              "targets": "all"
+            }
+          ],
+          "input_move_speed": 0,
+          "facing": "windup_input_else_facing",
+          "vertical": "freeze_during_movement_then_fall_from_zero",
+          "movement": {
+            "start": 0.15,
+            "duration": 0.3,
+            "distance": 6,
+            "speed": 20.0,
+            "wall_recovery": 0.35
+          },
+          "independent_effect": null,
+          "invulnerability": [],
+          "rules": "6unit/0.30초. 경로 각 적275피해1회. 일반 적은 방패 앞으로 밀며 벽 앞 정지, 보스는 밀지 않고 시전자만 통과한다. 무적·피해감소 없음. 벽 종료 후 회복0.35초."
+        },
+        {
+          "id": "shield_follow_up",
+          "slot": "follow_up",
+          "name": "미끼 방패",
+          "provenance": "delegated_initial_design",
+          "cooldown": 10,
+          "activation_time": 0.2,
+          "motion_end": 0.55,
+          "hits": [],
+          "input_move_speed": 0,
+          "facing": "windup_start",
+          "vertical": "normal",
+          "movement": null,
+          "independent_effect": {
+            "type": "decoy",
+            "duration": 3,
+            "hp": 60,
+            "shape": {
+              "kind": "box",
+              "size": [
+                0.8,
+                1.5
+              ],
+              "right_offset": [
+                0,
+                0.75
+              ],
+              "left_offset": [
+                0,
+                0.75
+              ],
+              "radius_from_root": 0.4,
+              "bottom": 0
+            },
+            "spawn_offset": [
+              1.40625,
+              0
+            ],
+            "taunt_radius": 5,
+            "limit_per_owner": 1
+          },
+          "invulnerability": [],
+          "rules": "바라보는 쪽 몸 앞끝에서0.75unit 앞을 중심으로 허수아비 배치. 후보 위치에서 아래3unit 이내 바닥을 찾고 그 위에 배치, 바닥 없음/몸 영역이 고체와 겹치면 발동 전 실패. 몸0.8×1.5/HP60/3초이며 적 몸을 막지 않음. 탐색 반경5unit의 일반 적 도발, 보스 면역. 반경 밖/허수아비 사망·만료면 기존 AI 재탐색. 현재 적 공격을 강제 취소하지 않고 다음 대상 판단부터 적용. 시전자당1개, 재사용 시 이전 것 제거. 경로가 막혀 있으면 가장 가까운 도달 가능 지점까지 이동하며 벽 관통 공격 금지. 이미 발사된 탄은 재조준하지 않음."
+        }
+      ]
+    },
+    {
+      "id": "greatsword",
+      "name": "대검",
+      "category": "둔기",
+      "role": "전방 기본 베기와 양방향 특수·회전 광역 공격",
+      "provenance": "delegated_initial_design",
+      "basic": {
+        "damages": [
+          170,
+          130,
+          255
+        ],
+        "motion_durations": [
+          0.75,
+          0.29,
+          0.66
+        ],
+        "local_hit_times": [
+          0.6,
+          0.1,
+          0.4
+        ],
+        "shapes": [
+          {
+            "kind": "box",
+            "size": [
+              2.8,
+              2.5
+            ],
+            "right_offset": [
+              2.05625,
+              1.25
+            ],
+            "left_offset": [
+              -2.05625,
+              1.25
+            ],
+            "bottom": 0,
+            "reach_from_body_front": 2.8
+          },
+          {
+            "kind": "box",
+            "size": [
+              2.8,
+              2.5
+            ],
+            "right_offset": [
+              2.05625,
+              1.25
+            ],
+            "left_offset": [
+              -2.05625,
+              1.25
+            ],
+            "bottom": 0,
+            "reach_from_body_front": 2.8
+          },
+          {
+            "kind": "box",
+            "size": [
+              2.8,
+              2.5
+            ],
+            "right_offset": [
+              2.05625,
+              1.25
+            ],
+            "left_offset": [
+              -2.05625,
+              1.25
+            ],
+            "reach_from_body_front": 2.8,
+            "bottom": 0
+          }
+        ],
+        "active_seconds": 0.1,
+        "input_move_speed": 0,
+        "fastest_cycle": 1.7,
+        "late_combo_seconds": 0.3,
+        "target_policy": "all_once_per_hit",
+        "normal_enemy_stagger": 0.3,
+        "boss_stagger": 0,
+        "vertical": "normal",
+        "cancel": "valid_jump_or_dash"
+      },
+      "specials": [
+        {
+          "id": "greatsword_default",
+          "slot": "default",
+          "name": "모아내려찍기",
+          "provenance": "delegated_initial_design",
+          "cooldown": 7,
+          "activation_time": 0.25,
+          "motion_end": 0.7,
+          "hits": [
+            {
+              "time": 0.25,
+              "damage": 350,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  4.1875,
+                  2.5
+                ],
+                "right_offset": [
+                  1.5625,
+                  1.25
+                ],
+                "left_offset": [
+                  -1.5625,
+                  1.25
+                ],
+                "reach_from_body_front": 3,
+                "bottom": 0
+              },
+              "active": 0.12,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            }
+          ],
+          "input_move_speed": 0,
+          "facing": "windup_start",
+          "vertical": "normal",
+          "movement": null,
+          "independent_effect": null,
+          "invulnerability": [],
+          "rules": "0.25~1.00초 차지로 피해350→600, 이후 최대 피해 유지. 입력 해제 후0.18초 준비를 거쳐 범위 안 모든 적 내려찍기. 판정0.12+회복0.33. 전방 충격파는 시각 효과.",
+          "charge": {
+            "min_hold": 0.25,
+            "max_hold": 1,
+            "min_damage": 350,
+            "max_damage": 600,
+            "active": 0.12,
+            "recovery": 0.33,
+            "hold_until_release": true,
+            "release_windup": 0.18
+          }
+        },
+        {
+          "id": "greatsword_range",
+          "slot": "range",
+          "name": "반월참",
+          "provenance": "delegated_initial_design",
+          "cooldown": 9,
+          "activation_time": 0.45,
+          "motion_end": 1.05,
+          "hits": [
+            {
+              "time": 0.45,
+              "damage": 500,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  10,
+                  10
+                ],
+                "right_offset": [
+                  0,
+                  5
+                ],
+                "left_offset": [
+                  0,
+                  5
+                ],
+                "radius_from_root": 5,
+                "bottom": 0
+              },
+              "active": 0.12,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            }
+          ],
+          "input_move_speed": 0,
+          "facing": "windup_start",
+          "vertical": "normal",
+          "movement": null,
+          "independent_effect": null,
+          "invulnerability": [],
+          "rules": "0.45초에 소환 대검을 박아 좌우 root 기준5unit·전체 폭10·높이10 범위에 대상당500피해1회. 고체 차폐, 추가 제어 없음."
+        },
+        {
+          "id": "greatsword_movement",
+          "slot": "movement",
+          "name": "회전 전진",
+          "provenance": "delegated_initial_design",
+          "cooldown": 9,
+          "activation_time": 0.2,
+          "motion_end": 2.5,
+          "hits": [
+            {
+              "time": 0.2,
+              "damage": 120,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  4.8,
+                  2.2
+                ],
+                "right_offset": [
+                  0,
+                  1.1
+                ],
+                "left_offset": [
+                  0,
+                  1.1
+                ],
+                "radius_from_root": 2.4,
+                "bottom": 0
+              },
+              "active": 0.08,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            },
+            {
+              "time": 0.45,
+              "damage": 120,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  4.8,
+                  2.2
+                ],
+                "right_offset": [
+                  0,
+                  1.1
+                ],
+                "left_offset": [
+                  0,
+                  1.1
+                ],
+                "radius_from_root": 2.4,
+                "bottom": 0
+              },
+              "active": 0.08,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            },
+            {
+              "time": 0.7,
+              "damage": 120,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  4.8,
+                  2.2
+                ],
+                "right_offset": [
+                  0,
+                  1.1
+                ],
+                "left_offset": [
+                  0,
+                  1.1
+                ],
+                "radius_from_root": 2.4,
+                "bottom": 0
+              },
+              "active": 0.08,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            },
+            {
+              "time": 0.95,
+              "damage": 120,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  4.8,
+                  2.2
+                ],
+                "right_offset": [
+                  0,
+                  1.1
+                ],
+                "left_offset": [
+                  0,
+                  1.1
+                ],
+                "radius_from_root": 2.4,
+                "bottom": 0
+              },
+              "active": 0.08,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            },
+            {
+              "time": 1.2,
+              "damage": 120,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  4.8,
+                  2.2
+                ],
+                "right_offset": [
+                  0,
+                  1.1
+                ],
+                "left_offset": [
+                  0,
+                  1.1
+                ],
+                "radius_from_root": 2.4,
+                "bottom": 0
+              },
+              "active": 0.08,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            },
+            {
+              "time": 1.45,
+              "damage": 120,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  4.8,
+                  2.2
+                ],
+                "right_offset": [
+                  0,
+                  1.1
+                ],
+                "left_offset": [
+                  0,
+                  1.1
+                ],
+                "radius_from_root": 2.4,
+                "bottom": 0
+              },
+              "active": 0.08,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            },
+            {
+              "time": 1.7,
+              "damage": 120,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  4.8,
+                  2.2
+                ],
+                "right_offset": [
+                  0,
+                  1.1
+                ],
+                "left_offset": [
+                  0,
+                  1.1
+                ],
+                "radius_from_root": 2.4,
+                "bottom": 0
+              },
+              "active": 0.08,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            },
+            {
+              "time": 1.95,
+              "damage": 120,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  4.8,
+                  2.2
+                ],
+                "right_offset": [
+                  0,
+                  1.1
+                ],
+                "left_offset": [
+                  0,
+                  1.1
+                ],
+                "radius_from_root": 2.4,
+                "bottom": 0
+              },
+              "active": 0.08,
+              "control": {},
+              "anchor": "actor",
+              "targets": "all"
+            }
+          ],
+          "input_move_speed": 0,
+          "facing": "windup_start",
+          "vertical": "normal",
+          "movement": {
+            "start": 0.2,
+            "duration": 2,
+            "distance": 10,
+            "speed": 5,
+            "wall_policy": "stop_translation_continue_spin"
+          },
+          "independent_effect": null,
+          "invulnerability": [],
+          "rules": "준비0.20초 후 수평10unit/2초 이동하며0.20/0.45/0.70/0.95/1.20/1.45/1.70/1.95초에 각24, 8타 총192. 회복0.30초·전체2.50초 유지. 벽에서는 이동만 종료하고 남은 회전 타격 유지. 정상 중력, 무적 없음. 대시 취소는 미래 직접 타격 제거."
+        },
+        {
+          "id": "greatsword_follow_up",
+          "slot": "follow_up",
+          "name": "낙인 대검",
+          "provenance": "delegated_initial_design",
+          "cooldown": 10,
+          "activation_time": 0.4,
+          "motion_end": 0.58,
+          "hits": [
+            {
+              "time": 0.805,
+              "damage": 150,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  6,
+                  7.2
+                ],
+                "right_offset": [
+                  0,
+                  2.1
+                ],
+                "left_offset": [
+                  0,
+                  2.1
+                ],
+                "coordinate_frame": "effect_center"
+              },
+              "active": 0.08,
+              "control": {},
+              "anchor": "saved_spawn_world_pose",
+              "targets": "all"
+            },
+            {
+              "time": 1.05,
+              "damage": 150,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  6,
+                  7.2
+                ],
+                "right_offset": [
+                  0,
+                  2.1
+                ],
+                "left_offset": [
+                  0,
+                  2.1
+                ],
+                "coordinate_frame": "effect_center"
+              },
+              "active": 0.08,
+              "control": {},
+              "anchor": "saved_spawn_world_pose",
+              "targets": "all"
+            },
+            {
+              "time": 1.295,
+              "damage": 150,
+              "shape": {
+                "kind": "box",
+                "size": [
+                  6,
+                  7.2
+                ],
+                "right_offset": [
+                  0,
+                  2.1
+                ],
+                "left_offset": [
+                  0,
+                  2.1
+                ],
+                "coordinate_frame": "effect_center"
+              },
+              "active": 0.08,
+              "control": {},
+              "anchor": "saved_spawn_world_pose",
+              "targets": "all"
+            }
+          ],
+          "input_move_speed": 0,
+          "facing": "windup_start",
+          "vertical": "normal",
+          "movement": null,
+          "independent_effect": {
+            "type": "delayed_world_sword",
+            "schedule_at": 0.4,
+            "fire_at": 0.805,
+            "end_at": 1.375,
+            "spawn_offset": [
+              7,
+              1.5
+            ],
+            "telegraph_seconds": 0.405
+          },
+          "invulnerability": [],
+          "rules": "0.40초에 전방 7unit에 대검을 던져 위치를 고정한다. 시전자는 0.58초부터 기본 공격과 이동이 가능하다. 검은 저장 중심에서 회전하며 0.805/1.05/1.295초에 대상당 30씩 최대 3타를 준다. 범위 폭6/높이7.2, 밑면은 발 높이(박스 중심 발+3.6, 검 설치 중심은 발+1.5). 고체 차폐와 설치 실패 규칙을 유지하고 대시 취소나 무기 교체 이후에도 발동된 검은 남는다."
+        }
+      ]
+    }
+  ]
+}

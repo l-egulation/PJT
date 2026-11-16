@@ -1,0 +1,209 @@
+{
+  "date": "2026-10-21",
+  "status": "user_approved",
+  "weapons": [
+    {
+      "id": "sword",
+      "name": "기본검",
+      "status": "user_approved",
+      "frameFiles": 55,
+      "motions": [
+        "idle",
+        "walk",
+        "run",
+        "jump",
+        "dash",
+        "attack",
+        "death",
+        "single"
+      ],
+      "effect": "approved_melee",
+      "folder": "무기별/기본검"
+    },
+    {
+      "id": "whip",
+      "name": "채찍",
+      "status": "user_approved",
+      "frameFiles": 59,
+      "motions": [
+        "idle",
+        "walk",
+        "run",
+        "jump",
+        "dash",
+        "attack",
+        "death",
+        "single"
+      ],
+      "effect": "approved_melee",
+      "folder": "무기별/채찍"
+    },
+    {
+      "id": "rapier",
+      "name": "레이피어",
+      "status": "user_approved",
+      "frameFiles": 53,
+      "motions": [
+        "idle",
+        "walk",
+        "run",
+        "jump",
+        "dash",
+        "attack",
+        "death",
+        "single"
+      ],
+      "effect": "approved_melee",
+      "folder": "무기별/레이피어"
+    },
+    {
+      "id": "dagger",
+      "name": "단검",
+      "status": "user_approved",
+      "frameFiles": 60,
+      "motions": [
+        "idle",
+        "walk",
+        "run",
+        "jump",
+        "dash",
+        "attack",
+        "death",
+        "single"
+      ],
+      "effect": "approved_melee",
+      "folder": "무기별/단검"
+    },
+    {
+      "id": "hammer",
+      "name": "망치",
+      "status": "user_approved",
+      "frameFiles": 56,
+      "motions": [
+        "idle",
+        "walk",
+        "run",
+        "jump",
+        "dash",
+        "attack",
+        "death",
+        "single"
+      ],
+      "effect": "approved_melee",
+      "folder": "무기별/망치"
+    },
+    {
+      "id": "shield",
+      "name": "방패",
+      "status": "user_approved",
+      "frameFiles": 52,
+      "motions": [
+        "idle",
+        "walk",
+        "run",
+        "jump",
+        "dash",
+        "attack",
+        "death",
+        "single"
+      ],
+      "effect": "approved_melee",
+      "folder": "무기별/방패"
+    },
+    {
+      "id": "greatsword",
+      "name": "대검",
+      "status": "user_approved",
+      "frameFiles": 58,
+      "motions": [
+        "idle",
+        "walk",
+        "run",
+        "jump",
+        "dash",
+        "attack",
+        "death",
+        "single"
+      ],
+      "effect": "approved_melee",
+      "folder": "무기별/대검"
+    },
+    {
+      "id": "cannon",
+      "name": "기본포",
+      "status": "user_approved",
+      "frameFiles": 53,
+      "motions": [
+        "idle",
+        "walk",
+        "run",
+        "jump",
+        "dash",
+        "death",
+        "single",
+        "attack"
+      ],
+      "effect": "A",
+      "folder": "무기별/기본포"
+    },
+    {
+      "id": "laser",
+      "name": "레이저포",
+      "status": "user_approved",
+      "frameFiles": 50,
+      "motions": [
+        "idle",
+        "walk",
+        "run",
+        "jump",
+        "dash",
+        "death",
+        "single",
+        "attack"
+      ],
+      "effect": "B",
+      "folder": "무기별/레이저포"
+    },
+    {
+      "id": "shotgun",
+      "name": "샷건",
+      "status": "user_approved",
+      "frameFiles": 52,
+      "motions": [
+        "idle",
+        "walk",
+        "run",
+        "jump",
+        "dash",
+        "death",
+        "single",
+        "attack"
+      ],
+      "effect": "A",
+      "folder": "무기별/샷건"
+    },
+    {
+      "id": "grenade",
+      "name": "유탄포",
+      "status": "user_approved",
+      "frameFiles": 54,
+      "motions": [
+        "idle",
+        "walk",
+        "run",
+        "jump",
+        "dash",
+        "death",
+        "single",
+        "attack"
+      ],
+      "effect": "B",
+      "folder": "무기별/유탄포"
+    }
+  ],
+  "idle": "첨부 F006–F009 기반으로 통일한 승인 대기 모션 유지",
+  "sources": {
+    "motion": "원거리4종_무기잔픽셀정리_이펙트후보_v24_20261021",
+    "rangedEffects": "원거리4종_샷건A확정_유탄비대칭_v28_20261021"
+  }
+}

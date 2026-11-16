@@ -1,0 +1,42 @@
+{
+  "schema": "stage2-projectile-material-review-v1",
+  "status": "pending-user-review",
+  "output": "outputs/waterway/projectile-material-review-20261101",
+  "h3Approved": "outputs/waterway/h3-slow-arc-impact-20261101",
+  "throwerApproved": "outputs/waterway/thrower-pocket-attack-return-20261101",
+  "h3": {
+    "canvas": [96,96],
+    "pivotPx": [48,48],
+    "stepMs": 50,
+    "flightMs": 1000,
+    "modelStepSeconds": 0.004166666666666667,
+    "restoringFrequencyRadiansPerSecond": 12,
+    "dampingRatio": 0.44,
+    "initialDeformationVelocity": 10,
+    "speedLoad": 0.18,
+    "maximumTaper": 0.48,
+    "maximumBendPx": 5,
+    "areaTolerance": 0.07,
+    "physicsReference": "https://docs.blender.org/manual/en/5.1/physics/fluid/type/domain/liquid/diffusion.html",
+    "modelScope": "Pixel-art material approximation: ballistic center of mass; damped spring scalar for launch strain and speed load; area-preserving tapered UV warp. Gravity moves the whole free-falling drop, not a fictitious differential weight force. Not an incompressible fluid solver, measured viscosity or game runtime physics."
+  },
+  "thrower": {
+    "sourceKeysOneBased": [11,12,13],
+    "primarySourceOneBased": 26,
+    "canvas": [64,64],
+    "pivotPx": [32,32],
+    "sourceColorThreshold": 230,
+    "releaseMs": 680,
+    "lastHeldPropRoiNative": [128,60,152,81],
+    "heldCenterNative": [140,70],
+    "spawnCenterWorld": [378,164],
+    "landingXWorldIllustration": 165,
+    "groundYWorldIllustration": 288,
+    "flightMsIllustration": 800,
+    "arcHeightPxIllustration": 80,
+    "rotationStepDegrees": 90,
+    "rotationHoldMs": 200,
+    "previewLoopMs": 2050,
+    "policy": "Extract the already detached actual gold prop from source26 with the approved character scale/offset and12-color palette. Preserve source26/27/29 candidates. Use source26 in the projectile with exact quarter-turn rotations. Spawn from last held prop center at approved release680ms. Preserve19 body PNG bytes and timing. The parabolic preview illustrates aimed throwing, not a new approved trajectory or gameplay implementation."
+  }
+}

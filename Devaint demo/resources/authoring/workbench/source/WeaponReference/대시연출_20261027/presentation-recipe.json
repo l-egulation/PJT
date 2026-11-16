@@ -1,0 +1,81 @@
+{
+  "weapon": "base_sword",
+  "movementDurationMs": 200,
+  "distanceNativePixels": 144,
+  "sourceFrameDurationsMs": [
+    22.22,
+    40.74,
+    40.74,
+    37.04,
+    59.26
+  ],
+  "afterPoseEndTimesMs": [
+    20,
+    90,
+    200,
+    245,
+    300
+  ],
+  "afterimageEmitMs": [
+    0,
+    20,
+    40,
+    60,
+    80,
+    100,
+    120,
+    140,
+    160,
+    180
+  ],
+  "afterimageLifeMs": 180,
+  "afterimageMaximumOpacity": 0.52,
+  "originalImagesUnchanged": true,
+  "unityModified": false,
+  "background": "#ffffff",
+  "afterimageColor": "#2b546a",
+  "format": "f109-dash-presentation-recipe-v1",
+  "approvedDate": "2026-10-27",
+  "status": "approved-preview-not-runtime-integrated",
+  "sourceMotion": "base_sword/dash",
+  "sourceFrameCount": 5,
+  "recoveryAfterMovementMs": 100,
+  "afterimageFadeExponent": 1.15,
+  "afterimageSpawnIntervalMs": 20,
+  "rendering": "nearest-neighbor",
+  "runtimeGameplayChanges": false,
+  "framePivot": "use each existing Unity sprite pivot; do not center by image bounds",
+  "previewMotion": {
+    "speedUnityUnitsPerSecond": 22.5,
+    "durationMs": 200,
+    "pixelsPerUnit": 32,
+    "distancePixels": 144
+  },
+  "frames": [
+    {
+      "file": "dash/F01.png",
+      "existingUnityResource": "CharacterApproved11/base_sword/F000",
+      "sha256": "f3f6076daf48d800dcfec3898a22c11c15d7b3a844c112f3f5e1029ea7697469"
+    },
+    {
+      "file": "dash/F02.png",
+      "existingUnityResource": "CharacterApproved11/base_sword/F001",
+      "sha256": "e2ae1df95a5d7d8289e0d4f43078cbcb39e6d9ac168abdcafe5c4c5004b83306"
+    },
+    {
+      "file": "dash/F03.png",
+      "existingUnityResource": "CharacterApproved11/base_sword/F002",
+      "sha256": "401207f2d0733622aea48b5f6401c1a1d45873c659c878a0675a4fa45a80ef9f"
+    },
+    {
+      "file": "dash/F04.png",
+      "existingUnityResource": "CharacterApproved11/base_sword/F003",
+      "sha256": "10440501fca6a1113ad801dca2c4224991b2540c21969078f122eaa1dafcdf46"
+    },
+    {
+      "file": "dash/F05.png",
+      "existingUnityResource": "CharacterApproved11/base_sword/F004",
+      "sha256": "c31804671f73976686e5b40ed8cf4c3fc3ae2d39147f31972302874e70ed179c"
+    }
+  ]
+}

@@ -1,0 +1,1924 @@
+{
+  "schema": 2,
+  "status": "runtime_integrated_playtest_pending",
+  "spec": "docs/design/equipment/rules.md",
+  "startingWeapon": {
+    "mode": "unarmed",
+    "blueprintsGranted": 0,
+    "basicAttackSpec": "data/combat/unarmed_basic.json",
+    "hasSkill": false
+  },
+  "inventory": {
+    "activeWeaponSlots": 2,
+    "weaponAndInkStorage": "unlimited_and_independent",
+    "pauseCombatAndTimers": true,
+    "manualDiscardStoredWeapon": true,
+    "equipmentChangeCooldownSeconds": 5,
+    "equipmentChangeCooldownStartsOnInventoryClose": true,
+    "inventoryChangesWhileOpenIgnoreCooldown": true,
+    "initialEquipStartsCooldown": true,
+    "manualUnequipStartsCooldown": true,
+    "replaceStartsCooldown": true,
+    "activeSlotSwitchStartsCooldown": false,
+    "slotOrderSwapIgnoresCooldown": true,
+    "monsterHitCombatLock": false,
+    "skillCooldownWhileStored": "freeze",
+    "skillCooldownInEquippedSlots": "advance_with_combat_time",
+    "breakSelectsRemainingSlotWithoutRebindingKeys": true
+  },
+  "blueprints": {
+    "item": "sketch_weapon",
+    "sources": [
+      "kill_milestone_choice",
+      "boss_choice",
+      "shop"
+    ],
+    "compositionFixedAtDrop": [
+      "weapon_form",
+      "skill",
+      "palette_slots"
+    ],
+    "skillsPerWeapon": 1,
+    "formAndSkillSelection": "uniform_form_then_uniform_skill_of_that_form",
+    "minPaletteSlots": 4,
+    "maxPaletteSlots": 6,
+    "slotCountsByStage": {
+      "status": "user_decision_2026-11-12",
+      "1": [
+        4
+      ],
+      "2": [
+        5
+      ],
+      "3": [
+        6
+      ],
+      "laterStages": "same_as_stage_3"
+    },
+    "normalRewardSlotCountsByOffer": {
+      "status": "user_decision_2026-11-12",
+      "1": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "2": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "3": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "laterStages": "same_as_stage_3",
+      "fromOffer7": "stage_maximum",
+      "offerCountScope": "per_stage_open_order"
+    },
+    "bossRewardSlotCount": "stage_maximum",
+    "shopSlotCount": "fixed_stage_slot_count",
+    "enhancedSlotChancePerSlot": {
+      "status": "first_playtest_value_pending_user_confirmation",
+      "unit": "percent_per_slot",
+      "byStage": {
+        "1": 20,
+        "2": 25,
+        "3": null
+      },
+      "afterMaxEnhancedSlots": "remaining_slots_colorless"
+    },
+    "maxEnhancedSlots": 2,
+    "enhancedSlotColor": {
+      "selection": "uniform_among_allowed_colors",
+      "multipleEnhancedSlotsShareColor": true
+    },
+    "allowedInkColors": [
+      "red",
+      "yellow",
+      "green",
+      "blue",
+      "purple"
+    ],
+    "enhancedSlotAcceptsAllColors": true,
+    "scope": "run"
+  },
+  "inks": {
+    "composition": "effect_granting_and_status_conditioned_basic_and_skill_enhancement",
+    "cartesianProductRequired": true,
+    "exceptionCriteria": [
+      "intuitive",
+      "distinctive",
+      "explicit_rules_and_scope",
+      "respects_ink_roles_conditions_and_status_trigger_prohibition"
+    ],
+    "catalogScope": "run",
+    "reusableAfterAcquisition": false,
+    "effectGranting": {
+      "triggers": [
+        "basic_attack",
+        "skill_attack",
+        "weapon_switch",
+        "dash_use",
+        "status_condition"
+      ],
+      "colors": {
+        "yellow": [
+          "movement_speed_increase"
+        ],
+        "green": [
+          "shield",
+          "heal"
+        ],
+        "purple": [
+          "stun",
+          "root",
+          "slow"
+        ]
+      },
+      "forbiddenCombinations": [
+        {
+          "trigger": "status_condition",
+          "effect": "stun"
+        },
+        {
+          "trigger": "status_condition",
+          "effect": "root"
+        },
+        {
+          "trigger": "status_condition",
+          "effect": "slow"
+        }
+      ],
+      "statusTriggerSubjectAndEvent": {
+        "target": "monster",
+        "event": "status_applied",
+        "playerStatusApplicationTriggers": false,
+        "reapplicationAndFailure": {
+          "successfulReapplicationTriggers": true,
+          "requiresDurationOrStrengthIncrease": false,
+          "failedApplicationTriggers": false,
+          "respectsInternalCooldownAndAttackProcLimit": true
+        }
+      },
+      "timingTargetsStackingAndValues": null,
+      "internalCooldown": {
+        "required": true,
+        "exemptEffects": [],
+        "scope": "per_weapon_independent",
+        "seconds": null,
+        "startTimingAndWithinWeaponSharing": {
+          "attackTriggeredPurple": "window_expiry",
+          "attackTriggeredPurplePendingAttackReservation": {
+            "selection": "first_successful_status_application",
+            "reserveAtAttackExecution": false,
+            "winningAttackKeepsPerTargetApplication": false,
+            "otherAttacksRespectCooldown": false,
+            "duringWindow": "all_source_weapon_basic_and_skill_hits"
+          },
+          "healAndShield": "when_actual_resource_increase_positive",
+          "zeroResourceIncreaseConsumesCooldown": false,
+          "zeroResourceIncreaseConsumesAttackProc": false,
+          "otherStartTiming": null,
+          "withinWeaponSharing": "independent_per_equipped_copy",
+          "resourceRetryRequiresOriginalTrigger": true,
+          "movementSpeed": "on_effect_activation",
+          "simultaneousHealAndShieldApplication": {
+            "scope": "same_weapon_same_trigger_event",
+            "order": "blueprint_slot_order",
+            "recalculateAvailableCapacityAfterEachCopy": true,
+            "zeroGainPreservesCooldownAndAttackProc": true
+          }
+        },
+        "withinWeaponSharing": "independent_per_equipped_copy",
+        "perEffectAndTriggerSeconds": {
+          "shield": {
+            "basic_attack": 6,
+            "skill_attack": 6,
+            "weapon_switch": 6,
+            "dash_use": 8,
+            "status_condition": 6
+          },
+          "heal": {
+            "basic_attack": 6,
+            "skill_attack": 6,
+            "weapon_switch": 6,
+            "dash_use": 8,
+            "status_condition": 6
+          },
+          "movement_speed_increase": {
+            "basic_attack": 6,
+            "skill_attack": 6,
+            "weapon_switch": 6,
+            "dash_use": 8,
+            "status_condition": 6
+          },
+          "stun": {
+            "basic_attack": 3,
+            "skill_attack": 3,
+            "weapon_switch": 3,
+            "dash_use": 3
+          },
+          "root": {
+            "basic_attack": 3,
+            "skill_attack": 3,
+            "weapon_switch": 3,
+            "dash_use": 3
+          },
+          "slow": {
+            "basic_attack": 3,
+            "skill_attack": 3,
+            "weapon_switch": 3,
+            "dash_use": 3
+          }
+        },
+        "purpleSharing": "same_source_weapon_same_ink"
+      },
+      "outOfCombatProcAllowed": true,
+      "additionalCombatOrEnemyHitGate": false,
+      "shieldLifetimeAndCap": {
+        "reapplication": "add_to_remaining_shield",
+        "lifetime": "gradual_decay",
+        "expiresOverTime": true,
+        "cap": {
+          "basis": "maximum_health_fraction",
+          "fraction": 0.2
+        },
+        "weaponDestructionAndRunEndHandling": {
+          "weaponDestruction": "retain_with_existing_decay_rules",
+          "runEnd": null
+        },
+        "generation": {
+          "basicAndSkillAttack": "positive_actual_monster_health_loss",
+          "weaponSwitch": "qualifying_attack_enemy_hit",
+          "statusCondition": "successful_status_application",
+          "dashUse": "dash_start_without_hit"
+        },
+        "decay": {
+          "startTiming": "after_grace_since_last_enemy_hit",
+          "rate": {
+            "mode": "fixed_max_health_fraction_per_second",
+            "fractionPerSecond": 0.05
+          },
+          "hitRefreshRules": "stop_decay_and_reset_grace",
+          "graceSeconds": 10,
+          "refreshRequiresShieldGeneration": false,
+          "hitRefreshSources": {
+            "weaponScope": "both_weapons",
+            "basicAndSkillDirectHits": true,
+            "projectileAndDeployableDirectHits": true,
+            "requiresShieldInkProc": false
+          }
+        },
+        "dashShield": {
+          "generationTiming": "dash_start",
+          "hitRequired": false,
+          "disappearsFasterThanOtherShields": true,
+          "purpose": "brief_protection_immediately_after_invulnerable_dash",
+          "decayStartTiming": "after_dash_end_grace",
+          "decayRate": {
+            "mode": "fixed_max_health_fraction_per_second",
+            "fractionPerSecond": 0.2,
+            "fasterThanNormal": true,
+            "multipleBatchDistribution": "full_rate_independently_per_generated_batch"
+          },
+          "mixingWithOtherShield": {
+            "amountAndTimers": "separate_normal_and_dash",
+            "damageConsumptionOrder": [
+              "dash",
+              "normal"
+            ],
+            "capScope": "combined_normal_and_dash",
+            "overflowHandling": "fill_remaining_capacity_discard_excess",
+            "repeatedDashRefresh": "independent_timer_per_generated_batch",
+            "dashBatchDamageConsumptionOrder": "earliest_grace_end_first"
+          },
+          "graceAfterDashEndSeconds": 3,
+          "enemyHitRefreshesGrace": false
+        },
+        "generationAmount": {
+          "mode": "fixed_shield_points",
+          "perInkBaseAndEnhancedValues": {
+            "basic_attack": {
+              "base": 7,
+              "enhanced": 10
+            },
+            "skill_attack": {
+              "base": 7,
+              "enhanced": 10
+            },
+            "weapon_switch": {
+              "base": 7,
+              "enhanced": 10
+            },
+            "dash_use": {
+              "base": 7,
+              "enhanced": 10
+            },
+            "status_condition": {
+              "base": 7,
+              "enhanced": 10
+            }
+          },
+          "scalesWithMaxHealth": false
+        }
+      },
+      "inactiveWeaponTimeAndStateLifecycle": {
+        "cooldowns": "continue_while_inactive",
+        "appliedEffectsOnWeaponDestruction": "retain_with_existing_lifetimes",
+        "otherEffectTimersOnSwitch": null,
+        "newWeaponState": "ink_cooldowns_ready"
+      },
+      "requiredCombinations": [
+        {
+          "trigger": "basic_attack",
+          "effect": "movement_speed_increase",
+          "rarity": "normal"
+        },
+        {
+          "trigger": "basic_attack",
+          "effect": "shield",
+          "rarity": "normal"
+        },
+        {
+          "trigger": "basic_attack",
+          "effect": "heal",
+          "rarity": "normal"
+        },
+        {
+          "trigger": "basic_attack",
+          "effect": "stun",
+          "rarity": "normal"
+        },
+        {
+          "trigger": "basic_attack",
+          "effect": "root",
+          "rarity": "normal"
+        },
+        {
+          "trigger": "basic_attack",
+          "effect": "slow",
+          "rarity": "normal"
+        },
+        {
+          "trigger": "skill_attack",
+          "effect": "movement_speed_increase",
+          "rarity": "normal"
+        },
+        {
+          "trigger": "skill_attack",
+          "effect": "shield",
+          "rarity": "normal"
+        },
+        {
+          "trigger": "skill_attack",
+          "effect": "heal",
+          "rarity": "normal"
+        },
+        {
+          "trigger": "skill_attack",
+          "effect": "stun",
+          "rarity": "normal"
+        },
+        {
+          "trigger": "skill_attack",
+          "effect": "root",
+          "rarity": "normal"
+        },
+        {
+          "trigger": "skill_attack",
+          "effect": "slow",
+          "rarity": "normal"
+        },
+        {
+          "trigger": "weapon_switch",
+          "effect": "movement_speed_increase",
+          "rarity": "normal"
+        },
+        {
+          "trigger": "weapon_switch",
+          "effect": "shield",
+          "rarity": "normal"
+        },
+        {
+          "trigger": "weapon_switch",
+          "effect": "heal",
+          "rarity": "normal"
+        },
+        {
+          "trigger": "weapon_switch",
+          "effect": "stun",
+          "rarity": "normal"
+        },
+        {
+          "trigger": "weapon_switch",
+          "effect": "root",
+          "rarity": "normal"
+        },
+        {
+          "trigger": "weapon_switch",
+          "effect": "slow",
+          "rarity": "normal"
+        },
+        {
+          "trigger": "dash_use",
+          "effect": "movement_speed_increase",
+          "rarity": "normal"
+        },
+        {
+          "trigger": "dash_use",
+          "effect": "shield",
+          "rarity": "normal"
+        },
+        {
+          "trigger": "dash_use",
+          "effect": "heal",
+          "rarity": "normal"
+        },
+        {
+          "trigger": "dash_use",
+          "effect": "stun",
+          "rarity": "normal"
+        },
+        {
+          "trigger": "dash_use",
+          "effect": "root",
+          "rarity": "normal"
+        },
+        {
+          "trigger": "dash_use",
+          "effect": "slow",
+          "rarity": "normal"
+        },
+        {
+          "trigger": "status_condition",
+          "effect": "movement_speed_increase",
+          "rarity": "normal"
+        },
+        {
+          "trigger": "status_condition",
+          "effect": "shield",
+          "rarity": "normal"
+        },
+        {
+          "trigger": "status_condition",
+          "effect": "heal",
+          "rarity": "normal"
+        }
+      ],
+      "requiredCombinationCount": 27,
+      "triggerRules": {
+        "basicAndSkillAttack": {
+          "activationTiming": "attack_execution_except_heal_and_shield_on_positive_monster_health_loss",
+          "hitRequired": false,
+          "healAndShield": {
+            "activationTiming": "after_committed_positive_monster_health_loss",
+            "excludesDecoysAndPlayer": true,
+            "lethalHitQualifies": true,
+            "zeroDamageConsumesCooldownOrProc": false
+          },
+          "cancelledBeforeExecutionTriggers": false
+        },
+        "weaponSwitch": {
+          "condition": "previous_attack_used_different_weapon",
+          "weaponChangeInputAloneTriggers": false,
+          "owner": "incoming_weapon",
+          "statusTargets": "qualifying_attack_hit_targets",
+          "selfEffectTiming": "qualifying_attack_execution",
+          "firstAttackAndHistoryUpdateRules": {
+            "firstAttackTriggersSwitch": false,
+            "updateAt": "attack_execution_even_on_miss",
+            "cancelledBeforeExecution": "preserve_previous_attack_weapon",
+            "compareBeforeUpdating": true,
+            "weaponIdentity": "unique_weapon_instance",
+            "onWeaponDestruction": "preserve_previous_attack_weapon_identity",
+            "onWeaponStored": "preserve_previous_attack_weapon_identity"
+          },
+          "selfEffectHitRequired": false
+        },
+        "dashUse": {
+          "activationTiming": "dash_start_once",
+          "selfEffects": [
+            "movement_speed_increase",
+            "shield",
+            "heal"
+          ],
+          "statusEffects": [
+            "stun",
+            "root",
+            "slow"
+          ],
+          "statusApplication": "enemies_along_dash_path",
+          "statusAppliesToBasicAndSkillHits": false,
+          "statusUsesAreaAroundDashPosition": false,
+          "cooldownComparedToBasicAndSkill": "longer_for_yellow_green_only",
+          "cooldownValues": null,
+          "cooldownStartTiming": "self_effect_activation_or_purple_window_expiry",
+          "requiresNextAttack": false,
+          "pathWidthAndDetectionTiming": {
+            "widthDetermination": "playtesting",
+            "applicationTiming": "on_enemy_contact_during_dash",
+            "shapeBasis": "player_hurtbox",
+            "expansionUnitsPerSide": {
+              "left": 0.25,
+              "right": 0.25,
+              "up": 0.25,
+              "down": 0.25
+            },
+            "changesPlayerHurtbox": false
+          },
+          "sameTargetReapplicationAndPathLifetime": {
+            "applicationsPerTargetPerDash": 1,
+            "recontactReapplies": false,
+            "leavesPersistentPath": false,
+            "appliedStatusKeepsOwnDuration": true
+          },
+          "interruptionAndWeaponSwitchHandling": {
+            "onInterruption": "stop_new_contacts_preserve_already_applied_status",
+            "weaponSwitchHandling": "retain_dash_and_original_activated_path_effects",
+            "weaponDestructionHandling": "retain_dash_and_original_activated_path_effects",
+            "activateNewWeaponInks": false,
+            "preserveOriginalInkCooldowns": true,
+            "preservePerTargetApplicationHistory": true
+          },
+          "sourceWeaponSelection": {
+            "when": "dash_start",
+            "weapon": "currently_active_weapon",
+            "includesOtherWeapon": false,
+            "onlyReadyEquippedCopies": true
+          },
+          "healActivation": {
+            "timing": "on_enemy_contact_during_dash",
+            "pathDetection": "same_as_dash_status_effects",
+            "perEquippedCopyPerDash": 1,
+            "cooldownStartTiming": "when_actual_healing_positive",
+            "noEnemyContactTriggers": false
+          }
+        },
+        "attackProcLimit": {
+          "scope": "yellow_green_blue",
+          "perInkPerAttackExecution": 1,
+          "perHitOrTargetExtraProcs": false,
+          "multiTargetStatusApplicationAllowed": true,
+          "multiHitStatusTargetSelection": {
+            "scope": "attack_based_purple_effects_excluding_dash",
+            "targets": "all_hit_targets_of_same_attack_execution",
+            "applicationsPerTarget": "every_hit_during_window",
+            "laterHitsCanAddNewTargets": true,
+            "repeatedHitsRefreshSameTarget": true
+          },
+          "unit": "equipped_ink_copy",
+          "exceptions": {
+            "red": "refresh_each_qualifying_basic_hit",
+            "purple": "each_hit_during_source_weapon_window"
+          }
+        },
+        "statusCondition": {
+          "supportedStatuses": [
+            "stun",
+            "root",
+            "slow"
+          ],
+          "sourceScope": "status_source_weapon_only",
+          "reactingInks": "original_weapon_equipped_copies",
+          "includesSuccessfulReapplication": true,
+          "otherWeaponInksReact": false
+        }
+      },
+      "movementSpeedStacking": {
+        "differentInkStacking": "additive_increase_rates",
+        "durationOwnership": "per_effect_independent",
+        "cap": {
+          "required": true,
+          "maximumIncreaseRate": 0.4,
+          "valueDetermination": "playtesting",
+          "scope": "all_active_ink_effects_across_both_weapons_and_equipped_copies",
+          "includesPermanentMovementSpeedUpgrade": false
+        },
+        "sameInkReapplication": {
+          "scope": "same_equipped_copy",
+          "stackMagnitude": false,
+          "durationRule": "reset_to_original_effect_duration"
+        },
+        "duplicateInkStacking": "additive_per_equipped_copy",
+        "effectValues": {
+          "increaseRate": {
+            "base": 0.1,
+            "enhanced": 0.15
+          },
+          "durationSecondsByTrigger": {
+            "basic_attack": 3,
+            "skill_attack": 3,
+            "weapon_switch": 3,
+            "dash_use": 4,
+            "status_condition": 3
+          },
+          "durationSharedBetweenBaseAndEnhanced": true
+        }
+      },
+      "shieldRulesOverrideGeneralSelfEffectTiming": true,
+      "healAmount": {
+        "mode": "fixed_health_points",
+        "base": 1,
+        "enhanced": 2,
+        "scalesWithMaxHealth": false
+      },
+      "weaponSwitchTrigger": "attack_actually_starts_with_other_equipped_weapon"
+    },
+    "attackGranting": {
+      "color": "red",
+      "trigger": "damage_dealt_by_basic_attack",
+      "effect": "timed_basic_attack_damage_or_speed_buff",
+      "buff": {
+        "durationSeconds": 0.75,
+        "attackPowerIncrease": {
+          "base": 0.3,
+          "enhanced": 0.45
+        },
+        "increaseMode": "percentage",
+        "affectedAttacksAndWeapons": {
+          "weaponScope": "all_player_weapons",
+          "basicAttacks": true,
+          "skillAttacks": false,
+          "includesUnarmed": true
+        },
+        "appliesToTriggeringHit": true,
+        "refreshAndStacking": {
+          "sameInkReproc": "reset_full_effective_copy_duration",
+          "extendDuration": false,
+          "stackMagnitudeOnReproc": false
+        },
+        "differentInkStacking": "additive_increase_rates",
+        "duplicateInkStacking": "additive_magnitude_and_duration_by_effective_copies",
+        "timeValuesSharedBetweenBaseAndEnhanced": false,
+        "damageIncreaseCap": {
+          "enabled": false
+        },
+        "owner": "player",
+        "instanceOwnership": "per_source_weapon_same_ink"
+      },
+      "cooldown": {
+        "required": false,
+        "seconds": 0,
+        "startsAt": "buff_activation",
+        "scope": "per_weapon_independent",
+        "withinWeaponSharing": "independent_per_equipped_copy",
+        "retriggerWhileCoolingDown": true
+      },
+      "procUnitAndOrder": {
+        "unit": "every_qualifying_basic_hit",
+        "order": [
+          "apply_hit_statuses_to_all_targets_of_same_hit",
+          "check_status_conditions_across_hit_targets",
+          "activate_ready_red_copies",
+          "calculate_damage_for_all_targets_of_same_hit"
+        ],
+        "triggeringHitScope": "all_targets_of_same_hit",
+        "requiresEachDamageTargetStatus": false,
+        "retroactiveDamageChange": false
+      },
+      "reprocAfterCooldown": {
+        "requiresDamageTrigger": true,
+        "refreshBuffDuration": true
+      },
+      "inactiveWeaponTimeAndStateLifecycle": {
+        "cooldowns": "continue_while_inactive",
+        "buff": "retain_and_continue_duration",
+        "destroyedWeaponBuffUsable": true,
+        "newWeaponState": "ink_cooldowns_ready",
+        "buffOnSourceWeaponStored": "retain_apply_to_other_weapons_and_continue_duration"
+      },
+      "costRequired": false,
+      "penalty": false,
+      "conditionVariantRarities": {
+        "stun": "normal",
+        "root": "normal",
+        "slow": "normal"
+      },
+      "requiredCombinationCount": 6,
+      "attackSpeedBuff": {
+        "effect": "basic_attack_speed_increase",
+        "increaseRate": {
+          "base": 0.2,
+          "enhanced": 0.3
+        },
+        "durationSecondsPerEffectiveCopy": 1.5,
+        "durationCapSeconds": 3,
+        "increaseCap": 0.6,
+        "maximumBasicSpeedScale": 2,
+        "scope": "all_player_weapons_and_unarmed_basic_attacks_only",
+        "proc": "qualifying_basic_hit_after_status_application",
+        "appliesToTriggeringAttackTiming": false,
+        "timingSnapshot": "next_basic_attack_start",
+        "sameInkReproc": "refresh_duration_without_magnitude_stacking",
+        "stacking": "additive_with_other_basic_speed_bonuses_then_cap",
+        "skillsProjectilesAndIndependentEffects": "keep_existing_time_and_speed",
+        "audio": "full_original_rate_and_pitch_swing_at_start_hit_sound_at_accepted_hit"
+      },
+      "effects": [
+        "basic_attack_damage_increase",
+        "basic_attack_speed_increase"
+      ]
+    },
+    "buildGoals": {
+      "basicAttackAndSkillBuildsAllowed": true,
+      "effectHeavyUtilityBuildAllowed": true,
+      "noCostOrPenalty": true
+    },
+    "excludeAcquiredInkFromAllSupply": false,
+    "supplyExclusionKey": "locked_by_permanent_unlock_only",
+    "effectsAndCooldownsOwnership": "per_weapon_independent",
+    "simultaneousProcOrder": [
+      "grant_effects",
+      "check_target_status",
+      "grant_red_or_blue_effect",
+      "calculate_triggering_hit_damage"
+    ],
+    "numericValues": {
+      "requiredForEveryInk": true,
+      "requiredVariants": [
+        "base",
+        "enhanced"
+      ],
+      "perInkTemplate": {
+        "base": null,
+        "enhanced": null
+      },
+      "selection": "match_slot_enhancement_color_to_ink",
+      "sameInkCatalogIdentity": true,
+      "enhancementCauseAndConditions": {
+        "condition": "ink_color_matches_blueprint_slot_color",
+        "enhancedValuesOnMatch": true,
+        "slotColorAssignment": {
+          "determinedAt": "blueprint_acquisition",
+          "fixedAfterAcquisition": true,
+          "layoutSource": "blueprints.normalRewardSlotCountsByOffer+blueprints.enhancedSlotChancePerSlot",
+          "colorSource": "blueprints.enhancedSlotColor",
+          "uncoloredSlots": {
+            "allowed": true,
+            "appliedNumericVariant": "base"
+          }
+        },
+        "mismatchedColorPlacement": {
+          "allowed": true,
+          "numericVariant": "base"
+        }
+      },
+      "affectedParametersAndSharedValues": {
+        "enhancementScope": "effect_values_and_duplicate_investment",
+        "cooldownSharedBetweenBaseAndEnhanced": false,
+        "sameTriggerEffectTypeAndTargetRules": true,
+        "perInkEnhancedParameters": null,
+        "cooldownException": "purple_uses_effective_copies_other_colors_keep_original"
+      },
+      "postApplicationStateChanges": "slot_fixed_on_commit_or_later_insertion"
+    },
+    "cartesianProductScope": "effect_granting",
+    "sustainedEffectGoal": {
+      "status": "first_trial_timings_playtest_pending",
+      "effects": [
+        "movement_speed_increase",
+        "timed_basic_attack_power_buff",
+        "slow"
+      ],
+      "actualCombinedUptimeTarget": [
+        0.9,
+        1.0
+      ],
+      "referencePerWeaponUptime": [
+        0.5,
+        0.6
+      ],
+      "requiresTriggersSwitchingAndAffordableCosts": true,
+      "formulaWithActivationStartCooldown": "per_weapon_duration / cooldown",
+      "twoWeaponAlternatingCeiling": "min(1, 2 * duration / cooldown)",
+      "hardControlUptime": null,
+      "healAndShieldEvaluatedBySupplyRate": true,
+      "activationStartFormulaScope": [
+        "movement_speed_increase"
+      ],
+      "controlWindowUptime": "active_window / (active_window + reuse_cooldown)",
+      "redUptime": "qualifying_hit_interval_compared_to_buff_duration"
+    },
+    "rarity": {
+      "purpose": "drop_rate_item_classification",
+      "tiers": [
+        {
+          "id": "normal",
+          "name": "노말"
+        },
+        {
+          "id": "rare",
+          "name": "레어"
+        },
+        {
+          "id": "epic",
+          "name": "에픽"
+        }
+      ],
+      "independentOfBaseAndEnhancedValues": true,
+      "automaticStatScaling": false,
+      "currentContentRarity": "normal",
+      "futureHigherRarityDirection": "distinctive_conditions_or_effects",
+      "dropRatesAndWeights": null,
+      "acquisitionSourceApplication": null
+    },
+    "skillGranting": {
+      "color": "blue",
+      "trigger": "skill_attack",
+      "triggerTimingAndHitRequirement": {
+        "activationTiming": "skill_attack_hit",
+        "hitRequired": true,
+        "statusCheckTarget": "hit_monster",
+        "cancelledBeforeExecutionTriggers": false
+      },
+      "effects": {
+        "cooldownReduction": {
+          "effect": "cooldown_reduction",
+          "costRequired": false,
+          "targetCooldown": "currently_running_same_skill_on_source_weapon",
+          "reductionAmountAndMode": {
+            "mode": "subtract_fraction_of_base_cooldown",
+            "baseFraction": 0.15,
+            "enhancedFraction": 0.2,
+            "calculationBasis": "full_base_skill_cooldown",
+            "usesRemainingCooldownAsBasis": false,
+            "formula": "base_skill_cooldown_seconds * reduction_fraction",
+            "example": {
+              "baseSkillCooldownSeconds": 10,
+              "remainingCooldownSeconds": 4,
+              "reductionFraction": 0.15,
+              "reductionSeconds": 1.5,
+              "remainingAfterReductionSeconds": 2.5
+            }
+          },
+          "applicationTimingAndDuration": {
+            "timing": "qualifying_skill_hit",
+            "mode": "instant_remaining_cooldown_reduction",
+            "olderExecutionCanReduceNewerExecutionCooldown": true,
+            "scope": "same_skill_same_source_weapon",
+            "minimumWaitMeasuredFrom": "current_skill_cooldown_start",
+            "noRunningCooldown": "zero_reduction_no_proc",
+            "chargeBasedSkillHandling": null
+          },
+          "minimumCooldownAndStacking": {
+            "differentInkStacking": "additive_base_cooldown_reduction_rates",
+            "minimumCooldown": {
+              "mode": "fraction_of_base_cooldown",
+              "fraction": 0.2,
+              "measuredFrom": "skill_cooldown_start",
+              "restartsOnInkProc": false
+            },
+            "excessReductionHandling": "discard_without_carryover",
+            "duplicateInkStacking": "additive_per_equipped_copy",
+            "simultaneousApplication": {
+              "order": "blueprint_slot_order",
+              "recalculateRemainingCooldownAndMinimumWaitAfterEachCopy": true,
+              "zeroReductionPreservesCooldownAndAttackProc": true
+            }
+          },
+          "rarity": "normal",
+          "zeroActualReduction": {
+            "consumesInternalCooldown": false,
+            "consumesAttackProcChance": false,
+            "retryRequiresOriginalHitAndStatusConditions": true
+          }
+        },
+        "skillDamageIncrease": {
+          "effect": "skill_attack_damage_increase",
+          "costRequired": false,
+          "affectedAttacks": {
+            "basicAttacks": false,
+            "skillAttacks": true
+          },
+          "increaseAmountAndMode": {
+            "mode": "percentage",
+            "base": 0.2,
+            "enhanced": 0.3
+          },
+          "applicationTimingAndDuration": {
+            "startsAt": "triggering_hit_before_damage_calculation",
+            "scope": "triggering_skill_execution",
+            "subsequentHitsAndDurationRules": "triggering_hit_and_remaining_hits_of_same_execution",
+            "carriesToNextSkillExecution": false,
+            "firstHitHandling": {
+              "order": [
+                "apply_first_hit_status_effects",
+                "check_target_status",
+                "activate_ready_damage_increase",
+                "calculate_first_hit_damage"
+              ],
+              "firstHitCanActivateAndBenefit": true,
+              "sameFirstHitStatusApplicationQualifies": true,
+              "requiresReadyEquippedCopy": true,
+              "requiresMatchingTargetStatus": true,
+              "example": {
+                "statusAppliedByFirstHit": "slow",
+                "baseFirstHitDamage": 100,
+                "increaseRate": 0.2,
+                "firstHitDamage": 120
+              }
+            }
+          },
+          "stacking": {
+            "differentInkStacking": "additive_increase_rates",
+            "duplicateInkStacking": "additive_per_equipped_copy",
+            "damageIncreaseCap": {
+              "enabled": false
+            }
+          },
+          "rarity": "normal",
+          "appliesToTriggeringHit": true,
+          "targetApplication": {
+            "scope": "each_damage_target",
+            "requiresMatchingStatusAtDamageCalculation": true,
+            "checkPerInkCondition": true,
+            "retroactiveDamageChange": false
+          }
+        }
+      },
+      "effectCombinationWithinInk": null,
+      "internalCooldownRules": {
+        "required": true,
+        "startsAt": "successful_ink_proc",
+        "seconds": 4,
+        "scope": "per_equipped_copy",
+        "continuesWhileWeaponInactive": true,
+        "sharedBetweenBaseAndEnhanced": true
+      },
+      "simultaneousProcOrder": [
+        "grant_effects",
+        "check_target_status",
+        "grant_skill_effect",
+        "calculate_triggering_hit_damage"
+      ],
+      "penalty": false,
+      "requiredCombinations": [
+        {
+          "condition": "stun",
+          "effect": "cooldownReduction",
+          "rarity": "normal"
+        },
+        {
+          "condition": "root",
+          "effect": "cooldownReduction",
+          "rarity": "normal"
+        },
+        {
+          "condition": "slow",
+          "effect": "cooldownReduction",
+          "rarity": "normal"
+        },
+        {
+          "condition": "stun",
+          "effect": "skillDamageIncrease",
+          "rarity": "normal"
+        },
+        {
+          "condition": "root",
+          "effect": "skillDamageIncrease",
+          "rarity": "normal"
+        },
+        {
+          "condition": "slow",
+          "effect": "skillDamageIncrease",
+          "rarity": "normal"
+        }
+      ],
+      "requiredCombinationCount": 6
+    },
+    "simultaneousProcOrderScope": "effect_granting_and_red_or_blue",
+    "statusConditions": {
+      "subject": "attack_target_monster",
+      "states": [
+        "stun",
+        "root",
+        "slow"
+      ],
+      "consumesStatusDuration": false,
+      "consumesResources": false,
+      "penalty": false,
+      "perInkSelectionAndCombination": "one_named_status_per_standard_ink; compound_exception_content_undecided",
+      "checkTiming": "after_same_attack_status_application",
+      "appliesTo": [
+        "red",
+        "blue"
+      ],
+      "sameAttackAppliedStatusQualifies": true,
+      "hardControlReapplication": {
+        "states": [
+          "stun",
+          "root"
+        ],
+        "durationRule": "max_remaining_and_new_duration",
+        "addDurations": false,
+        "sameInkDuplicateApplication": {
+          "scope": "same_source_weapon_same_ink",
+          "newDuration": "effective_copies_capped_at_3_seconds",
+          "compareWithExisting": "max_remaining_and_capped_new_duration",
+          "combineStunAndRoot": false,
+          "durationCap": {
+            "required": true,
+            "seconds": 3,
+            "valueDetermination": "playtesting"
+          }
+        },
+        "perInkDurationSeconds": {
+          "stun": {
+            "base": 1,
+            "enhanced": 1.5
+          },
+          "root": {
+            "base": 1,
+            "enhanced": 1.5
+          }
+        }
+      },
+      "slowStacking": {
+        "durationOwnership": "per_effect_independent",
+        "appliedStrength": "strongest_active_slow_only",
+        "addSlowRates": false,
+        "onStrongestExpiry": "use_strongest_remaining_active_slow",
+        "sameSourceReapplication": {
+          "scope": "same_source_weapon_same_ink_same_target",
+          "durationRule": "reset_full_duration",
+          "refreshOtherSources": false
+        }
+      },
+      "slowEffect": {
+        "affectedSpeeds": [
+          "movement",
+          "attack_motion"
+        ],
+        "affectsAttackReuseCooldown": false,
+        "movementReductionRate": {
+          "base": 0.4,
+          "enhanced": 0.6
+        },
+        "attackMotionReductionRate": {
+          "base": 0.4,
+          "enhanced": 0.6
+        },
+        "attackMotionPhaseDetails": {
+          "affectedPhases": [
+            "windup",
+            "active",
+            "recovery"
+          ],
+          "motionAndHitTimingStaySynchronized": true,
+          "alreadyLaunchedProjectileSpeed": "unchanged",
+          "changesDuringAttack": "apply_current_slow_immediately_preserve_elapsed_progress_and_hit_history",
+          "projectilesLaunchedDuringSlowSpeed": "unchanged"
+        },
+        "bossApplicationDetails": {
+          "statusApplies": true,
+          "movementReductionApplies": false,
+          "attackMotionReductionApplies": false,
+          "cancelsPatterns": false,
+          "changesPatternOrder": false,
+          "qualifiesForRedAndBlueConditions": true
+        },
+        "durationSecondsByTrigger": {
+          "basic_attack": 1,
+          "skill_attack": 1,
+          "weapon_switch": 1,
+          "dash_use": 1
+        },
+        "durationSharedBetweenBaseAndEnhanced": false
+      }
+    },
+    "contentCounts": {
+      "scope": "current_standard_ink_definitions",
+      "byColor": {
+        "yellow": 5,
+        "green": 10,
+        "purple": 12,
+        "red": 6,
+        "blue": 6
+      },
+      "effectGranting": 27,
+      "red": 6,
+      "blue": 6,
+      "total": 39,
+      "baseAndEnhancedCountedSeparately": false,
+      "unadoptedExceptionCandidatesIncluded": false
+    },
+    "timeAndWeaponLifecycle": {
+      "inactiveWeaponInkCooldowns": "continue",
+      "redBuffOnWeaponSwitch": "retain_and_continue_duration",
+      "appliedEffectsOnWeaponDestruction": "retain_with_existing_lifetimes",
+      "retainedEffectTypes": [
+        "movement_speed_increase",
+        "shield",
+        "monster_status_effects",
+        "player_red_basic_attack_buff"
+      ],
+      "destroyedWeaponAttackBuffUsable": true,
+      "newBlueprintWeaponInkCooldowns": "ready",
+      "weaponSwitchResetsCooldowns": false,
+      "movementSpeedOnWeaponSwitch": "retain_effect_and_continue_duration",
+      "inactiveWeaponScope": "other_equipped_weapon",
+      "storedWeaponInkCooldowns": "freeze",
+      "redBuffEffectScope": "player_basic_attacks_across_all_weapons_and_unarmed",
+      "storedPurpleWindowAndCooldowns": "continue"
+    },
+    "attackProcLimit": {
+      "scope": "yellow_green_blue",
+      "perInkPerAttackExecution": 1,
+      "perHitOrTargetExtraProcs": false,
+      "multiTargetStatusApplicationAllowed": true,
+      "multiHitStatusTargetSelection": {
+        "scope": "attack_based_purple_effects_excluding_dash",
+        "targets": "all_hit_targets_of_same_attack_execution",
+        "applicationsPerTarget": "every_hit_during_window",
+        "laterHitsCanAddNewTargets": true,
+        "repeatedHitsRefreshSameTarget": true
+      },
+      "unit": "equipped_ink_copy",
+      "exceptions": {
+        "red": "refresh_each_qualifying_basic_hit",
+        "purple": "each_hit_during_source_weapon_window"
+      }
+    },
+    "hasLevels": false,
+    "availableFromStage": 1,
+    "damageBonusComposition": {
+      "mode": "additive_rates_with_existing_bonuses_in_same_damage_scope",
+      "redScope": "basic_attack_damage",
+      "blueScope": "skill_attack_damage",
+      "example": {
+        "baseDamage": 100,
+        "existingIncreaseRate": 0.2,
+        "inkIncreaseRate": 0.2,
+        "result": 140
+      }
+    },
+    "presentation": {
+      "nameStyle": "functional_trigger_or_status_condition_plus_effect",
+      "nameExamples": [
+        "대쉬 회복",
+        "공격 기절"
+      ],
+      "descriptionOrder": [
+        "trigger_and_status_condition",
+        "target_and_effect",
+        "values_and_duration",
+        "internal_cooldown"
+      ],
+      "numericTextSource": "structured_base_and_enhanced_values",
+      "individualContentTextStatus": "runtime_connected_color_icons",
+      "descriptionTemplates": {
+        "movement_speed_increase": "{triggerText} {duration}초 동안 이동속도 {base}%(강화 {enhanced}%) 증가.",
+        "shield": "{triggerText} 방어막 {base}(강화 {enhanced}) 획득. 쿨타임 {cooldown}초.",
+        "heal": "{triggerText} 체력 {base}(강화 {enhanced}) 회복. 쿨타임 {cooldown}초.",
+        "stun": "{activationText} {window}초(강화 {enhancedWindow}초) 동안 {applicationText} 기절 부여. 쿨타임 {cooldown}초(강화 {enhancedCooldown}초).",
+        "root": "{activationText} {window}초(강화 {enhancedWindow}초) 동안 {applicationText} 속박 부여. 쿨타임 {cooldown}초(강화 {enhancedCooldown}초).",
+        "slow": "{activationText} {window}초(강화 {enhancedWindow}초) 동안 {applicationText} 슬로우 부여. 쿨타임 {cooldown}초(강화 {enhancedCooldown}초).",
+        "basic_attack_damage_increase": "{conditionText} 적에게 기본 공격 적중 시 {duration}초(강화 {enhancedDuration}초) 동안 모든 무기 기본 공격 피해 +{base}%(강화 +{enhanced}%) 증가.",
+        "cooldown_reduction": "{conditionText} 적에게 스킬 공격 시 이 무기의 스킬 쿨타임 {base}%(강화 {enhanced}%) 감소. 잉크 쿨타임 {cooldown}초.",
+        "skill_attack_damage_increase": "{conditionText} 적에게 스킬 공격 시 이 무기의 스킬 피해 {base}%(강화 {enhanced}%) 증가. 잉크 쿨타임 {cooldown}초.",
+        "basic_attack_speed_increase": "{conditionText} 적에게 기본 공격 적중 시 {duration}초(강화 {enhancedDuration}초) 동안 모든 무기 기본 공격속도 +{base}%(강화 +{enhanced}%) 증가."
+      },
+      "entries": [
+        {
+          "color": "yellow",
+          "trigger": "basic_attack",
+          "effect": "movement_speed_increase",
+          "name": "공격 가속"
+        },
+        {
+          "color": "yellow",
+          "trigger": "skill_attack",
+          "effect": "movement_speed_increase",
+          "name": "스킬 가속"
+        },
+        {
+          "color": "yellow",
+          "trigger": "weapon_switch",
+          "effect": "movement_speed_increase",
+          "name": "교체 가속"
+        },
+        {
+          "color": "yellow",
+          "trigger": "dash_use",
+          "effect": "movement_speed_increase",
+          "name": "대쉬 가속"
+        },
+        {
+          "color": "yellow",
+          "trigger": "status_condition",
+          "effect": "movement_speed_increase",
+          "name": "제압 가속"
+        },
+        {
+          "color": "green",
+          "trigger": "basic_attack",
+          "effect": "shield",
+          "name": "공격 방어막"
+        },
+        {
+          "color": "green",
+          "trigger": "skill_attack",
+          "effect": "shield",
+          "name": "스킬 방어막"
+        },
+        {
+          "color": "green",
+          "trigger": "weapon_switch",
+          "effect": "shield",
+          "name": "교체 방어막"
+        },
+        {
+          "color": "green",
+          "trigger": "dash_use",
+          "effect": "shield",
+          "name": "대쉬 방어막"
+        },
+        {
+          "color": "green",
+          "trigger": "status_condition",
+          "effect": "shield",
+          "name": "제압 방어막"
+        },
+        {
+          "color": "green",
+          "trigger": "basic_attack",
+          "effect": "heal",
+          "name": "공격 회복"
+        },
+        {
+          "color": "green",
+          "trigger": "skill_attack",
+          "effect": "heal",
+          "name": "스킬 회복"
+        },
+        {
+          "color": "green",
+          "trigger": "weapon_switch",
+          "effect": "heal",
+          "name": "교체 회복"
+        },
+        {
+          "color": "green",
+          "trigger": "dash_use",
+          "effect": "heal",
+          "name": "대쉬 회복"
+        },
+        {
+          "color": "green",
+          "trigger": "status_condition",
+          "effect": "heal",
+          "name": "제압 회복"
+        },
+        {
+          "color": "purple",
+          "trigger": "basic_attack",
+          "effect": "stun",
+          "name": "공격 기절"
+        },
+        {
+          "color": "purple",
+          "trigger": "skill_attack",
+          "effect": "stun",
+          "name": "스킬 기절"
+        },
+        {
+          "color": "purple",
+          "trigger": "weapon_switch",
+          "effect": "stun",
+          "name": "교체 기절"
+        },
+        {
+          "color": "purple",
+          "trigger": "dash_use",
+          "effect": "stun",
+          "name": "대쉬 기절"
+        },
+        {
+          "color": "purple",
+          "trigger": "basic_attack",
+          "effect": "root",
+          "name": "공격 속박"
+        },
+        {
+          "color": "purple",
+          "trigger": "skill_attack",
+          "effect": "root",
+          "name": "스킬 속박"
+        },
+        {
+          "color": "purple",
+          "trigger": "weapon_switch",
+          "effect": "root",
+          "name": "교체 속박"
+        },
+        {
+          "color": "purple",
+          "trigger": "dash_use",
+          "effect": "root",
+          "name": "대쉬 속박"
+        },
+        {
+          "color": "purple",
+          "trigger": "basic_attack",
+          "effect": "slow",
+          "name": "공격 슬로우"
+        },
+        {
+          "color": "purple",
+          "trigger": "skill_attack",
+          "effect": "slow",
+          "name": "스킬 슬로우"
+        },
+        {
+          "color": "purple",
+          "trigger": "weapon_switch",
+          "effect": "slow",
+          "name": "교체 슬로우"
+        },
+        {
+          "color": "purple",
+          "trigger": "dash_use",
+          "effect": "slow",
+          "name": "대쉬 슬로우"
+        },
+        {
+          "color": "red",
+          "trigger": "basic_attack",
+          "effect": "basic_attack_damage_increase",
+          "condition": "stun",
+          "name": "기절 사냥"
+        },
+        {
+          "color": "red",
+          "trigger": "basic_attack",
+          "effect": "basic_attack_damage_increase",
+          "condition": "root",
+          "name": "속박 사냥"
+        },
+        {
+          "color": "red",
+          "trigger": "basic_attack",
+          "effect": "basic_attack_damage_increase",
+          "condition": "slow",
+          "name": "슬로우 사냥"
+        },
+        {
+          "color": "red",
+          "trigger": "basic_attack",
+          "effect": "basic_attack_speed_increase",
+          "condition": "stun",
+          "name": "기절 연격"
+        },
+        {
+          "color": "red",
+          "trigger": "basic_attack",
+          "effect": "basic_attack_speed_increase",
+          "condition": "root",
+          "name": "속박 연격"
+        },
+        {
+          "color": "red",
+          "trigger": "basic_attack",
+          "effect": "basic_attack_speed_increase",
+          "condition": "slow",
+          "name": "슬로우 연격"
+        },
+        {
+          "color": "blue",
+          "trigger": "skill_attack",
+          "effect": "cooldown_reduction",
+          "condition": "stun",
+          "name": "기절 쿨감"
+        },
+        {
+          "color": "blue",
+          "trigger": "skill_attack",
+          "effect": "cooldown_reduction",
+          "condition": "root",
+          "name": "속박 쿨감"
+        },
+        {
+          "color": "blue",
+          "trigger": "skill_attack",
+          "effect": "cooldown_reduction",
+          "condition": "slow",
+          "name": "슬로우 쿨감"
+        },
+        {
+          "color": "blue",
+          "trigger": "skill_attack",
+          "effect": "skill_attack_damage_increase",
+          "condition": "stun",
+          "name": "기절 포화"
+        },
+        {
+          "color": "blue",
+          "trigger": "skill_attack",
+          "effect": "skill_attack_damage_increase",
+          "condition": "root",
+          "name": "속박 포화"
+        },
+        {
+          "color": "blue",
+          "trigger": "skill_attack",
+          "effect": "skill_attack_damage_increase",
+          "condition": "slow",
+          "name": "슬로우 포화"
+        }
+      ],
+      "iconsByColor": {
+        "yellow": "LootPickups/ink-flat-yellow",
+        "green": "LootPickups/ink-flat-green",
+        "purple": "LootPickups/ink-flat-purple",
+        "red": "LootPickups/ink-flat-red",
+        "blue": "LootPickups/ink-flat-blue"
+      }
+    },
+    "applicationUses": {
+      "perAcquisition": 10,
+      "sources": "all_including_shop_event_tutorial",
+      "pooling": "add_per_kind_without_cap",
+      "costPerSlot": 1,
+      "draft": "reserve_across_all_unconfirmed_weapons",
+      "onDraftRemovalOrDiscard": "release_reservation",
+      "onConfirmation": "consume_reserved_uses",
+      "onConfirmedDiscardOrBreak": "no_refund",
+      "onZero": "hide_from_application_list_keep_existing_mounts",
+      "scope": "run_carry_across_stages_reset_on_new_run"
+    },
+    "duplicateInvestment": {
+      "scope": "same_source_weapon_same_ink",
+      "baseContribution": 1,
+      "enhancedContribution": 1.5,
+      "redBaseDurationSeconds": 0.75,
+      "controlBaseWindowSeconds": 1.7,
+      "controlEnhancedWindowSeconds": 2.5,
+      "controlFourCopiesWindowSeconds": 6,
+      "controlCooldownAtOne": 3,
+      "controlCooldownFloor": 1,
+      "slowTwoCopiesWindowSeconds": 6,
+      "slowCooldownAtOne": 3,
+      "slowCooldownFloor": 1,
+      "slowRateAtOne": 0.4,
+      "slowRateAtTwo": 0.8,
+      "slowRateCap": 0.9,
+      "targetDurationCapSeconds": 3,
+      "timingStatus": "animation_derived_first_playtest_values",
+      "timingBasis": "sword next-weapon impacts ~0.33/0.66s after source hit; hammer first-to-third hit 1.55s at base speed; R=0.75s T=1.7s",
+      "windowRefresh": false,
+      "cooldownStarts": "window_expiry",
+      "redRefresh": "full_duration_each_qualifying_hit",
+      "sourceDestruction": "retain_started_attacks_and_original_state"
+    },
+    "effectStacking": {
+      "maximumContributingCopiesPerEffect": 6,
+      "countUnit": "actual_equipped_copy_enhanced_counts_as_one",
+      "playerBuffEffects": [
+        "basic_attack_damage_increase",
+        "basic_attack_speed_increase",
+        "movement_speed_increase"
+      ],
+      "playerBuffScope": "all_unexpired_sources_including_stored_and_destroyed_weapons",
+      "selection": "highest_amount_then_latest_proc_order",
+      "overflow": "retain_original_expiry_and_cooldown_without_contributing",
+      "onSelectedExpiry": "reselect_from_still_unexpired_sources_without_refresh",
+      "sourceScopedEffects": [
+        "skill_attack_damage_increase",
+        "cooldown_reduction",
+        "stun",
+        "root",
+        "slow"
+      ],
+      "sourceScopedRule": "existing_source_weapon_or_skill_scope_maximum_six_slots_no_cross_weapon_transfer",
+      "excludedEffects": [
+        "heal",
+        "shield"
+      ],
+      "existingNumericCapsAndEffectiveCopyDurations": "unchanged"
+    }
+  },
+  "activation": {
+    "method": "confirm_palette_in_inventory",
+    "usableWithoutInk": true,
+    "goldCost": 0,
+    "draftPersistsWhenClosed": true,
+    "equipChoice": [
+      "slot_1",
+      "slot_2",
+      "keep_in_bag"
+    ],
+    "requiresConfirmationBeforeUse": true,
+    "confirmationLocksAllSlots": true
+  },
+  "durability": {
+    "maximumFormula": "base + perSlot * paletteSlots",
+    "maximumBase": 6000,
+    "maximumPerSlot": 4500,
+    "maximumStatus": "user_decision_2026-11-16_stage1_playtest_x0.6",
+    "maximumBySlots": {
+      "1": 10500,
+      "2": 15000,
+      "3": 19500,
+      "4": 24000,
+      "5": 28500,
+      "6": 33000
+    },
+    "maximumScope": "same_slot_count_same_maximum_all_stages_and_sources",
+    "initial": "full",
+    "accounting": "actual_hp_removed_from_any_damageable_target",
+    "owner": "source_weapon_including_delayed_damage_while_stored",
+    "breakThreshold": "cumulative_damage_at_least_maximum",
+    "finalHit": "resolve_all_simultaneous_targets_then_break",
+    "onBreak": "cancel_uncreated_hits_keep_spawned_effects",
+    "fullStageTargetWeaponsConsumed": 2,
+    "fullStageTargetStatus": "remeasure_after_slot_scaled_durability",
+    "balanceRoute": "all_optional_rooms_elite_and_boss",
+    "damageAccounting": {
+      "basis": "actual_hp_removed_from_any_damageable_target",
+      "includeOverkill": false,
+      "depletingHitHandling": {
+        "applyFullHitDamage": true,
+        "remainingDurability": "clamp_to_zero",
+        "destroyTiming": "after_depleting_hit_damage",
+        "newAttacksAfterDestruction": false,
+        "multiTargetHitOrdering": "apply_all_targets_of_same_hit_before_destruction"
+      },
+      "alreadyCreatedAttackHandling": {
+        "independentProjectilesAndDeployables": "retain",
+        "weaponAttachedRemainingHits": "terminate",
+        "afterSourceDestroyedChargeOtherWeapons": false,
+        "postDestructionInkProcs": {
+          "allowed": true,
+          "rules": "original_ink_rules",
+          "retainOriginalCooldownState": true,
+          "retainAttackProcHistory": true,
+          "resetCooldownOrProcLimit": false
+        }
+      }
+    }
+  },
+  "rewards": {
+    "unit": "reward_gauge_per_stage",
+    "gauge": {
+      "status": "first_playtest_value",
+      "perReward": 100,
+      "openingRequirements": {
+        "status": "user_decision_2026-11-13",
+        "countScope": "run_cumulative_filled_rewards",
+        "values": [
+          15,
+          48
+        ],
+        "eachFilledAnew": true,
+        "thenFollows": "blocks.requirement",
+        "note": "the run's 1st reward needs 15 and the 2nd 48; later rewards use the per-stage blocks (100 for the stage's 3rd-6th, then +50 every 6)"
+      },
+      "targetNormalKillsPerReward": {
+        "1": [
+          17,
+          23
+        ],
+        "2": "follows_x1_5_gain_about_13"
+      },
+      "thresholdRandomization": "none_variation_only_from_monster_mix",
+      "tierBy": "monster_max_hp",
+      "stageTiers": {
+        "1": {
+          "small": {
+            "maxHpBelow": 225,
+            "gain": 4
+          },
+          "medium": {
+            "maxHpFrom": 225,
+            "maxHpBelow": 390,
+            "gain": 5
+          },
+          "large": {
+            "maxHpFrom": 390,
+            "gain": 8
+          }
+        },
+        "2": {
+          "small": {
+            "maxHpBelow": 225,
+            "gain": 6
+          },
+          "medium": {
+            "maxHpFrom": 225,
+            "maxHpBelow": 390,
+            "gain": 7.5
+          },
+          "large": {
+            "maxHpFrom": 390,
+            "gain": 12
+          }
+        },
+        "3": {
+          "small": {
+            "maxHpBelow": 225,
+            "gain": 8
+          },
+          "medium": {
+            "maxHpFrom": 225,
+            "maxHpBelow": 390,
+            "gain": 10
+          },
+          "large": {
+            "maxHpFrom": 390,
+            "gain": 16
+          }
+        }
+      },
+      "stageScaling": {
+        "basis": "gain_multiplier_vs_stage1_same_hp_tiers",
+        "rule": "multiplier = 1 + 0.5 * (stage - 1)",
+        "byStage": {
+          "1": 1.0,
+          "2": 1.5,
+          "3": 2.0
+        },
+        "requirementUnaffected": true,
+        "eliteAlwaysOneFullReward": true
+      },
+      "elite": "one_full_reward",
+      "boss": 0,
+      "countSources": [
+        "normal",
+        "elite",
+        "event_room_monsters"
+      ],
+      "simultaneousKills": "sum_gauge_then_bank_every_filled_reward_carry_remainder",
+      "baseRewardsPerStage": 6,
+      "blocks": {
+        "status": "first_playtest_value",
+        "rewardsPerBlock": 6,
+        "requirement": {
+          "countScope": "per_stage",
+          "byBlock": [
+            100,
+            150,
+            200
+          ],
+          "increasePerBlock": 50,
+          "resetsEachStage": true,
+          "unfilledGaugeAtStageExit": "carry_to_next_stage_first_reward"
+        },
+        "quality": {
+          "countScope": "run_cumulative_normal_rewards_in_open_order",
+          "carriesAcrossStages": true,
+          "weaponSlotsBy": "stage_offer_index_not_tier",
+          "weaponSlotsNote": "user_decision_2026-11-12: offers 1-6 of a stage follow blueprints.normalRewardSlotCountsByOffer, offer 7 and later use the stage maximum; reward tiers change ink rarity only",
+          "inkRarityByTier": "rare_and_epic_weight_rises_each_tier",
+          "inkRarityTierWeights": null,
+          "inkQualityNote": "all_current_inks_normal_so_ink_quality_has_no_effect_until_rare_or_epic_exist"
+        }
+      }
+    },
+    "banking": {
+      "bankFilledRewards": true,
+      "bankLimit": "none",
+      "openAnytime": [
+        "inventory",
+        "key_G"
+      ],
+      "openPausesGame": true,
+      "openOneAtATime": true,
+      "rollCandidatesAt": "open",
+      "offerOrderCountsBy": "open_order",
+      "unopenedAtStageExit": "choose_all_before_exit_no_carry"
+    },
+    "eventRooms": {
+      "rooms": [
+        "seal_challenge",
+        "locked_chest",
+        "ink_spirit_rescue",
+        "ink_sapling_survival",
+        "risk_chest",
+        "trap_collection"
+      ],
+      "rewardTiming": "on_clear_must_choose",
+      "canBank": false,
+      "monstersFillGauge": true,
+      "spec": "docs/design/world/event-rooms.md",
+      "implemented": [
+        "seal_challenge",
+        "locked_chest"
+      ],
+      "rewardOncePerRoom": true
+    },
+    "display": "gauge_bar_and_banked_count_badge_no_numbers",
+    "normalChoicesPerStage": 6,
+    "minimumPlacedNormalMonstersPerStage": 140,
+    "sixthRewardBeforeFullClear": true,
+    "choicesPerOffer": 3,
+    "openingOffers": {
+      "status": "user_decision_2026-11-13",
+      "countScope": "run_cumulative_normal_rewards_in_open_order",
+      "first": "ink_three_then_weapon_three",
+      "second": "ink_three_then_weapon_three",
+      "weaponSlotsBy": "stage_offer_index"
+    },
+    "mixedOffersFrom": {
+      "status": "user_decision_2026-11-13",
+      "runReward": 3,
+      "minimumUnregisteredInk": 1,
+      "minimumWeapons": 1,
+      "thirdPlace": "weapon_50_ink_50",
+      "noInkLeft": "distinct_weapon",
+      "weaponGuaranteeOverrides": true
+    },
+    "doubleOffers": {
+      "status": "user_decision_2026-11-13",
+      "kind": "ink_three_then_weapon_three",
+      "fromRunReward": 6,
+      "everyRunRewards": 4,
+      "countScope": "run_cumulative_normal_rewards_in_open_order",
+      "fewInksLeft": "fill_with_distinct_weapons"
+    },
+    "selected": 1,
+    "canSkip": false,
+    "pauseGameWhenOpened": true,
+    "normalMinimumWeaponsAcquired": 3,
+    "normalMinimumInkOpportunitiesIfAvailable": 3,
+    "firstOfferPerStage": {
+      "status": "user_decision_2026-11-12",
+      "minimumWeapons": 1,
+      "appliesTo": "every_stage",
+      "noInkLeft": "distinct_weapon",
+      "countsTowardMinimumWeapons": true,
+      "minimumInk": 1
+    },
+    "countSources": [
+      "normal_reward_selection"
+    ],
+    "forcedWeaponsWhen": "remaining_offers_including_current_equals_missing_weapons",
+    "afterThreeWeapons": "offer_both_types_if_ink_catalog_not_empty",
+    "otherwise": "roll_each_candidate_type_independently",
+    "candidateTypeWeights": {
+      "status": "first_playtest_value",
+      "sketch_weapon": 50,
+      "ink": 50
+    },
+    "uniqueInkIdentitiesPerOffer": true,
+    "missingInkFallback": "distinct_weapon",
+    "duplicateWeaponKey": [
+      "form",
+      "skill",
+      "counts_by_slot_color_including_neutral"
+    ],
+    "bossChoicesPerStage": 1,
+    "bossReward": "three_weapons_with_stage_maximum_slot_count",
+    "shop": {
+      "currency": "gold",
+      "goods": [
+        "sketch_weapon",
+        "ink"
+      ],
+      "weaponPool": "current_stage_normal",
+      "stock": "fixed_once_bought_sold_out",
+      "inkRegisteredElsewhere": "keep_existing_stock",
+      "stockPerShop": {
+        "sketch_weapon": 3,
+        "ink": 3
+      },
+      "prices": {
+        "weaponFormula": "base + perSlot * paletteSlots + perEnhancedSlot * enhancedSlots",
+        "status": "stage1_user_decision_2026-11-12_stage2_income_ratio_1.75",
+        "reason": "slot_scaled_durability_lowers_prices_user_decision_2026-11-12",
+        "byStage": {
+          "1": {
+            "base": 200,
+            "perSlot": 100,
+            "perEnhancedSlot": 50,
+            "ink": 220
+          },
+          "2": {
+            "base": 350,
+            "perSlot": 175,
+            "perEnhancedSlot": 90,
+            "ink": 400
+          },
+          "3": null
+        }
+      },
+      "duplicateInkIdentitiesAllowed": true
+    },
+    "inkCandidatePolicy": {
+      "firstNormalInkOffer": "standalone_effects_only",
+      "laterInkOffers": "at_least_one_usable_if_eligible_pool_exists",
+      "usability": "standalone_or_condition_source_with_positive_remaining_bag_uses",
+      "fallback": "existing_weapon_fallback_when_no_eligible_inks",
+      "shopGuarantee": false
+    }
+  },
+  "inkApplication": {
+    "source": "run_ink_catalog",
+    "method": "direct_to_weapon_palette",
+    "consumesCatalogEntry": false,
+    "repeatUseAcrossWeapons": true,
+    "duplicateInkOnSameWeapon": true,
+    "capacity": "one_ink_per_slot",
+    "goldCost": 0,
+    "filledSlotsFixed": true,
+    "emptySlotsCanBeFilledLater": false,
+    "laterInsertionLocksImmediately": false,
+    "numericValueSelection": "matching_color_enhanced_otherwise_base",
+    "duplicateEffectRules": {
+      "cooldownSharing": "independent_per_equipped_copy",
+      "sameInkDamageIncreaseAndCooldownReduction": "additive_per_equipped_copy",
+      "reprocCreatesAdditionalCopy": false,
+      "existingStatusAndCapRulesStillApply": true,
+      "readyCopiesProc": "all_ready_copies",
+      "perCopyPerAttackExecution": 1,
+      "exceptions": {
+        "red": "duration_by_effective_copies_no_cooldown",
+        "purple": "shared_window_and_cooldown_by_effective_copies"
+      }
+    },
+    "allSlotsFixedOnConfirmation": true,
+    "postConfirmationEditingAllowed": false,
+    "consumesApplicationUses": true
+  },
+  "saveTransition": {
+    "policy": "delete_legacy_play_data_and_start_with_new_rules",
+    "scope": [
+      "legacy_run_state",
+      "legacy_permanent_profile",
+      "legacy_unlock_history"
+    ],
+    "preserveLegacyUnlocks": false,
+    "convertLegacyItemsOrUnlocks": false,
+    "appliesWhen": "new_equipment_system_runtime_transition",
+    "runtimeImplemented": true
+  },
+  "combatBalanceTrial": {
+    "status": "first_playtest_values_not_measured_clear_times",
+    "reference": "base_sword_basic_65_no_permanent_growth_no_enhanced_slots",
+    "stage1": {
+      "smallHp": [
+        220,
+        230
+      ],
+      "largeHp": 390,
+      "eliteHp": 3000,
+      "focusedBuild": "one_status_three_matching_red",
+      "targetUnbuffedHits": [
+        4,
+        6
+      ],
+      "targetBuffedHits": [
+        2,
+        4
+      ]
+    },
+    "stage2": {
+      "smallHp": 270,
+      "largeHp": 450,
+      "eliteHp": 4500,
+      "focusedBuild": "one_status_four_matching_red"
+    },
+    "bossCalibration": {
+      "basicAttackDutyFraction": 0.6,
+      "firstBossHp": 18000,
+      "firstBossFocusedTargetSeconds": [
+        30,
+        60
+      ],
+      "firstBossMixedTargetSeconds": [
+        60,
+        120
+      ],
+      "laterBossFocusedTargetSeconds": [
+        60,
+        120
+      ],
+      "includesDodgeAndPatternWaits": true,
+      "minimumDurationEnforced": false,
+      "manualValidationPending": true,
+      "stage2TotalPhaseHpRange": [
+        47000,
+        59000
+      ],
+      "stage2MachineAllowsInkStatus": false
+    },
+    "gaugePreservation": "size thresholds 225 and 390 preserve 4/5/8 contributions; gains and stage multiplier unchanged",
+    "damageScale": {
+      "factor": 5,
+      "purpose": "increase_damage_number_visibility_preserving_relative_combat_balance",
+      "scope": "all_player_weapon_basics_and_skills_enemy_hp_and_damageable_boss_patterns",
+      "linked": "durability_hp_tiers_boss_hp_thresholds_and_boss_received_gimmick_damage",
+      "playerHealthAndEnemyAttackDamage": "unchanged"
+    },
+    "keyCarrierHp": 1000
+  }
+}

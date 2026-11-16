@@ -1,0 +1,463 @@
+{
+  "status": "user-example-flat-edge-cleanup",
+  "frame_count": 24,
+  "canvas": [
+    240,
+    135
+  ],
+  "pivot": [
+    120,
+    120
+  ],
+  "durations_ms": {
+    "idle": 360,
+    "prepare": 650,
+    "swing": 150,
+    "impact": 150,
+    "recover": 180,
+    "turn": 300
+  },
+  "teleport_ms": 120,
+  "arrival_hold_ms": 100,
+  "rest_ms": 2000,
+  "frames": [
+    {
+      "source": 1,
+      "phase": "idle",
+      "start_ms": 0.0,
+      "hold_ms": 180.0,
+      "index": 1,
+      "file": "frames/a3_01_idle_src001.png",
+      "sheet_rect_px": [
+        0,
+        0,
+        240,
+        135
+      ]
+    },
+    {
+      "source": 10,
+      "phase": "idle",
+      "start_ms": 180.0,
+      "hold_ms": 180.0,
+      "index": 2,
+      "file": "frames/a3_02_idle_src010.png",
+      "sheet_rect_px": [
+        240,
+        0,
+        240,
+        135
+      ]
+    },
+    {
+      "source": 17,
+      "phase": "prepare",
+      "start_ms": 0.0,
+      "hold_ms": 65.0,
+      "index": 3,
+      "file": "frames/a3_03_prepare_src017.png",
+      "sheet_rect_px": [
+        480,
+        0,
+        240,
+        135
+      ]
+    },
+    {
+      "source": 19,
+      "phase": "prepare",
+      "start_ms": 65.0,
+      "hold_ms": 65.0,
+      "index": 4,
+      "file": "frames/a3_04_prepare_src019.png",
+      "sheet_rect_px": [
+        720,
+        0,
+        240,
+        135
+      ]
+    },
+    {
+      "source": 21,
+      "phase": "prepare",
+      "start_ms": 130.0,
+      "hold_ms": 65.0,
+      "index": 5,
+      "file": "frames/a3_05_prepare_src021.png",
+      "sheet_rect_px": [
+        960,
+        0,
+        240,
+        135
+      ]
+    },
+    {
+      "source": 25,
+      "phase": "prepare",
+      "start_ms": 195.0,
+      "hold_ms": 65.0,
+      "index": 6,
+      "file": "frames/a3_06_prepare_src025.png",
+      "sheet_rect_px": [
+        1200,
+        0,
+        240,
+        135
+      ]
+    },
+    {
+      "source": 29,
+      "phase": "prepare",
+      "start_ms": 260.0,
+      "hold_ms": 130.0,
+      "index": 7,
+      "file": "frames/a3_07_prepare_src029.png",
+      "sheet_rect_px": [
+        0,
+        135,
+        240,
+        135
+      ]
+    },
+    {
+      "source": 37,
+      "phase": "prepare",
+      "start_ms": 390.0,
+      "hold_ms": 130.0,
+      "index": 8,
+      "file": "frames/a3_08_prepare_src037.png",
+      "sheet_rect_px": [
+        240,
+        135,
+        240,
+        135
+      ]
+    },
+    {
+      "source": 43,
+      "phase": "prepare",
+      "start_ms": 520.0,
+      "hold_ms": 130.0,
+      "index": 9,
+      "file": "frames/a3_09_prepare_src043.png",
+      "sheet_rect_px": [
+        480,
+        135,
+        240,
+        135
+      ]
+    },
+    {
+      "source": 44,
+      "phase": "swing",
+      "start_ms": 0.0,
+      "hold_ms": 16.0,
+      "index": 10,
+      "file": "frames/a3_10_swing_src044.png",
+      "sheet_rect_px": [
+        720,
+        135,
+        240,
+        135
+      ]
+    },
+    {
+      "source": 46,
+      "phase": "swing",
+      "start_ms": 16.0,
+      "hold_ms": 18.2857,
+      "index": 11,
+      "file": "frames/a3_11_swing_src046.png",
+      "sheet_rect_px": [
+        960,
+        135,
+        240,
+        135
+      ]
+    },
+    {
+      "source": 50,
+      "phase": "swing",
+      "start_ms": 34.2857,
+      "hold_ms": 25.7143,
+      "index": 12,
+      "file": "frames/a3_12_swing_src050.png",
+      "sheet_rect_px": [
+        1200,
+        135,
+        240,
+        135
+      ]
+    },
+    {
+      "source": 53,
+      "phase": "swing",
+      "start_ms": 60.0,
+      "hold_ms": 30.0,
+      "index": 13,
+      "file": "frames/a3_13_swing_src053.png",
+      "sheet_rect_px": [
+        0,
+        270,
+        240,
+        135
+      ]
+    },
+    {
+      "source": 56,
+      "phase": "swing",
+      "start_ms": 90.0,
+      "hold_ms": 20.0,
+      "index": 14,
+      "file": "frames/a3_14_swing_src056.png",
+      "sheet_rect_px": [
+        240,
+        270,
+        240,
+        135
+      ]
+    },
+    {
+      "source": 58,
+      "phase": "swing",
+      "start_ms": 110.0,
+      "hold_ms": 40.0,
+      "index": 15,
+      "file": "frames/a3_15_swing_src058.png",
+      "sheet_rect_px": [
+        480,
+        270,
+        240,
+        135
+      ]
+    },
+    {
+      "source": 60,
+      "phase": "impact",
+      "start_ms": 0.0,
+      "hold_ms": 90.0,
+      "index": 16,
+      "file": "frames/a3_16_impact_src060.png",
+      "sheet_rect_px": [
+        720,
+        270,
+        240,
+        135
+      ]
+    },
+    {
+      "source": 73,
+      "phase": "impact",
+      "start_ms": 90.0,
+      "hold_ms": 60.0,
+      "index": 17,
+      "file": "frames/a3_17_impact_src073.png",
+      "sheet_rect_px": [
+        960,
+        270,
+        240,
+        135
+      ]
+    },
+    {
+      "source": 77,
+      "phase": "recover",
+      "start_ms": 0.0,
+      "hold_ms": 40.0,
+      "index": 18,
+      "file": "frames/a3_18_recover_src077.png",
+      "sheet_rect_px": [
+        1200,
+        270,
+        240,
+        135
+      ]
+    },
+    {
+      "source": 79,
+      "phase": "recover",
+      "start_ms": 40.0,
+      "hold_ms": 40.0,
+      "index": 19,
+      "file": "frames/a3_19_recover_src079.png",
+      "sheet_rect_px": [
+        0,
+        405,
+        240,
+        135
+      ]
+    },
+    {
+      "source": 81,
+      "phase": "recover",
+      "start_ms": 80.0,
+      "hold_ms": 100.0,
+      "index": 20,
+      "file": "frames/a3_20_recover_src081.png",
+      "sheet_rect_px": [
+        240,
+        405,
+        240,
+        135
+      ]
+    },
+    {
+      "source": 82,
+      "phase": "turn",
+      "start_ms": 0,
+      "hold_ms": 70,
+      "index": 21,
+      "file": "frames/a3_21_turn_src082.png",
+      "sheet_rect_px": [
+        480,
+        405,
+        240,
+        135
+      ]
+    },
+    {
+      "source": 84,
+      "phase": "turn",
+      "start_ms": 70,
+      "hold_ms": 90,
+      "index": 22,
+      "file": "frames/a3_22_turn_src084.png",
+      "sheet_rect_px": [
+        720,
+        405,
+        240,
+        135
+      ]
+    },
+    {
+      "source": 87,
+      "phase": "turn",
+      "start_ms": 160,
+      "hold_ms": 70,
+      "index": 23,
+      "file": "frames/a3_23_turn_src087.png",
+      "sheet_rect_px": [
+        960,
+        405,
+        240,
+        135
+      ]
+    },
+    {
+      "source": 90,
+      "phase": "turn",
+      "start_ms": 230,
+      "hold_ms": 70,
+      "index": 24,
+      "file": "frames/a3_24_turn_src090.png",
+      "sheet_rect_px": [
+        1200,
+        405,
+        240,
+        135
+      ]
+    }
+  ],
+  "uniform_art_scale": 1.2,
+  "pixel_palette_colors": 11,
+  "alpha": "binary 0 or 255",
+  "sheet_grid": [
+    6,
+    4
+  ],
+  "reference_display_cell": [
+    480,
+    270
+  ],
+  "ppu_status": "not finalized",
+  "notes": [
+    "Frame 1 is exactly the user JSON retouch.",
+    "All alpha masks and 24 poses, dimensions, pivots and timings preserved.",
+    "Only existing original 11 master colours used.",
+    "Thin colour borders filled with neighbouring solid interior colours."
+  ],
+  "approved_on": "2026-11-02",
+  "approved_variant": "medium",
+  "approval": "사용자: 중간 픽셀 하자 고고",
+  "timing_status": "preview-reference",
+  "combat_implementation": "not integrated",
+  "sprite_sheet": "sheets/all-24.png",
+  "pivot_coordinate_system": "pixels from top-left",
+  "pivot_normalized_unity": [
+    0.5,
+    0.11111111111111116
+  ],
+  "motion_sheets": {
+    "idle": {
+      "file": "sheets/idle.png",
+      "grid": [
+        2,
+        1
+      ],
+      "frame_indices": [
+        1,
+        2
+      ]
+    },
+    "prepare": {
+      "file": "sheets/prepare.png",
+      "grid": [
+        7,
+        1
+      ],
+      "frame_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "punch": {
+      "file": "sheets/punch.png",
+      "grid": [
+        8,
+        1
+      ],
+      "frame_indices": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    "recover": {
+      "file": "sheets/recover.png",
+      "grid": [
+        3,
+        1
+      ],
+      "frame_indices": [
+        18,
+        19,
+        20
+      ]
+    },
+    "turn": {
+      "file": "sheets/turn.png",
+      "grid": [
+        4,
+        1
+      ],
+      "frame_indices": [
+        21,
+        22,
+        23,
+        24
+      ]
+    }
+  },
+  "source_version": "C:\\Users\\SSAFY\\Desktop\\자율 프로젝트\\02_에셋\\몬스터\\2챕터_A3_엘리트\\04_확정본\\순간이동펀치_24프레임_중간픽셀_마스터11색_정리본_외곽1단계다운",
+  "cleanup": "Thin colour rims extended from solid interior colour; user frame 1 preserved exactly"
+}

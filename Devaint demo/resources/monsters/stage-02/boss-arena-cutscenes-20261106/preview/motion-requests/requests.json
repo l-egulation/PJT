@@ -1,0 +1,321 @@
+{
+  "format": "stage2-cutscene-motion-requests-v1",
+  "status": "requested-not-generated-or-integrated",
+  "tool": "Aether AI: attach the reference / start / end images listed per motion and paste the English prompt.",
+  "referenceImage": {
+    "note": "Start, end and reference PNGs are white-background enlargements of approved runtime frames (same framing as the boss-phase2-cutscene handoff): crop [32,64,352,244] of the 384x256 frame, x4 nearest-neighbour, 1280x720, ground at y 672.",
+    "sourceCanvas": [
+      384,
+      256
+    ],
+    "sourcePivot": [
+      192,
+      232
+    ],
+    "crop": [
+      32,
+      64,
+      352,
+      244
+    ],
+    "enlargement": 4,
+    "canvas": [
+      1280,
+      720
+    ],
+    "groundY": 672
+  },
+  "sourceRoot": "monsters/stage-02/boss-motion-size-review-20261106/runtime/",
+  "common": {
+    "rose": "Preserve the exact Rose character: crimson hood and long crimson coat, pale rigid face MASK with a narrow eye opening (no mouth, no facial expressions), dark trousers, leg wraps, brown boots, and her wooden crossbow held in both hands. Keep the palette, proportions, character size, head size and shoulder width identical to the references.",
+    "blue": "Preserve the exact Blue character: blue hood and long blue coat, pale rigid face MASK with a narrow eye opening (no mouth, no facial expressions), brown trousers, bracers, leg wraps and boots. Keep both hands empty. Keep the palette, proportions, character size, head size and shoulder width identical to the references.",
+    "frame": "Fixed camera, identical framing and ground level, pure white background. Crisp outline-free pixel-art shapes and limited shading matching the references. No camera movement, zoom, scaling, body stretching, extra limbs, motion blur, text, speech bubbles, magic effects, particles or floor shadow. Return an animation, not a storyboard or sprite sheet."
+  },
+  "motions": [
+    {
+      "id": "B1-blue-calm-idle",
+      "priority": 1,
+      "character": "blue",
+      "name": "블루 · 무심한 대기",
+      "scenes": [
+        {
+          "cutscene": "입장",
+          "page": "../intro/?at=10.1",
+          "time": "2.95~16.4초",
+          "lines": [
+            "블루: ...",
+            "로즈의 허세·투정 내내 옆에 서 있음"
+          ]
+        },
+        {
+          "cutscene": "1→2 전환",
+          "page": "../phase-shift/?at=5.0",
+          "time": "2.1~14.4초",
+          "lines": [
+            "블루: ...시끄러",
+            "블루: ..."
+          ]
+        }
+      ],
+      "action": "거의 움직이지 않는 숨쉬기. 어깨와 두건이 1~2px 오르내리고, 무게 중심이 아주 조금 옮겨지는 정도. 로즈를 거들떠보지 않는 무심함. 예전의 몸 낮추기·반걸음 물러나기·움찔하기는 쓰지 않습니다.",
+      "length": "반복 2초, 4~6장",
+      "loop": true,
+      "replaces": "현재 1장짜리 blue-idle + 코드의 위축 동작(몸 2px 낮춤, 반걸음 뒤로, 시전 직전 움찔)",
+      "start": "blue-idle/00.png",
+      "end": "blue-idle/00.png",
+      "prompt": "Animate the exact same Blue character as a calm, indifferent idle loop for a 2D side-scrolling game cutscene.\n\nSTART and END: the same standing pose as the references; the clip must loop seamlessly back to it.\n\nACTION: almost motionless, slow breathing. His shoulders and hood rise and settle by one or two pixels and his weight shifts very slightly. He looks bored and detached, not nervous: no flinching, no shrinking, no stepping back, no looking around. His boots stay planted in exactly the same positions and both arms hang relaxed.\n\nAbout 2 seconds per cycle, seamless loop."
+    },
+    {
+      "id": "R1-rose-smug-laugh",
+      "priority": 1,
+      "character": "rose",
+      "name": "로즈 · 거만한 웃음",
+      "scenes": [
+        {
+          "cutscene": "입장",
+          "page": "../intro/?at=3.6",
+          "time": "3.6~5.0초",
+          "lines": [
+            "로즈: 크크큭..."
+          ]
+        }
+      ],
+      "action": "석궁을 든 채 어깨를 들썩이며 낮게 웃음. 고개를 살짝 뒤로 젖혔다 내리는 허세. 발은 그대로.",
+      "length": "반복 0.6초, 4~6장 (대사 동안 2~3번 반복)",
+      "loop": true,
+      "replaces": "현재 1장짜리 rose-idle",
+      "start": "rose-idle/00.png",
+      "end": "rose-idle/00.png",
+      "prompt": "Animate the exact same Rose character doing a smug, theatrical low laugh for a 2D side-scrolling game cutscene.\n\nSTART and END: the standing pose of the references, crossbow held in both hands; the clip must loop seamlessly back to it.\n\nACTION: her shoulders bob up and down in short rhythmic chuckles while her head tilts slightly back and returns, like a villain enjoying her own entrance. The crossbow stays in her hands and moves only with her shoulders. Her boots stay planted.\n\nAbout 0.6 seconds per cycle, seamless loop."
+    },
+    {
+      "id": "R2-rose-boast-aim",
+      "priority": 1,
+      "character": "rose",
+      "name": "로즈 · 석궁 휙 겨누고 멈춤",
+      "scenes": [
+        {
+          "cutscene": "입장",
+          "page": "../intro/?at=7.4",
+          "time": "7.4초에 시작, 11.1초까지 겨눈 채 유지",
+          "lines": [
+            "로즈: 이 이상은 지나갈 수 없다!",
+            "(눈 반짝 9.5초)",
+            "블루: ..."
+          ]
+        }
+      ],
+      "action": "대기 자세에서 석궁을 휙 들어 정면(주인공 쪽)으로 겨누고 딱 멈춤. 폼 잡는 결정 포즈. 마지막 자세를 블루의 「...」가 끝날 때까지 유지합니다. 마지막 장은 R3의 시작 이미지가 됩니다.",
+      "length": "1회 0.3~0.4초 + 마지막 자세 유지, 5~8장",
+      "loop": false,
+      "replaces": "현재 1장짜리 rose-idle",
+      "start": "rose-idle/00.png",
+      "end": null,
+      "reference": "rose-shot/00.png",
+      "referenceNote": "겨누는 팔·석궁 각도 참고용(공중 사격 그림). 기본 자세와 좌우가 반대이니 방향은 시작 이미지를 따르고, 발은 땅에 붙인 채로 만들어 주세요.",
+      "prompt": "Animate the exact same Rose character snapping into a dramatic aiming pose for a 2D side-scrolling game cutscene.\n\nSTART: the standing pose of the START reference, crossbow held low in both hands.\n\nACTION: in one quick, confident motion she swings the crossbow up to shoulder height and aims it straight ahead in the direction she faces, then freezes in a proud, showy aiming pose and holds it steadily for the rest of the clip. Use the REFERENCE image only for the arm and crossbow angle; she stays standing with both boots planted on the ground (no jumping or floating). No shooting, no bolt leaving the crossbow. The REFERENCE faces the opposite way (mirrored); keep her facing exactly the same direction as the START reference.\n\nAbout 0.3 to 0.4 seconds for the snap, then a clear final hold of at least 1 second. Single playback, no loop and no return to the starting pose."
+    },
+    {
+      "id": "R3-rose-aim-release",
+      "priority": 1,
+      "character": "rose",
+      "name": "로즈 · 겨눔 풀고 대기 자세로",
+      "scenes": [
+        {
+          "cutscene": "입장",
+          "page": "../intro/?at=11.1",
+          "time": "11.1~12.0초",
+          "lines": [
+            "로즈: 아.",
+            "로즈: 진짜 너무하네."
+          ]
+        }
+      ],
+      "action": "블루가 반응 없자 김이 빠져 겨누던 석궁을 내리고 원래 대기 자세로 돌아옴. 어깨가 살짝 처지는 느낌.",
+      "length": "1회 0.5~0.7초, 5~8장",
+      "loop": false,
+      "replaces": "현재 1장짜리 rose-idle",
+      "start": null,
+      "startNote": "R2가 채택되면 R2의 마지막 장을 시작 이미지로 넣어 주세요.",
+      "end": "rose-idle/00.png",
+      "reference": "rose-shot/00.png",
+      "referenceNote": "R2가 나오기 전까지 겨눈 자세 참고용. 기본 자세와 좌우가 반대이니 방향은 끝 이미지를 따라 주세요.",
+      "prompt": "Animate the exact same Rose character lowering her crossbow out of a showy aiming pose for a 2D side-scrolling game cutscene.\n\nSTART: the aiming pose of the START reference (the final frame of her dramatic aim).\n\nACTION: she deflates, as if her big moment was ignored: the crossbow drops from shoulder height back to the low two-handed hold, her shoulders sag slightly and her head dips a little. Finish exactly in the standing pose of the END reference and hold it. Her boots stay planted. If the START reference is missing, use the REFERENCE only for the aiming arm angle: it faces the opposite way (mirrored), so keep her facing exactly the same direction as the END reference.\n\nAbout 0.5 to 0.7 seconds, then a short final hold. Single playback, no loop."
+    },
+    {
+      "id": "R4-rose-surprise-point",
+      "priority": 1,
+      "character": "rose",
+      "name": "로즈 · 놀람 → 신나서 손가락질",
+      "scenes": [
+        {
+          "cutscene": "1→2 전환",
+          "page": "../phase-shift/?at=2.6",
+          "time": "2.6~5.0초",
+          "lines": [
+            "로즈: 어?",
+            "로즈: 야야야 쟤 나왔어!!"
+          ]
+        }
+      ],
+      "action": "「어?」에 움찔 놀라 몸을 살짝 세움 → 「야야야」에 한 손으로 석궁을 쥔 채 다른 손으로 주인공 쪽을 연달아 가리키며 들뜬 모습. 손가락질 부분은 반복.",
+      "length": "놀람 0.3초 + 손가락질 반복 0.4초 주기, 8~12장",
+      "loop": false,
+      "replaces": "현재 1장짜리 rose-idle + 코드의 2px 들썩",
+      "start": "rose-idle/00.png",
+      "end": null,
+      "prompt": "Animate the exact same Rose character reacting with surprise and then excitement for a 2D side-scrolling game cutscene.\n\nSTART: the standing pose of the START reference.\n\nACTION: first a small startled jolt: she straightens up and leans back slightly, crossbow still in both hands. Then she becomes excited: she holds the crossbow in one hand and jabs the other hand forward, pointing repeatedly in the direction she faces, bouncing lightly on her heels like someone who just spotted something amazing. Keep the pointing rhythmic so the last part can loop. Her boots stay on the ground.\n\nAbout 0.3 seconds for the surprise, then about 1.5 seconds of excited pointing. Single playback."
+    },
+    {
+      "id": "B2-blue-after-absorb",
+      "priority": 1,
+      "character": "blue",
+      "name": "블루 · 흡수 직후 정적",
+      "scenes": [
+        {
+          "cutscene": "흡수 · 블루가 먼저 쓰러짐",
+          "page": "../../../boss-phase2-cutscene-20261106/preview/?scene=blue-first&at=11.85",
+          "time": "11.85~13.68초",
+          "lines": [
+            "블루: ...이제 좀 조용하군."
+          ]
+        },
+        {
+          "cutscene": "흡수 · 로즈가 먼저 쓰러짐",
+          "page": "../../../boss-phase2-cutscene-20261106/preview/?scene=rose-first&at=13.66",
+          "time": "13.66~15.48초",
+          "lines": [
+            "블루: ...이제 좀 조용하군."
+          ]
+        }
+      ],
+      "action": "흡수를 끝낸 뒤 붙잡던 팔을 천천히 내리고 고개를 숙였다가, 조용히 고개를 들어 포효 직전 자세로 이어짐. 차분하고 섬뜩하게.",
+      "length": "1회 1.6~1.8초, 10~14장",
+      "loop": false,
+      "replaces": "현재 비어 있는 구간(흡수 끝 자세가 그대로 멈춰 있음)",
+      "start": "blue-cast/15.png",
+      "end": "blue-roar/00.png",
+      "endNote": "기존 포효 첫 장. 포효에서 몸이 뜨기 시작하므로 끝으로 갈수록 발이 살짝 떠도 됩니다.",
+      "prompt": "Animate the exact same Blue character in the quiet moment right after he has absorbed someone, for a 2D side-scrolling game cutscene.\n\nSTART: the outstretched gripping pose of the START reference.\n\nACTION: he slowly lowers the outstretched arm to his side and lets his head bow for a beat, completely still and calm. Then he slowly raises his head and squares his shoulders, rising into the pose of the END reference, which is the first frame of his roar. Restrained, deliberate and unsettling, never frantic. No magic, energy or particles; effects are composited separately.\n\nAbout 1.6 to 1.8 seconds, ending exactly on the END reference. Single playback, no loop."
+    },
+    {
+      "id": "R5-rose-backstep",
+      "priority": 2,
+      "character": "rose",
+      "name": "로즈 · 뒷걸음질 두 번",
+      "scenes": [
+        {
+          "cutscene": "흡수 · 블루가 먼저 쓰러짐",
+          "page": "../../../boss-phase2-cutscene-20261106/preview/?scene=blue-first&at=2.6",
+          "time": "2.6~5.85초",
+          "lines": [
+            "로즈: 야 괜찮아??",
+            "로즈: 그래.. 이번엔 잠깐 물러나자. 쟤 심상치 않아. 정비를 좀 하고"
+          ]
+        }
+      ],
+      "action": "석궁을 든 채 정면을 본 상태로 뒷걸음질 두 번. 그 뒤 대기 자세로 멈춤. (사용자 지정: 뒷걸음질만)",
+      "length": "1회 약 1.0~1.2초(한 걸음 0.5초), 8~12장",
+      "loop": false,
+      "replaces": "현재 1장짜리 rose-idle",
+      "start": "rose-idle/00.png",
+      "end": "rose-idle/00.png",
+      "endNote": "끝은 같은 대기 자세. 실제 이동 거리는 컷씬 코드에서 옮기므로 그림 안에서는 제자리 걸음처럼 발 기준선을 유지해 주세요.",
+      "prompt": "Animate the exact same Rose character taking two cautious steps backward for a 2D side-scrolling game cutscene.\n\nSTART and END: the standing pose of the references, crossbow held in both hands.\n\nACTION: still facing forward and keeping the crossbow raised a little defensively, she takes two careful steps backward, away from the direction she faces, then settles back into the standing pose. Animate the steps in place: keep her body centred in the frame and the feet on the same ground line (the movement across the floor is added in the game). No turning around.\n\nAbout 1.0 to 1.2 seconds, ending exactly on the END reference. Single playback."
+    },
+    {
+      "id": "R6-rose-panic-reload",
+      "priority": 2,
+      "character": "rose",
+      "name": "로즈 · 허둥지둥 석궁 장전",
+      "scenes": [
+        {
+          "cutscene": "입장",
+          "page": "../intro/?at=17.8",
+          "time": "17.8~18.5초 (이후 잔상과 함께 퇴장)",
+          "lines": [
+            "로즈: 야..야! 잠깐만! 나 아직 ㅈ"
+          ]
+        }
+      ],
+      "action": "블루가 마법을 시작하자 당황해서 석궁 시위를 급히 당기고 화살을 끼우려다 헛손질. 허둥대는 손놀림. (사용자 지정)",
+      "length": "약 0.7~1.0초, 6~10장 (컷씬에서는 앞부분만 쓰일 수 있음)",
+      "loop": false,
+      "replaces": "현재 1장짜리 rose-idle",
+      "start": "rose-idle/00.png",
+      "end": null,
+      "prompt": "Animate the exact same Rose character frantically trying to reload her crossbow in a panic, for a 2D side-scrolling game cutscene.\n\nSTART: the standing pose of the START reference.\n\nACTION: caught off guard, she hurriedly tips the crossbow down, yanks at the string with jerky, clumsy hands and fumbles as if trying to slot a bolt in, her shoulders hunched and her whole body jittering with haste. Comical, flustered and fast. She stays in place with her boots on the ground. No bolt is fired.\n\nAbout 0.7 to 1.0 seconds of frantic fumbling. Single playback."
+    },
+    {
+      "id": "B3-blue-scene-cast",
+      "priority": 2,
+      "character": "blue",
+      "name": "블루 · 환각 전장 시전",
+      "scenes": [
+        {
+          "cutscene": "입장",
+          "page": "../intro/?at=15.3",
+          "time": "15.3초 대사, 16.4초 시전 시작~18.5초",
+          "lines": [
+            "블루: 시작한다. 준비해."
+          ]
+        }
+      ],
+      "action": "무심하게 한 손을 들어 손바닥을 펼침 → 마법 방울·환각 전장 시전 자세 유지. 지금은 흡수 컷씬의 시전 모션(blue-cast)을 빌려 쓰고 있습니다.",
+      "length": "1회 0.5~0.8초 + 유지, 6~10장",
+      "loop": false,
+      "replaces": "현재 빌려 쓰는 blue-cast",
+      "start": "blue-idle/00.png",
+      "end": null,
+      "reference": "blue-palm/07.png",
+      "referenceNote": "손바닥을 펼친 각도 참고용(공중 그림). 발은 땅에 붙인 채로 만들어 주세요.",
+      "prompt": "Animate the exact same Blue character casting a spell with one calm gesture, for a 2D side-scrolling game cutscene.\n\nSTART: the standing pose of the START reference.\n\nACTION: without hurry or emotion, he raises one arm and opens his palm forward in the direction he faces, as in the REFERENCE image, then holds that casting pose steadily for the rest of the clip. The other arm stays relaxed. He stays standing with both boots planted (no floating). No orb, magic circle, energy or particles; effects are composited separately.\n\nAbout 0.5 to 0.8 seconds for the gesture, then a clear final hold. Single playback, no loop."
+    },
+    {
+      "id": "R7-rose-battle-ready",
+      "priority": 2,
+      "character": "rose",
+      "name": "로즈 · 전투 자세 진입",
+      "scenes": [
+        {
+          "cutscene": "1→2 전환",
+          "page": "../phase-shift/?at=12.05",
+          "time": "12.05~14.4초",
+          "lines": [
+            "로즈: 헤헤헤..시작할게!"
+          ]
+        }
+      ],
+      "action": "신난 듯 석궁을 한 번 고쳐 잡고(시위 당기기 또는 살짝 돌리기) 전투 대기 자세로 들어감. 2페이즈 시작으로 이어짐.",
+      "length": "1회 0.8~1.0초, 6~10장",
+      "loop": false,
+      "replaces": "현재 1장짜리 rose-idle",
+      "start": "rose-idle/00.png",
+      "end": "rose-idle/00.png",
+      "prompt": "Animate the exact same Rose character eagerly getting ready to fight, for a 2D side-scrolling game cutscene.\n\nSTART and END: the standing pose of the references.\n\nACTION: with playful excitement she gives the crossbow a quick regrip and cocks it with a confident tug, a little bounce in her shoulders, then settles back into her ready stance. Her boots stay planted. No bolt is fired.\n\nAbout 0.8 to 1.0 seconds, ending exactly on the END reference. Single playback."
+    },
+    {
+      "id": "R8-rose-downed-aim",
+      "priority": 2,
+      "character": "rose",
+      "name": "로즈 · 쓰러진 채 석궁 들기",
+      "scenes": [
+        {
+          "cutscene": "흡수 · 로즈가 먼저 쓰러짐",
+          "page": "../../../boss-phase2-cutscene-20261106/preview/?scene=rose-first&at=4.62",
+          "time": "4.62~6.95초",
+          "lines": [
+            "로즈: 조금만 시간 끌어줘. 내가 저 녀석 머리에 반드시 한 발 박아넣으"
+          ]
+        }
+      ],
+      "action": "쓰러진 자세에서 떨리는 손으로 바닥의 석궁을 집어 들어 무릎 꿇은 채 겨누려 함. 힘이 부족해 흔들림.",
+      "length": "1회 1.2~1.5초 + 흔들리며 유지, 8~12장",
+      "loop": false,
+      "replaces": "현재 쓰러진 마지막 장(rose-collapse/07)에서 멈춤",
+      "start": "rose-collapse/07.png",
+      "end": null,
+      "prompt": "Animate the exact same Rose character, wounded and down on one knee, struggling to raise her crossbow, for a 2D side-scrolling game cutscene.\n\nSTART: the collapsed kneeling pose of the START reference, crossbow on the floor.\n\nACTION: with trembling arms she drags the crossbow up from the floor and tries to level it at someone ahead of her while still kneeling. She is weak: the crossbow wobbles and dips, and she has to brace it. She does not stand up. No bolt is fired.\n\nAbout 1.2 to 1.5 seconds, then hold the shaky aiming pose with a slight tremble. Single playback, no loop."
+    }
+  ]
+}

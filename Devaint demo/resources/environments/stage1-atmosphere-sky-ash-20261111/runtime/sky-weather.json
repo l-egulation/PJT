@@ -1,0 +1,185 @@
+{
+  "format": "stage1-sky-weather-v1",
+  "status": "user-approved-art",
+  "pixelsPerUnit": 32,
+  "scale": 1,
+  "pixelCluster": 1,
+  "filterMode": "Point",
+  "mipmaps": false,
+  "compression": "None",
+  "seed": 7312026,
+  "cloudField": {
+    "columns": 7,
+    "rows": 5,
+    "cellWorldSize": [
+      8,
+      6
+    ],
+    "parallax": [
+      0.06,
+      0.025
+    ]
+  },
+  "birdField": {
+    "columns": 6,
+    "rows": 4,
+    "cellWorldSize": [
+      10,
+      9
+    ],
+    "parallax": [
+      0.08,
+      0.04
+    ]
+  },
+  "ash": {
+    "count": 96,
+    "normalSizePixels": [
+      2.5,
+      4.5
+    ],
+    "occasionalSizePixels": 6.5,
+    "windPixelsPerSecond": 30,
+    "tint": "#7D7569",
+    "alphaRange": [
+      0.28,
+      0.53
+    ],
+    "focusAttenuation": true,
+    "implementation": "one code-generated dynamic mesh",
+    "paletteMix": [
+      {
+        "tint": "#7D7569",
+        "count": 67,
+        "role": "existing taupe"
+      },
+      {
+        "tint": "#141414",
+        "count": 10,
+        "role": "small black accents"
+      },
+      {
+        "tint": "#FFFFFF",
+        "count": 19,
+        "role": "white paper fragments"
+      }
+    ],
+    "colorStablePerFleck": true
+  },
+  "layers": [
+    {
+      "path": "runtime/clouds/clouds-0.png",
+      "width": 192,
+      "height": 64,
+      "palette": [
+        "#DDD8CD",
+        "#E6E2D8"
+      ],
+      "sha256": "f8e4d74e6376747589b79c0c640f7accc71bd31d08087b32fbc7325fcd3021ed"
+    },
+    {
+      "path": "runtime/clouds/clouds-1.png",
+      "width": 192,
+      "height": 64,
+      "palette": [
+        "#DDD8CD",
+        "#E6E2D8"
+      ],
+      "sha256": "db651e856dc1258985d2c677d061ba82d3f8728fe3dd93eb1d1d44599f188d47"
+    },
+    {
+      "path": "runtime/clouds/clouds-2.png",
+      "width": 192,
+      "height": 64,
+      "palette": [
+        "#DDD8CD",
+        "#E6E2D8"
+      ],
+      "sha256": "0bb706742b881f8358caf12e180b5dd5bd8676ec3de422cff29893692c99ef18"
+    },
+    {
+      "path": "runtime/clouds/clouds-3.png",
+      "width": 192,
+      "height": 64,
+      "palette": [
+        "#DDD8CD",
+        "#E6E2D8"
+      ],
+      "sha256": "06bd1e1347b65e3ca3fdac6fa76ee7f68ac00f19f0841de666a3299ff537be89"
+    },
+    {
+      "path": "runtime/clouds/clouds-4.png",
+      "width": 192,
+      "height": 64,
+      "palette": [
+        "#DDD8CD",
+        "#E6E2D8"
+      ],
+      "sha256": "e078df09b04c7e7226a8b822562e691de9ea91447592e852c0e9f740023c2c5a"
+    },
+    {
+      "path": "runtime/clouds/clouds-5.png",
+      "width": 192,
+      "height": 64,
+      "palette": [
+        "#DDD8CD",
+        "#E6E2D8"
+      ],
+      "sha256": "f9f6e18b0a32e27aa0599054950f435b172bf204f9c628ece2203c73a8aec2a0"
+    },
+    {
+      "path": "runtime/birds/birds-0.png",
+      "width": 32,
+      "height": 16,
+      "palette": [
+        "#B7AFA0"
+      ],
+      "sha256": "d9cbd8264061d3e10ff968e8b714c26a0ca9d3a17c0eabfde97ee4353148872f"
+    },
+    {
+      "path": "runtime/birds/birds-1.png",
+      "width": 32,
+      "height": 16,
+      "palette": [
+        "#B7AFA0"
+      ],
+      "sha256": "1ed0770fc89b47a1d85f459c01719ef80c676ca871b107730e30aa9b681e9bda"
+    },
+    {
+      "path": "runtime/birds/birds-2.png",
+      "width": 32,
+      "height": 16,
+      "palette": [
+        "#B7AFA0"
+      ],
+      "sha256": "e591e23c1c237bc0d8916138f8b87b1d14877420117fd64b9790700664f31aba"
+    },
+    {
+      "path": "runtime/birds/birds-3.png",
+      "width": 32,
+      "height": 16,
+      "palette": [
+        "#B7AFA0"
+      ],
+      "sha256": "afd8e7832cb42685f6719c68c82910e342b109957fc4bd9bd929bedca06bccf0"
+    },
+    {
+      "path": "runtime/birds/birds-4.png",
+      "width": 32,
+      "height": 16,
+      "palette": [
+        "#B7AFA0"
+      ],
+      "sha256": "82ad48c3651f9f1f037ecee86afe4ba212acaaed8da492e5e15bada261019cc9"
+    },
+    {
+      "path": "runtime/birds/birds-5.png",
+      "width": 32,
+      "height": 16,
+      "palette": [
+        "#B7AFA0"
+      ],
+      "sha256": "c66c7eb0e848691ca70fefd0205dd761f95fc1fcc1c05a8322a89a77d1af542e"
+    }
+  ]
+}

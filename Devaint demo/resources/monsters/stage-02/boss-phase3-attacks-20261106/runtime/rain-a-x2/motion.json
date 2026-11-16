@@ -1,0 +1,1134 @@
+{
+  "format": "stage2-rain-a-x2-v1",
+  "status": "user-approved-rain-A-x2-not-unity-integrated",
+  "pattern": "ArrowRain",
+  "canvas": [
+    384,
+    256
+  ],
+  "pivot": [
+    192,
+    232
+  ],
+  "repeat": false,
+  "holdLastFrame": true,
+  "totalMs": 3070,
+  "sourceFrames": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35
+  ],
+  "durationsMs": [
+    280,
+    40,
+    40,
+    40,
+    50,
+    45,
+    45,
+    99,
+    99,
+    99,
+    99,
+    98,
+    98,
+    98,
+    98,
+    98,
+    98,
+    98,
+    98,
+    98,
+    98,
+    98,
+    98,
+    98,
+    90,
+    90,
+    60,
+    90,
+    70,
+    70,
+    60,
+    60,
+    60,
+    60,
+    150
+  ],
+  "cues": {
+    "summonRaisedMs": 400,
+    "detonateMs": 2450,
+    "game": "RainTell 0.5 s: first arrow 0.5 s, landings 0.75-2.25 s, explosions 2.45-3.95 s; the body holds the last frame until the pattern ends"
+  },
+  "timing": "A와 같은 35장 그대로. 02~07을 2배 빠르게(40~50ms). 가장 순간적으로 치켜 올라감. 기본 자세 280ms 뒤 0.12초 만에 팔이 올라감.",
+  "sourceSheet": "../../source/rain-aether-01/aether-original.png",
+  "sourceSheetSha256": "636a72158156707f522b53926a3eda35810931ae5e88fcd2735c9c2c81191d61",
+  "prompt": "../../source/rain-aether/prompt.txt",
+  "cleanup": "../../preview/rain-candidates/clean-all.json",
+  "timingCandidates": "../../preview/rain-candidates/candidates.json",
+  "inGamePreview": "../../preview/rain-sim/index.html",
+  "transform": {
+    "destinationSize": [
+      445,
+      250
+    ],
+    "scale": [
+      0.6953125,
+      0.6944444444444444
+    ],
+    "rasterOffset": [
+      -29,
+      -9
+    ],
+    "resampling": "nearest-neighbor",
+    "perFrameAutoFit": false,
+    "basis": "body height 256 -> 178 px of approved fused-idle; crossbow centre aligned"
+  },
+  "matteProcessing": "clean_stage2_bounce_a.matte_body (homing maths + preservation fixes), shin restoration from source row 294, enclosed restoration only below min channel 228 (background noise in arm gaps reaches 236-247)",
+  "face": {
+    "method": "canonical mouthless face from source frame 12 (mouth row 81 x184-190 filled from rows 80/82), pasted at hood registration offset in every frame",
+    "userRequest": "입이 생겨버렸어.. 이거만 따로 제거",
+    "handProtectionWhenOverlap": "pixels with g-b < 14 kept (hand colour) when the face region overlaps the hand",
+    "maskStyle": "generated mask style kept to match approved homing D V2 and bounce A; approved fused-idle dotted eye line not pasted"
+  },
+  "crossbow": {
+    "method": "exact approved RGBA crop, translation only",
+    "cropBounds": [
+      139,
+      17,
+      246,
+      58
+    ],
+    "scale": 1,
+    "file": "approved-crossbow.png",
+    "approvedSource": "../../source/approved-fused-idle-original.png"
+  },
+  "footCleanup": "clean_stage2_bounce_a.clean_feet",
+  "edgeRefinement": "refine_stage2_homing_d_edges.refine",
+  "identity": {
+    "newLimbs": false,
+    "maskRedrawn": "mouth row only, one canonical mask pasted at hood registration",
+    "generativeRedraw": false
+  },
+  "frames": [
+    {
+      "file": "frames/00.png",
+      "sourceFrame": 1,
+      "role": "idle",
+      "durationMs": 280,
+      "bounds": [
+        139,
+        12,
+        246,
+        231
+      ],
+      "sha256": "c05d23767dab24cdfb149ce6ec47e146530f922e3d9678b279796023bb040238",
+      "sourceCellSha256": "abe5010df2f59a04473034aca09f38445479fd0940f673d7bf3d971f30d746a7",
+      "crossbowPosition": [
+        139,
+        12
+      ],
+      "face": {
+        "registrationShift": [
+          2,
+          1
+        ],
+        "hoodIoU": 0.756,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 2
+      }
+    },
+    {
+      "file": "frames/01.png",
+      "sourceFrame": 2,
+      "role": "idle",
+      "durationMs": 40,
+      "bounds": [
+        139,
+        13,
+        246,
+        231
+      ],
+      "sha256": "66bc77956a32f14f114a061b5191dec7c0cfcadef385ff815dce074527264f21",
+      "sourceCellSha256": "147655445806177ab7f94e08861eaba6fdc42b1906f3a0c0c07e9d66e6b07e7e",
+      "crossbowPosition": [
+        139,
+        13
+      ],
+      "face": {
+        "registrationShift": [
+          1,
+          1
+        ],
+        "hoodIoU": 0.704,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 1
+      }
+    },
+    {
+      "file": "frames/02.png",
+      "sourceFrame": 3,
+      "role": "coil",
+      "durationMs": 40,
+      "bounds": [
+        139,
+        13,
+        246,
+        231
+      ],
+      "sha256": "dfd0115c4115273ad7e8354f62b4dffcaa1bb0d595835bf22fa24c27121776ab",
+      "sourceCellSha256": "b72f05959e04217db0bb089f261b8fb9f50a514b2a5ae2b3cb8655a92c73b141",
+      "crossbowPosition": [
+        139,
+        13
+      ],
+      "face": {
+        "registrationShift": [
+          1,
+          0
+        ],
+        "hoodIoU": 0.787,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 0
+      }
+    },
+    {
+      "file": "frames/03.png",
+      "sourceFrame": 4,
+      "role": "coil",
+      "durationMs": 40,
+      "bounds": [
+        139,
+        14,
+        246,
+        231
+      ],
+      "sha256": "53e9c8da10d2ec6f9bef305580496c2652f5e2928483c0eca0d8f2e96c593219",
+      "sourceCellSha256": "c8a81ab590a3aebf05de20b97950a257785fecb0c2776fa831c2ae2e06aa0659",
+      "crossbowPosition": [
+        139,
+        14
+      ],
+      "face": {
+        "registrationShift": [
+          1,
+          0
+        ],
+        "hoodIoU": 0.705,
+        "pixelsWritten": 199,
+        "handPixelsProtected": 5,
+        "handOverlap": 104
+      }
+    },
+    {
+      "file": "frames/04.png",
+      "sourceFrame": 5,
+      "role": "hit",
+      "durationMs": 50,
+      "bounds": [
+        128,
+        15,
+        246,
+        231
+      ],
+      "sha256": "15c68e005abf61f454326c4d33172b3832dcc3ffad476074135c7a7a7d1e41d3",
+      "sourceCellSha256": "d02a5781d8f8eaf1f8da76dced6a6ea00de3eb5811d0235a8d95199951b1fe24",
+      "crossbowPosition": [
+        139,
+        15
+      ],
+      "face": {
+        "registrationShift": [
+          0,
+          -1
+        ],
+        "hoodIoU": 0.865,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 0
+      }
+    },
+    {
+      "file": "frames/05.png",
+      "sourceFrame": 6,
+      "role": "follow",
+      "durationMs": 45,
+      "bounds": [
+        120,
+        16,
+        246,
+        231
+      ],
+      "sha256": "3c18c60787bc5b565da457e1fdf33aeab65da1ae01fffab51327af825187a70b",
+      "sourceCellSha256": "2d573228239afb6753ef1e1dffb6d29408113122d8a357234ed03f69878f0069",
+      "crossbowPosition": [
+        139,
+        16
+      ],
+      "face": {
+        "registrationShift": [
+          0,
+          -1
+        ],
+        "hoodIoU": 0.866,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 0
+      }
+    },
+    {
+      "file": "frames/06.png",
+      "sourceFrame": 7,
+      "role": "follow",
+      "durationMs": 45,
+      "bounds": [
+        113,
+        16,
+        246,
+        231
+      ],
+      "sha256": "675c699c7ba325fc2e89c03fb7682fdd63b3994776544d7c44d60e6c6d75051c",
+      "sourceCellSha256": "666468094eaeef2c44ab9d23df6916333fead3c9eb0d62fe98f5a6ad9cf6480d",
+      "crossbowPosition": [
+        139,
+        16
+      ],
+      "face": {
+        "registrationShift": [
+          0,
+          -1
+        ],
+        "hoodIoU": 0.867,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 0
+      }
+    },
+    {
+      "file": "frames/07.png",
+      "sourceFrame": 8,
+      "role": "lock",
+      "durationMs": 99,
+      "bounds": [
+        111,
+        17,
+        246,
+        231
+      ],
+      "sha256": "8bf8baf75e89b56a7be60ea48173b02b94a595bbdfae43eade4edc8f039390f3",
+      "sourceCellSha256": "75520163b6e4e8ace3f6f359d966a6f57025ab579e6eb02e4dc8180a1d2b7bbf",
+      "crossbowPosition": [
+        139,
+        17
+      ],
+      "face": {
+        "registrationShift": [
+          0,
+          0
+        ],
+        "hoodIoU": 0.878,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 0
+      }
+    },
+    {
+      "file": "frames/08.png",
+      "sourceFrame": 9,
+      "role": "lock",
+      "durationMs": 99,
+      "bounds": [
+        109,
+        17,
+        246,
+        231
+      ],
+      "sha256": "6caa70eff66b2aaa69e4d8dcfe563f6d7429a9736e0dd966930c20aced0d5199",
+      "sourceCellSha256": "91acade67a81659f3bb1f42c946395fcf764694e8e8ccac9d521d7b6012dc2e5",
+      "crossbowPosition": [
+        139,
+        17
+      ],
+      "face": {
+        "registrationShift": [
+          0,
+          0
+        ],
+        "hoodIoU": 0.919,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 0
+      }
+    },
+    {
+      "file": "frames/09.png",
+      "sourceFrame": 10,
+      "role": "lock",
+      "durationMs": 99,
+      "bounds": [
+        109,
+        17,
+        246,
+        231
+      ],
+      "sha256": "7ace5f861e8e304672ee94b63f072390b4adf0d8ae71f1c521bfb66f9d87996e",
+      "sourceCellSha256": "a6ceebd97b961727504bc66d6745fc29dc0463d214159469ae9ed78c451ce31c",
+      "crossbowPosition": [
+        139,
+        17
+      ],
+      "face": {
+        "registrationShift": [
+          0,
+          0
+        ],
+        "hoodIoU": 0.942,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 0
+      }
+    },
+    {
+      "file": "frames/10.png",
+      "sourceFrame": 11,
+      "role": "lock",
+      "durationMs": 99,
+      "bounds": [
+        108,
+        17,
+        246,
+        231
+      ],
+      "sha256": "c8673bdb088882ddd36bdd7694b7d79c7c81d611bb44b2408045b144eebf25df",
+      "sourceCellSha256": "49a30ef1e9b80f0f54ac214781a56c4ed6bcbe5c5ff0679d78b24bcbcbb89118",
+      "crossbowPosition": [
+        139,
+        17
+      ],
+      "face": {
+        "registrationShift": [
+          0,
+          0
+        ],
+        "hoodIoU": 0.966,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 0
+      }
+    },
+    {
+      "file": "frames/11.png",
+      "sourceFrame": 12,
+      "role": "lock",
+      "durationMs": 98,
+      "bounds": [
+        109,
+        17,
+        246,
+        231
+      ],
+      "sha256": "bf7dba451e8f505a1425676072615016569ecc7a96d5f4e311b840b9cfbc9a6b",
+      "sourceCellSha256": "65a98e56babbba1f6c6d7a02a51c338717d13968dd1cb5bf1e585460cf2d8676",
+      "crossbowPosition": [
+        139,
+        17
+      ],
+      "face": {
+        "registrationShift": [
+          0,
+          0
+        ],
+        "hoodIoU": 1.0,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 0
+      }
+    },
+    {
+      "file": "frames/12.png",
+      "sourceFrame": 13,
+      "role": "lock",
+      "durationMs": 98,
+      "bounds": [
+        109,
+        17,
+        246,
+        231
+      ],
+      "sha256": "1107ef3c8cf502cd4087db6cacf40d7f936abade8f7ff9b9d986ed8f9128ee72",
+      "sourceCellSha256": "9fe4e58e5def8438bb92af8d905f60a9d9c2627c1aa34bd01c7cb8794b93a195",
+      "crossbowPosition": [
+        139,
+        17
+      ],
+      "face": {
+        "registrationShift": [
+          0,
+          0
+        ],
+        "hoodIoU": 0.99,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 0
+      }
+    },
+    {
+      "file": "frames/13.png",
+      "sourceFrame": 14,
+      "role": "lock",
+      "durationMs": 98,
+      "bounds": [
+        109,
+        16,
+        246,
+        231
+      ],
+      "sha256": "9d92269e9976332c03ac722b8c40cb6c8e7e00d2187a56ef72057f4ec61239d3",
+      "sourceCellSha256": "560d9c09e580042d23473578d643c3f1319de76e9bed0487a060eda6f7ef848a",
+      "crossbowPosition": [
+        139,
+        16
+      ],
+      "face": {
+        "registrationShift": [
+          0,
+          0
+        ],
+        "hoodIoU": 0.954,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 0
+      }
+    },
+    {
+      "file": "frames/14.png",
+      "sourceFrame": 15,
+      "role": "lock",
+      "durationMs": 98,
+      "bounds": [
+        109,
+        16,
+        246,
+        231
+      ],
+      "sha256": "fac2c8d21b7ac3d1fc7c9d09cf3bf6455d12bcaf8a1f5e88fe6b1bddbadee4dd",
+      "sourceCellSha256": "3d9396da5315d173726fbe704697791fb1515bb1fea19c9e2701a41bc4ac1252",
+      "crossbowPosition": [
+        139,
+        16
+      ],
+      "face": {
+        "registrationShift": [
+          0,
+          0
+        ],
+        "hoodIoU": 0.957,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 0
+      }
+    },
+    {
+      "file": "frames/15.png",
+      "sourceFrame": 16,
+      "role": "lock",
+      "durationMs": 98,
+      "bounds": [
+        108,
+        15,
+        246,
+        231
+      ],
+      "sha256": "f26f8f69c35b0c18271d09d7dd4df2af6d3729c4624128ad11548ab6579d4b59",
+      "sourceCellSha256": "3a586df0fd79931196343d7e6f2241c3ef6c107c73ee2794f355841fd15a0c89",
+      "crossbowPosition": [
+        139,
+        15
+      ],
+      "face": {
+        "registrationShift": [
+          0,
+          0
+        ],
+        "hoodIoU": 0.928,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 0
+      }
+    },
+    {
+      "file": "frames/16.png",
+      "sourceFrame": 17,
+      "role": "lock",
+      "durationMs": 98,
+      "bounds": [
+        108,
+        14,
+        246,
+        231
+      ],
+      "sha256": "60fcd3df388ad644c0ce637c6272602b63e1dab3f27220ba13faf8b8c039e9d4",
+      "sourceCellSha256": "0541cc1d2aabba3d7723ebff76b6100238228d63d3b71d5803a7d4205d5fdd31",
+      "crossbowPosition": [
+        139,
+        14
+      ],
+      "face": {
+        "registrationShift": [
+          0,
+          0
+        ],
+        "hoodIoU": 0.925,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 0
+      }
+    },
+    {
+      "file": "frames/17.png",
+      "sourceFrame": 18,
+      "role": "lock",
+      "durationMs": 98,
+      "bounds": [
+        108,
+        13,
+        246,
+        231
+      ],
+      "sha256": "9b5d4c187858ec886255c94e7fe8bf2ed556ff60082861e128f617bc9387392b",
+      "sourceCellSha256": "d51029b979a92244744ef4dd17cdcbac54f9051bde9b8e118ae4bd0e2543d5d5",
+      "crossbowPosition": [
+        139,
+        13
+      ],
+      "face": {
+        "registrationShift": [
+          0,
+          0
+        ],
+        "hoodIoU": 0.917,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 0
+      }
+    },
+    {
+      "file": "frames/18.png",
+      "sourceFrame": 19,
+      "role": "lock",
+      "durationMs": 98,
+      "bounds": [
+        108,
+        12,
+        246,
+        231
+      ],
+      "sha256": "56690148ee6580398bc2d50a9cd7389ce4add4726bedc5fdee02c29ec9ae2f2f",
+      "sourceCellSha256": "268f208f8927257b596cffa54e111c1b3cd74151578d50dca6bf1c79bd001d01",
+      "crossbowPosition": [
+        139,
+        12
+      ],
+      "face": {
+        "registrationShift": [
+          0,
+          0
+        ],
+        "hoodIoU": 0.92,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 0
+      }
+    },
+    {
+      "file": "frames/19.png",
+      "sourceFrame": 20,
+      "role": "lock",
+      "durationMs": 98,
+      "bounds": [
+        108,
+        11,
+        246,
+        231
+      ],
+      "sha256": "bccdf4ad94c9a3f7616f13061203f52f5e452935e20b80212949aead446b513a",
+      "sourceCellSha256": "78a0a659ddf9a1482c802e200b9f1a6e35c816d975d8701b147d5837424774cb",
+      "crossbowPosition": [
+        139,
+        11
+      ],
+      "face": {
+        "registrationShift": [
+          0,
+          0
+        ],
+        "hoodIoU": 0.911,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 0
+      }
+    },
+    {
+      "file": "frames/20.png",
+      "sourceFrame": 21,
+      "role": "lock",
+      "durationMs": 98,
+      "bounds": [
+        108,
+        10,
+        246,
+        231
+      ],
+      "sha256": "f61c51c20ba543fdbfba6592e22e4f3d0f97b040ace6db2abc4437e9f7bb9601",
+      "sourceCellSha256": "d8b0c962849aeec38817af3c7db9bb61b284fbb54b0655a1fcd43ef784347c8a",
+      "crossbowPosition": [
+        139,
+        10
+      ],
+      "face": {
+        "registrationShift": [
+          0,
+          0
+        ],
+        "hoodIoU": 0.909,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 0
+      }
+    },
+    {
+      "file": "frames/21.png",
+      "sourceFrame": 22,
+      "role": "lock",
+      "durationMs": 98,
+      "bounds": [
+        108,
+        10,
+        246,
+        231
+      ],
+      "sha256": "bce0e98253d6dba101618b7591e81e23f8cd82c4cecb6495cc93fede733bd7ae",
+      "sourceCellSha256": "36f0e8bcfaecbe3bf11f5abbe8a3ca3c0bd1e3b7a9cc539311d39d235c87812f",
+      "crossbowPosition": [
+        139,
+        10
+      ],
+      "face": {
+        "registrationShift": [
+          0,
+          0
+        ],
+        "hoodIoU": 0.898,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 1
+      }
+    },
+    {
+      "file": "frames/22.png",
+      "sourceFrame": 23,
+      "role": "lock",
+      "durationMs": 98,
+      "bounds": [
+        108,
+        10,
+        246,
+        231
+      ],
+      "sha256": "5d3ee5d80ff2850389bab67ddf4e44aadf7552acfdefd3811558d5d948e79ef5",
+      "sourceCellSha256": "45468c07830fbc9108c5ad9527d5601ca5db2b8950b5dfc1b973b20e1c433e03",
+      "crossbowPosition": [
+        139,
+        10
+      ],
+      "face": {
+        "registrationShift": [
+          0,
+          0
+        ],
+        "hoodIoU": 0.897,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 1
+      }
+    },
+    {
+      "file": "frames/23.png",
+      "sourceFrame": 24,
+      "role": "lock",
+      "durationMs": 98,
+      "bounds": [
+        108,
+        10,
+        246,
+        231
+      ],
+      "sha256": "5de4cb8e1d5c28118303800e9391867f43ca87342ab05fa598c6acc5aaa32bd1",
+      "sourceCellSha256": "6d63c8c45bef1d14b9f5524688c519bcb126a7301c248b6577abbf95a07c5f2a",
+      "crossbowPosition": [
+        139,
+        10
+      ],
+      "face": {
+        "registrationShift": [
+          0,
+          0
+        ],
+        "hoodIoU": 0.905,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 1
+      }
+    },
+    {
+      "file": "frames/24.png",
+      "sourceFrame": 25,
+      "role": "coil",
+      "durationMs": 90,
+      "bounds": [
+        118,
+        11,
+        246,
+        231
+      ],
+      "sha256": "439631816800acbb1db0951788fd90266f4a0f702ba1ce6ca12d2bc9a0bc149b",
+      "sourceCellSha256": "381e0103815f223a2512ae9325e6f1523bc03b4fa5e945905399f41e7de681d0",
+      "crossbowPosition": [
+        139,
+        11
+      ],
+      "face": {
+        "registrationShift": [
+          0,
+          0
+        ],
+        "hoodIoU": 0.905,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 1
+      }
+    },
+    {
+      "file": "frames/25.png",
+      "sourceFrame": 26,
+      "role": "coil",
+      "durationMs": 90,
+      "bounds": [
+        123,
+        11,
+        246,
+        231
+      ],
+      "sha256": "a4db8b72b3265619ec89175f22190b7953dda964e48069d0fb07bda2d462e8f4",
+      "sourceCellSha256": "9494a8f28a608bb53b686d04d26ee34a953e1f2ef17d1f13c85f380d326b283f",
+      "crossbowPosition": [
+        139,
+        11
+      ],
+      "face": {
+        "registrationShift": [
+          0,
+          0
+        ],
+        "hoodIoU": 0.909,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 0
+      }
+    },
+    {
+      "file": "frames/26.png",
+      "sourceFrame": 27,
+      "role": "strike",
+      "durationMs": 60,
+      "bounds": [
+        118,
+        13,
+        246,
+        231
+      ],
+      "sha256": "8d7f3973d40c1db2b50e293753d72fa1e455dbdfa7bb170fb94a2750c205bc46",
+      "sourceCellSha256": "af38e9267671a3a46374c6f08d54f99f61d879fcd7eef25c1beddc792e1840a1",
+      "crossbowPosition": [
+        139,
+        13
+      ],
+      "face": {
+        "registrationShift": [
+          0,
+          1
+        ],
+        "hoodIoU": 0.872,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 0
+      }
+    },
+    {
+      "file": "frames/27.png",
+      "sourceFrame": 28,
+      "role": "hit",
+      "durationMs": 90,
+      "bounds": [
+        111,
+        13,
+        246,
+        231
+      ],
+      "sha256": "1039068ae3b2a18ec4525f6efedff9493f32a5301aa3e4fd2d3123c3f62a822c",
+      "sourceCellSha256": "25d8154eab9db40437f7565117f2595ca50fc3139fb2f0281b913dae76d161f1",
+      "crossbowPosition": [
+        139,
+        13
+      ],
+      "face": {
+        "registrationShift": [
+          0,
+          2
+        ],
+        "hoodIoU": 0.84,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 2
+      }
+    },
+    {
+      "file": "frames/28.png",
+      "sourceFrame": 29,
+      "role": "lock",
+      "durationMs": 70,
+      "bounds": [
+        121,
+        14,
+        248,
+        231
+      ],
+      "sha256": "0010a2cbf41a876b534ea0a7dc158167772abf80dc690df08f8fd60f9d830d92",
+      "sourceCellSha256": "924a1b173e4d4a7abc409c0c7beec4fd4b410c69c40e91639cf3a954eb21573a",
+      "crossbowPosition": [
+        139,
+        14
+      ],
+      "face": {
+        "registrationShift": [
+          2,
+          3
+        ],
+        "hoodIoU": 0.803,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 0
+      }
+    },
+    {
+      "file": "frames/29.png",
+      "sourceFrame": 30,
+      "role": "lock",
+      "durationMs": 70,
+      "bounds": [
+        121,
+        15,
+        246,
+        231
+      ],
+      "sha256": "10fb60fae8a4d1c078e467403c50c89ec87aa803bbb729b3c0acec7b458bec10",
+      "sourceCellSha256": "48407b386cee4e36134a0d6d4e1e1bbc2a4b47f2ac5195f2db3c468cb59dc25a",
+      "crossbowPosition": [
+        139,
+        15
+      ],
+      "face": {
+        "registrationShift": [
+          2,
+          1
+        ],
+        "hoodIoU": 0.807,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 0
+      }
+    },
+    {
+      "file": "frames/30.png",
+      "sourceFrame": 31,
+      "role": "lock",
+      "durationMs": 60,
+      "bounds": [
+        121,
+        16,
+        246,
+        231
+      ],
+      "sha256": "db05c2574689bc12600c80968f32c60653c0ee3498cb0b4c49a3940d17063238",
+      "sourceCellSha256": "de74458f14da194fc93c68b17d811e8e8696ebdd2d243503c5260dc27cab0501",
+      "crossbowPosition": [
+        139,
+        16
+      ],
+      "face": {
+        "registrationShift": [
+          2,
+          0
+        ],
+        "hoodIoU": 0.803,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 0
+      }
+    },
+    {
+      "file": "frames/31.png",
+      "sourceFrame": 32,
+      "role": "lock",
+      "durationMs": 60,
+      "bounds": [
+        121,
+        17,
+        246,
+        231
+      ],
+      "sha256": "c7dd4fe465e448cac9e2207b24fa708224a93087a986143dd41b25d30e6e689e",
+      "sourceCellSha256": "0f0fb2180db27d4447dea3d77a2fd2789313d10846aee15978c43315abe42767",
+      "crossbowPosition": [
+        139,
+        17
+      ],
+      "face": {
+        "registrationShift": [
+          2,
+          0
+        ],
+        "hoodIoU": 0.813,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 0
+      }
+    },
+    {
+      "file": "frames/32.png",
+      "sourceFrame": 33,
+      "role": "lock",
+      "durationMs": 60,
+      "bounds": [
+        120,
+        17,
+        246,
+        231
+      ],
+      "sha256": "d3e2926f45125ef11da806f7e15a91a3d1ac14d5e399bc5f9329a2626c08d7a8",
+      "sourceCellSha256": "f6802c10621f3e007083970415910cb0d4b4747a0aaf8b44d3c749fc7d29f817",
+      "crossbowPosition": [
+        139,
+        17
+      ],
+      "face": {
+        "registrationShift": [
+          2,
+          0
+        ],
+        "hoodIoU": 0.799,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 1
+      }
+    },
+    {
+      "file": "frames/33.png",
+      "sourceFrame": 34,
+      "role": "lock",
+      "durationMs": 60,
+      "bounds": [
+        120,
+        18,
+        246,
+        231
+      ],
+      "sha256": "95be8b244c629221f4027b55f1e14eeaacbccfaf189f72a2cdf10f4c435604a5",
+      "sourceCellSha256": "a4b81dcd70a4fe87bbee3176fd9de65b2468fdd7e8441f3c2b4248c44d58675f",
+      "crossbowPosition": [
+        139,
+        18
+      ],
+      "face": {
+        "registrationShift": [
+          2,
+          -1
+        ],
+        "hoodIoU": 0.806,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 0
+      }
+    },
+    {
+      "file": "frames/34.png",
+      "sourceFrame": 35,
+      "role": "hold",
+      "durationMs": 150,
+      "bounds": [
+        120,
+        18,
+        246,
+        231
+      ],
+      "sha256": "abfdf6fff65f02bd537aad8db9a9abdddf8bdbb2bb0322aeccd144f499eb0ea5",
+      "sourceCellSha256": "183f9c214cf0c184473f7602ab5fd6d5379ff3c41a593ec6b2963d907f9eae5a",
+      "crossbowPosition": [
+        139,
+        18
+      ],
+      "face": {
+        "registrationShift": [
+          2,
+          -1
+        ],
+        "hoodIoU": 0.803,
+        "pixelsWritten": 204,
+        "handPixelsProtected": 0,
+        "handOverlap": 0
+      }
+    }
+  ],
+  "approval": {
+    "userSelected": "A-x2",
+    "userRequest": "A-x2. A · 앞부분 2배속 으로 가자",
+    "date": "2026-11-07",
+    "scope": "rain-aether-01 source, mouth removed with one canonical mask, matte/edge/foot cleanup, approved crossbow, timing A-x2"
+  },
+  "unityIntegrated": false
+}

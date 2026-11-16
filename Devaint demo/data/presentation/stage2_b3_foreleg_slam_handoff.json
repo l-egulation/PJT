@@ -1,0 +1,25 @@
+{
+  "schema": "stage2-b3-foreleg-slam-handoff-v1",
+  "status": "stationary-front-leg-slam-prompt-ready-awaiting-return",
+  "output": "outputs/waterway/b3-foreleg-slam-20261101",
+  "sourceInput": "outputs/waterway/b3-high-lift-headroom-20261101/B3-white-headroom-input-4x.png",
+  "sourceManifest": "outputs/waterway/b3-high-lift-headroom-20261101/manifest.json",
+  "previousPrompt": "outputs/waterway/b3-high-lift-headroom-20261101/prompt-en.txt",
+  "base": "outputs/waterway/pixel-base-step1-20261031/B3/native/base-frame.png",
+  "palette": "outputs/waterway/pixel-base-step1-20261031/B3/palette.json",
+  "inputSize": [1536,1536],
+  "workingLogicalCanvas": [384,384],
+  "bodySizeLogical": [180,100],
+  "logicalTranslation": [0,160],
+  "phaseDurationsMsProposal": [450,150,900],
+  "oneLine": "제자리에서 뒷발 접점을 고정한 채 앞발만 높이 들어 잠깐 버티고, 앞발과 앞부분을 바닥에 쾅 내리찍는다.",
+  "motionRules": [
+    "화면 오른쪽 뒤 지지대의 발끝 접점은 시작부터 끝까지 같은 바닥 좌표에 고정한다.",
+    "후방 몸통과 골반은 낮게 지지하고, 뒷다리를 펴서 몸 전체를 위로 밀어내는 도약 동작을 넣지 않는다.",
+    "크림색 쐐기 아래 앞쪽 주황 지지대만 접어 가슴/앞몸 가까이 높게 들고, 앞몸은 그 동작에 필요한 만큼만 기울어진다.",
+    "앞발을 크게 든 자세를 잠깐 읽힌 뒤 앞발과 앞부분을 아래로 한 번 강하게 내려찍는다. 뒷발은 계속 고정한다.",
+    "새 여백의 기본 입력은 그대로 사용한다. 이전 몸 전체를 세우는 생성 가이드는 이번 프롬프트에 참조하지 않는다."
+  ],
+  "policy": "Copy the expanded1536x1536 neutral input byte-for-byte. Revise only the requested animation constraints: supported stationary foreleg lift/slam with fixed hind-foot contacts. No new image generation, generated motion or pixel edits; prior inputs/prompts and approved assets remain preserved.1.5s timing is the existing slam-only art proposal; no combat/runtime changes.",
+  "prompt": "Animate ONE STATIONARY SUPPORTED FRONT-LEG SLAM using the exact supplied pixel-art creature. The rear feet act as fixed ground anchors from the first frame to the last. Keep the rear half supported and low while ONLY the front legs lift high, pause, then strike down heavily in the same place.\n\nMANDATORY CONTACT RULE: identify the original rear foot contacts on the RIGHT side of the image. Their sole contact points must remain at exactly the same x/y floor coordinates in EVERY frame. Keep their soles touching the ground continuously. The rear legs never push off or extend to launch the body. The rear pelvis stays at approximately its resting height. Keep the character's screen position fixed.\n\nACTION, about1.5 seconds total:\n1. LIFT AND HOLD, about0.45s: from the neutral pose, bend and fold ONLY the existing orange front supports beneath the cream wedge upward toward the chest/upper forebody. Raise the front feet HIGH and clearly off the floor, with a large visible gap underneath them. Let the forebody tilt naturally with the lifted front supports while the grounded rear half bears the weight. Briefly hold the front feet up so the threat is readable. Do not raise the whole creature vertically.\n2. SLAM, about0.15s: drive the lifted front feet and front section sharply DOWN into the original ground directly below/in front of them, once. The rear feet remain fixed and planted throughout. The impact comes from lowering the front limbs and pitching the front section down, not from an airborne landing.\n3. RECOVERY, about0.9s: briefly brace in the low impact pose, then slowly unfold the front supports back to the exact original neutral posture. Keep rear contacts fixed and finish without a bounce.\n\nForbidden movement: hopping, bounding, jumping, all feet leaving the ground, rear-leg takeoff, upward root translation, floating, a whole-body launch-and-land arc, forward travel, running, a rear-up onto newly positioned feet or repeated impacts. No ground-contact sliding. Preserve the original support count and attachments: do not add arms, human hands or longer legs. The front-leg lift must be large while the hind-foot anchors stay immobile.\n\nPreserve the same cream wedge, teal rear plates, orange supports, original10 colors,180x100 logical neutral body size and slightly turned LEFT-facing view. Keep rigid plates connected and solid colored areas filled. Use chunky crisp pixel clusters, readable held poses and a quick heavy strike. No outlines, blur, gradients, antialiasing, dithering or added colors. No dust, trails, ink, shockwave, shadows, ground cracks, scenery, text or grid.\n\nUse the supplied neutral image as the only character/pose input. Keep the full1536x1536 square white canvas, exactly4x the384x384 working grid. Neutral body size is720x400 image pixels, floor line y1408. Preserve this low placement and use the extra upper white margin for the lifted FRONT legs. Do not crop, zoom, shrink, recenter or mirror. Lock camera and framing. Export a single chronological action with identical full-canvas frames."
+}

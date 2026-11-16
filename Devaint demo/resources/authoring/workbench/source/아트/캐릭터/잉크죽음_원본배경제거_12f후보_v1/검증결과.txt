@@ -1,0 +1,5 @@
+PASS all36 original RGB unchanged
+PASS all36 fixed640x360 RGBA canvases
+PASS background binary alpha without generator noise
+PASS late12 frames retain >1000 opaque white pixels each
+PASS selected12 and durations sum1200ms

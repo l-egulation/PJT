@@ -1,0 +1,1353 @@
+{
+  "schema": "stage2-h3-slow-arc-impact-v1",
+  "status": "slow-charge-arc-impact-bubbling-puddle-approved-by-user",
+  "approval": "approved-by-user",
+  "output": "outputs/waterway/h3-slow-arc-impact-20261101",
+  "orbReturn": "outputs/waterway/h3-orb-return-20261101",
+  "bodyFloat": "outputs/waterway/h3-float-travel-20261101/B",
+  "impactGeneratedSource": "C:/Users/SSAFY/.codex/generated_images/01a18def-9c96-7602-bc0f-d707e8e958ed/exec-d94b35ed-14ad-4f28-abbb-dc3c33394925.png",
+  "impactGenerationPrompt": "outputs/waterway/h3-slow-arc-impact-20261101/impact-generation-prompt.txt",
+  "formationDurationsMs": [
+    100,
+    150,
+    200,
+    200,
+    200,
+    200,
+    250,
+    300
+  ],
+  "formationMs": 1600,
+  "flightMs": 1000,
+  "arcHeightPx": 90,
+  "startCenterWorld": [
+    372,
+    193
+  ],
+  "landingXWorld": 276,
+  "groundYWorld": 354,
+  "impactWidth": 80,
+  "impactCanvas": [
+    160,
+    64
+  ],
+  "impactAnchor": [
+    80,
+    52
+  ],
+  "pixelsPerUnit": 32,
+  "puddleWidthUnitsTrial": 3.5,
+  "puddleWidthPx": 112,
+  "puddleBubbleDurationsMs": [
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100
+  ],
+  "burstKeyDurationsMs": [
+    50,
+    50,
+    50,
+    50,
+    50,
+    50
+  ],
+  "puddleMs": 3000,
+  "fadeMs": 200,
+  "previewCycleMs": 6400,
+  "stepMs": 50,
+  "orbPaletteRgb": [
+    [
+      41,
+      37,
+      47
+    ],
+    [
+      128,
+      88,
+      110
+    ],
+    [
+      113,
+      130,
+      139
+    ],
+    [
+      217,
+      198,
+      171
+    ]
+  ],
+  "impactPaletteRgb": [
+    [
+      41,
+      37,
+      47
+    ],
+    [
+      128,
+      88,
+      110
+    ],
+    [
+      113,
+      130,
+      139
+    ]
+  ],
+  "bodyOffsetWorld": [
+    238,
+    94
+  ],
+  "whitePreviewCrop": [
+    200,
+    105,
+    485,
+    375
+  ],
+  "mapReference": "outputs/waterway/pixel-base-step1-20261031/references/C-game.png",
+  "combatReference": "data/combat/stage2_waterway_patterns.json",
+  "policy": "Reuse exact formation1-8 pixels retimed850->1600ms including300ms formed hold. Discard the source launch/tail poses for this version. Reuse complete orb for integer-position parabolic flight, then ground-contact ink rupture and the existing puddle direction. New static splash uses built-in image_gen, preserved raw/prompt and quantized to3 existing colors; derived nearest-neighbor impact keys are review effects. Body B16 and100ms timing remain unchanged. Puddle total width3.5units=112px at project PPU32 is a trial within user3-4units, with12 directly edited pixel bubble keys looping1200ms; it is not a radius. Arc geometry/1s flight/80px splash are illustration proposals, not game collision or damage implementation. Keep existing3s puddle trial and do not add explosion damage.",
+  "impactTimeMs": 2600,
+  "puddleEndMs": 5600,
+  "previewReviewGapMs": 600,
+  "bodyPixelsChanged": 0,
+  "actorPhaseTotalMsProposal": 2700,
+  "bodyFloatHashes": [
+    "e296db26c43a24f39717f68f2b3ee668c293854b5da90fb51a8ca04cb9536f1e",
+    "3374685823422b881b4b4fd8d1f8e825aa452d48a36a6340fd7e7d180820dde4",
+    "17dbbb12b26767da6b092069299b10e46a14dc991ee06fcb5b5b8fae513bab68",
+    "ed04ea9b59c480b6eb71ca2b0ab2da9980bac6b3f45b37c1cb273490543de662",
+    "3121eaa4b443f4351149cd2ec5b24150c87609e2102d4202286a139d5480cd69",
+    "11340a72799c40ec6801c3d12149383376c4d3ca923da38d62fbd59358adb298",
+    "290e2547b2ffe8553ca3c272a6076bb60b2206602f425baeaa462826b3c9206d",
+    "d2fefde10913a6f55bd0e73180b288511647af573c360b018b749dc151102027",
+    "fd4b9efc21250764e12c834048f0da1caf71704fb0c352669fdc3ad8384b479c",
+    "ec191273c41171ca44499c4d7c9512366ded1f641926fa75cc9cc1b18d188da3",
+    "fa89473deac17a4893da689ca882bcc620805f8ecb059ba58a3db8f5f15d4d4f",
+    "2cb74bcd80b1b0d0f68745b8f82121b6030af024bf857f2438592de4e69428e1",
+    "c57e11b5ea8d337655aef4c44c52c8fa098ecffe4e9ef918b07c8f7eeca9fd3f",
+    "ed04ea9b59c480b6eb71ca2b0ab2da9980bac6b3f45b37c1cb273490543de662",
+    "49a65331c9d9e9b81faca666fe2e79cefcf0aaacd4071ad019b96af6b4634dfc",
+    "63dda3ef6eb34ac2f3917b90ae865333325978e6135ada1eeed21226a3b02255"
+  ],
+  "bodyCycleMs": 1600,
+  "formationHashes": [
+    "9bfc2421123363e0d91e4b972afe7ae47863087ff6a9616b30e46ce22b0d5c6b",
+    "c17ba5b7161110aa20917ee89371b1bb0ddfa516f56fef279e8cee7e00c2f9dd",
+    "9cd16c88d9105bad098dbccb2fab3ee7af0031ee68d04ec692fb08d4bcce949d",
+    "de8a8b4455f9351c4d229d3471ed45506069700173eed347e947dd0d8e3d5ab9",
+    "b63585d553227608db6c4d57258599c846dfb20d88066696ef7e90c5d90de257",
+    "204c088d654a317611fe64421e8d8f1db07ecbcfd8eb4c72812e89b7da9e7c4d",
+    "fe2e730e27377baafb0b5d9a3d4d1f7885f2736d5c8873a08f41fd112614e852",
+    "622f14b17f644a9d33e2a003a3d01eae1f9c3c0daf37b2de5897c03a39d681a9"
+  ],
+  "projectileSha256": "2880f5c87694a32bbfe9baa1b1716c6fd3179095ad5b3f6452a6edd0bb3a5a26",
+  "impactGenerationTool": "built-in image_gen",
+  "impactOriginalSha256": "c2109494ae6d0f8a74c04981fa7edf522fc3d4c21478b16bffc79ef2af84e1ba",
+  "impactOriginalBox": [
+    100,
+    201,
+    1709,
+    799
+  ],
+  "impactPromptSha256": "9a91175bfb0480afc7e7ede09ad4a8cc759ca6222a00b2573a7b21f1eddf2279",
+  "impactPixelVisibleSize": [
+    80,
+    30
+  ],
+  "impactAssets": [
+    {
+      "path": "impact/native/burst-01.png",
+      "sha256": "6829f038bc1b23e0b37efbb64c27c1611307aeee75b6ba4742350ebab31549fa",
+      "bbox": [
+        55,
+        38,
+        105,
+        56
+      ]
+    },
+    {
+      "path": "impact/native/burst-02.png",
+      "sha256": "2337efe2adadc299ee1bb3636f788cc3edcc075ef3f421280d0062a5f71cfba9",
+      "bbox": [
+        24,
+        38,
+        136,
+        56
+      ]
+    },
+    {
+      "path": "impact/native/burst-03.png",
+      "sha256": "4e8356b7e3707eb0fdbd77fe908170812acb4e1f3b80c77217ea1b82a6b0ce01",
+      "bbox": [
+        24,
+        29,
+        136,
+        56
+      ]
+    },
+    {
+      "path": "impact/native/burst-04.png",
+      "sha256": "0dbb1d3319948daeaba0afb5a177591573dfbc1ccd0e5ceebc4ccc6ee88a97d4",
+      "bbox": [
+        24,
+        26,
+        136,
+        56
+      ]
+    },
+    {
+      "path": "impact/native/burst-05.png",
+      "sha256": "e77d02406843773725d16674f9f1c47981f49e3a53b1f4632a5af077308b2ace",
+      "bbox": [
+        24,
+        38,
+        136,
+        56
+      ]
+    },
+    {
+      "path": "impact/native/burst-06.png",
+      "sha256": "3207a86ef168d2d57a326b87c090b3521797cd4d083d7b604fe245909a2914eb",
+      "bbox": [
+        24,
+        46,
+        136,
+        56
+      ]
+    },
+    {
+      "path": "impact/native/puddle.png",
+      "sha256": "30446d1223be69c91c40576007be6c2f7d319036022221d2938eb198e5c2a855",
+      "bbox": [
+        24,
+        48,
+        136,
+        56
+      ]
+    },
+    {
+      "path": "impact/native/puddle-bubble-01.png",
+      "sha256": "000f7faffc971de0c90ccc0563b79e8e2b6c2eaa601eae88591694bf7cc15b70",
+      "bbox": [
+        24,
+        37,
+        136,
+        56
+      ]
+    },
+    {
+      "path": "impact/native/puddle-bubble-02.png",
+      "sha256": "5f6e7657b18f57c57047d47a19cc16a359db1f4a32afea57cab89b605a9510ae",
+      "bbox": [
+        24,
+        40,
+        136,
+        56
+      ]
+    },
+    {
+      "path": "impact/native/puddle-bubble-03.png",
+      "sha256": "9a49e63ef97466902dbc4aeee31d83eb97296252c905fb2bb0a8d833927e1159",
+      "bbox": [
+        24,
+        43,
+        136,
+        56
+      ]
+    },
+    {
+      "path": "impact/native/puddle-bubble-04.png",
+      "sha256": "373eb853a13bb5f2d89443b6f3b413c79df3c282c3aa15030e35db38f5c29bb1",
+      "bbox": [
+        24,
+        39,
+        136,
+        56
+      ]
+    },
+    {
+      "path": "impact/native/puddle-bubble-05.png",
+      "sha256": "ce9e48bf81410528730dec2ad588c61fd76fe8bfe655d0540700140ccb8e90e1",
+      "bbox": [
+        24,
+        37,
+        136,
+        56
+      ]
+    },
+    {
+      "path": "impact/native/puddle-bubble-06.png",
+      "sha256": "8e8597c44dfc84e66da3e06f297b0b295b6081527cdbfcb10a7fd656abe6f039",
+      "bbox": [
+        24,
+        40,
+        136,
+        56
+      ]
+    },
+    {
+      "path": "impact/native/puddle-bubble-07.png",
+      "sha256": "42091f7ed0271fff67cdaad1c6bc5802dc64af708e0ac29de6fc429bb403768d",
+      "bbox": [
+        24,
+        43,
+        136,
+        56
+      ]
+    },
+    {
+      "path": "impact/native/puddle-bubble-08.png",
+      "sha256": "387ee8e4e1c51de4b69a4fba66a35b4d58845d0a31f0a5990323bdc62627c8f9",
+      "bbox": [
+        24,
+        39,
+        136,
+        56
+      ]
+    },
+    {
+      "path": "impact/native/puddle-bubble-09.png",
+      "sha256": "7aa4bdde7a558c6c86af8d57f6f7bbc0c9299281d9a84dd1fcda82e6a177c05c",
+      "bbox": [
+        24,
+        37,
+        136,
+        56
+      ]
+    },
+    {
+      "path": "impact/native/puddle-bubble-10.png",
+      "sha256": "0edd5255de8efc106759638e8840d95d0c665b1ad10e8355d8c3a68da1d8c568",
+      "bbox": [
+        24,
+        40,
+        136,
+        56
+      ]
+    },
+    {
+      "path": "impact/native/puddle-bubble-11.png",
+      "sha256": "c385f9da18cb0a00f7784a4a33ae8d026c737ca1f953d03c1b43cb20fc45b76d",
+      "bbox": [
+        24,
+        43,
+        136,
+        56
+      ]
+    },
+    {
+      "path": "impact/native/puddle-bubble-12.png",
+      "sha256": "b71e01f01073fe089de13960f0826481e0f32bfd377675b0d5e37761a8768484",
+      "bbox": [
+        24,
+        39,
+        136,
+        56
+      ]
+    },
+    {
+      "path": "impact/native/fade-01.png",
+      "sha256": "30446d1223be69c91c40576007be6c2f7d319036022221d2938eb198e5c2a855",
+      "bbox": [
+        24,
+        48,
+        136,
+        56
+      ]
+    },
+    {
+      "path": "impact/native/fade-02.png",
+      "sha256": "d7721803ee9dda4e9d9a484dde76f4a199014461fea3e562476bd03f5c305fd7",
+      "bbox": [
+        40,
+        48,
+        120,
+        56
+      ]
+    },
+    {
+      "path": "impact/native/fade-03.png",
+      "sha256": "aeed3ebe9afec399be24bfb0049c15004052218fc6ef34f9b7bac69485edf32d",
+      "bbox": [
+        60,
+        48,
+        100,
+        56
+      ]
+    },
+    {
+      "path": "impact/native/fade-04.png",
+      "sha256": "5fedf42597d3072ec58c30decf737ac05bc614699579bdbf11b5c62f21a7ea0a",
+      "bbox": null
+    }
+  ],
+  "timeline": [
+    {
+      "timeMs": 0,
+      "stage": "formation",
+      "bodyKey": 1,
+      "assetKey": 1,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 50,
+      "stage": "formation",
+      "bodyKey": 1,
+      "assetKey": 1,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 100,
+      "stage": "formation",
+      "bodyKey": 2,
+      "assetKey": 2,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 150,
+      "stage": "formation",
+      "bodyKey": 2,
+      "assetKey": 2,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 200,
+      "stage": "formation",
+      "bodyKey": 3,
+      "assetKey": 2,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 250,
+      "stage": "formation",
+      "bodyKey": 3,
+      "assetKey": 3,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 300,
+      "stage": "formation",
+      "bodyKey": 4,
+      "assetKey": 3,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 350,
+      "stage": "formation",
+      "bodyKey": 4,
+      "assetKey": 3,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 400,
+      "stage": "formation",
+      "bodyKey": 5,
+      "assetKey": 3,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 450,
+      "stage": "formation",
+      "bodyKey": 5,
+      "assetKey": 4,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 500,
+      "stage": "formation",
+      "bodyKey": 6,
+      "assetKey": 4,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 550,
+      "stage": "formation",
+      "bodyKey": 6,
+      "assetKey": 4,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 600,
+      "stage": "formation",
+      "bodyKey": 7,
+      "assetKey": 4,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 650,
+      "stage": "formation",
+      "bodyKey": 7,
+      "assetKey": 5,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 700,
+      "stage": "formation",
+      "bodyKey": 8,
+      "assetKey": 5,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 750,
+      "stage": "formation",
+      "bodyKey": 8,
+      "assetKey": 5,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 800,
+      "stage": "formation",
+      "bodyKey": 9,
+      "assetKey": 5,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 850,
+      "stage": "formation",
+      "bodyKey": 9,
+      "assetKey": 6,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 900,
+      "stage": "formation",
+      "bodyKey": 10,
+      "assetKey": 6,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 950,
+      "stage": "formation",
+      "bodyKey": 10,
+      "assetKey": 6,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 1000,
+      "stage": "formation",
+      "bodyKey": 11,
+      "assetKey": 6,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 1050,
+      "stage": "formation",
+      "bodyKey": 11,
+      "assetKey": 7,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 1100,
+      "stage": "formation",
+      "bodyKey": 12,
+      "assetKey": 7,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 1150,
+      "stage": "formation",
+      "bodyKey": 12,
+      "assetKey": 7,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 1200,
+      "stage": "formation",
+      "bodyKey": 13,
+      "assetKey": 7,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 1250,
+      "stage": "formation",
+      "bodyKey": 13,
+      "assetKey": 7,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 1300,
+      "stage": "formation",
+      "bodyKey": 14,
+      "assetKey": 8,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 1350,
+      "stage": "formation",
+      "bodyKey": 14,
+      "assetKey": 8,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 1400,
+      "stage": "formation",
+      "bodyKey": 15,
+      "assetKey": 8,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 1450,
+      "stage": "formation",
+      "bodyKey": 15,
+      "assetKey": 8,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 1500,
+      "stage": "formation",
+      "bodyKey": 16,
+      "assetKey": 8,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 1550,
+      "stage": "formation",
+      "bodyKey": 16,
+      "assetKey": 8,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 1600,
+      "stage": "flight",
+      "bodyKey": 1,
+      "assetKey": 1,
+      "orbCenterWorld": [
+        372,
+        193
+      ]
+    },
+    {
+      "timeMs": 1650,
+      "stage": "flight",
+      "bodyKey": 1,
+      "assetKey": 1,
+      "orbCenterWorld": [
+        367,
+        183
+      ]
+    },
+    {
+      "timeMs": 1700,
+      "stage": "flight",
+      "bodyKey": 2,
+      "assetKey": 1,
+      "orbCenterWorld": [
+        362,
+        175
+      ]
+    },
+    {
+      "timeMs": 1750,
+      "stage": "flight",
+      "bodyKey": 2,
+      "assetKey": 1,
+      "orbCenterWorld": [
+        358,
+        168
+      ]
+    },
+    {
+      "timeMs": 1800,
+      "stage": "flight",
+      "bodyKey": 3,
+      "assetKey": 1,
+      "orbCenterWorld": [
+        353,
+        164
+      ]
+    },
+    {
+      "timeMs": 1850,
+      "stage": "flight",
+      "bodyKey": 3,
+      "assetKey": 1,
+      "orbCenterWorld": [
+        348,
+        161
+      ]
+    },
+    {
+      "timeMs": 1900,
+      "stage": "flight",
+      "bodyKey": 4,
+      "assetKey": 1,
+      "orbCenterWorld": [
+        343,
+        160
+      ]
+    },
+    {
+      "timeMs": 1950,
+      "stage": "flight",
+      "bodyKey": 4,
+      "assetKey": 1,
+      "orbCenterWorld": [
+        338,
+        160
+      ]
+    },
+    {
+      "timeMs": 2000,
+      "stage": "flight",
+      "bodyKey": 5,
+      "assetKey": 1,
+      "orbCenterWorld": [
+        334,
+        163
+      ]
+    },
+    {
+      "timeMs": 2050,
+      "stage": "flight",
+      "bodyKey": 5,
+      "assetKey": 1,
+      "orbCenterWorld": [
+        329,
+        167
+      ]
+    },
+    {
+      "timeMs": 2100,
+      "stage": "flight",
+      "bodyKey": 6,
+      "assetKey": 1,
+      "orbCenterWorld": [
+        324,
+        174
+      ]
+    },
+    {
+      "timeMs": 2150,
+      "stage": "flight",
+      "bodyKey": 6,
+      "assetKey": 1,
+      "orbCenterWorld": [
+        319,
+        181
+      ]
+    },
+    {
+      "timeMs": 2200,
+      "stage": "flight",
+      "bodyKey": 7,
+      "assetKey": 1,
+      "orbCenterWorld": [
+        314,
+        191
+      ]
+    },
+    {
+      "timeMs": 2250,
+      "stage": "flight",
+      "bodyKey": 7,
+      "assetKey": 1,
+      "orbCenterWorld": [
+        310,
+        203
+      ]
+    },
+    {
+      "timeMs": 2300,
+      "stage": "flight",
+      "bodyKey": 8,
+      "assetKey": 1,
+      "orbCenterWorld": [
+        305,
+        216
+      ]
+    },
+    {
+      "timeMs": 2350,
+      "stage": "flight",
+      "bodyKey": 8,
+      "assetKey": 1,
+      "orbCenterWorld": [
+        300,
+        231
+      ]
+    },
+    {
+      "timeMs": 2400,
+      "stage": "flight",
+      "bodyKey": 9,
+      "assetKey": 1,
+      "orbCenterWorld": [
+        295,
+        248
+      ]
+    },
+    {
+      "timeMs": 2450,
+      "stage": "flight",
+      "bodyKey": 9,
+      "assetKey": 1,
+      "orbCenterWorld": [
+        290,
+        267
+      ]
+    },
+    {
+      "timeMs": 2500,
+      "stage": "flight",
+      "bodyKey": 10,
+      "assetKey": 1,
+      "orbCenterWorld": [
+        286,
+        288
+      ]
+    },
+    {
+      "timeMs": 2550,
+      "stage": "flight",
+      "bodyKey": 10,
+      "assetKey": 1,
+      "orbCenterWorld": [
+        281,
+        310
+      ]
+    },
+    {
+      "timeMs": 2600,
+      "stage": "impact",
+      "bodyKey": 11,
+      "assetKey": 1,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 2650,
+      "stage": "impact",
+      "bodyKey": 11,
+      "assetKey": 2,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 2700,
+      "stage": "impact",
+      "bodyKey": 12,
+      "assetKey": 3,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 2750,
+      "stage": "impact",
+      "bodyKey": 12,
+      "assetKey": 4,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 2800,
+      "stage": "impact",
+      "bodyKey": 13,
+      "assetKey": 5,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 2850,
+      "stage": "impact",
+      "bodyKey": 13,
+      "assetKey": 6,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 2900,
+      "stage": "puddle",
+      "bodyKey": 14,
+      "assetKey": 1,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 2950,
+      "stage": "puddle",
+      "bodyKey": 14,
+      "assetKey": 1,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 3000,
+      "stage": "puddle",
+      "bodyKey": 15,
+      "assetKey": 2,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 3050,
+      "stage": "puddle",
+      "bodyKey": 15,
+      "assetKey": 2,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 3100,
+      "stage": "puddle",
+      "bodyKey": 16,
+      "assetKey": 3,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 3150,
+      "stage": "puddle",
+      "bodyKey": 16,
+      "assetKey": 3,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 3200,
+      "stage": "puddle",
+      "bodyKey": 1,
+      "assetKey": 4,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 3250,
+      "stage": "puddle",
+      "bodyKey": 1,
+      "assetKey": 4,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 3300,
+      "stage": "puddle",
+      "bodyKey": 2,
+      "assetKey": 5,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 3350,
+      "stage": "puddle",
+      "bodyKey": 2,
+      "assetKey": 5,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 3400,
+      "stage": "puddle",
+      "bodyKey": 3,
+      "assetKey": 6,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 3450,
+      "stage": "puddle",
+      "bodyKey": 3,
+      "assetKey": 6,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 3500,
+      "stage": "puddle",
+      "bodyKey": 4,
+      "assetKey": 7,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 3550,
+      "stage": "puddle",
+      "bodyKey": 4,
+      "assetKey": 7,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 3600,
+      "stage": "puddle",
+      "bodyKey": 5,
+      "assetKey": 8,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 3650,
+      "stage": "puddle",
+      "bodyKey": 5,
+      "assetKey": 8,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 3700,
+      "stage": "puddle",
+      "bodyKey": 6,
+      "assetKey": 9,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 3750,
+      "stage": "puddle",
+      "bodyKey": 6,
+      "assetKey": 9,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 3800,
+      "stage": "puddle",
+      "bodyKey": 7,
+      "assetKey": 10,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 3850,
+      "stage": "puddle",
+      "bodyKey": 7,
+      "assetKey": 10,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 3900,
+      "stage": "puddle",
+      "bodyKey": 8,
+      "assetKey": 11,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 3950,
+      "stage": "puddle",
+      "bodyKey": 8,
+      "assetKey": 11,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 4000,
+      "stage": "puddle",
+      "bodyKey": 9,
+      "assetKey": 12,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 4050,
+      "stage": "puddle",
+      "bodyKey": 9,
+      "assetKey": 12,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 4100,
+      "stage": "puddle",
+      "bodyKey": 10,
+      "assetKey": 1,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 4150,
+      "stage": "puddle",
+      "bodyKey": 10,
+      "assetKey": 1,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 4200,
+      "stage": "puddle",
+      "bodyKey": 11,
+      "assetKey": 2,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 4250,
+      "stage": "puddle",
+      "bodyKey": 11,
+      "assetKey": 2,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 4300,
+      "stage": "puddle",
+      "bodyKey": 12,
+      "assetKey": 3,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 4350,
+      "stage": "puddle",
+      "bodyKey": 12,
+      "assetKey": 3,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 4400,
+      "stage": "puddle",
+      "bodyKey": 13,
+      "assetKey": 4,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 4450,
+      "stage": "puddle",
+      "bodyKey": 13,
+      "assetKey": 4,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 4500,
+      "stage": "puddle",
+      "bodyKey": 14,
+      "assetKey": 5,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 4550,
+      "stage": "puddle",
+      "bodyKey": 14,
+      "assetKey": 5,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 4600,
+      "stage": "puddle",
+      "bodyKey": 15,
+      "assetKey": 6,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 4650,
+      "stage": "puddle",
+      "bodyKey": 15,
+      "assetKey": 6,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 4700,
+      "stage": "puddle",
+      "bodyKey": 16,
+      "assetKey": 7,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 4750,
+      "stage": "puddle",
+      "bodyKey": 16,
+      "assetKey": 7,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 4800,
+      "stage": "puddle",
+      "bodyKey": 1,
+      "assetKey": 8,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 4850,
+      "stage": "puddle",
+      "bodyKey": 1,
+      "assetKey": 8,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 4900,
+      "stage": "puddle",
+      "bodyKey": 2,
+      "assetKey": 9,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 4950,
+      "stage": "puddle",
+      "bodyKey": 2,
+      "assetKey": 9,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 5000,
+      "stage": "puddle",
+      "bodyKey": 3,
+      "assetKey": 10,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 5050,
+      "stage": "puddle",
+      "bodyKey": 3,
+      "assetKey": 10,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 5100,
+      "stage": "puddle",
+      "bodyKey": 4,
+      "assetKey": 11,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 5150,
+      "stage": "puddle",
+      "bodyKey": 4,
+      "assetKey": 11,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 5200,
+      "stage": "puddle",
+      "bodyKey": 5,
+      "assetKey": 12,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 5250,
+      "stage": "puddle",
+      "bodyKey": 5,
+      "assetKey": 12,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 5300,
+      "stage": "puddle",
+      "bodyKey": 6,
+      "assetKey": 1,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 5350,
+      "stage": "puddle",
+      "bodyKey": 6,
+      "assetKey": 1,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 5400,
+      "stage": "puddle",
+      "bodyKey": 7,
+      "assetKey": 2,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 5450,
+      "stage": "puddle",
+      "bodyKey": 7,
+      "assetKey": 2,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 5500,
+      "stage": "puddle",
+      "bodyKey": 8,
+      "assetKey": 3,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 5550,
+      "stage": "puddle",
+      "bodyKey": 8,
+      "assetKey": 3,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 5600,
+      "stage": "fade",
+      "bodyKey": 9,
+      "assetKey": 1,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 5650,
+      "stage": "fade",
+      "bodyKey": 9,
+      "assetKey": 2,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 5700,
+      "stage": "fade",
+      "bodyKey": 10,
+      "assetKey": 3,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 5750,
+      "stage": "fade",
+      "bodyKey": 10,
+      "assetKey": 4,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 5800,
+      "stage": "review",
+      "bodyKey": 11,
+      "assetKey": null,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 5850,
+      "stage": "review",
+      "bodyKey": 11,
+      "assetKey": null,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 5900,
+      "stage": "review",
+      "bodyKey": 12,
+      "assetKey": null,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 5950,
+      "stage": "review",
+      "bodyKey": 12,
+      "assetKey": null,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 6000,
+      "stage": "review",
+      "bodyKey": 13,
+      "assetKey": null,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 6050,
+      "stage": "review",
+      "bodyKey": 13,
+      "assetKey": null,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 6100,
+      "stage": "review",
+      "bodyKey": 14,
+      "assetKey": null,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 6150,
+      "stage": "review",
+      "bodyKey": 14,
+      "assetKey": null,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 6200,
+      "stage": "review",
+      "bodyKey": 15,
+      "assetKey": null,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 6250,
+      "stage": "review",
+      "bodyKey": 15,
+      "assetKey": null,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 6300,
+      "stage": "review",
+      "bodyKey": 16,
+      "assetKey": null,
+      "orbCenterWorld": null
+    },
+    {
+      "timeMs": 6350,
+      "stage": "review",
+      "bodyKey": 16,
+      "assetKey": null,
+      "orbCenterWorld": null
+    }
+  ],
+  "runtimeIntegration": "not-performed"
+}

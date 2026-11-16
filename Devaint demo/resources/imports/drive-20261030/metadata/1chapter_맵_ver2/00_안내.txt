@@ -1,0 +1,36 @@
+1chapter 맵 ver2 · 절벽과 깊은 숲
+
+■ 맵을 수정해보기
+1. Chapter1_Map_Ver2_Editor.zip을 다운로드하고 압축을 풉니다.
+2. 맵 편집기.html을 Chrome 또는 Edge로 엽니다. 설치나 Unity가 필요 없습니다.
+3. 지형 편집으로 땅을 수정하고 배치 편집으로 발판·시설을 이동합니다.
+4. 전체 맵 JSON 저장으로 chapter1_이름.json을 저장해 공유합니다.
+5. 다른 수정본은 JSON 불러오기로 확인합니다.
+자동 저장은 본인 브라우저에만 남습니다. HTML 파일 자체가 수정되지는 않습니다.
+이전 지형에서 저장한 JSON은 이전_지형용_편집기.html에서 엽니다.
+
+■ Unity에 에셋 적용
+1. GitLab main을 최신으로 받고 Unity를 닫습니다.
+2. Google Drive 데스크톱에서 F109_공유에셋/01_승인에셋을 동기화합니다.
+3. 저장소 루트의 에셋 업데이트.bat을 실행합니다.
+4. 처음에는 assets 폴더를 포함한 01_승인에셋을 선택합니다.
+PNG 6개를 Git의 경로·크기·SHA256 목록과 대조한 뒤 자동 적용합니다.
+기존 알 수 없는 로컬 수정은 덮어쓰지 않습니다. 씬·코드·타일 설정·meta는 Git main에 있습니다.
+드라이브를 연결하지 않는 수동 복원용 ZIP도 계속 제공합니다:
+python tools/chapter1-rounded-terrain/restore.py "<Chapter1_Map_Ver2.zip 경로>"
+
+■ 폴더 내용
+Chapter1_Map_Ver2_Editor.zip: 현재 편집기·이전 지형용 호환 편집기·안내.
+Chapter1_Map_Ver2.zip: Unity용 아틀라스·제작 타일·발판·배경 PNG 6개.
+맵 편집기.html: 현재 편집기 단일 파일.
+타일_배경/: 개별 PNG 6개. Unity 아틀라스는 RoundedTerrain.png입니다.
+적용_미리보기.png: HTML의 대표 절벽·분지·전투 지면.
+전체_지형.png: 24공간 전체 지도.
+
+현재 HTML은 24공간 설계 편집기이며 캐릭터는 크기 비교용입니다.
+Unity는 같은 아트가 적용된 기존 8구간 시험 씬입니다.
+HTML의 수정 지형이 Unity에 자동 반영되지는 않습니다.
+
+GitLab main 경로: tools/chapter1-map-editor
+머지된 MR: https://lab.ssafy.com/s15-final/S15P31F109/-/merge_requests/16
+제작 기준본: 02_에셋/배경/숲/1chapter_맵_ver2

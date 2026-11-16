@@ -1,0 +1,98 @@
+{
+  "schema": "stage2-normal-motion-review-v1",
+  "output": "outputs/waterway/normal-motion-review-v2-20261101",
+  "canvas": [
+    512,
+    384
+  ],
+  "nativeOffset": [
+    128,
+    68
+  ],
+  "canonicalToWorld": [
+    110,
+    26
+  ],
+  "map": "outputs/waterway/pixel-base-step1-20261031/references/C-game.png",
+  "player": "outputs/waterway/pixel-base-step1-20261031/references/assets/approved-player.png",
+  "idleRoot": "outputs/waterway/body-idles-8-v2-20261031",
+  "movementSpec": "data/presentation/stage2_normal_locomotion_approved.json",
+  "monsters": [
+    {
+      "id": "K4",
+      "name": "등짐분사수",
+      "role": "근거리 · 접근 분사",
+      "attack": "outputs/waterway/k4-ink-only-repaired-20261101",
+      "attackKind": "composite",
+      "gapMs": 500,
+      "attackNote": "기존 A19장 본체 + 잉크만 분리·픽셀 보충. 분사 자세2.1초 유지 → 잉크 종료 뒤 회수.",
+      "attackStatus": "채택 본체 + 이번 잉크 보정본",
+      "whiteClip": "existing-attack-native.webp",
+      "worldCrop": [
+        48,
+        74,
+        568,
+        374
+      ],
+      "guideWorldY": -1
+    },
+    {
+      "id": "B3",
+      "name": "쐐기보행기",
+      "role": "큰 근거리 · 내려찍기",
+      "attack": "outputs/waterway/b3-slam-return-20261101",
+      "nativeSubdir": "original/native",
+      "attackKind": "native",
+      "gapMs": 600,
+      "attackNote": "앞다리를 크게 들고 제자리 내려찍기. 원본19장 사용 · 돌진 연결은 별도.",
+      "attackStatus": "무보충 원본19장 채택"
+    },
+    {
+      "id": "M3",
+      "name": "먹침필경사",
+      "role": "근거리 · 빠른 연속 찌르기",
+      "attack": "outputs/waterway/m3-stab-fast-20261101",
+      "attackKind": "timeline",
+      "gapMs": 600,
+      "attackNote": "빠른4연타 · 찌르기70ms/회수80ms 박자 유지.",
+      "attackStatus": "빠른4연타 채택"
+    },
+    {
+      "id": "R-selected",
+      "name": "신호투척수",
+      "role": "원거리 · 폐잉크통 투척",
+      "attack": "outputs/waterway/thrower-can-break-20261101",
+      "attackKind": "composite",
+      "whiteClip": "previews/review-native.webp",
+      "worldCrop": [
+        100,
+        80,
+        510,
+        315
+      ],
+      "guideWorldY": 288,
+      "gapMs": 600,
+      "attackNote": "폐잉크통 놓기 → 곡사 → 통 파손/짧은 잉크. 직격1회 · 장판 없음.",
+      "attackStatus": "채택 본체 + 최신 통/파손 보정 시안"
+    },
+    {
+      "id": "H3",
+      "name": "늘어진 수의",
+      "role": "원거리 · 잉크 공/장판",
+      "attack": "outputs/waterway/attack-fx-polish-20261101/h3",
+      "attackKind": "composite",
+      "whiteClip": "review-native.webp",
+      "worldCrop": [
+        200,
+        105,
+        485,
+        375
+      ],
+      "guideWorldY": 354,
+      "gapMs": 600,
+      "attackNote": "27키로 천천히1.6초 생성 → 점성 있는 포물선 낙하 → 착탄 → 폭3.5유닛 부글 장판.",
+      "attackStatus": "사용자 채택 생성 보정 + 점성 비행/장판"
+    }
+  ],
+  "policy": "Collect exactly5 normal monsters and15 idle/move/attack clips. Preserve source pixels, palette, size and per-key timing. Composite attacks recover only exact nonwhite/non-guide pixels from latest lossless native review clips. Shared per-monster crop across3 states; integer zoom only. Source files and hashes preserved. No new poses, timing changes, combat data or Unity integration."
+}

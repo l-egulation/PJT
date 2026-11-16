@@ -1,0 +1,42 @@
+{
+  "format": "deviant-resource-asset-v1",
+  "id": "monsters.stage-02.rose-blue-machine-crystal-20261112",
+  "path": "monsters/stage-02/rose-blue-machine-crystal-20261112",
+  "status": "user-selected",
+  "gameIntegration": "unity-chapter2-rose-blue-boss",
+  "style": "픽셀 결정, 렉토 보라 램프·먹 테두리 1px (사용자 확정 2026-11-12)",
+  "replaces": "monsters/stage-02/boss-siblings-lineup-20261103/unity-phase1/machine.png (1페이즈 기계장치 그림)",
+  "sources": [
+    "자율PJ 04_테스트/2스테이지 배경 현대화 시안(환각 기계 시안.html)에서 사용자가 고르고 다듬은 잉크 결정. source/ 의 Python 코드로 그렸다."
+  ],
+  "decisions": [
+    "그림 3×4u(96×128), 판정 2×3u 그대로, 1:1",
+    "속은 면 명암만, 강조는 빛 쓸기. 떠다니는 구슬·조각, 속 얇은 선, 십자 반짝임, 속 원은 뺀다",
+    "손상은 갈라져 벌어짐이고 쌓인다(2단계는 1단계 금을 두고 새 금을 더한다)",
+    "손상 체력 문턱 66%·33%는 그림 쪽 제안, 기획 확정 아님"
+  ],
+  "runtimeManifest": "runtime/sheets.json",
+  "regenerate": "cd source && python export_runtime.py ../runtime",
+  "files": [
+    "asset.json",
+    "README.md",
+    "preview/break-3x.gif",
+    "preview/damage-progress.png",
+    "preview/idle-3x.gif",
+    "preview/size-vs-hero.png",
+    "preview/states-in-room-2x.gif",
+    "preview/states-sheet.png",
+    "runtime/machine-crystal-break.png",
+    "runtime/machine-crystal-damage1.png",
+    "runtime/machine-crystal-damage2.png",
+    "runtime/machine-crystal-hit0.png",
+    "runtime/machine-crystal-hit1.png",
+    "runtime/machine-crystal-hit2.png",
+    "runtime/machine-crystal-idle.png",
+    "runtime/sheets.json",
+    "source/crystal_damage_options.py",
+    "source/crystal_states.py",
+    "source/crystal_v3.py",
+    "source/export_runtime.py"
+  ]
+}

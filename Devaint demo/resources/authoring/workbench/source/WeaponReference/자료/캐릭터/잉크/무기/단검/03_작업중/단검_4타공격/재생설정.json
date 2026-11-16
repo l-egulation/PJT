@@ -1,0 +1,181 @@
+{
+  "hits": [
+    {
+      "name": "1타 · 짧은 가로베기",
+      "frames": [
+        "1타/01.png",
+        "1타/02.png",
+        "1타/03.png"
+      ],
+      "ms": [
+        45,
+        75,
+        45
+      ],
+      "poses": [
+        "H1",
+        "H2",
+        "H3"
+      ],
+      "reverse": false
+    },
+    {
+      "name": "2타 · 되받아 올려베기",
+      "frames": [
+        "2타/01.png",
+        "2타/02.png",
+        "2타/03.png"
+      ],
+      "ms": [
+        45,
+        75,
+        45
+      ],
+      "poses": [
+        "D3",
+        "H2",
+        "D1"
+      ],
+      "reverse": false
+    },
+    {
+      "name": "3타 · 내려베기",
+      "frames": [
+        "3타/01.png",
+        "3타/02.png",
+        "3타/03.png",
+        "3타/04.png"
+      ],
+      "ms": [
+        50,
+        50,
+        110,
+        50
+      ],
+      "poses": [
+        "D1",
+        "D2",
+        "D3",
+        "H3"
+      ],
+      "reverse": false
+    },
+    {
+      "name": "4타 · 역수 마무리",
+      "frames": [
+        "4타/01.png",
+        "4타/02.png",
+        "4타/03.png",
+        "4타/04.png"
+      ],
+      "ms": [
+        55,
+        200,
+        90,
+        65
+      ],
+      "poses": [
+        "D1",
+        "D2",
+        "H2",
+        "H3"
+      ],
+      "reverse": true
+    }
+  ],
+  "combo_window_ms": 300,
+  "buffer_max": 1,
+  "effects": {
+    "palette": "white and gray only",
+    "source": "02_에셋/이펙트/기본공격/03_작업중",
+    "hits": [
+      {
+        "frames": [
+          "이펙트/1타/01.png",
+          "이펙트/1타/02.png",
+          "이펙트/1타/03.png",
+          "이펙트/1타/04.png",
+          "이펙트/1타/05.png",
+          "이펙트/1타/06.png"
+        ],
+        "ms": [
+          18,
+          22,
+          28,
+          34,
+          30,
+          24
+        ],
+        "start": 45,
+        "name": "몸을 가로지르는 잔상"
+      },
+      {
+        "frames": [
+          "이펙트/2타/01.png",
+          "이펙트/2타/02.png",
+          "이펙트/2타/03.png",
+          "이펙트/2타/04.png",
+          "이펙트/2타/05.png",
+          "이펙트/2타/06.png"
+        ],
+        "ms": [
+          18,
+          22,
+          28,
+          34,
+          30,
+          24
+        ],
+        "start": 45,
+        "name": "크게 감아올리기"
+      },
+      {
+        "frames": [
+          "이펙트/3타/01.png",
+          "이펙트/3타/02.png",
+          "이펙트/3타/03.png",
+          "이펙트/3타/04.png",
+          "이펙트/3타/05.png",
+          "이펙트/3타/06.png"
+        ],
+        "ms": [
+          18,
+          22,
+          28,
+          34,
+          30,
+          24
+        ],
+        "start": 100,
+        "name": "전신 내려베기"
+      },
+      {
+        "frames": [
+          "이펙트/4타/01.png",
+          "이펙트/4타/02.png",
+          "이펙트/4타/03.png",
+          "이펙트/4타/04.png",
+          "이펙트/4타/05.png",
+          "이펙트/4타/06.png"
+        ],
+        "ms": [
+          18,
+          22,
+          28,
+          34,
+          30,
+          24
+        ],
+        "start": 255,
+        "name": "역수 큰 절단"
+      }
+    ],
+    "render_order": [
+      "character_weapon",
+      "effects"
+    ],
+    "independent_decay_ms": 156
+  },
+  "normalization": "source bodies 1.2x; fixed rear foot and ground; weapon native size",
+  "dagger_grip_shortened_px": 6
+}

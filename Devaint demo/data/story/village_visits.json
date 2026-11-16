@@ -1,0 +1,685 @@
+{
+  "schemaVersion": 1,
+  "id": "village_visits",
+  "title": "마을 장인의 방문",
+  "status": "village-ink-return-integrated",
+  "source": "docs/design/progression/village-palette-pieces.md; village ink return followed by existing facility visits",
+  "coordinates": "world x in starting-village units (data/assets/starting_hub.json layoutProposal)",
+  "schema": {
+    "parts": "part k is the return after the k-th village ink; its first beat starts with the visit",
+    "artisan": "mode enter (comes in from the right edge of the view to x, or heroOffset right of the hero) | place (stands at x) | walk (to x) | busy (id sort | hammer | look; empty stops) | face | leave (walks off to the right while the screen dims) | inside (fades into the building); face 1 right / -1 left",
+    "pan": "id: station; the hero walks to 1.9 left of it and the artisan to heroOffset right of it (then faces face), the camera follows the hero and settles on the station",
+    "unlockStation": "id: the station's lock breaks and its name inks in (the station stays closed until then)",
+    "sparkle": "id: sparks around an already open station",
+    "bloom": "First red tutorial only. Later ink is poured by F at the well; facility scenes follow its reward confirmation.",
+    "thud": "volume: one hammer blow",
+    "firstRunSupplyLesson": "After asking for the remaining ink, connect to preparation, pigment/resurrection/persistence, supply office, atelier, and farewell. Replaces the workshop segment through the farewell only when the initial supply lesson is unseen.",
+    "firstRunDialogue": "Line overrides for the first-run boss-clear variant only. The shared silent hero, well-pour choreography, and return animation are preserved."
+  },
+  "speakerNames": [
+    {
+      "speaker": "artisan",
+      "name": "마을 장인"
+    }
+  ],
+  "beats": [
+    {
+      "id": "visit-1",
+      "part": 1,
+      "trigger": {
+        "type": "start"
+      },
+      "actions": [
+        {
+          "type": "lockInput"
+        },
+        {
+          "type": "wait",
+          "seconds": 0.5
+        },
+        {
+          "type": "artisan",
+          "mode": "enterSlow",
+          "heroOffset": 9,
+          "face": -1
+        },
+        {
+          "type": "waitAnimation"
+        },
+        {
+          "type": "wait",
+          "seconds": 0.35
+        },
+        {
+          "type": "exclaim"
+        },
+        {
+          "type": "wait",
+          "seconds": 1
+        },
+        {
+          "type": "artisan",
+          "mode": "walkFast",
+          "heroOffset": 2.3,
+          "face": -1
+        },
+        {
+          "type": "waitAnimation"
+        },
+        {
+          "type": "wait",
+          "seconds": 0.25
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "어, 또 보네!",
+          "id": "red-ink-greet"
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "잘 다녀왔어?",
+          "id": "red-ink-check"
+        },
+        {
+          "type": "wait",
+          "seconds": 0.4
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "어! 너 주머니에… 그거!",
+          "id": "red-ink-notice"
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "붉은 잉크잖아!"
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "너… 시계탑 집행자를 쓰러뜨렸구나!"
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "그 잉크라면 마을에 색을 돌려줄 수 있겠어.",
+          "id": "red-ink-colour"
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "이 우물은 마을 곳곳의 물길과 이어져 있거든."
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "여기에 조금 흘려보내면, 색도 마을로 퍼져 나갈 거야.",
+          "id": "red-ink-water"
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "마침 잘됐다. 한 번 써볼까?",
+          "id": "red-ink-try"
+        },
+        {
+          "type": "bloom",
+          "piece": 1
+        },
+        {
+          "type": "waitAnimation"
+        },
+        {
+          "type": "wait",
+          "seconds": 0.7
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "봐… 색이 돌아오고 있어!",
+          "id": "red-ink-restored"
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "이런 풍경, 정말 오랜만이네.",
+          "id": "red-ink-remember"
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "다섯 색을 모두 되찾으면 마을도 예전 모습으로 돌아올 거야.",
+          "id": "red-ink-remaining"
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "나머지 잉크도 찾아줄 수 있을까?",
+          "id": "red-ink-request"
+        },
+        {
+          "type": "wait",
+          "seconds": 0.25
+        },
+        {
+          "type": "face",
+          "face": 1
+        },
+        {
+          "type": "wait",
+          "seconds": 0.85
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "고마워. 네 덕분에 희망이 생겼네.",
+          "id": "red-ink-thanks"
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "돌아온 색 덕분에 공방에서 새 잉크도 연구할 수 있겠어.",
+          "id": "red-ink-workshop-start"
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "잠깐 공방으로 가 볼까?"
+        },
+        {
+          "type": "pan",
+          "id": "artisan_hub",
+          "heroOffset": 1.7,
+          "face": -1
+        },
+        {
+          "type": "waitAnimation"
+        },
+        {
+          "type": "unlockStation",
+          "id": "palette_bench"
+        },
+        {
+          "type": "wait",
+          "seconds": 1
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "이제 여기서 마법안료로 발동 방식이 같은 잉크들을 한 묶음씩 해금할 수 있어."
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "보급이든 잉크 연구든, 필요한 일은 이 작업대에서 골라 줘."
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "안료가 모이면 들러. 다음 여행에 맞춰 손봐 줄게."
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "난 다시 정비소에 가 봐야겠네.",
+          "id": "red-ink-farewell"
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "조심해서 다녀와. 또 보자!"
+        },
+        {
+          "type": "artisan",
+          "mode": "leave"
+        },
+        {
+          "type": "waitAnimation"
+        },
+        {
+          "type": "wait",
+          "seconds": 0.5
+        },
+        {
+          "type": "unlockInput"
+        }
+      ]
+    },
+    {
+      "id": "visit-2",
+      "part": 2,
+      "trigger": {
+        "type": "start"
+      },
+      "actions": [
+        {
+          "type": "lockInput"
+        },
+        {
+          "type": "artisan",
+          "mode": "place",
+          "x": 30.1,
+          "face": -1
+        },
+        {
+          "type": "pan",
+          "id": "artisan_hub",
+          "heroOffset": 1.6,
+          "face": -1
+        },
+        {
+          "type": "waitAnimation"
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "두 번째 잉크도 되찾았네. 마을이 한결 살아났어."
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "공방에 회수 작업도 준비해 뒀어."
+        },
+        {
+          "type": "unlockStation",
+          "id": "reclaim_bench"
+        },
+        {
+          "type": "wait",
+          "seconds": 1.15
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "마법안료로 회수 기능을 해금하면, 내구도가 다한 무기에서 골드를 돌려받을 수 있어."
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "보급과 잉크 연구 옆에서 같이 고르면 돼. 필요한 것부터 준비해."
+        },
+        {
+          "type": "artisan",
+          "mode": "leave"
+        },
+        {
+          "type": "waitAnimation"
+        },
+        {
+          "type": "unlockInput"
+        }
+      ]
+    },
+    {
+      "id": "visit-3",
+      "part": 3,
+      "trigger": {
+        "type": "start"
+      },
+      "actions": [
+        {
+          "type": "lockInput"
+        },
+        {
+          "type": "wait",
+          "seconds": 0.5
+        },
+        {
+          "type": "waitAnimation"
+        },
+        {
+          "type": "unlockInput"
+        }
+      ]
+    },
+    {
+      "id": "visit-4",
+      "part": 4,
+      "trigger": {
+        "type": "start"
+      },
+      "actions": [
+        {
+          "type": "lockInput"
+        },
+        {
+          "type": "wait",
+          "seconds": 0.5
+        },
+        {
+          "type": "waitAnimation"
+        },
+        {
+          "type": "artisan",
+          "mode": "place",
+          "x": 21.9,
+          "face": -1
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "네 번째 잉크까지 돌아왔네. 마을의 색도 한결 선명해졌어."
+        },
+        {
+          "type": "pan",
+          "id": "artisan_hub",
+          "heroOffset": 1.7,
+          "face": -1
+        },
+        {
+          "type": "wait",
+          "seconds": 0.25
+        },
+        {
+          "type": "sparkle",
+          "id": "palette_bench"
+        },
+        {
+          "type": "wait",
+          "seconds": 0.9
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "공방에서 해금할 수 있는 준비도 다시 살펴봐."
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "마지막 하나만 더. 기다릴게!"
+        },
+        {
+          "type": "artisan",
+          "mode": "face",
+          "face": 1
+        },
+        {
+          "type": "wait",
+          "seconds": 0.6
+        },
+        {
+          "type": "artisan",
+          "mode": "leave"
+        },
+        {
+          "type": "waitAnimation"
+        },
+        {
+          "type": "unlockInput"
+        }
+      ]
+    },
+    {
+      "id": "visit-5",
+      "part": 5,
+      "trigger": {
+        "type": "start"
+      },
+      "actions": [
+        {
+          "type": "artisan",
+          "mode": "place",
+          "x": 16.9,
+          "face": -1,
+          "id": "look"
+        },
+        {
+          "type": "lockInput"
+        },
+        {
+          "type": "wait",
+          "seconds": 0.8
+        },
+        {
+          "type": "waitAnimation"
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "…다 모았구나."
+        },
+        {
+          "type": "artisan",
+          "mode": "busy",
+          "id": "",
+          "face": -1
+        },
+        {
+          "type": "wait",
+          "seconds": 0.3
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "마을이 원래 색을 되찾았어."
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "이제 나도 밖에서만 장사할 필요는 없겠네."
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "앞으로는 마을 공방에 있을게. 보급이든 잉크 연구든, 필요한 게 있으면 찾아와."
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "고마워. 정말 수고 많았어."
+        },
+        {
+          "type": "artisan",
+          "mode": "walk",
+          "x": 28.5,
+          "face": -1
+        },
+        {
+          "type": "sparkle",
+          "id": "palette_bench"
+        },
+        {
+          "type": "wait",
+          "seconds": 1
+        },
+        {
+          "type": "unlockInput"
+        }
+      ]
+    }
+  ],
+  "firstRunSupplyLesson": [
+    {
+      "type": "bubble",
+      "speaker": "artisan",
+      "text": "그럼 다음에 나갈 준비는 내가 좀 도와줄게.",
+      "mode": "advance"
+    },
+    {
+      "type": "bubble",
+      "speaker": "artisan",
+      "text": "밖에서 작은 색가루도 모았지?",
+      "mode": "advance"
+    },
+    {
+      "type": "bubble",
+      "speaker": "artisan",
+      "text": "그게 마법안료야.",
+      "mode": "advance"
+    },
+    {
+      "type": "pigment"
+    },
+    {
+      "type": "wait",
+      "seconds": 0.4
+    },
+    {
+      "type": "bubble",
+      "speaker": "artisan",
+      "text": "가지고 있으면 이 마을에서 쓸 데가 있어.",
+      "mode": "advance"
+    },
+    {
+      "type": "bubble",
+      "speaker": "artisan",
+      "text": "그리고 혹시 밖에서 쓰러지더라도… 네 안에 잉크가 남아 있으면 이 우물가에서 다시 깨어날 거야.",
+      "mode": "advance"
+    },
+    {
+      "type": "bubble",
+      "speaker": "artisan",
+      "text": "모아 둔 마법안료도 사라지지 않아. 잘 챙겨 둬.",
+      "mode": "advance"
+    },
+    {
+      "type": "bubble",
+      "speaker": "artisan",
+      "mode": "advance",
+      "text": "필요한 준비는 내 공방에서 한 번에 도와줄게."
+    },
+    {
+      "type": "pan",
+      "id": "artisan_hub",
+      "heroOffset": 1.7,
+      "face": -1
+    },
+    {
+      "type": "waitAnimation"
+    },
+    {
+      "type": "unlockStation",
+      "id": "supply_counter"
+    },
+    {
+      "type": "wait",
+      "seconds": 0.5
+    },
+    {
+      "type": "bubble",
+      "speaker": "artisan",
+      "mode": "advance",
+      "text": "여기가 내 공방이야. 안료로 출발 자금을 챙기거나 몸을 단련할 수 있어."
+    },
+    {
+      "type": "bubble",
+      "speaker": "artisan",
+      "mode": "advance",
+      "text": "이번엔 붉은색까지 돌아왔으니, 새 잉크를 연구할 수 있겠네."
+    },
+    {
+      "type": "unlockStation",
+      "id": "palette_bench"
+    },
+    {
+      "type": "wait",
+      "seconds": 0.8
+    },
+    {
+      "type": "bubble",
+      "speaker": "artisan",
+      "mode": "advance",
+      "text": "잉크 묶음을 해금하면 다음 모험에서 새로운 잉크들을 만날 수 있어."
+    },
+    {
+      "type": "bubble",
+      "speaker": "artisan",
+      "mode": "advance",
+      "text": "작업대에서 필요한 걸 골라 줘. 안료가 모자라면 나중에 와도 괜찮아."
+    },
+    {
+      "type": "bubble",
+      "speaker": "artisan",
+      "mode": "advance",
+      "text": "난 다시 정비소에 가 봐야겠네. 밖에서 만나면 들러."
+    },
+    {
+      "type": "bubble",
+      "speaker": "artisan",
+      "mode": "advance",
+      "text": "그럼, 조심해서 다녀와!"
+    }
+  ],
+  "firstRunDialogue": [
+    {
+      "id": "red-ink-greet",
+      "text": "어, 돌아왔구나!"
+    },
+    {
+      "id": "red-ink-check",
+      "text": "다친 데는 없고?"
+    },
+    {
+      "id": "red-ink-notice",
+      "text": "잠깐. 너 주머니에… 그거!"
+    },
+    {
+      "id": "red-ink-colour",
+      "text": "그 안에 마을에서 빼앗긴 색이 들어 있어."
+    },
+    {
+      "id": "red-ink-water",
+      "text": "여기에 잉크를 흘려보내면, 물길을 따라 색이 돌아갈 거야."
+    },
+    {
+      "id": "red-ink-try",
+      "text": "한번 해 볼까?"
+    },
+    {
+      "id": "red-ink-restored",
+      "text": "봐! 지붕에 색이 돌아오고 있어!"
+    },
+    {
+      "id": "red-ink-remember",
+      "text": "…우리 마을 지붕이 저런 색이었지."
+    },
+    {
+      "id": "red-ink-remaining",
+      "text": "아직 돌아오지 않은 색도 있어."
+    },
+    {
+      "id": "red-ink-request",
+      "text": "다른 잉크도 찾아와 줄 수 있을까?"
+    },
+    {
+      "id": "red-ink-thanks",
+      "text": "고마워."
+    }
+  ]
+}

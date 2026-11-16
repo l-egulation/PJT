@@ -1,0 +1,235 @@
+{
+  "format": "stage1-pixel-structures-v1",
+  "pixelsPerUnit": 32,
+  "dot": "2x2 px",
+  "filterMode": "Point",
+  "compression": "None",
+  "mipmaps": false,
+  "alpha": "binary",
+  "contact": "bottom row sits on the ground contact line (8 px below the terrain tile top); grass decoration draws in front",
+  "palette": "terrain six colours (#fffcf7 #fef7ee #ccc7be #a09d96 #6f6e69, ink #3f3e3c) + meaningful colours; exit uses stage-2 sewer stone",
+  "static": [
+    {
+      "file": "runtime/recovery-station.png",
+      "width": 96,
+      "height": 112,
+      "pivot": "bottom",
+      "role": "ink recovery station (fuel-pump form), 3.5u tall"
+    },
+    {
+      "file": "runtime/maintenance-backdrop.png",
+      "width": 660,
+      "height": 258,
+      "pivot": "bottom",
+      "role": "artisan room back wall"
+    },
+    {
+      "file": "runtime/maintenance-desk.png",
+      "width": 150,
+      "height": 78,
+      "pivot": "bottom",
+      "role": "artisan desk"
+    },
+    {
+      "file": "runtime/maintenance-lantern.png",
+      "width": 20,
+      "height": 38,
+      "pivot": "top",
+      "role": "hanging lantern"
+    },
+    {
+      "file": "runtime/maintenance-sign.png",
+      "width": 60,
+      "height": 60,
+      "pivot": "top",
+      "role": "palette sign hanging from its rod"
+    },
+    {
+      "file": "runtime/exit-sealed.png",
+      "width": 128,
+      "height": 160,
+      "pivot": "bottom",
+      "role": "chapter-1 exit = chapter-2 sewer entrance, grate down"
+    },
+    {
+      "file": "runtime/exit-open.png",
+      "width": 128,
+      "height": 160,
+      "pivot": "bottom",
+      "role": "exit with the grate raised"
+    },
+    {
+      "file": "runtime/altar-before.png",
+      "width": 48,
+      "height": 40,
+      "pivot": "bottom",
+      "role": "ink altar, five colour gems"
+    },
+    {
+      "file": "runtime/altar-after.png",
+      "width": 48,
+      "height": 40,
+      "pivot": "bottom",
+      "role": "ink altar, gems spent"
+    },
+    {
+      "file": "runtime/locked-chest-closed.png",
+      "width": 60,
+      "height": 54,
+      "pivot": "bottom",
+      "role": "locked chest"
+    },
+    {
+      "file": "runtime/locked-chest-open.png",
+      "width": 60,
+      "height": 54,
+      "pivot": "bottom",
+      "role": "locked chest open"
+    },
+    {
+      "file": "runtime/reward-chest-closed.png",
+      "width": 60,
+      "height": 54,
+      "pivot": "bottom",
+      "role": "reward chest"
+    },
+    {
+      "file": "runtime/reward-chest-open.png",
+      "width": 60,
+      "height": 54,
+      "pivot": "bottom",
+      "role": "reward chest open"
+    },
+    {
+      "file": "runtime/seal-dormant.png",
+      "width": 48,
+      "height": 72,
+      "pivot": "bottom",
+      "role": "wave guardian statue, waiting"
+    },
+    {
+      "file": "runtime/seal-active.png",
+      "width": 48,
+      "height": 72,
+      "pivot": "bottom",
+      "role": "wave 1 lit"
+    },
+    {
+      "file": "runtime/seal-wave2.png",
+      "width": 48,
+      "height": 72,
+      "pivot": "bottom",
+      "role": "wave 2 lit"
+    },
+    {
+      "file": "runtime/seal-wave3.png",
+      "width": 48,
+      "height": 72,
+      "pivot": "bottom",
+      "role": "wave 3 lit"
+    },
+    {
+      "file": "runtime/seal-broken.png",
+      "width": 48,
+      "height": 72,
+      "pivot": "bottom",
+      "role": "cleared, statue broken"
+    },
+    {
+      "file": "runtime/iron-gate-body.png",
+      "width": 24,
+      "height": 128,
+      "pivot": "bottom",
+      "role": "iron gate bar segment"
+    },
+    {
+      "file": "runtime/iron-gate-tip.png",
+      "width": 24,
+      "height": 24,
+      "pivot": "bottom",
+      "role": "iron gate bar tip"
+    }
+  ],
+  "animations": [
+    {
+      "name": "exit-open",
+      "frames": [
+        "runtime/anim/exit-open/01.png",
+        "runtime/anim/exit-open/02.png",
+        "runtime/anim/exit-open/03.png",
+        "runtime/anim/exit-open/04.png",
+        "runtime/anim/exit-open/05.png",
+        "runtime/anim/exit-open/06.png",
+        "runtime/anim/exit-open/07.png",
+        "runtime/anim/exit-open/08.png"
+      ],
+      "width": 128,
+      "height": 160,
+      "pivot": "bottom"
+    },
+    {
+      "name": "altar-appear",
+      "frames": [
+        "runtime/anim/altar-appear/01.png",
+        "runtime/anim/altar-appear/02.png",
+        "runtime/anim/altar-appear/03.png",
+        "runtime/anim/altar-appear/04.png",
+        "runtime/anim/altar-appear/05.png",
+        "runtime/anim/altar-appear/06.png",
+        "runtime/anim/altar-appear/07.png",
+        "runtime/anim/altar-appear/08.png"
+      ],
+      "width": 48,
+      "height": 40,
+      "pivot": "bottom"
+    },
+    {
+      "name": "altar-use",
+      "frames": [
+        "runtime/anim/altar-use/01.png",
+        "runtime/anim/altar-use/02.png",
+        "runtime/anim/altar-use/03.png",
+        "runtime/anim/altar-use/04.png",
+        "runtime/anim/altar-use/05.png",
+        "runtime/anim/altar-use/06.png",
+        "runtime/anim/altar-use/07.png",
+        "runtime/anim/altar-use/08.png"
+      ],
+      "width": 48,
+      "height": 40,
+      "pivot": "bottom"
+    },
+    {
+      "name": "altar-choice-acquire",
+      "frames": [
+        "runtime/anim/altar-choice-acquire/01.png",
+        "runtime/anim/altar-choice-acquire/02.png",
+        "runtime/anim/altar-choice-acquire/03.png",
+        "runtime/anim/altar-choice-acquire/04.png",
+        "runtime/anim/altar-choice-acquire/05.png",
+        "runtime/anim/altar-choice-acquire/06.png",
+        "runtime/anim/altar-choice-acquire/07.png",
+        "runtime/anim/altar-choice-acquire/08.png"
+      ],
+      "width": 64,
+      "height": 64,
+      "pivot": "bottom"
+    },
+    {
+      "name": "altar-choice-discard",
+      "frames": [
+        "runtime/anim/altar-choice-discard/01.png",
+        "runtime/anim/altar-choice-discard/02.png",
+        "runtime/anim/altar-choice-discard/03.png",
+        "runtime/anim/altar-choice-discard/04.png",
+        "runtime/anim/altar-choice-discard/05.png",
+        "runtime/anim/altar-choice-discard/06.png",
+        "runtime/anim/altar-choice-discard/07.png",
+        "runtime/anim/altar-choice-discard/08.png"
+      ],
+      "width": 64,
+      "height": 64,
+      "pivot": "bottom"
+    }
+  ]
+}

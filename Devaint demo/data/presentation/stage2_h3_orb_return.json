@@ -1,0 +1,33 @@
+{
+  "schema": "stage2-h3-orb-return-v1",
+  "status": "returned-orb-formation-launch-pixel-preview-pending",
+  "approval": "pending-user-review",
+  "sourceFile": "C:/Users/SSAFY/Downloads/f84029dd-20f6-4973-8500-f4f4a978ab22.png",
+  "output": "outputs/waterway/h3-orb-return-20261101",
+  "inputHandoff": "outputs/waterway/h3-orb-attack-handoff-20261101",
+  "bodyFloat": "outputs/waterway/h3-float-travel-20261101/B",
+  "combatReference": "data/combat/stage2_waterway_patterns.json",
+  "grid": [6,6],
+  "cellSize": [640,360],
+  "canvas": [128,96],
+  "referenceSourceOneBased": 9,
+  "targetReferenceHeight": 40,
+  "orbCenter": [64,48],
+  "bodyCanvas": [384,224],
+  "orbCenterInBodyCanvas": [134,99],
+  "paletteRgb": [[41,37,47],[128,88,110],[113,130,139],[217,198,171]],
+  "supersampleGrid": 4,
+  "coverageMinimum": 0.5,
+  "matte": {"opaqueRmsMax":25,"compositeRmsMax":12,"alphaMinimum":0.8,"matteAdvantage":8},
+  "phases": [
+    {"id":"formation","name":"생성·응축","sourceOneBased":[2,3,4,5,6,7,8,9],"durationsMs":[50,100,100,100,100,100,150,150]},
+    {"id":"launch","name":"분리·발사 시작","sourceOneBased":[10,11,12,13,14],"durationsMs":[25,25,50,50,50]},
+    {"id":"recovery","name":"빈 생성 위치","sourceOneBased":[17],"durationsMs":[900]}
+  ],
+  "excluded": [{"sourceOneBased":1,"reason":"reference-only"},{"sourceOneBased":15,"reason":"source-left-edge-clipped"},{"sourceOneBased":16,"reason":"source-left-edge-clipped"}],
+  "reviewGapMs": 1250,
+  "previewCycleMs": 3200,
+  "mapReference": "outputs/waterway/pixel-base-step1-20261031/references/C-game.png",
+  "mapOffset": [238,94],
+  "policy": "Preserve all36 original cells. Select13 complete visible poses plus one empty recovery. Exclude source-clipped15/16 rather than invent missing pixels. One fixed scale/offset, formed source9 height40,128x96 canvas adds padding only, exact four colors/binary alpha/8x. Preserve intentional formation gaps and disconnected ink clusters. Reuse approved body B16 byte-identically and merge both timelines for previews. Keep1950ms attack proposal;1250ms review-only blank aligns preview to two1600ms float loops. Flight after local release, impact/hazard and Unity integration are separate."
+}

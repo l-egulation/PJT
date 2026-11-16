@@ -1,0 +1,98 @@
+{
+ "status": "user_approved_look_20261106_not_in_unity",
+ "appear": {
+  "grow_seconds": 0.05,
+  "thickness_from": 0.35,
+  "thickness_seconds": 0.08,
+  "head": {
+   "pivot_px": [
+    16,
+    16
+   ],
+   "seconds": [
+    0.025,
+    0.025
+   ]
+  },
+  "grow_rule": "fixed 0.05s to visible end (first wall or camera edge), regardless of length"
+ },
+ "pop": {
+  "pivot_px": [
+   8,
+   32
+  ],
+  "seconds": [
+   0.02,
+   0.03,
+   0.035,
+   0.04
+  ]
+ },
+ "hold": {
+  "pivot_px": [
+   4,
+   12
+  ],
+  "seconds": [
+   0.05,
+   0.05
+  ]
+ },
+ "hit": {
+  "pivot_px": [
+   24,
+   56
+  ],
+  "seconds": [
+   0.03,
+   0.03,
+   0.04,
+   0.04,
+   0.05,
+   0.05
+  ],
+  "trigger": "per enemy when visual head passes its front (damage timing unchanged, all at release)"
+ },
+ "vanish": {
+  "shrink_seconds": 0.06,
+  "shrink_to": 0.12,
+  "shards_spacing_units": 0.3,
+  "shard_life": [
+   0.08,
+   0.16
+  ],
+  "sweep": "muzzle_to_tip"
+ },
+ "basis": "main 66f353c81 laser skill: horizontal unlimited pierce, stops at first solid, 28 per target once at release",
+ "beam": {
+  "frames": "beam/F00-F05",
+  "source": "EffectsApproved11/launcher_laser/beam copy",
+  "thickness": 0.5,
+  "taper_in_px": 48,
+  "taper_out_px": 20,
+  "core": "white 3px line kept"
+ },
+ "wall": {
+  "pivot_px": [
+   30,
+   24
+  ],
+  "pivot_note": "x=30 is wall face",
+  "impact_frames": [
+   0,
+   1,
+   2
+  ],
+  "impact_seconds": [
+   0.03,
+   0.04,
+   0.05
+  ],
+  "hold_frames": [
+   3,
+   4
+  ],
+  "hold_seconds": 0.05,
+  "trigger": "beam head reaches first solid; hold until release; none when no wall"
+ }
+}

@@ -1,0 +1,136 @@
+{
+  "title": "시계탑 집행자 보스전 — 전조·타격·회복 연출 조사",
+  "date": "2026-10-29",
+  "scope": "기존 게임의 읽기 쉬운 전투 원리를 참고한 HTML 시연용 설계. 외부 게임의 그림·스프라이트·음향은 복제하지 않으며 Unity에는 적용하지 않는다.",
+  "evidencePolicy": "메커니즘은 아래 문서 본문에서 확인했다. 실제 재생 화면을 관찰한 영상은 Shacknews의 Rogue Legacy 2 개발자 영상뿐이다. 다른 게임의 영상을 시청하거나 프레임 단위 시간을 측정했다고 주장하지 않는다.",
+  "sources": [
+    {
+      "id": "giant",
+      "game": "Dead Cells",
+      "title": "The Giant — 공격과 부위별 피격",
+      "url": "https://deadcells.wiki.gg/wiki/The_Giant",
+      "developerGameplayUrl": "https://www.youtube.com/watch?v=UNDpsQT9HTw",
+      "developerGameplayArticleUrl": "https://www.gamespot.com/videos/dead-cells-rise-of-the-giant-dlc-devs-take-down-th/2300-6448969/",
+      "developerGameplayNote": "GameSpot의 영상 설명과 기사에서 Motion Twin 개발자의 실제 플레이임을 확인했다. 이 영상은 추가 참고 링크이며, 후속 조사 시 브라우저 연결이 없어 직접 재생 화면은 확인하지 못했다.",
+      "evidenceKind": "게임 위키 본문 검색 색인 검증. 직접 페이지 접근은 차단되어 색인 본문을 확인했다.",
+      "verifiedClaims": [
+        "Punch는 한 주먹을 경기장 옆으로 올린 뒤 경기장을 가로질러 뻗는다.",
+        "Slam은 들어 올린 주먹으로 플레이어 위치를 따라가다가 멈춘 뒤 내려치며 바닥으로 파동이 퍼진다.",
+        "주먹이 파괴되면 공격을 중단하고 눈이 3초 동안 노출된다. 주먹과 눈은 별도 피격 대상이다."
+      ]
+    },
+    {
+      "id": "irad",
+      "game": "Rogue Legacy 2",
+      "title": "Estuary Irad — 고정형 보스의 공격 형태 구분",
+      "url": "https://rogue-legacy-2.fandom.com/wiki/Estuary_Irad",
+      "evidenceKind": "게임 위키 본문 검색 색인 검증. 영상 시청 근거가 아니다.",
+      "verifiedClaims": [
+        "고정된 눈들이 공격하며 체력이 절반으로 내려가면 세 번째 눈이 활성화된다.",
+        "나선 투사체, 지연 후 추적하는 투사체, 원형 파동, 가까운 범위의 지연 폭발처럼 서로 다른 공간 형태의 공격을 쓴다.",
+        "공격마다 피하는 방식이 다르므로 보스 몸체가 크게 이동하지 않아도 전투에 변화가 생긴다. 마지막 문장은 메커니즘으로부터 도출한 설계 해석이다."
+      ]
+    },
+    {
+      "id": "theseus",
+      "game": "Hades",
+      "title": "Theseus/Combat — 지점 표식과 지연 공격",
+      "url": "https://hades.fandom.com/wiki/Theseus/Combat",
+      "evidenceKind": "게임 위키 본문 검증. 영상 시청 근거가 아니다.",
+      "verifiedClaims": [
+        "창 투척은 플레이어에게 조준 표식을 보인 뒤 지연 후 발사한다.",
+        "올림포스 지원의 최초 발동은 플레이어 위치에 원형 공격 지점을 빠르게 만들며 해당 지점이 활성화될 때 피해를 준다.",
+        "지원 신에 따라 원형 배열·추적 지점·쓸어가는 배열 등 위험 지점의 배치가 달라진다."
+      ]
+    },
+    {
+      "id": "hades",
+      "game": "Hades",
+      "title": "Hades/Combat — 회전 공격 범위 예고",
+      "url": "https://hades.fandom.com/wiki/Hades/Combat",
+      "evidenceKind": "게임 위키 본문 검증. 영상 시청 근거가 아니다.",
+      "verifiedClaims": [
+        "회전 공격은 자신의 주변 공격 영역을 먼저 표시한 뒤 앞으로 이동하며 창을 휘두른다.",
+        "두 번째 단계의 광선은 여러 방향으로 뻗고 천천히 플레이어를 따라가며 지속 피해를 준다."
+      ]
+    },
+    {
+      "id": "naamah-visual",
+      "game": "Rogue Legacy 2",
+      "title": "Shacknews E6 — Boss Art & Design Deep Dive, Matt Hammill 참여",
+      "url": "https://www.youtube.com/watch?v=RJ9JPdO-o9s",
+      "articleUrl": "https://www.shacknews.com/article/130960/shacknews-e6-2022-rogue-legacy-2-boss-design-deep-dive",
+      "evidenceKind": "개발자 참여 영상의 실제 재생 화면을 브라우저에서 시각 확인. 문서만 읽은 근거와 분리했다.",
+      "observedTimestamps": ["34:28", "34:51"],
+      "verifiedClaims": [
+        "34:28의 Naamah 전투에서 밝고 차가운 배경 위에 청색 구형 투사체와 붉게 점멸하는 보스가 분리되어 보인다.",
+        "34:51에서는 청색 구형 투사체, 중앙의 적색 원형 문양과 수직 광선, 플레이어와 보스가 서로 구분되어 보인다."
+      ],
+      "limitations": "해당 두 시점의 시각적 구분을 확인했다. 원형 문양의 실제 판정 종류나 정확한 전조·회복 시간은 이 화면만으로 확정하지 않는다."
+    }
+  ],
+  "patternMappings": [
+    {
+      "id": "long-fist",
+      "title": "긴 주먹 — 어느 쪽에서 오는지 먼저 읽히게",
+      "sourceIds": ["giant"],
+      "referenceTell": "선택된 쪽 주먹을 뒤로 보내는 준비 동작.",
+      "referenceAttack": "경기장을 가로지르는 큰 주먹 공격.",
+      "referenceRecovery": "Giant의 눈 노출은 별도 취약 기회다. 우리 보스의 회복 시간이나 부위별 HP 규칙과 동일하다는 뜻은 아니다.",
+      "ourApplication": "선택된 손·사슬이 같은 쪽으로 빠지는 1초 동안 방향 화살표와 위험 띠를 표시한다. 0.3초 뻗기만 피해를 주고 0.3초 유지·0.5초 회수는 무해하게 구분한다. 이후 2초 회복은 플레이어의 반격 시간이다.",
+      "originalFx": "진행 방향으로 늘어나는 잉크 속도선, 주먹 끝의 짧은 압력 띠, 닿는 바닥의 낮은 먼지 부채. 프레임이 끝나면 뒤로 흡수되지 않고 퍼진 자리에서 흐려진다."
+    },
+    {
+      "id": "needle-rain",
+      "title": "시계침 낙하 — 지점 확정과 피해 시작 분리",
+      "sourceIds": ["theseus"],
+      "referenceTell": "조준 표식 또는 원형 위험 지점이 실제 공격보다 먼저 보인다.",
+      "referenceAttack": "표식이 활성화되거나 투사체가 발사될 때 피해가 발생한다.",
+      "referenceRecovery": "출처에서 우리 구현에 쓸 고정 회복 시간을 확인하지 않았으므로 현지 명세의 시간을 사용한다.",
+      "ourApplication": "각 침은 생성 시 목표 지점을 확정한다. 바닥 표식과 가느다란 수직 안내선을 1초 온전히 보여준 뒤 0.3초 낙하한다. 13개를 0.3초 간격으로 예고하며, 박힌 침과 소멸 잔상은 무해하다.",
+      "originalFx": "점점 차오르는 바닥 눈금, 낙하 직전의 짧은 밝은 점멸, 착지하는 순간 옆으로 튀는 1~3픽셀 파편과 낮은 먼지. 위험 표식과 무해한 잔상은 밝기와 형태를 다르게 한다."
+    },
+    {
+      "id": "mixer",
+      "title": "믹서기 — 큰 원형 위험이 이동하는 경로 표시",
+      "sourceIds": ["hades", "irad"],
+      "referenceTell": "Hades의 회전 공격은 주변 범위를 먼저 표시한다. Irad는 원형 위험과 투사체 형태를 구분한다.",
+      "referenceAttack": "회전하는 영역 및 지속 위험은 피해 범위와 이동 방향을 읽을 수 있어야 한다는 설계 원리를 참고한다.",
+      "referenceRecovery": "회복 수치는 타 게임에서 가져오지 않고 우리 명세를 따른다.",
+      "ourApplication": "몸통 상승과 같은 쪽 측면 예고 1초 후 확대 시계가 등장한다. 원판의 실제 반지름과 진행 방향을 표시하고 4.5초 동안 이동한다. 소멸·복귀 1초 이후 2초 회복으로 반격 시간을 준다.",
+      "originalFx": "두 개의 두꺼운 회전 바늘, 원판 가장자리의 짧은 파편 궤적, 지면을 따라 뒤에 남는 작은 먼지. 바늘 잔상이 원판 밖으로 커져 판정을 오해하게 하지 않는다."
+    },
+    {
+      "id": "stationary-readability",
+      "title": "고정형 보스의 전투 변화와 가독성",
+      "sourceIds": ["irad", "naamah-visual"],
+      "referenceTell": "고정된 공격 주체에 다른 공격 형태를 배치하며 밝은 배경과 투사체·문양을 시각적으로 분리한다.",
+      "referenceAttack": "직선, 점, 원으로 위험 형태가 달라진다. 영상은 색과 형태의 분리 근거이며 시점별 정확한 판정은 추정하지 않는다.",
+      "referenceRecovery": "강한 공격 연출이 끝난 뒤에는 잔상을 빠르게 정리해 다음 전조를 읽을 수 있게 한다. 이는 우리 설계 제안이다.",
+      "ourApplication": "긴 주먹은 수평 띠, 침은 바닥 점과 수직선, 믹서는 원형 면적으로 표시한다. 전조 중 보스 미세 흔들림을 줄여 공격 준비가 눈에 들어오게 한다. 외형과 입체감은 기존 몬스터의 잉크·돌 팔레트를 유지한다.",
+      "originalFx": "각 효과는 최대 3개 RGB색만 쓰고 윤곽선은 두르지 않는다. 위험 표식의 구분을 색 하나에만 맡기지 않고 형태·채움 변화·짧은 음향을 함께 사용한다."
+    }
+  ],
+  "timingAudit": {
+    "source": "docs/development/clock-executioner-sprites.md",
+    "longFistSeconds": {"warning": 1, "extend": 0.3, "hold": 0.3, "retract": 0.5, "recovery": 2, "wait": 2, "total": 6.1},
+    "needleRain": {
+      "count": 13,
+      "intervalSeconds": 0.3,
+      "warningSecondsEach": 1,
+      "fallSeconds": 0.3,
+      "documentLastLandingSeconds": 4.6,
+      "computedLastLandingSeconds": 4.9,
+      "computedNextPatternSeconds": 8.9,
+      "decision": "시연에서는 12×0.3+1+0.3=4.9초로 계산하여 마지막 침까지 전조 1초를 보장한다. 회복 2초와 대기 2초를 더해 다음 패턴은 8.9초다. 문서의 4.6/8.6초와 0.3초 차이가 있으므로 최종 밸런스 검토 대상으로 남긴다."
+    },
+    "mixerSeconds": {"warning": 1, "travel": 4.5, "return": 1, "recovery": 2, "wait": 2, "total": 10.5}
+  },
+  "balanceRisks": [
+    "긴 주먹이 24유닛 방의 20유닛을 덮으면 반대편 안전 구역은 4유닛뿐이다. 플레이어의 출발 위치와 이동 속도에 따라 1초 경고만으로 안전 구역에 도착하지 못할 수 있다. 대시 무적 통과 가능 여부와 실제 회피 성공률을 함께 확인해야 한다.",
+    "낙하 침은 전조가 끝날 때까지 플레이어를 계속 추적하면 불공정해진다. 목표 지점은 각 전조 시작 시 확정하며 후속 침만 새 위치를 선택한다.",
+    "믹서의 0.25초 반복 피해는 보통 피격 무적과 다른 규칙이므로 반경·안전 공간·대시 통과를 명확히 보여주어야 한다. 파편이나 먼지까지 피해 영역처럼 보이지 않게 한다.",
+    "광폭화 시 진행 중 공격을 갑자기 가속하지 않는다. 현재 패턴을 정상 종료한 뒤 다음 패턴부터 시간 배율 0.8을 적용한다."
+  ],
+  "originalAssetPolicy": "타 게임의 스프라이트·GIF·사운드는 다운로드하거나 재배포하지 않았다. 제공된 보스 부품을 사용하고, 픽셀 효과는 시연 코드에서 독자적으로 제작한다. 참고 영상은 링크로만 제공한다."
+}

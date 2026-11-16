@@ -1,0 +1,263 @@
+{
+  "status": "playtest-prototype-not-balanced",
+  "legacyMap": [
+    {
+      "from": "01_field_mouse",
+      "to": "01_thorn-root"
+    },
+    {
+      "from": "02_mole",
+      "to": "02_broom-stalker"
+    },
+    {
+      "from": "05_boar",
+      "to": "01_thorn-root"
+    },
+    {
+      "from": "07_scarecrow",
+      "to": "02_broom-stalker"
+    },
+    {
+      "from": "08_hay_bale",
+      "to": "02_broom-stalker"
+    },
+    {
+      "from": "10_water_bucket",
+      "to": "03_gutter-spitter"
+    }
+  ],
+  "windupCue": {
+    "shakeStepSeconds": 0.06,
+    "shakeWidenFrom": 0.6,
+    "flashSeconds": 0.1,
+    "flashColor": [
+      242,
+      239,
+      233
+    ],
+    "tintKinds": [
+      "dash",
+      "sweep"
+    ],
+    "tintColor": [
+      214,
+      44,
+      32
+    ],
+    "tintMax": 0.55
+  },
+  "monsters": [
+    {
+      "id": "01_thorn-root",
+      "name": "가시뿌리",
+      "damage": 16,
+      "maxHP": 230,
+      "template": "05_boar",
+      "attackKind": "dash",
+      "hurtSize": [
+        1.75,
+        1.9
+      ],
+      "hurtOffset": [
+        0,
+        0.95
+      ],
+      "bodySize": [
+        1.0,
+        1.3
+      ],
+      "bodyOffset": [
+        0,
+        0.65
+      ],
+      "attackSize": [
+        1.8,
+        1.5
+      ],
+      "attackOffset": [
+        0.9,
+        0.75
+      ],
+      "senseX": 13.0,
+      "walkSpeed": 2.5,
+      "startGap": 4.5,
+      "minimumStartDistance": 0.0,
+      "prepare": 0.65,
+      "damageStart": 0.65,
+      "damageEnd": 0.85,
+      "chargeDistance": 3.0,
+      "chargeSpeed": 15.0,
+      "interval": 1.6,
+      "prepareHoldFrame": 3,
+      "prepareHoldExtra": 0.2,
+      "windupCueFrame": 3
+    },
+    {
+      "id": "02_broom-stalker",
+      "name": "먹빗자루",
+      "damage": 20,
+      "maxHP": 220,
+      "template": "07_scarecrow",
+      "attackKind": "sweep",
+      "hurtSize": [
+        1.2,
+        2.35
+      ],
+      "hurtOffset": [
+        0,
+        1.175
+      ],
+      "bodySize": [
+        0.85,
+        2.6
+      ],
+      "bodyOffset": [
+        0,
+        1.3
+      ],
+      "attackSize": [
+        4.4,
+        1.2
+      ],
+      "attackOffset": [
+        2.05,
+        0.6
+      ],
+      "senseX": 13.0,
+      "walkSpeed": 1.5,
+      "startGap": 2.55,
+      "minimumStartDistance": 0.0,
+      "prepare": 0.7,
+      "damageStart": 0.7,
+      "damageEnd": 0.88,
+      "chargeDistance": 0.0,
+      "chargeSpeed": 0.0,
+      "interval": 2.0,
+      "prepareHoldFrame": 4,
+      "prepareHoldExtra": 0.2,
+      "windupCueFrame": 4,
+      "attackEffectScale": 1.5
+    },
+    {
+      "id": "03_gutter-spitter",
+      "name": "배수관 포수",
+      "damage": 20,
+      "maxHP": 230,
+      "template": "10_water_bucket",
+      "attackKind": "spit",
+      "hurtSize": [
+        2.25,
+        1.85
+      ],
+      "hurtOffset": [
+        0,
+        0.925
+      ],
+      "bodySize": [
+        1.5,
+        1.7
+      ],
+      "bodyOffset": [
+        0,
+        0.85
+      ],
+      "attackSize": [
+        7.0,
+        0.6
+      ],
+      "attackOffset": [
+        3.5,
+        1.5
+      ],
+      "senseX": 13.0,
+      "walkSpeed": 1.0,
+      "startGap": 10.5,
+      "minimumStartDistance": 0.0,
+      "prepare": 1.25,
+      "damageStart": 1.25,
+      "damageEnd": 1.38,
+      "chargeDistance": 0.0,
+      "chargeSpeed": 0.0,
+      "interval": 2.5,
+      "muzzleOffset": [
+        1.375,
+        1.25
+      ],
+      "projectileSize": [
+        0.5,
+        0.375
+      ],
+      "projectileSpeed": 8.0,
+      "windupCueFrame": 14
+    },
+    {
+      "id": "04_well-warden",
+      "name": "우물 도르래 수문장",
+      "damage": 40,
+      "template": "08_hay_bale",
+      "attackKind": "hook-claw",
+      "maxHP": 3000,
+      "hookSpeed": 1.5,
+      "clawStart": 1.6,
+      "hitStaggerImmune": true,
+      "noPlayerHitReaction": true,
+      "hurtSize": [
+        2.75,
+        3.4
+      ],
+      "hurtOffset": [
+        0,
+        1.7
+      ],
+      "bodySize": [
+        1.5,
+        2.6
+      ],
+      "bodyOffset": [
+        0,
+        1.3
+      ],
+      "attackSize": [
+        2.5,
+        2.4
+      ],
+      "attackOffset": [
+        1.0,
+        1.2
+      ],
+      "walkSpeed": 1.0,
+      "startGap": 4.7,
+      "minimumStartDistance": 0.0,
+      "prepare": 0.85,
+      "damageStart": 2.24,
+      "damageEnd": 2.41,
+      "chargeDistance": 0.0,
+      "chargeSpeed": 0.0,
+      "interval": 3.8,
+      "hookStart": 0.85,
+      "hookPeak": 1.1,
+      "hookReturn": 1.6,
+      "hookReach": 4.7,
+      "hookHeight": 1.5,
+      "hookSize": 0.6,
+      "pullSpeed": 9.0,
+      "pullGap": 1.3,
+      "attackEffectStart": 2.18,
+      "burrow": {
+        "enabled": true,
+        "meltEnd": 0.55,
+        "warningStart": 1.55,
+        "eruptionStart": 2.1,
+        "damageEnd": 2.28,
+        "cooldown": 8.0,
+        "maxTravel": 6.0,
+        "groundSearch": 6.0,
+        "attackSize": [
+          2.8125,
+          3.0
+        ],
+        "attackHeight": 1.5
+      }
+    }
+  ]
+}

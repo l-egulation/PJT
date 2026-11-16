@@ -1,0 +1,18 @@
+{
+  "schema": "stage2-normal-locomotion-approved-v1",
+  "status": "all-five-normal-locomotion-approved-by-user",
+  "output": "outputs/waterway/normal-locomotion-approved-20261101",
+  "canvas": [384, 224],
+  "rosterCanvas": [960, 540],
+  "baseline": 340,
+  "references": "outputs/waterway/pixel-base-step1-20261031/references",
+  "monsters": [
+    {"id":"K4","name":"등짐분사수","role":"근거리","choice":"D · 빈 픽셀 정리본","source":"outputs/waterway/k4-walk-D-pixel-clean-20261031","frameCount":20,"cycleMs":1000,"left":138},
+    {"id":"B3","name":"쐐기보행기","role":"근거리","choice":"19장 채택본","source":"outputs/waterway/b3-walk-return-20261031","frameCount":19,"cycleMs":1300,"left":263},
+    {"id":"M3","name":"먹침필경사","role":"근거리","choice":"A · 빠른 달리기","source":"outputs/waterway/m3-A-fast-20261101","frameCount":18,"cycleMs":540,"left":495},
+    {"id":"R-selected","name":"신호투척수","role":"원거리","choice":"C · 바지 복원본","source":"outputs/waterway/thrower-C-cloth-clean-20261101","frameCount":17,"cycleMs":900,"left":727},
+    {"id":"H3","name":"늘어진수의","role":"원거리","choice":"B · 수의가 뒤따르는 부유","source":"outputs/waterway/h3-float-travel-20261101/B","frameCount":16,"cycleMs":1600,"left":880}
+  ],
+  "policy": "Copy approved native, indexed and enlarged PNG files byte-for-byte. Keep each original duration table, logical size, palette and canvas. The lineup preserves native scale and individual cycle timing. Map panels preserve original scene/player pixels. Art review and composite previews only; no combat, Unity or elite/boss production changes.",
+  "runtimeIntegration": "not-performed"
+}

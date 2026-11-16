@@ -1,0 +1,25 @@
+{
+  "schema": "stage2-thrower-original-prop-v1",
+  "status": "pending-user-review",
+  "output": "outputs/waterway/thrower-prop-original-shape-20261101",
+  "base": "outputs/waterway/pixel-base-step1-20261031/R-selected/native/base-frame.png",
+  "approvedAttack": "outputs/waterway/thrower-pocket-attack-return-20261101",
+  "rejectedProjectile": "outputs/waterway/projectile-material-review-20261101/thrower/projectile/native/prop-01.png",
+  "visiblePropPolygonNative": [[207,154],[212,154],[214,155],[215,155],[215,156],[216,156],[216,157],[217,157],[217,158],[220,159],[221,159],[221,156],[224,155],[228,155],[228,156],[232,156],[232,158],[234,158],[234,160],[236,160],[236,163],[238,163],[238,168],[237,168],[237,173],[236,173],[236,177],[234,177],[234,178],[225,178],[225,177],[221,177],[221,176],[218,176],[218,174],[216,174],[216,173],[213,173],[213,171],[208,171],[208,170],[205,170],[205,168],[204,168],[204,159],[205,159]],
+  "canvas": [64,64],
+  "pivotPx": [32,32],
+  "occlusionRepairRowsNative": [[155,216,227],[156,217,225],[157,218,225],[158,218,221]],
+  "occlusionRepairRgb": [214,166,80],
+  "flightOrientation": "exact-counterclockwise-quarter-turn-fixed-for-whole-flight",
+  "releaseMs": 680,
+  "heldCorrections": [
+    {"keyOneBased":9,"oldPropRoi":[178,58,217,89],"propCenterNative":[201,70]},
+    {"keyOneBased":10,"oldPropRoi":[128,58,152,82],"propCenterNative":[140,65]}
+  ],
+  "flightMsIllustration":800,
+  "landingXWorldIllustration":165,
+  "groundYWorldIllustration":288,
+  "arcHeightPxIllustration":80,
+  "previewLoopMs":2050,
+  "policy":"Use original cylinder pixels from approved neutral base, including its dark end cap. User requested filling the hand-occluded upper notch; replace only explicit repair rows with existing ochre RGB214,166,80 and preserve all pixels outside that mask. Preserve the unrepaired visible cutout separately. No resampling, new colors, squash, stretch or flight spin. Exact quarter-turn only to match raised holding pose, then keep identical PNG for whole flight. Correct the prop area in the last2 held poses for continuity while preserving purple hand/nearby wrist pixels and all pixels outside explicit regions. Keep approved body originals; this separate display correction is pending review."
+}

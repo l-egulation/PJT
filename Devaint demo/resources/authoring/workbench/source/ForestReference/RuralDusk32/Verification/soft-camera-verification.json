@@ -1,0 +1,57 @@
+{
+  "pass": true,
+  "method": "Actual old/new app.js in Node VM, 120Hz, identical inputs; browser UI not executed",
+  "cases": [
+    {
+      "kind": "single",
+      "before": {
+        "cameraTravel": 68.0370342611976,
+        "maxStep": 1.8351789563202203
+      },
+      "after": {
+        "cameraTravel": 0,
+        "maxStep": 0,
+        "screenFeetRange": [
+          281.04166666666663,
+          354
+        ],
+        "finalHeroY": 288
+      },
+      "movementAndAnimationIdentical": true
+    },
+    {
+      "kind": "double",
+      "before": {
+        "cameraTravel": 140.94756226048003,
+        "maxStep": 1.7589843014862936
+      },
+      "after": {
+        "cameraTravel": 127.99999815363654,
+        "maxStep": 1.69395556389901,
+        "screenFeetRange": [
+          231.5033482805206,
+          353.9999981536365
+        ],
+        "finalHeroY": 160
+      },
+      "movementAndAnimationIdentical": true
+    },
+    {
+      "kind": "fall",
+      "before": {
+        "cameraTravel": 285.9999999999962,
+        "maxStep": 4.13890306863027
+      },
+      "after": {
+        "cameraTravel": 285.9999906671056,
+        "maxStep": 4.062457615005314,
+        "screenFeetRange": [
+          134.05555555555554,
+          486.10067451513805
+        ],
+        "finalHeroY": 256
+      },
+      "movementAndAnimationIdentical": true
+    }
+  ]
+}

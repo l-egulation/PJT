@@ -1,0 +1,1935 @@
+{
+  "version": 1,
+  "sourceManifestSHA256": "98fab8d514456114e1ec2c436685c378a031fee1f5e6eed24986098fdc17fc9c",
+  "palette": [
+    "#171716",
+    "#41413D",
+    "#575451",
+    "#817D77",
+    "#9C968D",
+    "#D6D0C7"
+  ],
+  "monsters": [
+    {
+      "id": "01_thorn-root",
+      "displayName": "가시뿌리",
+      "motions": [
+        {
+          "id": "base",
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "ground": 120,
+          "loop": false,
+          "milliseconds": [
+            100
+          ],
+          "frames": [
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/base/00.png",
+              "sha256": "b6d29febee3a26eac962594e636a576cac923678669de6fdd2cf5aec2b30b286"
+            }
+          ]
+        },
+        {
+          "id": "idle",
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "ground": 120,
+          "loop": true,
+          "milliseconds": [
+            140,
+            100,
+            150,
+            180,
+            120,
+            100,
+            90,
+            80,
+            160,
+            230,
+            100,
+            90
+          ],
+          "frames": [
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/idle/00.png",
+              "sha256": "b6d29febee3a26eac962594e636a576cac923678669de6fdd2cf5aec2b30b286"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/idle/01.png",
+              "sha256": "97b48acf06f69de85befa9d05805df7956dd25793cc594381f5b41838548ba04"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/idle/02.png",
+              "sha256": "ecd26a4a7f43bed44279e8522ffbd81457e5ee714a46f88cc08edfd93f484412"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/idle/03.png",
+              "sha256": "94b5bb1d226873aee1bbeb02e4f0ea6be4984e40b1bd52c6f1a663e8a0b0ffdd"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/idle/04.png",
+              "sha256": "f53140affbde8410bbd592f21d9613a77b79a97e19e5efa47cfa45680a6d9a52"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/idle/05.png",
+              "sha256": "480c69ca922d8628aec3fdca9e16edb29dc0912d95ed93501bf21ee95a1df42a"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/idle/06.png",
+              "sha256": "72493a352ad5e666d1ff519e410713ac02a4e017a62130851ab88c573882cf9f"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/idle/07.png",
+              "sha256": "1fb7cfac2f22a6182b9db3a97cafac9bf723d8199357936a84972954955db03d"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/idle/08.png",
+              "sha256": "25d23d4664b048f9112329ca102a45a050c9e831358ec3a2d7a9d4bd11a41970"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/idle/09.png",
+              "sha256": "57aed74ddb39594336d70335a119fa35aec7bd0a65a7e5ff41dc41669922eb1b"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/idle/10.png",
+              "sha256": "0dbcf35dbab50c7d216fb82c19fae43121316f774997f259994a4e5f18aa45c7"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/idle/11.png",
+              "sha256": "1e95dbc8b6abcfc4b77ca623316ee64b9d151e96d1c642e43b8360ad6cfc5814"
+            }
+          ]
+        },
+        {
+          "id": "death",
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "ground": 120,
+          "loop": false,
+          "milliseconds": [
+            100,
+            80,
+            80,
+            80,
+            90,
+            90,
+            100,
+            100,
+            120,
+            160,
+            180,
+            180,
+            160,
+            80
+          ],
+          "frames": [
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/00.png",
+              "sha256": "b6d29febee3a26eac962594e636a576cac923678669de6fdd2cf5aec2b30b286"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/01.png",
+              "sha256": "b6d29febee3a26eac962594e636a576cac923678669de6fdd2cf5aec2b30b286"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/02.png",
+              "sha256": "1b95ef9600429c198e3ef4da57aa69c02c4ee83234bf5ef2ed83bc5270443117"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/03.png",
+              "sha256": "d5c954504c5b0b0867c3ac752d1d95acfeca8f80a5a6b24afbe8560d25807fbd"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/04.png",
+              "sha256": "88c4e21d88c1cd67a56a544702e0f199f2d5e79e13c63e74ad22f50d96377d7b"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/05.png",
+              "sha256": "0951d3c83eff7a5f65a2132df2053b2915779c3ec6003cced615e7330fae1c45"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/06.png",
+              "sha256": "51673b267239861d0636ad83fbf00fab2036d26ee09d80fe081abcf61cc8a561"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/07.png",
+              "sha256": "c327525f27dabd4469ef89014e1bd0b62a3515cc8ebd20b5e36132995e3c20c5"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/08.png",
+              "sha256": "3ad578701a3766b248c00161d8cee74a966e4e7c7a338d94cc0b82629973e016"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/09.png",
+              "sha256": "017a02ebbd54538c2bdc6c557e1a5090b392440c342fe792cfd6225536f7d492"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/10.png",
+              "sha256": "9c6ebb5f7023440585c4e3150efd170f39845d8e53275af0f80d411b09742d3a"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/11.png",
+              "sha256": "5307c62ba9de9c3fb9448e09b4f078df6d5a65d842e910dc4c46ee6cb293b4a2"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/12.png",
+              "sha256": "46aeb5bd74d46f608777b8a81a766f6380cb5347f5beb2194fc3b345ec524286"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/13.png",
+              "sha256": "06ab142c3bad172a564f50931dd667c07af918ed7298107b0c41f79cd761cc8f"
+            }
+          ]
+        },
+        {
+          "id": "walk",
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "ground": 120,
+          "loop": true,
+          "milliseconds": [
+            80,
+            80,
+            80,
+            80,
+            80,
+            80,
+            80,
+            80
+          ],
+          "frames": [
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/walk/00.png",
+              "sha256": "66a8dc90ce9d3fa479b83d382e562974983b0b5a7277fec8a7471abce9048d16"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/walk/01.png",
+              "sha256": "b36f1da5d0252c7b9d66af7f9fa28b113b0caa376bc0a87c0fa09809e9f34c66"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/walk/02.png",
+              "sha256": "a2cb366a0e836c14ebd79dd841df8acdc509209ea6fb7b71d994af4f58eb6c16"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/walk/03.png",
+              "sha256": "2f760a254cc30d4a28342f96851fc0872ab865d1fa10efb084b2ca04001383da"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/walk/04.png",
+              "sha256": "02d9e42b5ee99cc4c81ddbd1482a04ec76d0521558836c53c8e0b601ecb8b480"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/walk/05.png",
+              "sha256": "4d5c7e9b3455bae917274c71d48987f4e514a37ad9a80040a1c26346bd403c28"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/walk/06.png",
+              "sha256": "9fef0fd7b588c52aefa5d59ce0016c6515834cc973fd6274ad9c6c7df0fc5f3d"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/walk/07.png",
+              "sha256": "080e638b39a50f807b2ce7ad051647b4f670cd538ceaee37bb65faf8a103d6cb"
+            }
+          ]
+        },
+        {
+          "id": "attack",
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "ground": 120,
+          "loop": false,
+          "milliseconds": [
+            60,
+            70,
+            80,
+            440,
+            40,
+            110,
+            60,
+            70,
+            90
+          ],
+          "frames": [
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/attack/00.png",
+              "sha256": "b6d29febee3a26eac962594e636a576cac923678669de6fdd2cf5aec2b30b286"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/attack/01.png",
+              "sha256": "87155920f64b071aed75b6c68147123ac21cfff5290d398504620423990e44d0"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/attack/02.png",
+              "sha256": "9c85c3a2c8f6e34aeff398981cfa8e382a2fb2da8d6899fa8e35c90460d3fc10"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/attack/03.png",
+              "sha256": "22b13a31ec4ee997708069d3d936d511ad409db5056e360238dbf107bcf84135"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/attack/04.png",
+              "sha256": "20564b9c07df6a076aded12e43264463ae2e4ec8b6aa2fba58afdad4dc81518e"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/attack/05.png",
+              "sha256": "1f26b9f37da5df5f0ca3e46856104639213934162bd3d0a5b670c4413b752eb0"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/attack/06.png",
+              "sha256": "ce91a2d1676b163e0f31db9e7b085ae6f532b4b2adcd5b1f4dd9eda7f18b4691"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/attack/07.png",
+              "sha256": "a2fe115ad93dd46877b31c0134f6e5ef4141dea58902c392fd3e5a6f96f4d225"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/attack/08.png",
+              "sha256": "b6004cec959db038bd32b300dbc8d2a532891007a0a9376a2b5c4439278661c9"
+            }
+          ]
+        },
+        {
+          "id": "hit",
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "ground": 120,
+          "loop": false,
+          "milliseconds": [
+            120
+          ],
+          "frames": [
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/hit/00.png",
+              "sha256": "2b3915a0d0d8975c1aed562eed059ec4b98d2ae9df785fd84c8091974f982b2a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02_broom-stalker",
+      "displayName": "먹빗자루",
+      "motions": [
+        {
+          "id": "base",
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "ground": 120,
+          "loop": false,
+          "milliseconds": [
+            100
+          ],
+          "frames": [
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/base/00.png",
+              "sha256": "3a74f83f8a6426e83fb64c7de61345006238fac9c5eee2d755089aa571a8b8bd"
+            }
+          ]
+        },
+        {
+          "id": "idle",
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "ground": 120,
+          "loop": true,
+          "milliseconds": [
+            140,
+            100,
+            150,
+            180,
+            120,
+            100,
+            90,
+            80,
+            160,
+            230,
+            100,
+            90
+          ],
+          "frames": [
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/idle/00.png",
+              "sha256": "3a74f83f8a6426e83fb64c7de61345006238fac9c5eee2d755089aa571a8b8bd"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/idle/01.png",
+              "sha256": "9e948db25d6d2bd934c16368e1a99a9072912ab71ee3a01ffe2052aaef2c7be3"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/idle/02.png",
+              "sha256": "2b8fc842d9f0909de5050afc906fb43bfdaef672e69499be03141e82eb894495"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/idle/03.png",
+              "sha256": "70196e0b19a35072f6ca6169aef118350c48ef6fc6d3f599074dcae9bfeda590"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/idle/04.png",
+              "sha256": "dcfa7f21942d765439775b5a91e8a91e268c9a39bbe4a80624bd954b1037bc79"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/idle/05.png",
+              "sha256": "ac81ed4c5ec1ad28f60c43a5ae8c6e1d19e69f3c91ce4e78d14a8b61096c2377"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/idle/06.png",
+              "sha256": "a0be0729eb5e1158968f743d27e21081ed8e1d1f7e7bcc857b1b3012923e1eb0"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/idle/07.png",
+              "sha256": "4fd8219c4b5a6042e9f4d5b38796f176d2fa522b5392dbbd630be32ddc05dd55"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/idle/08.png",
+              "sha256": "cc2c3c327de4d176307749444d3c4a0f2498702a1373c28933ec580114594fff"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/idle/09.png",
+              "sha256": "910b77810e3af5683b168ffc4e622eedde878ceda912923700a10d9fadd36238"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/idle/10.png",
+              "sha256": "7846dcbc8ec8a796af701ef65d081f8b299b709d73e0d7a498856ad2006e510b"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/idle/11.png",
+              "sha256": "b7f1b0ff18daa8d9ea6a0dfec8df59e3654f2bf842627c767e47b700cdc1dd7d"
+            }
+          ]
+        },
+        {
+          "id": "death",
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "ground": 120,
+          "loop": false,
+          "milliseconds": [
+            100,
+            80,
+            80,
+            80,
+            90,
+            90,
+            100,
+            100,
+            120,
+            160,
+            180,
+            180,
+            160,
+            80
+          ],
+          "frames": [
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/00.png",
+              "sha256": "3a74f83f8a6426e83fb64c7de61345006238fac9c5eee2d755089aa571a8b8bd"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/01.png",
+              "sha256": "3a74f83f8a6426e83fb64c7de61345006238fac9c5eee2d755089aa571a8b8bd"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/02.png",
+              "sha256": "71e6caf7146c076bad9bc8aa21d262990a9a934179845412baa61d0a8ceb800a"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/03.png",
+              "sha256": "d2e6987c1fa8b551947a720d64fa515f065a3a701c6ef7aa2d54df4eed5d7157"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/04.png",
+              "sha256": "5d65a4f4ed97125376496a6f86ac39b78574915169437e7b3ab29ef38f7cb149"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/05.png",
+              "sha256": "acfecc3c3e84c3c3b09f527adb4cdd06df3ae63d3867efe4cbb5a6b0aaa46e5d"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/06.png",
+              "sha256": "4e31274590385ae272a340c7f450422550aac89e089071d44866bbdcd3ccd662"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/07.png",
+              "sha256": "7d7498a0a3be9af5e3948a1a87814d536f7222466ad193212dfdfaadfc62b0c9"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/08.png",
+              "sha256": "4e2415d02eff602643549bc7493374d9bcb4cba602b6454ee5568d7f35f7e6a3"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/09.png",
+              "sha256": "ca6be583cd9383abd33c9a4ebabfa39e7610e181035d36707cfca6ff282400f7"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/10.png",
+              "sha256": "67f2c09645c3b515967bf7b5083915fd6dc973c1d039503c3238783d4173c6cc"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/11.png",
+              "sha256": "e5a15a57e3212bbd46b308fd5b1195c3b52dd792d2f0dfa0b48900c2a301c682"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/12.png",
+              "sha256": "e972c047aff8a0efa15aec4b85c8520b7845da35f49d7bcc7a5ee3bd0b8d1f01"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/13.png",
+              "sha256": "06ab142c3bad172a564f50931dd667c07af918ed7298107b0c41f79cd761cc8f"
+            }
+          ]
+        },
+        {
+          "id": "walk",
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0859375
+          ],
+          "ground": 117,
+          "loop": true,
+          "milliseconds": [
+            90,
+            90,
+            90,
+            90,
+            90,
+            90,
+            90,
+            90
+          ],
+          "frames": [
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/walk/00.png",
+              "sha256": "12f680572ad05b47cd219ce95c29f1c9f83b3b5cbaa8b1f9e597b732a03240c6"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/walk/01.png",
+              "sha256": "2db2aea47f0195a88a359f1675a0e6231a050e289de32436ea1aa625c9c1809a"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/walk/02.png",
+              "sha256": "d5efee5356c8a6a4c0c8f5de9eaeb83e4185b2af31e4ff00d5e23528356245d8"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/walk/03.png",
+              "sha256": "e3dbd5b11373a2f6c6bdabd5b41ea22a1775f0ad64bfde9000eb4cd64479badb"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/walk/04.png",
+              "sha256": "450a611a13c50a4244f693ccbab640955286ad94d01739add774a8defff6aa0c"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/walk/05.png",
+              "sha256": "8086913534136d9ca506a66dffbe9dda85819cda8eb8611c5544d965338dce69"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/walk/06.png",
+              "sha256": "e785ab3ac368505fbec3e680069c85c5a9f1cdb6ebb57bbfa4e7f99bc1369e56"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/walk/07.png",
+              "sha256": "330a8cc5fe87d4afe9ee23cca9613d60ea3e2229fe4c2556cb4fc6d9d832bf0a"
+            }
+          ]
+        },
+        {
+          "id": "attack",
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "ground": 120,
+          "loop": false,
+          "milliseconds": [
+            60,
+            70,
+            80,
+            90,
+            400,
+            50,
+            50,
+            40,
+            40,
+            60,
+            70,
+            80,
+            80,
+            90,
+            90,
+            100
+          ],
+          "frames": [
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/00.png",
+              "sha256": "3a74f83f8a6426e83fb64c7de61345006238fac9c5eee2d755089aa571a8b8bd"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/01.png",
+              "sha256": "16646d304018a0b5ebabbd9932154f2b8b71f73f1f03244e0a6f99316512badf"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/02.png",
+              "sha256": "37aea5da52fe87511432f82460f8eb307adafc054c1eb12199968fc4e77b66cd"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/03.png",
+              "sha256": "1ed931fb55b4ef9670f5c0cd451effc9a4579d40de443470351f55da027d32cf"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/04.png",
+              "sha256": "48b09f82d364f929924913ca5ad2c72cbfc121a81eba84aba414e42da88b1367"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/05.png",
+              "sha256": "c15452d4fe75cc7b50360d0152c5b8137597cc602c6776b0b491da4136d2458d"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/06.png",
+              "sha256": "e051f3e4abd0684f871bbf4a983606aadf05ab7cac5679c162961c9b8d34a075"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/07.png",
+              "sha256": "c6db9e26c0b1c1556dd7768a921d5631eeaaf89927b979eb67cde8e98c28a989"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/08.png",
+              "sha256": "7577696e2a9edc358ac63f1560d9c1980941c0487fa6ac5690d601f03049749e"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/09.png",
+              "sha256": "ab7ceff2f58d66aa40c1980d884a5e557c3c5be2d33aa6a604240813a889fb1c"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/10.png",
+              "sha256": "76f017e6de7ef5e2699c85dc8d7ca2691185ade4e71e9f3970eca4552f56777e"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/11.png",
+              "sha256": "3eb12e33ed52e562d21afd99b4a27bcd3fb30304ab2958de02ba9c539a7b7e3d"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/12.png",
+              "sha256": "0244e0801263da8c664193f95036645a8eb26b950c2368f2498715bca97c6f9c"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/13.png",
+              "sha256": "12b56646e71efa44f3d86d4642758218a7495c6c1f361bd190b697e87ec607c6"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/14.png",
+              "sha256": "d8c36e993d3991bb07e74705ab29d400a481a7bff4b3c2c33ef71d195adb8efe"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/15.png",
+              "sha256": "3a74f83f8a6426e83fb64c7de61345006238fac9c5eee2d755089aa571a8b8bd"
+            }
+          ]
+        },
+        {
+          "id": "hit",
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "ground": 120,
+          "loop": false,
+          "milliseconds": [
+            120
+          ],
+          "frames": [
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/hit/00.png",
+              "sha256": "33191454ba15f12140739dcb89d7021fa9c3971a5ec049db51eb62b69ba0bac3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03_gutter-spitter",
+      "displayName": "배수관 포수",
+      "motions": [
+        {
+          "id": "base",
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "ground": 120,
+          "loop": false,
+          "milliseconds": [
+            100
+          ],
+          "frames": [
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/base/00.png",
+              "sha256": "c6064fab4d47b548cc4bef3553752c7398eb19f4a77cb3db897492b734774048"
+            }
+          ]
+        },
+        {
+          "id": "idle",
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "ground": 120,
+          "loop": true,
+          "milliseconds": [
+            140,
+            100,
+            150,
+            180,
+            120,
+            100,
+            90,
+            80,
+            160,
+            230,
+            100,
+            90
+          ],
+          "frames": [
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/idle/00.png",
+              "sha256": "c6064fab4d47b548cc4bef3553752c7398eb19f4a77cb3db897492b734774048"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/idle/01.png",
+              "sha256": "ca25703112a0ec9cfe4bc5370c510b90d6f7aee2dac620784530d0b8b66f7181"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/idle/02.png",
+              "sha256": "ca25703112a0ec9cfe4bc5370c510b90d6f7aee2dac620784530d0b8b66f7181"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/idle/03.png",
+              "sha256": "70efb4fd6cca0d69a6467249f1650de100b57d9969bf7d2e281108eeddd87c46"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/idle/04.png",
+              "sha256": "3cec7b217087b7aa09b4e91ae85695e8c8f7989c48f111915f777e4468d589a4"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/idle/05.png",
+              "sha256": "1ed95585dd3b13664a1a09091bb6a91ff539095c86fa20fcb8509d6f77b9c8a5"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/idle/06.png",
+              "sha256": "ca25703112a0ec9cfe4bc5370c510b90d6f7aee2dac620784530d0b8b66f7181"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/idle/07.png",
+              "sha256": "ca25703112a0ec9cfe4bc5370c510b90d6f7aee2dac620784530d0b8b66f7181"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/idle/08.png",
+              "sha256": "7ae91e06d2a29ccb22614500ca37027faf1689b1d16fbe12f61210ea8f7ff489"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/idle/09.png",
+              "sha256": "5a205fe2b8fa9a983125425d60536d8754a90077327241e6887c74b9a75da453"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/idle/10.png",
+              "sha256": "69b1780ccd7799719c0c43077a2f21fba2d4ec0342394558ad12e40331ae1657"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/idle/11.png",
+              "sha256": "c6064fab4d47b548cc4bef3553752c7398eb19f4a77cb3db897492b734774048"
+            }
+          ]
+        },
+        {
+          "id": "death",
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "ground": 120,
+          "loop": false,
+          "milliseconds": [
+            100,
+            80,
+            80,
+            80,
+            90,
+            90,
+            100,
+            100,
+            120,
+            160,
+            180,
+            180,
+            160,
+            80
+          ],
+          "frames": [
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/00.png",
+              "sha256": "c6064fab4d47b548cc4bef3553752c7398eb19f4a77cb3db897492b734774048"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/01.png",
+              "sha256": "c6064fab4d47b548cc4bef3553752c7398eb19f4a77cb3db897492b734774048"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/02.png",
+              "sha256": "c9f08eef76dfc0bd956da1cf13c8d8d3b71f385d1e2a4babd822f29c3968e098"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/03.png",
+              "sha256": "334eb0b99a9eb6ea027540a3bfd5b62655b79a8751d5ae9cf87b683eccd21c5e"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/04.png",
+              "sha256": "07a77de752ee9e014ef247bbd5eb2274535b221dc244f42e2f294be22652398b"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/05.png",
+              "sha256": "5f54b8c19b4a9c6bf7e15045a7aaaf97f3e9b19fcb636927be2dc400afa62aac"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/06.png",
+              "sha256": "550131f8df9aef63462d19ffbd4569b44d5f3ec38f93f5682b7f8a61fbca48c9"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/07.png",
+              "sha256": "d53bae1a3c11497ef636dd2b88e9c565f641bc2a91ff88c6fb47fd4dbcc825cb"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/08.png",
+              "sha256": "4d2f5d7e40bd9c4f388c06a26bf27fd184fc5d394ed1fb9492789f4d115deda6"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/09.png",
+              "sha256": "7deee25f76395df0bc8880f96ab3ecd38bf8138728652862412f0a6ec831d1d6"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/10.png",
+              "sha256": "08ffddafbb48f62356dc2620ae349f9c689b069edef35df178e47a7f0fc1e733"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/11.png",
+              "sha256": "10d734e4608558b79ec9bf1716bda50623f4d3648a075569d919db52ae6c2c82"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/12.png",
+              "sha256": "0761923d2ce3f7f2efbbe5e0df3710f2f5682c2d0a32c21dd4e2907dbcb51fed"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/13.png",
+              "sha256": "06ab142c3bad172a564f50931dd667c07af918ed7298107b0c41f79cd761cc8f"
+            }
+          ]
+        },
+        {
+          "id": "attack",
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "ground": 120,
+          "loop": false,
+          "milliseconds": [
+            120,
+            80,
+            40,
+            40,
+            50,
+            40,
+            100,
+            60,
+            30,
+            30,
+            40,
+            30,
+            80,
+            90,
+            100,
+            100,
+            110,
+            110,
+            30,
+            50,
+            60,
+            60,
+            30,
+            30,
+            70,
+            140
+          ],
+          "frames": [
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/00.png",
+              "sha256": "c6064fab4d47b548cc4bef3553752c7398eb19f4a77cb3db897492b734774048"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/01.png",
+              "sha256": "5fc079a97831d5ab29d840a681c4590cdf2ffa4f010d288b768ad2f2dae0436a"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/02.png",
+              "sha256": "15a5e2802b843c36456ebb5791c8a7e14aeaef6a88d289cc3aea4b66026b2eee"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/03.png",
+              "sha256": "166eede7d565b55178766ddc5163ae233207ff58a3cf4f1c74d77c4207f6de1b"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/04.png",
+              "sha256": "feccc117fb33a096723507ea505055983bc91c2c94e8fe80413a3e54d260e697"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/05.png",
+              "sha256": "3c35177dcc075a945fd36e2dd520a883d39376322e612f30c1195f07f3cc373c"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/06.png",
+              "sha256": "427a88e73a36eec861dc4862943bcfd71273a5455a522efef52ddb788fba11d0"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/07.png",
+              "sha256": "2aa0413733817406a67c8c9e7ed6afe80acaf96687f72f6e184f37bb1e82814a"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/08.png",
+              "sha256": "9460fd85ee70633d9b80d7a7af3c6606428aad11994fd12eb365a88739a9dc92"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/09.png",
+              "sha256": "86b556372cc0167e45bbc56d87828208708e3665f91940c99c0d8c8bf371c233"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/10.png",
+              "sha256": "789a6cbd7fd15ff169fe68fa16291ba62d00b6f09cadd0af181296421cc625e4"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/11.png",
+              "sha256": "c4a12f513e95b5a33b3999b14a013f991c5ac4d1f18afa545ba9222337c93ec1"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/12.png",
+              "sha256": "c5ebf414ae6f64a2e923674cfa5449f1f0828ad2e4545397abd1bcf472abec96"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/13.png",
+              "sha256": "4af358dfaad29787a4f99ebc113f33972ef8efe4eeeb3db87d8ed613b76c5a8f"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/14.png",
+              "sha256": "af1e80adf6baba668ea600fbe6adf10e341f16acdd26e6f265e75d1e2248b46d"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/15.png",
+              "sha256": "b2d23fe32fcf2918a208d40172d1e53a5dbb01858beba15910e8ca661bb43fe2"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/16.png",
+              "sha256": "687af62466bd186618483cffaeb9eadbb5dfe713ef2e5e2910700f14fef260fc"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/17.png",
+              "sha256": "41943612c872b384c14d376ba51f3aa66a05f966f49d0b978dc495201d54375d"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/18.png",
+              "sha256": "11bae23e33a85b9b669c4706f706c644cf193b096c9b5dc2a371e230745b9044"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/19.png",
+              "sha256": "d265d5b52f6abe65729e3cc4fbdaa5e1a7e29e19d2c208092cecabbc92de3e3a"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/20.png",
+              "sha256": "45fcd69edc59dbb3e4d969fecabbc2cc5f3bb41debbebeb26e35aa929e3a4054"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/21.png",
+              "sha256": "3ef03a4fac32da3e4bc1a2e5f96811c53f1a090e8a180c7090e00fee37e12c05"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/22.png",
+              "sha256": "1a4b0d4be84053b42655d277527baea226538fc07457a1c24472e5475fd6808a"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/23.png",
+              "sha256": "783fc0c0184e1f15e61e769d6e670730693521667c20b6523f50d7b2ff919459"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/24.png",
+              "sha256": "838a5abd33dffff379027a877aee4409958c866969a69750e218ecd8a76e16b3"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/25.png",
+              "sha256": "c6064fab4d47b548cc4bef3553752c7398eb19f4a77cb3db897492b734774048"
+            }
+          ]
+        },
+        {
+          "id": "walk",
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "ground": 120,
+          "loop": true,
+          "milliseconds": [
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "frames": [
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/00.png",
+              "sha256": "5bdfb47636fcb4cbbf4e4e1d99d52318e5135bd7a4f607b909ab8e1c44351d3a"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/01.png",
+              "sha256": "a1aaa0da9a827238a3a52678dbcc61daa2551f6ae86eeba80f953cf9e8324c2c"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/02.png",
+              "sha256": "d5facb1b61821467e77ef094169e9405cdc63281dbce7b90860885732a2969c8"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/03.png",
+              "sha256": "0bdd37dc57a3a0b323563a8868438f78deda5a839a6ffe7019a85c8ecdcc69bf"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/04.png",
+              "sha256": "9b524fbbebdd39943295c3d163736a0a22f6c70ecb3838d1e6c87e6735931ab4"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/05.png",
+              "sha256": "bcb9ca3e961174b5ea136e17b826df265a8ff88259bb248fa20b21661a07183d"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/06.png",
+              "sha256": "2b730786658b70786c5f3a429936d309fa0be0f8f1cfd6e556deec2816adef80"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/07.png",
+              "sha256": "4c707cfb9d1aa2b6c233dceb76d208f92ad62eec43cc3c3900d83ac87d891ed2"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/08.png",
+              "sha256": "7127ebc42ef6c8b93c9652a443b45006ad4f9e49670fbb7f9ad7c3eb5744c034"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/09.png",
+              "sha256": "68d4fbec871a2cdb0116136e699638d8c92cf9c4a1e0154169e2e463687d14f9"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/10.png",
+              "sha256": "f8e8a0b593d07e7c343d072937391e1401c4de5e6b50c2f43c1730c315d78374"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/11.png",
+              "sha256": "61fddf40ae62f57fa5995722f77ce2ec13fa7b87335e1f1effa5b8cfba0eb4d7"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/12.png",
+              "sha256": "1ef56cb96e606e271dad3f30f7dc579e62ccf9b959b78f2af62f9a4153c5b45f"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/13.png",
+              "sha256": "b2712711545e1a50b49894d9ac0ae304e4920eb1b7cb30ded35efeb27d85ed0e"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/14.png",
+              "sha256": "f1bc16a6eb9a9dfa4d002bd6df0218f53bdea0e1b646ec19cd4eae8f2b0caaf5"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/15.png",
+              "sha256": "6f8fc89f742b7e2d0c03262135e73909f1a1f903ce428c7e04b742e9aee37002"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/16.png",
+              "sha256": "74d8fff7653dc3f6a82366c96ebc58463f33ba52206947ded68a4988f8a5b41f"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/17.png",
+              "sha256": "9600e7281ce6d626ce85c241bf25cc26311eafed229f4a04a52b5cf78cce1063"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/18.png",
+              "sha256": "808f3d2095cb58a7ce59594206cb9cb634003cd2c754292d0e0714d4e36f7a34"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/19.png",
+              "sha256": "15494fd90534e4c0c9249888781ed831ca6669e8ecdacca274ea6eca7efddb97"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/20.png",
+              "sha256": "ba4d9e607f08e3f0a8cfc1d23d2246fe79aaa95751277fd6e3343d62382ac8ed"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/21.png",
+              "sha256": "820e7c750227c86734b3f504a28f2106624ad88396df9040a5b03e08d1621d50"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/22.png",
+              "sha256": "2a8e8a2f541c6e38b1d9ab2b6c2b8e7fbb567756cc4f5e1e1049751a1306f214"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/23.png",
+              "sha256": "03e16ae23e5339d97c60d01aeb74842b528cbb5783d993a90d48ce7b5e33b71c"
+            }
+          ]
+        },
+        {
+          "id": "hit",
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "ground": 120,
+          "loop": false,
+          "milliseconds": [
+            120
+          ],
+          "frames": [
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/hit/00.png",
+              "sha256": "d5c202ce6ad1a3b3e98ccba407f5a0284e4bf3207b32c1e463c711904ad53d44"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04_well-warden",
+      "displayName": "우물 도르래 수문장",
+      "motions": [
+        {
+          "id": "base",
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "ground": 120,
+          "loop": false,
+          "milliseconds": [
+            100
+          ],
+          "frames": [
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/base/00.png",
+              "sha256": "e85afed72a6752020d03893e7c2e25f1c7e4acaf5efcf3d825e49b668e4a96e1"
+            }
+          ]
+        },
+        {
+          "id": "idle",
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "ground": 120,
+          "loop": true,
+          "milliseconds": [
+            120,
+            100,
+            90,
+            90,
+            90,
+            90,
+            110,
+            120,
+            120,
+            110,
+            90,
+            90,
+            90,
+            90,
+            100,
+            110,
+            110,
+            110,
+            110,
+            120
+          ],
+          "frames": [
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/00.png",
+              "sha256": "e85afed72a6752020d03893e7c2e25f1c7e4acaf5efcf3d825e49b668e4a96e1"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/01.png",
+              "sha256": "e85afed72a6752020d03893e7c2e25f1c7e4acaf5efcf3d825e49b668e4a96e1"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/02.png",
+              "sha256": "21d01d86ae1699721a0e959584545fdd7972d21ed0f482f397d8e2301721a106"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/03.png",
+              "sha256": "9e05fca39bdf0fffbe2072b14fa2aff479c9910d7fd6b3d1852838266c0bec32"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/04.png",
+              "sha256": "f0e6987f7b005dbd55465a6b22612f9b27e7744a2970df08726977980c12789c"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/05.png",
+              "sha256": "1fd580f61351330623138396890f424b13c76935dff5befeac515e030c4eb210"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/06.png",
+              "sha256": "1292329db7a16eb3fe9ef19bba429a47d5cfcb6777b48a21c4470a41398f9db4"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/07.png",
+              "sha256": "664cdf795b7e82834b3eee8f385564d6dd7bb40878f94a74a1cf634e88cc0cfb"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/08.png",
+              "sha256": "ce11bf7c53573bfc68f47268adb210892c11ac0619ba34cb9c065a77b63df2ef"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/09.png",
+              "sha256": "3a012f0282e71590e43bec09a701a95e9d271751812db43db20d1e6eb48fc8a6"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/10.png",
+              "sha256": "562eb6fe6bd48e98455db1a24fb5e420f00c17a7552b21e666b15d1294510929"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/11.png",
+              "sha256": "53ccf0901cc6cd5b42a73d770647b4d75c233a4b2a2af7cd8b3db473b5036626"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/12.png",
+              "sha256": "6f2307861ec3fc21f99cea451311a1f2c11d08f78c8b3e972aba2889f574b73d"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/13.png",
+              "sha256": "9d698493a7fb149105581bf285e3b618c1e5bf179249cdc7f443eb45f4f6a755"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/14.png",
+              "sha256": "fd0cb447950b588e8041d959c3d3b3aeef66a6a1bed4d6ea5b35469e5015956e"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/15.png",
+              "sha256": "d2bc5307046b82acf3d092f56083b20dfaa912ac869889bf7f46356b3e387922"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/16.png",
+              "sha256": "719b6ba61accf45dd2efc39f23b9e20cc4928c33dba23045663763d449d620f7"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/17.png",
+              "sha256": "193edf1e1227b9ca44a8ac53eb93ae0b904bb79b4f7a5b25fc1e2b6ded62c073"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/18.png",
+              "sha256": "e85afed72a6752020d03893e7c2e25f1c7e4acaf5efcf3d825e49b668e4a96e1"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/19.png",
+              "sha256": "e85afed72a6752020d03893e7c2e25f1c7e4acaf5efcf3d825e49b668e4a96e1"
+            }
+          ]
+        },
+        {
+          "id": "attack",
+          "width": 448,
+          "height": 180,
+          "ppu": 32,
+          "pivot": [
+            0.6383928571428571,
+            0.08333333333333333
+          ],
+          "ground": 165,
+          "loop": false,
+          "milliseconds": [
+            100,
+            80,
+            80,
+            80,
+            80,
+            90,
+            320,
+            70,
+            50,
+            40,
+            30,
+            40,
+            240,
+            50,
+            50,
+            60,
+            70,
+            70,
+            60,
+            60,
+            60,
+            60,
+            70,
+            70,
+            160,
+            40,
+            40,
+            40,
+            90,
+            110,
+            70,
+            70,
+            70,
+            160
+          ],
+          "frames": [
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/00.png",
+              "sha256": "bd09e71ad43ac8a254da4f383d3a092fc7814b21a6faad398a970a1a71db1613"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/01.png",
+              "sha256": "cba0253f8bf3b2d4e8f900843e0a4c1c7136c22d44998bd7df0e4c0cc2fa1a5a"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/02.png",
+              "sha256": "7ef769b5244d5259afc9e8f694c9843098fdf95ceb435266eca80e442a0f232e"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/03.png",
+              "sha256": "0bd8727ff08cf1cd92ed4cb571e64f5f90a8773cc874423ed9d5fa52384cdf23"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/04.png",
+              "sha256": "2e0aabee090cd0c0db4267c437474ce21d3f9bc5e17e5664374b192f172744cf"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/05.png",
+              "sha256": "f18fe8143332c9ea66e068477dbe461491ae88d0fb6a4572c0734ac334240c2d"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/06.png",
+              "sha256": "dc05e1e85e617ce6d9e7626b87a7c1a3fe405bd5f4831c710af5141672f30f7a"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/07.png",
+              "sha256": "7164f081297be01331554574ca471ef742580a014e81ef6c45d705372777fbb8"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/08.png",
+              "sha256": "f801d88d863d0fa17d32dc884565ef3fb65523b86e6cd5217d608370d0ee5386"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/09.png",
+              "sha256": "2eee49c12f67444d3f58791ae0157bea14e26e9fd597f03673bbcc3d3705ad62"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/10.png",
+              "sha256": "2778ee44f760884c38d8a69a48e48b572229b010ac32b5603e92f2b12095fb27"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/11.png",
+              "sha256": "cbf1c85b337177308eb08713bd6c98a448602f6c0ebbe23d93325548b5128507"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/12.png",
+              "sha256": "0a36dae60df8b0d11d06b8eee3a71c823b267e306a3d35874b9190758b53d252"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/13.png",
+              "sha256": "251f1ba2b3f7c409ca1a2b4265ce607145e215d79f99b9814c667d6a2bdc8a83"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/14.png",
+              "sha256": "733c3691e897000f5e38992fd2253380b0a0b772a1d119b9f6b80398a9aaa462"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/15.png",
+              "sha256": "29b545e749da9d22270ea807e61d2e2fe95346ffa38481f59bec098451591a22"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/16.png",
+              "sha256": "85ef0ca61929c2fc4a3e2060d2bfca67866ee1d7e4a1424a937c28bb4b4ae47a"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/17.png",
+              "sha256": "a0ff061cb5e21963d4c7a3ac27bd113665a44117c045973e23d41a06566f9081"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/18.png",
+              "sha256": "0f8b4d8483d1f2f9b57b03fe0d07ce54b903c0bf1c9e0f3f89b3c89b45e63609"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/19.png",
+              "sha256": "a25f5bf015b3d555c640981661e5c8155b0931947df4fd2f8c1d4e952ddde63a"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/20.png",
+              "sha256": "4cf53328055c1c0c8959739b1ae69ca59158d22f80ecbcdc2a794eee99b34477"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/21.png",
+              "sha256": "c67ed4970da7df7b48780a2c6052f31eda64d8193765499c5cbfba7da4f9a677"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/22.png",
+              "sha256": "c45c32b78f68415586ef7c84cac86b9734ab4c36d8ffe3d0c7fe7c5f96ccd424"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/23.png",
+              "sha256": "447dbd42db85f305412a8dda08b3f093463ab1100c53944536ab6246a81db1dd"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/24.png",
+              "sha256": "f21bcd2303fe8390a131d8096b331a9abf764755cfee61b33af15902a8c49998"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/25.png",
+              "sha256": "27b07120aa530517543dd65affcc1f904d203add321e7d211d304b7f6cedcc09"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/26.png",
+              "sha256": "23502e68763d98eb422fdcd38d903d341c4c5fd0e1a2ca21eb8fc5ec2e9be7bf"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/27.png",
+              "sha256": "ec870c185b0d275acff417c1c6ce9e6dc4185f75f83c9cbcbfb84cf2f73c1c2d"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/28.png",
+              "sha256": "abddefdc2b8bbc156a1168b87c33868d849f81cf976e3a3ef6150721393786c6"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/29.png",
+              "sha256": "e371b744f87a68bacc677e372c6f8055e6d96514565705a644b6368eab4cfc73"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/30.png",
+              "sha256": "232dcb007c54ad6bc0a255ca88a5dd9f3f541aee1eecdbd6170bb55b3c671ce3"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/31.png",
+              "sha256": "59613457c609649f543f2d0a40798d23c3f25cca0d486ec4bc2dbe63c5f930a2"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/32.png",
+              "sha256": "636552c427a4c3d68e475e7f1b0ac8ed4287bbe5705f4b4403542e77af932d96"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/33.png",
+              "sha256": "a740bb286d129db472418ef4624f71e0a6c5cc36d2bf2ca1e2de900cbb84e2f0"
+            }
+          ]
+        },
+        {
+          "id": "walk",
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "ground": 120,
+          "loop": true,
+          "milliseconds": [
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "frames": [
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/00.png",
+              "sha256": "41b12847e6a6c071197aa808dae3270b674d61547f7625910e038ed0b37b1a04"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/01.png",
+              "sha256": "9594ab992b9449c963366d87895161634d2e065818decedb417e9d6abf79bd8d"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/02.png",
+              "sha256": "2b5c89d98ba980d819e13aa3afee2d71f9754bb3ae0cda685ceca70ecfcac71f"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/03.png",
+              "sha256": "b271a3cddf76eba6578f363b5b101eb2d08c1faf5399c7300e594b875150f64f"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/04.png",
+              "sha256": "27acaab5c1a06e82b43f3adf03f3f3d8297ff121dad97a4a42008cd8a8855cf2"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/05.png",
+              "sha256": "ac38c05d46cceced6cd41d5b40e9006a98d2a399784c01d8b476171847504490"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/06.png",
+              "sha256": "eb98db6a9cf968cb6257ab7a2fe551c3c407b2cc2ad00557703879fd8e4aed20"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/07.png",
+              "sha256": "c02d23784d09e8727fdf551da9f5e1dafe7a179114918b0ef7556e7b97210086"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/08.png",
+              "sha256": "6faaf6ebf22ea1584d51b5d97307a93647394b90019089ec27ec0b94021bbecb"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/09.png",
+              "sha256": "c2520d190c7e79a6f0f977834264c78f7d9711bb8cbf076fa89ed2e122b0e362"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/10.png",
+              "sha256": "d7f2a7b10df991a9a90e4ac07f0cf62ff52c1ed637f039edc376a2a10a7ff910"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/11.png",
+              "sha256": "7e4e0671c66af0330adb78944d0f41a0d7db79df80db54bab81b12ad9d40a72a"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/12.png",
+              "sha256": "aa2bf9daface2fc7ce01fa69568bf16ac0ef6eeb59c606927bcde78abb02ec2a"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/13.png",
+              "sha256": "c2eb2dece875013130d753c2ad6330c27560dc1591b642eaba63f5a9a9cbc01d"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/14.png",
+              "sha256": "77e7427057b656f90534cafe8a5a119610fa1824e2f68e5b26c5445e9557262c"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/15.png",
+              "sha256": "82b8225bfec09e2ecb12ce1e7ee007f8b1a1c0c00c8c2002440375dd85203587"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/16.png",
+              "sha256": "f1d878b4cad8003b317b6f25b0a22ff17198b850d3e9eaa2072f640cdb38c669"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/17.png",
+              "sha256": "cccc1cfa738cad3c9584668419415db8817ad1fb0681adee8ddec4018764b2a6"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/18.png",
+              "sha256": "70138adfbca386d5bfbcd083656376373432aa1e7987a43d8db1c6b66bcc7fd0"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/19.png",
+              "sha256": "93ad41c5c5ddd16f58c68d77db9ac1eef7436ed7826288159a14f6ef3acbff6d"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/20.png",
+              "sha256": "9322edebd8bf8e7abd7dd3f018d8c2dbaed0e23ba16d613b012a222850a7a659"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/21.png",
+              "sha256": "cc75e73bdb5381cba808a5e6e5ca67a1930d69b75b0907a1229aba21c2e369f6"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/22.png",
+              "sha256": "2c14a39861334d9b50a313442b07ac57ece590d8bdb48ef037a512cfbf9e962f"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/23.png",
+              "sha256": "2ac4fd37fa31e29a10f4dae6461c4c34d6d19c6e80c2cf827f10ed74d64e97ab"
+            }
+          ]
+        },
+        {
+          "id": "death",
+          "width": 192,
+          "height": 160,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.1
+          ],
+          "ground": 144,
+          "loop": false,
+          "milliseconds": [
+            100,
+            40,
+            40,
+            90,
+            40,
+            50,
+            50,
+            50,
+            50,
+            40,
+            40,
+            40,
+            40,
+            40,
+            40,
+            40,
+            40,
+            40,
+            40,
+            40,
+            40,
+            40,
+            50,
+            50,
+            60,
+            60,
+            60,
+            60,
+            60,
+            60,
+            60,
+            60,
+            60,
+            120
+          ],
+          "frames": [
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/00.png",
+              "sha256": "7eeea6f30bf275913d6919f77c2c8e9fe9bb0d641f1756c59f332d1093db02ad"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/01.png",
+              "sha256": "c423b996595854f17526f8a5268d9c3330abf2095a902cd8dc8db8b2a6336be7"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/02.png",
+              "sha256": "180e56aafc0a7d66e41e5551eb18dfc74b795b2811feb5bb94b4cd946be95360"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/03.png",
+              "sha256": "180e56aafc0a7d66e41e5551eb18dfc74b795b2811feb5bb94b4cd946be95360"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/04.png",
+              "sha256": "f4b7715f263aee573a86e104aab0ba798ef8c2102ceaa666b82042f1510df8d1"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/05.png",
+              "sha256": "c622e0e4d711a2d2d1bf9440b1682ee58d74c3f7ab4a8b8007e1d64eccbb23a4"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/06.png",
+              "sha256": "1ed5b2cf3b8c432e69bf4dc257b3450bc4d4bf6c62fd876ed36593ff5a50f879"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/07.png",
+              "sha256": "58fbfc12b45c312ba6ddbaf4f350d59fa065ce0fbd0a111988355c95dae0dced"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/08.png",
+              "sha256": "2586b42e5175fd449decc51e0bf54a91ee0ddffa0bbf0968e5218ab755e6c02b"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/09.png",
+              "sha256": "499449444ea1b5666b0cc139eb478097466b82857850ca56b5c239685ebd8d81"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/10.png",
+              "sha256": "83565871185c1765d02e979426fddaf28af93c15a25adec8e42b6c147d66286a"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/11.png",
+              "sha256": "83c8fafb2ea54811b27538de85542aece82186563a9d7214af269006e07009d3"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/12.png",
+              "sha256": "eab0dc8b1d93119b9cca43d21822d0b3ae0d25f03fff2ee3f876b56f7f8fbda9"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/13.png",
+              "sha256": "c723ef53afead67e4e794cbabd94b223632af028718a1766586143c7c09ca9b3"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/14.png",
+              "sha256": "98f062aa611ad1a41376fb683dd1a2f694448f3293b75729981a454115a449cc"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/15.png",
+              "sha256": "224295ab66d1366e051179e038b87e30d5aa722739afde5606ec19dfa23797f5"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/16.png",
+              "sha256": "f7e0ddfdbc54290870a644f6d421543c691037ab4cd434ec822b2ca7d6795e32"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/17.png",
+              "sha256": "ba5b9267917f8dc6ac87196a34a9b3651c80875448be0225501ea3c7b6ef4a27"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/18.png",
+              "sha256": "1a453de9a63160aad8056a1e394e79709274971534f8bdcdab6ddfeac9c333ce"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/19.png",
+              "sha256": "6fad3c1bc86e9481c4d0fe19998287776bc5377fe67e2a9bb80820c4c0f54a73"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/20.png",
+              "sha256": "28a9be71a47a45e617811e8b84a65334047204ab15f0f01ae691bc51755e4608"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/21.png",
+              "sha256": "b9cdae2de6b322c3fae956cee8b2acfe22094fc7421a20ca47fc135700bd95cd"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/22.png",
+              "sha256": "5ae782f705a8b39341ab2603957f000ef960b7861ba78b7a36971c168e0d4de0"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/23.png",
+              "sha256": "78135688c23fc345ef61b4247807feb4bcc8d125d63f7568b1eaba6c31b1d622"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/24.png",
+              "sha256": "c7d39cb5d239802167399a575778f3a445b74b7c295102ebd3c21d04d0888fd1"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/25.png",
+              "sha256": "8467104506b7e57e28643d659006995948c76092db30cf88a8df549d5b0dfa94"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/26.png",
+              "sha256": "f07c184d6f3c7c6507baeb90dc7481ce298d682b4bdc2a021e5d09eb9bb1f26e"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/27.png",
+              "sha256": "a4e88439d77d6319ac63977a635bae6883ac9cfbe5eea7a8fd5ed5d0215bc1d7"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/28.png",
+              "sha256": "45da9b9938746f038714ee33856e07f6d01eafe5fc6b0aa05643c4cfe2e0ec12"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/29.png",
+              "sha256": "97eeca2dfe95cb7aed40812604fb16f37348260a69a452c9335f2bc7b797f9d7"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/30.png",
+              "sha256": "406fa1ae0b1fdee076e8a3fe81f5524dbd6bf5733839c63128ff6eba168e0bc8"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/31.png",
+              "sha256": "9078cf88818f45fe93f5244fc438c1c004aded6501abf6f69a83fd8decb5d391"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/32.png",
+              "sha256": "aa50e5216a7a807067525995a737c4b55ebb19fd918da0beb6a3ed16d41cecae"
+            },
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/33.png",
+              "sha256": "aa50e5216a7a807067525995a737c4b55ebb19fd918da0beb6a3ed16d41cecae"
+            }
+          ]
+        },
+        {
+          "id": "hit",
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "ground": 120,
+          "loop": false,
+          "milliseconds": [
+            120
+          ],
+          "frames": [
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/04_well-warden/hit/00.png",
+              "sha256": "0503d31e3a6c6ba119b31d1d9e617b8191676d3ada5f3d4a3bccd7fe37aa5b03"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05_clock-executioner",
+      "displayName": "시계탑 집행자",
+      "motions": [
+        {
+          "id": "base",
+          "width": 256,
+          "height": 256,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "ground": 240,
+          "loop": false,
+          "milliseconds": [
+            100
+          ],
+          "frames": [
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/05_clock-executioner/base/00.png",
+              "sha256": "043124722c5760a8547b544723b138453e7430518ca9e86ddd0f19c8e81369b2"
+            }
+          ]
+        },
+        {
+          "id": "hit",
+          "width": 256,
+          "height": 256,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "ground": 240,
+          "loop": false,
+          "milliseconds": [
+            120
+          ],
+          "frames": [
+            {
+              "path": "Assets/Deviant/Stage1Monsters/Art/05_clock-executioner/hit/00.png",
+              "sha256": "afda93b439a18526b0c289fff823b2d2e39106dc965c5f4d1875646542731eb7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "scope": "Approved motion presentation only. No enemy AI, damage, hitstun or spawn policy changes.",
+  "playerReference": {
+    "id": "player-reference",
+    "width": 128,
+    "height": 128,
+    "ppu": 32,
+    "ground": 121,
+    "pivot": [
+      0.5,
+      0.0546875
+    ],
+    "frames": [
+      {
+        "path": "Assets/Deviant/Stage1Monsters/Art/Reference/player.png",
+        "sha256": "8adf9a881f5c01c7407bd4468bd3c1b67d012b91d951c9ee8fb1546eab9ee9fc"
+      }
+    ]
+  },
+  "polishManifest": "authoring/workbench/source/MonsterReference/approved-polish-v1/manifest.json",
+  "polishSHA256": "234b2dcc31a1620cba6afeddc447cb0119e8e4be36aff3917fa6061e25450a32"
+}

@@ -1,0 +1,1540 @@
+{
+  "schema": 1,
+  "approved_forms": [
+    "base_sword",
+    "whip",
+    "rapier",
+    "dagger",
+    "greatsword",
+    "shuriken"
+  ],
+  "source_hash": "7d0ad52ea332d421a4537a91ea97aa4c4d90a71f20399bb4e39bc33694a49798",
+  "project": {
+    "version": 1,
+    "sourceHash": "7d0ad52ea332d421a4537a91ea97aa4c4d90a71f20399bb4e39bc33694a49798",
+    "actionId": "shuriken/combo",
+    "actions": {
+      "base_sword/combo": [
+        {
+          "id": "e529066a-974e-40ac-881d-18cf7c60715c",
+          "mode": "one",
+          "at": 200,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 0,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        },
+        {
+          "id": "931920af-cb1f-49ea-8ae5-e8fef20f2651",
+          "mode": "one",
+          "at": 600,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 0,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "greatsword/combo": [
+        {
+          "id": "3d17126e-1b54-4180-af04-26a573e7635e",
+          "mode": "one",
+          "at": 210,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": -12,
+          "gain": 10,
+          "speed": 0.5,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        },
+        {
+          "id": "56a652e2-73cd-490e-9f15-50ad58f18415",
+          "mode": "one",
+          "at": 460,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": -12,
+          "gain": 10,
+          "speed": 0.5,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        },
+        {
+          "id": "dd534ae2-7dd0-44ac-ade4-8efe6b8a52a1",
+          "mode": "one",
+          "at": 934,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": -12,
+          "gain": 10,
+          "speed": 0.5,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "greatsword_movement": [
+        {
+          "id": "92b87593-3081-467a-af2e-6e059756506d",
+          "mode": "spin",
+          "at": 200,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": -12,
+          "gain": 5,
+          "speed": 0.5,
+          "pan": 0,
+          "interval": 100,
+          "count": 3,
+          "duration": 1100,
+          "spinHz": 2,
+          "depth": 0.45,
+          "sweep": 0
+        }
+      ],
+      "shuriken/combo": [
+        {
+          "id": "0081e230-497f-477d-baf5-b7260b2246cd",
+          "mode": "spin",
+          "at": 100,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": -3,
+          "gain": -6,
+          "speed": 0.8,
+          "pan": 0,
+          "interval": 65,
+          "count": 4,
+          "duration": 500,
+          "spinHz": 5,
+          "depth": 0.45,
+          "sweep": 0
+        }
+      ],
+      "whip/combo": [
+        {
+          "id": "35fe3319-f0f5-4acc-9deb-30c7d2858501",
+          "mode": "one",
+          "at": 250,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 10,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        },
+        {
+          "id": "c606f19d-9327-4093-8dd5-4b5ceb0f47cf",
+          "mode": "one",
+          "at": 800,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 10,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "base_sword/basic/1": [
+        {
+          "id": "ca5bbc3c-fc00-43f8-8ae7-df5c67641f66",
+          "mode": "one",
+          "at": 200,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 0,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "base_sword/basic/2": [
+        {
+          "id": "c7f1f5af-d4a6-44c1-b16f-d73ec4038cd6",
+          "mode": "one",
+          "at": 200,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 0,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "base_sword_default": [
+        {
+          "id": "89d5e28e-f20d-4534-a325-6813de5a2fd2",
+          "mode": "one",
+          "at": 300,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 0,
+          "gain": 10,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "base_sword_range": [
+        {
+          "id": "28d20910-abba-40c9-83f3-56c5732be81b",
+          "mode": "one",
+          "at": 200,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 0,
+          "gain": 10,
+          "speed": 1.5,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "base_sword_movement": [
+        {
+          "id": "b8e4929a-b67e-42c8-82d0-fcf5fee49457",
+          "mode": "one",
+          "at": 150,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 0,
+          "gain": 10,
+          "speed": 1.5,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "base_sword_follow_up": [
+        {
+          "id": "a027a100-3316-40b4-ba9f-ad85b542a783",
+          "mode": "one",
+          "at": 200,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 0,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        },
+        {
+          "id": "89ef2848-f738-4c75-9ca3-60a8dc5b5c44",
+          "mode": "one",
+          "at": 500,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 0,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "whip/basic/2": [
+        {
+          "id": "e0a7a033-b361-4df2-addd-ef574f5bc53d",
+          "mode": "one",
+          "at": 300,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 10,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "greatsword_range": [
+        {
+          "id": "0613d47f-da02-4704-a01e-316d0b689643",
+          "mode": "one",
+          "at": 450,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": -12,
+          "gain": 10,
+          "speed": 0.5,
+          "pan": 0,
+          "interval": 100,
+          "count": 1,
+          "duration": 1000,
+          "spinHz": 1,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "greatsword_default": [
+        {
+          "id": "ba43849e-b472-4d9b-b2b2-a55a2b873bb5",
+          "mode": "one",
+          "at": 250,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": -12,
+          "gain": 15,
+          "speed": 0.5,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "greatsword_follow_up": [
+        {
+          "id": "48d3417b-6598-4b49-a840-0105eb4e2b31",
+          "mode": "one",
+          "at": 900,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": -12,
+          "gain": 10,
+          "speed": 0.5,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "whip_default": [
+        {
+          "id": "df20578c-97c4-4893-8948-18576c420ba9",
+          "mode": "one",
+          "at": 250,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 10,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "whip_range": [
+        {
+          "id": "c3f2d773-fe91-4b44-a0c2-564f13586377",
+          "mode": "one",
+          "at": 350,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 10,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "whip_movement": [
+        {
+          "id": "a75105c6-cc54-4437-8da5-417ac4c8a478",
+          "mode": "one",
+          "at": 150,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 10,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "whip_follow_up": [
+        {
+          "id": "c0dc1d64-1ac9-469a-a60d-c2e08c3f92dc",
+          "mode": "one",
+          "at": 250,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 10,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        },
+        {
+          "id": "c1f20624-13f6-4ba8-82f9-b5351cab639a",
+          "mode": "one",
+          "at": 850,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 10,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "whip/basic/1": [
+        {
+          "id": "7c2d0af0-ae43-4bca-9958-fd532795365b",
+          "mode": "one",
+          "at": 250,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 10,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "rapier/combo": [
+        {
+          "id": "80dd0464-f72b-4152-a612-bc0247da20f4",
+          "mode": "one",
+          "at": 100,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 10,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        },
+        {
+          "id": "be9e0bb8-8c6f-46fa-9cdd-08a77eeb4a7b",
+          "mode": "one",
+          "at": 317,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 10,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        },
+        {
+          "id": "028641ce-af90-4381-8aba-5473b9c3e7c6",
+          "mode": "one",
+          "at": 560,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 10,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "rapier/basic/3": [
+        {
+          "id": "4dbe033d-9a25-498f-a588-a949223a7a78",
+          "mode": "one",
+          "at": 120,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 10,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "rapier/basic/2": [
+        {
+          "id": "89d3b2d8-1227-4b51-aa24-bf9a49455b8f",
+          "mode": "one",
+          "at": 100,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 10,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "rapier/basic/1": [
+        {
+          "id": "88e9ebc2-3cf2-4fef-9b00-66a5358e9bcc",
+          "mode": "one",
+          "at": 100,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 10,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "rapier_default": [
+        {
+          "id": "f2038db7-f702-461c-a16f-956bbcc4a6c2",
+          "mode": "one",
+          "at": 200,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 10,
+          "gain": 10,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "rapier_range": [
+        {
+          "id": "edeb983a-2358-442f-8346-58a8ac9d416b",
+          "mode": "one",
+          "at": 300,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 10,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "rapier_movement": [
+        {
+          "id": "f205bd2c-e7e5-4cce-a9ea-0e770e3f47e8",
+          "mode": "one",
+          "at": 100,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 10,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "rapier_follow_up": [
+        {
+          "id": "6500a02b-24c7-411b-b633-a6ee8e237d97",
+          "mode": "one",
+          "at": 150,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 10,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        },
+        {
+          "id": "17cea144-41ee-427b-97b1-b0a344a2d8c6",
+          "mode": "one",
+          "at": 267,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 10,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        },
+        {
+          "id": "7449049f-53ba-4a1f-a45c-7ed0c5711dd1",
+          "mode": "one",
+          "at": 387,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 10,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        },
+        {
+          "id": "ec83b99b-4d3e-4685-8371-603dadc29cd1",
+          "mode": "one",
+          "at": 505,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 10,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        },
+        {
+          "id": "f290af5b-98e3-4e0b-aefd-4fa6a9800342",
+          "mode": "one",
+          "at": 642,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 10,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "dagger/combo": [
+        {
+          "id": "86e705c0-0bec-44fe-a2cf-28ae34a4047c",
+          "mode": "one",
+          "at": 45,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 5,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        },
+        {
+          "id": "0361de63-1feb-421c-a1d2-eeb0715fbb80",
+          "mode": "one",
+          "at": 210,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 5,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        },
+        {
+          "id": "fbd507a9-af46-46c2-8a26-35bb3d1b9c89",
+          "mode": "one",
+          "at": 430,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 5,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        },
+        {
+          "id": "0c13e7e0-5fa9-40f1-80f7-68fe243b4dd8",
+          "mode": "one",
+          "at": 845,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 5,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "dagger/basic/1": [
+        {
+          "id": "8ee8477c-3f78-4987-81a3-6b6b4098644a",
+          "mode": "one",
+          "at": 45,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 5,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "dagger/basic/2": [
+        {
+          "id": "e9395b7a-e829-42fe-8f1e-5fe467cf7d9c",
+          "mode": "one",
+          "at": 45,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 5,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "dagger/basic/3": [
+        {
+          "id": "9826b7cb-2e12-4854-8706-17ccff08e5bf",
+          "mode": "one",
+          "at": 100,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 5,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "dagger/basic/4": [
+        {
+          "id": "d25ed735-0915-4cff-b04a-466afb2048f3",
+          "mode": "one",
+          "at": 255,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 5,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "dagger_default": [
+        {
+          "id": "d51b08d7-3554-4296-92ba-a68cde38a927",
+          "mode": "one",
+          "at": 100,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 5,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "dagger_range": [
+        {
+          "id": "bfbf28bb-36af-4e07-94ad-e381aaf768e0",
+          "mode": "one",
+          "at": 150,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 5,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "dagger_movement": [
+        {
+          "id": "54ad8638-ee00-4e6a-b55d-c0b082962cef",
+          "mode": "one",
+          "at": 80,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 5,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "dagger_follow_up": [
+        {
+          "id": "257479e7-5213-4b82-9e80-c5935abcee4f",
+          "mode": "one",
+          "at": 153,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 5,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        },
+        {
+          "id": "1109caae-46d5-45a5-85a4-19fd79c724e3",
+          "mode": "one",
+          "at": 275,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 5,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        },
+        {
+          "id": "074faa9d-b2c0-4d39-b13e-870abb52722e",
+          "mode": "one",
+          "at": 388,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 5,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        },
+        {
+          "id": "3f4a67a8-503b-4253-8912-d09fe457a40b",
+          "mode": "one",
+          "at": 505,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 5,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        },
+        {
+          "id": "7b020c21-e122-43bc-8573-b24007a21562",
+          "mode": "one",
+          "at": 632,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 5,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        },
+        {
+          "id": "905c2ac2-145c-4a2f-966a-a18a3b94ea50",
+          "mode": "one",
+          "at": 750,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 5,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "greatsword/basic/3": [
+        {
+          "id": "c2528aa0-dd71-4048-b929-654aa1812a0c",
+          "mode": "one",
+          "at": 280,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": -12,
+          "gain": 10,
+          "speed": 0.5,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "greatsword/basic/2": [
+        {
+          "id": "9ea6fd38-86b4-4c3b-829c-3a03d4292ad0",
+          "mode": "one",
+          "at": 100,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": -12,
+          "gain": 10,
+          "speed": 0.5,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "greatsword/basic/1": [
+        {
+          "id": "24d1956c-d374-45b9-b70c-acacae3a1a37",
+          "mode": "one",
+          "at": 210,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": -12,
+          "gain": 10,
+          "speed": 0.5,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "shuriken/basic/1": [
+        {
+          "id": "94c0aa52-7cc4-4613-9a8b-aad009b1bb80",
+          "mode": "one",
+          "at": 100,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 0,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "shuriken/basic/2": [
+        {
+          "id": "3a315b31-0d35-41a5-b636-967d6cc5703a",
+          "mode": "one",
+          "at": 120,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 0,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "shuriken_basic_special": [
+        {
+          "id": "ca93cb02-fb99-467d-a6d7-f451b16615b7",
+          "mode": "one",
+          "at": 200,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 0,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "shuriken_range_special": [
+        {
+          "id": "a322342e-49c7-4f3f-8da4-20b4a85f64d2",
+          "mode": "one",
+          "at": 200,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 0,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "shuriken_move_special": [
+        {
+          "id": "3b42a26c-fdbd-46ec-a9a2-c276fdde5ef9",
+          "mode": "one",
+          "at": 200,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 0,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ],
+      "shuriken_followup_special": [
+        {
+          "id": "cd3c9e82-2525-4ea2-b4aa-93b489e23e1d",
+          "mode": "one",
+          "at": 200,
+          "trimA": 0,
+          "trimB": 115,
+          "pitch": 0,
+          "gain": 0,
+          "speed": 1,
+          "pan": 0,
+          "interval": 100,
+          "count": 4,
+          "duration": 1000,
+          "spinHz": 4,
+          "depth": 0.5,
+          "sweep": 0
+        }
+      ]
+    },
+    "crop": [
+      0,
+      115
+    ]
+  },
+  "motion_reference": {
+    "base_sword/combo": {
+      "duration": 1.0,
+      "markers": [
+        0.2,
+        0.6000000000000001
+      ]
+    },
+    "greatsword/combo": {
+      "duration": 1.23,
+      "markers": [
+        0.21,
+        0.45999999999999996,
+        0.9299999999999999
+      ]
+    },
+    "greatsword_movement": {
+      "duration": 1.3,
+      "markers": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ]
+    },
+    "shuriken/combo": {
+      "duration": 0.6,
+      "markers": [
+        0.1,
+        0.37
+      ]
+    },
+    "whip/combo": {
+      "duration": 1.2,
+      "markers": [
+        0.25,
+        0.8
+      ]
+    },
+    "base_sword/basic/1": {
+      "duration": 0.4,
+      "markers": [
+        0.2
+      ]
+    },
+    "base_sword/basic/2": {
+      "duration": 0.6,
+      "markers": [
+        0.2
+      ]
+    },
+    "base_sword_default": {
+      "duration": 0.7,
+      "markers": [
+        0.3
+      ]
+    },
+    "base_sword_range": {
+      "duration": 0.5,
+      "markers": [
+        0.2
+      ]
+    },
+    "base_sword_movement": {
+      "duration": 0.6,
+      "markers": [
+        0.15
+      ]
+    },
+    "base_sword_follow_up": {
+      "duration": 0.5,
+      "markers": [
+        0.2,
+        0.5
+      ]
+    },
+    "whip/basic/2": {
+      "duration": 0.7,
+      "markers": [
+        0.3
+      ]
+    },
+    "greatsword_range": {
+      "duration": 1.05,
+      "markers": [
+        0.45
+      ]
+    },
+    "greatsword_default": {
+      "duration": 0.7,
+      "markers": [
+        0.25
+      ]
+    },
+    "greatsword_follow_up": {
+      "duration": 0.7,
+      "markers": [
+        0.9
+      ]
+    },
+    "whip_default": {
+      "duration": 0.6,
+      "markers": [
+        0.25
+      ]
+    },
+    "whip_range": {
+      "duration": 0.8,
+      "markers": [
+        0.35
+      ]
+    },
+    "whip_movement": {
+      "duration": 0.5,
+      "markers": [
+        0.15
+      ]
+    },
+    "whip_follow_up": {
+      "duration": 0.6,
+      "markers": [
+        0.25,
+        0.85
+      ]
+    },
+    "whip/basic/1": {
+      "duration": 0.5,
+      "markers": [
+        0.25
+      ]
+    },
+    "rapier/combo": {
+      "duration": 0.8,
+      "markers": [
+        0.1,
+        0.32,
+        0.56
+      ]
+    },
+    "rapier/basic/3": {
+      "duration": 0.36,
+      "markers": [
+        0.12
+      ]
+    },
+    "rapier/basic/2": {
+      "duration": 0.22,
+      "markers": [
+        0.1
+      ]
+    },
+    "rapier/basic/1": {
+      "duration": 0.22,
+      "markers": [
+        0.1
+      ]
+    },
+    "rapier_default": {
+      "duration": 0.53,
+      "markers": [
+        0.2
+      ]
+    },
+    "rapier_range": {
+      "duration": 0.7,
+      "markers": [
+        0.3
+      ]
+    },
+    "rapier_movement": {
+      "duration": 0.45,
+      "markers": [
+        0.1
+      ]
+    },
+    "rapier_follow_up": {
+      "duration": 0.95,
+      "markers": [
+        0.15,
+        0.27,
+        0.39,
+        0.51,
+        0.63
+      ]
+    },
+    "dagger/combo": {
+      "duration": 1.0,
+      "markers": [
+        0.045,
+        0.21000000000000002,
+        0.43000000000000005,
+        0.8450000000000001
+      ]
+    },
+    "dagger/basic/1": {
+      "duration": 0.165,
+      "markers": [
+        0.045
+      ]
+    },
+    "dagger/basic/2": {
+      "duration": 0.165,
+      "markers": [
+        0.045
+      ]
+    },
+    "dagger/basic/3": {
+      "duration": 0.26,
+      "markers": [
+        0.1
+      ]
+    },
+    "dagger/basic/4": {
+      "duration": 0.41,
+      "markers": [
+        0.255
+      ]
+    },
+    "dagger_default": {
+      "duration": 0.35,
+      "markers": [
+        0.1
+      ]
+    },
+    "dagger_range": {
+      "duration": 0.5,
+      "markers": [
+        0.15
+      ]
+    },
+    "dagger_movement": {
+      "duration": 0.38,
+      "markers": [
+        0.08
+      ]
+    },
+    "dagger_follow_up": {
+      "duration": 0.95,
+      "markers": [
+        0.15,
+        0.27,
+        0.39,
+        0.51,
+        0.63,
+        0.75
+      ]
+    },
+    "greatsword/basic/3": {
+      "duration": 0.58,
+      "markers": [
+        0.28
+      ]
+    },
+    "greatsword/basic/2": {
+      "duration": 0.29,
+      "markers": [
+        0.1
+      ]
+    },
+    "greatsword/basic/1": {
+      "duration": 0.36,
+      "markers": [
+        0.21
+      ]
+    },
+    "shuriken/basic/1": {
+      "duration": 0.25,
+      "markers": [
+        0.1
+      ]
+    },
+    "shuriken/basic/2": {
+      "duration": 0.35,
+      "markers": [
+        0.12
+      ]
+    },
+    "shuriken_basic_special": {
+      "duration": 0.6,
+      "markers": [
+        0.2
+      ]
+    },
+    "shuriken_range_special": {
+      "duration": 0.6,
+      "markers": [
+        0.2
+      ]
+    },
+    "shuriken_move_special": {
+      "duration": 0.6,
+      "markers": [
+        0.2
+      ]
+    },
+    "shuriken_followup_special": {
+      "duration": 0.2,
+      "markers": [
+        0.2
+      ]
+    }
+  },
+  "basic_selection_policy": "Approved combo mix is split at actual per-hit motion starts. Only the current action region is started; following hits are never queued by audio."
+}

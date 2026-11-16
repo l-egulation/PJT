@@ -1,0 +1,12 @@
+[
+  {
+    "key": "clouds",
+    "prompt": "Use case: stylized-concept. Reference attached pale pixel cloud layer ONLY for visual style and warm ivory/greige colors. Create a production transparent sprite ATLAS containing SIX DISTINCT cloud assets, exactly a 3-column by 2-row regular grid, one cloud centered within each equal cell with generous 10 percent clear gutters. Entire canvas aspect ratio 4.5:1 (e.g.1152x256), cell aspect3:1. No border, no grid lines, no text, no checkerboard. Variants: low flat cloud with broad base; asymmetric puffy cloud; small elongated wispy cloud; large triple-lobed cloud; narrow separated puff cluster treated as one asset; tiny two-lobed cloud. Keep each cloud's horizontal silhouette and flat stepped pixel edges, minimal 2 or 3 solid pale colors (#DDD8CD, #E6E2D8, #F0EBE2), transparent background. Intended final atlas 576x128 with 192x64 native cells. Deliberate compact pixel clusters and staircase contours; no blur, no gradients, no black outlines, no landscape or ground. These clouds sit quietly behind a cream/graphite pixel game. Preserve reference palette and flat quiet shading. Atlas of reusable objects only.",
+    "sourceFile": "clouds-atlas-generated.png"
+  },
+  {
+    "key": "birds",
+    "prompt": "Use case: stylized-concept. Reference attached tiny birds ONLY for color and minimal distant bird visual style. Make a transparent reusable pixel sprite ATLAS with SIX DISTINCT bird FLOCKS, exactly 3 equal columns by 2 equal rows, generous transparent margins around each flock, no grid lines/borders/text/checkerboard. Each cell aspect2:1, entire atlas aspect3:1. Native target atlas96x32, each cell32x16. Minimal ONE solid warm grey ink #B7AFA0, each tiny bird a clean 3-to-7 pixel winged chevron silhouette at final size. Vary flock counts and spacing: two birds; three staggered birds; four loose birds; two distant V-wing birds; five sparse birds; single shallow V bird. Flocks small, natural uneven spacing and wing angles, quiet sky accents, not cartoon animal illustrations. Transparent background, no shading/no outline/no extra objects, razor-sharp pixel steps. At high output resolution use consistent blocky pixels corresponding to native target grid.",
+    "sourceFile": "birds-atlas-generated.png"
+  }
+]

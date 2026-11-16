@@ -1,0 +1,28 @@
+{
+  "format": "deviant-resource-asset-v1",
+  "id": "environments.stage2-boss-hall-room-v26-20261113",
+  "path": "environments/stage2-boss-hall-room-v26-20261113",
+  "status": "user-selected",
+  "gameIntegration": "unity-chapter2-waterway",
+  "style": "v26 지하수로 화풍의 보스 앞 48u 통로·보스방(30×18u) 그림 배경",
+  "sources": [
+    "04_테스트 「보스 길목·보스방 시안」 2차(2026-11-12 사용자 OK)의 render_boss.py 를 그대로 옮겼다."
+  ],
+  "runtimeManifest": "runtime/*.png",
+  "regenerate": "cd source && python render_boss.py ../build && python render_boss.py ../build-air --air && python cut_boss.py ../build ../build/runtime ../build-air",
+  "files": [
+    "asset.json",
+    "README.md",
+    "preview/full.png",
+    "preview/room-30u-phase1-and-clear.png",
+    "runtime/boss-floor.png",
+    "runtime/boss-hall-grates.png",
+    "runtime/boss-hall.png",
+    "runtime/boss-room-air.png",
+    "runtime/boss-room.png",
+    "source/cut_boss.py",
+    "source/render_boss.py",
+    "source/render_map.py",
+    "source/render_v26.py"
+  ]
+}

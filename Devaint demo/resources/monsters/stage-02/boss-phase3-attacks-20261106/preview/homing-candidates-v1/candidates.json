@@ -1,0 +1,167 @@
+{
+  "format": "stage2-homing-timing-candidates-v1",
+  "status": "timing-review-only-pending-user-selection",
+  "source": "../../source/homing-aether-01/aether-original.png",
+  "frameBase": "../../source/homing-aether-01/frames/",
+  "frameNumbering": "zero-based row-major; source index 5 = first row sixth column",
+  "sourceCellSize": [
+    640,
+    360
+  ],
+  "logicalCanvas": [
+    384,
+    256
+  ],
+  "commonTransform": {
+    "sourceAnchor": [
+      320,
+      337
+    ],
+    "outputPivot": [
+      192,
+      232
+    ],
+    "scale": 0.75,
+    "rasterOffset": [
+      -48,
+      -21
+    ],
+    "destinationSize": [
+      480,
+      270
+    ],
+    "resampling": "nearest-neighbor",
+    "perFrameAutoFit": false,
+    "perFrameFootLock": false,
+    "note": "Same affine transform for every frame. Native source boot motion remains visible; no per-frame bone/leg locking."
+  },
+  "previewMatte": {
+    "scope": "browser memory only; source pixels unmodified; not final cleanup",
+    "whiteMinimum": 250,
+    "maximumChannelDifference": 4,
+    "classifyAtSourceResolution": true,
+    "paletteCorrection": false
+  },
+  "excluded": {
+    "frame0": "Smaller than generated animation; retain as source but exclude from playback.",
+    "frames1to3": "Unrequested leg step and initial settling.",
+    "frames22to35": "Automatic arm return to idle conflicts with final-hold request."
+  },
+  "candidates": [
+    {
+      "id": "A",
+      "name": "짧고 강한 방출 · 추천",
+      "sourceFrames": [
+        5,
+        7,
+        9,
+        11,
+        12,
+        13,
+        16,
+        19
+      ],
+      "durationsMs": [
+        260,
+        260,
+        260,
+        160,
+        60,
+        80,
+        120,
+        400
+      ],
+      "phasesMs": {
+        "prepare": 940,
+        "release": 60,
+        "settle": 200,
+        "hold": 400
+      },
+      "note": "준비를 읽힌 뒤 연결 한 장으로 빠르게 방출. 발을 옮기는 초반과 자동 복귀 구간 제외.",
+      "frameCount": 8,
+      "totalMs": 1600,
+      "projectileCueMs": 1000,
+      "repeat": false
+    },
+    {
+      "id": "B",
+      "name": "준비 연결을 살린 균형형",
+      "sourceFrames": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        19
+      ],
+      "durationsMs": [
+        80,
+        100,
+        100,
+        110,
+        110,
+        120,
+        120,
+        180,
+        80,
+        200,
+        600
+      ],
+      "phasesMs": {
+        "prepare": 920,
+        "release": 80,
+        "settle": 200,
+        "hold": 600
+      },
+      "note": "팔을 모으는 중간 자세를 더 사용. 방출은 짧게 유지하고 끝 자세를 길게 읽힘.",
+      "frameCount": 11,
+      "totalMs": 1800,
+      "projectileCueMs": 1000,
+      "repeat": false
+    },
+    {
+      "id": "C",
+      "name": "넓은 동작과 긴 끝 유지",
+      "sourceFrames": [
+        5,
+        6,
+        8,
+        10,
+        11,
+        12,
+        13,
+        15,
+        18,
+        21
+      ],
+      "durationsMs": [
+        160,
+        200,
+        200,
+        200,
+        140,
+        100,
+        80,
+        120,
+        200,
+        700
+      ],
+      "phasesMs": {
+        "prepare": 900,
+        "release": 100,
+        "settle": 400,
+        "hold": 700
+      },
+      "note": "방출 후 소매와 로브 흐름을 조금 더 살린 비교안. 전투 휴식이나 수치 변경은 아님.",
+      "frameCount": 10,
+      "totalMs": 2100,
+      "projectileCueMs": 1000,
+      "repeat": false
+    }
+  ]
+}

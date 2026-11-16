@@ -1,0 +1,117 @@
+{
+  "schema": "stage2-projectile-rules-v1",
+  "status": "approved-core-rules-details-unresolved-runtime-integrated",
+  "monsters": {
+    "R-selected": {
+      "horizontalSpeedUnitsPerSecond": 6,
+      "minimumFlightSeconds": 0.9,
+      "trajectory": "arc; apex rise approved, variable-target-height solver pending",
+      "targeting": {
+        "floorReference": "floor-for-player-position-at-aim-lock",
+        "lockFloorAtAim": true,
+        "retargetAfterLock": false,
+        "lockPlayerPositionAtAim": true,
+        "aimLockMoment": "immediately-before-projectile-release",
+        "airborneFloorSelection": "nearest-floor-directly-below-player-position-at-aim-lock",
+        "includeOneWayPlatforms": true,
+        "noValidFloorBeforeRelease": "withhold-shot",
+        "chooseNearestFloorRegardlessOfGroundedState": true
+      },
+      "terrainCollision": {
+        "walls": "pass-through",
+        "ceilings": "pass-through",
+        "nonTargetFloors": "pass-through",
+        "targetFloor": "collide",
+        "targetSurfaceIdentification": "logical aimed floor surface, not all world floors sharing a collider"
+      },
+      "onTargetFloorImpact": "break-and-despawn-no-extra-floor-damage",
+      "onPlayerDirectHit": {
+        "damageApplications": 1,
+        "projectile": "despawn-immediately",
+        "groundHazard": {
+          "create": false
+        }
+      },
+      "apexRiseAboveLaunchUnits": 1.5,
+      "maxLifetimeSecondsFromRelease": 3,
+      "lifetimeExpiry": "despawn-without-new-damage-or-ground-hazard",
+      "unreachableTrajectory": "withhold-shot-without-raising-apex-or-changing-target-floor",
+      "nearZeroHorizontalSeparation": {
+        "mode": "vertical-toss-then-fall",
+        "horizontalSpeedException": true,
+        "normalHorizontalSpeedPolicy": "maximum; reduced when minimum flight time applies",
+        "useExistingProjectileArt": true,
+        "respectApprovedApexRise": true,
+        "numericToleranceAndTimeMapping": "implementation detail to validate; no minimum-distance attack suppression"
+      },
+      "targetFloorDisappearsAfterRelease": {
+        "mode": "continue-original-flight-until-normal-lifetime-expiry",
+        "retargetFloor": false,
+        "despawnImmediately": false,
+        "spawnHazardOnMissingFloor": false,
+        "existingPlayerDirectHitRulesStillApply": true,
+        "resetLifetimeOnFloorLoss": false
+      }
+    },
+    "H3": {
+      "horizontalSpeedUnitsPerSecond": 6,
+      "minimumFlightSeconds": 0.9,
+      "trajectory": "arc; apex rise approved, variable-target-height solver pending",
+      "targeting": {
+        "floorReference": "floor-for-player-position-at-aim-lock",
+        "lockFloorAtAim": true,
+        "retargetAfterLock": false,
+        "lockPlayerPositionAtAim": true,
+        "aimLockMoment": "immediately-before-projectile-release",
+        "airborneFloorSelection": "nearest-floor-directly-below-player-position-at-aim-lock",
+        "includeOneWayPlatforms": true,
+        "noValidFloorBeforeRelease": "withhold-shot",
+        "chooseNearestFloorRegardlessOfGroundedState": true
+      },
+      "terrainCollision": {
+        "walls": "pass-through",
+        "ceilings": "pass-through",
+        "nonTargetFloors": "pass-through",
+        "targetFloor": "collide",
+        "targetSurfaceIdentification": "logical aimed floor surface, not all world floors sharing a collider"
+      },
+      "onTargetFloorImpact": "form-ground-hazard-on-locked-target-floor",
+      "onPlayerDirectHit": {
+        "damageApplications": 1,
+        "projectile": "despawn-immediately",
+        "groundHazard": {
+          "create": true,
+          "floorSelection": "nearest-floor-directly-below-direct-hit-position",
+          "referenceTime": "direct-hit-time",
+          "usesOriginallyAimedFloor": false,
+          "noValidFloor": "skip-hazard-creation-retain-direct-hit-damage"
+        }
+      },
+      "apexRiseAboveLaunchUnits": 2.5,
+      "maxLifetimeSecondsFromRelease": 5,
+      "lifetimeExpiry": "despawn-without-new-damage-or-ground-hazard",
+      "unreachableTrajectory": "withhold-shot-without-raising-apex-or-changing-target-floor",
+      "nearZeroHorizontalSeparation": {
+        "mode": "vertical-toss-then-fall",
+        "horizontalSpeedException": true,
+        "normalHorizontalSpeedPolicy": "maximum; reduced when minimum flight time applies",
+        "useExistingProjectileArt": true,
+        "respectApprovedApexRise": true,
+        "numericToleranceAndTimeMapping": "implementation detail to validate; no minimum-distance attack suppression"
+      },
+      "targetFloorDisappearsAfterRelease": {
+        "mode": "continue-original-flight-until-normal-lifetime-expiry",
+        "retargetFloor": false,
+        "despawnImmediately": false,
+        "spawnHazardOnMissingFloor": false,
+        "existingPlayerDirectHitRulesStillApply": true,
+        "resetLifetimeOnFloorLoss": false
+      }
+    }
+  },
+  "unresolved": [
+    "moving target-floor surface handling (floor disappearance already approved)",
+    "arc numerical solver including vertical-toss time mapping; unreachable targets already withhold shot",
+    "downward floor search extent (implementation must honor nearest-floor selection)"
+  ]
+}

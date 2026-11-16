@@ -1,0 +1,46 @@
+{
+  "pending": [],
+  "echo_base_damage": 25,
+  "echo_stats": "source_weapon_snapshot_at_primary_activation",
+  "damage_category": "special",
+  "special_ink": "follow_up",
+  "status": "user_approved_initial_design",
+  "echo_position": "world_hitbox_position_saved_at_primary_activation",
+  "cooldown_start": "primary_effect_activation",
+  "primary_base_damage": 25,
+  "echo_delay_from_primary_seconds": 0.3,
+  "weapon": "basic_sword",
+  "base_cooldown_seconds": 8,
+  "activation": "special_input_direct_slash_then_delayed_echo",
+  "name": "잔상",
+  "hitbox": {
+    "right_offset": [
+      1.421875,
+      1
+    ],
+    "left_offset": [
+      -1.421875,
+      1
+    ],
+    "size": [
+      2.46875,
+      2
+    ]
+  },
+  "unity_applied": false,
+  "windup_seconds": 0.2,
+  "recovery_seconds": 0.3,
+  "total_motion_seconds": 0.5,
+  "primary_active_seconds": 0.08,
+  "echo_active_seconds": 0.08,
+  "target_count": "all_valid_targets_per_hit",
+  "hits_per_target_per_hit": 1,
+  "echo_survives_dash_cancel_after_primary": true,
+  "echo_survives_weapon_switch": true,
+  "facing_lock": "windup_start",
+  "horizontal_input_during_motion": "disabled",
+  "vertical_physics": "unchanged",
+  "additional_control_effect": "none",
+  "applies_basic_hit_stagger": false,
+  "occlusion": "solid_world_blocks_one_way_platform_does_not"
+}

@@ -1,0 +1,110 @@
+{
+  "referenceResolution": [
+    1670,
+    942
+  ],
+  "coordinateOrigin": "top-left",
+  "gameIntegration": true,
+  "anchors": {
+    "health": "top-left",
+    "weapons": "bottom-left",
+    "currencies-controls-map": "top-right",
+    "run-palette": "center"
+  },
+  "minimap": {
+    "rect": [
+      1251,
+      98,
+      394,
+      253.01597444089458
+    ],
+    "aspectRatio": "313:201",
+    "frame": "minimap-frame-compact",
+    "contentInset": [
+      22,
+      22,
+      22,
+      22
+    ],
+    "below": "currencies-and-buttons"
+  },
+  "reveal": {
+    "cardRect": [
+      0,
+      0,
+      313,
+      201
+    ],
+    "durationSeconds": 3.5,
+    "content": "weapon identity + color slots only"
+  },
+  "palette": {
+    "sizes": {
+      "3": [
+        171,
+        43
+      ],
+      "4": [
+        213,
+        43
+      ],
+      "5": [
+        255,
+        43
+      ]
+    },
+    "spriteBorderPixels": [
+      49,
+      45,
+      49,
+      45
+    ],
+    "sourceHeight": 98,
+    "nineSlice": "Use palette-tray-3 with left/bottom/right/top sprite borders. Render at scale 0.5; expand only center. Exact 4/5-slot sprites also supplied."
+  },
+  "bars": {
+    "health": {
+      "sprite": "health-fill-red",
+      "imageType": "Filled",
+      "fillMethod": "Horizontal",
+      "fillOrigin": "Left",
+      "tint": "#ffffff"
+    },
+    "cooldown": {
+      "sprite": "ring-cooldown",
+      "imageType": "Filled",
+      "fillMethod": "Radial360",
+      "fillOrigin": "Top",
+      "clockwise": true
+    },
+    "charge": {
+      "sprite": "ring-charge",
+      "fillMethod": "Radial360",
+      "fillAmount": "chargeProgress; never cooldownFraction"
+    }
+  },
+  "unity": {
+    "textureType": "Sprite (2D and UI)",
+    "spriteMode": "Single",
+    "meshType": "FullRect",
+    "alphaIsTransparency": true,
+    "mipmaps": false,
+    "filterMode": "Bilinear",
+    "compression": "None",
+    "pixelsPerUnit": 100,
+    "canvasScaler": "ScaleWithScreenSize",
+    "matchWidthOrHeight": 0.5
+  },
+  "dynamicText": [
+    "health value",
+    "currency totals",
+    "weapon names",
+    "key bindings",
+    "cooldown seconds",
+    "available/capacity"
+  ],
+  "editorLayout": "layout-edited.json",
+  "sceneBuilder": "ui-model.js",
+  "catalog": "catalog.json",
+  "rendererInputs": "stateContract in catalog.json"
+}

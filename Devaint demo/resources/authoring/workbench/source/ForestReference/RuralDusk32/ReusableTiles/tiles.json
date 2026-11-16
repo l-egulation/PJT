@@ -1,0 +1,1962 @@
+{
+  "tileSize": 32,
+  "ppu": 32,
+  "baselineRow": 1,
+  "groundMaskBits": {
+    "N": 1,
+    "E": 2,
+    "S": 4,
+    "W": 8,
+    "NW": 16,
+    "NE": 32,
+    "SE": 64,
+    "SW": 128
+  },
+  "palette": [
+    {
+      "id": "clean_platform_left_0",
+      "file": "clean_platform_left_0.png",
+      "group": "clean_platform",
+      "label": "왼쪽 끝 · 풀 위 장식",
+      "style": "clean",
+      "kind": "platform",
+      "column": "left",
+      "row": 0
+    },
+    {
+      "id": "clean_platform_left_1",
+      "file": "clean_platform_left_1.png",
+      "group": "clean_platform",
+      "label": "왼쪽 끝 · 두꺼운 잎층",
+      "style": "clean",
+      "kind": "platform",
+      "column": "left",
+      "row": 1
+    },
+    {
+      "id": "clean_platform_left_2",
+      "file": "clean_platform_left_2.png",
+      "group": "clean_platform",
+      "label": "왼쪽 끝 · 잎 끝",
+      "style": "clean",
+      "kind": "platform",
+      "column": "left",
+      "row": 2
+    },
+    {
+      "id": "clean_platform_middle_a_0",
+      "file": "clean_platform_middle_a_0.png",
+      "group": "clean_platform",
+      "label": "중앙 A · 풀 위 장식",
+      "style": "clean",
+      "kind": "platform",
+      "column": "middle_a",
+      "row": 0
+    },
+    {
+      "id": "clean_platform_middle_a_1",
+      "file": "clean_platform_middle_a_1.png",
+      "group": "clean_platform",
+      "label": "중앙 A · 두꺼운 잎층",
+      "style": "clean",
+      "kind": "platform",
+      "column": "middle_a",
+      "row": 1
+    },
+    {
+      "id": "clean_platform_middle_a_2",
+      "file": "clean_platform_middle_a_2.png",
+      "group": "clean_platform",
+      "label": "중앙 A · 잎 끝",
+      "style": "clean",
+      "kind": "platform",
+      "column": "middle_a",
+      "row": 2
+    },
+    {
+      "id": "clean_platform_middle_b_0",
+      "file": "clean_platform_middle_b_0.png",
+      "group": "clean_platform",
+      "label": "중앙 B · 풀 위 장식",
+      "style": "clean",
+      "kind": "platform",
+      "column": "middle_b",
+      "row": 0
+    },
+    {
+      "id": "clean_platform_middle_b_1",
+      "file": "clean_platform_middle_b_1.png",
+      "group": "clean_platform",
+      "label": "중앙 B · 두꺼운 잎층",
+      "style": "clean",
+      "kind": "platform",
+      "column": "middle_b",
+      "row": 1
+    },
+    {
+      "id": "clean_platform_middle_b_2",
+      "file": "clean_platform_middle_b_2.png",
+      "group": "clean_platform",
+      "label": "중앙 B · 잎 끝",
+      "style": "clean",
+      "kind": "platform",
+      "column": "middle_b",
+      "row": 2
+    },
+    {
+      "id": "clean_platform_middle_c_0",
+      "file": "clean_platform_middle_c_0.png",
+      "group": "clean_platform",
+      "label": "중앙 C · 풀 위 장식",
+      "style": "clean",
+      "kind": "platform",
+      "column": "middle_c",
+      "row": 0
+    },
+    {
+      "id": "clean_platform_middle_c_1",
+      "file": "clean_platform_middle_c_1.png",
+      "group": "clean_platform",
+      "label": "중앙 C · 두꺼운 잎층",
+      "style": "clean",
+      "kind": "platform",
+      "column": "middle_c",
+      "row": 1
+    },
+    {
+      "id": "clean_platform_middle_c_2",
+      "file": "clean_platform_middle_c_2.png",
+      "group": "clean_platform",
+      "label": "중앙 C · 잎 끝",
+      "style": "clean",
+      "kind": "platform",
+      "column": "middle_c",
+      "row": 2
+    },
+    {
+      "id": "clean_platform_right_0",
+      "file": "clean_platform_right_0.png",
+      "group": "clean_platform",
+      "label": "오른쪽 끝 · 풀 위 장식",
+      "style": "clean",
+      "kind": "platform",
+      "column": "right",
+      "row": 0
+    },
+    {
+      "id": "clean_platform_right_1",
+      "file": "clean_platform_right_1.png",
+      "group": "clean_platform",
+      "label": "오른쪽 끝 · 두꺼운 잎층",
+      "style": "clean",
+      "kind": "platform",
+      "column": "right",
+      "row": 1
+    },
+    {
+      "id": "clean_platform_right_2",
+      "file": "clean_platform_right_2.png",
+      "group": "clean_platform",
+      "label": "오른쪽 끝 · 잎 끝",
+      "style": "clean",
+      "kind": "platform",
+      "column": "right",
+      "row": 2
+    },
+    {
+      "id": "clean_platform_single_0",
+      "file": "clean_platform_single_0.png",
+      "group": "clean_platform",
+      "label": "한 칸 · 풀 위 장식",
+      "style": "clean",
+      "kind": "platform",
+      "column": "single",
+      "row": 0
+    },
+    {
+      "id": "clean_platform_single_1",
+      "file": "clean_platform_single_1.png",
+      "group": "clean_platform",
+      "label": "한 칸 · 두꺼운 잎층",
+      "style": "clean",
+      "kind": "platform",
+      "column": "single",
+      "row": 1
+    },
+    {
+      "id": "clean_platform_single_2",
+      "file": "clean_platform_single_2.png",
+      "group": "clean_platform",
+      "label": "한 칸 · 잎 끝",
+      "style": "clean",
+      "kind": "platform",
+      "column": "single",
+      "row": 2
+    },
+    {
+      "id": "clean_ground_000",
+      "file": "clean_ground_000.png",
+      "group": "clean_ground",
+      "label": "독립 한 칸",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 0
+    },
+    {
+      "id": "clean_ground_001",
+      "file": "clean_ground_001.png",
+      "group": "clean_ground",
+      "label": "기둥 끝 / 세 면",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 1
+    },
+    {
+      "id": "clean_ground_002",
+      "file": "clean_ground_002.png",
+      "group": "clean_ground",
+      "label": "기둥 끝 / 세 면",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 2
+    },
+    {
+      "id": "clean_ground_003",
+      "file": "clean_ground_003.png",
+      "group": "clean_ground",
+      "label": "밑면 + 왼쪽 벽",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 3
+    },
+    {
+      "id": "clean_ground_004",
+      "file": "clean_ground_004.png",
+      "group": "clean_ground",
+      "label": "기둥 끝 / 세 면",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 4
+    },
+    {
+      "id": "clean_ground_005",
+      "file": "clean_ground_005.png",
+      "group": "clean_ground",
+      "label": "오른쪽 벽 + 왼쪽 벽",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 5
+    },
+    {
+      "id": "clean_ground_006",
+      "file": "clean_ground_006.png",
+      "group": "clean_ground",
+      "label": "윗면 + 왼쪽 벽",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 6
+    },
+    {
+      "id": "clean_ground_007",
+      "file": "clean_ground_007.png",
+      "group": "clean_ground",
+      "label": "왼쪽 벽",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 7
+    },
+    {
+      "id": "clean_ground_008",
+      "file": "clean_ground_008.png",
+      "group": "clean_ground",
+      "label": "기둥 끝 / 세 면",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 8
+    },
+    {
+      "id": "clean_ground_009",
+      "file": "clean_ground_009.png",
+      "group": "clean_ground",
+      "label": "오른쪽 벽 + 밑면",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 9
+    },
+    {
+      "id": "clean_ground_010",
+      "file": "clean_ground_010.png",
+      "group": "clean_ground",
+      "label": "윗면 + 밑면",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 10
+    },
+    {
+      "id": "clean_ground_011",
+      "file": "clean_ground_011.png",
+      "group": "clean_ground",
+      "label": "밑면",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 11
+    },
+    {
+      "id": "clean_ground_012",
+      "file": "clean_ground_012.png",
+      "group": "clean_ground",
+      "label": "윗면 + 오른쪽 벽",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 12
+    },
+    {
+      "id": "clean_ground_013",
+      "file": "clean_ground_013.png",
+      "group": "clean_ground",
+      "label": "오른쪽 벽",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 13
+    },
+    {
+      "id": "clean_ground_014",
+      "file": "clean_ground_014.png",
+      "group": "clean_ground",
+      "label": "윗면",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 14
+    },
+    {
+      "id": "clean_ground_015",
+      "file": "clean_ground_015.png",
+      "group": "clean_ground",
+      "label": "안쪽 모서리",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 15
+    },
+    {
+      "id": "clean_ground_025",
+      "file": "clean_ground_025.png",
+      "group": "clean_ground",
+      "label": "오른쪽 벽 + 밑면",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 25
+    },
+    {
+      "id": "clean_ground_027",
+      "file": "clean_ground_027.png",
+      "group": "clean_ground",
+      "label": "밑면",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 27
+    },
+    {
+      "id": "clean_ground_029",
+      "file": "clean_ground_029.png",
+      "group": "clean_ground",
+      "label": "오른쪽 벽",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 29
+    },
+    {
+      "id": "clean_ground_031",
+      "file": "clean_ground_031.png",
+      "group": "clean_ground",
+      "label": "안쪽 모서리",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 31
+    },
+    {
+      "id": "clean_ground_035",
+      "file": "clean_ground_035.png",
+      "group": "clean_ground",
+      "label": "밑면 + 왼쪽 벽",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 35
+    },
+    {
+      "id": "clean_ground_039",
+      "file": "clean_ground_039.png",
+      "group": "clean_ground",
+      "label": "왼쪽 벽",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 39
+    },
+    {
+      "id": "clean_ground_043",
+      "file": "clean_ground_043.png",
+      "group": "clean_ground",
+      "label": "밑면",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 43
+    },
+    {
+      "id": "clean_ground_047",
+      "file": "clean_ground_047.png",
+      "group": "clean_ground",
+      "label": "안쪽 모서리",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 47
+    },
+    {
+      "id": "clean_ground_059",
+      "file": "clean_ground_059.png",
+      "group": "clean_ground",
+      "label": "밑면",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 59
+    },
+    {
+      "id": "clean_ground_063",
+      "file": "clean_ground_063.png",
+      "group": "clean_ground",
+      "label": "안쪽 모서리",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 63
+    },
+    {
+      "id": "clean_ground_070",
+      "file": "clean_ground_070.png",
+      "group": "clean_ground",
+      "label": "윗면 + 왼쪽 벽",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 70
+    },
+    {
+      "id": "clean_ground_071",
+      "file": "clean_ground_071.png",
+      "group": "clean_ground",
+      "label": "왼쪽 벽",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 71
+    },
+    {
+      "id": "clean_ground_078",
+      "file": "clean_ground_078.png",
+      "group": "clean_ground",
+      "label": "윗면",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 78
+    },
+    {
+      "id": "clean_ground_079",
+      "file": "clean_ground_079.png",
+      "group": "clean_ground",
+      "label": "안쪽 모서리",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 79
+    },
+    {
+      "id": "clean_ground_095",
+      "file": "clean_ground_095.png",
+      "group": "clean_ground",
+      "label": "안쪽 모서리",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 95
+    },
+    {
+      "id": "clean_ground_103",
+      "file": "clean_ground_103.png",
+      "group": "clean_ground",
+      "label": "왼쪽 벽",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 103
+    },
+    {
+      "id": "clean_ground_111",
+      "file": "clean_ground_111.png",
+      "group": "clean_ground",
+      "label": "안쪽 모서리",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 111
+    },
+    {
+      "id": "clean_ground_127",
+      "file": "clean_ground_127.png",
+      "group": "clean_ground",
+      "label": "안쪽 모서리",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 127
+    },
+    {
+      "id": "clean_ground_140",
+      "file": "clean_ground_140.png",
+      "group": "clean_ground",
+      "label": "윗면 + 오른쪽 벽",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 140
+    },
+    {
+      "id": "clean_ground_141",
+      "file": "clean_ground_141.png",
+      "group": "clean_ground",
+      "label": "오른쪽 벽",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 141
+    },
+    {
+      "id": "clean_ground_142",
+      "file": "clean_ground_142.png",
+      "group": "clean_ground",
+      "label": "윗면",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 142
+    },
+    {
+      "id": "clean_ground_143",
+      "file": "clean_ground_143.png",
+      "group": "clean_ground",
+      "label": "안쪽 모서리",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 143
+    },
+    {
+      "id": "clean_ground_157",
+      "file": "clean_ground_157.png",
+      "group": "clean_ground",
+      "label": "오른쪽 벽",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 157
+    },
+    {
+      "id": "clean_ground_159",
+      "file": "clean_ground_159.png",
+      "group": "clean_ground",
+      "label": "안쪽 모서리",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 159
+    },
+    {
+      "id": "clean_ground_175",
+      "file": "clean_ground_175.png",
+      "group": "clean_ground",
+      "label": "안쪽 모서리",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 175
+    },
+    {
+      "id": "clean_ground_191",
+      "file": "clean_ground_191.png",
+      "group": "clean_ground",
+      "label": "안쪽 모서리",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 191
+    },
+    {
+      "id": "clean_ground_206",
+      "file": "clean_ground_206.png",
+      "group": "clean_ground",
+      "label": "윗면",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 206
+    },
+    {
+      "id": "clean_ground_207",
+      "file": "clean_ground_207.png",
+      "group": "clean_ground",
+      "label": "안쪽 모서리",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 207
+    },
+    {
+      "id": "clean_ground_223",
+      "file": "clean_ground_223.png",
+      "group": "clean_ground",
+      "label": "안쪽 모서리",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 223
+    },
+    {
+      "id": "clean_ground_239",
+      "file": "clean_ground_239.png",
+      "group": "clean_ground",
+      "label": "안쪽 모서리",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 239
+    },
+    {
+      "id": "clean_ground_255",
+      "file": "clean_ground_255.png",
+      "group": "clean_ground",
+      "label": "내부 채움",
+      "style": "clean",
+      "kind": "ground",
+      "mask": 255
+    },
+    {
+      "id": "clean_detail_01",
+      "file": "clean_detail_01.png",
+      "group": "clean_detail",
+      "label": "외곽 풀 연결 1",
+      "style": "clean",
+      "kind": "fringe",
+      "mask": 1
+    },
+    {
+      "id": "clean_detail_02",
+      "file": "clean_detail_02.png",
+      "group": "clean_detail",
+      "label": "외곽 풀 연결 2",
+      "style": "clean",
+      "kind": "fringe",
+      "mask": 2
+    },
+    {
+      "id": "clean_detail_03",
+      "file": "clean_detail_03.png",
+      "group": "clean_detail",
+      "label": "외곽 풀 연결 3",
+      "style": "clean",
+      "kind": "fringe",
+      "mask": 3
+    },
+    {
+      "id": "clean_detail_04",
+      "file": "clean_detail_04.png",
+      "group": "clean_detail",
+      "label": "외곽 풀 연결 4",
+      "style": "clean",
+      "kind": "fringe",
+      "mask": 4
+    },
+    {
+      "id": "clean_detail_05",
+      "file": "clean_detail_05.png",
+      "group": "clean_detail",
+      "label": "외곽 풀 연결 5",
+      "style": "clean",
+      "kind": "fringe",
+      "mask": 5
+    },
+    {
+      "id": "clean_detail_06",
+      "file": "clean_detail_06.png",
+      "group": "clean_detail",
+      "label": "외곽 풀 연결 6",
+      "style": "clean",
+      "kind": "fringe",
+      "mask": 6
+    },
+    {
+      "id": "clean_detail_07",
+      "file": "clean_detail_07.png",
+      "group": "clean_detail",
+      "label": "외곽 풀 연결 7",
+      "style": "clean",
+      "kind": "fringe",
+      "mask": 7
+    },
+    {
+      "id": "clean_detail_08",
+      "file": "clean_detail_08.png",
+      "group": "clean_detail",
+      "label": "외곽 풀 연결 8",
+      "style": "clean",
+      "kind": "fringe",
+      "mask": 8
+    },
+    {
+      "id": "clean_detail_09",
+      "file": "clean_detail_09.png",
+      "group": "clean_detail",
+      "label": "외곽 풀 연결 9",
+      "style": "clean",
+      "kind": "fringe",
+      "mask": 9
+    },
+    {
+      "id": "clean_detail_10",
+      "file": "clean_detail_10.png",
+      "group": "clean_detail",
+      "label": "외곽 풀 연결 10",
+      "style": "clean",
+      "kind": "fringe",
+      "mask": 10
+    },
+    {
+      "id": "clean_detail_11",
+      "file": "clean_detail_11.png",
+      "group": "clean_detail",
+      "label": "외곽 풀 연결 11",
+      "style": "clean",
+      "kind": "fringe",
+      "mask": 11
+    },
+    {
+      "id": "clean_detail_12",
+      "file": "clean_detail_12.png",
+      "group": "clean_detail",
+      "label": "외곽 풀 연결 12",
+      "style": "clean",
+      "kind": "fringe",
+      "mask": 12
+    },
+    {
+      "id": "clean_detail_13",
+      "file": "clean_detail_13.png",
+      "group": "clean_detail",
+      "label": "외곽 풀 연결 13",
+      "style": "clean",
+      "kind": "fringe",
+      "mask": 13
+    },
+    {
+      "id": "clean_detail_14",
+      "file": "clean_detail_14.png",
+      "group": "clean_detail",
+      "label": "외곽 풀 연결 14",
+      "style": "clean",
+      "kind": "fringe",
+      "mask": 14
+    },
+    {
+      "id": "clean_detail_15",
+      "file": "clean_detail_15.png",
+      "group": "clean_detail",
+      "label": "외곽 풀 연결 15",
+      "style": "clean",
+      "kind": "fringe",
+      "mask": 15
+    },
+    {
+      "id": "clean_roots_0",
+      "file": "clean_roots_0.png",
+      "group": "clean_detail",
+      "label": "윗면 아래 뿌리",
+      "style": "clean",
+      "kind": "roots",
+      "turn": 0
+    },
+    {
+      "id": "clean_roots_1",
+      "file": "clean_roots_1.png",
+      "group": "clean_detail",
+      "label": "오른쪽 벽 안 뿌리",
+      "style": "clean",
+      "kind": "roots",
+      "turn": 1
+    },
+    {
+      "id": "clean_roots_2",
+      "file": "clean_roots_2.png",
+      "group": "clean_detail",
+      "label": "밑면 안 뿌리",
+      "style": "clean",
+      "kind": "roots",
+      "turn": 2
+    },
+    {
+      "id": "clean_roots_3",
+      "file": "clean_roots_3.png",
+      "group": "clean_detail",
+      "label": "왼쪽 벽 안 뿌리",
+      "style": "clean",
+      "kind": "roots",
+      "turn": 3
+    },
+    {
+      "id": "unfinished_platform_left_0",
+      "file": "unfinished_platform_left_0.png",
+      "group": "unfinished_platform",
+      "label": "왼쪽 끝 · 풀 위 장식",
+      "style": "unfinished",
+      "kind": "platform",
+      "column": "left",
+      "row": 0
+    },
+    {
+      "id": "unfinished_platform_left_1",
+      "file": "unfinished_platform_left_1.png",
+      "group": "unfinished_platform",
+      "label": "왼쪽 끝 · 두꺼운 잎층",
+      "style": "unfinished",
+      "kind": "platform",
+      "column": "left",
+      "row": 1
+    },
+    {
+      "id": "unfinished_platform_left_2",
+      "file": "unfinished_platform_left_2.png",
+      "group": "unfinished_platform",
+      "label": "왼쪽 끝 · 잎 끝",
+      "style": "unfinished",
+      "kind": "platform",
+      "column": "left",
+      "row": 2
+    },
+    {
+      "id": "unfinished_platform_middle_a_0",
+      "file": "unfinished_platform_middle_a_0.png",
+      "group": "unfinished_platform",
+      "label": "중앙 A · 풀 위 장식",
+      "style": "unfinished",
+      "kind": "platform",
+      "column": "middle_a",
+      "row": 0
+    },
+    {
+      "id": "unfinished_platform_middle_a_1",
+      "file": "unfinished_platform_middle_a_1.png",
+      "group": "unfinished_platform",
+      "label": "중앙 A · 두꺼운 잎층",
+      "style": "unfinished",
+      "kind": "platform",
+      "column": "middle_a",
+      "row": 1
+    },
+    {
+      "id": "unfinished_platform_middle_a_2",
+      "file": "unfinished_platform_middle_a_2.png",
+      "group": "unfinished_platform",
+      "label": "중앙 A · 잎 끝",
+      "style": "unfinished",
+      "kind": "platform",
+      "column": "middle_a",
+      "row": 2
+    },
+    {
+      "id": "unfinished_platform_middle_b_0",
+      "file": "unfinished_platform_middle_b_0.png",
+      "group": "unfinished_platform",
+      "label": "중앙 B · 풀 위 장식",
+      "style": "unfinished",
+      "kind": "platform",
+      "column": "middle_b",
+      "row": 0
+    },
+    {
+      "id": "unfinished_platform_middle_b_1",
+      "file": "unfinished_platform_middle_b_1.png",
+      "group": "unfinished_platform",
+      "label": "중앙 B · 두꺼운 잎층",
+      "style": "unfinished",
+      "kind": "platform",
+      "column": "middle_b",
+      "row": 1
+    },
+    {
+      "id": "unfinished_platform_middle_b_2",
+      "file": "unfinished_platform_middle_b_2.png",
+      "group": "unfinished_platform",
+      "label": "중앙 B · 잎 끝",
+      "style": "unfinished",
+      "kind": "platform",
+      "column": "middle_b",
+      "row": 2
+    },
+    {
+      "id": "unfinished_platform_middle_c_0",
+      "file": "unfinished_platform_middle_c_0.png",
+      "group": "unfinished_platform",
+      "label": "중앙 C · 풀 위 장식",
+      "style": "unfinished",
+      "kind": "platform",
+      "column": "middle_c",
+      "row": 0
+    },
+    {
+      "id": "unfinished_platform_middle_c_1",
+      "file": "unfinished_platform_middle_c_1.png",
+      "group": "unfinished_platform",
+      "label": "중앙 C · 두꺼운 잎층",
+      "style": "unfinished",
+      "kind": "platform",
+      "column": "middle_c",
+      "row": 1
+    },
+    {
+      "id": "unfinished_platform_middle_c_2",
+      "file": "unfinished_platform_middle_c_2.png",
+      "group": "unfinished_platform",
+      "label": "중앙 C · 잎 끝",
+      "style": "unfinished",
+      "kind": "platform",
+      "column": "middle_c",
+      "row": 2
+    },
+    {
+      "id": "unfinished_platform_right_0",
+      "file": "unfinished_platform_right_0.png",
+      "group": "unfinished_platform",
+      "label": "오른쪽 끝 · 풀 위 장식",
+      "style": "unfinished",
+      "kind": "platform",
+      "column": "right",
+      "row": 0
+    },
+    {
+      "id": "unfinished_platform_right_1",
+      "file": "unfinished_platform_right_1.png",
+      "group": "unfinished_platform",
+      "label": "오른쪽 끝 · 두꺼운 잎층",
+      "style": "unfinished",
+      "kind": "platform",
+      "column": "right",
+      "row": 1
+    },
+    {
+      "id": "unfinished_platform_right_2",
+      "file": "unfinished_platform_right_2.png",
+      "group": "unfinished_platform",
+      "label": "오른쪽 끝 · 잎 끝",
+      "style": "unfinished",
+      "kind": "platform",
+      "column": "right",
+      "row": 2
+    },
+    {
+      "id": "unfinished_platform_single_0",
+      "file": "unfinished_platform_single_0.png",
+      "group": "unfinished_platform",
+      "label": "한 칸 · 풀 위 장식",
+      "style": "unfinished",
+      "kind": "platform",
+      "column": "single",
+      "row": 0
+    },
+    {
+      "id": "unfinished_platform_single_1",
+      "file": "unfinished_platform_single_1.png",
+      "group": "unfinished_platform",
+      "label": "한 칸 · 두꺼운 잎층",
+      "style": "unfinished",
+      "kind": "platform",
+      "column": "single",
+      "row": 1
+    },
+    {
+      "id": "unfinished_platform_single_2",
+      "file": "unfinished_platform_single_2.png",
+      "group": "unfinished_platform",
+      "label": "한 칸 · 잎 끝",
+      "style": "unfinished",
+      "kind": "platform",
+      "column": "single",
+      "row": 2
+    },
+    {
+      "id": "unfinished_ground_000",
+      "file": "unfinished_ground_000.png",
+      "group": "unfinished_ground",
+      "label": "독립 한 칸",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 0
+    },
+    {
+      "id": "unfinished_ground_001",
+      "file": "unfinished_ground_001.png",
+      "group": "unfinished_ground",
+      "label": "기둥 끝 / 세 면",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 1
+    },
+    {
+      "id": "unfinished_ground_002",
+      "file": "unfinished_ground_002.png",
+      "group": "unfinished_ground",
+      "label": "기둥 끝 / 세 면",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 2
+    },
+    {
+      "id": "unfinished_ground_003",
+      "file": "unfinished_ground_003.png",
+      "group": "unfinished_ground",
+      "label": "밑면 + 왼쪽 벽",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 3
+    },
+    {
+      "id": "unfinished_ground_004",
+      "file": "unfinished_ground_004.png",
+      "group": "unfinished_ground",
+      "label": "기둥 끝 / 세 면",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 4
+    },
+    {
+      "id": "unfinished_ground_005",
+      "file": "unfinished_ground_005.png",
+      "group": "unfinished_ground",
+      "label": "오른쪽 벽 + 왼쪽 벽",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 5
+    },
+    {
+      "id": "unfinished_ground_006",
+      "file": "unfinished_ground_006.png",
+      "group": "unfinished_ground",
+      "label": "윗면 + 왼쪽 벽",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 6
+    },
+    {
+      "id": "unfinished_ground_007",
+      "file": "unfinished_ground_007.png",
+      "group": "unfinished_ground",
+      "label": "왼쪽 벽",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 7
+    },
+    {
+      "id": "unfinished_ground_008",
+      "file": "unfinished_ground_008.png",
+      "group": "unfinished_ground",
+      "label": "기둥 끝 / 세 면",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 8
+    },
+    {
+      "id": "unfinished_ground_009",
+      "file": "unfinished_ground_009.png",
+      "group": "unfinished_ground",
+      "label": "오른쪽 벽 + 밑면",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 9
+    },
+    {
+      "id": "unfinished_ground_010",
+      "file": "unfinished_ground_010.png",
+      "group": "unfinished_ground",
+      "label": "윗면 + 밑면",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 10
+    },
+    {
+      "id": "unfinished_ground_011",
+      "file": "unfinished_ground_011.png",
+      "group": "unfinished_ground",
+      "label": "밑면",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 11
+    },
+    {
+      "id": "unfinished_ground_012",
+      "file": "unfinished_ground_012.png",
+      "group": "unfinished_ground",
+      "label": "윗면 + 오른쪽 벽",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 12
+    },
+    {
+      "id": "unfinished_ground_013",
+      "file": "unfinished_ground_013.png",
+      "group": "unfinished_ground",
+      "label": "오른쪽 벽",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 13
+    },
+    {
+      "id": "unfinished_ground_014",
+      "file": "unfinished_ground_014.png",
+      "group": "unfinished_ground",
+      "label": "윗면",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 14
+    },
+    {
+      "id": "unfinished_ground_015",
+      "file": "unfinished_ground_015.png",
+      "group": "unfinished_ground",
+      "label": "안쪽 모서리",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 15
+    },
+    {
+      "id": "unfinished_ground_025",
+      "file": "unfinished_ground_025.png",
+      "group": "unfinished_ground",
+      "label": "오른쪽 벽 + 밑면",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 25
+    },
+    {
+      "id": "unfinished_ground_027",
+      "file": "unfinished_ground_027.png",
+      "group": "unfinished_ground",
+      "label": "밑면",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 27
+    },
+    {
+      "id": "unfinished_ground_029",
+      "file": "unfinished_ground_029.png",
+      "group": "unfinished_ground",
+      "label": "오른쪽 벽",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 29
+    },
+    {
+      "id": "unfinished_ground_031",
+      "file": "unfinished_ground_031.png",
+      "group": "unfinished_ground",
+      "label": "안쪽 모서리",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 31
+    },
+    {
+      "id": "unfinished_ground_035",
+      "file": "unfinished_ground_035.png",
+      "group": "unfinished_ground",
+      "label": "밑면 + 왼쪽 벽",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 35
+    },
+    {
+      "id": "unfinished_ground_039",
+      "file": "unfinished_ground_039.png",
+      "group": "unfinished_ground",
+      "label": "왼쪽 벽",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 39
+    },
+    {
+      "id": "unfinished_ground_043",
+      "file": "unfinished_ground_043.png",
+      "group": "unfinished_ground",
+      "label": "밑면",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 43
+    },
+    {
+      "id": "unfinished_ground_047",
+      "file": "unfinished_ground_047.png",
+      "group": "unfinished_ground",
+      "label": "안쪽 모서리",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 47
+    },
+    {
+      "id": "unfinished_ground_059",
+      "file": "unfinished_ground_059.png",
+      "group": "unfinished_ground",
+      "label": "밑면",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 59
+    },
+    {
+      "id": "unfinished_ground_063",
+      "file": "unfinished_ground_063.png",
+      "group": "unfinished_ground",
+      "label": "안쪽 모서리",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 63
+    },
+    {
+      "id": "unfinished_ground_070",
+      "file": "unfinished_ground_070.png",
+      "group": "unfinished_ground",
+      "label": "윗면 + 왼쪽 벽",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 70
+    },
+    {
+      "id": "unfinished_ground_071",
+      "file": "unfinished_ground_071.png",
+      "group": "unfinished_ground",
+      "label": "왼쪽 벽",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 71
+    },
+    {
+      "id": "unfinished_ground_078",
+      "file": "unfinished_ground_078.png",
+      "group": "unfinished_ground",
+      "label": "윗면",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 78
+    },
+    {
+      "id": "unfinished_ground_079",
+      "file": "unfinished_ground_079.png",
+      "group": "unfinished_ground",
+      "label": "안쪽 모서리",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 79
+    },
+    {
+      "id": "unfinished_ground_095",
+      "file": "unfinished_ground_095.png",
+      "group": "unfinished_ground",
+      "label": "안쪽 모서리",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 95
+    },
+    {
+      "id": "unfinished_ground_103",
+      "file": "unfinished_ground_103.png",
+      "group": "unfinished_ground",
+      "label": "왼쪽 벽",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 103
+    },
+    {
+      "id": "unfinished_ground_111",
+      "file": "unfinished_ground_111.png",
+      "group": "unfinished_ground",
+      "label": "안쪽 모서리",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 111
+    },
+    {
+      "id": "unfinished_ground_127",
+      "file": "unfinished_ground_127.png",
+      "group": "unfinished_ground",
+      "label": "안쪽 모서리",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 127
+    },
+    {
+      "id": "unfinished_ground_140",
+      "file": "unfinished_ground_140.png",
+      "group": "unfinished_ground",
+      "label": "윗면 + 오른쪽 벽",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 140
+    },
+    {
+      "id": "unfinished_ground_141",
+      "file": "unfinished_ground_141.png",
+      "group": "unfinished_ground",
+      "label": "오른쪽 벽",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 141
+    },
+    {
+      "id": "unfinished_ground_142",
+      "file": "unfinished_ground_142.png",
+      "group": "unfinished_ground",
+      "label": "윗면",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 142
+    },
+    {
+      "id": "unfinished_ground_143",
+      "file": "unfinished_ground_143.png",
+      "group": "unfinished_ground",
+      "label": "안쪽 모서리",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 143
+    },
+    {
+      "id": "unfinished_ground_157",
+      "file": "unfinished_ground_157.png",
+      "group": "unfinished_ground",
+      "label": "오른쪽 벽",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 157
+    },
+    {
+      "id": "unfinished_ground_159",
+      "file": "unfinished_ground_159.png",
+      "group": "unfinished_ground",
+      "label": "안쪽 모서리",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 159
+    },
+    {
+      "id": "unfinished_ground_175",
+      "file": "unfinished_ground_175.png",
+      "group": "unfinished_ground",
+      "label": "안쪽 모서리",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 175
+    },
+    {
+      "id": "unfinished_ground_191",
+      "file": "unfinished_ground_191.png",
+      "group": "unfinished_ground",
+      "label": "안쪽 모서리",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 191
+    },
+    {
+      "id": "unfinished_ground_206",
+      "file": "unfinished_ground_206.png",
+      "group": "unfinished_ground",
+      "label": "윗면",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 206
+    },
+    {
+      "id": "unfinished_ground_207",
+      "file": "unfinished_ground_207.png",
+      "group": "unfinished_ground",
+      "label": "안쪽 모서리",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 207
+    },
+    {
+      "id": "unfinished_ground_223",
+      "file": "unfinished_ground_223.png",
+      "group": "unfinished_ground",
+      "label": "안쪽 모서리",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 223
+    },
+    {
+      "id": "unfinished_ground_239",
+      "file": "unfinished_ground_239.png",
+      "group": "unfinished_ground",
+      "label": "안쪽 모서리",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 239
+    },
+    {
+      "id": "unfinished_ground_255",
+      "file": "unfinished_ground_255.png",
+      "group": "unfinished_ground",
+      "label": "내부 채움",
+      "style": "unfinished",
+      "kind": "ground",
+      "mask": 255
+    },
+    {
+      "id": "unfinished_detail_01",
+      "file": "unfinished_detail_01.png",
+      "group": "unfinished_detail",
+      "label": "외곽 풀 연결 1",
+      "style": "unfinished",
+      "kind": "fringe",
+      "mask": 1
+    },
+    {
+      "id": "unfinished_detail_02",
+      "file": "unfinished_detail_02.png",
+      "group": "unfinished_detail",
+      "label": "외곽 풀 연결 2",
+      "style": "unfinished",
+      "kind": "fringe",
+      "mask": 2
+    },
+    {
+      "id": "unfinished_detail_03",
+      "file": "unfinished_detail_03.png",
+      "group": "unfinished_detail",
+      "label": "외곽 풀 연결 3",
+      "style": "unfinished",
+      "kind": "fringe",
+      "mask": 3
+    },
+    {
+      "id": "unfinished_detail_04",
+      "file": "unfinished_detail_04.png",
+      "group": "unfinished_detail",
+      "label": "외곽 풀 연결 4",
+      "style": "unfinished",
+      "kind": "fringe",
+      "mask": 4
+    },
+    {
+      "id": "unfinished_detail_05",
+      "file": "unfinished_detail_05.png",
+      "group": "unfinished_detail",
+      "label": "외곽 풀 연결 5",
+      "style": "unfinished",
+      "kind": "fringe",
+      "mask": 5
+    },
+    {
+      "id": "unfinished_detail_06",
+      "file": "unfinished_detail_06.png",
+      "group": "unfinished_detail",
+      "label": "외곽 풀 연결 6",
+      "style": "unfinished",
+      "kind": "fringe",
+      "mask": 6
+    },
+    {
+      "id": "unfinished_detail_07",
+      "file": "unfinished_detail_07.png",
+      "group": "unfinished_detail",
+      "label": "외곽 풀 연결 7",
+      "style": "unfinished",
+      "kind": "fringe",
+      "mask": 7
+    },
+    {
+      "id": "unfinished_detail_08",
+      "file": "unfinished_detail_08.png",
+      "group": "unfinished_detail",
+      "label": "외곽 풀 연결 8",
+      "style": "unfinished",
+      "kind": "fringe",
+      "mask": 8
+    },
+    {
+      "id": "unfinished_detail_09",
+      "file": "unfinished_detail_09.png",
+      "group": "unfinished_detail",
+      "label": "외곽 풀 연결 9",
+      "style": "unfinished",
+      "kind": "fringe",
+      "mask": 9
+    },
+    {
+      "id": "unfinished_detail_10",
+      "file": "unfinished_detail_10.png",
+      "group": "unfinished_detail",
+      "label": "외곽 풀 연결 10",
+      "style": "unfinished",
+      "kind": "fringe",
+      "mask": 10
+    },
+    {
+      "id": "unfinished_detail_11",
+      "file": "unfinished_detail_11.png",
+      "group": "unfinished_detail",
+      "label": "외곽 풀 연결 11",
+      "style": "unfinished",
+      "kind": "fringe",
+      "mask": 11
+    },
+    {
+      "id": "unfinished_detail_12",
+      "file": "unfinished_detail_12.png",
+      "group": "unfinished_detail",
+      "label": "외곽 풀 연결 12",
+      "style": "unfinished",
+      "kind": "fringe",
+      "mask": 12
+    },
+    {
+      "id": "unfinished_detail_13",
+      "file": "unfinished_detail_13.png",
+      "group": "unfinished_detail",
+      "label": "외곽 풀 연결 13",
+      "style": "unfinished",
+      "kind": "fringe",
+      "mask": 13
+    },
+    {
+      "id": "unfinished_detail_14",
+      "file": "unfinished_detail_14.png",
+      "group": "unfinished_detail",
+      "label": "외곽 풀 연결 14",
+      "style": "unfinished",
+      "kind": "fringe",
+      "mask": 14
+    },
+    {
+      "id": "unfinished_detail_15",
+      "file": "unfinished_detail_15.png",
+      "group": "unfinished_detail",
+      "label": "외곽 풀 연결 15",
+      "style": "unfinished",
+      "kind": "fringe",
+      "mask": 15
+    },
+    {
+      "id": "unfinished_roots_0",
+      "file": "unfinished_roots_0.png",
+      "group": "unfinished_detail",
+      "label": "윗면 아래 뿌리",
+      "style": "unfinished",
+      "kind": "roots",
+      "turn": 0
+    },
+    {
+      "id": "unfinished_roots_1",
+      "file": "unfinished_roots_1.png",
+      "group": "unfinished_detail",
+      "label": "오른쪽 벽 안 뿌리",
+      "style": "unfinished",
+      "kind": "roots",
+      "turn": 1
+    },
+    {
+      "id": "unfinished_roots_2",
+      "file": "unfinished_roots_2.png",
+      "group": "unfinished_detail",
+      "label": "밑면 안 뿌리",
+      "style": "unfinished",
+      "kind": "roots",
+      "turn": 2
+    },
+    {
+      "id": "unfinished_roots_3",
+      "file": "unfinished_roots_3.png",
+      "group": "unfinished_detail",
+      "label": "왼쪽 벽 안 뿌리",
+      "style": "unfinished",
+      "kind": "roots",
+      "turn": 3
+    },
+    {
+      "id": "colored_platform_left_0",
+      "file": "colored_platform_left_0.png",
+      "group": "colored_platform",
+      "label": "left · 채색 풀 0",
+      "style": "colored",
+      "kind": "platform",
+      "column": "left",
+      "row": 0
+    },
+    {
+      "id": "colored_platform_left_1",
+      "file": "colored_platform_left_1.png",
+      "group": "colored_platform",
+      "label": "left · 채색 풀 1",
+      "style": "colored",
+      "kind": "platform",
+      "column": "left",
+      "row": 1
+    },
+    {
+      "id": "colored_platform_left_2",
+      "file": "colored_platform_left_2.png",
+      "group": "colored_platform",
+      "label": "left · 채색 풀 2",
+      "style": "colored",
+      "kind": "platform",
+      "column": "left",
+      "row": 2
+    },
+    {
+      "id": "colored_platform_middle_a_0",
+      "file": "colored_platform_middle_a_0.png",
+      "group": "colored_platform",
+      "label": "middle_a · 채색 풀 0",
+      "style": "colored",
+      "kind": "platform",
+      "column": "middle_a",
+      "row": 0
+    },
+    {
+      "id": "colored_platform_middle_a_1",
+      "file": "colored_platform_middle_a_1.png",
+      "group": "colored_platform",
+      "label": "middle_a · 채색 풀 1",
+      "style": "colored",
+      "kind": "platform",
+      "column": "middle_a",
+      "row": 1
+    },
+    {
+      "id": "colored_platform_middle_a_2",
+      "file": "colored_platform_middle_a_2.png",
+      "group": "colored_platform",
+      "label": "middle_a · 채색 풀 2",
+      "style": "colored",
+      "kind": "platform",
+      "column": "middle_a",
+      "row": 2
+    },
+    {
+      "id": "colored_platform_middle_b_0",
+      "file": "colored_platform_middle_b_0.png",
+      "group": "colored_platform",
+      "label": "middle_b · 채색 풀 0",
+      "style": "colored",
+      "kind": "platform",
+      "column": "middle_b",
+      "row": 0
+    },
+    {
+      "id": "colored_platform_middle_b_1",
+      "file": "colored_platform_middle_b_1.png",
+      "group": "colored_platform",
+      "label": "middle_b · 채색 풀 1",
+      "style": "colored",
+      "kind": "platform",
+      "column": "middle_b",
+      "row": 1
+    },
+    {
+      "id": "colored_platform_middle_b_2",
+      "file": "colored_platform_middle_b_2.png",
+      "group": "colored_platform",
+      "label": "middle_b · 채색 풀 2",
+      "style": "colored",
+      "kind": "platform",
+      "column": "middle_b",
+      "row": 2
+    },
+    {
+      "id": "colored_platform_middle_c_0",
+      "file": "colored_platform_middle_c_0.png",
+      "group": "colored_platform",
+      "label": "middle_c · 채색 풀 0",
+      "style": "colored",
+      "kind": "platform",
+      "column": "middle_c",
+      "row": 0
+    },
+    {
+      "id": "colored_platform_middle_c_1",
+      "file": "colored_platform_middle_c_1.png",
+      "group": "colored_platform",
+      "label": "middle_c · 채색 풀 1",
+      "style": "colored",
+      "kind": "platform",
+      "column": "middle_c",
+      "row": 1
+    },
+    {
+      "id": "colored_platform_middle_c_2",
+      "file": "colored_platform_middle_c_2.png",
+      "group": "colored_platform",
+      "label": "middle_c · 채색 풀 2",
+      "style": "colored",
+      "kind": "platform",
+      "column": "middle_c",
+      "row": 2
+    },
+    {
+      "id": "colored_platform_right_0",
+      "file": "colored_platform_right_0.png",
+      "group": "colored_platform",
+      "label": "right · 채색 풀 0",
+      "style": "colored",
+      "kind": "platform",
+      "column": "right",
+      "row": 0
+    },
+    {
+      "id": "colored_platform_right_1",
+      "file": "colored_platform_right_1.png",
+      "group": "colored_platform",
+      "label": "right · 채색 풀 1",
+      "style": "colored",
+      "kind": "platform",
+      "column": "right",
+      "row": 1
+    },
+    {
+      "id": "colored_platform_right_2",
+      "file": "colored_platform_right_2.png",
+      "group": "colored_platform",
+      "label": "right · 채색 풀 2",
+      "style": "colored",
+      "kind": "platform",
+      "column": "right",
+      "row": 2
+    },
+    {
+      "id": "colored_platform_single_0",
+      "file": "colored_platform_single_0.png",
+      "group": "colored_platform",
+      "label": "single · 채색 풀 0",
+      "style": "colored",
+      "kind": "platform",
+      "column": "single",
+      "row": 0
+    },
+    {
+      "id": "colored_platform_single_1",
+      "file": "colored_platform_single_1.png",
+      "group": "colored_platform",
+      "label": "single · 채색 풀 1",
+      "style": "colored",
+      "kind": "platform",
+      "column": "single",
+      "row": 1
+    },
+    {
+      "id": "colored_platform_single_2",
+      "file": "colored_platform_single_2.png",
+      "group": "colored_platform",
+      "label": "single · 채색 풀 2",
+      "style": "colored",
+      "kind": "platform",
+      "column": "single",
+      "row": 2
+    },
+    {
+      "id": "painted_left_0_0",
+      "file": "painted_left_0_0.png",
+      "group": "painted_platform",
+      "label": "색→선화 1 · 풀 위",
+      "style": "painted",
+      "kind": "platform",
+      "side": "left",
+      "column": 0,
+      "row": 0
+    },
+    {
+      "id": "painted_left_0_1",
+      "file": "painted_left_0_1.png",
+      "group": "painted_platform",
+      "label": "색→선화 1 · 두꺼운 잎층",
+      "style": "painted",
+      "kind": "platform",
+      "side": "left",
+      "column": 0,
+      "row": 1
+    },
+    {
+      "id": "painted_left_0_2",
+      "file": "painted_left_0_2.png",
+      "group": "painted_platform",
+      "label": "색→선화 1 · 잎 끝",
+      "style": "painted",
+      "kind": "platform",
+      "side": "left",
+      "column": 0,
+      "row": 2
+    },
+    {
+      "id": "painted_left_1_0",
+      "file": "painted_left_1_0.png",
+      "group": "painted_platform",
+      "label": "색→선화 2 · 풀 위",
+      "style": "painted",
+      "kind": "platform",
+      "side": "left",
+      "column": 1,
+      "row": 0
+    },
+    {
+      "id": "painted_left_1_1",
+      "file": "painted_left_1_1.png",
+      "group": "painted_platform",
+      "label": "색→선화 2 · 두꺼운 잎층",
+      "style": "painted",
+      "kind": "platform",
+      "side": "left",
+      "column": 1,
+      "row": 1
+    },
+    {
+      "id": "painted_left_1_2",
+      "file": "painted_left_1_2.png",
+      "group": "painted_platform",
+      "label": "색→선화 2 · 잎 끝",
+      "style": "painted",
+      "kind": "platform",
+      "side": "left",
+      "column": 1,
+      "row": 2
+    },
+    {
+      "id": "painted_left_2_0",
+      "file": "painted_left_2_0.png",
+      "group": "painted_platform",
+      "label": "색→선화 3 · 풀 위",
+      "style": "painted",
+      "kind": "platform",
+      "side": "left",
+      "column": 2,
+      "row": 0
+    },
+    {
+      "id": "painted_left_2_1",
+      "file": "painted_left_2_1.png",
+      "group": "painted_platform",
+      "label": "색→선화 3 · 두꺼운 잎층",
+      "style": "painted",
+      "kind": "platform",
+      "side": "left",
+      "column": 2,
+      "row": 1
+    },
+    {
+      "id": "painted_left_2_2",
+      "file": "painted_left_2_2.png",
+      "group": "painted_platform",
+      "label": "색→선화 3 · 잎 끝",
+      "style": "painted",
+      "kind": "platform",
+      "side": "left",
+      "column": 2,
+      "row": 2
+    },
+    {
+      "id": "painted_right_0_0",
+      "file": "painted_right_0_0.png",
+      "group": "painted_platform",
+      "label": "선화→색 1 · 풀 위",
+      "style": "painted",
+      "kind": "platform",
+      "side": "right",
+      "column": 0,
+      "row": 0
+    },
+    {
+      "id": "painted_right_0_1",
+      "file": "painted_right_0_1.png",
+      "group": "painted_platform",
+      "label": "선화→색 1 · 두꺼운 잎층",
+      "style": "painted",
+      "kind": "platform",
+      "side": "right",
+      "column": 0,
+      "row": 1
+    },
+    {
+      "id": "painted_right_0_2",
+      "file": "painted_right_0_2.png",
+      "group": "painted_platform",
+      "label": "선화→색 1 · 잎 끝",
+      "style": "painted",
+      "kind": "platform",
+      "side": "right",
+      "column": 0,
+      "row": 2
+    },
+    {
+      "id": "painted_right_1_0",
+      "file": "painted_right_1_0.png",
+      "group": "painted_platform",
+      "label": "선화→색 2 · 풀 위",
+      "style": "painted",
+      "kind": "platform",
+      "side": "right",
+      "column": 1,
+      "row": 0
+    },
+    {
+      "id": "painted_right_1_1",
+      "file": "painted_right_1_1.png",
+      "group": "painted_platform",
+      "label": "선화→색 2 · 두꺼운 잎층",
+      "style": "painted",
+      "kind": "platform",
+      "side": "right",
+      "column": 1,
+      "row": 1
+    },
+    {
+      "id": "painted_right_1_2",
+      "file": "painted_right_1_2.png",
+      "group": "painted_platform",
+      "label": "선화→색 2 · 잎 끝",
+      "style": "painted",
+      "kind": "platform",
+      "side": "right",
+      "column": 1,
+      "row": 2
+    },
+    {
+      "id": "painted_right_2_0",
+      "file": "painted_right_2_0.png",
+      "group": "painted_platform",
+      "label": "선화→색 3 · 풀 위",
+      "style": "painted",
+      "kind": "platform",
+      "side": "right",
+      "column": 2,
+      "row": 0
+    },
+    {
+      "id": "painted_right_2_1",
+      "file": "painted_right_2_1.png",
+      "group": "painted_platform",
+      "label": "선화→색 3 · 두꺼운 잎층",
+      "style": "painted",
+      "kind": "platform",
+      "side": "right",
+      "column": 2,
+      "row": 1
+    },
+    {
+      "id": "painted_right_2_2",
+      "file": "painted_right_2_2.png",
+      "group": "painted_platform",
+      "label": "선화→색 3 · 잎 끝",
+      "style": "painted",
+      "kind": "platform",
+      "side": "right",
+      "column": 2,
+      "row": 2
+    }
+  ],
+  "platforms": {
+    "rows": 3,
+    "landingY": 32,
+    "foliageOnly": true,
+    "columns": [
+      "left",
+      "middle_a",
+      "middle_b",
+      "middle_c",
+      "right",
+      "single"
+    ]
+  },
+  "notes": [
+    "Every PNG is 32x32. Repeat middle_a/b/c in any order.",
+    "Platforms are thick foliage only: upper tufts and a leaf mat, no soil or root row.",
+    "Ground uses 47 normalized neighbor shapes per sketch style. Details are separate cells outside the ground.",
+    "PNG names are roles; no length-specific output fragments."
+  ]
+}

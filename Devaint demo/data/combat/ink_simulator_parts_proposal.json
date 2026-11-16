@@ -1,0 +1,1742 @@
+{
+  "schema": 2,
+  "status": "design_draft_browser_experiment",
+  "purpose": "사용자 지정 색상 역할과 초기 4종 트리거에 맞춘 신규 파츠 50종. 효과·수치·운용 제약은 검토 초안이며 본 게임 구현 데이터가 아니다.",
+  "colorRoles": {
+    "red": "attack",
+    "yellow": "move_speed",
+    "green": "life",
+    "blue": "range_cooldown",
+    "purple": "crowd_control"
+  },
+  "triggers": {
+    "hit": "몬스터 적중 시",
+    "switch": "스위칭 시",
+    "detonate": "표식을 터트릴 시",
+    "kill": "몬스터 처치 시"
+  },
+  "rules": {
+    "switchOrder": [
+      "outgoing_effects",
+      "switch_weapon",
+      "incoming_auto_attack"
+    ],
+    "extraHitsTriggerHitAndKill": true,
+    "damageOverTime": false,
+    "markSource": "primary_hit",
+    "markDetonation": "무기 전환 후 몬스터 적중 시",
+    "markConsumption": "all",
+    "chainLimit": null,
+    "duplicatePolicy": null,
+    "note": "초안의 모든 수치는 제안이다. 표식 부여 상세·연쇄 제한·중복·제어 저항을 임의 확정하지 않는다. 별도 스탬프 설계는 개편 설계 문서를 따른다.",
+    "marksPerHit": 1,
+    "extraHitsApplyMarks": false,
+    "markCap": 5,
+    "markDuration": 8,
+    "markIntrinsicDamage": {
+      "model": "proportional_to_consumed_marks",
+      "basis": "detonating_weapon_basic_attack_reference",
+      "coefficientPerMark": null
+    },
+    "inkEffectProcsPerDetonation": 1,
+    "markIntrinsicDamageCountsAsExtraHit": true,
+    "markIntrinsicDamageTriggersHitAndKill": true,
+    "markTimeRefresh": "refresh_all_on_primary_hit",
+    "markSameHitOrder": "detonate_existing_then_add_new_weapon_mark"
+  },
+  "parts": [
+    {
+      "id": "ink2_red_01",
+      "name": "덧칠",
+      "color": "red",
+      "trigger": "hit",
+      "source": "event_weapon",
+      "requires": null,
+      "goal": "한 대의 적중을 후속 공격으로 연결한다.",
+      "situation": "단일 몬스터를 계속 공격할 때",
+      "reason": "한 대의 적중을 후속 공격으로 연결한다. 단일 몬스터를 계속 공격할 때에 선택할 후보다.",
+      "effect": {
+        "role": "attack",
+        "kind": "extra_hit",
+        "target": "적중한 몬스터",
+        "description": "원공격 피해의 20%인 추가타 1회를 가한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "ratio": 0.2
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "추가타가 다시 추가타를 만드는 연쇄 한도는 미정이다.",
+      "combo": "추가타의 적중 트리거와 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_red_02",
+      "name": "꿰뚫는 획",
+      "color": "red",
+      "trigger": "hit",
+      "source": "event_weapon",
+      "requires": null,
+      "goal": "일렬로 선 적을 겨냥하도록 한다.",
+      "situation": "몬스터가 앞뒤로 늘어서 있을 때",
+      "reason": "일렬로 선 적을 겨냥하도록 한다. 몬스터가 앞뒤로 늘어서 있을 때에 선택할 후보다.",
+      "effect": {
+        "role": "attack",
+        "kind": "line_hit",
+        "target": "적중한 몬스터 뒤의 몬스터",
+        "description": "적중점 뒤 직선에 원공격 피해의 25%인 추가 공격을 가한다. 최초 대상은 제외한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "ratio": 0.25,
+          "range": 3,
+          "width": 0.6
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "뒤쪽에 다른 몬스터가 없으면 보상을 얻지 못한다.",
+      "combo": "범위를 넓히는 파랑 파츠와 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_red_03",
+      "name": "겨눈 획",
+      "color": "red",
+      "trigger": "hit",
+      "source": "event_weapon",
+      "requires": null,
+      "goal": "약해진 적을 우선 마무리한다.",
+      "situation": "체력이 낮은 몬스터를 골라 공격할 때",
+      "reason": "약해진 적을 우선 마무리한다. 체력이 낮은 몬스터를 골라 공격할 때에 선택할 후보다.",
+      "effect": {
+        "role": "attack",
+        "kind": "conditional_hit",
+        "target": "현재 체력 30% 이하인 적중 몬스터",
+        "description": "조건에 맞는 대상에게 원공격 피해의 35%인 추가타를 가한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "ratio": 0.35,
+          "threshold": 0.3
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "체력이 높은 대상에게는 추가 공격이 없다.",
+      "combo": "처치 트리거 파츠와 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_red_04",
+      "name": "건네는 진한 먹",
+      "color": "red",
+      "trigger": "switch",
+      "source": "outgoing_weapon",
+      "requires": null,
+      "goal": "무기를 바꾸며 강한 공격을 이어 간다.",
+      "situation": "B의 강한 공격을 준비했을 때",
+      "reason": "무기를 바꾸며 강한 공격을 이어 간다. B의 강한 공격을 준비했을 때에 선택할 후보다.",
+      "effect": {
+        "role": "attack",
+        "kind": "next_attack_power",
+        "target": "전환 후 B무기의 다음 공격",
+        "description": "A에서 효과를 부여해 B무기의 다음 공격 피해를 30% 높인다. 공격 시작 시 1회 소비한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "amount": 0.3
+        },
+        "weaponScope": "incoming_weapon",
+        "crossWeaponException": "예외: 전환 전 A에서 발동해 들어오는 B에 설명된 강화를 적용한다."
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "다음 공격이 빗나가도 소비한다.",
+      "combo": "B의 범위 확대 효과와 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_red_05",
+      "name": "떠나며 긋기",
+      "color": "red",
+      "trigger": "switch",
+      "source": "outgoing_weapon",
+      "requires": null,
+      "goal": "근접 압박을 남기면서 무기를 교대한다.",
+      "situation": "A 전방에 몬스터가 있을 때",
+      "reason": "근접 압박을 남기면서 무기를 교대한다. A 전방에 몬스터가 있을 때에 선택할 후보다.",
+      "effect": {
+        "role": "attack",
+        "kind": "outgoing_area_hit",
+        "target": "전환 전 A무기 앞쪽 몬스터",
+        "description": "A의 전방에 A 기본 공격 기준 피해 40%인 공격을 1회 가한 후 전환한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "ratio": 0.4,
+          "range": 2,
+          "radius": 1
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "전환 전 A의 방향과 위치를 사용하므로 뒤쪽 적은 맞지 않는다.",
+      "combo": "이 공격의 적중·처치 트리거와 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_red_06",
+      "name": "뒤늦은 획",
+      "color": "red",
+      "trigger": "switch",
+      "source": "outgoing_weapon",
+      "requires": null,
+      "goal": "전환 전후 공격을 겹쳐 압박한다.",
+      "situation": "A로 때린 적을 B로 이어 공격할 때",
+      "reason": "전환 전후 공격을 겹쳐 압박한다. A로 때린 적을 B로 이어 공격할 때에 선택할 후보다.",
+      "effect": {
+        "role": "attack",
+        "kind": "delayed_single_hit",
+        "target": "A의 마지막 적중 몬스터",
+        "description": "A에서 단발 추격 공격을 예약한다. 전환 후 0.4초에 A 기본 공격 기준 피해 50%를 1회 가한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "ratio": 0.5,
+          "delay": 0.4
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "예약 대상이 죽으면 소멸하며 다른 몬스터로 이전하지 않는다. 지연 단발이며 지속형 피해가 아니다.",
+      "combo": "B의 공격과 단발 추격의 시간차 활용",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_red_07",
+      "name": "터지는 먹물",
+      "color": "red",
+      "trigger": "detonate",
+      "source": "event_weapon",
+      "requires": "mark_system_pending",
+      "goal": "표식 격발을 단일 대상 화력으로 바꾼다.",
+      "situation": "표식을 쌓은 강한 몬스터를 전환 공격할 때",
+      "reason": "표식 격발을 단일 대상 화력으로 바꾼다. 표식을 쌓은 강한 몬스터를 전환 공격할 때에 선택할 후보다.",
+      "effect": {
+        "role": "attack",
+        "kind": "detonation_extra_hit",
+        "target": "표식이 격발된 몬스터",
+        "description": "격발 대상에게 발동 무기 기본 공격 기준 피해 60%인 추가타 1회를 가한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "ratio": 0.6
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "표식이 없으면 발동하지 않는다. 격발 자체의 기본 피해는 별도 미정이다.",
+      "combo": "표식 공급 수단이 정해진 뒤 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_red_08",
+      "name": "사방으로 튄 먹",
+      "color": "red",
+      "trigger": "detonate",
+      "source": "event_weapon",
+      "requires": "mark_system_pending",
+      "goal": "표식 대상 주변까지 공격한다.",
+      "situation": "표식 대상 주위에 몬스터가 모였을 때",
+      "reason": "표식 대상 주변까지 공격한다. 표식 대상 주위에 몬스터가 모였을 때에 선택할 후보다.",
+      "effect": {
+        "role": "attack",
+        "kind": "detonation_area_hit",
+        "target": "격발 대상 주변의 다른 몬스터",
+        "description": "격발점 주변 반경 2에 기본 공격 기준 피해 30%인 파편 공격을 가한다. 격발 대상은 제외한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "ratio": 0.3,
+          "radius": 2
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "단일 대상 전투에서는 주변 파편 피해를 얻지 못한다.",
+      "combo": "보라의 모으기 CC와 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_red_09",
+      "name": "옮겨 튀는 먹방울",
+      "color": "red",
+      "trigger": "kill",
+      "source": "event_weapon",
+      "requires": null,
+      "goal": "처치를 다음 표적으로 연결한다.",
+      "situation": "잔여 몬스터가 가까이 있을 때",
+      "reason": "처치를 다음 표적으로 연결한다. 잔여 몬스터가 가까이 있을 때에 선택할 후보다.",
+      "effect": {
+        "role": "attack",
+        "kind": "single_ricochet",
+        "target": "처치 지점에서 가장 가까운 다른 몬스터",
+        "description": "반경 4 안의 다른 몬스터 1명에게 기본 공격 기준 피해 50%인 추가 공격을 보낸다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "ratio": 0.5,
+          "range": 4
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "유효 대상이 없으면 공격이 발생하지 않는다. 처치 연쇄 한도는 미정이다.",
+      "combo": "처치 후 이동 속도 증가와 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_red_10",
+      "name": "진해진 먹",
+      "color": "red",
+      "trigger": "kill",
+      "source": "event_weapon",
+      "requires": null,
+      "goal": "약한 적 처치 후 강한 적에게 공격한다.",
+      "situation": "작은 몬스터 옆에 강한 몬스터가 있을 때",
+      "reason": "약한 적 처치 후 강한 적에게 공격한다. 작은 몬스터 옆에 강한 몬스터가 있을 때에 선택할 후보다.",
+      "effect": {
+        "role": "attack",
+        "kind": "next_attack_power",
+        "target": "장착 무기의 다음 공격",
+        "description": "장착 무기의 다음 공격 피해를 25% 높인다. 공격 시작 시 소비하며 반복 처치는 수치를 더하지 않고 갱신한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "amount": 0.25
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "한 대상만 있는 전투에서는 최초 처치 전까지 이득이 없다.",
+      "combo": "스위칭 후 공격 강화와 중첩 방식 검토",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_yellow_01",
+      "name": "가벼운 발끝",
+      "color": "yellow",
+      "trigger": "hit",
+      "source": "event_weapon",
+      "requires": null,
+      "goal": "공격을 유지하며 이동한다.",
+      "situation": "공격과 위치 조정을 반복할 때",
+      "reason": "공격을 유지하며 이동한다. 공격과 위치 조정을 반복할 때에 선택할 후보다.",
+      "effect": {
+        "role": "move_speed",
+        "kind": "move_speed",
+        "target": "플레이어",
+        "description": "이동 속도가 3초간 12% 증가한다. 재발동 시 지속시간만 갱신한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "amount": 0.12,
+          "duration": 3
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "적중을 중단하면 보상이 끝난다.",
+      "combo": "근접 공격 후 재배치",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_yellow_02",
+      "name": "점점 가벼운 발",
+      "color": "yellow",
+      "trigger": "hit",
+      "source": "event_weapon",
+      "requires": null,
+      "goal": "적중을 누적해 기동력을 확보한다.",
+      "situation": "여러 차례 적중시킬 기회가 있을 때",
+      "reason": "적중을 누적해 기동력을 확보한다. 여러 차례 적중시킬 기회가 있을 때에 선택할 후보다.",
+      "effect": {
+        "role": "move_speed",
+        "kind": "stack_move_speed",
+        "target": "플레이어",
+        "description": "적중마다 이동 속도 4%를 4초간 쌓는다. 최대 5중첩이며 재발동 시 중첩 유지시간을 갱신한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "amount": 0.04,
+          "duration": 4,
+          "cap": 5
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "초기 적중 보상이 작고 유지가 끊기면 중첩이 사라진다.",
+      "combo": "추가타 적중과 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_yellow_03",
+      "name": "쫓는 발걸음",
+      "color": "yellow",
+      "trigger": "hit",
+      "source": "event_weapon",
+      "requires": null,
+      "goal": "공격한 적과 거리를 좁힌다.",
+      "situation": "멀어진 몬스터를 추격할 때",
+      "reason": "공격한 적과 거리를 좁힌다. 멀어진 몬스터를 추격할 때에 선택할 후보다.",
+      "effect": {
+        "role": "move_speed",
+        "kind": "directional_move_speed",
+        "target": "플레이어",
+        "description": "3초간 마지막 적중 몬스터를 향해 이동할 때 이동 속도가 25% 증가한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "amount": 0.25,
+          "duration": 3,
+          "direction": "toward"
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "대상에서 멀어지는 이동에는 증가가 없다.",
+      "combo": "전환 후 접근 공격과 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_yellow_04",
+      "name": "바꿔 쥐고 내달리기",
+      "color": "yellow",
+      "trigger": "switch",
+      "source": "outgoing_weapon",
+      "requires": null,
+      "goal": "전환 직후 짧게 자리를 바꾼다.",
+      "situation": "B로 바꾼 직후 접근하거나 피할 때",
+      "reason": "전환 직후 짧게 자리를 바꾼다. B로 바꾼 직후 접근하거나 피할 때에 선택할 후보다.",
+      "effect": {
+        "role": "move_speed",
+        "kind": "move_speed",
+        "target": "플레이어",
+        "description": "A에서 부여한 이동 속도 35% 증가를 B 전환 후 1.5초간 유지한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "amount": 0.35,
+          "duration": 1.5
+        },
+        "weaponScope": "incoming_weapon",
+        "crossWeaponException": "예외: 전환 전 A에서 발동해 들어오는 B에 설명된 강화를 적용한다."
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "지속시간이 짧아 즉시 이동해야 활용한다.",
+      "combo": "A의 스위칭 효과와 B 공격의 위치 조정",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_yellow_05",
+      "name": "오래 가는 걸음",
+      "color": "yellow",
+      "trigger": "switch",
+      "source": "outgoing_weapon",
+      "requires": null,
+      "goal": "무기 교대 후 지속적으로 이동한다.",
+      "situation": "넓은 전장에서 다음 적에게 이동할 때",
+      "reason": "무기 교대 후 지속적으로 이동한다. 넓은 전장에서 다음 적에게 이동할 때에 선택할 후보다.",
+      "effect": {
+        "role": "move_speed",
+        "kind": "move_speed",
+        "target": "플레이어",
+        "description": "A에서 부여한 이동 속도 18% 증가를 B 전환 후 5초간 유지한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "amount": 0.18,
+          "duration": 5
+        },
+        "weaponScope": "incoming_weapon",
+        "crossWeaponException": "예외: 전환 전 A에서 발동해 들어오는 B에 설명된 강화를 적용한다."
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "짧은 순간의 이동 증가는 바꿔 쥐고 내달리기보다 낮다.",
+      "combo": "처치 후 다음 무리로 이동",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_yellow_06",
+      "name": "물러서는 발",
+      "color": "yellow",
+      "trigger": "switch",
+      "source": "outgoing_weapon",
+      "requires": null,
+      "goal": "전환하면서 기존 교전 지점에서 물러난다.",
+      "situation": "근접 무기에서 거리 확보가 필요한 무기로 바꿀 때",
+      "reason": "전환하면서 기존 교전 지점에서 물러난다. 근접 무기에서 거리 확보가 필요한 무기로 바꿀 때에 선택할 후보다.",
+      "effect": {
+        "role": "move_speed",
+        "kind": "directional_move_speed",
+        "target": "플레이어",
+        "description": "전환 전 A가 바라보던 방향의 반대쪽으로 이동할 때 3초간 이동 속도가 30% 증가한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "amount": 0.3,
+          "duration": 3,
+          "direction": "backward"
+        },
+        "weaponScope": "incoming_weapon",
+        "crossWeaponException": "예외: 전환 전 A에서 발동해 들어오는 B에 설명된 강화를 적용한다."
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "전환 전 방향을 기준으로 하며 전진에는 보상이 없다.",
+      "combo": "B의 원거리 공격과 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_yellow_07",
+      "name": "터뜨리고 달리기",
+      "color": "yellow",
+      "trigger": "detonate",
+      "source": "event_weapon",
+      "requires": "mark_system_pending",
+      "goal": "격발 직후 재배치한다.",
+      "situation": "격발 후 다른 몬스터로 이동할 때",
+      "reason": "격발 직후 재배치한다. 격발 후 다른 몬스터로 이동할 때에 선택할 후보다.",
+      "effect": {
+        "role": "move_speed",
+        "kind": "move_speed",
+        "target": "플레이어",
+        "description": "표식 격발 후 이동 속도가 3초간 30% 증가한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "amount": 0.3,
+          "duration": 3
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "격발 전 준비 구간에는 기동 보상이 없다.",
+      "combo": "격발 후 공격·이탈 선택",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_yellow_08",
+      "name": "터뜨리고 빠지기",
+      "color": "yellow",
+      "trigger": "detonate",
+      "source": "event_weapon",
+      "requires": "mark_system_pending",
+      "goal": "격발 후 안전한 거리를 만든다.",
+      "situation": "강한 몬스터에게 격발한 직후",
+      "reason": "격발 후 안전한 거리를 만든다. 강한 몬스터에게 격발한 직후에 선택할 후보다.",
+      "effect": {
+        "role": "move_speed",
+        "kind": "directional_move_speed",
+        "target": "플레이어",
+        "description": "격발된 몬스터의 위치에서 멀어질 때 4초간 이동 속도가 40% 증가한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "amount": 0.4,
+          "duration": 4,
+          "direction": "away"
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "격발 위치에 접근하는 이동에는 적용하지 않는다.",
+      "combo": "보라의 속박 후 이탈",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_yellow_09",
+      "name": "가벼워진 걸음",
+      "color": "yellow",
+      "trigger": "kill",
+      "source": "event_weapon",
+      "requires": null,
+      "goal": "처치한 자리에서 빠르게 이동한다.",
+      "situation": "몬스터 무리 사이를 이동할 때",
+      "reason": "처치한 자리에서 빠르게 이동한다. 몬스터 무리 사이를 이동할 때에 선택할 후보다.",
+      "effect": {
+        "role": "move_speed",
+        "kind": "move_speed",
+        "target": "플레이어",
+        "description": "몬스터 처치 후 이동 속도가 4초간 22% 증가한다. 재처치 시 갱신한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "amount": 0.22,
+          "duration": 4
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "첫 처치 전과 단일 보스 전투 중에는 발동 기회가 적다.",
+      "combo": "다음 적을 찾는 공격 파츠와 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_yellow_10",
+      "name": "지울수록 빨라지는 발",
+      "color": "yellow",
+      "trigger": "kill",
+      "source": "event_weapon",
+      "requires": null,
+      "goal": "연속 처치를 기동력으로 바꾼다.",
+      "situation": "작은 몬스터를 연속 처치할 때",
+      "reason": "연속 처치를 기동력으로 바꾼다. 작은 몬스터를 연속 처치할 때에 선택할 후보다.",
+      "effect": {
+        "role": "move_speed",
+        "kind": "stack_move_speed",
+        "target": "플레이어",
+        "description": "처치마다 이동 속도 10%를 6초간 쌓는다. 최대 3중첩이며 재처치 시 유지시간을 갱신한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "amount": 0.1,
+          "duration": 6,
+          "cap": 3
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "처치 간격이 길면 중첩을 유지하지 못한다.",
+      "combo": "처치 추가 공격과 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_green_01",
+      "name": "생기 한 방울",
+      "color": "green",
+      "trigger": "hit",
+      "source": "event_weapon",
+      "requires": null,
+      "goal": "공격을 계속해 잃은 체력을 보충한다.",
+      "situation": "체력이 일부 줄어든 지속 교전",
+      "reason": "공격을 계속해 잃은 체력을 보충한다. 체력이 일부 줄어든 지속 교전에 선택할 후보다.",
+      "effect": {
+        "role": "life",
+        "kind": "heal",
+        "target": "플레이어",
+        "description": "몬스터 적중 시 체력을 2 회복한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "amount": 2
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "체력이 가득 차면 초과분은 사라진다. 적중 빈도 보정은 미정이다.",
+      "combo": "추가타의 적중 보상과 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_green_02",
+      "name": "겹겹이 덧댄 종이",
+      "color": "green",
+      "trigger": "hit",
+      "source": "event_weapon",
+      "requires": null,
+      "goal": "공격으로 다음 피격을 대비한다.",
+      "situation": "적중 후 반격이 예상될 때",
+      "reason": "공격으로 다음 피격을 대비한다. 적중 후 반격이 예상될 때에 선택할 후보다.",
+      "effect": {
+        "role": "life",
+        "kind": "shield",
+        "target": "플레이어",
+        "description": "적중 시 3초간 보호막 3을 얻는다. 같은 파츠의 보호막은 최대 15까지 합산한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "amount": 3,
+          "duration": 3,
+          "cap": 15
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "보호막이 시간 만료되면 사라지며 회복으로 전환하지 않는다.",
+      "combo": "공격 유지와 생존 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_green_03",
+      "name": "빨아들이는 먹",
+      "color": "green",
+      "trigger": "hit",
+      "source": "event_weapon",
+      "requires": null,
+      "goal": "강한 적중을 회복으로 전환한다.",
+      "situation": "회복이 필요하고 실제 체력 피해를 줄 수 있을 때",
+      "reason": "강한 적중을 회복으로 전환한다. 회복이 필요하고 실제 체력 피해를 줄 수 있을 때에 선택할 후보다.",
+      "effect": {
+        "role": "life",
+        "kind": "lifesteal",
+        "target": "플레이어",
+        "description": "해당 적중이 몬스터 체력에 실제로 준 피해의 5%만큼 체력을 회복한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "ratio": 0.05
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "실제 체력 피해가 없으면 회복하지 않는다.",
+      "combo": "강한 추가타와 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_green_04",
+      "name": "덧댄 종이 한 장",
+      "color": "green",
+      "trigger": "switch",
+      "source": "outgoing_weapon",
+      "requires": null,
+      "goal": "전환 직후의 피격을 대비한다.",
+      "situation": "B의 공격을 시작할 때 위험이 클 때",
+      "reason": "전환 직후의 피격을 대비한다. B의 공격을 시작할 때 위험이 클 때에 선택할 후보다.",
+      "effect": {
+        "role": "life",
+        "kind": "shield",
+        "target": "플레이어",
+        "description": "A에서 보호막 12를 부여하며 B 전환 후 4초간 유지한다. 같은 파츠의 재발동은 갱신한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "amount": 12,
+          "duration": 4
+        },
+        "weaponScope": "incoming_weapon",
+        "crossWeaponException": "예외: 전환 전 A에서 발동해 들어오는 B에 설명된 강화를 적용한다."
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "유효시간 안에 피격이 없으면 보호막이 소멸한다.",
+      "combo": "B의 근접 자동 공격을 보호",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_green_05",
+      "name": "숨 고르기",
+      "color": "green",
+      "trigger": "switch",
+      "source": "outgoing_weapon",
+      "requires": null,
+      "goal": "손상된 상태에서 교대로 회복한다.",
+      "situation": "체력이 많이 줄어 무기를 바꿀 때",
+      "reason": "손상된 상태에서 교대로 회복한다. 체력이 많이 줄어 무기를 바꿀 때에 선택할 후보다.",
+      "effect": {
+        "role": "life",
+        "kind": "missing_health_heal",
+        "target": "플레이어",
+        "description": "A에서 잃은 체력의 8%를 회복한 후 B로 전환한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "ratio": 0.08
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "잃은 체력이 적을수록 회복량도 적다.",
+      "combo": "공격 전환과 체력 유지",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_green_06",
+      "name": "두꺼워진 종이",
+      "color": "green",
+      "trigger": "switch",
+      "source": "outgoing_weapon",
+      "requires": null,
+      "goal": "회복을 받을 수 있는 일시적인 체력 여유를 만든다.",
+      "situation": "전환 후 회복 효과를 함께 사용할 때",
+      "reason": "회복을 받을 수 있는 일시적인 체력 여유를 만든다. 전환 후 회복 효과를 함께 사용할 때에 선택할 후보다.",
+      "effect": {
+        "role": "life",
+        "kind": "temporary_max_health",
+        "target": "플레이어",
+        "description": "A에서 최대 체력을 6초간 15% 높인다. 현재 체력은 직접 회복하지 않으며 종료 시 현재 체력은 원래 최대치를 넘지 않게 한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "amount": 0.15,
+          "duration": 6
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "단독으로는 현재 체력이 늘지 않아 회복 수단이 필요하다.",
+      "combo": "적중·격발 회복 파츠와 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_green_07",
+      "name": "터진 자리의 생기",
+      "color": "green",
+      "trigger": "detonate",
+      "source": "event_weapon",
+      "requires": "mark_system_pending",
+      "goal": "격발 준비를 회복 보상으로 돌려받는다.",
+      "situation": "체력이 줄어든 상태에서 표식을 격발할 때",
+      "reason": "격발 준비를 회복 보상으로 돌려받는다. 체력이 줄어든 상태에서 표식을 격발할 때에 선택할 후보다.",
+      "effect": {
+        "role": "life",
+        "kind": "heal",
+        "target": "플레이어",
+        "description": "표식 격발 시 체력을 8 회복한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "amount": 8
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "표식과 전환 적중을 준비해야 하며 초과 회복은 버린다.",
+      "combo": "표식 운용과 생존 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_green_08",
+      "name": "터지면 덧대기",
+      "color": "green",
+      "trigger": "detonate",
+      "source": "event_weapon",
+      "requires": "mark_system_pending",
+      "goal": "격발 후 이어질 공격을 견딘다.",
+      "situation": "몬스터에 접근해 격발한 직후",
+      "reason": "격발 후 이어질 공격을 견딘다. 몬스터에 접근해 격발한 직후에 선택할 후보다.",
+      "effect": {
+        "role": "life",
+        "kind": "shield",
+        "target": "플레이어",
+        "description": "표식 격발 시 5초간 보호막 14를 얻는다. 같은 파츠의 재발동은 갱신한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "amount": 14,
+          "duration": 5
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "보호막은 회복이 아니며 유효시간 뒤 사라진다.",
+      "combo": "격발 후 근접 공격 유지",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_green_09",
+      "name": "한숨 돌리기",
+      "color": "green",
+      "trigger": "kill",
+      "source": "event_weapon",
+      "requires": null,
+      "goal": "처치를 통해 다음 교전을 준비한다.",
+      "situation": "작은 몬스터를 처치하며 체력을 보충할 때",
+      "reason": "처치를 통해 다음 교전을 준비한다. 작은 몬스터를 처치하며 체력을 보충할 때에 선택할 후보다.",
+      "effect": {
+        "role": "life",
+        "kind": "max_health_heal",
+        "target": "플레이어",
+        "description": "몬스터 처치 시 최대 체력의 5%를 회복한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "ratio": 0.05
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "처치할 수 없는 대상만 남으면 회복 기회가 없다.",
+      "combo": "마무리 추가타와 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_green_10",
+      "name": "쌓이는 덧종이",
+      "color": "green",
+      "trigger": "kill",
+      "source": "event_weapon",
+      "requires": null,
+      "goal": "연속 처치로 다음 교전의 보호막을 준비한다.",
+      "situation": "다음 적과 곧바로 싸울 때",
+      "reason": "연속 처치로 다음 교전의 보호막을 준비한다. 다음 적과 곧바로 싸울 때에 선택할 후보다.",
+      "effect": {
+        "role": "life",
+        "kind": "stack_shield",
+        "target": "플레이어",
+        "description": "처치마다 6초간 보호막 6을 얻는다. 같은 파츠의 보호막 합계는 최대 24다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "amount": 6,
+          "duration": 6,
+          "cap": 24
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "전투 사이 이동이 길면 보호막이 만료된다.",
+      "combo": "처치 이동 속도로 다음 교전 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_blue_01",
+      "name": "길게 뻗는 획",
+      "color": "blue",
+      "trigger": "hit",
+      "source": "event_weapon",
+      "requires": null,
+      "goal": "적중 후 조금 더 먼 거리에서 공격한다.",
+      "situation": "접촉 후 상대와 거리가 벌어질 때",
+      "reason": "적중 후 조금 더 먼 거리에서 공격한다. 접촉 후 상대와 거리가 벌어질 때에 선택할 후보다.",
+      "effect": {
+        "role": "range_cooldown",
+        "kind": "next_attack_reach",
+        "target": "발동 무기의 다음 공격",
+        "description": "다음 공격의 사거리를 20% 늘린다. 피해량·투사체 속도는 바꾸지 않으며 공격 시작 시 소비한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "amount": 0.2
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "방사형 반경을 함께 늘리지 않으며 미지원 공격의 적용은 미정이다.",
+      "combo": "직선 추가 공격과 사거리 연계",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_blue_02",
+      "name": "빨리 마르는 붓",
+      "color": "blue",
+      "trigger": "hit",
+      "source": "event_weapon",
+      "requires": null,
+      "goal": "기본 공격으로 스킬 재사용을 앞당긴다.",
+      "situation": "스킬 쿨타임 동안 몬스터를 공격할 때",
+      "reason": "기본 공격으로 스킬 재사용을 앞당긴다. 스킬 쿨타임 동안 몬스터를 공격할 때에 선택할 후보다.",
+      "effect": {
+        "role": "range_cooldown",
+        "kind": "cooldown_reduce",
+        "target": "발동 무기 스킬",
+        "description": "현재 진행 중인 스킬 쿨타임을 0.3초 줄인다. 남은 시간 아래로만 줄이며 다음 사용에 저장하지 않는다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "seconds": 0.3
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "쿨타임이 없거나 이미 준비되었으면 보상을 저장하지 않는다.",
+      "combo": "추가타 적중으로 재사용 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_blue_03",
+      "name": "넓게 번지는 붓",
+      "color": "blue",
+      "trigger": "hit",
+      "source": "event_weapon",
+      "requires": null,
+      "goal": "적중을 유지해 넓은 영역을 공격한다.",
+      "situation": "범위 공격으로 무리를 상대할 때",
+      "reason": "적중을 유지해 넓은 영역을 공격한다. 범위 공격으로 무리를 상대할 때에 선택할 후보다.",
+      "effect": {
+        "role": "range_cooldown",
+        "kind": "area_radius_buff",
+        "target": "발동 무기의 범위 공격",
+        "description": "3초간 공격 반경을 20% 늘린다. 직선 사거리와 피해량은 바꾸지 않는다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "amount": 0.2,
+          "duration": 3
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "반경이 없는 공격에 적용할 방식은 미정이며 사거리를 대신 올리지 않는다.",
+      "combo": "빨강의 주변 추가 공격과 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_blue_04",
+      "name": "길게 건네는 획",
+      "color": "blue",
+      "trigger": "switch",
+      "source": "outgoing_weapon",
+      "requires": null,
+      "goal": "교대 직후 더 먼 적에게 공격한다.",
+      "situation": "전환 후 B의 사거리가 부족할 때",
+      "reason": "교대 직후 더 먼 적에게 공격한다. 전환 후 B의 사거리가 부족할 때에 선택할 후보다.",
+      "effect": {
+        "role": "range_cooldown",
+        "kind": "next_attack_reach",
+        "target": "전환 후 B무기의 다음 공격",
+        "description": "A에서 효과를 부여해 B 다음 공격의 사거리를 40% 늘린다. 공격 시작 시 소비한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "amount": 0.4
+        },
+        "weaponScope": "incoming_weapon",
+        "crossWeaponException": "예외: 전환 전 A에서 발동해 들어오는 B에 설명된 강화를 적용한다."
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "자동 공격을 시작하면 소비하며 피해량은 늘지 않는다.",
+      "combo": "B의 자동 공격과 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_blue_05",
+      "name": "미리 적셔 둔 붓",
+      "color": "blue",
+      "trigger": "switch",
+      "source": "outgoing_weapon",
+      "requires": null,
+      "goal": "A를 떠나면서 B 스킬을 준비한다.",
+      "situation": "B 스킬이 아직 재사용 대기 중일 때",
+      "reason": "A를 떠나면서 B 스킬을 준비한다. B 스킬이 아직 재사용 대기 중일 때에 선택할 후보다.",
+      "effect": {
+        "role": "range_cooldown",
+        "kind": "cooldown_reduce",
+        "target": "전환할 B무기 스킬",
+        "description": "A에서 B 스킬의 현재 남은 쿨타임을 1초 줄인 뒤 B로 전환한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "seconds": 1
+        },
+        "weaponScope": "incoming_weapon",
+        "crossWeaponException": "예외: 전환 전 A에서 발동해 들어오는 B에 설명된 강화를 적용한다."
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "준비된 스킬에는 추가 충전을 저장하지 않는다.",
+      "combo": "두 무기 스킬을 번갈아 사용",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_blue_06",
+      "name": "넓게 건네는 번짐",
+      "color": "blue",
+      "trigger": "switch",
+      "source": "outgoing_weapon",
+      "requires": null,
+      "goal": "B의 범위 스킬을 넓혀 교대한다.",
+      "situation": "몬스터 무리에게 범위 스킬을 쓸 때",
+      "reason": "B의 범위 스킬을 넓혀 교대한다. 몬스터 무리에게 범위 스킬을 쓸 때에 선택할 후보다.",
+      "effect": {
+        "role": "range_cooldown",
+        "kind": "next_skill_radius",
+        "target": "전환 후 B무기의 다음 스킬",
+        "description": "A에서 효과를 부여해 B의 다음 범위 스킬 반경을 35% 늘린다. B의 스킬 시작 시 소비한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "amount": 0.35
+        },
+        "weaponScope": "incoming_weapon",
+        "crossWeaponException": "예외: 전환 전 A에서 발동해 들어오는 B에 설명된 강화를 적용한다."
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "반경이 없는 스킬은 보상을 받지 않으며 기본 공격에는 소비하지 않는다.",
+      "combo": "B 범위 스킬 준비와 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_blue_07",
+      "name": "두 붓 함께 말리기",
+      "color": "blue",
+      "trigger": "detonate",
+      "source": "event_weapon",
+      "requires": "mark_system_pending",
+      "goal": "격발로 두 무기의 재사용을 앞당긴다.",
+      "situation": "두 스킬이 모두 대기 중일 때",
+      "reason": "격발로 두 무기의 재사용을 앞당긴다. 두 스킬이 모두 대기 중일 때에 선택할 후보다.",
+      "effect": {
+        "role": "range_cooldown",
+        "kind": "both_cooldown_reduce",
+        "target": "두 무기의 스킬",
+        "description": "표식 격발 시 두 무기의 진행 중인 스킬 쿨타임을 각각 0.6초 줄인다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "seconds": 0.6
+        },
+        "weaponScope": "both_weapons",
+        "crossWeaponException": "예외: 두 무기의 남은 스킬 쿨타임에 적용한다."
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "이미 준비된 스킬은 이득이 없고 미래 쿨타임에 저장하지 않는다.",
+      "combo": "표식 격발 후 양쪽 스킬 순환",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_blue_08",
+      "name": "크게 번지는 먹",
+      "color": "blue",
+      "trigger": "detonate",
+      "source": "event_weapon",
+      "requires": "mark_system_pending",
+      "goal": "격발 뒤 넓은 범위로 공격한다.",
+      "situation": "표식 대상 주위의 무리를 이어 상대할 때",
+      "reason": "격발 뒤 넓은 범위로 공격한다. 표식 대상 주위의 무리를 이어 상대할 때에 선택할 후보다.",
+      "effect": {
+        "role": "range_cooldown",
+        "kind": "area_radius_buff",
+        "target": "장착 무기의 범위 공격",
+        "description": "격발 후 4초간 장착 무기의 공격 반경이 35% 증가한다. 피해·직선 사거리는 바꾸지 않는다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "amount": 0.35,
+          "duration": 4
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "격발한 그 타격의 범위를 소급해서 바꾸지 않는다.",
+      "combo": "후속 범위 공격과 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_blue_09",
+      "name": "말끔히 헹군 붓",
+      "color": "blue",
+      "trigger": "kill",
+      "source": "event_weapon",
+      "requires": null,
+      "goal": "처치한 무기의 스킬 재사용을 앞당긴다.",
+      "situation": "작은 몬스터 처치 후 스킬을 다시 쓸 때",
+      "reason": "처치한 무기의 스킬 재사용을 앞당긴다. 작은 몬스터 처치 후 스킬을 다시 쓸 때에 선택할 후보다.",
+      "effect": {
+        "role": "range_cooldown",
+        "kind": "cooldown_reduce",
+        "target": "처치 트리거를 발동한 무기 스킬",
+        "description": "진행 중인 스킬 쿨타임을 0.8초 줄인다. 남은 쿨타임을 초과해 저장하지 않는다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "seconds": 0.8
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "처치가 필요하며 준비된 스킬에는 보상이 없다.",
+      "combo": "빨강 처치 연계 공격과 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_blue_10",
+      "name": "점점 넓어지는 얼룩",
+      "color": "blue",
+      "trigger": "kill",
+      "source": "event_weapon",
+      "requires": null,
+      "goal": "연속 처치로 공격 영역을 넓힌다.",
+      "situation": "작은 몬스터가 계속 등장할 때",
+      "reason": "연속 처치로 공격 영역을 넓힌다. 작은 몬스터가 계속 등장할 때에 선택할 후보다.",
+      "effect": {
+        "role": "range_cooldown",
+        "kind": "stack_area_radius",
+        "target": "장착 무기의 범위 공격",
+        "description": "처치마다 6초간 장착 무기의 공격 반경 5%를 쌓는다. 최대 6중첩이며 재처치 시 유지시간을 갱신한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "amount": 0.05,
+          "duration": 6,
+          "cap": 6
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "처치가 끊기면 중첩이 사라지며 직선 사거리는 늘지 않는다.",
+      "combo": "범위 공격의 연속 처치와 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정"
+      ]
+    },
+    {
+      "id": "ink2_purple_01",
+      "name": "끈적한 먹",
+      "color": "purple",
+      "trigger": "hit",
+      "source": "event_weapon",
+      "requires": null,
+      "goal": "맞힌 적의 이동을 억제한다.",
+      "situation": "움직이는 몬스터와 거리를 조절할 때",
+      "reason": "맞힌 적의 이동을 억제한다. 움직이는 몬스터와 거리를 조절할 때에 선택할 후보다.",
+      "effect": {
+        "role": "crowd_control",
+        "kind": "slow",
+        "target": "적중한 몬스터",
+        "description": "이동 속도를 2초간 20% 낮춘다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "amount": 0.2,
+          "duration": 2
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "이동하지 않는 몬스터에게는 이동 억제의 가치가 작다.",
+      "combo": "노랑 이동 속도와 거리 조절",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정",
+        "제어 저항·보스 적용·반복 CC 제한"
+      ]
+    },
+    {
+      "id": "ink2_purple_02",
+      "name": "밀어내는 붓질",
+      "color": "purple",
+      "trigger": "hit",
+      "source": "event_weapon",
+      "requires": null,
+      "goal": "적중할 때 근접 위협을 떼어 낸다.",
+      "situation": "몬스터가 플레이어에게 접근할 때",
+      "reason": "적중할 때 근접 위협을 떼어 낸다. 몬스터가 플레이어에게 접근할 때에 선택할 후보다.",
+      "effect": {
+        "role": "crowd_control",
+        "kind": "knockback",
+        "target": "적중한 몬스터",
+        "description": "공격 방향으로 몬스터를 0.5unit 밀어낸다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "distance": 0.5
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "대상을 사거리 밖으로 밀 수 있으며 보스 적용은 미정이다.",
+      "combo": "파랑 사거리 증가와 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정",
+        "제어 저항·보스 적용·반복 CC 제한"
+      ]
+    },
+    {
+      "id": "ink2_purple_03",
+      "name": "순간 굳는 먹",
+      "color": "purple",
+      "trigger": "hit",
+      "source": "event_weapon",
+      "requires": null,
+      "goal": "짧은 공격 틈을 만든다.",
+      "situation": "몬스터의 반격이 예상될 때",
+      "reason": "짧은 공격 틈을 만든다. 몬스터의 반격이 예상될 때에 선택할 후보다.",
+      "effect": {
+        "role": "crowd_control",
+        "kind": "stun",
+        "target": "적중한 몬스터",
+        "description": "몬스터의 행동을 0.2초간 기절로 제한한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "duration": 0.2
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "반복 제어 제한·보스 적용·공격 취소 가능 범위는 미정이다.",
+      "combo": "짧은 틈에 다른 무기 공격 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정",
+        "제어 저항·보스 적용·반복 CC 제한"
+      ]
+    },
+    {
+      "id": "ink2_purple_04",
+      "name": "끌어당기는 획",
+      "color": "purple",
+      "trigger": "switch",
+      "source": "outgoing_weapon",
+      "requires": null,
+      "goal": "교대 전에 몬스터를 모은다.",
+      "situation": "B의 범위 공격을 준비했을 때",
+      "reason": "교대 전에 몬스터를 모은다. B의 범위 공격을 준비했을 때에 선택할 후보다.",
+      "effect": {
+        "role": "crowd_control",
+        "kind": "pull",
+        "target": "A 위치 주변 반경 3의 몬스터",
+        "description": "A에서 주변 몬스터를 A의 전환 전 위치 쪽으로 최대 1unit 끌어당긴 후 B로 전환한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "radius": 3,
+          "distance": 1
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "A 주변으로 적을 모으므로 근접 위험이 커질 수 있다.",
+      "combo": "B의 범위 자동 공격과 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정",
+        "제어 저항·보스 적용·반복 CC 제한"
+      ]
+    },
+    {
+      "id": "ink2_purple_05",
+      "name": "겁먹게 하는 얼룩",
+      "color": "purple",
+      "trigger": "switch",
+      "source": "outgoing_weapon",
+      "requires": null,
+      "goal": "교대 전에 주변 적을 흩어 거리를 만든다.",
+      "situation": "포위 압박에서 무기를 바꿀 때",
+      "reason": "교대 전에 주변 적을 흩어 거리를 만든다. 포위 압박에서 무기를 바꿀 때에 선택할 후보다.",
+      "effect": {
+        "role": "crowd_control",
+        "kind": "fear",
+        "target": "A 전방 반경 2의 몬스터",
+        "description": "A에서 대상에게 0.8초 공포를 부여해 A의 전환 전 위치에서 멀어지게 한 뒤 B로 전환한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "radius": 2,
+          "duration": 0.8
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "몬스터가 흩어져 B의 범위 공격 효율이 떨어질 수 있다.",
+      "combo": "노랑의 이탈 이동과 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정",
+        "제어 저항·보스 적용·반복 CC 제한"
+      ]
+    },
+    {
+      "id": "ink2_purple_06",
+      "name": "입을 덮는 먹",
+      "color": "purple",
+      "trigger": "switch",
+      "source": "outgoing_weapon",
+      "requires": null,
+      "goal": "교대 시 몬스터의 스킬 대응을 억제한다.",
+      "situation": "스킬을 쓰는 몬스터와 교전할 때",
+      "reason": "교대 시 몬스터의 스킬 대응을 억제한다. 스킬을 쓰는 몬스터와 교전할 때에 선택할 후보다.",
+      "effect": {
+        "role": "crowd_control",
+        "kind": "silence",
+        "target": "A 전방 반경 3의 몬스터",
+        "description": "A에서 1초간 침묵을 부여한 후 B로 전환한다. 침묵은 몬스터의 스킬 사용을 제한한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "radius": 3,
+          "duration": 1
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "기본 이동·기본 공격까지 멈추지 않으며 몬스터별 스킬 분류는 미정이다.",
+      "combo": "B의 공격 준비와 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정",
+        "제어 저항·보스 적용·반복 CC 제한"
+      ]
+    },
+    {
+      "id": "ink2_purple_07",
+      "name": "발을 붙이는 먹",
+      "color": "purple",
+      "trigger": "detonate",
+      "source": "event_weapon",
+      "requires": "mark_system_pending",
+      "goal": "격발한 적의 위치를 붙잡는다.",
+      "situation": "격발 후 후속 공격을 맞힐 때",
+      "reason": "격발한 적의 위치를 붙잡는다. 격발 후 후속 공격을 맞힐 때에 선택할 후보다.",
+      "effect": {
+        "role": "crowd_control",
+        "kind": "root",
+        "target": "격발된 몬스터",
+        "description": "1초간 속박해 이동을 제한한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "duration": 1
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "공격·스킬 자체를 막지 않으며 보스 적용은 미정이다.",
+      "combo": "후속 강공격·범위 공격과 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정",
+        "제어 저항·보스 적용·반복 CC 제한"
+      ]
+    },
+    {
+      "id": "ink2_purple_08",
+      "name": "무기를 덮는 먹",
+      "color": "purple",
+      "trigger": "detonate",
+      "source": "event_weapon",
+      "requires": "mark_system_pending",
+      "goal": "격발 후 근접 공격의 위험을 낮춘다.",
+      "situation": "기본 공격이 위협적인 몬스터를 상대할 때",
+      "reason": "격발 후 근접 공격의 위험을 낮춘다. 기본 공격이 위협적인 몬스터를 상대할 때에 선택할 후보다.",
+      "effect": {
+        "role": "crowd_control",
+        "kind": "disarm",
+        "target": "격발된 몬스터",
+        "description": "1초간 무장해제를 부여해 몬스터의 기본 공격 사용을 제한한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "duration": 1
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "이동과 스킬을 막지 않으며 기본 공격 분류는 미정이다.",
+      "combo": "격발 후 근접 공격 유지",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정",
+        "제어 저항·보스 적용·반복 CC 제한"
+      ]
+    },
+    {
+      "id": "ink2_purple_09",
+      "name": "빨아들이는 얼룩",
+      "color": "purple",
+      "trigger": "kill",
+      "source": "event_weapon",
+      "requires": null,
+      "goal": "처치 지점을 다음 공격의 중심으로 만든다.",
+      "situation": "무리 가운데의 몬스터를 먼저 처치할 때",
+      "reason": "처치 지점을 다음 공격의 중심으로 만든다. 무리 가운데의 몬스터를 먼저 처치할 때에 선택할 후보다.",
+      "effect": {
+        "role": "crowd_control",
+        "kind": "pull",
+        "target": "처치 지점 반경 3의 다른 몬스터",
+        "description": "처치 지점 쪽으로 주변 몬스터를 최대 1unit 끌어당긴다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "radius": 3,
+          "distance": 1
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "남은 적이 없거나 범위 밖이면 보상이 없다.",
+      "combo": "빨강 처치 추가 공격·파랑 범위 확대",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정",
+        "제어 저항·보스 적용·반복 CC 제한"
+      ]
+    },
+    {
+      "id": "ink2_purple_10",
+      "name": "눈을 가리는 먹",
+      "color": "purple",
+      "trigger": "kill",
+      "source": "event_weapon",
+      "requires": null,
+      "goal": "처치 주변 몬스터의 조준을 흐트러뜨린다.",
+      "situation": "조준 공격을 하는 몬스터 사이에서 처치할 때",
+      "reason": "처치 주변 몬스터의 조준을 흐트러뜨린다. 조준 공격을 하는 몬스터 사이에서 처치할 때에 선택할 후보다.",
+      "effect": {
+        "role": "crowd_control",
+        "kind": "blind",
+        "target": "처치 지점 반경 2의 다른 몬스터",
+        "description": "1.5초간 실명을 부여해 플레이어를 새로 조준하는 행동을 제한한다.",
+        "tuningStatus": "draft_not_approved",
+        "params": {
+          "radius": 2,
+          "duration": 1.5
+        },
+        "weaponScope": "equipped_weapon",
+        "crossWeaponException": null
+      },
+      "cost": "별도 재화·체력 소모는 제안하지 않는다. 발동 준비와 아래 운용상 약점을 대가 후보로 둔다.",
+      "limits": "이미 발사된 공격에는 소급 적용하지 않는다. 조준 행동의 상세 범위는 미정이다.",
+      "combo": "처치 후 이동·교대와 연결",
+      "duplicate": null,
+      "cooldownSeconds": null,
+      "openQuestions": [
+        "수치·지속시간·내부 쿨타임 확정",
+        "동일 파츠 중복과 동일 효과 중첩 판정",
+        "제어 저항·보스 적용·반복 CC 제한"
+      ]
+    }
+  ],
+  "mvp": {
+    "status": "selected_for_mvp_trial",
+    "partIds": [
+      "ink2_red_01",
+      "ink2_red_04",
+      "ink2_red_07",
+      "ink2_red_10",
+      "ink2_yellow_01",
+      "ink2_yellow_04",
+      "ink2_yellow_07",
+      "ink2_yellow_09",
+      "ink2_green_03",
+      "ink2_green_04",
+      "ink2_green_07",
+      "ink2_green_09",
+      "ink2_blue_02",
+      "ink2_blue_04",
+      "ink2_blue_08",
+      "ink2_blue_09",
+      "ink2_purple_01",
+      "ink2_purple_04",
+      "ink2_purple_07",
+      "ink2_purple_09"
+    ],
+    "scope": "색상별 4종, 각 색상에서 적중·스위칭·표식 격발·처치 1종씩 총 20종을 MVP 우선 콘텐츠로 채택한다. 나머지 30종은 후속 후보다.",
+    "tuningStatus": "not_approved",
+    "pendingRules": [
+      "표식 부여·누적·소비",
+      "내부 쿨타임·중첩·연쇄 제한",
+      "CC 저항·보스 적용",
+      "효과 수치·지속시간·범위"
+    ],
+    "implementation": "콘텐츠 선정이며 MVP 전용 드롭·제작·Unity 통합 또는 검증 완료를 뜻하지 않는다."
+  },
+  "equipmentRules": {
+    "status": "design_confirmed_implementation_pending",
+    "paletteRequiredBeforeInk": true,
+    "slotColorMustMatchInk": true,
+    "colorlessSlotAcceptsAllFiveColors": true,
+    "defaultWeaponScope": "equipped_weapon",
+    "crossWeaponExceptionRequiresExplicitTarget": true,
+    "note": "무기에 팔레트를 먼저 장착하고 허용 색상 칸에만 잉크를 장착한다. 기본 효과는 그 무기 귀속이다. 다른 무기 강화는 파츠 설명에 대상 무기와 효과를 명시한다. 무색 칸의 기존 자유색 규칙은 유지한다. 브라우저의 자유 6칸과 공통 버프 제한은 아직 이 규칙으로 이행하지 않았다."
+  }
+}

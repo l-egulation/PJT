@@ -1,0 +1,26 @@
+﻿1Stage 몬스터 4종 · 외곽선 보정 에셋
+
+가시뿌리 / 먹빗자루 / 배수관 포수 / 우물 도르래 수문장
+기본 · 대기 · 걷기 · 공격 · 피격 · 죽음 / 총 289 프레임
+일반 몹: 외곽선 없는 v3 / 엘리트: 잉크색·외곽 튐 보정 v4
+
+Unity 적용
+1. 압축을 풀고 Assets 폴더를 Unity 프로젝트의 기존 Assets 폴더에 병합하세요.
+2. PNG와 .meta를 함께 복사하세요. 기존 경로·GUID를 사용하는 애니메이션은 새 그림으로 갱신됩니다.
+3. 기존 애니메이션이 없는 프로젝트는 motion-manifest.json의 프레임 순서·ms·pivot을 기준으로 클립을 연결하세요.
+
+규격
+PPU 32 / Point 필터 / 무압축 / mipmap 없음 / Full Rect
+팔레트 고정 6색 / 알파 0 또는 255
+128x128을 기본으로 사용하며, 공격·죽음의 확장 캔버스와 피벗은 motion-manifest.json을 따릅니다.
+프레임을 개별 크롭하거나 높이에 맞춰 확대하지 마세요.
+
+구성
+Assets/: Unity용 개별 PNG와 .meta
+SpriteSheets/: 모션별 가로 스프라이트 시트
+SourceLayers/: 분리된 본체·이펙트 원본 레이어
+Palette/: 6색 JSON / HEX / 6x1 PNG
+motion-manifest.json: 크기·PPU·피벗·프레임 박자
+SHA256SUMS.json: 파일 무결성 확인
+
+에셋 이미지와 임포트 설정만 포함합니다. 게임 코드·씬·보스는 포함하지 않습니다.

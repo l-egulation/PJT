@@ -1,0 +1,76 @@
+{
+  "size": [
+    96,
+    64
+  ],
+  "anchor": [
+    48,
+    64
+  ],
+  "patternSeconds": [
+    0.6,
+    0.82,
+    1,
+    1.09,
+    1.22,
+    1.42,
+    1.65
+  ],
+  "damageAt": 1,
+  "damage": 15,
+  "status": "concept-review",
+  "gameIntegration": "not-performed",
+  "palette": [
+    [
+      32,
+      24,
+      41
+    ],
+    [
+      61,
+      41,
+      73
+    ],
+    [
+      99,
+      71,
+      111
+    ],
+    [
+      150,
+      115,
+      145
+    ]
+  ],
+  "smooth": {
+    "frames": 24,
+    "times": [
+      0.6,
+      0.655,
+      0.71,
+      0.765,
+      0.82,
+      0.865,
+      0.91,
+      0.955,
+      1.0,
+      1.0225,
+      1.045,
+      1.0675,
+      1.09,
+      1.1225,
+      1.155,
+      1.1875,
+      1.22,
+      1.27,
+      1.32,
+      1.37,
+      1.42,
+      1.49,
+      1.56,
+      1.62
+    ],
+    "offAt": 1.65,
+    "method": "signed-distance silhouette inbetweens; solid alpha and original four colors; original keyframes preserved"
+  }
+}

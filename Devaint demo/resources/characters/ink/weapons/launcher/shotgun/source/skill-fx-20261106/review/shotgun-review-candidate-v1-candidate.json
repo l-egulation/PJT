@@ -1,0 +1,92 @@
+{
+ "status": "user_approved_look_20261106_not_in_unity",
+ "pellet": {
+  "pivot_px": [
+   18,
+   4
+  ],
+  "seconds": [
+   0.04,
+   0.04
+  ],
+  "rotate": "pellet angle",
+  "visual_rule": "draw on muzzle axis (hit circle y+0.11) and hide until past fire-time muzzle tip; hit circle unchanged"
+ },
+ "pop": {
+  "pivot_px": [
+   6,
+   32
+  ],
+  "seconds": [
+   0.02,
+   0.03,
+   0.035,
+   0.045
+  ],
+  "anchor": "fire-time muzzle (F049 tip ~1.0625,1.109), stays in world; existing black muzzle A also stays in world instead of following"
+ },
+ "dust": {
+  "pivot_px": [
+   32,
+   22
+  ],
+  "seconds": [
+   0.04,
+   0.05,
+   0.06,
+   0.07
+  ],
+  "trigger": "recoil start on ground and recoil landing"
+ },
+ "wind": {
+  "pivot_px": [
+   8,
+   28
+  ],
+  "seconds": [
+   0.05,
+   0.05
+  ],
+  "anchor": "body front x+0.4, y 1.05; gun height left empty; during recoil only"
+ },
+ "hit": {
+  "pivot_px": [
+   16,
+   36
+  ],
+  "seconds": [
+   0.03,
+   0.035,
+   0.04,
+   0.045,
+   0.05
+  ],
+  "trigger": "enemy hit: frames 0-4; terrain hit: frames 2-4 only"
+ },
+ "gun_tip_measured": {
+  "F046": [
+   1.125,
+   0.797
+  ],
+  "F047": [
+   1.3125,
+   0.896
+  ],
+  "F048": [
+   1.0625,
+   1.109
+  ],
+  "F049": [
+   1.0625,
+   1.109
+  ],
+  "F050": [
+   1.1875,
+   0.859
+  ],
+  "F051": [
+   1.125,
+   0.891
+  ]
+ }
+}

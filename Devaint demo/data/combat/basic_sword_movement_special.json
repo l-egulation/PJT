@@ -1,0 +1,49 @@
+{
+  "weapon": "basic_sword",
+  "name": "돌진 찌르기",
+  "target_count": "all_valid_targets_along_path",
+  "fall_immunity": false,
+  "pending": [],
+  "incoming_hit_knockback": "suppressed_during_forced_movement",
+  "special_ink": "movement",
+  "horizontal_speed_units_per_second": 20,
+  "cooldown_start": "actual_thrust_movement_start",
+  "base_cooldown_seconds": 7,
+  "dash_duration_seconds": 0.2,
+  "invulnerability": false,
+  "unity_applied": false,
+  "solid_wall_pass_through": false,
+  "hits_per_target_per_attack": 1,
+  "base_damage": 40,
+  "status": "user_approved_initial_design",
+  "horizontal_distance_units": 4,
+  "windup_seconds": 0.15,
+  "recovery_seconds": 0.25,
+  "total_motion_seconds": 0.6,
+  "horizontal_input_outside_dash": "disabled_during_windup_and_recovery",
+  "vertical_physics_during_windup": "unchanged",
+  "vertical_physics_during_dash": "velocity_zero_gravity_suspended",
+  "vertical_physics_after_dash": "zero_vertical_velocity_then_fall_gravity",
+  "direction_selection": "horizontal_input_at_windup_start_else_facing",
+  "facing_lock": "windup_start",
+  "hitbox": {
+    "size": [
+      1,
+      1
+    ],
+    "right_offset": [
+      1.15625,
+      1
+    ],
+    "active_phase": "dash_only",
+    "sweep_between_updates": true,
+    "solid_occlusion": true,
+    "left_offset": [
+      -1.15625,
+      1
+    ]
+  },
+  "wall_collision_transition": "end_dash_and_hitbox_then_full_recovery_restore_vertical_physics",
+  "additional_control_effect": "none",
+  "applies_basic_hit_stagger": false
+}

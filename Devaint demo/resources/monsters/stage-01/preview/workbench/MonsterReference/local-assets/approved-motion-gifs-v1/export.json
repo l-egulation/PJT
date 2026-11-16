@@ -1,0 +1,155 @@
+{
+  "source": "approved/manifest.json",
+  "sizePolicy": "Per-monster canvas contains widest motion; body aligned across left padding.",
+  "scale": 3,
+  "monsters": [
+    {
+      "id": "01_thorn-root",
+      "name": "가시뿌리",
+      "file": "01_thorn-root-all-motions.gif",
+      "durationMs": 7630,
+      "size": [
+        960,
+        540
+      ],
+      "segments": [
+        {
+          "motion": "idle",
+          "startMs": 0,
+          "repetitions": 2,
+          "durationMs": 3080
+        },
+        {
+          "motion": "walk",
+          "startMs": 3080,
+          "repetitions": 2,
+          "durationMs": 1280
+        },
+        {
+          "motion": "attack",
+          "startMs": 4360,
+          "repetitions": 1,
+          "durationMs": 1020
+        },
+        {
+          "motion": "death",
+          "startMs": 5380,
+          "repetitions": 1,
+          "durationMs": 1600
+        }
+      ],
+      "bytes": 158252
+    },
+    {
+      "id": "02_broom-stalker",
+      "name": "먹빗자루",
+      "file": "02_broom-stalker-all-motions.gif",
+      "durationMs": 8220,
+      "size": [
+        960,
+        540
+      ],
+      "segments": [
+        {
+          "motion": "idle",
+          "startMs": 0,
+          "repetitions": 2,
+          "durationMs": 3080
+        },
+        {
+          "motion": "walk",
+          "startMs": 3080,
+          "repetitions": 2,
+          "durationMs": 1440
+        },
+        {
+          "motion": "attack",
+          "startMs": 4520,
+          "repetitions": 1,
+          "durationMs": 1450
+        },
+        {
+          "motion": "death",
+          "startMs": 5970,
+          "repetitions": 1,
+          "durationMs": 1600
+        }
+      ],
+      "bytes": 153562
+    },
+    {
+      "id": "03_gutter-spitter",
+      "name": "배수관 포수",
+      "file": "03_gutter-spitter-all-motions.gif",
+      "durationMs": 11850,
+      "size": [
+        960,
+        540
+      ],
+      "segments": [
+        {
+          "motion": "idle",
+          "startMs": 0,
+          "repetitions": 2,
+          "durationMs": 3080
+        },
+        {
+          "motion": "walk",
+          "startMs": 3080,
+          "repetitions": 2,
+          "durationMs": 4800
+        },
+        {
+          "motion": "attack",
+          "startMs": 7880,
+          "repetitions": 1,
+          "durationMs": 1720
+        },
+        {
+          "motion": "death",
+          "startMs": 9600,
+          "repetitions": 1,
+          "durationMs": 1600
+        }
+      ],
+      "bytes": 315629
+    },
+    {
+      "id": "04_well-warden",
+      "name": "우물 도르래 수문장",
+      "file": "04_well-warden-all-motions.gif",
+      "durationMs": 14190,
+      "size": [
+        1344,
+        540
+      ],
+      "segments": [
+        {
+          "motion": "idle",
+          "startMs": 0,
+          "repetitions": 2,
+          "durationMs": 4120
+        },
+        {
+          "motion": "walk",
+          "startMs": 4120,
+          "repetitions": 2,
+          "durationMs": 4800
+        },
+        {
+          "motion": "attack",
+          "startMs": 8920,
+          "repetitions": 1,
+          "durationMs": 2830
+        },
+        {
+          "motion": "death",
+          "startMs": 11750,
+          "repetitions": 1,
+          "durationMs": 1790
+        }
+      ],
+      "bytes": 1209461
+    }
+  ]
+}

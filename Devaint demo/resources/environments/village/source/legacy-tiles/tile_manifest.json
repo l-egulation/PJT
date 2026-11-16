@@ -1,0 +1,249 @@
+{
+  "cellSize": 32,
+  "sheetSize": [
+    256,
+    160
+  ],
+  "grid": [
+    8,
+    5
+  ],
+  "deepFill": [
+    37,
+    34,
+    38,
+    255
+  ],
+  "tiles": [
+    {
+      "id": 1,
+      "name": "surface_A",
+      "file": "01_surface_A_32x32.png",
+      "sourceCell": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 2,
+      "name": "surface_B",
+      "file": "02_surface_B_32x32.png",
+      "sourceCell": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "outer_top_right",
+      "file": "03_outer_top_right_32x32.png",
+      "sourceCell": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": 4,
+      "name": "outer_top_left",
+      "file": "04_outer_top_left_32x32.png",
+      "sourceCell": [
+        5,
+        1
+      ]
+    },
+    {
+      "id": 5,
+      "name": "surface_C",
+      "file": "05_surface_C_32x32.png",
+      "sourceCell": [
+        6,
+        1
+      ]
+    },
+    {
+      "id": 6,
+      "name": "surface_D",
+      "file": "06_surface_D_32x32.png",
+      "sourceCell": [
+        7,
+        1
+      ]
+    },
+    {
+      "id": 7,
+      "name": "wall_right",
+      "file": "07_wall_right_32x32.png",
+      "sourceCell": [
+        2,
+        2
+      ]
+    },
+    {
+      "id": 8,
+      "name": "wall_left",
+      "file": "08_wall_left_32x32.png",
+      "sourceCell": [
+        5,
+        2
+      ]
+    },
+    {
+      "id": 9,
+      "name": "air_inner_left",
+      "file": "09_air_inner_left_32x32.png",
+      "sourceCell": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": 10,
+      "name": "air_inner_right",
+      "file": "10_air_inner_right_32x32.png",
+      "sourceCell": [
+        4,
+        2
+      ]
+    },
+    {
+      "id": 11,
+      "name": "inner_floor_left",
+      "file": "11_inner_floor_left_32x32.png",
+      "sourceCell": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 12,
+      "name": "pit_floor_A",
+      "file": "12_pit_floor_A_32x32.png",
+      "sourceCell": [
+        3,
+        3
+      ]
+    },
+    {
+      "id": 13,
+      "name": "pit_floor_B",
+      "file": "13_pit_floor_B_32x32.png",
+      "sourceCell": [
+        4,
+        3
+      ]
+    },
+    {
+      "id": 14,
+      "name": "inner_floor_right",
+      "file": "14_inner_floor_right_32x32.png",
+      "sourceCell": [
+        5,
+        3
+      ]
+    },
+    {
+      "id": 15,
+      "name": "core",
+      "file": "15_core_32x32.png",
+      "sourceCell": [
+        0,
+        2
+      ]
+    }
+  ],
+  "roleIds": {
+    "surface_A": 1,
+    "surface_B": 2,
+    "outer_top_right": 3,
+    "outer_top_left": 4,
+    "surface_C": 5,
+    "surface_D": 6,
+    "wall_right": 7,
+    "wall_left": 8,
+    "air_inner_left": 9,
+    "air_inner_right": 10,
+    "inner_floor_left": 11,
+    "pit_floor_A": 12,
+    "pit_floor_B": 13,
+    "inner_floor_right": 14,
+    "core": 15,
+    "cell_0_0": null,
+    "cell_1_0": null,
+    "cell_2_0": null,
+    "cell_3_0": null,
+    "cell_4_0": null,
+    "cell_5_0": null,
+    "cell_6_0": null,
+    "cell_7_0": null,
+    "cell_3_1": null,
+    "cell_4_1": null,
+    "cell_1_2": 15,
+    "cell_6_2": 15,
+    "cell_7_2": 15,
+    "cell_0_3": 15,
+    "cell_1_3": 15,
+    "cell_6_3": 15,
+    "cell_7_3": 15,
+    "cell_0_4": 15,
+    "cell_1_4": 15,
+    "cell_2_4": 15,
+    "cell_3_4": 15,
+    "cell_4_4": 15,
+    "cell_5_4": 15,
+    "cell_6_4": 15,
+    "cell_7_4": 15
+  },
+  "sourceAssembly": [
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      1,
+      2,
+      3,
+      null,
+      null,
+      4,
+      5,
+      6
+    ],
+    [
+      15,
+      15,
+      7,
+      9,
+      10,
+      8,
+      15,
+      15
+    ],
+    [
+      15,
+      15,
+      11,
+      12,
+      13,
+      14,
+      15,
+      15
+    ],
+    [
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15
+    ]
+  ],
+  "alphaDecorationNote": "air_inner_left/right are transparent corner-overhang cells above the floor; their visible rim belongs to the adjacent solid corner. Collider shape is a separate Unity setup."
+}

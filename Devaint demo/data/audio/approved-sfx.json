@@ -1,0 +1,4453 @@
+{
+  "version": 1,
+  "state": "approved_assets_not_runtime_bound",
+  "delivery": {
+    "sample_rate": 48000,
+    "channels": 1,
+    "format": "PCM16",
+    "peak_limit_dbfs": -16.0
+  },
+  "items": [
+    {
+      "id": "sfx_items_bake",
+      "name": "팔레트 굽기 활성화",
+      "path": "unity/Assets/Deviant/Audio/SFX/Items/sfx_items_bake_01_v01.wav",
+      "sha256": "be4dc4136acb92ee0f96adeaa802cb42fae1843306934981de3ec0ea3dbdcf11",
+      "version_id": "cc4305581d43485886a23aea97629777",
+      "seed": 1196683854,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 31200,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Items",
+        "mode": "oneshot",
+        "length": 0.65,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "blast-items-story-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/equipment/rules.md"
+        ],
+        "status": "planned",
+        "notes": "설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_items_draw",
+      "name": "랜덤 색상 잉크 획득",
+      "path": "unity/Assets/Deviant/Audio/SFX/Items/sfx_items_draw_01_v01.wav",
+      "sha256": "98f243afcbfb19fdff34bdcfed5aff848647c2db34cbf61f6fdd1e5327c57e64",
+      "version_id": "1e3f9ea2e41d49eeacbd583d99dbc19d",
+      "seed": 2298546947,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 14400,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Items",
+        "mode": "oneshot",
+        "length": 0.3,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "blast-items-story-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/equipment/rules.md"
+        ],
+        "status": "planned",
+        "notes": "설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_items_drop_land",
+      "name": "아이템 바닥 착지",
+      "path": "unity/Assets/Deviant/Audio/SFX/Items/sfx_items_drop_land_01_v01.wav",
+      "sha256": "74683c330dbc17b43be66c83b2c660c540293ad7daf292b618d7eb1d669801e4",
+      "version_id": "820ebc1c28da4925900d830ecf770fba",
+      "seed": 766304012,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 8640,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Items",
+        "mode": "oneshot",
+        "length": 0.18,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "blast-items-story-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/equipment/rules.md"
+        ],
+        "status": "current",
+        "notes": " 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_items_equip",
+      "name": "잉크·팔레트 장착",
+      "path": "unity/Assets/Deviant/Audio/SFX/Items/sfx_items_equip_01_v01.wav",
+      "sha256": "65eab3e366bf3cf59f94d6db2c91f4a5cbbd85818a73b7c4a2cdf85b1d4ef6d2",
+      "version_id": "9ec6e292fbdf4ac394a1f6a1f2391af4",
+      "seed": 2964361656,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 10560,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Items",
+        "mode": "oneshot",
+        "length": 0.22,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "blast-items-story-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/equipment/rules.md"
+        ],
+        "status": "current",
+        "notes": " 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_items_exchange",
+      "name": "가방 수동 교환",
+      "path": "unity/Assets/Deviant/Audio/SFX/Items/sfx_items_exchange_01_v01.wav",
+      "sha256": "567e1531da554bad6f90bbe5ab74d0aacaec6c390f513eef9af19d9cb7b0bf56",
+      "version_id": "5e93223f825648afba91be19635c61ed",
+      "seed": 2266435102,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 11520,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Items",
+        "mode": "oneshot",
+        "length": 0.24,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "blast-items-story-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/equipment/rules.md"
+        ],
+        "status": "current",
+        "notes": " 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_items_gold_pay",
+      "name": "골드 결제",
+      "path": "unity/Assets/Deviant/Audio/SFX/Items/sfx_items_gold_pay_01_v01.wav",
+      "sha256": "fbefbd38c026300e44216a1f87a5fa8fcc355ade435fc809e9e865dd31d0d51f",
+      "version_id": "f3f6f4ed24d64568afd5e167e6feb521",
+      "seed": 3155828218,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 8640,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Items",
+        "mode": "oneshot",
+        "length": 0.18,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "blast-items-story-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/equipment/rules.md"
+        ],
+        "status": "planned",
+        "notes": "설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_items_ink_pickup",
+      "name": "잉크 획득",
+      "path": "unity/Assets/Deviant/Audio/SFX/Items/sfx_items_ink_pickup_01_v01.wav",
+      "sha256": "967dd21dcbdc8f92d4ae8a0e2e7742309bde8888a1e6bb471d10da21565922f2",
+      "version_id": "456ec45ae3bf4d08b6c4262a013cd585",
+      "seed": 3878301770,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 12000,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Items",
+        "mode": "oneshot",
+        "length": 0.25,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "movement-ui-v1",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/equipment/rules.md"
+        ],
+        "status": "current",
+        "notes": " 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_items_palette_break",
+      "name": "팔레트 교체 파괴",
+      "path": "unity/Assets/Deviant/Audio/SFX/Items/sfx_items_palette_break_01_v01.wav",
+      "sha256": "66edd2ca4b80dc725874e2bf5c9ce8628c651eb6f5bb9cec3c227e707a11d184",
+      "version_id": "84e217dfa49b49769b6ee72c5465a811",
+      "seed": 4105080941,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 33600,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Items",
+        "mode": "oneshot",
+        "length": 0.7,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "palette-break-fracture-v2",
+        "extraction": "event",
+        "events": [],
+        "trigger": "팔레트 구성 교체가 확정되어 기존 팔레트가 실제로 파괴될 때 한 번",
+        "evidence": [
+          "docs/design/equipment/rules.md"
+        ],
+        "status": "planned",
+        "notes": "사용자 요청: 더 분명한 파괴·부서짐. 단단한 균열과 연속된 작은 파열, 조각이 부딪혀 떨어지는 꼬리를 보존. 실제 제작 확정 사건에 사용하며 취소/미정 실패 규칙을 추가하지 않음.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_items_stamp",
+      "name": "무기·스킬 스탬프 적용",
+      "path": "unity/Assets/Deviant/Audio/SFX/Items/sfx_items_stamp_01_v01.wav",
+      "sha256": "1a11dd864f6cab04774fe4482e060539e61ef643fe24bc9126b9186499ecd00c",
+      "version_id": "6065300c36534a5289f98ae86710485f",
+      "seed": 3593872958,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 11040,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Items",
+        "mode": "oneshot",
+        "length": 0.23,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "blast-items-story-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/equipment/rules.md"
+        ],
+        "status": "planned",
+        "notes": "설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_items_unequip",
+      "name": "잉크 해제",
+      "path": "unity/Assets/Deviant/Audio/SFX/Items/sfx_items_unequip_01_v01.wav",
+      "sha256": "9e84f60143cbc7f7f0fe15f38abcb115cdfaf376cd384bdbbb2fd7ef5dab4d3d",
+      "version_id": "206d5f04b5f144fdae0569bea833ef87",
+      "seed": 772482936,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 8640,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Items",
+        "mode": "oneshot",
+        "length": 0.18,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "blast-items-story-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/equipment/rules.md"
+        ],
+        "status": "current",
+        "notes": " 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_items_upgrade",
+      "name": "정비소 강화 성공",
+      "path": "unity/Assets/Deviant/Audio/SFX/Items/sfx_items_upgrade_01_v01.wav",
+      "sha256": "bf0b56ea9d5063b131ec7afab3323fa0724cff80c548bfcc1317a9039f50f1a9",
+      "version_id": "ab90ecf03b1b44cb93f7aabe2700304a",
+      "seed": 455307193,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 19200,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Items",
+        "mode": "oneshot",
+        "length": 0.4,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "blast-items-story-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/equipment/rules.md"
+        ],
+        "status": "planned",
+        "notes": "설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_monster_01_field_mouse_attack",
+      "name": "곡식 들쥐 · 공격",
+      "path": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_01_field_mouse_attack_01_v01.wav",
+      "sha256": "2246ec580ea6ae4a2ffdf737a1e8fe9cd8d50b30963b6fa042b8d78c67c45a48",
+      "version_id": "6eca7fea4b2e4b95ade738cad02784f8",
+      "seed": 2580749032,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 14400,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Monsters",
+        "mode": "oneshot",
+        "length": 0.3,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "monsters-v1",
+        "events": [],
+        "trigger": "공격 활성 시작 350ms / 실제 공격 이벤트",
+        "evidence": [
+          "data/monsters/chapter1_approved.json"
+        ],
+        "status": "current",
+        "notes": "몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서 재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_monster_01_field_mouse_death",
+      "name": "곡식 들쥐 · 사망",
+      "path": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_01_field_mouse_death_01_v01.wav",
+      "sha256": "daef2bae41de8dfcbb4e76f218b4739029eb867197121ea54de8ba94ef81841a",
+      "version_id": "1d8f37b4af9147a9886555567998bca7",
+      "seed": 3526618892,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 26400,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Monsters",
+        "mode": "oneshot",
+        "length": 0.55,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "monsters-v1",
+        "events": [],
+        "trigger": "실제 사망 이벤트",
+        "evidence": [
+          "data/monsters/chapter1_approved.json"
+        ],
+        "status": "current",
+        "notes": "몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서 재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_monster_01_field_mouse_hurt",
+      "name": "곡식 들쥐 · 피격",
+      "path": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_01_field_mouse_hurt_01_v01.wav",
+      "sha256": "25ef3fa0a2f67442dd4602d786c3cc99ab9a7597be4a32c19faaf3659a1256f7",
+      "version_id": "40a14bc8c0854b8a92ec37ea1de20f07",
+      "seed": 966737205,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 10560,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Monsters",
+        "mode": "oneshot",
+        "length": 0.22,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "monsters-v1",
+        "events": [],
+        "trigger": "실제 피격 이벤트",
+        "evidence": [
+          "data/monsters/chapter1_approved.json"
+        ],
+        "status": "current",
+        "notes": "몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서 재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_monster_02_mole_attack",
+      "name": "밭 두더지 · 공격",
+      "path": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_02_mole_attack_01_v01.wav",
+      "sha256": "4d202a7cdd4a101c374120e8d0e1ef216cd547c967706553eed8d5b28fa02061",
+      "version_id": "3051a51aa8cd4e98b58a0973b8fdae8e",
+      "seed": 4191526420,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 14400,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Monsters",
+        "mode": "oneshot",
+        "length": 0.3,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "monsters-v1",
+        "events": [],
+        "trigger": "공격 활성 시작 550ms / 실제 공격 이벤트",
+        "evidence": [
+          "data/monsters/chapter1_approved.json"
+        ],
+        "status": "current",
+        "notes": "몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서 재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_monster_02_mole_death",
+      "name": "밭 두더지 · 사망",
+      "path": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_02_mole_death_01_v01.wav",
+      "sha256": "d3c109375b2254c72f35ef7fa9a834d9b649f6ab47e7a04a786ca304aac25b50",
+      "version_id": "b99a9e6358164b439c5804b854a3a23c",
+      "seed": 2391808382,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 26400,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Monsters",
+        "mode": "oneshot",
+        "length": 0.55,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "monsters-v1",
+        "events": [],
+        "trigger": "실제 사망 이벤트",
+        "evidence": [
+          "data/monsters/chapter1_approved.json"
+        ],
+        "status": "current",
+        "notes": "몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서 재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_monster_02_mole_hurt",
+      "name": "밭 두더지 · 피격",
+      "path": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_02_mole_hurt_01_v01.wav",
+      "sha256": "cd76ddf8ef50b774033dc0a2b379261b6235eb2dcf8b089442a19365733bad06",
+      "version_id": "4ba751b73e7a43e58b15a5fbe47c9b71",
+      "seed": 4188903466,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 10560,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Monsters",
+        "mode": "oneshot",
+        "length": 0.22,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "monsters-v1",
+        "events": [],
+        "trigger": "실제 피격 이벤트",
+        "evidence": [
+          "data/monsters/chapter1_approved.json"
+        ],
+        "status": "current",
+        "notes": "몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서 재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_monster_05_boar_attack",
+      "name": "산비탈 멧돼지 · 공격",
+      "path": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_05_boar_attack_01_v01.wav",
+      "sha256": "29888a34fb876c3f451387e32d8846970d798e2032f04a42fb5ab189f3d173a0",
+      "version_id": "b15bd90da19a48189640dcfb5491054f",
+      "seed": 4113794385,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 14400,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Monsters",
+        "mode": "oneshot",
+        "length": 0.3,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "monsters-v1",
+        "events": [],
+        "trigger": "공격 활성 시작 650ms / 실제 공격 이벤트",
+        "evidence": [
+          "data/monsters/chapter1_approved.json"
+        ],
+        "status": "current",
+        "notes": "몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서 재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_monster_05_boar_death",
+      "name": "산비탈 멧돼지 · 사망",
+      "path": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_05_boar_death_01_v01.wav",
+      "sha256": "804304c07fda51de5b8ba472cb2daac80578451e863fac062400056aced26afb",
+      "version_id": "b33226c955104270a209a92457848896",
+      "seed": 4184111358,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 26400,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Monsters",
+        "mode": "oneshot",
+        "length": 0.55,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "monsters-v1",
+        "events": [],
+        "trigger": "실제 사망 이벤트",
+        "evidence": [
+          "data/monsters/chapter1_approved.json"
+        ],
+        "status": "current",
+        "notes": "몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서 재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_monster_05_boar_hurt",
+      "name": "산비탈 멧돼지 · 피격",
+      "path": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_05_boar_hurt_01_v01.wav",
+      "sha256": "0a4dcb161ec7c0e8ca051d6e16ec117f96eb1a71a4b717fbaa0a4c6dc0580c8d",
+      "version_id": "bc0a89ced9d2467b929653f49943c630",
+      "seed": 1257284061,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 10560,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Monsters",
+        "mode": "oneshot",
+        "length": 0.22,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "monsters-v1",
+        "events": [],
+        "trigger": "실제 피격 이벤트",
+        "evidence": [
+          "data/monsters/chapter1_approved.json"
+        ],
+        "status": "current",
+        "notes": "몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서 재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_monster_07_scarecrow_attack",
+      "name": "밭 허수아비 · 공격",
+      "path": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_07_scarecrow_attack_01_v01.wav",
+      "sha256": "b60955985fc6aa61ad946a316c51baded6e4c2437aef9b1ef7fbf186f37e5aad",
+      "version_id": "62eee36a764549a182f7746370378286",
+      "seed": 3796587227,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 14400,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Monsters",
+        "mode": "oneshot",
+        "length": 0.3,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "monsters-v1",
+        "events": [],
+        "trigger": "공격 활성 시작 450ms / 실제 공격 이벤트",
+        "evidence": [
+          "data/monsters/chapter1_approved.json"
+        ],
+        "status": "current",
+        "notes": "몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서 재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_monster_07_scarecrow_death",
+      "name": "밭 허수아비 · 사망",
+      "path": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_07_scarecrow_death_01_v01.wav",
+      "sha256": "9512d6a0337922d2856716cde861f00c4101cb81519ec67d2718d75c80776cd4",
+      "version_id": "b68863093be74fa490a3f54038edd767",
+      "seed": 446812937,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 26400,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Monsters",
+        "mode": "oneshot",
+        "length": 0.55,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "monsters-v1",
+        "events": [],
+        "trigger": "실제 사망 이벤트",
+        "evidence": [
+          "data/monsters/chapter1_approved.json"
+        ],
+        "status": "current",
+        "notes": "몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서 재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_monster_07_scarecrow_hurt",
+      "name": "밭 허수아비 · 피격",
+      "path": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_07_scarecrow_hurt_01_v01.wav",
+      "sha256": "29814d5cc44a122626c7d3b0884a7ed2e098a8dadffd5dbc8caaed08eabc292c",
+      "version_id": "440c096b2d064663a42edefbffe43d1e",
+      "seed": 828561621,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 10560,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Monsters",
+        "mode": "oneshot",
+        "length": 0.22,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "monsters-v1",
+        "events": [],
+        "trigger": "실제 피격 이벤트",
+        "evidence": [
+          "data/monsters/chapter1_approved.json"
+        ],
+        "status": "current",
+        "notes": "몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서 재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_monster_08_hay_bale_attack",
+      "name": "굴러다니는 짚단 · 공격",
+      "path": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_08_hay_bale_attack_01_v01.wav",
+      "sha256": "06250cfe439f986fdc1104af23fd0fcb884510b9bd100972620c4917750eca58",
+      "version_id": "5ed615e817fd4cdf8cdae448370d5d3b",
+      "seed": 3376161089,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 14400,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Monsters",
+        "mode": "oneshot",
+        "length": 0.3,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "monsters-v1",
+        "events": [],
+        "trigger": "공격 활성 시작 1350ms / 실제 공격 이벤트",
+        "evidence": [
+          "data/monsters/chapter1_approved.json"
+        ],
+        "status": "current",
+        "notes": "몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서 재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_monster_08_hay_bale_death",
+      "name": "굴러다니는 짚단 · 사망",
+      "path": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_08_hay_bale_death_01_v01.wav",
+      "sha256": "74f58b48a66c6300f2644187c4d8ba59328164cac5ab9cca06e6ce8cc5933d47",
+      "version_id": "ec61f61965a5417dbe6043a8f0e079b8",
+      "seed": 3040331038,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 26400,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Monsters",
+        "mode": "oneshot",
+        "length": 0.55,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "monsters-v1",
+        "events": [],
+        "trigger": "실제 사망 이벤트",
+        "evidence": [
+          "data/monsters/chapter1_approved.json"
+        ],
+        "status": "current",
+        "notes": "몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서 재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_monster_08_hay_bale_hurt",
+      "name": "굴러다니는 짚단 · 피격",
+      "path": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_08_hay_bale_hurt_01_v01.wav",
+      "sha256": "4ac93c0079f9f9360b1522d220d33ba7bc26cfcfbde4f806841b92b50bb292ac",
+      "version_id": "be6f5d8de7d548a29fa7537777b37b71",
+      "seed": 1840534508,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 10560,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Monsters",
+        "mode": "oneshot",
+        "length": 0.22,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "monsters-v1",
+        "events": [],
+        "trigger": "실제 피격 이벤트",
+        "evidence": [
+          "data/monsters/chapter1_approved.json"
+        ],
+        "status": "current",
+        "notes": "몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서 재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_monster_10_water_bucket_attack",
+      "name": "우물 두레박 · 공격",
+      "path": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_10_water_bucket_attack_01_v01.wav",
+      "sha256": "15f8634d88d5d63b645a029e28955c69b963c585dbbcec39437b0b69a06d7ab3",
+      "version_id": "1645491229d04b1fabef1d33e8e8f25a",
+      "seed": 2633954961,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 14400,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Monsters",
+        "mode": "oneshot",
+        "length": 0.3,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "monsters-v1",
+        "events": [],
+        "trigger": "공격 활성 시작 700ms / 실제 공격 이벤트",
+        "evidence": [
+          "data/monsters/chapter1_approved.json"
+        ],
+        "status": "current",
+        "notes": "몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서 재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_monster_10_water_bucket_death",
+      "name": "우물 두레박 · 사망",
+      "path": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_10_water_bucket_death_01_v01.wav",
+      "sha256": "7e1379aa63684ef54a268fbae82315d9b80a712dea3e68a7e0d93f9fc7ab0940",
+      "version_id": "05762d87ce854630a9e3bd9489c2ba1d",
+      "seed": 1887534196,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 26400,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Monsters",
+        "mode": "oneshot",
+        "length": 0.55,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "monsters-v1",
+        "events": [],
+        "trigger": "실제 사망 이벤트",
+        "evidence": [
+          "data/monsters/chapter1_approved.json"
+        ],
+        "status": "current",
+        "notes": "몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서 재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_monster_10_water_bucket_hurt",
+      "name": "우물 두레박 · 피격",
+      "path": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_10_water_bucket_hurt_01_v01.wav",
+      "sha256": "3e07bcda2f55df69dfe4a332e10dfad869a60b7cc6583483ccb3bb3659e0570c",
+      "version_id": "0e64aaf0a3854db2bfaa761db26f0d14",
+      "seed": 219638621,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 10560,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Monsters",
+        "mode": "oneshot",
+        "length": 0.22,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "monsters-v1",
+        "events": [],
+        "trigger": "실제 피격 이벤트",
+        "evidence": [
+          "data/monsters/chapter1_approved.json"
+        ],
+        "status": "current",
+        "notes": "몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서 재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_player_dash",
+      "name": "대시",
+      "path": "unity/Assets/Deviant/Audio/SFX/Player/sfx_player_dash_01_v01.wav",
+      "sha256": "158dc4f7f24616dd71e56ef459ecc04a5ed209f3c1551c826d60507c4b109f4c",
+      "version_id": "53b51629f3ae49f5bb1dc52353aa8589",
+      "seed": 545861431,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 9600,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Player",
+        "mode": "oneshot",
+        "length": 0.2,
+        "unit_length": 0.16,
+        "pre_peak": 0.03,
+        "rms_db": -28.0,
+        "revision": "dash-agile-friction-v2",
+        "events": [],
+        "trigger": "해당 실제 게임 이벤트",
+        "evidence": [
+          "docs/design/combat/rules.md"
+        ],
+        "status": "current",
+        "notes": " 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관. 사용자 요청: 짧고 날렵한 스스슥 질감. 무거운 저음과 충격을 제외하고 얇은 공기·옷감 마찰 중심.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_player_death",
+      "name": "잉크 몸 사망",
+      "path": "unity/Assets/Deviant/Audio/SFX/Player/sfx_player_death_01_v01.wav",
+      "sha256": "57c0a4380503ecf291452cddcc519b8f515de6eab14426a1e341d2e54e418764",
+      "version_id": "1589d6443c3a4f9fab2e0544d7510387",
+      "seed": 505521240,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 28800,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Player",
+        "mode": "oneshot",
+        "length": 0.6,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "combat-related-v1",
+        "events": [],
+        "trigger": "해당 실제 게임 이벤트",
+        "evidence": [
+          "docs/design/combat/rules.md"
+        ],
+        "status": "current",
+        "notes": " 전투 관련 후속 후보. 실제 사건에서 재생하는 한 번의 소리. 원본 최소 2초·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_player_double_jump",
+      "name": "공중 두 번째 점프",
+      "path": "unity/Assets/Deviant/Audio/SFX/Player/sfx_player_double_jump_01_v01.wav",
+      "sha256": "6e848e60f7a2432c5f59c08495b5196cfd1abb77430d392c28de95c4087fbf8b",
+      "version_id": "e9c4a03891684fe6b612112cdb53f5e7",
+      "seed": 3425131199,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 10560,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Player",
+        "mode": "oneshot",
+        "length": 0.22,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "movement-ui-v1",
+        "events": [],
+        "trigger": "해당 실제 게임 이벤트",
+        "evidence": [
+          "docs/design/combat/rules.md"
+        ],
+        "status": "current",
+        "notes": " 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_player_fall_return",
+      "name": "낙사 복귀",
+      "path": "unity/Assets/Deviant/Audio/SFX/Player/sfx_player_fall_return_01_v01.wav",
+      "sha256": "67e3de56df2366386ce7869ffc12c581df3568885885e9584d5f6f19c9b366d5",
+      "version_id": "e141a792b4f84456b0b4dbc099f2113b",
+      "seed": 3089737802,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 21600,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Player",
+        "mode": "oneshot",
+        "length": 0.45,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "movement-ui-v1",
+        "events": [],
+        "trigger": "해당 실제 게임 이벤트",
+        "evidence": [
+          "docs/design/combat/rules.md"
+        ],
+        "status": "current",
+        "notes": " 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_player_hurt",
+      "name": "플레이어 피격",
+      "path": "unity/Assets/Deviant/Audio/SFX/Player/sfx_player_hurt_01_v01.wav",
+      "sha256": "55bcbb067c885cac852f6819bfd5fc069ac5e432b915d91c31f7908bba7b6f48",
+      "version_id": "da1e06be410a434ea68d803e13f8efa7",
+      "seed": 1773160539,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 11520,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Player",
+        "mode": "oneshot",
+        "length": 0.24,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "combat-related-v1",
+        "events": [],
+        "trigger": "해당 실제 게임 이벤트",
+        "evidence": [
+          "docs/design/combat/rules.md"
+        ],
+        "status": "current",
+        "notes": " 전투 관련 후속 후보. 실제 사건에서 재생하는 한 번의 소리. 원본 최소 2초·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_player_jump",
+      "name": "첫 점프",
+      "path": "unity/Assets/Deviant/Audio/SFX/Player/sfx_player_jump_01_v01.wav",
+      "sha256": "0d6817706372a94c2a50af19ce55b3898163f5c43760061be913941f315f22d8",
+      "version_id": "7e223ced211348b5ac7fc26e03690f6c",
+      "seed": 2503221754,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 8640,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Player",
+        "mode": "oneshot",
+        "length": 0.18,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "movement-ui-v1",
+        "events": [],
+        "trigger": "해당 실제 게임 이벤트",
+        "evidence": [
+          "docs/design/combat/rules.md"
+        ],
+        "status": "current",
+        "notes": " 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_player_land",
+      "name": "착지",
+      "path": "unity/Assets/Deviant/Audio/SFX/Player/sfx_player_land_01_v01.wav",
+      "sha256": "98b98d6655a8658d77cb6a3ae529b25b67d6b500667ebe7501839fcdae7ffa3a",
+      "version_id": "49d4ea2424994fcb994a29102c4e377f",
+      "seed": 246294467,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 9600,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Player",
+        "mode": "oneshot",
+        "length": 0.2,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "movement-ui-v1",
+        "events": [],
+        "trigger": "해당 실제 게임 이벤트",
+        "evidence": [
+          "docs/design/combat/rules.md"
+        ],
+        "status": "current",
+        "notes": " 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_player_step_dirt",
+      "name": "발걸음 · 흙 · 한 발",
+      "path": "unity/Assets/Deviant/Audio/SFX/Player/sfx_player_step_dirt_01_v01.wav",
+      "sha256": "2245b157d5eaed736c59b886a3d0ef687d0a62d9c5a97654108ff3c006b72f75",
+      "version_id": "b8582041ebde4cabbf643b568b9b9b50",
+      "seed": 3546546657,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 5760,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Player",
+        "mode": "oneshot",
+        "length": 0.12,
+        "unit_length": 0.16,
+        "pre_peak": 0.025,
+        "rms_db": -28.0,
+        "revision": "movement-ui-v1",
+        "events": [],
+        "trigger": "grounded && run 프레임 3/6 진입: 120ms/305ms, 매 360ms 반복",
+        "evidence": [
+          "unity/Assets/Deviant/Combat/Resources/CharacterV2/AnimationCatalog.json; resources/authoring/workbench/source/WeaponReference/확정11종_20261021/manifest.json"
+        ],
+        "status": "current",
+        "notes": "좌우 별도 긴 루프 불필요. 같은 모노 클립을 두 접촉에 재사용. 실제 표현 Elapsed와 형태/상태 리셋을 함께 따름. 정지·공중·대시·공격·사망 시 중단. 접촉 시각에서 JSON foot_peak_offset_samples만큼 앞서 재생. 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.",
+        "foot_contacts": [
+          {
+            "time": 0.12,
+            "gain": 1.0
+          },
+          {
+            "time": 0.305,
+            "gain": 0.96
+          }
+        ],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": 136,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_player_step_grass",
+      "name": "발걸음 · 풀·잔디 · 한 발",
+      "path": "unity/Assets/Deviant/Audio/SFX/Player/sfx_player_step_grass_01_v01.wav",
+      "sha256": "f20ed8bb9c72a9567a1a7f54adbd7a40d67557efa15dd0ea338a38d642135749",
+      "version_id": "a13af825c3c4443e9a76c49f183269d0",
+      "seed": 896966230,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 5760,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Player",
+        "mode": "oneshot",
+        "length": 0.12,
+        "unit_length": 0.16,
+        "pre_peak": 0.025,
+        "rms_db": -28.0,
+        "revision": "movement-ui-v1",
+        "events": [],
+        "trigger": "grounded && run 프레임 3/6 진입: 120ms/305ms, 매 360ms 반복",
+        "evidence": [
+          "unity/Assets/Deviant/Combat/Resources/CharacterV2/AnimationCatalog.json; resources/authoring/workbench/source/WeaponReference/확정11종_20261021/manifest.json"
+        ],
+        "status": "current",
+        "notes": "좌우 별도 긴 루프 불필요. 같은 모노 클립을 두 접촉에 재사용. 실제 표현 Elapsed와 형태/상태 리셋을 함께 따름. 정지·공중·대시·공격·사망 시 중단. 접촉 시각에서 JSON foot_peak_offset_samples만큼 앞서 재생. 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.",
+        "foot_contacts": [
+          {
+            "time": 0.12,
+            "gain": 1.0
+          },
+          {
+            "time": 0.305,
+            "gain": 0.96
+          }
+        ],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": 1200,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_player_step_stone",
+      "name": "발걸음 · 돌·석재 · 한 발",
+      "path": "unity/Assets/Deviant/Audio/SFX/Player/sfx_player_step_stone_01_v01.wav",
+      "sha256": "f24a3c8c9541b80f5e3d72f150507049378353db3512d8a4b6173fe0033f8a3c",
+      "version_id": "e863d8d20cc644358d70b13766a609c2",
+      "seed": 1145480844,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 5760,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Player",
+        "mode": "oneshot",
+        "length": 0.12,
+        "unit_length": 0.16,
+        "pre_peak": 0.025,
+        "rms_db": -28.0,
+        "revision": "movement-ui-v1",
+        "events": [],
+        "trigger": "grounded && run 프레임 3/6 진입: 120ms/305ms, 매 360ms 반복",
+        "evidence": [
+          "unity/Assets/Deviant/Combat/Resources/CharacterV2/AnimationCatalog.json; resources/authoring/workbench/source/WeaponReference/확정11종_20261021/manifest.json"
+        ],
+        "status": "current",
+        "notes": "좌우 별도 긴 루프 불필요. 같은 모노 클립을 두 접촉에 재사용. 실제 표현 Elapsed와 형태/상태 리셋을 함께 따름. 정지·공중·대시·공격·사망 시 중단. 접촉 시각에서 JSON foot_peak_offset_samples만큼 앞서 재생. 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.",
+        "foot_contacts": [
+          {
+            "time": 0.12,
+            "gain": 1.0
+          },
+          {
+            "time": 0.305,
+            "gain": 0.96
+          }
+        ],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": 168,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_player_step_wood",
+      "name": "발걸음 · 목재 · 한 발",
+      "path": "unity/Assets/Deviant/Audio/SFX/Player/sfx_player_step_wood_01_v01.wav",
+      "sha256": "fe4b44c43fd53226b7bc30a7e5c30a188d85d2149e3968ebf31a4036c198ea08",
+      "version_id": "53e7648b6df94cbb97adf1de57dc74ad",
+      "seed": 4171732095,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 5760,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Player",
+        "mode": "oneshot",
+        "length": 0.12,
+        "unit_length": 0.16,
+        "pre_peak": 0.025,
+        "rms_db": -28.0,
+        "revision": "movement-ui-v1",
+        "events": [],
+        "trigger": "grounded && run 프레임 3/6 진입: 120ms/305ms, 매 360ms 반복",
+        "evidence": [
+          "unity/Assets/Deviant/Combat/Resources/CharacterV2/AnimationCatalog.json; resources/authoring/workbench/source/WeaponReference/확정11종_20261021/manifest.json"
+        ],
+        "status": "current",
+        "notes": "좌우 별도 긴 루프 불필요. 같은 모노 클립을 두 접촉에 재사용. 실제 표현 Elapsed와 형태/상태 리셋을 함께 따름. 정지·공중·대시·공격·사망 시 중단. 접촉 시각에서 JSON foot_peak_offset_samples만큼 앞서 재생. 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.",
+        "foot_contacts": [
+          {
+            "time": 0.12,
+            "gain": 1.0
+          },
+          {
+            "time": 0.305,
+            "gain": 0.96
+          }
+        ],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": 197,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_player_swap",
+      "name": "무기 교체",
+      "path": "unity/Assets/Deviant/Audio/SFX/Player/sfx_player_swap_01_v01.wav",
+      "sha256": "8e0db0f530415ea4f5bbedd7ea2ab14ca5aeb1e52fea9626508b7e2358b5cbb9",
+      "version_id": "bfe2237b1ffd4277bab97dfcced9bab7",
+      "seed": 1936836949,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 10560,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Player",
+        "mode": "oneshot",
+        "length": 0.22,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "combat-related-v1",
+        "events": [],
+        "trigger": "해당 실제 게임 이벤트",
+        "evidence": [
+          "docs/design/combat/rules.md"
+        ],
+        "status": "current",
+        "notes": " 전투 관련 후속 후보. 실제 사건에서 재생하는 한 번의 소리. 원본 최소 2초·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_story_collapse",
+      "name": "쓰러짐",
+      "path": "unity/Assets/Deviant/Audio/SFX/Story/sfx_story_collapse_01_v01.wav",
+      "sha256": "c80b272c4e97f0535ee447a7dfe5bdb9085edce6345beea17f1a3ec4913e9515",
+      "version_id": "3f929b7a69fc4be3ace7f9c7535b5e71",
+      "seed": 1765768820,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 24000,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Story",
+        "mode": "oneshot",
+        "length": 0.5,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "blast-items-story-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/story/opening/opening.md"
+        ],
+        "status": "planned",
+        "notes": "설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_story_door",
+      "name": "농가·보관소 문",
+      "path": "unity/Assets/Deviant/Audio/SFX/Story/sfx_story_door_01_v01.wav",
+      "sha256": "e8df19441480fcdde5b8b0b5cdb7ddd6045ddd8a687d17a7154e35d07afc3176",
+      "version_id": "a8005a88e4a34c828cb17814b26ecc2b",
+      "seed": 4060236619,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 28800,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Story",
+        "mode": "oneshot",
+        "length": 0.6,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "blast-items-story-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/story/opening/opening.md"
+        ],
+        "status": "planned",
+        "notes": "설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_story_ink_awaken",
+      "name": "첫 잉크 몸 각성",
+      "path": "unity/Assets/Deviant/Audio/SFX/Story/sfx_story_ink_awaken_01_v01.wav",
+      "sha256": "c397f59946be90ce4f12484c9d8addcc1ea507bcf8d2d794d9ec76d9b74beb34",
+      "version_id": "80fa017f5b984e299565eedbc2660d09",
+      "seed": 214890724,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 43200,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Story",
+        "mode": "oneshot",
+        "length": 0.9,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "blast-items-story-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/story/opening/opening.md"
+        ],
+        "status": "planned",
+        "notes": "설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_story_ink_sacrifice",
+      "name": "조력자 잉크 희생",
+      "path": "unity/Assets/Deviant/Audio/SFX/Story/sfx_story_ink_sacrifice_01_v01.wav",
+      "sha256": "00945725be4a245188e4275b291802b169dc5d44418939367701de3e81e9199a",
+      "version_id": "00670a6fac404c10af2abd6c91e29a37",
+      "seed": 360701497,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 57600,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Story",
+        "mode": "oneshot",
+        "length": 1.2,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "blast-items-story-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/story/opening/opening.md"
+        ],
+        "status": "planned",
+        "notes": "설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_story_page_turn",
+      "name": "대서적·작은 책 페이지",
+      "path": "unity/Assets/Deviant/Audio/SFX/Story/sfx_story_page_turn_01_v01.wav",
+      "sha256": "3a8c33998d2d5c5b9399f7be431fc4e479aa0ca2b7f12e74759b6eceb3367e9e",
+      "version_id": "10243d42fc954195a1ede4ab4daf5523",
+      "seed": 1121568299,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 33600,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Story",
+        "mode": "oneshot",
+        "length": 0.7,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "blast-items-story-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/story/opening/opening.md"
+        ],
+        "status": "planned",
+        "notes": "설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_story_record_erase",
+      "name": "이름 기록 삭제",
+      "path": "unity/Assets/Deviant/Audio/SFX/Story/sfx_story_record_erase_01_v01.wav",
+      "sha256": "5ad4bf06064fce50f7c600941bb755cd3e1d8254b316ad1d864e2cd7015319a3",
+      "version_id": "d33d5741d2754bf2891b7185b3c41f32",
+      "seed": 3649571155,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 33600,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Story",
+        "mode": "oneshot",
+        "length": 0.7,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "blast-items-story-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/story/opening/opening.md"
+        ],
+        "status": "planned",
+        "notes": "설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_story_world_erase",
+      "name": "마을 색·질감 소거",
+      "path": "unity/Assets/Deviant/Audio/SFX/Story/sfx_story_world_erase_01_v01.wav",
+      "sha256": "284b664fa3282be0a245bff2c2b37b2587323abc47136f2f9cb96924ace67ec8",
+      "version_id": "0842af2176434508b5ded0ffe1a5e66b",
+      "seed": 3210636248,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 67200,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Story",
+        "mode": "oneshot",
+        "length": 1.4,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "blast-items-story-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/story/opening/opening.md"
+        ],
+        "status": "planned",
+        "notes": "설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_ui_cancel",
+      "name": "메뉴 취소",
+      "path": "unity/Assets/Deviant/Audio/SFX/UI/sfx_ui_cancel_01_v01.wav",
+      "sha256": "54862b8156b5d0a8865df83feb5aadf60fc4a6086072dbb87aa7c0d6e7a4f220",
+      "version_id": "6cadb3a62c4d472184a94522aa63f6c1",
+      "seed": 2886394126,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 7200,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "UI",
+        "mode": "oneshot",
+        "length": 0.15,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "movement-ui-v1",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/ui/ui-and-interaction.md"
+        ],
+        "status": "current",
+        "notes": " 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_ui_confirm",
+      "name": "메뉴 확인",
+      "path": "unity/Assets/Deviant/Audio/SFX/UI/sfx_ui_confirm_01_v01.wav",
+      "sha256": "930768e804a17fda32fceabcf0bf5e8f73453d0e96b5fb6ed475f8cb97594526",
+      "version_id": "32ef5b8823db41cabee9d10934f35fe8",
+      "seed": 1296553629,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 9600,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "UI",
+        "mode": "oneshot",
+        "length": 0.2,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "movement-ui-v1",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/ui/ui-and-interaction.md"
+        ],
+        "status": "current",
+        "notes": " 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_ui_dialogue_next",
+      "name": "대화 진행",
+      "path": "unity/Assets/Deviant/Audio/SFX/UI/sfx_ui_dialogue_next_01_v01.wav",
+      "sha256": "2b7961a55134bd7aa2f902261a9c55cb76b06c2381c3179a46520f80d2126f92",
+      "version_id": "445f3322a4da478ea6fd7f9e5191041e",
+      "seed": 1806092606,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 4800,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "UI",
+        "mode": "oneshot",
+        "length": 0.1,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "movement-ui-v1",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/ui/ui-and-interaction.md"
+        ],
+        "status": "current",
+        "notes": " 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_ui_inventory_close",
+      "name": "가방 닫기",
+      "path": "unity/Assets/Deviant/Audio/SFX/UI/sfx_ui_inventory_close_01_v01.wav",
+      "sha256": "7c11b4a4598e1eca4e5304eb34706b9c7ce88ddefc8badf078b46b78b83fce0c",
+      "version_id": "be3104b3b18d42c8ad7b717744445ed2",
+      "seed": 1446343231,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 10560,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "UI",
+        "mode": "oneshot",
+        "length": 0.22,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "movement-ui-v1",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/ui/ui-and-interaction.md"
+        ],
+        "status": "current",
+        "notes": " 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_ui_inventory_open",
+      "name": "가방 열기",
+      "path": "unity/Assets/Deviant/Audio/SFX/UI/sfx_ui_inventory_open_01_v01.wav",
+      "sha256": "2e5edfe43838f66b8b211f3875250ed366077ad4a6339f90c0135afaaed20582",
+      "version_id": "22027546cfb8426f88a0695765ce40e8",
+      "seed": 1679696373,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 12000,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "UI",
+        "mode": "oneshot",
+        "length": 0.25,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "movement-ui-v1",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/ui/ui-and-interaction.md"
+        ],
+        "status": "current",
+        "notes": " 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_ui_map_open",
+      "name": "지도 열기",
+      "path": "unity/Assets/Deviant/Audio/SFX/UI/sfx_ui_map_open_01_v01.wav",
+      "sha256": "02cd841ddd2c2ea3e9171c098aafc78da552dc5a4f3761cea01bca8f48b9c3e3",
+      "version_id": "1e1981b4ae15473c9d7602bd60779d60",
+      "seed": 658276949,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 14400,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "UI",
+        "mode": "oneshot",
+        "length": 0.3,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "movement-ui-v1",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/ui/ui-and-interaction.md"
+        ],
+        "status": "current",
+        "notes": " 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_ui_navigate",
+      "name": "메뉴 이동",
+      "path": "unity/Assets/Deviant/Audio/SFX/UI/sfx_ui_navigate_01_v01.wav",
+      "sha256": "e9074b002bbc09db4eb45906382e69141fd549fb409a8b5a8f74123db2b2618c",
+      "version_id": "fc5a5b1f0cc9448d823e5e95b5d5528a",
+      "seed": 2292573625,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 4320,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "UI",
+        "mode": "oneshot",
+        "length": 0.09,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "movement-ui-v1",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/ui/ui-and-interaction.md"
+        ],
+        "status": "current",
+        "notes": " 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_ui_pause",
+      "name": "일시정지",
+      "path": "unity/Assets/Deviant/Audio/SFX/UI/sfx_ui_pause_01_v01.wav",
+      "sha256": "9cb9310fe8f08bb1820373425da0721eb6254340ae7b51629e2a7cd1ff604df5",
+      "version_id": "6a2e7cf643d04597808e81ed19736ac6",
+      "seed": 3388317690,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 8640,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "UI",
+        "mode": "oneshot",
+        "length": 0.18,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "movement-ui-v1",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/ui/ui-and-interaction.md"
+        ],
+        "status": "current",
+        "notes": " 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_ui_reject",
+      "name": "사용 불가",
+      "path": "unity/Assets/Deviant/Audio/SFX/UI/sfx_ui_reject_01_v01.wav",
+      "sha256": "bc45b893125311160ac23143525573b1b9a598dd9910e535c2b1680e462f12ed",
+      "version_id": "0e9c04bf90c04593af2b7e3309724ca5",
+      "seed": 795086657,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 8640,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "UI",
+        "mode": "oneshot",
+        "length": 0.18,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "movement-ui-v1",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/ui/ui-and-interaction.md"
+        ],
+        "status": "current",
+        "notes": " 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_ui_resume",
+      "name": "일시정지 복귀",
+      "path": "unity/Assets/Deviant/Audio/SFX/UI/sfx_ui_resume_01_v01.wav",
+      "sha256": "08751d7e1e35ea506d7d2b15c3d16f513ab345de3dc2a2fba011a1b2365f3de7",
+      "version_id": "c3bf5a5d637a41d388c313bd2de3515c",
+      "seed": 3493725971,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 8640,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "UI",
+        "mode": "oneshot",
+        "length": 0.18,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "movement-ui-v1",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/ui/ui-and-interaction.md"
+        ],
+        "status": "current",
+        "notes": " 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_combat_bomb_explosion",
+      "name": "폭탄 접촉 폭발",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_combat_bomb_explosion_01_v01.wav",
+      "sha256": "fbcabd17e31b0db84c090e2c56ac394efe4d4eda88e47cd2c70d784d78d44356",
+      "version_id": "6e3e1510cea14e0286da0da63d402576",
+      "seed": 2922092716,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 23040,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.48,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "combat-related-v1",
+        "events": [],
+        "trigger": "해당 실제 적중/접촉/패링/차지 시작·종료 이벤트",
+        "evidence": [
+          "docs/design/combat/rules.md"
+        ],
+        "status": "current",
+        "notes": "폭발은 실제 접촉·신관 이벤트에서만 재생. 차지/비행은 반복 클립의 재생 핸들을 종료 시 정리. 전투 관련 후속 후보. 실제 사건에서 재생하는 한 번의 소리. 원본 최소 2초·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_combat_charge",
+      "name": "차지 유지 레이어",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_combat_charge_01_v01.wav",
+      "sha256": "4c4db8a50f4db6bcac37f36712326c1e7b9caf1cbce8440a905492ee90d7fc67",
+      "version_id": "94d6858ea9a049158d8e9acaa33bd58f",
+      "seed": 3355841489,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 72000,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "loop",
+        "length": 1.5,
+        "unit_length": 0.16,
+        "pre_peak": 0.025,
+        "rms_db": -28.0,
+        "revision": "melee-specials-v1",
+        "extraction": null,
+        "events": [],
+        "trigger": "해당 실제 적중/접촉/패링/차지 시작·종료 이벤트",
+        "evidence": [
+          "docs/design/combat/rules.md"
+        ],
+        "status": "current",
+        "notes": "폭발은 실제 접촉·신관 이벤트에서만 재생. 차지/비행은 반복 클립의 재생 핸들을 종료 시 정리. 차지 소유자가 유지하는 짧은 반복 레이어. 해제·취소·사망·리셋에서 종료하며 발동음을 섞지 않음.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_combat_fragment_explosion",
+      "name": "파편 개별 폭발",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_combat_fragment_explosion_01_v01.wav",
+      "sha256": "5bd54fd813b5314368b8862cd36f4a75651474d4a3699c8281d2b64891266c42",
+      "version_id": "a38327d4dfab402e8b9803299907c4ea",
+      "seed": 1152848936,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 13440,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.28,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "fragment-small-blast-v2",
+        "extraction": "event",
+        "events": [],
+        "trigger": "각 파편의 실제 접촉 또는 수명 만료 폭발 사건에서 한 번",
+        "evidence": [
+          "docs/design/combat/rules.md"
+        ],
+        "status": "current",
+        "notes": "반경 0.6 개별 파편 폭발용. 최대 4개가 근접 발생할 수 있어 본체보다 짧고 간결한 하나의 폭발. 4연속 소리를 파일에 굽지 않는다.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_combat_grenade_explosion",
+      "name": "유탄 본체 접촉 폭발",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_combat_grenade_explosion_01_v01.wav",
+      "sha256": "89039d91f5f6aabd6a556748ae9d18f7fe31a2371e876d9d814a67542cf03bc0",
+      "version_id": "9af611d6b6484725803a9f2931fd5b72",
+      "seed": 89593427,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 33600,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.7,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "grenade-contact-blast-v2",
+        "extraction": "event",
+        "events": [],
+        "trigger": "유탄 본체의 실제 최초 유효 접촉 폭발 사건",
+        "evidence": [
+          "docs/design/combat/rules.md"
+        ],
+        "status": "current",
+        "notes": "반경 1.2 본체 폭발용. 발사음/금속 충돌음과 구분. 선행 파열음·저음 압력·잔해 꼬리를 함께 보존한다. 고정 비행 시간이나 파편 폭발을 포함하지 않음.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_combat_guard_break",
+      "name": "보호막 파괴",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_combat_guard_break_01_v01.wav",
+      "sha256": "172665a310388111abe6f9f91763f6d35424564dbc098a9363ad074b10d73177",
+      "version_id": "9a8a203c936c4771aa48181ec9f8ffd2",
+      "seed": 2566540050,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 14400,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.3,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "combat-related-v1",
+        "events": [],
+        "trigger": "해당 실제 적중/접촉/패링/차지 시작·종료 이벤트",
+        "evidence": [
+          "docs/design/combat/rules.md"
+        ],
+        "status": "current",
+        "notes": "폭발은 실제 접촉·신관 이벤트에서만 재생. 차지/비행은 반복 클립의 재생 핸들을 종료 시 정리. 전투 관련 후속 후보. 실제 사건에서 재생하는 한 번의 소리. 원본 최소 2초·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_combat_hit_ink",
+      "name": "잉크 몸 실제 적중",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_combat_hit_ink_01_v01.wav",
+      "sha256": "8e6dc87b0e874ee4e01a738642a000333607a7268e94c792fa970dab4b49ccaa",
+      "version_id": "8b06753b9a394303951b4293d998217b",
+      "seed": 1194391081,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 9600,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.2,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "combat-related-v1",
+        "events": [],
+        "trigger": "해당 실제 적중/접촉/패링/차지 시작·종료 이벤트",
+        "evidence": [
+          "docs/design/combat/rules.md"
+        ],
+        "status": "current",
+        "notes": "폭발은 실제 접촉·신관 이벤트에서만 재생. 차지/비행은 반복 클립의 재생 핸들을 종료 시 정리. 전투 관련 후속 후보. 실제 사건에서 재생하는 한 번의 소리. 원본 최소 2초·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_combat_hit_metal",
+      "name": "금속 실제 적중",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_combat_hit_metal_01_v01.wav",
+      "sha256": "6dc5a7bbd99c887ffe867f01d975fbff8ea070973c4419460062156d66fadc93",
+      "version_id": "ee133477d41e4e74940961bc9c5fdc62",
+      "seed": 2280268659,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 8640,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.18,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "combat-related-v1",
+        "events": [],
+        "trigger": "해당 실제 적중/접촉/패링/차지 시작·종료 이벤트",
+        "evidence": [
+          "docs/design/combat/rules.md"
+        ],
+        "status": "current",
+        "notes": "폭발은 실제 접촉·신관 이벤트에서만 재생. 차지/비행은 반복 클립의 재생 핸들을 종료 시 정리. 전투 관련 후속 후보. 실제 사건에서 재생하는 한 번의 소리. 원본 최소 2초·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_combat_hit_wood",
+      "name": "목재 실제 적중",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_combat_hit_wood_01_v01.wav",
+      "sha256": "ab6a6baaa75af2186119d14f8a153b22487cb0946841799b093e826bccd3a3f0",
+      "version_id": "ef40721b613f49cb89480161d0de503f",
+      "seed": 1660644942,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 9600,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.2,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "combat-related-v1",
+        "events": [],
+        "trigger": "해당 실제 적중/접촉/패링/차지 시작·종료 이벤트",
+        "evidence": [
+          "docs/design/combat/rules.md"
+        ],
+        "status": "current",
+        "notes": "폭발은 실제 접촉·신관 이벤트에서만 재생. 차지/비행은 반복 클립의 재생 핸들을 종료 시 정리. 전투 관련 후속 후보. 실제 사건에서 재생하는 한 번의 소리. 원본 최소 2초·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_combat_large_bomb_explosion",
+      "name": "대형 폭탄 접촉 폭발",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_combat_large_bomb_explosion_01_v01.wav",
+      "sha256": "d926db246e2516cf60716e2c5855d80e713042919b1ad9e4dda45f03e8392f04",
+      "version_id": "407ad04d2a8743a7a5318c7906b13922",
+      "seed": 3000764849,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 31200,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.65,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "blast-items-story-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "해당 실제 적중/접촉/패링/차지 시작·종료 이벤트",
+        "evidence": [
+          "docs/design/combat/rules.md"
+        ],
+        "status": "current",
+        "notes": "폭발은 실제 접촉·신관 이벤트에서만 재생. 차지/비행은 반복 클립의 재생 핸들을 종료 시 정리. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_combat_missile_flight",
+      "name": "미사일 비행 레이어",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_combat_missile_flight_01_v01.wav",
+      "sha256": "959c2b6c69f58088e8960b7c9681e08a2994df4e585c012b848151628da91439",
+      "version_id": "9d8c018b2ae6496c82523aba6900747c",
+      "seed": 3224954018,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 72000,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "loop",
+        "length": 1.5,
+        "unit_length": 0.16,
+        "pre_peak": 0.025,
+        "rms_db": -30.0,
+        "revision": "remaining-content-v1",
+        "extraction": null,
+        "events": [],
+        "trigger": "해당 실제 적중/접촉/패링/차지 시작·종료 이벤트",
+        "evidence": [
+          "docs/design/combat/rules.md"
+        ],
+        "status": "current",
+        "notes": "폭발은 실제 접촉·신관 이벤트에서만 재생. 차지/비행은 반복 클립의 재생 핸들을 종료 시 정리. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다. 몬스터 이동은 한 접촉/짧은 마찰이며 미정 접지 주기를 임의 확정하지 않는다.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_combat_parry_success",
+      "name": "패링 성공",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_combat_parry_success_01_v01.wav",
+      "sha256": "adcec74841b62e550e4bbc0eb2e3a761c401565b1a7f6577de4ceb9261bd0248",
+      "version_id": "98e33055df06476a8689c4eeebb877c0",
+      "seed": 90201492,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 13440,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.28,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "combat-related-v1",
+        "events": [],
+        "trigger": "해당 실제 적중/접촉/패링/차지 시작·종료 이벤트",
+        "evidence": [
+          "docs/design/combat/rules.md"
+        ],
+        "status": "current",
+        "notes": "폭발은 실제 접촉·신관 이벤트에서만 재생. 차지/비행은 반복 클립의 재생 핸들을 종료 시 정리. 전투 관련 후속 후보. 실제 사건에서 재생하는 한 번의 소리. 원본 최소 2초·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_combat_projectile_wall",
+      "name": "투사체 벽 충돌",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_combat_projectile_wall_01_v01.wav",
+      "sha256": "b168bf00524d8ada1cee64f02c5893587d4e4493d6ace422f15f665dc4bd40df",
+      "version_id": "f1e3293d07434688a0bd031fb2fbc4bd",
+      "seed": 2391441481,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 7200,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.15,
+        "unit_length": 0.16,
+        "pre_peak": 0.012,
+        "rms_db": -28.0,
+        "revision": "combat-related-v1",
+        "events": [],
+        "trigger": "해당 실제 적중/접촉/패링/차지 시작·종료 이벤트",
+        "evidence": [
+          "docs/design/combat/rules.md"
+        ],
+        "status": "current",
+        "notes": "폭발은 실제 접촉·신관 이벤트에서만 재생. 차지/비행은 반복 클립의 재생 핸들을 종료 시 정리. 전투 관련 후속 후보. 실제 사건에서 재생하는 한 번의 소리. 원본 최소 2초·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_base_sword_default",
+      "name": "검 · 강베기",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_base_sword_default_01_v01.wav",
+      "sha256": "2c0a10bdc40db94eb884930384ee72404d353b8a88cc392e8b1944453a86b886",
+      "version_id": "920d00a63e7b4d8bb644d323c53edf86",
+      "seed": 3413880565,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 15360,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.32,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "melee-specials-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 효과 발생 이벤트",
+        "evidence": [
+          "data/combat/melee_weapon_design.json"
+        ],
+        "status": "current",
+        "notes": "기준 activation=0.3s, motion_end=0.7s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_base_sword_follow_up",
+      "name": "검 · 잔상",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_base_sword_follow_up_01_v01.wav",
+      "sha256": "8c0b8c1a6ce4edf6c7831d3716a0a15cd5d8b8a36e1f0e6f8376e09665b542eb",
+      "version_id": "a8384d63642a49ffb44f13c7de9713f1",
+      "seed": 3241555283,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 15360,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.32,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "melee-specials-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 효과 발생 이벤트",
+        "evidence": [
+          "data/combat/melee_weapon_design.json"
+        ],
+        "status": "current",
+        "notes": "기준 activation=0.2s, motion_end=0.5s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_base_sword_movement",
+      "name": "검 · 돌진 찌르기",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_base_sword_movement_01_v01.wav",
+      "sha256": "460295d3dfb96e6f6224852626d821187f2647a7e08be113d8a5a800bf43e48a",
+      "version_id": "5706bc159f2f4439be96e16b6ad0cc1c",
+      "seed": 1705166291,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 15360,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.32,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "melee-specials-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 효과 발생 이벤트",
+        "evidence": [
+          "data/combat/melee_weapon_design.json"
+        ],
+        "status": "current",
+        "notes": "기준 activation=0.15s, motion_end=0.6s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_base_sword_range",
+      "name": "검 · 검기",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_base_sword_range_01_v01.wav",
+      "sha256": "bbf6e3ec07d7767242776647bd2196c4ea8ebd367ef2eab0a65d96638592eef3",
+      "version_id": "c0cd6bcfe8b742219f98beeef10e0d49",
+      "seed": 2643276672,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 15360,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.32,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "melee-specials-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 효과 발생 이벤트",
+        "evidence": [
+          "data/combat/melee_weapon_design.json"
+        ],
+        "status": "current",
+        "notes": "기준 activation=0.2s, motion_end=0.5s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_bomb_default",
+      "name": "3연속 폭탄 투척의 한 투척",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_bomb_default_01_v01.wav",
+      "sha256": "cd305332adf3552f4851354ed43bb63c7e2a38372aeb5c58f665ec35b07e3837",
+      "version_id": "54f057f6658d4f3f9a947fc9066329c2",
+      "seed": 1623151365,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 14400,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.3,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "remaining-content-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 투척/복귀/설치 이벤트",
+        "evidence": [
+          "data/combat/ranged_basic_design.json"
+        ],
+        "status": "current",
+        "notes": "타겟·착지·접촉·취소에 따라 발생이 달라짐. 반복/폭발 타이머를 WAV에 고정하지 않음. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다. 몬스터 이동은 한 접촉/짧은 마찰이며 미정 접지 주기를 임의 확정하지 않는다.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_bomb_follow_up",
+      "name": "착지 시한폭탄 설치",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_bomb_follow_up_01_v01.wav",
+      "sha256": "8fb08a2aca81842d0bd868b4e067dffa52208bd37f49ae9b4a6df7b52eecf910",
+      "version_id": "4712032b80894ab1afca6a426639f450",
+      "seed": 1599399755,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 14400,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.3,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "remaining-content-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 투척/복귀/설치 이벤트",
+        "evidence": [
+          "data/combat/ranged_basic_design.json"
+        ],
+        "status": "current",
+        "notes": "타겟·착지·접촉·취소에 따라 발생이 달라짐. 반복/폭발 타이머를 WAV에 고정하지 않음. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다. 몬스터 이동은 한 접촉/짧은 마찰이며 미정 접지 주기를 임의 확정하지 않는다.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_bomb_range",
+      "name": "대형 폭탄 투척",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_bomb_range_01_v01.wav",
+      "sha256": "47746ffc218db175d6c1858c0b5e07c46bbd26a1dc88170936e502aa0497e16a",
+      "version_id": "46369b6b1a8f4206acaa9dcabc5077d9",
+      "seed": 4105022229,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 14400,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.3,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "remaining-content-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 투척/복귀/설치 이벤트",
+        "evidence": [
+          "data/combat/ranged_basic_design.json"
+        ],
+        "status": "current",
+        "notes": "타겟·착지·접촉·취소에 따라 발생이 달라짐. 반복/폭발 타이머를 WAV에 고정하지 않음. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다. 몬스터 이동은 한 접촉/짧은 마찰이며 미정 접지 주기를 임의 확정하지 않는다.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_dagger_default",
+      "name": "한손 단검 · 숨죽이기",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_dagger_default_01_v01.wav",
+      "sha256": "666cc84fc19a60ed11f26aabf1f4ac3fe617f896462cdb494dcabf092f375a89",
+      "version_id": "66aed924abcc4de393539814df40effd",
+      "seed": 1204631589,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 15360,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.32,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "melee-specials-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 효과 발생 이벤트",
+        "evidence": [
+          "data/combat/melee_weapon_design.json"
+        ],
+        "status": "current",
+        "notes": "기준 activation=0.1s, motion_end=0.35s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_dagger_follow_up",
+      "name": "한손 단검 · 그림자 난무",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_dagger_follow_up_01_v01.wav",
+      "sha256": "d1ee51584b61c6baaf9f329413faf26c2a9bbe8e3fb38fe70efbe67de3bed337",
+      "version_id": "b08f62209aaf4e36b2a302b67ff43ebc",
+      "seed": 1096213679,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 15360,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.32,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "melee-specials-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 효과 발생 이벤트",
+        "evidence": [
+          "data/combat/melee_weapon_design.json"
+        ],
+        "status": "current",
+        "notes": "기준 activation=0.15s, motion_end=0.95s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_dagger_movement",
+      "name": "한손 단검 · 삼연 도약",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_dagger_movement_01_v01.wav",
+      "sha256": "d9c3692d94cea154bdcf154702569253b29d824dd234b35f1ab1373d50fe0cce",
+      "version_id": "d45bacb976b24a0f8ed9841c73e0fee4",
+      "seed": 68377914,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 15360,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.32,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "melee-specials-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 효과 발생 이벤트",
+        "evidence": [
+          "data/combat/melee_weapon_design.json"
+        ],
+        "status": "current",
+        "notes": "기준 activation=0.08s, motion_end=0.38s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_dagger_range",
+      "name": "한손 단검 · 먹안개",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_dagger_range_01_v01.wav",
+      "sha256": "7cf3d5890807d2700cc9756be9c0e190af89c052f4babef9497127cd97d0eb6d",
+      "version_id": "05ffc0ca96c84e8d991b360ea710b831",
+      "seed": 2821357472,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 38400,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.8,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "ink-smoke-bloom-v2",
+        "extraction": "event",
+        "events": [],
+        "trigger": "먹안개가 실제 생성되는 150ms 발동 사건",
+        "evidence": [
+          "data/combat/melee_weapon_design.json"
+        ],
+        "status": "current",
+        "notes": "연막탄처럼 퍼지는 공기·입자 방출. 피해 폭발음이 아니며 연막 3초의 전체 유지시간을 파일에 굽지 않는다.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_greatsword_default",
+      "name": "대검 · 모아내려찍기",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_greatsword_default_01_v01.wav",
+      "sha256": "f66a1d9983d8268af8496dc12537e9eb169547e92aa83b2f140442add0d7b1e6",
+      "version_id": "72dfbf10da2149e4bc3a3d885bd289e4",
+      "seed": 521390033,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 21600,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.45,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "melee-specials-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 효과 발생 이벤트",
+        "evidence": [
+          "data/combat/melee_weapon_design.json"
+        ],
+        "status": "current",
+        "notes": "기준 activation=0.25s, motion_end=0.7s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_greatsword_follow_up",
+      "name": "대검 · 낙인 대검",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_greatsword_follow_up_01_v01.wav",
+      "sha256": "5a9888b3f602042f5d369abf0957fcf8cf79be3c8c9f7c59b52fe5bd4a6d63ab",
+      "version_id": "a212367c50bd429a81cf0700fcc50822",
+      "seed": 1269107114,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 21600,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.45,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "melee-specials-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 효과 발생 이벤트",
+        "evidence": [
+          "data/combat/melee_weapon_design.json"
+        ],
+        "status": "current",
+        "notes": "기준 activation=0.3s, motion_end=0.7s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_greatsword_movement",
+      "name": "대검 · 회전 전진",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_greatsword_movement_01_v01.wav",
+      "sha256": "40cf027e180af7bdf6e1b480c246be165b27e0d38ed08b56090c6cde77f8a224",
+      "version_id": "f654f1d47b7c43f6af59c560e28ddfa9",
+      "seed": 2406551343,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 21600,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.45,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "melee-specials-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 효과 발생 이벤트",
+        "evidence": [
+          "data/combat/melee_weapon_design.json"
+        ],
+        "status": "current",
+        "notes": "기준 activation=0.2s, motion_end=1.3s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_greatsword_range",
+      "name": "대검 · 반월참",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_greatsword_range_01_v01.wav",
+      "sha256": "1929a0baab04a623261c7d379798b334fc65193757c00da516218fa3bf5471e2",
+      "version_id": "fd4dd698a98442d2ab25e4e6be59db1b",
+      "seed": 3323825870,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 21600,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.45,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "melee-specials-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 효과 발생 이벤트",
+        "evidence": [
+          "data/combat/melee_weapon_design.json"
+        ],
+        "status": "current",
+        "notes": "기준 activation=0.45s, motion_end=1.05s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_hammer_default",
+      "name": "망치 · 횡강타",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_hammer_default_01_v01.wav",
+      "sha256": "b6c63dfa784dbf6b3c42ee0c0f9b108ce1dd5a909778fb554da2cd9bc5b97a51",
+      "version_id": "7066c6ca578144319d88cb382f8e2aa3",
+      "seed": 3261740791,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 21600,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.45,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "melee-specials-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 효과 발생 이벤트",
+        "evidence": [
+          "data/combat/melee_weapon_design.json"
+        ],
+        "status": "current",
+        "notes": "기준 activation=0.4s, motion_end=0.95s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_hammer_follow_up",
+      "name": "망치 · 여진",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_hammer_follow_up_01_v01.wav",
+      "sha256": "b4c5d80a99efb3db9313c9ceabb40dd49914d5277c7f75a2953c570e1e5b8a44",
+      "version_id": "620f98a432684703bc3c359f09273b77",
+      "seed": 1901303208,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 21600,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.45,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "melee-specials-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 효과 발생 이벤트",
+        "evidence": [
+          "data/combat/melee_weapon_design.json"
+        ],
+        "status": "current",
+        "notes": "기준 activation=0.4s, motion_end=0.9s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_hammer_movement",
+      "name": "망치 · 몰아치기",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_hammer_movement_01_v01.wav",
+      "sha256": "03df25a8fef1659d0d074ef378893cc6a671b285062b9f4f1b6b82d8cd42c2d1",
+      "version_id": "1c34d03f6d6646c5bd950d67a56303ee",
+      "seed": 86175138,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 21600,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.45,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "melee-specials-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 효과 발생 이벤트",
+        "evidence": [
+          "data/combat/melee_weapon_design.json"
+        ],
+        "status": "current",
+        "notes": "기준 activation=0.2s, motion_end=0.85s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_hammer_range",
+      "name": "망치 · 지축 강타",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_hammer_range_01_v01.wav",
+      "sha256": "fb8684777eac112fad2d6215b2bd8c0183566776192047ddf3b7a78cb5334b5b",
+      "version_id": "bbe06b84c59643a48524aaf6ec1fa4ec",
+      "seed": 2551173008,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 21600,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.45,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "melee-specials-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 효과 발생 이벤트",
+        "evidence": [
+          "data/combat/melee_weapon_design.json"
+        ],
+        "status": "current",
+        "notes": "기준 activation=0.5s, motion_end=1.1s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_rapier_default",
+      "name": "레이피어 · 모아찌르기",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_rapier_default_01_v01.wav",
+      "sha256": "1e5db9c7eea01adfb86a159084596ab0e093c8ceeb081893c2d493f351551931",
+      "version_id": "21dbaaa1c5074a2dbed04a90d2260664",
+      "seed": 590012765,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 15360,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.32,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "melee-specials-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 효과 발생 이벤트",
+        "evidence": [
+          "data/combat/melee_weapon_design.json"
+        ],
+        "status": "current",
+        "notes": "기준 activation=0.2s, motion_end=0.53s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_rapier_follow_up",
+      "name": "레이피어 · 섬광 연침",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_rapier_follow_up_01_v01.wav",
+      "sha256": "834c652d4c873bca1432d2afc434605e24f93e27ff660d747fdedf69e7db8dcf",
+      "version_id": "79803ca588c242cd85afd14a8645e013",
+      "seed": 1847675457,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 15360,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.32,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "melee-specials-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 효과 발생 이벤트",
+        "evidence": [
+          "data/combat/melee_weapon_design.json"
+        ],
+        "status": "current",
+        "notes": "기준 activation=0.1s, motion_end=0.95s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_rapier_movement",
+      "name": "레이피어 · 흘려찌르기",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_rapier_movement_01_v01.wav",
+      "sha256": "73170c9562bcd3637487cd434984bb62151a9e4e055d78021ce066fdda90046f",
+      "version_id": "f431159ff46940e9a4f1ba0cb5849337",
+      "seed": 3559581896,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 15360,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.32,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "melee-specials-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 효과 발생 이벤트",
+        "evidence": [
+          "data/combat/melee_weapon_design.json"
+        ],
+        "status": "current",
+        "notes": "기준 activation=0.1s, motion_end=0.45s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_rapier_range",
+      "name": "레이피어 · 장침",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_rapier_range_01_v01.wav",
+      "sha256": "bc645276ac8ab4e12b194155f142aaa2841b56ece861b7a7d1d1cae07b134875",
+      "version_id": "a17b7ba6c03f4063861c929045dcf030",
+      "seed": 774391182,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 15360,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.32,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "melee-specials-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 효과 발생 이벤트",
+        "evidence": [
+          "data/combat/melee_weapon_design.json"
+        ],
+        "status": "current",
+        "notes": "기준 activation=0.3s, motion_end=0.7s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_shield_default",
+      "name": "방패 · 받아치기",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_shield_default_01_v01.wav",
+      "sha256": "8dfcf7447399ff47b029e388666a160c46617e5c1b59ba486b5b56cfe69fd70e",
+      "version_id": "33c381ddfd7c414ea42246a6e57ec60f",
+      "seed": 465029390,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 15360,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.32,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "melee-specials-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 효과 발생 이벤트",
+        "evidence": [
+          "data/combat/melee_weapon_design.json"
+        ],
+        "status": "current",
+        "notes": "기준 activation=0s, motion_end=0.45s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_shield_follow_up",
+      "name": "방패 · 미끼 방패",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_shield_follow_up_01_v01.wav",
+      "sha256": "0b1f89b552d98af0d027f97755b5b9e843ab55d8a096de8e12d25e16f0dd80c1",
+      "version_id": "b468dc5e734542a1ad51f7760d6b47ea",
+      "seed": 1455796743,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 15360,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.32,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "melee-specials-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 효과 발생 이벤트",
+        "evidence": [
+          "data/combat/melee_weapon_design.json"
+        ],
+        "status": "current",
+        "notes": "기준 activation=0.2s, motion_end=0.55s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_shield_movement",
+      "name": "방패 · 방패 밀기",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_shield_movement_01_v01.wav",
+      "sha256": "7e0f403b14bccc92111da618a7454ff1d286b2ce7bebfb21bb607519abbe1aee",
+      "version_id": "503c5856c83b4a3ba8fc8bea5b37d254",
+      "seed": 2640568618,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 15360,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.32,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "melee-specials-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 효과 발생 이벤트",
+        "evidence": [
+          "data/combat/melee_weapon_design.json"
+        ],
+        "status": "current",
+        "notes": "기준 activation=0.15s, motion_end=0.8s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_shield_range",
+      "name": "방패 · 수호막",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_shield_range_01_v01.wav",
+      "sha256": "80cf8fa72686ad6d61f89887c66be27234bb5c755eb3ce8cf9754b31f8c6a41e",
+      "version_id": "72fb0cc22a764faf82abd6795ef2dce3",
+      "seed": 1566797553,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 15360,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.32,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "melee-specials-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 효과 발생 이벤트",
+        "evidence": [
+          "data/combat/melee_weapon_design.json"
+        ],
+        "status": "current",
+        "notes": "기준 activation=0.1s, motion_end=0.5s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_shuriken_default",
+      "name": "큰 관통 수리검",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_shuriken_default_01_v01.wav",
+      "sha256": "10694926172d71a6aa415794d26b5cbd1b27df1c19dd85b6fe0a5521d411748a",
+      "version_id": "f54f431d9b0644b691d188b9c9997512",
+      "seed": 2623724319,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 14400,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.3,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "remaining-content-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 투척/복귀/설치 이벤트",
+        "evidence": [
+          "data/combat/ranged_basic_design.json"
+        ],
+        "status": "current",
+        "notes": "타겟·착지·접촉·취소에 따라 발생이 달라짐. 반복/폭발 타이머를 WAV에 고정하지 않음. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다. 몬스터 이동은 한 접촉/짧은 마찰이며 미정 접지 주기를 임의 확정하지 않는다.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_shuriken_follow_up",
+      "name": "전진 회전 수리검",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_shuriken_follow_up_01_v01.wav",
+      "sha256": "34017a2fc87464535c446eb84b8ffc8048fd939c4c6e905613006f5c56fd3036",
+      "version_id": "b067a34204b64e8292caa9101d110a51",
+      "seed": 2822867383,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 14400,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.3,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "remaining-content-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 투척/복귀/설치 이벤트",
+        "evidence": [
+          "data/combat/ranged_basic_design.json"
+        ],
+        "status": "current",
+        "notes": "타겟·착지·접촉·취소에 따라 발생이 달라짐. 반복/폭발 타이머를 WAV에 고정하지 않음. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다. 몬스터 이동은 한 접촉/짧은 마찰이며 미정 접지 주기를 임의 확정하지 않는다.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_shuriken_movement",
+      "name": "수리검 순간이동",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_shuriken_movement_01_v01.wav",
+      "sha256": "a5e80694eb1b23e88bcae78bb5cbe6388e7ed41f6db59502bdfb3b28f0323df0",
+      "version_id": "d4b7439aa7b14ed5898d2bd9ac1d3103",
+      "seed": 2166358349,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 14400,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.3,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "remaining-content-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 투척/복귀/설치 이벤트",
+        "evidence": [
+          "data/combat/ranged_basic_design.json"
+        ],
+        "status": "current",
+        "notes": "타겟·착지·접촉·취소에 따라 발생이 달라짐. 반복/폭발 타이머를 WAV에 고정하지 않음. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다. 몬스터 이동은 한 접촉/짧은 마찰이며 미정 접지 주기를 임의 확정하지 않는다.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_special_shuriken_range",
+      "name": "폭발 수리검 발사",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_shuriken_range_01_v01.wav",
+      "sha256": "831c86ce5ada949ce9db3ffcb6e9056985378c5c9131116d0a22237b8cd645d4",
+      "version_id": "11ba3f46a80c41228615ee2b4d2c8f0e",
+      "seed": 1124298465,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 14400,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "oneshot",
+        "length": 0.3,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "remaining-content-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "기술 실제 발동/개별 투척/복귀/설치 이벤트",
+        "evidence": [
+          "data/combat/ranged_basic_design.json"
+        ],
+        "status": "current",
+        "notes": "타겟·착지·접촉·취소에 따라 발생이 달라짐. 반복/폭발 타이머를 WAV에 고정하지 않음. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다. 몬스터 이동은 한 접촉/짧은 마찰이며 미정 접지 주기를 임의 확정하지 않는다.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_weapon_base_sword_basic_cycle",
+      "name": "검 기본공격 · 1사이클",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_base_sword_basic_cycle_01_v01.wav",
+      "sha256": "4ee998edaddecc3e3dc5dfb2f750a42230760fd4439b411dcba31119e028ed09",
+      "version_id": "c320a0b0a95b496eb0730d5f687b7958",
+      "seed": 2570958268,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 48000,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "cycle",
+        "length": 1.0,
+        "unit_length": 0.3,
+        "pre_peak": 0.1,
+        "rms_db": -28.0,
+        "revision": "basic-sword-v2",
+        "events": [
+          {
+            "time": 0.2,
+            "gain": 1.0
+          },
+          {
+            "time": 0.6,
+            "gain": 1.0
+          }
+        ],
+        "trigger": "최단 기본 연계 검수 / 런타임은 각 타 영역을 해당 타 모션 시작에 재생",
+        "evidence": [
+          "docs/development/presentation/audio/basic-attack-audio-timing.md"
+        ],
+        "status": "current",
+        "notes": "검만 재제작. 2초 AI 원본에서 정상 휘두름을 추출하고 200/600ms 피크로 합성. 원본 포화 0.1% 초과 시 실패. 완성 길이 1초, 피크 상한 -16dBFS, 발음 구간 RMS 목표 -28dBFS. 실제 적중음 없음.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": [
+          {
+            "hit": 1,
+            "start": 0.0,
+            "end": 0.4,
+            "peak": 0.2,
+            "local_peak": 0.2
+          },
+          {
+            "hit": 2,
+            "start": 0.4,
+            "end": 1.0,
+            "peak": 0.6000000000000001,
+            "local_peak": 0.2
+          }
+        ]
+      },
+      "event_samples": [
+        9600,
+        28800
+      ],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_weapon_bomb_basic_cycle",
+      "name": "폭탄 투척 기본공격 · 1사이클",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_bomb_basic_cycle_01_v01.wav",
+      "sha256": "e90be30786d0bf20310ea3306f533b9e57e8eaa96da5f1eb749b591e0b6ccac6",
+      "version_id": "1552e470a3424b04a3f87b112ae43eba",
+      "seed": 2570958268,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 43200,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "cycle",
+        "length": 0.9,
+        "unit_length": 0.3,
+        "pre_peak": 0.1,
+        "rms_db": -28.0,
+        "revision": "basic-attacks-v2",
+        "events": [
+          {
+            "time": 0.2,
+            "gain": 1.0
+          }
+        ],
+        "trigger": "발사/투척 모션 시작; 타별 영역 사용",
+        "evidence": [
+          "docs/development/presentation/audio/basic-attack-audio-timing.md"
+        ],
+        "status": "current",
+        "notes": "폭발·명중·비행시간은 포함하지 않음. 샷건은 동시 한 발사음. 공속 ×1. 2초 원본·포화 검사 적용. 피크 상한 -16dBFS, 발음 구간 RMS 목표 -28dBFS. 각 타 영역 이전으로 소리 시작이 넘어가지 않도록 어택을 제한.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": [
+          {
+            "hit": 1,
+            "start": 0.0,
+            "end": 0.9,
+            "peak": 0.2,
+            "local_peak": 0.2
+          }
+        ]
+      },
+      "event_samples": [
+        9600
+      ],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_weapon_dagger_basic_cycle",
+      "name": "한손 단검 기본공격 · 1사이클",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_dagger_basic_cycle_01_v01.wav",
+      "sha256": "382c9a7dcba4b3886d5b14139f7fd6c9bfa14e02dee9867b337a288038bfecad",
+      "version_id": "6215930ca7b444539c1e63a54b3313fa",
+      "seed": 2570958268,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 48000,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "cycle",
+        "length": 1.0,
+        "unit_length": 0.3,
+        "pre_peak": 0.1,
+        "rms_db": -28.0,
+        "revision": "basic-attacks-v2",
+        "events": [
+          {
+            "time": 0.045,
+            "gain": 1.0
+          },
+          {
+            "time": 0.21000000000000002,
+            "gain": 1.0
+          },
+          {
+            "time": 0.43000000000000005,
+            "gain": 1.0
+          },
+          {
+            "time": 0.8450000000000001,
+            "gain": 1.0
+          }
+        ],
+        "trigger": "최단 기본 연계 검수 / 런타임은 각 타 영역을 해당 타 모션 시작에 재생",
+        "evidence": [
+          "docs/development/presentation/audio/basic-attack-audio-timing.md"
+        ],
+        "status": "current",
+        "notes": "공속 ×1 기본값. 실제 명중음 없음. 입력 대기·취소 시 전체 사이클 예약 금지. JSON regions로 한 WAV의 타별 영역 사용. 시간표의 판정 기준에 피크를 정렬한 제작 후보이며 시각 휘두름 시작은 인게임 최종 확인 필요. 2초 원본·포화 검사 적용. 피크 상한 -16dBFS, 발음 구간 RMS 목표 -28dBFS. 각 타 영역 이전으로 소리 시작이 넘어가지 않도록 어택을 제한.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": [
+          {
+            "hit": 1,
+            "start": 0.0,
+            "end": 0.165,
+            "peak": 0.045,
+            "local_peak": 0.045
+          },
+          {
+            "hit": 2,
+            "start": 0.165,
+            "end": 0.33,
+            "peak": 0.21000000000000002,
+            "local_peak": 0.045
+          },
+          {
+            "hit": 3,
+            "start": 0.33,
+            "end": 0.5900000000000001,
+            "peak": 0.43000000000000005,
+            "local_peak": 0.1
+          },
+          {
+            "hit": 4,
+            "start": 0.5900000000000001,
+            "end": 1.0,
+            "peak": 0.8450000000000001,
+            "local_peak": 0.255
+          }
+        ]
+      },
+      "event_samples": [
+        2160,
+        10080,
+        20640,
+        40560
+      ],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_weapon_greatsword_basic_cycle",
+      "name": "대검 기본공격 · 1사이클",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_greatsword_basic_cycle_01_v01.wav",
+      "sha256": "e4f8db0222bde28b5889036631590c8c4cf5a8aa31ed96f748d3d51f16adb8c2",
+      "version_id": "b28db8f3cef24d48b15d976d7ddced79",
+      "seed": 3447471663,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 59040,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "cycle",
+        "length": 1.23,
+        "unit_length": 0.42,
+        "pre_peak": 0.16,
+        "rms_db": -28.0,
+        "revision": "basic-attacks-tone-v3",
+        "events": [
+          {
+            "time": 0.21,
+            "gain": 1.0
+          },
+          {
+            "time": 0.45999999999999996,
+            "gain": 1.0
+          },
+          {
+            "time": 0.9299999999999999,
+            "gain": 1.0
+          }
+        ],
+        "trigger": "최단 기본 연계 검수 / 런타임은 각 타 영역을 해당 타 모션 시작에 재생",
+        "evidence": [
+          "docs/development/presentation/audio/basic-attack-audio-timing.md"
+        ],
+        "status": "current",
+        "notes": "공속 ×1 기본값. 실제 명중음 없음. 입력 대기·취소 시 전체 사이클 예약 금지. JSON regions로 한 WAV의 타별 영역 사용. 시간표의 판정 기준에 피크를 정렬한 제작 후보이며 시각 휘두름 시작은 인게임 최종 확인 필요. 2초 원본·포화 검사 적용. 피크 상한 -16dBFS, 발음 구간 RMS 목표 -28dBFS. 각 타 영역 이전으로 소리 시작이 넘어가지 않도록 어택을 제한.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": [
+          {
+            "hit": 1,
+            "start": 0.0,
+            "end": 0.36,
+            "peak": 0.21,
+            "local_peak": 0.21
+          },
+          {
+            "hit": 2,
+            "start": 0.36,
+            "end": 0.6499999999999999,
+            "peak": 0.45999999999999996,
+            "local_peak": 0.1
+          },
+          {
+            "hit": 3,
+            "start": 0.6499999999999999,
+            "end": 1.23,
+            "peak": 0.9299999999999999,
+            "local_peak": 0.28
+          }
+        ]
+      },
+      "event_samples": [
+        10080,
+        22080,
+        44640
+      ],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_weapon_hammer_basic_cycle",
+      "name": "망치 기본공격 · 1사이클",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_hammer_basic_cycle_01_v01.wav",
+      "sha256": "fc6db4f3626dc29460fd2639b15cdfa55c8e4ecc482bb782ea077575067b3679",
+      "version_id": "b81514f5c1bd4bb4a0c6ca006652846b",
+      "seed": 2570958268,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 52320,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "cycle",
+        "length": 1.0899999999999999,
+        "unit_length": 0.3,
+        "pre_peak": 0.1,
+        "rms_db": -28.0,
+        "revision": "basic-attacks-v2",
+        "events": [
+          {
+            "time": 0.21,
+            "gain": 1.0
+          },
+          {
+            "time": 0.6599999999999999,
+            "gain": 1.0
+          }
+        ],
+        "trigger": "최단 기본 연계 검수 / 런타임은 각 타 영역을 해당 타 모션 시작에 재생",
+        "evidence": [
+          "docs/development/presentation/audio/basic-attack-audio-timing.md"
+        ],
+        "status": "current",
+        "notes": "공속 ×1 기본값. 실제 명중음 없음. 입력 대기·취소 시 전체 사이클 예약 금지. JSON regions로 한 WAV의 타별 영역 사용. 시간표의 판정 기준에 피크를 정렬한 제작 후보이며 시각 휘두름 시작은 인게임 최종 확인 필요. 2초 원본·포화 검사 적용. 피크 상한 -16dBFS, 발음 구간 RMS 목표 -28dBFS. 각 타 영역 이전으로 소리 시작이 넘어가지 않도록 어택을 제한.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": [
+          {
+            "hit": 1,
+            "start": 0.0,
+            "end": 0.37,
+            "peak": 0.21,
+            "local_peak": 0.21
+          },
+          {
+            "hit": 2,
+            "start": 0.37,
+            "end": 1.0899999999999999,
+            "peak": 0.6599999999999999,
+            "local_peak": 0.29
+          }
+        ]
+      },
+      "event_samples": [
+        10080,
+        31680
+      ],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_weapon_launcher_basic_cycle",
+      "name": "발사기 볼 탄환 기본공격 · 1사이클",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_launcher_basic_cycle_01_v01.wav",
+      "sha256": "dba5629c7b5b090af1813d3dca592428ee335d5449a3ff5d760aaddd6f006241",
+      "version_id": "785bfa74ea064b6b865f3444c9ac0897",
+      "seed": 2570958268,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 19200,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "cycle",
+        "length": 0.4,
+        "unit_length": 0.3,
+        "pre_peak": 0.1,
+        "rms_db": -28.0,
+        "revision": "basic-attacks-v2",
+        "events": [
+          {
+            "time": 0.12,
+            "gain": 1.0
+          }
+        ],
+        "trigger": "발사/투척 모션 시작; 타별 영역 사용",
+        "evidence": [
+          "docs/development/presentation/audio/basic-attack-audio-timing.md"
+        ],
+        "status": "current",
+        "notes": "폭발·명중·비행시간은 포함하지 않음. 샷건은 동시 한 발사음. 공속 ×1. 2초 원본·포화 검사 적용. 피크 상한 -16dBFS, 발음 구간 RMS 목표 -28dBFS. 각 타 영역 이전으로 소리 시작이 넘어가지 않도록 어택을 제한.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": [
+          {
+            "hit": 1,
+            "start": 0.0,
+            "end": 0.4,
+            "peak": 0.12,
+            "local_peak": 0.12
+          }
+        ]
+      },
+      "event_samples": [
+        5760
+      ],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_weapon_launcher_grenade_basic_cycle",
+      "name": "발사기 유탄·파편 기본공격 · 1사이클",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_launcher_grenade_basic_cycle_01_v01.wav",
+      "sha256": "9eaee8367c981480d94f23dd78038938451d278af47078f4c9273013cd41ba22",
+      "version_id": "bad48b91556e4ca9a4821be2225e8f15",
+      "seed": 2570958268,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 48000,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "cycle",
+        "length": 1.0,
+        "unit_length": 0.3,
+        "pre_peak": 0.1,
+        "rms_db": -28.0,
+        "revision": "basic-attacks-v2",
+        "events": [
+          {
+            "time": 0.2,
+            "gain": 1.0
+          }
+        ],
+        "trigger": "발사/투척 모션 시작; 타별 영역 사용",
+        "evidence": [
+          "docs/development/presentation/audio/basic-attack-audio-timing.md"
+        ],
+        "status": "current",
+        "notes": "폭발·명중·비행시간은 포함하지 않음. 샷건은 동시 한 발사음. 공속 ×1. 2초 원본·포화 검사 적용. 피크 상한 -16dBFS, 발음 구간 RMS 목표 -28dBFS. 각 타 영역 이전으로 소리 시작이 넘어가지 않도록 어택을 제한.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": [
+          {
+            "hit": 1,
+            "start": 0.0,
+            "end": 1.0,
+            "peak": 0.2,
+            "local_peak": 0.2
+          }
+        ]
+      },
+      "event_samples": [
+        9600
+      ],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_weapon_launcher_laser_basic_cycle",
+      "name": "발사기 레이저 기본공격 · 1사이클",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_launcher_laser_basic_cycle_01_v01.wav",
+      "sha256": "da90668f70e16e3ba51446d9cf27500762a2f619b6b018da73e037d157b5552d",
+      "version_id": "66bbeefca90648ad85a4c8f1f630159d",
+      "seed": 2570958268,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 28800,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "cycle",
+        "length": 0.6,
+        "unit_length": 0.3,
+        "pre_peak": 0.1,
+        "rms_db": -28.0,
+        "revision": "basic-attacks-v2",
+        "events": [
+          {
+            "time": 0.15,
+            "gain": 1.0
+          }
+        ],
+        "trigger": "발사/투척 모션 시작; 타별 영역 사용",
+        "evidence": [
+          "docs/development/presentation/audio/basic-attack-audio-timing.md"
+        ],
+        "status": "current",
+        "notes": "폭발·명중·비행시간은 포함하지 않음. 샷건은 동시 한 발사음. 공속 ×1. 2초 원본·포화 검사 적용. 피크 상한 -16dBFS, 발음 구간 RMS 목표 -28dBFS. 각 타 영역 이전으로 소리 시작이 넘어가지 않도록 어택을 제한.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": [
+          {
+            "hit": 1,
+            "start": 0.0,
+            "end": 0.6,
+            "peak": 0.15,
+            "local_peak": 0.15
+          }
+        ]
+      },
+      "event_samples": [
+        7200
+      ],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_weapon_launcher_shotgun_basic_cycle",
+      "name": "발사기 샷건 기본공격 · 1사이클",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_launcher_shotgun_basic_cycle_01_v01.wav",
+      "sha256": "770675f329ed199fa0938da72a336c9a4f640fff9e91c07828001b69df6a1b17",
+      "version_id": "c7bdb14254314a88924a684af7dcdf88",
+      "seed": 2570958268,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 38400,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "cycle",
+        "length": 0.8,
+        "unit_length": 0.3,
+        "pre_peak": 0.1,
+        "rms_db": -28.0,
+        "revision": "basic-attacks-v2",
+        "events": [
+          {
+            "time": 0.15,
+            "gain": 1.0
+          }
+        ],
+        "trigger": "발사/투척 모션 시작; 타별 영역 사용",
+        "evidence": [
+          "docs/development/presentation/audio/basic-attack-audio-timing.md"
+        ],
+        "status": "current",
+        "notes": "폭발·명중·비행시간은 포함하지 않음. 샷건은 동시 한 발사음. 공속 ×1. 2초 원본·포화 검사 적용. 피크 상한 -16dBFS, 발음 구간 RMS 목표 -28dBFS. 각 타 영역 이전으로 소리 시작이 넘어가지 않도록 어택을 제한.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": [
+          {
+            "hit": 1,
+            "start": 0.0,
+            "end": 0.8,
+            "peak": 0.15,
+            "local_peak": 0.15
+          }
+        ]
+      },
+      "event_samples": [
+        7200
+      ],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_weapon_rapier_basic_cycle",
+      "name": "레이피어 기본공격 · 1사이클",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_rapier_basic_cycle_01_v01.wav",
+      "sha256": "7d590243a353d130bb2da077b280d4e2082e74c93086e53df61ddd8b26b54374",
+      "version_id": "c33eebcdfe084e358ba0a67d35356676",
+      "seed": 2570958268,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 38400,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "cycle",
+        "length": 0.8,
+        "unit_length": 0.3,
+        "pre_peak": 0.1,
+        "rms_db": -28.0,
+        "revision": "basic-attacks-v2",
+        "events": [
+          {
+            "time": 0.1,
+            "gain": 1.0
+          },
+          {
+            "time": 0.32,
+            "gain": 1.0
+          },
+          {
+            "time": 0.56,
+            "gain": 1.0
+          }
+        ],
+        "trigger": "최단 기본 연계 검수 / 런타임은 각 타 영역을 해당 타 모션 시작에 재생",
+        "evidence": [
+          "docs/development/presentation/audio/basic-attack-audio-timing.md"
+        ],
+        "status": "current",
+        "notes": "공속 ×1 기본값. 실제 명중음 없음. 입력 대기·취소 시 전체 사이클 예약 금지. JSON regions로 한 WAV의 타별 영역 사용. 시간표의 판정 기준에 피크를 정렬한 제작 후보이며 시각 휘두름 시작은 인게임 최종 확인 필요. 2초 원본·포화 검사 적용. 피크 상한 -16dBFS, 발음 구간 RMS 목표 -28dBFS. 각 타 영역 이전으로 소리 시작이 넘어가지 않도록 어택을 제한.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": [
+          {
+            "hit": 1,
+            "start": 0.0,
+            "end": 0.22,
+            "peak": 0.1,
+            "local_peak": 0.1
+          },
+          {
+            "hit": 2,
+            "start": 0.22,
+            "end": 0.44,
+            "peak": 0.32,
+            "local_peak": 0.1
+          },
+          {
+            "hit": 3,
+            "start": 0.44,
+            "end": 0.8,
+            "peak": 0.56,
+            "local_peak": 0.12
+          }
+        ]
+      },
+      "event_samples": [
+        4800,
+        15360,
+        26880
+      ],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_weapon_shield_basic_cycle",
+      "name": "방패 기본공격 · 1사이클",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_shield_basic_cycle_01_v01.wav",
+      "sha256": "4ec5f12e11d44daa14583aafec6290effef1845f295ad603cbdcd65890d6ba6b",
+      "version_id": "0895223162064b73a8d2311700a1f025",
+      "seed": 2188390375,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 28800,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "cycle",
+        "length": 0.6,
+        "unit_length": 0.42,
+        "pre_peak": 0.12,
+        "rms_db": -28.0,
+        "revision": "shield-heavy-hammer-v4",
+        "events": [
+          {
+            "time": 0.25,
+            "gain": 1.0
+          }
+        ],
+        "trigger": "최단 기본 연계 검수 / 런타임은 각 타 영역을 해당 타 모션 시작에 재생",
+        "evidence": [
+          "docs/development/presentation/audio/basic-attack-audio-timing.md"
+        ],
+        "status": "current",
+        "notes": "공속 ×1 기본값. 실제 명중음 없음. 입력 대기·취소 시 전체 사이클 예약 금지. JSON regions로 한 WAV의 타별 영역 사용. 시간표의 판정 기준에 피크를 정렬한 제작 후보이며 시각 휘두름 시작은 인게임 최종 확인 필요. 2초 원본·포화 검사 적용. 피크 상한 -16dBFS, 발음 구간 RMS 목표 -28dBFS. 각 타 영역 이전으로 소리 시작이 넘어가지 않도록 어택을 제한. 사용자 요청: 망치 한 방처럼 묵직하고 강한 방패 배시. 음량 상한은 유지하고 저중역의 단단한 질감과 짧은 공명을 강화.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": [
+          {
+            "hit": 1,
+            "start": 0.0,
+            "end": 0.6,
+            "peak": 0.25,
+            "local_peak": 0.25
+          }
+        ]
+      },
+      "event_samples": [
+        12000
+      ],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_weapon_shuriken_basic_cycle",
+      "name": "수리검 기본공격 · 1사이클",
+      "path": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_shuriken_basic_cycle_01_v01.wav",
+      "sha256": "e0bff45fef7368ccfa95421fa19954f23e3f5c9507ad34be6744267328447348",
+      "version_id": "f97f064be5dd476aa02fd943925a0a5b",
+      "seed": 2570958268,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 28800,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "Weapons",
+        "mode": "cycle",
+        "length": 0.6,
+        "unit_length": 0.3,
+        "pre_peak": 0.1,
+        "rms_db": -28.0,
+        "revision": "basic-attacks-v2",
+        "events": [
+          {
+            "time": 0.1,
+            "gain": 1.0
+          },
+          {
+            "time": 0.37,
+            "gain": 1.0
+          }
+        ],
+        "trigger": "발사/투척 모션 시작; 타별 영역 사용",
+        "evidence": [
+          "docs/development/presentation/audio/basic-attack-audio-timing.md"
+        ],
+        "status": "current",
+        "notes": "폭발·명중·비행시간은 포함하지 않음. 샷건은 동시 한 발사음. 공속 ×1. 2초 원본·포화 검사 적용. 피크 상한 -16dBFS, 발음 구간 RMS 목표 -28dBFS. 각 타 영역 이전으로 소리 시작이 넘어가지 않도록 어택을 제한.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": [
+          {
+            "hit": 1,
+            "start": 0.0,
+            "end": 0.25,
+            "peak": 0.1,
+            "local_peak": 0.1
+          },
+          {
+            "hit": 2,
+            "start": 0.25,
+            "end": 0.6,
+            "peak": 0.37,
+            "local_peak": 0.12
+          }
+        ]
+      },
+      "event_samples": [
+        4800,
+        17760
+      ],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_world_erased_air",
+      "name": "삭제된 마을 환경 레이어",
+      "path": "unity/Assets/Deviant/Audio/SFX/World/sfx_world_erased_air_01_v01.wav",
+      "sha256": "a3d8cdbd2615cae9384a88afaf2e4d4b788b3751a1ceb1087e03ca2897e2d62e",
+      "version_id": "5e767ad8db704aa5932144ef206a63f8",
+      "seed": 2936449578,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 384000,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "World",
+        "mode": "loop",
+        "length": 8.0,
+        "unit_length": 0.16,
+        "pre_peak": 0.025,
+        "rms_db": -36.0,
+        "revision": "remaining-content-v1",
+        "extraction": null,
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/world/world-and-levels.md"
+        ],
+        "status": "planned",
+        "notes": "설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다. 몬스터 이동은 한 접촉/짧은 마찰이며 미정 접지 주기를 임의 확정하지 않는다.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_world_forest_air",
+      "name": "숲·들판 환경 레이어",
+      "path": "unity/Assets/Deviant/Audio/SFX/World/sfx_world_forest_air_01_v01.wav",
+      "sha256": "38320a608c4889b7b88b70d4510c82812568d67c65ace040d3261eb7aa7a5261",
+      "version_id": "390a1d7323034a519249cdcd953e8876",
+      "seed": 2646041033,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 384000,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "World",
+        "mode": "loop",
+        "length": 8.0,
+        "unit_length": 0.16,
+        "pre_peak": 0.025,
+        "rms_db": -36.0,
+        "revision": "remaining-content-v1",
+        "extraction": null,
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/world/world-and-levels.md"
+        ],
+        "status": "planned",
+        "notes": "설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다. 몬스터 이동은 한 접촉/짧은 마찰이며 미정 접지 주기를 임의 확정하지 않는다.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_world_grass_brush",
+      "name": "풀 접촉",
+      "path": "unity/Assets/Deviant/Audio/SFX/World/sfx_world_grass_brush_01_v01.wav",
+      "sha256": "a45f32c564d4e7818be595e82ecc8419fad85cd09c31dcd5176da2198de76f27",
+      "version_id": "eca6ad5fcc20421aad1575f681e52427",
+      "seed": 1026230663,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 9600,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "World",
+        "mode": "oneshot",
+        "length": 0.2,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "remaining-content-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/world/world-and-levels.md"
+        ],
+        "status": "planned",
+        "notes": "설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다. 몬스터 이동은 한 접촉/짧은 마찰이며 미정 접지 주기를 임의 확정하지 않는다.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_world_library_air",
+      "name": "대서적 보관소 환경 레이어",
+      "path": "unity/Assets/Deviant/Audio/SFX/World/sfx_world_library_air_01_v01.wav",
+      "sha256": "bcd50e4c319cc800b43eed0aa699e8c22d8ee75538961c7dd13213981562baf7",
+      "version_id": "761c08fbd1e34ab58dda587bf5e5d0ad",
+      "seed": 848707408,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 384000,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "World",
+        "mode": "loop",
+        "length": 8.0,
+        "unit_length": 0.16,
+        "pre_peak": 0.025,
+        "rms_db": -36.0,
+        "revision": "remaining-content-v1",
+        "extraction": null,
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/world/world-and-levels.md"
+        ],
+        "status": "planned",
+        "notes": "설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다. 몬스터 이동은 한 접촉/짧은 마찰이며 미정 접지 주기를 임의 확정하지 않는다.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_world_village_air",
+      "name": "농가·우물 주변 환경 레이어",
+      "path": "unity/Assets/Deviant/Audio/SFX/World/sfx_world_village_air_01_v01.wav",
+      "sha256": "50f62b130b1da29e763d6d8fdc3fb9f06c4c084d63b0058ac7d75f664b7de0a8",
+      "version_id": "6ee5e1c7021e45a6b4048359c973cf89",
+      "seed": 2197908110,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 384000,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "World",
+        "mode": "loop",
+        "length": 8.0,
+        "unit_length": 0.16,
+        "pre_peak": 0.025,
+        "rms_db": -36.0,
+        "revision": "remaining-content-v1",
+        "extraction": null,
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/world/world-and-levels.md"
+        ],
+        "status": "planned",
+        "notes": "설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다. 몬스터 이동은 한 접촉/짧은 마찰이며 미정 접지 주기를 임의 확정하지 않는다.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    },
+    {
+      "id": "sfx_world_water_splash",
+      "name": "도랑 물 접촉",
+      "path": "unity/Assets/Deviant/Audio/SFX/World/sfx_world_water_splash_01_v01.wav",
+      "sha256": "394e19d64f99ac8c3526ee3968f18877fddf5fa9ff0867e89eda83117fe36515",
+      "version_id": "2695a25b971945c48fcbc5807a7d5c4b",
+      "seed": 242417625,
+      "model": "stabilityai/stable-audio-3-small-sfx",
+      "samples": 16800,
+      "sample_rate": 48000,
+      "channels": 1,
+      "production": {
+        "category": "World",
+        "mode": "oneshot",
+        "length": 0.35,
+        "unit_length": 0.16,
+        "pre_peak": 0.02,
+        "rms_db": -28.0,
+        "revision": "remaining-content-v1",
+        "extraction": "event",
+        "events": [],
+        "trigger": "해당 상호작용 성공 / 환경 레이어 소유자 시작·종료",
+        "evidence": [
+          "docs/design/world/world-and-levels.md"
+        ],
+        "status": "planned",
+        "notes": "설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다. 몬스터 이동은 한 접촉/짧은 마찰이며 미정 접지 주기를 임의 확정하지 않는다.",
+        "foot_contacts": [],
+        "foot_cycle": 0.36,
+        "regions": []
+      },
+      "event_samples": [],
+      "foot_peak_offset_samples": null,
+      "state": "approved_asset_not_runtime_bound"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>잉크 주인공 공격 분리</title>
+<style>body{margin:0;background:#20252b;color:#eee;font:16px system-ui;padding:28px}h1{font-size:23px}button{background:#3d5264;color:white;border:1px solid #82919e;border-radius:7px;padding:12px 20px;margin:5px;cursor:pointer}canvas{image-rendering:pixelated;background:#707070;max-width:100%;border:1px solid #555}main{display:flex;gap:28px;flex-wrap:wrap}.panel{max-width:540px}p{line-height:1.7}.cards{display:flex;gap:18px;flex-wrap:wrap;margin-top:24px}.cards img{width:256px;image-rendering:pixelated;background:#707070}.cards figure{margin:0}.tag{color:#91d5ed}input{width:90px;padding:7px}a{color:#9ed5ef}</style>
+<h1>공격 1 · 올려베기 → 공격 2 · 내려베기</h1>
+<main><div class="panel"><canvas id="stage" width="512" height="512" aria-label="클릭으로 공격 재생"></canvas><p id="status" class="tag"></p></div>
+<div class="panel"><p>캐릭터 화면이나 <b>공격 클릭</b> 버튼을 누르면 1타.<br>1타 도중 또는 연결 대기 중 다시 누르면 2타가 이어집니다.</p>
+<button id="attack">공격 클릭</button><button id="single">1타만 보기</button><button id="combo">1타 + 2타 보기</button><button id="reset">초기화</button>
+<p>연결 입력 대기 <input id="window" type="number" min="0" max="1000" step="20" value="120"> ms</p>
+<p>1타: 원본 1~6프레임 · 470ms<br>2타: 원본 6~12프레임 · 620ms<br>공유 연결 자세: 원본 6프레임</p>
+<p>추가 입력이 없으면 무기를 위에 든 자세로 잠시 기다린 뒤 대기로 복귀합니다. 복귀는 기존 5→12→1프레임을 재배열한 검토용 구간입니다.</p>
+<p><a href="공격분리_재생설정.json">재생 설정 JSON</a></p></div></main>
+<div class="cards"><figure><img src="공격1_올려베기/스프라이트시트.png"><figcaption>공격1 · 올려베기</figcaption></figure><figure><img src="공격2_내려베기/스프라이트시트.png"><figcaption>공격2 · 내려베기</figcaption></figure><figure><img src="공격1_복귀/스프라이트시트.png"><figcaption>1타 뒤 복귀 시안</figcaption></figure></div>
+<script src="재생.js"></script><script>
+const canvas=document.getElementById('stage'),ctx=canvas.getContext('2d');ctx.imageSmoothingEnabled=false;
+let player=new AttackPlayer();const images=new Map();
+const paths=['대기.png',...Object.values(clips).flatMap(c=>c.times.map((_,i)=>c.folder+'/'+String(i+1).padStart(2,'0')+'.png'))];
+Promise.all(paths.map(src=>new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>{images.set(src,im);resolve();};im.onerror=reject;im.src=src;}))).then(()=>requestAnimationFrame(draw)).catch(()=>document.getElementById('status').textContent='이미지 로딩 실패: 폴더 전체를 유지해 주세요.');
+function draw(t){const f=player.update(t);ctx.clearRect(0,0,512,512);ctx.drawImage(images.get(f.src),0,0,512,512);const names={idle:'대기',a1:'1타 · 올려베기',hold:'2타 입력 대기',a2:'2타 · 내려베기',return:'1타 뒤 복귀'};document.getElementById('status').textContent=names[player.state]+(player.queued?' · 2타 예약됨':'');requestAnimationFrame(draw);}
+function reset(){player=new AttackPlayer();player.window=Math.max(0,Number(document.getElementById('window').value)||0);}
+function attack(){player.click(performance.now());}
+canvas.onclick=attack;document.getElementById('attack').onclick=attack;
+document.getElementById('single').onclick=()=>{reset();attack();};
+document.getElementById('combo').onclick=()=>{reset();attack();attack();};
+document.getElementById('reset').onclick=reset;
+document.getElementById('window').onchange=()=>player.window=Math.max(0,Number(document.getElementById('window').value)||0);
+</script></html>
+
+
+
+

@@ -1,0 +1,623 @@
+{
+  "format": "deviant-resource-asset-v1",
+  "id": "audio.weapon-sounds",
+  "path": "audio/weapon-sounds",
+  "status": "user-selected",
+  "gameIntegration": "selected-for-runtime-binding",
+  "distribution": "project-team",
+  "licenseReview": {
+    "products": [
+      {
+        "product": "Sonniss GDC 2026 Game Audio Bundle",
+        "licenseReference": "https://sonniss.com/gdc-bundle-license/",
+        "terms": "royalty-free commercial use, no attribution; no resale as sound effects, no AI/ML training"
+      },
+      {
+        "product": "Kenney RPG Audio, Impact Sounds",
+        "licenseReference": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "terms": "CC0"
+      },
+      {
+        "product": "Gamemaster Audio - Pro Sound Collection (audio.deviant-selected 의 클립을 다시 씀)",
+        "licenseReference": "https://assetstore.unity.com/packages/audio/sound-fx/pro-sound-collection-50235"
+      }
+    ],
+    "teamDistribution": "user-confirmed-team-sharing"
+  },
+  "sources": {
+    "sfx_hit_dagger": {
+      "use": "플레이어 공격이 적에게 맞은 순간(수락된 피격) 한 번. 몬스터가 아니라 무기·스킬이 소리를 정한다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_family_sounds.py: 검·방패·총 세 갈래 원판을 무기마다 음높이만 바꾸고 음량·어택·고음을 다듬음 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_hit_dagger_01_v01.wav",
+      "resourceFile": "runtime/Hits/sfx_hit_dagger_01_v01.wav",
+      "sha256": "e6becd9460fae11259db9c51fcb8831c4c64e003620eb1d89f0093bd30af1c5f"
+    },
+    "sfx_hit_greatsword": {
+      "use": "플레이어 공격이 적에게 맞은 순간(수락된 피격) 한 번. 몬스터가 아니라 무기·스킬이 소리를 정한다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_family_sounds.py: 검·방패·총 세 갈래 원판을 무기마다 음높이만 바꾸고 음량·어택·고음을 다듬음 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_hit_greatsword_01_v01.wav",
+      "resourceFile": "runtime/Hits/sfx_hit_greatsword_01_v01.wav",
+      "sha256": "e28091449c2134b6c540ba31be83141857d3c18ceca3539ee3a7042f025b6291"
+    },
+    "sfx_hit_hammer": {
+      "use": "플레이어 공격이 적에게 맞은 순간(수락된 피격) 한 번. 몬스터가 아니라 무기·스킬이 소리를 정한다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_hit_hammer_01_v01.wav",
+      "resourceFile": "runtime/Hits/sfx_hit_hammer_01_v01.wav",
+      "sha256": "9b07a55855650d19da5d62317c5d8d3034f01ca8cda7b81f4ccbf9df8b309eaf"
+    },
+    "sfx_hit_launcher_ball": {
+      "use": "플레이어 공격이 적에게 맞은 순간(수락된 피격) 한 번. 몬스터가 아니라 무기·스킬이 소리를 정한다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_hit_launcher_ball_01_v01.wav",
+      "resourceFile": "runtime/Hits/sfx_hit_launcher_ball_01_v01.wav",
+      "sha256": "8906114c3dbef8edd5d808345e10f267fd5f766308dc6472cc8abb73fa3472af"
+    },
+    "sfx_hit_launcher_laser": {
+      "use": "플레이어 공격이 적에게 맞은 순간(수락된 피격) 한 번. 몬스터가 아니라 무기·스킬이 소리를 정한다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_hit_launcher_laser_01_v01.wav",
+      "resourceFile": "runtime/Hits/sfx_hit_launcher_laser_01_v01.wav",
+      "sha256": "bd4c51d83b728460d803eb8d85ab866eab143c418a4effd6db50b64fb6c633a1"
+    },
+    "sfx_hit_rapier": {
+      "use": "플레이어 공격이 적에게 맞은 순간(수락된 피격) 한 번. 몬스터가 아니라 무기·스킬이 소리를 정한다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_family_sounds.py: 검·방패·총 세 갈래 원판을 무기마다 음높이만 바꾸고 음량·어택·고음을 다듬음 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_hit_rapier_01_v01.wav",
+      "resourceFile": "runtime/Hits/sfx_hit_rapier_01_v01.wav",
+      "sha256": "fc38c2c1db705a1da05a00dcdf26c8e30d7ed13fb104b36a78b7f9a5c900bea3"
+    },
+    "sfx_hit_shield": {
+      "use": "플레이어 공격이 적에게 맞은 순간(수락된 피격) 한 번. 몬스터가 아니라 무기·스킬이 소리를 정한다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_hit_shield_01_v01.wav",
+      "resourceFile": "runtime/Hits/sfx_hit_shield_01_v01.wav",
+      "sha256": "3ef0781812b0d8bfb0f1df685b094cd520c95d1ee72ecf9d575a97ad7773d23f"
+    },
+    "sfx_hit_shuriken": {
+      "use": "플레이어 공격이 적에게 맞은 순간(수락된 피격) 한 번. 몬스터가 아니라 무기·스킬이 소리를 정한다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_family_sounds.py: 검·방패·총 세 갈래 원판을 무기마다 음높이만 바꾸고 음량·어택·고음을 다듬음 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_hit_shuriken_01_v01.wav",
+      "resourceFile": "runtime/Hits/sfx_hit_shuriken_01_v01.wav",
+      "sha256": "79169bbd8122732f35aff4e9e30304fe809e2718f902f3bbe2f90928a9f47f29"
+    },
+    "sfx_hit_sword": {
+      "use": "플레이어 공격이 적에게 맞은 순간(수락된 피격) 한 번. 몬스터가 아니라 무기·스킬이 소리를 정한다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_family_sounds.py: 검·방패·총 세 갈래 원판을 무기마다 음높이만 바꾸고 음량·어택·고음을 다듬음 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_hit_sword_01_v01.wav",
+      "resourceFile": "runtime/Hits/sfx_hit_sword_01_v01.wav",
+      "sha256": "072e01c2a3831fd5870604bf28599a5023f22f8e90738cd83c75b73eeb6efbcc"
+    },
+    "sfx_hit_unarmed": {
+      "use": "플레이어 공격이 적에게 맞은 순간(수락된 피격) 한 번. 몬스터가 아니라 무기·스킬이 소리를 정한다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_hit_unarmed_01_v01.wav",
+      "resourceFile": "runtime/Hits/sfx_hit_unarmed_01_v01.wav",
+      "sha256": "5d1ce4ff97373d9658b37ec77a227fd956e46582c862d4df09c9280bf8ed5ea8"
+    },
+    "sfx_hit_whip": {
+      "use": "플레이어 공격이 적에게 맞은 순간(수락된 피격) 한 번. 몬스터가 아니라 무기·스킬이 소리를 정한다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_family_sounds.py: 검·방패·총 세 갈래 원판을 무기마다 음높이만 바꾸고 음량·어택·고음을 다듬음 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_hit_whip_01_v01.wav",
+      "resourceFile": "runtime/Hits/sfx_hit_whip_01_v01.wav",
+      "sha256": "fce94554556d99da0e56dd67be1ba7d6bc79c869ee575f6a8c6006356f430467"
+    },
+    "sfx_weapon_base_sword_basic_0": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_base_sword_basic_0_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_base_sword_basic_0_01_v01.wav",
+      "sha256": "9a3ea94d6ab6abd48e47e83a58f169b6b9dc804add82c0899250a557e66b4796"
+    },
+    "sfx_weapon_base_sword_basic_1": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_base_sword_basic_1_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_base_sword_basic_1_01_v01.wav",
+      "sha256": "a62d117a63ce89783f06a0d87541c0fe04af1e48a22595cbc739924c5eb8f136"
+    },
+    "sfx_weapon_base_sword_default": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_base_sword_default_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_base_sword_default_01_v01.wav",
+      "sha256": "76955f8de6fc1b56e4fcd3d36a2066e63c64af1a260c11aab60096f52520f53e"
+    },
+    "sfx_weapon_base_sword_follow_up": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_base_sword_follow_up_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_base_sword_follow_up_01_v01.wav",
+      "sha256": "9a3ea94d6ab6abd48e47e83a58f169b6b9dc804add82c0899250a557e66b4796"
+    },
+    "sfx_weapon_base_sword_movement": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_base_sword_movement_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_base_sword_movement_01_v01.wav",
+      "sha256": "a4cf3dcad5aae159ac44578e478cb290d487b1d968cc72157210aeeb90fc89e6"
+    },
+    "sfx_weapon_base_sword_range": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_base_sword_range_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_base_sword_range_01_v01.wav",
+      "sha256": "9a3ea94d6ab6abd48e47e83a58f169b6b9dc804add82c0899250a557e66b4796"
+    },
+    "sfx_weapon_bomb_basic_0": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_bomb_basic_0_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_bomb_basic_0_01_v01.wav",
+      "sha256": "06ba6d9a97bc200b6dd3be0f2f344ca212e5d39db74750d5b766fd434d7be0c7"
+    },
+    "sfx_weapon_bomb_basic_special": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_bomb_basic_special_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_bomb_basic_special_01_v01.wav",
+      "sha256": "9ab12da7a78826c255c9527918dfc60c782372cdfa9029ac879b9857c491ac30"
+    },
+    "sfx_weapon_bomb_followup_special": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_bomb_followup_special_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_bomb_followup_special_01_v01.wav",
+      "sha256": "27374538a057dba433a3bba6ed7b755efed12f3530e721b871938f23a293801f"
+    },
+    "sfx_weapon_bomb_move_special": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_bomb_move_special_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_bomb_move_special_01_v01.wav",
+      "sha256": "146c0ad03147ee28596eb35158b4402af1d37fc9a2c2855b79fa9d1a5ff76fd3"
+    },
+    "sfx_weapon_bomb_range_special": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_bomb_range_special_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_bomb_range_special_01_v01.wav",
+      "sha256": "3bf8f64f53cefa9fb3fc47c539853b84c2adac667a85ab9af37ef5c0222ced48"
+    },
+    "sfx_weapon_dagger_basic_0": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_dagger_basic_0_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_dagger_basic_0_01_v01.wav",
+      "sha256": "0ea53919de025025e08f307ccaaf93d9a2f704bb3cd968de02e0d45a7c64907c"
+    },
+    "sfx_weapon_dagger_basic_1": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_dagger_basic_1_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_dagger_basic_1_01_v01.wav",
+      "sha256": "0ea53919de025025e08f307ccaaf93d9a2f704bb3cd968de02e0d45a7c64907c"
+    },
+    "sfx_weapon_dagger_basic_2": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_dagger_basic_2_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_dagger_basic_2_01_v01.wav",
+      "sha256": "286c03f57ec9d4bf61be3506028847b6fe03ab231bb22c845a9fc2d181334faf"
+    },
+    "sfx_weapon_dagger_basic_3": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_dagger_basic_3_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_dagger_basic_3_01_v01.wav",
+      "sha256": "9a6d93bfe9f9bbbdc07600d47eada42c659761d1e3b6bf8b16c5415904be2040"
+    },
+    "sfx_weapon_dagger_default": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_dagger_default_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_dagger_default_01_v01.wav",
+      "sha256": "286c03f57ec9d4bf61be3506028847b6fe03ab231bb22c845a9fc2d181334faf"
+    },
+    "sfx_weapon_dagger_follow_up": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_dagger_follow_up_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_dagger_follow_up_01_v01.wav",
+      "sha256": "1a6dbfa8f4b3c0f5b7469592966e8b5d5a47408ff19b1ef4ab4817292afa7f67"
+    },
+    "sfx_weapon_dagger_movement": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_dagger_movement_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_dagger_movement_01_v01.wav",
+      "sha256": "08bbd11bcf46b1c59ac811dc37f6c7f2162acb410f6afe1704e9c1a4c90ee9a0"
+    },
+    "sfx_weapon_dagger_range": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_dagger_range_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_dagger_range_01_v01.wav",
+      "sha256": "83df8fc6d02816152a090c579ac2db6dd1e7609186cf797b22d71d1c2d87ea7c"
+    },
+    "sfx_weapon_greatsword_basic_0": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_greatsword_basic_0_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_greatsword_basic_0_01_v01.wav",
+      "sha256": "0516af94860b105251d4f300eb1b71ead0af85a3670f44538a5765ce1a0938a4"
+    },
+    "sfx_weapon_greatsword_basic_1": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_greatsword_basic_1_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_greatsword_basic_1_01_v01.wav",
+      "sha256": "c338f0e483bb6e3d9e3ad29bc49bc90be723df6315365879d3fb5c4db607b906"
+    },
+    "sfx_weapon_greatsword_basic_2": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_greatsword_basic_2_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_greatsword_basic_2_01_v01.wav",
+      "sha256": "5a8b13b8746963b09675aac15b74cb58578d235f4e3513c16b3d75a324dce218"
+    },
+    "sfx_weapon_greatsword_default": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_greatsword_default_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_greatsword_default_01_v01.wav",
+      "sha256": "9ecd318a318e41a62bd72b6211afbe706a3eca8c9d4eb825ef23999b364b5ee7"
+    },
+    "sfx_weapon_greatsword_follow_up": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_greatsword_follow_up_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_greatsword_follow_up_01_v01.wav",
+      "sha256": "62c29d83421656838164cbf555f10ec82dde907bcabf8d0a9d7305f6346f6cec"
+    },
+    "sfx_weapon_greatsword_movement": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_greatsword_movement_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_greatsword_movement_01_v01.wav",
+      "sha256": "c897af3ca05405765a2e560ea86d3f840a979a1ba5064ee31c57f9c77a42a89e"
+    },
+    "sfx_weapon_greatsword_range": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_greatsword_range_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_greatsword_range_01_v01.wav",
+      "sha256": "5e5d5bf710b94f221f33692a814d7d2401ef41b7d70b5e2209f7d7c4c457015a"
+    },
+    "sfx_weapon_hammer_basic_0": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_hammer_basic_0_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_hammer_basic_0_01_v01.wav",
+      "sha256": "79a51c50e88d7af0868030df8ebc9fb58d671e1517710e661ea0e82ddade9a0b"
+    },
+    "sfx_weapon_hammer_basic_1": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_hammer_basic_1_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_hammer_basic_1_01_v01.wav",
+      "sha256": "169788b8240c3025de11adb2c272f3a63215e426e39ebad300399fb7a8b14b5d"
+    },
+    "sfx_weapon_hammer_default": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_hammer_default_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_hammer_default_01_v01.wav",
+      "sha256": "575a0303e384c683b6a0f96dfb4ed207708699fd8a8b3c3f2685e198dc48697a"
+    },
+    "sfx_weapon_hammer_follow_up": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_hammer_follow_up_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_hammer_follow_up_01_v01.wav",
+      "sha256": "575a0303e384c683b6a0f96dfb4ed207708699fd8a8b3c3f2685e198dc48697a"
+    },
+    "sfx_weapon_hammer_movement": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_hammer_movement_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_hammer_movement_01_v01.wav",
+      "sha256": "4bad25f39de847b9f7e5eced258fb4d087c079b5a2f0c8615561a5da80f44e82"
+    },
+    "sfx_weapon_hammer_range": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_hammer_range_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_hammer_range_01_v01.wav",
+      "sha256": "08a1f67f55758dbcc68fe28315e7a58aa27fa146c4058ea164d0f250ece9a448"
+    },
+    "sfx_weapon_launcher_basic_0": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_launcher_basic_0_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_launcher_basic_0_01_v01.wav",
+      "sha256": "fc43c2bafb1a1c603686de4512f6fa5385810558237685b2dae7e10f1c1c3e6b"
+    },
+    "sfx_weapon_launcher_basic_special": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_launcher_basic_special_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_launcher_basic_special_01_v01.wav",
+      "sha256": "65ffb4d17bde78955f5248706b2c7fd5718d24c2be87d73efc77a637810ce886"
+    },
+    "sfx_weapon_launcher_followup_special": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_launcher_followup_special_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_launcher_followup_special_01_v01.wav",
+      "sha256": "572f01deca3d335b7ae7a39069529b04f4393848de499a65d670132eb15b8061"
+    },
+    "sfx_weapon_launcher_move_special": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_launcher_move_special_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_launcher_move_special_01_v01.wav",
+      "sha256": "989440c088c859648490f24221da59ebee8a984ab9f265a2c228a2b703dc3f54"
+    },
+    "sfx_weapon_launcher_range_special": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_launcher_range_special_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_launcher_range_special_01_v01.wav",
+      "sha256": "9ac12dbb9f2547b8e4630a1176f0e061e91a817924e48d22f26e4c5cbdf9300c"
+    },
+    "sfx_weapon_rapier_basic_0": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_rapier_basic_0_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_rapier_basic_0_01_v01.wav",
+      "sha256": "7d7ded013ebb1a4ebbeed8e7e7efebe4e83c387353a958617aebb944f1ef95fb"
+    },
+    "sfx_weapon_rapier_basic_1": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_rapier_basic_1_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_rapier_basic_1_01_v01.wav",
+      "sha256": "7d7ded013ebb1a4ebbeed8e7e7efebe4e83c387353a958617aebb944f1ef95fb"
+    },
+    "sfx_weapon_rapier_basic_2": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_rapier_basic_2_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_rapier_basic_2_01_v01.wav",
+      "sha256": "305d947bfc63150066990fcd9d6b1510e9f35f4014386bb057117fa7143b292f"
+    },
+    "sfx_weapon_rapier_default": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_rapier_default_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_rapier_default_01_v01.wav",
+      "sha256": "145a52221209b1ef6ac4360cc6275c580cffdffcc9981e5c25eb30d2b7cc8ccf"
+    },
+    "sfx_weapon_rapier_follow_up": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_rapier_follow_up_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_rapier_follow_up_01_v01.wav",
+      "sha256": "ca70b3f3ca07cef0a66b3dfafa2c2f47039e18fb4056ffda6d03ac7dca561888"
+    },
+    "sfx_weapon_rapier_movement": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_rapier_movement_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_rapier_movement_01_v01.wav",
+      "sha256": "09ee414687abea331fe324f38576eca52820e1d369ef9f5a3935cf0c46f9b9fc"
+    },
+    "sfx_weapon_rapier_range": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_rapier_range_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_rapier_range_01_v01.wav",
+      "sha256": "0d594cb4be19eac2aa1816d23adaeff43e2e381ff9e80f26d8bf21c8059bb2bf"
+    },
+    "sfx_weapon_shield_basic_0": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_shield_basic_0_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_shield_basic_0_01_v01.wav",
+      "sha256": "54309e48b29701f82b34b1e093c7abb6cb7ae00e5ad03cb90f98e8db47df485d"
+    },
+    "sfx_weapon_shield_default": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_shield_default_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_shield_default_01_v01.wav",
+      "sha256": "1afad788198e17d812f440527c568ceb48e5dd6f2c1bb5b4b56f02779852bbb9"
+    },
+    "sfx_weapon_shield_follow_up": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_shield_follow_up_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_shield_follow_up_01_v01.wav",
+      "sha256": "c6efee1caf27f946e90c693c03169db6646f26086e18889c5bdadd4e078781ee"
+    },
+    "sfx_weapon_shield_movement": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_shield_movement_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_shield_movement_01_v01.wav",
+      "sha256": "2f907f560980096f90f3815f8ee5b95b1de4886b55638770c439fc33fbe0e8f2"
+    },
+    "sfx_weapon_shield_range": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_shield_range_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_shield_range_01_v01.wav",
+      "sha256": "be2f04caf84c61db8486cac1f29970dd3e266c63d3d31ed932a657077af82fd8"
+    },
+    "sfx_weapon_shuriken_basic_0": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_shuriken_basic_0_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_shuriken_basic_0_01_v01.wav",
+      "sha256": "c58fcf8c412d78fa15f22d482475834c04268296e57a3f7af9871319a3401a9f"
+    },
+    "sfx_weapon_shuriken_basic_1": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_shuriken_basic_1_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_shuriken_basic_1_01_v01.wav",
+      "sha256": "1cdd425bf492ef8ce8fccdb4859d523b41a86fb9f57e2c05be2c5bd0d53a698f"
+    },
+    "sfx_weapon_shuriken_basic_special": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_shuriken_basic_special_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_shuriken_basic_special_01_v01.wav",
+      "sha256": "28711879586eac8411ac4663bbd50bf7139528806b3f7a8eb5e810a5ce9f3fae"
+    },
+    "sfx_weapon_shuriken_followup_special": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_shuriken_followup_special_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_shuriken_followup_special_01_v01.wav",
+      "sha256": "98b9fafb86c8e8a7a11abbaa74567f58b2e8e747602ab04540ae3fa22cc13458"
+    },
+    "sfx_weapon_shuriken_move_special": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_shuriken_move_special_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_shuriken_move_special_01_v01.wav",
+      "sha256": "28711879586eac8411ac4663bbd50bf7139528806b3f7a8eb5e810a5ce9f3fae"
+    },
+    "sfx_weapon_shuriken_range_special": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_shuriken_range_special_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_shuriken_range_special_01_v01.wav",
+      "sha256": "28711879586eac8411ac4663bbd50bf7139528806b3f7a8eb5e810a5ce9f3fae"
+    },
+    "sfx_weapon_unarmed_basic_0": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_unarmed_basic_0_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_unarmed_basic_0_01_v01.wav",
+      "sha256": "62dfe9b9f3c68f2ac997bbccfa18a0eea117f2a34014aad20cd7ffce076cfe49"
+    },
+    "sfx_weapon_unarmed_basic_1": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 방패·총 갈래 원판을 5kHz 아래로 어둡고 작게, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_unarmed_basic_1_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_unarmed_basic_1_01_v01.wav",
+      "sha256": "d3ccd0379cb6d1438a091534af7657214dbd17fd70fd48010c839aba17c26e23"
+    },
+    "sfx_weapon_whip_basic_0": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_whip_basic_0_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_whip_basic_0_01_v01.wav",
+      "sha256": "87b76f39359859dbd56e49c216c0cc95a57a74e97faf86c0b8cb52fda14b2e71"
+    },
+    "sfx_weapon_whip_basic_1": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_whip_basic_1_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_whip_basic_1_01_v01.wav",
+      "sha256": "c095d07ffadffb7452a9ee7fb7556181943b909f789b2b90f3b53e02e07c04e7"
+    },
+    "sfx_weapon_whip_default": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_whip_default_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_whip_default_01_v01.wav",
+      "sha256": "231566c9ea6b411e1d12146588b802f71a1eaa38e1dfdd40983aa8db651eed5f"
+    },
+    "sfx_weapon_whip_follow_up": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_whip_follow_up_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_whip_follow_up_01_v01.wav",
+      "sha256": "231566c9ea6b411e1d12146588b802f71a1eaa38e1dfdd40983aa8db651eed5f"
+    },
+    "sfx_weapon_whip_movement": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_whip_movement_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_whip_movement_01_v01.wav",
+      "sha256": "c9e47e66ab2d843e1fcecb4e7a6b0873c035ba06184284e4a5bdbae4630f1c2a"
+    },
+    "sfx_weapon_whip_range": {
+      "use": "플레이어 공격이 시작될 때 한 번. 공격 시작부터 재생하면 가장 큰 지점이 그 공격의 타격 시각에 온다.",
+      "recipe": "04_테스트/무기 적중음 시안/export_soft_variants.py 의 soft(부드럽게): 검 갈래 바람 「휙」(쇳소리 없음), 5kHz 아래, 무기마다 음높이만 (사용자 결정 2026-11-13)",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_whip_range_01_v01.wav",
+      "resourceFile": "runtime/Swings/sfx_weapon_whip_range_01_v01.wav",
+      "sha256": "0a426c9d852fe33c9695bebae7273858f4288f25b74f79cb057fbea30abf95ed"
+    }
+  },
+  "files": [
+    "runtime/Hits/sfx_hit_dagger_01_v01.wav",
+    "runtime/Hits/sfx_hit_greatsword_01_v01.wav",
+    "runtime/Hits/sfx_hit_hammer_01_v01.wav",
+    "runtime/Hits/sfx_hit_launcher_ball_01_v01.wav",
+    "runtime/Hits/sfx_hit_launcher_laser_01_v01.wav",
+    "runtime/Hits/sfx_hit_rapier_01_v01.wav",
+    "runtime/Hits/sfx_hit_shield_01_v01.wav",
+    "runtime/Hits/sfx_hit_shuriken_01_v01.wav",
+    "runtime/Hits/sfx_hit_sword_01_v01.wav",
+    "runtime/Hits/sfx_hit_unarmed_01_v01.wav",
+    "runtime/Hits/sfx_hit_whip_01_v01.wav",
+    "runtime/Swings/sfx_weapon_base_sword_basic_0_01_v01.wav",
+    "runtime/Swings/sfx_weapon_base_sword_basic_1_01_v01.wav",
+    "runtime/Swings/sfx_weapon_base_sword_default_01_v01.wav",
+    "runtime/Swings/sfx_weapon_base_sword_follow_up_01_v01.wav",
+    "runtime/Swings/sfx_weapon_base_sword_movement_01_v01.wav",
+    "runtime/Swings/sfx_weapon_base_sword_range_01_v01.wav",
+    "runtime/Swings/sfx_weapon_bomb_basic_0_01_v01.wav",
+    "runtime/Swings/sfx_weapon_bomb_basic_special_01_v01.wav",
+    "runtime/Swings/sfx_weapon_bomb_followup_special_01_v01.wav",
+    "runtime/Swings/sfx_weapon_bomb_move_special_01_v01.wav",
+    "runtime/Swings/sfx_weapon_bomb_range_special_01_v01.wav",
+    "runtime/Swings/sfx_weapon_dagger_basic_0_01_v01.wav",
+    "runtime/Swings/sfx_weapon_dagger_basic_1_01_v01.wav",
+    "runtime/Swings/sfx_weapon_dagger_basic_2_01_v01.wav",
+    "runtime/Swings/sfx_weapon_dagger_basic_3_01_v01.wav",
+    "runtime/Swings/sfx_weapon_dagger_default_01_v01.wav",
+    "runtime/Swings/sfx_weapon_dagger_follow_up_01_v01.wav",
+    "runtime/Swings/sfx_weapon_dagger_movement_01_v01.wav",
+    "runtime/Swings/sfx_weapon_dagger_range_01_v01.wav",
+    "runtime/Swings/sfx_weapon_greatsword_basic_0_01_v01.wav",
+    "runtime/Swings/sfx_weapon_greatsword_basic_1_01_v01.wav",
+    "runtime/Swings/sfx_weapon_greatsword_basic_2_01_v01.wav",
+    "runtime/Swings/sfx_weapon_greatsword_default_01_v01.wav",
+    "runtime/Swings/sfx_weapon_greatsword_follow_up_01_v01.wav",
+    "runtime/Swings/sfx_weapon_greatsword_movement_01_v01.wav",
+    "runtime/Swings/sfx_weapon_greatsword_range_01_v01.wav",
+    "runtime/Swings/sfx_weapon_hammer_basic_0_01_v01.wav",
+    "runtime/Swings/sfx_weapon_hammer_basic_1_01_v01.wav",
+    "runtime/Swings/sfx_weapon_hammer_default_01_v01.wav",
+    "runtime/Swings/sfx_weapon_hammer_follow_up_01_v01.wav",
+    "runtime/Swings/sfx_weapon_hammer_movement_01_v01.wav",
+    "runtime/Swings/sfx_weapon_hammer_range_01_v01.wav",
+    "runtime/Swings/sfx_weapon_launcher_basic_0_01_v01.wav",
+    "runtime/Swings/sfx_weapon_launcher_basic_special_01_v01.wav",
+    "runtime/Swings/sfx_weapon_launcher_followup_special_01_v01.wav",
+    "runtime/Swings/sfx_weapon_launcher_move_special_01_v01.wav",
+    "runtime/Swings/sfx_weapon_launcher_range_special_01_v01.wav",
+    "runtime/Swings/sfx_weapon_rapier_basic_0_01_v01.wav",
+    "runtime/Swings/sfx_weapon_rapier_basic_1_01_v01.wav",
+    "runtime/Swings/sfx_weapon_rapier_basic_2_01_v01.wav",
+    "runtime/Swings/sfx_weapon_rapier_default_01_v01.wav",
+    "runtime/Swings/sfx_weapon_rapier_follow_up_01_v01.wav",
+    "runtime/Swings/sfx_weapon_rapier_movement_01_v01.wav",
+    "runtime/Swings/sfx_weapon_rapier_range_01_v01.wav",
+    "runtime/Swings/sfx_weapon_shield_basic_0_01_v01.wav",
+    "runtime/Swings/sfx_weapon_shield_default_01_v01.wav",
+    "runtime/Swings/sfx_weapon_shield_follow_up_01_v01.wav",
+    "runtime/Swings/sfx_weapon_shield_movement_01_v01.wav",
+    "runtime/Swings/sfx_weapon_shield_range_01_v01.wav",
+    "runtime/Swings/sfx_weapon_shuriken_basic_0_01_v01.wav",
+    "runtime/Swings/sfx_weapon_shuriken_basic_1_01_v01.wav",
+    "runtime/Swings/sfx_weapon_shuriken_basic_special_01_v01.wav",
+    "runtime/Swings/sfx_weapon_shuriken_followup_special_01_v01.wav",
+    "runtime/Swings/sfx_weapon_shuriken_move_special_01_v01.wav",
+    "runtime/Swings/sfx_weapon_shuriken_range_special_01_v01.wav",
+    "runtime/Swings/sfx_weapon_unarmed_basic_0_01_v01.wav",
+    "runtime/Swings/sfx_weapon_unarmed_basic_1_01_v01.wav",
+    "runtime/Swings/sfx_weapon_whip_basic_0_01_v01.wav",
+    "runtime/Swings/sfx_weapon_whip_basic_1_01_v01.wav",
+    "runtime/Swings/sfx_weapon_whip_default_01_v01.wav",
+    "runtime/Swings/sfx_weapon_whip_follow_up_01_v01.wav",
+    "runtime/Swings/sfx_weapon_whip_movement_01_v01.wav",
+    "runtime/Swings/sfx_weapon_whip_range_01_v01.wav"
+  ]
+}

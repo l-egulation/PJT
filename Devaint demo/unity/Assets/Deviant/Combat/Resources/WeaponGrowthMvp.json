@@ -1,0 +1,3235 @@
+{
+  "schema": 1,
+  "parts": [
+    {
+      "id": "ink3_red_01",
+      "name": "추가타",
+      "description": "맞힐 때마다 20% 피해로 한 번 더 때린다.",
+      "color": "red",
+      "trigger": "hit",
+      "kind": "extra_hit",
+      "scope": "equipped_weapon",
+      "grade": 1,
+      "duplicate": true,
+      "cooldown": 0.25,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_red_01",
+      "levels": [
+        {
+          "ratio": 0.2
+        },
+        {
+          "ratio": 0.22
+        },
+        {
+          "ratio": 0.26
+        },
+        {
+          "ratio": 0.32
+        },
+        {
+          "ratio": 0.4
+        },
+        {
+          "ratio": 0.5
+        }
+      ],
+      "stats": [
+        {
+          "label": "추가타",
+          "values": [
+            "20%",
+            "22%",
+            "26%",
+            "32%",
+            "40%",
+            "50%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_red_02",
+      "name": "집중 공격",
+      "description": "같은 적을 계속 때리면 피해가 4%씩 오른다. (최대 20%)",
+      "color": "red",
+      "trigger": "hit",
+      "kind": "focus_stack_damage",
+      "scope": "equipped_weapon",
+      "grade": 3,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_red_01",
+      "levels": [
+        {
+          "amountPerStack": 0.02,
+          "maxStacks": 5,
+          "resetSeconds": 2
+        },
+        {
+          "amountPerStack": 0.023,
+          "maxStacks": 5,
+          "resetSeconds": 2
+        },
+        {
+          "amountPerStack": 0.0308,
+          "maxStacks": 5,
+          "resetSeconds": 2
+        },
+        {
+          "amountPerStack": 0.0476,
+          "maxStacks": 5,
+          "resetSeconds": 2
+        },
+        {
+          "amountPerStack": 0.08,
+          "maxStacks": 5,
+          "resetSeconds": 2
+        },
+        {
+          "amountPerStack": 0.14,
+          "maxStacks": 5,
+          "resetSeconds": 2
+        }
+      ],
+      "stats": [
+        {
+          "label": "한 번 쌓일 때마다 피해 증가",
+          "values": [
+            "2%",
+            "2.3%",
+            "3.08%",
+            "4.76%",
+            "8%",
+            "14%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_red_03",
+      "name": "교체 강타",
+      "description": "무기 교체 시 첫 공격의 피해가 30% 늘어난다.",
+      "color": "red",
+      "trigger": "switch",
+      "kind": "next_attack_power",
+      "scope": "incoming_weapon",
+      "grade": 2,
+      "duplicate": false,
+      "cooldown": 2,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_red_01",
+      "levels": [
+        {
+          "amount": 0.35
+        },
+        {
+          "amount": 0.38
+        },
+        {
+          "amount": 0.422
+        },
+        {
+          "amount": 0.479
+        },
+        {
+          "amount": 0.554
+        },
+        {
+          "amount": 0.65
+        }
+      ],
+      "stats": [
+        {
+          "label": "다음 공격 피해 증가",
+          "values": [
+            "35%",
+            "38%",
+            "42.2%",
+            "47.9%",
+            "55.4%",
+            "65%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_red_04",
+      "name": "표식 폭발",
+      "description": "표식을 터트린 적에게 60% 피해를 한 번 더 준다.",
+      "color": "red",
+      "trigger": "mark_burst",
+      "kind": "burst_extra_hit",
+      "scope": "equipped_weapon",
+      "grade": 4,
+      "duplicate": false,
+      "cooldown": 0.5,
+      "targetCooldown": true,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_red_01",
+      "levels": [
+        {
+          "ratio": 0.3
+        },
+        {
+          "ratio": 0.3375
+        },
+        {
+          "ratio": 0.435
+        },
+        {
+          "ratio": 0.645
+        },
+        {
+          "ratio": 1.05
+        },
+        {
+          "ratio": 1.8
+        }
+      ],
+      "stats": [
+        {
+          "label": "표식 폭발 추가타",
+          "values": [
+            "30%",
+            "33.75%",
+            "43.5%",
+            "64.5%",
+            "105%",
+            "180%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_red_05",
+      "name": "처치 폭발",
+      "description": "적을 처치하면 넓은 주변 적에게 100% 피해를 준다.",
+      "color": "red",
+      "trigger": "kill",
+      "kind": "kill_area_hit",
+      "scope": "equipped_weapon",
+      "grade": 1,
+      "duplicate": true,
+      "cooldown": 0.5,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_red_01",
+      "levels": [
+        {
+          "ratio": 1.0,
+          "radius": 6
+        },
+        {
+          "ratio": 1.1,
+          "radius": 6
+        },
+        {
+          "ratio": 1.3,
+          "radius": 6
+        },
+        {
+          "ratio": 1.6,
+          "radius": 6
+        },
+        {
+          "ratio": 2.0,
+          "radius": 6
+        },
+        {
+          "ratio": 2.5,
+          "radius": 6
+        }
+      ],
+      "stats": [
+        {
+          "label": "처치 폭발 피해",
+          "values": [
+            "100%",
+            "110%",
+            "130%",
+            "160%",
+            "200%",
+            "250%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_red_06",
+      "name": "처치 공격력",
+      "description": "적을 처치할 때마다 공격력이 0.5% 오른다. (최대 30%)",
+      "color": "red",
+      "trigger": "kill",
+      "kind": "kill_stack_attack_power",
+      "scope": "equipped_weapon",
+      "grade": 3,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_red_01",
+      "levels": [
+        {
+          "amountPerKill": 0.003,
+          "cap": 0.15
+        },
+        {
+          "amountPerKill": 0.0033,
+          "cap": 0.16125
+        },
+        {
+          "amountPerKill": 0.00408,
+          "cap": 0.1905
+        },
+        {
+          "amountPerKill": 0.00576,
+          "cap": 0.2535
+        },
+        {
+          "amountPerKill": 0.009,
+          "cap": 0.375
+        },
+        {
+          "amountPerKill": 0.015,
+          "cap": 0.6
+        }
+      ],
+      "stats": [
+        {
+          "label": "처치당 공격력 증가",
+          "values": [
+            "0.3%",
+            "0.33%",
+            "0.408%",
+            "0.576%",
+            "0.9%",
+            "1.5%"
+          ]
+        },
+        {
+          "label": "공격력 증가 상한",
+          "values": [
+            "15%",
+            "16.125%",
+            "19.05%",
+            "25.35%",
+            "37.5%",
+            "60%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_red_07",
+      "name": "표식 강화",
+      "description": "표식이 터질 때 주는 피해가 50% 늘어난다.",
+      "color": "red",
+      "trigger": "passive",
+      "kind": "mark_damage_bonus",
+      "scope": "equipped_weapon",
+      "grade": 3,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_red_01",
+      "levels": [
+        {
+          "amount": 0.25
+        },
+        {
+          "amount": 0.27375
+        },
+        {
+          "amount": 0.3355
+        },
+        {
+          "amount": 0.4685
+        },
+        {
+          "amount": 0.725
+        },
+        {
+          "amount": 1.2
+        }
+      ],
+      "stats": [
+        {
+          "label": "표식 피해 증가",
+          "values": [
+            "25%",
+            "27.375%",
+            "33.55%",
+            "46.85%",
+            "72.5%",
+            "120%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_red_08",
+      "name": "결정타",
+      "description": "체력 30% 이하인 적에게 주는 피해가 35% 늘어난다.",
+      "color": "red",
+      "trigger": "hit",
+      "kind": "execute_damage",
+      "scope": "equipped_weapon",
+      "grade": 2,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_red_01",
+      "levels": [
+        {
+          "threshold": 0.3,
+          "amount": 0.4
+        },
+        {
+          "threshold": 0.3,
+          "amount": 0.435
+        },
+        {
+          "threshold": 0.3,
+          "amount": 0.484
+        },
+        {
+          "threshold": 0.3,
+          "amount": 0.5505
+        },
+        {
+          "threshold": 0.3,
+          "amount": 0.638
+        },
+        {
+          "threshold": 0.3,
+          "amount": 0.75
+        }
+      ],
+      "stats": [
+        {
+          "label": "체력 30% 이하 적에게 피해 증가",
+          "values": [
+            "40%",
+            "43.5%",
+            "48.4%",
+            "55.05%",
+            "63.8%",
+            "75%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_red_09",
+      "name": "광폭화",
+      "description": "주는 피해가 25% 늘지만, 받는 피해도 15% 는다.",
+      "color": "red",
+      "trigger": "passive",
+      "kind": "risky_attack_power",
+      "scope": "equipped_weapon",
+      "grade": 3,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_red_01",
+      "levels": [
+        {
+          "amount": 0.3,
+          "damageTaken": 0.15
+        },
+        {
+          "amount": 0.33,
+          "damageTaken": 0.15
+        },
+        {
+          "amount": 0.372,
+          "damageTaken": 0.15
+        },
+        {
+          "amount": 0.429,
+          "damageTaken": 0.15
+        },
+        {
+          "amount": 0.504,
+          "damageTaken": 0.15
+        },
+        {
+          "amount": 0.6,
+          "damageTaken": 0.15
+        }
+      ],
+      "stats": [
+        {
+          "label": "공격 피해 증가",
+          "values": [
+            "30%",
+            "33%",
+            "37.2%",
+            "42.9%",
+            "50.4%",
+            "60%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_red_10",
+      "name": "스킬 표적",
+      "description": "스킬로 맞힌 적에게 4초간 기본 공격 피해가 25% 늘어난다.",
+      "color": "red",
+      "trigger": "hit",
+      "kind": "underline_mark",
+      "scope": "equipped_weapon",
+      "grade": 2,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "special",
+      "markIndex": 0,
+      "icon": "ink-ink2_red_01",
+      "levels": [
+        {
+          "amount": 0.15,
+          "duration": 4
+        },
+        {
+          "amount": 0.16125,
+          "duration": 4
+        },
+        {
+          "amount": 0.1905,
+          "duration": 4
+        },
+        {
+          "amount": 0.2535,
+          "duration": 4
+        },
+        {
+          "amount": 0.375,
+          "duration": 4
+        },
+        {
+          "amount": 0.6,
+          "duration": 4
+        }
+      ],
+      "stats": [
+        {
+          "label": "표적에게 기본 공격 피해 증가",
+          "values": [
+            "15%",
+            "16.125%",
+            "19.05%",
+            "25.35%",
+            "37.5%",
+            "60%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_yellow_01",
+      "name": "전기 발자국",
+      "description": "움직이면 발자국에 전기가 남아 닿은 적에게 피해를 준다.",
+      "color": "yellow",
+      "trigger": "move",
+      "kind": "electric_field",
+      "scope": "equipped_weapon",
+      "grade": 3,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_yellow_01",
+      "levels": [
+        {
+          "distance": 1.5,
+          "radius": 0.75,
+          "duration": 2,
+          "interval": 0.5,
+          "ratio": 0.08
+        },
+        {
+          "distance": 1.5,
+          "radius": 0.75,
+          "duration": 2,
+          "interval": 0.5,
+          "ratio": 0.086
+        },
+        {
+          "distance": 1.5,
+          "radius": 0.75,
+          "duration": 2,
+          "interval": 0.5,
+          "ratio": 0.1016
+        },
+        {
+          "distance": 1.5,
+          "radius": 0.75,
+          "duration": 2,
+          "interval": 0.5,
+          "ratio": 0.1352
+        },
+        {
+          "distance": 1.5,
+          "radius": 0.75,
+          "duration": 2,
+          "interval": 0.5,
+          "ratio": 0.2
+        },
+        {
+          "distance": 1.5,
+          "radius": 0.75,
+          "duration": 2,
+          "interval": 0.5,
+          "ratio": 0.32
+        }
+      ],
+      "stats": [
+        {
+          "label": "전기장 피해 (0.5초마다)",
+          "values": [
+            "8%",
+            "8.6%",
+            "10.16%",
+            "13.52%",
+            "20%",
+            "32%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_yellow_02",
+      "name": "신속",
+      "description": "공격 속도와 이동 속도가 10% 빨라진다.",
+      "color": "yellow",
+      "trigger": "passive",
+      "kind": "attack_and_move_speed",
+      "scope": "equipped_weapon",
+      "grade": 1,
+      "duplicate": true,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_yellow_01",
+      "levels": [
+        {
+          "attackSpeed": 0.1,
+          "moveSpeed": 0.1
+        },
+        {
+          "attackSpeed": 0.13,
+          "moveSpeed": 0.11
+        },
+        {
+          "attackSpeed": 0.19,
+          "moveSpeed": 0.13
+        },
+        {
+          "attackSpeed": 0.27,
+          "moveSpeed": 0.16
+        },
+        {
+          "attackSpeed": 0.37,
+          "moveSpeed": 0.2
+        },
+        {
+          "attackSpeed": 0.5,
+          "moveSpeed": 0.25
+        }
+      ],
+      "stats": [
+        {
+          "label": "공격 속도 증가",
+          "values": [
+            "10%",
+            "13%",
+            "19%",
+            "27%",
+            "37%",
+            "50%"
+          ]
+        },
+        {
+          "label": "이동 속도 증가",
+          "values": [
+            "10%",
+            "11%",
+            "13%",
+            "16%",
+            "20%",
+            "25%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_yellow_03",
+      "name": "몸통 박치기",
+      "description": "대시로 부딪힌 적에게 기본 공격만큼 피해를 준다.",
+      "color": "yellow",
+      "trigger": "dash",
+      "kind": "dash_hit",
+      "scope": "equipped_weapon",
+      "grade": 2,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_yellow_01",
+      "levels": [
+        {
+          "ratio": 1.1
+        },
+        {
+          "ratio": 1.19
+        },
+        {
+          "ratio": 1.316
+        },
+        {
+          "ratio": 1.487
+        },
+        {
+          "ratio": 1.712
+        },
+        {
+          "ratio": 2.0
+        }
+      ],
+      "stats": [
+        {
+          "label": "대시 충돌 피해",
+          "values": [
+            "110%",
+            "119%",
+            "131.6%",
+            "148.7%",
+            "171.2%",
+            "200%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_yellow_04",
+      "name": "휘몰아치기",
+      "description": "무기 교체 시 3초간 공격·이동 속도가 30% 빨라지고, 바꿔 든 공격이 더 빨리 나간다.",
+      "color": "yellow",
+      "trigger": "switch",
+      "kind": "attack_and_move_speed",
+      "scope": "incoming_weapon",
+      "grade": 3,
+      "duplicate": false,
+      "cooldown": 3,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_yellow_01",
+      "levels": [
+        {
+          "attackSpeed": 0.3,
+          "moveSpeed": 0.3,
+          "duration": 3,
+          "switchWindupReduction": 0.5
+        },
+        {
+          "attackSpeed": 0.32,
+          "moveSpeed": 0.32,
+          "duration": 3,
+          "switchWindupReduction": 0.5
+        },
+        {
+          "attackSpeed": 0.348,
+          "moveSpeed": 0.348,
+          "duration": 3,
+          "switchWindupReduction": 0.5
+        },
+        {
+          "attackSpeed": 0.386,
+          "moveSpeed": 0.386,
+          "duration": 3,
+          "switchWindupReduction": 0.5
+        },
+        {
+          "attackSpeed": 0.436,
+          "moveSpeed": 0.436,
+          "duration": 3,
+          "switchWindupReduction": 0.5
+        },
+        {
+          "attackSpeed": 0.5,
+          "moveSpeed": 0.5,
+          "duration": 3,
+          "switchWindupReduction": 0.5
+        }
+      ],
+      "stats": [
+        {
+          "label": "공격 속도 증가",
+          "values": [
+            "30%",
+            "32%",
+            "34.8%",
+            "38.6%",
+            "43.6%",
+            "50%"
+          ]
+        },
+        {
+          "label": "이동 속도 증가",
+          "values": [
+            "30%",
+            "32%",
+            "34.8%",
+            "38.6%",
+            "43.6%",
+            "50%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_yellow_05",
+      "name": "전기 장판",
+      "description": "표식을 터트린 자리에 3초간 전기장을 깐다.",
+      "color": "yellow",
+      "trigger": "mark_burst",
+      "kind": "electric_field",
+      "scope": "equipped_weapon",
+      "grade": 4,
+      "duplicate": false,
+      "cooldown": 3,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_yellow_01",
+      "levels": [
+        {
+          "radius": 2,
+          "duration": 3,
+          "interval": 0.5,
+          "ratio": 0.1
+        },
+        {
+          "radius": 2,
+          "duration": 3,
+          "interval": 0.5,
+          "ratio": 0.10875
+        },
+        {
+          "radius": 2,
+          "duration": 3,
+          "interval": 0.5,
+          "ratio": 0.1315
+        },
+        {
+          "radius": 2,
+          "duration": 3,
+          "interval": 0.5,
+          "ratio": 0.1805
+        },
+        {
+          "radius": 2,
+          "duration": 3,
+          "interval": 0.5,
+          "ratio": 0.275
+        },
+        {
+          "radius": 2,
+          "duration": 3,
+          "interval": 0.5,
+          "ratio": 0.45
+        }
+      ],
+      "stats": [
+        {
+          "label": "전기장 피해 (0.5초마다)",
+          "values": [
+            "10%",
+            "10.875%",
+            "13.15%",
+            "18.05%",
+            "27.5%",
+            "45%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_yellow_06",
+      "name": "신난다",
+      "description": "적을 처치하면 4초간 빨라지고, 달리며 한 공격이 15% 더 아프다.",
+      "color": "yellow",
+      "trigger": "kill",
+      "kind": "moving_attack_power",
+      "scope": "equipped_weapon",
+      "grade": 1,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_yellow_01",
+      "levels": [
+        {
+          "moveSpeed": 0.15,
+          "amount": 0.1,
+          "duration": 4
+        },
+        {
+          "moveSpeed": 0.15667,
+          "amount": 0.11333,
+          "duration": 4
+        },
+        {
+          "moveSpeed": 0.17,
+          "amount": 0.14,
+          "duration": 4
+        },
+        {
+          "moveSpeed": 0.19,
+          "amount": 0.18,
+          "duration": 4
+        },
+        {
+          "moveSpeed": 0.21667,
+          "amount": 0.23333,
+          "duration": 4
+        },
+        {
+          "moveSpeed": 0.25,
+          "amount": 0.3,
+          "duration": 4
+        }
+      ],
+      "stats": [
+        {
+          "label": "이동 중 시작한 공격 피해 증가",
+          "values": [
+            "10%",
+            "11.333%",
+            "14%",
+            "18%",
+            "23.333%",
+            "30%"
+          ]
+        },
+        {
+          "label": "처치 후 이동 속도 증가",
+          "values": [
+            "15%",
+            "15.667%",
+            "17%",
+            "19%",
+            "21.667%",
+            "25%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_yellow_07",
+      "name": "교체 연계",
+      "description": "기본 공격이 맞으면 후딜 없이 바로 다른 무기로 공격할 수 있다.",
+      "color": "yellow",
+      "trigger": "hit",
+      "kind": "hit_recovery_cancel",
+      "scope": "equipped_weapon",
+      "grade": 3,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_yellow_01",
+      "levels": [
+        {
+          "amount": 0.1
+        },
+        {
+          "amount": 0.125
+        },
+        {
+          "amount": 0.16
+        },
+        {
+          "amount": 0.2075
+        },
+        {
+          "amount": 0.27
+        },
+        {
+          "amount": 0.35
+        }
+      ],
+      "stats": [
+        {
+          "label": "이어 친 공격 피해 증가",
+          "values": [
+            "10%",
+            "12.5%",
+            "16%",
+            "20.75%",
+            "27%",
+            "35%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_yellow_08",
+      "name": "연쇄 번개",
+      "description": "노랑 표식이 터지면 주변 적 2마리에게 전기가 튄다.",
+      "color": "yellow",
+      "trigger": "mark_pop",
+      "kind": "chain_lightning",
+      "scope": "equipped_weapon",
+      "grade": 2,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 3,
+      "icon": "ink-ink2_yellow_01",
+      "levels": [
+        {
+          "ratio": 0.2,
+          "count": 2,
+          "radius": 3
+        },
+        {
+          "ratio": 0.215,
+          "count": 2,
+          "radius": 3
+        },
+        {
+          "ratio": 0.254,
+          "count": 2,
+          "radius": 3
+        },
+        {
+          "ratio": 0.338,
+          "count": 2,
+          "radius": 3
+        },
+        {
+          "ratio": 0.5,
+          "count": 2,
+          "radius": 3
+        },
+        {
+          "ratio": 0.8,
+          "count": 2,
+          "radius": 3
+        }
+      ],
+      "stats": [
+        {
+          "label": "번개 피해",
+          "values": [
+            "20%",
+            "21.5%",
+            "25.4%",
+            "33.8%",
+            "50%",
+            "80%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_yellow_09",
+      "name": "번지는 표식",
+      "description": "표식이 터지다 적이 죽으면, 남은 표식이 옆 적에게 옮겨 터진다.",
+      "color": "yellow",
+      "trigger": "mark_burst",
+      "kind": "mark_chain_spread",
+      "scope": "equipped_weapon",
+      "grade": 4,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_yellow_01",
+      "levels": [
+        {
+          "radius": 2.5,
+          "amount": 0.0
+        },
+        {
+          "radius": 2.538,
+          "amount": 0.015
+        },
+        {
+          "radius": 2.635,
+          "amount": 0.054
+        },
+        {
+          "radius": 2.845,
+          "amount": 0.138
+        },
+        {
+          "radius": 3.25,
+          "amount": 0.3
+        },
+        {
+          "radius": 4.0,
+          "amount": 0.6
+        }
+      ],
+      "stats": [
+        {
+          "label": "옮겨 간 표식 피해 증가",
+          "values": [
+            "0%",
+            "1.5%",
+            "5.4%",
+            "13.8%",
+            "30%",
+            "60%"
+          ]
+        },
+        {
+          "label": "옮겨 가는 거리",
+          "values": [
+            "2.5u",
+            "2.538u",
+            "2.635u",
+            "2.845u",
+            "3.25u",
+            "4u"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_yellow_10",
+      "name": "질주 충전",
+      "description": "움직이면 기가 쌓이고(최대 3), 맞히면 기 하나당 15% 추가 피해를 준다.",
+      "color": "yellow",
+      "trigger": "move",
+      "kind": "move_charge",
+      "scope": "equipped_weapon",
+      "grade": 1,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_yellow_01",
+      "levels": [
+        {
+          "distance": 3,
+          "maxStacks": 3,
+          "ratio": 0.1,
+          "resetSeconds": 2
+        },
+        {
+          "distance": 3,
+          "maxStacks": 3,
+          "ratio": 0.11,
+          "resetSeconds": 2
+        },
+        {
+          "distance": 3,
+          "maxStacks": 3,
+          "ratio": 0.13,
+          "resetSeconds": 2
+        },
+        {
+          "distance": 3,
+          "maxStacks": 3,
+          "ratio": 0.16,
+          "resetSeconds": 2
+        },
+        {
+          "distance": 3,
+          "maxStacks": 3,
+          "ratio": 0.2,
+          "resetSeconds": 2
+        },
+        {
+          "distance": 3,
+          "maxStacks": 3,
+          "ratio": 0.25,
+          "resetSeconds": 2
+        }
+      ],
+      "stats": [
+        {
+          "label": "충전 하나당 추가타",
+          "values": [
+            "10%",
+            "11%",
+            "13%",
+            "16%",
+            "20%",
+            "25%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_yellow_11",
+      "name": "대시 강타",
+      "description": "대시 중이나 직후의 공격은 30% 더 아프고 더 빨리 나간다.",
+      "color": "yellow",
+      "trigger": "passive",
+      "kind": "dash_followup",
+      "scope": "equipped_weapon",
+      "grade": 2,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_yellow_01",
+      "levels": [
+        {
+          "amount": 0.2,
+          "windupReduction": 0.3,
+          "duration": 0.5
+        },
+        {
+          "amount": 0.21,
+          "windupReduction": 0.3,
+          "duration": 0.5
+        },
+        {
+          "amount": 0.236,
+          "windupReduction": 0.3,
+          "duration": 0.5
+        },
+        {
+          "amount": 0.292,
+          "windupReduction": 0.3,
+          "duration": 0.5
+        },
+        {
+          "amount": 0.4,
+          "windupReduction": 0.3,
+          "duration": 0.5
+        },
+        {
+          "amount": 0.6,
+          "windupReduction": 0.3,
+          "duration": 0.5
+        }
+      ],
+      "stats": [
+        {
+          "label": "대시 직후 공격 피해 증가",
+          "values": [
+            "20%",
+            "21%",
+            "23.6%",
+            "29.2%",
+            "40%",
+            "60%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_yellow_12",
+      "name": "교체 순간이동",
+      "description": "무기 교체 시 앞으로 미끄러지며 지나간 적에게 50% 피해를 준다.",
+      "color": "yellow",
+      "trigger": "switch",
+      "kind": "switch_slide",
+      "scope": "equipped_weapon",
+      "grade": 3,
+      "duplicate": false,
+      "cooldown": 2,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_yellow_01",
+      "levels": [
+        {
+          "distance": 2,
+          "ratio": 0.8
+        },
+        {
+          "distance": 2,
+          "ratio": 0.87
+        },
+        {
+          "distance": 2,
+          "ratio": 0.968
+        },
+        {
+          "distance": 2,
+          "ratio": 1.101
+        },
+        {
+          "distance": 2,
+          "ratio": 1.276
+        },
+        {
+          "distance": 2,
+          "ratio": 1.5
+        }
+      ],
+      "stats": [
+        {
+          "label": "통과 피해",
+          "values": [
+            "80%",
+            "87%",
+            "96.8%",
+            "110.1%",
+            "127.6%",
+            "150%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_green_01",
+      "name": "든든한 배리어",
+      "description": "보호막이 있는 동안 주는 피해가 20% 늘어난다.",
+      "color": "green",
+      "trigger": "passive",
+      "kind": "shielded_attack_power",
+      "scope": "equipped_weapon",
+      "grade": 3,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_green_03",
+      "levels": [
+        {
+          "amount": 0.1
+        },
+        {
+          "amount": 0.11375
+        },
+        {
+          "amount": 0.1495
+        },
+        {
+          "amount": 0.2265
+        },
+        {
+          "amount": 0.375
+        },
+        {
+          "amount": 0.65
+        }
+      ],
+      "stats": [
+        {
+          "label": "보호막 보유 중 공격 피해 증가",
+          "values": [
+            "10%",
+            "11.375%",
+            "14.95%",
+            "22.65%",
+            "37.5%",
+            "65%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_green_02",
+      "name": "교체 보호막",
+      "description": "무기 교체 시 5초간 보호막 15를 얻는다.",
+      "color": "green",
+      "trigger": "switch",
+      "kind": "shield",
+      "scope": "equipped_weapon",
+      "grade": 2,
+      "duplicate": false,
+      "cooldown": 15,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_green_03",
+      "levels": [
+        {
+          "amount": 18.0,
+          "duration": 5
+        },
+        {
+          "amount": 20.0,
+          "duration": 5
+        },
+        {
+          "amount": 22.0,
+          "duration": 5
+        },
+        {
+          "amount": 25.0,
+          "duration": 5
+        },
+        {
+          "amount": 30.0,
+          "duration": 5
+        },
+        {
+          "amount": 35.0,
+          "duration": 5
+        }
+      ],
+      "stats": [
+        {
+          "label": "보호막",
+          "values": [
+            "18HP",
+            "20HP",
+            "22HP",
+            "25HP",
+            "30HP",
+            "35HP"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_green_03",
+      "name": "가시갑옷",
+      "description": "나를 때린 적에게 80% 피해의 유도탄을 쏜다.",
+      "color": "green",
+      "trigger": "damaged",
+      "kind": "homing_counter",
+      "scope": "equipped_weapon",
+      "grade": 3,
+      "duplicate": false,
+      "cooldown": 1,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_green_03",
+      "levels": [
+        {
+          "ratio": 1.0
+        },
+        {
+          "ratio": 1.1
+        },
+        {
+          "ratio": 1.24
+        },
+        {
+          "ratio": 1.43
+        },
+        {
+          "ratio": 1.68
+        },
+        {
+          "ratio": 2.0
+        }
+      ],
+      "stats": [
+        {
+          "label": "피격 반격 피해",
+          "values": [
+            "100%",
+            "110%",
+            "124%",
+            "143%",
+            "168%",
+            "200%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_green_04",
+      "name": "처치 회복",
+      "description": "적을 5마리 처치할 때마다 체력 6을 회복한다.",
+      "color": "green",
+      "trigger": "kill",
+      "kind": "heal",
+      "scope": "equipped_weapon",
+      "grade": 1,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 5,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_green_03",
+      "levels": [
+        {
+          "amount": 1.0
+        },
+        {
+          "amount": 2.0
+        },
+        {
+          "amount": 3.0
+        },
+        {
+          "amount": 4.0
+        },
+        {
+          "amount": 5.0
+        },
+        {
+          "amount": 7.0
+        }
+      ],
+      "stats": [
+        {
+          "label": "5처치당 회복",
+          "values": [
+            "1HP",
+            "2HP",
+            "3HP",
+            "4HP",
+            "5HP",
+            "7HP"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_green_05",
+      "name": "적중 회복",
+      "description": "50번 때릴 때마다 체력 5를 회복한다.",
+      "color": "green",
+      "trigger": "hit",
+      "kind": "heal",
+      "scope": "equipped_weapon",
+      "grade": 1,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 50,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_green_03",
+      "levels": [
+        {
+          "amount": 4.0
+        },
+        {
+          "amount": 4.0
+        },
+        {
+          "amount": 5.0
+        },
+        {
+          "amount": 6.0
+        },
+        {
+          "amount": 8.0
+        },
+        {
+          "amount": 10.0
+        }
+      ],
+      "stats": [
+        {
+          "label": "50적중당 회복",
+          "values": [
+            "4HP",
+            "4HP",
+            "5HP",
+            "6HP",
+            "8HP",
+            "10HP"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_green_06",
+      "name": "풀컨디션",
+      "description": "체력이 80% 이상이면 주는 피해가 15% 늘어난다.",
+      "color": "green",
+      "trigger": "passive",
+      "kind": "high_health_attack_power",
+      "scope": "equipped_weapon",
+      "grade": 2,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_green_03",
+      "levels": [
+        {
+          "threshold": 0.8,
+          "amount": 0.2
+        },
+        {
+          "threshold": 0.8,
+          "amount": 0.24
+        },
+        {
+          "threshold": 0.8,
+          "amount": 0.31
+        },
+        {
+          "threshold": 0.8,
+          "amount": 0.42
+        },
+        {
+          "threshold": 0.8,
+          "amount": 0.57
+        },
+        {
+          "threshold": 0.8,
+          "amount": 0.75
+        }
+      ],
+      "stats": [
+        {
+          "label": "높은 체력일 때 공격 피해 증가",
+          "values": [
+            "20%",
+            "24%",
+            "31%",
+            "42%",
+            "57%",
+            "75%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_green_07",
+      "name": "초록 표식 회복",
+      "description": "초록 표식이 터지면 체력 3을 회복한다.",
+      "color": "green",
+      "trigger": "mark_pop",
+      "kind": "heal",
+      "scope": "equipped_weapon",
+      "grade": 3,
+      "duplicate": false,
+      "cooldown": 15,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 4,
+      "icon": "ink-ink2_green_03",
+      "levels": [
+        {
+          "amount": 5.0
+        },
+        {
+          "amount": 6.0
+        },
+        {
+          "amount": 7.0
+        },
+        {
+          "amount": 8.0
+        },
+        {
+          "amount": 10.0
+        },
+        {
+          "amount": 12.0
+        }
+      ],
+      "stats": [
+        {
+          "label": "초록 표식 회복",
+          "values": [
+            "5HP",
+            "6HP",
+            "7HP",
+            "8HP",
+            "10HP",
+            "12HP"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_green_08",
+      "name": "피격 보호막",
+      "description": "체력이 깎이면 다음 피격을 10까지 막는 보호막을 얻는다.",
+      "color": "green",
+      "trigger": "damaged",
+      "kind": "hit_guard_shield",
+      "scope": "equipped_weapon",
+      "grade": 2,
+      "duplicate": false,
+      "cooldown": 20,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_green_03",
+      "levels": [
+        {
+          "amount": 10.0
+        },
+        {
+          "amount": 11.0
+        },
+        {
+          "amount": 12.0
+        },
+        {
+          "amount": 14.0
+        },
+        {
+          "amount": 17.0
+        },
+        {
+          "amount": 20.0
+        }
+      ],
+      "stats": [
+        {
+          "label": "다음 피격 한 번 보호막",
+          "values": [
+            "10HP",
+            "11HP",
+            "12HP",
+            "14HP",
+            "17HP",
+            "20HP"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_green_09",
+      "name": "복수 일격",
+      "description": "맞은 피해의 2배를 3초 안에 다음 공격에 실어 돌려준다.",
+      "color": "green",
+      "trigger": "damaged",
+      "kind": "stored_retaliation",
+      "scope": "equipped_weapon",
+      "grade": 2,
+      "duplicate": false,
+      "cooldown": 3,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_green_03",
+      "levels": [
+        {
+          "ratio": 1.5,
+          "duration": 3
+        },
+        {
+          "ratio": 1.5625,
+          "duration": 3
+        },
+        {
+          "ratio": 1.725,
+          "duration": 3
+        },
+        {
+          "ratio": 2.075,
+          "duration": 3
+        },
+        {
+          "ratio": 2.75,
+          "duration": 3
+        },
+        {
+          "ratio": 4.0,
+          "duration": 3
+        }
+      ],
+      "stats": [
+        {
+          "label": "되갚는 피해",
+          "values": [
+            "150%",
+            "156.25%",
+            "172.5%",
+            "207.5%",
+            "275%",
+            "400%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_green_10",
+      "name": "처치 보호막",
+      "description": "적을 10마리 처치할 때마다 8초간 보호막 12를 얻는다.",
+      "color": "green",
+      "trigger": "kill",
+      "kind": "shield",
+      "scope": "equipped_weapon",
+      "grade": 1,
+      "duplicate": false,
+      "cooldown": 15,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 10,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_green_03",
+      "levels": [
+        {
+          "amount": 5.0,
+          "duration": 8
+        },
+        {
+          "amount": 6.0,
+          "duration": 8
+        },
+        {
+          "amount": 8.0,
+          "duration": 8
+        },
+        {
+          "amount": 11.0,
+          "duration": 8
+        },
+        {
+          "amount": 15.0,
+          "duration": 8
+        },
+        {
+          "amount": 20.0,
+          "duration": 8
+        }
+      ],
+      "stats": [
+        {
+          "label": "10처치당 보호막",
+          "values": [
+            "5HP",
+            "6HP",
+            "8HP",
+            "11HP",
+            "15HP",
+            "20HP"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_blue_01",
+      "name": "범위 확장",
+      "description": "공격 범위가 20% 넓어진다.",
+      "color": "blue",
+      "trigger": "passive",
+      "kind": "all_geometry",
+      "scope": "equipped_weapon",
+      "grade": 2,
+      "duplicate": true,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_blue_02",
+      "levels": [
+        {
+          "amount": 0.25,
+          "ratio": 0.0
+        },
+        {
+          "amount": 0.28,
+          "ratio": 0.05
+        },
+        {
+          "amount": 0.32,
+          "ratio": 0.1
+        },
+        {
+          "amount": 0.37,
+          "ratio": 0.15
+        },
+        {
+          "amount": 0.43,
+          "ratio": 0.22
+        },
+        {
+          "amount": 0.5,
+          "ratio": 0.3
+        }
+      ],
+      "stats": [
+        {
+          "label": "범위와 사거리 증가",
+          "values": [
+            "25%",
+            "28%",
+            "32%",
+            "37%",
+            "43%",
+            "50%"
+          ]
+        },
+        {
+          "label": "기본 공격과 스킬 피해 증가",
+          "values": [
+            "0%",
+            "5%",
+            "10%",
+            "15%",
+            "22%",
+            "30%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_blue_02",
+      "name": "교체 쿨감",
+      "description": "무기 교체 시 바꿔 든 무기의 스킬 쿨타임이 1초 줄어든다.",
+      "color": "blue",
+      "trigger": "switch",
+      "kind": "cooldown_reduce",
+      "scope": "incoming_weapon",
+      "grade": 1,
+      "duplicate": false,
+      "cooldown": 3,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_blue_02",
+      "levels": [
+        {
+          "seconds": 0.8
+        },
+        {
+          "seconds": 0.88
+        },
+        {
+          "seconds": 1.04
+        },
+        {
+          "seconds": 1.28
+        },
+        {
+          "seconds": 1.6
+        },
+        {
+          "seconds": 2.0
+        }
+      ],
+      "stats": [
+        {
+          "label": "바꿔 든 무기 스킬 쿨타임 감소",
+          "values": [
+            "0.8초",
+            "0.88초",
+            "1.04초",
+            "1.28초",
+            "1.6초",
+            "2초"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_blue_04",
+      "name": "적중 쿨감",
+      "description": "맞힐 때마다 스킬 쿨타임이 0.1초 줄어든다.",
+      "color": "blue",
+      "trigger": "hit",
+      "kind": "cooldown_reduce",
+      "scope": "equipped_weapon",
+      "grade": 3,
+      "duplicate": false,
+      "cooldown": 0.25,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_blue_02",
+      "levels": [
+        {
+          "seconds": 0.08
+        },
+        {
+          "seconds": 0.086
+        },
+        {
+          "seconds": 0.1
+        },
+        {
+          "seconds": 0.131
+        },
+        {
+          "seconds": 0.19
+        },
+        {
+          "seconds": 0.3
+        }
+      ],
+      "stats": [
+        {
+          "label": "맞힐 때마다 스킬 쿨타임 감소",
+          "values": [
+            "0.08초",
+            "0.086초",
+            "0.1초",
+            "0.131초",
+            "0.19초",
+            "0.3초"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_blue_05",
+      "name": "표식 쿨감",
+      "description": "표식을 터트리면 두 무기의 스킬 쿨타임이 0.6초씩 줄어든다.",
+      "color": "blue",
+      "trigger": "mark_burst",
+      "kind": "cooldown_reduce",
+      "scope": "both_weapons",
+      "grade": 4,
+      "duplicate": false,
+      "cooldown": 0.5,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_blue_02",
+      "levels": [
+        {
+          "seconds": 0.4
+        },
+        {
+          "seconds": 0.44
+        },
+        {
+          "seconds": 0.544
+        },
+        {
+          "seconds": 0.768
+        },
+        {
+          "seconds": 1.2
+        },
+        {
+          "seconds": 2.0
+        }
+      ],
+      "stats": [
+        {
+          "label": "두 무기 스킬 쿨타임 감소",
+          "values": [
+            "0.4초",
+            "0.44초",
+            "0.544초",
+            "0.768초",
+            "1.2초",
+            "2초"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_blue_06",
+      "name": "학살",
+      "description": "적을 처치하면 4초간 공격 범위가 35% 넓어진다.",
+      "color": "blue",
+      "trigger": "kill",
+      "kind": "area_radius",
+      "scope": "equipped_weapon",
+      "grade": 1,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_blue_02",
+      "levels": [
+        {
+          "amount": 0.3,
+          "duration": 4
+        },
+        {
+          "amount": 0.32333,
+          "duration": 4
+        },
+        {
+          "amount": 0.37,
+          "duration": 4
+        },
+        {
+          "amount": 0.44,
+          "duration": 4
+        },
+        {
+          "amount": 0.53333,
+          "duration": 4
+        },
+        {
+          "amount": 0.65,
+          "duration": 4
+        }
+      ],
+      "stats": [
+        {
+          "label": "처치 후 공격 반경 증가",
+          "values": [
+            "30%",
+            "32.333%",
+            "37%",
+            "44%",
+            "53.333%",
+            "65%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_blue_07",
+      "name": "파랑 표식 쿨감",
+      "description": "파랑 표식이 터지면 두 무기의 스킬 쿨타임이 1초씩 줄어든다.",
+      "color": "blue",
+      "trigger": "mark_pop",
+      "kind": "cooldown_reduce",
+      "scope": "both_weapons",
+      "grade": 3,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 5,
+      "icon": "ink-ink2_blue_02",
+      "levels": [
+        {
+          "seconds": 1.0
+        },
+        {
+          "seconds": 1.12
+        },
+        {
+          "seconds": 1.288
+        },
+        {
+          "seconds": 1.516
+        },
+        {
+          "seconds": 1.816
+        },
+        {
+          "seconds": 2.2
+        }
+      ],
+      "stats": [
+        {
+          "label": "두 무기 스킬 쿨타임 감소",
+          "values": [
+            "1초",
+            "1.12초",
+            "1.288초",
+            "1.516초",
+            "1.816초",
+            "2.2초"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_blue_08",
+      "name": "표식 전염",
+      "description": "공격이 표식을 남기고, 가까운 적 1마리에게도 표식이 번진다.",
+      "color": "blue",
+      "trigger": "hit",
+      "kind": "mark_spread",
+      "scope": "equipped_weapon",
+      "grade": 4,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_blue_02",
+      "levels": [
+        {
+          "radius": 2.0,
+          "count": 1.0
+        },
+        {
+          "radius": 2.038,
+          "count": 1.0
+        },
+        {
+          "radius": 2.135,
+          "count": 1.0
+        },
+        {
+          "radius": 2.345,
+          "count": 2.0
+        },
+        {
+          "radius": 2.75,
+          "count": 2.0
+        },
+        {
+          "radius": 3.5,
+          "count": 3.0
+        }
+      ],
+      "stats": [
+        {
+          "label": "표식이 번지는 적 수",
+          "values": [
+            "1명",
+            "1명",
+            "1명",
+            "2명",
+            "2명",
+            "3명"
+          ]
+        },
+        {
+          "label": "번지는 거리",
+          "values": [
+            "2u",
+            "2.038u",
+            "2.135u",
+            "2.345u",
+            "2.75u",
+            "3.5u"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_blue_09",
+      "name": "스킬 추가 충전",
+      "description": "스킬을 한 번 더 쌓아 둘 수 있다. (충전 +1)",
+      "color": "blue",
+      "trigger": "passive",
+      "kind": "extra_skill_charge",
+      "scope": "equipped_weapon",
+      "grade": 4,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_blue_02",
+      "levels": [
+        {
+          "count": 1.0,
+          "rechargeReduction": 0.1
+        },
+        {
+          "count": 1.0,
+          "rechargeReduction": 0.115
+        },
+        {
+          "count": 1.0,
+          "rechargeReduction": 0.136
+        },
+        {
+          "count": 1.0,
+          "rechargeReduction": 0.1645
+        },
+        {
+          "count": 1.0,
+          "rechargeReduction": 0.202
+        },
+        {
+          "count": 1.0,
+          "rechargeReduction": 0.25
+        }
+      ],
+      "stats": [
+        {
+          "label": "스킬 모아 두기",
+          "values": [
+            "1회",
+            "1회",
+            "1회",
+            "1회",
+            "1회",
+            "1회"
+          ]
+        },
+        {
+          "label": "다시 차는 시간 감소",
+          "values": [
+            "10%",
+            "11.5%",
+            "13.6%",
+            "16.45%",
+            "20.2%",
+            "25%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_blue_10",
+      "name": "처치 쿨감",
+      "description": "적을 처치하면 스킬 쿨타임이 0.5초 줄어든다.",
+      "color": "blue",
+      "trigger": "kill",
+      "kind": "cooldown_reduce",
+      "scope": "equipped_weapon",
+      "grade": 1,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_blue_02",
+      "levels": [
+        {
+          "seconds": 0.4
+        },
+        {
+          "seconds": 0.44
+        },
+        {
+          "seconds": 0.52
+        },
+        {
+          "seconds": 0.64
+        },
+        {
+          "seconds": 0.8
+        },
+        {
+          "seconds": 1.0
+        }
+      ],
+      "stats": [
+        {
+          "label": "처치할 때 스킬 쿨타임 감소",
+          "values": [
+            "0.4초",
+            "0.44초",
+            "0.52초",
+            "0.64초",
+            "0.8초",
+            "1초"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_blue_11",
+      "name": "교체 범위 확장",
+      "description": "무기 교체 시 첫 공격의 사거리와 범위가 40% 늘어난다.",
+      "color": "blue",
+      "trigger": "switch",
+      "kind": "next_attack_geometry",
+      "scope": "incoming_weapon",
+      "grade": 2,
+      "duplicate": false,
+      "cooldown": 2,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_blue_02",
+      "levels": [
+        {
+          "amount": 0.45
+        },
+        {
+          "amount": 0.485
+        },
+        {
+          "amount": 0.534
+        },
+        {
+          "amount": 0.6005
+        },
+        {
+          "amount": 0.688
+        },
+        {
+          "amount": 0.8
+        }
+      ],
+      "stats": [
+        {
+          "label": "교체 후 첫 공격 범위와 사거리 증가",
+          "values": [
+            "45%",
+            "48.5%",
+            "53.4%",
+            "60.05%",
+            "68.8%",
+            "80%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_purple_01",
+      "name": "적중 속박",
+      "description": "맞힌 적을 0.8초 속박하고 30% 피해를 준다.",
+      "color": "purple",
+      "trigger": "hit",
+      "kind": "bind",
+      "scope": "equipped_weapon",
+      "grade": 2,
+      "duplicate": false,
+      "cooldown": 1,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_purple_01",
+      "levels": [
+        {
+          "duration": 0.8,
+          "ratio": 0.35
+        },
+        {
+          "duration": 0.83,
+          "ratio": 0.39
+        },
+        {
+          "duration": 0.872,
+          "ratio": 0.446
+        },
+        {
+          "duration": 0.929,
+          "ratio": 0.522
+        },
+        {
+          "duration": 1.004,
+          "ratio": 0.622
+        },
+        {
+          "duration": 1.1,
+          "ratio": 0.75
+        }
+      ],
+      "stats": [
+        {
+          "label": "속박 시 피해",
+          "values": [
+            "35%",
+            "39%",
+            "44.6%",
+            "52.2%",
+            "62.2%",
+            "75%"
+          ]
+        },
+        {
+          "label": "속박 시간",
+          "values": [
+            "0.8초",
+            "0.83초",
+            "0.872초",
+            "0.929초",
+            "1.004초",
+            "1.1초"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_purple_02",
+      "name": "속박 폭발",
+      "description": "속박된 적이 풀릴 때 주변에 50% 폭발이 일어난다.",
+      "color": "purple",
+      "trigger": "bind_end",
+      "kind": "area_hit",
+      "scope": "equipped_weapon",
+      "grade": 3,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_purple_01",
+      "levels": [
+        {
+          "ratio": 0.3,
+          "radius": 2
+        },
+        {
+          "ratio": 0.3275,
+          "radius": 2
+        },
+        {
+          "ratio": 0.399,
+          "radius": 2
+        },
+        {
+          "ratio": 0.553,
+          "radius": 2
+        },
+        {
+          "ratio": 0.85,
+          "radius": 2
+        },
+        {
+          "ratio": 1.4,
+          "radius": 2
+        }
+      ],
+      "stats": [
+        {
+          "label": "속박 종료 폭발 피해",
+          "values": [
+            "30%",
+            "32.75%",
+            "39.9%",
+            "55.3%",
+            "85%",
+            "140%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_purple_03",
+      "name": "적중 기절",
+      "description": "처음 때린 적을 0.5초 기절시킨다.",
+      "color": "purple",
+      "trigger": "hit",
+      "kind": "stun",
+      "scope": "equipped_weapon",
+      "grade": 2,
+      "duplicate": false,
+      "cooldown": 5,
+      "targetCooldown": true,
+      "eliteCooldown": 20,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_purple_01",
+      "levels": [
+        {
+          "duration": 0.6
+        },
+        {
+          "duration": 0.64
+        },
+        {
+          "duration": 0.696
+        },
+        {
+          "duration": 0.772
+        },
+        {
+          "duration": 0.872
+        },
+        {
+          "duration": 1.0
+        }
+      ],
+      "stats": [
+        {
+          "label": "적중 기절 시간",
+          "values": [
+            "0.6초",
+            "0.64초",
+            "0.696초",
+            "0.772초",
+            "0.872초",
+            "1초"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_purple_04",
+      "name": "기절 추가 피해",
+      "description": "기절한 적은 기절하는 동안 계속 피해를 받는다.",
+      "color": "purple",
+      "trigger": "passive",
+      "kind": "stunned_dot",
+      "scope": "equipped_weapon",
+      "grade": 3,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_purple_01",
+      "levels": [
+        {
+          "interval": 0.25,
+          "ratio": 0.06
+        },
+        {
+          "interval": 0.25,
+          "ratio": 0.0655
+        },
+        {
+          "interval": 0.25,
+          "ratio": 0.0798
+        },
+        {
+          "interval": 0.25,
+          "ratio": 0.1106
+        },
+        {
+          "interval": 0.25,
+          "ratio": 0.17
+        },
+        {
+          "interval": 0.25,
+          "ratio": 0.28
+        }
+      ],
+      "stats": [
+        {
+          "label": "기절 중 피해 (0.25초마다)",
+          "values": [
+            "6%",
+            "6.55%",
+            "7.98%",
+            "11.06%",
+            "17%",
+            "28%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_purple_05",
+      "name": "독 공격",
+      "description": "맞힌 적을 3초간 중독시킨다.",
+      "color": "purple",
+      "trigger": "hit",
+      "kind": "poison",
+      "scope": "equipped_weapon",
+      "grade": 2,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_purple_01",
+      "levels": [
+        {
+          "duration": 3,
+          "interval": 0.5,
+          "ratio": 0.06,
+          "maxStacks": 1.0
+        },
+        {
+          "duration": 3,
+          "interval": 0.5,
+          "ratio": 0.061,
+          "maxStacks": 1.0
+        },
+        {
+          "duration": 3,
+          "interval": 0.5,
+          "ratio": 0.0636,
+          "maxStacks": 2.0
+        },
+        {
+          "duration": 3,
+          "interval": 0.5,
+          "ratio": 0.0692,
+          "maxStacks": 2.0
+        },
+        {
+          "duration": 3,
+          "interval": 0.5,
+          "ratio": 0.08,
+          "maxStacks": 3.0
+        },
+        {
+          "duration": 3,
+          "interval": 0.5,
+          "ratio": 0.1,
+          "maxStacks": 3.0
+        }
+      ],
+      "stats": [
+        {
+          "label": "독 피해 (0.5초마다)",
+          "values": [
+            "6%",
+            "6.1%",
+            "6.36%",
+            "6.92%",
+            "8%",
+            "10%"
+          ]
+        },
+        {
+          "label": "독 최대 겹 수",
+          "values": [
+            "1개",
+            "1개",
+            "2개",
+            "2개",
+            "3개",
+            "3개"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_purple_06",
+      "name": "상태 이상 폭발",
+      "description": "표식을 터트린 적의 상태 이상 하나당 25% 피해를 준다.",
+      "color": "purple",
+      "trigger": "mark_burst",
+      "kind": "cc_count_hit",
+      "scope": "equipped_weapon",
+      "grade": 4,
+      "duplicate": false,
+      "cooldown": 0.5,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_purple_01",
+      "levels": [
+        {
+          "ratioPerState": 0.15
+        },
+        {
+          "ratioPerState": 0.165
+        },
+        {
+          "ratioPerState": 0.204
+        },
+        {
+          "ratioPerState": 0.288
+        },
+        {
+          "ratioPerState": 0.45
+        },
+        {
+          "ratioPerState": 0.75
+        }
+      ],
+      "stats": [
+        {
+          "label": "상태 하나당 추가 피해",
+          "values": [
+            "15%",
+            "16.5%",
+            "20.4%",
+            "28.8%",
+            "45%",
+            "75%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_purple_07",
+      "name": "남색 표식 속박",
+      "description": "남색 표식이 터지면 적을 0.6초 속박하고 20% 피해를 준다.",
+      "color": "purple",
+      "trigger": "mark_pop",
+      "kind": "bind",
+      "scope": "equipped_weapon",
+      "grade": 3,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 6,
+      "icon": "ink-ink2_purple_01",
+      "levels": [
+        {
+          "duration": 0.7,
+          "ratio": 0.4
+        },
+        {
+          "duration": 0.74,
+          "ratio": 0.445
+        },
+        {
+          "duration": 0.796,
+          "ratio": 0.508
+        },
+        {
+          "duration": 0.872,
+          "ratio": 0.5935
+        },
+        {
+          "duration": 0.972,
+          "ratio": 0.706
+        },
+        {
+          "duration": 1.1,
+          "ratio": 0.85
+        }
+      ],
+      "stats": [
+        {
+          "label": "남색 표식 속박 피해",
+          "values": [
+            "40%",
+            "44.5%",
+            "50.8%",
+            "59.35%",
+            "70.6%",
+            "85%"
+          ]
+        },
+        {
+          "label": "속박 시간",
+          "values": [
+            "0.7초",
+            "0.74초",
+            "0.796초",
+            "0.872초",
+            "0.972초",
+            "1.1초"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_purple_08",
+      "name": "보라 표식 독",
+      "description": "보라 표식이 터지면 적에게 중독을 1겹 쌓는다. (최대 5겹)",
+      "color": "purple",
+      "trigger": "mark_pop",
+      "kind": "poison",
+      "scope": "equipped_weapon",
+      "grade": 4,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 7,
+      "icon": "ink-ink2_purple_01",
+      "levels": [
+        {
+          "duration": 3,
+          "interval": 0.5,
+          "ratio": 0.05,
+          "maxStacks": 3.0
+        },
+        {
+          "duration": 3,
+          "interval": 0.5,
+          "ratio": 0.0525,
+          "maxStacks": 3.0
+        },
+        {
+          "duration": 3,
+          "interval": 0.5,
+          "ratio": 0.059,
+          "maxStacks": 3.0
+        },
+        {
+          "duration": 3,
+          "interval": 0.5,
+          "ratio": 0.073,
+          "maxStacks": 4.0
+        },
+        {
+          "duration": 3,
+          "interval": 0.5,
+          "ratio": 0.1,
+          "maxStacks": 4.0
+        },
+        {
+          "duration": 3,
+          "interval": 0.5,
+          "ratio": 0.15,
+          "maxStacks": 5.0
+        }
+      ],
+      "stats": [
+        {
+          "label": "독 피해 (0.5초마다)",
+          "values": [
+            "5%",
+            "5.25%",
+            "5.9%",
+            "7.3%",
+            "10%",
+            "15%"
+          ]
+        },
+        {
+          "label": "독 최대 겹 수",
+          "values": [
+            "3개",
+            "3개",
+            "3개",
+            "4개",
+            "4개",
+            "5개"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_purple_09",
+      "name": "독폭탄",
+      "description": "중독된 적을 때리면 남은 중독 피해를 한 번에 터트린다.",
+      "color": "purple",
+      "trigger": "hit",
+      "kind": "poison_burst",
+      "scope": "equipped_weapon",
+      "grade": 3,
+      "duplicate": false,
+      "cooldown": 2,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_purple_01",
+      "levels": [
+        {
+          "ratio": 1.0
+        },
+        {
+          "ratio": 1.02
+        },
+        {
+          "ratio": 1.072
+        },
+        {
+          "ratio": 1.184
+        },
+        {
+          "ratio": 1.4
+        },
+        {
+          "ratio": 1.8
+        }
+      ],
+      "stats": [
+        {
+          "label": "터트리는 독 피해",
+          "values": [
+            "100%",
+            "102%",
+            "107.2%",
+            "118.4%",
+            "140%",
+            "180%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_purple_10",
+      "name": "대시 기절",
+      "description": "대시로 부딪힌 적을 0.4초 기절시킨다.",
+      "color": "purple",
+      "trigger": "dash",
+      "kind": "stun",
+      "scope": "equipped_weapon",
+      "grade": 2,
+      "duplicate": false,
+      "cooldown": 3,
+      "targetCooldown": true,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_purple_01",
+      "levels": [
+        {
+          "duration": 0.5
+        },
+        {
+          "duration": 0.54
+        },
+        {
+          "duration": 0.596
+        },
+        {
+          "duration": 0.672
+        },
+        {
+          "duration": 0.772
+        },
+        {
+          "duration": 0.9
+        }
+      ],
+      "stats": [
+        {
+          "label": "대시 충돌 기절 시간",
+          "values": [
+            "0.5초",
+            "0.54초",
+            "0.596초",
+            "0.672초",
+            "0.772초",
+            "0.9초"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ink3_purple_11",
+      "name": "약점 공격",
+      "description": "속박되거나 기절한 적에게 주는 피해가 25% 늘어난다.",
+      "color": "purple",
+      "trigger": "passive",
+      "kind": "controlled_damage",
+      "scope": "equipped_weapon",
+      "grade": 2,
+      "duplicate": false,
+      "cooldown": 0,
+      "targetCooldown": false,
+      "eliteCooldown": 0,
+      "every": 0,
+      "condition": "",
+      "markIndex": 0,
+      "icon": "ink-ink2_purple_01",
+      "levels": [
+        {
+          "amount": 0.15
+        },
+        {
+          "amount": 0.16125
+        },
+        {
+          "amount": 0.1905
+        },
+        {
+          "amount": 0.2535
+        },
+        {
+          "amount": 0.375
+        },
+        {
+          "amount": 0.6
+        }
+      ],
+      "stats": [
+        {
+          "label": "묶이거나 기절한 적에게 피해 증가",
+          "values": [
+            "15%",
+            "16.125%",
+            "19.05%",
+            "25.35%",
+            "37.5%",
+            "60%"
+          ]
+        }
+      ]
+    }
+  ],
+  "gradeSources": [
+    {
+      "source": "normal",
+      "weights": [
+        0.75,
+        0.2,
+        0.04,
+        0.01
+      ]
+    },
+    {
+      "source": "elite",
+      "weights": [
+        0.35,
+        0.4,
+        0.2,
+        0.05
+      ]
+    },
+    {
+      "source": "boss",
+      "weights": [
+        0.05,
+        0.3,
+        0.45,
+        0.2
+      ]
+    },
+    {
+      "source": "maintenance",
+      "weights": [
+        0.5,
+        0.3,
+        0.15,
+        0.05
+      ]
+    }
+  ],
+  "rewards": [
+    {
+      "source": "normal",
+      "inkChance": 0.08,
+      "inkCount": 1,
+      "paletteChance": 0,
+      "paletteCount": 0
+    },
+    {
+      "source": "elite",
+      "inkChance": 1,
+      "inkCount": 3,
+      "paletteChance": 0,
+      "paletteCount": 0
+    },
+    {
+      "source": "boss",
+      "inkChance": 0,
+      "inkCount": 0,
+      "paletteChance": 0,
+      "paletteCount": 0
+    }
+  ],
+  "slotWeights": [
+    0.6,
+    0.3,
+    0.1
+  ],
+  "colorWeights": [
+    {
+      "color": "red",
+      "weight": 0.18
+    },
+    {
+      "color": "yellow",
+      "weight": 0.18
+    },
+    {
+      "color": "green",
+      "weight": 0.18
+    },
+    {
+      "color": "blue",
+      "weight": 0.18
+    },
+    {
+      "color": "purple",
+      "weight": 0.18
+    },
+    {
+      "color": "colorless",
+      "weight": 0.1
+    }
+  ],
+  "concentratedColorSelection": "uniform_five_base_colors_then_independent_colorless",
+  "colorlessChancePerSlot": 0.1,
+  "earlyOwnedColorInks": 5,
+  "colorChangeGold": 100,
+  "colorChangesPerRun": 2,
+  "saleFraction": 0.2,
+  "attackPerLevel": 0.05,
+  "attackMaxLevel": 10,
+  "markCoefficient": 0.15,
+  "markCap": 7,
+  "markDuration": 8,
+  "markPopInterval": 0.08,
+  "basicReferencePolicy": "mean_basic_combo_hit",
+  "shieldCap": 50,
+  "chainDepth": 2,
+  "movementSpeedBonusCap": 0.5,
+  "lifeStealFractionCap": 0.15,
+  "hardControlRecoverySeconds": 1,
+  "bossControlDurationAndDisplacementScale": 0.25,
+  "combinedDisplacementCapPerTargetPerSourceAction": 2,
+  "inkCapacity": 5
+}

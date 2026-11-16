@@ -1,0 +1,455 @@
+{
+  "status": "user-confirmed: retain existing game hit sounds",
+  "selection": "current-installed",
+  "scope": "all existing weapon and skill hit sound routing retained",
+  "candidateApplied": false,
+  "currentHitReferences": {
+    "base_sword_basic_0": {
+      "id": "sfx_hit_sword",
+      "audio": "072e01c2a3831fd5870604bf28599a5023f22f8e90738cd83c75b73eeb6efbcc",
+      "gain": 0.8,
+      "guid": "7c4b367dec5a47ddb240e33ddb8b83b4",
+      "file": "sfx_hit_sword_01_v01.wav"
+    },
+    "base_sword_basic_1": {
+      "id": "sfx_hit_sword",
+      "audio": "072e01c2a3831fd5870604bf28599a5023f22f8e90738cd83c75b73eeb6efbcc",
+      "gain": 0.8,
+      "guid": "7c4b367dec5a47ddb240e33ddb8b83b4",
+      "file": "sfx_hit_sword_01_v01.wav"
+    },
+    "base_sword_combo": {
+      "id": "sfx_hit_sword",
+      "audio": "072e01c2a3831fd5870604bf28599a5023f22f8e90738cd83c75b73eeb6efbcc",
+      "gain": 0.8,
+      "guid": "7c4b367dec5a47ddb240e33ddb8b83b4",
+      "file": "sfx_hit_sword_01_v01.wav"
+    },
+    "whip_basic_0": {
+      "id": "sfx_hit_whip",
+      "audio": "fce94554556d99da0e56dd67be1ba7d6bc79c869ee575f6a8c6006356f430467",
+      "gain": 0.8,
+      "guid": "687ecee24a8d4991884a06d91da02780",
+      "file": "sfx_hit_whip_01_v01.wav"
+    },
+    "whip_basic_1": {
+      "id": "sfx_hit_whip",
+      "audio": "fce94554556d99da0e56dd67be1ba7d6bc79c869ee575f6a8c6006356f430467",
+      "gain": 0.8,
+      "guid": "687ecee24a8d4991884a06d91da02780",
+      "file": "sfx_hit_whip_01_v01.wav"
+    },
+    "whip_combo": {
+      "id": "sfx_hit_whip",
+      "audio": "fce94554556d99da0e56dd67be1ba7d6bc79c869ee575f6a8c6006356f430467",
+      "gain": 0.8,
+      "guid": "687ecee24a8d4991884a06d91da02780",
+      "file": "sfx_hit_whip_01_v01.wav"
+    },
+    "rapier_basic_0": {
+      "id": "sfx_hit_rapier",
+      "audio": "fc38c2c1db705a1da05a00dcdf26c8e30d7ed13fb104b36a78b7f9a5c900bea3",
+      "gain": 0.8,
+      "guid": "9dad8e16c2a4463f91e2f69d571691a9",
+      "file": "sfx_hit_rapier_01_v01.wav"
+    },
+    "rapier_basic_1": {
+      "id": "sfx_hit_rapier",
+      "audio": "fc38c2c1db705a1da05a00dcdf26c8e30d7ed13fb104b36a78b7f9a5c900bea3",
+      "gain": 0.8,
+      "guid": "9dad8e16c2a4463f91e2f69d571691a9",
+      "file": "sfx_hit_rapier_01_v01.wav"
+    },
+    "rapier_basic_2": {
+      "id": "sfx_hit_rapier",
+      "audio": "fc38c2c1db705a1da05a00dcdf26c8e30d7ed13fb104b36a78b7f9a5c900bea3",
+      "gain": 0.8,
+      "guid": "9dad8e16c2a4463f91e2f69d571691a9",
+      "file": "sfx_hit_rapier_01_v01.wav"
+    },
+    "rapier_combo": {
+      "id": "sfx_hit_rapier",
+      "audio": "fc38c2c1db705a1da05a00dcdf26c8e30d7ed13fb104b36a78b7f9a5c900bea3",
+      "gain": 0.8,
+      "guid": "9dad8e16c2a4463f91e2f69d571691a9",
+      "file": "sfx_hit_rapier_01_v01.wav"
+    },
+    "dagger_basic_0": {
+      "id": "sfx_hit_dagger",
+      "audio": "e6becd9460fae11259db9c51fcb8831c4c64e003620eb1d89f0093bd30af1c5f",
+      "gain": 0.8,
+      "guid": "3f477d39542647af908c65378cb0b6b2",
+      "file": "sfx_hit_dagger_01_v01.wav"
+    },
+    "dagger_basic_1": {
+      "id": "sfx_hit_dagger",
+      "audio": "e6becd9460fae11259db9c51fcb8831c4c64e003620eb1d89f0093bd30af1c5f",
+      "gain": 0.8,
+      "guid": "3f477d39542647af908c65378cb0b6b2",
+      "file": "sfx_hit_dagger_01_v01.wav"
+    },
+    "dagger_basic_2": {
+      "id": "sfx_hit_dagger",
+      "audio": "e6becd9460fae11259db9c51fcb8831c4c64e003620eb1d89f0093bd30af1c5f",
+      "gain": 0.8,
+      "guid": "3f477d39542647af908c65378cb0b6b2",
+      "file": "sfx_hit_dagger_01_v01.wav"
+    },
+    "dagger_basic_3": {
+      "id": "sfx_hit_dagger",
+      "audio": "e6becd9460fae11259db9c51fcb8831c4c64e003620eb1d89f0093bd30af1c5f",
+      "gain": 0.8,
+      "guid": "3f477d39542647af908c65378cb0b6b2",
+      "file": "sfx_hit_dagger_01_v01.wav"
+    },
+    "dagger_combo": {
+      "id": "sfx_hit_dagger",
+      "audio": "e6becd9460fae11259db9c51fcb8831c4c64e003620eb1d89f0093bd30af1c5f",
+      "gain": 0.8,
+      "guid": "3f477d39542647af908c65378cb0b6b2",
+      "file": "sfx_hit_dagger_01_v01.wav"
+    },
+    "hammer_basic_0": {
+      "id": "sfx_hit_hammer",
+      "audio": "9b07a55855650d19da5d62317c5d8d3034f01ca8cda7b81f4ccbf9df8b309eaf",
+      "gain": 0.8,
+      "guid": "0a1d843e72f24027990478e60d896f5f",
+      "file": "sfx_hit_hammer_01_v01.wav"
+    },
+    "hammer_basic_1": {
+      "id": "sfx_hit_hammer",
+      "audio": "9b07a55855650d19da5d62317c5d8d3034f01ca8cda7b81f4ccbf9df8b309eaf",
+      "gain": 0.8,
+      "guid": "0a1d843e72f24027990478e60d896f5f",
+      "file": "sfx_hit_hammer_01_v01.wav"
+    },
+    "hammer_combo": {
+      "id": "sfx_hit_hammer",
+      "audio": "9b07a55855650d19da5d62317c5d8d3034f01ca8cda7b81f4ccbf9df8b309eaf",
+      "gain": 0.8,
+      "guid": "0a1d843e72f24027990478e60d896f5f",
+      "file": "sfx_hit_hammer_01_v01.wav"
+    },
+    "shield_basic_0": {
+      "id": "sfx_hit_shield",
+      "audio": "3ef0781812b0d8bfb0f1df685b094cd520c95d1ee72ecf9d575a97ad7773d23f",
+      "gain": 0.8,
+      "guid": "1ed28e583d244928879379b5c7907d78",
+      "file": "sfx_hit_shield_01_v01.wav"
+    },
+    "shield_combo": {
+      "id": "sfx_hit_shield",
+      "audio": "3ef0781812b0d8bfb0f1df685b094cd520c95d1ee72ecf9d575a97ad7773d23f",
+      "gain": 0.8,
+      "guid": "1ed28e583d244928879379b5c7907d78",
+      "file": "sfx_hit_shield_01_v01.wav"
+    },
+    "greatsword_basic_0": {
+      "id": "sfx_hit_greatsword",
+      "audio": "e28091449c2134b6c540ba31be83141857d3c18ceca3539ee3a7042f025b6291",
+      "gain": 0.8,
+      "guid": "f9dfc7572045476e89325da7ba82e740",
+      "file": "sfx_hit_greatsword_01_v01.wav"
+    },
+    "greatsword_basic_1": {
+      "id": "sfx_hit_greatsword",
+      "audio": "e28091449c2134b6c540ba31be83141857d3c18ceca3539ee3a7042f025b6291",
+      "gain": 0.8,
+      "guid": "f9dfc7572045476e89325da7ba82e740",
+      "file": "sfx_hit_greatsword_01_v01.wav"
+    },
+    "greatsword_basic_2": {
+      "id": "sfx_hit_greatsword",
+      "audio": "e28091449c2134b6c540ba31be83141857d3c18ceca3539ee3a7042f025b6291",
+      "gain": 0.8,
+      "guid": "f9dfc7572045476e89325da7ba82e740",
+      "file": "sfx_hit_greatsword_01_v01.wav"
+    },
+    "greatsword_combo": {
+      "id": "sfx_hit_greatsword",
+      "audio": "e28091449c2134b6c540ba31be83141857d3c18ceca3539ee3a7042f025b6291",
+      "gain": 0.8,
+      "guid": "f9dfc7572045476e89325da7ba82e740",
+      "file": "sfx_hit_greatsword_01_v01.wav"
+    },
+    "launcher_basic_0": {
+      "id": "sfx_hit_launcher_ball",
+      "audio": "8906114c3dbef8edd5d808345e10f267fd5f766308dc6472cc8abb73fa3472af",
+      "gain": 0.8,
+      "guid": "aeb05930fca04694ae0eb843a50aa7e5",
+      "file": "sfx_hit_launcher_ball_01_v01.wav"
+    },
+    "launcher_combo": {
+      "id": "sfx_hit_launcher_ball",
+      "audio": "8906114c3dbef8edd5d808345e10f267fd5f766308dc6472cc8abb73fa3472af",
+      "gain": 0.8,
+      "guid": "aeb05930fca04694ae0eb843a50aa7e5",
+      "file": "sfx_hit_launcher_ball_01_v01.wav"
+    },
+    "bomb_basic_0": null,
+    "bomb_combo": null,
+    "shuriken_basic_0": {
+      "id": "sfx_hit_shuriken",
+      "audio": "79169bbd8122732f35aff4e9e30304fe809e2718f902f3bbe2f90928a9f47f29",
+      "gain": 0.8,
+      "guid": "5bc4c41d6f6d4bec8b38a01cd50d99ee",
+      "file": "sfx_hit_shuriken_01_v01.wav"
+    },
+    "shuriken_basic_1": {
+      "id": "sfx_hit_shuriken",
+      "audio": "79169bbd8122732f35aff4e9e30304fe809e2718f902f3bbe2f90928a9f47f29",
+      "gain": 0.8,
+      "guid": "5bc4c41d6f6d4bec8b38a01cd50d99ee",
+      "file": "sfx_hit_shuriken_01_v01.wav"
+    },
+    "shuriken_combo": {
+      "id": "sfx_hit_shuriken",
+      "audio": "79169bbd8122732f35aff4e9e30304fe809e2718f902f3bbe2f90928a9f47f29",
+      "gain": 0.8,
+      "guid": "5bc4c41d6f6d4bec8b38a01cd50d99ee",
+      "file": "sfx_hit_shuriken_01_v01.wav"
+    },
+    "unarmed_basic_0": {
+      "id": "sfx_hit_unarmed",
+      "audio": "5d1ce4ff97373d9658b37ec77a227fd956e46582c862d4df09c9280bf8ed5ea8",
+      "gain": 0.8,
+      "guid": "79ecbf14c5644d7ba01f9723f355fcb3",
+      "file": "sfx_hit_unarmed_01_v01.wav"
+    },
+    "unarmed_basic_1": {
+      "id": "sfx_hit_unarmed",
+      "audio": "5d1ce4ff97373d9658b37ec77a227fd956e46582c862d4df09c9280bf8ed5ea8",
+      "gain": 0.8,
+      "guid": "79ecbf14c5644d7ba01f9723f355fcb3",
+      "file": "sfx_hit_unarmed_01_v01.wav"
+    },
+    "unarmed_combo": {
+      "id": "sfx_hit_unarmed",
+      "audio": "5d1ce4ff97373d9658b37ec77a227fd956e46582c862d4df09c9280bf8ed5ea8",
+      "gain": 0.8,
+      "guid": "79ecbf14c5644d7ba01f9723f355fcb3",
+      "file": "sfx_hit_unarmed_01_v01.wav"
+    },
+    "base_sword_default@0": {
+      "id": "sfx_hit_sword",
+      "audio": "072e01c2a3831fd5870604bf28599a5023f22f8e90738cd83c75b73eeb6efbcc",
+      "gain": 0.8,
+      "guid": "7c4b367dec5a47ddb240e33ddb8b83b4",
+      "file": "sfx_hit_sword_01_v01.wav"
+    },
+    "base_sword_range@0": {
+      "id": "sfx_hit_sword",
+      "audio": "072e01c2a3831fd5870604bf28599a5023f22f8e90738cd83c75b73eeb6efbcc",
+      "gain": 0.8,
+      "guid": "7c4b367dec5a47ddb240e33ddb8b83b4",
+      "file": "sfx_hit_sword_01_v01.wav"
+    },
+    "base_sword_movement@0": {
+      "id": "sfx_hit_sword",
+      "audio": "072e01c2a3831fd5870604bf28599a5023f22f8e90738cd83c75b73eeb6efbcc",
+      "gain": 0.8,
+      "guid": "7c4b367dec5a47ddb240e33ddb8b83b4",
+      "file": "sfx_hit_sword_01_v01.wav"
+    },
+    "base_sword_follow_up@0": {
+      "id": "sfx_hit_sword",
+      "audio": "072e01c2a3831fd5870604bf28599a5023f22f8e90738cd83c75b73eeb6efbcc",
+      "gain": 0.8,
+      "guid": "7c4b367dec5a47ddb240e33ddb8b83b4",
+      "file": "sfx_hit_sword_01_v01.wav"
+    },
+    "whip_default@0": {
+      "id": "sfx_hit_whip",
+      "audio": "fce94554556d99da0e56dd67be1ba7d6bc79c869ee575f6a8c6006356f430467",
+      "gain": 0.8,
+      "guid": "687ecee24a8d4991884a06d91da02780",
+      "file": "sfx_hit_whip_01_v01.wav"
+    },
+    "whip_range@0": {
+      "id": "sfx_hit_whip",
+      "audio": "fce94554556d99da0e56dd67be1ba7d6bc79c869ee575f6a8c6006356f430467",
+      "gain": 0.8,
+      "guid": "687ecee24a8d4991884a06d91da02780",
+      "file": "sfx_hit_whip_01_v01.wav"
+    },
+    "whip_movement@0": {
+      "id": "sfx_hit_whip",
+      "audio": "fce94554556d99da0e56dd67be1ba7d6bc79c869ee575f6a8c6006356f430467",
+      "gain": 0.8,
+      "guid": "687ecee24a8d4991884a06d91da02780",
+      "file": "sfx_hit_whip_01_v01.wav"
+    },
+    "whip_follow_up@0": {
+      "id": "sfx_hit_whip",
+      "audio": "fce94554556d99da0e56dd67be1ba7d6bc79c869ee575f6a8c6006356f430467",
+      "gain": 0.8,
+      "guid": "687ecee24a8d4991884a06d91da02780",
+      "file": "sfx_hit_whip_01_v01.wav"
+    },
+    "rapier_default@0": {
+      "id": "sfx_hit_rapier",
+      "audio": "fc38c2c1db705a1da05a00dcdf26c8e30d7ed13fb104b36a78b7f9a5c900bea3",
+      "gain": 0.8,
+      "guid": "9dad8e16c2a4463f91e2f69d571691a9",
+      "file": "sfx_hit_rapier_01_v01.wav"
+    },
+    "rapier_range@0": {
+      "id": "sfx_hit_rapier",
+      "audio": "fc38c2c1db705a1da05a00dcdf26c8e30d7ed13fb104b36a78b7f9a5c900bea3",
+      "gain": 0.8,
+      "guid": "9dad8e16c2a4463f91e2f69d571691a9",
+      "file": "sfx_hit_rapier_01_v01.wav"
+    },
+    "rapier_movement@0": {
+      "id": "sfx_hit_rapier",
+      "audio": "fc38c2c1db705a1da05a00dcdf26c8e30d7ed13fb104b36a78b7f9a5c900bea3",
+      "gain": 0.8,
+      "guid": "9dad8e16c2a4463f91e2f69d571691a9",
+      "file": "sfx_hit_rapier_01_v01.wav"
+    },
+    "rapier_follow_up@0": {
+      "id": "sfx_hit_rapier",
+      "audio": "fc38c2c1db705a1da05a00dcdf26c8e30d7ed13fb104b36a78b7f9a5c900bea3",
+      "gain": 0.8,
+      "guid": "9dad8e16c2a4463f91e2f69d571691a9",
+      "file": "sfx_hit_rapier_01_v01.wav"
+    },
+    "dagger_default@0": null,
+    "dagger_range@0": null,
+    "dagger_movement@0": {
+      "id": "sfx_hit_dagger",
+      "audio": "e6becd9460fae11259db9c51fcb8831c4c64e003620eb1d89f0093bd30af1c5f",
+      "gain": 0.8,
+      "guid": "3f477d39542647af908c65378cb0b6b2",
+      "file": "sfx_hit_dagger_01_v01.wav"
+    },
+    "dagger_follow_up@0": {
+      "id": "sfx_hit_dagger",
+      "audio": "e6becd9460fae11259db9c51fcb8831c4c64e003620eb1d89f0093bd30af1c5f",
+      "gain": 0.8,
+      "guid": "3f477d39542647af908c65378cb0b6b2",
+      "file": "sfx_hit_dagger_01_v01.wav"
+    },
+    "hammer_default@0": {
+      "id": "sfx_hit_hammer",
+      "audio": "9b07a55855650d19da5d62317c5d8d3034f01ca8cda7b81f4ccbf9df8b309eaf",
+      "gain": 0.8,
+      "guid": "0a1d843e72f24027990478e60d896f5f",
+      "file": "sfx_hit_hammer_01_v01.wav"
+    },
+    "hammer_range@0": {
+      "id": "sfx_hit_hammer",
+      "audio": "9b07a55855650d19da5d62317c5d8d3034f01ca8cda7b81f4ccbf9df8b309eaf",
+      "gain": 0.8,
+      "guid": "0a1d843e72f24027990478e60d896f5f",
+      "file": "sfx_hit_hammer_01_v01.wav"
+    },
+    "hammer_movement@0": {
+      "id": "sfx_hit_hammer",
+      "audio": "9b07a55855650d19da5d62317c5d8d3034f01ca8cda7b81f4ccbf9df8b309eaf",
+      "gain": 0.8,
+      "guid": "0a1d843e72f24027990478e60d896f5f",
+      "file": "sfx_hit_hammer_01_v01.wav"
+    },
+    "hammer_follow_up@0": {
+      "id": "sfx_hit_hammer",
+      "audio": "9b07a55855650d19da5d62317c5d8d3034f01ca8cda7b81f4ccbf9df8b309eaf",
+      "gain": 0.8,
+      "guid": "0a1d843e72f24027990478e60d896f5f",
+      "file": "sfx_hit_hammer_01_v01.wav"
+    },
+    "shield_default@0": {
+      "id": "sfx_hit_shield",
+      "audio": "3ef0781812b0d8bfb0f1df685b094cd520c95d1ee72ecf9d575a97ad7773d23f",
+      "gain": 0.8,
+      "guid": "1ed28e583d244928879379b5c7907d78",
+      "file": "sfx_hit_shield_01_v01.wav"
+    },
+    "shield_range@0": null,
+    "shield_movement@0": {
+      "id": "sfx_hit_shield",
+      "audio": "3ef0781812b0d8bfb0f1df685b094cd520c95d1ee72ecf9d575a97ad7773d23f",
+      "gain": 0.8,
+      "guid": "1ed28e583d244928879379b5c7907d78",
+      "file": "sfx_hit_shield_01_v01.wav"
+    },
+    "shield_follow_up@0": null,
+    "greatsword_default@0": {
+      "id": "sfx_hit_greatsword",
+      "audio": "e28091449c2134b6c540ba31be83141857d3c18ceca3539ee3a7042f025b6291",
+      "gain": 0.8,
+      "guid": "f9dfc7572045476e89325da7ba82e740",
+      "file": "sfx_hit_greatsword_01_v01.wav"
+    },
+    "greatsword_default@1": {
+      "id": "sfx_hit_greatsword",
+      "audio": "e28091449c2134b6c540ba31be83141857d3c18ceca3539ee3a7042f025b6291",
+      "gain": 0.8,
+      "guid": "f9dfc7572045476e89325da7ba82e740",
+      "file": "sfx_hit_greatsword_01_v01.wav"
+    },
+    "greatsword_range@0": {
+      "id": "sfx_hit_greatsword",
+      "audio": "e28091449c2134b6c540ba31be83141857d3c18ceca3539ee3a7042f025b6291",
+      "gain": 0.8,
+      "guid": "f9dfc7572045476e89325da7ba82e740",
+      "file": "sfx_hit_greatsword_01_v01.wav"
+    },
+    "greatsword_movement@0": {
+      "id": "sfx_hit_greatsword",
+      "audio": "e28091449c2134b6c540ba31be83141857d3c18ceca3539ee3a7042f025b6291",
+      "gain": 0.8,
+      "guid": "f9dfc7572045476e89325da7ba82e740",
+      "file": "sfx_hit_greatsword_01_v01.wav"
+    },
+    "greatsword_follow_up@0": {
+      "id": "sfx_hit_greatsword",
+      "audio": "e28091449c2134b6c540ba31be83141857d3c18ceca3539ee3a7042f025b6291",
+      "gain": 0.8,
+      "guid": "f9dfc7572045476e89325da7ba82e740",
+      "file": "sfx_hit_greatsword_01_v01.wav"
+    },
+    "launcher_basic_special@0": null,
+    "launcher_range_special@0": {
+      "id": "sfx_hit_launcher_laser",
+      "audio": "bd4c51d83b728460d803eb8d85ab866eab143c418a4effd6db50b64fb6c633a1",
+      "gain": 0.8,
+      "guid": "3c9b08607ef440ab94624e6eb2dde3f7",
+      "file": "sfx_hit_launcher_laser_01_v01.wav"
+    },
+    "launcher_move_special@0": {
+      "id": "sfx_hit_launcher_ball",
+      "audio": "8906114c3dbef8edd5d808345e10f267fd5f766308dc6472cc8abb73fa3472af",
+      "gain": 0.8,
+      "guid": "aeb05930fca04694ae0eb843a50aa7e5",
+      "file": "sfx_hit_launcher_ball_01_v01.wav"
+    },
+    "launcher_followup_special@0": null,
+    "bomb_basic_special@0": null,
+    "bomb_range_special@0": null,
+    "bomb_move_special@0": null,
+    "bomb_followup_special@0": null,
+    "shuriken_basic_special@0": {
+      "id": "sfx_hit_shuriken",
+      "audio": "79169bbd8122732f35aff4e9e30304fe809e2718f902f3bbe2f90928a9f47f29",
+      "gain": 0.8,
+      "guid": "5bc4c41d6f6d4bec8b38a01cd50d99ee",
+      "file": "sfx_hit_shuriken_01_v01.wav"
+    },
+    "shuriken_range_special@0": null,
+    "shuriken_move_special@0": {
+      "id": "sfx_hit_shuriken",
+      "audio": "79169bbd8122732f35aff4e9e30304fe809e2718f902f3bbe2f90928a9f47f29",
+      "gain": 0.8,
+      "guid": "5bc4c41d6f6d4bec8b38a01cd50d99ee",
+      "file": "sfx_hit_shuriken_01_v01.wav"
+    },
+    "shuriken_followup_special@0": {
+      "id": "sfx_hit_shuriken",
+      "audio": "79169bbd8122732f35aff4e9e30304fe809e2718f902f3bbe2f90928a9f47f29",
+      "gain": 0.8,
+      "guid": "5bc4c41d6f6d4bec8b38a01cd50d99ee",
+      "file": "sfx_hit_shuriken_01_v01.wav"
+    }
+  }
+}

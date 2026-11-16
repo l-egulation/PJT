@@ -1,0 +1,118 @@
+{
+  "format": "stage2-rain-aether-input-v1",
+  "status": "output-A-x2-user-approved",
+  "pattern": "ArrowRain",
+  "startImage": "rain-start-white-3x.png",
+  "startImageSha256": "8a9a2af8f7d23bc20d1528865d6eb7b40d5e50cd5bda8badcb721fcbf9743061",
+  "sourceReference": "../approved-fused-idle-original.png",
+  "endImage": null,
+  "endImageReason": "The detonation end pose is described in the prompt; no forced end frame.",
+  "sourceCanvas": [
+    384,
+    256
+  ],
+  "inputCanvas": [
+    1536,
+    1152
+  ],
+  "logicalPaddingCanvas": [
+    512,
+    384
+  ],
+  "sourcePasteOffset": [
+    64,
+    64
+  ],
+  "integerNearestScale": 3,
+  "inputGroundY": 888,
+  "inputPivot": [
+    768,
+    888
+  ],
+  "prompt": "prompt.txt",
+  "suggestedDurationSeconds": 3.0,
+  "bodyBeatsSeconds": {
+    "summonLocked": 0.4,
+    "holdUntil": 2.1,
+    "detonateLocked": 2.45
+  },
+  "gameContract": {
+    "source": "data/combat/chapter2_rose_blue.json, RoseBlue/Patterns.cs, Runtime/RoseBlueEncounter.Patterns.cs @ main 7f2fbe8ed",
+    "RainTell": 0.5,
+    "RainCount": 12,
+    "RainFall": 0.25,
+    "RainLandingSpan": 1.5,
+    "RainFuse": 0.2,
+    "firstArrowSpawn": 0.5,
+    "landings": [
+      0.75,
+      2.25
+    ],
+    "explosions": [
+      2.45,
+      3.95
+    ],
+    "arrowsFallFromArenaTop": true,
+    "startSide": "random left/right (cast.FromRight)",
+    "bossFixedInPlace": true,
+    "combatChanges": false
+  },
+  "directionChoice": "Neutral vertical summon; the random start side is shown by the existing rain-start warning column. A side-pointing tell would need two generations because the character is never mirrored.",
+  "referenceMainCommit": "7f2fbe8ed90aca1f943d124db52e637c32ae029b",
+  "identityLocks": {
+    "rigidMask": true,
+    "mouth": false,
+    "armCount": 1,
+    "existingArm": "image-left raised hand beside mask",
+    "oppositeArm": "anatomically absent",
+    "overheadCrossbow": "preserve exact approved shape",
+    "headPositionScaleAngleFixed": true,
+    "armMayNotOccludeMask": true,
+    "handMayNotOverlapCrossbow": true
+  },
+  "handSpaceOnApproved": {
+    "crossbowLeftPartBottomY": 44,
+    "hoodTopY": 54,
+    "hoodLeftEdgeXAtY60_70": [
+      182,
+      176
+    ],
+    "freeZone": [
+      140,
+      45,
+      175,
+      75
+    ],
+    "note": "approved 384x256 canvas coordinates"
+  },
+  "headDetailReference": {
+    "file": "approved-head-detail-8x.png",
+    "sourceCrop": [
+      163,
+      50,
+      223,
+      112
+    ],
+    "integerNearestScale": 8,
+    "role": "identity detail only; not first-frame image"
+  },
+  "aetherOutputReceived": true,
+  "selectedFrames": null,
+  "timingsFinalized": false,
+  "imageApiCalled": false,
+  "sourcePixelsRepainted": false,
+  "aetherOutput": {
+    "folder": "../rain-aether-01/",
+    "extraction": "../rain-aether-01/extraction.json",
+    "cleanAll": "../../preview/rain-candidates/clean-all.json",
+    "timingReview": "../../preview/rain-candidates/candidates.json",
+    "userFeedback": "입이 생겨버렸어..1 이거만 따로 제거해서하면 ㄱㅊ을지도? 이 자세 좋네",
+    "observed": [
+      "generated mask gained a mouth line; removed with one canonical mouthless face pasted at hood registration",
+      "drawn larger than input (body 256 px, crossbow 157 px) -> 445x250 at (-29,-9)",
+      "summon peak frame 05, detonation frame 28, frames 29-35 hold low; no return to idle"
+    ],
+    "runtime": "../../runtime/rain-a-x2/motion.json"
+  },
+  "selectedTiming": "A-x2"
+}

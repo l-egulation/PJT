@@ -1,0 +1,976 @@
+{
+ "format": "deviant-launcher-skill-fx-v1",
+ "clips": [
+  {
+   "name": "ball_pop",
+   "loop": false,
+   "loopFrom": -1,
+   "seconds": [
+    0.025,
+    0.03,
+    0.035,
+    0.04
+   ],
+   "frames": [
+    "LauncherSkillFx/ball_pop/00",
+    "LauncherSkillFx/ball_pop/01",
+    "LauncherSkillFx/ball_pop/02",
+    "LauncherSkillFx/ball_pop/03"
+   ]
+  },
+  {
+   "name": "ball_bullet",
+   "loop": true,
+   "loopFrom": 1,
+   "seconds": [
+    0.03,
+    0.04,
+    0.04,
+    0.04
+   ],
+   "frames": [
+    "LauncherSkillFx/ball_bullet/00",
+    "LauncherSkillFx/ball_bullet/01",
+    "LauncherSkillFx/ball_bullet/02",
+    "LauncherSkillFx/ball_bullet/03"
+   ]
+  },
+  {
+   "name": "ball_hit",
+   "loop": false,
+   "loopFrom": -1,
+   "seconds": [
+    0.03,
+    0.03,
+    0.04,
+    0.04,
+    0.05,
+    0.05
+   ],
+   "frames": [
+    "LauncherSkillFx/ball_hit/00",
+    "LauncherSkillFx/ball_hit/01",
+    "LauncherSkillFx/ball_hit/02",
+    "LauncherSkillFx/ball_hit/03",
+    "LauncherSkillFx/ball_hit/04",
+    "LauncherSkillFx/ball_hit/05"
+   ]
+  },
+  {
+   "name": "laser_pop",
+   "loop": false,
+   "loopFrom": -1,
+   "seconds": [
+    0.02,
+    0.03,
+    0.035,
+    0.04
+   ],
+   "frames": [
+    "LauncherSkillFx/laser_pop/00",
+    "LauncherSkillFx/laser_pop/01",
+    "LauncherSkillFx/laser_pop/02",
+    "LauncherSkillFx/laser_pop/03"
+   ]
+  },
+  {
+   "name": "laser_hold",
+   "loop": true,
+   "loopFrom": -1,
+   "seconds": [
+    0.05,
+    0.05
+   ],
+   "frames": [
+    "LauncherSkillFx/laser_hold/00",
+    "LauncherSkillFx/laser_hold/01"
+   ]
+  },
+  {
+   "name": "laser_head",
+   "loop": true,
+   "loopFrom": -1,
+   "seconds": [
+    0.025,
+    0.025
+   ],
+   "frames": [
+    "LauncherSkillFx/laser_head/00",
+    "LauncherSkillFx/laser_head/01"
+   ]
+  },
+  {
+   "name": "laser_hit",
+   "loop": false,
+   "loopFrom": -1,
+   "seconds": [
+    0.03,
+    0.03,
+    0.04,
+    0.04,
+    0.05,
+    0.05
+   ],
+   "frames": [
+    "LauncherSkillFx/laser_hit/00",
+    "LauncherSkillFx/laser_hit/01",
+    "LauncherSkillFx/laser_hit/02",
+    "LauncherSkillFx/laser_hit/03",
+    "LauncherSkillFx/laser_hit/04",
+    "LauncherSkillFx/laser_hit/05"
+   ]
+  },
+  {
+   "name": "laser_beam",
+   "loop": true,
+   "loopFrom": -1,
+   "seconds": [
+    0.08,
+    0.08,
+    0.08,
+    0.08,
+    0.08,
+    0.08
+   ],
+   "frames": [
+    "LauncherSkillFx/laser_beam/00",
+    "LauncherSkillFx/laser_beam/01",
+    "LauncherSkillFx/laser_beam/02",
+    "LauncherSkillFx/laser_beam/03",
+    "LauncherSkillFx/laser_beam/04",
+    "LauncherSkillFx/laser_beam/05"
+   ]
+  },
+  {
+   "name": "laser_wall_hit",
+   "loop": false,
+   "loopFrom": -1,
+   "seconds": [
+    0.03,
+    0.04,
+    0.05
+   ],
+   "frames": [
+    "LauncherSkillFx/laser_wall_hit/00",
+    "LauncherSkillFx/laser_wall_hit/01",
+    "LauncherSkillFx/laser_wall_hit/02"
+   ]
+  },
+  {
+   "name": "laser_wall_hold",
+   "loop": true,
+   "loopFrom": -1,
+   "seconds": [
+    0.05,
+    0.05
+   ],
+   "frames": [
+    "LauncherSkillFx/laser_wall_hold/00",
+    "LauncherSkillFx/laser_wall_hold/01"
+   ]
+  },
+  {
+   "name": "shotgun_pellet",
+   "loop": true,
+   "loopFrom": -1,
+   "seconds": [
+    0.04,
+    0.04
+   ],
+   "frames": [
+    "LauncherSkillFx/shotgun_pellet/00",
+    "LauncherSkillFx/shotgun_pellet/01"
+   ]
+  },
+  {
+   "name": "shotgun_pop",
+   "loop": false,
+   "loopFrom": -1,
+   "seconds": [
+    0.02,
+    0.03,
+    0.035,
+    0.045
+   ],
+   "frames": [
+    "LauncherSkillFx/shotgun_pop/00",
+    "LauncherSkillFx/shotgun_pop/01",
+    "LauncherSkillFx/shotgun_pop/02",
+    "LauncherSkillFx/shotgun_pop/03"
+   ]
+  },
+  {
+   "name": "shotgun_dust",
+   "loop": false,
+   "loopFrom": -1,
+   "seconds": [
+    0.04,
+    0.05,
+    0.06,
+    0.07
+   ],
+   "frames": [
+    "LauncherSkillFx/shotgun_dust/00",
+    "LauncherSkillFx/shotgun_dust/01",
+    "LauncherSkillFx/shotgun_dust/02",
+    "LauncherSkillFx/shotgun_dust/03"
+   ]
+  },
+  {
+   "name": "shotgun_wind",
+   "loop": true,
+   "loopFrom": -1,
+   "seconds": [
+    0.05,
+    0.05
+   ],
+   "frames": [
+    "LauncherSkillFx/shotgun_wind/00",
+    "LauncherSkillFx/shotgun_wind/01"
+   ]
+  },
+  {
+   "name": "shotgun_hit",
+   "loop": false,
+   "loopFrom": -1,
+   "seconds": [
+    0.03,
+    0.035,
+    0.04,
+    0.045,
+    0.05
+   ],
+   "frames": [
+    "LauncherSkillFx/shotgun_hit/00",
+    "LauncherSkillFx/shotgun_hit/01",
+    "LauncherSkillFx/shotgun_hit/02",
+    "LauncherSkillFx/shotgun_hit/03",
+    "LauncherSkillFx/shotgun_hit/04"
+   ]
+  },
+  {
+   "name": "grenade_shell",
+   "loop": true,
+   "loopFrom": -1,
+   "seconds": [
+    0.05,
+    0.05
+   ],
+   "frames": [
+    "LauncherSkillFx/grenade_shell/00",
+    "LauncherSkillFx/grenade_shell/01"
+   ]
+  },
+  {
+   "name": "grenade_smoke",
+   "loop": false,
+   "loopFrom": -1,
+   "seconds": [
+    0.05,
+    0.05,
+    0.06,
+    0.07
+   ],
+   "frames": [
+    "LauncherSkillFx/grenade_smoke/00",
+    "LauncherSkillFx/grenade_smoke/01",
+    "LauncherSkillFx/grenade_smoke/02",
+    "LauncherSkillFx/grenade_smoke/03"
+   ]
+  },
+  {
+   "name": "grenade_pop",
+   "loop": false,
+   "loopFrom": -1,
+   "seconds": [
+    0.025,
+    0.035,
+    0.045,
+    0.06
+   ],
+   "frames": [
+    "LauncherSkillFx/grenade_pop/00",
+    "LauncherSkillFx/grenade_pop/01",
+    "LauncherSkillFx/grenade_pop/02",
+    "LauncherSkillFx/grenade_pop/03"
+   ]
+  },
+  {
+   "name": "grenade_frag",
+   "loop": true,
+   "loopFrom": -1,
+   "seconds": [
+    0.04,
+    0.04
+   ],
+   "frames": [
+    "LauncherSkillFx/grenade_frag/00",
+    "LauncherSkillFx/grenade_frag/01"
+   ]
+  },
+  {
+   "name": "grenade_main_air",
+   "loop": false,
+   "loopFrom": -1,
+   "seconds": [
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333
+   ],
+   "frames": [
+    "LauncherSkillFx/grenade_main_air/00",
+    "LauncherSkillFx/grenade_main_air/01",
+    "LauncherSkillFx/grenade_main_air/02",
+    "LauncherSkillFx/grenade_main_air/03",
+    "LauncherSkillFx/grenade_main_air/04",
+    "LauncherSkillFx/grenade_main_air/05",
+    "LauncherSkillFx/grenade_main_air/06",
+    "LauncherSkillFx/grenade_main_air/07",
+    "LauncherSkillFx/grenade_main_air/08",
+    "LauncherSkillFx/grenade_main_air/09",
+    "LauncherSkillFx/grenade_main_air/10",
+    "LauncherSkillFx/grenade_main_air/11",
+    "LauncherSkillFx/grenade_main_air/12",
+    "LauncherSkillFx/grenade_main_air/13",
+    "LauncherSkillFx/grenade_main_air/14",
+    "LauncherSkillFx/grenade_main_air/15",
+    "LauncherSkillFx/grenade_main_air/16",
+    "LauncherSkillFx/grenade_main_air/17",
+    "LauncherSkillFx/grenade_main_air/18",
+    "LauncherSkillFx/grenade_main_air/19",
+    "LauncherSkillFx/grenade_main_air/20",
+    "LauncherSkillFx/grenade_main_air/21",
+    "LauncherSkillFx/grenade_main_air/22",
+    "LauncherSkillFx/grenade_main_air/23",
+    "LauncherSkillFx/grenade_main_air/24",
+    "LauncherSkillFx/grenade_main_air/25",
+    "LauncherSkillFx/grenade_main_air/26",
+    "LauncherSkillFx/grenade_main_air/27",
+    "LauncherSkillFx/grenade_main_air/28",
+    "LauncherSkillFx/grenade_main_air/29",
+    "LauncherSkillFx/grenade_main_air/30",
+    "LauncherSkillFx/grenade_main_air/31",
+    "LauncherSkillFx/grenade_main_air/32",
+    "LauncherSkillFx/grenade_main_air/33"
+   ]
+  },
+  {
+   "name": "grenade_main_ground",
+   "loop": false,
+   "loopFrom": -1,
+   "seconds": [
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333
+   ],
+   "frames": [
+    "LauncherSkillFx/grenade_main_ground/00",
+    "LauncherSkillFx/grenade_main_ground/01",
+    "LauncherSkillFx/grenade_main_ground/02",
+    "LauncherSkillFx/grenade_main_ground/03",
+    "LauncherSkillFx/grenade_main_ground/04",
+    "LauncherSkillFx/grenade_main_ground/05",
+    "LauncherSkillFx/grenade_main_ground/06",
+    "LauncherSkillFx/grenade_main_ground/07",
+    "LauncherSkillFx/grenade_main_ground/08",
+    "LauncherSkillFx/grenade_main_ground/09",
+    "LauncherSkillFx/grenade_main_ground/10",
+    "LauncherSkillFx/grenade_main_ground/11",
+    "LauncherSkillFx/grenade_main_ground/12",
+    "LauncherSkillFx/grenade_main_ground/13",
+    "LauncherSkillFx/grenade_main_ground/14",
+    "LauncherSkillFx/grenade_main_ground/15",
+    "LauncherSkillFx/grenade_main_ground/16",
+    "LauncherSkillFx/grenade_main_ground/17",
+    "LauncherSkillFx/grenade_main_ground/18",
+    "LauncherSkillFx/grenade_main_ground/19",
+    "LauncherSkillFx/grenade_main_ground/20",
+    "LauncherSkillFx/grenade_main_ground/21",
+    "LauncherSkillFx/grenade_main_ground/22",
+    "LauncherSkillFx/grenade_main_ground/23",
+    "LauncherSkillFx/grenade_main_ground/24",
+    "LauncherSkillFx/grenade_main_ground/25",
+    "LauncherSkillFx/grenade_main_ground/26",
+    "LauncherSkillFx/grenade_main_ground/27",
+    "LauncherSkillFx/grenade_main_ground/28",
+    "LauncherSkillFx/grenade_main_ground/29",
+    "LauncherSkillFx/grenade_main_ground/30",
+    "LauncherSkillFx/grenade_main_ground/31",
+    "LauncherSkillFx/grenade_main_ground/32",
+    "LauncherSkillFx/grenade_main_ground/33"
+   ]
+  },
+  {
+   "name": "grenade_frag_air",
+   "loop": false,
+   "loopFrom": -1,
+   "seconds": [
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333
+   ],
+   "frames": [
+    "LauncherSkillFx/grenade_frag_air/00",
+    "LauncherSkillFx/grenade_frag_air/01",
+    "LauncherSkillFx/grenade_frag_air/02",
+    "LauncherSkillFx/grenade_frag_air/03",
+    "LauncherSkillFx/grenade_frag_air/04",
+    "LauncherSkillFx/grenade_frag_air/05",
+    "LauncherSkillFx/grenade_frag_air/06",
+    "LauncherSkillFx/grenade_frag_air/07",
+    "LauncherSkillFx/grenade_frag_air/08",
+    "LauncherSkillFx/grenade_frag_air/09",
+    "LauncherSkillFx/grenade_frag_air/10",
+    "LauncherSkillFx/grenade_frag_air/11",
+    "LauncherSkillFx/grenade_frag_air/12",
+    "LauncherSkillFx/grenade_frag_air/13",
+    "LauncherSkillFx/grenade_frag_air/14",
+    "LauncherSkillFx/grenade_frag_air/15",
+    "LauncherSkillFx/grenade_frag_air/16",
+    "LauncherSkillFx/grenade_frag_air/17",
+    "LauncherSkillFx/grenade_frag_air/18",
+    "LauncherSkillFx/grenade_frag_air/19",
+    "LauncherSkillFx/grenade_frag_air/20",
+    "LauncherSkillFx/grenade_frag_air/21",
+    "LauncherSkillFx/grenade_frag_air/22",
+    "LauncherSkillFx/grenade_frag_air/23",
+    "LauncherSkillFx/grenade_frag_air/24",
+    "LauncherSkillFx/grenade_frag_air/25",
+    "LauncherSkillFx/grenade_frag_air/26",
+    "LauncherSkillFx/grenade_frag_air/27",
+    "LauncherSkillFx/grenade_frag_air/28",
+    "LauncherSkillFx/grenade_frag_air/29",
+    "LauncherSkillFx/grenade_frag_air/30",
+    "LauncherSkillFx/grenade_frag_air/31",
+    "LauncherSkillFx/grenade_frag_air/32",
+    "LauncherSkillFx/grenade_frag_air/33"
+   ]
+  },
+  {
+   "name": "grenade_frag_ground",
+   "loop": false,
+   "loopFrom": -1,
+   "seconds": [
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333
+   ],
+   "frames": [
+    "LauncherSkillFx/grenade_frag_ground/00",
+    "LauncherSkillFx/grenade_frag_ground/01",
+    "LauncherSkillFx/grenade_frag_ground/02",
+    "LauncherSkillFx/grenade_frag_ground/03",
+    "LauncherSkillFx/grenade_frag_ground/04",
+    "LauncherSkillFx/grenade_frag_ground/05",
+    "LauncherSkillFx/grenade_frag_ground/06",
+    "LauncherSkillFx/grenade_frag_ground/07",
+    "LauncherSkillFx/grenade_frag_ground/08",
+    "LauncherSkillFx/grenade_frag_ground/09",
+    "LauncherSkillFx/grenade_frag_ground/10",
+    "LauncherSkillFx/grenade_frag_ground/11",
+    "LauncherSkillFx/grenade_frag_ground/12",
+    "LauncherSkillFx/grenade_frag_ground/13",
+    "LauncherSkillFx/grenade_frag_ground/14",
+    "LauncherSkillFx/grenade_frag_ground/15",
+    "LauncherSkillFx/grenade_frag_ground/16",
+    "LauncherSkillFx/grenade_frag_ground/17",
+    "LauncherSkillFx/grenade_frag_ground/18",
+    "LauncherSkillFx/grenade_frag_ground/19",
+    "LauncherSkillFx/grenade_frag_ground/20",
+    "LauncherSkillFx/grenade_frag_ground/21",
+    "LauncherSkillFx/grenade_frag_ground/22",
+    "LauncherSkillFx/grenade_frag_ground/23",
+    "LauncherSkillFx/grenade_frag_ground/24",
+    "LauncherSkillFx/grenade_frag_ground/25",
+    "LauncherSkillFx/grenade_frag_ground/26",
+    "LauncherSkillFx/grenade_frag_ground/27",
+    "LauncherSkillFx/grenade_frag_ground/28",
+    "LauncherSkillFx/grenade_frag_ground/29",
+    "LauncherSkillFx/grenade_frag_ground/30",
+    "LauncherSkillFx/grenade_frag_ground/31",
+    "LauncherSkillFx/grenade_frag_ground/32",
+    "LauncherSkillFx/grenade_frag_ground/33"
+   ]
+  },
+  {
+   "name": "charge_orb1",
+   "loop": true,
+   "loopFrom": -1,
+   "seconds": [
+    0.06,
+    0.06
+   ],
+   "frames": [
+    "LauncherSkillFx/charge_orb1/00",
+    "LauncherSkillFx/charge_orb1/01"
+   ]
+  },
+  {
+   "name": "charge_orb2",
+   "loop": true,
+   "loopFrom": -1,
+   "seconds": [
+    0.06,
+    0.06
+   ],
+   "frames": [
+    "LauncherSkillFx/charge_orb2/00",
+    "LauncherSkillFx/charge_orb2/01"
+   ]
+  },
+  {
+   "name": "charge_orb3",
+   "loop": true,
+   "loopFrom": -1,
+   "seconds": [
+    0.06,
+    0.06
+   ],
+   "frames": [
+    "LauncherSkillFx/charge_orb3/00",
+    "LauncherSkillFx/charge_orb3/01"
+   ]
+  },
+  {
+   "name": "charge_suck",
+   "loop": true,
+   "loopFrom": -1,
+   "seconds": [
+    0.05,
+    0.05,
+    0.05
+   ],
+   "frames": [
+    "LauncherSkillFx/charge_suck/00",
+    "LauncherSkillFx/charge_suck/01",
+    "LauncherSkillFx/charge_suck/02"
+   ]
+  },
+  {
+   "name": "charge_up",
+   "loop": false,
+   "loopFrom": -1,
+   "seconds": [
+    0.03,
+    0.04,
+    0.05
+   ],
+   "frames": [
+    "LauncherSkillFx/charge_up/00",
+    "LauncherSkillFx/charge_up/01",
+    "LauncherSkillFx/charge_up/02"
+   ]
+  },
+  {
+   "name": "charge_shot1",
+   "loop": true,
+   "loopFrom": -1,
+   "seconds": [
+    0.04,
+    0.04
+   ],
+   "frames": [
+    "LauncherSkillFx/charge_shot1/00",
+    "LauncherSkillFx/charge_shot1/01"
+   ]
+  },
+  {
+   "name": "charge_shot2",
+   "loop": true,
+   "loopFrom": -1,
+   "seconds": [
+    0.04,
+    0.04
+   ],
+   "frames": [
+    "LauncherSkillFx/charge_shot2/00",
+    "LauncherSkillFx/charge_shot2/01"
+   ]
+  },
+  {
+   "name": "charge_shot3",
+   "loop": true,
+   "loopFrom": -1,
+   "seconds": [
+    0.04,
+    0.04
+   ],
+   "frames": [
+    "LauncherSkillFx/charge_shot3/00",
+    "LauncherSkillFx/charge_shot3/01"
+   ]
+  },
+  {
+   "name": "charge_pop_big",
+   "loop": false,
+   "loopFrom": -1,
+   "seconds": [
+    0.03,
+    0.04,
+    0.05,
+    0.06
+   ],
+   "frames": [
+    "LauncherSkillFx/charge_pop_big/00",
+    "LauncherSkillFx/charge_pop_big/01",
+    "LauncherSkillFx/charge_pop_big/02",
+    "LauncherSkillFx/charge_pop_big/03"
+   ]
+  },
+  {
+   "name": "charge_burst1",
+   "loop": false,
+   "loopFrom": -1,
+   "seconds": [
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333
+   ],
+   "frames": [
+    "LauncherSkillFx/charge_burst1/00",
+    "LauncherSkillFx/charge_burst1/01",
+    "LauncherSkillFx/charge_burst1/02",
+    "LauncherSkillFx/charge_burst1/03",
+    "LauncherSkillFx/charge_burst1/04",
+    "LauncherSkillFx/charge_burst1/05",
+    "LauncherSkillFx/charge_burst1/06",
+    "LauncherSkillFx/charge_burst1/07",
+    "LauncherSkillFx/charge_burst1/08",
+    "LauncherSkillFx/charge_burst1/09",
+    "LauncherSkillFx/charge_burst1/10",
+    "LauncherSkillFx/charge_burst1/11",
+    "LauncherSkillFx/charge_burst1/12",
+    "LauncherSkillFx/charge_burst1/13",
+    "LauncherSkillFx/charge_burst1/14",
+    "LauncherSkillFx/charge_burst1/15",
+    "LauncherSkillFx/charge_burst1/16",
+    "LauncherSkillFx/charge_burst1/17",
+    "LauncherSkillFx/charge_burst1/18",
+    "LauncherSkillFx/charge_burst1/19",
+    "LauncherSkillFx/charge_burst1/20",
+    "LauncherSkillFx/charge_burst1/21",
+    "LauncherSkillFx/charge_burst1/22",
+    "LauncherSkillFx/charge_burst1/23",
+    "LauncherSkillFx/charge_burst1/24",
+    "LauncherSkillFx/charge_burst1/25",
+    "LauncherSkillFx/charge_burst1/26",
+    "LauncherSkillFx/charge_burst1/27",
+    "LauncherSkillFx/charge_burst1/28",
+    "LauncherSkillFx/charge_burst1/29",
+    "LauncherSkillFx/charge_burst1/30",
+    "LauncherSkillFx/charge_burst1/31",
+    "LauncherSkillFx/charge_burst1/32",
+    "LauncherSkillFx/charge_burst1/33"
+   ]
+  },
+  {
+   "name": "charge_burst2",
+   "loop": false,
+   "loopFrom": -1,
+   "seconds": [
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333
+   ],
+   "frames": [
+    "LauncherSkillFx/charge_burst2/00",
+    "LauncherSkillFx/charge_burst2/01",
+    "LauncherSkillFx/charge_burst2/02",
+    "LauncherSkillFx/charge_burst2/03",
+    "LauncherSkillFx/charge_burst2/04",
+    "LauncherSkillFx/charge_burst2/05",
+    "LauncherSkillFx/charge_burst2/06",
+    "LauncherSkillFx/charge_burst2/07",
+    "LauncherSkillFx/charge_burst2/08",
+    "LauncherSkillFx/charge_burst2/09",
+    "LauncherSkillFx/charge_burst2/10",
+    "LauncherSkillFx/charge_burst2/11",
+    "LauncherSkillFx/charge_burst2/12",
+    "LauncherSkillFx/charge_burst2/13",
+    "LauncherSkillFx/charge_burst2/14",
+    "LauncherSkillFx/charge_burst2/15",
+    "LauncherSkillFx/charge_burst2/16",
+    "LauncherSkillFx/charge_burst2/17",
+    "LauncherSkillFx/charge_burst2/18",
+    "LauncherSkillFx/charge_burst2/19",
+    "LauncherSkillFx/charge_burst2/20",
+    "LauncherSkillFx/charge_burst2/21",
+    "LauncherSkillFx/charge_burst2/22",
+    "LauncherSkillFx/charge_burst2/23",
+    "LauncherSkillFx/charge_burst2/24",
+    "LauncherSkillFx/charge_burst2/25",
+    "LauncherSkillFx/charge_burst2/26",
+    "LauncherSkillFx/charge_burst2/27",
+    "LauncherSkillFx/charge_burst2/28",
+    "LauncherSkillFx/charge_burst2/29",
+    "LauncherSkillFx/charge_burst2/30",
+    "LauncherSkillFx/charge_burst2/31",
+    "LauncherSkillFx/charge_burst2/32",
+    "LauncherSkillFx/charge_burst2/33"
+   ]
+  },
+  {
+   "name": "charge_burst3",
+   "loop": false,
+   "loopFrom": -1,
+   "seconds": [
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333,
+    0.033333
+   ],
+   "frames": [
+    "LauncherSkillFx/charge_burst3/00",
+    "LauncherSkillFx/charge_burst3/01",
+    "LauncherSkillFx/charge_burst3/02",
+    "LauncherSkillFx/charge_burst3/03",
+    "LauncherSkillFx/charge_burst3/04",
+    "LauncherSkillFx/charge_burst3/05",
+    "LauncherSkillFx/charge_burst3/06",
+    "LauncherSkillFx/charge_burst3/07",
+    "LauncherSkillFx/charge_burst3/08",
+    "LauncherSkillFx/charge_burst3/09",
+    "LauncherSkillFx/charge_burst3/10",
+    "LauncherSkillFx/charge_burst3/11",
+    "LauncherSkillFx/charge_burst3/12",
+    "LauncherSkillFx/charge_burst3/13",
+    "LauncherSkillFx/charge_burst3/14",
+    "LauncherSkillFx/charge_burst3/15",
+    "LauncherSkillFx/charge_burst3/16",
+    "LauncherSkillFx/charge_burst3/17",
+    "LauncherSkillFx/charge_burst3/18",
+    "LauncherSkillFx/charge_burst3/19",
+    "LauncherSkillFx/charge_burst3/20",
+    "LauncherSkillFx/charge_burst3/21",
+    "LauncherSkillFx/charge_burst3/22",
+    "LauncherSkillFx/charge_burst3/23",
+    "LauncherSkillFx/charge_burst3/24",
+    "LauncherSkillFx/charge_burst3/25",
+    "LauncherSkillFx/charge_burst3/26",
+    "LauncherSkillFx/charge_burst3/27",
+    "LauncherSkillFx/charge_burst3/28",
+    "LauncherSkillFx/charge_burst3/29",
+    "LauncherSkillFx/charge_burst3/30",
+    "LauncherSkillFx/charge_burst3/31",
+    "LauncherSkillFx/charge_burst3/32",
+    "LauncherSkillFx/charge_burst3/33"
+   ]
+  }
+ ]
+}

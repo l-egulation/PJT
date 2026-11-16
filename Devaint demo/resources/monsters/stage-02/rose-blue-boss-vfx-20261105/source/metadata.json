@@ -1,0 +1,914 @@
+{
+  "style": "rose-blue-exchange-flash-sheet-v4에 맞춘 빛 화풍, Blue 캐릭터 색(강철빛 파랑·남색)",
+  "pixelsPerUnit": 32,
+  "order": "top-left row-major",
+  "assets": {
+    "dive": {
+      "file": "dive-sheet.png",
+      "columns": 6,
+      "rows": 1,
+      "frameWidth": 96,
+      "frameHeight": 224,
+      "frameCount": 6,
+      "pivot": [
+        0.5,
+        0.044642857142857095
+      ],
+      "pivotPx": [
+        48,
+        214
+      ],
+      "loop": false,
+      "durationsMs": [
+        20,
+        20,
+        20,
+        20,
+        30,
+        30
+      ],
+      "attachTo": "Blue feet during the 0.14s descent"
+    },
+    "impact": {
+      "file": "impact-sheet.png",
+      "columns": 4,
+      "rows": 2,
+      "frameWidth": 208,
+      "frameHeight": 112,
+      "frameCount": 8,
+      "pivot": [
+        0.5,
+        0.1428571428571429
+      ],
+      "pivotPx": [
+        104,
+        96
+      ],
+      "loop": false,
+      "durationsMs": [
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        70,
+        80
+      ],
+      "attachTo": "locked landing point"
+    },
+    "root": {
+      "file": "root-sheet.png",
+      "columns": 4,
+      "rows": 3,
+      "frameWidth": 112,
+      "frameHeight": 96,
+      "frameCount": 12,
+      "pivot": [
+        0.5,
+        0.08333333333333337
+      ],
+      "pivotPx": [
+        56,
+        88
+      ],
+      "loop": false,
+      "appearFrames": [
+        1,
+        2,
+        3
+      ],
+      "appearDurationsMs": [
+        30,
+        40,
+        50
+      ],
+      "holdFrames": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "holdFrameDurationMs": 90,
+      "releaseFrames": [
+        10,
+        11,
+        12
+      ],
+      "releaseDurationsMs": [
+        50,
+        50,
+        60
+      ],
+      "attachTo": "rooted player feet"
+    },
+    "roseArrowBody": {
+      "file": "rose-arrow-body.png",
+      "columns": 1,
+      "rows": 1,
+      "frameWidth": 56,
+      "frameHeight": 28,
+      "frameCount": 1,
+      "pivotPx": [
+        28,
+        14
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "note": "Rose 마법 화살 빛 화풍, 판정 1×0.3u 그대로"
+    },
+    "roseArrowFlight": {
+      "file": "rose-arrow-flight.png",
+      "columns": 4,
+      "rows": 1,
+      "frameWidth": 96,
+      "frameHeight": 28,
+      "frameCount": 4,
+      "pivotPx": [
+        64,
+        14
+      ],
+      "pivot": [
+        0.6666666666666666,
+        0.5
+      ],
+      "durationsMs": [
+        50,
+        50,
+        50,
+        50
+      ],
+      "loop": true,
+      "note": "본체 고정, 꼬리 뒤 잔상만 순환"
+    },
+    "roseRainArrowFlight": {
+      "file": "rose-rain-arrow-flight.png",
+      "columns": 4,
+      "rows": 1,
+      "frameWidth": 64,
+      "frameHeight": 20,
+      "frameCount": 4,
+      "pivotPx": [
+        44,
+        10
+      ],
+      "pivot": [
+        0.6875,
+        0.5
+      ],
+      "durationsMs": [
+        50,
+        50,
+        50,
+        50
+      ],
+      "loop": true,
+      "note": "화살비용 작은 화살(0.7배 비율로 다시 그림), 본체 고정"
+    },
+    "blueOrbBody": {
+      "file": "blue-orb-glow-body.png",
+      "columns": 6,
+      "rows": 1,
+      "frameWidth": 80,
+      "frameHeight": 80,
+      "frameCount": 6,
+      "pivotPx": [
+        40,
+        40
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationsMs": [
+        70,
+        70,
+        70,
+        70,
+        70,
+        70
+      ],
+      "loop": true,
+      "note": "Blue 구체 빛 화풍 몸체, 판정 2×2u 그대로, 회전하지 않음"
+    },
+    "blueOrbTrail": {
+      "file": "blue-orb-glow-trail.png",
+      "columns": 6,
+      "rows": 1,
+      "frameWidth": 128,
+      "frameHeight": 80,
+      "frameCount": 6,
+      "pivotPx": [
+        92,
+        40
+      ],
+      "pivot": [
+        0.71875,
+        0.5
+      ],
+      "durationsMs": [
+        70,
+        70,
+        70,
+        70,
+        70,
+        70
+      ],
+      "loop": true,
+      "note": "꼬리만, 진행 방향으로 회전"
+    },
+    "p3ArrowBody": {
+      "file": "p3-arrow-glow-body.png",
+      "columns": 1,
+      "rows": 1,
+      "frameWidth": 56,
+      "frameHeight": 28,
+      "frameCount": 1,
+      "pivotPx": [
+        28,
+        14
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "note": "3페이즈 화살 빛 화풍, 판정 1×0.3u 그대로"
+    },
+    "p3ArrowFlight": {
+      "file": "p3-arrow-glow-flight.png",
+      "columns": 4,
+      "rows": 1,
+      "frameWidth": 96,
+      "frameHeight": 28,
+      "frameCount": 4,
+      "pivotPx": [
+        64,
+        14
+      ],
+      "pivot": [
+        0.6666666666666666,
+        0.5
+      ],
+      "durationsMs": [
+        50,
+        50,
+        50,
+        50
+      ],
+      "loop": true,
+      "note": "본체 고정, 잔상만 순환"
+    },
+    "p3HomingBody": {
+      "file": "p3-homing-glow-body.png",
+      "columns": 1,
+      "rows": 1,
+      "frameWidth": 128,
+      "frameHeight": 56,
+      "frameCount": 1,
+      "pivotPx": [
+        64,
+        28
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "note": "유도 화살 후보(디자인 보류), 판정 3×1u"
+    },
+    "p3HomingFlight": {
+      "file": "p3-homing-glow-flight.png",
+      "columns": 4,
+      "rows": 1,
+      "frameWidth": 288,
+      "frameHeight": 56,
+      "frameCount": 4,
+      "pivotPx": [
+        184,
+        28
+      ],
+      "pivot": [
+        0.6388888888888888,
+        0.5
+      ],
+      "durationsMs": [
+        50,
+        50,
+        50,
+        50
+      ],
+      "loop": true,
+      "note": "유도 화살 후보, 본체 고정"
+    },
+    "p3Blast": {
+      "file": "p3-blast.png",
+      "columns": 8,
+      "rows": 1,
+      "frameWidth": 112,
+      "frameHeight": 112,
+      "frameCount": 8,
+      "pivotPx": [
+        56,
+        56
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationsMs": [
+        30,
+        40,
+        40,
+        50,
+        60,
+        60,
+        70,
+        80
+      ],
+      "loop": false,
+      "note": "3페이즈 튕기는 화살 지연 폭발(2×2u), 청보라·장밋빛, 흰 섬광 시작"
+    },
+    "orbHit": {
+      "file": "orb-hit.png",
+      "columns": 8,
+      "rows": 1,
+      "frameWidth": 112,
+      "frameHeight": 112,
+      "frameCount": 8,
+      "pivotPx": [
+        56,
+        56
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationsMs": [
+        30,
+        40,
+        40,
+        50,
+        60,
+        60,
+        70,
+        80
+      ],
+      "loop": false,
+      "note": "1페이즈 유도 구체가 기계에 닿을 때, Blue 강철빛·남색"
+    },
+    "trapWarn": {
+      "file": "trap-warn.png",
+      "columns": 6,
+      "rows": 1,
+      "frameWidth": 208,
+      "frameHeight": 48,
+      "frameCount": 6,
+      "pivotPx": [
+        104,
+        40
+      ],
+      "pivot": [
+        0.5,
+        0.16666666666666666
+      ],
+      "durationsMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "loop": true,
+      "note": "1페이즈 패턴 2 속박 함정 전조, 발판 하나(6u)를 통째로 덮음, Blue 강철빛·남색"
+    },
+    "trapSnap": {
+      "file": "trap-snap.png",
+      "columns": 10,
+      "rows": 1,
+      "frameWidth": 224,
+      "frameHeight": 144,
+      "frameCount": 10,
+      "pivotPx": [
+        112,
+        136
+      ],
+      "pivot": [
+        0.5,
+        0.05555555555555555
+      ],
+      "durationsMs": [
+        40,
+        40,
+        40,
+        60,
+        50,
+        60,
+        70,
+        80,
+        90,
+        100
+      ],
+      "loop": false,
+      "note": "1페이즈 패턴 2 속박 함정 활성화: 사슬 네 줄이 가운데 한 점으로 모여 봉인 자물쇠가 잠기고, 발목 높이 가로 사슬이 발판 전체를 묶음. 붙잡힌 동안은 root-sheet"
+    },
+    "p1p3-machine-warn": {
+      "file": "p1p3-machine-warn.png",
+      "columns": 6,
+      "rows": 1,
+      "frameWidth": 208,
+      "frameHeight": 80,
+      "frameCount": 6,
+      "pivotPx": [
+        104,
+        72
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "durationsMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "loop": true,
+      "note": "1페이즈 패턴 3 기계 발판 1초 전조(범위 6×2u), Blue·잉크"
+    },
+    "p1p3-ink-blast": {
+      "file": "p1p3-ink-blast.png",
+      "columns": 8,
+      "rows": 1,
+      "frameWidth": 288,
+      "frameHeight": 160,
+      "frameCount": 8,
+      "pivotPx": [
+        144,
+        112
+      ],
+      "pivot": [
+        0.5,
+        0.3
+      ],
+      "durationsMs": [
+        30,
+        40,
+        50,
+        60,
+        60,
+        70,
+        80,
+        90
+      ],
+      "loop": false,
+      "note": "1페이즈 패턴 3 기계 발판 잉크 폭발(구역 6×2u 한가운데가 터짐), 짙은 잉크 + Blue 빛"
+    },
+    "p1p3-rain-warn": {
+      "file": "p1p3-rain-warn.png",
+      "columns": 6,
+      "rows": 1,
+      "frameWidth": 208,
+      "frameHeight": 80,
+      "frameCount": 6,
+      "pivotPx": [
+        104,
+        72
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "durationsMs": [
+        60,
+        60,
+        60,
+        60,
+        60,
+        60
+      ],
+      "loop": true,
+      "note": "1페이즈 패턴 3 나머지 발판 0.5초 화살비 전조, Rose"
+    },
+    "p1p4-warn-rose": {
+      "file": "p1p4-warn-rose.png",
+      "columns": 6,
+      "rows": 1,
+      "frameWidth": 208,
+      "frameHeight": 144,
+      "frameCount": 6,
+      "pivotPx": [
+        104,
+        136
+      ],
+      "pivot": [
+        0.5,
+        0.05555555555555555
+      ],
+      "durationsMs": [
+        70,
+        70,
+        70,
+        70,
+        70,
+        70
+      ],
+      "loop": true,
+      "note": "1페이즈 패턴 4 홀수 번호 발판 전조(범위 6×4u), Rose 별 문양"
+    },
+    "p1p4-warn-blue": {
+      "file": "p1p4-warn-blue.png",
+      "columns": 6,
+      "rows": 1,
+      "frameWidth": 208,
+      "frameHeight": 144,
+      "frameCount": 6,
+      "pivotPx": [
+        104,
+        136
+      ],
+      "pivot": [
+        0.5,
+        0.05555555555555555
+      ],
+      "durationsMs": [
+        70,
+        70,
+        70,
+        70,
+        70,
+        70
+      ],
+      "loop": true,
+      "note": "1페이즈 패턴 4 짝수 번호 발판 전조(범위 6×4u), Blue 마름모 문양"
+    },
+    "p1p4-blast-rose": {
+      "file": "p1p4-blast-rose.png",
+      "columns": 8,
+      "rows": 1,
+      "frameWidth": 288,
+      "frameHeight": 224,
+      "frameCount": 8,
+      "pivotPx": [
+        144,
+        176
+      ],
+      "pivot": [
+        0.5,
+        0.21428571428571427
+      ],
+      "durationsMs": [
+        30,
+        40,
+        50,
+        60,
+        60,
+        70,
+        80,
+        90
+      ],
+      "loop": false,
+      "note": "1페이즈 패턴 4 홀수 번호 발판 폭발(구역 6×4.03u), Rose: 화살 베기 X자 → 장미 꽃잎 개화 → 꽃잎 흩날림"
+    },
+    "p1p4-blast-blue": {
+      "file": "p1p4-blast-blue.png",
+      "columns": 8,
+      "rows": 1,
+      "frameWidth": 288,
+      "frameHeight": 224,
+      "frameCount": 8,
+      "pivotPx": [
+        144,
+        176
+      ],
+      "pivot": [
+        0.5,
+        0.21428571428571427
+      ],
+      "durationsMs": [
+        30,
+        40,
+        50,
+        60,
+        60,
+        70,
+        80,
+        90
+      ],
+      "loop": false,
+      "note": "1페이즈 패턴 4 짝수 번호 발판 폭발(구역 6×4.03u 한가운데가 터짐), Blue"
+    },
+    "snipe-hit-a": {
+      "file": "snipe-hit-a.png",
+      "columns": 8,
+      "rows": 1,
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "frameCount": 8,
+      "pivotPx": [
+        64,
+        64
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationsMs": [
+        30,
+        30,
+        40,
+        40,
+        50,
+        60,
+        70,
+        80
+      ],
+      "loop": false,
+      "note": "1페이즈 패턴 2 추적 저격 적중 시안 관통: 꿰뚫는 선 + X 베기 + 실금 + 가는 파편"
+    },
+    "snipe-hit-b": {
+      "file": "snipe-hit-b.png",
+      "columns": 8,
+      "rows": 1,
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "frameCount": 8,
+      "pivotPx": [
+        64,
+        64
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationsMs": [
+        30,
+        30,
+        40,
+        40,
+        50,
+        60,
+        70,
+        80
+      ],
+      "loop": false,
+      "note": "1페이즈 패턴 2 추적 저격 적중 시안 깨진 고리: 끊긴 원호 두 겹 + 꼬리 불씨, 가운데 빔"
+    },
+    "snipe-hit-c": {
+      "file": "snipe-hit-c.png",
+      "columns": 8,
+      "rows": 1,
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "frameCount": 8,
+      "pivotPx": [
+        64,
+        64
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationsMs": [
+        30,
+        30,
+        40,
+        40,
+        50,
+        60,
+        70,
+        80
+      ],
+      "loop": false,
+      "note": "1페이즈 패턴 2 추적 저격 적중 시안 가시 개화: 굽은 가시 일곱 갈래 + 꽃잎 조각"
+    },
+    "ink-charge": {
+      "file": "ink-charge.png",
+      "columns": 8,
+      "rows": 1,
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "frameCount": 8,
+      "pivotPx": [
+        64,
+        64
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationsMs": [
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64
+      ],
+      "loop": false,
+      "note": "2페이즈 패턴 1 Blue 차징(0.5초, 마지막 프레임 유지)"
+    },
+    "ink-fireball": {
+      "file": "ink-fireball.png",
+      "columns": 6,
+      "rows": 1,
+      "frameWidth": 224,
+      "frameHeight": 112,
+      "frameCount": 6,
+      "pivotPx": [
+        144,
+        56
+      ],
+      "pivot": [
+        0.6428571428571429,
+        0.5
+      ],
+      "durationsMs": [
+        70,
+        70,
+        70,
+        70,
+        70,
+        70
+      ],
+      "loop": true,
+      "note": "2페이즈 패턴 1 잉크 파이어볼(본체 2.5u, 오른쪽 향함, 진행 방향으로 회전)"
+    },
+    "ink-blast": {
+      "file": "ink-blast.png",
+      "columns": 9,
+      "rows": 1,
+      "frameWidth": 192,
+      "frameHeight": 192,
+      "frameCount": 9,
+      "pivotPx": [
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationsMs": [
+        30,
+        40,
+        50,
+        60,
+        60,
+        70,
+        80,
+        90,
+        100
+      ],
+      "loop": false,
+      "note": "2페이즈 패턴 1 잉크 폭발(4×4u)"
+    },
+    "blue-vanish": {
+      "file": "blue-vanish.png",
+      "columns": 8,
+      "rows": 1,
+      "frameWidth": 128,
+      "frameHeight": 176,
+      "frameCount": 8,
+      "pivotPx": [
+        64,
+        168
+      ],
+      "pivot": [
+        0.5,
+        0.045454545454545456
+      ],
+      "durationsMs": [
+        30,
+        40,
+        40,
+        50,
+        50,
+        60,
+        60,
+        70
+      ],
+      "loop": false,
+      "note": "2페이즈 패턴 2 Blue 사라짐(급강하 전 원위치, 착지 직후 착지점)"
+    },
+    "press-rose": {
+      "file": "press-rose.png",
+      "columns": 12,
+      "rows": 1,
+      "frameWidth": 480,
+      "frameHeight": 256,
+      "frameCount": 12,
+      "pivotPx": [
+        8,
+        248
+      ],
+      "pivot": [
+        0.016666666666666666,
+        0.03125
+      ],
+      "durationsMs": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        80,
+        80,
+        90
+      ],
+      "loop": false,
+      "note": "2페이즈 패턴 4 Rose 가시 장미 덩굴 압박 벽(왼쪽, 바깥 벽이 x=0)"
+    },
+    "press-blue": {
+      "file": "press-blue.png",
+      "columns": 12,
+      "rows": 1,
+      "frameWidth": 480,
+      "frameHeight": 256,
+      "frameCount": 12,
+      "pivotPx": [
+        8,
+        248
+      ],
+      "pivot": [
+        0.016666666666666666,
+        0.03125
+      ],
+      "durationsMs": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        80,
+        80,
+        90
+      ],
+      "loop": false,
+      "note": "2페이즈 패턴 4 Blue 잉크 해일 압박 벽(왼쪽 기준으로 그림, 오른쪽에 좌우 뒤집어 씀)"
+    },
+    "press-rose-tell": {
+      "file": "press-rose-tell.png",
+      "columns": 4,
+      "rows": 1,
+      "frameWidth": 416,
+      "frameHeight": 72,
+      "frameCount": 4,
+      "pivotPx": [
+        8,
+        64
+      ],
+      "pivot": [
+        0.019230769230769232,
+        0.1111111111111111
+      ],
+      "durationsMs": [
+        80,
+        80,
+        80,
+        80
+      ],
+      "loop": true,
+      "note": "2페이즈 패턴 4 Rose 압박 0.5초 전조"
+    },
+    "press-blue-tell": {
+      "file": "press-blue-tell.png",
+      "columns": 4,
+      "rows": 1,
+      "frameWidth": 416,
+      "frameHeight": 72,
+      "frameCount": 4,
+      "pivotPx": [
+        8,
+        64
+      ],
+      "pivot": [
+        0.019230769230769232,
+        0.1111111111111111
+      ],
+      "durationsMs": [
+        80,
+        80,
+        80,
+        80
+      ],
+      "loop": true,
+      "note": "2페이즈 패턴 4 Blue 압박 0.5초 전조(좌우 뒤집어 씀)"
+    }
+  }
+}

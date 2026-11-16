@@ -1,0 +1,310 @@
+{
+  "base": "../stage2-sewer-modern-v25",
+  "layout": "current",
+  "source": "../source/chapter2-layouts.json",
+  "sourceSha256": "08e9e77a4fcc3adc95fa0cbbff556002d24eaae20678bfc235cc6fe1940a3310",
+  "screenSize": [
+    960,
+    540
+  ],
+  "pixelsPerUnit": 32,
+  "layers": {
+    "background": "runtime/background (RGB)",
+    "foreground": "runtime/foreground (RGBA, 지형·돌판·웅덩이 안벽과 물 뒷면)",
+    "waterFront": "runtime/water-front (RGBA, 액터 앞에 덮는 반투명 물 앞면·수면 줄)",
+    "preview": "preview, preview/in-basin"
+  },
+  "basin": {
+    "depthUnits": 1,
+    "widthsUnits": [
+      2,
+      3,
+      4
+    ],
+    "surfaceBelowFloorPx": 2,
+    "liningPx": 3,
+    "collision": "판 칸(x0..x1 × bottom..floorTop)을 바닥 충돌에서 뺀다. 안벽·바닥 그림은 칸 바깥 땅 속에 있다.",
+    "placement": [
+      "물줄기가 떨어지는 바닥엔 하나(벽 쪽 여유 8px, 좌우 이동해 맞춤)",
+      "그 밖엔 바닥 288px마다 후보, 셋 중 둘",
+      "아래·옆 8px 이상 땅이 꽉 찬 곳만",
+      "문 발치(테 + 30px)·캐릭터 발밑·다른 웅덩이(40px)와 떨어짐"
+    ]
+  },
+  "views": [
+    {
+      "id": "S",
+      "title": "시작 구간",
+      "screen": "01-S-960x540.png",
+      "camera": [
+        -11.4062,
+        7.6875
+      ],
+      "heroFeet": [
+        -13.4062,
+        3
+      ],
+      "inBasinPreview": true,
+      "lamps": 3,
+      "shafts": 0,
+      "doors": 2,
+      "waters": 0,
+      "basins": [
+        {
+          "x0": 0.0,
+          "x1": 4.0,
+          "floorTop": 19.125,
+          "bottom": 18.125,
+          "fall": false
+        },
+        {
+          "x0": -9.0,
+          "x1": -5.0,
+          "floorTop": 3.0,
+          "bottom": 2.0,
+          "fall": false
+        }
+      ]
+    },
+    {
+      "id": "F01",
+      "title": "독립형 통과 발판",
+      "screen": "02-F01-960x540.png",
+      "camera": [
+        30.25,
+        -6.0625
+      ],
+      "heroFeet": [
+        28.25,
+        -10.75
+      ],
+      "inBasinPreview": true,
+      "lamps": 1,
+      "shafts": 2,
+      "doors": 1,
+      "waters": 1,
+      "basins": [
+        {
+          "x0": 20.0,
+          "x1": 23.0,
+          "floorTop": 5.25,
+          "bottom": 4.25,
+          "fall": false
+        },
+        {
+          "x0": 32.0,
+          "x1": 35.0,
+          "floorTop": -10.75,
+          "bottom": -11.75,
+          "fall": true
+        }
+      ]
+    },
+    {
+      "id": "F02",
+      "title": "벽 부착·긴 발판",
+      "screen": "03-F02-960x540.png",
+      "camera": [
+        12.25,
+        -23.3125
+      ],
+      "heroFeet": [
+        10.25,
+        -28
+      ],
+      "inBasinPreview": true,
+      "lamps": 2,
+      "shafts": 0,
+      "doors": 0,
+      "waters": 0,
+      "basins": [
+        {
+          "x0": 2.0,
+          "x1": 6.0,
+          "floorTop": -11.875,
+          "bottom": -12.875,
+          "fall": false
+        },
+        {
+          "x0": 11.5,
+          "x1": 15.5,
+          "floorTop": -11.875,
+          "bottom": -12.875,
+          "fall": false
+        },
+        {
+          "x0": 18.5,
+          "x1": 21.5,
+          "floorTop": -11.875,
+          "bottom": -12.875,
+          "fall": false
+        },
+        {
+          "x0": 12.0,
+          "x1": 16.0,
+          "floorTop": -28.0,
+          "bottom": -29.0,
+          "fall": false
+        }
+      ]
+    },
+    {
+      "id": "F03",
+      "title": "장거리 통과 발판",
+      "screen": "04-F03-960x540.png",
+      "camera": [
+        5,
+        -60.8125
+      ],
+      "heroFeet": [
+        3,
+        -65.5
+      ],
+      "inBasinPreview": false,
+      "lamps": 1,
+      "shafts": 2,
+      "doors": 0,
+      "waters": 0,
+      "basins": [
+        {
+          "x0": -7.5,
+          "x1": -3.5,
+          "floorTop": -49.375,
+          "bottom": -50.375,
+          "fall": false
+        }
+      ]
+    },
+    {
+      "id": "F04",
+      "title": "하부 착지 구간",
+      "screen": "05-F04-960x540.png",
+      "camera": [
+        -15,
+        -92.0625
+      ],
+      "heroFeet": [
+        -17,
+        -96.75
+      ],
+      "inBasinPreview": true,
+      "lamps": 1,
+      "shafts": 1,
+      "doors": 1,
+      "waters": 1,
+      "basins": [
+        {
+          "x0": -15.25,
+          "x1": -12.25,
+          "floorTop": -96.75,
+          "bottom": -97.75,
+          "fall": true
+        }
+      ]
+    },
+    {
+      "id": "F05",
+      "title": "수직방 발판",
+      "screen": "06-F05-960x540.png",
+      "camera": [
+        -18.25,
+        -109.5625
+      ],
+      "heroFeet": [
+        -20.25,
+        -114.25
+      ],
+      "inBasinPreview": true,
+      "lamps": 2,
+      "shafts": 1,
+      "doors": 0,
+      "waters": 1,
+      "basins": [
+        {
+          "x0": -34.5,
+          "x1": -30.5,
+          "floorTop": -98.125,
+          "bottom": -99.125,
+          "fall": false
+        },
+        {
+          "x0": -6.0,
+          "x1": -2.0,
+          "floorTop": -98.125,
+          "bottom": -99.125,
+          "fall": false
+        },
+        {
+          "x0": -12.5,
+          "x1": -9.5,
+          "floorTop": -114.25,
+          "bottom": -115.25,
+          "fall": true
+        }
+      ]
+    },
+    {
+      "id": "F06",
+      "title": "좁은 석재 발판",
+      "screen": "07-F06-960x540.png",
+      "camera": [
+        33,
+        -113.0625
+      ],
+      "heroFeet": [
+        31,
+        -117.75
+      ],
+      "inBasinPreview": true,
+      "lamps": 3,
+      "shafts": 2,
+      "doors": 2,
+      "waters": 0,
+      "basins": [
+        {
+          "x0": 18.5,
+          "x1": 21.5,
+          "floorTop": -101.625,
+          "bottom": -102.625,
+          "fall": false
+        },
+        {
+          "x0": 36.0,
+          "x1": 40.0,
+          "floorTop": -117.75,
+          "bottom": -118.75,
+          "fall": false
+        }
+      ]
+    },
+    {
+      "id": "F09",
+      "title": "벽·발판 연결",
+      "screen": "08-F09-960x540.png",
+      "camera": [
+        59.25,
+        -29.0625
+      ],
+      "heroFeet": [
+        57.25,
+        -33.75
+      ],
+      "inBasinPreview": true,
+      "lamps": 2,
+      "shafts": 0,
+      "doors": 1,
+      "waters": 1,
+      "basins": [
+        {
+          "x0": 50.4688,
+          "x1": 53.4688,
+          "floorTop": -33.75,
+          "bottom": -34.75,
+          "fall": true
+        }
+      ]
+    }
+  ],
+  "characterResampled": false,
+  "unityModified": false
+}

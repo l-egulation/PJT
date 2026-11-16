@@ -1,0 +1,37 @@
+{
+  "schema": "stage2-b3-slam-return-v1",
+  "status": "original19-pixel-slam-approved-by-user",
+  "approval": "approved-by-user",
+  "approvedVariant": "original",
+  "sourceFile": "C:/Users/SSAFY/Downloads/8577cf71-d657-4c55-af65-17db3d3abac2.png",
+  "output": "outputs/waterway/b3-slam-return-20261101",
+  "base": "outputs/waterway/pixel-base-step1-20261031/B3",
+  "inputHandoff": "outputs/waterway/b3-foreleg-slam-20261101",
+  "grid": [6,6],
+  "cellSize": [1280,720],
+  "canvas": [384,224],
+  "baseline": 192,
+  "scaleReferenceFramesZeroBased": [1,2,3],
+  "targetReferenceHeight": 100,
+  "supersampleGrid": 4,
+  "coverageMinimum": 0.5,
+  "matte": {"opaqueRmsMax":25,"compositeRmsMax":12,"alphaMinimum":0.8,"matteAdvantage":8},
+  "pinholeCleanup": {"maxPinholeArea":4,"ankleRepairZone":[0,0,0,0],"maxAnkleHoleArea":0},
+  "phases": [
+    {"id":"lift-hold","name":"들기·버팀","sourceOneBased":[2,6,8,10,12,14,16,18],"durationMs":450,"lastKeyHoldMs":120},
+    {"id":"slam","name":"찍기","sourceOneBased":[19,20,22],"durationMs":150},
+    {"id":"recovery","name":"회복","sourceOneBased":[23,24,26,28,30,32,34,36],"durationMs":900,"firstKeyHoldMs":180}
+  ],
+  "previewGapMs": 600,
+  "repairTrial": {
+    "defaultApplied": false,
+    "disposition": "attempted-but-rejected-for-raised-pose-tip-protrusion",
+    "frontPadBox": [100,173,133,193],
+    "smallFrontSupportBox": [144,153,176,192],
+    "switchAfterSourceOneBased": 20,
+    "method": "Copy only existing support-colored pixels from the approved base. Estimate the cream wedge centroid and principal axis in each pose, rotate the small copied support with integer nearest placement and composite only behind existing opaque character pixels. Fill enclosed gaps of that small repair layer using its existing colors. Preserve the entire unmodified extraction separately. The pad protrudes beyond the wedge at maximum lift, so the trial is optional and not the default.",
+    "colors": [[84,57,63],[41,38,48],[212,124,81],[169,91,64]],
+    "creamColors": [[240,218,187],[210,185,146],[176,155,123]]
+  },
+  "policy": "Preserve the36-cell upload and extract every1280x720 cell unchanged. Exclude reference1, whose scale differs from the actual animation. Select19 readable poses; use one fixed scale/offset based on actual neutral source2-4 for all poses. Preserve source motion including its plate/support variations and baked-in floor debris. Use only approved10 colors, binary alpha, native384x224 and exact4x. Repair trial is additive only and is rejected from the default preview. Original source, selected source cells, base/palette/input prompt, masks, timing and hashes are preserved. No new generated pose, framewise body scaling/registration, runtime or combat change."
+}

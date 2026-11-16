@@ -1,0 +1,63 @@
+{
+ "format": "stage2-boss-motion-v8",
+ "id": "R2-rose-boast-aim",
+ "name": "입장 R2 로즈 석궁 겨누고 멈춤",
+ "use": "입장 컷씬 7.4초 시작, 11.1초까지 마지막 칸 유지",
+ "canvas": [
+  384,
+  256
+ ],
+ "pivot": [
+  192,
+  232
+ ],
+ "frames": [
+  "00.png",
+  "01.png",
+  "02.png",
+  "03.png",
+  "04.png",
+  "05.png",
+  "06.png"
+ ],
+ "sheet": {
+  "file": "sheet.png",
+  "columns": 7,
+  "cell": [
+   384,
+   256
+  ],
+  "order": "frames, left-to-right then top-to-bottom"
+ },
+ "sequence": [
+  "00.png",
+  "01.png",
+  "02.png",
+  "03.png",
+  "04.png",
+  "05.png",
+  "06.png"
+ ],
+ "durationsMs": [
+  60,
+  55,
+  55,
+  55,
+  55,
+  55,
+  1500
+ ],
+ "totalMs": 1835,
+ "loop": false,
+ "workFolder": "cutscene/입장_R2_Rose-석궁겨누고멈춤",
+ "footShiftPx": {
+  "01.png": 6,
+  "02.png": 6,
+  "03.png": 6,
+  "04.png": 6,
+  "05.png": 6,
+  "06.png": 6
+ },
+ "projectilePixelsRemoved": {},
+ "status": "user-approved-not-unity-integrated"
+}

@@ -1,0 +1,22 @@
+1Stage 바닥 타일·발판 확정본 (2026-10-23)
+
+바닥 타일: tiles_color / tiles_sketch 각 15개, 32×32.
+바닥 시트: 01_color_sheet_256x160.png / 02_sketch_sheet_256x160.png.
+바닥의 역할·시트 좌표는 tile_manifest.json, 조립 예시는 map_assembly.json입니다.
+깊은 내부 채움은 RGBA(37,34,38,255), #252226입니다.
+
+발판: platforms/의 컬러·스케치 원본은 각 160×32 한 줄입니다.
+분할본: platforms/tiles32/color 및 sketch 각 5개, 32×32.
+c01~c05를 왼쪽부터 한 줄로 배치합니다. 그림 픽셀 손실 없이 위쪽 빈 여백 2px만 정리했습니다.
+기존 배치의 착지 높이를 유지하는 2px 보정은 platforms/tiles32/Unity_가져오기.txt를 참고하세요.
+
+preview/01_바닥타일_32px.png : 확정 바닥 타일 목록.
+preview/02_발판타일_한줄32px.png : 확정 한 줄 발판 목록.
+preview/03_맵_배치확인.png : 실제 PNG를 조립한 맵 확인 이미지.
+
+Unity 기본 가져오기: PPU32 / Point / Mipmap Off / Compression None.
+지형은 현재 사용한 윗면·벽·모서리 구성 15종이며, 노출 천장·아랫면을 포함한 47종 전체 오토타일 세트는 아닙니다.
+Unity 씬·Collider·통과 및 하강 로직은 이 파일 정리 작업에서 변경하지 않았습니다.
+
+프롬프트와 검증 결과는 prompts/ 및 checks.json에 보존했습니다.
+확정 후 탈락한 이전 타일·발판 시안과 임시 작업 폴더는 정리했습니다.

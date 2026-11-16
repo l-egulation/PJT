@@ -1,0 +1,28 @@
+{
+  "schema": "stage2-m3-walk-candidates-v1",
+  "status": "awaiting-user-candidate-choice",
+  "sourceFile": "C:/Users/SSAFY/Downloads/7fa1aa4b-3122-4b1e-a5da-eebf4e64ed8c.png",
+  "output": "outputs/waterway/m3-walk-candidates-20261101",
+  "base": "outputs/waterway/pixel-base-step1-20261031/M3",
+  "inputPrompt": "outputs/waterway/walk-retry-white-20261101/M3/prompt-white.txt",
+  "grid": [10,10],
+  "cellSize": [1280,720],
+  "canvas": [384,224],
+  "baseline": 192,
+  "targetReferenceHeight": 59,
+  "scaleReferenceFrameZeroBased": 0,
+  "anchorReferenceRange": [1,99],
+  "supersampleGrid": 4,
+  "coverageMinimum": 0.5,
+  "needleRepairZone": [88,130,184,148],
+  "maxNeedleRowGap": 2,
+  "matte": {"opaqueRmsMax":25,"compositeRmsMax":12,"alphaMinimum":0.8,"matteAdvantage":8},
+  "pinholeCleanup": {"maxPinholeArea":4,"ankleRepairZone":[0,0,0,0],"maxAnkleHoleArea":0},
+  "palettePolicy": "Only the9 opaque colors present in the selected M3 pixel base. One fixed scale and offset for all candidates; preserve source walking posture and intentional limb spaces. No added outline, new poses, morphs, per-frame registration or resizing. Small enclosed alpha holes and isolated noise may be cleaned in logical pixels.",
+  "candidates": [
+    {"id":"A","name":"초반 보행","start":15,"end":32,"cycleMs":800,"recommended":true,"description":"초반 연속18장. 침·얼굴과 다리의 반복 연결을 함께 비교한 기본 속도 안."},
+    {"id":"B","name":"중반 보행","start":34,"end":50,"cycleMs":800,"recommended":false,"description":"중반 연속17장. A와 같은0.8초에 다른 발 교대·몸통 변화를 비교."},
+    {"id":"C","name":"후반 보행","start":74,"end":88,"cycleMs":800,"recommended":false,"description":"후반 연속15장. A/B와 같은0.8초에 다른 교차 보행 구간을 비교."},
+    {"id":"D","name":"A를 조금 느리게","start":15,"end":32,"cycleMs":1000,"recommended":false,"description":"A와 픽셀·순서가 같은18장. 재생만1초로 늦춘 속도 비교 안이며 새 동작이 아님."}
+  ]
+}

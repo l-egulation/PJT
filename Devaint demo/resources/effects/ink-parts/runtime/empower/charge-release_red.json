@@ -1,0 +1,218 @@
+{
+ "frames": [
+  {
+   "filename": "charge-release_red 0",
+   "frame": {
+    "x": 0,
+    "y": 0,
+    "w": 80,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 80,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 80,
+    "h": 112
+   },
+   "duration": 40
+  },
+  {
+   "filename": "charge-release_red 1",
+   "frame": {
+    "x": 80,
+    "y": 0,
+    "w": 80,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 80,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 80,
+    "h": 112
+   },
+   "duration": 40
+  },
+  {
+   "filename": "charge-release_red 2",
+   "frame": {
+    "x": 160,
+    "y": 0,
+    "w": 80,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 80,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 80,
+    "h": 112
+   },
+   "duration": 40
+  },
+  {
+   "filename": "charge-release_red 3",
+   "frame": {
+    "x": 240,
+    "y": 0,
+    "w": 80,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 80,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 80,
+    "h": 112
+   },
+   "duration": 40
+  },
+  {
+   "filename": "charge-release_red 4",
+   "frame": {
+    "x": 0,
+    "y": 112,
+    "w": 80,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 80,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 80,
+    "h": 112
+   },
+   "duration": 40
+  },
+  {
+   "filename": "charge-release_red 5",
+   "frame": {
+    "x": 80,
+    "y": 112,
+    "w": 80,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 80,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 80,
+    "h": 112
+   },
+   "duration": 40
+  },
+  {
+   "filename": "charge-release_red 6",
+   "frame": {
+    "x": 160,
+    "y": 112,
+    "w": 80,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 80,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 80,
+    "h": 112
+   },
+   "duration": 40
+  },
+  {
+   "filename": "charge-release_red 7",
+   "frame": {
+    "x": 240,
+    "y": 112,
+    "w": 80,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 80,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 80,
+    "h": 112
+   },
+   "duration": 40
+  }
+ ],
+ "meta": {
+  "app": "https://github.com/patch-gg/pixelfx",
+  "version": "1",
+  "image": "charge-release_red.png",
+  "format": "RGBA8888",
+  "size": {
+   "w": 320,
+   "h": 224
+  },
+  "scale": "1",
+  "frameTags": [
+   {
+    "name": "charge-release_red",
+    "from": 0,
+    "to": 7,
+    "direction": "forward"
+   }
+  ],
+  "pixelfx": {
+   "id": "ink/charge-release",
+   "name": "Charge release (ink)",
+   "fps": 25,
+   "loop": false,
+   "frames": 8,
+   "frameSize": [
+    80,
+    112
+   ],
+   "pivot": [
+    40,
+    100
+   ],
+   "columns": 4,
+   "color": "red",
+   "facing": "right",
+   "anchor": "player-feet"
+  }
+ }
+}

@@ -1,0 +1,35 @@
+{
+  "format": "deviant-resource-asset-v1",
+  "id": "ui.buff-slot-icons",
+  "path": "ui/buff-slot-icons",
+  "name": "버프칸 아이콘(잉크 효과·내부 쿨타임)",
+  "status": "user-selected",
+  "gameIntegration": "unity-combat-hud-buff-slots",
+  "style": "24×24 픽셀, 재기 규칙(수평·수직·1:1·1:2 직선, 고른 곡선 계단, 이중 픽셀 없음), 잉크 외곽선과 음영, 잉크 색 테두리 칸(사용자 확정 2026-11-12, 같은 날 사용자 손수정 11장 반영)",
+  "sources": [
+    "source/tools/make_icons.mjs: pixelfx(https://github.com/patch-gg/pixelfx, MIT) 코어로 새로 그린 아이콘 코드(후보 3안 비교 후 사용자 확정 2026-11-12)"
+  ],
+  "regenerate": "node source/tools/make_final.mjs <pixelfx 저장소 경로> <다른 출력 폴더> (이 폴더 기준. runtime/ 은 사용자 손수정본이라 덮어쓰지 않는다)",
+  "files": [
+    "README.md",
+    "asset.json",
+    "runtime/basic-damage.png",
+    "runtime/basic-speed.png",
+    "runtime/bind.png",
+    "runtime/heal.png",
+    "runtime/move-speed.png",
+    "runtime/poison.png",
+    "runtime/shield.png",
+    "runtime/skill-cooldown.png",
+    "runtime/skill-damage.png",
+    "runtime/slow.png",
+    "runtime/stun.png",
+    "runtime/trigger-basic.png",
+    "runtime/trigger-dash.png",
+    "runtime/trigger-skill.png",
+    "runtime/trigger-status.png",
+    "runtime/trigger-switch.png",
+    "source/tools/make_final.mjs",
+    "source/tools/make_icons.mjs"
+  ]
+}

@@ -1,0 +1,502 @@
+{
+  "schemaVersion": 1,
+  "id": "hero_bodies",
+  "source": "docs/design/story/opening/opening-playable.md; frames and timings from the HTML opening prototype (04_테스트/오프닝 테스트/assets/characters/*/clips.json)",
+  "note": "Animation sets the starting village draws instead of the weapon form: the village is always walked bare-handed (village), the opening shows the hero as a human before the ink (opening). frames are under root, as <motion>/F<nn>. Jump phases (jump_start..land) take the same lengths as the combat forms' approved jump clips (base_sword in ApprovedTraversal/Catalog.json), so a jump reads the same in the village and in a fight (playtest 2026-11-04).",
+  "village": "village_unarmed",
+  "opening": "opening_human",
+  "bodies": [
+    {
+      "id": "opening_human",
+      "root": "Hub/opening/human-hero",
+      "plainAfterimage": true,
+      "dashPoses": [1, 3, 5, 9, 11],
+      "clips": [
+        {
+          "name": "idle",
+          "frames": [
+            "idle/F01",
+            "idle/F02",
+            "idle/F03",
+            "idle/F04",
+            "idle/F05",
+            "idle/F06",
+            "idle/F07",
+            "idle/F08",
+            "idle/F09",
+            "idle/F10",
+            "idle/F11",
+            "idle/F12"
+          ],
+          "seconds": [
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1
+          ]
+        },
+        {
+          "name": "walk",
+          "frames": [
+            "walk/F01",
+            "walk/F02",
+            "walk/F03",
+            "walk/F04",
+            "walk/F05",
+            "walk/F06",
+            "walk/F07",
+            "walk/F08",
+            "walk/F09",
+            "walk/F10",
+            "walk/F11",
+            "walk/F12"
+          ],
+          "seconds": [
+            0.08,
+            0.08,
+            0.08,
+            0.08,
+            0.08,
+            0.08,
+            0.08,
+            0.08,
+            0.08,
+            0.08,
+            0.08,
+            0.08
+          ]
+        },
+        {
+          "name": "run",
+          "frames": [
+            "run/F01",
+            "run/F02",
+            "run/F03",
+            "run/F04",
+            "run/F05",
+            "run/F06",
+            "run/F07",
+            "run/F08",
+            "run/F09",
+            "run/F10",
+            "run/F11",
+            "run/F12"
+          ],
+          "seconds": [
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06
+          ]
+        },
+        {
+          "name": "dash",
+          "frames": [
+            "dash/F01",
+            "dash/F02",
+            "dash/F03",
+            "dash/F04",
+            "dash/F05",
+            "dash/F06",
+            "dash/F07",
+            "dash/F08",
+            "dash/F09",
+            "dash/F10",
+            "dash/F11",
+            "dash/F12"
+          ],
+          "seconds": [
+            0.03,
+            0.03,
+            0.03,
+            0.03,
+            0.03,
+            0.03,
+            0.03,
+            0.03,
+            0.03,
+            0.03,
+            0.03,
+            0.03
+          ]
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "jump/F02",
+            "jump/F03"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ]
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "jump/F04",
+            "jump/F05"
+          ],
+          "seconds": [
+            0.0646,
+            0.0754
+          ]
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "jump/F06",
+            "jump/F07"
+          ],
+          "seconds": [
+            0.0311,
+            0.0389
+          ]
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "jump/F08"
+          ],
+          "seconds": [
+            0.06
+          ]
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "fall-land/F01",
+            "fall-land/F02",
+            "fall-land/F03",
+            "fall-land/F04"
+          ],
+          "seconds": [
+            0.0504,
+            0.0432,
+            0.0432,
+            0.0432
+          ]
+        },
+        {
+          "name": "land",
+          "frames": [
+            "fall-land/F06",
+            "fall-land/F09",
+            "fall-land/F12"
+          ],
+          "seconds": [
+            0.0633,
+            0.0633,
+            0.0634
+          ]
+        },
+        {
+          "name": "wall_contact",
+          "frames": [
+            "wall/F08",
+            "wall/F09",
+            "wall/F10",
+            "wall/F11",
+            "wall/F12",
+            "wall/F13",
+            "wall/F14",
+            "wall/F15",
+            "wall/F16",
+            "wall/F17",
+            "wall/F18",
+            "wall/F19",
+            "wall/F20",
+            "wall/F21",
+            "wall/F22",
+            "wall/F23"
+          ],
+          "seconds": [
+            0.08,
+            0.08,
+            0.09,
+            0.09,
+            0.1,
+            0.1,
+            0.11,
+            0.12,
+            0.14,
+            0.14,
+            0.14,
+            0.14,
+            0.14,
+            0.14,
+            0.14,
+            0.07
+          ]
+        },
+        {
+          "name": "wall_kick",
+          "frames": [
+            "wall/F24",
+            "wall/F25",
+            "wall/F26",
+            "wall/F27",
+            "wall/F28",
+            "wall/F29"
+          ],
+          "seconds": [
+            0.06,
+            0.08,
+            0.09,
+            0.09,
+            0.09,
+            0.09
+          ]
+        }
+      ]
+    },
+    {
+      "id": "village_unarmed",
+      "root": "UnarmedBody",
+      "dashPoses": [1, 3, 5, 9, 11],
+      "clips": [
+        {
+          "name": "idle",
+          "frames": [
+            "idle/F01",
+            "idle/F02",
+            "idle/F03",
+            "idle/F04",
+            "idle/F05",
+            "idle/F06",
+            "idle/F07",
+            "idle/F08",
+            "idle/F09",
+            "idle/F10",
+            "idle/F11",
+            "idle/F12"
+          ],
+          "seconds": [
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1
+          ]
+        },
+        {
+          "name": "walk",
+          "frames": [
+            "walk/F01",
+            "walk/F02",
+            "walk/F03",
+            "walk/F04",
+            "walk/F05",
+            "walk/F06",
+            "walk/F07",
+            "walk/F08",
+            "walk/F09",
+            "walk/F10",
+            "walk/F11",
+            "walk/F12"
+          ],
+          "seconds": [
+            0.08,
+            0.08,
+            0.08,
+            0.08,
+            0.08,
+            0.08,
+            0.08,
+            0.08,
+            0.08,
+            0.08,
+            0.08,
+            0.08
+          ]
+        },
+        {
+          "name": "run",
+          "frames": [
+            "run/F01",
+            "run/F02",
+            "run/F03",
+            "run/F04",
+            "run/F05",
+            "run/F06",
+            "run/F07",
+            "run/F08",
+            "run/F09",
+            "run/F10",
+            "run/F11",
+            "run/F12"
+          ],
+          "seconds": [
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06
+          ]
+        },
+        {
+          "name": "dash",
+          "frames": [
+            "dash/F01",
+            "dash/F02",
+            "dash/F03",
+            "dash/F04",
+            "dash/F05",
+            "dash/F06",
+            "dash/F07",
+            "dash/F08",
+            "dash/F09",
+            "dash/F10",
+            "dash/F11",
+            "dash/F12"
+          ],
+          "seconds": [
+            0.03,
+            0.03,
+            0.03,
+            0.03,
+            0.03,
+            0.03,
+            0.03,
+            0.03,
+            0.03,
+            0.03,
+            0.03,
+            0.03
+          ]
+        },
+        {
+          "name": "death",
+          "frames": [
+            "death/F01",
+            "death/F02",
+            "death/F03",
+            "death/F04",
+            "death/F05",
+            "death/F06",
+            "death/F07",
+            "death/F08",
+            "death/F09",
+            "death/F10",
+            "death/F11",
+            "death/F12"
+          ],
+          "seconds": [
+            0.08,
+            0.09,
+            0.09,
+            0.1,
+            0.1,
+            0.09,
+            0.09,
+            0.07,
+            0.07,
+            0.09,
+            0.1,
+            0.18
+          ]
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "jump/F02",
+            "jump/F03"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ]
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "jump/F04",
+            "jump/F05"
+          ],
+          "seconds": [
+            0.0646,
+            0.0754
+          ]
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "jump/F06",
+            "jump/F07"
+          ],
+          "seconds": [
+            0.0311,
+            0.0389
+          ]
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "jump/F08"
+          ],
+          "seconds": [
+            0.06
+          ]
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "fall-land/F01",
+            "fall-land/F02",
+            "fall-land/F03",
+            "fall-land/F04"
+          ],
+          "seconds": [
+            0.0504,
+            0.0432,
+            0.0432,
+            0.0432
+          ]
+        },
+        {
+          "name": "land",
+          "frames": [
+            "fall-land/F06",
+            "fall-land/F09",
+            "fall-land/F12"
+          ],
+          "seconds": [
+            0.0633,
+            0.0633,
+            0.0634
+          ]
+        }
+      ]
+    }
+  ]
+}

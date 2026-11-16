@@ -1,0 +1,13 @@
+{
+  "status":"user-retrying-one-monster-at-a-time",
+  "activeId":"R-selected",
+  "background":"#ffffff",
+  "canvas":[384,224],
+  "scale":4,
+  "source":"outputs/waterway/pixel-base-step1-20261031/R-selected/native/base-frame.png",
+  "output":"outputs/waterway/walk-retry-white-20261101/R-selected",
+  "previousWalks":"K4 cleaned D, B3 selected19-frame pixel walk and M3 fast A540ms accepted by user; old rejected thrower composite stays on hold",
+  "cycleSecondsProposal":0.9,
+  "frameCountProposal":20,
+  "prompt":"Animate the exact supplied pixel-art character into a smooth, seamless LEFT-facing in-place walking loop, about 0.9 seconds. Aim for 20 distinct sequential frames with natural intermediate poses, no duplicated endpoint and no pause at either end.\n\nUse compact alternating boot steps with a slight cautious forward lean. Clearly show foot lift, forward placement, planted support and push-off. Keep the short legs, rounded torso and original slightly turned view. The head and torso bob by only 1-2 logical pixels. Let the orange apron hem make a small delayed sway; do not stretch the torso or hide the knees.\n\nThe ochre/golden carried prop MUST stay in the SAME hand as the reference, on the RIGHT side of the image beside the rear hip while the face points LEFT. Keep that hand, its grip and the prop attached as one assembly with constant size, orientation and position relative to the carrying forearm. The prop follows the torso's tiny bob; it does not swing independently. NEVER switch hands, mirror the character, move the prop to the other side, pass it across the abdomen, duplicate it or change its shape. The empty arm on the LEFT side of the image may counter-swing slightly without taking the prop.\n\nPreserve the exact cream hood, face, purple arms, orange apron, boots, proportions and existing palette. Walking only: no aiming, throwing, raising the prop overhead, reloading or attack effects. Lock camera, character center, scale and framing. Do not travel across the canvas, zoom, crop, auto-trim or rotate. Keep the entire hood, carried prop, both thighs, knees and BOTH boots fully visible inside the frame in every pose, with generous padding below the soles. Match the last-to-first step phase and body height for a continuous loop.\n\nThe supplied image is a 384x224 logical-pixel canvas enlarged exactly 4x to 1536x896. Preserve crisp aligned 4x4 pixel blocks using logical-pixel cluster motion. No outlines, antialiasing, blur, gradients, dithering, new colors or texture. Keep the background solid pure white (#FFFFFF), without shadows, scenery, text or grid. Export ordered full-canvas frames or a continuous animation with identical framing."
+}

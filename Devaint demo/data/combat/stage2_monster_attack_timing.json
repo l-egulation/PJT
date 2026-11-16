@@ -1,0 +1,163 @@
+{
+  "schema": "stage2-approved-attack-timing-v1",
+  "status": "approved-design-runtime-integrated",
+  "M3": {
+    "referenceVideo": "녹음 2026-11-03 161059.mp4",
+    "referenceVideoSha256": "aa8fcd3249457dd0ab702aefbd44e3bc5339128673e070f6823216c8153fed3a",
+    "sourceFrameNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      30,
+      31
+    ],
+    "milliseconds": [
+      100,
+      70,
+      70,
+      70,
+      240,
+      20,
+      20,
+      30,
+      20,
+      30,
+      30,
+      20,
+      20,
+      30,
+      20,
+      30,
+      30,
+      20,
+      20,
+      30,
+      20,
+      30,
+      30,
+      150,
+      440
+    ],
+    "playbackRate": 1,
+    "thrustCount": 3,
+    "thrustStartPeriodMs": 150,
+    "windupMs": 550,
+    "burstMs": 450,
+    "recoveryMs": 590,
+    "totalMs": 1590,
+    "note": "Retain original frame durations. Omit fourth thrust (source frames 24-29). Period is thrust-start to next thrust-start, not an added pause.",
+    "damageWindows": {
+      "status": "user-approved",
+      "activeMsPerThrust": 70,
+      "windows": [
+        {
+          "sourceFrameStartInclusive": 7,
+          "sourceFrameEndInclusive": 9,
+          "startInclusiveMs": 570,
+          "endExclusiveMs": 640
+        },
+        {
+          "sourceFrameStartInclusive": 13,
+          "sourceFrameEndInclusive": 15,
+          "startInclusiveMs": 720,
+          "endExclusiveMs": 790
+        },
+        {
+          "sourceFrameStartInclusive": 19,
+          "sourceFrameEndInclusive": 21,
+          "startInclusiveMs": 870,
+          "endExclusiveMs": 940
+        }
+      ],
+      "maxHitsPerTargetPerThrust": 1,
+      "maxHitsPerTargetPerFullAttack": 3,
+      "inactiveBetweenThrusts": true,
+      "boundaryConvention": "inclusive start, exclusive end; source frame labels are 1-based inclusive"
+    }
+  },
+  "R-selected": {
+    "windupMs": 650,
+    "releaseAtMs": 650,
+    "recoveryMs": 700,
+    "bodyAttackTotalMs": 1350,
+    "postRecoveryCooldownMs": 1400,
+    "continuousEligibleStartToStartMs": 2750,
+    "phaseDefinition": "windup = attack start through pre-release; recovery = release through body recovery completion; no extra throwing-phase duration",
+    "projectileFlightAndHazardLifetime": "independent of body recovery and cooldown",
+    "frameMappingStatus": "not yet retimed; approved phase targets only"
+  },
+  "H3": {
+    "windupMs": 1600,
+    "releaseAtMs": 1600,
+    "recoveryMs": 900,
+    "bodyAttackTotalMs": 2500,
+    "postRecoveryCooldownMs": 1800,
+    "continuousEligibleStartToStartMs": 4300,
+    "phaseDefinition": "windup = attack start through pre-release; recovery = release through body recovery completion; no extra throwing-phase duration",
+    "projectileFlightAndHazardLifetime": "independent of body recovery and cooldown",
+    "frameMappingStatus": "not yet retimed; approved phase targets only"
+  },
+  "K4": {
+    "windupMs": 650,
+    "damageWindow": {
+      "startInclusiveMs": 650,
+      "endExclusiveMs": 1300
+    },
+    "activeMs": 650,
+    "recoveryMs": 700,
+    "bodyAttackTotalMs": 2000,
+    "postRecoveryCooldownMs": 1200,
+    "continuousEligibleStartToStartMs": 3200,
+    "sprayDamage": "first overlap hit, then every 300ms per target, max 3 for whole spray; re-entry does not reset counter",
+    "exampleContinuouslyOverlappingHitsMs": [
+      650,
+      950,
+      1250
+    ],
+    "frameMappingStatus": "approved phase targets only; existing sprite retiming pending"
+  },
+  "B3": {
+    "chargeWindupMs": 600,
+    "chargeMaxMs": 500,
+    "chargeDamageWindow": "actual charge movement only; ends immediately on actual stop",
+    "chargeDamagePerTarget": "first contact only",
+    "slamWindupMs": 450,
+    "slamWindupOrigin": "actual charge stop and carry release",
+    "slamActiveMs": 150,
+    "slamDamagePerTarget": "once for whole slam window",
+    "recoveryMs": 900,
+    "bodyAttackMaxMs": 2600,
+    "postRecoveryCooldownMs": 1800,
+    "continuousEligibleStartToStartMaxMs": 4400,
+    "nominalTimelineWithoutEarlyStop": {
+      "chargeStartMs": 600,
+      "chargeStopMs": 1100,
+      "carryReleaseMs": 1100,
+      "slamStartMs": 1550,
+      "slamEndMs": 1700,
+      "recoveryEndMs": 2600,
+      "nextWindupStartMs": 4400
+    },
+    "frameMappingStatus": "approved phase targets only; charge/slam sprite-state mapping pending"
+  }
+}

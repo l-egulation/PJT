@@ -1,0 +1,162 @@
+{
+  "status": "확정 초안",
+  "version": "v22",
+  "screen": [
+    640,
+    360
+  ],
+  "ppu": 32,
+  "tile": [
+    32,
+    32
+  ],
+  "sectionWidth": 2048,
+  "cycleWidth": 16384,
+  "continuesRight": true,
+  "profiles": [
+    {
+      "section": 1,
+      "startX": 0,
+      "segments": [
+        {
+          "floorY": 288,
+          "width": 1536
+        },
+        {
+          "floorY": 256,
+          "width": 256
+        },
+        {
+          "floorY": 224,
+          "width": 256
+        }
+      ]
+    },
+    {
+      "section": 2,
+      "startX": 2048,
+      "segments": [
+        {
+          "floorY": 224,
+          "width": 1664
+        },
+        {
+          "floorY": 192,
+          "width": 192
+        },
+        {
+          "floorY": 160,
+          "width": 192
+        }
+      ]
+    },
+    {
+      "section": 3,
+      "startX": 4096,
+      "segments": [
+        {
+          "floorY": 160,
+          "width": 2048
+        }
+      ]
+    },
+    {
+      "section": 4,
+      "startX": 6144,
+      "segments": [
+        {
+          "floorY": 160,
+          "width": 1280
+        },
+        {
+          "floorY": 128,
+          "width": 256
+        },
+        {
+          "floorY": 96,
+          "width": 512
+        }
+      ]
+    },
+    {
+      "section": 5,
+      "startX": 8192,
+      "segments": [
+        {
+          "floorY": 96,
+          "width": 1792
+        },
+        {
+          "floorY": 128,
+          "width": 256
+        }
+      ]
+    },
+    {
+      "section": 6,
+      "startX": 10240,
+      "segments": [
+        {
+          "floorY": 128,
+          "width": 768
+        },
+        {
+          "floorY": 160,
+          "width": 256
+        },
+        {
+          "floorY": 192,
+          "width": 1024
+        }
+      ]
+    },
+    {
+      "section": 7,
+      "startX": 12288,
+      "segments": [
+        {
+          "floorY": 192,
+          "width": 1280
+        },
+        {
+          "floorY": 224,
+          "width": 256
+        },
+        {
+          "floorY": 256,
+          "width": 512
+        }
+      ]
+    },
+    {
+      "section": 8,
+      "startX": 14336,
+      "segments": [
+        {
+          "floorY": 256,
+          "width": 1536
+        },
+        {
+          "floorY": 288,
+          "width": 512
+        }
+      ]
+    }
+  ],
+  "maximumElevation": 192,
+  "stepHeight": 32,
+  "platformWidths": [
+    256,
+    320,
+    384
+  ],
+  "platformAboveFloor": 96,
+  "camera": "horizontal following plus vertical elevation following",
+  "themes": [
+    "twilight",
+    "gold",
+    "jade"
+  ],
+  "character": "confirmed original PNG unchanged",
+  "scope": "지형과 이동의 확정 초안. 적·전투 시스템은 별도 작업."
+}

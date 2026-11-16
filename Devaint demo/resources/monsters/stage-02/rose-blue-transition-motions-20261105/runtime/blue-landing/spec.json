@@ -1,0 +1,230 @@
+{
+  "approvedMotion": true,
+  "canvas": [
+    384,
+    256
+  ],
+  "groundAnchor": [
+    192,
+    232
+  ],
+  "fixedSourceScale": 0.33902439024390246,
+  "palette": [
+    [
+      25,
+      29,
+      48
+    ],
+    [
+      37,
+      31,
+      43
+    ],
+    [
+      38,
+      53,
+      82
+    ],
+    [
+      52,
+      75,
+      107
+    ],
+    [
+      62,
+      43,
+      44
+    ],
+    [
+      66,
+      97,
+      132
+    ],
+    [
+      84,
+      118,
+      155
+    ],
+    [
+      87,
+      60,
+      53
+    ],
+    [
+      103,
+      138,
+      170
+    ],
+    [
+      104,
+      81,
+      113
+    ],
+    [
+      118,
+      86,
+      74
+    ],
+    [
+      148,
+      123,
+      152
+    ],
+    [
+      153,
+      123,
+      102
+    ],
+    [
+      187,
+      160,
+      131
+    ],
+    [
+      217,
+      193,
+      165
+    ],
+    [
+      233,
+      174,
+      44
+    ],
+    [
+      241,
+      222,
+      191
+    ]
+  ],
+  "poses": [
+    {
+      "file": "00.png",
+      "sourceFrame": 13
+    },
+    {
+      "file": "01.png",
+      "sourceFrame": 14
+    },
+    {
+      "file": "02.png",
+      "sourceFrame": 15
+    },
+    {
+      "file": "03.png",
+      "sourceFrame": 16
+    },
+    {
+      "file": "04.png",
+      "sourceFrame": 17
+    },
+    {
+      "file": "05.png",
+      "sourceFrame": 18
+    },
+    {
+      "file": "06.png",
+      "sourceFrame": 19
+    },
+    {
+      "file": "07.png",
+      "sourceFrame": 20
+    }
+  ],
+  "sequence": [
+    {
+      "sourceFrame": 13,
+      "lift": 358,
+      "durationMs": 20
+    },
+    {
+      "sourceFrame": 13,
+      "lift": 335,
+      "durationMs": 20
+    },
+    {
+      "sourceFrame": 14,
+      "lift": 298,
+      "durationMs": 20
+    },
+    {
+      "sourceFrame": 14,
+      "lift": 246,
+      "durationMs": 20
+    },
+    {
+      "sourceFrame": 14,
+      "lift": 179,
+      "durationMs": 20
+    },
+    {
+      "sourceFrame": 15,
+      "lift": 97,
+      "durationMs": 20
+    },
+    {
+      "sourceFrame": 15,
+      "lift": 0,
+      "durationMs": 20
+    },
+    {
+      "sourceFrame": 16,
+      "lift": 0,
+      "durationMs": 50
+    },
+    {
+      "sourceFrame": 17,
+      "lift": 0,
+      "durationMs": 50
+    },
+    {
+      "sourceFrame": 18,
+      "lift": 0,
+      "durationMs": 60
+    },
+    {
+      "sourceFrame": 19,
+      "lift": 0,
+      "durationMs": 70
+    },
+    {
+      "sourceFrame": 20,
+      "lift": 0,
+      "durationMs": 90
+    }
+  ],
+  "notes": [
+    "RGBA PNG frames are transparent.",
+    "Fixed scale; no per-frame size normalization.",
+    "Detached orb and pale neutral dust removed.",
+    "GIF backgrounds are review only."
+  ],
+  "edgeCleanup": {
+    "method": "Recolor pale isolated cloth-edge contamination with neighboring approved blue; preserve alpha and skin cores",
+    "pixelsPerPose": [
+      140,
+      121,
+      125,
+      154,
+      101,
+      120,
+      100,
+      101
+    ]
+  },
+  "negativeSpaceCleanup": {
+    "method": "Original source white-background mask before palette mapping; no hole filling",
+    "clearedPixelsPerPose": [
+      74,
+      114,
+      117,
+      27,
+      87,
+      133,
+      333,
+      86
+    ]
+  },
+  "localRepairs": [
+    "Pose 4: reconstruct bent trouser knee obscured by source landing dust."
+  ]
+}

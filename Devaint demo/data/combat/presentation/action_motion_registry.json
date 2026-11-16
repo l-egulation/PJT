@@ -1,0 +1,5873 @@
+{
+  "schemaVersion": 1,
+  "palettes": [
+    {
+      "id": "base_sword/attack_reviewed_wave",
+      "form": "base_sword",
+      "clip": "attack_reviewed_wave",
+      "frames": [
+        "CharacterBaseSwordReviewed/range-01",
+        "CharacterBaseSwordReviewed/range-03",
+        "CharacterBaseSwordReviewed/range-04",
+        "CharacterBaseSwordReviewed/range-08",
+        "CharacterBaseSwordReviewed/range-13",
+        "CharacterBaseSwordReviewed/range-15",
+        "CharacterBaseSwordReviewed/range-16",
+        "CharacterBaseSwordReviewed/range-17",
+        "CharacterBaseSwordReviewed/range-18",
+        "CharacterBaseSwordReviewed/range-27",
+        "CharacterBaseSwordReviewed/range-28",
+        "CharacterBaseSwordReviewed/range-29",
+        "CharacterBaseSwordReviewed/range-30"
+      ]
+    },
+    {
+      "id": "base_sword/attack_reviewed_echo",
+      "form": "base_sword",
+      "clip": "attack_reviewed_echo",
+      "frames": [
+        "CharacterBaseSwordReviewed/follow-01",
+        "CharacterBaseSwordReviewed/follow-06",
+        "CharacterBaseSwordReviewed/follow-10",
+        "CharacterBaseSwordReviewed/follow-14",
+        "CharacterBaseSwordReviewed/follow-16",
+        "CharacterBaseSwordReviewed/follow-17",
+        "CharacterBaseSwordReviewed/follow-18",
+        "CharacterBaseSwordReviewed/follow-24"
+      ]
+    },
+    {
+      "id": "base_sword/attack1",
+      "form": "base_sword",
+      "clip": "attack1",
+      "frames": [
+        "CharacterApproved11/base_sword/F100",
+        "CharacterApproved11/base_sword/F101",
+        "CharacterApproved11/base_sword/F102",
+        "CharacterApproved11/base_sword/F103",
+        "CharacterApproved11/base_sword/F104"
+      ]
+    },
+    {
+      "id": "base_sword/attack2",
+      "form": "base_sword",
+      "clip": "attack2",
+      "frames": [
+        "CharacterApproved11/base_sword/F105",
+        "CharacterApproved11/base_sword/F106",
+        "CharacterApproved11/base_sword/F107",
+        "CharacterApproved11/base_sword/F108",
+        "CharacterApproved11/base_sword/F109",
+        "CharacterApproved11/base_sword/F100"
+      ]
+    },
+    {
+      "id": "whip/attack1",
+      "form": "whip",
+      "clip": "attack1",
+      "frames": [
+        "CharacterApproved11/whip/F000",
+        "CharacterApproved11/whip/F001",
+        "CharacterApproved11/whip/F002",
+        "CharacterApproved11/whip/F003",
+        "CharacterApproved11/whip/F004",
+        "CharacterApproved11/whip/F005",
+        "CharacterApproved11/whip/F006"
+      ]
+    },
+    {
+      "id": "whip/attack2",
+      "form": "whip",
+      "clip": "attack2",
+      "frames": [
+        "CharacterApproved11/whip/F007",
+        "CharacterApproved11/whip/F008",
+        "CharacterApproved11/whip/F009",
+        "CharacterApproved11/whip/F010",
+        "CharacterApproved11/whip/F011",
+        "CharacterApproved11/whip/F012",
+        "CharacterApproved11/whip/F013",
+        "CharacterApproved11/whip/F006"
+      ]
+    },
+    {
+      "id": "hammer/attack1",
+      "form": "hammer",
+      "clip": "attack1",
+      "frames": [
+        "CharacterBasicOutline/hammer-a/00",
+        "CharacterBasicOutline/hammer-a/01",
+        "CharacterBasicOutline/hammer-a/02",
+        "CharacterBasicOutline/hammer-a/03",
+        "CharacterBasicOutline/hammer-a/04",
+        "CharacterBasicOutline/hammer-a/05",
+        "CharacterBasicOutline/hammer-a/06",
+        "CharacterBasicOutline/hammer-a/07",
+        "CharacterBasicOutline/hammer-a/08"
+      ]
+    },
+    {
+      "id": "hammer/attack2",
+      "form": "hammer",
+      "clip": "attack2",
+      "frames": [
+        "CharacterBasicOutline/hammer-a/09",
+        "CharacterBasicOutline/hammer-a/10",
+        "CharacterBasicOutline/hammer-a/11",
+        "CharacterBasicOutline/hammer-a/12",
+        "CharacterBasicOutline/hammer-a/13",
+        "CharacterBasicOutline/hammer-a/14",
+        "CharacterBasicOutline/hammer-a/15",
+        "CharacterBasicOutline/hammer-a/16",
+        "CharacterBasicOutline/hammer-a/17",
+        "CharacterBasicOutline/hammer-a/18",
+        "CharacterBasicOutline/hammer-a/19",
+        "CharacterBasicOutline/hammer-a/20"
+      ]
+    },
+    {
+      "id": "shield/attack1",
+      "form": "shield",
+      "clip": "attack1",
+      "frames": [
+        "CharacterApproved11/shield/F046",
+        "CharacterApproved11/shield/F047",
+        "CharacterApproved11/shield/F048",
+        "CharacterApproved11/shield/F049",
+        "CharacterApproved11/shield/F050",
+        "CharacterApproved11/shield/F051"
+      ]
+    },
+    {
+      "id": "greatsword/attack1",
+      "form": "greatsword",
+      "clip": "attack1",
+      "frames": [
+        "CharacterGreatswordReviewed/basic-1-00",
+        "CharacterGreatswordReviewed/basic-1-01",
+        "CharacterGreatswordReviewed/basic-1-02",
+        "CharacterGreatswordReviewed/basic-1-03",
+        "CharacterGreatswordReviewed/basic-1-04",
+        "CharacterGreatswordReviewed/basic-1-05",
+        "CharacterGreatswordReviewed/basic-1-06",
+        "CharacterGreatswordReviewed/basic-1-07"
+      ]
+    },
+    {
+      "id": "greatsword/attack2",
+      "form": "greatsword",
+      "clip": "attack2",
+      "frames": [
+        "CharacterGreatswordReviewed/basic-2-00",
+        "CharacterGreatswordReviewed/basic-2-01",
+        "CharacterGreatswordReviewed/basic-2-02",
+        "CharacterGreatswordReviewed/basic-2-03",
+        "CharacterGreatswordReviewed/basic-2-04",
+        "CharacterGreatswordReviewed/basic-2-05",
+        "CharacterGreatswordReviewed/basic-2-06"
+      ]
+    },
+    {
+      "id": "greatsword/attack3",
+      "form": "greatsword",
+      "clip": "attack3",
+      "frames": [
+        "CharacterGreatswordReviewed/basic-3-00",
+        "CharacterGreatswordReviewed/basic-3-01",
+        "CharacterGreatswordReviewed/basic-3-02",
+        "CharacterGreatswordReviewed/basic-3-03",
+        "CharacterGreatswordReviewed/basic-3-04",
+        "CharacterGreatswordReviewed/basic-3-05",
+        "CharacterGreatswordReviewed/basic-3-06",
+        "CharacterGreatswordReviewed/basic-3-07",
+        "CharacterGreatswordReviewed/basic-3-08",
+        "CharacterGreatswordReviewed/basic-3-09",
+        "CharacterGreatswordReviewed/basic-3-10",
+        "CharacterGreatswordReviewed/basic-3-11",
+        "CharacterGreatswordReviewed/basic-3-12"
+      ]
+    },
+    {
+      "id": "launcher/attack_single",
+      "form": "launcher",
+      "clip": "attack_single",
+      "frames": [
+        "CharacterApproved11/launcher/F046",
+        "CharacterApproved11/launcher/F048",
+        "CharacterApproved11/launcher/F049",
+        "CharacterApproved11/launcher/F051",
+        "CharacterApproved11/launcher/F052"
+      ]
+    },
+    {
+      "id": "launcher/attack1",
+      "form": "launcher",
+      "clip": "attack1",
+      "frames": [
+        "CharacterApproved11/launcher/F046",
+        "CharacterApproved11/launcher/F047",
+        "CharacterApproved11/launcher/F049",
+        "CharacterApproved11/launcher/F050"
+      ]
+    },
+    {
+      "id": "launcher/attack2",
+      "form": "launcher",
+      "clip": "attack2",
+      "frames": [
+        "CharacterApproved11/launcher/F047",
+        "CharacterApproved11/launcher/F049",
+        "CharacterApproved11/launcher/F050"
+      ]
+    },
+    {
+      "id": "launcher/attack3",
+      "form": "launcher",
+      "clip": "attack3",
+      "frames": [
+        "CharacterApproved11/launcher/F047",
+        "CharacterApproved11/launcher/F049",
+        "CharacterApproved11/launcher/F050",
+        "CharacterApproved11/launcher/F052"
+      ]
+    },
+    {
+      "id": "launcher_laser/attack_single",
+      "form": "launcher_laser",
+      "clip": "attack_single",
+      "frames": [
+        "CharacterApproved11/launcher_laser/F046",
+        "CharacterApproved11/launcher_laser/F047",
+        "CharacterApproved11/launcher_laser/F048",
+        "CharacterApproved11/launcher_laser/F049"
+      ]
+    },
+    {
+      "id": "launcher_laser/attack1",
+      "form": "launcher_laser",
+      "clip": "attack1",
+      "frames": [
+        "CharacterApproved11/launcher_laser/F046",
+        "CharacterApproved11/launcher_laser/F047",
+        "CharacterApproved11/launcher_laser/F048",
+        "CharacterApproved11/launcher_laser/F049"
+      ]
+    },
+    {
+      "id": "launcher_shotgun/attack_single",
+      "form": "launcher_shotgun",
+      "clip": "attack_single",
+      "frames": [
+        "CharacterApproved11/launcher_shotgun/F046",
+        "CharacterApproved11/launcher_shotgun/F047",
+        "CharacterApproved11/launcher_shotgun/F049",
+        "CharacterApproved11/launcher_shotgun/F050",
+        "CharacterApproved11/launcher_shotgun/F051"
+      ]
+    },
+    {
+      "id": "launcher_shotgun/attack1",
+      "form": "launcher_shotgun",
+      "clip": "attack1",
+      "frames": [
+        "CharacterApproved11/launcher_shotgun/F046",
+        "CharacterApproved11/launcher_shotgun/F047",
+        "CharacterApproved11/launcher_shotgun/F048",
+        "CharacterApproved11/launcher_shotgun/F050"
+      ]
+    },
+    {
+      "id": "launcher_shotgun/attack2",
+      "form": "launcher_shotgun",
+      "clip": "attack2",
+      "frames": [
+        "CharacterApproved11/launcher_shotgun/F047",
+        "CharacterApproved11/launcher_shotgun/F048",
+        "CharacterApproved11/launcher_shotgun/F050"
+      ]
+    },
+    {
+      "id": "launcher_shotgun/attack3",
+      "form": "launcher_shotgun",
+      "clip": "attack3",
+      "frames": [
+        "CharacterApproved11/launcher_shotgun/F047",
+        "CharacterApproved11/launcher_shotgun/F048",
+        "CharacterApproved11/launcher_shotgun/F050",
+        "CharacterApproved11/launcher_shotgun/F051",
+        "CharacterApproved11/launcher_shotgun/F046"
+      ]
+    },
+    {
+      "id": "launcher_grenade/attack_single",
+      "form": "launcher_grenade",
+      "clip": "attack_single",
+      "frames": [
+        "CharacterApproved11/launcher_grenade/F046",
+        "CharacterApproved11/launcher_grenade/F047",
+        "CharacterApproved11/launcher_grenade/F049",
+        "CharacterApproved11/launcher_grenade/F050",
+        "CharacterApproved11/launcher_grenade/F051",
+        "CharacterApproved11/launcher_grenade/F053"
+      ]
+    },
+    {
+      "id": "launcher_grenade/attack1",
+      "form": "launcher_grenade",
+      "clip": "attack1",
+      "frames": [
+        "CharacterApproved11/launcher_grenade/F046",
+        "CharacterApproved11/launcher_grenade/F047",
+        "CharacterApproved11/launcher_grenade/F048",
+        "CharacterApproved11/launcher_grenade/F050"
+      ]
+    },
+    {
+      "id": "launcher_grenade/attack2",
+      "form": "launcher_grenade",
+      "clip": "attack2",
+      "frames": [
+        "CharacterApproved11/launcher_grenade/F047",
+        "CharacterApproved11/launcher_grenade/F048",
+        "CharacterApproved11/launcher_grenade/F050"
+      ]
+    },
+    {
+      "id": "launcher_grenade/attack3",
+      "form": "launcher_grenade",
+      "clip": "attack3",
+      "frames": [
+        "CharacterApproved11/launcher_grenade/F047",
+        "CharacterApproved11/launcher_grenade/F048",
+        "CharacterApproved11/launcher_grenade/F050",
+        "CharacterApproved11/launcher_grenade/F052",
+        "CharacterApproved11/launcher_grenade/F053",
+        "CharacterApproved11/launcher_grenade/F046"
+      ]
+    },
+    {
+      "id": "bomb/attack1",
+      "form": "bomb",
+      "clip": "attack1",
+      "frames": [
+        "CharacterApproved13/bomb/F051",
+        "CharacterApproved13/bomb/F052",
+        "CharacterApproved13/bomb/F053",
+        "CharacterApproved13/bomb/F054",
+        "CharacterApproved13/bomb/F055",
+        "CharacterApproved13/bomb/F056",
+        "CharacterApproved13/bomb/F057",
+        "CharacterApproved13/bomb/F058",
+        "CharacterApproved13/bomb/F059"
+      ]
+    },
+    {
+      "id": "base_sword/attack_strong_slash",
+      "form": "base_sword",
+      "clip": "attack_strong_slash",
+      "frames": [
+        "CharacterBaseSwordReviewed/default-00",
+        "CharacterBaseSwordReviewed/default-01",
+        "CharacterBaseSwordReviewed/default-02",
+        "CharacterBaseSwordReviewed/default-03",
+        "CharacterBaseSwordReviewed/default-04",
+        "CharacterBaseSwordReviewed/default-05",
+        "CharacterBaseSwordReviewed/default-06",
+        "CharacterBaseSwordReviewed/default-07",
+        "CharacterBaseSwordReviewed/default-08",
+        "CharacterBaseSwordReviewed/default-09",
+        "CharacterBaseSwordReviewed/default-10",
+        "CharacterBaseSwordReviewed/default-11"
+      ]
+    },
+    {
+      "id": "hammer/attack_default_slam",
+      "form": "hammer",
+      "clip": "attack_default_slam",
+      "frames": [
+        "CharacterHammerReview/hammer/hammer_default_01",
+        "CharacterHammerReview/hammer/hammer_default_02",
+        "CharacterHammerReview/hammer/hammer_default_03",
+        "CharacterHammerReview/hammer/hammer_default_04",
+        "CharacterHammerReview/hammer/hammer_default_05",
+        "CharacterHammerReview/hammer/hammer_default_06",
+        "CharacterHammerReview/hammer/hammer_default_07",
+        "CharacterHammerReview/hammer/hammer_default_08",
+        "CharacterHammerReview/hammer/hammer_default_09",
+        "CharacterHammerReview/hammer/hammer_default_10",
+        "CharacterHammerReview/hammer/hammer_default_11",
+        "CharacterHammerReview/hammer/hammer_default_12",
+        "CharacterHammerReview/hammer/hammer_default_13",
+        "CharacterHammerReview/hammer/hammer_default_14"
+      ]
+    },
+    {
+      "id": "hammer/attack_range_slam",
+      "form": "hammer",
+      "clip": "attack_range_slam",
+      "frames": [
+        "CharacterHammerReview/hammer/hammer_default_01",
+        "CharacterHammerReview/hammer/hammer_default_02",
+        "CharacterHammerReview/hammer/hammer_default_03",
+        "CharacterHammerReview/hammer/hammer_default_04",
+        "CharacterHammerReview/hammer/hammer_default_05",
+        "CharacterHammerReview/hammer/hammer_default_06",
+        "CharacterHammerReview/hammer/hammer_default_07",
+        "CharacterHammerReview/hammer/hammer_default_08",
+        "CharacterHammerReview/hammer/hammer_default_09",
+        "CharacterHammerReview/hammer/hammer_default_10",
+        "CharacterHammerReview/hammer/hammer_default_11",
+        "CharacterHammerReview/hammer/hammer_default_12",
+        "CharacterHammerReview/hammer/hammer_default_13",
+        "CharacterHammerReview/hammer/hammer_default_14"
+      ]
+    },
+    {
+      "id": "hammer/attack_rush_push",
+      "form": "hammer",
+      "clip": "attack_rush_push",
+      "frames": [
+        "CharacterWeaponSkills/hammer/hammer_movement_01",
+        "CharacterWeaponSkills/hammer/hammer_movement_02",
+        "CharacterWeaponSkills/hammer/hammer_movement_03",
+        "CharacterWeaponSkills/hammer/hammer_movement_04",
+        "CharacterWeaponSkills/hammer/hammer_movement_05",
+        "CharacterWeaponSkills/hammer/hammer_movement_06",
+        "CharacterWeaponSkills/hammer/hammer_movement_07",
+        "CharacterWeaponSkills/hammer/hammer_movement_08",
+        "CharacterWeaponSkills/hammer/hammer_movement_09",
+        "CharacterWeaponSkills/hammer/hammer_movement_10",
+        "CharacterWeaponSkills/hammer/hammer_movement_11",
+        "CharacterWeaponSkills/hammer/hammer_movement_12",
+        "CharacterWeaponSkills/hammer/hammer_movement_13",
+        "CharacterWeaponSkills/hammer/hammer_movement_14"
+      ]
+    },
+    {
+      "id": "base_sword/attack_dash_thrust",
+      "form": "base_sword",
+      "clip": "attack_dash_thrust",
+      "frames": [
+        "CharacterWeaponSkills/base_sword/attack_dash_thrust_01",
+        "CharacterWeaponSkills/base_sword/attack_dash_thrust_02",
+        "CharacterWeaponSkills/base_sword/attack_dash_thrust_03",
+        "CharacterWeaponSkills/base_sword/attack_dash_thrust_04",
+        "CharacterWeaponSkills/base_sword/attack_dash_thrust_05",
+        "CharacterWeaponSkills/base_sword/attack_dash_thrust_06",
+        "CharacterWeaponSkills/base_sword/attack_dash_thrust_07",
+        "CharacterWeaponSkills/base_sword/attack_dash_thrust_08",
+        "CharacterWeaponSkills/base_sword/attack_dash_thrust_09",
+        "CharacterWeaponSkills/base_sword/attack_dash_thrust_10"
+      ]
+    },
+    {
+      "id": "rapier/attack1",
+      "form": "rapier",
+      "clip": "attack1",
+      "frames": [
+        "CharacterBasicOutline/rapier/00",
+        "CharacterBasicOutline/rapier/01",
+        "CharacterBasicOutline/rapier/02",
+        "CharacterBasicOutline/rapier/03",
+        "CharacterBasicOutline/rapier/04",
+        "CharacterBasicOutline/rapier/05",
+        "CharacterBasicOutline/rapier/06",
+        "CharacterBasicOutline/rapier/07",
+        "CharacterBasicOutline/rapier/08"
+      ]
+    },
+    {
+      "id": "rapier/attack2",
+      "form": "rapier",
+      "clip": "attack2",
+      "frames": [
+        "CharacterBasicOutline/rapier/09",
+        "CharacterBasicOutline/rapier/10",
+        "CharacterBasicOutline/rapier/11",
+        "CharacterBasicOutline/rapier/12",
+        "CharacterBasicOutline/rapier/13",
+        "CharacterBasicOutline/rapier/14",
+        "CharacterBasicOutline/rapier/15"
+      ]
+    },
+    {
+      "id": "rapier/attack3",
+      "form": "rapier",
+      "clip": "attack3",
+      "frames": [
+        "CharacterBasicOutline/rapier/16",
+        "CharacterBasicOutline/rapier/17",
+        "CharacterBasicOutline/rapier/18",
+        "CharacterBasicOutline/rapier/19",
+        "CharacterBasicOutline/rapier/20",
+        "CharacterBasicOutline/rapier/21",
+        "CharacterBasicOutline/rapier/22",
+        "CharacterBasicOutline/rapier/23"
+      ]
+    },
+    {
+      "id": "rapier/attack_charge",
+      "form": "rapier",
+      "clip": "attack_charge",
+      "frames": [
+        "CharacterRapierMotion/charge/002",
+        "CharacterRapierMotion/charge/003",
+        "CharacterRapierMotion/charge/004",
+        "CharacterRapierMotion/charge/005",
+        "CharacterRapierMotion/charge/006",
+        "CharacterRapierMotion/charge/009",
+        "CharacterRapierMotion/charge/012",
+        "CharacterRapierMotion/charge/015",
+        "CharacterRapierMotion/charge/019",
+        "CharacterRapierMotion/charge/020",
+        "CharacterRapierMotion/charge/021",
+        "CharacterRapierMotion/charge/024",
+        "CharacterRapierMotion/charge/028",
+        "CharacterRapierMotion/charge/030",
+        "CharacterRapierMotion/charge/032",
+        "CharacterRapierMotion/charge/034"
+      ]
+    },
+    {
+      "id": "rapier/attack_long_thrust",
+      "form": "rapier",
+      "clip": "attack_long_thrust",
+      "frames": [
+        "CharacterRapierMotion/needle/001",
+        "CharacterRapierMotion/needle/004",
+        "CharacterRapierMotion/needle/005",
+        "CharacterRapierMotion/needle/006",
+        "CharacterRapierMotion/needle/007",
+        "CharacterRapierMotion/needle/014",
+        "CharacterRapierMotion/needle/023",
+        "CharacterRapierMotion/needle/028"
+      ]
+    },
+    {
+      "id": "rapier/attack_held_thrust",
+      "form": "rapier",
+      "clip": "attack_held_thrust",
+      "frames": [
+        "CharacterRapierMotion/slip/001",
+        "CharacterRapierMotion/slip/003",
+        "CharacterRapierMotion/slip/005",
+        "CharacterRapierMotion/slip/007",
+        "CharacterRapierMotion/slip/009",
+        "CharacterRapierMotion/slip/012",
+        "CharacterRapierMotion/slip/016",
+        "CharacterRapierMotion/slip/019",
+        "CharacterRapierMotion/slip/022",
+        "CharacterRapierMotion/slip/024",
+        "CharacterRapierMotion/slip/027"
+      ]
+    },
+    {
+      "id": "rapier/attack_flurry",
+      "form": "rapier",
+      "clip": "attack_flurry",
+      "frames": [
+        "CharacterRapierMotion/flurry/002",
+        "CharacterRapierMotion/flurry/004",
+        "CharacterRapierMotion/flurry/008",
+        "CharacterRapierMotion/flurry/010",
+        "CharacterRapierMotion/flurry/011",
+        "CharacterRapierMotion/flurry/013",
+        "CharacterRapierMotion/flurry/016",
+        "CharacterRapierMotion/flurry/018",
+        "CharacterRapierMotion/flurry/021",
+        "CharacterRapierMotion/flurry/024",
+        "CharacterRapierMotion/flurry/026",
+        "CharacterRapierMotion/flurry/028"
+      ]
+    },
+    {
+      "id": "greatsword/attack_charge_slam",
+      "form": "greatsword",
+      "clip": "attack_charge_slam",
+      "frames": [
+        "CharacterGreatswordReviewed/charge-01",
+        "CharacterGreatswordReviewed/charge-06",
+        "CharacterGreatswordReviewed/charge-10",
+        "CharacterGreatswordReviewed/charge-12",
+        "CharacterGreatswordReviewed/charge-15",
+        "CharacterGreatswordReviewed/charge-46",
+        "CharacterGreatswordReviewed/charge-48",
+        "CharacterGreatswordReviewed/charge-50",
+        "CharacterGreatswordReviewed/charge-52",
+        "CharacterGreatswordReviewed/charge-55",
+        "CharacterGreatswordReviewed/charge-58",
+        "CharacterGreatswordReviewed/charge-59",
+        "CharacterGreatswordReviewed/charge-60",
+        "CharacterGreatswordReviewed/charge-62",
+        "CharacterGreatswordReviewed/charge-64",
+        "CharacterGreatswordReviewed/charge-67",
+        "CharacterGreatswordReviewed/charge-69",
+        "CharacterGreatswordReviewed/charge-75",
+        "CharacterGreatswordReviewed/charge-78",
+        "CharacterGreatswordReviewed/charge-81",
+        "CharacterGreatswordReviewed/charge-86"
+      ]
+    },
+    {
+      "id": "greatsword/attack_spin_advance",
+      "form": "greatsword",
+      "clip": "attack_spin_advance",
+      "frames": [
+        "CharacterGreatswordReviewed/spin-01",
+        "CharacterGreatswordReviewed/spin-04",
+        "CharacterGreatswordReviewed/spin-06",
+        "CharacterGreatswordReviewed/spin-07",
+        "CharacterGreatswordReviewed/spin-13",
+        "CharacterGreatswordReviewed/spin-14",
+        "CharacterGreatswordReviewed/spin-15",
+        "CharacterGreatswordReviewed/spin-16",
+        "CharacterGreatswordReviewed/spin-25",
+        "CharacterGreatswordReviewed/spin-17",
+        "CharacterGreatswordReviewed/spin-18",
+        "CharacterGreatswordReviewed/spin-19",
+        "CharacterGreatswordReviewed/spin-20",
+        "CharacterGreatswordReviewed/spin-21",
+        "CharacterGreatswordReviewed/spin-22"
+      ]
+    },
+    {
+      "id": "greatsword/attack_summon_sword",
+      "form": "greatsword",
+      "clip": "attack_summon_sword",
+      "frames": [
+        "CharacterApproved11/greatsword/F000",
+        "CharacterGreatswordReviewed/range-load",
+        "CharacterGreatswordReviewed/range-hit"
+      ]
+    },
+    {
+      "id": "greatsword/attack_throw_sword",
+      "form": "greatsword",
+      "clip": "attack_throw_sword",
+      "frames": [
+        "CharacterApproved11/greatsword/F000",
+        "CharacterGreatswordReviewed/throw-load",
+        "CharacterGreatswordReviewed/throw-release",
+        "CharacterGreatswordReviewed/throw-settle"
+      ]
+    },
+    {
+      "id": "shuriken/attack1",
+      "form": "shuriken",
+      "clip": "attack1",
+      "frames": [
+        "CharacterShurikenSkills/basic/03",
+        "CharacterShurikenSkills/basic/04",
+        "CharacterShurikenSkills/basic/07",
+        "CharacterShurikenSkills/basic/08",
+        "CharacterShurikenSkills/basic/09",
+        "CharacterShurikenSkills/basic/11"
+      ]
+    },
+    {
+      "id": "shuriken/attack1_chain",
+      "form": "shuriken",
+      "clip": "attack1_chain",
+      "frames": [
+        "CharacterShurikenSkills/basic/03",
+        "CharacterShurikenSkills/basic/04",
+        "CharacterShurikenSkills/basic/07",
+        "CharacterShurikenSkills/basic/08",
+        "CharacterShurikenSkills/basic/09",
+        "CharacterShurikenSkills/basic/11"
+      ]
+    },
+    {
+      "id": "shuriken/attack2",
+      "form": "shuriken",
+      "clip": "attack2",
+      "frames": [
+        "CharacterShurikenSkills/basic/14",
+        "CharacterShurikenSkills/basic/15",
+        "CharacterShurikenSkills/basic/17",
+        "CharacterShurikenSkills/basic/18",
+        "CharacterShurikenSkills/basic/20"
+      ]
+    },
+    {
+      "id": "shuriken/attack_pierce",
+      "form": "shuriken",
+      "clip": "attack_pierce",
+      "frames": [
+        "CharacterShurikenSkills/pierce/03",
+        "CharacterShurikenSkills/pierce/05",
+        "CharacterShurikenSkills/pierce/07",
+        "CharacterShurikenSkills/pierce/09",
+        "CharacterShurikenSkills/pierce/10",
+        "CharacterShurikenSkills/pierce/11",
+        "CharacterShurikenSkills/pierce/13",
+        "CharacterShurikenSkills/pierce/24",
+        "CharacterShurikenSkills/pierce/26",
+        "CharacterShurikenSkills/pierce/28"
+      ]
+    },
+    {
+      "id": "shuriken/attack_explosive",
+      "form": "shuriken",
+      "clip": "attack_explosive",
+      "frames": [
+        "CharacterShurikenSkills/explosive/03",
+        "CharacterShurikenSkills/explosive/05",
+        "CharacterShurikenSkills/explosive/08",
+        "CharacterShurikenSkills/explosive/10",
+        "CharacterShurikenSkills/explosive/17",
+        "CharacterShurikenSkills/explosive/22",
+        "CharacterShurikenSkills/explosive/29",
+        "CharacterShurikenSkills/explosive/32",
+        "CharacterShurikenSkills/explosive/33"
+      ]
+    },
+    {
+      "id": "shuriken/attack_step_throw",
+      "form": "shuriken",
+      "clip": "attack_step_throw",
+      "frames": [
+        "CharacterShurikenSkills/step_throw/02",
+        "CharacterShurikenSkills/step_throw/04",
+        "CharacterShurikenSkills/step_throw/05",
+        "CharacterShurikenSkills/step_throw/06",
+        "CharacterShurikenSkills/step_throw/08",
+        "CharacterShurikenSkills/step_throw/12",
+        "CharacterShurikenSkills/step_throw/14",
+        "CharacterShurikenSkills/step_throw/17",
+        "CharacterShurikenSkills/step_throw/21",
+        "CharacterShurikenSkills/step_throw/28"
+      ]
+    },
+    {
+      "id": "shuriken/attack_roll",
+      "form": "shuriken",
+      "clip": "attack_roll",
+      "frames": [
+        "CharacterShurikenSkills/roll/04",
+        "CharacterShurikenSkills/roll/06",
+        "CharacterShurikenSkills/roll/09",
+        "CharacterShurikenSkills/roll/11"
+      ]
+    },
+    {
+      "id": "whip/attack_wrap",
+      "form": "whip",
+      "clip": "attack_wrap",
+      "frames": [
+        "CharacterWhipSkills/wrap/01",
+        "CharacterWhipSkills/wrap/02",
+        "CharacterWhipSkills/wrap/03",
+        "CharacterWhipSkills/wrap/wrap-04s",
+        "CharacterWhipSkills/wrap/wrap-05s",
+        "CharacterWhipSkills/wrap/wrap-06s",
+        "CharacterWhipSkills/wrap/wrap-07s",
+        "CharacterWhipSkills/wrap/wrap-10s",
+        "CharacterWhipSkills/wrap/wrap-14s",
+        "CharacterWhipSkills/wrap/wrap-18s"
+      ]
+    },
+    {
+      "id": "whip/attack_net",
+      "form": "whip",
+      "clip": "attack_net",
+      "frames": [
+        "CharacterWhipSkills/thorn-net/01",
+        "CharacterWhipSkills/thorn-net/03",
+        "CharacterWhipSkills/thorn-net/04",
+        "CharacterWhipSkills/thorn-net/05",
+        "CharacterWhipSkills/thorn-net/06",
+        "CharacterWhipSkills/thorn-net/08",
+        "CharacterWhipSkills/thorn-net/10",
+        "CharacterWhipSkills/thorn-net/12",
+        "CharacterWhipSkills/thorn-net/13",
+        "CharacterWhipSkills/thorn-net/14",
+        "CharacterWhipSkills/thorn-net/15",
+        "CharacterWhipSkills/thorn-net/16",
+        "CharacterWhipSkills/thorn-net/17",
+        "CharacterWhipSkills/thorn-net/18",
+        "CharacterWhipSkills/thorn-net/19"
+      ]
+    },
+    {
+      "id": "whip/attack_knot",
+      "form": "whip",
+      "clip": "attack_knot",
+      "frames": [
+        "CharacterWhipSkills/knot-approach/01",
+        "CharacterWhipSkills/knot-approach/02",
+        "CharacterWhipSkills/knot-approach/03",
+        "CharacterWhipSkills/knot-approach/04",
+        "CharacterWhipSkills/knot-approach/05",
+        "CharacterWhipSkills/knot-approach/knot-approach-06s",
+        "CharacterWhipSkills/knot-approach/knot-approach-08s",
+        "CharacterWhipSkills/knot-approach/knot-approach-10s",
+        "CharacterWhipSkills/knot-approach/knot-approach-13s",
+        "CharacterWhipSkills/knot-approach/knot-approach-16s"
+      ]
+    },
+    {
+      "id": "whip/attack_tighten",
+      "form": "whip",
+      "clip": "attack_tighten",
+      "frames": [
+        "CharacterWhipSkills/knot-tighten/01",
+        "CharacterWhipSkills/knot-tighten/02",
+        "CharacterWhipSkills/knot-tighten/03",
+        "CharacterWhipSkills/knot-tighten/04",
+        "CharacterWhipSkills/knot-tighten/05",
+        "CharacterWhipSkills/knot-tighten/06",
+        "CharacterWhipSkills/knot-tighten/07",
+        "CharacterWhipSkills/knot-tighten/knot-tighten-08s",
+        "CharacterWhipSkills/knot-tighten/knot-tighten-09s",
+        "CharacterWhipSkills/knot-tighten/knot-tighten-12s",
+        "CharacterWhipSkills/knot-tighten/knot-tighten-16s",
+        "CharacterWhipSkills/knot-tighten/knot-tighten-21s",
+        "CharacterWhipSkills/knot-tighten/knot-tighten-22s",
+        "CharacterWhipSkills/knot-tighten/knot-tighten-23s"
+      ]
+    },
+    {
+      "id": "dagger/attack1",
+      "form": "dagger",
+      "clip": "attack1",
+      "frames": [
+        "CharacterDaggerSkills/basic/1-06",
+        "CharacterDaggerSkills/basic/1-07",
+        "CharacterDaggerSkills/basic/1-09",
+        "CharacterDaggerSkills/basic/1-11"
+      ]
+    },
+    {
+      "id": "dagger/attack2",
+      "form": "dagger",
+      "clip": "attack2",
+      "frames": [
+        "CharacterDaggerSkills/basic/1-11",
+        "CharacterDaggerSkills/basic/1-12",
+        "CharacterDaggerSkills/basic/1-13",
+        "CharacterDaggerSkills/basic/1-20"
+      ]
+    },
+    {
+      "id": "dagger/attack3",
+      "form": "dagger",
+      "clip": "attack3",
+      "frames": [
+        "CharacterDaggerSkills/basic/1-20",
+        "CharacterDaggerSkills/basic/1-22",
+        "CharacterDaggerSkills/basic/1-25",
+        "CharacterDaggerSkills/basic/1-26",
+        "CharacterDaggerSkills/basic/2-03"
+      ]
+    },
+    {
+      "id": "dagger/attack4",
+      "form": "dagger",
+      "clip": "attack4",
+      "frames": [
+        "CharacterDaggerSkills/basic/2-08",
+        "CharacterDaggerSkills/basic/2-14",
+        "CharacterDaggerSkills/basic/2-17",
+        "CharacterDaggerSkills/basic/2-20",
+        "CharacterDaggerSkills/basic/2-21",
+        "CharacterDaggerSkills/basic/2-24",
+        "CharacterDaggerSkills/basic/2-27"
+      ]
+    },
+    {
+      "id": "dagger/attack_hold_breath",
+      "form": "dagger",
+      "clip": "attack_hold_breath",
+      "frames": [
+        "CharacterDaggerSkills/hold_breath/00",
+        "CharacterDaggerSkills/hold_breath/02",
+        "CharacterDaggerSkills/hold_breath/03",
+        "CharacterDaggerSkills/hold_breath/04",
+        "CharacterDaggerSkills/hold_breath/06",
+        "CharacterDaggerSkills/hold_breath/09",
+        "CharacterDaggerSkills/hold_breath/12",
+        "CharacterDaggerSkills/hold_breath/15",
+        "CharacterDaggerSkills/hold_breath/17",
+        "CharacterDaggerSkills/hold_breath/19"
+      ]
+    },
+    {
+      "id": "dagger/attack_ink_smoke",
+      "form": "dagger",
+      "clip": "attack_ink_smoke",
+      "frames": [
+        "CharacterDaggerSkills/ink_smoke/00",
+        "CharacterDaggerSkills/ink_smoke/02",
+        "CharacterDaggerSkills/ink_smoke/04",
+        "CharacterDaggerSkills/ink_smoke/06",
+        "CharacterDaggerSkills/ink_smoke/07",
+        "CharacterDaggerSkills/ink_smoke/08",
+        "CharacterDaggerSkills/ink_smoke/10",
+        "CharacterDaggerSkills/ink_smoke/12",
+        "CharacterDaggerSkills/ink_smoke/20",
+        "CharacterDaggerSkills/ink_smoke/23",
+        "CharacterDaggerSkills/ink_smoke/25",
+        "CharacterDaggerSkills/ink_smoke/27",
+        "CharacterDaggerSkills/ink_smoke/29",
+        "CharacterDaggerSkills/ink_smoke/31"
+      ]
+    },
+    {
+      "id": "dagger/attack_triple_leap",
+      "form": "dagger",
+      "clip": "attack_triple_leap",
+      "frames": [
+        "CharacterDaggerSkills/triple_leap/00",
+        "CharacterDaggerSkills/triple_leap/04",
+        "CharacterDaggerSkills/triple_leap/06",
+        "CharacterDaggerSkills/triple_leap/07",
+        "CharacterDaggerSkills/triple_leap/09",
+        "CharacterDaggerSkills/triple_leap/12",
+        "CharacterDaggerSkills/triple_leap/15",
+        "CharacterDaggerSkills/triple_leap/17",
+        "CharacterDaggerSkills/triple_leap/18",
+        "CharacterDaggerSkills/triple_leap/19",
+        "CharacterDaggerSkills/triple_leap/20",
+        "CharacterDaggerSkills/triple_leap/22"
+      ]
+    },
+    {
+      "id": "dagger/attack_flurry",
+      "form": "dagger",
+      "clip": "attack_flurry",
+      "frames": [
+        "CharacterDaggerSkills/flurry/04",
+        "CharacterDaggerSkills/flurry/12",
+        "CharacterDaggerSkills/flurry/50",
+        "CharacterDaggerSkills/flurry/19",
+        "CharacterDaggerSkills/flurry/53",
+        "CharacterDaggerSkills/flurry/59",
+        "CharacterDaggerSkills/flurry/38",
+        "CharacterDaggerSkills/flurry/20",
+        "CharacterDaggerSkills/flurry/60",
+        "CharacterDaggerSkills/flurry/37",
+        "CharacterDaggerSkills/flurry/74",
+        "CharacterDaggerSkills/flurry/77",
+        "CharacterDaggerSkills/flurry/84",
+        "CharacterDaggerSkills/flurry/86",
+        "CharacterDaggerSkills/flurry/88",
+        "CharacterDaggerSkills/flurry/95"
+      ]
+    },
+    {
+      "id": "bomb/attack_triple_kick",
+      "form": "bomb",
+      "clip": "attack_triple_kick",
+      "frames": [
+        "CharacterBombSkills/triple_kick/00",
+        "CharacterBombSkills/triple_kick/02",
+        "CharacterBombSkills/triple_kick/04",
+        "CharacterBombSkills/triple_kick/06",
+        "CharacterBombSkills/triple_kick/09",
+        "CharacterBombSkills/triple_kick/11",
+        "CharacterBombSkills/triple_kick/12",
+        "CharacterBombSkills/triple_kick/13",
+        "CharacterBombSkills/triple_kick/14",
+        "CharacterBombSkills/triple_kick/15",
+        "CharacterBombSkills/triple_kick/17",
+        "CharacterBombSkills/triple_kick/18",
+        "CharacterBombSkills/triple_kick/19",
+        "CharacterBombSkills/triple_kick/21",
+        "CharacterBombSkills/triple_kick/23",
+        "CharacterBombSkills/triple_kick/27"
+      ]
+    },
+    {
+      "id": "bomb/attack_big_heave",
+      "form": "bomb",
+      "clip": "attack_big_heave",
+      "frames": [
+        "CharacterBombSkills/big_heave/00",
+        "CharacterBombSkills/big_heave/02",
+        "CharacterBombSkills/big_heave/04",
+        "CharacterBombSkills/big_heave/05",
+        "CharacterBombSkills/big_heave/07",
+        "CharacterBombSkills/big_heave/09",
+        "CharacterBombSkills/big_heave/12",
+        "CharacterBombSkills/big_heave/14",
+        "CharacterBombSkills/big_heave/16",
+        "CharacterBombSkills/big_heave/18",
+        "CharacterBombSkills/big_heave/20",
+        "CharacterBombSkills/big_heave/22",
+        "CharacterBombSkills/big_heave/25",
+        "CharacterBombSkills/big_heave/27",
+        "CharacterBombSkills/big_heave/29"
+      ]
+    },
+    {
+      "id": "bomb/attack_missile",
+      "form": "bomb",
+      "clip": "attack_missile",
+      "frames": [
+        "CharacterBombSkills/missile_launch/00",
+        "CharacterBombSkills/missile_launch/05",
+        "CharacterBombSkills/missile_launch/09",
+        "CharacterBombSkills/missile_launch/13",
+        "CharacterBombSkills/missile_launch/18"
+      ]
+    },
+    {
+      "id": "bomb/attack_timed_toss",
+      "form": "bomb",
+      "clip": "attack_timed_toss",
+      "frames": [
+        "CharacterBombSkills/timed_toss/00",
+        "CharacterBombSkills/timed_toss/03",
+        "CharacterBombSkills/timed_toss/06",
+        "CharacterBombSkills/timed_toss/14",
+        "CharacterBombSkills/timed_toss/17",
+        "CharacterBombSkills/timed_toss/19",
+        "CharacterBombSkills/timed_toss/21",
+        "CharacterBombSkills/timed_toss/23",
+        "CharacterBombSkills/timed_toss/28",
+        "CharacterBombSkills/timed_toss/30"
+      ]
+    },
+    {
+      "id": "launcher/attack_charge_shot",
+      "form": "launcher",
+      "clip": "attack_charge_shot",
+      "frames": [
+        "CharacterLauncherSkills/attack_charge_shot/00",
+        "CharacterLauncherSkills/attack_charge_shot/02",
+        "CharacterLauncherSkills/attack_charge_shot/03",
+        "CharacterLauncherSkills/attack_charge_shot/05",
+        "CharacterLauncherSkills/attack_charge_shot/08",
+        "CharacterLauncherSkills/attack_charge_shot/18",
+        "CharacterLauncherSkills/attack_charge_shot/20",
+        "CharacterLauncherSkills/attack_charge_shot/22",
+        "CharacterLauncherSkills/attack_charge_shot/24",
+        "CharacterLauncherSkills/attack_charge_shot/26",
+        "CharacterLauncherSkills/attack_charge_shot/28"
+      ]
+    },
+    {
+      "id": "launcher_laser/attack_laser_beam",
+      "form": "launcher_laser",
+      "clip": "attack_laser_beam",
+      "frames": [
+        "CharacterLauncherSkills/attack_laser_beam/00",
+        "CharacterLauncherSkills/attack_laser_beam/03",
+        "CharacterLauncherSkills/attack_laser_beam/05",
+        "CharacterLauncherSkills/attack_laser_beam/06",
+        "CharacterLauncherSkills/attack_laser_beam/08",
+        "CharacterLauncherSkills/attack_laser_beam/11",
+        "CharacterLauncherSkills/attack_laser_beam/13",
+        "CharacterLauncherSkills/attack_laser_beam/16",
+        "CharacterLauncherSkills/attack_laser_beam/19",
+        "CharacterLauncherSkills/attack_laser_beam/22",
+        "CharacterLauncherSkills/attack_laser_beam/26",
+        "CharacterLauncherSkills/attack_laser_beam/28"
+      ]
+    },
+    {
+      "id": "launcher_shotgun/attack_blast_jump",
+      "form": "launcher_shotgun",
+      "clip": "attack_blast_jump",
+      "frames": [
+        "CharacterLauncherSkills/attack_blast_jump/00",
+        "CharacterLauncherSkills/attack_blast_jump/03",
+        "CharacterLauncherSkills/attack_blast_jump/05",
+        "CharacterLauncherSkills/attack_blast_jump/06",
+        "CharacterLauncherSkills/attack_blast_jump/09",
+        "CharacterLauncherSkills/attack_blast_jump/12",
+        "CharacterLauncherSkills/attack_blast_jump/14",
+        "CharacterLauncherSkills/attack_blast_jump/16",
+        "CharacterLauncherSkills/attack_blast_jump/18",
+        "CharacterLauncherSkills/attack_blast_jump/20",
+        "CharacterLauncherSkills/attack_blast_jump/22",
+        "CharacterLauncherSkills/attack_blast_jump/24",
+        "CharacterLauncherSkills/attack_blast_jump/26",
+        "CharacterLauncherSkills/attack_blast_jump/28"
+      ]
+    },
+    {
+      "id": "launcher_grenade/attack_kneel_reload",
+      "form": "launcher_grenade",
+      "clip": "attack_kneel_reload",
+      "frames": [
+        "CharacterLauncherSkills/attack_kneel_reload/00",
+        "CharacterLauncherSkills/attack_kneel_reload/02",
+        "CharacterLauncherSkills/attack_kneel_reload/04",
+        "CharacterLauncherSkills/attack_kneel_reload/06",
+        "CharacterLauncherSkills/attack_kneel_reload/08",
+        "CharacterLauncherSkills/attack_kneel_reload/10",
+        "CharacterLauncherSkills/attack_kneel_reload/13",
+        "CharacterLauncherSkills/attack_kneel_reload/16",
+        "CharacterLauncherSkills/attack_kneel_reload/18",
+        "CharacterLauncherSkills/attack_kneel_reload/20",
+        "CharacterLauncherSkills/attack_kneel_reload/22",
+        "CharacterLauncherSkills/attack_kneel_reload/24",
+        "CharacterLauncherSkills/attack_kneel_reload/26",
+        "CharacterLauncherSkills/attack_kneel_reload/28",
+        "CharacterLauncherSkills/attack_kneel_reload/30"
+      ]
+    },
+    {
+      "id": "unarmed/attack1",
+      "form": "unarmed",
+      "clip": "attack1",
+      "frames": [
+        "UnarmedAttack/jab-combo/frame-09",
+        "UnarmedAttack/jab-combo/frame-10",
+        "UnarmedAttack/jab-combo/frame-11",
+        "UnarmedAttack/jab-combo/frame-12",
+        "UnarmedAttack/jab-combo/frame-14",
+        "UnarmedAttack/jab-combo/frame-15"
+      ]
+    },
+    {
+      "id": "unarmed/attack2",
+      "form": "unarmed",
+      "clip": "attack2",
+      "frames": [
+        "UnarmedAttack/jab-combo/frame-20",
+        "UnarmedAttack/jab-combo/frame-22",
+        "UnarmedAttack/jab-combo/frame-23",
+        "UnarmedAttack/jab-combo/frame-26",
+        "UnarmedAttack/jab-combo/frame-32"
+      ]
+    }
+  ],
+  "motions": [
+    {
+      "id": "base_sword/attack_reviewed_wave",
+      "palette": "base_sword/attack_reviewed_wave",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "base-sword-attack_reviewed_wave-reviewed-00",
+          "frame": "CharacterBaseSwordReviewed/range-01",
+          "seconds": 0.044
+        },
+        {
+          "id": "base-sword-attack_reviewed_wave-reviewed-01",
+          "frame": "CharacterBaseSwordReviewed/range-03",
+          "seconds": 0.036
+        },
+        {
+          "id": "base-sword-attack_reviewed_wave-reviewed-02",
+          "frame": "CharacterBaseSwordReviewed/range-04",
+          "seconds": 0.034
+        },
+        {
+          "id": "base-sword-attack_reviewed_wave-reviewed-03",
+          "frame": "CharacterBaseSwordReviewed/range-08",
+          "seconds": 0.035
+        },
+        {
+          "id": "base-sword-attack_reviewed_wave-reviewed-04",
+          "frame": "CharacterBaseSwordReviewed/range-13",
+          "seconds": 0.032
+        },
+        {
+          "id": "base-sword-attack_reviewed_wave-reviewed-05",
+          "frame": "CharacterBaseSwordReviewed/range-15",
+          "seconds": 0.019
+        },
+        {
+          "id": "base-sword-attack_reviewed_wave-reviewed-06",
+          "frame": "CharacterBaseSwordReviewed/range-16",
+          "seconds": 0.025
+        },
+        {
+          "id": "base-sword-attack_reviewed_wave-reviewed-07",
+          "frame": "CharacterBaseSwordReviewed/range-17",
+          "seconds": 0.029
+        },
+        {
+          "id": "base-sword-attack_reviewed_wave-reviewed-08",
+          "frame": "CharacterBaseSwordReviewed/range-18",
+          "seconds": 0.054
+        },
+        {
+          "id": "base-sword-attack_reviewed_wave-reviewed-09",
+          "frame": "CharacterBaseSwordReviewed/range-27",
+          "seconds": 0.042
+        },
+        {
+          "id": "base-sword-attack_reviewed_wave-reviewed-10",
+          "frame": "CharacterBaseSwordReviewed/range-28",
+          "seconds": 0.041
+        },
+        {
+          "id": "base-sword-attack_reviewed_wave-reviewed-11",
+          "frame": "CharacterBaseSwordReviewed/range-29",
+          "seconds": 0.054
+        },
+        {
+          "id": "base-sword-attack_reviewed_wave-reviewed-12",
+          "frame": "CharacterBaseSwordReviewed/range-30",
+          "seconds": 0.055
+        }
+      ],
+      "sourceImpact": 0.2,
+      "fxStart": -1
+    },
+    {
+      "id": "base_sword/attack_reviewed_echo",
+      "palette": "base_sword/attack_reviewed_echo",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "base-sword-attack_reviewed_echo-reviewed-00",
+          "frame": "CharacterBaseSwordReviewed/follow-01",
+          "seconds": 0.042
+        },
+        {
+          "id": "base-sword-attack_reviewed_echo-reviewed-01",
+          "frame": "CharacterBaseSwordReviewed/follow-06",
+          "seconds": 0.044
+        },
+        {
+          "id": "base-sword-attack_reviewed_echo-reviewed-02",
+          "frame": "CharacterBaseSwordReviewed/follow-10",
+          "seconds": 0.051
+        },
+        {
+          "id": "base-sword-attack_reviewed_echo-reviewed-03",
+          "frame": "CharacterBaseSwordReviewed/follow-14",
+          "seconds": 0.038
+        },
+        {
+          "id": "base-sword-attack_reviewed_echo-reviewed-04",
+          "frame": "CharacterBaseSwordReviewed/follow-16",
+          "seconds": 0.025
+        },
+        {
+          "id": "base-sword-attack_reviewed_echo-reviewed-05",
+          "frame": "CharacterBaseSwordReviewed/follow-17",
+          "seconds": 0.02
+        },
+        {
+          "id": "base-sword-attack_reviewed_echo-reviewed-06",
+          "frame": "CharacterBaseSwordReviewed/follow-18",
+          "seconds": 0.095
+        },
+        {
+          "id": "base-sword-attack_reviewed_echo-reviewed-07",
+          "frame": "CharacterBaseSwordReviewed/follow-24",
+          "seconds": 0.185
+        }
+      ],
+      "sourceImpact": 0.2,
+      "fxStart": -1
+    },
+    {
+      "id": "base_sword/attack1",
+      "palette": "base_sword/attack1",
+      "delegatedSource": "data/combat/presentation/base_sword_attack1.json"
+    },
+    {
+      "id": "base_sword/attack2",
+      "palette": "base_sword/attack2",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "base_sword-attack2-step-001",
+          "frame": "CharacterApproved11/base_sword/F105",
+          "seconds": 0.09
+        },
+        {
+          "id": "base_sword-attack2-step-002",
+          "frame": "CharacterApproved11/base_sword/F106",
+          "seconds": 0.04
+        },
+        {
+          "id": "base_sword-attack2-step-003",
+          "frame": "CharacterApproved11/base_sword/F107",
+          "seconds": 0.05
+        },
+        {
+          "id": "base_sword-attack2-step-004",
+          "frame": "CharacterApproved11/base_sword/F108",
+          "seconds": 0.05
+        },
+        {
+          "id": "base_sword-attack2-step-005",
+          "frame": "CharacterApproved11/base_sword/F109",
+          "seconds": 0.05
+        },
+        {
+          "id": "base_sword-attack2-step-006",
+          "frame": "CharacterApproved11/base_sword/F100",
+          "seconds": 0.09
+        }
+      ],
+      "sourceImpact": 0.13,
+      "fxStart": -1
+    },
+    {
+      "id": "whip/attack1",
+      "palette": "whip/attack1",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "whip-attack1-step-001",
+          "frame": "CharacterApproved11/whip/F000",
+          "seconds": 0.07
+        },
+        {
+          "id": "whip-attack1-step-002",
+          "frame": "CharacterApproved11/whip/F000",
+          "seconds": 0.02
+        },
+        {
+          "id": "whip-attack1-step-003",
+          "frame": "CharacterApproved11/whip/F000",
+          "seconds": 0.02
+        },
+        {
+          "id": "whip-attack1-step-004",
+          "frame": "CharacterApproved11/whip/F001",
+          "seconds": 0.02
+        },
+        {
+          "id": "whip-attack1-step-005",
+          "frame": "CharacterApproved11/whip/F001",
+          "seconds": 0.02
+        },
+        {
+          "id": "whip-attack1-step-006",
+          "frame": "CharacterApproved11/whip/F002",
+          "seconds": 0.04
+        },
+        {
+          "id": "whip-attack1-step-007",
+          "frame": "CharacterApproved11/whip/F003",
+          "seconds": 0.035
+        },
+        {
+          "id": "whip-attack1-step-008",
+          "frame": "CharacterApproved11/whip/F004",
+          "seconds": 0.04
+        },
+        {
+          "id": "whip-attack1-step-009",
+          "frame": "CharacterApproved11/whip/F004",
+          "seconds": 0.045
+        },
+        {
+          "id": "whip-attack1-step-010",
+          "frame": "CharacterApproved11/whip/F005",
+          "seconds": 0.055
+        },
+        {
+          "id": "whip-attack1-step-011",
+          "frame": "CharacterApproved11/whip/F006",
+          "seconds": 0.21
+        }
+      ],
+      "sourceImpact": 0.15,
+      "fxStart": 0.09
+    },
+    {
+      "id": "whip/attack2",
+      "palette": "whip/attack2",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "whip-attack2-step-001",
+          "frame": "CharacterApproved11/whip/F007",
+          "seconds": 0.06
+        },
+        {
+          "id": "whip-attack2-step-002",
+          "frame": "CharacterApproved11/whip/F008",
+          "seconds": 0.13
+        },
+        {
+          "id": "whip-attack2-step-003",
+          "frame": "CharacterApproved11/whip/F008",
+          "seconds": 0.02
+        },
+        {
+          "id": "whip-attack2-step-004",
+          "frame": "CharacterApproved11/whip/F008",
+          "seconds": 0.02
+        },
+        {
+          "id": "whip-attack2-step-005",
+          "frame": "CharacterApproved11/whip/F009",
+          "seconds": 0.02
+        },
+        {
+          "id": "whip-attack2-step-006",
+          "frame": "CharacterApproved11/whip/F009",
+          "seconds": 0.02
+        },
+        {
+          "id": "whip-attack2-step-007",
+          "frame": "CharacterApproved11/whip/F010",
+          "seconds": 0.06
+        },
+        {
+          "id": "whip-attack2-step-008",
+          "frame": "CharacterApproved11/whip/F011",
+          "seconds": 0.035
+        },
+        {
+          "id": "whip-attack2-step-009",
+          "frame": "CharacterApproved11/whip/F012",
+          "seconds": 0.04
+        },
+        {
+          "id": "whip-attack2-step-010",
+          "frame": "CharacterApproved11/whip/F012",
+          "seconds": 0.045
+        },
+        {
+          "id": "whip-attack2-step-011",
+          "frame": "CharacterApproved11/whip/F013",
+          "seconds": 0.055
+        },
+        {
+          "id": "whip-attack2-step-012",
+          "frame": "CharacterApproved11/whip/F006",
+          "seconds": 0.21
+        }
+      ],
+      "sourceImpact": 0.27,
+      "fxStart": 0.21
+    },
+    {
+      "id": "hammer/attack1",
+      "palette": "hammer/attack1",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "hammer-attack1-outline-00",
+          "frame": "CharacterBasicOutline/hammer-a/00",
+          "seconds": 0.031428571
+        },
+        {
+          "id": "hammer-attack1-outline-01",
+          "frame": "CharacterBasicOutline/hammer-a/01",
+          "seconds": 0.031428571
+        },
+        {
+          "id": "hammer-attack1-outline-02",
+          "frame": "CharacterBasicOutline/hammer-a/02",
+          "seconds": 0.031428571
+        },
+        {
+          "id": "hammer-attack1-outline-03",
+          "frame": "CharacterBasicOutline/hammer-a/03",
+          "seconds": 0.031428571
+        },
+        {
+          "id": "hammer-attack1-outline-04",
+          "frame": "CharacterBasicOutline/hammer-a/04",
+          "seconds": 0.031428571
+        },
+        {
+          "id": "hammer-attack1-outline-05",
+          "frame": "CharacterBasicOutline/hammer-a/05",
+          "seconds": 0.031428571
+        },
+        {
+          "id": "hammer-attack1-outline-06",
+          "frame": "CharacterBasicOutline/hammer-a/06",
+          "seconds": 0.031428571
+        },
+        {
+          "id": "hammer-attack1-outline-07",
+          "frame": "CharacterBasicOutline/hammer-a/07",
+          "seconds": 0.06
+        },
+        {
+          "id": "hammer-attack1-outline-08",
+          "frame": "CharacterBasicOutline/hammer-a/08",
+          "seconds": 0.06
+        }
+      ],
+      "sourceImpact": 0.22,
+      "fxStart": -1
+    },
+    {
+      "id": "hammer/attack2",
+      "palette": "hammer/attack2",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "hammer-attack2-outline-09",
+          "frame": "CharacterBasicOutline/hammer-a/09",
+          "seconds": 0.055
+        },
+        {
+          "id": "hammer-attack2-outline-10",
+          "frame": "CharacterBasicOutline/hammer-a/10",
+          "seconds": 0.055
+        },
+        {
+          "id": "hammer-attack2-outline-11",
+          "frame": "CharacterBasicOutline/hammer-a/11",
+          "seconds": 0.055
+        },
+        {
+          "id": "hammer-attack2-outline-12",
+          "frame": "CharacterBasicOutline/hammer-a/12",
+          "seconds": 0.055
+        },
+        {
+          "id": "hammer-attack2-outline-13",
+          "frame": "CharacterBasicOutline/hammer-a/13",
+          "seconds": 0.055
+        },
+        {
+          "id": "hammer-attack2-outline-14",
+          "frame": "CharacterBasicOutline/hammer-a/14",
+          "seconds": 0.055
+        },
+        {
+          "id": "hammer-attack2-outline-15",
+          "frame": "CharacterBasicOutline/hammer-a/15",
+          "seconds": 0.058333333
+        },
+        {
+          "id": "hammer-attack2-outline-16",
+          "frame": "CharacterBasicOutline/hammer-a/16",
+          "seconds": 0.058333333
+        },
+        {
+          "id": "hammer-attack2-outline-17",
+          "frame": "CharacterBasicOutline/hammer-a/17",
+          "seconds": 0.058333333
+        },
+        {
+          "id": "hammer-attack2-outline-18",
+          "frame": "CharacterBasicOutline/hammer-a/18",
+          "seconds": 0.058333333
+        },
+        {
+          "id": "hammer-attack2-outline-19",
+          "frame": "CharacterBasicOutline/hammer-a/19",
+          "seconds": 0.058333333
+        },
+        {
+          "id": "hammer-attack2-outline-20",
+          "frame": "CharacterBasicOutline/hammer-a/20",
+          "seconds": 0.058333333
+        }
+      ],
+      "sourceImpact": 0.33,
+      "fxStart": -1
+    },
+    {
+      "id": "shield/attack1",
+      "palette": "shield/attack1",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "shield-attack1-step-001",
+          "frame": "CharacterApproved11/shield/F046",
+          "seconds": 0.05
+        },
+        {
+          "id": "shield-attack1-step-002",
+          "frame": "CharacterApproved11/shield/F047",
+          "seconds": 0.09
+        },
+        {
+          "id": "shield-attack1-step-003",
+          "frame": "CharacterApproved11/shield/F048",
+          "seconds": 0.11
+        },
+        {
+          "id": "shield-attack1-step-004",
+          "frame": "CharacterApproved11/shield/F049",
+          "seconds": 0.1
+        },
+        {
+          "id": "shield-attack1-step-005",
+          "frame": "CharacterApproved11/shield/F050",
+          "seconds": 0.11
+        },
+        {
+          "id": "shield-attack1-step-006",
+          "frame": "CharacterApproved11/shield/F051",
+          "seconds": 0.14
+        }
+      ],
+      "sourceImpact": 0.25,
+      "fxStart": 0.25
+    },
+    {
+      "id": "greatsword/attack1",
+      "palette": "greatsword/attack1",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "greatsword-attack1-reviewed-000",
+          "frame": "CharacterGreatswordReviewed/basic-1-00",
+          "seconds": 0.07
+        },
+        {
+          "id": "greatsword-attack1-reviewed-001",
+          "frame": "CharacterGreatswordReviewed/basic-1-01",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack1-reviewed-002",
+          "frame": "CharacterGreatswordReviewed/basic-1-02",
+          "seconds": 0.1
+        },
+        {
+          "id": "greatsword-attack1-reviewed-003",
+          "frame": "CharacterGreatswordReviewed/basic-1-03",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack1-reviewed-004",
+          "frame": "CharacterGreatswordReviewed/basic-1-04",
+          "seconds": 0.02
+        },
+        {
+          "id": "greatsword-attack1-reviewed-005",
+          "frame": "CharacterGreatswordReviewed/basic-1-05",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack1-reviewed-006",
+          "frame": "CharacterGreatswordReviewed/basic-1-06",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack1-reviewed-007",
+          "frame": "CharacterGreatswordReviewed/basic-1-07",
+          "seconds": 0.06
+        }
+      ],
+      "sourceImpact": 0.27,
+      "fxStart": -1
+    },
+    {
+      "id": "greatsword/attack2",
+      "palette": "greatsword/attack2",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "greatsword-attack2-reviewed-000",
+          "frame": "CharacterGreatswordReviewed/basic-2-00",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack2-reviewed-001",
+          "frame": "CharacterGreatswordReviewed/basic-2-01",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack2-reviewed-002",
+          "frame": "CharacterGreatswordReviewed/basic-2-02",
+          "seconds": 0.02
+        },
+        {
+          "id": "greatsword-attack2-reviewed-003",
+          "frame": "CharacterGreatswordReviewed/basic-2-03",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack2-reviewed-004",
+          "frame": "CharacterGreatswordReviewed/basic-2-04",
+          "seconds": 0.02
+        },
+        {
+          "id": "greatsword-attack2-reviewed-005",
+          "frame": "CharacterGreatswordReviewed/basic-2-05",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack2-reviewed-006",
+          "frame": "CharacterGreatswordReviewed/basic-2-06",
+          "seconds": 0.06
+        }
+      ],
+      "sourceImpact": 0.1,
+      "fxStart": -1
+    },
+    {
+      "id": "greatsword/attack3",
+      "palette": "greatsword/attack3",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "greatsword-attack3-reviewed-000",
+          "frame": "CharacterGreatswordReviewed/basic-3-00",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack3-reviewed-001",
+          "frame": "CharacterGreatswordReviewed/basic-3-01",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack3-reviewed-002",
+          "frame": "CharacterGreatswordReviewed/basic-3-02",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack3-reviewed-003",
+          "frame": "CharacterGreatswordReviewed/basic-3-03",
+          "seconds": 0.02
+        },
+        {
+          "id": "greatsword-attack3-reviewed-004",
+          "frame": "CharacterGreatswordReviewed/basic-3-04",
+          "seconds": 0.02
+        },
+        {
+          "id": "greatsword-attack3-reviewed-005",
+          "frame": "CharacterGreatswordReviewed/basic-3-05",
+          "seconds": 0.02
+        },
+        {
+          "id": "greatsword-attack3-reviewed-006",
+          "frame": "CharacterGreatswordReviewed/basic-3-06",
+          "seconds": 0.02
+        },
+        {
+          "id": "greatsword-attack3-reviewed-007",
+          "frame": "CharacterGreatswordReviewed/basic-3-07",
+          "seconds": 0.02
+        },
+        {
+          "id": "greatsword-attack3-reviewed-008",
+          "frame": "CharacterGreatswordReviewed/basic-3-08",
+          "seconds": 0.02
+        },
+        {
+          "id": "greatsword-attack3-reviewed-009",
+          "frame": "CharacterGreatswordReviewed/basic-3-09",
+          "seconds": 0.02
+        },
+        {
+          "id": "greatsword-attack3-reviewed-010",
+          "frame": "CharacterGreatswordReviewed/basic-3-10",
+          "seconds": 0.02
+        },
+        {
+          "id": "greatsword-attack3-reviewed-011",
+          "frame": "CharacterGreatswordReviewed/basic-3-11",
+          "seconds": 0.02
+        },
+        {
+          "id": "greatsword-attack3-reviewed-012",
+          "frame": "CharacterGreatswordReviewed/basic-3-12",
+          "seconds": 0.25
+        }
+      ],
+      "sourceImpact": 0.16,
+      "fxStart": -1
+    },
+    {
+      "id": "launcher/attack_single",
+      "palette": "launcher/attack_single",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "launcher-attack_single-approved-1",
+          "frame": "CharacterApproved11/launcher/F046",
+          "seconds": 0.05
+        },
+        {
+          "id": "launcher-attack_single-approved-2",
+          "frame": "CharacterApproved11/launcher/F048",
+          "seconds": 0.04
+        },
+        {
+          "id": "launcher-attack_single-approved-3",
+          "frame": "CharacterApproved11/launcher/F049",
+          "seconds": 0.07
+        },
+        {
+          "id": "launcher-attack_single-approved-4",
+          "frame": "CharacterApproved11/launcher/F051",
+          "seconds": 0.17
+        },
+        {
+          "id": "launcher-attack_single-approved-5",
+          "frame": "CharacterApproved11/launcher/F052",
+          "seconds": 0.17
+        }
+      ],
+      "sourceImpact": 0.09,
+      "fxStart": -1
+    },
+    {
+      "id": "launcher/attack1",
+      "palette": "launcher/attack1",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "launcher-attack1-approved-1",
+          "frame": "CharacterApproved11/launcher/F046",
+          "seconds": 0.03
+        },
+        {
+          "id": "launcher-attack1-approved-2",
+          "frame": "CharacterApproved11/launcher/F047",
+          "seconds": 0.06
+        },
+        {
+          "id": "launcher-attack1-approved-3",
+          "frame": "CharacterApproved11/launcher/F049",
+          "seconds": 0.04
+        },
+        {
+          "id": "launcher-attack1-approved-4",
+          "frame": "CharacterApproved11/launcher/F050",
+          "seconds": 0.08
+        }
+      ],
+      "sourceImpact": 0.09,
+      "fxStart": -1
+    },
+    {
+      "id": "launcher/attack2",
+      "palette": "launcher/attack2",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "launcher-attack2-approved-1",
+          "frame": "CharacterApproved11/launcher/F047",
+          "seconds": 0.06
+        },
+        {
+          "id": "launcher-attack2-approved-2",
+          "frame": "CharacterApproved11/launcher/F049",
+          "seconds": 0.04
+        },
+        {
+          "id": "launcher-attack2-approved-3",
+          "frame": "CharacterApproved11/launcher/F050",
+          "seconds": 0.08
+        }
+      ],
+      "sourceImpact": 0.06,
+      "fxStart": -1
+    },
+    {
+      "id": "launcher/attack3",
+      "palette": "launcher/attack3",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "launcher-attack3-approved-1",
+          "frame": "CharacterApproved11/launcher/F047",
+          "seconds": 0.06
+        },
+        {
+          "id": "launcher-attack3-approved-2",
+          "frame": "CharacterApproved11/launcher/F049",
+          "seconds": 0.04
+        },
+        {
+          "id": "launcher-attack3-approved-3",
+          "frame": "CharacterApproved11/launcher/F050",
+          "seconds": 0.08
+        },
+        {
+          "id": "launcher-attack3-approved-4",
+          "frame": "CharacterApproved11/launcher/F052",
+          "seconds": 0.07
+        }
+      ],
+      "sourceImpact": 0.06,
+      "fxStart": -1
+    },
+    {
+      "id": "launcher_laser/attack_single",
+      "palette": "launcher_laser/attack_single",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "launcher_laser-attack_single-approved-1",
+          "frame": "CharacterApproved11/launcher_laser/F046",
+          "seconds": 0.02
+        },
+        {
+          "id": "launcher_laser-attack_single-approved-2",
+          "frame": "CharacterApproved11/launcher_laser/F047",
+          "seconds": 0.06
+        },
+        {
+          "id": "launcher_laser-attack_single-approved-3",
+          "frame": "CharacterApproved11/launcher_laser/F048",
+          "seconds": 1.0
+        },
+        {
+          "id": "launcher_laser-attack_single-approved-4",
+          "frame": "CharacterApproved11/launcher_laser/F049",
+          "seconds": 0.05
+        },
+        {
+          "id": "launcher_laser-attack_single-approved-5",
+          "frame": "CharacterApproved11/launcher_laser/F046",
+          "seconds": 0.04
+        }
+      ],
+      "sourceImpact": 0.08,
+      "fxStart": -1
+    },
+    {
+      "id": "launcher_laser/attack1",
+      "palette": "launcher_laser/attack1",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "launcher_laser-attack1-approved-1",
+          "frame": "CharacterApproved11/launcher_laser/F046",
+          "seconds": 0.02
+        },
+        {
+          "id": "launcher_laser-attack1-approved-2",
+          "frame": "CharacterApproved11/launcher_laser/F047",
+          "seconds": 0.06
+        },
+        {
+          "id": "launcher_laser-attack1-approved-3",
+          "frame": "CharacterApproved11/launcher_laser/F048",
+          "seconds": 1.0
+        },
+        {
+          "id": "launcher_laser-attack1-approved-4",
+          "frame": "CharacterApproved11/launcher_laser/F049",
+          "seconds": 0.05
+        },
+        {
+          "id": "launcher_laser-attack1-approved-5",
+          "frame": "CharacterApproved11/launcher_laser/F046",
+          "seconds": 0.04
+        }
+      ],
+      "sourceImpact": 0.08,
+      "fxStart": -1
+    },
+    {
+      "id": "launcher_shotgun/attack_single",
+      "palette": "launcher_shotgun/attack_single",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "launcher_shotgun-attack_single-approved-1",
+          "frame": "CharacterApproved11/launcher_shotgun/F046",
+          "seconds": 0.09
+        },
+        {
+          "id": "launcher_shotgun-attack_single-approved-2",
+          "frame": "CharacterApproved11/launcher_shotgun/F047",
+          "seconds": 0.03
+        },
+        {
+          "id": "launcher_shotgun-attack_single-approved-3",
+          "frame": "CharacterApproved11/launcher_shotgun/F049",
+          "seconds": 0.17
+        },
+        {
+          "id": "launcher_shotgun-attack_single-approved-4",
+          "frame": "CharacterApproved11/launcher_shotgun/F050",
+          "seconds": 0.12
+        },
+        {
+          "id": "launcher_shotgun-attack_single-approved-5",
+          "frame": "CharacterApproved11/launcher_shotgun/F051",
+          "seconds": 0.13
+        },
+        {
+          "id": "launcher_shotgun-attack_single-approved-6",
+          "frame": "CharacterApproved11/launcher_shotgun/F046",
+          "seconds": 0.11
+        }
+      ],
+      "sourceImpact": 0.12,
+      "fxStart": -1
+    },
+    {
+      "id": "launcher_shotgun/attack1",
+      "palette": "launcher_shotgun/attack1",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "launcher_shotgun-attack1-approved-1",
+          "frame": "CharacterApproved11/launcher_shotgun/F046",
+          "seconds": 0.05
+        },
+        {
+          "id": "launcher_shotgun-attack1-approved-2",
+          "frame": "CharacterApproved11/launcher_shotgun/F047",
+          "seconds": 0.03
+        },
+        {
+          "id": "launcher_shotgun-attack1-approved-3",
+          "frame": "CharacterApproved11/launcher_shotgun/F048",
+          "seconds": 0.13
+        },
+        {
+          "id": "launcher_shotgun-attack1-approved-4",
+          "frame": "CharacterApproved11/launcher_shotgun/F050",
+          "seconds": 0.07
+        }
+      ],
+      "sourceImpact": 0.08,
+      "fxStart": -1
+    },
+    {
+      "id": "launcher_shotgun/attack2",
+      "palette": "launcher_shotgun/attack2",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "launcher_shotgun-attack2-approved-1",
+          "frame": "CharacterApproved11/launcher_shotgun/F047",
+          "seconds": 0.03
+        },
+        {
+          "id": "launcher_shotgun-attack2-approved-2",
+          "frame": "CharacterApproved11/launcher_shotgun/F048",
+          "seconds": 0.13
+        },
+        {
+          "id": "launcher_shotgun-attack2-approved-3",
+          "frame": "CharacterApproved11/launcher_shotgun/F050",
+          "seconds": 0.07
+        }
+      ],
+      "sourceImpact": 0.03,
+      "fxStart": -1
+    },
+    {
+      "id": "launcher_shotgun/attack3",
+      "palette": "launcher_shotgun/attack3",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "launcher_shotgun-attack3-approved-1",
+          "frame": "CharacterApproved11/launcher_shotgun/F047",
+          "seconds": 0.03
+        },
+        {
+          "id": "launcher_shotgun-attack3-approved-2",
+          "frame": "CharacterApproved11/launcher_shotgun/F048",
+          "seconds": 0.13
+        },
+        {
+          "id": "launcher_shotgun-attack3-approved-3",
+          "frame": "CharacterApproved11/launcher_shotgun/F050",
+          "seconds": 0.07
+        },
+        {
+          "id": "launcher_shotgun-attack3-approved-4",
+          "frame": "CharacterApproved11/launcher_shotgun/F051",
+          "seconds": 0.07
+        },
+        {
+          "id": "launcher_shotgun-attack3-approved-5",
+          "frame": "CharacterApproved11/launcher_shotgun/F046",
+          "seconds": 0.07
+        }
+      ],
+      "sourceImpact": 0.03,
+      "fxStart": -1
+    },
+    {
+      "id": "launcher_grenade/attack_single",
+      "palette": "launcher_grenade/attack_single",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "launcher_grenade-attack_single-approved-1",
+          "frame": "CharacterApproved11/launcher_grenade/F046",
+          "seconds": 0.05
+        },
+        {
+          "id": "launcher_grenade-attack_single-approved-2",
+          "frame": "CharacterApproved11/launcher_grenade/F047",
+          "seconds": 0.04
+        },
+        {
+          "id": "launcher_grenade-attack_single-approved-3",
+          "frame": "CharacterApproved11/launcher_grenade/F049",
+          "seconds": 0.16
+        },
+        {
+          "id": "launcher_grenade-attack_single-approved-4",
+          "frame": "CharacterApproved11/launcher_grenade/F050",
+          "seconds": 0.11
+        },
+        {
+          "id": "launcher_grenade-attack_single-approved-5",
+          "frame": "CharacterApproved11/launcher_grenade/F051",
+          "seconds": 0.1
+        },
+        {
+          "id": "launcher_grenade-attack_single-approved-6",
+          "frame": "CharacterApproved11/launcher_grenade/F053",
+          "seconds": 0.08
+        },
+        {
+          "id": "launcher_grenade-attack_single-approved-7",
+          "frame": "CharacterApproved11/launcher_grenade/F046",
+          "seconds": 0.08
+        }
+      ],
+      "sourceImpact": 0.09,
+      "fxStart": -1
+    },
+    {
+      "id": "launcher_grenade/attack1",
+      "palette": "launcher_grenade/attack1",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "launcher_grenade-attack1-approved-1",
+          "frame": "CharacterApproved11/launcher_grenade/F046",
+          "seconds": 0.05
+        },
+        {
+          "id": "launcher_grenade-attack1-approved-2",
+          "frame": "CharacterApproved11/launcher_grenade/F047",
+          "seconds": 0.04
+        },
+        {
+          "id": "launcher_grenade-attack1-approved-3",
+          "frame": "CharacterApproved11/launcher_grenade/F048",
+          "seconds": 0.16
+        },
+        {
+          "id": "launcher_grenade-attack1-approved-4",
+          "frame": "CharacterApproved11/launcher_grenade/F050",
+          "seconds": 0.09
+        }
+      ],
+      "sourceImpact": 0.09,
+      "fxStart": -1
+    },
+    {
+      "id": "launcher_grenade/attack2",
+      "palette": "launcher_grenade/attack2",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "launcher_grenade-attack2-approved-1",
+          "frame": "CharacterApproved11/launcher_grenade/F047",
+          "seconds": 0.04
+        },
+        {
+          "id": "launcher_grenade-attack2-approved-2",
+          "frame": "CharacterApproved11/launcher_grenade/F048",
+          "seconds": 0.16
+        },
+        {
+          "id": "launcher_grenade-attack2-approved-3",
+          "frame": "CharacterApproved11/launcher_grenade/F050",
+          "seconds": 0.09
+        }
+      ],
+      "sourceImpact": 0.04,
+      "fxStart": -1
+    },
+    {
+      "id": "launcher_grenade/attack3",
+      "palette": "launcher_grenade/attack3",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "launcher_grenade-attack3-approved-1",
+          "frame": "CharacterApproved11/launcher_grenade/F047",
+          "seconds": 0.04
+        },
+        {
+          "id": "launcher_grenade-attack3-approved-2",
+          "frame": "CharacterApproved11/launcher_grenade/F048",
+          "seconds": 0.16
+        },
+        {
+          "id": "launcher_grenade-attack3-approved-3",
+          "frame": "CharacterApproved11/launcher_grenade/F050",
+          "seconds": 0.09
+        },
+        {
+          "id": "launcher_grenade-attack3-approved-4",
+          "frame": "CharacterApproved11/launcher_grenade/F052",
+          "seconds": 0.06
+        },
+        {
+          "id": "launcher_grenade-attack3-approved-5",
+          "frame": "CharacterApproved11/launcher_grenade/F053",
+          "seconds": 0.07
+        },
+        {
+          "id": "launcher_grenade-attack3-approved-6",
+          "frame": "CharacterApproved11/launcher_grenade/F046",
+          "seconds": 0.08
+        }
+      ],
+      "sourceImpact": 0.04,
+      "fxStart": -1
+    },
+    {
+      "id": "bomb/attack1",
+      "palette": "bomb/attack1",
+      "mode": "CombatTimeFixed",
+      "sourceImpact": 0.35,
+      "fxStart": -1,
+      "steps": [
+        {
+          "id": "bomb-attack1-1",
+          "frame": "CharacterApproved13/bomb/F051",
+          "seconds": 0.07
+        },
+        {
+          "id": "bomb-attack1-2",
+          "frame": "CharacterApproved13/bomb/F052",
+          "seconds": 0.065
+        },
+        {
+          "id": "bomb-attack1-3",
+          "frame": "CharacterApproved13/bomb/F053",
+          "seconds": 0.075
+        },
+        {
+          "id": "bomb-attack1-4",
+          "frame": "CharacterApproved13/bomb/F054",
+          "seconds": 0.095
+        },
+        {
+          "id": "bomb-attack1-5",
+          "frame": "CharacterApproved13/bomb/F055",
+          "seconds": 0.045
+        },
+        {
+          "id": "bomb-attack1-6",
+          "frame": "CharacterApproved13/bomb/F056",
+          "seconds": 0.1
+        },
+        {
+          "id": "bomb-attack1-7",
+          "frame": "CharacterApproved13/bomb/F057",
+          "seconds": 0.07
+        },
+        {
+          "id": "bomb-attack1-8",
+          "frame": "CharacterApproved13/bomb/F058",
+          "seconds": 0.095
+        },
+        {
+          "id": "bomb-attack1-9",
+          "frame": "CharacterApproved13/bomb/F059",
+          "seconds": 0.15
+        }
+      ]
+    },
+    {
+      "id": "base_sword/attack_strong_slash",
+      "palette": "base_sword/attack_strong_slash",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "base-sword-attack_strong_slash-reviewed-00",
+          "frame": "CharacterBaseSwordReviewed/default-00",
+          "seconds": 0.06
+        },
+        {
+          "id": "base-sword-attack_strong_slash-reviewed-01",
+          "frame": "CharacterBaseSwordReviewed/default-01",
+          "seconds": 0.04
+        },
+        {
+          "id": "base-sword-attack_strong_slash-reviewed-02",
+          "frame": "CharacterBaseSwordReviewed/default-02",
+          "seconds": 0.04
+        },
+        {
+          "id": "base-sword-attack_strong_slash-reviewed-03",
+          "frame": "CharacterBaseSwordReviewed/default-03",
+          "seconds": 0.026
+        },
+        {
+          "id": "base-sword-attack_strong_slash-reviewed-04",
+          "frame": "CharacterBaseSwordReviewed/default-04",
+          "seconds": 0.014
+        },
+        {
+          "id": "base-sword-attack_strong_slash-reviewed-05",
+          "frame": "CharacterBaseSwordReviewed/default-05",
+          "seconds": 0.028
+        },
+        {
+          "id": "base-sword-attack_strong_slash-reviewed-06",
+          "frame": "CharacterBaseSwordReviewed/default-06",
+          "seconds": 0.027
+        },
+        {
+          "id": "base-sword-attack_strong_slash-reviewed-07",
+          "frame": "CharacterBaseSwordReviewed/default-07",
+          "seconds": 0.031
+        },
+        {
+          "id": "base-sword-attack_strong_slash-reviewed-08",
+          "frame": "CharacterBaseSwordReviewed/default-08",
+          "seconds": 0.032
+        },
+        {
+          "id": "base-sword-attack_strong_slash-reviewed-09",
+          "frame": "CharacterBaseSwordReviewed/default-09",
+          "seconds": 0.052
+        },
+        {
+          "id": "base-sword-attack_strong_slash-reviewed-10",
+          "frame": "CharacterBaseSwordReviewed/default-10",
+          "seconds": 0.06
+        },
+        {
+          "id": "base-sword-attack_strong_slash-reviewed-11",
+          "frame": "CharacterBaseSwordReviewed/default-11",
+          "seconds": 0.09
+        }
+      ],
+      "sourceImpact": 0.18,
+      "fxStart": -1
+    },
+    {
+      "id": "hammer/attack_default_slam",
+      "palette": "hammer/attack_default_slam",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "hammer-attack_default_slam-001",
+          "frame": "CharacterHammerReview/hammer/hammer_default_01",
+          "seconds": 0.06
+        },
+        {
+          "id": "hammer-attack_default_slam-002",
+          "frame": "CharacterHammerReview/hammer/hammer_default_02",
+          "seconds": 0.09
+        },
+        {
+          "id": "hammer-attack_default_slam-003",
+          "frame": "CharacterHammerReview/hammer/hammer_default_03",
+          "seconds": 0.11
+        },
+        {
+          "id": "hammer-attack_default_slam-004",
+          "frame": "CharacterHammerReview/hammer/hammer_default_04",
+          "seconds": 0.08
+        },
+        {
+          "id": "hammer-attack_default_slam-005",
+          "frame": "CharacterHammerReview/hammer/hammer_default_05",
+          "seconds": 0.02
+        },
+        {
+          "id": "hammer-attack_default_slam-006",
+          "frame": "CharacterHammerReview/hammer/hammer_default_06",
+          "seconds": 0.02
+        },
+        {
+          "id": "hammer-attack_default_slam-007",
+          "frame": "CharacterHammerReview/hammer/hammer_default_07",
+          "seconds": 0.02
+        },
+        {
+          "id": "hammer-attack_default_slam-008",
+          "frame": "CharacterHammerReview/hammer/hammer_default_08",
+          "seconds": 0.07
+        },
+        {
+          "id": "hammer-attack_default_slam-009",
+          "frame": "CharacterHammerReview/hammer/hammer_default_09",
+          "seconds": 0.05
+        },
+        {
+          "id": "hammer-attack_default_slam-010",
+          "frame": "CharacterHammerReview/hammer/hammer_default_10",
+          "seconds": 0.06
+        },
+        {
+          "id": "hammer-attack_default_slam-011",
+          "frame": "CharacterHammerReview/hammer/hammer_default_11",
+          "seconds": 0.06
+        },
+        {
+          "id": "hammer-attack_default_slam-012",
+          "frame": "CharacterHammerReview/hammer/hammer_default_12",
+          "seconds": 0.08
+        },
+        {
+          "id": "hammer-attack_default_slam-013",
+          "frame": "CharacterHammerReview/hammer/hammer_default_13",
+          "seconds": 0.13
+        },
+        {
+          "id": "hammer-attack_default_slam-014",
+          "frame": "CharacterHammerReview/hammer/hammer_default_14",
+          "seconds": 0.1
+        }
+      ],
+      "sourceImpact": 0.4,
+      "fxStart": -1
+    },
+    {
+      "id": "hammer/attack_range_slam",
+      "palette": "hammer/attack_range_slam",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "hammer-attack_range_slam-001",
+          "frame": "CharacterHammerReview/hammer/hammer_default_01",
+          "seconds": 0.06
+        },
+        {
+          "id": "hammer-attack_range_slam-002",
+          "frame": "CharacterHammerReview/hammer/hammer_default_02",
+          "seconds": 0.09
+        },
+        {
+          "id": "hammer-attack_range_slam-003",
+          "frame": "CharacterHammerReview/hammer/hammer_default_03",
+          "seconds": 0.21
+        },
+        {
+          "id": "hammer-attack_range_slam-004",
+          "frame": "CharacterHammerReview/hammer/hammer_default_04",
+          "seconds": 0.08
+        },
+        {
+          "id": "hammer-attack_range_slam-005",
+          "frame": "CharacterHammerReview/hammer/hammer_default_05",
+          "seconds": 0.02
+        },
+        {
+          "id": "hammer-attack_range_slam-006",
+          "frame": "CharacterHammerReview/hammer/hammer_default_06",
+          "seconds": 0.02
+        },
+        {
+          "id": "hammer-attack_range_slam-007",
+          "frame": "CharacterHammerReview/hammer/hammer_default_07",
+          "seconds": 0.02
+        },
+        {
+          "id": "hammer-attack_range_slam-008",
+          "frame": "CharacterHammerReview/hammer/hammer_default_08",
+          "seconds": 0.07
+        },
+        {
+          "id": "hammer-attack_range_slam-009",
+          "frame": "CharacterHammerReview/hammer/hammer_default_09",
+          "seconds": 0.05
+        },
+        {
+          "id": "hammer-attack_range_slam-010",
+          "frame": "CharacterHammerReview/hammer/hammer_default_10",
+          "seconds": 0.06
+        },
+        {
+          "id": "hammer-attack_range_slam-011",
+          "frame": "CharacterHammerReview/hammer/hammer_default_11",
+          "seconds": 0.06
+        },
+        {
+          "id": "hammer-attack_range_slam-012",
+          "frame": "CharacterHammerReview/hammer/hammer_default_12",
+          "seconds": 0.08
+        },
+        {
+          "id": "hammer-attack_range_slam-013",
+          "frame": "CharacterHammerReview/hammer/hammer_default_13",
+          "seconds": 0.13
+        },
+        {
+          "id": "hammer-attack_range_slam-014",
+          "frame": "CharacterHammerReview/hammer/hammer_default_14",
+          "seconds": 0.15
+        }
+      ],
+      "sourceImpact": 0.5,
+      "fxStart": -1
+    },
+    {
+      "id": "hammer/attack_rush_push",
+      "palette": "hammer/attack_rush_push",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "hammer_movement-body-001",
+          "frame": "CharacterWeaponSkills/hammer/hammer_movement_01",
+          "seconds": 0.04
+        },
+        {
+          "id": "hammer_movement-body-002",
+          "frame": "CharacterWeaponSkills/hammer/hammer_movement_02",
+          "seconds": 0.05
+        },
+        {
+          "id": "hammer_movement-body-003",
+          "frame": "CharacterWeaponSkills/hammer/hammer_movement_03",
+          "seconds": 0.05
+        },
+        {
+          "id": "hammer_movement-body-004",
+          "frame": "CharacterWeaponSkills/hammer/hammer_movement_04",
+          "seconds": 0.06
+        },
+        {
+          "id": "hammer_movement-body-005",
+          "frame": "CharacterWeaponSkills/hammer/hammer_movement_05",
+          "seconds": 0.04
+        },
+        {
+          "id": "hammer_movement-body-006",
+          "frame": "CharacterWeaponSkills/hammer/hammer_movement_06",
+          "seconds": 0.04
+        },
+        {
+          "id": "hammer_movement-body-007",
+          "frame": "CharacterWeaponSkills/hammer/hammer_movement_07",
+          "seconds": 0.04
+        },
+        {
+          "id": "hammer_movement-body-008",
+          "frame": "CharacterWeaponSkills/hammer/hammer_movement_08",
+          "seconds": 0.18
+        },
+        {
+          "id": "hammer_movement-body-009",
+          "frame": "CharacterWeaponSkills/hammer/hammer_movement_09",
+          "seconds": 0.08
+        },
+        {
+          "id": "hammer_movement-body-010",
+          "frame": "CharacterWeaponSkills/hammer/hammer_movement_10",
+          "seconds": 0.04
+        },
+        {
+          "id": "hammer_movement-body-011",
+          "frame": "CharacterWeaponSkills/hammer/hammer_movement_11",
+          "seconds": 0.05
+        },
+        {
+          "id": "hammer_movement-body-012",
+          "frame": "CharacterWeaponSkills/hammer/hammer_movement_12",
+          "seconds": 0.06
+        },
+        {
+          "id": "hammer_movement-body-013",
+          "frame": "CharacterWeaponSkills/hammer/hammer_movement_13",
+          "seconds": 0.06
+        },
+        {
+          "id": "hammer_movement-body-014",
+          "frame": "CharacterWeaponSkills/hammer/hammer_movement_14",
+          "seconds": 0.06
+        }
+      ],
+      "sourceImpact": 0.2,
+      "fxStart": -1
+    },
+    {
+      "id": "base_sword/attack_dash_thrust",
+      "palette": "base_sword/attack_dash_thrust",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "base_sword_movement-body-001",
+          "frame": "CharacterWeaponSkills/base_sword/attack_dash_thrust_01",
+          "seconds": 0.03
+        },
+        {
+          "id": "base_sword_movement-body-002",
+          "frame": "CharacterWeaponSkills/base_sword/attack_dash_thrust_02",
+          "seconds": 0.03
+        },
+        {
+          "id": "base_sword_movement-body-003",
+          "frame": "CharacterWeaponSkills/base_sword/attack_dash_thrust_03",
+          "seconds": 0.04
+        },
+        {
+          "id": "base_sword_movement-body-004",
+          "frame": "CharacterWeaponSkills/base_sword/attack_dash_thrust_04",
+          "seconds": 0.05
+        },
+        {
+          "id": "base_sword_movement-body-005",
+          "frame": "CharacterWeaponSkills/base_sword/attack_dash_thrust_05",
+          "seconds": 0.1333333333
+        },
+        {
+          "id": "base_sword_movement-body-006",
+          "frame": "CharacterWeaponSkills/base_sword/attack_dash_thrust_06",
+          "seconds": 0.04
+        },
+        {
+          "id": "base_sword_movement-body-007",
+          "frame": "CharacterWeaponSkills/base_sword/attack_dash_thrust_07",
+          "seconds": 0.05
+        },
+        {
+          "id": "base_sword_movement-body-008",
+          "frame": "CharacterWeaponSkills/base_sword/attack_dash_thrust_08",
+          "seconds": 0.05
+        },
+        {
+          "id": "base_sword_movement-body-009",
+          "frame": "CharacterWeaponSkills/base_sword/attack_dash_thrust_09",
+          "seconds": 0.06
+        },
+        {
+          "id": "base_sword_movement-body-010",
+          "frame": "CharacterWeaponSkills/base_sword/attack_dash_thrust_10",
+          "seconds": 0.05
+        }
+      ],
+      "sourceImpact": 0.15,
+      "fxStart": -1
+    },
+    {
+      "id": "rapier/attack1",
+      "palette": "rapier/attack1",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "rapier-attack1-outline-00",
+          "frame": "CharacterBasicOutline/rapier/00",
+          "seconds": 0.033333333
+        },
+        {
+          "id": "rapier-attack1-outline-01",
+          "frame": "CharacterBasicOutline/rapier/01",
+          "seconds": 0.033333333
+        },
+        {
+          "id": "rapier-attack1-outline-02",
+          "frame": "CharacterBasicOutline/rapier/02",
+          "seconds": 0.033333333
+        },
+        {
+          "id": "rapier-attack1-outline-03",
+          "frame": "CharacterBasicOutline/rapier/03",
+          "seconds": 0.02
+        },
+        {
+          "id": "rapier-attack1-outline-04",
+          "frame": "CharacterBasicOutline/rapier/04",
+          "seconds": 0.02
+        },
+        {
+          "id": "rapier-attack1-outline-05",
+          "frame": "CharacterBasicOutline/rapier/05",
+          "seconds": 0.02
+        },
+        {
+          "id": "rapier-attack1-outline-06",
+          "frame": "CharacterBasicOutline/rapier/06",
+          "seconds": 0.02
+        },
+        {
+          "id": "rapier-attack1-outline-07",
+          "frame": "CharacterBasicOutline/rapier/07",
+          "seconds": 0.02
+        },
+        {
+          "id": "rapier-attack1-outline-08",
+          "frame": "CharacterBasicOutline/rapier/08",
+          "seconds": 0.02
+        }
+      ],
+      "sourceImpact": 0.1,
+      "fxStart": 0.07
+    },
+    {
+      "id": "rapier/attack2",
+      "palette": "rapier/attack2",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "rapier-attack2-outline-09",
+          "frame": "CharacterBasicOutline/rapier/09",
+          "seconds": 0.05
+        },
+        {
+          "id": "rapier-attack2-outline-10",
+          "frame": "CharacterBasicOutline/rapier/10",
+          "seconds": 0.05
+        },
+        {
+          "id": "rapier-attack2-outline-11",
+          "frame": "CharacterBasicOutline/rapier/11",
+          "seconds": 0.024
+        },
+        {
+          "id": "rapier-attack2-outline-12",
+          "frame": "CharacterBasicOutline/rapier/12",
+          "seconds": 0.024
+        },
+        {
+          "id": "rapier-attack2-outline-13",
+          "frame": "CharacterBasicOutline/rapier/13",
+          "seconds": 0.024
+        },
+        {
+          "id": "rapier-attack2-outline-14",
+          "frame": "CharacterBasicOutline/rapier/14",
+          "seconds": 0.024
+        },
+        {
+          "id": "rapier-attack2-outline-15",
+          "frame": "CharacterBasicOutline/rapier/15",
+          "seconds": 0.024
+        }
+      ],
+      "sourceImpact": 0.1,
+      "fxStart": 0.07
+    },
+    {
+      "id": "rapier/attack3",
+      "palette": "rapier/attack3",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "rapier-attack3-outline-16",
+          "frame": "CharacterBasicOutline/rapier/16",
+          "seconds": 0.12
+        },
+        {
+          "id": "rapier-attack3-outline-17",
+          "frame": "CharacterBasicOutline/rapier/17",
+          "seconds": 0.034285714
+        },
+        {
+          "id": "rapier-attack3-outline-18",
+          "frame": "CharacterBasicOutline/rapier/18",
+          "seconds": 0.034285714
+        },
+        {
+          "id": "rapier-attack3-outline-19",
+          "frame": "CharacterBasicOutline/rapier/19",
+          "seconds": 0.034285714
+        },
+        {
+          "id": "rapier-attack3-outline-20",
+          "frame": "CharacterBasicOutline/rapier/20",
+          "seconds": 0.034285714
+        },
+        {
+          "id": "rapier-attack3-outline-21",
+          "frame": "CharacterBasicOutline/rapier/21",
+          "seconds": 0.034285714
+        },
+        {
+          "id": "rapier-attack3-outline-22",
+          "frame": "CharacterBasicOutline/rapier/22",
+          "seconds": 0.034285714
+        },
+        {
+          "id": "rapier-attack3-outline-23",
+          "frame": "CharacterBasicOutline/rapier/23",
+          "seconds": 0.034285714
+        }
+      ],
+      "sourceImpact": 0.12,
+      "fxStart": 0.09
+    },
+    {
+      "id": "rapier/attack_charge",
+      "palette": "rapier/attack_charge",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "attack_charge-0",
+          "frame": "CharacterRapierMotion/charge/002",
+          "seconds": 0.07
+        },
+        {
+          "id": "attack_charge-1",
+          "frame": "CharacterRapierMotion/charge/003",
+          "seconds": 0.08
+        },
+        {
+          "id": "attack_charge-2",
+          "frame": "CharacterRapierMotion/charge/004",
+          "seconds": 0.1
+        },
+        {
+          "id": "attack_charge-3",
+          "frame": "CharacterRapierMotion/charge/005",
+          "seconds": 0.11
+        },
+        {
+          "id": "attack_charge-4",
+          "frame": "CharacterRapierMotion/charge/006",
+          "seconds": 0.1
+        },
+        {
+          "id": "attack_charge-5",
+          "frame": "CharacterRapierMotion/charge/009",
+          "seconds": 0.1
+        },
+        {
+          "id": "attack_charge-6",
+          "frame": "CharacterRapierMotion/charge/012",
+          "seconds": 0.1
+        },
+        {
+          "id": "attack_charge-7",
+          "frame": "CharacterRapierMotion/charge/015",
+          "seconds": 0.1
+        },
+        {
+          "id": "attack_charge-8",
+          "frame": "CharacterRapierMotion/charge/019",
+          "seconds": 0.02
+        },
+        {
+          "id": "attack_charge-9",
+          "frame": "CharacterRapierMotion/charge/020",
+          "seconds": 0.02
+        },
+        {
+          "id": "attack_charge-10",
+          "frame": "CharacterRapierMotion/charge/021",
+          "seconds": 0.07
+        },
+        {
+          "id": "attack_charge-11",
+          "frame": "CharacterRapierMotion/charge/024",
+          "seconds": 0.06
+        },
+        {
+          "id": "attack_charge-12",
+          "frame": "CharacterRapierMotion/charge/028",
+          "seconds": 0.05
+        },
+        {
+          "id": "attack_charge-13",
+          "frame": "CharacterRapierMotion/charge/030",
+          "seconds": 0.05
+        },
+        {
+          "id": "attack_charge-14",
+          "frame": "CharacterRapierMotion/charge/032",
+          "seconds": 0.05
+        },
+        {
+          "id": "attack_charge-15",
+          "frame": "CharacterRapierMotion/charge/034",
+          "seconds": 0.05
+        }
+      ],
+      "sourceImpact": 0.8,
+      "fxStart": 0.77
+    },
+    {
+      "id": "rapier/attack_long_thrust",
+      "palette": "rapier/attack_long_thrust",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "attack_long_thrust-0",
+          "frame": "CharacterRapierMotion/needle/001",
+          "seconds": 0.06
+        },
+        {
+          "id": "attack_long_thrust-1",
+          "frame": "CharacterRapierMotion/needle/004",
+          "seconds": 0.08
+        },
+        {
+          "id": "attack_long_thrust-2",
+          "frame": "CharacterRapierMotion/needle/005",
+          "seconds": 0.12
+        },
+        {
+          "id": "attack_long_thrust-3",
+          "frame": "CharacterRapierMotion/needle/006",
+          "seconds": 0.04
+        },
+        {
+          "id": "attack_long_thrust-4",
+          "frame": "CharacterRapierMotion/needle/007",
+          "seconds": 0.1
+        },
+        {
+          "id": "attack_long_thrust-5",
+          "frame": "CharacterRapierMotion/needle/014",
+          "seconds": 0.1
+        },
+        {
+          "id": "attack_long_thrust-6",
+          "frame": "CharacterRapierMotion/needle/023",
+          "seconds": 0.1
+        },
+        {
+          "id": "attack_long_thrust-7",
+          "frame": "CharacterRapierMotion/needle/028",
+          "seconds": 0.1
+        }
+      ],
+      "sourceImpact": 0.3,
+      "fxStart": 0.27
+    },
+    {
+      "id": "rapier/attack_held_thrust",
+      "palette": "rapier/attack_held_thrust",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "attack_held_thrust-0",
+          "frame": "CharacterRapierMotion/slip/001",
+          "seconds": 0.03
+        },
+        {
+          "id": "attack_held_thrust-1",
+          "frame": "CharacterRapierMotion/slip/003",
+          "seconds": 0.035
+        },
+        {
+          "id": "attack_held_thrust-2",
+          "frame": "CharacterRapierMotion/slip/005",
+          "seconds": 0.035
+        },
+        {
+          "id": "attack_held_thrust-3",
+          "frame": "CharacterRapierMotion/slip/007",
+          "seconds": 0.06
+        },
+        {
+          "id": "attack_held_thrust-4",
+          "frame": "CharacterRapierMotion/slip/009",
+          "seconds": 0.05
+        },
+        {
+          "id": "attack_held_thrust-5",
+          "frame": "CharacterRapierMotion/slip/012",
+          "seconds": 0.05
+        },
+        {
+          "id": "attack_held_thrust-6",
+          "frame": "CharacterRapierMotion/slip/016",
+          "seconds": 0.04
+        },
+        {
+          "id": "attack_held_thrust-7",
+          "frame": "CharacterRapierMotion/slip/019",
+          "seconds": 0.04
+        },
+        {
+          "id": "attack_held_thrust-8",
+          "frame": "CharacterRapierMotion/slip/022",
+          "seconds": 0.035
+        },
+        {
+          "id": "attack_held_thrust-9",
+          "frame": "CharacterRapierMotion/slip/024",
+          "seconds": 0.035
+        },
+        {
+          "id": "attack_held_thrust-10",
+          "frame": "CharacterRapierMotion/slip/027",
+          "seconds": 0.04
+        }
+      ],
+      "sourceImpact": 0.1,
+      "fxStart": 0.07
+    },
+    {
+      "id": "rapier/attack_flurry",
+      "palette": "rapier/attack_flurry",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "attack_flurry-0",
+          "frame": "CharacterRapierMotion/flurry/002",
+          "seconds": 0.05
+        },
+        {
+          "id": "attack_flurry-1",
+          "frame": "CharacterRapierMotion/flurry/004",
+          "seconds": 0.05
+        },
+        {
+          "id": "attack_flurry-2",
+          "frame": "CharacterRapierMotion/flurry/008",
+          "seconds": 0.05
+        },
+        {
+          "id": "attack_flurry-3",
+          "frame": "CharacterRapierMotion/flurry/010",
+          "seconds": 0.06
+        },
+        {
+          "id": "attack_flurry-4",
+          "frame": "CharacterRapierMotion/flurry/008",
+          "seconds": 0.06
+        },
+        {
+          "id": "attack_flurry-5",
+          "frame": "CharacterRapierMotion/flurry/010",
+          "seconds": 0.06
+        },
+        {
+          "id": "attack_flurry-6",
+          "frame": "CharacterRapierMotion/flurry/008",
+          "seconds": 0.06
+        },
+        {
+          "id": "attack_flurry-7",
+          "frame": "CharacterRapierMotion/flurry/010",
+          "seconds": 0.06
+        },
+        {
+          "id": "attack_flurry-8",
+          "frame": "CharacterRapierMotion/flurry/008",
+          "seconds": 0.06
+        },
+        {
+          "id": "attack_flurry-9",
+          "frame": "CharacterRapierMotion/flurry/010",
+          "seconds": 0.06
+        },
+        {
+          "id": "attack_flurry-10",
+          "frame": "CharacterRapierMotion/flurry/008",
+          "seconds": 0.06
+        },
+        {
+          "id": "attack_flurry-11",
+          "frame": "CharacterRapierMotion/flurry/011",
+          "seconds": 0.05
+        },
+        {
+          "id": "attack_flurry-12",
+          "frame": "CharacterRapierMotion/flurry/013",
+          "seconds": 0.05
+        },
+        {
+          "id": "attack_flurry-13",
+          "frame": "CharacterRapierMotion/flurry/016",
+          "seconds": 0.03
+        },
+        {
+          "id": "attack_flurry-14",
+          "frame": "CharacterRapierMotion/flurry/018",
+          "seconds": 0.05
+        },
+        {
+          "id": "attack_flurry-15",
+          "frame": "CharacterRapierMotion/flurry/021",
+          "seconds": 0.04
+        },
+        {
+          "id": "attack_flurry-16",
+          "frame": "CharacterRapierMotion/flurry/024",
+          "seconds": 0.03
+        },
+        {
+          "id": "attack_flurry-17",
+          "frame": "CharacterRapierMotion/flurry/026",
+          "seconds": 0.03
+        },
+        {
+          "id": "attack_flurry-18",
+          "frame": "CharacterRapierMotion/flurry/028",
+          "seconds": 0.04
+        }
+      ],
+      "sourceImpact": 0.15,
+      "fxStart": 0.12
+    },
+    {
+      "id": "greatsword/attack_charge_slam",
+      "palette": "greatsword/attack_charge_slam",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "greatsword-attack_charge_slam-reviewed-000",
+          "frame": "CharacterGreatswordReviewed/charge-01",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_charge_slam-reviewed-001",
+          "frame": "CharacterGreatswordReviewed/charge-06",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_charge_slam-reviewed-002",
+          "frame": "CharacterGreatswordReviewed/charge-10",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_charge_slam-reviewed-003",
+          "frame": "CharacterGreatswordReviewed/charge-12",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_charge_slam-reviewed-004",
+          "frame": "CharacterGreatswordReviewed/charge-15",
+          "seconds": 0.12
+        },
+        {
+          "id": "greatsword-attack_charge_slam-reviewed-005",
+          "frame": "CharacterGreatswordReviewed/charge-46",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_charge_slam-reviewed-006",
+          "frame": "CharacterGreatswordReviewed/charge-48",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_charge_slam-reviewed-007",
+          "frame": "CharacterGreatswordReviewed/charge-50",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack_charge_slam-reviewed-008",
+          "frame": "CharacterGreatswordReviewed/charge-52",
+          "seconds": 0.08
+        },
+        {
+          "id": "greatsword-attack_charge_slam-reviewed-009",
+          "frame": "CharacterGreatswordReviewed/charge-55",
+          "seconds": 0.02
+        },
+        {
+          "id": "greatsword-attack_charge_slam-reviewed-010",
+          "frame": "CharacterGreatswordReviewed/charge-58",
+          "seconds": 0.02
+        },
+        {
+          "id": "greatsword-attack_charge_slam-reviewed-011",
+          "frame": "CharacterGreatswordReviewed/charge-59",
+          "seconds": 0.02
+        },
+        {
+          "id": "greatsword-attack_charge_slam-reviewed-012",
+          "frame": "CharacterGreatswordReviewed/charge-60",
+          "seconds": 0.1
+        },
+        {
+          "id": "greatsword-attack_charge_slam-reviewed-013",
+          "frame": "CharacterGreatswordReviewed/charge-62",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_charge_slam-reviewed-014",
+          "frame": "CharacterGreatswordReviewed/charge-64",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_charge_slam-reviewed-015",
+          "frame": "CharacterGreatswordReviewed/charge-67",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_charge_slam-reviewed-016",
+          "frame": "CharacterGreatswordReviewed/charge-69",
+          "seconds": 0.07
+        },
+        {
+          "id": "greatsword-attack_charge_slam-reviewed-017",
+          "frame": "CharacterGreatswordReviewed/charge-75",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack_charge_slam-reviewed-018",
+          "frame": "CharacterGreatswordReviewed/charge-78",
+          "seconds": 0.05
+        },
+        {
+          "id": "greatsword-attack_charge_slam-reviewed-019",
+          "frame": "CharacterGreatswordReviewed/charge-81",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_charge_slam-reviewed-020",
+          "frame": "CharacterGreatswordReviewed/charge-86",
+          "seconds": 0.2
+        }
+      ],
+      "sourceImpact": 0.56,
+      "fxStart": -1
+    },
+    {
+      "id": "greatsword/attack_spin_advance",
+      "palette": "greatsword/attack_spin_advance",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-000",
+          "frame": "CharacterGreatswordReviewed/spin-01",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-001",
+          "frame": "CharacterGreatswordReviewed/spin-04",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-002",
+          "frame": "CharacterGreatswordReviewed/spin-06",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-003",
+          "frame": "CharacterGreatswordReviewed/spin-07",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-004",
+          "frame": "CharacterGreatswordReviewed/spin-13",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-005",
+          "frame": "CharacterGreatswordReviewed/spin-14",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-006",
+          "frame": "CharacterGreatswordReviewed/spin-15",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-007",
+          "frame": "CharacterGreatswordReviewed/spin-16",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-008",
+          "frame": "CharacterGreatswordReviewed/spin-25",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-009",
+          "frame": "CharacterGreatswordReviewed/spin-17",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-010",
+          "frame": "CharacterGreatswordReviewed/spin-18",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-011",
+          "frame": "CharacterGreatswordReviewed/spin-19",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-012",
+          "frame": "CharacterGreatswordReviewed/spin-20",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-013",
+          "frame": "CharacterGreatswordReviewed/spin-21",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-014",
+          "frame": "CharacterGreatswordReviewed/spin-13",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-015",
+          "frame": "CharacterGreatswordReviewed/spin-14",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-016",
+          "frame": "CharacterGreatswordReviewed/spin-15",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-017",
+          "frame": "CharacterGreatswordReviewed/spin-16",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-018",
+          "frame": "CharacterGreatswordReviewed/spin-25",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-019",
+          "frame": "CharacterGreatswordReviewed/spin-17",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-020",
+          "frame": "CharacterGreatswordReviewed/spin-18",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-021",
+          "frame": "CharacterGreatswordReviewed/spin-19",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-022",
+          "frame": "CharacterGreatswordReviewed/spin-20",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-023",
+          "frame": "CharacterGreatswordReviewed/spin-21",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-024",
+          "frame": "CharacterGreatswordReviewed/spin-13",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-025",
+          "frame": "CharacterGreatswordReviewed/spin-14",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-026",
+          "frame": "CharacterGreatswordReviewed/spin-15",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-027",
+          "frame": "CharacterGreatswordReviewed/spin-16",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-028",
+          "frame": "CharacterGreatswordReviewed/spin-25",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-029",
+          "frame": "CharacterGreatswordReviewed/spin-17",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-030",
+          "frame": "CharacterGreatswordReviewed/spin-18",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-031",
+          "frame": "CharacterGreatswordReviewed/spin-19",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-032",
+          "frame": "CharacterGreatswordReviewed/spin-20",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-033",
+          "frame": "CharacterGreatswordReviewed/spin-21",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-034",
+          "frame": "CharacterGreatswordReviewed/spin-13",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-035",
+          "frame": "CharacterGreatswordReviewed/spin-14",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-036",
+          "frame": "CharacterGreatswordReviewed/spin-15",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-037",
+          "frame": "CharacterGreatswordReviewed/spin-16",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-038",
+          "frame": "CharacterGreatswordReviewed/spin-25",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-039",
+          "frame": "CharacterGreatswordReviewed/spin-17",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-040",
+          "frame": "CharacterGreatswordReviewed/spin-18",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-041",
+          "frame": "CharacterGreatswordReviewed/spin-19",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-042",
+          "frame": "CharacterGreatswordReviewed/spin-20",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-043",
+          "frame": "CharacterGreatswordReviewed/spin-21",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-044",
+          "frame": "CharacterGreatswordReviewed/spin-22",
+          "seconds": 0.04
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-045",
+          "frame": "CharacterGreatswordReviewed/spin-06",
+          "seconds": 0.06
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-046",
+          "frame": "CharacterGreatswordReviewed/spin-04",
+          "seconds": 0.08
+        },
+        {
+          "id": "greatsword-attack_spin_advance-reviewed-047",
+          "frame": "CharacterGreatswordReviewed/spin-01",
+          "seconds": 0.12
+        }
+      ],
+      "sourceImpact": 0.2,
+      "fxStart": -1
+    },
+    {
+      "id": "greatsword/attack_summon_sword",
+      "palette": "greatsword/attack_summon_sword",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "greatsword-attack_summon_sword-reviewed-000",
+          "frame": "CharacterApproved11/greatsword/F000",
+          "seconds": 0.175
+        },
+        {
+          "id": "greatsword-attack_summon_sword-reviewed-001",
+          "frame": "CharacterGreatswordReviewed/range-load",
+          "seconds": 0.275
+        },
+        {
+          "id": "greatsword-attack_summon_sword-reviewed-002",
+          "frame": "CharacterGreatswordReviewed/range-hit",
+          "seconds": 0.115
+        },
+        {
+          "id": "greatsword-attack_summon_sword-reviewed-003",
+          "frame": "CharacterApproved11/greatsword/F000",
+          "seconds": 0.485
+        }
+      ],
+      "sourceImpact": 0.45,
+      "fxStart": -1
+    },
+    {
+      "id": "greatsword/attack_throw_sword",
+      "palette": "greatsword/attack_throw_sword",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "greatsword-attack_throw_sword-reviewed-000",
+          "frame": "CharacterApproved11/greatsword/F000",
+          "seconds": 0.065
+        },
+        {
+          "id": "greatsword-attack_throw_sword-reviewed-001",
+          "frame": "CharacterGreatswordReviewed/throw-load",
+          "seconds": 0.165
+        },
+        {
+          "id": "greatsword-attack_throw_sword-reviewed-002",
+          "frame": "CharacterGreatswordReviewed/throw-release",
+          "seconds": 0.09
+        },
+        {
+          "id": "greatsword-attack_throw_sword-reviewed-003",
+          "frame": "CharacterGreatswordReviewed/throw-settle",
+          "seconds": 0.09
+        }
+      ],
+      "sourceImpact": 0.23,
+      "fxStart": -1
+    },
+    {
+      "id": "shuriken/attack1",
+      "palette": "shuriken/attack1",
+      "mode": "CombatTimeFixed",
+      "sourceImpact": 0.1,
+      "fxStart": -1,
+      "steps": [
+        {
+          "id": "shuriken-attack1-1",
+          "frame": "CharacterShurikenSkills/basic/03",
+          "seconds": 0.04
+        },
+        {
+          "id": "shuriken-attack1-2",
+          "frame": "CharacterShurikenSkills/basic/04",
+          "seconds": 0.04
+        },
+        {
+          "id": "shuriken-attack1-3",
+          "frame": "CharacterShurikenSkills/basic/07",
+          "seconds": 0.02
+        },
+        {
+          "id": "shuriken-attack1-4",
+          "frame": "CharacterShurikenSkills/basic/08",
+          "seconds": 0.05
+        },
+        {
+          "id": "shuriken-attack1-5",
+          "frame": "CharacterShurikenSkills/basic/09",
+          "seconds": 0.05
+        },
+        {
+          "id": "shuriken-attack1-6",
+          "frame": "CharacterShurikenSkills/basic/11",
+          "seconds": 0.05
+        }
+      ]
+    },
+    {
+      "id": "shuriken/attack1_chain",
+      "palette": "shuriken/attack1_chain",
+      "mode": "CombatTimeFixed",
+      "sourceImpact": 0.1,
+      "fxStart": -1,
+      "steps": [
+        {
+          "id": "shuriken-attack1-chain-1",
+          "frame": "CharacterShurikenSkills/basic/03",
+          "seconds": 0.04
+        },
+        {
+          "id": "shuriken-attack1-chain-2",
+          "frame": "CharacterShurikenSkills/basic/04",
+          "seconds": 0.04
+        },
+        {
+          "id": "shuriken-attack1-chain-3",
+          "frame": "CharacterShurikenSkills/basic/07",
+          "seconds": 0.02
+        },
+        {
+          "id": "shuriken-attack1-chain-4",
+          "frame": "CharacterShurikenSkills/basic/08",
+          "seconds": 0.05
+        },
+        {
+          "id": "shuriken-attack1-chain-5",
+          "frame": "CharacterShurikenSkills/basic/09",
+          "seconds": 0.05
+        },
+        {
+          "id": "shuriken-attack1-chain-6",
+          "frame": "CharacterShurikenSkills/basic/11",
+          "seconds": 0.05
+        }
+      ]
+    },
+    {
+      "id": "shuriken/attack2",
+      "palette": "shuriken/attack2",
+      "mode": "CombatTimeFixed",
+      "sourceImpact": 0.12,
+      "fxStart": -1,
+      "steps": [
+        {
+          "id": "shuriken-attack2-1",
+          "frame": "CharacterShurikenSkills/basic/14",
+          "seconds": 0.05
+        },
+        {
+          "id": "shuriken-attack2-2",
+          "frame": "CharacterShurikenSkills/basic/15",
+          "seconds": 0.07
+        },
+        {
+          "id": "shuriken-attack2-3",
+          "frame": "CharacterShurikenSkills/basic/17",
+          "seconds": 0.07
+        },
+        {
+          "id": "shuriken-attack2-4",
+          "frame": "CharacterShurikenSkills/basic/18",
+          "seconds": 0.08
+        },
+        {
+          "id": "shuriken-attack2-5",
+          "frame": "CharacterShurikenSkills/basic/20",
+          "seconds": 0.08
+        }
+      ]
+    },
+    {
+      "id": "shuriken/attack_pierce",
+      "palette": "shuriken/attack_pierce",
+      "mode": "CombatTimeFixed",
+      "sourceImpact": 0.2,
+      "fxStart": -1,
+      "steps": [
+        {
+          "id": "shuriken-attack-pierce-1",
+          "frame": "CharacterShurikenSkills/pierce/03",
+          "seconds": 0.05
+        },
+        {
+          "id": "shuriken-attack-pierce-2",
+          "frame": "CharacterShurikenSkills/pierce/05",
+          "seconds": 0.05
+        },
+        {
+          "id": "shuriken-attack-pierce-3",
+          "frame": "CharacterShurikenSkills/pierce/07",
+          "seconds": 0.05
+        },
+        {
+          "id": "shuriken-attack-pierce-4",
+          "frame": "CharacterShurikenSkills/pierce/09",
+          "seconds": 0.05
+        },
+        {
+          "id": "shuriken-attack-pierce-5",
+          "frame": "CharacterShurikenSkills/pierce/10",
+          "seconds": 0.07
+        },
+        {
+          "id": "shuriken-attack-pierce-6",
+          "frame": "CharacterShurikenSkills/pierce/11",
+          "seconds": 0.08
+        },
+        {
+          "id": "shuriken-attack-pierce-7",
+          "frame": "CharacterShurikenSkills/pierce/13",
+          "seconds": 0.1
+        },
+        {
+          "id": "shuriken-attack-pierce-8",
+          "frame": "CharacterShurikenSkills/pierce/24",
+          "seconds": 0.05
+        },
+        {
+          "id": "shuriken-attack-pierce-9",
+          "frame": "CharacterShurikenSkills/pierce/26",
+          "seconds": 0.05
+        },
+        {
+          "id": "shuriken-attack-pierce-10",
+          "frame": "CharacterShurikenSkills/pierce/28",
+          "seconds": 0.05
+        }
+      ]
+    },
+    {
+      "id": "shuriken/attack_explosive",
+      "palette": "shuriken/attack_explosive",
+      "mode": "CombatTimeFixed",
+      "sourceImpact": 0.2,
+      "fxStart": -1,
+      "steps": [
+        {
+          "id": "shuriken-attack-explosive-1",
+          "frame": "CharacterShurikenSkills/explosive/03",
+          "seconds": 0.05
+        },
+        {
+          "id": "shuriken-attack-explosive-2",
+          "frame": "CharacterShurikenSkills/explosive/05",
+          "seconds": 0.05
+        },
+        {
+          "id": "shuriken-attack-explosive-3",
+          "frame": "CharacterShurikenSkills/explosive/08",
+          "seconds": 0.05
+        },
+        {
+          "id": "shuriken-attack-explosive-4",
+          "frame": "CharacterShurikenSkills/explosive/10",
+          "seconds": 0.05
+        },
+        {
+          "id": "shuriken-attack-explosive-5",
+          "frame": "CharacterShurikenSkills/explosive/17",
+          "seconds": 0.1
+        },
+        {
+          "id": "shuriken-attack-explosive-6",
+          "frame": "CharacterShurikenSkills/explosive/22",
+          "seconds": 0.13
+        },
+        {
+          "id": "shuriken-attack-explosive-7",
+          "frame": "CharacterShurikenSkills/explosive/29",
+          "seconds": 0.07
+        },
+        {
+          "id": "shuriken-attack-explosive-8",
+          "frame": "CharacterShurikenSkills/explosive/32",
+          "seconds": 0.06
+        },
+        {
+          "id": "shuriken-attack-explosive-9",
+          "frame": "CharacterShurikenSkills/explosive/33",
+          "seconds": 0.04
+        }
+      ]
+    },
+    {
+      "id": "shuriken/attack_step_throw",
+      "palette": "shuriken/attack_step_throw",
+      "mode": "CombatTimeFixed",
+      "sourceImpact": 0.2,
+      "fxStart": -1,
+      "steps": [
+        {
+          "id": "shuriken-attack-step-throw-1",
+          "frame": "CharacterShurikenSkills/step_throw/02",
+          "seconds": 0.07
+        },
+        {
+          "id": "shuriken-attack-step-throw-2",
+          "frame": "CharacterShurikenSkills/step_throw/04",
+          "seconds": 0.06
+        },
+        {
+          "id": "shuriken-attack-step-throw-3",
+          "frame": "CharacterShurikenSkills/step_throw/05",
+          "seconds": 0.07
+        },
+        {
+          "id": "shuriken-attack-step-throw-4",
+          "frame": "CharacterShurikenSkills/step_throw/06",
+          "seconds": 0.06
+        },
+        {
+          "id": "shuriken-attack-step-throw-5",
+          "frame": "CharacterShurikenSkills/step_throw/08",
+          "seconds": 0.06
+        },
+        {
+          "id": "shuriken-attack-step-throw-6",
+          "frame": "CharacterShurikenSkills/step_throw/12",
+          "seconds": 0.06
+        },
+        {
+          "id": "shuriken-attack-step-throw-7",
+          "frame": "CharacterShurikenSkills/step_throw/14",
+          "seconds": 0.08
+        },
+        {
+          "id": "shuriken-attack-step-throw-8",
+          "frame": "CharacterShurikenSkills/step_throw/17",
+          "seconds": 0.08
+        },
+        {
+          "id": "shuriken-attack-step-throw-9",
+          "frame": "CharacterShurikenSkills/step_throw/21",
+          "seconds": 0.04
+        },
+        {
+          "id": "shuriken-attack-step-throw-10",
+          "frame": "CharacterShurikenSkills/step_throw/28",
+          "seconds": 0.02
+        }
+      ]
+    },
+    {
+      "id": "shuriken/attack_roll",
+      "palette": "shuriken/attack_roll",
+      "mode": "CombatTimeFixed",
+      "sourceImpact": 0.2,
+      "fxStart": -1,
+      "steps": [
+        {
+          "id": "shuriken-attack-roll-1",
+          "frame": "CharacterShurikenSkills/roll/04",
+          "seconds": 0.05
+        },
+        {
+          "id": "shuriken-attack-roll-2",
+          "frame": "CharacterShurikenSkills/roll/06",
+          "seconds": 0.05
+        },
+        {
+          "id": "shuriken-attack-roll-3",
+          "frame": "CharacterShurikenSkills/roll/09",
+          "seconds": 0.05
+        },
+        {
+          "id": "shuriken-attack-roll-4",
+          "frame": "CharacterShurikenSkills/roll/11",
+          "seconds": 0.05
+        }
+      ]
+    },
+    {
+      "id": "whip/attack_wrap",
+      "palette": "whip/attack_wrap",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "whip-attack_wrap-step-001",
+          "frame": "CharacterWhipSkills/wrap/01",
+          "seconds": 0.04
+        },
+        {
+          "id": "whip-attack_wrap-step-002",
+          "frame": "CharacterWhipSkills/wrap/02",
+          "seconds": 0.04
+        },
+        {
+          "id": "whip-attack_wrap-step-003",
+          "frame": "CharacterWhipSkills/wrap/03",
+          "seconds": 0.04
+        },
+        {
+          "id": "whip-attack_wrap-step-004",
+          "frame": "CharacterWhipSkills/wrap/wrap-04s",
+          "seconds": 0.04
+        },
+        {
+          "id": "whip-attack_wrap-step-005",
+          "frame": "CharacterWhipSkills/wrap/wrap-05s",
+          "seconds": 0.045
+        },
+        {
+          "id": "whip-attack_wrap-step-006",
+          "frame": "CharacterWhipSkills/wrap/wrap-06s",
+          "seconds": 0.045
+        },
+        {
+          "id": "whip-attack_wrap-step-007",
+          "frame": "CharacterWhipSkills/wrap/wrap-07s",
+          "seconds": 0.05
+        },
+        {
+          "id": "whip-attack_wrap-step-008",
+          "frame": "CharacterWhipSkills/wrap/wrap-10s",
+          "seconds": 0.05
+        },
+        {
+          "id": "whip-attack_wrap-step-009",
+          "frame": "CharacterWhipSkills/wrap/wrap-14s",
+          "seconds": 0.05
+        },
+        {
+          "id": "whip-attack_wrap-step-010",
+          "frame": "CharacterWhipSkills/wrap/wrap-18s",
+          "seconds": 0.2
+        }
+      ],
+      "sourceImpact": 0.25,
+      "fxStart": -1
+    },
+    {
+      "id": "whip/attack_net",
+      "palette": "whip/attack_net",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "whip-attack_net-step-001",
+          "frame": "CharacterWhipSkills/thorn-net/01",
+          "seconds": 0.03
+        },
+        {
+          "id": "whip-attack_net-step-002",
+          "frame": "CharacterWhipSkills/thorn-net/03",
+          "seconds": 0.03
+        },
+        {
+          "id": "whip-attack_net-step-003",
+          "frame": "CharacterWhipSkills/thorn-net/04",
+          "seconds": 0.03
+        },
+        {
+          "id": "whip-attack_net-step-004",
+          "frame": "CharacterWhipSkills/thorn-net/05",
+          "seconds": 0.03
+        },
+        {
+          "id": "whip-attack_net-step-005",
+          "frame": "CharacterWhipSkills/thorn-net/06",
+          "seconds": 0.03
+        },
+        {
+          "id": "whip-attack_net-step-006",
+          "frame": "CharacterWhipSkills/thorn-net/08",
+          "seconds": 0.03
+        },
+        {
+          "id": "whip-attack_net-step-007",
+          "frame": "CharacterWhipSkills/thorn-net/10",
+          "seconds": 0.03
+        },
+        {
+          "id": "whip-attack_net-step-008",
+          "frame": "CharacterWhipSkills/thorn-net/12",
+          "seconds": 0.035
+        },
+        {
+          "id": "whip-attack_net-step-009",
+          "frame": "CharacterWhipSkills/thorn-net/13",
+          "seconds": 0.035
+        },
+        {
+          "id": "whip-attack_net-step-010",
+          "frame": "CharacterWhipSkills/thorn-net/14",
+          "seconds": 0.035
+        },
+        {
+          "id": "whip-attack_net-step-011",
+          "frame": "CharacterWhipSkills/thorn-net/15",
+          "seconds": 0.035
+        },
+        {
+          "id": "whip-attack_net-step-012",
+          "frame": "CharacterWhipSkills/thorn-net/16",
+          "seconds": 0.06
+        },
+        {
+          "id": "whip-attack_net-step-013",
+          "frame": "CharacterWhipSkills/thorn-net/17",
+          "seconds": 0.06
+        },
+        {
+          "id": "whip-attack_net-step-014",
+          "frame": "CharacterWhipSkills/thorn-net/18",
+          "seconds": 0.05
+        },
+        {
+          "id": "whip-attack_net-step-015",
+          "frame": "CharacterWhipSkills/thorn-net/19",
+          "seconds": 0.28
+        }
+      ],
+      "sourceImpact": 0.35,
+      "fxStart": -1
+    },
+    {
+      "id": "whip/attack_knot",
+      "palette": "whip/attack_knot",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "whip-attack_knot-step-001",
+          "frame": "CharacterWhipSkills/knot-approach/01",
+          "seconds": 0.025
+        },
+        {
+          "id": "whip-attack_knot-step-002",
+          "frame": "CharacterWhipSkills/knot-approach/02",
+          "seconds": 0.025
+        },
+        {
+          "id": "whip-attack_knot-step-003",
+          "frame": "CharacterWhipSkills/knot-approach/03",
+          "seconds": 0.025
+        },
+        {
+          "id": "whip-attack_knot-step-004",
+          "frame": "CharacterWhipSkills/knot-approach/04",
+          "seconds": 0.025
+        },
+        {
+          "id": "whip-attack_knot-step-005",
+          "frame": "CharacterWhipSkills/knot-approach/05",
+          "seconds": 0.025
+        },
+        {
+          "id": "whip-attack_knot-step-006",
+          "frame": "CharacterWhipSkills/knot-approach/knot-approach-06s",
+          "seconds": 0.025
+        },
+        {
+          "id": "whip-attack_knot-step-007",
+          "frame": "CharacterWhipSkills/knot-approach/knot-approach-08s",
+          "seconds": 0.05
+        },
+        {
+          "id": "whip-attack_knot-step-008",
+          "frame": "CharacterWhipSkills/knot-approach/knot-approach-10s",
+          "seconds": 0.05
+        },
+        {
+          "id": "whip-attack_knot-step-009",
+          "frame": "CharacterWhipSkills/knot-approach/knot-approach-13s",
+          "seconds": 0.05
+        },
+        {
+          "id": "whip-attack_knot-step-010",
+          "frame": "CharacterWhipSkills/knot-approach/knot-approach-16s",
+          "seconds": 0.2
+        }
+      ],
+      "sourceImpact": 0.15,
+      "fxStart": -1
+    },
+    {
+      "id": "whip/attack_tighten",
+      "palette": "whip/attack_tighten",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "whip-attack_tighten-step-001",
+          "frame": "CharacterWhipSkills/knot-tighten/01",
+          "seconds": 0.03
+        },
+        {
+          "id": "whip-attack_tighten-step-002",
+          "frame": "CharacterWhipSkills/knot-tighten/02",
+          "seconds": 0.03
+        },
+        {
+          "id": "whip-attack_tighten-step-003",
+          "frame": "CharacterWhipSkills/knot-tighten/03",
+          "seconds": 0.03
+        },
+        {
+          "id": "whip-attack_tighten-step-004",
+          "frame": "CharacterWhipSkills/knot-tighten/04",
+          "seconds": 0.03
+        },
+        {
+          "id": "whip-attack_tighten-step-005",
+          "frame": "CharacterWhipSkills/knot-tighten/05",
+          "seconds": 0.03
+        },
+        {
+          "id": "whip-attack_tighten-step-006",
+          "frame": "CharacterWhipSkills/knot-tighten/06",
+          "seconds": 0.03
+        },
+        {
+          "id": "whip-attack_tighten-step-007",
+          "frame": "CharacterWhipSkills/knot-tighten/07",
+          "seconds": 0.035
+        },
+        {
+          "id": "whip-attack_tighten-step-008",
+          "frame": "CharacterWhipSkills/knot-tighten/knot-tighten-08s",
+          "seconds": 0.035
+        },
+        {
+          "id": "whip-attack_tighten-step-009",
+          "frame": "CharacterWhipSkills/knot-tighten/knot-tighten-09s",
+          "seconds": 0.05
+        },
+        {
+          "id": "whip-attack_tighten-step-010",
+          "frame": "CharacterWhipSkills/knot-tighten/knot-tighten-12s",
+          "seconds": 0.05
+        },
+        {
+          "id": "whip-attack_tighten-step-011",
+          "frame": "CharacterWhipSkills/knot-tighten/knot-tighten-16s",
+          "seconds": 0.04
+        },
+        {
+          "id": "whip-attack_tighten-step-012",
+          "frame": "CharacterWhipSkills/knot-tighten/knot-tighten-21s",
+          "seconds": 0.04
+        },
+        {
+          "id": "whip-attack_tighten-step-013",
+          "frame": "CharacterWhipSkills/knot-tighten/knot-tighten-22s",
+          "seconds": 0.04
+        },
+        {
+          "id": "whip-attack_tighten-step-014",
+          "frame": "CharacterWhipSkills/knot-tighten/knot-tighten-23s",
+          "seconds": 0.13
+        }
+      ],
+      "sourceImpact": 0.25,
+      "fxStart": -1
+    },
+    {
+      "id": "dagger/attack1",
+      "palette": "dagger/attack1",
+      "mode": "CombatTimeFixed",
+      "sourceImpact": 0.045,
+      "fxStart": 0.045,
+      "steps": [
+        {
+          "id": "dagger-attack1-1",
+          "frame": "CharacterDaggerSkills/basic/1-06",
+          "seconds": 0.045
+        },
+        {
+          "id": "dagger-attack1-2",
+          "frame": "CharacterDaggerSkills/basic/1-07",
+          "seconds": 0.055
+        },
+        {
+          "id": "dagger-attack1-3",
+          "frame": "CharacterDaggerSkills/basic/1-09",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack1-4",
+          "frame": "CharacterDaggerSkills/basic/1-11",
+          "seconds": 0.035
+        }
+      ]
+    },
+    {
+      "id": "dagger/attack2",
+      "palette": "dagger/attack2",
+      "mode": "CombatTimeFixed",
+      "sourceImpact": 0.045,
+      "fxStart": 0.045,
+      "steps": [
+        {
+          "id": "dagger-attack2-1",
+          "frame": "CharacterDaggerSkills/basic/1-11",
+          "seconds": 0.045
+        },
+        {
+          "id": "dagger-attack2-2",
+          "frame": "CharacterDaggerSkills/basic/1-12",
+          "seconds": 0.055
+        },
+        {
+          "id": "dagger-attack2-3",
+          "frame": "CharacterDaggerSkills/basic/1-13",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack2-4",
+          "frame": "CharacterDaggerSkills/basic/1-20",
+          "seconds": 0.035
+        }
+      ]
+    },
+    {
+      "id": "dagger/attack3",
+      "palette": "dagger/attack3",
+      "mode": "CombatTimeFixed",
+      "sourceImpact": 0.1,
+      "fxStart": 0.1,
+      "steps": [
+        {
+          "id": "dagger-attack3-1",
+          "frame": "CharacterDaggerSkills/basic/1-20",
+          "seconds": 0.04
+        },
+        {
+          "id": "dagger-attack3-2",
+          "frame": "CharacterDaggerSkills/basic/1-22",
+          "seconds": 0.06
+        },
+        {
+          "id": "dagger-attack3-3",
+          "frame": "CharacterDaggerSkills/basic/1-25",
+          "seconds": 0.06
+        },
+        {
+          "id": "dagger-attack3-4",
+          "frame": "CharacterDaggerSkills/basic/1-26",
+          "seconds": 0.05
+        },
+        {
+          "id": "dagger-attack3-5",
+          "frame": "CharacterDaggerSkills/basic/2-03",
+          "seconds": 0.05
+        }
+      ]
+    },
+    {
+      "id": "dagger/attack4",
+      "palette": "dagger/attack4",
+      "mode": "CombatTimeFixed",
+      "sourceImpact": 0.255,
+      "fxStart": 0.255,
+      "steps": [
+        {
+          "id": "dagger-attack4-1",
+          "frame": "CharacterDaggerSkills/basic/2-08",
+          "seconds": 0.06
+        },
+        {
+          "id": "dagger-attack4-2",
+          "frame": "CharacterDaggerSkills/basic/2-14",
+          "seconds": 0.06
+        },
+        {
+          "id": "dagger-attack4-3",
+          "frame": "CharacterDaggerSkills/basic/2-17",
+          "seconds": 0.07
+        },
+        {
+          "id": "dagger-attack4-4",
+          "frame": "CharacterDaggerSkills/basic/2-20",
+          "seconds": 0.065
+        },
+        {
+          "id": "dagger-attack4-5",
+          "frame": "CharacterDaggerSkills/basic/2-21",
+          "seconds": 0.075
+        },
+        {
+          "id": "dagger-attack4-6",
+          "frame": "CharacterDaggerSkills/basic/2-24",
+          "seconds": 0.04
+        },
+        {
+          "id": "dagger-attack4-7",
+          "frame": "CharacterDaggerSkills/basic/2-27",
+          "seconds": 0.04
+        }
+      ]
+    },
+    {
+      "id": "dagger/attack_hold_breath",
+      "palette": "dagger/attack_hold_breath",
+      "mode": "CombatTimeFixed",
+      "sourceImpact": 0.1,
+      "fxStart": -1,
+      "steps": [
+        {
+          "id": "dagger-attack-hold-breath-1",
+          "frame": "CharacterDaggerSkills/hold_breath/00",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-hold-breath-2",
+          "frame": "CharacterDaggerSkills/hold_breath/02",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-hold-breath-3",
+          "frame": "CharacterDaggerSkills/hold_breath/03",
+          "seconds": 0.04
+        },
+        {
+          "id": "dagger-attack-hold-breath-4",
+          "frame": "CharacterDaggerSkills/hold_breath/04",
+          "seconds": 0.04
+        },
+        {
+          "id": "dagger-attack-hold-breath-5",
+          "frame": "CharacterDaggerSkills/hold_breath/06",
+          "seconds": 0.05
+        },
+        {
+          "id": "dagger-attack-hold-breath-6",
+          "frame": "CharacterDaggerSkills/hold_breath/09",
+          "seconds": 0.05
+        },
+        {
+          "id": "dagger-attack-hold-breath-7",
+          "frame": "CharacterDaggerSkills/hold_breath/12",
+          "seconds": 0.04
+        },
+        {
+          "id": "dagger-attack-hold-breath-8",
+          "frame": "CharacterDaggerSkills/hold_breath/15",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-hold-breath-9",
+          "frame": "CharacterDaggerSkills/hold_breath/17",
+          "seconds": 0.02
+        },
+        {
+          "id": "dagger-attack-hold-breath-10",
+          "frame": "CharacterDaggerSkills/hold_breath/19",
+          "seconds": 0.02
+        }
+      ]
+    },
+    {
+      "id": "dagger/attack_ink_smoke",
+      "palette": "dagger/attack_ink_smoke",
+      "mode": "CombatTimeFixed",
+      "sourceImpact": 0.15,
+      "fxStart": -1,
+      "steps": [
+        {
+          "id": "dagger-attack-ink-smoke-1",
+          "frame": "CharacterDaggerSkills/ink_smoke/00",
+          "seconds": 0.02
+        },
+        {
+          "id": "dagger-attack-ink-smoke-2",
+          "frame": "CharacterDaggerSkills/ink_smoke/02",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-ink-smoke-3",
+          "frame": "CharacterDaggerSkills/ink_smoke/04",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-ink-smoke-4",
+          "frame": "CharacterDaggerSkills/ink_smoke/06",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-ink-smoke-5",
+          "frame": "CharacterDaggerSkills/ink_smoke/07",
+          "seconds": 0.04
+        },
+        {
+          "id": "dagger-attack-ink-smoke-6",
+          "frame": "CharacterDaggerSkills/ink_smoke/08",
+          "seconds": 0.04
+        },
+        {
+          "id": "dagger-attack-ink-smoke-7",
+          "frame": "CharacterDaggerSkills/ink_smoke/10",
+          "seconds": 0.05
+        },
+        {
+          "id": "dagger-attack-ink-smoke-8",
+          "frame": "CharacterDaggerSkills/ink_smoke/12",
+          "seconds": 0.06
+        },
+        {
+          "id": "dagger-attack-ink-smoke-9",
+          "frame": "CharacterDaggerSkills/ink_smoke/20",
+          "seconds": 0.05
+        },
+        {
+          "id": "dagger-attack-ink-smoke-10",
+          "frame": "CharacterDaggerSkills/ink_smoke/23",
+          "seconds": 0.04
+        },
+        {
+          "id": "dagger-attack-ink-smoke-11",
+          "frame": "CharacterDaggerSkills/ink_smoke/25",
+          "seconds": 0.04
+        },
+        {
+          "id": "dagger-attack-ink-smoke-12",
+          "frame": "CharacterDaggerSkills/ink_smoke/27",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-ink-smoke-13",
+          "frame": "CharacterDaggerSkills/ink_smoke/29",
+          "seconds": 0.02
+        },
+        {
+          "id": "dagger-attack-ink-smoke-14",
+          "frame": "CharacterDaggerSkills/ink_smoke/31",
+          "seconds": 0.02
+        }
+      ]
+    },
+    {
+      "id": "dagger/attack_triple_leap",
+      "palette": "dagger/attack_triple_leap",
+      "mode": "CombatTimeFixed",
+      "sourceImpact": 0.08,
+      "fxStart": -1,
+      "steps": [
+        {
+          "id": "dagger-attack-triple-leap-1",
+          "frame": "CharacterDaggerSkills/triple_leap/00",
+          "seconds": 0.02
+        },
+        {
+          "id": "dagger-attack-triple-leap-2",
+          "frame": "CharacterDaggerSkills/triple_leap/04",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-triple-leap-3",
+          "frame": "CharacterDaggerSkills/triple_leap/06",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-triple-leap-4",
+          "frame": "CharacterDaggerSkills/triple_leap/07",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-triple-leap-5",
+          "frame": "CharacterDaggerSkills/triple_leap/09",
+          "seconds": 0.04
+        },
+        {
+          "id": "dagger-attack-triple-leap-6",
+          "frame": "CharacterDaggerSkills/triple_leap/12",
+          "seconds": 0.04
+        },
+        {
+          "id": "dagger-attack-triple-leap-7",
+          "frame": "CharacterDaggerSkills/triple_leap/15",
+          "seconds": 0.04
+        },
+        {
+          "id": "dagger-attack-triple-leap-8",
+          "frame": "CharacterDaggerSkills/triple_leap/17",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-triple-leap-9",
+          "frame": "CharacterDaggerSkills/triple_leap/18",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-triple-leap-10",
+          "frame": "CharacterDaggerSkills/triple_leap/19",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-triple-leap-11",
+          "frame": "CharacterDaggerSkills/triple_leap/20",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-triple-leap-12",
+          "frame": "CharacterDaggerSkills/triple_leap/22",
+          "seconds": 0.03
+        }
+      ]
+    },
+    {
+      "id": "dagger/attack_flurry",
+      "palette": "dagger/attack_flurry",
+      "mode": "CombatTimeFixed",
+      "sourceImpact": 0.15,
+      "fxStart": -1,
+      "steps": [
+        {
+          "id": "dagger-attack-flurry-1",
+          "frame": "CharacterDaggerSkills/flurry/04",
+          "seconds": 0.05
+        },
+        {
+          "id": "dagger-attack-flurry-2",
+          "frame": "CharacterDaggerSkills/flurry/12",
+          "seconds": 0.04
+        },
+        {
+          "id": "dagger-attack-flurry-3",
+          "frame": "CharacterDaggerSkills/flurry/50",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-flurry-4",
+          "frame": "CharacterDaggerSkills/flurry/19",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-flurry-5",
+          "frame": "CharacterDaggerSkills/flurry/53",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-flurry-6",
+          "frame": "CharacterDaggerSkills/flurry/59",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-flurry-7",
+          "frame": "CharacterDaggerSkills/flurry/50",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-flurry-8",
+          "frame": "CharacterDaggerSkills/flurry/38",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-flurry-9",
+          "frame": "CharacterDaggerSkills/flurry/53",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-flurry-10",
+          "frame": "CharacterDaggerSkills/flurry/20",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-flurry-11",
+          "frame": "CharacterDaggerSkills/flurry/50",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-flurry-12",
+          "frame": "CharacterDaggerSkills/flurry/60",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-flurry-13",
+          "frame": "CharacterDaggerSkills/flurry/53",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-flurry-14",
+          "frame": "CharacterDaggerSkills/flurry/37",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-flurry-15",
+          "frame": "CharacterDaggerSkills/flurry/50",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-flurry-16",
+          "frame": "CharacterDaggerSkills/flurry/19",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-flurry-17",
+          "frame": "CharacterDaggerSkills/flurry/53",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-flurry-18",
+          "frame": "CharacterDaggerSkills/flurry/59",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-flurry-19",
+          "frame": "CharacterDaggerSkills/flurry/50",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-flurry-20",
+          "frame": "CharacterDaggerSkills/flurry/38",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-flurry-21",
+          "frame": "CharacterDaggerSkills/flurry/53",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-flurry-22",
+          "frame": "CharacterDaggerSkills/flurry/20",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-flurry-23",
+          "frame": "CharacterDaggerSkills/flurry/50",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-flurry-24",
+          "frame": "CharacterDaggerSkills/flurry/74",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-flurry-25",
+          "frame": "CharacterDaggerSkills/flurry/77",
+          "seconds": 0.1
+        },
+        {
+          "id": "dagger-attack-flurry-26",
+          "frame": "CharacterDaggerSkills/flurry/84",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-flurry-27",
+          "frame": "CharacterDaggerSkills/flurry/86",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-flurry-28",
+          "frame": "CharacterDaggerSkills/flurry/88",
+          "seconds": 0.03
+        },
+        {
+          "id": "dagger-attack-flurry-29",
+          "frame": "CharacterDaggerSkills/flurry/95",
+          "seconds": 0.01
+        }
+      ]
+    },
+    {
+      "id": "bomb/attack_triple_kick",
+      "palette": "bomb/attack_triple_kick",
+      "mode": "CombatTimeFixed",
+      "sourceImpact": 0.2,
+      "fxStart": -1,
+      "steps": [
+        {
+          "id": "bomb-attack-triple-kick-1",
+          "frame": "CharacterBombSkills/triple_kick/00",
+          "seconds": 0.04
+        },
+        {
+          "id": "bomb-attack-triple-kick-2",
+          "frame": "CharacterBombSkills/triple_kick/02",
+          "seconds": 0.04
+        },
+        {
+          "id": "bomb-attack-triple-kick-3",
+          "frame": "CharacterBombSkills/triple_kick/04",
+          "seconds": 0.04
+        },
+        {
+          "id": "bomb-attack-triple-kick-4",
+          "frame": "CharacterBombSkills/triple_kick/06",
+          "seconds": 0.04
+        },
+        {
+          "id": "bomb-attack-triple-kick-5",
+          "frame": "CharacterBombSkills/triple_kick/09",
+          "seconds": 0.04
+        },
+        {
+          "id": "bomb-attack-triple-kick-6",
+          "frame": "CharacterBombSkills/triple_kick/11",
+          "seconds": 0.07
+        },
+        {
+          "id": "bomb-attack-triple-kick-7",
+          "frame": "CharacterBombSkills/triple_kick/12",
+          "seconds": 0.08
+        },
+        {
+          "id": "bomb-attack-triple-kick-8",
+          "frame": "CharacterBombSkills/triple_kick/13",
+          "seconds": 0.07
+        },
+        {
+          "id": "bomb-attack-triple-kick-9",
+          "frame": "CharacterBombSkills/triple_kick/14",
+          "seconds": 0.08
+        },
+        {
+          "id": "bomb-attack-triple-kick-10",
+          "frame": "CharacterBombSkills/triple_kick/15",
+          "seconds": 0.06
+        },
+        {
+          "id": "bomb-attack-triple-kick-11",
+          "frame": "CharacterBombSkills/triple_kick/17",
+          "seconds": 0.06
+        },
+        {
+          "id": "bomb-attack-triple-kick-12",
+          "frame": "CharacterBombSkills/triple_kick/18",
+          "seconds": 0.06
+        },
+        {
+          "id": "bomb-attack-triple-kick-13",
+          "frame": "CharacterBombSkills/triple_kick/19",
+          "seconds": 0.06
+        },
+        {
+          "id": "bomb-attack-triple-kick-14",
+          "frame": "CharacterBombSkills/triple_kick/21",
+          "seconds": 0.06
+        },
+        {
+          "id": "bomb-attack-triple-kick-15",
+          "frame": "CharacterBombSkills/triple_kick/23",
+          "seconds": 0.06
+        },
+        {
+          "id": "bomb-attack-triple-kick-16",
+          "frame": "CharacterBombSkills/triple_kick/27",
+          "seconds": 0.04
+        }
+      ]
+    },
+    {
+      "id": "bomb/attack_big_heave",
+      "palette": "bomb/attack_big_heave",
+      "mode": "CombatTimeFixed",
+      "sourceImpact": 0.3,
+      "fxStart": -1,
+      "steps": [
+        {
+          "id": "bomb-attack-big-heave-1",
+          "frame": "CharacterBombSkills/big_heave/00",
+          "seconds": 0.04
+        },
+        {
+          "id": "bomb-attack-big-heave-2",
+          "frame": "CharacterBombSkills/big_heave/02",
+          "seconds": 0.04
+        },
+        {
+          "id": "bomb-attack-big-heave-3",
+          "frame": "CharacterBombSkills/big_heave/04",
+          "seconds": 0.06
+        },
+        {
+          "id": "bomb-attack-big-heave-4",
+          "frame": "CharacterBombSkills/big_heave/05",
+          "seconds": 0.06
+        },
+        {
+          "id": "bomb-attack-big-heave-5",
+          "frame": "CharacterBombSkills/big_heave/07",
+          "seconds": 0.06
+        },
+        {
+          "id": "bomb-attack-big-heave-6",
+          "frame": "CharacterBombSkills/big_heave/09",
+          "seconds": 0.04
+        },
+        {
+          "id": "bomb-attack-big-heave-7",
+          "frame": "CharacterBombSkills/big_heave/12",
+          "seconds": 0.06
+        },
+        {
+          "id": "bomb-attack-big-heave-8",
+          "frame": "CharacterBombSkills/big_heave/14",
+          "seconds": 0.08
+        },
+        {
+          "id": "bomb-attack-big-heave-9",
+          "frame": "CharacterBombSkills/big_heave/16",
+          "seconds": 0.08
+        },
+        {
+          "id": "bomb-attack-big-heave-10",
+          "frame": "CharacterBombSkills/big_heave/18",
+          "seconds": 0.08
+        },
+        {
+          "id": "bomb-attack-big-heave-11",
+          "frame": "CharacterBombSkills/big_heave/20",
+          "seconds": 0.08
+        },
+        {
+          "id": "bomb-attack-big-heave-12",
+          "frame": "CharacterBombSkills/big_heave/22",
+          "seconds": 0.08
+        },
+        {
+          "id": "bomb-attack-big-heave-13",
+          "frame": "CharacterBombSkills/big_heave/25",
+          "seconds": 0.06
+        },
+        {
+          "id": "bomb-attack-big-heave-14",
+          "frame": "CharacterBombSkills/big_heave/27",
+          "seconds": 0.05
+        },
+        {
+          "id": "bomb-attack-big-heave-15",
+          "frame": "CharacterBombSkills/big_heave/29",
+          "seconds": 0.03
+        }
+      ]
+    },
+    {
+      "id": "bomb/attack_missile",
+      "palette": "bomb/attack_missile",
+      "mode": "CombatTimeFixed",
+      "sourceImpact": 0.2,
+      "fxStart": -1,
+      "steps": [
+        {
+          "id": "bomb-attack-missile-1",
+          "frame": "CharacterBombSkills/missile_launch/00",
+          "seconds": 0.05
+        },
+        {
+          "id": "bomb-attack-missile-2",
+          "frame": "CharacterBombSkills/missile_launch/05",
+          "seconds": 0.05
+        },
+        {
+          "id": "bomb-attack-missile-3",
+          "frame": "CharacterBombSkills/missile_launch/09",
+          "seconds": 0.04
+        },
+        {
+          "id": "bomb-attack-missile-4",
+          "frame": "CharacterBombSkills/missile_launch/13",
+          "seconds": 0.03
+        },
+        {
+          "id": "bomb-attack-missile-5",
+          "frame": "CharacterBombSkills/missile_launch/18",
+          "seconds": 0.03
+        }
+      ]
+    },
+    {
+      "id": "bomb/attack_timed_toss",
+      "palette": "bomb/attack_timed_toss",
+      "mode": "CombatTimeFixed",
+      "sourceImpact": 0.2,
+      "fxStart": -1,
+      "steps": [
+        {
+          "id": "bomb-attack-timed-toss-1",
+          "frame": "CharacterBombSkills/timed_toss/00",
+          "seconds": 0.05
+        },
+        {
+          "id": "bomb-attack-timed-toss-2",
+          "frame": "CharacterBombSkills/timed_toss/03",
+          "seconds": 0.05
+        },
+        {
+          "id": "bomb-attack-timed-toss-3",
+          "frame": "CharacterBombSkills/timed_toss/06",
+          "seconds": 0.05
+        },
+        {
+          "id": "bomb-attack-timed-toss-4",
+          "frame": "CharacterBombSkills/timed_toss/14",
+          "seconds": 0.05
+        },
+        {
+          "id": "bomb-attack-timed-toss-5",
+          "frame": "CharacterBombSkills/timed_toss/17",
+          "seconds": 0.06
+        },
+        {
+          "id": "bomb-attack-timed-toss-6",
+          "frame": "CharacterBombSkills/timed_toss/19",
+          "seconds": 0.08
+        },
+        {
+          "id": "bomb-attack-timed-toss-7",
+          "frame": "CharacterBombSkills/timed_toss/21",
+          "seconds": 0.08
+        },
+        {
+          "id": "bomb-attack-timed-toss-8",
+          "frame": "CharacterBombSkills/timed_toss/23",
+          "seconds": 0.08
+        },
+        {
+          "id": "bomb-attack-timed-toss-9",
+          "frame": "CharacterBombSkills/timed_toss/28",
+          "seconds": 0.06
+        },
+        {
+          "id": "bomb-attack-timed-toss-10",
+          "frame": "CharacterBombSkills/timed_toss/30",
+          "seconds": 0.04
+        }
+      ]
+    },
+    {
+      "id": "launcher/attack_charge_shot",
+      "palette": "launcher/attack_charge_shot",
+      "mode": "CombatTimeFixed",
+      "sourceImpact": 0.2,
+      "fxStart": -1,
+      "steps": [
+        {
+          "id": "launcher-attack-charge-shot-1",
+          "frame": "CharacterLauncherSkills/attack_charge_shot/00",
+          "seconds": 0.04
+        },
+        {
+          "id": "launcher-attack-charge-shot-2",
+          "frame": "CharacterLauncherSkills/attack_charge_shot/02",
+          "seconds": 0.04
+        },
+        {
+          "id": "launcher-attack-charge-shot-3",
+          "frame": "CharacterLauncherSkills/attack_charge_shot/03",
+          "seconds": 0.04
+        },
+        {
+          "id": "launcher-attack-charge-shot-4",
+          "frame": "CharacterLauncherSkills/attack_charge_shot/05",
+          "seconds": 0.04
+        },
+        {
+          "id": "launcher-attack-charge-shot-5",
+          "frame": "CharacterLauncherSkills/attack_charge_shot/08",
+          "seconds": 0.04
+        },
+        {
+          "id": "launcher-attack-charge-shot-6",
+          "frame": "CharacterLauncherSkills/attack_charge_shot/18",
+          "seconds": 0.05
+        },
+        {
+          "id": "launcher-attack-charge-shot-7",
+          "frame": "CharacterLauncherSkills/attack_charge_shot/20",
+          "seconds": 0.05
+        },
+        {
+          "id": "launcher-attack-charge-shot-8",
+          "frame": "CharacterLauncherSkills/attack_charge_shot/22",
+          "seconds": 0.05
+        },
+        {
+          "id": "launcher-attack-charge-shot-9",
+          "frame": "CharacterLauncherSkills/attack_charge_shot/24",
+          "seconds": 0.05
+        },
+        {
+          "id": "launcher-attack-charge-shot-10",
+          "frame": "CharacterLauncherSkills/attack_charge_shot/26",
+          "seconds": 0.05
+        },
+        {
+          "id": "launcher-attack-charge-shot-11",
+          "frame": "CharacterLauncherSkills/attack_charge_shot/28",
+          "seconds": 0.05
+        }
+      ]
+    },
+    {
+      "id": "launcher_laser/attack_laser_beam",
+      "palette": "launcher_laser/attack_laser_beam",
+      "mode": "CombatTimeFixed",
+      "sourceImpact": 0.15,
+      "fxStart": -1,
+      "steps": [
+        {
+          "id": "launcher_laser-attack-laser-beam-1",
+          "frame": "CharacterLauncherSkills/attack_laser_beam/00",
+          "seconds": 0.05
+        },
+        {
+          "id": "launcher_laser-attack-laser-beam-2",
+          "frame": "CharacterLauncherSkills/attack_laser_beam/03",
+          "seconds": 0.05
+        },
+        {
+          "id": "launcher_laser-attack-laser-beam-3",
+          "frame": "CharacterLauncherSkills/attack_laser_beam/05",
+          "seconds": 0.05
+        },
+        {
+          "id": "launcher_laser-attack-laser-beam-4",
+          "frame": "CharacterLauncherSkills/attack_laser_beam/06",
+          "seconds": 0.05
+        },
+        {
+          "id": "launcher_laser-attack-laser-beam-5",
+          "frame": "CharacterLauncherSkills/attack_laser_beam/08",
+          "seconds": 0.05
+        },
+        {
+          "id": "launcher_laser-attack-laser-beam-6",
+          "frame": "CharacterLauncherSkills/attack_laser_beam/11",
+          "seconds": 0.05
+        },
+        {
+          "id": "launcher_laser-attack-laser-beam-7",
+          "frame": "CharacterLauncherSkills/attack_laser_beam/13",
+          "seconds": 0.05
+        },
+        {
+          "id": "launcher_laser-attack-laser-beam-8",
+          "frame": "CharacterLauncherSkills/attack_laser_beam/16",
+          "seconds": 0.05
+        },
+        {
+          "id": "launcher_laser-attack-laser-beam-9",
+          "frame": "CharacterLauncherSkills/attack_laser_beam/19",
+          "seconds": 0.05
+        },
+        {
+          "id": "launcher_laser-attack-laser-beam-10",
+          "frame": "CharacterLauncherSkills/attack_laser_beam/22",
+          "seconds": 0.05
+        },
+        {
+          "id": "launcher_laser-attack-laser-beam-11",
+          "frame": "CharacterLauncherSkills/attack_laser_beam/26",
+          "seconds": 0.05
+        },
+        {
+          "id": "launcher_laser-attack-laser-beam-12",
+          "frame": "CharacterLauncherSkills/attack_laser_beam/28",
+          "seconds": 0.05
+        }
+      ]
+    },
+    {
+      "id": "launcher_shotgun/attack_blast_jump",
+      "palette": "launcher_shotgun/attack_blast_jump",
+      "mode": "CombatTimeFixed",
+      "sourceImpact": 0.15,
+      "fxStart": -1,
+      "steps": [
+        {
+          "id": "launcher_shotgun-attack-blast-jump-1",
+          "frame": "CharacterLauncherSkills/attack_blast_jump/00",
+          "seconds": 0.05
+        },
+        {
+          "id": "launcher_shotgun-attack-blast-jump-2",
+          "frame": "CharacterLauncherSkills/attack_blast_jump/03",
+          "seconds": 0.05
+        },
+        {
+          "id": "launcher_shotgun-attack-blast-jump-3",
+          "frame": "CharacterLauncherSkills/attack_blast_jump/05",
+          "seconds": 0.05
+        },
+        {
+          "id": "launcher_shotgun-attack-blast-jump-4",
+          "frame": "CharacterLauncherSkills/attack_blast_jump/06",
+          "seconds": 0.05
+        },
+        {
+          "id": "launcher_shotgun-attack-blast-jump-5",
+          "frame": "CharacterLauncherSkills/attack_blast_jump/09",
+          "seconds": 0.06
+        },
+        {
+          "id": "launcher_shotgun-attack-blast-jump-6",
+          "frame": "CharacterLauncherSkills/attack_blast_jump/12",
+          "seconds": 0.06
+        },
+        {
+          "id": "launcher_shotgun-attack-blast-jump-7",
+          "frame": "CharacterLauncherSkills/attack_blast_jump/14",
+          "seconds": 0.06
+        },
+        {
+          "id": "launcher_shotgun-attack-blast-jump-8",
+          "frame": "CharacterLauncherSkills/attack_blast_jump/16",
+          "seconds": 0.08
+        },
+        {
+          "id": "launcher_shotgun-attack-blast-jump-9",
+          "frame": "CharacterLauncherSkills/attack_blast_jump/18",
+          "seconds": 0.06
+        },
+        {
+          "id": "launcher_shotgun-attack-blast-jump-10",
+          "frame": "CharacterLauncherSkills/attack_blast_jump/20",
+          "seconds": 0.06
+        },
+        {
+          "id": "launcher_shotgun-attack-blast-jump-11",
+          "frame": "CharacterLauncherSkills/attack_blast_jump/22",
+          "seconds": 0.06
+        },
+        {
+          "id": "launcher_shotgun-attack-blast-jump-12",
+          "frame": "CharacterLauncherSkills/attack_blast_jump/24",
+          "seconds": 0.06
+        },
+        {
+          "id": "launcher_shotgun-attack-blast-jump-13",
+          "frame": "CharacterLauncherSkills/attack_blast_jump/26",
+          "seconds": 0.05
+        },
+        {
+          "id": "launcher_shotgun-attack-blast-jump-14",
+          "frame": "CharacterLauncherSkills/attack_blast_jump/28",
+          "seconds": 0.05
+        }
+      ]
+    },
+    {
+      "id": "launcher_grenade/attack_kneel_reload",
+      "palette": "launcher_grenade/attack_kneel_reload",
+      "mode": "CombatTimeFixed",
+      "sourceImpact": 0.2,
+      "fxStart": -1,
+      "steps": [
+        {
+          "id": "launcher_grenade-attack-kneel-reload-1",
+          "frame": "CharacterLauncherSkills/attack_kneel_reload/00",
+          "seconds": 0.06
+        },
+        {
+          "id": "launcher_grenade-attack-kneel-reload-2",
+          "frame": "CharacterLauncherSkills/attack_kneel_reload/02",
+          "seconds": 0.07
+        },
+        {
+          "id": "launcher_grenade-attack-kneel-reload-3",
+          "frame": "CharacterLauncherSkills/attack_kneel_reload/04",
+          "seconds": 0.07
+        },
+        {
+          "id": "launcher_grenade-attack-kneel-reload-4",
+          "frame": "CharacterLauncherSkills/attack_kneel_reload/06",
+          "seconds": 0.06
+        },
+        {
+          "id": "launcher_grenade-attack-kneel-reload-5",
+          "frame": "CharacterLauncherSkills/attack_kneel_reload/08",
+          "seconds": 0.06
+        },
+        {
+          "id": "launcher_grenade-attack-kneel-reload-6",
+          "frame": "CharacterLauncherSkills/attack_kneel_reload/10",
+          "seconds": 0.08
+        },
+        {
+          "id": "launcher_grenade-attack-kneel-reload-7",
+          "frame": "CharacterLauncherSkills/attack_kneel_reload/13",
+          "seconds": 0.07
+        },
+        {
+          "id": "launcher_grenade-attack-kneel-reload-8",
+          "frame": "CharacterLauncherSkills/attack_kneel_reload/16",
+          "seconds": 0.07
+        },
+        {
+          "id": "launcher_grenade-attack-kneel-reload-9",
+          "frame": "CharacterLauncherSkills/attack_kneel_reload/18",
+          "seconds": 0.06
+        },
+        {
+          "id": "launcher_grenade-attack-kneel-reload-10",
+          "frame": "CharacterLauncherSkills/attack_kneel_reload/20",
+          "seconds": 0.06
+        },
+        {
+          "id": "launcher_grenade-attack-kneel-reload-11",
+          "frame": "CharacterLauncherSkills/attack_kneel_reload/22",
+          "seconds": 0.06
+        },
+        {
+          "id": "launcher_grenade-attack-kneel-reload-12",
+          "frame": "CharacterLauncherSkills/attack_kneel_reload/24",
+          "seconds": 0.08
+        },
+        {
+          "id": "launcher_grenade-attack-kneel-reload-13",
+          "frame": "CharacterLauncherSkills/attack_kneel_reload/26",
+          "seconds": 0.06
+        },
+        {
+          "id": "launcher_grenade-attack-kneel-reload-14",
+          "frame": "CharacterLauncherSkills/attack_kneel_reload/28",
+          "seconds": 0.07
+        },
+        {
+          "id": "launcher_grenade-attack-kneel-reload-15",
+          "frame": "CharacterLauncherSkills/attack_kneel_reload/30",
+          "seconds": 0.07
+        }
+      ]
+    },
+    {
+      "id": "unarmed/attack1",
+      "palette": "unarmed/attack1",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "unarmed-hit1-jab09",
+          "frame": "UnarmedAttack/jab-combo/frame-09",
+          "seconds": 0.1
+        },
+        {
+          "id": "unarmed-hit1-jab10",
+          "frame": "UnarmedAttack/jab-combo/frame-10",
+          "seconds": 0.02
+        },
+        {
+          "id": "unarmed-hit1-jab11",
+          "frame": "UnarmedAttack/jab-combo/frame-11",
+          "seconds": 0.06
+        },
+        {
+          "id": "unarmed-hit1-jab12",
+          "frame": "UnarmedAttack/jab-combo/frame-12",
+          "seconds": 0.06
+        },
+        {
+          "id": "unarmed-hit1-jab14",
+          "frame": "UnarmedAttack/jab-combo/frame-14",
+          "seconds": 0.05
+        },
+        {
+          "id": "unarmed-hit1-jab15",
+          "frame": "UnarmedAttack/jab-combo/frame-15",
+          "seconds": 0.07
+        }
+      ],
+      "sourceImpact": 0.12,
+      "fxStart": 0.12
+    },
+    {
+      "id": "unarmed/attack2",
+      "palette": "unarmed/attack2",
+      "mode": "CombatTimeFixed",
+      "steps": [
+        {
+          "id": "unarmed-hit2-jab20",
+          "frame": "UnarmedAttack/jab-combo/frame-20",
+          "seconds": 0.1
+        },
+        {
+          "id": "unarmed-hit2-jab22",
+          "frame": "UnarmedAttack/jab-combo/frame-22",
+          "seconds": 0.02
+        },
+        {
+          "id": "unarmed-hit2-jab23",
+          "frame": "UnarmedAttack/jab-combo/frame-23",
+          "seconds": 0.07
+        },
+        {
+          "id": "unarmed-hit2-jab26",
+          "frame": "UnarmedAttack/jab-combo/frame-26",
+          "seconds": 0.07
+        },
+        {
+          "id": "unarmed-hit2-jab32",
+          "frame": "UnarmedAttack/jab-combo/frame-32",
+          "seconds": 0.06
+        }
+      ],
+      "sourceImpact": 0.12,
+      "fxStart": 0.12
+    }
+  ],
+  "actions": [
+    {
+      "actionId": "base_sword_basic_0",
+      "kind": 0,
+      "variant": -1,
+      "form": "base_sword",
+      "clip": "attack1",
+      "motion": "base_sword/attack1",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/base_sword_attack1.json"
+    },
+    {
+      "actionId": "base_sword_basic_1",
+      "kind": 0,
+      "variant": -1,
+      "form": "base_sword",
+      "clip": "attack2",
+      "motion": "base_sword/attack2",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/melee_frame_bindings.json"
+    },
+    {
+      "actionId": "base_sword_default",
+      "kind": 1,
+      "variant": -1,
+      "form": "base_sword",
+      "clip": "attack_strong_slash",
+      "motion": "base_sword/attack_strong_slash",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/melee_frame_bindings.json"
+    },
+    {
+      "actionId": "base_sword_follow_up",
+      "kind": 1,
+      "variant": -1,
+      "form": "base_sword",
+      "clip": "attack_reviewed_echo",
+      "motion": "base_sword/attack_reviewed_echo",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/special_frame_bindings.json"
+    },
+    {
+      "actionId": "base_sword_movement",
+      "kind": 1,
+      "variant": -1,
+      "form": "base_sword",
+      "clip": "attack_dash_thrust",
+      "motion": "base_sword/attack_dash_thrust",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/special_frame_bindings.json"
+    },
+    {
+      "actionId": "base_sword_range",
+      "kind": 1,
+      "variant": -1,
+      "form": "base_sword",
+      "clip": "attack_reviewed_wave",
+      "motion": "base_sword/attack_reviewed_wave",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/special_frame_bindings.json"
+    },
+    {
+      "actionId": "bomb_basic_0",
+      "kind": 0,
+      "variant": -1,
+      "form": "bomb",
+      "clip": "attack1",
+      "motion": "bomb/attack1",
+      "fallback": false
+    },
+    {
+      "actionId": "bomb_basic_special",
+      "kind": 1,
+      "variant": -1,
+      "form": "bomb",
+      "clip": "attack_triple_kick",
+      "motion": "bomb/attack_triple_kick",
+      "fallback": false
+    },
+    {
+      "actionId": "bomb_followup_special",
+      "kind": 1,
+      "variant": -1,
+      "form": "bomb",
+      "clip": "attack_timed_toss",
+      "motion": "bomb/attack_timed_toss",
+      "fallback": false
+    },
+    {
+      "actionId": "bomb_move_special",
+      "kind": 1,
+      "variant": -1,
+      "form": "bomb",
+      "clip": "attack_missile",
+      "motion": "bomb/attack_missile",
+      "fallback": false
+    },
+    {
+      "actionId": "bomb_range_special",
+      "kind": 1,
+      "variant": -1,
+      "form": "bomb",
+      "clip": "attack_big_heave",
+      "motion": "bomb/attack_big_heave",
+      "fallback": false
+    },
+    {
+      "actionId": "dagger_basic_0",
+      "kind": 0,
+      "variant": -1,
+      "form": "dagger",
+      "clip": "attack1",
+      "motion": "dagger/attack1",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/melee_frame_bindings.json"
+    },
+    {
+      "actionId": "dagger_basic_1",
+      "kind": 0,
+      "variant": -1,
+      "form": "dagger",
+      "clip": "attack2",
+      "motion": "dagger/attack2",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/melee_frame_bindings.json"
+    },
+    {
+      "actionId": "dagger_basic_2",
+      "kind": 0,
+      "variant": -1,
+      "form": "dagger",
+      "clip": "attack3",
+      "motion": "dagger/attack3",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/melee_frame_bindings.json"
+    },
+    {
+      "actionId": "dagger_basic_3",
+      "kind": 0,
+      "variant": -1,
+      "form": "dagger",
+      "clip": "attack4",
+      "motion": "dagger/attack4",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/melee_frame_bindings.json"
+    },
+    {
+      "actionId": "dagger_default",
+      "kind": 1,
+      "variant": -1,
+      "form": "dagger",
+      "clip": "attack_hold_breath",
+      "motion": "dagger/attack_hold_breath",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/special_frame_bindings.json"
+    },
+    {
+      "actionId": "dagger_follow_up",
+      "kind": 1,
+      "variant": -1,
+      "form": "dagger",
+      "clip": "attack_flurry",
+      "motion": "dagger/attack_flurry",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/special_frame_bindings.json"
+    },
+    {
+      "actionId": "dagger_movement",
+      "kind": 1,
+      "variant": -1,
+      "form": "dagger",
+      "clip": "attack_triple_leap",
+      "motion": "dagger/attack_triple_leap",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/special_frame_bindings.json"
+    },
+    {
+      "actionId": "dagger_range",
+      "kind": 1,
+      "variant": -1,
+      "form": "dagger",
+      "clip": "attack_ink_smoke",
+      "motion": "dagger/attack_ink_smoke",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/special_frame_bindings.json"
+    },
+    {
+      "actionId": "greatsword_basic_0",
+      "kind": 0,
+      "variant": -1,
+      "form": "greatsword",
+      "clip": "attack1",
+      "motion": "greatsword/attack1",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/melee_frame_bindings.json"
+    },
+    {
+      "actionId": "greatsword_basic_1",
+      "kind": 0,
+      "variant": -1,
+      "form": "greatsword",
+      "clip": "attack2",
+      "motion": "greatsword/attack2",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/melee_frame_bindings.json"
+    },
+    {
+      "actionId": "greatsword_basic_2",
+      "kind": 0,
+      "variant": -1,
+      "form": "greatsword",
+      "clip": "attack3",
+      "motion": "greatsword/attack3",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/melee_frame_bindings.json"
+    },
+    {
+      "actionId": "greatsword_default",
+      "kind": 1,
+      "variant": -1,
+      "form": "greatsword",
+      "clip": "attack_charge_slam",
+      "motion": "greatsword/attack_charge_slam",
+      "fallback": false
+    },
+    {
+      "actionId": "greatsword_follow_up",
+      "kind": 1,
+      "variant": -1,
+      "form": "greatsword",
+      "clip": "attack_throw_sword",
+      "motion": "greatsword/attack_throw_sword",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/special_frame_bindings.json"
+    },
+    {
+      "actionId": "greatsword_movement",
+      "kind": 1,
+      "variant": -1,
+      "form": "greatsword",
+      "clip": "attack_spin_advance",
+      "motion": "greatsword/attack_spin_advance",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/special_frame_bindings.json"
+    },
+    {
+      "actionId": "greatsword_range",
+      "kind": 1,
+      "variant": -1,
+      "form": "greatsword",
+      "clip": "attack_summon_sword",
+      "motion": "greatsword/attack_summon_sword",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/melee_frame_bindings.json"
+    },
+    {
+      "actionId": "hammer_basic_0",
+      "kind": 0,
+      "variant": -1,
+      "form": "hammer",
+      "clip": "attack1",
+      "motion": "hammer/attack1",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/melee_frame_bindings.json"
+    },
+    {
+      "actionId": "hammer_basic_1",
+      "kind": 0,
+      "variant": -1,
+      "form": "hammer",
+      "clip": "attack2",
+      "motion": "hammer/attack2",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/melee_frame_bindings.json"
+    },
+    {
+      "actionId": "hammer_default",
+      "kind": 1,
+      "variant": -1,
+      "form": "hammer",
+      "clip": "attack_default_slam",
+      "motion": "hammer/attack_default_slam",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/special_frame_bindings.json"
+    },
+    {
+      "actionId": "hammer_follow_up",
+      "kind": 1,
+      "variant": -1,
+      "form": "hammer",
+      "clip": "attack_default_slam",
+      "motion": "hammer/attack_default_slam",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/special_frame_bindings.json"
+    },
+    {
+      "actionId": "hammer_movement",
+      "kind": 1,
+      "variant": -1,
+      "form": "hammer",
+      "clip": "attack_rush_push",
+      "motion": "hammer/attack_rush_push",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/special_frame_bindings.json"
+    },
+    {
+      "actionId": "hammer_range",
+      "kind": 1,
+      "variant": -1,
+      "form": "hammer",
+      "clip": "attack_range_slam",
+      "motion": "hammer/attack_range_slam",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/special_frame_bindings.json"
+    },
+    {
+      "actionId": "launcher_basic_0",
+      "kind": 2,
+      "variant": 0,
+      "form": "launcher",
+      "clip": "attack_single",
+      "motion": "launcher/attack_single",
+      "fallback": false
+    },
+    {
+      "actionId": "launcher_basic_0",
+      "kind": 2,
+      "variant": 1,
+      "form": "launcher_laser",
+      "clip": "attack_single",
+      "motion": "launcher_laser/attack_single",
+      "fallback": false
+    },
+    {
+      "actionId": "launcher_basic_0",
+      "kind": 2,
+      "variant": 2,
+      "form": "launcher_shotgun",
+      "clip": "attack_single",
+      "motion": "launcher_shotgun/attack_single",
+      "fallback": false
+    },
+    {
+      "actionId": "launcher_basic_0",
+      "kind": 2,
+      "variant": 3,
+      "form": "launcher_grenade",
+      "clip": "attack_single",
+      "motion": "launcher_grenade/attack_single",
+      "fallback": false
+    },
+    {
+      "actionId": "launcher_basic_special",
+      "kind": 1,
+      "variant": -1,
+      "form": "launcher",
+      "clip": "attack_charge_shot",
+      "motion": "launcher/attack_charge_shot",
+      "fallback": false
+    },
+    {
+      "actionId": "launcher_range_special",
+      "kind": 1,
+      "variant": -1,
+      "form": "launcher_laser",
+      "clip": "attack_laser_beam",
+      "motion": "launcher_laser/attack_laser_beam",
+      "fallback": false
+    },
+    {
+      "actionId": "launcher_move_special",
+      "kind": 1,
+      "variant": -1,
+      "form": "launcher_shotgun",
+      "clip": "attack_blast_jump",
+      "motion": "launcher_shotgun/attack_blast_jump",
+      "fallback": false
+    },
+    {
+      "actionId": "launcher_followup_special",
+      "kind": 1,
+      "variant": -1,
+      "form": "launcher_grenade",
+      "clip": "attack_kneel_reload",
+      "motion": "launcher_grenade/attack_kneel_reload",
+      "fallback": false
+    },
+    {
+      "actionId": "rapier_basic_0",
+      "kind": 0,
+      "variant": -1,
+      "form": "rapier",
+      "clip": "attack1",
+      "motion": "rapier/attack1",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/melee_frame_bindings.json"
+    },
+    {
+      "actionId": "rapier_basic_1",
+      "kind": 0,
+      "variant": -1,
+      "form": "rapier",
+      "clip": "attack2",
+      "motion": "rapier/attack2",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/melee_frame_bindings.json"
+    },
+    {
+      "actionId": "rapier_basic_2",
+      "kind": 0,
+      "variant": -1,
+      "form": "rapier",
+      "clip": "attack3",
+      "motion": "rapier/attack3",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/melee_frame_bindings.json"
+    },
+    {
+      "actionId": "rapier_default",
+      "kind": 1,
+      "variant": -1,
+      "form": "rapier",
+      "clip": "attack_charge",
+      "motion": "rapier/attack_charge",
+      "fallback": false
+    },
+    {
+      "actionId": "rapier_follow_up",
+      "kind": 1,
+      "variant": -1,
+      "form": "rapier",
+      "clip": "attack_flurry",
+      "motion": "rapier/attack_flurry",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/special_frame_bindings.json"
+    },
+    {
+      "actionId": "rapier_movement",
+      "kind": 1,
+      "variant": -1,
+      "form": "rapier",
+      "clip": "attack_held_thrust",
+      "motion": "rapier/attack_held_thrust",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/special_frame_bindings.json"
+    },
+    {
+      "actionId": "rapier_range",
+      "kind": 1,
+      "variant": -1,
+      "form": "rapier",
+      "clip": "attack_long_thrust",
+      "motion": "rapier/attack_long_thrust",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/melee_frame_bindings.json"
+    },
+    {
+      "actionId": "shield_basic_0",
+      "kind": 0,
+      "variant": -1,
+      "form": "shield",
+      "clip": "attack1",
+      "motion": "shield/attack1",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/melee_frame_bindings.json"
+    },
+    {
+      "actionId": "shield_default",
+      "kind": 1,
+      "variant": -1,
+      "form": "shield",
+      "clip": "attack1",
+      "motion": "shield/attack1",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/special_frame_bindings.json"
+    },
+    {
+      "actionId": "shield_follow_up",
+      "kind": 1,
+      "variant": -1,
+      "form": "shield",
+      "clip": "attack1",
+      "motion": "shield/attack1",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/special_frame_bindings.json"
+    },
+    {
+      "actionId": "shield_movement",
+      "kind": 1,
+      "variant": -1,
+      "form": "shield",
+      "clip": "attack1",
+      "motion": "shield/attack1",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/special_frame_bindings.json"
+    },
+    {
+      "actionId": "shield_range",
+      "kind": 1,
+      "variant": -1,
+      "form": "shield",
+      "clip": "attack1",
+      "motion": "shield/attack1",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/special_frame_bindings.json"
+    },
+    {
+      "actionId": "shuriken_basic_0",
+      "kind": 0,
+      "variant": -1,
+      "form": "shuriken",
+      "clip": "attack1",
+      "motion": "shuriken/attack1",
+      "fallback": false
+    },
+    {
+      "actionId": "shuriken_basic_1",
+      "kind": 0,
+      "variant": -1,
+      "form": "shuriken",
+      "clip": "attack2",
+      "motion": "shuriken/attack2",
+      "fallback": false
+    },
+    {
+      "actionId": "shuriken_basic_special",
+      "kind": 1,
+      "variant": -1,
+      "form": "shuriken",
+      "clip": "attack_pierce",
+      "motion": "shuriken/attack_pierce",
+      "fallback": false
+    },
+    {
+      "actionId": "shuriken_followup_special",
+      "kind": 1,
+      "variant": -1,
+      "form": "shuriken",
+      "clip": "attack_roll",
+      "motion": "shuriken/attack_roll",
+      "fallback": false
+    },
+    {
+      "actionId": "shuriken_move_special",
+      "kind": 1,
+      "variant": -1,
+      "form": "shuriken",
+      "clip": "attack_step_throw",
+      "motion": "shuriken/attack_step_throw",
+      "fallback": false
+    },
+    {
+      "actionId": "shuriken_range_special",
+      "kind": 1,
+      "variant": -1,
+      "form": "shuriken",
+      "clip": "attack_explosive",
+      "motion": "shuriken/attack_explosive",
+      "fallback": false
+    },
+    {
+      "actionId": "whip_basic_0",
+      "kind": 0,
+      "variant": -1,
+      "form": "whip",
+      "clip": "attack1",
+      "motion": "whip/attack1",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/melee_frame_bindings.json"
+    },
+    {
+      "actionId": "whip_basic_1",
+      "kind": 0,
+      "variant": -1,
+      "form": "whip",
+      "clip": "attack2",
+      "motion": "whip/attack2",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/melee_frame_bindings.json"
+    },
+    {
+      "actionId": "whip_default",
+      "kind": 1,
+      "variant": -1,
+      "form": "whip",
+      "clip": "attack_wrap",
+      "motion": "whip/attack_wrap",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/special_frame_bindings.json"
+    },
+    {
+      "actionId": "whip_follow_up",
+      "kind": 1,
+      "variant": -1,
+      "form": "whip",
+      "clip": "attack_tighten",
+      "motion": "whip/attack_tighten",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/special_frame_bindings.json"
+    },
+    {
+      "actionId": "whip_movement",
+      "kind": 1,
+      "variant": -1,
+      "form": "whip",
+      "clip": "attack_knot",
+      "motion": "whip/attack_knot",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/special_frame_bindings.json"
+    },
+    {
+      "actionId": "whip_range",
+      "kind": 1,
+      "variant": -1,
+      "form": "whip",
+      "clip": "attack_net",
+      "motion": "whip/attack_net",
+      "fallback": false,
+      "frameTimingSource": "data/combat/presentation/special_frame_bindings.json"
+    },
+    {
+      "actionId": "unarmed_basic_0",
+      "kind": 0,
+      "variant": -1,
+      "form": "unarmed",
+      "clip": "attack1",
+      "motion": "unarmed/attack1",
+      "fallback": false
+    },
+    {
+      "actionId": "unarmed_basic_1",
+      "kind": 0,
+      "variant": -1,
+      "form": "unarmed",
+      "clip": "attack2",
+      "motion": "unarmed/attack2",
+      "fallback": false
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "tool": "PixelLab vfx_workbench",
+  "effectId": "87d71a7e-79df-4e89-8577-86c74addcf83",
+  "recipe": {
+    "canvas": {"w": 72, "h": 44}, "frames": 12, "fps": 12, "loop": true, "origin": [36, 30], "tones": 6,
+    "ramps": {"main": "electric", "gold": ["#5a3a08", "#a86a10", "#e8b020", "#fdd835", "#fff6a8", "#ffffff"]},
+    "outline": {"mode": "dark"},
+    "layers": [
+      {"id": "pool", "type": "glow", "x": 36, "y": 30, "radius": 28, "squash": 0.2, "shape": "soft", "ramp": "gold", "intensity": {"wave": {"mid": 0.4, "amp": 0.1, "cycles": 3}}, "opacity": 0.5, "outline": false},
+      {"id": "rim", "type": "ring", "x": 36, "y": 30, "radius": 28, "squash": 0.2, "width": 0.5, "soft": 1, "ramp": "gold", "intensity": {"wave": {"mid": 0.6, "amp": 0.15, "cycles": 2}}, "outline": false},
+      {"id": "bolt_a", "type": "bolt", "plane": "ground", "start": [11, 30], "end": [61, 30], "segments": 14, "jag": 0.16, "branches": 3, "branch_length": 0.22, "width": 0.7, "soft": 1, "flicker": 2, "ramp": "gold", "z": "front", "intensity": 0.9},
+      {"id": "bolt_b", "type": "bolt", "plane": "ground", "start": [16, 28], "end": [56, 32], "segments": 10, "jag": 0.2, "branches": 2, "branch_length": 0.25, "width": 0.6, "soft": 0.5, "flicker": 3, "seed": 7, "ramp": "gold", "z": "front", "intensity": 0.75},
+      {"id": "arc_up", "type": "bolt", "start": [26, 30], "end": [30, 18], "segments": 5, "jag": 0.3, "branches": 0, "width": 0.6, "soft": 0.5, "flicker": 2, "seed": 11, "ramp": "gold", "z": "front", "life": [0.0, 0.25]},
+      {"id": "arc_up2", "type": "bolt", "start": [46, 30], "end": [43, 17], "segments": 5, "jag": 0.3, "branches": 0, "width": 0.6, "soft": 0.5, "flicker": 2, "seed": 23, "ramp": "gold", "z": "front", "life": [0.5, 0.75]},
+      {"id": "sparks", "type": "particles", "x": 36, "y": 30, "mode": "rise", "radius": 25, "squash": 0.2, "speed": 14, "count": 8, "size": [1, 2], "shape": "sparkle", "lifespan": 0.35, "cycles": 2, "blink": 2, "ramp": "gold", "z": "front"}
+    ]
+  }
+}

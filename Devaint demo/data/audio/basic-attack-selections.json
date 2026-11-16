@@ -1,0 +1,381 @@
+{
+  "format": "deviant-basic-audio-selection-v1",
+  "scope": "basic attacks only",
+  "pending": [],
+  "weapons": {
+    "base_sword": {
+      "number": 5,
+      "file": "whoosh_swish_high_big_01.wav",
+      "archiveEntry": "Whooshes/whoosh_swish_high_big_01.wav",
+      "sha256": "7df8e272526831a50f7f3f6dff638662be2a8aba17055dbba05b1ea78d459b98",
+      "offsetMs": 0,
+      "status": "applied-locally",
+      "sourceChoice": "base_sword 5",
+      "defaultSpeed": 1,
+      "comparisonRmsDb": -22
+    },
+    "whip": {
+      "number": 9,
+      "file": "whoosh_swish_small_harsh_02.wav",
+      "archiveEntry": "Whooshes/whoosh_swish_small_harsh_02.wav",
+      "sha256": "5343ace6dd6bbbab6447badcfb491e47100691063d8fec38d4e4d570e98ee52d",
+      "offsetMs": 0,
+      "status": "applied-locally",
+      "sourceChoice": "whip 9",
+      "defaultSpeed": 1.4,
+      "comparisonRmsDb": -22
+    },
+    "rapier": {
+      "number": 10,
+      "file": "whoosh_swish_small_harsh_03.wav",
+      "archiveEntry": "Whooshes/whoosh_swish_small_harsh_03.wav",
+      "sha256": "3d5534259dbe3df8109fa86c89af99b2a7498aebbdb6a571780e3a299c39010f",
+      "offsetMs": 0,
+      "status": "applied-locally",
+      "sourceChoice": "rapier 10",
+      "defaultSpeed": 1,
+      "comparisonRmsDb": -22
+    },
+    "dagger": {
+      "number": 9,
+      "file": "whoosh_swish_small_01.wav",
+      "archiveEntry": "Whooshes/whoosh_swish_small_01.wav",
+      "sha256": "753945c79af4d630dde8a51e9a28c7f4e62e08d8fe5f06267c67160c052c853f",
+      "offsetMs": 0,
+      "status": "applied-locally",
+      "sourceChoice": "dagger 9",
+      "defaultSpeed": 1,
+      "comparisonRmsDb": -22
+    },
+    "shield": {
+      "number": 1,
+      "file": "whoosh_low_deep_01.wav",
+      "archiveEntry": "Whooshes/whoosh_low_deep_01.wav",
+      "sha256": "23acec8fa8ccbf69b4aacd6034a9a0d17b3ee2afd488b51d045da38d410fe592",
+      "offsetMs": 0,
+      "status": "applied-locally",
+      "sourceChoice": "shield 1",
+      "defaultSpeed": 1,
+      "comparisonRmsDb": -22
+    },
+    "greatsword": {
+      "number": 4,
+      "file": "whoosh_swish_high_big_04.wav",
+      "archiveEntry": "Whooshes/whoosh_swish_high_big_04.wav",
+      "sha256": "f594fda391f61e0ed9cb8c3841769f937a666dd8c90dba0bef5a91b6b3d3056e",
+      "offsetMs": 0,
+      "status": "applied-locally",
+      "sourceChoice": "greatsword 4",
+      "defaultSpeed": 0.8,
+      "comparisonRmsDb": -22
+    },
+    "bomb": {
+      "number": 1,
+      "file": "whoosh_swish_high_big_01.wav",
+      "archiveEntry": "Whooshes/whoosh_swish_high_big_01.wav",
+      "sha256": "7df8e272526831a50f7f3f6dff638662be2a8aba17055dbba05b1ea78d459b98",
+      "offsetMs": 0,
+      "status": "applied-locally",
+      "sourceChoice": "bomb 1",
+      "defaultSpeed": 1,
+      "comparisonRmsDb": -22
+    },
+    "unarmed": {
+      "number": 10,
+      "file": "whoosh_low_deep_soft_02.wav",
+      "archiveEntry": "Whooshes/whoosh_low_deep_soft_02.wav",
+      "sha256": "833e5b5705f6bd13a4daea1bc407145502c6207eb80732e3e5b701cc59ac2dfa",
+      "offsetMs": 0,
+      "status": "applied-locally",
+      "sourceChoice": "unarmed 10",
+      "defaultSpeed": 1,
+      "comparisonRmsDb": -22
+    },
+    "shuriken": {
+      "number": 10,
+      "file": "whoosh_swish_high_big_02.wav",
+      "archiveEntry": "Whooshes/whoosh_swish_high_big_02.wav",
+      "sha256": "eaed3add1004991ac171d7e88222a92a5a4c3d6811c6273bb94d0c87468bec15",
+      "offsetMs": 0,
+      "status": "applied-locally",
+      "sourceChoice": "bomb 2",
+      "defaultSpeed": 1,
+      "comparisonRmsDb": -22
+    },
+    "launcher": {
+      "number": 11,
+      "file": "sfx_weapon_launcher_basic_0_01_v01.wav",
+      "sha256": "fc43c2bafb1a1c603686de4512f6fa5385810558237685b2dae7e10f1c1c3e6b",
+      "offsetMs": 0,
+      "status": "approved-current",
+      "sourceChoice": "current-runtime"
+    },
+    "hammer": {
+      "number": 5,
+      "file": "hammer-r5-05",
+      "recipeId": "hammer-r5-05",
+      "offsetMs": 0,
+      "layerOffsetsMs": {
+        "swing": 0,
+        "impact": 210
+      },
+      "status": "applied-locally",
+      "sourceChoice": "exported selected candidate and sole favorite",
+      "inputSha256": "55dc7611b8cbd5af546e9a19b67c5e476fd5431ddd3cd26d288e785d05454eea",
+      "runtimeHeadroomGain": 1,
+      "layers": {
+        "attack2": {
+          "swing": {
+            "file": "hammer-05-hit-2-swing.wav",
+            "sha256": "8106be4d1a963e6197fbe40186ef30583ae3d51e1d75a6de02bdcda5deecb22f",
+            "nominalDuration": 0.59,
+            "accentSeconds": 0.24999999999999997
+          },
+          "impact": {
+            "file": "hammer-05-hit-2-impact.wav",
+            "sha256": "7d492743e8a00efd204f04e2d3e5879b0e7607997f8021349ceee2a1df20c5ce",
+            "nominalDuration": 0.59,
+            "accentSeconds": 0.24999999999999997
+          }
+        }
+      },
+      "variants": {
+        "attack1": {
+          "file": "hammer-05-hit-1.wav",
+          "sha256": "a2513fa8fd5cb82afb38f8a73e46d9312bfbc8e9dac3c21dc61dbfb18ce8e3c4",
+          "nominalDuration": 0.96
+        },
+        "attack2": {
+          "file": "hammer-05-hit-2.wav",
+          "sha256": "9b6144bee14d73aedca2a56e36ac3dbf80ea1ed6707d2c454bfab8e13c5408b6",
+          "nominalDuration": 0.59
+        }
+      }
+    }
+  },
+  "outputs": [
+    {
+      "actionId": "base_sword_basic_0",
+      "file": "sfx_weapon_base_sword_basic_0_01_v01.wav",
+      "sha256": "cfcc3af78f712ed12a3faf6702b5e6e3237e6d721d0c06ff112a73d0c53b93e3",
+      "bytes": 38442,
+      "playbackRate": 1.2121212121212122,
+      "impactSeconds": 0.13,
+      "nominalDuration": 0.4,
+      "source": "whoosh_swish_high_big_01.wav"
+    },
+    {
+      "actionId": "base_sword_basic_1",
+      "file": "sfx_weapon_base_sword_basic_1_01_v01.wav",
+      "sha256": "5acde10186154919dbfca57e49d85787a0a10ecb6260365aee7c82b1e015ed59",
+      "bytes": 57642,
+      "playbackRate": 1.6216216216216215,
+      "impactSeconds": 0.13,
+      "nominalDuration": 0.6,
+      "source": "whoosh_swish_high_big_01.wav"
+    },
+    {
+      "actionId": "whip_basic_0",
+      "file": "sfx_weapon_whip_basic_0_01_v01.wav",
+      "sha256": "aa7332f4575ed308a43840b30e063f48bf60619b7862f719f92a32165f42875f",
+      "bytes": 48040,
+      "playbackRate": 1.4,
+      "impactSeconds": 0.17857142857142858,
+      "nominalDuration": 0.5,
+      "source": "whoosh_swish_small_harsh_02.wav"
+    },
+    {
+      "actionId": "whip_basic_1",
+      "file": "sfx_weapon_whip_basic_1_01_v01.wav",
+      "sha256": "f0565a63e60b8a81498424e2484225b913b11e53dbb184d36a59ba629b87ae8c",
+      "bytes": 67242,
+      "playbackRate": 1.4,
+      "impactSeconds": 0.2142857142857143,
+      "nominalDuration": 0.7,
+      "source": "whoosh_swish_small_harsh_02.wav"
+    },
+    {
+      "actionId": "rapier_basic_0",
+      "file": "sfx_weapon_rapier_basic_0_01_v01.wav",
+      "sha256": "ddefdb7795fbf24970c5221054b02635ffff88bfcef7df3a3e3b3fc2a3eb18c8",
+      "bytes": 21164,
+      "playbackRate": 1.0,
+      "impactSeconds": 0.1,
+      "nominalDuration": 0.22,
+      "source": "whoosh_swish_small_harsh_03.wav"
+    },
+    {
+      "actionId": "rapier_basic_1",
+      "file": "sfx_weapon_rapier_basic_1_01_v01.wav",
+      "sha256": "ddefdb7795fbf24970c5221054b02635ffff88bfcef7df3a3e3b3fc2a3eb18c8",
+      "bytes": 21164,
+      "playbackRate": 1.0,
+      "impactSeconds": 0.1,
+      "nominalDuration": 0.22,
+      "source": "whoosh_swish_small_harsh_03.wav"
+    },
+    {
+      "actionId": "rapier_basic_2",
+      "file": "sfx_weapon_rapier_basic_2_01_v01.wav",
+      "sha256": "2d0c1f97b9e6385f04a981b27739aacd57074d4f23e401f48764e9523943d37c",
+      "bytes": 34604,
+      "playbackRate": 1.0,
+      "impactSeconds": 0.12,
+      "nominalDuration": 0.36,
+      "source": "whoosh_swish_small_harsh_03.wav"
+    },
+    {
+      "actionId": "dagger_basic_0",
+      "file": "sfx_weapon_dagger_basic_0_01_v01.wav",
+      "sha256": "d8cf7d8a8a9aea24ee125e88dba71494cee4e0b668306c4965ad1c93f56d8883",
+      "bytes": 30092,
+      "playbackRate": 1.0,
+      "impactSeconds": 0.045,
+      "nominalDuration": 0.165,
+      "source": "whoosh_swish_small_01.wav"
+    },
+    {
+      "actionId": "dagger_basic_1",
+      "file": "sfx_weapon_dagger_basic_1_01_v01.wav",
+      "sha256": "d8cf7d8a8a9aea24ee125e88dba71494cee4e0b668306c4965ad1c93f56d8883",
+      "bytes": 30092,
+      "playbackRate": 1.0,
+      "impactSeconds": 0.045,
+      "nominalDuration": 0.165,
+      "source": "whoosh_swish_small_01.wav"
+    },
+    {
+      "actionId": "dagger_basic_2",
+      "file": "sfx_weapon_dagger_basic_2_01_v01.wav",
+      "sha256": "606585a35391ee157f1b0b91370a292f4de35c5204424895ec2f564e6c7b860f",
+      "bytes": 34700,
+      "playbackRate": 1.0,
+      "impactSeconds": 0.1,
+      "nominalDuration": 0.26,
+      "source": "whoosh_swish_small_01.wav"
+    },
+    {
+      "actionId": "dagger_basic_3",
+      "file": "sfx_weapon_dagger_basic_3_01_v01.wav",
+      "sha256": "64e59478b20a58fd3983ea027b14c22e8a69fc5a8ffca3d6abd51298f70289fd",
+      "bytes": 49580,
+      "playbackRate": 1.0,
+      "impactSeconds": 0.255,
+      "nominalDuration": 0.41,
+      "source": "whoosh_swish_small_01.wav"
+    },
+    {
+      "actionId": "shield_basic_0",
+      "file": "sfx_weapon_shield_basic_0_01_v01.wav",
+      "sha256": "31f4a61bbc0df1e6b7ee35968607629e20d053236aea4ae2b8f0c56f249ef30c",
+      "bytes": 57644,
+      "playbackRate": 1.0,
+      "impactSeconds": 0.25,
+      "nominalDuration": 0.6,
+      "source": "whoosh_low_deep_01.wav"
+    },
+    {
+      "actionId": "greatsword_basic_0",
+      "file": "sfx_weapon_greatsword_basic_0_01_v01.wav",
+      "sha256": "e4068ddfb98210da0975c498450c11ff5145fbb7aa056e660b2a36adc6f267b5",
+      "bytes": 36022,
+      "playbackRate": 0.384,
+      "impactSeconds": 0.7499999999999999,
+      "nominalDuration": 0.36,
+      "source": "whoosh_swish_high_big_04.wav"
+    },
+    {
+      "actionId": "greatsword_basic_1",
+      "file": "sfx_weapon_greatsword_basic_1_01_v01.wav",
+      "sha256": "eef6680d2fad44f8251c2edfa0a3ba3561e0e72aa8ca12f3b326815bfe233f27",
+      "bytes": 27882,
+      "playbackRate": 0.8,
+      "impactSeconds": 0.125,
+      "nominalDuration": 0.29,
+      "source": "whoosh_swish_high_big_04.wav"
+    },
+    {
+      "actionId": "greatsword_basic_2",
+      "file": "sfx_weapon_greatsword_basic_2_01_v01.wav",
+      "sha256": "5a2fd5bc8d95eb1daa41fc7045233055999f89a912a0c3f00781bfc55e8fc73c",
+      "bytes": 55722,
+      "playbackRate": 0.703030303030303,
+      "impactSeconds": 0.5,
+      "nominalDuration": 0.58,
+      "source": "whoosh_swish_high_big_04.wav"
+    },
+    {
+      "actionId": "bomb_basic_0",
+      "file": "sfx_weapon_bomb_basic_0_01_v01.wav",
+      "sha256": "2408cfb77659e3555c8d9b0413fb5761a17d01d2a2309cb27b8ac402d696cef1",
+      "bytes": 73482,
+      "playbackRate": 1.02,
+      "impactSeconds": 0.16666666666666669,
+      "nominalDuration": 0.765,
+      "source": "whoosh_swish_high_big_01.wav"
+    },
+    {
+      "actionId": "unarmed_basic_0",
+      "file": "sfx_weapon_unarmed_basic_0_01_v01.wav",
+      "sha256": "426c9b5f71b04ea0d7ed7a9db4cdd92b3eec7ce251c4f704d43d6b248633d785",
+      "bytes": 34604,
+      "playbackRate": 1.0,
+      "impactSeconds": 0.12,
+      "nominalDuration": 0.36,
+      "source": "whoosh_low_deep_soft_02.wav"
+    },
+    {
+      "actionId": "unarmed_basic_1",
+      "file": "sfx_weapon_unarmed_basic_1_01_v01.wav",
+      "sha256": "33222584ca3905e8443a4c436b543c6d49bbcf8a738b939cc30bee6d77678738",
+      "bytes": 30764,
+      "playbackRate": 1.0,
+      "impactSeconds": 0.12,
+      "nominalDuration": 0.32,
+      "source": "whoosh_low_deep_soft_02.wav"
+    },
+    {
+      "actionId": "shuriken_basic_0",
+      "file": "sfx_weapon_shuriken_basic_0_01_v01.wav",
+      "sha256": "79645995c355d78c6ecf8f3e31865f08055ebba635aa877eddc04e5bf7be06b2",
+      "bytes": 29612,
+      "playbackRate": 1.0,
+      "impactSeconds": 0.1,
+      "nominalDuration": 0.25,
+      "source": "whoosh_swish_high_big_02.wav"
+    },
+    {
+      "actionId": "shuriken_basic_1",
+      "file": "sfx_weapon_shuriken_basic_1_01_v01.wav",
+      "sha256": "55b9292f289d1a5d4281654d7bcd3889214abf7f9ff137d2eb85a0d7992af82d",
+      "bytes": 33644,
+      "playbackRate": 1.0,
+      "impactSeconds": 0.12,
+      "nominalDuration": 0.35,
+      "source": "whoosh_swish_high_big_02.wav"
+    },
+    {
+      "actionId": "hammer_basic_0",
+      "file": "sfx_weapon_hammer_basic_0_01_v01.wav",
+      "sha256": "3b4898fe80620cf137028dae15af23c7c60b25373abad39bb69cdb03a5f85dee",
+      "bytes": 32684,
+      "playbackRate": 0.3541666666666667,
+      "nominalDuration": 0.34,
+      "source": "hammer-r5-05",
+      "layerOffsetsMs": {}
+    },
+    {
+      "actionId": "hammer_basic_1",
+      "file": "sfx_weapon_hammer_basic_1_01_v01.wav",
+      "sha256": "12020188378d022ded43a07346c8e5e40148b9fa7343723cac3d5987f17d0f63",
+      "bytes": 88558,
+      "playbackRate": 1.152542372881356,
+      "nominalDuration": 0.68,
+      "source": "hammer-r5-05",
+      "layerOffsetsMs": {
+        "swing": 0,
+        "impact": 210
+      }
+    }
+  ]
+}

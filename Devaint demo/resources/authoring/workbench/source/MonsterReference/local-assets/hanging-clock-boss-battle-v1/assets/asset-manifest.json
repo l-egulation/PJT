@@ -1,0 +1,897 @@
+{
+  "status": "playable-html-prototype-not-approved-production-art",
+  "pixelScale": "integer / nearest neighbour only",
+  "boss": {
+    "canvas": [
+      384,
+      416
+    ],
+    "parts": {
+      "ceiling": "assets/boss/ceiling.png",
+      "chain_center": "assets/boss/chain_center.png",
+      "chain_left": "assets/boss/chain_left.png",
+      "chain_right": "assets/boss/chain_right.png",
+      "body": "assets/boss/body.png",
+      "ink_lower": "assets/boss/ink_lower.png",
+      "dial": "assets/boss/dial.png",
+      "hand_minute": "assets/boss/hand_minute.png",
+      "hand_hour": "assets/boss/hand_hour.png",
+      "hand_hub": "assets/boss/hand_hub.png",
+      "fist_left": "assets/boss/fist_left-clean-v6.png",
+      "fist_right": "assets/boss/fist_right-clean-v6.png",
+      "body_merged": "assets/boss/body_merged.png"
+    },
+    "pivots": {
+      "ceiling": [
+        192,
+        39
+      ],
+      "chain_center": [
+        192,
+        59
+      ],
+      "chain_left": [
+        113,
+        76
+      ],
+      "chain_right": [
+        271,
+        76
+      ],
+      "body": [
+        192,
+        103
+      ],
+      "ink_lower": [
+        192,
+        302
+      ],
+      "dial": [
+        192,
+        245
+      ],
+      "hand_minute": [
+        192,
+        245
+      ],
+      "hand_hour": [
+        192,
+        245
+      ],
+      "hand_hub": [
+        192,
+        245
+      ],
+      "fist_left": [
+        88,
+        263
+      ],
+      "fist_right": [
+        296,
+        263
+      ]
+    },
+    "palette": [
+      "#171716",
+      "#41413D",
+      "#575451",
+      "#817D77",
+      "#9C968D",
+      "#D6D0C7"
+    ],
+    "giantFist": "assets/boss/giantFist-clean-v6.png",
+    "giantFistPivot": [
+      292,
+      100
+    ],
+    "armTile": "assets/boss/arm-segment-clean-v6.png",
+    "armTileCanvas": [
+      96,
+      192
+    ],
+    "mixerDial": "assets/boss/mixer-dial.png",
+    "mixerHands": "assets/boss/mixer-hands.png",
+    "mixerPivot": [
+      192,
+      192
+    ],
+    "needle": "assets/boss/needle-generated-v3.png",
+    "needlePivot": [
+      48,
+      168
+    ],
+    "foregroundBody": "assets/boss/mixer-body-native-v5.png",
+    "foregroundPivot": [
+      260,
+      334
+    ],
+    "foregroundFloorOffset": 125,
+    "giantFistBounds": [
+      12,
+      12,
+      292,
+      188
+    ],
+    "blade_minute": "assets/boss/mixer-blade-minute-v5.png",
+    "blade_hour": "assets/boss/mixer-blade-hour-v5.png",
+    "bladePivot": [
+      32,
+      15
+    ],
+    "bladeHub": "assets/boss/mixer-blade-hub-v5.png"
+  },
+  "hero": {
+    "idle": {
+      "frames": [
+        "assets/hero/idle/01.png",
+        "assets/hero/idle/02.png",
+        "assets/hero/idle/03.png",
+        "assets/hero/idle/04.png",
+        "assets/hero/idle/05.png",
+        "assets/hero/idle/06.png",
+        "assets/hero/idle/07.png",
+        "assets/hero/idle/08.png",
+        "assets/hero/idle/09.png",
+        "assets/hero/idle/10.png",
+        "assets/hero/idle/11.png",
+        "assets/hero/idle/12.png"
+      ],
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        121
+      ],
+      "fps": 10,
+      "facing": "right",
+      "source": "C:\\Users\\SSAFY\\Desktop\\자율 프로젝트\\03_개발\\Worktrees\\stage1-monster-assets\\unity\\Assets\\Deviant\\Combat\\Resources\\CharacterV2\\Sword\\idle"
+    },
+    "run": {
+      "frames": [
+        "assets/hero/run/01.png",
+        "assets/hero/run/02.png",
+        "assets/hero/run/03.png",
+        "assets/hero/run/04.png",
+        "assets/hero/run/05.png",
+        "assets/hero/run/06.png",
+        "assets/hero/run/07.png",
+        "assets/hero/run/08.png",
+        "assets/hero/run/09.png",
+        "assets/hero/run/10.png",
+        "assets/hero/run/11.png",
+        "assets/hero/run/12.png"
+      ],
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        121
+      ],
+      "fps": 14,
+      "facing": "right",
+      "source": "C:\\Users\\SSAFY\\Desktop\\자율 프로젝트\\03_개발\\Worktrees\\stage1-monster-assets\\unity\\Assets\\Deviant\\Combat\\Resources\\CharacterV2\\Sword\\run"
+    },
+    "jump": {
+      "frames": [
+        "assets/hero/jump/01.png",
+        "assets/hero/jump/02.png",
+        "assets/hero/jump/03.png",
+        "assets/hero/jump/04.png",
+        "assets/hero/jump/05.png",
+        "assets/hero/jump/06.png",
+        "assets/hero/jump/07.png",
+        "assets/hero/jump/08.png",
+        "assets/hero/jump/09.png",
+        "assets/hero/jump/10.png",
+        "assets/hero/jump/11.png",
+        "assets/hero/jump/12.png"
+      ],
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        121
+      ],
+      "fps": 12,
+      "facing": "right",
+      "source": "C:\\Users\\SSAFY\\Desktop\\자율 프로젝트\\03_개발\\Worktrees\\stage1-monster-assets\\unity\\Assets\\Deviant\\Combat\\Resources\\CharacterV2\\Sword\\jump"
+    },
+    "fall": {
+      "frames": [
+        "assets/hero/fall/01.png",
+        "assets/hero/fall/02.png",
+        "assets/hero/fall/03.png",
+        "assets/hero/fall/04.png",
+        "assets/hero/fall/05.png",
+        "assets/hero/fall/06.png",
+        "assets/hero/fall/07.png",
+        "assets/hero/fall/08.png",
+        "assets/hero/fall/09.png",
+        "assets/hero/fall/10.png",
+        "assets/hero/fall/11.png",
+        "assets/hero/fall/12.png"
+      ],
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        121
+      ],
+      "fps": 12,
+      "facing": "right",
+      "source": "C:\\Users\\SSAFY\\Desktop\\자율 프로젝트\\03_개발\\Worktrees\\stage1-monster-assets\\unity\\Assets\\Deviant\\Combat\\Resources\\CharacterV2\\Sword\\fall"
+    },
+    "dash": {
+      "frames": [
+        "assets/hero/dash/01.png",
+        "assets/hero/dash/02.png",
+        "assets/hero/dash/03.png",
+        "assets/hero/dash/04.png",
+        "assets/hero/dash/05.png",
+        "assets/hero/dash/06.png",
+        "assets/hero/dash/07.png",
+        "assets/hero/dash/08.png",
+        "assets/hero/dash/09.png",
+        "assets/hero/dash/10.png",
+        "assets/hero/dash/11.png",
+        "assets/hero/dash/12.png"
+      ],
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        121
+      ],
+      "fps": 18,
+      "facing": "right",
+      "source": "C:\\Users\\SSAFY\\Desktop\\자율 프로젝트\\03_개발\\Worktrees\\stage1-monster-assets\\unity\\Assets\\Deviant\\Combat\\Resources\\CharacterV2\\Sword\\dash"
+    },
+    "attack": {
+      "frames": [
+        "assets/hero/attack/01.png",
+        "assets/hero/attack/02.png",
+        "assets/hero/attack/03.png",
+        "assets/hero/attack/04.png"
+      ],
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        121
+      ],
+      "fps": 14,
+      "facing": "right",
+      "source": "C:\\Users\\SSAFY\\Desktop\\자율 프로젝트\\03_개발\\Worktrees\\stage1-monster-assets\\unity\\Assets\\Deviant\\Combat\\Resources\\CharacterV2\\Sword\\attack1"
+    },
+    "death": {
+      "frames": [
+        "assets/hero/death/01.png",
+        "assets/hero/death/02.png",
+        "assets/hero/death/03.png",
+        "assets/hero/death/04.png",
+        "assets/hero/death/05.png",
+        "assets/hero/death/06.png",
+        "assets/hero/death/07.png",
+        "assets/hero/death/08.png",
+        "assets/hero/death/09.png",
+        "assets/hero/death/10.png",
+        "assets/hero/death/11.png",
+        "assets/hero/death/12.png"
+      ],
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        121
+      ],
+      "fps": 12,
+      "facing": "right",
+      "source": "C:\\Users\\SSAFY\\Desktop\\자율 프로젝트\\03_개발\\Worktrees\\stage1-monster-assets\\unity\\Assets\\Deviant\\Combat\\Resources\\CharacterV2\\Sword\\death"
+    }
+  },
+  "fx": {
+    "dust": {
+      "frames": [
+        "assets/fx/dust/frames/00.png",
+        "assets/fx/dust/frames/01.png",
+        "assets/fx/dust/frames/02.png",
+        "assets/fx/dust/frames/03.png",
+        "assets/fx/dust/frames/04.png",
+        "assets/fx/dust/frames/05.png",
+        "assets/fx/dust/frames/06.png",
+        "assets/fx/dust/frames/07.png",
+        "assets/fx/dust/frames/08.png",
+        "assets/fx/dust/frames/09.png",
+        "assets/fx/dust/frames/10.png",
+        "assets/fx/dust/frames/11.png",
+        "assets/fx/dust/frames/12.png",
+        "assets/fx/dust/frames/13.png",
+        "assets/fx/dust/frames/14.png",
+        "assets/fx/dust/frames/15.png"
+      ],
+      "sheet": "assets/fx/dust/sheet.png",
+      "canvas": [
+        192,
+        96
+      ],
+      "pivot": [
+        96,
+        88
+      ],
+      "fps": 20,
+      "frameCount": 16,
+      "durationMs": 800,
+      "columns": 8,
+      "palette": [
+        "#817D77",
+        "#9C968D",
+        "#D6D0C7"
+      ],
+      "notes": "Expands outward and upward, then fades uniformly. No return to emitter; no dark outline."
+    },
+    "hit": {
+      "frames": [
+        "assets/fx/hit/frames/00.png",
+        "assets/fx/hit/frames/01.png",
+        "assets/fx/hit/frames/02.png",
+        "assets/fx/hit/frames/03.png",
+        "assets/fx/hit/frames/04.png",
+        "assets/fx/hit/frames/05.png",
+        "assets/fx/hit/frames/06.png",
+        "assets/fx/hit/frames/07.png",
+        "assets/fx/hit/frames/08.png",
+        "assets/fx/hit/frames/09.png"
+      ],
+      "sheet": "assets/fx/hit/sheet.png",
+      "canvas": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        48
+      ],
+      "fps": 30,
+      "frameCount": 10,
+      "durationMs": 333,
+      "columns": 8,
+      "palette": [
+        "#D6D0C7",
+        "#9C968D",
+        "#817D77"
+      ],
+      "notes": ""
+    },
+    "ink": {
+      "frames": [
+        "assets/fx/ink/frames/00.png",
+        "assets/fx/ink/frames/01.png",
+        "assets/fx/ink/frames/02.png",
+        "assets/fx/ink/frames/03.png",
+        "assets/fx/ink/frames/04.png",
+        "assets/fx/ink/frames/05.png",
+        "assets/fx/ink/frames/06.png",
+        "assets/fx/ink/frames/07.png",
+        "assets/fx/ink/frames/08.png",
+        "assets/fx/ink/frames/09.png",
+        "assets/fx/ink/frames/10.png",
+        "assets/fx/ink/frames/11.png",
+        "assets/fx/ink/frames/12.png",
+        "assets/fx/ink/frames/13.png",
+        "assets/fx/ink/frames/14.png",
+        "assets/fx/ink/frames/15.png",
+        "assets/fx/ink/frames/16.png",
+        "assets/fx/ink/frames/17.png"
+      ],
+      "sheet": "assets/fx/ink/sheet.png",
+      "canvas": [
+        192,
+        144
+      ],
+      "pivot": [
+        96,
+        128
+      ],
+      "fps": 24,
+      "frameCount": 18,
+      "durationMs": 750,
+      "columns": 8,
+      "palette": [
+        "#171716",
+        "#41413D",
+        "#817D77"
+      ],
+      "notes": ""
+    },
+    "needleImpact": {
+      "frames": [
+        "assets/fx/needleImpact/frames/00.png",
+        "assets/fx/needleImpact/frames/01.png",
+        "assets/fx/needleImpact/frames/02.png",
+        "assets/fx/needleImpact/frames/03.png",
+        "assets/fx/needleImpact/frames/04.png",
+        "assets/fx/needleImpact/frames/05.png",
+        "assets/fx/needleImpact/frames/06.png",
+        "assets/fx/needleImpact/frames/07.png",
+        "assets/fx/needleImpact/frames/08.png",
+        "assets/fx/needleImpact/frames/09.png",
+        "assets/fx/needleImpact/frames/10.png",
+        "assets/fx/needleImpact/frames/11.png",
+        "assets/fx/needleImpact/frames/12.png",
+        "assets/fx/needleImpact/frames/13.png"
+      ],
+      "sheet": "assets/fx/needleImpact/sheet.png",
+      "canvas": [
+        160,
+        96
+      ],
+      "pivot": [
+        80,
+        80
+      ],
+      "fps": 24,
+      "frameCount": 14,
+      "durationMs": 583,
+      "columns": 8,
+      "palette": [
+        "#D6D0C7",
+        "#9C968D",
+        "#817D77"
+      ],
+      "notes": ""
+    },
+    "charge": {
+      "frames": [
+        "assets/fx/charge/frames/00.png",
+        "assets/fx/charge/frames/01.png",
+        "assets/fx/charge/frames/02.png",
+        "assets/fx/charge/frames/03.png",
+        "assets/fx/charge/frames/04.png",
+        "assets/fx/charge/frames/05.png",
+        "assets/fx/charge/frames/06.png",
+        "assets/fx/charge/frames/07.png",
+        "assets/fx/charge/frames/08.png",
+        "assets/fx/charge/frames/09.png",
+        "assets/fx/charge/frames/10.png",
+        "assets/fx/charge/frames/11.png",
+        "assets/fx/charge/frames/12.png",
+        "assets/fx/charge/frames/13.png",
+        "assets/fx/charge/frames/14.png",
+        "assets/fx/charge/frames/15.png"
+      ],
+      "sheet": "assets/fx/charge/sheet.png",
+      "canvas": [
+        160,
+        160
+      ],
+      "pivot": [
+        80,
+        80
+      ],
+      "fps": 20,
+      "frameCount": 16,
+      "durationMs": 800,
+      "columns": 8,
+      "palette": [
+        "#817D77",
+        "#9C968D",
+        "#D6D0C7"
+      ],
+      "notes": "Orbiting stone/ink flecks, no solid ring or outline."
+    },
+    "dissolve": {
+      "frames": [
+        "assets/fx/dissolve/frames/00.png",
+        "assets/fx/dissolve/frames/01.png",
+        "assets/fx/dissolve/frames/02.png",
+        "assets/fx/dissolve/frames/03.png",
+        "assets/fx/dissolve/frames/04.png",
+        "assets/fx/dissolve/frames/05.png",
+        "assets/fx/dissolve/frames/06.png",
+        "assets/fx/dissolve/frames/07.png",
+        "assets/fx/dissolve/frames/08.png",
+        "assets/fx/dissolve/frames/09.png",
+        "assets/fx/dissolve/frames/10.png",
+        "assets/fx/dissolve/frames/11.png",
+        "assets/fx/dissolve/frames/12.png",
+        "assets/fx/dissolve/frames/13.png",
+        "assets/fx/dissolve/frames/14.png",
+        "assets/fx/dissolve/frames/15.png",
+        "assets/fx/dissolve/frames/16.png",
+        "assets/fx/dissolve/frames/17.png",
+        "assets/fx/dissolve/frames/18.png",
+        "assets/fx/dissolve/frames/19.png"
+      ],
+      "sheet": "assets/fx/dissolve/sheet.png",
+      "canvas": [
+        192,
+        192
+      ],
+      "pivot": [
+        96,
+        96
+      ],
+      "fps": 20,
+      "frameCount": 20,
+      "durationMs": 1000,
+      "columns": 8,
+      "palette": [
+        "#171716",
+        "#41413D",
+        "#9C968D"
+      ],
+      "notes": ""
+    },
+    "slash": {
+      "frames": [
+        "assets/fx/slash/frames/00.png",
+        "assets/fx/slash/frames/01.png",
+        "assets/fx/slash/frames/02.png",
+        "assets/fx/slash/frames/03.png",
+        "assets/fx/slash/frames/04.png",
+        "assets/fx/slash/frames/05.png",
+        "assets/fx/slash/frames/06.png"
+      ],
+      "sheet": "assets/fx/slash/sheet.png",
+      "canvas": [
+        112,
+        96
+      ],
+      "pivot": [
+        24,
+        48
+      ],
+      "fps": 30,
+      "frameCount": 7,
+      "durationMs": 233,
+      "columns": 7,
+      "palette": [
+        "#D6D0C7",
+        "#9C968D"
+      ],
+      "notes": ""
+    },
+    "inkWarning": {
+      "frames": [
+        "assets/fx/inkWarning/00.png",
+        "assets/fx/inkWarning/01.png",
+        "assets/fx/inkWarning/02.png",
+        "assets/fx/inkWarning/03.png",
+        "assets/fx/inkWarning/04.png",
+        "assets/fx/inkWarning/05.png",
+        "assets/fx/inkWarning/06.png",
+        "assets/fx/inkWarning/07.png",
+        "assets/fx/inkWarning/08.png",
+        "assets/fx/inkWarning/09.png",
+        "assets/fx/inkWarning/10.png",
+        "assets/fx/inkWarning/11.png",
+        "assets/fx/inkWarning/12.png",
+        "assets/fx/inkWarning/13.png",
+        "assets/fx/inkWarning/14.png",
+        "assets/fx/inkWarning/15.png",
+        "assets/fx/inkWarning/16.png",
+        "assets/fx/inkWarning/17.png",
+        "assets/fx/inkWarning/18.png",
+        "assets/fx/inkWarning/19.png"
+      ],
+      "fps": 20,
+      "pivot": [
+        56,
+        36
+      ],
+      "palette": [
+        "#171716",
+        "#41413D",
+        "#9C968D"
+      ],
+      "dangerWidth": 96
+    },
+    "collapseDust": {
+      "frames": [
+        "assets/fx/collapseDust/00.png",
+        "assets/fx/collapseDust/01.png",
+        "assets/fx/collapseDust/02.png",
+        "assets/fx/collapseDust/03.png",
+        "assets/fx/collapseDust/04.png",
+        "assets/fx/collapseDust/05.png",
+        "assets/fx/collapseDust/06.png",
+        "assets/fx/collapseDust/07.png",
+        "assets/fx/collapseDust/08.png",
+        "assets/fx/collapseDust/09.png",
+        "assets/fx/collapseDust/10.png",
+        "assets/fx/collapseDust/11.png",
+        "assets/fx/collapseDust/12.png",
+        "assets/fx/collapseDust/13.png",
+        "assets/fx/collapseDust/14.png",
+        "assets/fx/collapseDust/15.png",
+        "assets/fx/collapseDust/16.png",
+        "assets/fx/collapseDust/17.png",
+        "assets/fx/collapseDust/18.png",
+        "assets/fx/collapseDust/19.png",
+        "assets/fx/collapseDust/20.png",
+        "assets/fx/collapseDust/21.png",
+        "assets/fx/collapseDust/22.png",
+        "assets/fx/collapseDust/23.png",
+        "assets/fx/collapseDust/24.png",
+        "assets/fx/collapseDust/25.png",
+        "assets/fx/collapseDust/26.png",
+        "assets/fx/collapseDust/27.png",
+        "assets/fx/collapseDust/28.png",
+        "assets/fx/collapseDust/29.png",
+        "assets/fx/collapseDust/30.png",
+        "assets/fx/collapseDust/31.png"
+      ],
+      "fps": 20,
+      "pivot": [
+        160,
+        144
+      ],
+      "palette": [
+        "#575451",
+        "#9C968D",
+        "#D6D0C7"
+      ]
+    },
+    "collapsePlume": {
+      "frames": [
+        "assets/fx/collapsePlume/00.png",
+        "assets/fx/collapsePlume/01.png",
+        "assets/fx/collapsePlume/02.png",
+        "assets/fx/collapsePlume/03.png",
+        "assets/fx/collapsePlume/04.png",
+        "assets/fx/collapsePlume/05.png",
+        "assets/fx/collapsePlume/06.png",
+        "assets/fx/collapsePlume/07.png",
+        "assets/fx/collapsePlume/08.png",
+        "assets/fx/collapsePlume/09.png",
+        "assets/fx/collapsePlume/10.png",
+        "assets/fx/collapsePlume/11.png",
+        "assets/fx/collapsePlume/12.png",
+        "assets/fx/collapsePlume/13.png",
+        "assets/fx/collapsePlume/14.png",
+        "assets/fx/collapsePlume/15.png",
+        "assets/fx/collapsePlume/16.png",
+        "assets/fx/collapsePlume/17.png",
+        "assets/fx/collapsePlume/18.png",
+        "assets/fx/collapsePlume/19.png",
+        "assets/fx/collapsePlume/20.png",
+        "assets/fx/collapsePlume/21.png",
+        "assets/fx/collapsePlume/22.png",
+        "assets/fx/collapsePlume/23.png",
+        "assets/fx/collapsePlume/24.png",
+        "assets/fx/collapsePlume/25.png",
+        "assets/fx/collapsePlume/26.png",
+        "assets/fx/collapsePlume/27.png",
+        "assets/fx/collapsePlume/28.png",
+        "assets/fx/collapsePlume/29.png",
+        "assets/fx/collapsePlume/30.png",
+        "assets/fx/collapsePlume/31.png",
+        "assets/fx/collapsePlume/32.png",
+        "assets/fx/collapsePlume/33.png",
+        "assets/fx/collapsePlume/34.png",
+        "assets/fx/collapsePlume/35.png",
+        "assets/fx/collapsePlume/36.png",
+        "assets/fx/collapsePlume/37.png",
+        "assets/fx/collapsePlume/38.png",
+        "assets/fx/collapsePlume/39.png",
+        "assets/fx/collapsePlume/40.png",
+        "assets/fx/collapsePlume/41.png",
+        "assets/fx/collapsePlume/42.png",
+        "assets/fx/collapsePlume/43.png",
+        "assets/fx/collapsePlume/44.png",
+        "assets/fx/collapsePlume/45.png",
+        "assets/fx/collapsePlume/46.png",
+        "assets/fx/collapsePlume/47.png",
+        "assets/fx/collapsePlume/48.png",
+        "assets/fx/collapsePlume/49.png",
+        "assets/fx/collapsePlume/50.png",
+        "assets/fx/collapsePlume/51.png",
+        "assets/fx/collapsePlume/52.png",
+        "assets/fx/collapsePlume/53.png",
+        "assets/fx/collapsePlume/54.png",
+        "assets/fx/collapsePlume/55.png",
+        "assets/fx/collapsePlume/56.png",
+        "assets/fx/collapsePlume/57.png",
+        "assets/fx/collapsePlume/58.png",
+        "assets/fx/collapsePlume/59.png"
+      ],
+      "fps": 24,
+      "pivot": [
+        400,
+        392
+      ],
+      "palette": [
+        "#575451",
+        "#9C968D",
+        "#D6D0C7"
+      ],
+      "fadeAfter": 0.75,
+      "fadeDuration": 1.75
+    },
+    "wallInk": {
+      "frames": [
+        "assets/fx/wallInk/00.png",
+        "assets/fx/wallInk/01.png",
+        "assets/fx/wallInk/02.png",
+        "assets/fx/wallInk/03.png",
+        "assets/fx/wallInk/04.png",
+        "assets/fx/wallInk/05.png",
+        "assets/fx/wallInk/06.png",
+        "assets/fx/wallInk/07.png",
+        "assets/fx/wallInk/08.png",
+        "assets/fx/wallInk/09.png",
+        "assets/fx/wallInk/10.png",
+        "assets/fx/wallInk/11.png",
+        "assets/fx/wallInk/12.png",
+        "assets/fx/wallInk/13.png"
+      ],
+      "fps": 20,
+      "pivot": [
+        0,
+        200
+      ],
+      "startAt": 0.5,
+      "loopFrom": 6,
+      "palette": [
+        "#171716",
+        "#41413D",
+        "#9C968D"
+      ],
+      "notes": "Starts after the small fist leaves (pattern age 0.5 s). Soaks 0.3 s, then boils 192 px up the launching wall until the strike ends."
+    },
+    "clockRing": {
+      "frames": [
+        "assets/fx/clockRing/00.png",
+        "assets/fx/clockRing/01.png",
+        "assets/fx/clockRing/02.png",
+        "assets/fx/clockRing/03.png",
+        "assets/fx/clockRing/04.png",
+        "assets/fx/clockRing/05.png",
+        "assets/fx/clockRing/06.png",
+        "assets/fx/clockRing/07.png",
+        "assets/fx/clockRing/08.png",
+        "assets/fx/clockRing/09.png",
+        "assets/fx/clockRing/10.png",
+        "assets/fx/clockRing/11.png",
+        "assets/fx/clockRing/12.png",
+        "assets/fx/clockRing/13.png",
+        "assets/fx/clockRing/14.png",
+        "assets/fx/clockRing/15.png",
+        "assets/fx/clockRing/16.png",
+        "assets/fx/clockRing/17.png",
+        "assets/fx/clockRing/18.png",
+        "assets/fx/clockRing/19.png"
+      ],
+      "fps": 20,
+      "pivot": [
+        208,
+        208
+      ],
+      "loopFrom": 10,
+      "palette": [
+        "#171716",
+        "#41413D",
+        "#9C968D"
+      ],
+      "notes": "Ink clock face at the 192 px mixer hit radius. Frames 0-9 trace it, 10-19 loop while the mixer moves."
+    },
+    "needleInk": {
+      "frames": [
+        "assets/fx/needleInk/00.png",
+        "assets/fx/needleInk/01.png",
+        "assets/fx/needleInk/02.png",
+        "assets/fx/needleInk/03.png",
+        "assets/fx/needleInk/04.png",
+        "assets/fx/needleInk/05.png",
+        "assets/fx/needleInk/06.png",
+        "assets/fx/needleInk/07.png",
+        "assets/fx/needleInk/08.png",
+        "assets/fx/needleInk/09.png",
+        "assets/fx/needleInk/10.png",
+        "assets/fx/needleInk/11.png",
+        "assets/fx/needleInk/12.png",
+        "assets/fx/needleInk/13.png",
+        "assets/fx/needleInk/14.png",
+        "assets/fx/needleInk/15.png",
+        "assets/fx/needleInk/16.png",
+        "assets/fx/needleInk/17.png",
+        "assets/fx/needleInk/18.png",
+        "assets/fx/needleInk/19.png"
+      ],
+      "fps": 20,
+      "pivot": [
+        64,
+        0
+      ],
+      "ceilingY": 0,
+      "palette": [
+        "#171716",
+        "#41413D",
+        "#9C968D"
+      ],
+      "notes": "1 s needle warning. Pivot sits on the top screen edge over the 96 px landing column; drops reach the floor at y=464."
+    }
+  },
+  "room": "assets/room-open.png",
+  "roomSource": "C:\\Users\\SSAFY\\Desktop\\자율 프로젝트\\03_개발\\Worktrees\\stage1-monster-assets\\unity\\Assets\\Stage1VillageExperiment\\Resources\\Village\\reference-sketch\\backgrounds\\vault_rear_native.png",
+  "validation": {
+    "dust": {
+      "colors": 3,
+      "alpha": [
+        0,
+        32,
+        64,
+        96,
+        128,
+        159,
+        191,
+        223,
+        255
+      ],
+      "frames": 16
+    },
+    "hit": {
+      "colors": 3,
+      "alpha": [
+        0,
+        255
+      ],
+      "frames": 10
+    },
+    "ink": {
+      "colors": 3,
+      "alpha": [
+        0,
+        255
+      ],
+      "frames": 18
+    },
+    "needleImpact": {
+      "colors": 3,
+      "alpha": [
+        0,
+        255
+      ],
+      "frames": 14
+    },
+    "charge": {
+      "colors": 3,
+      "alpha": [
+        0,
+        255
+      ],
+      "frames": 16
+    },
+    "dissolve": {
+      "colors": 3,
+      "alpha": [
+        0,
+        255
+      ],
+      "frames": 20
+    },
+    "slash": {
+      "colors": 2,
+      "alpha": [
+        0,
+        255
+      ],
+      "frames": 7
+    }
+  },
+  "revision": "open-arena-v12"
+}

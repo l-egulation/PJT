@@ -1,0 +1,29 @@
+{
+  "kind": "smoke-release-revision14",
+  "status": "pending; not applied",
+  "items": [
+    {
+      "id": "A07-smoother",
+      "file": "smoke14-07-smoother.wav",
+      "sha256": "d837c9ea1022198144c1bbe3c0292e21cb8d4df6f3a98bc84a3797e07e9e627d",
+      "duration": 0.78,
+      "source": {
+        "file": "../smoke-release-13/smoke13-07-louder.wav",
+        "sha256": "0901e1ebe4e3ec92778e47cb1872dd04b80cf536d6a6e5a7e4f7a4c40ec872c7"
+      },
+      "edit": {
+        "mode": "gentle-high-shelf",
+        "transitionHz": [
+          1600,
+          4000
+        ],
+        "highShelfDb": -4,
+        "rmsCompensationGain": 1.3230101692799032,
+        "timingUnchanged": true,
+        "additionalEnvelope": false,
+        "addedSound": false
+      },
+      "peak": 0.19073486328125
+    }
+  ]
+}

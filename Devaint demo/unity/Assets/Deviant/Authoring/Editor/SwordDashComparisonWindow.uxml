@@ -1,0 +1,31 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:Style src="LocomotionWindow.uss" />
+    <ui:ScrollView class="locomotion-editor">
+        <ui:Label text="검 · 대시 A/B" class="heading" />
+        <ui:Label text="CombatV2Arena Play Mode에서 A를 기록합니다. 검/프레임 시간/이동 창에서 변경값을 적용한 뒤 B를 기록하고 비교합니다. 기록은 현재 고정/프레임 실행 정의와 이동 프로필의 복사본입니다." class="description" />
+        <uie:ObjectField name="runtime" label="실험할 전투" />
+        <ui:VisualElement class="actions">
+            <ui:Button name="captureA" text="현재 정의를 A로 기록" />
+            <ui:Button name="captureB" text="현재 정의를 B로 기록" />
+        </ui:VisualElement>
+        <ui:Label name="versions" class="description" />
+        <ui:Label text="기본 시나리오는 같은 지형·빈 능력치 슬롯·오른쪽 방향에서 0초 기본 공격, 0.6초 대시를 1.2초까지 실행하고 벽 앞 대시를 0.4초 실행합니다. 불러온 기록을 선택하면 그 틱 입력을 사용합니다. 틱 간격은 0.02초입니다." class="description" />
+        <ui:Label name="inputs" class="description" />
+        <ui:VisualElement class="actions">
+            <ui:Button name="importInputs" text="입력 기록 불러오기" />
+            <ui:Button name="exportInputs" text="입력 기록 내보내기" />
+            <ui:Button name="clearInputs" text="기본 입력 사용" />
+        </ui:VisualElement>
+        <ui:Button name="compare" text="같은 입력으로 A/B 실행 · 전투 리셋" />
+        <ui:Label name="results" class="description" />
+        <ui:Label text="라이브 입력 관측 · Game / Lab 공통" class="heading" />
+        <ui:Label text="선택한 전투의 실제 키보드/수동 접수 표본과 소비/폐기 틱을 메모리에만 관측합니다. 256개 경계의 bounded poll이며 오래된 관측 유실 수를 표시합니다. 아래에는 최근 8개 경계를 표시합니다. 고정 A/B 입력 파일 또는 행동 성공/초기 월드 저장이 아닙니다." class="description" />
+        <ui:VisualElement class="actions">
+            <ui:Button name="startLiveInputs" text="라이브 입력 관측 시작" />
+            <ui:Button name="stopLiveInputs" text="관측 중지 · 기록 유지" />
+        </ui:VisualElement>
+        <ui:Label name="liveInputs" class="description" />
+        <ui:Label name="status" class="description" />
+        <ui:Label text="비교 후 원래 장비·정의·고정/프레임 모드로 돌아가며 전투는 초기화됩니다. 진행 중 공격·HP는 복구하지 않습니다. 비교는 원본을 저장하지 않으며 입력 내보내기는 틱 입력만 저장합니다. 월드/장비 상태·실제 모션 영상/손맛 검증은 별도 범위입니다." class="description" />
+    </ui:ScrollView>
+</ui:UXML>

@@ -1,0 +1,67 @@
+{
+  "status": "design_draft_not_simulated",
+  "purpose": "신규 파츠의 연결 의도를 읽기 위한 조합 예시. 성능 탐색·최적화·실행 검증을 하지 않았다. 칸 수와 획득 규칙을 확정하지 않는다.",
+  "builds": [
+    {
+      "name": "교대 후 근접 압박",
+      "build": [
+        [
+          "ink2_red_04",
+          "ink2_green_04",
+          "ink2_purple_04"
+        ],
+        [
+          "ink2_red_01",
+          "ink2_blue_03",
+          "ink2_green_01"
+        ]
+      ]
+    },
+    {
+      "name": "거리 확보와 추격",
+      "build": [
+        [
+          "ink2_yellow_06",
+          "ink2_blue_04",
+          "ink2_purple_05"
+        ],
+        [
+          "ink2_yellow_03",
+          "ink2_purple_01",
+          "ink2_red_02"
+        ]
+      ]
+    },
+    {
+      "name": "표식 격발 후 생존",
+      "requires": "표식 부여 방식 결정 필요",
+      "build": [
+        [
+          "ink2_blue_05",
+          "ink2_yellow_04"
+        ],
+        [
+          "ink2_green_07",
+          "ink2_purple_07",
+          "ink2_red_07",
+          "ink2_blue_07"
+        ]
+      ]
+    },
+    {
+      "name": "처치 중심 무리전",
+      "build": [
+        [
+          "ink2_red_03",
+          "ink2_red_09",
+          "ink2_purple_09"
+        ],
+        [
+          "ink2_yellow_10",
+          "ink2_green_10",
+          "ink2_blue_10"
+        ]
+      ]
+    }
+  ]
+}

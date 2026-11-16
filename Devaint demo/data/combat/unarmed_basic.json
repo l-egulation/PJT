@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "status": "user_approved_initial_spec",
+  "note": "Approved two-hit starter combo; no weapon granted and no special. Independent damage 40/50, total 0.68s. Ground step only with directional input; existing airborne control, hit reactions and cancel rules remain. Body art: straight-jab set (2026-11-12, 11 frames, snap timing: hold the guard, pass the middle in 0.02s, the fully extended frame from the 0.12s impact). Effect: white crescent in front of the fist from the impact, 5 frames x 0.03s; the second hit uses a larger crescent. Range (2026-11-13, tuned by eye in the jab tuner from the first hit): both hits share one box 2.884 x 2.02 centred at (1.342, 1.002) from the feet (reaches -0.1 to 2.784 so enemies hugging the player are still hit); both crescents are anchored at (1.8, 1.005), scale 1.2 (first) / 1.1 (second).",
+  "form": {
+    "id": "unarmed",
+    "name": "맨손",
+    "category": "맨손",
+    "inputSpeed": 2.5,
+    "basics": [
+      {
+        "name": "가벼운 올려치기",
+        "kind": "melee",
+        "damage": 40,
+        "duration": 0.36,
+        "impact": 0.12,
+        "active": 0.06,
+        "advance": {
+          "distance": 0.2,
+          "start": 0.08,
+          "duration": 0.06
+        },
+        "box": {
+          "width": 2.884,
+          "height": 2.02,
+          "x": 1.342,
+          "y": 1.002
+        }
+      },
+      {
+        "name": "정면 주먹",
+        "kind": "melee",
+        "damage": 50,
+        "duration": 0.32,
+        "impact": 0.12,
+        "active": 0.06,
+        "advance": {
+          "distance": 0.2,
+          "start": 0.08,
+          "duration": 0.06
+        },
+        "box": {
+          "width": 2.884,
+          "height": 2.02,
+          "x": 1.342,
+          "y": 1.002
+        }
+      }
+    ],
+    "specials": [
+      {
+        "id": "unarmed_none",
+        "name": "특수 공격 없음",
+        "unavailable": true,
+        "capacity": 1,
+        "cooldown": 0,
+        "activation": 0,
+        "end": 0,
+        "vertical": "normal",
+        "facing": "windup_start",
+        "hits": [],
+        "invulStart": [],
+        "invulEnd": []
+      }
+    ]
+  },
+  "presentation": [
+    {
+      "name": "attack1",
+      "frames": [
+        "UnarmedAttack/jab-combo/frame-09",
+        "UnarmedAttack/jab-combo/frame-10",
+        "UnarmedAttack/jab-combo/frame-11",
+        "UnarmedAttack/jab-combo/frame-12",
+        "UnarmedAttack/jab-combo/frame-14",
+        "UnarmedAttack/jab-combo/frame-15"
+      ],
+      "seconds": [
+        0.1,
+        0.02,
+        0.06,
+        0.06,
+        0.05,
+        0.07
+      ],
+      "contact": 2,
+      "sourceImpact": 0.12,
+      "fxStart": 0.12
+    },
+    {
+      "name": "attack2",
+      "frames": [
+        "UnarmedAttack/jab-combo/frame-20",
+        "UnarmedAttack/jab-combo/frame-22",
+        "UnarmedAttack/jab-combo/frame-23",
+        "UnarmedAttack/jab-combo/frame-26",
+        "UnarmedAttack/jab-combo/frame-32"
+      ],
+      "seconds": [
+        0.1,
+        0.02,
+        0.07,
+        0.07,
+        0.06
+      ],
+      "contact": 2,
+      "sourceImpact": 0.12,
+      "fxStart": 0.12
+    }
+  ],
+  "effects": [
+    {
+      "attack": "attack1",
+      "frames": [
+        "UnarmedAttack/jab-fx/jab/00",
+        "UnarmedAttack/jab-fx/jab/01",
+        "UnarmedAttack/jab-fx/jab/02",
+        "UnarmedAttack/jab-fx/jab/03",
+        "UnarmedAttack/jab-fx/jab/04"
+      ],
+      "seconds": [
+        0.03,
+        0.03,
+        0.03,
+        0.03,
+        0.03
+      ],
+      "flipX": false,
+      "x": [
+        1.8,
+        1.8,
+        1.8,
+        1.8,
+        1.8
+      ],
+      "y": [
+        1.005,
+        1.005,
+        1.005,
+        1.005,
+        1.005
+      ],
+      "scale": 1.2
+    },
+    {
+      "attack": "attack2",
+      "frames": [
+        "UnarmedAttack/jab-fx/jab_big/00",
+        "UnarmedAttack/jab-fx/jab_big/01",
+        "UnarmedAttack/jab-fx/jab_big/02",
+        "UnarmedAttack/jab-fx/jab_big/03",
+        "UnarmedAttack/jab-fx/jab_big/04"
+      ],
+      "seconds": [
+        0.03,
+        0.03,
+        0.03,
+        0.03,
+        0.03
+      ],
+      "flipX": false,
+      "x": [
+        1.8,
+        1.8,
+        1.8,
+        1.8,
+        1.8
+      ],
+      "y": [
+        1.005,
+        1.005,
+        1.005,
+        1.005,
+        1.005
+      ],
+      "scale": 1.1
+    }
+  ]
+}

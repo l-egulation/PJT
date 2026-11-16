@@ -1,0 +1,17 @@
+{
+  "format": "stage2-hover-aether-input-v1",
+  "promptVersion": 2,
+  "status": "v2-prompt-ready-awaiting-aether-output",
+  "userRequest": "날라다니는 자세를 하나 뽑아야겠네 일단 기본 자세에서 날라다닐 수 있게 떠오르는거 그리고 다시 착지 자세까지 뽑을거야",
+  "purpose": "rest movement (FusedMoveSpeed 2 u/s, up to 3 u) shown as a float instead of walking; takeoff, loopable float, landing",
+  "startImage": "hover-start-white-3x.png",
+  "startImageSha256": "8a9a2af8f7d23bc20d1528865d6eb7b40d5e50cd5bda8badcb721fcbf9743061",
+  "sameAs": "../fan-aether/fan-start-white-3x.png (approved fused idle, 512x384 logical at (64,64), 3x nearest)",
+  "endImage": "hover-start-white-3x.png",
+  "endImageReason": "the landing must end on the exact idle; give the same image as the end frame if Aether accepts one",
+  "sheet": "6x6, 36 cells, 640x360, frame 00 = input",
+  "previousPrompts": [
+    "previous/prompt-v1-cute-jump.txt"
+  ],
+  "v2Reason": "User on the v1 result: \"너무 안 어울리게 깜찍하게 점프하는딩..\". v2 removes the knee dip and landing knee bend (read as jump anticipation), lowers the hover to 1/8 body height, slows the timing to 3.6 s and makes the body rise as one rigid piece lifted by an unseen force."
+}

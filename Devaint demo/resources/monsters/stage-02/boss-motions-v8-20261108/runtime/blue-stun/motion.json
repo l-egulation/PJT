@@ -1,0 +1,56 @@
+{
+ "format": "stage2-boss-motion-v8",
+ "id": "blue-stun",
+ "name": "Blue 기절",
+ "use": "2페이즈 교환 뒤 기절 2초(ExchangeStun)",
+ "canvas": [
+  384,
+  256
+ ],
+ "pivot": [
+  192,
+  232
+ ],
+ "frames": [
+  "02.png",
+  "03.png",
+  "04.png",
+  "05.png",
+  "06.png"
+ ],
+ "sheet": {
+  "file": "sheet.png",
+  "columns": 5,
+  "cell": [
+   384,
+   256
+  ],
+  "order": "frames, left-to-right then top-to-bottom"
+ },
+ "sequence": [
+  "03.png",
+  "04.png",
+  "05.png",
+  "06.png",
+  "05.png",
+  "04.png",
+  "03.png",
+  "02.png"
+ ],
+ "durationsMs": [
+  70,
+  70,
+  70,
+  1438,
+  88,
+  88,
+  88,
+  88
+ ],
+ "totalMs": 2000,
+ "loop": false,
+ "workFolder": "phase2/Blue_기절",
+ "footShiftPx": {},
+ "projectilePixelsRemoved": {},
+ "status": "user-approved-not-unity-integrated"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "chapter1-rural-dusk-tiles",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node prepare-grass.cjs && node build-modules.cjs"
+  },
+  "dependencies": {
+    "sharp": "0.35.5"
+  }
+}

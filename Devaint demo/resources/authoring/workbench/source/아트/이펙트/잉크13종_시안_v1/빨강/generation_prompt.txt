@@ -1,0 +1,21 @@
+Generation: built-in image_gen tool.
+Assembly: Pillow; nearest-neighbor scaling to 128px, grid slicing, animation and compositing of unchanged Unity character PNGs.
+
+Use case: stylized-concept
+Asset type: production prototype pixel-art animation sprite sheet for a 2D side-scrolling ink-themed action game.
+Primary request: create ONE transparent sprite sheet with exactly 12 animation cells, arranged 4 columns by 3 rows, read left to right then top to bottom. Canvas ratio 4:3; cells exactly square, equal dimensions; no margins or gutters. Intended final delivery is 512x384 pixels with each cell 128x128, so use coarse crisp pixel-art clusters, hard edges, no soft glow, no antialiasing.
+Subject: RED INK stacking mark and explosive release. Use rich crimson and vermilion ink with dark maroon contours and sparse light coral highlights, NOT fire, NOT blood or gore. Organic calligraphic magical ink.
+Frame 1: one small crisp ink drop mark at center, occupying at most 20% cell width.
+Frame 2: two ink drop marks forming the beginning of a small circular sigil, occupying at most 30% width.
+Frame 3: three ink drop marks completing a compact triangular/circular crimson sigil, occupying at most 36% width.
+Frame 4: completed mark compresses inward with sharp red strokes.
+Frame 5: small dense burst at center with jagged brush splashes.
+Frame 6: medium expanding ragged circular ink splash.
+Frame 7: maximum explosive ring of rough red calligraphic ink, 75% cell width, transparent center and chunky outward flying droplets.
+Frame 8: wider broken ring with separating droplets.
+Frame 9: separated red strokes and droplets moving outward, center clearing.
+Frame 10: sparse smaller droplets.
+Frame 11: a few tiny dark red ink specks.
+Frame 12: almost empty with two tiny faint specks.
+Composition: fixed center (64,64 in each final cell), equal grid, all artwork fully inside its own cell with 8% safety boundary, stable scale progression. Transparent background with real alpha, no checkerboard drawn into the pixels.
+Constraints: effect ONLY. No character, no weapon, no enemy, no scenery, no text, no frame numbers, no grid lines, no labels, no interface, no watermark. Clearly readable at native 128px.

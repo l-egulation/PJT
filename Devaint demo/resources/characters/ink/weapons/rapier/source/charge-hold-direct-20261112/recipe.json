@@ -1,0 +1,23 @@
+{
+  "method": "direct_integer_pixel_edit_no_imagegen_no_pixellab",
+  "base": "runtime/motion-20261108/charge/015.png",
+  "prepareSources": [
+    "runtime/motion-20261108/charge/002.png",
+    "runtime/motion-20261108/charge/004.png",
+    "runtime/motion-20261108/charge/009.png",
+    "runtime/motion-20261108/charge/015.png"
+  ],
+  "canvas": [
+    640,
+    360
+  ],
+  "palette": "original_six_colours_unchanged",
+  "preserve": "original pose and proportions, canvas, palette, head, face, eyes, arms, right weapon hand, complete rapier and feet; left fist and fabric-edge retouches are explicit user requests",
+  "tool": "tools/create_rapier_charge_hold.py",
+  "approval": "user-approved-20261112",
+  "requestedRetouch": [
+    "empty LEFT hand becomes a plain circular black fist in all preparation and hold frames",
+    "remove black edge pixels on trailing cape/scarf tips; preserve right weapon hand and rapier"
+  ],
+  "prepareSourcesCopiedVerbatim": false
+}

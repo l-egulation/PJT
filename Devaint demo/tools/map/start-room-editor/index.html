@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1챕터 시작방 편집기</title>
+<!-- 1챕터 시작방(S1-START, 모든 시드 공통)의 발판·몬스터 배치 편집기.
+     판정은 tools/map/engine.js·movecheck.js(validate.cjs와 같은 규칙)를 그대로 쓴다. 결과 JSON은
+     data/map/block_rooms.json의 S1-START plats·enemies에 넣고 node tools/map/export_block_rooms.cjs로 Unity에 반영한다. -->
+<script src="../engine.js"></script>
+<script src="../movecheck.js"></script>
+<style>
+:root{
+  --bg:#f4efe4; --panel:#fffaf0; --ink:#1f1b19; --muted:#6f665c; --line:#d8cfbf;
+  --solid:#5b524a; --solid-kit:#857a6e; --air:#fbf7ee; --grid:#ece4d4;
+  --plat:#8a5a2b; --plat-door:#b9935f; --plat-kit:#a99a86; --vanish:#3f7fbf;
+  --sel:#e0582a; --ok:#2f7d4f; --bad:#c23b2b; --warn:#b07a12; --accent:#2d6c8f;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 "Pretendard","Malgun Gothic",system-ui,sans-serif}
+header{padding:12px 16px;border-bottom:1px solid var(--line);display:flex;gap:16px;align-items:baseline;flex-wrap:wrap}
+header h1{font-size:18px;margin:0}
+header p{margin:0;color:var(--muted)}
+main{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:12px;padding:12px 16px}
+@media (max-width:1000px){main{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.card h2{font-size:13px;margin:0 0 8px;color:var(--muted);font-weight:600}
+.toolbar{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+button,select,input{font:inherit;color:inherit}
+button{background:#fff;border:1px solid var(--line);border-radius:6px;padding:5px 10px;cursor:pointer}
+button:hover{border-color:var(--muted)}
+button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+button.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.sep{width:1px;height:22px;background:var(--line);margin:0 4px}
+.mon{display:inline-flex;align-items:center;gap:6px}
+.mon i{display:inline-block;width:12px;height:12px;border-radius:3px}
+#stage{position:relative;overflow:auto}
+canvas{display:block;background:var(--air);border-radius:4px;cursor:crosshair;max-width:100%}
+.hint{color:var(--muted);font-size:12px;margin-top:6px}
+.row{display:flex;gap:8px;align-items:center;margin:5px 0;flex-wrap:wrap}
+.row label{min-width:44px;color:var(--muted)}
+.row input[type=number]{width:72px;padding:3px 6px;border:1px solid var(--line);border-radius:5px}
+.chk{display:inline-flex;gap:4px;align-items:center;margin-right:8px}
+ul.issues{list-style:none;margin:0;padding:0;max-height:220px;overflow:auto}
+ul.issues li{padding:3px 0;border-bottom:1px dashed var(--line);font-size:13px}
+ul.issues li b{display:inline-block;min-width:30px}
+.okmsg{color:var(--ok);font-weight:600}
+.badmsg{color:var(--bad);font-weight:600}
+textarea{width:100%;height:150px;font:12px/1.4 Consolas,monospace;border:1px solid var(--line);border-radius:6px;padding:6px;background:#fff}
+.list{max-height:200px;overflow:auto;font-size:13px}
+.list div{padding:2px 4px;border-radius:4px;cursor:pointer}
+.list div:hover{background:#f1e9d8}
+.list div.sel{background:#fbe1d4}
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:6px}
+.legend span{display:inline-flex;gap:5px;align-items:center}
+.legend i{display:inline-block;width:14px;height:6px;border-radius:2px}
+kbd{border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;padding:0 4px;font-size:11px;background:#fff}
+</style>
+</head>
+<body>
+<header>
+  <h1>1챕터 시작방 편집기</h1>
+  <p>모든 시드에 똑같이 쓰는 시작방(<code>S1-START</code>, 안쪽 26×20칸)의 시작 위치·발판·몬스터를 배치합니다. 1칸 = 1u.</p>
+</header>
+<main>
+<section>
+  <div class="card">
+    <div class="toolbar" id="tools">
+      <button data-mode="select" class="on">선택·이동 <kbd>V</kbd></button>
+      <button data-mode="plat">발판 그리기 <kbd>P</kbd></button>
+      <button data-mode="enemy">몬스터 놓기 <kbd>M</kbd></button>
+      <button data-mode="erase">지우기 <kbd>E</kbd></button>
+      <span class="sep"></span>
+      <select id="monType" title="놓을 몬스터"></select>
+      <span class="sep"></span>
+      <button id="undo" title="되돌리기">되돌리기 <kbd>Ctrl+Z</kbd></button>
+      <button id="redo" title="다시 하기">다시 <kbd>Ctrl+Y</kbd></button>
+    </div>
+    <div id="stage"><canvas id="cv"></canvas></div>
+    <div class="legend">
+      <span><i style="background:var(--plat)"></i>발판</span>
+      <span><i style="background:var(--vanish)"></i>지워지는 발판</span>
+      <span><i style="background:var(--solid)"></i>벽·바닥</span>
+      <span><i style="background:#c23b2b"></i>몬스터 점프 한계(바닥 기준)</span>
+    </div>
+    <div class="hint">
+      발판: 원하는 높이의 줄에서 가로로 끌어 그립니다. 선택 모드에서 발판 가운데를 끌면 이동하고, 양 끝을 끌면 폭이 바뀝니다.
+      몬스터: 놓을 종류를 고르고 클릭하면 그 아래 가장 가까운 바닥·발판 위에 섭니다. 오른쪽 클릭이나 <kbd>Delete</kbd>로 지웁니다.
+      시작 위치: 주황 점선 상자(플레이어 몸 크기)를 선택 모드에서 끌면 옮겨지며, 몬스터처럼 아래 바닥·발판 위에 섭니다.
+    </div>
+  </div>
+  <div class="card" style="margin-top:12px">
+    <h2>표시</h2>
+    <div class="row">
+      <span class="chk"><input type="checkbox" id="showJump" checked><label for="showJump" style="min-width:0;color:inherit">몬스터 점프 한계선</label></span>
+      <span class="chk"><input type="checkbox" id="showRefs" checked><label for="showRefs" style="min-width:0;color:inherit">튜토리얼 팻말 위치</label></span>
+    </div>
+    <div class="hint">시작방 출입구는 오른쪽 출구(R0) 하나입니다. 몬스터가 쫓아올 때 점프할 수 있는 높이는 <code>data/combat/enemy_pursuit.json</code>을 따릅니다(아래 표). 바닥 몬스터가 발판을 밟고 이어서 오를 수도 있으므로, 편집기는 발판을 차례로 밟는 경로까지 따져 시작 발판에 올라올 수 있으면 J1 경고를 띄웁니다. 가로 거리는 따지지 않으므로 실제보다 엄격합니다.</div>
+    <div class="hint" id="jumpTable"></div>
+    <div class="hint">튜토리얼 팻말은 시작 위치와 같은 높이의 바닥·발판 위, 시작 위치 왼쪽 약 2.3u 근처에 섭니다. 실행 중에는 그 면에서 받침 1u가 걸리고 머리 위 4.6u가 빈 가장 가까운 자리를 찾습니다.</div>
+  </div>
+</section>
+<aside>
+  <div class="card">
+    <h2>규칙 검사 (validate.cjs와 같은 판정)</h2>
+    <div id="verdict"></div>
+    <ul class="issues" id="issues"></ul>
+    <div class="row"><button id="checkAll">모든 출입구 조합 검사</button><span id="allResult" class="hint"></span></div>
+  </div>
+  <div class="card" style="margin-top:12px">
+    <h2>선택한 항목</h2>
+    <div id="props"><div class="hint">선택한 항목이 없습니다.</div></div>
+  </div>
+  <div class="card" style="margin-top:12px">
+    <h2>배치 목록</h2>
+    <div class="list" id="list"></div>
+  </div>
+  <div class="card" style="margin-top:12px">
+    <h2>결과 JSON (S1-START의 spawn·plats·enemies)</h2>
+    <textarea id="out" spellcheck="false"></textarea>
+    <div class="row">
+      <button class="primary" id="copy">복사</button>
+      <button id="download">파일로 저장</button>
+      <button id="import">붙여 넣은 JSON 불러오기</button>
+      <button id="reset">게임 현재값으로 초기화</button>
+      <button id="clear">모두 비우기</button>
+    </div>
+    <div class="hint" id="copyMsg">편집 내용은 이 브라우저에 자동 저장됩니다. 완성되면 복사해서 Claude에게 붙여 넣으면 게임 데이터에 반영합니다.</div>
+  </div>
+</aside>
+</main>
+<script>
+'use strict';
+const RS=window.RoomSpec, MC=window.MoveCheck;
+if(!RS||!MC){document.body.innerHTML='<p style="padding:20px">판정 스크립트(tools/map/engine.js·movecheck.js)를 불러오지 못했습니다. 같은 폴더의 시작방_편집기.html을 여세요(없으면 node tools/map/start-room-editor/build.cjs).</p>';throw new Error('engine missing');}
+const SPEC=RS.SPEC, ENEMY=RS.ENEMY;
+// 게임 현재값(2026-11-13, data/map/block_rooms.json S1-START)
+const GAME_DEFAULT={spawn:{x:13,y:0},plats:[],enemies:[]};
+// 몬스터 추격 점프 한계(u, data/combat/enemy_pursuit.json). 0은 제자리 고정(술통 포격수).
+const JUMP={T:6,K:6,P:6,G:0,C:4};
+// 1챕터 시작방은 오른쪽 출구 하나만 선언한다(맵 생성기가 시작방에 오른쪽으로만 다음 방을 붙인다).
+const BASE={id:'S1-START',stage:1,kind:'start',bw:2,bh:2,frameSide:3,slots:['R0'],solids:[]};
+const MON_TYPES=['T','K','P','G','C'];
+const MON_COLOR={T:'#7a8f3a',K:'#5b4a8a',P:'#2f7d8f',G:'#9a5a2a',C:'#8f2f3f'};
+const STORE='deviant.startRoomEditor.v2';
+const fw=BASE.bw*SPEC.blockW, fh=BASE.bh*SPEC.blockH, FX=BASE.frameSide, FY=SPEC.frame, IW=fw-2*FX, IH=fh-2*FY;
+// 플레이어 몸 크기(u)와 기본 시작 자리(방 가운데 바닥)
+const PLAYER_W=.9375, PLAYER_H=2, DEFAULT_SPAWN={x:fw/2-FX,y:0}, SPAWN_COLOR='#e0582a';
+
+let state=load()||clone(GAME_DEFAULT);
+if(!state.spawn)state.spawn=clone(DEFAULT_SPAWN);
+let active=new Set(['R0']);
+let mode='select', monType='T', sel=null; // sel: {kind:'plat'|'enemy', i}
+const undoStack=[], redoStack=[];
+function clone(o){return JSON.parse(JSON.stringify(o));}
+function load(){try{const s=JSON.parse(localStorage.getItem(STORE));if(s&&Array.isArray(s.plats)&&Array.isArray(s.enemies))return s;}catch(e){}return null;}
+function save(){try{localStorage.setItem(STORE,JSON.stringify(state));}catch(e){}}
+function commit(){undoStack.push(JSON.stringify(state));if(undoStack.length>200)undoStack.shift();redoStack.length=0;}
+function room(){return {...BASE,spawn:{x:state.spawn.x,y:state.spawn.y},plats:state.plats.map(p=>{const o={x:p.x,y:p.y,w:p.w,need:[]};if(p.vanishing)o.vanishing=true;return o;}),enemies:state.enemies.map(e=>({t:e.t,x:e.x,y:e.y}))};}
+// 판정 도구는 빈 need를 '조건 없음'이 아닌 '숨김'으로 읽으므로 rooms.js처럼 빈 배열을 지운다.
+function checkInput(){const r=room();r.plats=r.plats.map(p=>({...p,need:undefined}));return r;}
+// J1: 이동하는 몬스터가 추격 점프(한계 JUMP)로 발판을 차례로 밟아 시작 자리 높이까지 오를 수 있는가.
+// 가로 거리는 따지지 않는다(엄격한 쪽). 아래로는 언제든 내려갈 수 있다.
+function climbIssues(){
+  const out=[],sp=state.spawn;if(sp.y<=0)return out;
+  const levels=[0,...state.plats.map(p=>p.y)];
+  for(const e of state.enemies){const jh=JUMP[e.t]||0;if(jh<=0)continue;
+    let top=e.y,grew=true;while(grew){grew=false;for(const y of levels)if(y>top&&y-top<=jh){top=y;grew=true;}}
+    if(top>=sp.y)out.push({rule:'J1',msg:`${(ENEMY[e.t]||{}).name||e.t}(${e.x},${e.y})가 점프 ${jh}u로 시작 자리 높이 y${sp.y}까지 올라올 수 있음`});
+  }
+  return out;
+}
+// 판정 메시지의 좌표(바깥 테두리 포함)를 편집 좌표로 바꾼다.
+function local(msg){return String(msg).replace(/\((-?[\d.]+),(-?[\d.]+)\)/g,(_,a,b)=>`(${+a-FX},${+b-FY})`);}
+
+// ── 화면 ──
+const cv=document.getElementById('cv'), ctx=cv.getContext('2d');
+const C=26, PAD=18; // 1u 픽셀, 바깥 여백
+cv.width=fw*C+PAD*2; cv.height=fh*C+PAD*2;
+const sx=x=>PAD+(x+FX)*C, sy=y=>PAD+(fh-(y+FY))*C; // 안쪽 좌표 → 화면
+const ux=px=>(px-PAD)/C-FX, uy=py=>fh-(py-PAD)/C-FY; // 화면 → 안쪽 좌표
+let built=null, result=null;
+
+function rebuild(){
+  const r=checkInput();
+  built=RS.buildRoom(r,[...active],false);
+  try{result=RS.checkRoom(r,[...active],false,MC,'s1');}catch(e){result={issues:[{rule:'!',msg:'판정 오류: '+e.message}]};}
+  result.issues=(result.issues||[]).map(i=>({...i,msg:local(i.msg)})).concat(climbIssues());
+  draw();panel();save();
+}
+function draw(){
+  const b=built;ctx.clearRect(0,0,cv.width,cv.height);
+  // 셀
+  for(let y=0;y<fh;y++)for(let x=0;x<fw;x++){
+    const v=b.grid[y*fw+x];if(!v)continue;
+    ctx.fillStyle=b.own[y*fw+x]===2?getVar('--solid-kit'):getVar('--solid');
+    ctx.fillRect(PAD+x*C,PAD+(fh-1-y)*C,C,C);
+  }
+  // 격자
+  ctx.strokeStyle=getVar('--grid');ctx.lineWidth=1;ctx.beginPath();
+  for(let x=FX;x<=fw-FX;x++){ctx.moveTo(PAD+x*C+.5,PAD+FY*C);ctx.lineTo(PAD+x*C+.5,PAD+(fh-FY)*C);}
+  for(let y=FY;y<=fh-FY;y++){ctx.moveTo(PAD+FX*C,PAD+(fh-y)*C+.5);ctx.lineTo(PAD+(fw-FX)*C,PAD+(fh-y)*C+.5);}
+  ctx.stroke();
+  // 좌표 눈금(안쪽 기준)
+  ctx.fillStyle=getVar('--muted');ctx.font='10px sans-serif';ctx.textAlign='center';ctx.textBaseline='top';
+  for(let x=0;x<=IW;x+=2)ctx.fillText(x,sx(x),sy(0)+3);
+  ctx.textAlign='right';ctx.textBaseline='middle';
+  for(let y=0;y<=IH;y+=2)ctx.fillText(y,sx(0)-4,sy(y));
+  // 출입구 표시
+  for(const g of b.slots){
+    ctx.save();ctx.font='bold 11px sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';
+    ctx.fillStyle=g.active?getVar('--ok'):'#9b9083';
+    if(g.side==='L'||g.side==='R'){const x=g.side==='L'?PAD+6:PAD+fw*C-6;ctx.translate(x,PAD+(fh-(g.y0+g.y1)/2)*C);ctx.rotate(-Math.PI/2);ctx.fillText(g.id+(g.active?' 열림':' 닫힘'),0,0);}
+    else{const y=g.side==='B'?PAD+fh*C-7:PAD+7;ctx.fillText(g.id+(g.active?' 열림':' 닫힘'),PAD+(g.x0+g.x1)/2*C,y);}
+    ctx.restore();
+  }
+  // 참고 위치
+  // 튜토리얼 팻말: 시작 자리와 같은 높이의 바닥·발판 위, 시작 자리 왼쪽 약 2.3u(실행 중 그 면에서 가장 가까운 자리를 찾는다)
+  if(document.getElementById('showRefs').checked){
+    const y=state.spawn.y,X=sx(state.spawn.x-2.3),c='#6f665c';ctx.strokeStyle=c;ctx.setLineDash([4,3]);ctx.beginPath();ctx.moveTo(X,sy(y));ctx.lineTo(X,sy(y+3));ctx.stroke();ctx.setLineDash([]);
+    ctx.fillStyle=c;ctx.font='11px sans-serif';ctx.textAlign='center';ctx.textBaseline='bottom';ctx.fillText('팻말',X,sy(y+3)-2);
+  }
+  // 몬스터 점프 한계선(바닥 y0 기준): 돌진꾼 4u, 그 밖의 이동 몬스터 6u
+  if(document.getElementById('showJump').checked){
+    const lines={};for(const t of MON_TYPES)if(JUMP[t]>0)(lines[JUMP[t]]=lines[JUMP[t]]||[]).push(ENEMY[t].name);
+    for(const h of Object.keys(lines).map(Number)){const Y=sy(h);ctx.strokeStyle='#c23b2b';ctx.globalAlpha=.55;ctx.setLineDash([8,5]);ctx.beginPath();ctx.moveTo(sx(0),Y);ctx.lineTo(sx(IW),Y);ctx.stroke();ctx.setLineDash([]);ctx.globalAlpha=1;
+      ctx.fillStyle='#c23b2b';ctx.font='10px sans-serif';ctx.textAlign='right';ctx.textBaseline='bottom';ctx.fillText(`점프 ${h}u: ${lines[h].join('·')}`,sx(IW)-4,Y-2);}
+  }
+  // 편집 발판
+  state.plats.forEach((p,i)=>{
+    ctx.fillStyle=p.vanishing?getVar('--vanish'):getVar('--plat');ctx.fillRect(sx(p.x),sy(p.y)-4,p.w*C,8);
+    if(sel&&sel.kind==='plat'&&sel.i===i){ctx.strokeStyle=getVar('--sel');ctx.lineWidth=2;ctx.strokeRect(sx(p.x)-2,sy(p.y)-6,p.w*C+4,12);ctx.lineWidth=1;
+      ctx.fillStyle=getVar('--sel');ctx.fillRect(sx(p.x)-4,sy(p.y)-6,5,12);ctx.fillRect(sx(p.x+p.w)-1,sy(p.y)-6,5,12);}
+  });
+  // 몬스터
+  state.enemies.forEach((e,i)=>{
+    const s=ENEMY[e.t]||{w:1,h:1,name:e.t};const w=s.w*C,h=s.h*C,X=sx(e.x),Y=sy(e.y);
+    ctx.fillStyle=MON_COLOR[e.t]||'#555';ctx.globalAlpha=.82;ctx.fillRect(X-w/2,Y-h,w,h);ctx.globalAlpha=1;
+    ctx.strokeStyle=sel&&sel.kind==='enemy'&&sel.i===i?getVar('--sel'):'#1f1b19';ctx.lineWidth=sel&&sel.kind==='enemy'&&sel.i===i?3:1;ctx.strokeRect(X-w/2,Y-h,w,h);ctx.lineWidth=1;
+    ctx.fillStyle='#fff';ctx.font='bold 12px sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(e.t,X,Y-h/2);
+    ctx.fillStyle=getVar('--ink');ctx.font='10px sans-serif';ctx.textBaseline='bottom';ctx.fillText(s.name,X,Y-h-2);
+  });
+  // 플레이어 시작 자리(몸 크기)
+  {const s=state.spawn,w=PLAYER_W*C,h=PLAYER_H*C,X=sx(s.x),Y=sy(s.y),on=sel&&sel.kind==='spawn';
+    ctx.fillStyle=SPAWN_COLOR;ctx.globalAlpha=.25;ctx.fillRect(X-w/2,Y-h,w,h);ctx.globalAlpha=1;
+    ctx.strokeStyle=SPAWN_COLOR;ctx.lineWidth=on?3:2;ctx.setLineDash(on?[]:[5,3]);ctx.strokeRect(X-w/2,Y-h,w,h);ctx.setLineDash([]);ctx.lineWidth=1;
+    ctx.fillStyle=SPAWN_COLOR;ctx.font='bold 11px sans-serif';ctx.textAlign='center';ctx.textBaseline='bottom';ctx.fillText('시작',X,Y-h-2);}
+  // 그리는 중인 발판
+  if(drag&&drag.type==='new'){const a=Math.min(drag.x0,drag.x1),w=Math.abs(drag.x1-drag.x0);if(w>0){ctx.fillStyle=getVar('--sel');ctx.globalAlpha=.6;ctx.fillRect(sx(a),sy(drag.y)-4,w*C,8);ctx.globalAlpha=1;ctx.fillStyle=getVar('--ink');ctx.font='11px sans-serif';ctx.textAlign='left';ctx.textBaseline='bottom';ctx.fillText(`x ${a}, y ${drag.y}, 폭 ${w}`,sx(a),sy(drag.y)-6);}}
+  // 커서 안내
+  if(hover&&!drag){ctx.fillStyle=getVar('--muted');ctx.font='11px sans-serif';ctx.textAlign='left';ctx.textBaseline='top';ctx.fillText(`x ${hover.x.toFixed(2)}  y ${hover.y.toFixed(2)}`,PAD+4,4);}
+}
+const varCache={};function getVar(n){return varCache[n]||(varCache[n]=getComputedStyle(document.documentElement).getPropertyValue(n).trim());}
+
+// ── 판정·패널 ──
+const RULE={G1:'고체',G2:'발판',E1:'몬스터 자리',E2:'바닥 폭',E3:'좌우 출입구 근처',E4:'상하 출입구 근처',K1:'표식',M1:'이동',M2:'몬스터 도달',M3:'표식 도달',P1:'시작 자리',M4:'시작→출구',J1:'몬스터가 올라옴','!':'오류'};
+function panel(){
+  const iss=result.issues||[];const v=document.getElementById('verdict');
+  v.innerHTML=iss.length?`<span class="badmsg">문제 ${iss.length}건</span> <span class="hint">(열린 출입구: ${[...active].join(', ')||'없음'})</span>`:`<span class="okmsg">문제 없음</span> <span class="hint">(열린 출입구: ${[...active].join(', ')||'없음'})</span>`;
+  document.getElementById('issues').innerHTML=iss.map(i=>`<li><b>${i.rule}</b> ${RULE[i.rule]||''} — ${esc(i.msg)}</li>`).join('');
+  // 목록
+  const L=[`<div data-k="spawn" data-i="0" class="${sel&&sel.kind==='spawn'?'sel':''}"><b style="color:${SPAWN_COLOR}">시작 위치</b>: x ${state.spawn.x}, y ${state.spawn.y}</div>`];state.plats.forEach((p,i)=>L.push(`<div data-k="plat" data-i="${i}" class="${sel&&sel.kind==='plat'&&sel.i===i?'sel':''}">발판 ${i+1}: x ${p.x}, y ${p.y}, 폭 ${p.w}${p.vanishing?' · 지워짐':''}</div>`));
+  state.enemies.forEach((e,i)=>L.push(`<div data-k="enemy" data-i="${i}" class="${sel&&sel.kind==='enemy'&&sel.i===i?'sel':''}">${(ENEMY[e.t]||{}).name||e.t} (${e.t}): x ${e.x}, y ${e.y}</div>`));
+  document.getElementById('list').innerHTML=L.join('')||'<div class="hint">비어 있습니다.</div>';
+  props();
+  document.getElementById('out').value=exportText();
+}
+function esc(s){return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
+function props(){
+  const el=document.getElementById('props');
+  if(!sel){el.innerHTML='<div class="hint">선택한 항목이 없습니다.</div>';return;}
+  if(sel.kind==='spawn'){const s=state.spawn;
+    el.innerHTML=`<div class="row"><b style="color:${SPAWN_COLOR}">플레이어 시작 위치</b></div>
+    <div class="row"><label>x</label><input type="number" data-f="x" step="0.25" value="${s.x}"><label>y</label><input type="number" data-f="y" step="1" value="${s.y}"></div>
+    <div class="hint">y는 서 있는 바닥·발판 높이입니다. 바닥이나 발판 위여야 하고, 여기서 오른쪽 출구까지 갈 수 있어야 합니다(내려가서 걸어 나가도 됩니다). 지울 수는 없습니다.</div>
+    <div class="row"><button id="spawnReset">기본값(가운데 바닥)으로</button></div>`;return;}
+  if(sel.kind==='plat'){const p=state.plats[sel.i];
+    el.innerHTML=`<div class="row"><label>x</label><input type="number" data-f="x" step="1" value="${p.x}"><label>y</label><input type="number" data-f="y" step="1" value="${p.y}"></div>
+    <div class="row"><label>폭</label><input type="number" data-f="w" step="1" min="1" value="${p.w}"></div>
+    <div class="row"><span class="chk"><input type="checkbox" data-f="vanishing" ${p.vanishing?'checked':''}>지워지는 발판</span></div>
+    <div class="row"><button id="del">이 발판 지우기</button></div>`;
+  }else{const e=state.enemies[sel.i];
+    el.innerHTML=`<div class="row"><label>종류</label><select data-f="t">${MON_TYPES.map(t=>`<option value="${t}" ${t===e.t?'selected':''}>${t} · ${ENEMY[t].name}</option>`).join('')}</select></div>
+    <div class="row"><label>x</label><input type="number" data-f="x" step="0.25" value="${e.x}"><label>y</label><input type="number" data-f="y" step="1" value="${e.y}"></div>
+    <div class="hint">y는 서 있는 바닥·발판 높이입니다. 필요한 바닥 폭: ${ENEMY[e.t].run}칸, 키 ${ENEMY[e.t].h}u.</div>
+    <div class="row"><button id="del">이 몬스터 지우기</button></div>`;
+  }
+}
+document.getElementById('props').addEventListener('change',ev=>{
+  const t=ev.target;if(!sel)return;commit();
+  const o=obj(sel);
+  if(t.dataset.f==='vanishing'){if(t.checked)o.vanishing=true;else delete o.vanishing;}
+  else if(t.dataset.f==='t'){o.t=t.value;}
+  else if(t.dataset.f){let v=+t.value;if(!isFinite(v))return;if(t.dataset.f==='w')v=Math.max(1,Math.round(v));else if(sel.kind==='plat'||t.dataset.f==='y')v=Math.round(v);else v=Math.round(v*4)/4;o[t.dataset.f]=v;}
+  rebuild();
+});
+document.getElementById('props').addEventListener('click',ev=>{if(ev.target.id==='del')removeSel();
+  if(ev.target.id==='spawnReset'){commit();state.spawn=clone(DEFAULT_SPAWN);rebuild();}});
+function obj(s){return s.kind==='spawn'?state.spawn:s.kind==='plat'?state.plats[s.i]:state.enemies[s.i];}
+document.getElementById('list').addEventListener('click',ev=>{const d=ev.target.closest('[data-k]');if(!d)return;sel={kind:d.dataset.k,i:+d.dataset.i};setMode('select');rebuild();});
+
+// ── 입력 ──
+let drag=null, hover=null;
+function pos(ev){const r=cv.getBoundingClientRect();const k=cv.width/r.width;return {x:ux((ev.clientX-r.left)*k),y:uy((ev.clientY-r.top)*k)};}
+function shownPlats(){return state.plats;}
+// x 위치에서 높이 y 아래로 가장 가까운 설 자리(바닥·고체 윗면·보이는 발판)
+function surfaceBelow(x,y){
+  let best=0;const fx=Math.floor(x)+FX;
+  for(let gy=Math.min(fh-1,Math.floor(y+FY));gy>=1;gy--){if(built.grid[(gy-1)*fw+fx]===1&&built.grid[gy*fw+fx]===0){best=Math.max(best,gy-FY);break;}}
+  for(const p of shownPlats())if(x>=p.x&&x<=p.x+p.w&&p.y<=y+.5&&p.y>best)best=p.y;
+  return Math.max(0,best);
+}
+function hit(pt){
+  {const s=state.spawn;if(Math.abs(pt.x-s.x)<=PLAYER_W/2+.2&&pt.y>=s.y-.2&&pt.y<=s.y+PLAYER_H)return {kind:'spawn',i:0};}
+  for(let i=state.enemies.length-1;i>=0;i--){const e=state.enemies[i],s=ENEMY[e.t]||{w:1,h:1};if(Math.abs(pt.x-e.x)<=s.w/2+.15&&pt.y>=e.y-.2&&pt.y<=e.y+s.h)return {kind:'enemy',i};}
+  for(let i=state.plats.length-1;i>=0;i--){const p=state.plats[i];if(pt.x>=p.x-.4&&pt.x<=p.x+p.w+.4&&Math.abs(pt.y-p.y)<=.45){
+    const part=Math.abs(pt.x-p.x)<.45?'l':Math.abs(pt.x-(p.x+p.w))<.45?'r':'m';return {kind:'plat',i,part};}}
+  return null;
+}
+const clampX=x=>Math.max(0,Math.min(IW,x)), clampY=y=>Math.max(1,Math.min(IH-1,y));
+cv.addEventListener('contextmenu',ev=>{ev.preventDefault();const h=hit(pos(ev));if(h&&h.kind!=='spawn'){commit();sel=h;removeSel(true);}});
+cv.addEventListener('mousedown',ev=>{
+  if(ev.button!==0)return;const pt=pos(ev);
+  if(mode==='plat'){const y=clampY(Math.round(pt.y)),x=clampX(Math.round(pt.x));drag={type:'new',x0:x,x1:x,y};draw();return;}
+  if(mode==='enemy'){const x=clampX(Math.round(pt.x*4)/4);commit();state.enemies.push({t:monType,x,y:surfaceBelow(x,pt.y)});sel={kind:'enemy',i:state.enemies.length-1};rebuild();return;}
+  const h=hit(pt);
+  if(mode==='erase'){if(h&&h.kind!=='spawn'){commit();sel=h;removeSel(true);}return;}
+  sel=h?{kind:h.kind,i:h.i}:null;
+  if(h){commit();const o=obj(h);drag={type:h.kind,part:h.part,i:h.i,start:pt,orig:clone(o),moved:false,riders:h.kind==='plat'?riders(o):[]};}
+  rebuild();
+});
+window.addEventListener('mousemove',ev=>{
+  const pt=pos(ev);hover=(pt.x>=-FX&&pt.x<=IW+FX&&pt.y>=-FY&&pt.y<=IH+FY)?pt:null;
+  if(!drag){if(ev.target===cv){const h=mode==='select'?hit(pt):null;cv.style.cursor=h?(h.kind==='plat'&&h.part!=='m'?'ew-resize':'move'):'crosshair';draw();}return;}
+  if(drag.type==='new'){drag.x1=clampX(Math.round(pt.x));draw();return;}
+  const dx=pt.x-drag.start.x,dy=pt.y-drag.start.y;drag.moved=true;
+  if(drag.type==='plat'){const p=state.plats[drag.i],o=drag.orig;
+    if(drag.part==='l'){const nx=Math.min(o.x+o.w-1,clampX(Math.round(o.x+dx)));p.w=o.x+o.w-nx;p.x=nx;}
+    else if(drag.part==='r'){p.w=Math.max(1,Math.min(IW-o.x,Math.round(o.w+dx)));}
+    else{p.x=Math.max(0,Math.min(IW-o.w,Math.round(o.x+dx)));p.y=clampY(Math.round(o.y+dy));carry(drag.riders,p.x-o.x,p.y-o.y);}
+  }else{const e=drag.type==='spawn'?state.spawn:state.enemies[drag.i];e.x=clampX(Math.round((drag.orig.x+dx)*4)/4);e.y=surfaceBelow(e.x,pt.y+.3);}
+  rebuild();
+});
+window.addEventListener('mouseup',()=>{
+  if(!drag)return;
+  if(drag.type==='new'){const a=Math.min(drag.x0,drag.x1),w=Math.abs(drag.x1-drag.x0);if(w>=1){commit();state.plats.push({x:a,y:drag.y,w});sel={kind:'plat',i:state.plats.length-1};}}
+  else if(!drag.moved)undoStack.pop();
+  drag=null;rebuild();
+});
+cv.addEventListener('mouseleave',()=>{hover=null;if(!drag)draw();});
+// 발판 위에 서 있는 시작 자리·몬스터(발판을 옮기면 함께 옮긴다). 원래 좌표를 기억해 둔다.
+function riders(p){return [state.spawn,...state.enemies].filter(o=>o.y===p.y&&o.x>=p.x&&o.x<=p.x+p.w).map(o=>({o,x:o.x,y:o.y}));}
+function carry(rs,dx,dy){for(const r of rs){r.o.x=clampX(r.x+dx);r.o.y=r.y+dy;}}
+function removeSel(already){if(!sel||sel.kind==='spawn')return;if(!already)commit();(sel.kind==='plat'?state.plats:state.enemies).splice(sel.i,1);sel=null;rebuild();}
+function setMode(m){mode=m;document.querySelectorAll('#tools [data-mode]').forEach(b=>b.classList.toggle('on',b.dataset.mode===m));}
+document.getElementById('tools').addEventListener('click',ev=>{const b=ev.target.closest('[data-mode]');if(b)setMode(b.dataset.mode);});
+const monSel=document.getElementById('monType');
+monSel.innerHTML=MON_TYPES.map(t=>`<option value="${t}">${t} · ${ENEMY[t].name} (바닥 ${ENEMY[t].run}칸)</option>`).join('');
+monSel.addEventListener('change',()=>{monType=monSel.value;setMode('enemy');});
+function undo(){if(!undoStack.length)return;redoStack.push(JSON.stringify(state));state=JSON.parse(undoStack.pop());sel=null;rebuild();}
+function redo(){if(!redoStack.length)return;undoStack.push(JSON.stringify(state));state=JSON.parse(redoStack.pop());sel=null;rebuild();}
+document.getElementById('undo').onclick=undo;document.getElementById('redo').onclick=redo;
+window.addEventListener('keydown',ev=>{
+  if(ev.target.matches('input,textarea,select'))return;
+  const k=ev.key.toLowerCase();
+  if((ev.ctrlKey||ev.metaKey)&&k==='z'){ev.preventDefault();ev.shiftKey?redo():undo();return;}
+  if((ev.ctrlKey||ev.metaKey)&&k==='y'){ev.preventDefault();redo();return;}
+  if(k==='delete'||k==='backspace'){if(sel){ev.preventDefault();removeSel();}return;}
+  if(k==='v')setMode('select');else if(k==='p')setMode('plat');else if(k==='m')setMode('enemy');else if(k==='e')setMode('erase');
+  else if(sel&&k.startsWith('arrow')){ev.preventDefault();commit();const o=obj(sel);
+    const st=sel.kind==='plat'?1:.25;
+    if(sel.kind==='plat'){const rs=riders(o),x0=o.x,y0=o.y;
+      if(k==='arrowleft')o.x=Math.max(0,o.x-1);if(k==='arrowright')o.x=Math.min(IW-o.w,o.x+1);
+      if(k==='arrowup')o.y=clampY(o.y+1);if(k==='arrowdown')o.y=clampY(o.y-1);
+      carry(rs,o.x-x0,o.y-y0);}
+    else{if(k==='arrowleft')o.x=clampX(o.x-st);if(k==='arrowright')o.x=clampX(o.x+st);
+      o.y=surfaceBelow(o.x,k==='arrowdown'?o.y-.5:k==='arrowup'?IH:o.y+.3);}
+    rebuild();}
+});
+
+// ── 출입구 미리보기 ──
+document.getElementById('jumpTable').innerHTML=MON_TYPES.map(t=>`${ENEMY[t].name} ${JUMP[t]>0?JUMP[t]+'u':'이동 안 함'}`).join(' · ');
+document.getElementById('showJump').addEventListener('change',draw);
+document.getElementById('showRefs').addEventListener('change',draw);
+document.getElementById('checkAll').onclick=()=>{
+  const r=checkInput(),combos=RS.combos(r.slots);let bad=0,first='';
+  for(const c of combos)for(const m of [false,true]){const k=RS.checkRoom(r,c,m,MC,'s1');if(k.issues.length){bad++;if(!first)first=`${c.join('+')}${m?' 반전':''}: ${k.issues[0].msg}`;}}
+  document.getElementById('allResult').innerHTML=bad?`<span class="badmsg">${combos.length*2}건 중 ${bad}건 실패</span><br>${esc(local(first))}`:`<span class="okmsg">${combos.length*2}건 모두 통과</span>`;
+};
+
+// ── 내보내기 ──
+function exportText(){
+  const r=room();
+  const plats=r.plats.map(p=>'    '+JSON.stringify(p)).join(',\n'),en=r.enemies.map(e=>'    '+JSON.stringify(e)).join(',\n');
+  const arr=s=>s?`[\n${s}\n  ]`:'[]';
+  return `{\n  "id": "S1-START",\n  "spawn": ${JSON.stringify(r.spawn)},\n  "plats": ${arr(plats)},\n  "enemies": ${arr(en)}\n}`;
+}
+document.getElementById('copy').onclick=async()=>{const t=exportText();try{await navigator.clipboard.writeText(t);msg('복사했습니다. Claude에게 붙여 넣어 주세요.');}catch(e){const a=document.getElementById('out');a.select();document.execCommand('copy');msg('복사했습니다.');}};
+document.getElementById('download').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([exportText()],{type:'application/json'}));a.download='S1-START_배치.json';a.click();URL.revokeObjectURL(a.href);};
+document.getElementById('import').onclick=()=>{try{const o=JSON.parse(document.getElementById('out').value);if(!Array.isArray(o.plats)||!Array.isArray(o.enemies))throw new Error('plats·enemies 배열이 필요합니다');
+  commit();state={spawn:o.spawn&&isFinite(+o.spawn.x)&&isFinite(+o.spawn.y)?{x:+o.spawn.x,y:+o.spawn.y}:clone(DEFAULT_SPAWN),plats:o.plats.filter(p=>!p.need||!p.need.length||p.need.includes('R0')).map(p=>({x:+p.x,y:+p.y,w:+p.w,...(p.vanishing?{vanishing:true}:{})})),enemies:o.enemies.map(e=>({t:e.t,x:+e.x,y:+e.y}))};sel=null;rebuild();msg('불러왔습니다.');}catch(e){msg('불러오기 실패: '+e.message);}};
+document.getElementById('reset').onclick=()=>{if(!confirm('게임에 들어 있는 현재 시작방 값으로 되돌릴까요? (되돌리기로 취소할 수 있습니다)'))return;commit();state=clone(GAME_DEFAULT);sel=null;rebuild();};
+document.getElementById('clear').onclick=()=>{commit();state={spawn:state.spawn,plats:[],enemies:[]};sel=null;rebuild();};
+function msg(t){document.getElementById('copyMsg').textContent=t;}
+
+rebuild();
+</script>
+</body>
+</html>

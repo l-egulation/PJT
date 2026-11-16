@@ -1,0 +1,72 @@
+{
+  "format": "deviant-resource-asset-v1",
+  "id": "audio.final-game-bgm",
+  "path": "audio/final-game-bgm",
+  "name": "최종 장면별 BGM 및 사망 효과음",
+  "status": "user-supplied-runtime",
+  "approval": "user-selected-for-game-integration",
+  "gameIntegration": "main-owned",
+  "sources": [
+    "User-supplied original MP3 and WAV files; original bytes preserved"
+  ],
+  "files": [
+    "runtime/final-title.mp3",
+    "runtime/final-village.mp3",
+    "runtime/final-chase.mp3",
+    "runtime/final-chapter1-field.mp3",
+    "runtime/final-chapter2-field.mp3",
+    "runtime/final-chapter2-boss.mp3",
+    "runtime/final-maintenance.mp3",
+    "runtime/player-death.wav"
+  ],
+  "originalFiles": [
+    {
+      "file": "runtime/final-title.mp3",
+      "originalName": "타이틀.mp3",
+      "bytes": 2483009,
+      "sha256": "7fb349cbab6aa1d6058e33d86d91a9d9771ee39b337d52d89b7f5691cf79d3ce"
+    },
+    {
+      "file": "runtime/final-village.mp3",
+      "originalName": "시작마을.mp3",
+      "bytes": 2018754,
+      "sha256": "0eaabcef1063a18dc767ba18e16deef75b1629bf9dddb6370c62312e62e9b5a0"
+    },
+    {
+      "file": "runtime/final-chase.mp3",
+      "originalName": "튜토리얼 도망.mp3",
+      "bytes": 3066663,
+      "sha256": "5189d4c878ae53f560706d13fe442f309403648caab555f9c7cdf8afa66cffb4"
+    },
+    {
+      "file": "runtime/final-chapter1-field.mp3",
+      "originalName": "1스테이지.mp3",
+      "bytes": 2150516,
+      "sha256": "9df96c53c47c166b832e72edf8ea411a0eebadd85c71429a3959936122b0d2cf"
+    },
+    {
+      "file": "runtime/final-chapter2-field.mp3",
+      "originalName": "2스테이지.mp3",
+      "bytes": 2216982,
+      "sha256": "70ef5a7817b631bde2cb8dbe744eff17b6f4b92a1d3dd7be597a8192cc69b732"
+    },
+    {
+      "file": "runtime/final-chapter2-boss.mp3",
+      "originalName": "2스테이지보스.mp3",
+      "bytes": 4082951,
+      "sha256": "8a496c30246f39f4144f30d5daf0e253781a07d4d8c522149bf7332b04d9f618"
+    },
+    {
+      "file": "runtime/final-maintenance.mp3",
+      "originalName": "정비소.mp3",
+      "bytes": 2881453,
+      "sha256": "169e49b3e13c93fa28853e22606add28f365bb89732be590324fefab9c0ab23e"
+    },
+    {
+      "file": "runtime/player-death.wav",
+      "originalName": "죽었을 때.wav",
+      "bytes": 373468,
+      "sha256": "985ed08af5b5462ca1a3d65a052d92a3283da8809ed79a11896791311489b2b9"
+    }
+  ]
+}

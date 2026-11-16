@@ -1,0 +1,3127 @@
+{
+  "schema": "chapter1-authored-rooms-v1",
+  "rooms": [
+    {
+      "id": "forest_double_clearing_01",
+      "name": "숲의 이중 공터",
+      "width": 32,
+      "height": 18,
+      "mirrorable": false,
+      "ports": [
+        {
+          "side": "left",
+          "y": 15,
+          "role": "entry"
+        },
+        {
+          "side": "right",
+          "y": 15,
+          "role": "exit"
+        }
+      ],
+      "terrain": [
+        {
+          "x": 0,
+          "y": 15,
+          "w": 32,
+          "h": 3,
+          "kind": "earth",
+          "id": "compact-surface-01"
+        },
+        {
+          "x": 5,
+          "y": 11,
+          "w": 3,
+          "h": 0.5,
+          "kind": "wood",
+          "id": "compact-surface-07"
+        },
+        {
+          "x": 25,
+          "y": 11,
+          "w": 3,
+          "h": 0.5,
+          "kind": "wood",
+          "id": "copy-289b7a13-2e33-4120-993b-76b43106a552"
+        }
+      ],
+      "monsters": [
+        {
+          "x": 3,
+          "y": 15,
+          "species": "05_boar",
+          "id": "enemy-01"
+        },
+        {
+          "x": 6.5,
+          "y": 15,
+          "species": "07_scarecrow",
+          "id": "enemy-03"
+        },
+        {
+          "x": 10.5,
+          "y": 15,
+          "species": "05_boar",
+          "id": "copy-55da4dc0-6bce-43c8-b38c-6cc04183e9d4"
+        },
+        {
+          "x": 7.5,
+          "y": 15,
+          "species": "07_scarecrow",
+          "id": "copy-3469e636-59dc-47f8-8437-ac2cba4c67f4"
+        },
+        {
+          "x": 5.5,
+          "y": 15,
+          "species": "07_scarecrow",
+          "id": "copy-af5557bf-423a-4221-a946-2072852f5cc1"
+        },
+        {
+          "x": 16.5,
+          "y": 15,
+          "species": "10_water_bucket",
+          "id": "copy-8259ddd5-f5ad-476e-9015-01f8d3a53527"
+        },
+        {
+          "x": 27,
+          "y": 15,
+          "species": "07_scarecrow",
+          "id": "copy-097e502d-89f9-47cd-9fa7-6f46db320565"
+        },
+        {
+          "x": 28,
+          "y": 15,
+          "species": "07_scarecrow",
+          "id": "copy-84151cad-9051-47e1-a70f-94af0a27c48b"
+        },
+        {
+          "x": 29,
+          "y": 15,
+          "species": "07_scarecrow",
+          "id": "copy-d9bf41f7-a1b4-434e-921f-e51f1dd19054"
+        },
+        {
+          "id": "monster-e414c987-f259-4644-b3c9-08dc2f08de14",
+          "species": "draft_07_heavy_charger",
+          "x": 22.5,
+          "y": 15
+        },
+        {
+          "id": "monster-c43b4693-7720-4035-97fb-0d6e50d78282",
+          "species": "draft_06_stationary_turret",
+          "x": 26.5,
+          "y": 11
+        },
+        {
+          "id": "monster-689336d6-e701-4a56-975e-9797e9bd8a92",
+          "species": "draft_06_stationary_turret",
+          "x": 6.5,
+          "y": 11
+        }
+      ],
+      "decorations": [
+        {
+          "id": "prop-001",
+          "assetId": "village:phase2_plaza",
+          "x": 12.5,
+          "y": 15,
+          "width": 6.8125,
+          "height": 4.03125,
+          "order": -24,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "prop-002",
+          "assetId": "village:phase2_cypress",
+          "x": 11,
+          "y": 15,
+          "width": 2.625,
+          "height": 6.21875,
+          "order": -43,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "prop-003",
+          "assetId": "village:phase2_shrub",
+          "x": 15.5,
+          "y": 15,
+          "width": 2.969999983906746,
+          "height": 1.7324999906122684,
+          "order": -12,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "prop-004",
+          "assetId": "village:phase2_shrub",
+          "x": 10.57061767578125,
+          "y": 15,
+          "width": 2.1599999517202377,
+          "height": 1.2599999718368053,
+          "order": -13,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "prop-005",
+          "assetId": "village:phase2_grass",
+          "x": 2.5,
+          "y": 15,
+          "width": 0.9624999836087227,
+          "height": 0.5906249899417162,
+          "order": 1,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "prop-006",
+          "assetId": "village:phase2_grass",
+          "x": 6.5,
+          "y": 15,
+          "width": 0.9624999836087227,
+          "height": 0.5906249899417162,
+          "order": 1,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "prop-007",
+          "assetId": "village:phase2_grass",
+          "x": 10.5,
+          "y": 15,
+          "width": 0.9624999836087227,
+          "height": 0.5906249899417162,
+          "order": 1,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "prop-008",
+          "assetId": "village:phase2_grass",
+          "x": 19.5,
+          "y": 15,
+          "width": 0.9624999836087227,
+          "height": 0.5906249899417162,
+          "order": 1,
+          "rotation": 0,
+          "flipX": false
+        }
+      ],
+      "traversalRoute": [
+        {
+          "x": 1,
+          "y": 15
+        },
+        {
+          "x": 31,
+          "y": 15
+        }
+      ],
+      "renderGround": [],
+      "renderPlatforms": [
+        {
+          "x": 5,
+          "y": 11,
+          "offsetY": 0,
+          "id": 326
+        },
+        {
+          "x": 6,
+          "y": 11,
+          "offsetY": 0,
+          "id": 327
+        },
+        {
+          "x": 7,
+          "y": 11,
+          "offsetY": 0,
+          "id": 341
+        },
+        {
+          "x": 25,
+          "y": 11,
+          "offsetY": 0,
+          "id": 326
+        },
+        {
+          "x": 26,
+          "y": 11,
+          "offsetY": 0,
+          "id": 327
+        },
+        {
+          "x": 27,
+          "y": 11,
+          "offsetY": 0,
+          "id": 341
+        }
+      ]
+    },
+    {
+      "id": "root_ravine_02",
+      "name": "뿌리 협곡",
+      "width": 32,
+      "height": 18,
+      "mirrorable": false,
+      "ports": [
+        {
+          "side": "left",
+          "y": 15,
+          "role": "entry"
+        },
+        {
+          "side": "right",
+          "y": 15,
+          "role": "exit"
+        }
+      ],
+      "terrain": [
+        {
+          "id": "hill-0",
+          "kind": "earth",
+          "x": 0,
+          "y": 15,
+          "w": 32,
+          "h": 3
+        },
+        {
+          "id": "terrain-97b0b52b-0a94-4018-a3ef-ae5b4c2c6fc7",
+          "kind": "earth",
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 11
+        }
+      ],
+      "monsters": [
+        {
+          "id": "enemy-01",
+          "species": "05_boar",
+          "x": 3,
+          "y": 15
+        },
+        {
+          "id": "copy-8f97cda1-4ca1-46ef-b027-04c4a5b2d5d0",
+          "species": "05_boar",
+          "x": 4,
+          "y": 15
+        },
+        {
+          "id": "copy-fc6e4e5d-2699-40cc-b314-982e79218a72",
+          "species": "05_boar",
+          "x": 5,
+          "y": 15
+        },
+        {
+          "id": "copy-473e815c-8f97-4ac0-940b-8c04f0885608",
+          "species": "05_boar",
+          "x": 6,
+          "y": 15
+        },
+        {
+          "id": "copy-d830d329-ae17-4d7c-9ffc-f06b646a3002",
+          "species": "05_boar",
+          "x": 17.5,
+          "y": 15
+        },
+        {
+          "id": "copy-c7a141f2-a867-457f-aecc-4dde114d458d",
+          "species": "05_boar",
+          "x": 16.5,
+          "y": 15
+        },
+        {
+          "id": "copy-3da78357-b240-449f-a284-9689c5d846ce",
+          "species": "05_boar",
+          "x": 19.5,
+          "y": 15
+        },
+        {
+          "id": "copy-9d69eeac-ca75-4060-82de-01965eaf53ae",
+          "species": "05_boar",
+          "x": 18.5,
+          "y": 15
+        },
+        {
+          "id": "monster-7f87f5ec-85a4-4fa9-9120-8b85f9c052e9",
+          "species": "07_scarecrow",
+          "x": 10,
+          "y": 15
+        },
+        {
+          "id": "monster-14ba3aa8-e366-4d29-a10f-4f7ffa98b35e",
+          "species": "07_scarecrow",
+          "x": 12,
+          "y": 15
+        },
+        {
+          "id": "monster-4ecbda25-647f-4a80-b675-4f88f0c3be8e",
+          "species": "07_scarecrow",
+          "x": 11,
+          "y": 15
+        },
+        {
+          "id": "monster-89c2815e-e3bc-4dc7-adc5-07024ca5147c",
+          "species": "draft_07_heavy_charger",
+          "x": 24.5,
+          "y": 15
+        },
+        {
+          "id": "monster-90903682-6f05-4650-a976-50d0751d22e7",
+          "species": "draft_07_heavy_charger",
+          "x": 28,
+          "y": 15
+        }
+      ],
+      "decorations": [
+        {
+          "id": "prop-009",
+          "assetId": "village:phase2_grass",
+          "x": 28.5,
+          "y": 15,
+          "width": 0.9624999836087227,
+          "height": 0.5906249899417162,
+          "order": 1,
+          "rotation": 0,
+          "flipX": false
+        }
+      ],
+      "traversalRoute": [
+        {
+          "x": 1,
+          "y": 15
+        },
+        {
+          "x": 31,
+          "y": 15
+        }
+      ],
+      "renderGround": [],
+      "renderPlatforms": []
+    },
+    {
+      "id": "long_timber_bridge_03",
+      "name": "긴 숲 언덕",
+      "width": 32,
+      "height": 18,
+      "mirrorable": false,
+      "ports": [
+        {
+          "side": "left",
+          "y": 15,
+          "role": "entry"
+        },
+        {
+          "side": "right",
+          "y": 15,
+          "role": "exit"
+        }
+      ],
+      "terrain": [
+        {
+          "id": "hill-0",
+          "kind": "earth",
+          "x": 0,
+          "y": 15,
+          "w": 3,
+          "h": 3
+        },
+        {
+          "id": "hill-1",
+          "kind": "earth",
+          "x": 3,
+          "y": 13,
+          "w": 11,
+          "h": 5
+        },
+        {
+          "id": "hill-2",
+          "kind": "earth",
+          "x": 14,
+          "y": 6,
+          "w": 5,
+          "h": 12
+        },
+        {
+          "id": "hill-3",
+          "kind": "earth",
+          "x": 19,
+          "y": 12,
+          "w": 10,
+          "h": 6
+        },
+        {
+          "id": "hill-4",
+          "kind": "earth",
+          "x": 29,
+          "y": 15,
+          "w": 3,
+          "h": 3
+        },
+        {
+          "id": "terrain-dc7b67a6-9a89-495e-b754-2f156a7c6cbe",
+          "kind": "earth",
+          "x": 7,
+          "y": 7,
+          "w": 4,
+          "h": 3
+        },
+        {
+          "id": "terrain-10c5bdac-e8b1-405b-909f-4bf2182aa60a",
+          "kind": "wood",
+          "x": 21,
+          "y": 8,
+          "w": 4,
+          "h": 0.5
+        }
+      ],
+      "monsters": [
+        {
+          "id": "enemy-01",
+          "species": "05_boar",
+          "x": 2,
+          "y": 15
+        },
+        {
+          "id": "enemy-02",
+          "species": "07_scarecrow",
+          "x": 5,
+          "y": 13
+        },
+        {
+          "id": "enemy-04",
+          "species": "10_water_bucket",
+          "x": 11.5,
+          "y": 13
+        },
+        {
+          "id": "enemy-08",
+          "species": "05_boar",
+          "x": 25.5,
+          "y": 12
+        },
+        {
+          "id": "enemy-09",
+          "species": "05_boar",
+          "x": 27,
+          "y": 12
+        },
+        {
+          "id": "enemy-10",
+          "species": "07_scarecrow",
+          "x": 30,
+          "y": 15
+        },
+        {
+          "id": "copy-9a7cd581-0f70-4d98-852a-91d3d13829e8",
+          "species": "07_scarecrow",
+          "x": 6,
+          "y": 13
+        },
+        {
+          "id": "copy-bb5bc9f4-b986-4167-a68a-af4c34dee5f6",
+          "species": "07_scarecrow",
+          "x": 7,
+          "y": 13
+        },
+        {
+          "id": "copy-be723a95-285b-4520-bde0-b405ffca54ed",
+          "species": "05_boar",
+          "x": 10,
+          "y": 7
+        },
+        {
+          "id": "copy-72a8284f-3052-4bbd-8be7-48838e2abc71",
+          "species": "05_boar",
+          "x": 8,
+          "y": 7
+        },
+        {
+          "id": "copy-c31018fe-3704-4126-8c01-0aa13d225d34",
+          "species": "05_boar",
+          "x": 20.5,
+          "y": 12
+        },
+        {
+          "id": "copy-fa5f82b2-460f-4212-abb0-79718c507e04",
+          "species": "05_boar",
+          "x": 22,
+          "y": 12
+        },
+        {
+          "id": "monster-1abfaea0-a95f-49d0-9f3a-66762ad62176",
+          "species": "draft_06_stationary_turret",
+          "x": 16.5,
+          "y": 6
+        }
+      ],
+      "decorations": [
+        {
+          "id": "prop-001",
+          "assetId": "village:phase2_plaza",
+          "x": 24.75,
+          "y": 12,
+          "width": 6.8125,
+          "height": 4.03125,
+          "order": -24,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "prop-002",
+          "assetId": "village:phase2_cypress",
+          "x": 21.5,
+          "y": 12,
+          "width": 2.625,
+          "height": 6.21875,
+          "order": -43,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "prop-004",
+          "assetId": "village:phase2_shrub",
+          "x": 4.57061767578125,
+          "y": 13,
+          "width": 2.1599999517202377,
+          "height": 1.2599999718368053,
+          "order": -13,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "prop-005",
+          "assetId": "village:phase2_grass",
+          "x": 5.5,
+          "y": 13,
+          "width": 0.9624999836087227,
+          "height": 0.5906249899417162,
+          "order": 1,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "prop-006",
+          "assetId": "village:phase2_grass",
+          "x": 9.5,
+          "y": 13,
+          "width": 0.9624999836087227,
+          "height": 0.5906249899417162,
+          "order": 1,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "prop-008",
+          "assetId": "village:phase2_grass",
+          "x": 22.5,
+          "y": 12,
+          "width": 0.9624999836087227,
+          "height": 0.5906249899417162,
+          "order": 1,
+          "rotation": 0,
+          "flipX": false
+        }
+      ],
+      "traversalRoute": [
+        {
+          "x": 1,
+          "y": 15
+        },
+        {
+          "x": 2,
+          "y": 15
+        },
+        {
+          "x": 5.5,
+          "y": 13
+        },
+        {
+          "x": 6,
+          "y": 13
+        },
+        {
+          "x": 9,
+          "y": 7
+        },
+        {
+          "x": 10,
+          "y": 7
+        },
+        {
+          "x": 15,
+          "y": 6
+        },
+        {
+          "x": 18,
+          "y": 6
+        },
+        {
+          "x": 20,
+          "y": 12
+        },
+        {
+          "x": 28,
+          "y": 12
+        },
+        {
+          "x": 30,
+          "y": 15
+        },
+        {
+          "x": 31,
+          "y": 15
+        }
+      ],
+      "renderGround": [],
+      "renderPlatforms": [
+        {
+          "x": 21,
+          "y": 8,
+          "offsetY": 0,
+          "id": 326
+        },
+        {
+          "x": 22,
+          "y": 8,
+          "offsetY": 0,
+          "id": 327
+        },
+        {
+          "x": 23,
+          "y": 8,
+          "offsetY": 0,
+          "id": 327
+        },
+        {
+          "x": 24,
+          "y": 8,
+          "offsetY": 0,
+          "id": 341
+        }
+      ]
+    },
+    {
+      "id": "three_tier_hills_04",
+      "name": "삼단 언덕",
+      "width": 32,
+      "height": 18,
+      "mirrorable": false,
+      "ports": [
+        {
+          "side": "left",
+          "y": 15,
+          "role": "entry"
+        },
+        {
+          "side": "right",
+          "y": 13,
+          "role": "exit"
+        }
+      ],
+      "terrain": [
+        {
+          "id": "plan-ground-1",
+          "kind": "earth",
+          "x": 0,
+          "y": 15,
+          "w": 10,
+          "h": 3
+        },
+        {
+          "id": "plan-ground-2",
+          "kind": "earth",
+          "x": 10,
+          "y": 12,
+          "w": 10,
+          "h": 6
+        },
+        {
+          "id": "plan-ground-3",
+          "kind": "earth",
+          "x": 20,
+          "y": 13,
+          "w": 12,
+          "h": 5
+        },
+        {
+          "id": "plan-ground-4",
+          "kind": "wood",
+          "x": 14,
+          "y": 9,
+          "w": 4,
+          "h": 0.5
+        }
+      ],
+      "monsters": [
+        {
+          "id": "plan-enemy-1",
+          "species": "07_scarecrow",
+          "x": 4,
+          "y": 15
+        },
+        {
+          "id": "plan-enemy-2",
+          "species": "07_scarecrow",
+          "x": 5,
+          "y": 15
+        },
+        {
+          "id": "plan-enemy-3",
+          "species": "07_scarecrow",
+          "x": 6,
+          "y": 15
+        },
+        {
+          "id": "plan-enemy-4",
+          "species": "05_boar",
+          "x": 12,
+          "y": 12
+        },
+        {
+          "id": "plan-enemy-5",
+          "species": "05_boar",
+          "x": 13,
+          "y": 12
+        },
+        {
+          "id": "plan-enemy-6",
+          "species": "05_boar",
+          "x": 14,
+          "y": 12
+        },
+        {
+          "id": "plan-enemy-7",
+          "species": "10_water_bucket",
+          "x": 18.5,
+          "y": 12
+        },
+        {
+          "id": "plan-enemy-8",
+          "species": "draft_06_stationary_turret",
+          "x": 16,
+          "y": 9
+        },
+        {
+          "id": "plan-enemy-9",
+          "species": "draft_07_heavy_charger",
+          "x": 26,
+          "y": 13
+        },
+        {
+          "id": "plan-enemy-10",
+          "species": "05_boar",
+          "x": 8,
+          "y": 15
+        }
+      ],
+      "decorations": [
+        {
+          "id": "plan-prop-1",
+          "assetId": "village:phase2_grass",
+          "x": 3,
+          "y": 15,
+          "width": 1.375,
+          "height": 0.84375,
+          "order": 1,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "plan-prop-2",
+          "assetId": "village:phase2_shrub",
+          "x": 11,
+          "y": 12,
+          "width": 2.19375,
+          "height": 1.2796875,
+          "order": -12,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "plan-prop-3",
+          "assetId": "village:phase2_grass",
+          "x": 29,
+          "y": 13,
+          "width": 1.375,
+          "height": 0.84375,
+          "order": 1,
+          "rotation": 0,
+          "flipX": false
+        }
+      ],
+      "traversalRoute": [
+        {
+          "x": 1,
+          "y": 15
+        },
+        {
+          "x": 9,
+          "y": 15
+        },
+        {
+          "x": 11,
+          "y": 12
+        },
+        {
+          "x": 19,
+          "y": 12
+        },
+        {
+          "x": 21,
+          "y": 13
+        },
+        {
+          "x": 31,
+          "y": 13
+        }
+      ],
+      "renderGround": [],
+      "renderPlatforms": [
+        {
+          "x": 14,
+          "y": 9,
+          "offsetY": 0,
+          "id": 326
+        },
+        {
+          "x": 15,
+          "y": 9,
+          "offsetY": 0,
+          "id": 327
+        },
+        {
+          "x": 16,
+          "y": 9,
+          "offsetY": 0,
+          "id": 327
+        },
+        {
+          "x": 17,
+          "y": 9,
+          "offsetY": 0,
+          "id": 341
+        }
+      ]
+    },
+    {
+      "id": "low_root_tunnel_05",
+      "name": "이끼 둔덕",
+      "width": 32,
+      "height": 18,
+      "mirrorable": false,
+      "ports": [
+        {
+          "side": "left",
+          "y": 12,
+          "role": "entry"
+        },
+        {
+          "side": "right",
+          "y": 12,
+          "role": "exit"
+        }
+      ],
+      "terrain": [
+        {
+          "id": "plan-ground-1",
+          "kind": "earth",
+          "x": 0,
+          "y": 12,
+          "w": 5,
+          "h": 6
+        },
+        {
+          "id": "plan-ground-2",
+          "kind": "earth",
+          "x": 5,
+          "y": 15,
+          "w": 22,
+          "h": 3
+        },
+        {
+          "id": "plan-ground-3",
+          "kind": "earth",
+          "x": 27,
+          "y": 12,
+          "w": 5,
+          "h": 6
+        },
+        {
+          "id": "plan-ground-4",
+          "kind": "earth",
+          "x": 8,
+          "y": 6,
+          "w": 16,
+          "h": 3
+        },
+        {
+          "id": "plan-ground-5",
+          "kind": "wood",
+          "x": 24,
+          "y": 12.5,
+          "w": 2,
+          "h": 0.5
+        },
+        {
+          "id": "copy-934cc9cf-f27d-4536-a509-09f3b2beba20",
+          "kind": "wood",
+          "x": 6,
+          "y": 12.5,
+          "w": 2,
+          "h": 0.5
+        }
+      ],
+      "monsters": [
+        {
+          "id": "plan-enemy-1",
+          "species": "05_boar",
+          "x": 2,
+          "y": 12
+        },
+        {
+          "id": "plan-enemy-2",
+          "species": "05_boar",
+          "x": 3,
+          "y": 12
+        },
+        {
+          "id": "plan-enemy-3",
+          "species": "07_scarecrow",
+          "x": 8,
+          "y": 15
+        },
+        {
+          "id": "plan-enemy-4",
+          "species": "07_scarecrow",
+          "x": 9,
+          "y": 15
+        },
+        {
+          "id": "plan-enemy-5",
+          "species": "07_scarecrow",
+          "x": 10,
+          "y": 15
+        },
+        {
+          "id": "plan-enemy-6",
+          "species": "05_boar",
+          "x": 16,
+          "y": 15
+        },
+        {
+          "id": "plan-enemy-7",
+          "species": "05_boar",
+          "x": 17,
+          "y": 15
+        },
+        {
+          "id": "plan-enemy-8",
+          "species": "05_boar",
+          "x": 18,
+          "y": 15
+        },
+        {
+          "id": "plan-enemy-9",
+          "species": "10_water_bucket",
+          "x": 21,
+          "y": 15
+        },
+        {
+          "id": "plan-enemy-10",
+          "species": "10_water_bucket",
+          "x": 23,
+          "y": 15
+        }
+      ],
+      "decorations": [
+        {
+          "id": "plan-prop-1",
+          "assetId": "village:phase2_shrub",
+          "x": 6.5,
+          "y": 15,
+          "width": 2.025,
+          "height": 1.18125,
+          "order": -12,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "plan-prop-2",
+          "assetId": "village:phase2_grass",
+          "x": 26,
+          "y": 15,
+          "width": 1.375,
+          "height": 0.84375,
+          "order": 1,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "plan-prop-3",
+          "assetId": "village:phase2_grass",
+          "x": 29,
+          "y": 12,
+          "width": 1.375,
+          "height": 0.84375,
+          "order": 1,
+          "rotation": 0,
+          "flipX": false
+        }
+      ],
+      "traversalRoute": [
+        {
+          "x": 1,
+          "y": 12
+        },
+        {
+          "x": 4,
+          "y": 12
+        },
+        {
+          "x": 9,
+          "y": 15
+        },
+        {
+          "x": 25,
+          "y": 15
+        },
+        {
+          "x": 28,
+          "y": 12
+        },
+        {
+          "x": 31,
+          "y": 12
+        }
+      ],
+      "renderGround": [],
+      "renderPlatforms": [
+        {
+          "x": 24,
+          "y": 12,
+          "offsetY": 0.5,
+          "id": 326
+        },
+        {
+          "x": 25,
+          "y": 12,
+          "offsetY": 0.5,
+          "id": 341
+        },
+        {
+          "x": 6,
+          "y": 12,
+          "offsetY": 0.5,
+          "id": 326
+        },
+        {
+          "x": 7,
+          "y": 12,
+          "offsetY": 0.5,
+          "id": 341
+        }
+      ]
+    },
+    {
+      "id": "loop_courtyard_06",
+      "name": "언덕 마당",
+      "width": 32,
+      "height": 18,
+      "mirrorable": false,
+      "ports": [
+        {
+          "side": "left",
+          "y": 15,
+          "role": "entry"
+        },
+        {
+          "side": "right",
+          "y": 15,
+          "role": "exit"
+        }
+      ],
+      "terrain": [
+        {
+          "id": "plan-ground-1",
+          "kind": "earth",
+          "x": 0,
+          "y": 15,
+          "w": 3,
+          "h": 3
+        },
+        {
+          "id": "plan-ground-2",
+          "kind": "earth",
+          "x": 3,
+          "y": 12,
+          "w": 11,
+          "h": 6
+        },
+        {
+          "id": "plan-ground-3",
+          "kind": "earth",
+          "x": 14,
+          "y": 15,
+          "w": 18,
+          "h": 3
+        },
+        {
+          "id": "plan-ground-4",
+          "kind": "wood",
+          "x": 4,
+          "y": 7,
+          "w": 4,
+          "h": 0.5
+        },
+        {
+          "id": "plan-ground-5",
+          "kind": "wood",
+          "x": 1,
+          "y": 9.5,
+          "w": 3,
+          "h": 0.5
+        }
+      ],
+      "monsters": [
+        {
+          "id": "plan-enemy-1",
+          "species": "05_boar",
+          "x": 4,
+          "y": 12
+        },
+        {
+          "id": "plan-enemy-2",
+          "species": "05_boar",
+          "x": 5,
+          "y": 12
+        },
+        {
+          "id": "plan-enemy-3",
+          "species": "05_boar",
+          "x": 6,
+          "y": 12
+        },
+        {
+          "id": "plan-enemy-4",
+          "species": "07_scarecrow",
+          "x": 8,
+          "y": 12
+        },
+        {
+          "id": "plan-enemy-5",
+          "species": "07_scarecrow",
+          "x": 9,
+          "y": 12
+        },
+        {
+          "id": "plan-enemy-6",
+          "species": "07_scarecrow",
+          "x": 10,
+          "y": 12
+        },
+        {
+          "id": "plan-enemy-7",
+          "species": "05_boar",
+          "x": 19.5,
+          "y": 15
+        },
+        {
+          "id": "plan-enemy-8",
+          "species": "05_boar",
+          "x": 18,
+          "y": 15
+        },
+        {
+          "id": "plan-enemy-9",
+          "species": "draft_06_stationary_turret",
+          "x": 6,
+          "y": 7
+        },
+        {
+          "id": "plan-enemy-10",
+          "species": "draft_07_heavy_charger",
+          "x": 23,
+          "y": 15
+        },
+        {
+          "id": "copy-16af0968-8e34-47ad-a3f8-cc42b04cc4c2",
+          "species": "05_boar",
+          "x": 26.5,
+          "y": 15
+        },
+        {
+          "id": "copy-945542f1-e0a3-4fbe-b243-c85a9a160b22",
+          "species": "05_boar",
+          "x": 28,
+          "y": 15
+        }
+      ],
+      "decorations": [
+        {
+          "id": "plan-prop-1",
+          "assetId": "village:phase2_plaza",
+          "x": 11,
+          "y": 12,
+          "width": 4.0874999999999995,
+          "height": 2.4187499999999997,
+          "order": -24,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "plan-prop-2",
+          "assetId": "village:phase2_cypress",
+          "x": 13,
+          "y": 12,
+          "width": 1.575,
+          "height": 3.7312499999999997,
+          "order": -43,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "plan-prop-3",
+          "assetId": "village:phase2_grass",
+          "x": 21,
+          "y": 15,
+          "width": 1.375,
+          "height": 0.84375,
+          "order": 1,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "plan-prop-4",
+          "assetId": "village:phase2_grass",
+          "x": 29,
+          "y": 15,
+          "width": 1.375,
+          "height": 0.84375,
+          "order": 1,
+          "rotation": 0,
+          "flipX": false
+        }
+      ],
+      "traversalRoute": [
+        {
+          "x": 1,
+          "y": 15
+        },
+        {
+          "x": 2,
+          "y": 15
+        },
+        {
+          "x": 4.5,
+          "y": 12
+        },
+        {
+          "x": 13,
+          "y": 12
+        },
+        {
+          "x": 15,
+          "y": 15
+        },
+        {
+          "x": 31,
+          "y": 15
+        }
+      ],
+      "renderGround": [],
+      "renderPlatforms": [
+        {
+          "x": 4,
+          "y": 7,
+          "offsetY": 0,
+          "id": 326
+        },
+        {
+          "x": 5,
+          "y": 7,
+          "offsetY": 0,
+          "id": 327
+        },
+        {
+          "x": 6,
+          "y": 7,
+          "offsetY": 0,
+          "id": 327
+        },
+        {
+          "x": 7,
+          "y": 7,
+          "offsetY": 0,
+          "id": 341
+        },
+        {
+          "x": 1,
+          "y": 9,
+          "offsetY": 0.5,
+          "id": 326
+        },
+        {
+          "x": 2,
+          "y": 9,
+          "offsetY": 0.5,
+          "id": 327
+        },
+        {
+          "x": 3,
+          "y": 9,
+          "offsetY": 0.5,
+          "id": 341
+        }
+      ]
+    },
+    {
+      "id": "rising_terraces_07",
+      "name": "상승 숲 계단",
+      "width": 32,
+      "height": 18,
+      "mirrorable": false,
+      "ports": [
+        {
+          "side": "left",
+          "y": 15,
+          "role": "entry"
+        },
+        {
+          "side": "right",
+          "y": 6,
+          "role": "exit"
+        }
+      ],
+      "terrain": [
+        {
+          "id": "plan-ground-1",
+          "kind": "earth",
+          "x": 0,
+          "y": 15,
+          "w": 10,
+          "h": 3
+        },
+        {
+          "id": "plan-ground-2",
+          "kind": "earth",
+          "x": 10,
+          "y": 12,
+          "w": 9,
+          "h": 6
+        },
+        {
+          "id": "plan-ground-3",
+          "kind": "earth",
+          "x": 19,
+          "y": 9,
+          "w": 7,
+          "h": 9
+        },
+        {
+          "id": "plan-ground-4",
+          "kind": "earth",
+          "x": 26,
+          "y": 6,
+          "w": 6,
+          "h": 12
+        }
+      ],
+      "monsters": [
+        {
+          "id": "plan-enemy-1",
+          "species": "07_scarecrow",
+          "x": 4,
+          "y": 15
+        },
+        {
+          "id": "plan-enemy-2",
+          "species": "07_scarecrow",
+          "x": 5,
+          "y": 15
+        },
+        {
+          "id": "plan-enemy-3",
+          "species": "07_scarecrow",
+          "x": 6,
+          "y": 15
+        },
+        {
+          "id": "plan-enemy-4",
+          "species": "05_boar",
+          "x": 13,
+          "y": 12
+        },
+        {
+          "id": "plan-enemy-5",
+          "species": "05_boar",
+          "x": 14,
+          "y": 12
+        },
+        {
+          "id": "plan-enemy-6",
+          "species": "05_boar",
+          "x": 15,
+          "y": 12
+        },
+        {
+          "id": "plan-enemy-7",
+          "species": "07_scarecrow",
+          "x": 21,
+          "y": 9
+        },
+        {
+          "id": "plan-enemy-8",
+          "species": "07_scarecrow",
+          "x": 22,
+          "y": 9
+        },
+        {
+          "id": "plan-enemy-10",
+          "species": "draft_06_stationary_turret",
+          "x": 29,
+          "y": 6
+        },
+        {
+          "id": "copy-5ee3fb1b-2ef4-4f96-a6f6-316185fd00fc",
+          "species": "draft_06_stationary_turret",
+          "x": 24,
+          "y": 9
+        },
+        {
+          "id": "copy-6dc6b487-37f4-4401-b72a-8cba9d6459c1",
+          "species": "draft_06_stationary_turret",
+          "x": 17,
+          "y": 12
+        },
+        {
+          "id": "copy-cc83323f-896e-4303-bd34-e0c961974c90",
+          "species": "draft_06_stationary_turret",
+          "x": 8,
+          "y": 15
+        }
+      ],
+      "decorations": [
+        {
+          "id": "plan-prop-1",
+          "assetId": "village:phase2_shrub",
+          "x": 8,
+          "y": 15,
+          "width": 2.19375,
+          "height": 1.2796875,
+          "order": -12,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "plan-prop-2",
+          "assetId": "village:phase2_grass",
+          "x": 17,
+          "y": 12,
+          "width": 1.375,
+          "height": 0.84375,
+          "order": 1,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "plan-prop-3",
+          "assetId": "village:phase2_cypress",
+          "x": 27,
+          "y": 6,
+          "width": 1.3125,
+          "height": 3.109375,
+          "order": -43,
+          "rotation": 0,
+          "flipX": false
+        }
+      ],
+      "traversalRoute": [
+        {
+          "x": 1,
+          "y": 15
+        },
+        {
+          "x": 9,
+          "y": 15
+        },
+        {
+          "x": 11,
+          "y": 12
+        },
+        {
+          "x": 18,
+          "y": 12
+        },
+        {
+          "x": 20,
+          "y": 9
+        },
+        {
+          "x": 25,
+          "y": 9
+        },
+        {
+          "x": 27,
+          "y": 6
+        },
+        {
+          "x": 31,
+          "y": 6
+        }
+      ],
+      "renderGround": [],
+      "renderPlatforms": []
+    },
+    {
+      "id": "descending_terraces_08",
+      "name": "하강 숲 계단",
+      "width": 32,
+      "height": 18,
+      "mirrorable": false,
+      "ports": [
+        {
+          "side": "left",
+          "y": 6,
+          "role": "entry"
+        },
+        {
+          "side": "right",
+          "y": 15,
+          "role": "exit"
+        }
+      ],
+      "terrain": [
+        {
+          "id": "plan-ground-1",
+          "kind": "earth",
+          "x": 0,
+          "y": 6,
+          "w": 6,
+          "h": 12
+        },
+        {
+          "id": "plan-ground-2",
+          "kind": "earth",
+          "x": 6,
+          "y": 9,
+          "w": 6,
+          "h": 9
+        },
+        {
+          "id": "plan-ground-3",
+          "kind": "earth",
+          "x": 12,
+          "y": 12,
+          "w": 8,
+          "h": 6
+        },
+        {
+          "id": "plan-ground-4",
+          "kind": "earth",
+          "x": 20,
+          "y": 15,
+          "w": 12,
+          "h": 3
+        }
+      ],
+      "monsters": [
+        {
+          "id": "plan-enemy-1",
+          "species": "05_boar",
+          "x": 2,
+          "y": 6
+        },
+        {
+          "id": "plan-enemy-2",
+          "species": "05_boar",
+          "x": 3,
+          "y": 6
+        },
+        {
+          "id": "plan-enemy-3",
+          "species": "05_boar",
+          "x": 4,
+          "y": 6
+        },
+        {
+          "id": "plan-enemy-4",
+          "species": "07_scarecrow",
+          "x": 8,
+          "y": 9
+        },
+        {
+          "id": "plan-enemy-5",
+          "species": "07_scarecrow",
+          "x": 9,
+          "y": 9
+        },
+        {
+          "id": "plan-enemy-6",
+          "species": "07_scarecrow",
+          "x": 10,
+          "y": 9
+        },
+        {
+          "id": "plan-enemy-7",
+          "species": "05_boar",
+          "x": 14,
+          "y": 12
+        },
+        {
+          "id": "plan-enemy-8",
+          "species": "05_boar",
+          "x": 15,
+          "y": 12
+        },
+        {
+          "id": "plan-enemy-10",
+          "species": "draft_07_heavy_charger",
+          "x": 26,
+          "y": 15
+        },
+        {
+          "id": "copy-8dc3d9b9-a506-4f13-8c8a-19b6f8dff2fb",
+          "species": "05_boar",
+          "x": 17.5,
+          "y": 12
+        },
+        {
+          "id": "copy-69a3ca1b-17f5-46da-a5cb-78726641e1a1",
+          "species": "05_boar",
+          "x": 18.5,
+          "y": 12
+        }
+      ],
+      "decorations": [
+        {
+          "id": "plan-prop-1",
+          "assetId": "village:phase2_grass",
+          "x": 5,
+          "y": 6,
+          "width": 1.375,
+          "height": 0.84375,
+          "order": 1,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "plan-prop-2",
+          "assetId": "village:phase2_shrub",
+          "x": 12.5,
+          "y": 12,
+          "width": 2.025,
+          "height": 1.18125,
+          "order": -12,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "plan-prop-3",
+          "assetId": "village:phase2_grass",
+          "x": 30,
+          "y": 15,
+          "width": 1.375,
+          "height": 0.84375,
+          "order": 1,
+          "rotation": 0,
+          "flipX": false
+        }
+      ],
+      "traversalRoute": [
+        {
+          "x": 1,
+          "y": 6
+        },
+        {
+          "x": 5,
+          "y": 6
+        },
+        {
+          "x": 7,
+          "y": 9
+        },
+        {
+          "x": 11,
+          "y": 9
+        },
+        {
+          "x": 13,
+          "y": 12
+        },
+        {
+          "x": 19,
+          "y": 12
+        },
+        {
+          "x": 21,
+          "y": 15
+        },
+        {
+          "x": 31,
+          "y": 15
+        }
+      ],
+      "renderGround": [],
+      "renderPlatforms": []
+    },
+    {
+      "id": "wide_basin_09",
+      "name": "넓은 숲 분지",
+      "width": 32,
+      "height": 18,
+      "mirrorable": false,
+      "ports": [
+        {
+          "side": "left",
+          "y": 9,
+          "role": "entry"
+        },
+        {
+          "side": "right",
+          "y": 9,
+          "role": "exit"
+        }
+      ],
+      "terrain": [
+        {
+          "id": "plan-ground-1",
+          "kind": "earth",
+          "x": 0,
+          "y": 9,
+          "w": 5,
+          "h": 9
+        },
+        {
+          "id": "plan-ground-2",
+          "kind": "earth",
+          "x": 5,
+          "y": 15,
+          "w": 22,
+          "h": 3
+        },
+        {
+          "id": "plan-ground-3",
+          "kind": "earth",
+          "x": 27,
+          "y": 9,
+          "w": 5,
+          "h": 9
+        },
+        {
+          "id": "plan-ground-4",
+          "kind": "earth",
+          "x": 10,
+          "y": 9,
+          "w": 12,
+          "h": 3
+        },
+        {
+          "id": "plan-ground-6",
+          "kind": "wood",
+          "x": 6,
+          "y": 12,
+          "w": 3,
+          "h": 0.5
+        },
+        {
+          "id": "plan-ground-7",
+          "kind": "wood",
+          "x": 23,
+          "y": 12,
+          "w": 3,
+          "h": 0.5
+        }
+      ],
+      "monsters": [
+        {
+          "id": "plan-enemy-1",
+          "species": "05_boar",
+          "x": 2,
+          "y": 9
+        },
+        {
+          "id": "plan-enemy-2",
+          "species": "05_boar",
+          "x": 3,
+          "y": 9
+        },
+        {
+          "id": "plan-enemy-3",
+          "species": "07_scarecrow",
+          "x": 8,
+          "y": 15
+        },
+        {
+          "id": "plan-enemy-4",
+          "species": "07_scarecrow",
+          "x": 9,
+          "y": 15
+        },
+        {
+          "id": "plan-enemy-5",
+          "species": "07_scarecrow",
+          "x": 10,
+          "y": 15
+        },
+        {
+          "id": "plan-enemy-6",
+          "species": "05_boar",
+          "x": 20,
+          "y": 15
+        },
+        {
+          "id": "plan-enemy-7",
+          "species": "05_boar",
+          "x": 21,
+          "y": 15
+        },
+        {
+          "id": "plan-enemy-8",
+          "species": "05_boar",
+          "x": 22,
+          "y": 15
+        },
+        {
+          "id": "plan-enemy-9",
+          "species": "10_water_bucket",
+          "x": 29,
+          "y": 9
+        },
+        {
+          "id": "plan-enemy-10",
+          "species": "draft_06_stationary_turret",
+          "x": 16,
+          "y": 9
+        },
+        {
+          "id": "copy-4b8bbe68-a280-445b-a409-102fff492ced",
+          "species": "draft_06_stationary_turret",
+          "x": 19.5,
+          "y": 9
+        },
+        {
+          "id": "copy-fc936fe9-4e7e-4f5b-ac32-6380a7598feb",
+          "species": "draft_06_stationary_turret",
+          "x": 12,
+          "y": 9
+        }
+      ],
+      "decorations": [
+        {
+          "id": "plan-prop-1",
+          "assetId": "village:phase2_shrub",
+          "x": 11,
+          "y": 15,
+          "width": 1.8562500000000002,
+          "height": 1.0828125000000002,
+          "order": -12,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "plan-prop-2",
+          "assetId": "village:phase2_grass",
+          "x": 23,
+          "y": 15,
+          "width": 1.375,
+          "height": 0.84375,
+          "order": 1,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "plan-prop-3",
+          "assetId": "village:phase2_cypress",
+          "x": 28,
+          "y": 9,
+          "width": 1.3125,
+          "height": 3.109375,
+          "order": -43,
+          "rotation": 0,
+          "flipX": false
+        }
+      ],
+      "traversalRoute": [
+        {
+          "x": 1,
+          "y": 9
+        },
+        {
+          "x": 4,
+          "y": 9
+        },
+        {
+          "x": 8.5,
+          "y": 15
+        },
+        {
+          "x": 23.5,
+          "y": 15
+        },
+        {
+          "x": 24.5,
+          "y": 12
+        },
+        {
+          "x": 28.5,
+          "y": 9
+        },
+        {
+          "x": 31,
+          "y": 9
+        }
+      ],
+      "renderGround": [],
+      "renderPlatforms": [
+        {
+          "x": 6,
+          "y": 12,
+          "offsetY": 0,
+          "id": 326
+        },
+        {
+          "x": 7,
+          "y": 12,
+          "offsetY": 0,
+          "id": 327
+        },
+        {
+          "x": 8,
+          "y": 12,
+          "offsetY": 0,
+          "id": 341
+        },
+        {
+          "x": 23,
+          "y": 12,
+          "offsetY": 0,
+          "id": 326
+        },
+        {
+          "x": 24,
+          "y": 12,
+          "offsetY": 0,
+          "id": 327
+        },
+        {
+          "x": 25,
+          "y": 12,
+          "offsetY": 0,
+          "id": 341
+        }
+      ]
+    },
+    {
+      "id": "digeut_10",
+      "name": "ㄷ자 굽은 회랑",
+      "width": 32,
+      "height": 27,
+      "mirrorable": true,
+      "ports": [
+        {
+          "side": "right",
+          "y": 6,
+          "role": "entry"
+        },
+        {
+          "side": "right",
+          "y": 24,
+          "role": "exit"
+        }
+      ],
+      "terrain": [
+        {
+          "id": "plan-ground-1",
+          "kind": "earth",
+          "x": 7,
+          "y": 6,
+          "w": 25,
+          "h": 12
+        },
+        {
+          "id": "plan-ground-2",
+          "kind": "earth",
+          "x": 0,
+          "y": 24,
+          "w": 32,
+          "h": 3
+        },
+        {
+          "id": "plan-ground-3",
+          "kind": "wood",
+          "x": 3,
+          "y": 8.5,
+          "w": 3,
+          "h": 0.5
+        },
+        {
+          "id": "plan-ground-4",
+          "kind": "wood",
+          "x": 0,
+          "y": 11,
+          "w": 3,
+          "h": 0.5
+        },
+        {
+          "id": "plan-ground-5",
+          "kind": "wood",
+          "x": 3,
+          "y": 13.5,
+          "w": 3,
+          "h": 0.5
+        },
+        {
+          "id": "plan-ground-6",
+          "kind": "wood",
+          "x": 0,
+          "y": 16,
+          "w": 3,
+          "h": 0.5
+        },
+        {
+          "id": "plan-ground-7",
+          "kind": "wood",
+          "x": 3,
+          "y": 18.5,
+          "w": 3,
+          "h": 0.5
+        },
+        {
+          "id": "plan-ground-8",
+          "kind": "wood",
+          "x": 0,
+          "y": 21,
+          "w": 3,
+          "h": 0.5
+        }
+      ],
+      "monsters": [
+        {
+          "id": "plan-enemy-1",
+          "species": "05_boar",
+          "x": 27,
+          "y": 6
+        },
+        {
+          "id": "plan-enemy-2",
+          "species": "05_boar",
+          "x": 26,
+          "y": 6
+        },
+        {
+          "id": "plan-enemy-3",
+          "species": "05_boar",
+          "x": 25,
+          "y": 6
+        },
+        {
+          "id": "plan-enemy-4",
+          "species": "07_scarecrow",
+          "x": 19,
+          "y": 6
+        },
+        {
+          "id": "plan-enemy-5",
+          "species": "07_scarecrow",
+          "x": 18,
+          "y": 6
+        },
+        {
+          "id": "plan-enemy-6",
+          "species": "10_water_bucket",
+          "x": 11,
+          "y": 6
+        },
+        {
+          "id": "plan-enemy-7",
+          "species": "10_water_bucket",
+          "x": 13,
+          "y": 6
+        },
+        {
+          "id": "plan-enemy-8",
+          "species": "draft_06_stationary_turret",
+          "x": 1.5,
+          "y": 11
+        },
+        {
+          "id": "plan-enemy-9",
+          "species": "05_boar",
+          "x": 7,
+          "y": 24
+        },
+        {
+          "id": "plan-enemy-10",
+          "species": "05_boar",
+          "x": 8,
+          "y": 24
+        },
+        {
+          "id": "plan-enemy-11",
+          "species": "05_boar",
+          "x": 9,
+          "y": 24
+        },
+        {
+          "id": "plan-enemy-12",
+          "species": "draft_07_heavy_charger",
+          "x": 23,
+          "y": 24
+        },
+        {
+          "id": "copy-4385c768-4ef5-4125-86d9-41b8f3e55442",
+          "species": "draft_06_stationary_turret",
+          "x": 4.5,
+          "y": 18.5
+        }
+      ],
+      "decorations": [
+        {
+          "id": "plan-prop-1",
+          "assetId": "village:phase2_grass",
+          "x": 29,
+          "y": 6,
+          "width": 1.375,
+          "height": 0.84375,
+          "order": 1,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "plan-prop-2",
+          "assetId": "village:phase2_grass",
+          "x": 16,
+          "y": 6,
+          "width": 1.375,
+          "height": 0.84375,
+          "order": 1,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "plan-prop-3",
+          "assetId": "village:phase2_shrub",
+          "x": 11,
+          "y": 24,
+          "width": 2.025,
+          "height": 1.18125,
+          "order": -12,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "plan-prop-4",
+          "assetId": "village:phase2_grass",
+          "x": 28,
+          "y": 24,
+          "width": 1.375,
+          "height": 0.84375,
+          "order": 1,
+          "rotation": 0,
+          "flipX": false
+        }
+      ],
+      "traversalRoute": [
+        {
+          "x": 31,
+          "y": 6
+        },
+        {
+          "x": 8,
+          "y": 6
+        },
+        {
+          "x": 4,
+          "y": 8.5
+        },
+        {
+          "x": 2,
+          "y": 11
+        },
+        {
+          "x": 4,
+          "y": 13.5
+        },
+        {
+          "x": 2,
+          "y": 16
+        },
+        {
+          "x": 4,
+          "y": 18.5
+        },
+        {
+          "x": 2,
+          "y": 21
+        },
+        {
+          "x": 4,
+          "y": 24
+        },
+        {
+          "x": 31,
+          "y": 24
+        }
+      ],
+      "renderGround": [],
+      "renderPlatforms": [
+        {
+          "x": 3,
+          "y": 8,
+          "offsetY": 0.5,
+          "id": 326
+        },
+        {
+          "x": 4,
+          "y": 8,
+          "offsetY": 0.5,
+          "id": 327
+        },
+        {
+          "x": 5,
+          "y": 8,
+          "offsetY": 0.5,
+          "id": 341
+        },
+        {
+          "x": 0,
+          "y": 11,
+          "offsetY": 0,
+          "id": 326
+        },
+        {
+          "x": 1,
+          "y": 11,
+          "offsetY": 0,
+          "id": 327
+        },
+        {
+          "x": 2,
+          "y": 11,
+          "offsetY": 0,
+          "id": 341
+        },
+        {
+          "x": 3,
+          "y": 13,
+          "offsetY": 0.5,
+          "id": 326
+        },
+        {
+          "x": 4,
+          "y": 13,
+          "offsetY": 0.5,
+          "id": 327
+        },
+        {
+          "x": 5,
+          "y": 13,
+          "offsetY": 0.5,
+          "id": 341
+        },
+        {
+          "x": 0,
+          "y": 16,
+          "offsetY": 0,
+          "id": 326
+        },
+        {
+          "x": 1,
+          "y": 16,
+          "offsetY": 0,
+          "id": 327
+        },
+        {
+          "x": 2,
+          "y": 16,
+          "offsetY": 0,
+          "id": 341
+        },
+        {
+          "x": 3,
+          "y": 18,
+          "offsetY": 0.5,
+          "id": 326
+        },
+        {
+          "x": 4,
+          "y": 18,
+          "offsetY": 0.5,
+          "id": 327
+        },
+        {
+          "x": 5,
+          "y": 18,
+          "offsetY": 0.5,
+          "id": 341
+        },
+        {
+          "x": 0,
+          "y": 21,
+          "offsetY": 0,
+          "id": 326
+        },
+        {
+          "x": 1,
+          "y": 21,
+          "offsetY": 0,
+          "id": 327
+        },
+        {
+          "x": 2,
+          "y": 21,
+          "offsetY": 0,
+          "id": 341
+        }
+      ]
+    },
+    {
+      "id": "rieul_11",
+      "name": "ㄹ자 층계 회랑",
+      "width": 32,
+      "height": 27,
+      "mirrorable": false,
+      "ports": [
+        {
+          "side": "left",
+          "y": 6,
+          "role": "entry"
+        },
+        {
+          "side": "right",
+          "y": 24,
+          "role": "exit"
+        }
+      ],
+      "terrain": [
+        {
+          "x": 0,
+          "y": 6,
+          "w": 25,
+          "h": 3,
+          "kind": "earth",
+          "id": "compact-surface-01"
+        },
+        {
+          "x": 6,
+          "y": 15,
+          "w": 26,
+          "h": 3,
+          "kind": "earth",
+          "id": "compact-surface-02"
+        },
+        {
+          "x": 0,
+          "y": 24,
+          "w": 32,
+          "h": 3,
+          "kind": "earth",
+          "id": "compact-surface-03"
+        },
+        {
+          "x": 29,
+          "y": 10,
+          "w": 3,
+          "h": 0.5,
+          "kind": "wood",
+          "id": "compact-surface-04"
+        },
+        {
+          "x": 26,
+          "y": 12.5,
+          "w": 3,
+          "h": 0.5,
+          "kind": "wood",
+          "id": "compact-surface-05"
+        },
+        {
+          "x": 2,
+          "y": 16.5,
+          "w": 3,
+          "h": 0.5,
+          "kind": "wood",
+          "id": "compact-surface-06"
+        },
+        {
+          "x": 0,
+          "y": 19,
+          "w": 3,
+          "h": 0.5,
+          "kind": "wood",
+          "id": "compact-surface-07"
+        },
+        {
+          "x": 26,
+          "y": 7.5,
+          "w": 3,
+          "h": 0.5,
+          "kind": "wood",
+          "id": "copy-89067b38-d710-4e17-aa61-a36de7cf2916"
+        },
+        {
+          "x": 2,
+          "y": 21.5,
+          "w": 3,
+          "h": 0.5,
+          "kind": "wood",
+          "id": "copy-ae523c5d-c523-4f72-ae2d-77294209b933"
+        }
+      ],
+      "monsters": [
+        {
+          "x": 6.5,
+          "y": 6,
+          "species": "05_boar",
+          "id": "enemy-01"
+        },
+        {
+          "x": 16,
+          "y": 6,
+          "species": "05_boar",
+          "id": "enemy-03"
+        },
+        {
+          "x": 24.5,
+          "y": 15,
+          "species": "07_scarecrow",
+          "id": "enemy-04"
+        },
+        {
+          "x": 11.5,
+          "y": 15,
+          "species": "07_scarecrow",
+          "id": "enemy-05"
+        },
+        {
+          "x": 18.5,
+          "y": 24,
+          "species": "05_boar",
+          "id": "enemy-09"
+        },
+        {
+          "x": 28,
+          "y": 24,
+          "species": "07_scarecrow",
+          "id": "enemy-10"
+        },
+        {
+          "x": 7.5,
+          "y": 6,
+          "species": "05_boar",
+          "id": "copy-661e5d5e-7050-4ae9-91c1-b569d38d8872"
+        },
+        {
+          "x": 8.5,
+          "y": 6,
+          "species": "05_boar",
+          "id": "copy-eb954383-d12d-4d34-b7e4-1e5cd7a9548c"
+        },
+        {
+          "x": 15,
+          "y": 6,
+          "species": "05_boar",
+          "id": "copy-7a8117a3-d021-4001-a864-b5cc6e150393"
+        },
+        {
+          "x": 14,
+          "y": 6,
+          "species": "05_boar",
+          "id": "copy-a07c1e01-1a23-4702-8cf7-8ae8e9e819c2"
+        },
+        {
+          "id": "monster-b4580801-272e-497c-8ed3-d5c6cded83e6",
+          "species": "10_water_bucket",
+          "x": 20,
+          "y": 6
+        },
+        {
+          "id": "monster-e5ffd6d0-aebe-4422-8264-e6ed50a508e4",
+          "species": "10_water_bucket",
+          "x": 23.5,
+          "y": 6
+        },
+        {
+          "id": "monster-304e015c-0781-4ef2-91c9-ed2f0302a263",
+          "species": "draft_06_stationary_turret",
+          "x": 30.5,
+          "y": 10
+        },
+        {
+          "x": 10,
+          "y": 15,
+          "species": "07_scarecrow",
+          "id": "copy-e37377b7-3de3-497a-ba96-7b68db299128"
+        },
+        {
+          "x": 25.5,
+          "y": 15,
+          "species": "07_scarecrow",
+          "id": "copy-8dcd124c-6073-4fb3-9524-898b1544a15d"
+        },
+        {
+          "id": "monster-4f294849-ceb1-4d78-916f-36e3f6f57c62",
+          "species": "draft_07_heavy_charger",
+          "x": 18,
+          "y": 15
+        },
+        {
+          "x": 12,
+          "y": 24,
+          "species": "05_boar",
+          "id": "copy-83722004-3dbc-449d-aee4-c12252b3b6bf"
+        },
+        {
+          "x": 10.5,
+          "y": 24,
+          "species": "05_boar",
+          "id": "copy-aa2f5113-1cb8-4b75-a68c-8227d4d0a8d8"
+        },
+        {
+          "x": 20,
+          "y": 24,
+          "species": "05_boar",
+          "id": "copy-0704d628-d6a3-42ca-94b2-91c1e5852c00"
+        },
+        {
+          "id": "copy-0f3e72a0-1960-4792-92d6-45d38b8572a4",
+          "species": "draft_06_stationary_turret",
+          "x": 1.5,
+          "y": 19
+        }
+      ],
+      "decorations": [
+        {
+          "id": "prop-001",
+          "assetId": "village:phase2_plaza",
+          "x": 7.5,
+          "y": 24,
+          "width": 6.8125,
+          "height": 4.03125,
+          "order": -24,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "prop-002",
+          "assetId": "village:phase2_cypress",
+          "x": 4,
+          "y": 24,
+          "width": 2.625,
+          "height": 6.21875,
+          "order": -43,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "prop-003",
+          "assetId": "village:courtyard_wall",
+          "x": 12.375,
+          "y": 24,
+          "width": 9.125,
+          "height": 2.53125,
+          "order": -34,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "prop-004",
+          "assetId": "village:phase2_shrub",
+          "x": 10.42938232421875,
+          "y": 24,
+          "width": 2.969999983906746,
+          "height": 1.7324999906122684,
+          "order": -12,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "prop-005",
+          "assetId": "village:phase2_shrub",
+          "x": 4.57061767578125,
+          "y": 24,
+          "width": 2.1599999517202377,
+          "height": 1.2599999718368053,
+          "order": -13,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "prop-006",
+          "assetId": "village:phase2_grass",
+          "x": 5.5,
+          "y": 6,
+          "width": 0.9624999836087227,
+          "height": 0.5906249899417162,
+          "order": 1,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "prop-007",
+          "assetId": "village:phase2_grass",
+          "x": 9.5,
+          "y": 6,
+          "width": 0.9624999836087227,
+          "height": 0.5906249899417162,
+          "order": 1,
+          "rotation": 0,
+          "flipX": false
+        },
+        {
+          "id": "prop-008",
+          "assetId": "village:phase2_grass",
+          "x": 23.5,
+          "y": 6,
+          "width": 0.9624999836087227,
+          "height": 0.5906249899417162,
+          "order": 1,
+          "rotation": 0,
+          "flipX": false
+        }
+      ],
+      "traversalRoute": [
+        {
+          "x": 1,
+          "y": 6
+        },
+        {
+          "x": 24,
+          "y": 6
+        },
+        {
+          "x": 27.5,
+          "y": 7.5
+        },
+        {
+          "x": 30,
+          "y": 10
+        },
+        {
+          "x": 27.5,
+          "y": 12.5
+        },
+        {
+          "x": 30,
+          "y": 15
+        },
+        {
+          "x": 7,
+          "y": 15
+        },
+        {
+          "x": 3.5,
+          "y": 16.5
+        },
+        {
+          "x": 1.5,
+          "y": 19
+        },
+        {
+          "x": 3.5,
+          "y": 21.5
+        },
+        {
+          "x": 3,
+          "y": 24
+        },
+        {
+          "x": 31,
+          "y": 24
+        }
+      ],
+      "renderGround": [],
+      "renderPlatforms": [
+        {
+          "x": 29,
+          "y": 10,
+          "offsetY": 0,
+          "id": 326
+        },
+        {
+          "x": 30,
+          "y": 10,
+          "offsetY": 0,
+          "id": 327
+        },
+        {
+          "x": 31,
+          "y": 10,
+          "offsetY": 0,
+          "id": 341
+        },
+        {
+          "x": 26,
+          "y": 12,
+          "offsetY": 0.5,
+          "id": 326
+        },
+        {
+          "x": 27,
+          "y": 12,
+          "offsetY": 0.5,
+          "id": 327
+        },
+        {
+          "x": 28,
+          "y": 12,
+          "offsetY": 0.5,
+          "id": 341
+        },
+        {
+          "x": 2,
+          "y": 16,
+          "offsetY": 0.5,
+          "id": 326
+        },
+        {
+          "x": 3,
+          "y": 16,
+          "offsetY": 0.5,
+          "id": 327
+        },
+        {
+          "x": 4,
+          "y": 16,
+          "offsetY": 0.5,
+          "id": 341
+        },
+        {
+          "x": 0,
+          "y": 19,
+          "offsetY": 0,
+          "id": 326
+        },
+        {
+          "x": 1,
+          "y": 19,
+          "offsetY": 0,
+          "id": 327
+        },
+        {
+          "x": 2,
+          "y": 19,
+          "offsetY": 0,
+          "id": 341
+        },
+        {
+          "x": 26,
+          "y": 7,
+          "offsetY": 0.5,
+          "id": 326
+        },
+        {
+          "x": 27,
+          "y": 7,
+          "offsetY": 0.5,
+          "id": 327
+        },
+        {
+          "x": 28,
+          "y": 7,
+          "offsetY": 0.5,
+          "id": 341
+        },
+        {
+          "x": 2,
+          "y": 21,
+          "offsetY": 0.5,
+          "id": 326
+        },
+        {
+          "x": 3,
+          "y": 21,
+          "offsetY": 0.5,
+          "id": 327
+        },
+        {
+          "x": 4,
+          "y": 21,
+          "offsetY": 0.5,
+          "id": 341
+        }
+      ]
+    },
+    {
+      "id": "draft_room_twin_dike_14",
+      "name": "두물길 둑다리 (신규)",
+      "width": 32,
+      "height": 18,
+      "mirrorable": true,
+      "ports": [
+        {
+          "side": "left",
+          "y": 15,
+          "role": "entry"
+        },
+        {
+          "side": "right",
+          "y": 15,
+          "role": "exit"
+        }
+      ],
+      "terrain": [
+        {
+          "id": "new-ground-1",
+          "kind": "earth",
+          "x": 0,
+          "y": 15,
+          "w": 5,
+          "h": 3
+        },
+        {
+          "id": "new-ground-2",
+          "kind": "earth",
+          "x": 5,
+          "y": 16,
+          "w": 7,
+          "h": 2
+        },
+        {
+          "id": "new-ground-3",
+          "kind": "earth",
+          "x": 12,
+          "y": 13,
+          "w": 8,
+          "h": 5
+        },
+        {
+          "id": "new-ground-4",
+          "kind": "earth",
+          "x": 20,
+          "y": 16,
+          "w": 7,
+          "h": 2
+        },
+        {
+          "id": "new-ground-5",
+          "kind": "earth",
+          "x": 27,
+          "y": 15,
+          "w": 5,
+          "h": 3
+        },
+        {
+          "id": "new-ground-6",
+          "kind": "wood",
+          "x": 6,
+          "y": 13,
+          "w": 5,
+          "h": 0.5
+        },
+        {
+          "id": "new-ground-7",
+          "kind": "wood",
+          "x": 21,
+          "y": 13,
+          "w": 5,
+          "h": 0.5
+        }
+      ],
+      "monsters": [
+        {
+          "id": "new-enemy-1",
+          "species": "05_boar",
+          "x": 2,
+          "y": 15
+        },
+        {
+          "id": "new-enemy-2",
+          "species": "05_boar",
+          "x": 3,
+          "y": 15
+        },
+        {
+          "id": "new-enemy-3",
+          "species": "07_scarecrow",
+          "x": 7,
+          "y": 13
+        },
+        {
+          "id": "new-enemy-4",
+          "species": "07_scarecrow",
+          "x": 10,
+          "y": 13
+        },
+        {
+          "id": "new-enemy-5",
+          "species": "07_scarecrow",
+          "x": 8.5,
+          "y": 13
+        },
+        {
+          "id": "new-enemy-6",
+          "species": "05_boar",
+          "x": 14,
+          "y": 13
+        },
+        {
+          "id": "new-enemy-7",
+          "species": "05_boar",
+          "x": 18,
+          "y": 13
+        },
+        {
+          "id": "new-enemy-8",
+          "species": "05_boar",
+          "x": 16,
+          "y": 13
+        },
+        {
+          "id": "new-enemy-9",
+          "species": "draft_06_stationary_turret",
+          "x": 23.5,
+          "y": 16
+        },
+        {
+          "id": "new-enemy-10",
+          "species": "10_water_bucket",
+          "x": 23.5,
+          "y": 13
+        }
+      ],
+      "decorations": [
+        {
+          "id": "new-prop-1",
+          "assetId": "village:phase2_grass",
+          "x": 4,
+          "y": 15,
+          "width": 1.375,
+          "height": 0.84375,
+          "rotation": 0,
+          "order": 1,
+          "flipX": false
+        },
+        {
+          "id": "new-prop-2",
+          "assetId": "village:phase2_shrub",
+          "x": 18,
+          "y": 13,
+          "width": 1.6875,
+          "height": 0.984375,
+          "rotation": 0,
+          "order": -12,
+          "flipX": false
+        },
+        {
+          "id": "new-prop-3",
+          "assetId": "village:phase2_grass",
+          "x": 28,
+          "y": 15,
+          "width": 1.375,
+          "height": 0.84375,
+          "rotation": 0,
+          "order": 1,
+          "flipX": false
+        }
+      ],
+      "traversalRoute": [
+        {
+          "x": 1,
+          "y": 15
+        },
+        {
+          "x": 4,
+          "y": 15
+        },
+        {
+          "x": 7,
+          "y": 16
+        },
+        {
+          "x": 11,
+          "y": 16
+        },
+        {
+          "x": 13,
+          "y": 13
+        },
+        {
+          "x": 19,
+          "y": 13
+        },
+        {
+          "x": 21,
+          "y": 16
+        },
+        {
+          "x": 26,
+          "y": 16
+        },
+        {
+          "x": 28,
+          "y": 15
+        },
+        {
+          "x": 31,
+          "y": 15
+        }
+      ],
+      "renderGround": [],
+      "renderPlatforms": [
+        {
+          "x": 6,
+          "y": 13,
+          "offsetY": 0,
+          "id": 326
+        },
+        {
+          "x": 7,
+          "y": 13,
+          "offsetY": 0,
+          "id": 327
+        },
+        {
+          "x": 8,
+          "y": 13,
+          "offsetY": 0,
+          "id": 327
+        },
+        {
+          "x": 9,
+          "y": 13,
+          "offsetY": 0,
+          "id": 327
+        },
+        {
+          "x": 10,
+          "y": 13,
+          "offsetY": 0,
+          "id": 341
+        },
+        {
+          "x": 21,
+          "y": 13,
+          "offsetY": 0,
+          "id": 326
+        },
+        {
+          "x": 22,
+          "y": 13,
+          "offsetY": 0,
+          "id": 327
+        },
+        {
+          "x": 23,
+          "y": 13,
+          "offsetY": 0,
+          "id": 327
+        },
+        {
+          "x": 24,
+          "y": 13,
+          "offsetY": 0,
+          "id": 327
+        },
+        {
+          "x": 25,
+          "y": 13,
+          "offsetY": 0,
+          "id": 341
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "status": "proposal_simulation_only",
+  "purpose": "같은 12개 파츠를 두 무기에 배분하는 비교용 구성. 무기당 6칸 자유 팔레트는 실험 가정이며 실제 획득 가능한 팔레트가 아니다.",
+  "selection": "단검·대검의 밀집·보스 환경에서 6+6 배치 924개를 비교한 후보. 단일·분산 환경은 별도 확인하며 전 환경 최적성을 주장하지 않는다.",
+  "builds": [
+    {"name":"화상·추가타 릴레이","build":[["r_chase","r_split","g_shield","p_mark","r_echo","g_heal"],["r_burn","y_haste","r_blast","p_detonate","p_cross","y_cross"]]},
+    {"name":"기동·검기 순환","build":[["y_wave","y_haste","y_distance","y_charge_move","y_recovery","g_charge_shield"],["y_stride","b_distance","p_distance","y_cycle","r_range","p_heavy"]]},
+    {"name":"준비된 한 방","build":[["p_mark","p_echo","g_shield","r_delay","r_range","g_charge_shield"],["b_slow","y_cycle","y_cross","r_blood","p_heavy","y_refund"]]},
+    {"name":"제어·쇄빙","build":[["b_slow","b_frost","p_mark","g_shield","r_blast","y_recovery"],["b_root","y_haste","b_shatter","b_charge_shatter","b_prison","p_detonate"]]},
+    {"name":"회복·보호막 공격 전환","build":[["g_shield","g_leech","g_overheal","p_mark","g_charge_shield","g_heal"],["g_guard","g_counter","g_burst","g_armor","g_full","p_drain"]]},
+    {"name":"저주·전파","build":[["p_mark","p_detonate","p_heavy","p_finish","p_charge","p_timer"],["p_link","p_echo","p_spread","b_slow","y_stride","p_cross"]]},
+    {"name":"단색 빨강","build":[["r_split","r_echo","r_wave","r_finisher","r_shard","r_rage"],["r_burn","r_chase","r_blast","r_blood","r_delay","r_range"]]},
+    {"name":"단색 노랑","build":[["y_haste","y_stride","y_wave","y_distance","y_charge_move","y_recovery"],["y_kill","y_cross","y_cycle","y_refund","y_special","y_dodge"]]},
+    {"name":"단색 초록","build":[["g_shield","g_leech","g_overheal","g_armor","g_thorns","g_full"],["g_counter","g_guard","g_seed","g_charge_shield","g_heal","g_burst"]]},
+    {"name":"단색 파랑","build":[["b_wave","b_distance","b_shatter","b_charge_shatter","b_death","b_prison"],["b_slow","b_zone","b_root","b_frost","b_charge","b_break"]]},
+    {"name":"단색 보라","build":[["p_mark","p_timer","p_heavy","p_cross","p_finish","p_drain"],["p_echo","p_link","p_spread","p_distance","p_detonate","p_charge"]]}
+  ]
+}

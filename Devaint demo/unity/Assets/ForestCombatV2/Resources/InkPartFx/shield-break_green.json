@@ -1,0 +1,261 @@
+{
+ "frames": [
+  {
+   "filename": "shield-break_green 0",
+   "frame": {
+    "x": 0,
+    "y": 0,
+    "w": 152,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 152,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 152,
+    "h": 96
+   },
+   "duration": 40
+  },
+  {
+   "filename": "shield-break_green 1",
+   "frame": {
+    "x": 152,
+    "y": 0,
+    "w": 152,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 152,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 152,
+    "h": 96
+   },
+   "duration": 40
+  },
+  {
+   "filename": "shield-break_green 2",
+   "frame": {
+    "x": 304,
+    "y": 0,
+    "w": 152,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 152,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 152,
+    "h": 96
+   },
+   "duration": 40
+  },
+  {
+   "filename": "shield-break_green 3",
+   "frame": {
+    "x": 0,
+    "y": 96,
+    "w": 152,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 152,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 152,
+    "h": 96
+   },
+   "duration": 40
+  },
+  {
+   "filename": "shield-break_green 4",
+   "frame": {
+    "x": 152,
+    "y": 96,
+    "w": 152,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 152,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 152,
+    "h": 96
+   },
+   "duration": 40
+  },
+  {
+   "filename": "shield-break_green 5",
+   "frame": {
+    "x": 304,
+    "y": 96,
+    "w": 152,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 152,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 152,
+    "h": 96
+   },
+   "duration": 40
+  },
+  {
+   "filename": "shield-break_green 6",
+   "frame": {
+    "x": 0,
+    "y": 192,
+    "w": 152,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 152,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 152,
+    "h": 96
+   },
+   "duration": 40
+  },
+  {
+   "filename": "shield-break_green 7",
+   "frame": {
+    "x": 152,
+    "y": 192,
+    "w": 152,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 152,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 152,
+    "h": 96
+   },
+   "duration": 40
+  },
+  {
+   "filename": "shield-break_green 8",
+   "frame": {
+    "x": 304,
+    "y": 192,
+    "w": 152,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 152,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 152,
+    "h": 96
+   },
+   "duration": 40
+  },
+  {
+   "filename": "shield-break_green 9",
+   "frame": {
+    "x": 0,
+    "y": 288,
+    "w": 152,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 152,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 152,
+    "h": 96
+   },
+   "duration": 40
+  }
+ ],
+ "meta": {
+  "app": "https://github.com/patch-gg/pixelfx",
+  "version": "1",
+  "image": "shield-break_green.png",
+  "format": "RGBA8888",
+  "size": {
+   "w": 456,
+   "h": 384
+  },
+  "scale": "1",
+  "frameTags": [
+   {
+    "name": "shield-break_green",
+    "from": 0,
+    "to": 9,
+    "direction": "forward"
+   }
+  ],
+  "pixelfx": {
+   "id": "ink/shield-break",
+   "name": "Shield break (barrier dome)",
+   "fps": 25,
+   "loop": false,
+   "frames": 10,
+   "frameSize": [
+    152,
+    96
+   ],
+   "pivot": [
+    76,
+    86
+   ],
+   "columns": 3,
+   "color": "green",
+   "anchor": "player-feet"
+  }
+ }
+}

@@ -1,0 +1,112 @@
+{
+  "purpose": "Aether skill input only; direct crop/resize of the latest palette-corrected holding frame",
+  "input": "characters/ink/weapons/hammer/runtime/user-hammer-basic-color-motion-20261101/detail4x/attack_2_09.png",
+  "inputSha256": "e3bd4e075ffc92eeba51035d631c32c0bd36e1d1307a1e9535cbe57015bddcb3",
+  "inputCanvas": [
+    896,
+    768
+  ],
+  "inputPivot": [
+    384,
+    604
+  ],
+  "inputPpu": 128,
+  "cropLTRB": [
+    64,
+    256,
+    832,
+    640
+  ],
+  "largeCanvas": [
+    6144,
+    3072
+  ],
+  "integerScaleFromDetail": 8,
+  "largePivot": [
+    2560,
+    2784
+  ],
+  "smallerCanvas": [
+    4096,
+    2048
+  ],
+  "smallerPivot": [
+    1706.6666666666667,
+    1856
+  ],
+  "visibleCharacterAndHammerLarge": [
+    2608,
+    2128
+  ],
+  "startAndEndIdentical": true,
+  "resampling": "nearest-neighbor; no pixel repaint or new colors",
+  "restoreToDetail": "For 6144 reference: divide coordinates by 8 then add (64,256) to restore the 896x768 detail canvas. For 4096: divide by 16/3 then add (64,256).",
+  "restoreToNative": "After restoring the detail canvas, scale by 1/4 into 224x192, pivot (96,151), PPU32. Deployment approval and metadata are separate.",
+  "skill": {
+    "id": "hammer_default",
+    "slot": "default",
+    "name": "횡강타",
+    "provenance": "delegated_initial_design",
+    "cooldown": 6,
+    "activation_time": 0.4,
+    "motion_end": 0.95,
+    "hits": [
+      {
+        "time": 0.4,
+        "damage": 40,
+        "shape": {
+          "kind": "box",
+          "size": [
+            2.96875,
+            2.2
+          ],
+          "right_offset": [
+            1.671875,
+            1.1
+          ],
+          "left_offset": [
+            -1.671875,
+            1.1
+          ],
+          "reach_from_body_front": 2.5,
+          "bottom": 0
+        },
+        "active": 0.12,
+        "control": {
+          "push_distance": 1.5,
+          "push_seconds": 0.2
+        },
+        "anchor": "actor",
+        "targets": "all"
+      }
+    ],
+    "input_move_speed": 0,
+    "facing": "windup_start",
+    "vertical": "normal",
+    "movement": null,
+    "independent_effect": null,
+    "invulnerability": [],
+    "rules": "일반 적을 고정 공격 방향으로1.5unit 밀기. 벽 앞 정지/추가 피해 없음. 보스는 피해만."
+  },
+  "unityDefaultMatches": true,
+  "approval": "reference-only; skill motion not generated",
+  "gameIntegration": "not-deployed",
+  "artMotionPlan": {
+    "status": "user-requested; generation-pending",
+    "action": "one dramatic full-body overhead slam with hammer thrown deep behind hood and shoulders",
+    "bodyLift": "both feet clearly airborne during downstroke, 15-20% of body height; grounded backswing then firm landing",
+    "horizontalRoot": "fixed",
+    "timing": {
+      "contact": 0.4,
+      "end": 0.95
+    },
+    "gameplay": "existing horizontal-skill definition unchanged; no new jump mechanics or runtime binding applied",
+    "torso": "arch backward on backswing, then hinge forward 50-70 degrees from upright during attack",
+    "generationTiming": "Prioritize complete action and large poses over exact generated clip seconds; preserve 0.40/0.95 engine timing in later selection/integration.",
+    "reviewInput": {
+      "file": "aether-small-motion-input.png",
+      "status": "user-rejected; insufficient backswing, waist hinge and airborne silhouette",
+      "sha256": "4d01488808d2dfd1d8157f5d6127fafa0a6d24beafce94cd6b436847c769822f"
+    }
+  }
+}

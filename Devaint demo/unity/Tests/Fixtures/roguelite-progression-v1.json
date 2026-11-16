@@ -1,0 +1,878 @@
+{
+  "schemaVersion": 1,
+  "status": "trial-values-runtime-integrating",
+  "currency": {
+    "id": "magic_pigment",
+    "displayName": "마법안료",
+    "nameStatus": "working-name",
+    "source": "monster-kill-drop",
+    "dropAmounts": {
+      "normal": 1,
+      "elite": 10,
+      "boss": 40
+    },
+    "lossOnDeath": false,
+    "dropChance": 1.0,
+    "dropAmountsStatus": "trial-2",
+    "acquisition": "auto-on-kill"
+  },
+  "progressGates": [
+    "first_run_settled",
+    "chapter1_boss_first_clear",
+    "chapter2_boss_first_clear"
+  ],
+  "palettePieces": 5,
+  "palettePiecesNote": "docs/design/progression/village-palette-pieces.md: one piece per chapter first clear (profile chaptersCleared, at most palettePieces; user decision 2026-11-04); a building or unlock with openAtPieces opens at that many pieces",
+  "startLoadout": {
+    "availableBlueprints": [
+      "sword",
+      "blunt",
+      "ranged"
+    ],
+    "selectedCount": 2,
+    "paletteCount": 2,
+    "basePaletteSlots": 3,
+    "maxPaletteSlots": 5,
+    "randomizeSlotColorsAtRunStart": true,
+    "directColorSelection": false
+  },
+  "buildings": [
+    {
+      "id": "palette_atelier",
+      "name": "염색공방",
+      "station": "palette_bench",
+      "theme": "팔레트의 칸 수와 무색 칸",
+      "openAtPieces": 1
+    },
+    {
+      "id": "supply_office",
+      "name": "보급소",
+      "station": "supply_counter",
+      "theme": "출발 준비와 시작 자금, 영구 캐릭터 강화",
+      "requiredClear": "first_run_settled"
+    },
+    {
+      "id": "reclaim_workshop",
+      "name": "회수공방",
+      "station": "reclaim_bench",
+      "theme": "잉크 소모의 회수 보상",
+      "openAtPieces": 2
+    },
+    {
+      "id": "record_farmhouse",
+      "name": "기록 농가",
+      "station": "record_desk",
+      "theme": "현재 이야기와 진행 기록의 무료 열람"
+    },
+    {
+      "id": "departure_lane",
+      "name": "출발 농로",
+      "station": "departure_table",
+      "theme": "기본 도면 2개 선택과 1챕터 출발"
+    }
+  ],
+  "unlocks": [
+    {
+      "id": "palette_slots_4",
+      "name": "팔레트 4칸",
+      "building": "palette_atelier",
+      "cost": 120,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter1_boss_first_clear",
+      "prerequisites": [],
+      "effect": {
+        "kind": "palette_slot_count",
+        "value": 4,
+        "scope": "both-weapons-next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "palette_slots_5",
+      "name": "팔레트 5칸",
+      "building": "palette_atelier",
+      "openAtPieces": 4,
+      "cost": 220,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter1_boss_first_clear",
+      "prerequisites": [
+        "palette_slots_4"
+      ],
+      "effect": {
+        "kind": "palette_slot_count",
+        "value": 5,
+        "scope": "both-weapons-next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "palette_wildcard_1",
+      "name": "무기 1 첫 칸 무색",
+      "building": "palette_atelier",
+      "cost": 150,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter1_boss_first_clear",
+      "prerequisites": [],
+      "effect": {
+        "kind": "first_slot_wildcard",
+        "weaponSlot": 1,
+        "paletteSlot": 1,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "palette_wildcard_2",
+      "name": "무기 2 첫 칸 무색",
+      "building": "palette_atelier",
+      "cost": 180,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter1_boss_first_clear",
+      "prerequisites": [
+        "palette_wildcard_1"
+      ],
+      "effect": {
+        "kind": "first_slot_wildcard",
+        "weaponSlot": 2,
+        "paletteSlot": 1,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "starting_gold_50",
+      "name": "출발 지원금 1단계",
+      "building": "supply_office",
+      "cost": 60,
+      "costStatus": "trial-3",
+      "requiredClear": "first_run_settled",
+      "prerequisites": [],
+      "effect": {
+        "kind": "starting_gold_bonus",
+        "amount": 50,
+        "scope": "once-per-new-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "starting_gold_100",
+      "name": "출발 지원금 2단계",
+      "building": "supply_office",
+      "cost": 90,
+      "costStatus": "trial-3",
+      "requiredClear": "first_run_settled",
+      "prerequisites": [
+        "starting_gold_50"
+      ],
+      "effect": {
+        "kind": "starting_gold_bonus",
+        "amount": 100,
+        "scope": "once-per-new-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "starting_gold_150",
+      "name": "출발 지원금 3단계",
+      "building": "supply_office",
+      "cost": 130,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter2_boss_first_clear",
+      "prerequisites": [
+        "starting_gold_100"
+      ],
+      "effect": {
+        "kind": "starting_gold_bonus",
+        "amount": 150,
+        "scope": "once-per-new-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "starting_gold_200",
+      "name": "출발 지원금 4단계",
+      "building": "supply_office",
+      "cost": 180,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter2_boss_first_clear",
+      "prerequisites": [
+        "starting_gold_150"
+      ],
+      "effect": {
+        "kind": "starting_gold_bonus",
+        "amount": 200,
+        "scope": "once-per-new-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "attack_bonus_1",
+      "name": "공격력 강화 1단계",
+      "building": "supply_office",
+      "cost": 30,
+      "costStatus": "trial-3",
+      "requiredClear": "first_run_settled",
+      "prerequisites": [],
+      "effect": {
+        "kind": "attack_bonus_percent",
+        "value": 5,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "attack_bonus_2",
+      "name": "공격력 강화 2단계",
+      "building": "supply_office",
+      "cost": 45,
+      "costStatus": "trial-3",
+      "requiredClear": "first_run_settled",
+      "prerequisites": [
+        "attack_bonus_1"
+      ],
+      "effect": {
+        "kind": "attack_bonus_percent",
+        "value": 10,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "attack_bonus_3",
+      "name": "공격력 강화 3단계",
+      "building": "supply_office",
+      "cost": 65,
+      "costStatus": "trial-3",
+      "requiredClear": "first_run_settled",
+      "prerequisites": [
+        "attack_bonus_2"
+      ],
+      "effect": {
+        "kind": "attack_bonus_percent",
+        "value": 15,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "attack_bonus_4",
+      "name": "공격력 강화 4단계",
+      "building": "supply_office",
+      "cost": 90,
+      "costStatus": "trial-3",
+      "requiredClear": "first_run_settled",
+      "prerequisites": [
+        "attack_bonus_3"
+      ],
+      "effect": {
+        "kind": "attack_bonus_percent",
+        "value": 20,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "attack_bonus_5",
+      "name": "공격력 강화 5단계",
+      "building": "supply_office",
+      "cost": 120,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter1_boss_first_clear",
+      "prerequisites": [
+        "attack_bonus_4"
+      ],
+      "effect": {
+        "kind": "attack_bonus_percent",
+        "value": 25,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "attack_bonus_6",
+      "name": "공격력 강화 6단계",
+      "building": "supply_office",
+      "cost": 160,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter1_boss_first_clear",
+      "prerequisites": [
+        "attack_bonus_5"
+      ],
+      "effect": {
+        "kind": "attack_bonus_percent",
+        "value": 30,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "attack_bonus_7",
+      "name": "공격력 강화 7단계",
+      "building": "supply_office",
+      "cost": 210,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter2_boss_first_clear",
+      "prerequisites": [
+        "attack_bonus_6"
+      ],
+      "effect": {
+        "kind": "attack_bonus_percent",
+        "value": 35,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "attack_bonus_8",
+      "name": "공격력 강화 8단계",
+      "building": "supply_office",
+      "cost": 270,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter2_boss_first_clear",
+      "prerequisites": [
+        "attack_bonus_7"
+      ],
+      "effect": {
+        "kind": "attack_bonus_percent",
+        "value": 40,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "max_health_bonus_1",
+      "name": "최대 체력 강화 1단계",
+      "building": "supply_office",
+      "cost": 30,
+      "costStatus": "trial-3",
+      "requiredClear": "first_run_settled",
+      "prerequisites": [],
+      "effect": {
+        "kind": "max_health_bonus",
+        "value": 5,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "max_health_bonus_2",
+      "name": "최대 체력 강화 2단계",
+      "building": "supply_office",
+      "cost": 45,
+      "costStatus": "trial-3",
+      "requiredClear": "first_run_settled",
+      "prerequisites": [
+        "max_health_bonus_1"
+      ],
+      "effect": {
+        "kind": "max_health_bonus",
+        "value": 10,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "max_health_bonus_3",
+      "name": "최대 체력 강화 3단계",
+      "building": "supply_office",
+      "cost": 65,
+      "costStatus": "trial-3",
+      "requiredClear": "first_run_settled",
+      "prerequisites": [
+        "max_health_bonus_2"
+      ],
+      "effect": {
+        "kind": "max_health_bonus",
+        "value": 15,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "max_health_bonus_4",
+      "name": "최대 체력 강화 4단계",
+      "building": "supply_office",
+      "cost": 90,
+      "costStatus": "trial-3",
+      "requiredClear": "first_run_settled",
+      "prerequisites": [
+        "max_health_bonus_3"
+      ],
+      "effect": {
+        "kind": "max_health_bonus",
+        "value": 20,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "max_health_bonus_5",
+      "name": "최대 체력 강화 5단계",
+      "building": "supply_office",
+      "cost": 120,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter1_boss_first_clear",
+      "prerequisites": [
+        "max_health_bonus_4"
+      ],
+      "effect": {
+        "kind": "max_health_bonus",
+        "value": 25,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "max_health_bonus_6",
+      "name": "최대 체력 강화 6단계",
+      "building": "supply_office",
+      "cost": 160,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter1_boss_first_clear",
+      "prerequisites": [
+        "max_health_bonus_5"
+      ],
+      "effect": {
+        "kind": "max_health_bonus",
+        "value": 30,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "max_health_bonus_7",
+      "name": "최대 체력 강화 7단계",
+      "building": "supply_office",
+      "cost": 210,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter2_boss_first_clear",
+      "prerequisites": [
+        "max_health_bonus_6"
+      ],
+      "effect": {
+        "kind": "max_health_bonus",
+        "value": 35,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "max_health_bonus_8",
+      "name": "최대 체력 강화 8단계",
+      "building": "supply_office",
+      "cost": 270,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter2_boss_first_clear",
+      "prerequisites": [
+        "max_health_bonus_7"
+      ],
+      "effect": {
+        "kind": "max_health_bonus",
+        "value": 40,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "bag_slots_1",
+      "name": "가방 확장 1단계",
+      "building": "supply_office",
+      "cost": 45,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter1_boss_first_clear",
+      "prerequisites": [],
+      "effect": {
+        "kind": "bag_slot_count",
+        "value": 7,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "bag_slots_2",
+      "name": "가방 확장 2단계",
+      "building": "supply_office",
+      "cost": 70,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter1_boss_first_clear",
+      "prerequisites": [
+        "bag_slots_1"
+      ],
+      "effect": {
+        "kind": "bag_slot_count",
+        "value": 9,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "bag_slots_3",
+      "name": "가방 확장 3단계",
+      "building": "supply_office",
+      "cost": 100,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter1_boss_first_clear",
+      "prerequisites": [
+        "bag_slots_2"
+      ],
+      "effect": {
+        "kind": "bag_slot_count",
+        "value": 11,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "bag_slots_4",
+      "name": "가방 확장 4단계",
+      "building": "supply_office",
+      "cost": 130,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter2_boss_first_clear",
+      "prerequisites": [
+        "bag_slots_3"
+      ],
+      "effect": {
+        "kind": "bag_slot_count",
+        "value": 13,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "bag_slots_5",
+      "name": "가방 확장 5단계",
+      "building": "supply_office",
+      "cost": 170,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter2_boss_first_clear",
+      "prerequisites": [
+        "bag_slots_4"
+      ],
+      "effect": {
+        "kind": "bag_slot_count",
+        "value": 15,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "move_speed_bonus_1",
+      "name": "이동속도 강화 1단계",
+      "building": "supply_office",
+      "cost": 30,
+      "costStatus": "trial-3",
+      "requiredClear": "first_run_settled",
+      "prerequisites": [],
+      "effect": {
+        "kind": "move_speed_bonus_percent",
+        "value": 5,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "move_speed_bonus_2",
+      "name": "이동속도 강화 2단계",
+      "building": "supply_office",
+      "cost": 45,
+      "costStatus": "trial-3",
+      "requiredClear": "first_run_settled",
+      "prerequisites": [
+        "move_speed_bonus_1"
+      ],
+      "effect": {
+        "kind": "move_speed_bonus_percent",
+        "value": 10,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "move_speed_bonus_3",
+      "name": "이동속도 강화 3단계",
+      "building": "supply_office",
+      "cost": 65,
+      "costStatus": "trial-3",
+      "requiredClear": "first_run_settled",
+      "prerequisites": [
+        "move_speed_bonus_2"
+      ],
+      "effect": {
+        "kind": "move_speed_bonus_percent",
+        "value": 15,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "move_speed_bonus_4",
+      "name": "이동속도 강화 4단계",
+      "building": "supply_office",
+      "cost": 90,
+      "costStatus": "trial-3",
+      "requiredClear": "first_run_settled",
+      "prerequisites": [
+        "move_speed_bonus_3"
+      ],
+      "effect": {
+        "kind": "move_speed_bonus_percent",
+        "value": 20,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "extra_dash_1",
+      "name": "대시 추가",
+      "building": "supply_office",
+      "cost": 400,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter2_boss_first_clear",
+      "prerequisites": [
+        "move_speed_bonus_4"
+      ],
+      "effect": {
+        "kind": "dash_charges",
+        "value": 2,
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "destroyed_ink_gold_20",
+      "name": "안료 회수",
+      "building": "reclaim_workshop",
+      "cost": 60,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter2_boss_first_clear",
+      "prerequisites": [],
+      "effect": {
+        "kind": "destroyed_ink_gold_bonus",
+        "amount": 20,
+        "scope": "once-per-destroyed-owned-color-ink-instance"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "ink_part_ink3_red_02",
+      "name": "잉크 해금: 집중 공격",
+      "building": "palette_atelier",
+      "cost": 120,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter1_boss_first_clear",
+      "prerequisites": [
+        "bag_slots_1"
+      ],
+      "effect": {
+        "kind": "ink_part_unlock",
+        "part": "ink3_red_02",
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "ink_part_ink3_red_09",
+      "name": "잉크 해금: 광폭화",
+      "building": "palette_atelier",
+      "cost": 120,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter1_boss_first_clear",
+      "prerequisites": [
+        "ink_part_ink3_red_02"
+      ],
+      "effect": {
+        "kind": "ink_part_unlock",
+        "part": "ink3_red_09",
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "ink_part_ink3_yellow_07",
+      "name": "잉크 해금: 교체 연계",
+      "building": "palette_atelier",
+      "cost": 120,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter1_boss_first_clear",
+      "prerequisites": [
+        "bag_slots_1"
+      ],
+      "effect": {
+        "kind": "ink_part_unlock",
+        "part": "ink3_yellow_07",
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "ink_part_ink3_yellow_12",
+      "name": "잉크 해금: 교체 순간이동",
+      "building": "palette_atelier",
+      "cost": 120,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter1_boss_first_clear",
+      "prerequisites": [
+        "ink_part_ink3_yellow_07"
+      ],
+      "effect": {
+        "kind": "ink_part_unlock",
+        "part": "ink3_yellow_12",
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "ink_part_ink3_green_09",
+      "name": "잉크 해금: 복수 일격",
+      "building": "palette_atelier",
+      "cost": 90,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter1_boss_first_clear",
+      "prerequisites": [
+        "bag_slots_1"
+      ],
+      "effect": {
+        "kind": "ink_part_unlock",
+        "part": "ink3_green_09",
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "ink_part_ink3_green_03",
+      "name": "잉크 해금: 가시갑옷",
+      "building": "palette_atelier",
+      "cost": 150,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter1_boss_first_clear",
+      "prerequisites": [
+        "ink_part_ink3_green_09"
+      ],
+      "effect": {
+        "kind": "ink_part_unlock",
+        "part": "ink3_green_03",
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "ink_part_ink3_blue_04",
+      "name": "잉크 해금: 적중 쿨감",
+      "building": "palette_atelier",
+      "cost": 120,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter1_boss_first_clear",
+      "prerequisites": [
+        "bag_slots_1"
+      ],
+      "effect": {
+        "kind": "ink_part_unlock",
+        "part": "ink3_blue_04",
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "ink_part_ink3_blue_09",
+      "name": "잉크 해금: 스킬 추가 충전",
+      "building": "palette_atelier",
+      "cost": 150,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter1_boss_first_clear",
+      "prerequisites": [
+        "ink_part_ink3_blue_04"
+      ],
+      "effect": {
+        "kind": "ink_part_unlock",
+        "part": "ink3_blue_09",
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "ink_part_ink3_purple_03",
+      "name": "잉크 해금: 적중 기절",
+      "building": "palette_atelier",
+      "cost": 90,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter1_boss_first_clear",
+      "prerequisites": [
+        "bag_slots_1"
+      ],
+      "effect": {
+        "kind": "ink_part_unlock",
+        "part": "ink3_purple_03",
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    },
+    {
+      "id": "ink_part_ink3_purple_10",
+      "name": "잉크 해금: 대시 기절",
+      "building": "palette_atelier",
+      "cost": 120,
+      "costStatus": "trial-3",
+      "requiredClear": "chapter1_boss_first_clear",
+      "prerequisites": [
+        "ink_part_ink3_purple_03"
+      ],
+      "effect": {
+        "kind": "ink_part_unlock",
+        "part": "ink3_purple_10",
+        "scope": "next-run"
+      },
+      "maxPurchases": 1
+    }
+  ],
+  "transactions": {
+    "priceUnknownBehavior": "disable-purchase-with-explicit-reason",
+    "payAndUnlockAtomically": true,
+    "denyRepeatPurchase": true,
+    "persistAcquiredPigment": true,
+    "failedTransactionChangesNothing": true
+  },
+  "startingGold": {
+    "addToExistingBaseGold": true,
+    "receiptKey": [
+      "profileId",
+      "runId",
+      "starting_gold"
+    ],
+    "highestOwnedTierOnly": true,
+    "excludedEvents": [
+      "hub-enter",
+      "scene-reload",
+      "chapter-transition",
+      "load-save",
+      "debug-reset",
+      "training"
+    ]
+  },
+  "inkDestruction": {
+    "itemKind": "color-ink-part",
+    "eligibleReasons": [
+      "explicit-destroy-unmounted-owned-ink",
+      "paid-replacement-consumes-old-part"
+    ],
+    "excludedReasons": [
+      "sell",
+      "palette-color-change-detach",
+      "drop",
+      "floor-despawn",
+      "death-cleanup",
+      "run-cleanup",
+      "debug-reset",
+      "training",
+      "rollback"
+    ],
+    "receiptKey": [
+      "runId",
+      "inkInstanceId",
+      "destroyed_ink_gold_20"
+    ],
+    "awardAfterDestructionCommits": true,
+    "directDestroyEquippedInk": false,
+    "existingInkSaleRuleUnchanged": true
+  }
+}

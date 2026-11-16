@@ -1,0 +1,631 @@
+{
+  "updated": "2026-10-14",
+  "assets": [
+    {
+      "id": "ink-master",
+      "folder": "02_에셋/캐릭터/잉크/공통몸체",
+      "name": "잉크 공통 맨손 마스터",
+      "status": "사용자확정",
+      "defaultStage": "04_확정본",
+      "note": "7개 기본 모션, 각 12프레임. 무기 제작 기준 몸체를 보존한다.",
+      "preview": "02_에셋/캐릭터/잉크/공통몸체/05_미리보기/index.html",
+      "settings": [
+        "02_에셋/캐릭터/잉크/공통몸체/04_확정본/무기부착점.json",
+        "02_에셋/캐릭터/잉크/공통몸체/04_확정본/재생설정.json"
+      ],
+      "sharedPackages": [
+        "05_공유/캐릭터/잉크_공통몸체_이전포장본.zip"
+      ],
+      "guide": "02_에셋/캐릭터/잉크/공통몸체/00_안내.md",
+      "confirmedFiles": 103
+    },
+    {
+      "id": "ink-sword",
+      "folder": "02_에셋/캐릭터/잉크/무기/검",
+      "name": "잉크 검",
+      "status": "사용자확정",
+      "defaultStage": "04_확정본",
+      "note": "가로·내려 2타와 기본 모션. 기존 리터치를 보존한다.",
+      "preview": "02_에셋/캐릭터/잉크/무기/검/05_미리보기/index.html",
+      "settings": [
+        "02_에셋/캐릭터/잉크/무기/검/04_확정본/재생설정.json",
+        "02_에셋/캐릭터/잉크/무기/검/04_확정본/공격_양손/재생설정.json",
+        "02_에셋/캐릭터/잉크/무기/검/04_확정본/잉크_베기무기/재생설정.json",
+        "02_에셋/캐릭터/잉크/무기/검/01_참고자료/잉크_베기무기/공격_참고/재생설정.json"
+      ],
+      "sharedPackages": [
+        "05_공유/에셋포장/ink-sword/전달용/베기기본무기_A10_확정.zip"
+      ],
+      "guide": "02_에셋/캐릭터/잉크/무기/검/00_안내.md",
+      "confirmedFiles": 129
+    },
+    {
+      "id": "ink-whip",
+      "folder": "02_에셋/캐릭터/잉크/무기/채찍",
+      "name": "잉크 채찍",
+      "status": "사용자확정",
+      "defaultStage": "04_확정본",
+      "note": "일반 모션과 공격은 확정. 제작 몸 원본과 리터치를 같은 에셋 안에 모았다. 이전 공격은 별도 보존한다.",
+      "preview": "02_에셋/캐릭터/잉크/무기/채찍/05_미리보기/전체모션_개선/index.html",
+      "settings": [
+        "02_에셋/캐릭터/잉크/무기/채찍/04_확정본/전체모션_개선/재생설정.json"
+      ],
+      "sharedPackages": [],
+      "guide": "02_에셋/캐릭터/잉크/무기/채찍/00_안내.md",
+      "confirmedFiles": 170
+    },
+    {
+      "id": "ink-rapier",
+      "folder": "02_에셋/캐릭터/잉크/무기/레이피어",
+      "name": "잉크 레이피어",
+      "status": "디자인확정_공격검토",
+      "defaultStage": "03_작업중",
+      "note": "선택한 디자인과 대기1은 04_확정본/디자인에 있다. 기본 모션 적용본과 공격 검토본은 03_작업중에 유지한다. 공격 상태 때문에 디자인의 확정을 취소하지 않는다.",
+      "preview": "02_에셋/캐릭터/잉크/무기/레이피어/05_미리보기/레이피어_3타시안/index.html",
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/캐릭터/잉크/무기/레이피어/00_안내.md",
+      "confirmedFiles": 2
+    },
+    {
+      "id": "ink-dagger",
+      "folder": "02_에셋/캐릭터/잉크/무기/단검",
+      "name": "잉크 단검",
+      "status": "디자인확정_공격리터치적용",
+      "defaultStage": "03_작업중",
+      "note": "선택한 디자인과 대기1은 04_확정본/디자인에 있다. 기본 모션 적용본과 공격 검토본은 03_작업중에 유지한다. 공격 상태 때문에 디자인의 확정을 취소하지 않는다.",
+      "preview": "02_에셋/캐릭터/잉크/무기/단검/05_미리보기/단검_4타공격/index.html",
+      "settings": [
+        "02_에셋/캐릭터/잉크/무기/단검/03_작업중/단검_4타공격/재생설정.json"
+      ],
+      "sharedPackages": [],
+      "guide": "02_에셋/캐릭터/잉크/무기/단검/00_안내.md",
+      "confirmedFiles": 2
+    },
+    {
+      "id": "ink-weapon-shared",
+      "folder": "02_에셋/캐릭터/잉크/무기/공통제작",
+      "name": "레이피어와 단검 공용 제작 자료",
+      "status": "공용제작",
+      "defaultStage": "03_작업중",
+      "note": "두 무기의 비교 화면, 공용 생성기와 설정을 한 곳에 보존한다.",
+      "preview": "02_에셋/캐릭터/잉크/무기/공통제작/05_미리보기/index.html",
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/캐릭터/잉크/무기/공통제작/00_안내.md",
+      "confirmedFiles": 1
+    },
+    {
+      "id": "ink-quill",
+      "folder": "02_에셋/캐릭터/잉크/무기/깃털펜",
+      "name": "잉크 깃털펜",
+      "status": "사용여부확인필요",
+      "defaultStage": "01_참고자료",
+      "note": "현재 게임에서 사용하거나 폐기하기로 확정한 기록이 없다.",
+      "preview": null,
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/캐릭터/잉크/무기/깃털펜/00_안내.md",
+      "confirmedFiles": 0
+    },
+    {
+      "id": "ink-weapon-reference",
+      "folder": "02_에셋/캐릭터/잉크/무기/공통참고",
+      "name": "잉크 무기 공통 컨셉",
+      "status": "참고자료",
+      "defaultStage": "01_참고자료",
+      "note": "",
+      "preview": "02_에셋/캐릭터/잉크/무기/공통참고/05_미리보기/index.html",
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/캐릭터/잉크/무기/공통참고/00_안내.md",
+      "confirmedFiles": 0
+    },
+    {
+      "id": "story-talisman",
+      "folder": "02_에셋/스토리연출/부적전달",
+      "name": "부적 전달 연출",
+      "status": "사용자확정",
+      "defaultStage": "04_확정본",
+      "note": "주인공 받기와 할머니 건네기 12프레임 확정. 받은 생성 원본과 편집 데이터도 보존한다.",
+      "preview": "02_에셋/스토리연출/부적전달/05_미리보기/index.html",
+      "settings": [],
+      "sharedPackages": [
+        "05_공유/에셋포장/story-talisman/확정전달/부적전달_픽셀확정_12f.zip"
+      ],
+      "guide": "02_에셋/스토리연출/부적전달/00_안내.md",
+      "confirmedFiles": 31
+    },
+    {
+      "id": "forest-common",
+      "folder": "02_에셋/배경/숲/공통설정",
+      "name": "세 가지 숲 공통 설정",
+      "status": "확정초안",
+      "defaultStage": "04_확정본",
+      "note": "초안맵_확정.json 기준의 초안이다. 게임 전체의 최종 배치 승인과 구분한다.",
+      "preview": "02_에셋/배경/숲/공통설정/05_미리보기/index.html",
+      "settings": [
+        "02_에셋/배경/숲/공통설정/04_확정본/전투지형규격.json"
+      ],
+      "sharedPackages": [
+        "05_공유/배경/숲_확정초안/Unity통합_새세션_전달프롬프트.txt",
+        "05_공유/배경/숲_확정초안/배경_실사용에셋목록.json",
+        "05_공유/배경/숲_확정초안/새세션_붙여넣기.txt",
+        "05_공유/배경/숲_확정초안/새세션_인수인계.txt",
+        "05_공유/배경/숲_확정초안/캐릭터_현시점경로확인.json",
+        "05_공유/배경/숲_확정초안/확정맵_첫주기_타일배치.json"
+      ],
+      "guide": "02_에셋/배경/숲/공통설정/00_안내.md",
+      "confirmedFiles": 5
+    },
+    {
+      "id": "forest-test-cast",
+      "folder": "02_에셋/캐릭터/테스트용/숲_테스트캐릭터",
+      "name": "숲 테스트용 캐릭터 사본",
+      "status": "테스트자료",
+      "defaultStage": "03_작업중",
+      "note": "프로토타입에 함께 넣은 사본으로, 잉크 공통 마스터를 대체하지 않는다.",
+      "preview": null,
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/캐릭터/테스트용/숲_테스트캐릭터/00_안내.md",
+      "confirmedFiles": 0
+    },
+    {
+      "id": "ui-battle-hud",
+      "folder": "02_에셋/UI/전투HUD",
+      "name": "전투 HUD",
+      "status": "사용가능_최종승인미확인",
+      "defaultStage": "03_작업중",
+      "note": "현재 v3는 독립 파츠와 Unity 조립 검증을 통과했다. 전체 디자인에 대한 사용자 최종 승인 기록은 확인되지 않았다. 시안에서 추출한 v2는 이전 시안으로 보존한다.",
+      "preview": "02_에셋/UI/전투HUD/05_미리보기/index.html",
+      "settings": [
+        "02_에셋/UI/전투HUD/03_작업중/layout.json",
+        "02_에셋/UI/전투HUD/03_작업중/UnityReady/Assets/LostWordsGUIv3/Resources/LostWordsGUIv3/layout.json",
+        "02_에셋/UI/전투HUD/99_이전시안/v2/layout.json"
+      ],
+      "sharedPackages": [
+        "05_공유/에셋포장/ui-battle-hud/전달용/GUIv3.unitypackage",
+        "05_공유/에셋포장/ui-battle-hud/전달용/GUIv3_UnityReady.zip",
+        "05_공유/에셋포장/ui-battle-hud/이전시안/전투HUD_정밀_v2_Unity파츠.zip"
+      ],
+      "guide": "02_에셋/UI/전투HUD/00_안내.md",
+      "confirmedFiles": 0
+    },
+    {
+      "id": "ui-dialogue",
+      "folder": "02_에셋/UI/대화상호작용",
+      "name": "대화와 상호작용 UI",
+      "status": "제작초안",
+      "defaultStage": "03_작업중",
+      "note": "UnityReady 파츠를 보존한다. 전체 승인 여부는 확인이 필요하다.",
+      "preview": "02_에셋/UI/대화상호작용/05_미리보기/index.html",
+      "settings": [
+        "02_에셋/UI/대화상호작용/03_작업중/layout.json"
+      ],
+      "sharedPackages": [
+        "05_공유/에셋포장/ui-dialogue/전달용/대화_상호작용_v1_Unity파츠.zip"
+      ],
+      "guide": "02_에셋/UI/대화상호작용/00_안내.md",
+      "confirmedFiles": 0
+    },
+    {
+      "id": "vfx-scissor",
+      "folder": "02_에셋/이펙트/가위베기",
+      "name": "가위베기 효과",
+      "status": "승인기록확인필요",
+      "defaultStage": "03_작업중",
+      "note": "최종 타이밍 파일과 게임용 PNG는 있으나 별도 사용자 승인 기록은 확인이 필요하다.",
+      "preview": null,
+      "settings": [
+        "02_에셋/이펙트/가위베기/03_작업중/최종_타이밍.json"
+      ],
+      "sharedPackages": [],
+      "guide": "02_에셋/이펙트/가위베기/00_안내.md",
+      "confirmedFiles": 0
+    },
+    {
+      "id": "vfx-basic-attack",
+      "folder": "02_에셋/이펙트/기본공격",
+      "name": "기본공격 상하베기 효과",
+      "status": "공격시안",
+      "defaultStage": "03_작업중",
+      "note": "상하 베기 원본, 프레임, 비교 화면을 보존한다.",
+      "preview": "02_에셋/이펙트/기본공격/05_미리보기/preview.html",
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/이펙트/기본공격/00_안내.md",
+      "confirmedFiles": 0
+    },
+    {
+      "id": "monster-shared",
+      "folder": "02_에셋/몬스터/공통자료",
+      "name": "몬스터 공통 규격과 검증 자료",
+      "status": "공용자료",
+      "defaultStage": "03_작업중",
+      "note": "",
+      "preview": null,
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/몬스터/공통자료/00_안내.md",
+      "confirmedFiles": 0
+    },
+    {
+      "id": "monster-단어수집가",
+      "folder": "02_에셋/몬스터/단어수집가",
+      "name": "단어수집가",
+      "status": "정지디자인시안",
+      "defaultStage": "03_작업중",
+      "note": "12종 묶음의 정지 디자인 시안은 애니메이션 확정과 구분한다.",
+      "preview": null,
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/몬스터/단어수집가/00_안내.md",
+      "confirmedFiles": 0
+    },
+    {
+      "id": "monster-재단사",
+      "folder": "02_에셋/몬스터/재단사",
+      "name": "재단사",
+      "status": "기존확정모션_정지시안별도",
+      "defaultStage": "04_확정본",
+      "note": "12종 묶음의 정지 디자인 시안은 애니메이션 확정과 구분한다. 기존 픽셀 모션은 확정 기록에 따라 보존한다.",
+      "preview": null,
+      "settings": [
+        "02_에셋/몬스터/재단사/99_이전시안/3_최종12프레임/공격/정보.json",
+        "02_에셋/몬스터/재단사/99_이전시안/4_픽셀64/공격/정보.json",
+        "02_에셋/몬스터/재단사/04_확정본/공격/정보.json"
+      ],
+      "sharedPackages": [
+        "05_공유/에셋포장/monster-재단사/전달용/몬스터_프레임.zip"
+      ],
+      "guide": "02_에셋/몬스터/재단사/00_안내.md",
+      "confirmedFiles": 13
+    },
+    {
+      "id": "monster-나팔수",
+      "folder": "02_에셋/몬스터/나팔수",
+      "name": "나팔수",
+      "status": "정지디자인시안",
+      "defaultStage": "03_작업중",
+      "note": "12종 묶음의 정지 디자인 시안은 애니메이션 확정과 구분한다.",
+      "preview": null,
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/몬스터/나팔수/00_안내.md",
+      "confirmedFiles": 0
+    },
+    {
+      "id": "monster-메아리유령",
+      "folder": "02_에셋/몬스터/메아리유령",
+      "name": "메아리유령",
+      "status": "정지디자인시안",
+      "defaultStage": "03_작업중",
+      "note": "12종 묶음의 정지 디자인 시안은 애니메이션 확정과 구분한다.",
+      "preview": null,
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/몬스터/메아리유령/00_안내.md",
+      "confirmedFiles": 0
+    },
+    {
+      "id": "monster-여우",
+      "folder": "02_에셋/몬스터/여우",
+      "name": "여우",
+      "status": "정지디자인시안",
+      "defaultStage": "03_작업중",
+      "note": "12종 묶음의 정지 디자인 시안은 애니메이션 확정과 구분한다.",
+      "preview": null,
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/몬스터/여우/00_안내.md",
+      "confirmedFiles": 0
+    },
+    {
+      "id": "monster-멧돼지",
+      "folder": "02_에셋/몬스터/멧돼지",
+      "name": "멧돼지",
+      "status": "사용자확정",
+      "defaultStage": "04_확정본",
+      "note": "12종 묶음의 정지 디자인 시안은 애니메이션 확정과 구분한다. 기존 픽셀 모션은 확정 기록에 따라 보존한다.",
+      "preview": null,
+      "settings": [
+        "02_에셋/몬스터/멧돼지/04_확정본/걷기/정보.json",
+        "02_에셋/몬스터/멧돼지/04_확정본/돌진/정보.json"
+      ],
+      "sharedPackages": [],
+      "guide": "02_에셋/몬스터/멧돼지/00_안내.md",
+      "confirmedFiles": 32
+    },
+    {
+      "id": "monster-까치",
+      "folder": "02_에셋/몬스터/까치",
+      "name": "까치",
+      "status": "정지디자인시안",
+      "defaultStage": "03_작업중",
+      "note": "12종 묶음의 정지 디자인 시안은 애니메이션 확정과 구분한다.",
+      "preview": null,
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/몬스터/까치/00_안내.md",
+      "confirmedFiles": 0
+    },
+    {
+      "id": "monster-아귀",
+      "folder": "02_에셋/몬스터/아귀",
+      "name": "아귀",
+      "status": "정지디자인시안",
+      "defaultStage": "03_작업중",
+      "note": "12종 묶음의 정지 디자인 시안은 애니메이션 확정과 구분한다.",
+      "preview": null,
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/몬스터/아귀/00_안내.md",
+      "confirmedFiles": 0
+    },
+    {
+      "id": "monster-우편함",
+      "folder": "02_에셋/몬스터/우편함",
+      "name": "우편함",
+      "status": "정지디자인시안",
+      "defaultStage": "03_작업중",
+      "note": "12종 묶음의 정지 디자인 시안은 애니메이션 확정과 구분한다.",
+      "preview": null,
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/몬스터/우편함/00_안내.md",
+      "confirmedFiles": 0
+    },
+    {
+      "id": "monster-찻주전자게",
+      "folder": "02_에셋/몬스터/찻주전자게",
+      "name": "찻주전자게",
+      "status": "정지디자인시안",
+      "defaultStage": "03_작업중",
+      "note": "12종 묶음의 정지 디자인 시안은 애니메이션 확정과 구분한다.",
+      "preview": null,
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/몬스터/찻주전자게/00_안내.md",
+      "confirmedFiles": 0
+    },
+    {
+      "id": "monster-잉크눈",
+      "folder": "02_에셋/몬스터/잉크눈",
+      "name": "잉크눈",
+      "status": "사용자확정",
+      "defaultStage": "04_확정본",
+      "note": "12종 묶음의 정지 디자인 시안은 애니메이션 확정과 구분한다. 기존 픽셀 모션은 확정 기록에 따라 보존한다.",
+      "preview": null,
+      "settings": [
+        "02_에셋/몬스터/잉크눈/04_확정본/공격/정보.json",
+        "02_에셋/몬스터/잉크눈/04_확정본/이동/정보.json"
+      ],
+      "sharedPackages": [],
+      "guide": "02_에셋/몬스터/잉크눈/00_안내.md",
+      "confirmedFiles": 32
+    },
+    {
+      "id": "monster-책벌레",
+      "folder": "02_에셋/몬스터/책벌레",
+      "name": "책벌레",
+      "status": "정지디자인시안",
+      "defaultStage": "03_작업중",
+      "note": "12종 묶음의 정지 디자인 시안은 애니메이션 확정과 구분한다.",
+      "preview": null,
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/몬스터/책벌레/00_안내.md",
+      "confirmedFiles": 0
+    },
+    {
+      "id": "forest-jade",
+      "folder": "02_에셋/배경/숲/비취빛",
+      "name": "비취빛 숲",
+      "status": "확정초안",
+      "defaultStage": "04_확정본",
+      "note": "최신 v22 초안에서 사용한 레이어와 타일이다. 원본과 배치 검증 화면을 별도로 보존한다.",
+      "preview": null,
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/배경/숲/비취빛/00_안내.md",
+      "confirmedFiles": 31
+    },
+    {
+      "id": "forest-gold",
+      "folder": "02_에셋/배경/숲/황금빛",
+      "name": "황금빛 숲",
+      "status": "확정초안",
+      "defaultStage": "04_확정본",
+      "note": "최신 v22 초안에서 사용한 레이어와 타일이다. 원본과 배치 검증 화면을 별도로 보존한다.",
+      "preview": null,
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/배경/숲/황금빛/00_안내.md",
+      "confirmedFiles": 31
+    },
+    {
+      "id": "forest-twilight",
+      "folder": "02_에셋/배경/숲/황혼",
+      "name": "황혼 숲",
+      "status": "확정초안",
+      "defaultStage": "04_확정본",
+      "note": "최신 v22 초안에서 사용한 레이어와 타일이다. 원본과 배치 검증 화면을 별도로 보존한다.",
+      "preview": null,
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/배경/숲/황혼/00_안내.md",
+      "confirmedFiles": 31
+    },
+    {
+      "id": "cast-주인공",
+      "folder": "02_에셋/캐릭터/스토리등장인물/주인공",
+      "name": "주인공 디자인",
+      "status": "디자인확정",
+      "defaultStage": "04_확정본",
+      "note": "128×128 인물 디자인 확정 자료다. 모션 확정으로 표시하지 않는다.",
+      "preview": null,
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/캐릭터/스토리등장인물/주인공/00_안내.md",
+      "confirmedFiles": 1
+    },
+    {
+      "id": "cast-동료",
+      "folder": "02_에셋/캐릭터/스토리등장인물/동료",
+      "name": "동료 디자인",
+      "status": "디자인확정",
+      "defaultStage": "04_확정본",
+      "note": "128×128 인물 디자인 확정 자료다. 모션 확정으로 표시하지 않는다.",
+      "preview": null,
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/캐릭터/스토리등장인물/동료/00_안내.md",
+      "confirmedFiles": 1
+    },
+    {
+      "id": "cast-할머니",
+      "folder": "02_에셋/캐릭터/스토리등장인물/할머니",
+      "name": "할머니 디자인",
+      "status": "디자인확정",
+      "defaultStage": "04_확정본",
+      "note": "128×128 인물 디자인 확정 자료다. 모션 확정으로 표시하지 않는다.",
+      "preview": null,
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/캐릭터/스토리등장인물/할머니/00_안내.md",
+      "confirmedFiles": 1
+    },
+    {
+      "id": "cast-기사",
+      "folder": "02_에셋/캐릭터/스토리등장인물/기사",
+      "name": "기사 디자인",
+      "status": "디자인확정",
+      "defaultStage": "04_확정본",
+      "note": "128×128 인물 디자인 확정 자료다. 모션 확정으로 표시하지 않는다.",
+      "preview": null,
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/캐릭터/스토리등장인물/기사/00_안내.md",
+      "confirmedFiles": 1
+    },
+    {
+      "id": "cast-잉크주인공",
+      "folder": "02_에셋/캐릭터/스토리등장인물/잉크주인공",
+      "name": "잉크주인공 디자인",
+      "status": "디자인확정",
+      "defaultStage": "04_확정본",
+      "note": "128×128 인물 디자인 확정 자료다. 모션 확정으로 표시하지 않는다.",
+      "preview": null,
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/캐릭터/스토리등장인물/잉크주인공/00_안내.md",
+      "confirmedFiles": 1
+    },
+    {
+      "id": "cast-조력자",
+      "folder": "02_에셋/캐릭터/스토리등장인물/조력자",
+      "name": "조력자 디자인",
+      "status": "디자인확정",
+      "defaultStage": "04_확정본",
+      "note": "128×128 인물 디자인 확정 자료다. 모션 확정으로 표시하지 않는다.",
+      "preview": null,
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/캐릭터/스토리등장인물/조력자/00_안내.md",
+      "confirmedFiles": 1
+    },
+    {
+      "id": "cast-shared",
+      "folder": "02_에셋/캐릭터/스토리등장인물/공통자료",
+      "name": "스토리 등장인물 공통 자료",
+      "status": "디자인확정",
+      "defaultStage": "04_확정본",
+      "note": "",
+      "preview": null,
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/캐릭터/스토리등장인물/공통자료/00_안내.md",
+      "confirmedFiles": 1
+    },
+    {
+      "id": "story-Unity화풍_신규배경_시안_v2",
+      "folder": "02_에셋/스토리연출/장면시안/Unity화풍_신규배경_시안_v2",
+      "name": "Unity화풍 신규배경 시안 v2",
+      "status": "장면시안",
+      "defaultStage": "03_작업중",
+      "note": "",
+      "preview": null,
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/스토리연출/장면시안/Unity화풍_신규배경_시안_v2/00_안내.md",
+      "confirmedFiles": 0
+    },
+    {
+      "id": "story-신규배경_디테일기준_시안_v3",
+      "folder": "02_에셋/스토리연출/장면시안/신규배경_디테일기준_시안_v3",
+      "name": "신규배경 디테일기준 시안 v3",
+      "status": "장면시안",
+      "defaultStage": "03_작업중",
+      "note": "",
+      "preview": null,
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/스토리연출/장면시안/신규배경_디테일기준_시안_v3/00_안내.md",
+      "confirmedFiles": 0
+    },
+    {
+      "id": "story-초반_게임화면_시안_v1",
+      "folder": "02_에셋/스토리연출/장면시안/초반_게임화면_시안_v1",
+      "name": "초반 게임화면 시안 v1",
+      "status": "장면시안",
+      "defaultStage": "03_작업중",
+      "note": "",
+      "preview": null,
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/스토리연출/장면시안/초반_게임화면_시안_v1/00_안내.md",
+      "confirmedFiles": 0
+    },
+    {
+      "id": "background-library",
+      "folder": "02_에셋/배경/대도서관",
+      "name": "대도서관 · 접수실·대홀·안뜰",
+      "status": "1차확정",
+      "defaultStage": "04_확정본",
+      "note": "사용자가 풍부한 재질로 1차 확정한 배경과 분리 소품. 이후 수정한 현재 사용 PNG를 포함한다. 완성된 전체 게임과는 별개의 배경 확정 범위다.",
+      "preview": "02_에셋/배경/대도서관/05_미리보기/잃어버린_말_전체화면_플레이.html",
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/배경/대도서관/00_안내.md",
+      "confirmedFiles": 42
+    },
+    {
+      "id": "background-memory-home",
+      "folder": "02_에셋/배경/할머니집",
+      "name": "할머니집 회상 배경",
+      "status": "현재사용본",
+      "defaultStage": "04_확정본",
+      "note": "회상 장면에서 현재 사용하는 축소된 집 배경. 대도서관 1차 확정과 별도로 회상용 사용본임을 표시한다.",
+      "preview": null,
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/배경/할머니집/00_안내.md",
+      "confirmedFiles": 1
+    },
+    {
+      "id": "cast-citizen",
+      "folder": "02_에셋/캐릭터/스토리등장인물/시민",
+      "name": "접수 시민 NPC",
+      "status": "외형검토",
+      "defaultStage": "03_작업중",
+      "note": "첫 접수 업무에서 사용하는 시민 검토 시안. 사용자 확정한 배경과 구분한다.",
+      "preview": null,
+      "settings": [],
+      "sharedPackages": [],
+      "guide": "02_에셋/캐릭터/스토리등장인물/시민/00_안내.md",
+      "confirmedFiles": 0
+    }
+  ],
+  "pathScope": "Paths refer to the production workspace, not this Git checkout."
+}

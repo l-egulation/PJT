@@ -1,0 +1,113 @@
+{
+  "schema": "stage2-k4-attack-return-v1",
+  "status": "source-motion-user-accepted-pixel-and-hold-review",
+  "sourceFile": "C:/Users/SSAFY/Downloads/6a408467-021f-42bd-94f6-167b2eb43d6b.png",
+  "output": "outputs/waterway/k4-attack-hold-20261101",
+  "base": "outputs/waterway/pixel-base-step1-20261031/K4",
+  "inputHandoff": "outputs/waterway/normal-attack-handoff-20261101/K4",
+  "canvas": [
+    384,
+    224
+  ],
+  "grid": [
+    6,
+    6
+  ],
+  "cellSize": [
+    1280,
+    720
+  ],
+  "baseline": 192,
+  "scaleReferenceFramesZeroBased": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "targetReferenceHeight": 112,
+  "supersampleGrid": 4,
+  "coverageMinimum": 0.5,
+  "matte": {
+    "opaqueRmsMax": 25,
+    "compositeRmsMax": 12,
+    "alphaMinimum": 0.8,
+    "matteAdvantage": 8
+  },
+  "pinholeCleanup": {
+    "maxPinholeArea": 4,
+    "ankleRepairZone": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "maxAnkleHoleArea": 0
+  },
+  "phases": [
+    {
+      "id": "windup",
+      "name": "전조",
+      "sourceIndicesZeroBased": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "durationMs": 550
+    },
+    {
+      "id": "spray-hold",
+      "name": "분사 유지",
+      "sourceIndicesZeroBased": [
+        12
+      ],
+      "durationMs": 650
+    },
+    {
+      "id": "recovery",
+      "name": "회복",
+      "sourceIndicesZeroBased": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "durationMs": 700
+    }
+  ],
+  "effectAnchorProposal": {
+    "space": "native384x224",
+    "nozzleTip": [
+      125,
+      136
+    ],
+    "effectOrigin": [
+      124,
+      136
+    ],
+    "direction": [
+      -1,
+      0
+    ],
+    "phase": "spray-hold",
+    "status": "art-reference-only-not-runtime-binding"
+  },
+  "previewGapMs": 500,
+  "policy": "Preserve the uploaded36-cell sheet and extract every full cell without changes. Use original2-12 for anticipation, original13 as one exactly still650ms spray pose, original14-25 for recovery. Exclude initial reference1 with a different size and redundant trailing idles. Use one fixed scale/offset from original2-5, existing11 K4 colors, binary alpha, conservative tiny noise/enclosed hole cleanup. No new generated poses, per-frame scaling/registration, lower-body composites or synthesized recoil. A single held full frame keeps both nozzle and boots identical during emission. Preserve source motion outside the held phase. Keep combat data, approved walking and Unity unchanged.",
+  "holdCompletionProposal": "Keep the spray-hold pose for the actual emission duration.650ms is the preview default from the existing design proposal, not a new runtime lock. End emission before entering recovery; effect binding is not implemented."
+}

@@ -1,0 +1,155 @@
+{
+  "count": 14,
+  "selectedFrames": [
+    1,
+    10,
+    18,
+    22,
+    32,
+    36,
+    38,
+    39,
+    42,
+    50,
+    54,
+    62,
+    70,
+    90
+  ],
+  "steps": [
+    {
+      "frame": "F001",
+      "sourceIndex": 1,
+      "startMs": 0,
+      "ms": 60,
+      "phase": "준비 / 큰 백스윙"
+    },
+    {
+      "frame": "F010",
+      "sourceIndex": 10,
+      "startMs": 60,
+      "ms": 90,
+      "phase": "준비 / 큰 백스윙"
+    },
+    {
+      "frame": "F018",
+      "sourceIndex": 18,
+      "startMs": 150,
+      "ms": 110,
+      "phase": "준비 / 큰 백스윙"
+    },
+    {
+      "frame": "F022",
+      "sourceIndex": 22,
+      "startMs": 260,
+      "ms": 80,
+      "phase": "준비 / 큰 백스윙"
+    },
+    {
+      "frame": "F032",
+      "sourceIndex": 32,
+      "startMs": 340,
+      "ms": 20,
+      "phase": "체공 / 빠른 내려치기"
+    },
+    {
+      "frame": "F036",
+      "sourceIndex": 36,
+      "startMs": 360,
+      "ms": 20,
+      "phase": "체공 / 빠른 내려치기"
+    },
+    {
+      "frame": "F038",
+      "sourceIndex": 38,
+      "startMs": 380,
+      "ms": 20,
+      "phase": "체공 / 빠른 내려치기"
+    },
+    {
+      "frame": "F039",
+      "sourceIndex": 39,
+      "startMs": 400,
+      "ms": 70,
+      "phase": "접촉 / 짧게 유지"
+    },
+    {
+      "frame": "F042",
+      "sourceIndex": 42,
+      "startMs": 470,
+      "ms": 50,
+      "phase": "접촉 / 짧게 유지"
+    },
+    {
+      "frame": "F050",
+      "sourceIndex": 50,
+      "startMs": 520,
+      "ms": 60,
+      "phase": "착지 / 복귀"
+    },
+    {
+      "frame": "F054",
+      "sourceIndex": 54,
+      "startMs": 580,
+      "ms": 60,
+      "phase": "착지 / 복귀"
+    },
+    {
+      "frame": "F062",
+      "sourceIndex": 62,
+      "startMs": 640,
+      "ms": 80,
+      "phase": "착지 / 복귀"
+    },
+    {
+      "frame": "F070",
+      "sourceIndex": 70,
+      "startMs": 720,
+      "ms": 130,
+      "phase": "착지 / 복귀"
+    },
+    {
+      "frame": "F090",
+      "sourceIndex": 90,
+      "startMs": 850,
+      "ms": 100,
+      "phase": "착지 / 복귀"
+    }
+  ],
+  "contactSourceFrame": "F039",
+  "contactMs": 400,
+  "clipEndMs": 950,
+  "loopPauseMs": 650,
+  "sourceGrid": [
+    10,
+    10
+  ],
+  "sourceTile": [
+    1280,
+    720
+  ],
+  "previewCrop": [
+    180,
+    0,
+    1140,
+    720
+  ],
+  "rejectedFrames": [
+    {
+      "sourceIndex": 33,
+      "reason": "hammer head clipped at source-frame top"
+    },
+    {
+      "sourceIndex": 34,
+      "reason": "hammer head clipped at source-frame top"
+    },
+    {
+      "sourceIndex": 35,
+      "reason": "hammer head clipped at source-frame top"
+    }
+  ],
+  "alignment": "fixed source canvas; no per-frame vertical or horizontal re-anchoring",
+  "sourceColorsAndWhiteBackgroundUnchanged": true,
+  "approval": "user-approved-14-frame-motion",
+  "unityApplied": false
+}

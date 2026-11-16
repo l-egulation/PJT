@@ -1,0 +1,40 @@
+{
+  "format": "deviant-resource-asset-v1",
+  "id": "fonts.pretendard",
+  "path": "fonts/pretendard",
+  "name": "Pretendard 1.3.9 Regular·Bold (게임 GUI 본문 글꼴)",
+  "status": "third-party-runtime",
+  "approval": "user-selected-for-game-integration-20261109",
+  "gameIntegration": "main-owned",
+  "license": "SIL Open Font License 1.1 (LICENSE.txt). Reserved Font Name Pretendard: 글꼴을 고쳐 다시 배포하면 이름을 바꿔야 한다.",
+  "distribution": "OFL-1.1 permits bundling with the game; keep LICENSE.txt with redistributed copies",
+  "sources": [
+    "https://github.com/orioncactus/pretendard/releases/download/v1.3.9/Pretendard-1.3.9.zip (public/static/alternative/*.ttf, LICENSE.txt); original bytes preserved"
+  ],
+  "purpose": "맑은 고딕(Windows 동봉, 재배포 불가)을 대신하는 공통 GUI·수첩 글꼴. 2026-11-09 데모 검토에서 사용자 결정.",
+  "files": [
+    "runtime/Pretendard-Regular.ttf",
+    "runtime/Pretendard-Bold.ttf",
+    "LICENSE.txt"
+  ],
+  "originalFiles": [
+    {
+      "file": "runtime/Pretendard-Regular.ttf",
+      "originalName": "Pretendard-Regular.ttf",
+      "bytes": 2725828,
+      "sha256": "6d0af5258997aec7354a6e340fc2325ba321c410ca48b3af858c8c3d6e92a324"
+    },
+    {
+      "file": "runtime/Pretendard-Bold.ttf",
+      "originalName": "Pretendard-Bold.ttf",
+      "bytes": 2661752,
+      "sha256": "c16b88c670d23e83fa1170c954cbc4822d3b8dad3c3cde15d798a94b43d97985"
+    },
+    {
+      "file": "LICENSE.txt",
+      "originalName": "LICENSE.txt",
+      "bytes": 4419,
+      "sha256": "b04538c9abec39a3db75108cf0af0fd9c77032fe8aa2cf38345b4d250e98e38e"
+    }
+  ]
+}

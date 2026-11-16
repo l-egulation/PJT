@@ -1,0 +1,668 @@
+{
+  "schemaVersion": 1,
+  "status": "runtime_trial",
+  "selection": {
+    "offeredCards": 3,
+    "stableCards": 1,
+    "riskCards": 2,
+    "chosenCards": 1,
+    "riskCategoryDiversity": "different_groups",
+    "duplicates": "not_allowed"
+  },
+  "groups": {
+    "safe": "안정 성장",
+    "special": "특수 기믹",
+    "slow": "이동속도 대가",
+    "weapon": "무기 소모",
+    "combat": "전투 습관",
+    "fun": "유쾌한 한 방"
+  },
+  "catalogCounts": {
+    "total": 39,
+    "stable": 12,
+    "risk": 27
+  },
+  "numericRules": {
+    "C14": {
+      "basis": "max_health_before_selection",
+      "initialMaxHealthRatio": 0.3,
+      "killsPerMilestone": 10,
+      "maxHealthRatioGainPerMilestone": 0.1,
+      "finalMaxHealthRatio": 1.5,
+      "currentHealthOnGrowth": "heal_increase"
+    },
+    "C13": {
+      "maxHealthMultiplier": 2.0,
+      "healingReceivedMultiplier": 0.5,
+      "currentHealthOnAcquisition": "heal_increase"
+    },
+    "C02": {
+      "maxHealPerProc": 3,
+      "internalCooldownSeconds": 1,
+      "maxHealthMultiplier": 0.7,
+      "damageReceivedMultiplier": 1.25,
+      "damageToHealRatio": 0.1
+    },
+    "C04": {
+      "maxDamageBonus": 0.3,
+      "afterHitDamageMultiplier": 0.8,
+      "afterHitPenaltySeconds": 5,
+      "requiresNearbyEnemy": false,
+      "bonusGainRate": 0.05
+    },
+    "M02": {
+      "damageReceivedMultiplier": 0.55,
+      "walkSpeedMultiplier": 0.75
+    },
+    "W07": {
+      "maxDamageBonus": 0.5,
+      "durabilityConsumptionMultiplier": 1.4,
+      "resetOnOtherWeaponAttack": true,
+      "bonusPerAttack": null
+    },
+    "W08": {
+      "firstAttackAfterAlternatingMultiplier": 1.45,
+      "consecutiveAttackMultiplier": 0.8
+    },
+    "X01": {
+      "maxGhosts": 3,
+      "followsPlayer": true,
+      "lifetimeSeconds": null,
+      "lifetimePolicy": "no_time_limit",
+      "repeatIntervalSeconds": 1,
+      "repeatDamageMultiplier": 0.6,
+      "playerDirectDamageMultiplier": 0.8,
+      "behaviorAtSummonCap": null,
+      "carryAcrossRuns": null
+    },
+    "X11": {
+      "skillDamageMultiplier": 1.8,
+      "skillHealthCostRatio": 0.04,
+      "skillDurabilityConsumptionMultiplier": 0
+    }
+  },
+  "openQuestions": [
+    "내구도 구현 후 제외한 9종(S07·S08·W01·W04·W05·W07·W09·X01·X11)의 연결과 미정 값",
+    "시험값(trialValues)의 플레이 밸런스 검증",
+    "증강과 능력치 잉크·봉인 도전 증강의 합산 상한",
+    "정식 추첨 확률·가중치"
+  ],
+  "augments": [
+    {
+      "id": "S01",
+      "group": "safe",
+      "name": "정석대로 갑시다",
+      "gain": "주는 피해가 20% 증가합니다.",
+      "cost": "불이익이 없습니다.",
+      "play": "어떤 무기를 써도 확실하게 강해집니다.",
+      "note": "공통 피해 증가 12%에 8%를 더한 최종 수치입니다.",
+      "runtime": "implemented",
+      "effect": {
+        "damage": 0.2
+      }
+    },
+    {
+      "id": "S02",
+      "group": "safe",
+      "name": "두꺼운 종이",
+      "gain": "주는 피해가 12% 증가합니다. 최대 체력이 20% 늘고, 늘어난 만큼 체력을 회복합니다.",
+      "cost": "불이익이 없습니다.",
+      "play": "공격과 생존을 함께 챙깁니다.",
+      "runtime": "implemented",
+      "effect": {
+        "damage": 0.12,
+        "maxHealth": 0.2
+      }
+    },
+    {
+      "id": "S03",
+      "group": "safe",
+      "name": "보호 코팅",
+      "gain": "주는 피해가 12% 증가합니다. 받는 피해는 12% 줄어듭니다.",
+      "cost": "불이익이 없습니다.",
+      "play": "더 세게 때리고 덜 아픕니다.",
+      "runtime": "implemented",
+      "effect": {
+        "damage": 0.12,
+        "incoming": -0.12
+      }
+    },
+    {
+      "id": "S04",
+      "group": "safe",
+      "name": "손에 익은 필체",
+      "gain": "주는 피해가 12% 증가합니다. 기본 공격 속도가 15% 빨라집니다.",
+      "cost": "불이익이 없습니다.",
+      "play": "기본 공격이 더 경쾌해집니다.",
+      "note": "기본 공격의 시작부터 끝까지 동작 속도가 15% 빨라집니다. 스킬 속도는 바꾸지 않습니다.",
+      "runtime": "implemented",
+      "effect": {
+        "damage": 0.12,
+        "basicSpeed": 0.15
+      }
+    },
+    {
+      "id": "S05",
+      "group": "safe",
+      "name": "빠른 교정",
+      "gain": "주는 피해가 12% 증가합니다. 스킬 대기시간이 15% 줄어듭니다.",
+      "cost": "불이익이 없습니다.",
+      "play": "스킬을 더 자주 쓸 수 있습니다.",
+      "note": "스킬 충전 대기시간을 15% 줄입니다. 잉크의 대기시간 감소와는 합연산합니다.",
+      "runtime": "implemented",
+      "effect": {
+        "damage": 0.12,
+        "skillCooldown": 0.15
+      }
+    },
+    {
+      "id": "S07",
+      "group": "safe",
+      "batch": "stable",
+      "name": "알뜰한 필사",
+      "gain": "주는 피해가 12% 증가합니다. 공격할 때 도면을 20% 덜 소모합니다.",
+      "cost": "불이익이 없습니다.",
+      "play": "새로 얻은 무기도 더 오래 쓸 수 있습니다.",
+      "note": "소모량에 소수가 생길 때 반올림하는 방법은 아직 정하지 않았습니다.",
+      "runtime": "excluded_until_durability"
+    },
+    {
+      "id": "S08",
+      "group": "safe",
+      "batch": "stable",
+      "name": "다음 장도 든든하게",
+      "gain": "주는 피해가 12% 증가합니다. 도면을 다 쓰면 최대 체력의 15%만큼 보호막을 얻습니다.",
+      "cost": "불이익이 없습니다.",
+      "play": "다 쓴 도면이 다음 싸움의 안전장치가 됩니다.",
+      "note": "전투에서 도면을 다 썼을 때만 발동합니다. 이 보호막은 최대 체력의 15%까지만 채워집니다. 무기를 바꿔도 남아 있습니다.",
+      "runtime": "excluded_until_durability"
+    },
+    {
+      "id": "S09",
+      "group": "safe",
+      "batch": "stable",
+      "name": "회복용 여백",
+      "gain": "주는 피해가 12% 증가합니다. 체력을 회복할 때 회복량이 30% 늘어납니다.",
+      "cost": "불이익이 없습니다.",
+      "play": "같은 회복으로 더 많이 채웁니다.",
+      "note": "이 증강만으로 체력이 회복되지는 않습니다. 다른 회복량 증가·감소와는 합연산합니다. 예를 들어 대용량 잉크병과 함께 가지면 회복량은 80%입니다.",
+      "runtime": "implemented",
+      "effect": {
+        "damage": 0.12,
+        "healing": 0.3
+      }
+    },
+    {
+      "id": "S10",
+      "group": "safe",
+      "batch": "stable",
+      "name": "가벼운 발걸음",
+      "gain": "주는 피해가 12% 증가합니다. 이동속도가 15% 빨라집니다.",
+      "cost": "불이익이 없습니다.",
+      "play": "다음 무기와 공격 기회에 더 빨리 닿습니다.",
+      "note": "걷기 속도만 바꿉니다. 대시 거리·속도와 점프 성능은 유지하는 안입니다.",
+      "runtime": "implemented",
+      "effect": {
+        "damage": 0.12,
+        "walkSpeed": 0.15
+      }
+    },
+    {
+      "id": "S12",
+      "group": "safe",
+      "batch": "stable",
+      "name": "착실한 마침표",
+      "gain": "주는 피해가 12% 증가합니다. 같은 적을 세 번 맞힐 때마다, 세 번째 공격 피해의 60%를 한 번 더 줍니다.",
+      "cost": "불이익이 없습니다.",
+      "play": "무기를 바꿔도 쌓아 둔 횟수는 남습니다.",
+      "note": "적마다 따로 셉니다. 한 번의 공격은 한 번만 세며, 추가 피해는 횟수에 넣지 않습니다.",
+      "runtime": "implemented",
+      "effect": {
+        "damage": 0.12,
+        "sameEnemyHits": 3,
+        "sameEnemyExtra": 0.6
+      }
+    },
+    {
+      "id": "S13",
+      "group": "safe",
+      "batch": "stable",
+      "name": "끝까지 읽기",
+      "gain": "주는 피해가 12% 증가합니다. 체력이 30% 이하인 적에게는 피해가 추가로 35% 증가합니다.",
+      "cost": "불이익이 없습니다.",
+      "play": "쓰러지기 직전인 적을 확실하게 마무리합니다.",
+      "note": "공격이 맞기 직전의 적 체력을 기준으로 계산하는 안입니다.",
+      "runtime": "implemented",
+      "effect": {
+        "damage": 0.12,
+        "executeThreshold": 0.3,
+        "executeDamage": 0.35
+      }
+    },
+    {
+      "id": "S14",
+      "group": "safe",
+      "batch": "stable",
+      "name": "큰 글씨도 문제없다",
+      "gain": "주는 피해가 12% 증가합니다. 엘리트와 보스에게는 무기 공격 피해가 추가로 25% 증가합니다.",
+      "cost": "불이익이 없습니다.",
+      "play": "강한 적을 상대할 때 더 든든합니다.",
+      "runtime": "implemented",
+      "effect": {
+        "damage": 0.12,
+        "eliteBossWeaponDamage": 0.25
+      }
+    },
+    {
+      "id": "W01",
+      "group": "weapon",
+      "name": "화력은 수명과 반비례",
+      "gain": "무기로 주는 피해가 40% 증가합니다.",
+      "cost": "공격할 때 도면을 60% 더 소모합니다.",
+      "play": "빨리 소모하는 대신 강하게 때립니다.",
+      "runtime": "excluded_until_durability"
+    },
+    {
+      "id": "W04",
+      "group": "weapon",
+      "name": "중고가 더 좋아",
+      "gain": "도면 잔량이 줄수록 무기 피해가 증가합니다. 최대 60%까지 강해집니다.",
+      "cost": "도면 잔량이 절반보다 많으면 무기 피해가 15% 줄어듭니다.",
+      "play": "많이 쓴 무기일수록 강해집니다.",
+      "note": "잔량에 따라 피해가 얼마나 오르는지는 아직 정하지 않았습니다.",
+      "runtime": "excluded_until_durability"
+    },
+    {
+      "id": "W05",
+      "group": "weapon",
+      "name": "구두쇠의 명작",
+      "gain": "공격할 때 도면을 40% 덜 소모합니다.",
+      "cost": "무기로 주는 피해가 25% 줄어듭니다.",
+      "play": "덜 세지만 오래 씁니다.",
+      "runtime": "excluded_until_durability"
+    },
+    {
+      "id": "W07",
+      "group": "weapon",
+      "name": "한 우물만 팝니다",
+      "gain": "같은 무기로 계속 공격하면 피해가 증가합니다. 최대 50%까지 강해집니다.",
+      "cost": "공격할 때 도면을 40% 더 소모합니다. 다른 무기로 공격하면 쌓인 강화가 모두 사라집니다.",
+      "play": "한 무기로 밀어붙이되 도면도 더 빨리 씁니다.",
+      "note": "도면 소모량 증가는 처음부터 모든 무기 공격에 적용합니다. 공격 한 번에 오르는 피해 수치는 아직 정하지 않았습니다.",
+      "batch": "tuned",
+      "runtime": "excluded_until_durability"
+    },
+    {
+      "id": "W08",
+      "group": "weapon",
+      "name": "이번엔 너다",
+      "gain": "다른 무기로 바꿔 공격하면, 교대 직후 첫 공격의 피해가 45% 증가합니다.",
+      "cost": "같은 무기로 계속 공격하면 두 번째부터 피해가 20% 줄어듭니다.",
+      "play": "교대할 때마다 첫 한 방이 강해집니다.",
+      "batch": "tuned",
+      "note": "예를 들어 A로 공격한 뒤 B로 공격하면 B의 첫 공격이 강해집니다. 다시 A로 공격하면 A의 첫 공격이 강해집니다. 한 무기의 모든 공격이 계속 강해지는 효과는 아닙니다.",
+      "runtime": "implemented",
+      "effect": {
+        "switchFirstDamage": 0.45,
+        "repeatAttackDamage": -0.2
+      }
+    },
+    {
+      "id": "C01",
+      "group": "combat",
+      "name": "종이갑옷",
+      "gain": "주는 피해가 35% 증가합니다.",
+      "cost": "받는 피해도 25% 증가합니다.",
+      "play": "더 아프게 맞기 전에 먼저 쓰러뜨립니다.",
+      "runtime": "implemented",
+      "effect": {
+        "damage": 0.35,
+        "incoming": 0.25
+      }
+    },
+    {
+      "id": "C02",
+      "group": "combat",
+      "name": "잉크가 아니라 피였네",
+      "gain": "무기로 준 피해의 일부만큼 체력을 회복합니다. 한 번에 최대 3까지만 회복하며, 회복 후 1초 동안은 다시 회복할 수 없습니다.",
+      "cost": "최대 체력이 30% 줄어듭니다. 받는 피해도 25% 증가합니다.",
+      "play": "공격으로 회복하지만 한 번 크게 맞으면 위험합니다.",
+      "note": "피해의 10%를 회복하는 시험값입니다. 적의 체력을 실제로 줄인 양이 기준입니다. 1초는 내부 쿨타임의 시험값입니다. 두 무기가 같은 회복 제한을 공유합니다. 여러 적을 한꺼번에 맞혀도 한 번에 최대 3만 회복합니다. 추가 피해·잉크 효과의 피해로는 회복하지 않습니다.",
+      "batch": "tuned",
+      "runtime": "implemented",
+      "effect": {
+        "maxHealth": -0.3,
+        "incoming": 0.25,
+        "leechRatio": 0.1,
+        "leechMaxHeal": 3,
+        "leechCooldown": 1
+      }
+    },
+    {
+      "id": "C03",
+      "group": "combat",
+      "name": "마감 직전",
+      "gain": "체력이 30% 이하일 때 주는 피해가 60% 증가합니다.",
+      "cost": "체력이 30%를 넘으면 주는 피해가 10% 줄어듭니다.",
+      "play": "위태로울 때 가장 강합니다.",
+      "runtime": "implemented",
+      "effect": {
+        "lowHealthThreshold": 0.3,
+        "lowHealthDamage": 0.6,
+        "highHealthDamage": -0.1
+      }
+    },
+    {
+      "id": "C04",
+      "group": "combat",
+      "name": "무사고 장인",
+      "gain": "피해를 받지 않는 동안 주는 피해가 점점 증가합니다. 최대 30%까지 강해집니다.",
+      "cost": "피해를 받으면 쌓인 강화가 모두 사라집니다. 이후 5초 동안 주는 피해가 20% 줄어듭니다.",
+      "play": "맞지 않고 버틸수록 강해집니다.",
+      "note": "적과의 거리 조건은 없습니다. 피해를 받지 않는 1초마다 5%씩 오르는 시험값입니다. 피격 후 5초 동안 피해가 줄고, 감소 시간이 끝나면 강화는 0부터 다시 쌓입니다.",
+      "batch": "tuned",
+      "runtime": "implemented",
+      "effect": {
+        "unhurtMaxDamage": 0.3,
+        "unhurtGainPerSecond": 0.05,
+        "hurtDamage": -0.2,
+        "hurtSeconds": 5
+      }
+    },
+    {
+      "id": "C05",
+      "group": "combat",
+      "name": "딱 한 놈만",
+      "gain": "주변에 적이 한 명뿐이면 주는 피해가 60% 증가합니다.",
+      "cost": "주변에 적이 두 명 이상이면 주는 피해가 20% 줄어듭니다.",
+      "play": "적을 한 명씩 떼어 내서 싸웁니다.",
+      "note": "내 위치에서 6칸 안의 살아 있는 적을 셉니다(시험값). 주변에 적이 없으면 효과가 없습니다.",
+      "runtime": "implemented",
+      "effect": {
+        "nearbyRadius": 6,
+        "aloneDamage": 0.6,
+        "crowdDamage": -0.2
+      }
+    },
+    {
+      "id": "C07",
+      "group": "combat",
+      "name": "천천히, 아주 세게",
+      "gain": "기본 공격 피해가 65% 증가합니다.",
+      "cost": "기본 공격 속도가 30% 느려집니다.",
+      "play": "한 번의 기회에 묵직하게 때립니다.",
+      "runtime": "implemented",
+      "effect": {
+        "basicDamage": 0.65,
+        "basicSpeed": -0.3
+      }
+    },
+    {
+      "id": "C08",
+      "group": "combat",
+      "name": "평타가 본업",
+      "gain": "기본 공격 피해가 50% 증가합니다.",
+      "cost": "스킬 피해가 50% 줄어듭니다.",
+      "play": "스킬보다 기본 공격에 집중합니다.",
+      "runtime": "implemented",
+      "effect": {
+        "basicDamage": 0.5,
+        "skillDamage": -0.5
+      }
+    },
+    {
+      "id": "M01",
+      "group": "slow",
+      "fresh": true,
+      "name": "느리지만 확실하게",
+      "gain": "주는 피해가 40% 증가합니다.",
+      "cost": "이동속도가 20% 느려집니다.",
+      "play": "느리게 움직이고 강하게 때립니다.",
+      "runtime": "implemented",
+      "effect": {
+        "damage": 0.4,
+        "walkSpeed": -0.2
+      }
+    },
+    {
+      "id": "M02",
+      "group": "slow",
+      "fresh": true,
+      "name": "걸어다니는 성벽",
+      "gain": "받는 피해가 45% 줄어듭니다.",
+      "cost": "이동속도가 25% 느려집니다.",
+      "play": "느려지는 대신 훨씬 단단해집니다.",
+      "batch": "tuned",
+      "runtime": "implemented",
+      "effect": {
+        "incoming": -0.45,
+        "walkSpeed": -0.25
+      }
+    },
+    {
+      "id": "M04",
+      "group": "slow",
+      "fresh": true,
+      "name": "제자리 인쇄소",
+      "gain": "세 번 맞힐 때마다, 세 번째 무기 공격의 피해를 한 번 더 줍니다.",
+      "cost": "이동속도가 20% 느려집니다.",
+      "play": "느린 발 대신 추가 타격을 얻습니다.",
+      "note": "한 번의 공격은 한 번만 셉니다. 추가 피해는 횟수에 넣지 않습니다. 무기를 바꿔도 횟수는 이어집니다. 추가 피해는 세 번째 공격 피해의 100%입니다.",
+      "runtime": "implemented",
+      "effect": {
+        "walkSpeed": -0.2,
+        "attackHits": 3,
+        "attackExtra": 1.0
+      }
+    },
+    {
+      "id": "W09",
+      "group": "weapon",
+      "name": "폐기물 재활용",
+      "gain": "도면을 다 쓰면 최대 체력의 30%를 회복합니다.",
+      "cost": "다른 방법으로 회복하는 체력은 50% 줄어듭니다.",
+      "play": "도면을 끝까지 쓰는 것이 회복 수단이 됩니다.",
+      "note": "전투에서 도면을 다 썼을 때만 발동합니다.",
+      "runtime": "excluded_until_durability"
+    },
+    {
+      "id": "C09",
+      "group": "combat",
+      "fresh": true,
+      "name": "스킬이 본업",
+      "gain": "스킬 피해가 60% 증가합니다.",
+      "cost": "기본 공격 피해가 35% 줄어듭니다.",
+      "play": "기본 공격보다 스킬에 집중합니다.",
+      "runtime": "implemented",
+      "effect": {
+        "skillDamage": 0.6,
+        "basicDamage": -0.35
+      }
+    },
+    {
+      "id": "C10",
+      "group": "combat",
+      "fresh": true,
+      "name": "다섯 번째는 진심",
+      "gain": "다섯 번 공격할 때마다, 다섯 번째 무기 공격의 피해가 250% 증가합니다.",
+      "cost": "나머지 네 번의 무기 공격은 피해가 20% 줄어듭니다.",
+      "play": "하나, 둘, 셋, 넷, 쾅.",
+      "note": "공격을 시작할 때 한 번씩 셉니다. 무기를 바꿔도 횟수는 이어집니다. 추가 피해는 횟수에 넣지 않습니다.",
+      "runtime": "implemented",
+      "effect": {
+        "everyAttack": 5,
+        "everyAttackDamage": 2.5,
+        "otherAttackDamage": -0.2
+      }
+    },
+    {
+      "id": "C11",
+      "group": "combat",
+      "fresh": true,
+      "name": "정면 승부",
+      "gain": "적의 정면에서 때리면 무기 공격 피해가 50% 증가합니다.",
+      "cost": "내 등 뒤에서 맞으면 받는 피해가 40% 증가합니다.",
+      "play": "마주 보고 싸우되 포위당하면 위험합니다.",
+      "note": "맞는 대상이 바라보는 좌우 방향을 기준으로 합니다. 정면과 후면의 경계(같은 x)는 정면으로 봅니다(시험값).",
+      "runtime": "implemented",
+      "effect": {
+        "frontWeaponDamage": 0.5,
+        "backIncoming": 0.4
+      }
+    },
+    {
+      "id": "C12",
+      "group": "combat",
+      "fresh": true,
+      "name": "행운의 대가",
+      "gain": "치명타 확률이 35%p 증가합니다.",
+      "cost": "최대 체력이 20% 줄어듭니다.",
+      "play": "얇아진 목숨으로 큰 한 방을 노립니다.",
+      "note": "치명타 피해는 기존 규칙(두 배)을 따릅니다. 치명타 확률은 다른 효과와 더하며 100%를 넘지 않습니다.",
+      "runtime": "implemented",
+      "effect": {
+        "critChance": 0.35,
+        "maxHealth": -0.2
+      }
+    },
+    {
+      "id": "X01",
+      "group": "special",
+      "batch": "special",
+      "name": "유령 작가",
+      "gain": "도면을 다 쓸 때마다 유령이 한 마리 생깁니다. 유령은 시간 제한 없이 나를 따라다니며 공격합니다. 최대 세 마리까지 모을 수 있습니다.",
+      "cost": "내 무기 공격 피해가 20% 줄어듭니다.",
+      "play": "새 무기로 싸우는 동안 유령들도 함께 싸웁니다.",
+      "note": "각 유령은 자신을 만든 도면의 마지막 무기 공격을 1초마다 60% 위력으로 반복하는 안입니다. 공격 수치는 생성 시점에 정하며 무기를 바꿔도 유지합니다. 유령은 도면을 소모하거나 다른 유령·추가 효과를 만들지 않습니다. 세 마리를 모은 뒤의 추가 생성 처리와 런 사이 유지 여부는 아직 정하지 않았습니다.",
+      "runtime": "excluded_until_durability"
+    },
+    {
+      "id": "X08",
+      "group": "special",
+      "batch": "special",
+      "name": "반송 봉투",
+      "gain": "공격으로 적의 탄환을 쳐내면 적에게 되돌려 보냅니다. 되돌려 보낸 탄환은 피해가 두 배가 됩니다.",
+      "cost": "내 무기 공격 피해가 20% 줄어듭니다. 적의 탄환에 맞으면 받는 피해가 30% 증가합니다.",
+      "play": "날아오는 탄환을 공격으로 받아칩니다.",
+      "note": "반사할 수 있는 탄환에만 적용합니다. 광선과 지형 공격은 제외합니다. 한 번 반사한 탄환은 다시 반사하지 않습니다. 근접 공격 판정으로만 쳐낼 수 있습니다.",
+      "runtime": "implemented",
+      "effect": {
+        "weaponDamage": -0.2,
+        "projectileIncoming": 0.3,
+        "reflectDamageMultiplier": 2.0
+      }
+    },
+    {
+      "id": "X09",
+      "group": "special",
+      "batch": "special",
+      "name": "위험한 책갈피",
+      "gain": "스킬 피해가 70% 증가합니다. 스킬을 쓴 자리에 책갈피가 생깁니다.",
+      "cost": "3초 뒤 책갈피가 있는 자리로 강제로 돌아갑니다. 그 자리가 위험해져도 돌아갑니다.",
+      "play": "공격하러 나가되 돌아올 자리는 정해집니다.",
+      "note": "책갈피는 최대 한 개입니다. 책갈피가 남아 있을 때 스킬을 다시 써도 위치와 복귀 시각은 바뀌지 않습니다. 도착점이 막혀 있으면 가장 가까운 설 수 있는 자리로 돌아갑니다(시험안).",
+      "runtime": "implemented",
+      "effect": {
+        "skillDamage": 0.7,
+        "bookmarkSeconds": 3
+      }
+    },
+    {
+      "id": "X11",
+      "group": "special",
+      "batch": "special",
+      "name": "피로 쓴 계약",
+      "gain": "스킬 피해가 80% 증가합니다. 스킬을 써도 도면 잔량은 줄지 않습니다.",
+      "cost": "스킬을 쓸 때마다 최대 체력의 4%를 대신 씁니다. 남은 체력이 비용보다 적거나 같으면 스킬을 쓸 수 없습니다.",
+      "play": "도면 대신 내 체력으로 스킬을 씁니다.",
+      "note": "스킬도 도면을 소모하는 구조일 때 사용할 수 있는 후보입니다. 스킬이 실제로 발동할 때 체력을 씁니다. 이 체력 소모는 피격이나 반격 효과를 발동하지 않는 안입니다.",
+      "runtime": "excluded_until_durability"
+    },
+    {
+      "id": "F02",
+      "group": "fun",
+      "name": "사인해 주세요",
+      "gain": "같은 적을 세 번 맞히면 큰 추가 피해를 줍니다.",
+      "cost": "세 번째 공격 전에 다른 적을 때리면 쌓은 표시가 사라집니다. 기본 공격 피해가 15% 줄어듭니다.",
+      "play": "한 적에게 서명을 끝까지 완성합니다.",
+      "note": "세 번째 공격 피해의 150%를 추가 피해로 주는 시험값입니다. 서명을 완성하면 표시는 처음부터 다시 쌓입니다. 한 번의 공격은 한 번만 셉니다.",
+      "runtime": "implemented",
+      "effect": {
+        "basicDamage": -0.15,
+        "signHits": 3,
+        "signExtra": 1.5
+      }
+    },
+    {
+      "id": "C13",
+      "name": "대용량 잉크병",
+      "group": "combat",
+      "batch": "adopted",
+      "gain": "최대 체력이 100% 증가합니다.",
+      "cost": "모든 체력 회복량이 50% 줄어듭니다.",
+      "play": "체력통은 커지지만 다시 채우기는 어렵습니다.",
+      "note": "최대 체력이 늘어난 만큼 현재 체력도 늘어납니다. 다른 회복량 증가·감소와는 합연산합니다.",
+      "runtime": "implemented",
+      "effect": {
+        "maxHealth": 1.0,
+        "healing": -0.5
+      }
+    },
+    {
+      "id": "C14",
+      "name": "성장통",
+      "group": "combat",
+      "batch": "adopted",
+      "gain": "적을 10마리 처치할 때마다 기존 최대 체력의 10%만큼 최대 체력이 늘어납니다. 최종적으로 기존 최대 체력의 150%까지 성장합니다.",
+      "cost": "선택하는 즉시 최대 체력이 기존의 30%로 줄어듭니다. 초반에는 크게 약해진 체력으로 버텨야 합니다.",
+      "play": "체력 100이라면 30에서 시작해 150까지 키웁니다.",
+      "note": "모든 비율은 이 증강을 선택하기 전의 최대 체력이 기준입니다. 기준이 100이면 30 → 40 → 50 순서로 성장합니다. 70마리 처치하면 원래 체력 100으로 돌아오고, 120마리 처치하면 최대치 150에 도달합니다. 최종 체력은 원래의 1.5배이며, 기존 수치에 150%를 더하는 뜻은 아닙니다. 최대 체력이 늘어난 만큼 현재 체력도 늘어납니다.",
+      "runtime": "implemented",
+      "effect": {
+        "growthStartRatio": 0.3,
+        "growthKills": 10,
+        "growthStepRatio": 0.1,
+        "growthFinalRatio": 1.5
+      }
+    }
+  ],
+  "runtimeRules": {
+    "acquisition": "boss_clear_and_seal_reward_chest",
+    "bossReward": "free_offer_after_boss_weapon_choice_when_next_chapter",
+    "sealRewardChest": "free_offer_from_same_pool",
+    "lifetime": "weapon_growth_run",
+    "stacking": "additive_within_stat",
+    "otherSystems": "multiplicative",
+    "minimumDamageScale": 0.1,
+    "minimumIncomingScale": 0.1,
+    "minimumMaxHealthScale": 0.1,
+    "minimumWalkSpeedScale": 0.2,
+    "minimumBasicSpeedScale": 0.2,
+    "maximumSkillCooldownReduction": 0.8,
+    "maximumCritChance": 1.0,
+    "maxHealthIncrease": "heal_increase",
+    "maxHealthDecrease": "clamp_current",
+    "excludedUntilDurability": [
+      "S07",
+      "S08",
+      "W01",
+      "W04",
+      "W05",
+      "W07",
+      "W09",
+      "X01",
+      "X11"
+    ]
+  },
+  "trialValues": {
+    "C02.damageToHealRatio": 0.1,
+    "C04.bonusGainRatePerSecond": 0.05,
+    "C05.nearbyRadius": 6,
+    "C11.boundary": "same_x_is_front",
+    "C12.maxCritChance": 1.0,
+    "F02.extraDamageOfThirdHit": 1.5,
+    "X08.reflectBy": "player_melee_hitbox",
+    "X09.blockedDestination": "nearest_standable_point",
+    "minimumScales": "see runtimeRules"
+  }
+}

@@ -1,0 +1,377 @@
+{
+  "schema": "stage2-thrower-original-prop-v1",
+  "status": "pending-user-review",
+  "output": "outputs/waterway/thrower-prop-original-shape-20261101",
+  "base": "outputs/waterway/pixel-base-step1-20261031/R-selected/native/base-frame.png",
+  "approvedAttack": "outputs/waterway/thrower-pocket-attack-return-20261101",
+  "rejectedProjectile": "outputs/waterway/projectile-material-review-20261101/thrower/projectile/native/prop-01.png",
+  "visiblePropPolygonNative": [
+    [
+      207,
+      154
+    ],
+    [
+      212,
+      154
+    ],
+    [
+      214,
+      155
+    ],
+    [
+      215,
+      155
+    ],
+    [
+      215,
+      156
+    ],
+    [
+      216,
+      156
+    ],
+    [
+      216,
+      157
+    ],
+    [
+      217,
+      157
+    ],
+    [
+      217,
+      158
+    ],
+    [
+      220,
+      159
+    ],
+    [
+      221,
+      159
+    ],
+    [
+      221,
+      156
+    ],
+    [
+      224,
+      155
+    ],
+    [
+      228,
+      155
+    ],
+    [
+      228,
+      156
+    ],
+    [
+      232,
+      156
+    ],
+    [
+      232,
+      158
+    ],
+    [
+      234,
+      158
+    ],
+    [
+      234,
+      160
+    ],
+    [
+      236,
+      160
+    ],
+    [
+      236,
+      163
+    ],
+    [
+      238,
+      163
+    ],
+    [
+      238,
+      168
+    ],
+    [
+      237,
+      168
+    ],
+    [
+      237,
+      173
+    ],
+    [
+      236,
+      173
+    ],
+    [
+      236,
+      177
+    ],
+    [
+      234,
+      177
+    ],
+    [
+      234,
+      178
+    ],
+    [
+      225,
+      178
+    ],
+    [
+      225,
+      177
+    ],
+    [
+      221,
+      177
+    ],
+    [
+      221,
+      176
+    ],
+    [
+      218,
+      176
+    ],
+    [
+      218,
+      174
+    ],
+    [
+      216,
+      174
+    ],
+    [
+      216,
+      173
+    ],
+    [
+      213,
+      173
+    ],
+    [
+      213,
+      171
+    ],
+    [
+      208,
+      171
+    ],
+    [
+      208,
+      170
+    ],
+    [
+      205,
+      170
+    ],
+    [
+      205,
+      168
+    ],
+    [
+      204,
+      168
+    ],
+    [
+      204,
+      159
+    ],
+    [
+      205,
+      159
+    ]
+  ],
+  "canvas": [
+    64,
+    64
+  ],
+  "pivotPx": [
+    32,
+    32
+  ],
+  "occlusionRepairRowsNative": [
+    [
+      155,
+      216,
+      227
+    ],
+    [
+      156,
+      217,
+      225
+    ],
+    [
+      157,
+      218,
+      225
+    ],
+    [
+      158,
+      218,
+      221
+    ]
+  ],
+  "occlusionRepairRgb": [
+    214,
+    166,
+    80
+  ],
+  "flightOrientation": "exact-counterclockwise-quarter-turn-fixed-for-whole-flight",
+  "releaseMs": 680,
+  "heldCorrections": [
+    {
+      "keyOneBased": 9,
+      "oldPropRoi": [
+        178,
+        58,
+        217,
+        89
+      ],
+      "propCenterNative": [
+        201,
+        70
+      ]
+    },
+    {
+      "keyOneBased": 10,
+      "oldPropRoi": [
+        128,
+        58,
+        152,
+        82
+      ],
+      "propCenterNative": [
+        140,
+        65
+      ]
+    }
+  ],
+  "flightMsIllustration": 800,
+  "landingXWorldIllustration": 165,
+  "groundYWorldIllustration": 288,
+  "arcHeightPxIllustration": 80,
+  "previewLoopMs": 2050,
+  "policy": "Use original cylinder pixels from approved neutral base, including its dark end cap. User requested filling the hand-occluded upper notch; replace only explicit repair rows with existing ochre RGB214,166,80 and preserve all pixels outside that mask. Preserve the unrepaired visible cutout separately. No resampling, new colors, squash, stretch or flight spin. Exact quarter-turn only to match raised holding pose, then keep identical PNG for whole flight. Correct the prop area in the last2 held poses for continuity while preserving purple hand/nearby wrist pixels and all pixels outside explicit regions. Keep approved body originals; this separate display correction is pending review.",
+  "sourceSha256": "6a91a027c94c731c54a107de68cc0d4710f26fcceb2840bc336f0fa67b251715",
+  "sourceBounds": [
+    204,
+    154,
+    239,
+    179
+  ],
+  "visibleSize": [
+    35,
+    25
+  ],
+  "outputAssets": [
+    {
+      "path": "outputs/waterway/thrower-prop-original-shape-20261101/native/prop-visible-cutout.png",
+      "sha256": "fbfd5b9a0adbed9ae292f1888869a343507a5681c5e850275c9a2779543cdbcf",
+      "bbox": [
+        15,
+        20,
+        50,
+        45
+      ],
+      "pivotPx": [
+        32,
+        32
+      ],
+      "opaquePixels": 663
+    },
+    {
+      "path": "outputs/waterway/thrower-prop-original-shape-20261101/native/prop-original.png",
+      "sha256": "892539962d855d257a991a8c54f67de1bc717ddc4555b5fac67d43b4fb3e4975",
+      "bbox": [
+        15,
+        20,
+        50,
+        45
+      ],
+      "pivotPx": [
+        32,
+        32
+      ],
+      "opaquePixels": 681
+    },
+    {
+      "path": "outputs/waterway/thrower-prop-original-shape-20261101/native/prop-flight-fixed.png",
+      "sha256": "8064b4e09dc8c8cacb96d15039341453bbcf40b89d34f7fc5544685109510881",
+      "bbox": [
+        20,
+        15,
+        45,
+        50
+      ],
+      "pivotPx": [
+        32,
+        32
+      ],
+      "opaquePixels": 681
+    }
+  ],
+  "sourcePixelsOutsideRepairExact": true,
+  "upperEdgePixelsRepaired": 33,
+  "nativeResampling": false,
+  "newColorsAdded": false,
+  "wholeFlightSpriteIdentical": true,
+  "spawnCenterWorld": [
+    378,
+    159
+  ],
+  "bodyOriginalHashes": [
+    "a36aafeb1b0db23ef99606c1cf281f550b58732118f4667d7a708509c6d2a5f8",
+    "6abc7a9c11538596e7834c60cc0299546b666378015e79d4204ff8e02459a548",
+    "48f1c1c46d3fc100330686b75fb8a6d0bde95407d371fd7a809590a3ca472d80",
+    "cc13b22199462c95e6fb3305edeaccb7e285b7370f72ed2308de500c781a6fb8",
+    "7f05ccf2d98c24936737b41d8cd407f38bb17a824199c1fb51a04ebce1b5dea4",
+    "a7fa3b27e7fae9c0dee39e6294cc05ab9eeb9c8c6213e92675b39458055b60ec",
+    "c88af7c72b5138b7c2b5d6ed4abdb08553744f73f52331314e7c384827be7452",
+    "fde43bcc986b0204bc488b29f146ac4020d049219066622e65df9ccabb8db236",
+    "c06e5f0601aa204fc1ccf9ca35334e1a44a3e61de92692cce72956b90377258b",
+    "bdd78abb3cff1deeba1357309796c98b235fabdafcfce27dcc0e58c8fe498619",
+    "734f81b9342729d7ee4f38e9a8cbd31df3f95850824caabcb7d2c5f2a3209a66",
+    "ee3443ca7dd4a4614a69277eb55a31f14f0e85db7a3aa99cbc410115aa85d04c",
+    "5c1d558491c46bf6e3fc1eb2de3e3a8ce45d9e0c647fe725c0a66c79bbef5687",
+    "7d554afc423fa11ee6ef07c90c94efb507f8b188398d39c8294e060dba7fae59",
+    "08b22283343ca39e07e8a10906ef4eb68a46e492be6f44f313e69b1f6e8246a3",
+    "0c8dce59c393a4fa7e10186916ec97eef845bb66df0d9994ed75c83e21a4e1c0",
+    "13f7a2dbbefd8b7c9f0cbca0328ca9a557bad1488177dc5de4bbfa45b04656c4",
+    "bb01bac95468894f6a5dff849937a3272e5bcd567a63d1774448fb806317c684",
+    "a36aafeb1b0db23ef99606c1cf281f550b58732118f4667d7a708509c6d2a5f8"
+  ],
+  "displayCorrections": [
+    {
+      "keyOneBased": 9,
+      "changedPixels": 756,
+      "handPurpleAndWristPreserved": true,
+      "outsideExplicitPropAreasUnchanged": true,
+      "propCenterNative": [
+        201,
+        70
+      ]
+    },
+    {
+      "keyOneBased": 10,
+      "changedPixels": 606,
+      "handPurpleAndWristPreserved": true,
+      "outsideExplicitPropAreasUnchanged": true,
+      "propCenterNative": [
+        140,
+        65
+      ]
+    }
+  ],
+  "bodyTimingUnchanged": true,
+  "runtimeIntegration": "not-performed"
+}

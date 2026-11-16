@@ -1,0 +1,20 @@
+{
+  "mode": "built-in image_gen",
+  "jobs": [
+    {
+      "id": "asset_calm_clean",
+      "file": "title_background_calm.png",
+      "prompt": "Use case: precise-object-edit. Extract production game assets from the supplied APPROVED title-screen image. Do not redesign, recrop or move ANYTHING. Preserve same original full 16:9 framing and image dimensions. This is asset separation for the exact approved appearance, not another concept. Preserve fine pixel-art / graphite / parchment texture. No new objects, no labels or watermark. Remove ONLY all UI typography and UI selection graphics: the large \"Deviant\" wordmark at upper-left including its underline/construction strokes, Korean menu labels \"시작하기\", \"설정\", \"종료\", and teal selection brush banner behind 시작하기. Seamlessly reconstruct the sunlit limestone paving that lies behind those UI regions, coherent with original neighboring stones and their perspective/texture. Keep well, CLEAR clean turquoise water, complete colored stone plaza, plants, rooftops, protagonist, ink footsteps, bucket and every scene element EXACTLY as input. Do not erase protagonist or footprints. Peaceful intact village. Output the identical approved normal world BACKGROUND with NO text or UI at all, full-bleed opaque 16:9."
+    },
+    {
+      "id": "asset_ruin_clean",
+      "file": "title_background_erased_eye.png",
+      "prompt": "Use case: precise-object-edit. Extract production game assets from the supplied APPROVED title-screen image. Do not redesign, recrop or move ANYTHING. Preserve same original full 16:9 framing and image dimensions. This is asset separation for the exact approved appearance, not another concept. Preserve fine pixel-art / graphite / parchment texture. No new objects, no labels or watermark. Remove ONLY all UI typography and UI selection graphics: the large \"Deviant\" wordmark at upper-left including underline/construction strokes, Korean menu labels \"시작하기\", \"설정\", \"종료\", and teal selection brush banner behind 시작하기. Reconstruct the pale erased paper / incomplete paving / faint graphite surface underneath those UI regions, matching neighboring erasure traces. Everything else EXACTLY same. In particular PRESERVE the FINAL APPROVED GIANT ROUND EYE in the upper-right well: dim ash-gray globe, dark BURGUNDY iris, round black pupil displaced lower-left looking at protagonist, tiny square gray catchlight; do NOT redesign it or replace with water. Keep protagonist, well rim, bucket/rope/woodwork, all architectural damage, ink footprints, and same camera composition. Output approved catastrophe BACKGROUND with eye and NO text or UI at all, opaque full-bleed 16:9."
+    },
+    {
+      "id": "asset_ui_overlay",
+      "file": "title_ui_overlay.png",
+      "prompt": "Use case: background-extraction. Extract ONLY the UI artwork from the supplied approved title screen onto a GENUINELY TRANSPARENT ALPHA background. Keep the same full 16:9 canvas framing and original UI positions and scales. Preserve exact custom ink wordmark \"Deviant\" with its swoop/underline and faint construction lines at upper-left, the EXACT Korean label \"시작하기\" with pale text on its teal brush-stroke selection banner, and the labels \"설정\", \"종료\" in black ink at their existing left-side vertical menu positions. These 4 items are the ONLY visible content. Remove ALL environment, paper, paving, well, buildings, protagonist and footprints to actual transparent alpha. No white/cream rectangle behind logo or text, NO checkerboard pixels, no decorative shadow outside existing artwork, no extra characters/text or redesign. Text spellings and calligraphic wordmark shapes are essential. Return ONE transparent PNG, canvas with items at exactly the same normalized positions as input (not a rearranged sprite sheet). This is an overlay for recombining with a textless version of this same background."
+    }
+  ]
+}

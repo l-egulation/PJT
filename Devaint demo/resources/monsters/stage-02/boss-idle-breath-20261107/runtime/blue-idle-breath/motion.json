@@ -1,0 +1,75 @@
+{
+  "format": "stage2-idle-breath-v1",
+  "id": "blue-idle-breath",
+  "name": "블루 · 들썩 대기",
+  "status": "user-approved-not-unity-integrated",
+  "canvas": [
+    384,
+    256
+  ],
+  "pivot": [
+    192,
+    232
+  ],
+  "repeat": true,
+  "totalMs": 1980,
+  "mood": "무심하고 느린 호흡 (팀원 요청 B1: 반복 2초, 어깨·두건 1~2px)",
+  "source": "../../../../monsters/stage-02/boss-siblings-lineup-20261103/runtime/pixel-poses/blue-idle.png",
+  "sourceSha256": "b6ceeef20b513ce30c452b61205f69be1057ffddf730e4af6152533a8c70556c",
+  "cuts": {
+    "lowerLine": "knee",
+    "waistRow": 198,
+    "waistRemovalCost": 9,
+    "neckRow": 127,
+    "neckRemovalCost": 5
+  },
+  "method": "row deletion only: no resampling, redraw or new colours; rows below the waist line identical to the approved idle",
+  "frames": [
+    {
+      "file": "frames/00.png",
+      "durationMs": 330,
+      "shoulderDown": 0,
+      "headDown": 0,
+      "sha256": "b6ceeef20b513ce30c452b61205f69be1057ffddf730e4af6152533a8c70556c"
+    },
+    {
+      "file": "frames/01.png",
+      "durationMs": 330,
+      "shoulderDown": 1,
+      "headDown": 1,
+      "sha256": "6e705413dfffe185074d9cb134e4068ef1abdf38227eabed22f6e8d0844d7168"
+    },
+    {
+      "file": "frames/02.png",
+      "durationMs": 330,
+      "shoulderDown": 1,
+      "headDown": 2,
+      "sha256": "7decd768883e56abd182ab30f6486df7016746cc27e374784a7dd02413ca5221"
+    },
+    {
+      "file": "frames/03.png",
+      "durationMs": 330,
+      "shoulderDown": 1,
+      "headDown": 2,
+      "sha256": "7decd768883e56abd182ab30f6486df7016746cc27e374784a7dd02413ca5221"
+    },
+    {
+      "file": "frames/04.png",
+      "durationMs": 330,
+      "shoulderDown": 0,
+      "headDown": 1,
+      "sha256": "a1433e0acaa8d7686fd6b5c8a8ee75cd507722e59c88362434942dca770a07f0"
+    },
+    {
+      "file": "frames/05.png",
+      "durationMs": 330,
+      "shoulderDown": 0,
+      "headDown": 0,
+      "sha256": "b6ceeef20b513ce30c452b61205f69be1057ffddf730e4af6152533a8c70556c"
+    }
+  ],
+  "approval": {
+    "date": "2026-11-07",
+    "user": "일단 채택할게"
+  }
+}

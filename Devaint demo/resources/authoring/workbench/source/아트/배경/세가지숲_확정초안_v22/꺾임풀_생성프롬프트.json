@@ -1,0 +1,5 @@
+{
+  "tool": "built-in imagegen",
+  "prompt": "Edit this pixel-art terrain connection sample, keep canvas ratio2:1 and ALL existing terrain positions, scale, color palette and textures. It is a U shaped hollow with vertical grassy walls at x25% and75%, horizontal grassy floor at y50%. Improve ONLY the two lower inside bends where vertical wall moss meets horizontal floor grass: make lush contiguous rounded L-shaped tufts of matching moss/grass wrapping each inner corner, enough foliage to clearly cover the bare soil seam. Extend a small triangular trailing clump into the solid earth below each inside corner, about12 logical pixels wide and12 pixels tall on the original128x64 grid. Match existing pixel size and 3-shade leaves, no new colors or realistic detail. Keep middle horizontal grass and upper vertical grass unchanged, preserve dark earth texture away from the two corners. No frame, text, labels or grid. Preserve transparent hollow. This is a local terrain repair not a new scene.",
+  "integration": "12x12 corner patches; foreground transparent padding trimmed at native scale"
+}

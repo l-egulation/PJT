@@ -1,0 +1,113 @@
+{
+  "schema": 2,
+  "fadeOutSeconds": 2.0,
+  "fadeInSeconds": 3.0,
+  "loopCrossfadeSeconds": 2.0,
+  "scheduleLeadSeconds": 0.1,
+  "fadeStepLimitSeconds": 0.1,
+  "tracks": [
+    {
+      "id": "title",
+      "resource": "BackgroundMusic/final-title",
+      "volume": 0.33,
+      "startSeconds": 0.0,
+      "endSeconds": 91.55,
+      "loop": true,
+      "loopStartSeconds": 27.89,
+      "loopCrossfadeSeconds": 0.12
+    },
+    {
+      "id": "village",
+      "resource": "BackgroundMusic/final-village",
+      "volume": 0.305,
+      "startSeconds": 0.0,
+      "endSeconds": 69.42,
+      "loop": true,
+      "loopStartSeconds": 20.32,
+      "loopCrossfadeSeconds": 0.12,
+      "fadeOutSeconds": 0.6
+    },
+    {
+      "id": "chapter1_field",
+      "resource": "BackgroundMusic/final-chapter1-field",
+      "volume": 0.26,
+      "startSeconds": 0.0,
+      "endSeconds": 84.03,
+      "loop": true,
+      "loopStartSeconds": 20.8,
+      "loopCrossfadeSeconds": 0.12
+    },
+    {
+      "id": "chapter1_boss",
+      "resource": "BackgroundMusic/chapter1-boss",
+      "volume": 0.23,
+      "startSeconds": 0.0,
+      "endSeconds": 105.78,
+      "loop": true
+    },
+    {
+      "id": "chapter2_field",
+      "resource": "BackgroundMusic/final-chapter2-field",
+      "volume": 0.21,
+      "startSeconds": 0.0,
+      "endSeconds": 69.17,
+      "loop": true,
+      "loopStartSeconds": 17.76,
+      "loopCrossfadeSeconds": 0.12
+    },
+    {
+      "id": "chapter2_boss",
+      "resource": "BackgroundMusic/final-chapter2-boss",
+      "volume": 0.24,
+      "startSeconds": 0.0,
+      "endSeconds": 121.24,
+      "loop": true,
+      "loopStartSeconds": 36.83,
+      "loopCrossfadeSeconds": 0.12
+    },
+    {
+      "id": "opening_road",
+      "resource": "BackgroundMusic/final-village",
+      "volume": 0.305,
+      "startSeconds": 0.0,
+      "endSeconds": 69.42,
+      "loop": true,
+      "loopStartSeconds": 20.32,
+      "loopCrossfadeSeconds": 0.12,
+      "fadeOutSeconds": 0.6
+    },
+    {
+      "id": "opening_road_quiet",
+      "resource": "BackgroundMusic/final-village",
+      "volume": 0.305,
+      "startSeconds": 0.0,
+      "endSeconds": 69.42,
+      "loop": true,
+      "loopStartSeconds": 20.32,
+      "loopCrossfadeSeconds": 0.12,
+      "fadeOutSeconds": 0.6
+    },
+    {
+      "id": "opening_erase",
+      "resource": "BackgroundMusic/final-chase",
+      "volume": 0.24,
+      "startSeconds": 0.0,
+      "endSeconds": 105.26,
+      "loop": true,
+      "loopStartSeconds": 25.14,
+      "loopCrossfadeSeconds": 0.12,
+      "fadeInSeconds": 0.12,
+      "fadeOutSeconds": 3.8
+    },
+    {
+      "id": "maintenance",
+      "resource": "BackgroundMusic/final-maintenance",
+      "volume": 0.2,
+      "startSeconds": 0.0,
+      "endSeconds": 58.81,
+      "loop": true,
+      "loopStartSeconds": 18.69,
+      "loopCrossfadeSeconds": 0.12
+    }
+  ]
+}

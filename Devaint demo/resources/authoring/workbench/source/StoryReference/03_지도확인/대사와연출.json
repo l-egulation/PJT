@@ -1,0 +1,46 @@
+{
+  "id": "ink-map-observation-03",
+  "status": "장면 03 검토안 · 큰 예보 확인 뒤 작은 분기 발견",
+  "scope": "지도 확인과 발견까지. 추가 예보 요청은 다음 장면에서 구현한다.",
+  "inspectionMs": 1300,
+  "objective": "대홀의 잉크 지도 확인하기",
+  "nextObjective": "예측 담당자에게 추가 확인 요청하기",
+  "overview": {
+    "speaker": "주인공",
+    "text": "큰 흐름은 예보가 나온 지역을 향하고 있어."
+  },
+  "relief": {
+    "speaker": "주인공",
+    "text": "할머니 마을 쪽은 아니네."
+  },
+  "discovery": {
+    "speaker": "주인공",
+    "text": "이쪽으로도 흐르고 있는데…?"
+  },
+  "outro": {
+    "speaker": "주인공",
+    "text": "작은 흐름이 할머니 마을 쪽으로 이어져 있어. 예측 담당자에게 다시 확인해 보자."
+  },
+  "visual": {
+    "panel": {
+      "x": 140,
+      "y": 42,
+      "width": 360,
+      "height": 236
+    },
+    "map": {
+      "x": 146,
+      "y": 48,
+      "worldX": 958,
+      "worldY": 112,
+      "width": 174,
+      "height": 112,
+      "scale": 2
+    },
+    "backgroundLayer": "observatory_map_base",
+    "mainLayer": "observatory_flow_main",
+    "branchLayer": "observatory_flow_branch",
+    "forecastLayer": "observatory_marker_forecast",
+    "villageLayer": "observatory_marker_village"
+  }
+}

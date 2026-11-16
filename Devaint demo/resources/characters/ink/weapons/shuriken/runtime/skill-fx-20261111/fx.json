@@ -1,0 +1,32 @@
+{
+ "format": "deviant-shuriken-skill-fx-v1",
+ "pixelsPerUnit": 32,
+ "fps": 50,
+ "source": "tools/pixelfx/shuriken-big-star.js (bake_skill_fx_20261111.mjs, quarter 0.06)",
+ "clips": {
+  "star_fast": {
+   "options": {
+    "trail": "none",
+    "quarter": 0.06
+   },
+   "use": "큰 관통 수리검 탄(지름 2u, 0.24초에 한 바퀴). 잔상은 게임이 대시처럼 그린다"
+  },
+  "star_fast_sparks": {
+   "options": {
+    "trail": "sparksOnly",
+    "quarter": 0.06,
+    "sparks": 340,
+    "sparkPower": 1.35
+   },
+   "use": "탄 아래 땅이 가까울 때만 켜는 바닥 스파크"
+  }
+ },
+ "size": [
+  440,
+  120
+ ],
+ "originTopLeftPx": [
+  220,
+  60
+ ]
+}

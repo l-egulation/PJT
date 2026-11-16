@@ -1,0 +1,1673 @@
+{
+  "source": "Approved UI sketch-v3 runtime-content.js/app.js and Figma layout snapshot; isolated preview fixtures, not game economy",
+  "teamCommit": "bb88516c321ed895f06c4c782dfdc31438caea91",
+  "inkSourceCommit": "a51d555af2a9831d045e244dede54a696f7ff86e",
+  "priceStart": 60,
+  "priceStep": 30,
+  "augmentLimit": 10,
+  "items": [
+    {
+      "id": "sketch/rapier",
+      "kind": "sketch",
+      "name": "레이피어",
+      "art": "rapier",
+      "skill": "범위 · 장침",
+      "attack": "좁은 전방을 빠르게 찌릅니다.",
+      "description": "긴 찌르기로 전방의 적을 공격합니다."
+    },
+    {
+      "id": "sketch/launcher",
+      "kind": "sketch",
+      "name": "발사기",
+      "art": "launcher",
+      "skill": "기본 · 모아쏘기",
+      "attack": "직선으로 탄환을 발사합니다.",
+      "description": "힘을 모아 강한 탄환을 발사합니다."
+    },
+    {
+      "id": "sketch/base_sword",
+      "kind": "sketch",
+      "name": "기본검",
+      "art": "base_sword",
+      "skill": "이동 · 돌진 찌르기",
+      "attack": "전방을 베어 공격합니다.",
+      "description": "앞으로 이동하며 적을 공격합니다."
+    },
+    {
+      "id": "sketch/whip",
+      "kind": "sketch",
+      "name": "채찍",
+      "art": "whip",
+      "skill": "기본 · 휘감기",
+      "attack": "긴 채찍으로 전방을 공격합니다.",
+      "description": "전방의 적을 휘감아 속박합니다."
+    },
+    {
+      "id": "sketch/dagger",
+      "kind": "sketch",
+      "name": "한손 단검",
+      "art": "dagger",
+      "skill": "기본 · 숨죽이기",
+      "attack": "짧은 거리에서 빠르게 베어 공격합니다.",
+      "description": "잠시 은신하여 다음 공격을 준비합니다."
+    },
+    {
+      "id": "sketch/hammer",
+      "kind": "sketch",
+      "name": "기본망치",
+      "art": "hammer",
+      "skill": "기본 · 횡강타",
+      "attack": "제자리에서 무거운 타격을 가합니다.",
+      "description": "전방을 강하게 쳐 적을 밀어냅니다."
+    },
+    {
+      "id": "sketch/shield",
+      "kind": "sketch",
+      "name": "방패",
+      "art": "shield",
+      "skill": "기본 · 받아치기",
+      "attack": "방패로 전방을 공격합니다.",
+      "description": "방어하며 전방의 적을 받아칩니다."
+    },
+    {
+      "id": "sketch/greatsword",
+      "kind": "sketch",
+      "name": "대검",
+      "art": "greatsword",
+      "skill": "기본 · 모아내려찍기",
+      "attack": "가로베기·올려베기·내려베기를 이어갑니다.",
+      "description": "힘을 모아 대검을 내려찍습니다."
+    },
+    {
+      "id": "sketch/shuriken",
+      "kind": "sketch",
+      "name": "수리검",
+      "art": "shuriken",
+      "skill": "기본 · 큰 관통 수리검",
+      "attack": "수리검을 전방으로 던집니다.",
+      "description": "큰 수리검이 적을 관통하며 각각 50 피해를 줍니다. 쿨타임 5초."
+    },
+    {
+      "id": "sketch/bomb",
+      "kind": "sketch",
+      "name": "폭탄",
+      "art": "bomb",
+      "skill": "기본 · 폭탄 3연발",
+      "attack": "포물선으로 폭탄을 던집니다.",
+      "description": "폭탄 3개를 연속으로 던집니다. 각 29 피해, 쿨타임 8초."
+    },
+    {
+      "id": "sketch/launcher_laser",
+      "kind": "sketch",
+      "name": "발사기",
+      "art": "launcher_laser",
+      "skill": "범위 · 레이저",
+      "attack": "직선으로 볼 탄환을 발사합니다.",
+      "description": "지형에 막힐 때까지 적을 관통합니다. 40 피해, 쿨타임 8초."
+    },
+    {
+      "id": "sketch/launcher_shotgun",
+      "kind": "sketch",
+      "name": "발사기",
+      "art": "launcher_shotgun",
+      "skill": "이동 · 샷건",
+      "attack": "직선으로 볼 탄환을 발사합니다.",
+      "description": "5발을 쏘며 반동으로 뒤로 이동합니다. 탄당 20 피해, 쿨타임 7초."
+    },
+    {
+      "id": "sketch/launcher_grenade",
+      "kind": "sketch",
+      "name": "발사기",
+      "art": "launcher_grenade",
+      "skill": "후속타 · 유탄·파편",
+      "attack": "직선으로 볼 탄환을 발사합니다.",
+      "description": "유탄이 폭발하고 파편 4개가 퍼집니다. 본체 45·파편별 12 피해, 쿨타임 9초."
+    },
+    {
+      "id": "S01",
+      "kind": "maintenance",
+      "name": "정석대로 갑시다",
+      "art": "ui-assets-v1/S01",
+      "description": "주는 피해가 20% 증가합니다.",
+      "cost": "",
+      "note": "공통 피해 증가 12%에 8%를 더한 최종 수치입니다.",
+      "group": "safe",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "S02",
+      "kind": "maintenance",
+      "name": "두꺼운 종이",
+      "art": "ui-assets-v1/S02",
+      "description": "주는 피해가 12% 증가합니다. 최대 체력이 20% 늘고, 늘어난 만큼 체력을 회복합니다.",
+      "cost": "",
+      "note": "",
+      "group": "safe",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "S03",
+      "kind": "maintenance",
+      "name": "보호 코팅",
+      "art": "ui-assets-v1/S03",
+      "description": "주는 피해가 12% 증가합니다. 받는 피해는 12% 줄어듭니다.",
+      "cost": "",
+      "note": "",
+      "group": "safe",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "S04",
+      "kind": "maintenance",
+      "name": "손에 익은 필체",
+      "art": "ui-assets-v1/S04",
+      "description": "주는 피해가 12% 증가합니다. 기본 공격 속도가 15% 빨라집니다.",
+      "cost": "",
+      "note": "기본 공격의 시작부터 끝까지 동작 속도가 15% 빨라집니다. 스킬 속도는 바꾸지 않습니다.",
+      "group": "safe",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "S05",
+      "kind": "maintenance",
+      "name": "빠른 교정",
+      "art": "ui-assets-v1/S05",
+      "description": "주는 피해가 12% 증가합니다. 스킬 대기시간이 15% 줄어듭니다.",
+      "cost": "",
+      "note": "스킬 충전 대기시간을 15% 줄입니다. 잉크의 대기시간 감소와는 합연산합니다.",
+      "group": "safe",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "S07",
+      "kind": "maintenance",
+      "name": "알뜰한 필사",
+      "art": "ui-assets-v1/S07",
+      "description": "주는 피해가 12% 증가합니다. 공격할 때 도면을 20% 덜 소모합니다.",
+      "cost": "",
+      "note": "소모량에 소수가 생길 때 반올림하는 방법은 아직 정하지 않았습니다.",
+      "group": "safe",
+      "available": false,
+      "maxStacks": 1
+    },
+    {
+      "id": "S08",
+      "kind": "maintenance",
+      "name": "다음 장도 든든하게",
+      "art": "ui-assets-v1/S08",
+      "description": "주는 피해가 12% 증가합니다. 도면을 다 쓰면 최대 체력의 15%만큼 보호막을 얻습니다.",
+      "cost": "",
+      "note": "전투에서 도면을 다 썼을 때만 발동합니다. 이 보호막은 최대 체력의 15%까지만 채워집니다. 무기를 바꿔도 남아 있습니다.",
+      "group": "safe",
+      "available": false,
+      "maxStacks": 1
+    },
+    {
+      "id": "S09",
+      "kind": "maintenance",
+      "name": "회복용 여백",
+      "art": "ui-assets-v1/S09",
+      "description": "주는 피해가 12% 증가합니다. 체력을 회복할 때 회복량이 30% 늘어납니다.",
+      "cost": "",
+      "note": "이 증강만으로 체력이 회복되지는 않습니다. 다른 회복량 증가·감소와는 합연산합니다. 예를 들어 대용량 잉크병과 함께 가지면 회복량은 80%입니다.",
+      "group": "safe",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "S10",
+      "kind": "maintenance",
+      "name": "가벼운 발걸음",
+      "art": "ui-assets-v1/S10",
+      "description": "주는 피해가 12% 증가합니다. 이동속도가 15% 빨라집니다.",
+      "cost": "",
+      "note": "걷기 속도만 바꿉니다. 대시 거리·속도와 점프 성능은 유지하는 안입니다.",
+      "group": "safe",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "S12",
+      "kind": "maintenance",
+      "name": "착실한 마침표",
+      "art": "ui-assets-v1/S12",
+      "description": "주는 피해가 12% 증가합니다. 같은 적을 세 번 맞힐 때마다, 세 번째 공격 피해의 60%를 한 번 더 줍니다.",
+      "cost": "",
+      "note": "적마다 따로 셉니다. 한 번의 공격은 한 번만 세며, 추가 피해는 횟수에 넣지 않습니다.",
+      "group": "safe",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "S13",
+      "kind": "maintenance",
+      "name": "끝까지 읽기",
+      "art": "ui-assets-v1/S13",
+      "description": "주는 피해가 12% 증가합니다. 체력이 30% 이하인 적에게는 피해가 추가로 35% 증가합니다.",
+      "cost": "",
+      "note": "공격이 맞기 직전의 적 체력을 기준으로 계산하는 안입니다.",
+      "group": "safe",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "S14",
+      "kind": "maintenance",
+      "name": "큰 글씨도 문제없다",
+      "art": "ui-assets-v1/S14",
+      "description": "주는 피해가 12% 증가합니다. 엘리트와 보스에게는 무기 공격 피해가 추가로 25% 증가합니다.",
+      "cost": "",
+      "note": "",
+      "group": "safe",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "W01",
+      "kind": "maintenance",
+      "name": "화력은 수명과 반비례",
+      "art": "ui-assets-v1/W01",
+      "description": "무기로 주는 피해가 40% 증가합니다.",
+      "cost": "공격할 때 도면을 60% 더 소모합니다.",
+      "note": "",
+      "group": "weapon",
+      "available": false,
+      "maxStacks": 1
+    },
+    {
+      "id": "W04",
+      "kind": "maintenance",
+      "name": "중고가 더 좋아",
+      "art": "ui-assets-v1/W04",
+      "description": "도면 잔량이 줄수록 무기 피해가 증가합니다. 최대 60%까지 강해집니다.",
+      "cost": "도면 잔량이 절반보다 많으면 무기 피해가 15% 줄어듭니다.",
+      "note": "잔량에 따라 피해가 얼마나 오르는지는 아직 정하지 않았습니다.",
+      "group": "weapon",
+      "available": false,
+      "maxStacks": 1
+    },
+    {
+      "id": "W05",
+      "kind": "maintenance",
+      "name": "구두쇠의 명작",
+      "art": "ui-assets-v1/W05",
+      "description": "공격할 때 도면을 40% 덜 소모합니다.",
+      "cost": "무기로 주는 피해가 25% 줄어듭니다.",
+      "note": "",
+      "group": "weapon",
+      "available": false,
+      "maxStacks": 1
+    },
+    {
+      "id": "W07",
+      "kind": "maintenance",
+      "name": "한 우물만 팝니다",
+      "art": "ui-assets-v1/W07",
+      "description": "같은 무기로 계속 공격하면 피해가 증가합니다. 최대 50%까지 강해집니다.",
+      "cost": "공격할 때 도면을 40% 더 소모합니다. 다른 무기로 공격하면 쌓인 강화가 모두 사라집니다.",
+      "note": "도면 소모량 증가는 처음부터 모든 무기 공격에 적용합니다. 공격 한 번에 오르는 피해 수치는 아직 정하지 않았습니다.",
+      "group": "weapon",
+      "available": false,
+      "maxStacks": 1
+    },
+    {
+      "id": "W08",
+      "kind": "maintenance",
+      "name": "이번엔 너다",
+      "art": "ui-assets-v1/W08",
+      "description": "다른 무기로 바꿔 공격하면, 교대 직후 첫 공격의 피해가 45% 증가합니다.",
+      "cost": "같은 무기로 계속 공격하면 두 번째부터 피해가 20% 줄어듭니다.",
+      "note": "예를 들어 A로 공격한 뒤 B로 공격하면 B의 첫 공격이 강해집니다. 다시 A로 공격하면 A의 첫 공격이 강해집니다. 한 무기의 모든 공격이 계속 강해지는 효과는 아닙니다.",
+      "group": "weapon",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "C01",
+      "kind": "maintenance",
+      "name": "종이갑옷",
+      "art": "ui-assets-v1/C01",
+      "description": "주는 피해가 35% 증가합니다.",
+      "cost": "받는 피해도 25% 증가합니다.",
+      "note": "",
+      "group": "combat",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "C02",
+      "kind": "maintenance",
+      "name": "잉크가 아니라 피였네",
+      "art": "ui-assets-v1/C02",
+      "description": "무기로 준 피해의 일부만큼 체력을 회복합니다. 한 번에 최대 3까지만 회복하며, 회복 후 1초 동안은 다시 회복할 수 없습니다.",
+      "cost": "최대 체력이 30% 줄어듭니다. 받는 피해도 25% 증가합니다.",
+      "note": "피해의 10%를 회복하는 시험값입니다. 적의 체력을 실제로 줄인 양이 기준입니다. 1초는 내부 쿨타임의 시험값입니다. 두 무기가 같은 회복 제한을 공유합니다. 여러 적을 한꺼번에 맞혀도 한 번에 최대 3만 회복합니다. 추가 피해·잉크 효과의 피해로는 회복하지 않습니다.",
+      "group": "combat",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "C03",
+      "kind": "maintenance",
+      "name": "마감 직전",
+      "art": "ui-assets-v1/C03",
+      "description": "체력이 30% 이하일 때 주는 피해가 60% 증가합니다.",
+      "cost": "체력이 30%를 넘으면 주는 피해가 10% 줄어듭니다.",
+      "note": "",
+      "group": "combat",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "C04",
+      "kind": "maintenance",
+      "name": "무사고 장인",
+      "art": "ui-assets-v1/C04",
+      "description": "피해를 받지 않는 동안 주는 피해가 점점 증가합니다. 최대 30%까지 강해집니다.",
+      "cost": "피해를 받으면 쌓인 강화가 모두 사라집니다. 이후 5초 동안 주는 피해가 20% 줄어듭니다.",
+      "note": "적과의 거리 조건은 없습니다. 피해를 받지 않는 1초마다 5%씩 오르는 시험값입니다. 피격 후 5초 동안 피해가 줄고, 감소 시간이 끝나면 강화는 0부터 다시 쌓입니다.",
+      "group": "combat",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "C05",
+      "kind": "maintenance",
+      "name": "딱 한 놈만",
+      "art": "ui-assets-v1/C05",
+      "description": "주변에 적이 한 명뿐이면 주는 피해가 60% 증가합니다.",
+      "cost": "주변에 적이 두 명 이상이면 주는 피해가 20% 줄어듭니다.",
+      "note": "내 위치에서 6칸 안의 살아 있는 적을 셉니다(시험값). 주변에 적이 없으면 효과가 없습니다.",
+      "group": "combat",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "C07",
+      "kind": "maintenance",
+      "name": "천천히, 아주 세게",
+      "art": "ui-assets-v1/C07",
+      "description": "기본 공격 피해가 65% 증가합니다.",
+      "cost": "기본 공격 속도가 30% 느려집니다.",
+      "note": "",
+      "group": "combat",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "C08",
+      "kind": "maintenance",
+      "name": "평타가 본업",
+      "art": "ui-assets-v1/C08",
+      "description": "기본 공격 피해가 50% 증가합니다.",
+      "cost": "스킬 피해가 50% 줄어듭니다.",
+      "note": "",
+      "group": "combat",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "M01",
+      "kind": "maintenance",
+      "name": "느리지만 확실하게",
+      "art": "ui-assets-v1/M01",
+      "description": "주는 피해가 40% 증가합니다.",
+      "cost": "이동속도가 20% 느려집니다.",
+      "note": "",
+      "group": "slow",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "M02",
+      "kind": "maintenance",
+      "name": "걸어다니는 성벽",
+      "art": "ui-assets-v1/M02",
+      "description": "받는 피해가 45% 줄어듭니다.",
+      "cost": "이동속도가 25% 느려집니다.",
+      "note": "",
+      "group": "slow",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "M04",
+      "kind": "maintenance",
+      "name": "제자리 인쇄소",
+      "art": "ui-assets-v1/M04",
+      "description": "세 번 맞힐 때마다, 세 번째 무기 공격의 피해를 한 번 더 줍니다.",
+      "cost": "이동속도가 20% 느려집니다.",
+      "note": "한 번의 공격은 한 번만 셉니다. 추가 피해는 횟수에 넣지 않습니다. 무기를 바꿔도 횟수는 이어집니다. 추가 피해는 세 번째 공격 피해의 100%입니다.",
+      "group": "slow",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "W09",
+      "kind": "maintenance",
+      "name": "폐기물 재활용",
+      "art": "ui-assets-v1/W09",
+      "description": "도면을 다 쓰면 최대 체력의 30%를 회복합니다.",
+      "cost": "다른 방법으로 회복하는 체력은 50% 줄어듭니다.",
+      "note": "전투에서 도면을 다 썼을 때만 발동합니다.",
+      "group": "weapon",
+      "available": false,
+      "maxStacks": 1
+    },
+    {
+      "id": "C09",
+      "kind": "maintenance",
+      "name": "스킬이 본업",
+      "art": "ui-assets-v1/C09",
+      "description": "스킬 피해가 60% 증가합니다.",
+      "cost": "기본 공격 피해가 35% 줄어듭니다.",
+      "note": "",
+      "group": "combat",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "C10",
+      "kind": "maintenance",
+      "name": "다섯 번째는 진심",
+      "art": "ui-assets-v1/C10",
+      "description": "다섯 번 공격할 때마다, 다섯 번째 무기 공격의 피해가 250% 증가합니다.",
+      "cost": "나머지 네 번의 무기 공격은 피해가 20% 줄어듭니다.",
+      "note": "공격을 시작할 때 한 번씩 셉니다. 무기를 바꿔도 횟수는 이어집니다. 추가 피해는 횟수에 넣지 않습니다.",
+      "group": "combat",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "C11",
+      "kind": "maintenance",
+      "name": "정면 승부",
+      "art": "ui-assets-v1/C11",
+      "description": "적의 정면에서 때리면 무기 공격 피해가 50% 증가합니다.",
+      "cost": "내 등 뒤에서 맞으면 받는 피해가 40% 증가합니다.",
+      "note": "맞는 대상이 바라보는 좌우 방향을 기준으로 합니다. 정면과 후면의 경계(같은 x)는 정면으로 봅니다(시험값).",
+      "group": "combat",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "C12",
+      "kind": "maintenance",
+      "name": "행운의 대가",
+      "art": "ui-assets-v1/C12",
+      "description": "치명타 확률이 35%p 증가합니다.",
+      "cost": "최대 체력이 20% 줄어듭니다.",
+      "note": "치명타 피해는 기존 규칙(두 배)을 따릅니다. 치명타 확률은 다른 효과와 더하며 100%를 넘지 않습니다.",
+      "group": "combat",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "X01",
+      "kind": "maintenance",
+      "name": "유령 작가",
+      "art": "ui-assets-v1/X01",
+      "description": "도면을 다 쓸 때마다 유령이 한 마리 생깁니다. 유령은 시간 제한 없이 나를 따라다니며 공격합니다. 최대 세 마리까지 모을 수 있습니다.",
+      "cost": "내 무기 공격 피해가 20% 줄어듭니다.",
+      "note": "각 유령은 자신을 만든 도면의 마지막 무기 공격을 1초마다 60% 위력으로 반복하는 안입니다. 공격 수치는 생성 시점에 정하며 무기를 바꿔도 유지합니다. 유령은 도면을 소모하거나 다른 유령·추가 효과를 만들지 않습니다. 세 마리를 모은 뒤의 추가 생성 처리와 런 사이 유지 여부는 아직 정하지 않았습니다.",
+      "group": "special",
+      "available": false,
+      "maxStacks": 1
+    },
+    {
+      "id": "X08",
+      "kind": "maintenance",
+      "name": "반송 봉투",
+      "art": "ui-assets-v1/X08",
+      "description": "공격으로 적의 탄환을 쳐내면 적에게 되돌려 보냅니다. 되돌려 보낸 탄환은 피해가 두 배가 됩니다.",
+      "cost": "내 무기 공격 피해가 20% 줄어듭니다. 적의 탄환에 맞으면 받는 피해가 30% 증가합니다.",
+      "note": "반사할 수 있는 탄환에만 적용합니다. 광선과 지형 공격은 제외합니다. 한 번 반사한 탄환은 다시 반사하지 않습니다. 근접 공격 판정으로만 쳐낼 수 있습니다.",
+      "group": "special",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "X09",
+      "kind": "maintenance",
+      "name": "위험한 책갈피",
+      "art": "ui-assets-v1/X09",
+      "description": "스킬 피해가 70% 증가합니다. 스킬을 쓴 자리에 책갈피가 생깁니다.",
+      "cost": "3초 뒤 책갈피가 있는 자리로 강제로 돌아갑니다. 그 자리가 위험해져도 돌아갑니다.",
+      "note": "책갈피는 최대 한 개입니다. 책갈피가 남아 있을 때 스킬을 다시 써도 위치와 복귀 시각은 바뀌지 않습니다. 도착점이 막혀 있으면 가장 가까운 설 수 있는 자리로 돌아갑니다(시험안).",
+      "group": "special",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "X11",
+      "kind": "maintenance",
+      "name": "피로 쓴 계약",
+      "art": "ui-assets-v1/X11",
+      "description": "스킬 피해가 80% 증가합니다. 스킬을 써도 도면 잔량은 줄지 않습니다.",
+      "cost": "스킬을 쓸 때마다 최대 체력의 4%를 대신 씁니다. 남은 체력이 비용보다 적거나 같으면 스킬을 쓸 수 없습니다.",
+      "note": "스킬도 도면을 소모하는 구조일 때 사용할 수 있는 후보입니다. 스킬이 실제로 발동할 때 체력을 씁니다. 이 체력 소모는 피격이나 반격 효과를 발동하지 않는 안입니다.",
+      "group": "special",
+      "available": false,
+      "maxStacks": 1
+    },
+    {
+      "id": "F02",
+      "kind": "maintenance",
+      "name": "사인해 주세요",
+      "art": "ui-assets-v1/F02",
+      "description": "같은 적을 세 번 맞히면 큰 추가 피해를 줍니다.",
+      "cost": "세 번째 공격 전에 다른 적을 때리면 쌓은 표시가 사라집니다. 기본 공격 피해가 15% 줄어듭니다.",
+      "note": "세 번째 공격 피해의 150%를 추가 피해로 주는 시험값입니다. 서명을 완성하면 표시는 처음부터 다시 쌓입니다. 한 번의 공격은 한 번만 셉니다.",
+      "group": "fun",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "C13",
+      "kind": "maintenance",
+      "name": "대용량 잉크병",
+      "art": "ui-assets-v1/C13",
+      "description": "최대 체력이 100% 증가합니다.",
+      "cost": "모든 체력 회복량이 50% 줄어듭니다.",
+      "note": "최대 체력이 늘어난 만큼 현재 체력도 늘어납니다. 다른 회복량 증가·감소와는 합연산합니다.",
+      "group": "combat",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "C14",
+      "kind": "maintenance",
+      "name": "성장통",
+      "art": "ui-assets-v1/C14",
+      "description": "적을 10마리 처치할 때마다 기존 최대 체력의 10%만큼 최대 체력이 늘어납니다. 최종적으로 기존 최대 체력의 150%까지 성장합니다.",
+      "cost": "선택하는 즉시 최대 체력이 기존의 30%로 줄어듭니다. 초반에는 크게 약해진 체력으로 버텨야 합니다.",
+      "note": "모든 비율은 이 증강을 선택하기 전의 최대 체력이 기준입니다. 기준이 100이면 30 → 40 → 50 순서로 성장합니다. 70마리 처치하면 원래 체력 100으로 돌아오고, 120마리 처치하면 최대치 150에 도달합니다. 최종 체력은 원래의 1.5배이며, 기존 수치에 150%를 더하는 뜻은 아닙니다. 최대 체력이 늘어난 만큼 현재 체력도 늘어납니다.",
+      "group": "combat",
+      "available": true,
+      "maxStacks": 1
+    },
+    {
+      "id": "attackSpeed",
+      "kind": "seal",
+      "name": "공격 속도",
+      "art": "ui-assets-v1/attackSpeed",
+      "description": "공격 속도 +18%",
+      "maxStacks": 3
+    },
+    {
+      "id": "damage",
+      "kind": "seal",
+      "name": "공격력",
+      "art": "ui-assets-v1/damage",
+      "description": "공격 피해 +12%",
+      "maxStacks": 3
+    },
+    {
+      "id": "critical",
+      "kind": "seal",
+      "name": "치명타",
+      "art": "ui-assets-v1/critical",
+      "description": "15% 확률로 피해 2배",
+      "maxStacks": 3
+    },
+    {
+      "id": "reach",
+      "kind": "seal",
+      "name": "공격 범위",
+      "art": "ui-assets-v1/reach",
+      "description": "베기 범위 +12%",
+      "maxStacks": 3
+    },
+    {
+      "id": "maxHealth",
+      "kind": "seal",
+      "name": "최대 체력",
+      "art": "ui-assets-v1/maxHealth",
+      "description": "최대 체력 +15, 얻을 때 15 회복",
+      "maxStacks": 3
+    },
+    {
+      "id": "guard",
+      "kind": "seal",
+      "name": "방어",
+      "art": "ui-assets-v1/guard",
+      "description": "받는 피해 -12%",
+      "maxStacks": 3
+    },
+    {
+      "id": "evasion",
+      "kind": "seal",
+      "name": "회피",
+      "art": "ui-assets-v1/evasion",
+      "description": "맞은 뒤 무적 +0.3초",
+      "maxStacks": 3
+    },
+    {
+      "id": "thorns",
+      "kind": "seal",
+      "name": "가시",
+      "art": "ui-assets-v1/thorns",
+      "description": "맞으면 그 적에게 피해 12",
+      "maxStacks": 3
+    },
+    {
+      "id": "leech",
+      "kind": "seal",
+      "name": "흡수",
+      "art": "ui-assets-v1/leech",
+      "description": "10마리 처치마다 체력 +3",
+      "maxStacks": 3
+    },
+    {
+      "id": "recovery",
+      "kind": "seal",
+      "name": "회복력",
+      "art": "ui-assets-v1/recovery",
+      "description": "방 클리어 회복 +4",
+      "maxStacks": 3
+    },
+    {
+      "id": "instantHeal",
+      "kind": "seal",
+      "name": "즉시 회복",
+      "art": "ui-assets-v1/instantHeal",
+      "description": "얻을 때 체력 30 회복",
+      "maxStacks": 3
+    },
+    {
+      "id": "moveSpeed",
+      "kind": "seal",
+      "name": "이동 속도",
+      "art": "ui-assets-v1/moveSpeed",
+      "description": "이동 속도 +10%",
+      "maxStacks": 3
+    }
+  ],
+  "screens": [
+    {
+      "key": "reward",
+      "offers": [
+        {
+          "id": "sketch/rapier",
+          "node": "14:34019",
+          "colors": [
+            "red"
+          ],
+          "price": -1
+        },
+        {
+          "id": "green_weapon_switch_heal",
+          "node": "14:34043",
+          "colors": [],
+          "price": -1
+        },
+        {
+          "id": "red_basic_attack_basic_attack_damage_increase_stun",
+          "node": "14:34070",
+          "colors": [],
+          "price": -1
+        }
+      ]
+    },
+    {
+      "key": "mixed",
+      "offers": [
+        {
+          "id": "sketch/rapier",
+          "node": "14:34167",
+          "colors": [
+            "red"
+          ],
+          "price": -1
+        },
+        {
+          "id": "purple_basic_attack_root",
+          "node": "14:34191",
+          "colors": [],
+          "price": -1
+        },
+        {
+          "id": "sketch/base_sword",
+          "node": "14:34219",
+          "colors": [
+            "red"
+          ],
+          "price": -1
+        }
+      ]
+    },
+    {
+      "key": "quota",
+      "offers": [
+        {
+          "id": "sketch/rapier",
+          "node": "14:34306",
+          "colors": [
+            "red",
+            "neutral"
+          ],
+          "price": -1
+        },
+        {
+          "id": "red_basic_attack_basic_attack_damage_increase_root",
+          "node": "14:34333",
+          "colors": [],
+          "price": -1
+        },
+        {
+          "id": "red_basic_attack_basic_attack_damage_increase_slow",
+          "node": "14:34369",
+          "colors": [],
+          "price": -1
+        }
+      ]
+    },
+    {
+      "key": "boss",
+      "offers": [
+        {
+          "id": "sketch/rapier",
+          "node": "14:34465",
+          "colors": [
+            "red",
+            "neutral",
+            "red"
+          ],
+          "price": -1
+        },
+        {
+          "id": "sketch/launcher",
+          "node": "14:34495",
+          "colors": [
+            "red",
+            "neutral",
+            "red"
+          ],
+          "price": -1
+        },
+        {
+          "id": "sketch/base_sword",
+          "node": "14:34525",
+          "colors": [
+            "red",
+            "neutral",
+            "red"
+          ],
+          "price": -1
+        }
+      ]
+    },
+    {
+      "key": "boss-ink",
+      "offers": []
+    },
+    {
+      "key": "reward-seven",
+      "offers": [
+        {
+          "id": "sketch/rapier",
+          "node": "14:34839",
+          "colors": [
+            "red",
+            "neutral",
+            "red"
+          ],
+          "price": -1
+        },
+        {
+          "id": "green_weapon_switch_heal",
+          "node": "14:34869",
+          "colors": [],
+          "price": -1
+        },
+        {
+          "id": "blue_skill_attack_cooldown_reduction_slow",
+          "node": "14:34896",
+          "colors": [],
+          "price": -1
+        }
+      ]
+    },
+    {
+      "key": "reward-all-inks",
+      "offers": [
+        {
+          "id": "sketch/rapier",
+          "node": "14:34990",
+          "colors": [
+            "red"
+          ],
+          "price": -1
+        },
+        {
+          "id": "sketch/launcher",
+          "node": "14:35014",
+          "colors": [
+            "red"
+          ],
+          "price": -1
+        },
+        {
+          "id": "sketch/base_sword",
+          "node": "14:35038",
+          "colors": [
+            "red"
+          ],
+          "price": -1
+        }
+      ]
+    },
+    {
+      "key": "reward-guarantee",
+      "offers": [
+        {
+          "id": "sketch/rapier",
+          "node": "14:35127",
+          "colors": [
+            "red",
+            "neutral"
+          ],
+          "price": -1
+        },
+        {
+          "id": "sketch/launcher",
+          "node": "14:35154",
+          "colors": [
+            "red",
+            "neutral"
+          ],
+          "price": -1
+        },
+        {
+          "id": "sketch/base_sword",
+          "node": "14:35181",
+          "colors": [
+            "red",
+            "neutral"
+          ],
+          "price": -1
+        }
+      ]
+    },
+    {
+      "key": "boss-last",
+      "offers": [
+        {
+          "id": "sketch/rapier",
+          "colors": [
+            "red",
+            "neutral",
+            "red",
+            "neutral",
+            "neutral"
+          ],
+          "price": -1,
+          "node": "35:54613"
+        },
+        {
+          "id": "sketch/launcher",
+          "colors": [
+            "red",
+            "neutral",
+            "red",
+            "neutral",
+            "neutral"
+          ],
+          "price": -1,
+          "node": "35:54639"
+        },
+        {
+          "id": "sketch/base_sword",
+          "colors": [
+            "red",
+            "neutral",
+            "red",
+            "neutral",
+            "neutral"
+          ],
+          "price": -1,
+          "node": "35:54665"
+        }
+      ]
+    },
+    {
+      "key": "shop",
+      "offers": [
+        {
+          "id": "sketch/whip",
+          "node": "commerce:product-0",
+          "colors": [
+            "red"
+          ],
+          "price": 350,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "sketch/base_sword",
+          "node": "commerce:product-1",
+          "colors": [
+            "red",
+            "neutral",
+            "red"
+          ],
+          "price": 600,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "sketch/base_sword",
+          "colors": [
+            "red",
+            "neutral",
+            "neutral"
+          ],
+          "price": 550,
+          "node": "commerce:product-2",
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "blue_skill_attack_skill_attack_damage_increase_stun",
+          "node": "commerce:product-3",
+          "colors": [],
+          "price": 220,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "green_basic_attack_shield",
+          "colors": [],
+          "price": 220,
+          "node": "commerce:product-4",
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "purple_skill_attack_root",
+          "colors": [],
+          "price": 220,
+          "node": "commerce:product-5",
+          "sold": false,
+          "empty": false
+        }
+      ]
+    },
+    {
+      "key": "shop-poor",
+      "offers": [
+        {
+          "id": "sketch/launcher",
+          "node": "commerce:product-0",
+          "colors": [
+            "red"
+          ],
+          "price": 350,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "sketch/rapier",
+          "node": "commerce:product-1",
+          "colors": [
+            "red",
+            "neutral",
+            "red"
+          ],
+          "price": 600,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "sketch/base_sword",
+          "colors": [
+            "red",
+            "neutral",
+            "neutral"
+          ],
+          "price": 550,
+          "node": "commerce:product-2",
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "green_dash_use_shield",
+          "node": "commerce:product-3",
+          "colors": [],
+          "price": 220,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "blue_skill_attack_skill_attack_damage_increase_stun",
+          "colors": [],
+          "price": 220,
+          "node": "commerce:product-4",
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "green_basic_attack_shield",
+          "colors": [],
+          "price": 220,
+          "node": "commerce:product-5",
+          "sold": false,
+          "empty": false
+        }
+      ]
+    },
+    {
+      "key": "shop-sold",
+      "offers": [
+        {
+          "id": "sketch/whip",
+          "node": "commerce:product-0",
+          "colors": [
+            "red"
+          ],
+          "price": 350,
+          "sold": true,
+          "empty": false
+        },
+        {
+          "id": "sketch/rapier",
+          "colors": [
+            "red",
+            "neutral"
+          ],
+          "price": 450,
+          "node": "commerce:product-1",
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "sketch/base_sword",
+          "colors": [
+            "red",
+            "neutral",
+            "neutral"
+          ],
+          "price": 550,
+          "node": "commerce:product-2",
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "red_basic_attack_basic_attack_damage_increase_root",
+          "node": "commerce:product-3",
+          "colors": [],
+          "price": 220,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "green_dash_use_heal",
+          "node": "commerce:product-4",
+          "colors": [],
+          "price": 220,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "blue_skill_attack_skill_attack_damage_increase_stun",
+          "colors": [],
+          "price": 220,
+          "node": "commerce:product-5",
+          "sold": false,
+          "empty": false
+        }
+      ]
+    },
+    {
+      "key": "shop-ch2",
+      "offers": [
+        {
+          "id": "sketch/launcher",
+          "node": "commerce:product-0",
+          "colors": [
+            "red",
+            "neutral",
+            "red"
+          ],
+          "price": 1055,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "sketch/rapier",
+          "colors": [
+            "red",
+            "neutral",
+            "neutral",
+            "neutral"
+          ],
+          "price": 1140,
+          "node": "commerce:product-1",
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "sketch/base_sword",
+          "colors": [
+            "red",
+            "neutral",
+            "neutral",
+            "neutral",
+            "neutral"
+          ],
+          "price": 1315,
+          "node": "commerce:product-2",
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "green_basic_attack_shield",
+          "node": "commerce:product-3",
+          "colors": [],
+          "price": 400,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "blue_skill_attack_skill_attack_damage_increase_root",
+          "node": "commerce:product-4",
+          "colors": [],
+          "price": 400,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "blue_skill_attack_skill_attack_damage_increase_stun",
+          "colors": [],
+          "price": 400,
+          "node": "commerce:product-5",
+          "sold": false,
+          "empty": false
+        }
+      ]
+    },
+    {
+      "key": "shop-ch3",
+      "offers": [
+        {
+          "id": "sketch/base_sword",
+          "node": "commerce:product-0",
+          "colors": [
+            "red",
+            "neutral",
+            "blue",
+            "neutral",
+            "neutral",
+            "neutral"
+          ],
+          "price": -1,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "sketch/rapier",
+          "colors": [
+            "red",
+            "neutral",
+            "blue",
+            "neutral",
+            "neutral",
+            "neutral"
+          ],
+          "price": -1,
+          "node": "commerce:product-1",
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "sketch/whip",
+          "colors": [
+            "red",
+            "neutral",
+            "blue",
+            "neutral",
+            "neutral",
+            "neutral"
+          ],
+          "price": -1,
+          "node": "commerce:product-2",
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "green_status_condition_shield",
+          "node": "commerce:product-3",
+          "colors": [],
+          "price": -1,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "purple_basic_attack_stun",
+          "node": "commerce:product-4",
+          "colors": [],
+          "price": -1,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "blue_skill_attack_skill_attack_damage_increase_stun",
+          "colors": [],
+          "price": -1,
+          "node": "commerce:product-5",
+          "sold": false,
+          "empty": false
+        }
+      ]
+    },
+    {
+      "key": "shop-no-inks",
+      "offers": [
+        {
+          "id": "sketch/base_sword",
+          "node": "commerce:product-0",
+          "colors": [
+            "red"
+          ],
+          "price": 350,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "sketch/whip",
+          "node": "commerce:product-1",
+          "colors": [
+            "red",
+            "neutral"
+          ],
+          "price": 450,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "sketch/whip",
+          "node": "commerce:product-2",
+          "colors": [
+            "red",
+            "neutral",
+            "red"
+          ],
+          "price": 600,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "blue_skill_attack_skill_attack_damage_increase_stun",
+          "colors": [],
+          "price": 220,
+          "node": "commerce:product-3",
+          "sold": false,
+          "empty": true
+        },
+        {
+          "id": "green_basic_attack_shield",
+          "colors": [],
+          "price": 220,
+          "node": "commerce:product-4",
+          "sold": false,
+          "empty": true
+        },
+        {
+          "id": "purple_skill_attack_root",
+          "colors": [],
+          "price": 220,
+          "node": "commerce:product-5",
+          "sold": false,
+          "empty": true
+        }
+      ]
+    },
+    {
+      "key": "shop-refresh",
+      "offers": [
+        {
+          "id": "sketch/whip",
+          "node": "commerce:product-0",
+          "colors": [
+            "red"
+          ],
+          "price": 350,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "sketch/whip",
+          "node": "commerce:product-1",
+          "colors": [
+            "red",
+            "neutral",
+            "red"
+          ],
+          "price": 600,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "sketch/base_sword",
+          "colors": [
+            "red",
+            "neutral",
+            "neutral"
+          ],
+          "price": 550,
+          "node": "commerce:product-2",
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "green_basic_attack_shield",
+          "node": "commerce:product-3",
+          "colors": [],
+          "price": 220,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "blue_skill_attack_skill_attack_damage_increase_stun",
+          "colors": [],
+          "price": 220,
+          "node": "commerce:product-4",
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "purple_skill_attack_root",
+          "colors": [],
+          "price": 220,
+          "node": "commerce:product-5",
+          "sold": false,
+          "empty": false
+        }
+      ]
+    },
+    {
+      "key": "augment-choose",
+      "offers": [
+        {
+          "id": "S02",
+          "node": "14:36517",
+          "colors": [],
+          "price": -1
+        },
+        {
+          "id": "X09",
+          "node": "14:36532",
+          "colors": [],
+          "price": -1
+        },
+        {
+          "id": "C03",
+          "node": "14:36560",
+          "colors": [],
+          "price": -1
+        }
+      ]
+    },
+    {
+      "key": "augment-seal",
+      "offers": [
+        {
+          "id": "reach",
+          "node": "14:36905",
+          "colors": [],
+          "price": -1
+        },
+        {
+          "id": "maxHealth",
+          "node": "14:36921",
+          "colors": [],
+          "price": -1
+        },
+        {
+          "id": "evasion",
+          "node": "14:36937",
+          "colors": [],
+          "price": -1
+        }
+      ]
+    },
+    {
+      "key": "shop-world",
+      "offers": [
+        {
+          "id": "sketch/whip",
+          "node": "commerce:product-0",
+          "colors": [
+            "red"
+          ],
+          "price": 350,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "sketch/base_sword",
+          "node": "commerce:product-1",
+          "colors": [
+            "red",
+            "neutral",
+            "red"
+          ],
+          "price": 600,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "sketch/base_sword",
+          "colors": [
+            "red",
+            "neutral",
+            "neutral"
+          ],
+          "price": 550,
+          "node": "commerce:product-2",
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "purple_skill_attack_root",
+          "node": "commerce:product-3",
+          "colors": [],
+          "price": 220,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "blue_skill_attack_skill_attack_damage_increase_stun",
+          "colors": [],
+          "price": 220,
+          "node": "commerce:product-4",
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "green_basic_attack_shield",
+          "colors": [],
+          "price": 220,
+          "node": "commerce:product-5",
+          "sold": false,
+          "empty": false
+        }
+      ]
+    },
+    {
+      "key": "shop-world-poor",
+      "offers": [
+        {
+          "id": "sketch/whip",
+          "node": "commerce:product-0",
+          "colors": [
+            "red"
+          ],
+          "price": 350,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "sketch/base_sword",
+          "node": "commerce:product-1",
+          "colors": [
+            "red",
+            "neutral",
+            "red"
+          ],
+          "price": 600,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "sketch/base_sword",
+          "colors": [
+            "red",
+            "neutral",
+            "neutral"
+          ],
+          "price": 550,
+          "node": "commerce:product-2",
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "green_basic_attack_heal",
+          "node": "commerce:product-3",
+          "colors": [],
+          "price": 220,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "blue_skill_attack_skill_attack_damage_increase_stun",
+          "colors": [],
+          "price": 220,
+          "node": "commerce:product-4",
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "green_basic_attack_shield",
+          "colors": [],
+          "price": 220,
+          "node": "commerce:product-5",
+          "sold": false,
+          "empty": false
+        }
+      ]
+    },
+    {
+      "key": "shop-world-sold",
+      "offers": [
+        {
+          "id": "sketch/whip",
+          "node": "commerce:product-0",
+          "colors": [
+            "red"
+          ],
+          "price": 350,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "sketch/base_sword",
+          "node": "commerce:product-1",
+          "colors": [
+            "red",
+            "neutral",
+            "red"
+          ],
+          "price": 600,
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "sketch/base_sword",
+          "colors": [
+            "red",
+            "neutral",
+            "neutral"
+          ],
+          "price": 550,
+          "node": "commerce:product-2",
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "red_basic_attack_basic_attack_damage_increase_slow",
+          "node": "commerce:product-3",
+          "colors": [],
+          "price": 220,
+          "sold": true,
+          "empty": false
+        },
+        {
+          "id": "blue_skill_attack_skill_attack_damage_increase_stun",
+          "colors": [],
+          "price": 220,
+          "node": "commerce:product-4",
+          "sold": false,
+          "empty": false
+        },
+        {
+          "id": "green_basic_attack_shield",
+          "colors": [],
+          "price": 220,
+          "node": "commerce:product-5",
+          "sold": false,
+          "empty": false
+        }
+      ]
+    },
+    {
+      "key": "boss-all-inks",
+      "offers": [
+        {
+          "id": "sketch/rapier",
+          "colors": [
+            "red",
+            "neutral",
+            "red",
+            "neutral",
+            "neutral",
+            "neutral"
+          ],
+          "price": -1,
+          "node": "35:54748"
+        },
+        {
+          "id": "sketch/launcher",
+          "colors": [
+            "red",
+            "neutral",
+            "red",
+            "neutral",
+            "neutral",
+            "neutral"
+          ],
+          "price": -1,
+          "node": "35:54774"
+        },
+        {
+          "id": "sketch/base_sword",
+          "colors": [
+            "red",
+            "neutral",
+            "red",
+            "neutral",
+            "neutral",
+            "neutral"
+          ],
+          "price": -1,
+          "node": "35:54800"
+        }
+      ]
+    }
+  ]
+}

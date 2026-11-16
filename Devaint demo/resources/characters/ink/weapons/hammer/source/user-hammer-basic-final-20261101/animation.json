@@ -1,0 +1,337 @@
+{
+  "canvas": [
+    224,
+    192
+  ],
+  "pivot": [
+    96,
+    151
+  ],
+  "ppu": 32,
+  "detailExport": {
+    "canvas": [
+      896,
+      768
+    ],
+    "pivot": [
+      384,
+      604
+    ],
+    "ppu": 128
+  },
+  "scale": 0.145,
+  "paletteReference": "characters/ink/weapons/hammer/runtime/user-hammer-normal-reused-20261031/idle_01.png",
+  "paletteReferenceSha256": "477af5e2387c3e85e11e186b0117cb48ef02955f5fd3c93fa9dcc75f32b049b0",
+  "approvedPalette": [
+    "#1b1616",
+    "#fdeeda",
+    "#025673",
+    "#d2b396",
+    "#02648c",
+    "#eba516"
+  ],
+  "sequences": {
+    "attack_1": [
+      {
+        "frame": "attack_1_01",
+        "ms": 90
+      },
+      {
+        "frame": "attack_1_02",
+        "ms": 60
+      },
+      {
+        "frame": "attack_1_03",
+        "ms": 40
+      },
+      {
+        "frame": "attack_1_04",
+        "ms": 30
+      },
+      {
+        "frame": "attack_1_05",
+        "ms": 80
+      },
+      {
+        "frame": "attack_1_06",
+        "ms": 40
+      }
+    ],
+    "attack_2": [
+      {
+        "frame": "attack_2_01",
+        "ms": 80
+      },
+      {
+        "frame": "attack_2_02",
+        "ms": 100
+      },
+      {
+        "frame": "attack_2_03",
+        "ms": 120
+      },
+      {
+        "frame": "attack_2_04",
+        "ms": 30
+      },
+      {
+        "frame": "attack_2_05",
+        "ms": 90
+      },
+      {
+        "frame": "attack_2_06",
+        "ms": 70
+      },
+      {
+        "frame": "attack_2_07",
+        "ms": 60
+      },
+      {
+        "frame": "attack_2_08",
+        "ms": 130
+      },
+      {
+        "frame": "attack_2_09",
+        "ms": 650
+      }
+    ]
+  },
+  "reviewPauseMs": 650,
+  "motion": "Actual two boots define frame registration; natural foot shapes retained. Second-hit lift redistributed 80/100/120ms, same 300ms total.",
+  "color": "Only material RGB mapped to the six approved colors; intentional neutral attack effects preserved. No spatial grid conversion.",
+  "approval": "motion approved; final small appearance correction for review",
+  "gameIntegration": "not-deployed",
+  "frames": [
+    {
+      "frame": "attack_1_01",
+      "sourceFrame": "B19",
+      "sourceSet": "user-hammer-basic-color-motion-20261101",
+      "sourcePath": "characters/ink/weapons/hammer/source/user-hammer-basic-color-motion-20261101/color-corrected-highres/01-B19.png",
+      "sourceSha256": "9cf3254883e69fa5af9bb18874698700a6d32dc5d07deeedcf475c3115cc9b42",
+      "scaleMultiplier": 1,
+      "sourceAnchor": [
+        560.5,
+        648
+      ],
+      "edgePixelsRecolored": 53,
+      "sourceAlphaUnchanged": true
+    },
+    {
+      "frame": "attack_1_02",
+      "sourceFrame": "B20",
+      "sourceSet": "user-hammer-basic-color-motion-20261101",
+      "sourcePath": "characters/ink/weapons/hammer/source/user-hammer-basic-color-motion-20261101/color-corrected-highres/02-B20.png",
+      "sourceSha256": "7ca20f5ddcb8e6d82f6a7ddde7b564822b5a10e1c532eaec8b994b590ca34819",
+      "scaleMultiplier": 1,
+      "sourceAnchor": [
+        560.5,
+        648
+      ],
+      "edgePixelsRecolored": 20,
+      "sourceAlphaUnchanged": true
+    },
+    {
+      "frame": "attack_1_03",
+      "sourceFrame": "B37",
+      "sourceSet": "user-hammer-basic-color-motion-20261101",
+      "sourcePath": "characters/ink/weapons/hammer/source/user-hammer-basic-color-motion-20261101/color-corrected-highres/03-B37.png",
+      "sourceSha256": "0cde3e390ef381623d3872bba6cbf40e3ee31d6cc2b1701ea058c9d040bec08a",
+      "scaleMultiplier": 1,
+      "sourceAnchor": [
+        561,
+        648
+      ],
+      "edgePixelsRecolored": 130,
+      "sourceAlphaUnchanged": true
+    },
+    {
+      "frame": "attack_1_04",
+      "sourceFrame": "B53",
+      "sourceSet": "user-hammer-basic-color-motion-20261101",
+      "sourcePath": "characters/ink/weapons/hammer/source/user-hammer-basic-color-motion-20261101/color-corrected-highres/04-B53.png",
+      "sourceSha256": "5e062afb361759aa2ab346a48e73d0c4c662fba9e89f654e51bc5dc33884c0d4",
+      "scaleMultiplier": 1,
+      "sourceAnchor": [
+        556.5,
+        648
+      ],
+      "edgePixelsRecolored": 106,
+      "sourceAlphaUnchanged": true
+    },
+    {
+      "frame": "attack_1_05",
+      "sourceFrame": "B55",
+      "sourceSet": "user-hammer-basic-color-motion-20261101",
+      "sourcePath": "characters/ink/weapons/hammer/source/user-hammer-basic-color-motion-20261101/color-corrected-highres/05-B55.png",
+      "sourceSha256": "cf447c5e57cc3f08f9f730d59c66dac7c7fed563e5afa5624a122da6254fc750",
+      "scaleMultiplier": 1,
+      "sourceAnchor": [
+        555,
+        648
+      ],
+      "edgePixelsRecolored": 29,
+      "sourceAlphaUnchanged": true
+    },
+    {
+      "frame": "attack_1_06",
+      "sourceFrame": "B60",
+      "sourceSet": "user-hammer-basic-color-motion-20261101",
+      "sourcePath": "characters/ink/weapons/hammer/source/user-hammer-basic-color-motion-20261101/color-corrected-highres/06-B60.png",
+      "sourceSha256": "7c9f4f1d49b66f157d0675615b3399ab1c4f11d03b9e7e66aa0ca74eb3ccde0e",
+      "scaleMultiplier": 1,
+      "sourceAnchor": [
+        555,
+        648
+      ],
+      "edgePixelsRecolored": 59,
+      "sourceAlphaUnchanged": true
+    },
+    {
+      "frame": "attack_2_01",
+      "sourceFrame": "A09",
+      "sourceSet": "user-hammer-basic-color-motion-20261101",
+      "sourcePath": "characters/ink/weapons/hammer/source/user-hammer-basic-color-motion-20261101/color-corrected-highres/07-A09.png",
+      "sourceSha256": "90f307c3d4d156aa24ac82bd677fc15413e92d8ae1e0c0f98f09971cecdecc82",
+      "scaleMultiplier": 1,
+      "sourceAnchor": [
+        578,
+        650
+      ],
+      "edgePixelsRecolored": 36,
+      "sourceAlphaUnchanged": true
+    },
+    {
+      "frame": "attack_2_02",
+      "sourceFrame": "A11",
+      "sourceSet": "user-hammer-basic-color-motion-20261101",
+      "sourcePath": "characters/ink/weapons/hammer/source/user-hammer-basic-color-motion-20261101/color-corrected-highres/08-A11.png",
+      "sourceSha256": "6b9683410cb4e160ce1d957f3a7f2968efe0252f4b98de7b446d2e7e5f8f49b4",
+      "scaleMultiplier": 1,
+      "sourceAnchor": [
+        578,
+        650
+      ],
+      "edgePixelsRecolored": 7,
+      "sourceAlphaUnchanged": true
+    },
+    {
+      "frame": "attack_2_03",
+      "sourceFrame": "A14",
+      "sourceSet": "user-hammer-basic-color-motion-20261101",
+      "sourcePath": "characters/ink/weapons/hammer/source/user-hammer-basic-color-motion-20261101/color-corrected-highres/09-A14.png",
+      "sourceSha256": "622d20cd63f62547d9d519088b05536a2f0a2841beaaa12101eb778b14069427",
+      "scaleMultiplier": 1,
+      "sourceAnchor": [
+        567,
+        650
+      ],
+      "edgePixelsRecolored": 29,
+      "sourceAlphaUnchanged": true
+    },
+    {
+      "frame": "attack_2_04",
+      "sourceFrame": "A20",
+      "sourceSet": "user-hammer-basic-color-motion-20261101",
+      "sourcePath": "characters/ink/weapons/hammer/source/user-hammer-basic-color-motion-20261101/color-corrected-highres/10-A20.png",
+      "sourceSha256": "1eeb1831764677dd41445a882dd29cfe976db9e1ae21d165aca959206eb146d1",
+      "scaleMultiplier": 1,
+      "sourceAnchor": [
+        582.5,
+        650
+      ],
+      "edgePixelsRecolored": 63,
+      "sourceAlphaUnchanged": true
+    },
+    {
+      "frame": "attack_2_05",
+      "sourceFrame": "A21",
+      "sourceSet": "user-hammer-basic-color-motion-20261101",
+      "sourcePath": "characters/ink/weapons/hammer/source/user-hammer-basic-color-motion-20261101/color-corrected-highres/11-A21.png",
+      "sourceSha256": "83b554a472db7dada933cfb16e9ca323790cbf23746eb2d2268f738596447cf9",
+      "scaleMultiplier": 1,
+      "sourceAnchor": [
+        577.5,
+        653
+      ],
+      "edgePixelsRecolored": 57,
+      "sourceAlphaUnchanged": true
+    },
+    {
+      "frame": "attack_2_06",
+      "sourceFrame": "A22",
+      "sourceSet": "user-hammer-basic-color-motion-20261101",
+      "sourcePath": "characters/ink/weapons/hammer/source/user-hammer-basic-color-motion-20261101/color-corrected-highres/12-A22.png",
+      "sourceSha256": "9228fee1366f440dad78dd0df3a3e4c6db70d2158aa12aa25aa564dae25021d4",
+      "scaleMultiplier": 1,
+      "sourceAnchor": [
+        579,
+        646
+      ],
+      "edgePixelsRecolored": 62,
+      "sourceAlphaUnchanged": true
+    },
+    {
+      "frame": "attack_2_07",
+      "sourceFrame": "A24",
+      "sourceSet": "user-hammer-basic-color-motion-20261101",
+      "sourcePath": "characters/ink/weapons/hammer/source/user-hammer-basic-color-motion-20261101/color-corrected-highres/13-A24.png",
+      "sourceSha256": "0d9b8de96be7a7368c1711647c69fa6fd266480a64a96b830fc9d497902f1b51",
+      "scaleMultiplier": 1,
+      "sourceAnchor": [
+        578,
+        650
+      ],
+      "edgePixelsRecolored": 31,
+      "sourceAlphaUnchanged": true
+    },
+    {
+      "frame": "attack_2_08",
+      "sourceFrame": "A27",
+      "sourceSet": "user-hammer-basic-color-motion-20261101",
+      "sourcePath": "characters/ink/weapons/hammer/source/user-hammer-basic-color-motion-20261101/color-corrected-highres/14-A27.png",
+      "sourceSha256": "794c205a82d4e4de2f7e76026f2ba0024d28e0b909f7e04ddf54ae3032d3616b",
+      "scaleMultiplier": 1,
+      "sourceAnchor": [
+        578,
+        650
+      ],
+      "edgePixelsRecolored": 5,
+      "sourceAlphaUnchanged": true
+    },
+    {
+      "frame": "attack_2_09",
+      "sourceFrame": "A36",
+      "sourceSet": "user-hammer-basic-color-motion-20261101",
+      "sourcePath": "characters/ink/weapons/hammer/source/user-hammer-basic-color-motion-20261101/color-corrected-highres/15-A36.png",
+      "sourceSha256": "a7ca052437dfca771c2ccb0b6cbc45d0cb15179d1c92c67a3bb2eee2374bcbef",
+      "scaleMultiplier": 1,
+      "sourceAnchor": [
+        578,
+        650
+      ],
+      "edgePixelsRecolored": 37,
+      "sourceAlphaUnchanged": true
+    }
+  ],
+  "sourceSet": "user-hammer-basic-color-motion-20261101",
+  "scaleMultipliers": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "appearanceApproval": "final edge and scale correction prepared",
+  "resampling": "premultiplied bilinear from high-resolution palette layers",
+  "polish": "Small bright isolated exterior pigments recolored to adjacent scarf/hammer pigment; neutral FX and gold accents preserved. Premultiplied alpha export."
+}

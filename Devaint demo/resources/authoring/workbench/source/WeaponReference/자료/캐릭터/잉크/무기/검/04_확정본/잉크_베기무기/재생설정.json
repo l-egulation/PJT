@@ -1,0 +1,50 @@
+{
+  "version": 11,
+  "candidate": 4,
+  "name": "베기 기본 무기 A10",
+  "description": "손이 잉크 톱니 대검으로 변하는 기본 무기 전환",
+  "selected_weapons": {
+    "slash": "A10",
+    "pull": "B03",
+    "push": "C07",
+    "ranged": "D03"
+  },
+  "frame_count": 12,
+  "frame_width": 128,
+  "frame_height": 128,
+  "columns": 4,
+  "rows": 3,
+  "frame_order": "row-major",
+  "sheet": "변신_12프레임_128px.png",
+  "frame_times_ms": [
+    80,
+    70,
+    70,
+    60,
+    50,
+    50,
+    60,
+    70,
+    80,
+    90,
+    70,
+    180
+  ],
+  "total_duration_ms": 930,
+  "loop": false,
+  "hold_final_frame": true,
+  "background": "transparent",
+  "source_first_frame": "C:/Users/SSAFY/Desktop/자율 프로젝트/02_에셋/캐릭터/스토리등장인물/잉크주인공/04_확정본/05_잉크주인공_128x128.png",
+  "hand_region_preserved": true,
+  "sleeve_preserved": true,
+  "palette": [
+    "#FDEEDA",
+    "#D2B396",
+    "#1B1616",
+    "#02648C",
+    "#025673",
+    "#EBA516"
+  ],
+  "method": "Native 128x128 pixel animation. User-approved final 12 frames.",
+  "status": "confirmed"
+}

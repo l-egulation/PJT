@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cd9f883a0c3fb34b8cd81dd8bb79adc, type: 3}
+  m_Name: Art
+  m_EditorClassIdentifier: Deviant.Chapter2::Deviant.Chapter2.Chapter2LightingArt
+  housing: {fileID: 21300000, guid: d1761da0df908b24497dc5eeb9e9049b, type: 3}
+  mount: {fileID: 21300000, guid: e45d37c11bd736f49a5a826b5a557836, type: 3}
+  flame: {fileID: 21300000, guid: a731da70ac5750a40be6d3dfe8b09922, type: 3}
+  torch: {fileID: 21300000, guid: 9fd53ad147b75224e97c9797ee1fec41, type: 3}
+  contactGlint: {fileID: 21300000, guid: 44522a1f695dd6e4cbbad8fc5888138c, type: 3}
+  housingTop: {x: 0, y: 0.5625}
+  housingFlame: {x: 0, y: -0.1875}
+  mountChain: {x: 0.21875, y: -0.1875}
+  torchFlame: {x: 0.171875, y: 0.546875}
+  chain: {fileID: 11400000, guid: 0292e6c0027880845ac48d3509d73a68, type: 2}
+  windowOpening:
+    serializedVersion: 2
+    x: 0.5
+    y: 0.5
+    width: 2
+    height: 2.5
+  grilleVertices:
+  - {x: 0.6875, y: 3, z: 0}
+  - {x: 0.75, y: 3, z: 0}
+  - {x: 0.75, y: 0.5, z: 0}
+  - {x: 0.6875, y: 0.5, z: 0}
+  - {x: 1.1875, y: 3, z: 0}
+  - {x: 1.25, y: 3, z: 0}
+  - {x: 1.25, y: 0.5, z: 0}
+  - {x: 1.1875, y: 0.5, z: 0}
+  - {x: 1.6875, y: 3, z: 0}
+  - {x: 1.75, y: 3, z: 0}
+  - {x: 1.75, y: 0.5, z: 0}
+  - {x: 1.6875, y: 0.5, z: 0}
+  - {x: 2.1875, y: 3, z: 0}
+  - {x: 2.25, y: 3, z: 0}
+  - {x: 2.25, y: 0.5, z: 0}
+  - {x: 2.1875, y: 0.5, z: 0}
+  - {x: 0.5, y: 2.4375, z: 0}
+  - {x: 2.5, y: 2.4375, z: 0}
+  - {x: 2.5, y: 2.375, z: 0}
+  - {x: 0.5, y: 2.375, z: 0}
+  - {x: 0.5, y: 1.1875, z: 0}
+  - {x: 2.5, y: 1.1875, z: 0}
+  - {x: 2.5, y: 1.125, z: 0}
+  - {x: 0.5, y: 1.125, z: 0}
+  grilleEdges: 000000000100000001000000020000000200000003000000030000000000000004000000050000000500000006000000060000000700000007000000040000000800000009000000090000000a0000000a0000000b0000000b000000080000000c0000000d0000000d0000000e0000000e0000000f0000000f0000000c00000010000000110000001100000012000000120000001300000013000000100000001400000015000000150000001600000016000000170000001700000014000000i

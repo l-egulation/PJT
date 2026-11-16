@@ -1,0 +1,14 @@
+Blue airborne orb release — direction supplied before the user's Aether return.
+Keep the reference character, proportions, blue clothing and hovering position.
+The already extended forward hand supports an invisible orb. The OTHER hand,
+initially cupped near the waist, draws up beside the ribs and strikes forward
+with an open palm to knock the invisible orb to the left. The support hand
+yields away from its path. Brief follow-through, then recover to the initial pose.
+Body motion only: no baked orb, projectile, glow, text or camera movement.
+Plain white background; keep the whole character inside the canvas.
+
+Return processing: preserve the supplied GIF and sheet byte-for-byte. Extract
+6 by 6 cells in row-major order, remove the white matte, use one shared affine
+transform and a 24-color palette sampled from the returned neutral Blue.
+This direction records intent; the externally submitted Aether prompt/settings
+were not included in the upload. The composited ink orb is a separate asset.

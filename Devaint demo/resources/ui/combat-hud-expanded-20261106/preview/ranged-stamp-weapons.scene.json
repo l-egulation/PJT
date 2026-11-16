@@ -1,0 +1,1083 @@
+{
+  "width": 1670,
+  "height": 942,
+  "layers": [
+    {
+      "type": "sprite",
+      "sprite": "health-plaque",
+      "rect": [
+        96,
+        61,
+        428,
+        82
+      ],
+      "contain": false,
+      "id": "health.sprite:96,61",
+      "group": "health"
+    },
+    {
+      "type": "sprite",
+      "sprite": "health-fill-red",
+      "rect": [
+        165,
+        112,
+        330,
+        18
+      ],
+      "contain": false,
+      "fill": 0.82,
+      "id": "health.sprite:165,112",
+      "group": "health"
+    },
+    {
+      "type": "sprite",
+      "sprite": "hero-portrait",
+      "rect": [
+        29,
+        30,
+        147,
+        118
+      ],
+      "contain": true,
+      "id": "health.sprite:29,30",
+      "group": "health"
+    },
+    {
+      "type": "text",
+      "text": "82",
+      "x": 192,
+      "y": 59,
+      "size": 42,
+      "color": "#fff0da",
+      "center": false,
+      "id": "health.text:192,59",
+      "group": "health"
+    },
+    {
+      "type": "text",
+      "text": "/ 100",
+      "x": 263,
+      "y": 73,
+      "size": 28,
+      "color": "#fff0da",
+      "center": false,
+      "id": "health.text:263,73",
+      "group": "health"
+    },
+    {
+      "type": "sprite",
+      "sprite": "gold-coin",
+      "rect": [
+        1255,
+        28,
+        47,
+        47
+      ],
+      "contain": true,
+      "id": "currencies.sprite:1255,28",
+      "group": "currencies"
+    },
+    {
+      "type": "text",
+      "text": "240",
+      "x": 1308,
+      "y": 34,
+      "size": 34,
+      "color": "#1b1c18",
+      "center": false,
+      "id": "currencies.text:1308,34",
+      "group": "currencies"
+    },
+    {
+      "type": "sprite",
+      "sprite": "pigment-currency",
+      "rect": [
+        1390,
+        28,
+        47,
+        47
+      ],
+      "contain": true,
+      "id": "currencies.sprite:1390,28",
+      "group": "currencies"
+    },
+    {
+      "type": "text",
+      "text": "18",
+      "x": 1446,
+      "y": 34,
+      "size": 34,
+      "color": "#1b1c18",
+      "center": false,
+      "id": "currencies.text:1446,34",
+      "group": "currencies"
+    },
+    {
+      "type": "sprite",
+      "sprite": "button-frame",
+      "rect": [
+        1510,
+        24,
+        61,
+        61
+      ],
+      "contain": true,
+      "id": "inventory.sprite:1510,24",
+      "group": "inventory"
+    },
+    {
+      "type": "sprite",
+      "sprite": "bag-glyph",
+      "rect": [
+        1528,
+        39,
+        26,
+        31
+      ],
+      "contain": true,
+      "id": "inventory.sprite:1528,39",
+      "group": "inventory"
+    },
+    {
+      "type": "sprite",
+      "sprite": "minimap-frame-compact",
+      "rect": [
+        1251,
+        98,
+        394,
+        253.01597444089458
+      ],
+      "contain": false,
+      "role": "minimap",
+      "id": "minimap.sprite:1251,98",
+      "group": "minimap"
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          1276,
+          298
+        ],
+        [
+          1301,
+          298
+        ],
+        [
+          1301,
+          231
+        ],
+        [
+          1369,
+          231
+        ],
+        [
+          1369,
+          165
+        ],
+        [
+          1467,
+          165
+        ],
+        [
+          1467,
+          203
+        ],
+        [
+          1558,
+          203
+        ],
+        [
+          1558,
+          298
+        ],
+        [
+          1276,
+          298
+        ]
+      ],
+      "color": "#fff0da",
+      "width": 3,
+      "role": "live-map-example",
+      "id": "minimap.path:route",
+      "group": "minimap"
+    },
+    {
+      "type": "rect",
+      "rect": [
+        1405,
+        214,
+        18,
+        18
+      ],
+      "color": "#00d4d0",
+      "id": "minimap.rect:1405,214",
+      "group": "minimap"
+    },
+    {
+      "type": "sprite",
+      "sprite": "button-frame",
+      "rect": [
+        1583,
+        24,
+        61,
+        61
+      ],
+      "contain": true,
+      "id": "pause.sprite:1583,24",
+      "group": "pause"
+    },
+    {
+      "type": "sprite",
+      "sprite": "pause-glyph",
+      "rect": [
+        1602,
+        41,
+        23,
+        29
+      ],
+      "contain": true,
+      "id": "pause.sprite:1602,41",
+      "group": "pause"
+    },
+    {
+      "type": "sprite",
+      "sprite": "weapon-disc",
+      "rect": [
+        52,
+        774,
+        142,
+        142
+      ],
+      "contain": true,
+      "id": "weapon-0.sprite:52,774",
+      "group": "weapon-0"
+    },
+    {
+      "type": "sprite",
+      "sprite": "weapon-launcher-shotgun",
+      "rect": [
+        81,
+        802,
+        84,
+        84
+      ],
+      "contain": true,
+      "role": "weapon",
+      "weaponId": "launcher",
+      "id": "weapon-0.sprite:81,802",
+      "group": "weapon-0"
+    },
+    {
+      "type": "sprite",
+      "sprite": "ring-selected",
+      "rect": [
+        59,
+        781,
+        128,
+        128
+      ],
+      "contain": true,
+      "id": "weapon-0.sprite:59,781",
+      "group": "weapon-0"
+    },
+    {
+      "type": "sprite",
+      "sprite": "weapon-disc",
+      "rect": [
+        184,
+        808,
+        82,
+        82
+      ],
+      "contain": true,
+      "id": "weapon-0.sprite:184,808",
+      "group": "weapon-0"
+    },
+    {
+      "type": "sprite",
+      "sprite": "action-ball",
+      "rect": [
+        200,
+        824,
+        50,
+        50
+      ],
+      "contain": true,
+      "id": "weapon-0.sprite:200,824",
+      "group": "weapon-0"
+    },
+    {
+      "type": "sprite",
+      "sprite": "weapon-disc",
+      "rect": [
+        266,
+        808,
+        82,
+        82
+      ],
+      "contain": true,
+      "id": "weapon-0.sprite:266,808",
+      "group": "weapon-0"
+    },
+    {
+      "type": "sprite",
+      "sprite": "launcher-shotgun",
+      "rect": [
+        279,
+        821,
+        56,
+        56
+      ],
+      "contain": true,
+      "role": "skill",
+      "status": "ready",
+      "skillId": "launcher_shotgun",
+      "id": "weapon-0.sprite:279,821",
+      "group": "weapon-0"
+    },
+    {
+      "type": "sprite",
+      "sprite": "button-frame",
+      "rect": [
+        207,
+        786,
+        40,
+        33
+      ],
+      "contain": false,
+      "id": "weapon-0.sprite:207,786",
+      "group": "weapon-0"
+    },
+    {
+      "type": "text",
+      "text": "Q",
+      "x": 227,
+      "y": 788,
+      "size": 23,
+      "color": "#1b1c18",
+      "center": true,
+      "id": "weapon-0.text:227,788",
+      "group": "weapon-0"
+    },
+    {
+      "type": "sprite",
+      "sprite": "button-frame",
+      "rect": [
+        289,
+        786,
+        40,
+        33
+      ],
+      "contain": false,
+      "id": "weapon-0.sprite:289,786",
+      "group": "weapon-0"
+    },
+    {
+      "type": "text",
+      "text": "E",
+      "x": 309,
+      "y": 788,
+      "size": 23,
+      "color": "#1b1c18",
+      "center": true,
+      "id": "weapon-0.text:309,788",
+      "group": "weapon-0"
+    },
+    {
+      "type": "sprite",
+      "sprite": "palette-tray-5",
+      "rect": [
+        124,
+        885,
+        255,
+        43
+      ],
+      "contain": false,
+      "id": "weapon-0.sprite:124,885",
+      "group": "weapon-0"
+    },
+    {
+      "type": "sprite",
+      "sprite": "drop-colorless",
+      "rect": [
+        143,
+        889,
+        29,
+        35
+      ],
+      "contain": true,
+      "role": "ink",
+      "partId": null,
+      "color": "colorless",
+      "editorKey": "ink-0",
+      "id": "weapon-0.ink-0",
+      "group": "weapon-0"
+    },
+    {
+      "type": "sprite",
+      "sprite": "drop-yellow",
+      "rect": [
+        185,
+        889,
+        29,
+        35
+      ],
+      "contain": true,
+      "role": "ink",
+      "partId": null,
+      "color": "yellow",
+      "editorKey": "ink-1",
+      "id": "weapon-0.ink-1",
+      "group": "weapon-0"
+    },
+    {
+      "type": "sprite",
+      "sprite": "drop-green",
+      "rect": [
+        227,
+        889,
+        29,
+        35
+      ],
+      "contain": true,
+      "role": "ink",
+      "partId": null,
+      "color": "green",
+      "editorKey": "ink-2",
+      "id": "weapon-0.ink-2",
+      "group": "weapon-0"
+    },
+    {
+      "type": "sprite",
+      "sprite": "drop-blue",
+      "rect": [
+        269,
+        889,
+        29,
+        35
+      ],
+      "contain": true,
+      "role": "ink",
+      "partId": null,
+      "color": "blue",
+      "editorKey": "ink-3",
+      "id": "weapon-0.ink-3",
+      "group": "weapon-0"
+    },
+    {
+      "type": "sprite",
+      "sprite": "drop-purple",
+      "rect": [
+        311,
+        889,
+        29,
+        35
+      ],
+      "contain": true,
+      "role": "ink",
+      "partId": null,
+      "color": "purple",
+      "editorKey": "ink-4",
+      "id": "weapon-0.ink-4",
+      "group": "weapon-0"
+    },
+    {
+      "type": "sprite",
+      "sprite": "run-card",
+      "rect": [
+        516,
+        332,
+        313,
+        201
+      ],
+      "contain": false,
+      "id": "reveal-0.sprite:516,332",
+      "group": "reveal-0"
+    },
+    {
+      "type": "sprite",
+      "sprite": "weapon-disc",
+      "rect": [
+        628,
+        290,
+        90,
+        90
+      ],
+      "contain": true,
+      "id": "reveal-0.sprite:628,290",
+      "group": "reveal-0"
+    },
+    {
+      "type": "sprite",
+      "sprite": "weapon-launcher-shotgun",
+      "rect": [
+        647,
+        309,
+        52,
+        52
+      ],
+      "contain": true,
+      "id": "reveal-0.sprite:647,309",
+      "group": "reveal-0"
+    },
+    {
+      "type": "text",
+      "text": "샷건",
+      "x": 672.5,
+      "y": 376,
+      "size": 34,
+      "color": "#1b1c18",
+      "center": true,
+      "id": "reveal-0.text:672.5,376",
+      "group": "reveal-0"
+    },
+    {
+      "type": "sprite",
+      "sprite": "divider",
+      "rect": [
+        558,
+        423,
+        232,
+        4
+      ],
+      "contain": false,
+      "id": "reveal-0.sprite:558,423",
+      "group": "reveal-0"
+    },
+    {
+      "type": "sprite",
+      "sprite": "drop-colorless",
+      "rect": [
+        556.5,
+        444,
+        36,
+        47.02040816326531
+      ],
+      "contain": true,
+      "role": "reveal-color",
+      "editorKey": "ink-0",
+      "id": "reveal-0.ink-0",
+      "group": "reveal-0"
+    },
+    {
+      "type": "sprite",
+      "sprite": "drop-yellow",
+      "rect": [
+        605.5,
+        444,
+        36,
+        47.02040816326531
+      ],
+      "contain": true,
+      "role": "reveal-color",
+      "editorKey": "ink-1",
+      "id": "reveal-0.ink-1",
+      "group": "reveal-0"
+    },
+    {
+      "type": "sprite",
+      "sprite": "drop-green",
+      "rect": [
+        654.5,
+        444,
+        36,
+        47.02040816326531
+      ],
+      "contain": true,
+      "role": "reveal-color",
+      "editorKey": "ink-2",
+      "id": "reveal-0.ink-2",
+      "group": "reveal-0"
+    },
+    {
+      "type": "sprite",
+      "sprite": "drop-blue",
+      "rect": [
+        703.5,
+        444,
+        36,
+        47.02040816326531
+      ],
+      "contain": true,
+      "role": "reveal-color",
+      "editorKey": "ink-3",
+      "id": "reveal-0.ink-3",
+      "group": "reveal-0"
+    },
+    {
+      "type": "sprite",
+      "sprite": "drop-purple",
+      "rect": [
+        752.5,
+        444,
+        36,
+        47.02040816326531
+      ],
+      "contain": true,
+      "role": "reveal-color",
+      "editorKey": "ink-4",
+      "id": "reveal-0.ink-4",
+      "group": "reveal-0"
+    },
+    {
+      "type": "sprite",
+      "sprite": "corner-accent",
+      "rect": [
+        526,
+        491,
+        31,
+        31
+      ],
+      "contain": true,
+      "flip": false,
+      "id": "reveal-0.sprite:526,491",
+      "group": "reveal-0"
+    },
+    {
+      "type": "sprite",
+      "sprite": "weapon-disc",
+      "rect": [
+        422,
+        774,
+        142,
+        142
+      ],
+      "contain": true,
+      "id": "weapon-1.sprite:422,774",
+      "group": "weapon-1"
+    },
+    {
+      "type": "sprite",
+      "sprite": "weapon-launcher-grenade",
+      "rect": [
+        451,
+        802,
+        84,
+        84
+      ],
+      "contain": true,
+      "role": "weapon",
+      "weaponId": "launcher",
+      "id": "weapon-1.sprite:451,802",
+      "group": "weapon-1"
+    },
+    {
+      "type": "sprite",
+      "sprite": "ring-idle",
+      "rect": [
+        429,
+        781,
+        128,
+        128
+      ],
+      "contain": true,
+      "id": "weapon-1.sprite:429,781",
+      "group": "weapon-1"
+    },
+    {
+      "type": "sprite",
+      "sprite": "weapon-disc",
+      "rect": [
+        554,
+        808,
+        82,
+        82
+      ],
+      "contain": true,
+      "id": "weapon-1.sprite:554,808",
+      "group": "weapon-1"
+    },
+    {
+      "type": "sprite",
+      "sprite": "action-ball",
+      "rect": [
+        570,
+        824,
+        50,
+        50
+      ],
+      "contain": true,
+      "id": "weapon-1.sprite:570,824",
+      "group": "weapon-1"
+    },
+    {
+      "type": "sprite",
+      "sprite": "weapon-disc",
+      "rect": [
+        636,
+        808,
+        82,
+        82
+      ],
+      "contain": true,
+      "id": "weapon-1.sprite:636,808",
+      "group": "weapon-1"
+    },
+    {
+      "type": "sprite",
+      "sprite": "launcher-grenade",
+      "rect": [
+        649,
+        821,
+        56,
+        56
+      ],
+      "contain": true,
+      "role": "skill",
+      "status": "ready",
+      "skillId": "launcher_grenade",
+      "id": "weapon-1.sprite:649,821",
+      "group": "weapon-1"
+    },
+    {
+      "type": "sprite",
+      "sprite": "button-frame",
+      "rect": [
+        577,
+        786,
+        40,
+        33
+      ],
+      "contain": false,
+      "id": "weapon-1.sprite:577,786",
+      "group": "weapon-1"
+    },
+    {
+      "type": "text",
+      "text": "W",
+      "x": 597,
+      "y": 788,
+      "size": 23,
+      "color": "#1b1c18",
+      "center": true,
+      "id": "weapon-1.text:597,788",
+      "group": "weapon-1"
+    },
+    {
+      "type": "sprite",
+      "sprite": "button-frame",
+      "rect": [
+        659,
+        786,
+        40,
+        33
+      ],
+      "contain": false,
+      "id": "weapon-1.sprite:659,786",
+      "group": "weapon-1"
+    },
+    {
+      "type": "text",
+      "text": "R",
+      "x": 679,
+      "y": 788,
+      "size": 23,
+      "color": "#1b1c18",
+      "center": true,
+      "id": "weapon-1.text:679,788",
+      "group": "weapon-1"
+    },
+    {
+      "type": "sprite",
+      "sprite": "palette-tray-5",
+      "rect": [
+        494,
+        885,
+        255,
+        43
+      ],
+      "contain": false,
+      "id": "weapon-1.sprite:494,885",
+      "group": "weapon-1"
+    },
+    {
+      "type": "sprite",
+      "sprite": "drop-colorless",
+      "rect": [
+        513,
+        889,
+        29,
+        35
+      ],
+      "contain": true,
+      "role": "ink",
+      "partId": null,
+      "color": "colorless",
+      "editorKey": "ink-0",
+      "id": "weapon-1.ink-0",
+      "group": "weapon-1"
+    },
+    {
+      "type": "sprite",
+      "sprite": "drop-blue",
+      "rect": [
+        555,
+        889,
+        29,
+        35
+      ],
+      "contain": true,
+      "role": "ink",
+      "partId": null,
+      "color": "blue",
+      "editorKey": "ink-1",
+      "id": "weapon-1.ink-1",
+      "group": "weapon-1"
+    },
+    {
+      "type": "sprite",
+      "sprite": "drop-purple",
+      "rect": [
+        597,
+        889,
+        29,
+        35
+      ],
+      "contain": true,
+      "role": "ink",
+      "partId": null,
+      "color": "purple",
+      "editorKey": "ink-2",
+      "id": "weapon-1.ink-2",
+      "group": "weapon-1"
+    },
+    {
+      "type": "sprite",
+      "sprite": "drop-red",
+      "rect": [
+        639,
+        889,
+        29,
+        35
+      ],
+      "contain": true,
+      "role": "ink",
+      "partId": null,
+      "color": "red",
+      "editorKey": "ink-3",
+      "id": "weapon-1.ink-3",
+      "group": "weapon-1"
+    },
+    {
+      "type": "sprite",
+      "sprite": "drop-yellow",
+      "rect": [
+        681,
+        889,
+        29,
+        35
+      ],
+      "contain": true,
+      "role": "ink",
+      "partId": null,
+      "color": "yellow",
+      "editorKey": "ink-4",
+      "id": "weapon-1.ink-4",
+      "group": "weapon-1"
+    },
+    {
+      "type": "sprite",
+      "sprite": "run-card",
+      "rect": [
+        841,
+        332,
+        313,
+        201
+      ],
+      "contain": false,
+      "id": "reveal-1.sprite:841,332",
+      "group": "reveal-1"
+    },
+    {
+      "type": "sprite",
+      "sprite": "weapon-disc",
+      "rect": [
+        953,
+        290,
+        90,
+        90
+      ],
+      "contain": true,
+      "id": "reveal-1.sprite:953,290",
+      "group": "reveal-1"
+    },
+    {
+      "type": "sprite",
+      "sprite": "weapon-launcher-grenade",
+      "rect": [
+        972,
+        309,
+        52,
+        52
+      ],
+      "contain": true,
+      "id": "reveal-1.sprite:972,309",
+      "group": "reveal-1"
+    },
+    {
+      "type": "text",
+      "text": "유탄포",
+      "x": 997.5,
+      "y": 376,
+      "size": 34,
+      "color": "#1b1c18",
+      "center": true,
+      "id": "reveal-1.text:997.5,376",
+      "group": "reveal-1"
+    },
+    {
+      "type": "sprite",
+      "sprite": "divider",
+      "rect": [
+        883,
+        423,
+        232,
+        4
+      ],
+      "contain": false,
+      "id": "reveal-1.sprite:883,423",
+      "group": "reveal-1"
+    },
+    {
+      "type": "sprite",
+      "sprite": "drop-colorless",
+      "rect": [
+        881.5,
+        444,
+        36,
+        47.02040816326531
+      ],
+      "contain": true,
+      "role": "reveal-color",
+      "editorKey": "ink-0",
+      "id": "reveal-1.ink-0",
+      "group": "reveal-1"
+    },
+    {
+      "type": "sprite",
+      "sprite": "drop-blue",
+      "rect": [
+        930.5,
+        444,
+        36,
+        47.02040816326531
+      ],
+      "contain": true,
+      "role": "reveal-color",
+      "editorKey": "ink-1",
+      "id": "reveal-1.ink-1",
+      "group": "reveal-1"
+    },
+    {
+      "type": "sprite",
+      "sprite": "drop-purple",
+      "rect": [
+        979.5,
+        444,
+        36,
+        47.02040816326531
+      ],
+      "contain": true,
+      "role": "reveal-color",
+      "editorKey": "ink-2",
+      "id": "reveal-1.ink-2",
+      "group": "reveal-1"
+    },
+    {
+      "type": "sprite",
+      "sprite": "drop-red",
+      "rect": [
+        1028.5,
+        444,
+        36,
+        47.02040816326531
+      ],
+      "contain": true,
+      "role": "reveal-color",
+      "editorKey": "ink-3",
+      "id": "reveal-1.ink-3",
+      "group": "reveal-1"
+    },
+    {
+      "type": "sprite",
+      "sprite": "drop-yellow",
+      "rect": [
+        1077.5,
+        444,
+        36,
+        47.02040816326531
+      ],
+      "contain": true,
+      "role": "reveal-color",
+      "editorKey": "ink-4",
+      "id": "reveal-1.ink-4",
+      "group": "reveal-1"
+    },
+    {
+      "type": "sprite",
+      "sprite": "corner-accent",
+      "rect": [
+        1112,
+        491,
+        31,
+        31
+      ],
+      "contain": true,
+      "flip": true,
+      "id": "reveal-1.sprite:1112,491",
+      "group": "reveal-1"
+    },
+    {
+      "type": "sprite",
+      "sprite": "heading-plaque",
+      "rect": [
+        691,
+        248,
+        289,
+        67
+      ],
+      "contain": false,
+      "id": "reveal-heading.sprite:691,248",
+      "group": "reveal-heading"
+    },
+    {
+      "type": "text",
+      "text": "출발 팔레트",
+      "x": 835,
+      "y": 254,
+      "size": 35,
+      "color": "#fff0da",
+      "center": true,
+      "id": "reveal-heading.text:835,254",
+      "group": "reveal-heading"
+    },
+    {
+      "type": "sprite",
+      "sprite": "chevron",
+      "rect": [
+        720,
+        271,
+        9,
+        15
+      ],
+      "contain": true,
+      "id": "reveal-heading.sprite:720,271",
+      "group": "reveal-heading"
+    },
+    {
+      "type": "sprite",
+      "sprite": "chevron",
+      "rect": [
+        940,
+        271,
+        9,
+        15
+      ],
+      "contain": true,
+      "flip": true,
+      "id": "reveal-heading.sprite:940,271",
+      "group": "reveal-heading"
+    }
+  ]
+}

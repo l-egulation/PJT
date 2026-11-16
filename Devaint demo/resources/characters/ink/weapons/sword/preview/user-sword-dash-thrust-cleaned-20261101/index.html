@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>기본검 돌진 찌르기 · 후보 2</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#161c24;color:#ebeff5;font:16px system-ui,'Malgun Gothic',sans-serif}main{max-width:1328px;margin:32px auto;padding:0 24px}h1{font-size:25px;margin:0 0 8px}p{color:#adb9c9;line-height:1.6}.panel{border:1px solid #394351;border-radius:14px;overflow:hidden;background:#242c37}canvas{display:block;width:100%;height:auto}nav{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin:20px 0}button,select{background:#303c4c;border:1px solid #52647a;color:white;padding:10px 15px;border-radius:8px;font:inherit;cursor:pointer}button:first-child{background:#176b82}label{display:flex;align-items:center;gap:8px}input[type=range]{flex:1;min-width:220px;accent-color:#35b9d4}.status{font-variant-numeric:tabular-nums;color:#7bdef0;min-width:235px}.timeline{display:flex;height:8px;border-radius:8px;overflow:hidden}.timeline span:nth-child(1){width:25%;background:#65a8c9}.timeline span:nth-child(2){width:33.333%;background:#f3bd59}.timeline span:nth-child(3){flex:1;background:#74bb9b}.legend{display:flex;justify-content:space-between;font-size:14px;color:#abb8c9;margin-top:9px}.note{font-size:14px}
+</style>
+<main><h1>기본검 돌진 찌르기 · 후보 2</h1><p>검을 뻗은 F13 자세를 유지하며 앞으로 이동합니다. 잔상은 동작 확인용 임시 표현입니다.</p>
+<div class="panel"><canvas id="stage" width="1280" height="520" aria-label="캐릭터가 6유닛 돌진하며 뒤에 잔상을 남기는 미리보기"></canvas></div>
+<nav><button id="play">일시정지</button><button id="restart">처음부터</button><label>재생 속도 <select id="speed"><option value="1">1배속</option><option value="0.5">0.5배속</option><option value="0.25">0.25배속</option></select></label><label><input id="ghosts" type="checkbox" checked>잔상</label><label><input id="loop" type="checkbox" checked>반복</label></nav>
+<nav><input id="scrub" aria-label="동작 시간" type="range" min="0" max="600" step="1" value="0"><span class="status" id="status">이미지 준비 중</span></nav>
+<div class="timeline"><span></span><span></span><span></span></div><div class="legend"><span>준비 0–0.15초</span><span>고정 자세 돌진 0.15–0.35초</span><span>복귀 0.35–0.60초</span></div>
+<p class="note">이동: 6유닛 / 0.20초 · 전체 모션: 0.60초 · 반복 간 대기: 1초<br>초반에 빠르게 치고 나간 뒤 제동하는 연출용 이동 곡선입니다. 실제 게임의 이동 데이터는 변경하지 않았습니다.<br>선택한 10장에 배경·목도리 잔색 제거와 팔레트 보정을 적용했습니다. Unity 적용 전입니다.</p></main>
+<script src="preview-data.js?v=cleaned-1"></script><script src="viewer.js"></script></html>

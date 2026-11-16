@@ -1,0 +1,40 @@
+{
+  "format": "deviant-resource-asset-v1",
+  "id": "ui.inventory-journal-concept",
+  "path": "ui/inventory-journal-concept",
+  "name": "일반 인벤토리 수첩 UI 시안",
+  "status": "concept-review",
+  "approval": "pending-user-art-review",
+  "gameIntegration": "not-integrated",
+  "sources": [
+    "user-supplied current inventory screenshot",
+    "user-supplied maintenance palette UI screenshot",
+    "imagegen CLI gpt-image-2",
+    "deterministic arrangement of generated cells into 15 bag slots"
+  ],
+  "files": [
+    "preview/inventory-journal-concept.png",
+    "source/current-inventory.png",
+    "source/generated-raw.png",
+    "source/maintenance-style-reference.png",
+    "source/prepare_grid.py",
+    "source/prompt.txt"
+  ],
+  "layout": {
+    "equipmentSlots": {
+      "form": 1,
+      "stat": 5,
+      "special": 1
+    },
+    "bagColumns": 5,
+    "bagRows": 3,
+    "ownedExample": 6,
+    "removedButtons": [
+      "버리기",
+      "파괴",
+      "장착"
+    ]
+  },
+  "preview": "preview/inventory-journal-concept.png",
+  "prompt": "source/prompt.txt"
+}

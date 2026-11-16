@@ -1,0 +1,24 @@
+{
+  "kind": "smoke-release-revision13",
+  "status": "pending; not applied",
+  "items": [
+    {
+      "id": "A07-louder",
+      "file": "smoke13-07-louder.wav",
+      "sha256": "0901e1ebe4e3ec92778e47cb1872dd04b80cf536d6a6e5a7e4f7a4c40ec872c7",
+      "duration": 0.78,
+      "source": {
+        "file": "../smoke-release-12/smoke12-07-soft-tail.wav",
+        "sha256": "b493800d1175c7dd531208b97f6b1bb659df9349dcded71381b417780e5fcacb"
+      },
+      "edit": {
+        "gain": 4.0,
+        "gainDb": 12.0412,
+        "timingUnchanged": true,
+        "fadeUnchanged": true,
+        "addedSound": false
+      },
+      "peak": 0.19482421875
+    }
+  ]
+}

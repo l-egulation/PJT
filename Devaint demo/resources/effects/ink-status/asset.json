@@ -1,0 +1,46 @@
+{
+  "format": "deviant-resource-asset-v1",
+  "id": "effects.ink-status",
+  "path": "effects/ink-status",
+  "name": "몬스터 상태이상 표시(표식·표식 터짐·속박·기절·중독)",
+  "status": "user-selected",
+  "gameIntegration": "unity-combat-ink-status-visuals",
+  "style": "게임 화풍(2스테이지 보스 다크 판타지 칠하기를 색조 유지형으로 고친 것, 사용자 확정 2026-11-06)",
+  "sources": [
+    "source/pixelfx: pixelfx(https://github.com/patch-gg/pixelfx, MIT) 도구로 새로 그린 효과 코드(자율PJ 작업 폴더 output/vfx/ink-status-v1~v12 시안 검토로 사용자 확정 2026-11-06)",
+    "preview: 실제 몬스터 대기 동작(1스테이지 빗자루 추적자·가시뿌리, 2스테이지 H3·K4)과 게임 기본 검 피격(BasicSwordHit) 그림을 내장"
+  ],
+  "sheetFormat": {
+    "sheet": "투명 PNG, 열 = 프레임, 행 = 변형(sheets.json variants)",
+    "pixelsPerUnit": 32,
+    "pivot": "셀 왼쪽 위 기준 px"
+  },
+  "runtimeManifest": "runtime/sheets.json",
+  "regenerate": "node source/tools/export_runtime.mjs <pixelfx 저장소 경로> (이 폴더 기준)",
+  "files": [
+    "README.md",
+    "asset.json",
+    "preview/ink_status_preview.html",
+    "runtime/bind-back.png",
+    "runtime/bind-front.png",
+    "runtime/mark-burst.png",
+    "runtime/mark-drop.png",
+    "runtime/mark-pop.png",
+    "runtime/poison-skull.png",
+    "runtime/sheets.json",
+    "runtime/stun-stars.png",
+    "source/pixelfx/_bind.js",
+    "source/pixelfx/_ink.js",
+    "source/pixelfx/_lib.js",
+    "source/pixelfx/_poison.js",
+    "source/pixelfx/_wrap.js",
+    "source/pixelfx/burst-wide.js",
+    "source/pixelfx/mark-drop.js",
+    "source/pixelfx/mark-pop.js",
+    "source/pixelfx/poison-skull-p.js",
+    "source/pixelfx/stun-stars.js",
+    "source/pixelfx/wrap-c.js",
+    "source/tools/export_runtime.mjs",
+    "source/tools/gamestyle.mjs"
+  ]
+}

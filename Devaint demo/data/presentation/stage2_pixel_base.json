@@ -1,0 +1,215 @@
+{
+  "schema": "stage2-pixel-base-step1-v1",
+  "status": "static-base-review-no-new-animation",
+  "canvas": [
+    384,
+    224
+  ],
+  "baseline": 192,
+  "pixelGrid": 1,
+  "alpha": [
+    0,
+    255
+  ],
+  "exportScales": [
+    4,
+    8
+  ],
+  "paletteMethod": "Explicit per-character flat palette, nearest RGB without dithering, followed by interior majority and small color-island cleanup. Alpha silhouettes remain unchanged.",
+  "sizeSource": "tools/stage2_monster_concepts/user-size-reference.json",
+  "futureIdleMethod": "Duplicate this fixed indexed-color baseline, move only selected face/shoulder/cloth clusters by integer pixels. Pin ground contacts and rigid equipment geometry; no imagegen frame redrawing, no whole-sprite scaling, no interpolated new colors. Motion is not produced in step1.",
+  "assets": [
+    {
+      "id": "K4",
+      "name": "등짐분사수",
+      "role": "근거리·접근 분사",
+      "height": 112,
+      "newPose": true,
+      "palette": [
+        "25252d",
+        "4c5056",
+        "75858e",
+        "b85f55",
+        "d07b6b",
+        "874e4d",
+        "f4dfb7",
+        "bba887",
+        "c4b9ab",
+        "8d8883",
+        "eaaa16"
+      ],
+      "note": "얼굴·가슴을 앞쪽으로 조금 돌린 사선 자세. 단일 등통·노즐 유지.",
+      "idlePlan": "얼굴과 양어깨만 최대1px 호흡. 발·등통·끈·손·호스·노즐은 픽셀 고정. 첫 개체 검토 시안은 data/presentation/stage2_k4_pixel_idle.json을 따른다."
+    },
+    {
+      "id": "B3",
+      "name": "쐐기보행기",
+      "role": "큰 근거리·전진 압박",
+      "height": 100,
+      "newPose": false,
+      "palette": [
+        "292630",
+        "54393f",
+        "f0dabb",
+        "d2b992",
+        "b09b7b",
+        "d47c51",
+        "a95b40",
+        "758d89",
+        "536e70",
+        "415359"
+      ],
+      "note": "기존 정지 자세와 다섯 지면 접점 유지.",
+      "idlePlan": "다섯 접점과 쐐기 형태 고정. 관절 가까운 내부 명암 일부만 1px 이동; 찍기 전조와 구분."
+    },
+    {
+      "id": "M3",
+      "name": "먹침필경사",
+      "role": "근거리·긴 찌르기",
+      "height": 59,
+      "newPose": false,
+      "palette": [
+        "29252f",
+        "503444",
+        "715266",
+        "c095ac",
+        "a37c91",
+        "815d74",
+        "f3dfbc",
+        "c3ab8d",
+        "b58b46",
+        "b7a59c"
+      ],
+      "note": "198×59px 정지 원본. 긴 침 길이와 다리 실루엣 그대로 유지.",
+      "idlePlan": "긴 침 끝·발 접점 고정. 얼굴 인접 몸통/등판의 작은 1px 호흡; 찌르기나 발사 없음."
+    },
+    {
+      "id": "H3",
+      "name": "늘어진수의",
+      "role": "원거리·잉크 공 투척",
+      "height": 151,
+      "newPose": false,
+      "palette": [
+        "29252f",
+        "f6e5c7",
+        "d9c6ab",
+        "b4a991",
+        "aa7c8e",
+        "80586e",
+        "71828b",
+        "b88a3c",
+        "d8ac61",
+        "806236"
+      ],
+      "note": "기존 수의·가면·손 자세 유지. 지면 기준은 발이 아닌 옷 끝.",
+      "idlePlan": "가면과 큰 실루엣을 유지하며 손 끝/아래 주름 일부를 1px 늦게 움직임. 몸 전체 이동 대신 국소 변화."
+    },
+    {
+      "id": "R-selected",
+      "name": "신호투척수",
+      "role": "원거리·물체 투척",
+      "height": 106,
+      "newPose": false,
+      "palette": [
+        "25242b",
+        "f5e2c2",
+        "c4b499",
+        "b4a797",
+        "8c8179",
+        "e88a3f",
+        "bd632b",
+        "974f2e",
+        "8b748e",
+        "614c69",
+        "574338",
+        "d6a650",
+        "f4cd77",
+        "eaaa16"
+      ],
+      "note": "사용자154px는 머리 위 물건 포함. 물건을 내린 기존 몸 크기106px를 유지.",
+      "idlePlan": "발·손에 든 물건 형태 고정. 얼굴·어깨 1px, 앞치마 아래 일부는 한 박자 늦게 따라옴."
+    },
+    {
+      "id": "A3",
+      "name": "편측거구",
+      "role": "엘리트",
+      "height": 155,
+      "newPose": false,
+      "palette": [
+        "292630",
+        "ddbd79",
+        "bd9958",
+        "8e7449",
+        "93adc1",
+        "69869e",
+        "486379",
+        "a4b2a1",
+        "7e938b",
+        "536c6c",
+        "f1dfbe"
+      ],
+      "note": "기존 비대칭 팔·몸통·발 자세와 크기를 유지.",
+      "idlePlan": "발과 주먹 최하단 고정. 가슴·작은 얼굴/어깨를 느린 1px 호흡으로 움직임; 팔 크기 변형 없음."
+    },
+    {
+      "id": "I4-rose",
+      "name": "남매·자주색 전방",
+      "role": "보스·석궁 견제",
+      "height": 102,
+      "newPose": true,
+      "palette": [
+        "29262d",
+        "c67d82",
+        "9e5d69",
+        "70424f",
+        "f4dfba",
+        "c7ad88",
+        "8d765b",
+        "6b4b36",
+        "483930",
+        "eaaa16"
+      ],
+      "note": "사선 기본자세·석궁 낮게 휴대.102px는 남매 분리 작업값으로 별도 사용자 확정 전.",
+      "idlePlan": "발·석궁 길이/각도 고정. 얼굴과 양어깨 1px 호흡, 옷 끝 일부 후행."
+    },
+    {
+      "id": "I4-blue",
+      "name": "남매·푸른색 후방",
+      "role": "보스·원거리 잉크술",
+      "height": 127,
+      "newPose": true,
+      "palette": [
+        "29262f",
+        "638eaf",
+        "416482",
+        "f4dfba",
+        "c7ad88",
+        "8d765b",
+        "6b4b36",
+        "483930",
+        "9c8ba8",
+        "65586e",
+        "eaaa16"
+      ],
+      "note": "사선 기본자세·작은 잉크 구체.127px는 남매 분리 작업값으로 별도 사용자 확정 전.",
+      "idlePlan": "발·손바닥 기준 고정. 얼굴/가슴 1px 호흡, 작은 구체는 제한된 픽셀만 변화. 충전/발사 전조 없음."
+    }
+  ],
+  "references": [
+    {
+      "title": "Skul 제작 사례 / Unity·SouthPAW",
+      "url": "https://unity.com/resources/skul-the-hero-slayer-case-study",
+      "application": "자산 해상도·묘사 밀도 통일과 실제 화면 비교. 스컬의 대기 프레임별 변위 수치를 주장하는 자료는 아님."
+    },
+    {
+      "title": "SLYNYRD Pixelblog8 / Intro to Animation",
+      "url": "https://www.slynyrd.com/blog/2018/8/19/pixelblog-8-intro-to-animation",
+      "application": "제한된 색과 명확한 픽셀 덩어리, 대기 루프의 일관성. 이번 단계는 정지 기본본만 제작."
+    },
+    {
+      "title": "Sandro Maglione / Character animations guide",
+      "url": "https://www.sandromaglione.com/articles/pixel-art-character-animations-guide",
+      "application": "기존 그림에서 1px 변화와 후행 요소를 구분하는 대기 예시. 우리 캐릭터별 부위·시간은 다음 단계에서 검토."
+    }
+  ]
+}

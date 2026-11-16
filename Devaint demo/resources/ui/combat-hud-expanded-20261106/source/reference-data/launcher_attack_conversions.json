@@ -1,0 +1,103 @@
+{
+  "status": "user_approved_three_batches_all_A",
+  "input": "S_new_press_per_attack_no_hold_repeat",
+  "D_skill": null,
+  "damage_scaling": "basic_bonus_snapshot_on_release",
+  "attack_speed_scaling": "windup_recovery_only_not_ballistics_or_recoil",
+  "inactive_stats": [
+    "special_damage",
+    "special_cooldown_reduction"
+  ],
+  "ground_input_speed": 0,
+  "air_input_speed": 5,
+  "vertical": "normal_gravity",
+  "basic_reference": "ranged_basic_design.json#launcher",
+  "laser": {
+    "name": "레이저",
+    "damage": 12,
+    "windup": 0.15,
+    "recovery": 0.45,
+    "duration": 0.6,
+    "ranged": {
+      "type": "laser",
+      "distance": 8,
+      "thickness": 0.25,
+      "radius": 0.125,
+      "spawnHeight": 1,
+      "spawnGap": 0.05
+    },
+    "enemy_policy": "all_once_on_release",
+    "terrain_policy": "solid_blocks_ignore_one_way"
+  },
+  "shotgun": {
+    "name": "샷건",
+    "damage": 4,
+    "windup": 0.15,
+    "recovery": 0.65,
+    "duration": 0.8,
+    "ranged": {
+      "type": "shotgun",
+      "distance": 6,
+      "speed": 20,
+      "radius": 0.1,
+      "spawnHeight": 1,
+      "spawnGap": 0.05,
+      "angles": [
+        -20,
+        -10,
+        0,
+        10,
+        20
+      ],
+      "recoilDistance": 6,
+      "recoilDuration": 0.3117691447076827,
+      "recoilHopHeight": 1
+    },
+    "enemy_policy": "first_per_pellet_five_can_hit_same_actor",
+    "terrain_policy": "solid_blocks_ignore_one_way",
+    "recoil": "R8_air_only_backward_6_over_full_low_jump_arc_normal_gravity_wall_stop_dash_cancel_no_invulnerability",
+    "recoil_hop_height_status": "prototype_initial_value_1_unit_for_user_requested_low_hop"
+  },
+  "grenade": {
+    "name": "유탄·파편",
+    "damage": 12,
+    "windup": 0.2,
+    "recovery": 0.8,
+    "duration": 1,
+    "bomb": {
+      "angle": 30,
+      "speed": 10,
+      "gravity": 20,
+      "radius": 0.2,
+      "blastRadius": 1.2,
+      "lifetime": 5,
+      "spawnHeight": 1,
+      "spawnGap": 0.05,
+      "explodeOnExpiry": false,
+      "fragmentDamage": 4,
+      "fragmentSpeed": 6,
+      "fragmentGravity": 20,
+      "fragmentRadius": 0.1,
+      "fragmentBlastRadius": 0.6,
+      "fragmentLifetime": 0.6,
+      "fragmentSpawnOffset": 0.2,
+      "fragmentAngles": [
+        30,
+        60,
+        120,
+        150
+      ]
+    },
+    "contact": "enemy_or_solid_first_or_one_way_descending_from_above",
+    "blast_policy": "all_targets_once_per_blast_solid_wall_occlusion_no_self_damage_no_direct_bonus",
+    "same_target": "one_main_plus_up_to_four_fragment_blasts_total_28_before_bonuses",
+    "fragments": "spawn_immediately_offset_0.2_overlap_explodes_immediately_otherwise_contact_or_expiry_explodes_once",
+    "prototype_defaults_not_individually_approved": {
+      "fragment_collision_diameter": 0.2
+    }
+  },
+  "implementation_defaults_not_balance_decisions": {
+    "laser_visual_seconds": 0.1,
+    "placeholder_visuals": true
+  }
+}

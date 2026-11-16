@@ -1,0 +1,722 @@
+[
+  {
+    "id": "combo-connected",
+    "title": "평타 1→2→3타",
+    "duration": 800,
+    "hits": [
+      {
+        "time": 0.1,
+        "active": 0.06,
+        "damage": 6,
+        "shape": {
+          "kind": "box",
+          "size": [
+            2.96875,
+            0.8
+          ],
+          "right_offset": [
+            1.671875,
+            1.0
+          ],
+          "left_offset": [
+            -1.671875,
+            1.0
+          ],
+          "reach_from_body_front": 2.5,
+          "bottom": 0.6
+        }
+      },
+      {
+        "time": 0.32,
+        "active": 0.06,
+        "damage": 6,
+        "shape": {
+          "kind": "box",
+          "size": [
+            2.96875,
+            0.8
+          ],
+          "right_offset": [
+            1.671875,
+            1.0
+          ],
+          "left_offset": [
+            -1.671875,
+            1.0
+          ],
+          "reach_from_body_front": 2.5,
+          "bottom": 0.6
+        }
+      },
+      {
+        "time": 0.56,
+        "active": 0.06,
+        "damage": 10,
+        "shape": {
+          "kind": "box",
+          "size": [
+            2.96875,
+            0.8
+          ],
+          "right_offset": [
+            1.671875,
+            1.0
+          ],
+          "left_offset": [
+            -1.671875,
+            1.0
+          ],
+          "reach_from_body_front": 2.5,
+          "bottom": 0.6
+        }
+      }
+    ],
+    "frames": [
+      {
+        "key": "old-F001",
+        "ms": 50
+      },
+      {
+        "key": "old-F015",
+        "ms": 30
+      },
+      {
+        "key": "old-F016",
+        "ms": 20
+      },
+      {
+        "key": "old-F017",
+        "ms": 50
+      },
+      {
+        "key": "old-F022",
+        "ms": 30
+      },
+      {
+        "key": "old-F024",
+        "ms": 40
+      },
+      {
+        "key": "old-F025",
+        "ms": 40
+      },
+      {
+        "key": "old-F032",
+        "ms": 30
+      },
+      {
+        "key": "old-F033",
+        "ms": 30
+      },
+      {
+        "key": "old-F034",
+        "ms": 40
+      },
+      {
+        "key": "old-F038",
+        "ms": 40
+      },
+      {
+        "key": "old-F040",
+        "ms": 40
+      },
+      {
+        "key": "old-F051",
+        "ms": 25
+      },
+      {
+        "key": "old-F054",
+        "ms": 30
+      },
+      {
+        "key": "old-F056",
+        "ms": 30
+      },
+      {
+        "key": "old-F058",
+        "ms": 35
+      },
+      {
+        "key": "old-F068",
+        "ms": 60
+      },
+      {
+        "key": "old-F070",
+        "ms": 40
+      },
+      {
+        "key": "old-F081",
+        "ms": 70
+      },
+      {
+        "key": "old-F085",
+        "ms": 70
+      }
+    ],
+    "kind": "basic",
+    "folder": "three/frames/",
+    "ppu": 128,
+    "pivot": [
+      384,
+      604
+    ],
+    "end": 800,
+    "cd": 0
+  },
+  {
+    "id": "charge-gather",
+    "title": "모아찌르기",
+    "duration": 1130,
+    "hits": [
+      {
+        "time": 0.2,
+        "damage": 25,
+        "shape": {
+          "kind": "box",
+          "size": [
+            3.46875,
+            0.8
+          ],
+          "right_offset": [
+            1.921875,
+            1.0
+          ],
+          "left_offset": [
+            -1.921875,
+            1.0
+          ],
+          "reach_from_body_front": 3,
+          "bottom": 0.6
+        },
+        "active": 0.08,
+        "control": {},
+        "anchor": "actor",
+        "targets": "nearest"
+      }
+    ],
+    "frames": [
+      {
+        "key": "new-F001",
+        "ms": 50
+      },
+      {
+        "key": "new-F026",
+        "ms": 60
+      },
+      {
+        "key": "new-F028",
+        "ms": 65
+      },
+      {
+        "key": "new-F030",
+        "ms": 65
+      },
+      {
+        "key": "new-F034",
+        "ms": 60
+      },
+      {
+        "key": "new-F045",
+        "ms": 60
+      },
+      {
+        "key": "new-F054",
+        "ms": 395
+      },
+      {
+        "key": "new-F055",
+        "ms": 20
+      },
+      {
+        "key": "new-F056",
+        "ms": 15
+      },
+      {
+        "key": "new-F057",
+        "ms": 10
+      },
+      {
+        "key": "new-F058",
+        "ms": 30
+      },
+      {
+        "key": "new-F060",
+        "ms": 70
+      },
+      {
+        "key": "new-F068",
+        "ms": 50
+      },
+      {
+        "key": "new-F072",
+        "ms": 45
+      },
+      {
+        "key": "new-F075",
+        "ms": 45
+      },
+      {
+        "key": "new-F080",
+        "ms": 45
+      },
+      {
+        "key": "new-F085",
+        "ms": 45
+      }
+    ],
+    "kind": "skill",
+    "folder": "three/frames/",
+    "ppu": 128,
+    "pivot": [
+      384,
+      604
+    ],
+    "end": 530.0,
+    "cd": 6
+  },
+  {
+    "id": "rapier_range",
+    "title": "장침 · 복귀 연결·허리띠 제거",
+    "duration": 700,
+    "hits": [
+      {
+        "time": 0.3,
+        "damage": 45,
+        "shape": {
+          "kind": "box",
+          "size": [
+            4.46875,
+            1
+          ],
+          "right_offset": [
+            2.421875,
+            1.0
+          ],
+          "left_offset": [
+            -2.421875,
+            1.0
+          ],
+          "reach_from_body_front": 4,
+          "bottom": 0.5
+        },
+        "active": 0.08,
+        "control": {},
+        "anchor": "actor",
+        "targets": "all"
+      }
+    ],
+    "frames": [
+      {
+        "key": "range-F01",
+        "ms": 50
+      },
+      {
+        "key": "range-F04",
+        "ms": 60
+      },
+      {
+        "key": "range-F05",
+        "ms": 60
+      },
+      {
+        "key": "range-F06",
+        "ms": 60
+      },
+      {
+        "key": "range-F07",
+        "ms": 40
+      },
+      {
+        "key": "range-F08",
+        "ms": 30
+      },
+      {
+        "key": "range-F09",
+        "ms": 40
+      },
+      {
+        "key": "range-F11",
+        "ms": 60
+      },
+      {
+        "key": "range-F14",
+        "ms": 60
+      },
+      {
+        "key": "range-F16",
+        "ms": 40
+      },
+      {
+        "key": "range-F18",
+        "ms": 50
+      },
+      {
+        "key": "range-F21",
+        "ms": 50
+      },
+      {
+        "key": "range-F25",
+        "ms": 20
+      },
+      {
+        "key": "range-F31",
+        "ms": 20
+      },
+      {
+        "key": "range-F03",
+        "ms": 20
+      },
+      {
+        "key": "range-F02",
+        "ms": 20
+      },
+      {
+        "key": "range-F01",
+        "ms": 20
+      }
+    ],
+    "kind": "skill",
+    "folder": "three/frames/",
+    "ppu": 128,
+    "pivot": [
+      384,
+      604
+    ],
+    "end": 700.0,
+    "cd": 7
+  },
+  {
+    "id": "rapier_movement",
+    "title": "흘려찌르기",
+    "note": "기존 평타 2타의 찌르기·회수를 재사용. 0.10초에 적 앞에 나타나면서 한 번 찌름.",
+    "duration": 450,
+    "teleport": 100,
+    "hits": [
+      {
+        "time": 0.1,
+        "damage": 35,
+        "shape": {
+          "kind": "box",
+          "size": [
+            1.2,
+            1
+          ],
+          "right_offset": [
+            1.25625,
+            1.0
+          ],
+          "left_offset": [
+            -1.25625,
+            1.0
+          ],
+          "reach_from_body_front": 1.2,
+          "bottom": 0.5
+        },
+        "active": 0.15,
+        "control": {},
+        "anchor": "teleport_target",
+        "targets": "marked_target"
+      }
+    ],
+    "frames": [
+      {
+        "key": "old-F001",
+        "ms": 30
+      },
+      {
+        "key": "old-F025",
+        "ms": 30
+      },
+      {
+        "key": "old-F033",
+        "ms": 40
+      },
+      {
+        "key": "old-F034",
+        "ms": 70
+      },
+      {
+        "key": "old-F038",
+        "ms": 50
+      },
+      {
+        "key": "old-F040",
+        "ms": 60
+      },
+      {
+        "key": "old-F025",
+        "ms": 70
+      },
+      {
+        "key": "old-F001",
+        "ms": 100
+      }
+    ],
+    "count": 8,
+    "folder": "flurry/frames/",
+    "ppu": 128,
+    "pivot": [
+      384,
+      604
+    ],
+    "end": 450.0,
+    "cd": 6,
+    "movement": {
+      "type": "target_teleport_strike",
+      "start": 0.1,
+      "max_distance": 10,
+      "target_gap": 0.25,
+      "target_radius": 10,
+      "wall_policy": "teleport_endpoint_clear",
+      "collision": "skip_path_sweep_require_clear_endpoint"
+    },
+    "invulnerability": []
+  },
+  {
+    "id": "rapier_follow_up",
+    "title": "섬광 연침",
+    "note": "기존 평타 1·2타의 찌르기·짧은 회수를 교대로 재사용. 0.10초 순간이동 후 같은 자리에서 5회 찌름.",
+    "duration": 950,
+    "teleport": 100,
+    "hits": [
+      {
+        "time": 0.15,
+        "damage": 10,
+        "shape": {
+          "kind": "box",
+          "size": [
+            2.26875,
+            1.5
+          ],
+          "right_offset": [
+            1.321875,
+            1.0
+          ],
+          "left_offset": [
+            -1.321875,
+            1.0
+          ],
+          "reach_from_body_front": 1.8,
+          "bottom": 0.25
+        },
+        "active": 0.04,
+        "control": {},
+        "anchor": "actor",
+        "targets": "all"
+      },
+      {
+        "time": 0.27,
+        "damage": 10,
+        "shape": {
+          "kind": "box",
+          "size": [
+            2.26875,
+            1.5
+          ],
+          "right_offset": [
+            1.321875,
+            1.0
+          ],
+          "left_offset": [
+            -1.321875,
+            1.0
+          ],
+          "reach_from_body_front": 1.8,
+          "bottom": 0.25
+        },
+        "active": 0.04,
+        "control": {},
+        "anchor": "actor",
+        "targets": "all"
+      },
+      {
+        "time": 0.39,
+        "damage": 10,
+        "shape": {
+          "kind": "box",
+          "size": [
+            2.26875,
+            1.5
+          ],
+          "right_offset": [
+            1.321875,
+            1.0
+          ],
+          "left_offset": [
+            -1.321875,
+            1.0
+          ],
+          "reach_from_body_front": 1.8,
+          "bottom": 0.25
+        },
+        "active": 0.04,
+        "control": {},
+        "anchor": "actor",
+        "targets": "all"
+      },
+      {
+        "time": 0.51,
+        "damage": 10,
+        "shape": {
+          "kind": "box",
+          "size": [
+            2.26875,
+            1.5
+          ],
+          "right_offset": [
+            1.321875,
+            1.0
+          ],
+          "left_offset": [
+            -1.321875,
+            1.0
+          ],
+          "reach_from_body_front": 1.8,
+          "bottom": 0.25
+        },
+        "active": 0.04,
+        "control": {},
+        "anchor": "actor",
+        "targets": "all"
+      },
+      {
+        "time": 0.63,
+        "damage": 10,
+        "shape": {
+          "kind": "box",
+          "size": [
+            2.26875,
+            1.5
+          ],
+          "right_offset": [
+            1.321875,
+            1.0
+          ],
+          "left_offset": [
+            -1.321875,
+            1.0
+          ],
+          "reach_from_body_front": 1.8,
+          "bottom": 0.25
+        },
+        "active": 0.04,
+        "control": {},
+        "anchor": "actor",
+        "targets": "all"
+      }
+    ],
+    "frames": [
+      {
+        "key": "old-F001",
+        "ms": 40
+      },
+      {
+        "key": "old-F025",
+        "ms": 30
+      },
+      {
+        "key": "old-F033",
+        "ms": 30
+      },
+      {
+        "key": "old-F016",
+        "ms": 50
+      },
+      {
+        "key": "old-F017",
+        "ms": 40
+      },
+      {
+        "key": "old-F024",
+        "ms": 40
+      },
+      {
+        "key": "old-F033",
+        "ms": 40
+      },
+      {
+        "key": "old-F034",
+        "ms": 40
+      },
+      {
+        "key": "old-F040",
+        "ms": 40
+      },
+      {
+        "key": "old-F016",
+        "ms": 40
+      },
+      {
+        "key": "old-F017",
+        "ms": 40
+      },
+      {
+        "key": "old-F024",
+        "ms": 40
+      },
+      {
+        "key": "old-F033",
+        "ms": 40
+      },
+      {
+        "key": "old-F034",
+        "ms": 40
+      },
+      {
+        "key": "old-F040",
+        "ms": 40
+      },
+      {
+        "key": "old-F016",
+        "ms": 40
+      },
+      {
+        "key": "old-F017",
+        "ms": 40
+      },
+      {
+        "key": "old-F024",
+        "ms": 40
+      },
+      {
+        "key": "old-F033",
+        "ms": 40
+      },
+      {
+        "key": "old-F025",
+        "ms": 60
+      },
+      {
+        "key": "old-F085",
+        "ms": 60
+      },
+      {
+        "key": "old-F001",
+        "ms": 80
+      }
+    ],
+    "count": 22,
+    "folder": "flurry/frames/",
+    "ppu": 128,
+    "pivot": [
+      384,
+      604
+    ],
+    "end": 950.0,
+    "cd": 9,
+    "movement": {
+      "type": "target_teleport_strike",
+      "start": 0.1,
+      "max_distance": 5,
+      "target_radius": 5,
+      "target_gap": 0.25,
+      "collision": "sweep_full_body_stop_before_solid"
+    },
+    "invulnerability": [
+      [
+        0.1,
+        0.67
+      ]
+    ]
+  }
+]

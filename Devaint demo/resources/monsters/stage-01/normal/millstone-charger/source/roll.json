@@ -1,0 +1,160 @@
+{
+  "status": "pixel-normalized-review-output-not-integrated",
+  "source": "../pixel-6color-2x/frames/",
+  "selectedPlaybackReference": "../pixel-6color-2x/charge-preview-032.gif",
+  "frameSize": [
+    256,
+    160
+  ],
+  "frameCount": 8,
+  "columns": 4,
+  "rows": 2,
+  "durationMs": 320,
+  "frameDurationMs": 40,
+  "fps": 25,
+  "loop": true,
+  "ppu": 32,
+  "pivot": [
+    0.5,
+    0.05
+  ],
+  "pivotPixelsFromBottomLeft": [
+    128,
+    8
+  ],
+  "paletteSource": "03_개발/GitLab/S15P31F109/resources/authoring/workbench/source/MonsterReference/approved/master-palette.json",
+  "palette": [
+    "#171716",
+    "#41413D",
+    "#575451",
+    "#817D77",
+    "#9C968D",
+    "#D6D0C7"
+  ],
+  "paletteLock": true,
+  "allowedAlpha": [
+    0,
+    255
+  ],
+  "filterMode": "Point",
+  "compression": "None",
+  "mipmaps": false,
+  "meshType": "FullRect",
+  "normalization": {
+    "sourceToNativeScale": 0.45,
+    "nativeAxleFromTopLeft": [
+      77,
+      88
+    ],
+    "resampling": "nearest",
+    "alphaThreshold": 128,
+    "dithering": false,
+    "removeDetachedComponentsMaxArea": 2
+  },
+  "canvasReason": "Preserve selected millstone base.png 256x160 canvas, PPU32 and its existing 0.5/0.05 pivot; 128x128 is the other normal monsters standard.",
+  "frames": [
+    {
+      "file": "frames/roll-00.png",
+      "durationMs": 40,
+      "bounds": [
+        24,
+        20,
+        214,
+        159
+      ],
+      "sha256": "58f7d35bf4dade8aabca47f946710a81403f259bb3e0d2be803f5285349d5389",
+      "sourceSha256": "e8105044b53be82f00728a10f94b9940810ba91aa245a94da877f0b4c913b67c"
+    },
+    {
+      "file": "frames/roll-01.png",
+      "durationMs": 40,
+      "bounds": [
+        25,
+        16,
+        215,
+        155
+      ],
+      "sha256": "08e06e6a62d1ae7253bc941a5ad8c31d69d4ca681fe8396ea984b2a73683e27d",
+      "sourceSha256": "00ce60bcbd849a9489e53bd93b990840f858d933057160bf5f300960b4547355"
+    },
+    {
+      "file": "frames/roll-02.png",
+      "durationMs": 40,
+      "bounds": [
+        23,
+        16,
+        216,
+        152
+      ],
+      "sha256": "ad538014f42aada82d398be5be21fa3975b8d5aeea4e7c38afed60d34f6c1d34",
+      "sourceSha256": "335b93c6806bd992d7f16469b412ca8ccb3cc5807723e4834372d0f84cc3079f"
+    },
+    {
+      "file": "frames/roll-03.png",
+      "durationMs": 40,
+      "bounds": [
+        14,
+        23,
+        210,
+        152
+      ],
+      "sha256": "4d10c2dad005c5f9e90b081bdfe29c164cbbf5473fb1fe4902577518aae76823",
+      "sourceSha256": "817b984b390f66aeb5a1e9232b90faff15ff7ebe433a274d7462b36ae095c361"
+    },
+    {
+      "file": "frames/roll-04.png",
+      "durationMs": 40,
+      "bounds": [
+        24,
+        26,
+        216,
+        155
+      ],
+      "sha256": "d187382b9dea5a5f0680d77bde9596b17518c0f2ea1d1071b2c117968bed5847",
+      "sourceSha256": "0ae20fe66f623e3983dff1a590c0a18b66e69aea50ca676564dfc03af4e5043e"
+    },
+    {
+      "file": "frames/roll-05.png",
+      "durationMs": 40,
+      "bounds": [
+        20,
+        20,
+        214,
+        157
+      ],
+      "sha256": "a900683db12493c50dcbf7a037d7d1318c3925e753da37e069b5cc07b5e164ff",
+      "sourceSha256": "42f8d0afad79c5b0083ab385814a11b267d31dd8333e0f49028fb9c9d1b60251"
+    },
+    {
+      "file": "frames/roll-06.png",
+      "durationMs": 40,
+      "bounds": [
+        20,
+        25,
+        216,
+        158
+      ],
+      "sha256": "4267713c6a2486ef34dc2889758802adfaca7e2a3c9402177b85bd3a0cda630c",
+      "sourceSha256": "fabe898755ad210253c1a243bfe7569cdf7418da80bfc83103c1e7e0af45e37e"
+    },
+    {
+      "file": "frames/roll-07.png",
+      "durationMs": 40,
+      "bounds": [
+        23,
+        21,
+        211,
+        156
+      ],
+      "sha256": "66ad158f99b29b62355b94760cfc81a37b8ad284b142a857fe6d5a230f967a5a",
+      "sourceSha256": "e62872b55f2f736aed9cf2ff9f9d6ec87693a91fb6deab027670d2299e467f4c"
+    }
+  ],
+  "sizeCorrection": {
+    "horizontalScale": 1.075,
+    "verticalScale": 1,
+    "anchorX": 26,
+    "resampling": "nearest",
+    "reason": "Rolling body narrower than the base pose; keep height and ground position."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "format": "deviant-resource-asset-v1",
+  "id": "environments.maintenance-shops-stage2-pixel-20261113",
+  "path": "environments/maintenance-shops-stage2-pixel-20261113",
+  "status": "user-selected",
+  "gameIntegration": "unity-maintenance-room",
+  "style": "2챕터 정비소 뒷벽·작업대·랜턴·팔레트 간판 도트판(v26 수로 화풍, 불 켜진 작업장)",
+  "sources": [
+    "environments/maintenance-shops 의 2챕터 그림 배치를 밑그림으로 좌표를 재고 격자에 다시 그렸다."
+  ],
+  "runtimeManifest": "runtime/*.png",
+  "regenerate": "cd source && python backdrop4.py ../build/stage2-backdrop.png && python desk.py ../build/stage2-desk.png && python small.py ../build",
+  "files": [
+    "asset.json",
+    "README.md",
+    "preview/shop-vs-map.png",
+    "runtime/lantern.png",
+    "runtime/sign.png",
+    "runtime/stage2-backdrop.png",
+    "runtime/stage2-desk.png",
+    "source/backdrop4.py",
+    "source/desk.py",
+    "source/pal.py",
+    "source/small.py"
+  ]
+}

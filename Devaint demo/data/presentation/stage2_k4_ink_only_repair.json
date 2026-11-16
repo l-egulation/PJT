@@ -1,0 +1,24 @@
+{
+  "status": "pixel-tip-reconstruction-pending-user-review",
+  "source": "outputs/waterway/k4-aether-spray-return-20261101/references/aether-original.png",
+  "output": "outputs/waterway/k4-ink-only-repaired-20261101",
+  "body": "outputs/waterway/k4-attack-reduced-20261101/A",
+  "paletteRgb": [[37,37,45],[76,80,86]],
+  "sourceRangeOneBased": [5,31],
+  "sourceNozzleXExclusive": 468,
+  "scale": 0.31,
+  "effectCanvas": [288,224],
+  "effectPivot": [248,64],
+  "scaledSourceNozzle": [145,129],
+  "bodyOffset": [190,20],
+  "bodyNozzle": [125,135],
+  "sourceEdgeRunExtensionWidths": {
+    "9":[5], "10":[24,8], "11":[6,20,42], "12":[52,12,8],
+    "13":[60,8], "14":[16,62,18], "15":[14,62,6], "16":[15,60],
+    "17":[20,60,28], "18":[15,56,20], "19":[52], "20":[18,52],
+    "21":[12,46], "22":[44], "23":[16,38], "24":[12,6,26], "25":[20]
+  },
+  "emptyHoldMs": 100,
+  "reviewGapMs": 500,
+  "policy": "Use only ink from the user Aether sheet. Mask away every returned character/gun pixel before reduction. Two existing dark palette colors, binary alpha. Reconstruct only missing left-of-cell pixels as explicit editable native repair layers; preserve all visible extracted ink pixels exactly. Original approved A body19 files remain byte-identical. Hold pose until ink ends, then use original recovery. Missing tips are a reconstruction proposal, not recovered source evidence. No game collision/timing or Unity changes."
+}

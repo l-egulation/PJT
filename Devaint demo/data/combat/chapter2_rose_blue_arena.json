@@ -1,0 +1,282 @@
+{
+  "schema": "deviant-chapter2-boss-room-draft-v1",
+  "width": 30,
+  "height": 18,
+  "reference": "data/combat/chapter1_selected_rooms.json#special:boss",
+  "coordinateSystem": "bottom-left-y-up-unit",
+  "viewPhase": "phase1",
+  "layoutStatus": "user-approved",
+  "surfaces": [
+    {
+      "id": "floor",
+      "name": "복구되는 바닥",
+      "kind": "solid",
+      "x": 0,
+      "y": 0,
+      "w": 30,
+      "h": 3,
+      "phases": [
+        "encounter",
+        "phase2",
+        "phase3"
+      ]
+    },
+    {
+      "id": "platform-1-1",
+      "name": "1층 발판 1",
+      "kind": "platform",
+      "x": 6.5,
+      "y": 4.5,
+      "w": 6,
+      "h": 0.5,
+      "phases": [
+        "phase1"
+      ],
+      "layer": 1
+    },
+    {
+      "id": "platform-1-2",
+      "name": "1층 발판 2",
+      "kind": "platform",
+      "x": 17.5,
+      "y": 4.5,
+      "w": 6,
+      "h": 0.5,
+      "phases": [
+        "phase1"
+      ],
+      "layer": 1
+    },
+    {
+      "id": "platform-2-1",
+      "name": "2층 발판 1",
+      "kind": "platform",
+      "x": 2,
+      "y": 9,
+      "w": 6,
+      "h": 0.5,
+      "phases": [
+        "phase1"
+      ],
+      "layer": 2
+    },
+    {
+      "id": "platform-2-2",
+      "name": "2층 발판 2 · 기계",
+      "kind": "platform",
+      "x": 12,
+      "y": 9,
+      "w": 6,
+      "h": 0.5,
+      "phases": [
+        "phase1"
+      ],
+      "layer": 2
+    },
+    {
+      "id": "platform-2-3",
+      "name": "2층 발판 3",
+      "kind": "platform",
+      "x": 22,
+      "y": 9,
+      "w": 6,
+      "h": 0.5,
+      "phases": [
+        "phase1"
+      ],
+      "layer": 2
+    },
+    {
+      "id": "platform-3-1",
+      "name": "3층 발판 1",
+      "kind": "platform",
+      "x": 6.5,
+      "y": 12,
+      "w": 6,
+      "h": 0.5,
+      "phases": [
+        "phase1"
+      ],
+      "layer": 3
+    },
+    {
+      "id": "platform-3-2",
+      "name": "3층 발판 2",
+      "kind": "platform",
+      "x": 17.5,
+      "y": 12,
+      "w": 6,
+      "h": 0.5,
+      "phases": [
+        "phase1"
+      ],
+      "layer": 3
+    }
+  ],
+  "markers": [
+    {
+      "id": "player-phase1",
+      "assetId": "player",
+      "name": "플레이어 · 위치 초안",
+      "x": 7,
+      "y": 5,
+      "phases": [
+        "phase1"
+      ],
+      "flipX": false,
+      "h": 2,
+      "w": 2.03125
+    },
+    {
+      "id": "rose-phase1",
+      "assetId": "rose",
+      "name": "Rose · 위치 초안",
+      "x": 2,
+      "y": 5,
+      "phases": [
+        "phase1"
+      ],
+      "flipX": true,
+      "h": 3.2,
+      "w": 3.6705882352941175
+    },
+    {
+      "id": "blue-phase1",
+      "assetId": "blue",
+      "name": "Blue · 위치 초안",
+      "x": 28.75,
+      "y": 12.5,
+      "phases": [
+        "phase1"
+      ],
+      "flipX": false,
+      "h": 3.2,
+      "w": 2.0661417322834645
+    },
+    {
+      "id": "player-encounter",
+      "assetId": "player",
+      "name": "플레이어 · 위치 초안",
+      "x": 7,
+      "y": 3,
+      "phases": [
+        "encounter"
+      ],
+      "flipX": false,
+      "h": 2,
+      "w": 2.03125
+    },
+    {
+      "id": "rose-encounter",
+      "assetId": "rose",
+      "name": "Rose · 위치 초안",
+      "x": 2,
+      "y": 3,
+      "phases": [
+        "encounter"
+      ],
+      "flipX": true,
+      "h": 3.2,
+      "w": 3.6705882352941175
+    },
+    {
+      "id": "blue-encounter",
+      "assetId": "blue",
+      "name": "Blue · 위치 초안",
+      "x": 28.75,
+      "y": 3,
+      "phases": [
+        "encounter"
+      ],
+      "flipX": false,
+      "h": 3.2,
+      "w": 2.0661417322834645
+    },
+    {
+      "id": "player-phase2",
+      "assetId": "player",
+      "name": "플레이어 · 위치 초안",
+      "x": 15,
+      "y": 3,
+      "phases": [
+        "phase2"
+      ],
+      "flipX": false,
+      "h": 2,
+      "w": 2.03125
+    },
+    {
+      "id": "rose-phase2",
+      "assetId": "rose",
+      "name": "Rose · 위치 초안",
+      "x": 2,
+      "y": 3,
+      "phases": [
+        "phase2"
+      ],
+      "flipX": true,
+      "h": 3.2,
+      "w": 3.6705882352941175
+    },
+    {
+      "id": "blue-phase2",
+      "assetId": "blue",
+      "name": "Blue · 위치 초안",
+      "x": 28.75,
+      "y": 3,
+      "phases": [
+        "phase2"
+      ],
+      "flipX": false,
+      "h": 3.2,
+      "w": 2.0661417322834645
+    },
+    {
+      "id": "player-phase3",
+      "assetId": "player",
+      "name": "플레이어 · 위치 초안",
+      "x": 8,
+      "y": 3,
+      "phases": [
+        "phase3"
+      ],
+      "flipX": false,
+      "h": 2,
+      "w": 2.03125
+    },
+    {
+      "id": "blue-phase3",
+      "assetId": "blue",
+      "name": "Blue · 위치 초안",
+      "x": 22,
+      "y": 3,
+      "phases": [
+        "phase3"
+      ],
+      "flipX": false,
+      "h": 3.2,
+      "w": 2.0661417322834645
+    }
+  ],
+  "devices": [
+    {
+      "id": "machine",
+      "name": "기계장치 · 2×3u",
+      "kind": "machine",
+      "x": 14,
+      "y": 9.5,
+      "w": 2,
+      "h": 3,
+      "phases": [
+        "phase1"
+      ]
+    }
+  ],
+  "requirements": {
+    "phase1InvisibleClimbWalls": true,
+    "phase1FloorRemoved": true,
+    "backgroundChangeConfirmed": false
+  },
+  "sourceSha256": "8abdbb22c4fc8d3f640cd019a38bd5270c7c1bff2fdf9ac201b463fa02616fc9",
+  "layoutAdjustment": "User approved equal 6u platform widths on all three rows; preserve platform centers."
+}

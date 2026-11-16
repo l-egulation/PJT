@@ -1,0 +1,51 @@
+{
+  "id": "01_field_mouse",
+  "sourceSha256": "da28feeabb9752c9e4b5150a74d6c425206dd4a4fdea95f18ccdd17b3298631c",
+  "maxHP": 30,
+  "damage": 10,
+  "walkSpeed": 3,
+  "senseX": 10,
+  "senseY": 4,
+  "sensePeriod": 0.1,
+  "pathPeriod": 0.25,
+  "leash": 16,
+  "reengageTargetLimit": 14,
+  "searchWait": 1.5,
+  "stagger": 0.3,
+  "epsilon": 0.0001,
+  "cliffMargin": 0.03125,
+  "startGap": 0.75,
+  "startHeight": 0.75,
+  "prepare": 0.35,
+  "active": 0.1,
+  "recovery": 0.45,
+  "interval": 1.2,
+  "moveCycle": 0.5,
+  "deathDuration": 0.6,
+  "bodySize": [
+    1.09375,
+    1.0625
+  ],
+  "bodyOffset": [
+    0.234375,
+    0.53125
+  ],
+  "attackSize": [
+    1.25,
+    1.25
+  ],
+  "attackOffset": [
+    1.15625,
+    0.625
+  ],
+  "attackFrameDurations": [
+    0.1,
+    0.1,
+    0.15,
+    0.1,
+    0.12,
+    0.11,
+    0.11,
+    0.11
+  ]
+}

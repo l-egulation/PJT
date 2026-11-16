@@ -1,0 +1,12 @@
+{
+  "schema":"stage2-k4-walk-smooth21-v1",
+  "status":"denser-source-frame-review-not-approved",
+  "prior":"outputs/waterway/k4-walk-retry-frames-20261031",
+  "output":"outputs/waterway/k4-walk-smooth21-20261031",
+  "sourceStartZeroBased":7,
+  "sourceEndZeroBasedInclusive":27,
+  "frameDurationMs":50,
+  "timingStatus":"review-proposal-only-no-timing-in-uploaded-PNG",
+  "selectionReason":"Use21 consecutive original cells instead of skipping to8 poses. Shift the loop interval so the last and first leg poses are closer. Keep the cycle near the prior1-second preview:21x50ms=1050ms.",
+  "pixelPolicy":"Copy original1280x720 white-background PNGs exactly. No frame synthesis, recoloring, resizing, background removal or body-part compositing."
+}

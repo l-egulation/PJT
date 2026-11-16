@@ -1,0 +1,38 @@
+{
+  "status": "user-adopted-concept / production-in-progress",
+  "adoptedOn": "2026-10-27",
+  "branch": "experiment/stage1-village-reference",
+  "files": [
+    {
+      "file": "01-sketch-residential.png",
+      "sha256": "e4a6cc3865d22843b28051a0053dbe29e151d2d8ead4b3467e38ee5aefc96f41"
+    },
+    {
+      "file": "02-mixed-market-v2.png",
+      "sha256": "34ae8e2f9005d0227f6244e0d4d80c64a5d469e3c26d4ffbda780bbd6070a5cd"
+    },
+    {
+      "file": "03-bright-plaza.png",
+      "sha256": "701fc932f153f4e2331a51dd1d2b904d11c795892718cc22b393b1103867b95a"
+    },
+    {
+      "file": "04-stage-overview-v2.png",
+      "sha256": "bdd18b8028281be44b72a4e469472a19bac0aec124b6fc12409ea832ab4b580e"
+    },
+    {
+      "file": "05-matched-terrain.png",
+      "sha256": "694e2d158d8933df42fa70cd0d32afee69c34acf309bbd410fe8bc1847d0435e"
+    }
+  ],
+  "baselineStyle": "../approved-sketch.png",
+  "scope": "Five concepts guide art production. They are not engine screenshots, production-ready atlases or an approved replacement map layout.",
+  "progression": "Full sketch -> mixed bright pockets -> fully bright. First approximately 2/3 of total stage is sketch-affected; last approximately 1/3 bright. Not a per-screen ratio.",
+  "boundary": "B: crisp structure-led regions. No broad crossfade, noisy spray or raised torn paper. Spread timing/trigger undecided.",
+  "geometry": "Preserve current team map, actors, collision, platform coordinates, camera, combat and movement. Decorative scenery may vary by district.",
+  "terrain": "Bright and sketch share cap-stone size, contact line, wall contour, corner and modular platform geometry.",
+  "shading": "Large light faces, sparse local shadows/hatching, distant simple silhouettes. Prior heavily shaded phase2 candidates remain rejected.",
+  "boundaryReference": {
+    "file": "b-structure-led.png",
+    "sha256": "647d5f8f89b33cc15962f6528bc66a77a0fc1dc26d4af1d57d595c1a7cfb2eb0"
+  }
+}

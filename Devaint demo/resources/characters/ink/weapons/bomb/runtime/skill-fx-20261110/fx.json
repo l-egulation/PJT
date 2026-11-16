@@ -1,0 +1,21 @@
+{
+ "format": "deviant-bomb-skill-fx-v1",
+ "fps": 30,
+ "pixelsPerUnit": 32,
+ "source": "tools/bomb_pick.py clock_image",
+ "clips": {
+  "timed_clock": {
+   "frames": 13,
+   "size": [
+    64,
+    64
+   ],
+   "originTopLeftPx": [
+    32,
+    32
+   ],
+   "centerAboveFloor": 0.72,
+   "note": "00 = 땅에 멈춘 뒤 0.06초 동안 작게 나타나는 장, 01~12 = 바늘이 심지 시간/12 마다 30도씩. 고리 밑이 땅에 닿게 가운데를 바닥 위 0.72유닛에 둔다."
+  }
+ }
+}

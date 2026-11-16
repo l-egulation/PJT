@@ -1,0 +1,24 @@
+{
+ "format": "deviant-greatsword-summon-v1",
+ "source": "summoned-sword.png = source/reviewed-20261104/summoned-sword-vfx.png 의 검은 바탕을 밝기(최대 채널)로 투명화해 480px 높이로 줄임(PPU64, 7.5u). slam = pixelfx impacts/greatsword-slam.js(반경 2.5u, 게임에서 2배 PPU16)",
+ "summonedSword": {
+  "pixelsPerUnit": 64,
+  "pivot": [
+   0.5,
+   0.0
+  ]
+ },
+ "slam": {
+  "pixelsPerUnit": 16,
+  "fps": 30,
+  "size": [
+   288,
+   208
+  ],
+  "originTopLeftPx": [
+   144,
+   164
+  ]
+ },
+ "timing": "타격 기준 -0.30초 판정 위쪽 선에 등장, -0.10초부터 0.1초 만에 2.4u 박힘, 0.75~0.95초 사라짐. 기울임·옆면·후광·빛줄기·반짝임은 게임 코드(GreatswordSkillVisual)가 그림"
+}

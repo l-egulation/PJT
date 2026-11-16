@@ -1,0 +1,22 @@
+{
+  "schema": "stage2-h3-pixel-float-travel-v1",
+  "status": "B-float-travel-approved-by-user",
+  "selectedCandidate": "B",
+  "base": "outputs/waterway/pixel-base-step1-20261031/H3",
+  "localSources": "outputs/waterway/pixel-idles-8-v1-20261031/H3/frames",
+  "prior": "outputs/waterway/body-idles-8-v2-20261031/H3",
+  "output": "outputs/waterway/h3-float-travel-20261101",
+  "canvas": [384,224],
+  "headRigidHeight": 30,
+  "clothLagStartsAt": 30,
+  "clothLagFullAt": 125,
+  "sourceKeys": [0,1,1,2,2,3,3,2,1,0,0,1,1,2,2,3],
+  "bodyDy": [0,0,-1,-1,-2,-2,-3,-3,-3,-3,-2,-2,-1,-1,0,0],
+  "tailDx": [0,0,0,1,1,1,2,2,2,2,2,1,1,1,0,0],
+  "candidates": [
+    {"id":"A","name":"기존 느린 부유","reusePrior":true,"frameCount":8,"cycleMs":2400,"recommended":false,"description":"기존8키를 그대로 복사한 비교 기준. 전체3px 부유와 손끝·주름의 작은 변화."},
+    {"id":"B","name":"수의가 뒤따르는 이동","frameCount":16,"cycleMs":1600,"recommended":true,"description":"전체가3px 떠오르고 내려오며 아래 수의가 오른쪽으로 최대2px 뒤따름. 왼쪽 이동용 제자리 루프."},
+    {"id":"C","name":"B를 조금 빠르게","frameCount":16,"cycleMs":1200,"recommended":false,"description":"B와 동일한16장. 주기만1.2초로 줄인 약1.33배 속도 비교."}
+  ],
+  "method": "Use only existing H3 logical pixels and its8 actual opaque colors. Translate the whole body vertically by integer pixels; translate existing lower cloth rows rightward by an integer profile with the head rigid. Preserve row contents, pixel counts, source frame mapping and negative spaces. No generated art, added anatomy, rescaling, interpolation or new colors. Timing is an art proposal; gameplay movement and attacks are unchanged."
+}

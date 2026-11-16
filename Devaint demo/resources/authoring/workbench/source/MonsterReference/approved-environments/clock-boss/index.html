@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>마을 끝에서 보스방까지 · 색상 수정 V12</title><link rel="stylesheet" href="style.css"></head>
+<body><main>
+<header><div><span class="eyebrow">STAGE 01 / THE CLOCKWORK BELOW</span><h1>마을 끝에서 보스방까지</h1><p>기존 마을의 크림색과 회갈색을 길목·시계실에도 이어갑니다.</p></div><span class="badge">색상 수정 · V12</span></header>
+<nav aria-label="장면 선택"><button data-mode="approach" class="active" aria-pressed="true">처음부터 길 따라가기</button><button data-mode="boss" aria-pressed="false">보스방 바로 보기</button></nav>
+<div id="journey" class="journey">
+ <div class="journey-title"><button id="travel">길 따라 보기 ▶</button><span id="stage-name">마을의 끝</span><span class="dimension">길목 높이 5.5–6 u</span></div>
+ <input id="progress" aria-label="마을에서 보스방까지 진행 위치" type="range" min="0" max="100" value="0" step="0.1">
+ <div class="stops"><button data-progress="0">① 마을의 끝</button><button data-progress="0.22">② 벽의 흔적</button><button data-progress="0.46">③ 좁은 굴길</button><button data-progress="0.66">④ 시계실 앞</button><button data-progress="1">⑤ 보스방</button></div>
+</div>
+<div class="toolbar"><div><label><input id="decor" type="checkbox" checked> 벽·장치</label><label><input id="ambient" type="checkbox" checked> 잔해·먼지</label><label><input id="actors" type="checkbox" checked> 캐릭터·보스</label><label id="guide-label"><input id="guide" type="checkbox"> 길목 높이</label></div><div><button id="pause">움직임 정지</button><button id="reset">처음으로</button><button id="save">현재 화면 PNG ↓</button></div></div>
+<p id="caption" role="status"></p>
+<div class="color-comparison"><strong id="color-status" role="status">수정 V12 · 기존 마을의 크림색</strong><label><input id="previous-colors" type="checkbox"> 이전 V11 색과 비교</label><span>같은 위치·동작에서 색만 비교합니다.</span></div>
+<div class="viewport"><canvas id="scene" width="1280" height="720" aria-label="낡은 벽이 점점 늘어나는 굴길에서 시계탑 보스방까지 연결된 동선"></canvas><div id="loading">시계실로 가는 길 불러오는 중…</div></div>
+<div class="notes"><p><b>기존 집과 같은 크림색</b><br>바깥쪽 벽은 기존 마을의 밝고 따뜻한 종이색에 맞췄습니다.</p><p><b>안쪽으로 갈수록 어둡게</b><br>굴길과 보스방도 회갈색 계열을 유지하며 깊이만 어두워집니다.</p><p><b>승인한 구성 그대로</b><br>최대 6유닛 통로, 벽·장치 배치와 움직임, 기존 바닥·캐릭터·보스를 유지했습니다.</p></div>
+<section class="sequence"><h2>구간별 구성</h2><div id="sequence"><a href="01-village.png"><img src="01-village.png" alt="마을 끝 구간"><span>01 · 마을의 끝</span></a><a href="02-fragments.png"><img src="02-fragments.png" alt="낡은 벽이 늘어나는 구간"><span>02 · 벽의 흔적</span></a><a href="03-tunnel.png"><img src="03-tunnel.png" alt="굴로 들어가는 구간"><span>03 · 좁은 굴길</span></a><a href="04-machinery.png"><img src="04-machinery.png" alt="시계 장치가 있는 굴길"><span>04 · 시계실 앞</span></a><a href="06-boss-room.png"><img src="06-boss-room.png" alt="시계탑 보스방"><span>05 · 보스방</span></a></div></section>
+<section class="style-reference"><h2>기존 마을과 같은 그림체로</h2><div class="reference-grid"><figure><img src="assets/style-house-reference.png" alt="현재 Unity 마을의 집 원본"><figcaption>기준 · 현재 마을 집</figcaption></figure><figure><img src="assets/aged-wall-source.png" alt="같은 회색 연필선의 낡은 회벽"><figcaption>길목 · 낡은 회벽</figcaption></figure><figure><img src="assets/aged-gear-large-source.png" alt="길목과 방에서 함께 쓰는 스케치 톱니"><figcaption>공통 · 회전하는 톱니</figcaption></figure></div></section><footer><a href="layout.json" download>배치 정보 ↓</a> · <a href="README.md">작업·원본 정보</a> · <a href="unity-layout.json" download>Unity 배치 정보 ↓</a><p>승인 V12입니다. Unity 보스방에는 벽·장치·잔해를 개별 배경 레이어로 등록했습니다. 기존 바닥과 전투는 유지합니다.</p></footer>
+</main><script type="module" src="room.mjs"></script></body></html>

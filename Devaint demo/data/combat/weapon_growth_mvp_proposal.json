@@ -1,0 +1,170 @@
+{
+  "schema": 1,
+  "status": "mvp_direction_confirmed_implementation_pending",
+  "attackGrowth": {
+    "route": "shared_character_stats",
+    "appliesToBothWeapons": true,
+    "separateBlueprintAttackUpgrade": false,
+    "stats": null,
+    "values": null
+  },
+  "startingPalette": {
+    "granted": false,
+    "scope": "MVP trial"
+  },
+  "palette": {
+    "minSlots": 3,
+    "maxSlots": 5,
+    "initialColors": "slot_count_specific_patterns",
+    "slotCountWeights": null,
+    "colorWeights": null,
+    "colorRollMethod": null,
+    "colorChange": {
+      "facility": "maintenance",
+      "paid": true,
+      "maxChanges": 2,
+      "limitScope": "run",
+      "slotsPerOperation": 1,
+      "occupiedSlotPolicy": "atomic_replace_with_matching_new_ink",
+      "currencyAmount": null,
+      "oldInkDisposition": "return_to_owned_inks",
+      "requiresMatchingNewInkWhenOccupied": true
+    },
+    "firstEliteGuarantee": {
+      "enabled": true,
+      "count": 1
+    },
+    "slotCountDistribution": "fewer_slots_more_common",
+    "activation": {
+      "minimumFilledSlots": 1,
+      "facility": null,
+      "craftCostModel": "no_separate_initial_crafting",
+      "equipGold": 0,
+      "fillEmptySlotGold": 0,
+      "replaceOccupiedSlotPaid": true
+    },
+    "recraft": {
+      "oldPaletteDestroyed": true,
+      "oldInksDestroyed": true,
+      "oldInksReturned": false,
+      "slotUpgradesReset": true,
+      "additionalGold": 0
+    },
+    "colorPatternsBySlotCount": {
+      "3": "three_same_color",
+      "4": "two_distinct_colors_two_slots_each",
+      "5": "random"
+    },
+    "acquisition": "drop_or_shop_purchase_not_maintenance_crafting",
+    "weaponBinding": {
+      "bindOn": "first_equip",
+      "transferToOtherWeapon": false,
+      "swapBetweenWeapons": false,
+      "route": "bound_to_first_weapon_recraft_only"
+    },
+    "colorlessPolicy": "independent_per_slot_override_including_three_and_four_slots"
+  },
+  "slotUpgrade": {
+    "retainOnInkReplacement": true,
+    "retainOnPaletteRecraft": false,
+    "effect": "increase_equipped_ink_values",
+    "maxLevel": 5,
+    "growthPersistsOn": "palette_slot",
+    "baseLevel": 0,
+    "valueModel": "effect_family_multiplier",
+    "formula": "base_value_by_part * multiplier_by_effect_family_and_slot_level",
+    "baseLevelMultiplier": 1,
+    "multiplierByEffectFamilyAndLevel": null,
+    "upgradeTargetsByPart": null,
+    "valuesByPartAndLevel": null
+  },
+  "inkQuality": {
+    "colorIsEffectCategory": true,
+    "internalGrades": true,
+    "gradeLevels": 4,
+    "dropWeightsByGrade": null,
+    "gradeShownInUI": true,
+    "valueModel": "fixed_by_part",
+    "randomValuesWithinGrade": false,
+    "gradePresentation": {
+      "format": "small_numeric_label",
+      "min": 1,
+      "max": 4,
+      "usesInkColor": false
+    },
+    "gradeRollPolicy": "weights_by_acquisition_source",
+    "gradeGuaranteesBySource": null,
+    "gradeAssignment": "fixed_per_part",
+    "multipleGradesPerPart": false,
+    "fixedGradeByPart": null,
+    "valuesByPart": null,
+    "duplicatePolicy": "per_part",
+    "repeatDropPolicy": "allowed_including_nonduplicate_equipment_parts"
+  },
+  "note": "현재 정책 기준이다. 파츠별 고정 등급·수치·확률·가격·표식 계수는 tuningSource의 사용자 채택 시험 값을 사용하며 이 파일에 중복 편집하지 않는다. Unity 실행 검증·실게임 밸런스 검증은 구현 연결과 구분한다.",
+  "inkAcquisition": {
+    "normalEnemy": {
+      "coloredInkDropEnabled": true,
+      "chancePolicy": "low_probability",
+      "dropChance": null,
+      "countOnSuccess": 1,
+      "gradeSource": "normal_enemy"
+    },
+    "note": "일반 몬스터의 색상 잉크 드롭 확률은 tuningSource를 따르며 성공 시 1개다. 기존 chapter1_economy의 형태·특수 잉크와 색상 잉크 보상 경로를 구분한다.",
+    "colorRoll": {
+      "policy": "equipped_palette_color_bias",
+      "withoutPalette": "all_colors",
+      "biasWeights": null,
+      "gradeAndColorDrawOrder": null
+    },
+    "sale": {
+      "facility": "maintenance",
+      "disposition": "consume_sold_ink_receive_gold",
+      "drawPriceFraction": 0.2,
+      "priceBasis": "current_ink_draw_price",
+      "scope": null,
+      "note": "판매 시점의 현재 잉크 뽑기 비용 × 20%를 골드로 받는다. 판매는 뽑기 가격을 올리지 않는다. 현재 시험 가격은 40+20×성공 뽑기 횟수로 판매가가 항상 정수다. 장착 잉크 판매 허용 범위는 미정.",
+      "saleIncrementsDrawPrice": false,
+      "drawPriceIncrementsOn": "successful_draw_only",
+      "fiveSalesFundOneCurrentDraw": true
+    }
+  },
+  "markSystem": {
+    "source": "primary_hit",
+    "marksPerHit": 1,
+    "extraHitsApplyMarks": false,
+    "detonationCondition": "primary_hit_by_weapon_other_than_a_mark_owner",
+    "intrinsicDamage": {
+      "model": "proportional_to_consumed_marks",
+      "basis": "detonating_weapon_basic_attack_reference",
+      "coefficientPerMark": null,
+      "comboReference": "mean_basic_combo_hit"
+    },
+    "consumption": "all",
+    "maxStacks": 7,
+    "stackColors": ["red", "orange", "yellow", "green", "blue", "indigo", "violet"],
+    "atCap": "refresh_time_only",
+    "popOrder": "reverse_stack_order_one_per_interval",
+    "stopsWhenTargetDies": true,
+    "durationSeconds": 8,
+    "inkEffectProcsPerDetonation": 1,
+    "markBurstPartsFireOn": "last_red_pop",
+    "intrinsicDamageCountsAsExtraHit": true,
+    "intrinsicDamageTriggersHit": true,
+    "intrinsicDamageTriggersKill": true,
+    "timeRefresh": "refresh_all_on_primary_hit",
+    "sameHitOrder": "detonate_existing_then_add_new_weapon_mark"
+  },
+  "tuningPreparation": {
+    "author": "assistant",
+    "status": "accepted_as_test_baseline_implementation_pending",
+    "scope": [
+      "drop_probabilities",
+      "fixed_grade_by_part",
+      "base_values_by_part",
+      "slot_upgrade_multipliers",
+      "costs"
+    ]
+  },
+  "tuningSource": "data/combat/weapon_growth_mvp_tuning_draft.json"
+}

@@ -1,0 +1,218 @@
+{
+ "frames": [
+  {
+   "filename": "speed-burst_yellow 0",
+   "frame": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 72
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 72
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 72
+   },
+   "duration": 40
+  },
+  {
+   "filename": "speed-burst_yellow 1",
+   "frame": {
+    "x": 128,
+    "y": 0,
+    "w": 128,
+    "h": 72
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 72
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 72
+   },
+   "duration": 40
+  },
+  {
+   "filename": "speed-burst_yellow 2",
+   "frame": {
+    "x": 256,
+    "y": 0,
+    "w": 128,
+    "h": 72
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 72
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 72
+   },
+   "duration": 40
+  },
+  {
+   "filename": "speed-burst_yellow 3",
+   "frame": {
+    "x": 0,
+    "y": 72,
+    "w": 128,
+    "h": 72
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 72
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 72
+   },
+   "duration": 40
+  },
+  {
+   "filename": "speed-burst_yellow 4",
+   "frame": {
+    "x": 128,
+    "y": 72,
+    "w": 128,
+    "h": 72
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 72
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 72
+   },
+   "duration": 40
+  },
+  {
+   "filename": "speed-burst_yellow 5",
+   "frame": {
+    "x": 256,
+    "y": 72,
+    "w": 128,
+    "h": 72
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 72
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 72
+   },
+   "duration": 40
+  },
+  {
+   "filename": "speed-burst_yellow 6",
+   "frame": {
+    "x": 0,
+    "y": 144,
+    "w": 128,
+    "h": 72
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 72
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 72
+   },
+   "duration": 40
+  },
+  {
+   "filename": "speed-burst_yellow 7",
+   "frame": {
+    "x": 128,
+    "y": 144,
+    "w": 128,
+    "h": 72
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 72
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 72
+   },
+   "duration": 40
+  }
+ ],
+ "meta": {
+  "app": "https://github.com/patch-gg/pixelfx",
+  "version": "1",
+  "image": "speed-burst_yellow.png",
+  "format": "RGBA8888",
+  "size": {
+   "w": 384,
+   "h": 216
+  },
+  "scale": "1",
+  "frameTags": [
+   {
+    "name": "speed-burst_yellow",
+    "from": 0,
+    "to": 7,
+    "direction": "forward"
+   }
+  ],
+  "pixelfx": {
+   "id": "ink/speed-burst",
+   "name": "Speed burst (ink)",
+   "fps": 25,
+   "loop": false,
+   "frames": 8,
+   "frameSize": [
+    128,
+    72
+   ],
+   "pivot": [
+    88,
+    60
+   ],
+   "columns": 3,
+   "color": "yellow",
+   "facing": "right",
+   "anchor": "player-feet"
+  }
+ }
+}

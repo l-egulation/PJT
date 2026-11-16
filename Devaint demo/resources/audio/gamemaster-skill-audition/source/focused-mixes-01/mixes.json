@@ -1,0 +1,198 @@
+{
+  "kind": "focused-synthesized-comparison",
+  "status": "B3 user-confirmed; S1-S3 rejected; not applied",
+  "bombReference": "Crazy Arcade water balloon burst direction; reference audio not sampled",
+  "inputs": {
+    "Miscellaneous/Spray Bottle/spray_bottle_07.wav": "6c191648e278bca172886365eaff9f0371442c712fab7d46ee57dbd781d0add7",
+    "Doors/hydraulic_strut_air_gas_shock_door_03.wav": "90cf02aba07a4c42800ce8fece66f07dd83c83697944c1bfec36e095f5837eff",
+    "Miscellaneous/Spray Bottle/spray_bottle_12.wav": "1f2092040ba01b1b263f82b3243f6a9e03c061b5a2fe56a552d954085efd322e",
+    "Doors/hydraulic_strut_air_gas_shock_door_01.wav": "6517be7f0bec8c9dbf85d5855d5845e358937db6a7ec1c7229288353f193f853",
+    "Miscellaneous/Spray Bottle/spray_bottle_08.wav": "a3d428689398f9a90f8fcc0d2aff68a7bfa28fecddef168eed6e4689fffa284e",
+    "Doors/hydraulic_strut_air_gas_shock_door_02.wav": "3a3347fc341c5f3b63ca47783b19dafce9a19ba4c867dd6493da3c1d50bce8df",
+    "Magic_Spells/water_blast_projectile_spell_05.wav": "480db23f5f94aea04b65f82bf985e1ef6b1814cbb5db61e079fa253ba0b87717",
+    "Water/water_splash_object_body_02.wav": "9a9b9c23d1e41bebb5809729f42abb7ca4b73ca954836b6e42cc15e90da328b8",
+    "Magic_Spells/water_blast_projectile_spell_02.wav": "07d3322a8ebdf81741258d6259e192b14c3c6fa87c91049b2af311ea404ef7c2",
+    "Water/water_splash_object_body_04.wav": "9e5a24780a713caaa40a08c6e4c46e38900a076e7d102ad29d036f308531940b",
+    "Magic_Spells/water_blast_projectile_spell_04.wav": "ff8eda1a4209c45f133f95fd7cde5cca34e39936f435cdde7d6f3670cd040f4f",
+    "Water/water_splash_object_body_05.wav": "fde33bca1ecbdde018f31b7c45414718730947c78d7cada286ac7bd32b19a3fa"
+  },
+  "items": [
+    {
+      "id": "S1",
+      "label": "표준 분출",
+      "file": "S1.wav",
+      "duration": 1.0,
+      "sha256": "352e137201ebbeee3164d0c4bc14da0281baf97e6ccdb4060c075a21a2d70855",
+      "peak": 0.420684814453125,
+      "sources": [
+        "Miscellaneous/Spray Bottle/spray_bottle_07.wav",
+        "Doors/hydraulic_strut_air_gas_shock_door_03.wav"
+      ],
+      "edit": {
+        "kind": "pressure-release",
+        "duration": 1,
+        "frontCrop": [
+          0.025,
+          0.24
+        ],
+        "tailCrop": [
+          0.06,
+          1.01
+        ],
+        "frontGain": 0.72,
+        "tailGain": 0.34,
+        "tailOnset": 0.045,
+        "noExplosion": true,
+        "noLoop": true,
+        "noSyntheticNoise": true
+      },
+      "status": "rejected"
+    },
+    {
+      "id": "S2",
+      "label": "앞의 푸 강조",
+      "file": "S2.wav",
+      "duration": 1.0,
+      "sha256": "f40cb7c8333e3b3b4a85a7a68eb9ddfa5f123e4b0267057c9fbb46304a62acbb",
+      "peak": 0.47998046875,
+      "sources": [
+        "Miscellaneous/Spray Bottle/spray_bottle_12.wav",
+        "Doors/hydraulic_strut_air_gas_shock_door_01.wav"
+      ],
+      "edit": {
+        "kind": "pressure-release",
+        "duration": 1,
+        "frontCrop": [
+          0.025,
+          0.24
+        ],
+        "tailCrop": [
+          0.06,
+          1.01
+        ],
+        "frontGain": 0.92,
+        "tailGain": 0.34,
+        "tailOnset": 0.045,
+        "noExplosion": true,
+        "noLoop": true,
+        "noSyntheticNoise": true
+      },
+      "status": "rejected"
+    },
+    {
+      "id": "S3",
+      "label": "뒤의 쉬 강조",
+      "file": "S3.wav",
+      "duration": 1.0,
+      "sha256": "572e2388aa9484991434373b1c60b069d1721900ab25627723aee3f25c674e9d",
+      "peak": 0.47998046875,
+      "sources": [
+        "Miscellaneous/Spray Bottle/spray_bottle_08.wav",
+        "Doors/hydraulic_strut_air_gas_shock_door_02.wav"
+      ],
+      "edit": {
+        "kind": "pressure-release",
+        "duration": 1,
+        "frontCrop": [
+          0.025,
+          0.24
+        ],
+        "tailCrop": [
+          0.06,
+          1.01
+        ],
+        "frontGain": 0.57,
+        "tailGain": 0.34,
+        "tailOnset": 0.045,
+        "noExplosion": true,
+        "noLoop": true,
+        "noSyntheticNoise": true
+      },
+      "status": "rejected"
+    },
+    {
+      "id": "B1",
+      "label": "짧고 가벼운 물 파열",
+      "file": "B1.wav",
+      "duration": 0.85,
+      "sha256": "23575f26320a7d5abd96534b4d2f583552c83c481e4705f0ad11e3c3318ab2cf",
+      "peak": 0.3756103515625,
+      "sources": [
+        "Magic_Spells/water_blast_projectile_spell_05.wav",
+        "Water/water_splash_object_body_02.wav"
+      ],
+      "edit": {
+        "kind": "layered-water-release",
+        "mainStart": 0.1825625,
+        "wetStart": 0.2747291666666667,
+        "wetOnset": 0.025,
+        "mainGain": 0.72,
+        "wetGain": 0.42,
+        "decay": 0.115,
+        "noExplosionRecording": true,
+        "noThud": true,
+        "noCartoonPop": true,
+        "noSyntheticNoise": true
+      },
+      "status": "not selected"
+    },
+    {
+      "id": "B2",
+      "label": "물 퍼짐 강조",
+      "file": "B2.wav",
+      "duration": 0.95,
+      "sha256": "80dfc060fdb695e9ca72a193b0b3586316ae536a3b4cd6946f0c97fcdaf3cd0d",
+      "peak": 0.462493896484375,
+      "sources": [
+        "Magic_Spells/water_blast_projectile_spell_02.wav",
+        "Water/water_splash_object_body_04.wav"
+      ],
+      "edit": {
+        "kind": "layered-water-release",
+        "mainStart": 0.17760416666666667,
+        "wetStart": 0.2620416666666667,
+        "wetOnset": 0.025,
+        "mainGain": 0.72,
+        "wetGain": 0.65,
+        "decay": 0.145,
+        "noExplosionRecording": true,
+        "noThud": true,
+        "noCartoonPop": true,
+        "noSyntheticNoise": true
+      },
+      "status": "not selected"
+    },
+    {
+      "id": "B3",
+      "label": "큰 물풍선 방향",
+      "file": "B3.wav",
+      "duration": 1.05,
+      "sha256": "822a47da3fe91fdce647b2196cb4103857468f142e35ae09c70bfdf7aa827af1",
+      "peak": 0.47998046875,
+      "sources": [
+        "Magic_Spells/water_blast_projectile_spell_04.wav",
+        "Water/water_splash_object_body_05.wav"
+      ],
+      "edit": {
+        "kind": "layered-water-release",
+        "mainStart": 0.09939583333333334,
+        "wetStart": 0.25066666666666665,
+        "wetOnset": 0.025,
+        "mainGain": 0.72,
+        "wetGain": 0.82,
+        "decay": 0.175,
+        "noExplosionRecording": true,
+        "noThud": true,
+        "noCartoonPop": true,
+        "noSyntheticNoise": true
+      },
+      "status": "user-confirmed; not applied"
+    }
+  ],
+  "comparisonOrder": [
+    1,
+    2,
+    3
+  ],
+  "comparisonGapSeconds": 1
+}

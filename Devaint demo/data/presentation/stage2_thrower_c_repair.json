@@ -1,0 +1,21 @@
+{
+  "schema": "stage2-thrower-selected-C-cloth-repair-v1",
+  "status": "C-cloth-clean-walk-approved-by-user",
+  "source": "outputs/waterway/thrower-walk-candidates-20261101",
+  "output": "outputs/waterway/thrower-C-cloth-clean-20261101",
+  "selectedCandidate": "C",
+  "clothRecovery": {
+    "region": [145,158,225,181],
+    "sourceRgbMinMax": 210,
+    "minCoverage": 0.5,
+    "grid": 4,
+    "grayPalette": [[140,129,121],[180,167,151],[196,180,153]],
+    "purpleRgb": [97,76,105],
+    "purpleMinBlueOverGreen": 8,
+    "purpleMinBlueOverRed": 2,
+    "neutralMaxChroma": 50,
+    "neutralMinPeak": 115
+  },
+  "detailCrop": [145,158,225,196],
+  "policy": "Separate source occupancy from palette confidence for gray/purple cloth at open boundaries. Only add source-supported material to missing pixels inside the pants region; preserve all existing opaque pixels, other regions, true white gaps, selected17 poses, timing900ms, scale and offset. Use existing12-color palette only."
+}

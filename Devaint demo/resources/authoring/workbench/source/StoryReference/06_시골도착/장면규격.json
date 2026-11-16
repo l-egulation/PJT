@@ -1,0 +1,67 @@
+{
+  "canvas": [
+    960,
+    540
+  ],
+  "worldOffsetY": -24,
+  "footScreenY": 364,
+  "heroCanvas": [
+    128,
+    128
+  ],
+  "heroPivot": [
+    64,
+    120
+  ],
+  "heroVisibleHeight": 64,
+  "tileSize": 32,
+  "cinematicBars": {
+    "top": 72,
+    "bottom": 72,
+    "animated": false
+  },
+  "transition": {
+    "fadeOutMs": 350,
+    "opaqueHoldMs": 200,
+    "fadeInMs": 500,
+    "barsAppear": "at scene swap under opaque fade"
+  },
+  "sourceAssembly": {
+    "house": [
+      338,
+      196,
+      284,
+      187
+    ],
+    "well": [
+      207,
+      267,
+      86,
+      116
+    ],
+    "ground": [
+      0,
+      375,
+      960,
+      40
+    ]
+  },
+  "motion": {
+    "run": [
+      450,
+      2450
+    ],
+    "brake": [
+      2450,
+      2825
+    ],
+    "prepare": [
+      2825,
+      3095
+    ],
+    "breathStart": 3095
+  },
+  "preview": "StoryPreview/countryside-arrival/index.html",
+  "scope": "기록 확인 직후 출구 이동부터 시골 도착까지. Unity 구현은 별도.",
+  "forestAlignment": "세 가지 숲 미리보기도 960x540, 캐릭터 1:1, 시작 평지 발 위치 364로 확인."
+}

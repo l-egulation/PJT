@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>보스전 컷씬 흐름</title>
+<link rel="stylesheet" href="../../../boss-phase2-cutscene-20261106/preview/cutscene.css">
+<style>
+.stage iframe{display:block;width:100%;height:100%;border:0;background:#000}
+#steps{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}#steps button{font-size:12px;padding:6px 10px;background:#252e3d}#steps button.active{border-color:#d9b2d6;background:#483c56}
+.flowseek{display:flex;gap:14px;align-items:center;margin-top:14px}.track{position:relative;flex:1;padding-bottom:16px}#fseek{width:100%;margin:0}#fseek:disabled{opacity:.35}
+#ticks{position:absolute;left:8px;right:8px;top:22px;height:12px}#ticks button{position:absolute;transform:translateX(-50%);width:9px;height:12px;padding:0;border:0;border-radius:2px;background:#6f7f98;min-width:0}#ticks button:hover,#ticks button.active{background:#e3b6dc}
+#fclock{font:12px ui-monospace,monospace;color:#a7b7cb;min-width:115px}
+#cutlist{display:grid;gap:8px;margin-top:10px}.group{display:flex;flex-wrap:wrap;align-items:center;gap:6px}.group>.head{font-size:12px;padding:6px 10px;background:#33405a;min-width:150px;text-align:left}.group>.head.active{border-color:#d9b2d6;background:#483c56}
+.group .cut{font-size:12px;padding:5px 8px;background:#252e3d}.group .cut.active{border-color:#d9b2d6;background:#483c56}.group .cut small{color:#93a3bb;margin-right:4px;font-family:ui-monospace,monospace}
+#end{position:absolute;inset:0;display:grid;place-items:center;background:#0d1016e6;color:#e8e2f2;font-size:15px;text-align:center;line-height:1.8}
+</style>
+<main>
+  <header><div><span class="eyebrow">STAGE 02 / ROSE BLUE</span><h1>보스전 컷씬 이어 보기</h1></div><span class="draft">HTML 연출 시안</span></header>
+  <p class="intro">입장 컷씬 → 1페이즈 전투 → 1→2페이즈 전환 컷씬 → 2페이즈 전투 → 흡수 컷씬이 한 번에 이어집니다. 장치를 부수면 전환 컷씬이 나오고, 2페이즈에서 누구를 먼저 쓰러뜨리느냐에 따라 흡수 컷씬이 「블루가 먼저 쓰러짐」과 「로즈가 먼저 쓰러짐」 두 갈래로 나뉩니다. 아래 단계 버튼으로 두 갈래를 바로 열 수도 있습니다.</p>
+  <p class="intro"><a href="../motion-requests/" style="color:#b6d3f3">이 컷씬들에 필요한 로즈·블루 모션 제작 요청(Aether용) →</a></p>
+  <div class="stage"><iframe id="view" title="보스전 흐름"></iframe><div id="end" hidden><div><span id="end-text">흡수 컷씬 끝</span><br>3페이즈 전투는 아직 HTML 로 만들지 않았습니다<br><button id="other">다른 갈래 보기</button> <button id="again">처음부터 다시</button></div></div></div>
+  <div class="playbar"><button id="toggle">일시정지</button><button id="restart">처음부터</button><button id="prev-cut" title="이전 컷">◀ 이전 컷</button><button id="next-cut" title="다음 컷">다음 컷 ▶</button><button id="next">다음 단계로 건너뛰기</button><label title="말풍선 이름표를 켜고 끄며 비교"><input id="tags" type="checkbox" checked> 이름표</label><span id="ko" hidden><button data-first="blue">블루 먼저 쓰러뜨리기</button> <button data-first="rose">로즈 먼저 쓰러뜨리기</button></span><span id="status" role="status">불러오는 중…</span></div>
+  <div class="flowseek"><div class="track"><input id="fseek" type="range" min="0" max="1" step="0.01" value="0" aria-label="컷씬 시간"><div id="ticks"></div></div><output id="fclock">0.00 / 0.00s</output></div>
+  <div id="cutlist" aria-label="컷 바로 가기"></div>
+  <p class="notes">컷씬 조작: 재생바를 끌거나 눈금·컷 이름을 누르면 그 컷으로 이동하고 멈춥니다. 다른 단계의 컷을 누르면 그 단계를 열고 바로 이동합니다. 「이름표」를 끄면 말풍선의 이름표 없이 볼 수 있습니다(선택은 기억됨). 화면 밖에서 Space 재생·일시정지, [ ] 이전·다음 컷. 컷씬 화면을 클릭한 뒤에는 Space 재생·정지, ← → 0.1초 이동.</p>
+  <p class="notes">전투 조작: A/D 또는 ← → 이동, Space 2단 점프, Shift 대시, 1페이즈 Q 평타 W 강베기, 2페이즈 J 평타 K 강베기. 전투 화면을 한 번 클릭해야 키 입력을 받습니다. 1페이즈 전투는 예전 1페이즈 HTML 시험판(boss-siblings-lineup)을, 2페이즈 전투는 흡수 컷씬 페이지의 전투를 그대로 씁니다. 플레이어 위치와 HP 는 단계마다 이어집니다.</p>
+</main>
+<script type="module" src="flow.js"></script>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>블루 · 일어서기에서 흡수로 연결</title>
+<style>
+@font-face{font-family:Galmuri;src:url('../assets/Galmuri11-Bold.ttf')}*{box-sizing:border-box}body{margin:0;background:#171c25;color:#e8ecf2;font:14px 'Malgun Gothic',sans-serif}main{max-width:1240px;margin:30px auto;padding:0 24px}h1{font-size:25px;margin:0 0 12px}p{line-height:1.8;color:#b9c4d1}.frames{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:22px 0}figure{margin:0;border:1px solid #56647a;background:#232d3b;border-radius:6px;overflow:hidden}figcaption{padding:14px;font-weight:bold}figure img{display:block;width:100%;image-rendering:pixelated;background:white}nav{padding:12px;display:flex;gap:18px;flex-wrap:wrap}a{color:#b8d7fc}a:hover{color:white}.flow{padding:15px 18px;background:#253248;color:#e9d6e8;line-height:1.8}pre{white-space:pre-wrap;line-height:1.7;font:13px ui-monospace,monospace;padding:20px;background:#111924;border:1px solid #45546b;color:#d4dfec}button{background:#466284;color:#fff;border:1px solid #8aa3c4;border-radius:5px;padding:10px 16px;font:inherit;cursor:pointer}#status{margin-left:14px;color:#c3dbbf}footer{margin:24px 0 40px;color:#a8b5c9;font-size:12px}@media(max-width:760px){.frames{grid-template-columns:1fr}main{padding:0 14px}h1{font-size:22px}}
+</style>
+<main>
+ <h1>블루 · 일어서기 → 흡수 연결 모션</h1>
+ <p>이미 채택한 일어서기 다음에 붙일 동작 하나입니다. 아래 두 이미지를 에테르의 시작·끝 참조로 넣어 주세요.</p>
+ <div class="flow">잠깐 멈춤 → 위로 든 손바닥을 돌림 → 같은 팔을 왼쪽으로 뻗음 → 손가락을 오므려 붙잡음 → 흡수 자세 유지</div>
+ <div class="frames">
+  <figure><figcaption>시작 · 일어서기 마지막 자세</figcaption><img src="start.png" alt="블루가 일어선 뒤 손바닥을 위로 든 시작 참조"><nav><a href="start.png" download="blue-absorb-start-white.png">흰 배경 확대본 저장</a><a href="start-native.png" download>픽셀 원본</a></nav></figure>
+  <figure><figcaption>끝 · 한 손을 뻗어 붙잡는 자세</figcaption><img src="end.png" alt="블루가 왼쪽으로 한 손을 뻗는 흡수 끝 참조"><nav><a href="end.png" download="blue-absorb-end-white.png">흰 배경 확대본 저장</a><a href="end-native.png" download>픽셀 원본</a></nav></figure>
+ </div>
+ <p>두 확대본 모두 1280×720, 같은 배율·발 위치입니다. 일어서는 동작을 반복하지 않고 <b>1.5~2초 동안 손동작을 연결한 뒤 마지막 자세를 유지</b>하면 됩니다. 구체·흡수 이펙트는 넣지 않습니다.</p>
+ <button id="copy">영문 프롬프트 복사</button><span id="status" role="status"></span> <a href="prompt.txt" download>TXT 저장</a>
+ <pre id="prompt">불러오는 중…</pre>
+ <footer>채택한 픽셀 프레임을 그대로 쓴 제작 참조입니다. 신규 연결 모션은 아직 제작·적용 전입니다. <a href="../?scene=rose-first">컷씬 검토로 돌아가기</a></footer>
+</main>
+<script type="module">
+const box=document.querySelector('#prompt'),status=document.querySelector('#status');
+try{const r=await fetch('prompt.txt');if(!r.ok)throw Error(r.status);box.textContent=await r.text();document.querySelector('#copy').onclick=async()=>{try{await navigator.clipboard.writeText(box.textContent);status.textContent='복사했어요.'}catch{status.textContent='아래 내용을 선택하거나 TXT로 저장해 주세요.'}};}catch(e){box.textContent='프롬프트를 열지 못했습니다: '+e.message;}
+</script>
+</html>

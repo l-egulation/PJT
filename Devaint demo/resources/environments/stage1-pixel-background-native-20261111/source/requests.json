@@ -1,0 +1,35 @@
+[
+  {
+    "id": "near-village",
+    "width": 666,
+    "height": 334,
+    "grid": 2,
+    "levels": 6,
+    "kind": "land",
+    "prompt": "Use case: precise-object-edit. Edit the attached transparent game-background layer IN PLACE. Preserve its exact subject arrangement, proportions, skyline height, transparent margins, broad colors and overall design. No new objects or composition changes. The final use is our native 960x540 2D game, with cream/graphite 32px terrain and a pixel-art hero. Redraw the contours and internal shapes as carefully hand-placed, CLEAN PIXEL ART: intentional compact pixel clusters, consistent staircase rhythms on diagonals, small finite flat palette, binary clean alpha. Remove all blur, photographic gradients, antialias fringes, isolated noise pixels and accidental hairline strokes. Do NOT add black outlines, illustrations, paper grain, large dither patterns, text, borders, checkerboard, terrain, characters or gameplay objects. Keep the current quiet ivory/warm-grey palette; do not increase saturation or contrast. Transparent background must remain truly transparent. Deliver only this single separate asset, not a mockup or comparison sheet. Layer: the SAME near village of low cottages, round trees and modest bell roof, with the SAME little windows. Draw it on a 333x167 logical pixel grid, intended to be expanded exactly 2x into a 666x334 native PNG. Keep the tiny windows and chimney tops legible as deliberate pixel clusters. Clean up each roof slope, tree crown and building overlap; no outlines. This is refinement of the existing design, not a new village.",
+    "sourceFile": "near-village-redraw.png",
+    "inputFile": "inputs/near-village.png"
+  },
+  {
+    "id": "far-village",
+    "width": 444,
+    "height": 222,
+    "grid": 1,
+    "levels": 4,
+    "kind": "land",
+    "prompt": "Use case: precise-object-edit. Edit the attached transparent game-background layer IN PLACE. Preserve its exact subject arrangement, proportions, skyline height, transparent margins, broad colors and overall design. No new objects or composition changes. The final use is our native 960x540 2D game, with cream/graphite 32px terrain and a pixel-art hero. Redraw the contours and internal shapes as carefully hand-placed, CLEAN PIXEL ART: intentional compact pixel clusters, consistent staircase rhythms on diagonals, small finite flat palette, binary clean alpha. Remove all blur, photographic gradients, antialias fringes, isolated noise pixels and accidental hairline strokes. Do NOT add black outlines, illustrations, paper grain, large dither patterns, text, borders, checkerboard, terrain, characters or gameplay objects. Keep the current quiet ivory/warm-grey palette; do not increase saturation or contrast. Transparent background must remain truly transparent. Deliver only this single separate asset, not a mockup or comparison sheet. Layer: the SAME pale distant village silhouettes and two modest towers in the SAME positions. Refine to an intended native canvas 444x222 pixels. Use four flat near-paper warm-grey tones at most, no windows, no contour lines. Preserve the established large silhouette masses and clear tower tops with small clean pixel steps. Do not redesign the tower heights or tree positions.",
+    "sourceFile": "far-village-redraw.png",
+    "inputFile": "inputs/far-village.png"
+  },
+  {
+    "id": "mountains",
+    "width": 888,
+    "height": 444,
+    "grid": 1,
+    "levels": 3,
+    "kind": "land",
+    "prompt": "Use case: precise-object-edit. Edit the attached transparent game-background layer IN PLACE. Preserve its exact subject arrangement, proportions, skyline height, transparent margins, broad colors and overall design. No new objects or composition changes. The final use is our native 960x540 2D game, with cream/graphite 32px terrain and a pixel-art hero. Redraw the contours and internal shapes as carefully hand-placed, CLEAN PIXEL ART: intentional compact pixel clusters, consistent staircase rhythms on diagonals, small finite flat palette, binary clean alpha. Remove all blur, photographic gradients, antialias fringes, isolated noise pixels and accidental hairline strokes. Do NOT add black outlines, illustrations, paper grain, large dither patterns, text, borders, checkerboard, terrain, characters or gameplay objects. Keep the current quiet ivory/warm-grey palette; do not increase saturation or contrast. Transparent background must remain truly transparent. Deliver only this single separate asset, not a mockup or comparison sheet. Layer: the SAME two rolling mountain/hill ridges. Intended native canvas 888x444 pixels. Use only three very pale flat ivory-grey tones; no gradients, no outlines, no new peaks. Preserve the ridge shapes and heights exactly, just clean their edges into graceful fine pixel steps with no speckled halo.",
+    "sourceFile": "mountains-redraw.png",
+    "inputFile": "inputs/mountains.png"
+  }
+]

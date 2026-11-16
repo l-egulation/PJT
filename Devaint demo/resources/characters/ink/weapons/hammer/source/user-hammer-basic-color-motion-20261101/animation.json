@@ -1,0 +1,376 @@
+{
+  "canvas": [
+    224,
+    192
+  ],
+  "pivot": [
+    96,
+    151
+  ],
+  "ppu": 32,
+  "detailExport": {
+    "canvas": [
+      896,
+      768
+    ],
+    "pivot": [
+      384,
+      604
+    ],
+    "ppu": 128
+  },
+  "scale": 0.145,
+  "paletteReference": "characters/ink/weapons/hammer/runtime/user-hammer-normal-reused-20261031/idle_01.png",
+  "paletteReferenceSha256": "477af5e2387c3e85e11e186b0117cb48ef02955f5fd3c93fa9dcc75f32b049b0",
+  "approvedPalette": [
+    "#1b1616",
+    "#fdeeda",
+    "#025673",
+    "#d2b396",
+    "#02648c",
+    "#eba516"
+  ],
+  "sequences": {
+    "attack_1": [
+      {
+        "frame": "attack_1_01",
+        "ms": 90
+      },
+      {
+        "frame": "attack_1_02",
+        "ms": 60
+      },
+      {
+        "frame": "attack_1_03",
+        "ms": 40
+      },
+      {
+        "frame": "attack_1_04",
+        "ms": 30
+      },
+      {
+        "frame": "attack_1_05",
+        "ms": 80
+      },
+      {
+        "frame": "attack_1_06",
+        "ms": 40
+      }
+    ],
+    "attack_2": [
+      {
+        "frame": "attack_2_01",
+        "ms": 80
+      },
+      {
+        "frame": "attack_2_02",
+        "ms": 100
+      },
+      {
+        "frame": "attack_2_03",
+        "ms": 120
+      },
+      {
+        "frame": "attack_2_04",
+        "ms": 30
+      },
+      {
+        "frame": "attack_2_05",
+        "ms": 90
+      },
+      {
+        "frame": "attack_2_06",
+        "ms": 70
+      },
+      {
+        "frame": "attack_2_07",
+        "ms": 60
+      },
+      {
+        "frame": "attack_2_08",
+        "ms": 130
+      },
+      {
+        "frame": "attack_2_09",
+        "ms": 650
+      }
+    ]
+  },
+  "reviewPauseMs": 650,
+  "motion": "Actual two boots define frame registration; natural foot shapes retained. Second-hit lift redistributed 80/100/120ms, same 300ms total.",
+  "color": "Only material RGB mapped to the six approved colors; intentional neutral attack effects preserved. No spatial grid conversion.",
+  "approval": "pending-user-review",
+  "gameIntegration": "not-deployed",
+  "frames": [
+    {
+      "frame": "attack_1_01",
+      "input": "B19",
+      "oldAnchor": [
+        560.5,
+        648
+      ],
+      "correctedAnchor": [
+        560.5,
+        648
+      ],
+      "sourceSha256": "2d0f39f8ac03e26ae3e85f94da6a77eacb657ac159c079ea9a35607ca9645769",
+      "alphaAndPoseUnchanged": true,
+      "materialColorsUseApprovedPaletteOnly": true,
+      "preservedGrayEffectPixels": 0,
+      "sourceHighres": "color-corrected-highres/01-B19.png",
+      "durationMs": 90
+    },
+    {
+      "frame": "attack_1_02",
+      "input": "B20",
+      "oldAnchor": [
+        560.5,
+        648
+      ],
+      "correctedAnchor": [
+        560.5,
+        648
+      ],
+      "sourceSha256": "dc4870a88825a4ebe5edacf84e2a902a820ae50a35b2a127113e1295d66c4747",
+      "alphaAndPoseUnchanged": true,
+      "materialColorsUseApprovedPaletteOnly": true,
+      "preservedGrayEffectPixels": 0,
+      "sourceHighres": "color-corrected-highres/02-B20.png",
+      "durationMs": 60
+    },
+    {
+      "frame": "attack_1_03",
+      "input": "B37",
+      "oldAnchor": [
+        561.0,
+        648
+      ],
+      "correctedAnchor": [
+        561.0,
+        648
+      ],
+      "sourceSha256": "e4cc76895a8b3fd3884081703f3e8e25d05db9b09a9cee2559e0ca653aab6dc2",
+      "alphaAndPoseUnchanged": true,
+      "materialColorsUseApprovedPaletteOnly": true,
+      "preservedGrayEffectPixels": 0,
+      "sourceHighres": "color-corrected-highres/03-B37.png",
+      "durationMs": 40
+    },
+    {
+      "frame": "attack_1_04",
+      "input": "B53",
+      "oldAnchor": [
+        556.5,
+        648
+      ],
+      "correctedAnchor": [
+        556.5,
+        648
+      ],
+      "sourceSha256": "35417e7722fe0ff4fa827f7202e856bfb3ea226b72ae7a3a6f3ae1f5d8488ec4",
+      "alphaAndPoseUnchanged": true,
+      "materialColorsUseApprovedPaletteOnly": true,
+      "preservedGrayEffectPixels": 22758,
+      "sourceHighres": "color-corrected-highres/04-B53.png",
+      "durationMs": 30
+    },
+    {
+      "frame": "attack_1_05",
+      "input": "B55",
+      "oldAnchor": [
+        555.0,
+        648
+      ],
+      "correctedAnchor": [
+        555.0,
+        648
+      ],
+      "sourceSha256": "dc782e7ba0e01c7219b4a0939789867c94f04bc445ba14231ca4f3aed5903346",
+      "alphaAndPoseUnchanged": true,
+      "materialColorsUseApprovedPaletteOnly": true,
+      "preservedGrayEffectPixels": 6493,
+      "sourceHighres": "color-corrected-highres/05-B55.png",
+      "durationMs": 80
+    },
+    {
+      "frame": "attack_1_06",
+      "input": "B60",
+      "oldAnchor": [
+        555.0,
+        648
+      ],
+      "correctedAnchor": [
+        555.0,
+        648
+      ],
+      "sourceSha256": "11fe3a2ec6fbb1a188c500f2b8ffad16681805213bb3f48b91b6a751d4fb4b2c",
+      "alphaAndPoseUnchanged": true,
+      "materialColorsUseApprovedPaletteOnly": true,
+      "preservedGrayEffectPixels": 0,
+      "sourceHighres": "color-corrected-highres/06-B60.png",
+      "durationMs": 40
+    },
+    {
+      "frame": "attack_2_01",
+      "input": "A09",
+      "oldAnchor": [
+        578.0,
+        650
+      ],
+      "correctedAnchor": [
+        578.0,
+        650
+      ],
+      "sourceSha256": "a8012397a8f4a4b6139e0582978a44fe33ae4849fb1912ab9c42255d3dd7797e",
+      "alphaAndPoseUnchanged": true,
+      "materialColorsUseApprovedPaletteOnly": true,
+      "preservedGrayEffectPixels": 0,
+      "sourceHighres": "color-corrected-highres/07-A09.png",
+      "durationMs": 80
+    },
+    {
+      "frame": "attack_2_02",
+      "input": "A11",
+      "oldAnchor": [
+        578.0,
+        650
+      ],
+      "correctedAnchor": [
+        578.0,
+        650
+      ],
+      "sourceSha256": "84f0062aa8147093cbf122bc4d30c7b601a8010af5f38e98ad07dd0d17d907dd",
+      "alphaAndPoseUnchanged": true,
+      "materialColorsUseApprovedPaletteOnly": true,
+      "preservedGrayEffectPixels": 0,
+      "sourceHighres": "color-corrected-highres/08-A11.png",
+      "durationMs": 100
+    },
+    {
+      "frame": "attack_2_03",
+      "input": "A14",
+      "oldAnchor": [
+        567.0,
+        650
+      ],
+      "correctedAnchor": [
+        567.0,
+        650
+      ],
+      "sourceSha256": "b6df5d7b9f45f15a9ae2eb3c0ad31505d6b7badf4a9026546345fca1d4cd999d",
+      "alphaAndPoseUnchanged": true,
+      "materialColorsUseApprovedPaletteOnly": true,
+      "preservedGrayEffectPixels": 0,
+      "sourceHighres": "color-corrected-highres/09-A14.png",
+      "durationMs": 120
+    },
+    {
+      "frame": "attack_2_04",
+      "input": "A20",
+      "oldAnchor": [
+        525.5,
+        650
+      ],
+      "correctedAnchor": [
+        582.5,
+        650
+      ],
+      "sourceSha256": "67ddedc06f7b3756cc164e1934ff52ed383957776621b6df875281ac7bfea26a",
+      "alphaAndPoseUnchanged": true,
+      "materialColorsUseApprovedPaletteOnly": true,
+      "preservedGrayEffectPixels": 6740,
+      "sourceHighres": "color-corrected-highres/10-A20.png",
+      "durationMs": 30
+    },
+    {
+      "frame": "attack_2_05",
+      "input": "A21",
+      "oldAnchor": [
+        568.0,
+        653
+      ],
+      "correctedAnchor": [
+        577.5,
+        653
+      ],
+      "sourceSha256": "0cc0bd794ce5d72e5067fef7adc86c4f7ebcd46aa5a2c6b92e9ab0c889713cb8",
+      "alphaAndPoseUnchanged": true,
+      "materialColorsUseApprovedPaletteOnly": true,
+      "preservedGrayEffectPixels": 4367,
+      "sourceHighres": "color-corrected-highres/11-A21.png",
+      "durationMs": 90
+    },
+    {
+      "frame": "attack_2_06",
+      "input": "A22",
+      "oldAnchor": [
+        524.0,
+        646
+      ],
+      "correctedAnchor": [
+        579.0,
+        646
+      ],
+      "sourceSha256": "9aa08451570e99c0e06c7eff670140a39092e1b4d31b45ba961e28e07114836a",
+      "alphaAndPoseUnchanged": true,
+      "materialColorsUseApprovedPaletteOnly": true,
+      "preservedGrayEffectPixels": 10346,
+      "sourceHighres": "color-corrected-highres/12-A22.png",
+      "durationMs": 70
+    },
+    {
+      "frame": "attack_2_07",
+      "input": "A24",
+      "oldAnchor": [
+        505.0,
+        650
+      ],
+      "correctedAnchor": [
+        578.0,
+        650
+      ],
+      "sourceSha256": "032f3ae575200cbbc7691dba694b3ed0e26a7a690f4a4ad91ee069629e704406",
+      "alphaAndPoseUnchanged": true,
+      "materialColorsUseApprovedPaletteOnly": true,
+      "preservedGrayEffectPixels": 0,
+      "sourceHighres": "color-corrected-highres/13-A24.png",
+      "durationMs": 60
+    },
+    {
+      "frame": "attack_2_08",
+      "input": "A27",
+      "oldAnchor": [
+        578.0,
+        650
+      ],
+      "correctedAnchor": [
+        578.0,
+        650
+      ],
+      "sourceSha256": "9e7e968e3788c528faaf89256848f1e142f62cab8751f6f9dfa6e61b5e19a430",
+      "alphaAndPoseUnchanged": true,
+      "materialColorsUseApprovedPaletteOnly": true,
+      "preservedGrayEffectPixels": 0,
+      "sourceHighres": "color-corrected-highres/14-A27.png",
+      "durationMs": 130
+    },
+    {
+      "frame": "attack_2_09",
+      "input": "A36",
+      "oldAnchor": [
+        633.5,
+        658
+      ],
+      "correctedAnchor": [
+        578.0,
+        650
+      ],
+      "sourceSha256": "257f6b08b8ee7050341dab0440d50e99525bc2250cc8f1b35b2bf2cca5f52a9d",
+      "alphaAndPoseUnchanged": true,
+      "materialColorsUseApprovedPaletteOnly": true,
+      "preservedGrayEffectPixels": 0,
+      "sourceHighres": "color-corrected-highres/15-A36.png",
+      "durationMs": 650
+    }
+  ]
+}

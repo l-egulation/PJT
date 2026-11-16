@@ -1,0 +1,569 @@
+{
+  "schema": 1,
+  "status": "accepted_test_baseline_implementation_pending",
+  "purpose": "사용자가 채택한 MVP 시험 수치. 팔레트 구성·획득 정정 반영. 구현·밸런스 검증은 별도.",
+  "sources": {
+    "policy": "data/combat/weapon_growth_mvp_proposal.json",
+    "parts": "data/combat/ink_simulator_parts_proposal.json",
+    "existingEconomy": "data/combat/chapter1_economy.json"
+  },
+  "rewards": {
+    "normal": {
+      "inkChance": 0.08,
+      "inkCount": 1,
+      "paletteChance": 0,
+      "paletteCount": 0
+    },
+    "elite": {
+      "inkChance": 1,
+      "inkCount": 3,
+      "paletteChance": 0,
+      "paletteCount": 0
+    },
+    "boss": {
+      "inkChance": 0,
+      "inkCount": 0,
+      "paletteChance": 0,
+      "paletteCount": 0
+    },
+    "firstElitePalette": {
+      "override": false,
+      "count": 0,
+      "additiveToNormalPaletteRoll": false,
+      "retired": "2026-10-31: palettes are fixed at departure (roguelite-progression.md); kills never drop palettes"
+    }
+  },
+  "gradeWeights": {
+    "normal": [
+      0.75,
+      0.2,
+      0.04,
+      0.01
+    ],
+    "elite": [
+      0.35,
+      0.4,
+      0.2,
+      0.05
+    ],
+    "boss": [
+      0.05,
+      0.3,
+      0.45,
+      0.2
+    ],
+    "maintenance": [
+      0.5,
+      0.3,
+      0.15,
+      0.05
+    ]
+  },
+  "selection": {
+    "order": [
+      "eligible_grade",
+      "part_with_color_bias"
+    ],
+    "gradeWeightsApplyToFixedPartGrade": true,
+    "equippedPaletteColorWeight": 3,
+    "otherColorWeight": 1,
+    "withoutPalette": "all_parts_weight_one",
+    "colorlessCreatesColorBias": false,
+    "colorPresenceCountsOnce": true,
+    "emptyGradePolicy": "renormalize_nonempty_eligible_grades",
+    "repeatDropPolicy": "allowed"
+  },
+  "palettes": {
+    "earlyOwnedColorInks": 5,
+    "slotWeights": {
+      "3": 0.6,
+      "4": 0.3,
+      "5": 0.1
+    },
+    "colorWeights": {
+      "red": 0.18,
+      "yellow": 0.18,
+      "green": 0.18,
+      "blue": 0.18,
+      "purple": 0.18,
+      "colorless": 0.1
+    },
+    "colorRoll": "slot_count_specific_patterns",
+    "patternsBySlotCount": {
+      "3": "random",
+      "4": "random",
+      "5": "random"
+    },
+    "colorWeightsScope": "start_palette_every_slot_and_colorless_override",
+    "concentratedColorSelection": "uniform_five_base_colors_then_independent_colorless",
+    "colorlessChancePerSlot": 0.1
+  },
+  "upgradeMultipliers": {
+    "damage": [
+      1,
+      1.15,
+      1.3,
+      1.45,
+      1.6,
+      1.75
+    ],
+    "healing": [
+      1,
+      1.1,
+      1.2,
+      1.3,
+      1.4,
+      1.5
+    ],
+    "shield": [
+      1,
+      1.1,
+      1.2,
+      1.3,
+      1.4,
+      1.5
+    ],
+    "move_speed": [
+      1,
+      1.06,
+      1.12,
+      1.18,
+      1.24,
+      1.3
+    ],
+    "range": [
+      1,
+      1.08,
+      1.16,
+      1.24,
+      1.32,
+      1.4
+    ],
+    "cooldown": [
+      1,
+      1.08,
+      1.16,
+      1.24,
+      1.32,
+      1.4
+    ],
+    "crowd_control": [
+      1,
+      1.05,
+      1.1,
+      1.15,
+      1.2,
+      1.25
+    ]
+  },
+  "costs": {
+    "equipGold": 0,
+    "fillEmptyGold": 0,
+    "replaceGold": {
+      "base": 0,
+      "perIncomingPartGrade": 0
+    },
+    "replacedPart": "returns_to_owned_inks",
+    "equipPlace": "inventory_any_time",
+    "colorChangeGold": 100,
+    "colorChangesPerRun": 2,
+    "colorChangeIncludesReplacement": true,
+    "existingPriceTracks": "inherit_palette_inkDraw_statUpgrade_slotUpgrade",
+    "countScope": "retain_existing_run_global_price_track_counters",
+    "initialCrafting": "not_applicable_acquire_existing_palette",
+    "recraftGold": 0,
+    "inkSale": {
+      "drawPriceFraction": 0.2,
+      "priceBasis": "current_ink_draw_price",
+      "rounding": "not_required_for_current_40_plus_20_price_track",
+      "equippedInkEligible": null,
+      "saleIncrementsDrawPrice": false,
+      "drawPriceIncrementsOn": "successful_draw_only",
+      "fiveSalesFundOneCurrentDraw": true
+    }
+  },
+  "commonAttackGrowth": {
+    "perLevelAdditiveFraction": 0.05,
+    "proposedMaxLevel": 10,
+    "appliesTo": [
+      "basic_attack",
+      "skill_attack",
+      "weapon_basic_reference_for_ink_and_detonation"
+    ],
+    "excluded": [
+      "fixed_healing",
+      "movement_speed",
+      "cc_duration"
+    ]
+  },
+  "mark": {
+    "coefficientPerConsumedMark": 0.15,
+    "coefficientAffectedByPaletteSlotLevel": false,
+    "cap": 7,
+    "durationSeconds": 8,
+    "popIntervalSeconds": 0.08
+  },
+  "proposedSafety": {
+    "shieldCap": 50,
+    "chainDepth": 2,
+    "movementSpeedBonusCap": 0.5,
+    "lifeStealFractionCap": 0.15,
+    "hardControlRecoverySeconds": 1,
+    "bossControlDurationAndDisplacementScale": 0.25,
+    "combinedDisplacementCapPerTargetPerSourceAction": 2
+  },
+  "partTuning": [
+    {
+      "id": "ink2_red_01",
+      "fixedGrade": 3,
+      "duplicateEquip": true,
+      "baseParams": {
+        "ratio": 0.2
+      },
+      "upgradeTargets": [
+        {
+          "parameter": "ratio",
+          "family": "damage"
+        }
+      ],
+      "internalCooldownSeconds": 0.25,
+      "cooldownScope": "instance"
+    },
+    {
+      "id": "ink2_red_04",
+      "fixedGrade": 2,
+      "duplicateEquip": false,
+      "baseParams": {
+        "amount": 0.3
+      },
+      "upgradeTargets": [
+        {
+          "parameter": "amount",
+          "family": "damage"
+        }
+      ],
+      "internalCooldownSeconds": 2,
+      "cooldownScope": "instance"
+    },
+    {
+      "id": "ink2_red_07",
+      "fixedGrade": 4,
+      "duplicateEquip": false,
+      "baseParams": {
+        "ratio": 0.6
+      },
+      "upgradeTargets": [
+        {
+          "parameter": "ratio",
+          "family": "damage"
+        }
+      ],
+      "internalCooldownSeconds": 0.5,
+      "cooldownScope": "instance_and_target"
+    },
+    {
+      "id": "ink2_red_10",
+      "fixedGrade": 1,
+      "duplicateEquip": false,
+      "baseParams": {
+        "amount": 0.25
+      },
+      "upgradeTargets": [
+        {
+          "parameter": "amount",
+          "family": "damage"
+        }
+      ],
+      "internalCooldownSeconds": 0,
+      "cooldownScope": "instance"
+    },
+    {
+      "id": "ink2_yellow_01",
+      "fixedGrade": 1,
+      "duplicateEquip": true,
+      "baseParams": {
+        "amount": 0.12,
+        "duration": 3
+      },
+      "upgradeTargets": [
+        {
+          "parameter": "amount",
+          "family": "move_speed"
+        }
+      ],
+      "internalCooldownSeconds": 0.25,
+      "cooldownScope": "instance"
+    },
+    {
+      "id": "ink2_yellow_04",
+      "fixedGrade": 2,
+      "duplicateEquip": false,
+      "baseParams": {
+        "amount": 0.35,
+        "duration": 1.5
+      },
+      "upgradeTargets": [
+        {
+          "parameter": "amount",
+          "family": "move_speed"
+        }
+      ],
+      "internalCooldownSeconds": 2,
+      "cooldownScope": "instance"
+    },
+    {
+      "id": "ink2_yellow_07",
+      "fixedGrade": 3,
+      "duplicateEquip": false,
+      "baseParams": {
+        "amount": 0.3,
+        "duration": 3
+      },
+      "upgradeTargets": [
+        {
+          "parameter": "amount",
+          "family": "move_speed"
+        }
+      ],
+      "internalCooldownSeconds": 0.5,
+      "cooldownScope": "instance"
+    },
+    {
+      "id": "ink2_yellow_09",
+      "fixedGrade": 1,
+      "duplicateEquip": false,
+      "baseParams": {
+        "amount": 0.22,
+        "duration": 4
+      },
+      "upgradeTargets": [
+        {
+          "parameter": "amount",
+          "family": "move_speed"
+        }
+      ],
+      "internalCooldownSeconds": 0,
+      "cooldownScope": "instance"
+    },
+    {
+      "id": "ink2_green_03",
+      "fixedGrade": 3,
+      "duplicateEquip": true,
+      "baseParams": {
+        "ratio": 0.05
+      },
+      "upgradeTargets": [
+        {
+          "parameter": "ratio",
+          "family": "healing"
+        }
+      ],
+      "internalCooldownSeconds": 0,
+      "cooldownScope": "instance"
+    },
+    {
+      "id": "ink2_green_04",
+      "fixedGrade": 2,
+      "duplicateEquip": false,
+      "baseParams": {
+        "amount": 12,
+        "duration": 4
+      },
+      "upgradeTargets": [
+        {
+          "parameter": "amount",
+          "family": "shield"
+        }
+      ],
+      "internalCooldownSeconds": 2,
+      "cooldownScope": "instance"
+    },
+    {
+      "id": "ink2_green_07",
+      "fixedGrade": 3,
+      "duplicateEquip": false,
+      "baseParams": {
+        "amount": 8
+      },
+      "upgradeTargets": [
+        {
+          "parameter": "amount",
+          "family": "healing"
+        }
+      ],
+      "internalCooldownSeconds": 1,
+      "cooldownScope": "instance"
+    },
+    {
+      "id": "ink2_green_09",
+      "fixedGrade": 1,
+      "duplicateEquip": true,
+      "baseParams": {
+        "ratio": 0.05
+      },
+      "upgradeTargets": [
+        {
+          "parameter": "ratio",
+          "family": "healing"
+        }
+      ],
+      "internalCooldownSeconds": 0.5,
+      "cooldownScope": "instance"
+    },
+    {
+      "id": "ink2_blue_02",
+      "fixedGrade": 2,
+      "duplicateEquip": false,
+      "baseParams": {
+        "seconds": 0.3
+      },
+      "upgradeTargets": [
+        {
+          "parameter": "seconds",
+          "family": "cooldown"
+        }
+      ],
+      "internalCooldownSeconds": 0.25,
+      "cooldownScope": "instance"
+    },
+    {
+      "id": "ink2_blue_04",
+      "fixedGrade": 2,
+      "duplicateEquip": false,
+      "baseParams": {
+        "amount": 0.4
+      },
+      "upgradeTargets": [
+        {
+          "parameter": "amount",
+          "family": "range"
+        }
+      ],
+      "internalCooldownSeconds": 2,
+      "cooldownScope": "instance"
+    },
+    {
+      "id": "ink2_blue_08",
+      "fixedGrade": 3,
+      "duplicateEquip": false,
+      "baseParams": {
+        "amount": 0.35,
+        "duration": 4
+      },
+      "upgradeTargets": [
+        {
+          "parameter": "amount",
+          "family": "range"
+        }
+      ],
+      "internalCooldownSeconds": 0.5,
+      "cooldownScope": "instance"
+    },
+    {
+      "id": "ink2_blue_09",
+      "fixedGrade": 1,
+      "duplicateEquip": true,
+      "baseParams": {
+        "seconds": 0.8
+      },
+      "upgradeTargets": [
+        {
+          "parameter": "seconds",
+          "family": "cooldown"
+        }
+      ],
+      "internalCooldownSeconds": 0.5,
+      "cooldownScope": "instance"
+    },
+    {
+      "id": "ink2_purple_01",
+      "fixedGrade": 1,
+      "duplicateEquip": false,
+      "baseParams": {
+        "amount": 0.2,
+        "duration": 2
+      },
+      "upgradeTargets": [
+        {
+          "parameter": "amount",
+          "family": "crowd_control"
+        }
+      ],
+      "internalCooldownSeconds": 0.25,
+      "cooldownScope": "instance_and_target"
+    },
+    {
+      "id": "ink2_purple_04",
+      "fixedGrade": 4,
+      "duplicateEquip": false,
+      "baseParams": {
+        "radius": 3,
+        "distance": 1
+      },
+      "upgradeTargets": [
+        {
+          "parameter": "distance",
+          "family": "crowd_control"
+        }
+      ],
+      "internalCooldownSeconds": 2,
+      "cooldownScope": "instance"
+    },
+    {
+      "id": "ink2_purple_07",
+      "fixedGrade": 4,
+      "duplicateEquip": false,
+      "baseParams": {
+        "duration": 1
+      },
+      "upgradeTargets": [
+        {
+          "parameter": "duration",
+          "family": "crowd_control"
+        }
+      ],
+      "internalCooldownSeconds": 3,
+      "cooldownScope": "instance_and_target"
+    },
+    {
+      "id": "ink2_purple_09",
+      "fixedGrade": 3,
+      "duplicateEquip": true,
+      "baseParams": {
+        "radius": 3,
+        "distance": 1
+      },
+      "upgradeTargets": [
+        {
+          "parameter": "distance",
+          "family": "crowd_control"
+        }
+      ],
+      "internalCooldownSeconds": 0.5,
+      "cooldownScope": "instance"
+    }
+  ],
+  "pendingDecisions": [
+    "유료 색상 변경의 빈칸 처리와 무색 칸 변경 범위",
+    "사망·런 종료 시 강화와 재고의 초기화 범위",
+    "장착 중인 잉크의 직접 판매 허용 여부"
+  ],
+  "notes": [
+    "고정 등급은 파츠의 희소성과 상호작용 가치에 따른 시험 기준이며 같은 파츠의 1~4등급 변형을 만들지 않는다.",
+    "색상과 효과 값은 독립이다. 등급 4가 모든 상황에서 등급 1보다 우월한 것을 보장하지 않는다.",
+    "중복 가능은 장착 기준이다. 중복 장착 불가 파츠도 재드롭한다.",
+    "색상 가중치는 선택된 등급 풀 안의 파츠에 적용한다. 팔레트의 같은 색 칸이 여러 개라도 가중치를 반복 곱하지 않는다.",
+    "첫 팔레트의 색상과 보유 잉크가 맞지 않을 수 있다. 첫 팔레트 색상 보정·무료 재추첨은 추가하지 않았다.",
+    "표의 내부 쿨타임과 공통 안전 상한은 시험 기준이다. 확정된 표식·추가타 트리거 규칙을 바꾼다는 뜻이 아니다."
+  ],
+  "compositionRules": {
+    "status": "accepted_test_baseline_implementation_pending",
+    "sameAttackBonuses": "add_percent_bonuses_then_consume_all_at_attack_start",
+    "duplicateMovementBuffs": "independent_instances_sum_up_to_cap",
+    "commonAttackGrowth": "multiply_baseline_by_one_plus_additive_character_bonus",
+    "chainDepthDefinition": "primary_hit_depth_zero; child_damage_depth_parent_plus_one; limit_only_new_child_damage; resolve_hit_and_kill_rewards_of_accepted_damage",
+    "icdReservation": "reserve_before_enqueuing_descendant_events"
+  },
+  "paletteWeaponBinding": "first_equipped_weapon_no_transfer",
+  "basicReferencePolicy": "mean_basic_combo_hit"
+}

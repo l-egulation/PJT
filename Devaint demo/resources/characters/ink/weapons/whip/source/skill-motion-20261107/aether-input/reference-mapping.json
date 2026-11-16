@@ -1,0 +1,40 @@
+{
+ "purpose": "Aether whip skill input only; nearest-neighbor integer upscale of the approved whip idle frame, no repaint or new colors",
+ "input": "unity/Assets/Deviant/Combat/Resources/CharacterApproved11/whip/F006.png (= resources characters/ink/weapons/whip runtime approved-eleven idle)",
+ "inputSha256": "0c2c0b1e4d591cc8c1f3ecfc1d385d6d02320eff2bcfa82d5cfcba550f9cd657",
+ "inputCanvas": [
+  256,
+  104
+ ],
+ "inputPivotTopLeft": [
+  66,
+  88
+ ],
+ "inputPpu": 32,
+ "large": {
+  "canvas": [
+   6144,
+   3072
+  ],
+  "scale": 24,
+  "topPadding": 576,
+  "pivot": [
+   1584,
+   2688
+  ]
+ },
+ "smaller": {
+  "canvas": [
+   4096,
+   2048
+  ],
+  "scale": 16,
+  "topPadding": 384,
+  "pivot": [
+   1056,
+   1792
+  ]
+ },
+ "restoreToNative": "large: subtract topPadding from y, divide by 24 -> 256x104 canvas, pivot (66,88) top-left, PPU32. smaller: same with 16.",
+ "startAndEndIdentical": true
+}

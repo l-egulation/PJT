@@ -1,0 +1,275 @@
+{
+  "title": "시골 황혼 숲 v2 · 광폭 모듈 조립",
+  "ppu": 32,
+  "tileSize": 32,
+  "viewport": [
+    960,
+    540
+  ],
+  "surfaceBaselineY": 12,
+  "hero": {
+    "src": "hero/frames/F006.png",
+    "feetY": 115,
+    "pivotX": 64,
+    "animationManifest": "hero/animation.json"
+  },
+  "assets": {
+    "modules": {
+      "rim_top_01": {
+        "name": "rim_top_01",
+        "src": "terrain/rim_v3/rim_top_01.png",
+        "width": 112,
+        "height": 64,
+        "anchorX": 0,
+        "anchorY": 18,
+        "baselineY": 18,
+        "sourceRect": {
+          "left": 0,
+          "top": 49,
+          "width": 112,
+          "height": 64
+        },
+        "sha256": "a88d0c9e92e4856041799a786a5befae481cdb20e72196f3672f1ba89a8026fa"
+      },
+      "rim_top_02": {
+        "name": "rim_top_02",
+        "src": "terrain/rim_v3/rim_top_02.png",
+        "width": 112,
+        "height": 64,
+        "anchorX": 0,
+        "anchorY": 18,
+        "baselineY": 18,
+        "sourceRect": {
+          "left": 160,
+          "top": 154,
+          "width": 112,
+          "height": 64
+        },
+        "sha256": "383027276f79fe1afd5dcf704e8107b5082a04ec3d79db05aaca6d33f8005b45"
+      },
+      "rim_top_03": {
+        "name": "rim_top_03",
+        "src": "terrain/rim_v3/rim_top_03.png",
+        "width": 112,
+        "height": 64,
+        "anchorX": 0,
+        "anchorY": 18,
+        "baselineY": 18,
+        "sourceRect": {
+          "left": 248,
+          "top": 154,
+          "width": 112,
+          "height": 64
+        },
+        "sha256": "4e934003ce3fc96ac74e7b2ac81e3b8258d8d1e59754abbe4f1de0bbbda73dff"
+      },
+      "rim_top_04": {
+        "name": "rim_top_04",
+        "src": "terrain/rim_v3/rim_top_04.png",
+        "width": 112,
+        "height": 64,
+        "anchorX": 0,
+        "anchorY": 18,
+        "baselineY": 18,
+        "sourceRect": {
+          "left": 400,
+          "top": 49,
+          "width": 112,
+          "height": 64
+        },
+        "sha256": "8dd3bec1dc0ae19ef774454a21fb3e2641bd0de9b060ad718e98160f63264570"
+      },
+      "rim_outer_right": {
+        "name": "rim_outer_right",
+        "src": "terrain/rim_v3/rim_outer_right.png",
+        "width": 64,
+        "height": 64,
+        "anchorX": 32,
+        "anchorY": 18,
+        "baselineY": 18,
+        "sourceRect": {
+          "left": 104,
+          "top": 49,
+          "width": 64,
+          "height": 64
+        },
+        "sha256": "d47798fb41e0a697a725b21faffd1c88c925be43440320c1c60d9b65a94337c4"
+      },
+      "rim_outer_left": {
+        "name": "rim_outer_left",
+        "src": "terrain/rim_v3/rim_outer_left.png",
+        "width": 64,
+        "height": 64,
+        "anchorX": 32,
+        "anchorY": 18,
+        "baselineY": 18,
+        "sourceRect": {
+          "left": 344,
+          "top": 49,
+          "width": 64,
+          "height": 64
+        },
+        "sha256": "82e6490cffeb8e1f8c267eaadc19430d232afbefa31b0009152da60f00784a2e"
+      },
+      "rim_inner_right": {
+        "name": "rim_inner_right",
+        "src": "terrain/rim_v3/rim_inner_right.png",
+        "width": 64,
+        "height": 80,
+        "anchorX": 32,
+        "anchorY": 32,
+        "baselineY": 32,
+        "sourceRect": {
+          "left": 104,
+          "top": 140,
+          "width": 64,
+          "height": 80
+        },
+        "sha256": "524773877b23f7339223a8c8846e2c4837b58bfda5e1682befc47d5bad88b1ca"
+      },
+      "rim_inner_left": {
+        "name": "rim_inner_left",
+        "src": "terrain/rim_v3/rim_inner_left.png",
+        "width": 64,
+        "height": 80,
+        "anchorX": 32,
+        "anchorY": 32,
+        "baselineY": 32,
+        "sourceRect": {
+          "left": 344,
+          "top": 140,
+          "width": 64,
+          "height": 80
+        },
+        "sha256": "9f22f7386478dce2f5db52607999da607d9d232de06836cf879f160e841d5a38"
+      },
+      "rim_platform_whole": {
+        "name": "rim_platform_whole",
+        "src": "terrain/platform_v3/rim_platform_whole.png",
+        "width": 346,
+        "height": 71,
+        "baselineY": 17,
+        "assembly": [
+          "rim_platform_left",
+          "rim_platform_mid_01",
+          "rim_platform_mid_02",
+          "rim_platform_right"
+        ],
+        "sha256": "8243f21747b6611c9331519fc8d2e4a25fa1733599302c08c3822042d17acab8"
+      },
+      "rim_platform_left": {
+        "name": "rim_platform_left",
+        "src": "terrain/platform_v3/rim_platform_left.png",
+        "width": 32,
+        "height": 71,
+        "baselineY": 17,
+        "sourceRect": {
+          "left": 0,
+          "top": 0,
+          "width": 32,
+          "height": 71
+        },
+        "sha256": "a2dbbe697ba202ce3912d7a28fb1ad4123a48ba406898d65957737f9b0de1724"
+      },
+      "rim_platform_mid_01": {
+        "name": "rim_platform_mid_01",
+        "src": "terrain/platform_v3/rim_platform_mid_01.png",
+        "width": 128,
+        "height": 71,
+        "baselineY": 17,
+        "sourceRect": {
+          "left": 32,
+          "top": 0,
+          "width": 128,
+          "height": 71
+        },
+        "sha256": "97e428ab75513a1d98b1f31a9f5c6d61dfa31760ec5bcb4952118151e2db99d3"
+      },
+      "rim_platform_mid_02": {
+        "name": "rim_platform_mid_02",
+        "src": "terrain/platform_v3/rim_platform_mid_02.png",
+        "width": 128,
+        "height": 71,
+        "baselineY": 17,
+        "sourceRect": {
+          "left": 326,
+          "top": 0,
+          "width": 128,
+          "height": 71
+        },
+        "sha256": "586d662ed37f9e526f6ea8d69b672a4ca05a3bf592a44d3d2d1811630a2f6096"
+      },
+      "rim_platform_right": {
+        "name": "rim_platform_right",
+        "src": "terrain/platform_v3/rim_platform_right.png",
+        "width": 58,
+        "height": 71,
+        "baselineY": 17,
+        "sourceRect": {
+          "left": 454,
+          "top": 0,
+          "width": 58,
+          "height": 71
+        },
+        "sha256": "8a4413c114f3518bd2b01e06af26cfd898873f5d6f361062ca3c68c400622f8c"
+      }
+    },
+    "far": [],
+    "mid": [
+      {
+        "name": "mid_tree_complete_v1",
+        "src": "background/mid_tree_complete_v1.png",
+        "width": 318,
+        "height": 384,
+        "baseY": 374,
+        "parallax": 1
+      },
+      {
+        "name": "mid_tree_02_spreading",
+        "src": "background/mid_tree_02_spreading.png",
+        "width": 453,
+        "height": 336,
+        "baseY": 308,
+        "parallax": 1
+      },
+      {
+        "name": "mid_tree_03_upright",
+        "src": "background/mid_tree_03_upright.png",
+        "width": 252,
+        "height": 416,
+        "baseY": 399,
+        "parallax": 1
+      },
+      {
+        "name": "mid_tree_04_forked",
+        "src": "background/mid_tree_04_forked.png",
+        "width": 320,
+        "height": 368,
+        "baseY": 359,
+        "parallax": 1
+      }
+    ],
+    "midVariants": [],
+    "midSeams": []
+  },
+  "notes": [
+    "나무4종·고정 원본 배율·월드 접지",
+    "시골도착 스토리 지면 원본 재사용·960x40 동일 내보내기",
+    "하부는 #0b0d12 불투명 단색; 흙/돌 반복 무늬 없음"
+  ],
+  "unityCamera": {
+    "assetsPPU": 32,
+    "orthographicSize": 8.4375,
+    "referenceResolution": [
+      960,
+      540
+    ]
+  },
+  "groundStyle": {
+    "mode": "chunked-rim-v3",
+    "color": "#211b24",
+    "baselineY": 18,
+    "source": "02_제작원본/terrain/황혼지면_두꺼운테두리_v3/생성원본.png",
+    "floatingPlatforms": "matched-rim-platform-v3"
+  }
+}

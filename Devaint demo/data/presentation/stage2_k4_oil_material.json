@@ -1,0 +1,19 @@
+{
+  "schema": "stage2-k4-oil-material-direction-v1",
+  "status": "material-direction-confirmed-for-motion-study",
+  "output": "outputs/waterway/k4-oil-material-direction-20261101",
+  "source": "outputs/waterway/k4-oil-material-direction-20261101/generated/oil-material-full-column.png",
+  "sourceLayout": "three-vertically-ordered-isolated-key-shapes-with-drops",
+  "body": "outputs/waterway/k4-attack-reduced-20261101/A/native/attack-10.png",
+  "bodyOffsetPx": [120,0],
+  "nozzleBodyPx": [125,135],
+  "firstFlowWidthPxTrial": 140,
+  "contextCanvas": [480,320],
+  "paletteRgb": [[37,37,45],[76,80,86]],
+  "phases": [
+    {"id":"push","name":"초반 · 묵직하게 밀려 나옴","note":"굵고 꽉 찬 기름 덩어리. 큰 둥근 선단과 이어진 몸통으로 무게를 읽힌다."},
+    {"id":"pour","name":"감압 · 무게 때문에 굽어 쏟아짐","note":"속도가 줄며 넓고 두꺼운 줄기가 아래로 꺾인다. 얇은 실이나 입자 안개가 되지 않는다."},
+    {"id":"last-drop","name":"끝물 · 큰 방울로 끊어짐","note":"짧게 처진 목과 무거운 끝방울. 이 흐름이 끊어진 뒤 노즐을 거두는 방향이다."}
+  ],
+  "policy": "Use a built-in image_gen material/shape sheet instead of extending the rejected particle look. Preserve raw image, exact generation prompt and character reference. Code only extracts rows, applies one common pixel scale/two existing character colors and composites the unchanged held sprite. Three static material key references, not completed motion, measured oil viscosity, a physics solve or gameplay/hitbox approval. Keep adopted H3 unchanged."
+}

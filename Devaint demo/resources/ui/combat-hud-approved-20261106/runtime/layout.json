@@ -1,0 +1,1676 @@
+{
+  "format": "deviant-approved-ui-layout-v1",
+  "referenceResolution": [
+    1670,
+    942
+  ],
+  "coordinateSystem": "top-left pixels; no source resizing",
+  "sourceSizes": {
+    "battle": [
+      1670,
+      942
+    ],
+    "palette": [
+      1671,
+      941
+    ]
+  },
+  "unity": {
+    "canvasScaler": "ScaleWithScreenSize",
+    "referenceResolution": [
+      1670,
+      942
+    ],
+    "screenMatchMode": "MatchWidthOrHeight",
+    "matchWidthOrHeight": 0.5,
+    "textureType": "Sprite",
+    "spriteMode": "Single",
+    "pixelsPerUnit": 100,
+    "alphaIsTransparency": true,
+    "mipmaps": false,
+    "filterMode": "Bilinear",
+    "compression": "None",
+    "meshType": "FullRect",
+    "maxTextureSize": 2048,
+    "pixelPerfect": true,
+    "preserveAspect": true
+  },
+  "compositionOrder": "layers in array order; composites are alternatives, not additional layers",
+  "runReveal": {
+    "durationSeconds": 3.5,
+    "inputRequired": false,
+    "placement": "center"
+  },
+  "layers": [
+    {
+      "id": "health_shell",
+      "group": "health",
+      "file": "runtime/layers/health_shell.png",
+      "rect": [
+        31,
+        32,
+        491,
+        114
+      ],
+      "source": "battle",
+      "fidelity": "source-visible+restored-underlays",
+      "anchor": "top-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        31,
+        -32
+      ],
+      "note": "Only hidden pixels beneath movable foreground were restored.",
+      "z": 0
+    },
+    {
+      "id": "health_portrait",
+      "group": "health",
+      "file": "runtime/layers/health_portrait.png",
+      "rect": [
+        31,
+        32,
+        143,
+        114
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "top-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        31,
+        -32
+      ],
+      "note": "Includes visible plaque overlap; preserve original layering.",
+      "z": 1
+    },
+    {
+      "id": "health_value_82_100",
+      "group": "health",
+      "file": "runtime/layers/health_value_82_100.png",
+      "rect": [
+        194,
+        67,
+        124,
+        31
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "top-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        194,
+        -67
+      ],
+      "note": "Approved raster sample text; dynamic numbers require a matched runtime font.",
+      "z": 2
+    },
+    {
+      "id": "health_fill_82",
+      "group": "health",
+      "file": "runtime/layers/health_fill_82.png",
+      "rect": [
+        174,
+        107,
+        276,
+        24
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "top-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        174,
+        -107
+      ],
+      "note": "Visible 82% sample only, not a full-width 100% fill.",
+      "z": 3
+    },
+    {
+      "id": "gold_icon",
+      "group": "gold_icon",
+      "file": "runtime/layers/gold_icon.png",
+      "rect": [
+        1256,
+        30,
+        44,
+        46
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "top-right",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -414,
+        -30
+      ],
+      "note": "",
+      "z": 4
+    },
+    {
+      "id": "gold_value_240",
+      "group": "gold_value_240",
+      "file": "runtime/layers/gold_value_240.png",
+      "rect": [
+        1308,
+        41,
+        56,
+        25
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "top-right",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -362,
+        -41
+      ],
+      "note": "",
+      "z": 5
+    },
+    {
+      "id": "pigment_icon",
+      "group": "pigment_icon",
+      "file": "runtime/layers/pigment_icon.png",
+      "rect": [
+        1388,
+        28,
+        48,
+        47
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "top-right",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -282,
+        -28
+      ],
+      "note": "",
+      "z": 6
+    },
+    {
+      "id": "pigment_value_18",
+      "group": "pigment_value_18",
+      "file": "runtime/layers/pigment_value_18.png",
+      "rect": [
+        1442,
+        41,
+        33,
+        25
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "top-right",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -228,
+        -41
+      ],
+      "note": "",
+      "z": 7
+    },
+    {
+      "id": "inventory_button_frame",
+      "group": "inventory",
+      "file": "runtime/layers/inventory_button_frame.png",
+      "rect": [
+        1509,
+        23,
+        61,
+        61
+      ],
+      "source": "battle",
+      "fidelity": "source-visible+restored-underlays",
+      "anchor": "top-right",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -161,
+        -23
+      ],
+      "note": "Only hidden pixels beneath movable foreground were restored.",
+      "z": 8
+    },
+    {
+      "id": "inventory_glyph",
+      "group": "inventory",
+      "file": "runtime/layers/inventory_glyph.png",
+      "rect": [
+        1525,
+        38,
+        28,
+        30
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "top-right",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -145,
+        -38
+      ],
+      "note": "",
+      "z": 9
+    },
+    {
+      "id": "pause_button_frame",
+      "group": "pause",
+      "file": "runtime/layers/pause_button_frame.png",
+      "rect": [
+        1581,
+        23,
+        62,
+        61
+      ],
+      "source": "battle",
+      "fidelity": "source-visible+restored-underlays",
+      "anchor": "top-right",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -89,
+        -23
+      ],
+      "note": "Only hidden pixels beneath movable foreground were restored.",
+      "z": 10
+    },
+    {
+      "id": "pause_glyph",
+      "group": "pause",
+      "file": "runtime/layers/pause_glyph.png",
+      "rect": [
+        1601,
+        40,
+        22,
+        26
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "top-right",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -69,
+        -40
+      ],
+      "note": "",
+      "z": 11
+    },
+    {
+      "id": "minimap_frame_and_backing",
+      "group": "minimap",
+      "file": "runtime/layers/minimap_frame_and_backing.png",
+      "rect": [
+        1251,
+        88,
+        393,
+        145
+      ],
+      "source": "battle",
+      "fidelity": "source-visible+restored-underlays",
+      "anchor": "top-right",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -419,
+        -88
+      ],
+      "note": "Only hidden pixels beneath movable foreground were restored.",
+      "z": 12
+    },
+    {
+      "id": "minimap_player_marker",
+      "group": "minimap",
+      "file": "runtime/layers/minimap_player_marker.png",
+      "rect": [
+        1351,
+        161,
+        23,
+        22
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "top-right",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -319,
+        -161
+      ],
+      "note": "",
+      "z": 13
+    },
+    {
+      "id": "minimap_route_sample",
+      "group": "minimap",
+      "file": "runtime/layers/minimap_route_sample.png",
+      "rect": [
+        1269,
+        122,
+        194,
+        64
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "top-right",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -401,
+        -122
+      ],
+      "note": "Sample route; real map geometry must be drawn from game data.",
+      "z": 14
+    },
+    {
+      "id": "sword_cluster_backing",
+      "group": "sword",
+      "file": "runtime/layers/sword_cluster_backing.png",
+      "rect": [
+        52,
+        780,
+        296,
+        150
+      ],
+      "source": "battle",
+      "fidelity": "source-visible+restored-underlays",
+      "anchor": "bottom-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        52,
+        162
+      ],
+      "note": "Only hidden pixels beneath movable foreground were restored.",
+      "z": 15
+    },
+    {
+      "id": "sword_palette_drop_1",
+      "group": "sword",
+      "file": "runtime/layers/sword_palette_drop_1.png",
+      "rect": [
+        154,
+        886,
+        26,
+        32
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "bottom-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        154,
+        56
+      ],
+      "note": "",
+      "z": 16
+    },
+    {
+      "id": "sword_palette_drop_2",
+      "group": "sword",
+      "file": "runtime/layers/sword_palette_drop_2.png",
+      "rect": [
+        195,
+        886,
+        27,
+        32
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "bottom-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        195,
+        56
+      ],
+      "note": "",
+      "z": 17
+    },
+    {
+      "id": "sword_palette_drop_3",
+      "group": "sword",
+      "file": "runtime/layers/sword_palette_drop_3.png",
+      "rect": [
+        236,
+        886,
+        27,
+        32
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "bottom-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        236,
+        56
+      ],
+      "note": "",
+      "z": 18
+    },
+    {
+      "id": "keycap_q",
+      "group": "sword",
+      "file": "runtime/layers/keycap_q.png",
+      "rect": [
+        202,
+        791,
+        47,
+        37
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "bottom-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        202,
+        151
+      ],
+      "note": "",
+      "z": 19
+    },
+    {
+      "id": "keycap_e",
+      "group": "sword",
+      "file": "runtime/layers/keycap_e.png",
+      "rect": [
+        282,
+        791,
+        47,
+        37
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "bottom-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        282,
+        151
+      ],
+      "note": "",
+      "z": 20
+    },
+    {
+      "id": "sword_weapon_icon",
+      "group": "sword",
+      "file": "runtime/layers/sword_weapon_icon.png",
+      "rect": [
+        88,
+        813,
+        70,
+        73
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "bottom-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        88,
+        129
+      ],
+      "note": "",
+      "z": 21
+    },
+    {
+      "id": "sword_basic_icon",
+      "group": "sword",
+      "file": "runtime/layers/sword_basic_icon.png",
+      "rect": [
+        203,
+        829,
+        49,
+        49
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "bottom-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        203,
+        113
+      ],
+      "note": "",
+      "z": 22
+    },
+    {
+      "id": "sword_skill_icon",
+      "group": "sword",
+      "file": "runtime/layers/sword_skill_icon.png",
+      "rect": [
+        282,
+        829,
+        50,
+        51
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "bottom-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        282,
+        113
+      ],
+      "note": "",
+      "z": 23
+    },
+    {
+      "id": "sword_active_ring",
+      "group": "sword",
+      "file": "runtime/layers/sword_active_ring.png",
+      "rect": [
+        59,
+        786,
+        126,
+        124
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "bottom-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        59,
+        156
+      ],
+      "note": "",
+      "z": 24
+    },
+    {
+      "id": "hammer_cluster_backing",
+      "group": "hammer",
+      "file": "runtime/layers/hammer_cluster_backing.png",
+      "rect": [
+        404,
+        781,
+        319,
+        149
+      ],
+      "source": "battle",
+      "fidelity": "source-visible+restored-underlays",
+      "anchor": "bottom-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        404,
+        161
+      ],
+      "note": "Only hidden pixels beneath movable foreground were restored.",
+      "z": 25
+    },
+    {
+      "id": "hammer_palette_drop_1",
+      "group": "hammer",
+      "file": "runtime/layers/hammer_palette_drop_1.png",
+      "rect": [
+        510,
+        886,
+        27,
+        32
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "bottom-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        510,
+        56
+      ],
+      "note": "",
+      "z": 26
+    },
+    {
+      "id": "hammer_palette_drop_2",
+      "group": "hammer",
+      "file": "runtime/layers/hammer_palette_drop_2.png",
+      "rect": [
+        551,
+        886,
+        27,
+        32
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "bottom-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        551,
+        56
+      ],
+      "note": "",
+      "z": 27
+    },
+    {
+      "id": "hammer_palette_drop_3",
+      "group": "hammer",
+      "file": "runtime/layers/hammer_palette_drop_3.png",
+      "rect": [
+        592,
+        886,
+        27,
+        32
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "bottom-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        592,
+        56
+      ],
+      "note": "",
+      "z": 28
+    },
+    {
+      "id": "keycap_w",
+      "group": "hammer",
+      "file": "runtime/layers/keycap_w.png",
+      "rect": [
+        560,
+        791,
+        47,
+        37
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "bottom-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        560,
+        151
+      ],
+      "note": "",
+      "z": 29
+    },
+    {
+      "id": "keycap_r",
+      "group": "hammer",
+      "file": "runtime/layers/keycap_r.png",
+      "rect": [
+        648,
+        791,
+        47,
+        37
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "bottom-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        648,
+        151
+      ],
+      "note": "",
+      "z": 30
+    },
+    {
+      "id": "hammer_weapon_icon",
+      "group": "hammer",
+      "file": "runtime/layers/hammer_weapon_icon.png",
+      "rect": [
+        435,
+        807,
+        76,
+        77
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "bottom-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        435,
+        135
+      ],
+      "note": "",
+      "z": 31
+    },
+    {
+      "id": "hammer_basic_icon",
+      "group": "hammer",
+      "file": "runtime/layers/hammer_basic_icon.png",
+      "rect": [
+        556,
+        830,
+        53,
+        47
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "bottom-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        556,
+        112
+      ],
+      "note": "",
+      "z": 32
+    },
+    {
+      "id": "hammer_cooldown_3_2",
+      "group": "hammer",
+      "file": "runtime/layers/hammer_cooldown_3_2.png",
+      "rect": [
+        653,
+        842,
+        41,
+        23
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "bottom-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        653,
+        100
+      ],
+      "note": "",
+      "z": 33
+    },
+    {
+      "id": "hammer_inactive_ring",
+      "group": "hammer",
+      "file": "runtime/layers/hammer_inactive_ring.png",
+      "rect": [
+        404,
+        781,
+        144,
+        139
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "bottom-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        404,
+        161
+      ],
+      "note": "",
+      "z": 34
+    },
+    {
+      "id": "hammer_skill_cooldown_ring",
+      "group": "hammer",
+      "file": "runtime/layers/hammer_skill_cooldown_ring.png",
+      "rect": [
+        628,
+        813,
+        95,
+        89
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "bottom-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        628,
+        129
+      ],
+      "note": "Approved visible radial sample. Use UI radial fill for changing cooldown.",
+      "z": 35
+    },
+    {
+      "id": "run_heading_plate",
+      "group": "run_heading",
+      "file": "runtime/layers/run_heading_plate.png",
+      "rect": [
+        687,
+        249,
+        295,
+        69
+      ],
+      "source": "palette",
+      "fidelity": "source-visible+restored-underlays",
+      "anchor": "center",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -148.0,
+        222.0
+      ],
+      "note": "Only hidden pixels beneath movable foreground were restored.",
+      "z": 36
+    },
+    {
+      "id": "run_heading_label",
+      "group": "run_heading",
+      "file": "runtime/layers/run_heading_label.png",
+      "rect": [
+        753,
+        264,
+        168,
+        35
+      ],
+      "source": "palette",
+      "fidelity": "source-pixels",
+      "anchor": "center",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -82.0,
+        207.0
+      ],
+      "note": "",
+      "z": 37
+    },
+    {
+      "id": "run_heading_chevrons",
+      "group": "run_heading",
+      "file": "runtime/layers/run_heading_chevrons.png",
+      "rect": [
+        721,
+        273,
+        228,
+        18
+      ],
+      "source": "palette",
+      "fidelity": "source-pixels",
+      "anchor": "center",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -114.0,
+        198.0
+      ],
+      "note": "",
+      "z": 38
+    },
+    {
+      "id": "run_sword_card_and_badge",
+      "group": "run_sword",
+      "file": "runtime/layers/run_sword_card_and_badge.png",
+      "rect": [
+        514,
+        289,
+        317,
+        245
+      ],
+      "source": "palette",
+      "fidelity": "source-visible+restored-underlays",
+      "anchor": "center",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -321.0,
+        182.0
+      ],
+      "note": "Only hidden pixels beneath movable foreground were restored.",
+      "z": 39
+    },
+    {
+      "id": "run_sword_name",
+      "group": "run_sword",
+      "file": "runtime/layers/run_sword_name.png",
+      "rect": [
+        630,
+        383,
+        92,
+        34
+      ],
+      "source": "palette",
+      "fidelity": "source-pixels",
+      "anchor": "center",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -205.0,
+        88.0
+      ],
+      "note": "",
+      "z": 40
+    },
+    {
+      "id": "run_sword_divider",
+      "group": "run_sword",
+      "file": "runtime/layers/run_sword_divider.png",
+      "rect": [
+        558,
+        425,
+        231,
+        4
+      ],
+      "source": "palette",
+      "fidelity": "source-pixels",
+      "anchor": "center",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -277.0,
+        46.0
+      ],
+      "note": "",
+      "z": 41
+    },
+    {
+      "id": "run_sword_weapon_icon",
+      "group": "run_sword",
+      "file": "runtime/layers/run_sword_weapon_icon.png",
+      "rect": [
+        630,
+        307,
+        51,
+        57
+      ],
+      "source": "palette",
+      "fidelity": "source-pixels",
+      "anchor": "center",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -205.0,
+        164.0
+      ],
+      "note": "",
+      "z": 42
+    },
+    {
+      "id": "run_sword_drop_1",
+      "group": "run_sword",
+      "file": "runtime/layers/run_sword_drop_1.png",
+      "rect": [
+        581,
+        440,
+        49,
+        64
+      ],
+      "source": "palette",
+      "fidelity": "source-pixels",
+      "anchor": "center",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -254.0,
+        31.0
+      ],
+      "note": "",
+      "z": 43
+    },
+    {
+      "id": "run_sword_drop_2",
+      "group": "run_sword",
+      "file": "runtime/layers/run_sword_drop_2.png",
+      "rect": [
+        650,
+        440,
+        50,
+        64
+      ],
+      "source": "palette",
+      "fidelity": "source-pixels",
+      "anchor": "center",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -185.0,
+        31.0
+      ],
+      "note": "",
+      "z": 44
+    },
+    {
+      "id": "run_sword_drop_3",
+      "group": "run_sword",
+      "file": "runtime/layers/run_sword_drop_3.png",
+      "rect": [
+        719,
+        440,
+        50,
+        64
+      ],
+      "source": "palette",
+      "fidelity": "source-pixels",
+      "anchor": "center",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -116.0,
+        31.0
+      ],
+      "note": "",
+      "z": 45
+    },
+    {
+      "id": "run_sword_accent",
+      "group": "run_sword",
+      "file": "runtime/layers/run_sword_accent.png",
+      "rect": [
+        525,
+        491,
+        34,
+        31
+      ],
+      "source": "palette",
+      "fidelity": "source-pixels",
+      "anchor": "center",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -310.0,
+        -20.0
+      ],
+      "note": "",
+      "z": 46
+    },
+    {
+      "id": "run_hammer_card_and_badge",
+      "group": "run_hammer",
+      "file": "runtime/layers/run_hammer_card_and_badge.png",
+      "rect": [
+        837,
+        289,
+        319,
+        246
+      ],
+      "source": "palette",
+      "fidelity": "source-visible+restored-underlays",
+      "anchor": "center",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        2.0,
+        182.0
+      ],
+      "note": "Only hidden pixels beneath movable foreground were restored.",
+      "z": 47
+    },
+    {
+      "id": "run_hammer_name",
+      "group": "run_hammer",
+      "file": "runtime/layers/run_hammer_name.png",
+      "rect": [
+        939,
+        383,
+        123,
+        34
+      ],
+      "source": "palette",
+      "fidelity": "source-pixels",
+      "anchor": "center",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        104.0,
+        88.0
+      ],
+      "note": "",
+      "z": 48
+    },
+    {
+      "id": "run_hammer_divider",
+      "group": "run_hammer",
+      "file": "runtime/layers/run_hammer_divider.png",
+      "rect": [
+        880,
+        425,
+        234,
+        5
+      ],
+      "source": "palette",
+      "fidelity": "source-pixels",
+      "anchor": "center",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        45.0,
+        46.0
+      ],
+      "note": "",
+      "z": 49
+    },
+    {
+      "id": "run_hammer_weapon_icon",
+      "group": "run_hammer",
+      "file": "runtime/layers/run_hammer_weapon_icon.png",
+      "rect": [
+        987,
+        307,
+        52,
+        57
+      ],
+      "source": "palette",
+      "fidelity": "source-pixels",
+      "anchor": "center",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        152.0,
+        164.0
+      ],
+      "note": "",
+      "z": 50
+    },
+    {
+      "id": "run_hammer_drop_1",
+      "group": "run_hammer",
+      "file": "runtime/layers/run_hammer_drop_1.png",
+      "rect": [
+        899,
+        440,
+        49,
+        65
+      ],
+      "source": "palette",
+      "fidelity": "source-pixels",
+      "anchor": "center",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        64.0,
+        31.0
+      ],
+      "note": "",
+      "z": 51
+    },
+    {
+      "id": "run_hammer_drop_2",
+      "group": "run_hammer",
+      "file": "runtime/layers/run_hammer_drop_2.png",
+      "rect": [
+        970,
+        440,
+        52,
+        65
+      ],
+      "source": "palette",
+      "fidelity": "source-pixels",
+      "anchor": "center",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        135.0,
+        31.0
+      ],
+      "note": "",
+      "z": 52
+    },
+    {
+      "id": "run_hammer_drop_3",
+      "group": "run_hammer",
+      "file": "runtime/layers/run_hammer_drop_3.png",
+      "rect": [
+        1044,
+        440,
+        50,
+        65
+      ],
+      "source": "palette",
+      "fidelity": "source-pixels",
+      "anchor": "center",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        209.0,
+        31.0
+      ],
+      "note": "",
+      "z": 53
+    },
+    {
+      "id": "run_hammer_accent",
+      "group": "run_hammer",
+      "file": "runtime/layers/run_hammer_accent.png",
+      "rect": [
+        1112,
+        490,
+        32,
+        32
+      ],
+      "source": "palette",
+      "fidelity": "source-pixels",
+      "anchor": "center",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        277.0,
+        -19.0
+      ],
+      "note": "",
+      "z": 54
+    }
+  ],
+  "composites": [
+    {
+      "id": "health_complete",
+      "group": "health",
+      "file": "runtime/composites/health_complete.png",
+      "rect": [
+        31,
+        32,
+        491,
+        114
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "top-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        31,
+        -32
+      ],
+      "note": "Static approved sample, not a dynamic widget."
+    },
+    {
+      "id": "gold_icon_complete",
+      "group": "gold_icon",
+      "file": "runtime/composites/gold_icon_complete.png",
+      "rect": [
+        1256,
+        30,
+        44,
+        46
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "top-right",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -414,
+        -30
+      ],
+      "note": "Static approved sample, not a dynamic widget."
+    },
+    {
+      "id": "gold_value_240_complete",
+      "group": "gold_value_240",
+      "file": "runtime/composites/gold_value_240_complete.png",
+      "rect": [
+        1308,
+        41,
+        56,
+        25
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "top-right",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -362,
+        -41
+      ],
+      "note": "Static approved sample, not a dynamic widget."
+    },
+    {
+      "id": "pigment_icon_complete",
+      "group": "pigment_icon",
+      "file": "runtime/composites/pigment_icon_complete.png",
+      "rect": [
+        1388,
+        28,
+        48,
+        47
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "top-right",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -282,
+        -28
+      ],
+      "note": "Static approved sample, not a dynamic widget."
+    },
+    {
+      "id": "pigment_value_18_complete",
+      "group": "pigment_value_18",
+      "file": "runtime/composites/pigment_value_18_complete.png",
+      "rect": [
+        1442,
+        41,
+        33,
+        25
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "top-right",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -228,
+        -41
+      ],
+      "note": "Static approved sample, not a dynamic widget."
+    },
+    {
+      "id": "inventory_complete",
+      "group": "inventory",
+      "file": "runtime/composites/inventory_complete.png",
+      "rect": [
+        1509,
+        23,
+        61,
+        61
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "top-right",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -161,
+        -23
+      ],
+      "note": "Static approved sample, not a dynamic widget."
+    },
+    {
+      "id": "pause_complete",
+      "group": "pause",
+      "file": "runtime/composites/pause_complete.png",
+      "rect": [
+        1581,
+        23,
+        62,
+        61
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "top-right",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -89,
+        -23
+      ],
+      "note": "Static approved sample, not a dynamic widget."
+    },
+    {
+      "id": "minimap_complete",
+      "group": "minimap",
+      "file": "runtime/composites/minimap_complete.png",
+      "rect": [
+        1251,
+        88,
+        393,
+        145
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "top-right",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -419,
+        -88
+      ],
+      "note": "Static approved sample, not a dynamic widget."
+    },
+    {
+      "id": "sword_complete",
+      "group": "sword",
+      "file": "runtime/composites/sword_complete.png",
+      "rect": [
+        52,
+        780,
+        296,
+        150
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "bottom-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        52,
+        162
+      ],
+      "note": "Static approved sample, not a dynamic widget."
+    },
+    {
+      "id": "hammer_complete",
+      "group": "hammer",
+      "file": "runtime/composites/hammer_complete.png",
+      "rect": [
+        404,
+        781,
+        319,
+        149
+      ],
+      "source": "battle",
+      "fidelity": "source-pixels",
+      "anchor": "bottom-left",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        404,
+        161
+      ],
+      "note": "Static approved sample, not a dynamic widget."
+    },
+    {
+      "id": "run_heading_complete",
+      "group": "run_heading",
+      "file": "runtime/composites/run_heading_complete.png",
+      "rect": [
+        687,
+        249,
+        295,
+        69
+      ],
+      "source": "palette",
+      "fidelity": "source-pixels",
+      "anchor": "center",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -148.0,
+        222.0
+      ],
+      "note": "Static approved sample, not a dynamic widget."
+    },
+    {
+      "id": "run_sword_complete",
+      "group": "run_sword",
+      "file": "runtime/composites/run_sword_complete.png",
+      "rect": [
+        514,
+        289,
+        317,
+        245
+      ],
+      "source": "palette",
+      "fidelity": "source-pixels",
+      "anchor": "center",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        -321.0,
+        182.0
+      ],
+      "note": "Static approved sample, not a dynamic widget."
+    },
+    {
+      "id": "run_hammer_complete",
+      "group": "run_hammer",
+      "file": "runtime/composites/run_hammer_complete.png",
+      "rect": [
+        837,
+        289,
+        319,
+        246
+      ],
+      "source": "palette",
+      "fidelity": "source-pixels",
+      "anchor": "center",
+      "unityPivot": [
+        0,
+        1
+      ],
+      "unityAnchoredPosition": [
+        2.0,
+        182.0
+      ],
+      "note": "Static approved sample, not a dynamic widget."
+    }
+  ],
+  "limitations": [
+    "These are extracted flattened raster layers, not the original vector/PSD sources.",
+    "1 px antialias fringe retains original background RGB. Inspect on contrasting backgrounds.",
+    "Only pixels hidden beneath extracted overlays are restored. No claim of recovered hidden art.",
+    "HP 82/100, gold 240, pigment 18 and cooldown 3.2 are raster sample labels, not a complete font.",
+    "Full 100% HP fill, full radial cooldown ring and occluded circle sections are not present in source.",
+    "Source images differ by 1 pixel in each dimension; native popup pixels are not rescaled.",
+    "Reference reconstruction is an art preview, not an actual Unity runtime screenshot."
+  ]
+}

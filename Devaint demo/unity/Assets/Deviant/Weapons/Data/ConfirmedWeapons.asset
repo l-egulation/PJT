@@ -1,0 +1,3129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df88645ac2a5e514f88438bbf919e539, type: 3}
+  m_Name: ConfirmedWeapons
+  m_EditorClassIdentifier: Assembly-CSharp::Deviant.Weapons.ConfirmedWeaponLibrary
+  weapons:
+  - id: sword
+    name: "\uAC80"
+    pivotX: 64
+    pivotY: 115
+    fxPivotX: 80
+    fxPivotY: 137
+    comboWindowMs: 220
+    frames:
+    - id: F001
+      path: Assets/Deviant/Weapons/Art/sword/Character/F001.png
+      sprite: {fileID: 21300000, guid: f714d716d81227d49bf08640ee6a3764, type: 3}
+    - id: F002
+      path: Assets/Deviant/Weapons/Art/sword/Character/F002.png
+      sprite: {fileID: 21300000, guid: c1fb3c67f42fe7a41ab5587079c21334, type: 3}
+    - id: F003
+      path: Assets/Deviant/Weapons/Art/sword/Character/F003.png
+      sprite: {fileID: 21300000, guid: 5e10a68b135884e499d548c39b572ae8, type: 3}
+    - id: F004
+      path: Assets/Deviant/Weapons/Art/sword/Character/F004.png
+      sprite: {fileID: 21300000, guid: 8f108c41d417ec540867e6826118507b, type: 3}
+    - id: F005
+      path: Assets/Deviant/Weapons/Art/sword/Character/F005.png
+      sprite: {fileID: 21300000, guid: 763b912ad7693e7409fa0bfe190c41a6, type: 3}
+    - id: F006
+      path: Assets/Deviant/Weapons/Art/sword/Character/F006.png
+      sprite: {fileID: 21300000, guid: 4be308efe56adc34bbf14bd08ecb64c8, type: 3}
+    - id: F007
+      path: Assets/Deviant/Weapons/Art/sword/Character/F007.png
+      sprite: {fileID: 21300000, guid: e0edd63792fcd724793f17e1121ef23e, type: 3}
+    - id: F008
+      path: Assets/Deviant/Weapons/Art/sword/Character/F008.png
+      sprite: {fileID: 21300000, guid: 1720c5da2fabf6944924fc030fd49455, type: 3}
+    - id: F009
+      path: Assets/Deviant/Weapons/Art/sword/Character/F009.png
+      sprite: {fileID: 21300000, guid: 5311a6f253eaf2f43ab80bf3355e826b, type: 3}
+    - id: F010
+      path: Assets/Deviant/Weapons/Art/sword/Character/F010.png
+      sprite: {fileID: 21300000, guid: d083047fe81ce8a45a8b0031fc68b6a2, type: 3}
+    - id: F011
+      path: Assets/Deviant/Weapons/Art/sword/Character/F011.png
+      sprite: {fileID: 21300000, guid: a6df1728311ee8a469ee66f2c074f0cb, type: 3}
+    - id: F012
+      path: Assets/Deviant/Weapons/Art/sword/Character/F012.png
+      sprite: {fileID: 21300000, guid: 39fd0266289d84440afce4caf5fe0336, type: 3}
+    - id: F013
+      path: Assets/Deviant/Weapons/Art/sword/Character/F013.png
+      sprite: {fileID: 21300000, guid: 009126e5b8e505e4bb9363cf5c96a09a, type: 3}
+    - id: F014
+      path: Assets/Deviant/Weapons/Art/sword/Character/F014.png
+      sprite: {fileID: 21300000, guid: 9cd4d8d309719794e873b6bc7bae5bfb, type: 3}
+    - id: F015
+      path: Assets/Deviant/Weapons/Art/sword/Character/F015.png
+      sprite: {fileID: 21300000, guid: 9988819dfd51d4643b945cc6d7dc2117, type: 3}
+    - id: F016
+      path: Assets/Deviant/Weapons/Art/sword/Character/F016.png
+      sprite: {fileID: 21300000, guid: c56cd43b4d07284499075df459063b6f, type: 3}
+    - id: F017
+      path: Assets/Deviant/Weapons/Art/sword/Character/F017.png
+      sprite: {fileID: 21300000, guid: 8bc0eade9bebfde48b06889f127e40df, type: 3}
+    - id: F018
+      path: Assets/Deviant/Weapons/Art/sword/Character/F018.png
+      sprite: {fileID: 21300000, guid: fa8fe19946520c844910da5940743a49, type: 3}
+    - id: F019
+      path: Assets/Deviant/Weapons/Art/sword/Character/F019.png
+      sprite: {fileID: 21300000, guid: 92ba16f3c0ee27149bb54eacce4b8655, type: 3}
+    - id: F020
+      path: Assets/Deviant/Weapons/Art/sword/Character/F020.png
+      sprite: {fileID: 21300000, guid: fd6204b64590bb84eb283fd865fe865e, type: 3}
+    - id: F021
+      path: Assets/Deviant/Weapons/Art/sword/Character/F021.png
+      sprite: {fileID: 21300000, guid: b46a0a7e3d8acd84484eeff77c726b2e, type: 3}
+    - id: F022
+      path: Assets/Deviant/Weapons/Art/sword/Character/F022.png
+      sprite: {fileID: 21300000, guid: 1f0d8e6917ec5cf42aa7f3fdf8d7b9fa, type: 3}
+    - id: F023
+      path: Assets/Deviant/Weapons/Art/sword/Character/F023.png
+      sprite: {fileID: 21300000, guid: c54096811aca97543889667944368ecd, type: 3}
+    - id: F024
+      path: Assets/Deviant/Weapons/Art/sword/Character/F024.png
+      sprite: {fileID: 21300000, guid: 5195f08618d99a641a5b7745b6b9de07, type: 3}
+    - id: F025
+      path: Assets/Deviant/Weapons/Art/sword/Character/F025.png
+      sprite: {fileID: 21300000, guid: e04357de987f04a4e9098c9559d60620, type: 3}
+    - id: F026
+      path: Assets/Deviant/Weapons/Art/sword/Character/F026.png
+      sprite: {fileID: 21300000, guid: d2af6695f3df3be4685170667a445f20, type: 3}
+    - id: F027
+      path: Assets/Deviant/Weapons/Art/sword/Character/F027.png
+      sprite: {fileID: 21300000, guid: d9dfc62cda105f746aebfab72ca253a6, type: 3}
+    - id: F028
+      path: Assets/Deviant/Weapons/Art/sword/Character/F028.png
+      sprite: {fileID: 21300000, guid: a5bd46ea87618b24ca584b8e2ff71970, type: 3}
+    - id: F029
+      path: Assets/Deviant/Weapons/Art/sword/Character/F029.png
+      sprite: {fileID: 21300000, guid: 8ea3bd64946f79844a6c4abdf1861e64, type: 3}
+    - id: F030
+      path: Assets/Deviant/Weapons/Art/sword/Character/F030.png
+      sprite: {fileID: 21300000, guid: 28c1d1e850b5b8d41aec1716d6a0c7bd, type: 3}
+    - id: F031
+      path: Assets/Deviant/Weapons/Art/sword/Character/F031.png
+      sprite: {fileID: 21300000, guid: c0ddfbe1ad0228643920a43dc6db2879, type: 3}
+    - id: F032
+      path: Assets/Deviant/Weapons/Art/sword/Character/F032.png
+      sprite: {fileID: 21300000, guid: 4fdcbdebdff7ab9448672401f428d09f, type: 3}
+    - id: F033
+      path: Assets/Deviant/Weapons/Art/sword/Character/F033.png
+      sprite: {fileID: 21300000, guid: 944c866b821b1e4488646322f004757a, type: 3}
+    - id: F034
+      path: Assets/Deviant/Weapons/Art/sword/Character/F034.png
+      sprite: {fileID: 21300000, guid: 8658f31ac21f0e44a91810cf6e492c4f, type: 3}
+    - id: F035
+      path: Assets/Deviant/Weapons/Art/sword/Character/F035.png
+      sprite: {fileID: 21300000, guid: 9ca595cfd2fa633498623f87b9001e7f, type: 3}
+    - id: F036
+      path: Assets/Deviant/Weapons/Art/sword/Character/F036.png
+      sprite: {fileID: 21300000, guid: 66d5c5018afba3a4cbaa587fd7de09a5, type: 3}
+    - id: F037
+      path: Assets/Deviant/Weapons/Art/sword/Character/F037.png
+      sprite: {fileID: 21300000, guid: 0260d724f2dec464fb3fcfe6d43a6495, type: 3}
+    - id: F038
+      path: Assets/Deviant/Weapons/Art/sword/Character/F038.png
+      sprite: {fileID: 21300000, guid: f2f86b1e3a894564fab63bf7ff7a14e0, type: 3}
+    - id: F039
+      path: Assets/Deviant/Weapons/Art/sword/Character/F039.png
+      sprite: {fileID: 21300000, guid: 742f5367148474e4eb25af3a60a23776, type: 3}
+    - id: F040
+      path: Assets/Deviant/Weapons/Art/sword/Character/F040.png
+      sprite: {fileID: 21300000, guid: 80082a537cef90a44a32cca10a3e550b, type: 3}
+    - id: F041
+      path: Assets/Deviant/Weapons/Art/sword/Character/F041.png
+      sprite: {fileID: 21300000, guid: ed51b8afc836c914cbb7404cb0931597, type: 3}
+    - id: F042
+      path: Assets/Deviant/Weapons/Art/sword/Character/F042.png
+      sprite: {fileID: 21300000, guid: 32058249e17cd3140b8856c73c1d9cb7, type: 3}
+    - id: F043
+      path: Assets/Deviant/Weapons/Art/sword/Character/F043.png
+      sprite: {fileID: 21300000, guid: dfefe1bd090d7794fa2c4b37d91706ae, type: 3}
+    - id: F044
+      path: Assets/Deviant/Weapons/Art/sword/Character/F044.png
+      sprite: {fileID: 21300000, guid: ae6ec9327e7aa80418938a01c5bd1179, type: 3}
+    - id: F045
+      path: Assets/Deviant/Weapons/Art/sword/Character/F045.png
+      sprite: {fileID: 21300000, guid: 27fc5059b54827a498c05a90088a22ab, type: 3}
+    - id: S_RAISE_A
+      path: Assets/Deviant/Weapons/Art/sword/Character/S_RAISE_A.png
+      sprite: {fileID: 21300000, guid: 34649d7615c5a204fb5eff17f1b0b891, type: 3}
+    - id: S_RAISE_B
+      path: Assets/Deviant/Weapons/Art/sword/Character/S_RAISE_B.png
+      sprite: {fileID: 21300000, guid: 372e57e597e97b04e99b8b52eb90b3d9, type: 3}
+    - id: S_RAISE_C
+      path: Assets/Deviant/Weapons/Art/sword/Character/S_RAISE_C.png
+      sprite: {fileID: 21300000, guid: 8cd101ac36a63014b887f3f6a7bb6f3b, type: 3}
+    modules:
+    - id: idle
+      steps:
+      - frame: F006
+        phase: "\uD638\uD761"
+        ms: 180
+        dx: 0
+        dy: 0
+      - frame: F007
+        phase: "\uD638\uD761"
+        ms: 140
+        dx: 0
+        dy: 0
+      - frame: F008
+        phase: "\uD638\uD761"
+        ms: 180
+        dx: 0
+        dy: 0
+      - frame: F009
+        phase: "\uD638\uD761"
+        ms: 140
+        dx: 0
+        dy: 0
+      loop: 1
+      duration_ms: 640
+    - id: walk
+      steps:
+      - frame: F038
+        phase: "\uBCF4\uD589"
+        ms: 80
+        dx: 0
+        dy: 0
+      - frame: F039
+        phase: "\uBCF4\uD589"
+        ms: 65
+        dx: 0
+        dy: 0
+      - frame: F040
+        phase: "\uBCF4\uD589"
+        ms: 80
+        dx: 0
+        dy: 0
+      - frame: F041
+        phase: "\uBCF4\uD589"
+        ms: 65
+        dx: 0
+        dy: 0
+      - frame: F042
+        phase: "\uBCF4\uD589"
+        ms: 80
+        dx: 0
+        dy: 0
+      - frame: F043
+        phase: "\uBCF4\uD589"
+        ms: 65
+        dx: 0
+        dy: 0
+      - frame: F044
+        phase: "\uBCF4\uD589"
+        ms: 80
+        dx: 0
+        dy: 0
+      - frame: F045
+        phase: "\uBCF4\uD589"
+        ms: 65
+        dx: 0
+        dy: 0
+      loop: 1
+      duration_ms: 580
+    - id: run
+      steps:
+      - frame: F032
+        phase: "\uC9C8\uC8FC"
+        ms: 65
+        dx: 0
+        dy: 0
+      - frame: F033
+        phase: "\uC9C8\uC8FC"
+        ms: 55
+        dx: 0
+        dy: 0
+      - frame: F034
+        phase: "\uC9C8\uC8FC"
+        ms: 65
+        dx: 0
+        dy: 0
+      - frame: F035
+        phase: "\uC9C8\uC8FC"
+        ms: 55
+        dx: 0
+        dy: 0
+      - frame: F036
+        phase: "\uC9C8\uC8FC"
+        ms: 65
+        dx: 0
+        dy: 0
+      - frame: F037
+        phase: "\uC9C8\uC8FC"
+        ms: 55
+        dx: 0
+        dy: 0
+      loop: 1
+      duration_ms: 360
+    - id: jump_start
+      steps:
+      - frame: F021
+        phase: "\uC555\uCD95"
+        ms: 40
+        dx: 0
+        dy: 0
+      - frame: F022
+        phase: "\uC774\uB959"
+        ms: 40
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 80
+    - id: jump_rise
+      steps:
+      - frame: F023
+        phase: "\uC0C1\uC2B9"
+        ms: 70
+        dx: 0
+        dy: 0
+      - frame: F024
+        phase: "\uC0C1\uC2B9"
+        ms: 70
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 140
+    - id: jump_apex
+      steps:
+      - frame: F025
+        phase: "\uC815\uC810"
+        ms: 70
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 70
+    - id: fall_start
+      steps:
+      - frame: F026
+        phase: "\uD558\uAC15 \uC9C4\uC785"
+        ms: 60
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 60
+    - id: fall_loop
+      steps:
+      - frame: F027
+        phase: "\uB099\uD558"
+        ms: 90
+        dx: 0
+        dy: 0
+      - frame: F028
+        phase: "\uB099\uD558"
+        ms: 90
+        dx: 0
+        dy: 0
+      loop: 1
+      duration_ms: 180
+    - id: land
+      steps:
+      - frame: F029
+        phase: "\uC811\uC9C0"
+        ms: 45
+        dx: 0
+        dy: 0
+      - frame: F030
+        phase: "\uCDA9\uACA9 \uD761\uC218"
+        ms: 55
+        dx: 0
+        dy: 0
+      - frame: F031
+        phase: "\uBCF5\uADC0"
+        ms: 90
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 190
+    - id: dash_start
+      steps:
+      - frame: F010
+        phase: "\uB300\uC2DC \uC9C4\uC785"
+        ms: 30
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 30
+    - id: dash_active
+      steps:
+      - frame: F011
+        phase: "\uB300\uC2DC \uC774\uB3D9"
+        ms: 55
+        dx: 0
+        dy: 0
+      - frame: F012
+        phase: "\uB300\uC2DC \uC774\uB3D9"
+        ms: 55
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 110
+    - id: dash_end
+      steps:
+      - frame: F013
+        phase: "\uAC10\uC18D"
+        ms: 50
+        dx: 0
+        dy: 0
+      - frame: F014
+        phase: "\uBCF5\uADC0"
+        ms: 80
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 130
+    - id: death_start
+      steps:
+      - frame: F015
+        phase: "\uACBD\uC9C1"
+        ms: 90
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 90
+    - id: death_fall
+      steps:
+      - frame: F016
+        phase: "\uC4F0\uB7EC\uC9D0"
+        ms: 90
+        dx: 0
+        dy: 0
+      - frame: F017
+        phase: "\uC4F0\uB7EC\uC9D0"
+        ms: 90
+        dx: 0
+        dy: 0
+      - frame: F018
+        phase: "\uC4F0\uB7EC\uC9D0"
+        ms: 100
+        dx: 0
+        dy: 0
+      - frame: F019
+        phase: "\uC4F0\uB7EC\uC9D0"
+        ms: 120
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 400
+    - id: death_hold
+      steps:
+      - frame: F020
+        phase: "\uC815\uC9C0 \uC720\uC9C0"
+        ms: 300
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 300
+    - id: attack1
+      steps:
+      - frame: F006
+        phase: "\uB300\uAE30 \uC5F0\uACB0"
+        ms: 40
+        dx: 0
+        dy: 0
+      - frame: F001
+        phase: "\uB4A4\uB85C \uBE7C\uAE30"
+        ms: 35
+        dx: 0
+        dy: 0
+      - frame: S_RAISE_A
+        phase: "\uB0AE\uC740 \uC815\uBA74"
+        ms: 25
+        dx: 0
+        dy: 0
+      - frame: S_RAISE_B
+        phase: "\uC815\uBA74 \uD1B5\uACFC"
+        ms: 25
+        dx: 0
+        dy: 0
+      - frame: S_RAISE_C
+        phase: "\uB300\uAC01\uC120 \uC0C1\uC2B9"
+        ms: 30
+        dx: 0
+        dy: 0
+      - frame: F002
+        phase: "\uD0C0\uACA9"
+        ms: 35
+        dx: 0
+        dy: 0
+      - frame: F003
+        phase: "\uC5F0\uACC4 \uC900\uBE44"
+        ms: 180
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 370
+    - id: attack2
+      steps:
+      - frame: F003
+        phase: "2\uD0C0 \xB7 \uB0B4\uB824\uBCA0\uAE30 \xB7 4\uB2E8\uACC4"
+        ms: 50
+        dx: 0
+        dy: 0
+      - frame: F004
+        phase: "2\uD0C0 \xB7 \uB0B4\uB824\uBCA0\uAE30 \xB7 4\uB2E8\uACC4"
+        ms: 40
+        dx: 0
+        dy: 0
+      - frame: F005
+        phase: "2\uD0C0 \xB7 \uB0B4\uB824\uBCA0\uAE30 \xB7 4\uB2E8\uACC4"
+        ms: 105
+        dx: 0
+        dy: 0
+      - frame: F006
+        phase: "2\uD0C0 \xB7 \uB0B4\uB824\uBCA0\uAE30 \xB7 4\uB2E8\uACC4"
+        ms: 100
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 295
+    attacks:
+    - hit: 1
+      damage: 2
+      impact: 155
+      fxStart: 100
+      range: 106
+      height: 48
+      advance: 85
+      chainAt: 285
+      bufferEnd: 370
+      bufferMs: 670
+    - hit: 2
+      damage: 3
+      impact: 50
+      fxStart: 20
+      range: 106
+      height: 48
+      advance: 85
+      chainAt: 295
+      bufferEnd: 295
+      bufferMs: 595
+    effects:
+    - hit: 1
+      steps:
+      - path: Assets/Deviant/Weapons/Art/sword/Effects/up_00.png
+        sprite: {fileID: 21300000, guid: 5e298048029e215408bb5263f17f589b, type: 3}
+        ms: 30
+        ox: 38
+        oy: 18
+        scale: 1.35
+        angle: 20
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/sword/Effects/up_01.png
+        sprite: {fileID: 21300000, guid: 11b863cd3ba89fd479f2835c049d6233, type: 3}
+        ms: 30
+        ox: 38
+        oy: 18
+        scale: 1.35
+        angle: 35
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/sword/Effects/up_02.png
+        sprite: {fileID: 21300000, guid: 890c64f51a700db43b0c0d202b8ddeb6, type: 3}
+        ms: 40
+        ox: 38
+        oy: 18
+        scale: 1.35
+        angle: 45
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/sword/Effects/up_03.png
+        sprite: {fileID: 21300000, guid: 5cfb77c79dfdb894baad39e1ee44d2c1, type: 3}
+        ms: 40
+        ox: 38
+        oy: 18
+        scale: 1.35
+        angle: 45
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/sword/Effects/up_04.png
+        sprite: {fileID: 21300000, guid: d166b8cf2cdc9304494ce5256f90d2cc, type: 3}
+        ms: 30
+        ox: 38
+        oy: 18
+        scale: 1.35
+        angle: 45
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/sword/Effects/up_05.png
+        sprite: {fileID: 21300000, guid: eab5a2b70b2a2b94693fc7ecbca9ec49, type: 3}
+        ms: 30
+        ox: 38
+        oy: 18
+        scale: 1.35
+        angle: 45
+        flip: 0
+    - hit: 2
+      steps:
+      - path: Assets/Deviant/Weapons/Art/sword/Effects/down_00.png
+        sprite: {fileID: 21300000, guid: a515606cbbc45ee4283f0dcf4061ee3a, type: 3}
+        ms: 30
+        ox: -28
+        oy: 8
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/sword/Effects/down_01.png
+        sprite: {fileID: 21300000, guid: 0c45fdce3c35c504789af09304ad4cd9, type: 3}
+        ms: 30
+        ox: 0
+        oy: 8
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/sword/Effects/down_02.png
+        sprite: {fileID: 21300000, guid: c90e8bf63d5d5524c8f7c9a4c11acd03, type: 3}
+        ms: 40
+        ox: 22
+        oy: 10
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/sword/Effects/down_03.png
+        sprite: {fileID: 21300000, guid: eda425c5af326cc408e42cd7f0041a67, type: 3}
+        ms: 40
+        ox: 40
+        oy: 14
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/sword/Effects/down_04.png
+        sprite: {fileID: 21300000, guid: aeeba271de0da1b4aaee9614d3d37719, type: 3}
+        ms: 30
+        ox: 48
+        oy: 18
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/sword/Effects/down_05.png
+        sprite: {fileID: 21300000, guid: 49e11cff5e6c1304ebd0269f737809ec, type: 3}
+        ms: 30
+        ox: 48
+        oy: 20
+        scale: 1
+        angle: 0
+        flip: 0
+  - id: whip
+    name: "\uCC44\uCC0D"
+    pivotX: 66
+    pivotY: 88
+    fxPivotX: 96
+    fxPivotY: 147
+    comboWindowMs: 0
+    frames:
+    - id: F001
+      path: Assets/Deviant/Weapons/Art/whip/Character/F001.png
+      sprite: {fileID: 21300000, guid: c7cd8affdc141a64ea6f89e0c9df0493, type: 3}
+    - id: F002
+      path: Assets/Deviant/Weapons/Art/whip/Character/F002.png
+      sprite: {fileID: 21300000, guid: 66098ff9ba337944fa2ea466cf25d0c4, type: 3}
+    - id: F003
+      path: Assets/Deviant/Weapons/Art/whip/Character/F003.png
+      sprite: {fileID: 21300000, guid: 6f9658baa614ecf4eb9121590343e6e0, type: 3}
+    - id: F004
+      path: Assets/Deviant/Weapons/Art/whip/Character/F004.png
+      sprite: {fileID: 21300000, guid: be66834a78eb3f440b892bf4be4959f9, type: 3}
+    - id: F005
+      path: Assets/Deviant/Weapons/Art/whip/Character/F005.png
+      sprite: {fileID: 21300000, guid: 05a05b957b5b98f44a47d9dc3e428d1a, type: 3}
+    - id: F006
+      path: Assets/Deviant/Weapons/Art/whip/Character/F006.png
+      sprite: {fileID: 21300000, guid: 70bde19fa095ee245a049ad06b6e813c, type: 3}
+    - id: F007
+      path: Assets/Deviant/Weapons/Art/whip/Character/F007.png
+      sprite: {fileID: 21300000, guid: f98fba5f770978e41a49fc74976b670c, type: 3}
+    - id: F008
+      path: Assets/Deviant/Weapons/Art/whip/Character/F008.png
+      sprite: {fileID: 21300000, guid: 76cfd26f092d3ab41821522255a50352, type: 3}
+    - id: F009
+      path: Assets/Deviant/Weapons/Art/whip/Character/F009.png
+      sprite: {fileID: 21300000, guid: 3079a3a4ccfd1194285f0a353bf09df5, type: 3}
+    - id: F010
+      path: Assets/Deviant/Weapons/Art/whip/Character/F010.png
+      sprite: {fileID: 21300000, guid: e3d6f485b4baf064bb3f5483aa2a3bfc, type: 3}
+    - id: F011
+      path: Assets/Deviant/Weapons/Art/whip/Character/F011.png
+      sprite: {fileID: 21300000, guid: 73345af5ccc1558428fdf82845054a04, type: 3}
+    - id: F012
+      path: Assets/Deviant/Weapons/Art/whip/Character/F012.png
+      sprite: {fileID: 21300000, guid: 92d4f8f137cd28d4a928f0331d4fb933, type: 3}
+    - id: F013
+      path: Assets/Deviant/Weapons/Art/whip/Character/F013.png
+      sprite: {fileID: 21300000, guid: db920ee099eb8c4479b323d933bc4fa5, type: 3}
+    - id: F014
+      path: Assets/Deviant/Weapons/Art/whip/Character/F014.png
+      sprite: {fileID: 21300000, guid: 8f0ae789e7414cd4da4df57c9713d162, type: 3}
+    - id: F015
+      path: Assets/Deviant/Weapons/Art/whip/Character/F015.png
+      sprite: {fileID: 21300000, guid: 35b6da9beaa0daa4b8dc7d87fd77699c, type: 3}
+    - id: F016
+      path: Assets/Deviant/Weapons/Art/whip/Character/F016.png
+      sprite: {fileID: 21300000, guid: 90885cae28812fa4293b43e185830ab1, type: 3}
+    - id: F017
+      path: Assets/Deviant/Weapons/Art/whip/Character/F017.png
+      sprite: {fileID: 21300000, guid: f7117e6b1a5b5994eb8a822ee4882ccd, type: 3}
+    - id: F018
+      path: Assets/Deviant/Weapons/Art/whip/Character/F018.png
+      sprite: {fileID: 21300000, guid: 41dfba90870a9944b8f50b7fb8774492, type: 3}
+    - id: F019
+      path: Assets/Deviant/Weapons/Art/whip/Character/F019.png
+      sprite: {fileID: 21300000, guid: c907d9e0e361b6448ae9bcbc7b6a2f31, type: 3}
+    - id: F020
+      path: Assets/Deviant/Weapons/Art/whip/Character/F020.png
+      sprite: {fileID: 21300000, guid: 5f5024f082ad4304fb66aa6716ca7a46, type: 3}
+    - id: F021
+      path: Assets/Deviant/Weapons/Art/whip/Character/F021.png
+      sprite: {fileID: 21300000, guid: bc992ee57f8438245b05e9c5aaf3cb69, type: 3}
+    - id: F022
+      path: Assets/Deviant/Weapons/Art/whip/Character/F022.png
+      sprite: {fileID: 21300000, guid: 615cbcfa01c9b7e43a454961cdd0ffae, type: 3}
+    - id: F023
+      path: Assets/Deviant/Weapons/Art/whip/Character/F023.png
+      sprite: {fileID: 21300000, guid: 4b2b48b3e3bc3fa45b27a414c45ab667, type: 3}
+    - id: F024
+      path: Assets/Deviant/Weapons/Art/whip/Character/F024.png
+      sprite: {fileID: 21300000, guid: e4dbd4e3871e28b4a9e9a05ecbc9d9ec, type: 3}
+    - id: F025
+      path: Assets/Deviant/Weapons/Art/whip/Character/F025.png
+      sprite: {fileID: 21300000, guid: 08f879a2fe6a537499a228926582ace4, type: 3}
+    - id: F026
+      path: Assets/Deviant/Weapons/Art/whip/Character/F026.png
+      sprite: {fileID: 21300000, guid: d0c601043812bd648868a6c6aff1f081, type: 3}
+    - id: F027
+      path: Assets/Deviant/Weapons/Art/whip/Character/F027.png
+      sprite: {fileID: 21300000, guid: 9efa8a1128a76dd4ab1b10a3a39d516e, type: 3}
+    - id: F028
+      path: Assets/Deviant/Weapons/Art/whip/Character/F028.png
+      sprite: {fileID: 21300000, guid: fc3ccbb774f6b43478a7defe76709586, type: 3}
+    - id: F029
+      path: Assets/Deviant/Weapons/Art/whip/Character/F029.png
+      sprite: {fileID: 21300000, guid: 493f346e459046b49a9220a2abed058f, type: 3}
+    - id: F030
+      path: Assets/Deviant/Weapons/Art/whip/Character/F030.png
+      sprite: {fileID: 21300000, guid: 6333beba0922a254e95485ec59e3687c, type: 3}
+    - id: F031
+      path: Assets/Deviant/Weapons/Art/whip/Character/F031.png
+      sprite: {fileID: 21300000, guid: f91a245a86b788d459b4d9ae4a5f0d54, type: 3}
+    - id: F032
+      path: Assets/Deviant/Weapons/Art/whip/Character/F032.png
+      sprite: {fileID: 21300000, guid: 222836d367bb7d84e9ac32a4aaf167de, type: 3}
+    - id: F033
+      path: Assets/Deviant/Weapons/Art/whip/Character/F033.png
+      sprite: {fileID: 21300000, guid: 41f0792855eb76a4ba4590c362ccbe85, type: 3}
+    - id: F034
+      path: Assets/Deviant/Weapons/Art/whip/Character/F034.png
+      sprite: {fileID: 21300000, guid: 3a4889a55e7c98a42a67bd643dd66a26, type: 3}
+    - id: F035
+      path: Assets/Deviant/Weapons/Art/whip/Character/F035.png
+      sprite: {fileID: 21300000, guid: 01c604d67b9546b4e95f5ca2737f07b5, type: 3}
+    - id: F036
+      path: Assets/Deviant/Weapons/Art/whip/Character/F036.png
+      sprite: {fileID: 21300000, guid: eb9a710c676f9a441b6880332b311d99, type: 3}
+    - id: F037
+      path: Assets/Deviant/Weapons/Art/whip/Character/F037.png
+      sprite: {fileID: 21300000, guid: ceddb333e85df6d468bb2874314d9147, type: 3}
+    - id: F038
+      path: Assets/Deviant/Weapons/Art/whip/Character/F038.png
+      sprite: {fileID: 21300000, guid: 83461ab26dea8284db37c718bbd637ed, type: 3}
+    - id: F039
+      path: Assets/Deviant/Weapons/Art/whip/Character/F039.png
+      sprite: {fileID: 21300000, guid: 78f9987627eff1444a79bded55fdc22b, type: 3}
+    - id: F040
+      path: Assets/Deviant/Weapons/Art/whip/Character/F040.png
+      sprite: {fileID: 21300000, guid: e5dfe230272f1f6409945edaf21eb849, type: 3}
+    - id: F041
+      path: Assets/Deviant/Weapons/Art/whip/Character/F041.png
+      sprite: {fileID: 21300000, guid: 88ead03353d6aa945b0d7414434f02ab, type: 3}
+    - id: F042
+      path: Assets/Deviant/Weapons/Art/whip/Character/F042.png
+      sprite: {fileID: 21300000, guid: cf07e4824be85d7428400f6aad1dc8b4, type: 3}
+    - id: F043
+      path: Assets/Deviant/Weapons/Art/whip/Character/F043.png
+      sprite: {fileID: 21300000, guid: f1dc8811e3821a2468e2534f52e15dc4, type: 3}
+    - id: F044
+      path: Assets/Deviant/Weapons/Art/whip/Character/F044.png
+      sprite: {fileID: 21300000, guid: 862980e73a6db4a4397a7d1e68d07877, type: 3}
+    - id: F045
+      path: Assets/Deviant/Weapons/Art/whip/Character/F045.png
+      sprite: {fileID: 21300000, guid: 80523f63153d5b544a4d8d6ec39bc12c, type: 3}
+    - id: F046
+      path: Assets/Deviant/Weapons/Art/whip/Character/F046.png
+      sprite: {fileID: 21300000, guid: 3e31e885785680f45a36567ca086822f, type: 3}
+    - id: F047
+      path: Assets/Deviant/Weapons/Art/whip/Character/F047.png
+      sprite: {fileID: 21300000, guid: 72a73c305f382e34998c506e4dedefbd, type: 3}
+    - id: F048
+      path: Assets/Deviant/Weapons/Art/whip/Character/F048.png
+      sprite: {fileID: 21300000, guid: daff2d93dfb414743a34cfdde965d823, type: 3}
+    - id: F049
+      path: Assets/Deviant/Weapons/Art/whip/Character/F049.png
+      sprite: {fileID: 21300000, guid: 853208987439c8847a5692f01de6b756, type: 3}
+    - id: F050
+      path: Assets/Deviant/Weapons/Art/whip/Character/F050.png
+      sprite: {fileID: 21300000, guid: 1ddf2485d573a144a92a2bf2586f0e7b, type: 3}
+    - id: F051
+      path: Assets/Deviant/Weapons/Art/whip/Character/F051.png
+      sprite: {fileID: 21300000, guid: c5e4bc7b8eff28a4f8b6be93ff177679, type: 3}
+    - id: F052
+      path: Assets/Deviant/Weapons/Art/whip/Character/F052.png
+      sprite: {fileID: 21300000, guid: b056f529236e0d74ea9ad0cded433cd3, type: 3}
+    - id: F053
+      path: Assets/Deviant/Weapons/Art/whip/Character/F053.png
+      sprite: {fileID: 21300000, guid: 1e18831d546699a459dde47a6a9cae43, type: 3}
+    - id: F054
+      path: Assets/Deviant/Weapons/Art/whip/Character/F054.png
+      sprite: {fileID: 21300000, guid: 1da44dc98df59794ebb0a5027a7c91e5, type: 3}
+    - id: F055
+      path: Assets/Deviant/Weapons/Art/whip/Character/F055.png
+      sprite: {fileID: 21300000, guid: e002d0f977629164ba704f438056a96f, type: 3}
+    - id: F056
+      path: Assets/Deviant/Weapons/Art/whip/Character/F056.png
+      sprite: {fileID: 21300000, guid: 4cb644ce36f90d7459052361de2ec1f7, type: 3}
+    - id: F057
+      path: Assets/Deviant/Weapons/Art/whip/Character/F057.png
+      sprite: {fileID: 21300000, guid: 6fa4ab588e6d6524f98ad0d74975600d, type: 3}
+    - id: F058
+      path: Assets/Deviant/Weapons/Art/whip/Character/F058.png
+      sprite: {fileID: 21300000, guid: 472f69ccdc70ac5428d7662941e1dd49, type: 3}
+    - id: F059
+      path: Assets/Deviant/Weapons/Art/whip/Character/F059.png
+      sprite: {fileID: 21300000, guid: f9f1e3ff8acf4dd4c8dbf81bd2cfa9ab, type: 3}
+    - id: F060
+      path: Assets/Deviant/Weapons/Art/whip/Character/F060.png
+      sprite: {fileID: 21300000, guid: 2939a080173965043a48552eb8e88224, type: 3}
+    - id: F061
+      path: Assets/Deviant/Weapons/Art/whip/Character/F061.png
+      sprite: {fileID: 21300000, guid: 9bddb68ba869c61479d3790e17cfb277, type: 3}
+    - id: F062
+      path: Assets/Deviant/Weapons/Art/whip/Character/F062.png
+      sprite: {fileID: 21300000, guid: 163c386749f50b241a5179819f4638f3, type: 3}
+    - id: F063
+      path: Assets/Deviant/Weapons/Art/whip/Character/F063.png
+      sprite: {fileID: 21300000, guid: bac430dfc0ed23e468dd1cabd79fadaf, type: 3}
+    - id: F064
+      path: Assets/Deviant/Weapons/Art/whip/Character/F064.png
+      sprite: {fileID: 21300000, guid: cd08f974d7ccfd240b2aae04c8d816ea, type: 3}
+    - id: F065
+      path: Assets/Deviant/Weapons/Art/whip/Character/F065.png
+      sprite: {fileID: 21300000, guid: a7e1182e75a32a54e9b85af7a8fa78d2, type: 3}
+    - id: F066
+      path: Assets/Deviant/Weapons/Art/whip/Character/F066.png
+      sprite: {fileID: 21300000, guid: c63ae28fe3af34f4284b6193bd15dfb7, type: 3}
+    - id: F067
+      path: Assets/Deviant/Weapons/Art/whip/Character/F067.png
+      sprite: {fileID: 21300000, guid: ba84d18d5a5632f4a891be5be2b43e3e, type: 3}
+    modules:
+    - id: idle
+      steps:
+      - frame: F011
+        phase: "\uD638\uD761"
+        ms: 180
+        dx: 0
+        dy: 0
+      - frame: F040
+        phase: "\uD638\uD761"
+        ms: 140
+        dx: 0
+        dy: 0
+      - frame: F041
+        phase: "\uD638\uD761"
+        ms: 180
+        dx: 0
+        dy: 0
+      - frame: F042
+        phase: "\uD638\uD761"
+        ms: 140
+        dx: 0
+        dy: 0
+      loop: 1
+      duration_ms: 640
+    - id: walk
+      steps:
+      - frame: F060
+        phase: "\uBCF4\uD589"
+        ms: 80
+        dx: 0
+        dy: 0
+      - frame: F061
+        phase: "\uBCF4\uD589"
+        ms: 65
+        dx: 0
+        dy: 0
+      - frame: F062
+        phase: "\uBCF4\uD589"
+        ms: 80
+        dx: 0
+        dy: 0
+      - frame: F063
+        phase: "\uBCF4\uD589"
+        ms: 65
+        dx: 0
+        dy: 0
+      - frame: F064
+        phase: "\uBCF4\uD589"
+        ms: 80
+        dx: 0
+        dy: 0
+      - frame: F065
+        phase: "\uBCF4\uD589"
+        ms: 65
+        dx: 0
+        dy: 0
+      - frame: F066
+        phase: "\uBCF4\uD589"
+        ms: 80
+        dx: 0
+        dy: 0
+      - frame: F067
+        phase: "\uBCF4\uD589"
+        ms: 65
+        dx: 0
+        dy: 0
+      loop: 1
+      duration_ms: 580
+    - id: run
+      steps:
+      - frame: F054
+        phase: "\uC9C8\uC8FC"
+        ms: 65
+        dx: 0
+        dy: 0
+      - frame: F055
+        phase: "\uC9C8\uC8FC"
+        ms: 55
+        dx: 0
+        dy: 0
+      - frame: F056
+        phase: "\uC9C8\uC8FC"
+        ms: 65
+        dx: 0
+        dy: 0
+      - frame: F057
+        phase: "\uC9C8\uC8FC"
+        ms: 55
+        dx: 0
+        dy: 0
+      - frame: F058
+        phase: "\uC9C8\uC8FC"
+        ms: 65
+        dx: 0
+        dy: 0
+      - frame: F059
+        phase: "\uC9C8\uC8FC"
+        ms: 55
+        dx: 0
+        dy: 0
+      loop: 1
+      duration_ms: 360
+    - id: jump_start
+      steps:
+      - frame: F043
+        phase: "\uC555\uCD95"
+        ms: 40
+        dx: 0
+        dy: 0
+      - frame: F044
+        phase: "\uC774\uB959"
+        ms: 40
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 80
+    - id: jump_rise
+      steps:
+      - frame: F045
+        phase: "\uC0C1\uC2B9"
+        ms: 70
+        dx: 0
+        dy: 0
+      - frame: F046
+        phase: "\uC0C1\uC2B9"
+        ms: 70
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 140
+    - id: jump_apex
+      steps:
+      - frame: F047
+        phase: "\uC815\uC810"
+        ms: 70
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 70
+    - id: fall_start
+      steps:
+      - frame: F048
+        phase: "\uD558\uAC15 \uC9C4\uC785"
+        ms: 60
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 60
+    - id: fall_loop
+      steps:
+      - frame: F049
+        phase: "\uB099\uD558"
+        ms: 90
+        dx: 0
+        dy: 0
+      - frame: F050
+        phase: "\uB099\uD558"
+        ms: 90
+        dx: 0
+        dy: 0
+      loop: 1
+      duration_ms: 180
+    - id: land
+      steps:
+      - frame: F051
+        phase: "\uC811\uC9C0"
+        ms: 45
+        dx: 0
+        dy: 0
+      - frame: F052
+        phase: "\uCDA9\uACA9 \uD761\uC218"
+        ms: 55
+        dx: 0
+        dy: 0
+      - frame: F053
+        phase: "\uBCF5\uADC0"
+        ms: 90
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 190
+    - id: dash_start
+      steps:
+      - frame: F023
+        phase: "\uB300\uC2DC \uC9C4\uC785"
+        ms: 30
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 30
+    - id: dash_active
+      steps:
+      - frame: F024
+        phase: "\uB300\uC2DC \uC774\uB3D9"
+        ms: 55
+        dx: 0
+        dy: 0
+      - frame: F025
+        phase: "\uB300\uC2DC \uC774\uB3D9"
+        ms: 55
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 110
+    - id: dash_end
+      steps:
+      - frame: F026
+        phase: "\uAC10\uC18D"
+        ms: 50
+        dx: 0
+        dy: 0
+      - frame: F027
+        phase: "\uBCF5\uADC0"
+        ms: 80
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 130
+    - id: attack1
+      steps:
+      - frame: F001
+        phase: "\uC900\uBE44"
+        ms: 70
+        dx: 0
+        dy: 0
+      - frame: F002
+        phase: "\uC804\uB2EC"
+        ms: 40
+        dx: 0
+        dy: 0
+      - frame: F004
+        phase: "\uC804\uB2EC"
+        ms: 40
+        dx: 0
+        dy: 0
+      - frame: F006
+        phase: "\uD0C0\uACA9"
+        ms: 40
+        dx: 0
+        dy: 0
+      - frame: F007
+        phase: "\uD68C\uC218"
+        ms: 75
+        dx: 0
+        dy: 0
+      - frame: F009
+        phase: "\uD68C\uC218"
+        ms: 100
+        dx: 0
+        dy: 0
+      - frame: F011
+        phase: "\uB300\uAE30"
+        ms: 210
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 575
+    - id: attack2
+      steps:
+      - frame: F012
+        phase: "\uC900\uBE44"
+        ms: 60
+        dx: 0
+        dy: 0
+      - frame: F013
+        phase: "\uC900\uBE44"
+        ms: 130
+        dx: 0
+        dy: 0
+      - frame: F014
+        phase: "\uC804\uB2EC"
+        ms: 40
+        dx: 0
+        dy: 0
+      - frame: F016
+        phase: "\uC804\uB2EC"
+        ms: 40
+        dx: 0
+        dy: 0
+      - frame: F018
+        phase: "\uD0C0\uACA9"
+        ms: 60
+        dx: 0
+        dy: 0
+      - frame: F019
+        phase: "\uD68C\uC218"
+        ms: 120
+        dx: 0
+        dy: 0
+      - frame: F022
+        phase: "\uD68C\uC218"
+        ms: 55
+        dx: 0
+        dy: 0
+      - frame: F011
+        phase: "\uB300\uAE30"
+        ms: 210
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 715
+    - id: death_start
+      steps:
+      - frame: F028
+        phase: "\uACBD\uC9C1"
+        ms: 80
+        dx: 0
+        dy: 0
+      - frame: F029
+        phase: "\uACBD\uC9C1"
+        ms: 90
+        dx: 0
+        dy: 0
+      - frame: F030
+        phase: "\uACBD\uC9C1"
+        ms: 90
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 260
+    - id: death_fall
+      steps:
+      - frame: F031
+        phase: "\uC4F0\uB7EC\uC9D0"
+        ms: 100
+        dx: 0
+        dy: 0
+      - frame: F032
+        phase: "\uC4F0\uB7EC\uC9D0"
+        ms: 100
+        dx: 0
+        dy: 0
+      - frame: F033
+        phase: "\uC4F0\uB7EC\uC9D0"
+        ms: 90
+        dx: 0
+        dy: 0
+      - frame: F034
+        phase: "\uC4F0\uB7EC\uC9D0"
+        ms: 90
+        dx: 0
+        dy: 0
+      - frame: F035
+        phase: "\uC4F0\uB7EC\uC9D0"
+        ms: 70
+        dx: 0
+        dy: 0
+      - frame: F036
+        phase: "\uC4F0\uB7EC\uC9D0"
+        ms: 70
+        dx: 0
+        dy: 0
+      - frame: F037
+        phase: "\uC4F0\uB7EC\uC9D0"
+        ms: 90
+        dx: 0
+        dy: 0
+      - frame: F038
+        phase: "\uC4F0\uB7EC\uC9D0"
+        ms: 100
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 710
+    - id: death_hold
+      steps:
+      - frame: F039
+        phase: "\uC0AC\uB9DD \uC720\uC9C0"
+        ms: 180
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 180
+    attacks:
+    - hit: 1
+      damage: 2
+      impact: 150
+      fxStart: 90
+      range: 205
+      height: 56
+      advance: 0
+      chainAt: 225
+      bufferEnd: 575
+      bufferMs: 875
+    - hit: 2
+      damage: 3
+      impact: 270
+      fxStart: 210
+      range: 205
+      height: 56
+      advance: 0
+      chainAt: 715
+      bufferEnd: 715
+      bufferMs: 1015
+    effects:
+    - hit: 1
+      steps:
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/up_00.png
+        sprite: {fileID: 21300000, guid: 2945373b9ce64704189e5e627b88351b, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/up_01.png
+        sprite: {fileID: 21300000, guid: 45c06fb17a72e064a80f7b95cdb97d53, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/up_02.png
+        sprite: {fileID: 21300000, guid: c00de27e515cc784d936d5db4171be03, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/up_03.png
+        sprite: {fileID: 21300000, guid: d0be3615fea25dd40a298f4e34035050, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/up_04.png
+        sprite: {fileID: 21300000, guid: f2aec2f99de982b41b1959d60b7027f5, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/up_05.png
+        sprite: {fileID: 21300000, guid: 65cc6801ab6f63244ba76870e25f685a, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/up_06.png
+        sprite: {fileID: 21300000, guid: 2702ddde1d2db4146af6ccec0b66bd7d, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/up_07.png
+        sprite: {fileID: 21300000, guid: 917eb92f7d2ef8a45a82397661141133, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/up_08.png
+        sprite: {fileID: 21300000, guid: 3eccd797301c9c44784fb74502997d06, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/up_09.png
+        sprite: {fileID: 21300000, guid: ff283ce6856e0e743bbab6efc812b4e2, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/up_10.png
+        sprite: {fileID: 21300000, guid: 9fa61a8c21e1357498692839b99d1817, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/up_11.png
+        sprite: {fileID: 21300000, guid: 33e0934d4d27c9145a6086b190fcd0cb, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/up_12.png
+        sprite: {fileID: 21300000, guid: 58b2bc1b37733184a953ac34cd4b0038, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/up_13.png
+        sprite: {fileID: 21300000, guid: da480b5c0fba1d846aea78c11bbdc81c, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/up_14.png
+        sprite: {fileID: 21300000, guid: 045769fd65a4709469b405b24a5d58ed, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/up_15.png
+        sprite: {fileID: 21300000, guid: aa269093c665977448600fe835daa885, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/up_16.png
+        sprite: {fileID: 21300000, guid: ba43736739efb9445aa486bad6012de2, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/up_17.png
+        sprite: {fileID: 21300000, guid: 8187788890eaeab40b3e280780565152, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/up_18.png
+        sprite: {fileID: 21300000, guid: a2cbe9d911fed09468714d9f4de3ce6b, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/up_19.png
+        sprite: {fileID: 21300000, guid: a6cbebcf0334fde4cacb707676cfa247, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/up_20.png
+        sprite: {fileID: 21300000, guid: 4f150c98e5436824a967d92472d5ea92, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/up_21.png
+        sprite: {fileID: 21300000, guid: 058fa8b85ed08184bb86e53b6bca2928, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/up_22.png
+        sprite: {fileID: 21300000, guid: ff618cb4c02ce27428af75851b8a56cb, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+    - hit: 2
+      steps:
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/down_00.png
+        sprite: {fileID: 21300000, guid: c4150838874e943418d777190df2f57b, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/down_01.png
+        sprite: {fileID: 21300000, guid: a6befe5cb1223174c9d192d9da42c3dd, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/down_02.png
+        sprite: {fileID: 21300000, guid: f76483360be7885419925a56b9322256, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/down_03.png
+        sprite: {fileID: 21300000, guid: 52e3ddae96b516b4988b1daf237be207, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/down_04.png
+        sprite: {fileID: 21300000, guid: eb1b0d0698e8fed498aa777c289f6fbb, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/down_05.png
+        sprite: {fileID: 21300000, guid: 9436ae34d59354343831d6bcef9b9535, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/down_06.png
+        sprite: {fileID: 21300000, guid: 200cd934211a4a1429f079d3abe34246, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/down_07.png
+        sprite: {fileID: 21300000, guid: d3f9f498fcdea0b429843f80070eef73, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/down_08.png
+        sprite: {fileID: 21300000, guid: f37ada4d5e413ae4cb368f250b41ef15, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/down_09.png
+        sprite: {fileID: 21300000, guid: f422a7eacbab0d8418eefe75cf597e80, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/down_10.png
+        sprite: {fileID: 21300000, guid: 2a0010e70240adf4ab948accb32ac521, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/down_11.png
+        sprite: {fileID: 21300000, guid: c32459eee376b5345b4130528c21c7e4, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/down_12.png
+        sprite: {fileID: 21300000, guid: e552de7616026a645a8754059055af26, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/down_13.png
+        sprite: {fileID: 21300000, guid: 1dd457959bc834d449d779761392f2db, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/down_14.png
+        sprite: {fileID: 21300000, guid: 74659464e4d328b4da80ca681a83480b, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/down_15.png
+        sprite: {fileID: 21300000, guid: 4fa46e98b9222934791f527793c7c3e6, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/down_16.png
+        sprite: {fileID: 21300000, guid: e9aea218631087843b0b43bba3d619b9, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/down_17.png
+        sprite: {fileID: 21300000, guid: b82a48320464803438c67a96c3ad36e4, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/down_18.png
+        sprite: {fileID: 21300000, guid: 42c4eb316c5521349ada7e789f307ebc, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/down_19.png
+        sprite: {fileID: 21300000, guid: ca56322684bc4274f9eaa518aa9ccda7, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/down_20.png
+        sprite: {fileID: 21300000, guid: 6db7dad7991c2b1499eb94efd82ecb79, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/down_21.png
+        sprite: {fileID: 21300000, guid: 9d6b96d829c267c4182feb5f3e5b188d, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/whip/Effects/down_22.png
+        sprite: {fileID: 21300000, guid: 88303ae97a39bf44c89a268c8fc25463, type: 3}
+        ms: 10
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+  - id: rapier
+    name: "\uB808\uC774\uD53C\uC5B4"
+    pivotX: 62
+    pivotY: 78
+    fxPivotX: 64
+    fxPivotY: 88
+    comboWindowMs: 220
+    frames:
+    - id: F001
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F001.png
+      sprite: {fileID: 21300000, guid: d9b76e8143066d34faa020817a7d5c2c, type: 3}
+    - id: F002
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F002.png
+      sprite: {fileID: 21300000, guid: 148e9eab6d54444458c523f8f620728f, type: 3}
+    - id: F003
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F003.png
+      sprite: {fileID: 21300000, guid: 422498ec1e8c1fe48b4fbb51b9a8124f, type: 3}
+    - id: F004
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F004.png
+      sprite: {fileID: 21300000, guid: 381c2c29e53687f4fb74262a73ee92ca, type: 3}
+    - id: F005
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F005.png
+      sprite: {fileID: 21300000, guid: 0b70a53f69dcd3e419afab8a9351ffa6, type: 3}
+    - id: F006
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F006.png
+      sprite: {fileID: 21300000, guid: 687cadebb03198341af85b7309cde9f4, type: 3}
+    - id: F007
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F007.png
+      sprite: {fileID: 21300000, guid: 26d8dbafefa6f9c49937490d0f832f6c, type: 3}
+    - id: F008
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F008.png
+      sprite: {fileID: 21300000, guid: f2249f89b43ddfd46af2834a34f19eea, type: 3}
+    - id: F009
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F009.png
+      sprite: {fileID: 21300000, guid: 6174552394e577e46bef881947055500, type: 3}
+    - id: F010
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F010.png
+      sprite: {fileID: 21300000, guid: 5e918d4a1654cae46b1c7ff81ce6d65f, type: 3}
+    - id: F011
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F011.png
+      sprite: {fileID: 21300000, guid: 0c055d75fad960a45a50f76546b8355b, type: 3}
+    - id: F012
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F012.png
+      sprite: {fileID: 21300000, guid: b666eb6a8aebfb947ac1c093dde52021, type: 3}
+    - id: F013
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F013.png
+      sprite: {fileID: 21300000, guid: f98d601736dd17f41a9dac9b9be172e5, type: 3}
+    - id: F014
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F014.png
+      sprite: {fileID: 21300000, guid: 472f1fc245abb5c4fa5fb0f9c42d439c, type: 3}
+    - id: F015
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F015.png
+      sprite: {fileID: 21300000, guid: a38cc02ca5729a04d8cf96b72d1b8b12, type: 3}
+    - id: F016
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F016.png
+      sprite: {fileID: 21300000, guid: 8fb2a5fa9856f684aba510e3f37e1270, type: 3}
+    - id: F017
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F017.png
+      sprite: {fileID: 21300000, guid: 6413120a7391646499c5ed881e1790a2, type: 3}
+    - id: F018
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F018.png
+      sprite: {fileID: 21300000, guid: 83eb37af016753147bc25dd17f049fb3, type: 3}
+    - id: F019
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F019.png
+      sprite: {fileID: 21300000, guid: 72ed2dbdb7cba604cbd82e9c867f02f5, type: 3}
+    - id: F020
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F020.png
+      sprite: {fileID: 21300000, guid: 0445f4e4c41fb7b479a705b08260caa8, type: 3}
+    - id: F021
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F021.png
+      sprite: {fileID: 21300000, guid: a0d1d64446f073145adbcc9275321b31, type: 3}
+    - id: F022
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F022.png
+      sprite: {fileID: 21300000, guid: c62dbcb95abaadd44a3a27c60c410e7c, type: 3}
+    - id: F023
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F023.png
+      sprite: {fileID: 21300000, guid: fbde3324f31934b44857ba9d0e8bfc2c, type: 3}
+    - id: F024
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F024.png
+      sprite: {fileID: 21300000, guid: a76c63689c2a5d943842566328da64fc, type: 3}
+    - id: F025
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F025.png
+      sprite: {fileID: 21300000, guid: 7bac62a4b8daec04dac2db94d8919c0f, type: 3}
+    - id: F026
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F026.png
+      sprite: {fileID: 21300000, guid: 64780639d742fef4a8c54d6c1fa94f46, type: 3}
+    - id: F027
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F027.png
+      sprite: {fileID: 21300000, guid: 74f9ff3e6f8ad3a45a1296a8be6c948b, type: 3}
+    - id: F028
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F028.png
+      sprite: {fileID: 21300000, guid: c24201a21a19ef24b82a103fe81687fe, type: 3}
+    - id: F029
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F029.png
+      sprite: {fileID: 21300000, guid: 741b29b6c80ca8f4c8fec38ba9388603, type: 3}
+    - id: F030
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F030.png
+      sprite: {fileID: 21300000, guid: 8765e223a371ae8458eede866c7eccea, type: 3}
+    - id: F031
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F031.png
+      sprite: {fileID: 21300000, guid: 223f98ac2cae94643ad356b39f16651b, type: 3}
+    - id: F032
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F032.png
+      sprite: {fileID: 21300000, guid: d0f7f55c63eefc740b918840409ce15b, type: 3}
+    - id: F033
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F033.png
+      sprite: {fileID: 21300000, guid: 86957e0e624875d48a2e8160f5ec95f1, type: 3}
+    - id: F034
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F034.png
+      sprite: {fileID: 21300000, guid: d6102ef12d0ff3d4bb28e29a09e48328, type: 3}
+    - id: F035
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F035.png
+      sprite: {fileID: 21300000, guid: 58e1566c0f0d6d742818294590e0ae94, type: 3}
+    - id: F036
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F036.png
+      sprite: {fileID: 21300000, guid: 4c029fb4a2a464547abf3fe643a6532c, type: 3}
+    - id: F037
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F037.png
+      sprite: {fileID: 21300000, guid: c923c7feb008c434dae377c31b48ae07, type: 3}
+    - id: F038
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F038.png
+      sprite: {fileID: 21300000, guid: f181a95e651b01548b2fb9c282a43ffb, type: 3}
+    - id: F039
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F039.png
+      sprite: {fileID: 21300000, guid: f81d89526185b53419afbf36163f3381, type: 3}
+    - id: F040
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F040.png
+      sprite: {fileID: 21300000, guid: 91c3732bb98f4fb47bec20a2d36e2252, type: 3}
+    - id: F041
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F041.png
+      sprite: {fileID: 21300000, guid: ad7b08a5aa4e863499319dc646a4f45f, type: 3}
+    - id: F042
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F042.png
+      sprite: {fileID: 21300000, guid: 901d6e6720530684cacec14135f16796, type: 3}
+    - id: F043
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F043.png
+      sprite: {fileID: 21300000, guid: 57098332b35a7c14a92190bcf0d09474, type: 3}
+    - id: F044
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F044.png
+      sprite: {fileID: 21300000, guid: 6de1af7e2eb0d0a48b7a837cc1686ce5, type: 3}
+    - id: F045
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F045.png
+      sprite: {fileID: 21300000, guid: ca74fb32394904543a784daffd534801, type: 3}
+    - id: F046
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F046.png
+      sprite: {fileID: 21300000, guid: 46d2e56a9fcdb82488d73a586f8beb10, type: 3}
+    - id: F047
+      path: Assets/Deviant/Weapons/Art/rapier/Character/F047.png
+      sprite: {fileID: 21300000, guid: 3e22d46de3877b0429f02bc38127f5c5, type: 3}
+    modules:
+    - id: idle
+      steps:
+      - frame: F013
+        phase: "\uD638\uD761"
+        ms: 200
+        dx: 0
+        dy: 0
+      - frame: F015
+        phase: "\uD638\uD761"
+        ms: 200
+        dx: 0
+        dy: 0
+      - frame: F016
+        phase: "\uD638\uD761"
+        ms: 200
+        dx: 0
+        dy: 0
+      - frame: F014
+        phase: "\uD638\uD761"
+        ms: 200
+        dx: 0
+        dy: 0
+      loop: 1
+      duration_ms: 800
+    - id: walk
+      steps:
+      - frame: F040
+        phase: "\uBCF4\uD589"
+        ms: 80
+        dx: 0
+        dy: 0
+      - frame: F041
+        phase: "\uBCF4\uD589"
+        ms: 65
+        dx: 0
+        dy: 0
+      - frame: F042
+        phase: "\uBCF4\uD589"
+        ms: 80
+        dx: 0
+        dy: 0
+      - frame: F043
+        phase: "\uBCF4\uD589"
+        ms: 65
+        dx: 0
+        dy: 0
+      - frame: F044
+        phase: "\uBCF4\uD589"
+        ms: 80
+        dx: 0
+        dy: 0
+      - frame: F045
+        phase: "\uBCF4\uD589"
+        ms: 65
+        dx: 0
+        dy: 0
+      - frame: F046
+        phase: "\uBCF4\uD589"
+        ms: 80
+        dx: 0
+        dy: 0
+      - frame: F047
+        phase: "\uBCF4\uD589"
+        ms: 65
+        dx: 0
+        dy: 0
+      loop: 1
+      duration_ms: 580
+    - id: run
+      steps:
+      - frame: F032
+        phase: "\uC9C8\uC8FC"
+        ms: 65
+        dx: 0
+        dy: 0
+      - frame: F033
+        phase: "\uC9C8\uC8FC"
+        ms: 55
+        dx: 0
+        dy: 0
+      - frame: F034
+        phase: "\uC9C8\uC8FC"
+        ms: 65
+        dx: 0
+        dy: 0
+      - frame: F035
+        phase: "\uC9C8\uC8FC"
+        ms: 55
+        dx: 0
+        dy: 0
+      - frame: F036
+        phase: "\uC9C8\uC8FC"
+        ms: 65
+        dx: 0
+        dy: 0
+      - frame: F037
+        phase: "\uC9C8\uC8FC"
+        ms: 55
+        dx: 0
+        dy: 0
+      loop: 1
+      duration_ms: 360
+    - id: jump_start
+      steps:
+      - frame: F017
+        phase: "\uC555\uCD95"
+        ms: 40
+        dx: 0
+        dy: 0
+      - frame: F018
+        phase: "\uC774\uB959"
+        ms: 40
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 80
+    - id: jump_rise
+      steps:
+      - frame: F019
+        phase: "\uC0C1\uC2B9"
+        ms: 70
+        dx: 0
+        dy: 0
+      - frame: F020
+        phase: "\uC0C1\uC2B9"
+        ms: 70
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 140
+    - id: jump_apex
+      steps:
+      - frame: F021
+        phase: "\uC815\uC810"
+        ms: 70
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 70
+    - id: fall_start
+      steps:
+      - frame: F022
+        phase: "\uD558\uAC15 \uC9C4\uC785"
+        ms: 60
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 60
+    - id: fall_loop
+      steps:
+      - frame: F023
+        phase: "\uB099\uD558"
+        ms: 90
+        dx: 0
+        dy: 0
+      - frame: F024
+        phase: "\uB099\uD558"
+        ms: 90
+        dx: 0
+        dy: 0
+      loop: 1
+      duration_ms: 180
+    - id: land
+      steps:
+      - frame: F025
+        phase: "\uC811\uC9C0"
+        ms: 45
+        dx: 0
+        dy: 0
+      - frame: F026
+        phase: "\uCDA9\uACA9 \uD761\uC218"
+        ms: 55
+        dx: 0
+        dy: 0
+      - frame: F027
+        phase: "\uBCF5\uADC0"
+        ms: 90
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 190
+    - id: dash_start
+      steps:
+      - frame: F001
+        phase: "\uB300\uC2DC \uC9C4\uC785"
+        ms: 30
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 30
+    - id: dash_active
+      steps:
+      - frame: F002
+        phase: "\uB300\uC2DC \uC774\uB3D9"
+        ms: 55
+        dx: 0
+        dy: 0
+      - frame: F003
+        phase: "\uB300\uC2DC \uC774\uB3D9"
+        ms: 55
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 110
+    - id: dash_end
+      steps:
+      - frame: F004
+        phase: "\uAC10\uC18D"
+        ms: 50
+        dx: 0
+        dy: 0
+      - frame: F005
+        phase: "\uBCF5\uADC0"
+        ms: 80
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 130
+    - id: death_start
+      steps:
+      - frame: F006
+        phase: "\uACBD\uC9C1"
+        ms: 90
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 90
+    - id: death_fall
+      steps:
+      - frame: F007
+        phase: "\uC4F0\uB7EC\uC9D0"
+        ms: 90
+        dx: 0
+        dy: 0
+      - frame: F008
+        phase: "\uC4F0\uB7EC\uC9D0"
+        ms: 90
+        dx: 0
+        dy: 0
+      - frame: F009
+        phase: "\uC4F0\uB7EC\uC9D0"
+        ms: 100
+        dx: 0
+        dy: 0
+      - frame: F010
+        phase: "\uC4F0\uB7EC\uC9D0"
+        ms: 120
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 400
+    - id: death_hold
+      steps:
+      - frame: F011
+        phase: "\uC815\uC9C0 \uC720\uC9C0"
+        ms: 300
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 300
+    - id: attack1
+      steps:
+      - frame: F029
+        phase: "1\uD0C0 \uC900\uBE44"
+        ms: 40
+        dx: 0
+        dy: 0
+      - frame: F038
+        phase: "1\uD0C0 \uD0C0\uACA9"
+        ms: 50
+        dx: 0
+        dy: 0
+      - frame: F030
+        phase: "1\uD0C0 \uD68C\uC218"
+        ms: 45
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 135
+    - id: attack2
+      steps:
+      - frame: F039
+        phase: "2\uD0C0 \uD0C0\uACA9"
+        ms: 45
+        dx: 0
+        dy: 0
+      - frame: F030
+        phase: "2\uD0C0 \uD68C\uC218"
+        ms: 40
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 85
+    - id: attack3
+      steps:
+      - frame: F028
+        phase: "3\uD0C0 \uD798 \uBAA8\uC73C\uAE30"
+        ms: 140
+        dx: 0
+        dy: 0
+      - frame: F012
+        phase: "3\uD0C0 \uD0C0\uACA9"
+        ms: 75
+        dx: 0
+        dy: 0
+      - frame: F031
+        phase: "\uB300\uAE30\uB85C \uD68C\uC218"
+        ms: 95
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 310
+    attacks:
+    - hit: 1
+      damage: 1
+      impact: 40
+      fxStart: 40
+      range: 130
+      height: 48
+      advance: 0
+      chainAt: 135
+      bufferEnd: 135
+      bufferMs: 435
+    - hit: 2
+      damage: 1
+      impact: 0
+      fxStart: 0
+      range: 130
+      height: 48
+      advance: 0
+      chainAt: 85
+      bufferEnd: 85
+      bufferMs: 385
+    - hit: 3
+      damage: 3
+      impact: 140
+      fxStart: 140
+      range: 155
+      height: 48
+      advance: 0
+      chainAt: 310
+      bufferEnd: 310
+      bufferMs: 610
+    effects:
+    - hit: 1
+      steps:
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit1_00.png
+        sprite: {fileID: 21300000, guid: 807cb3a2a6983d840885ab663414b256, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit1_01.png
+        sprite: {fileID: 21300000, guid: 8639331ed9098c04ca2bf6e8658a6d07, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit1_02.png
+        sprite: {fileID: 21300000, guid: c14e5be02906b6d479b6d504c76a5d17, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit1_03.png
+        sprite: {fileID: 21300000, guid: 07e51bf9a36aac045bb14c88195ed51a, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit1_04.png
+        sprite: {fileID: 21300000, guid: c8e6d29bca220694e89135776ab3ff7c, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit1_05.png
+        sprite: {fileID: 21300000, guid: 710f6f3d21692e24abb82aca7d185a61, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit1_06.png
+        sprite: {fileID: 21300000, guid: c17ee87870225f045aa5380dba438a26, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit1_07.png
+        sprite: {fileID: 21300000, guid: 714e51e547110e645986f648a12e182c, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit1_08.png
+        sprite: {fileID: 21300000, guid: 1f630638103b96f42be98a9931eedcf1, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit1_09.png
+        sprite: {fileID: 21300000, guid: 7e48fe3c2a9703243a44f378a043301d, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+    - hit: 2
+      steps:
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit2_00.png
+        sprite: {fileID: 21300000, guid: 5537b6e6222b61345bebad13c16193d9, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit2_01.png
+        sprite: {fileID: 21300000, guid: b37b0e7006acf504caf7822a690f4b86, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit2_02.png
+        sprite: {fileID: 21300000, guid: 66cba10b0aaef3144a25ef1a571a2d62, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit2_03.png
+        sprite: {fileID: 21300000, guid: d22d2127abaa2694eb805ac68dca68fa, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit2_04.png
+        sprite: {fileID: 21300000, guid: 5a130a3e418ae4a4f8898a0699ce9407, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit2_05.png
+        sprite: {fileID: 21300000, guid: 8d8a6856bbbc11742b2db1e38a4a116b, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit2_06.png
+        sprite: {fileID: 21300000, guid: 3e8d189ca10cba443bfbf3fb946126ef, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit2_07.png
+        sprite: {fileID: 21300000, guid: 2c36db1547511024c89acd9f48a01245, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit2_08.png
+        sprite: {fileID: 21300000, guid: 496af27f303abc346ad9a72d682e1841, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit2_09.png
+        sprite: {fileID: 21300000, guid: 9ed9cd46f5f55384380e1190a253a6de, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+    - hit: 3
+      steps:
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit3_00.png
+        sprite: {fileID: 21300000, guid: e3bc25ccf42e05f4e88ac9bf3a1297ab, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit3_01.png
+        sprite: {fileID: 21300000, guid: 742fc65a41d7ff041ac91aa161ca7b8b, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit3_02.png
+        sprite: {fileID: 21300000, guid: 8e1e9647b13063047961668cb2de9482, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit3_03.png
+        sprite: {fileID: 21300000, guid: 6a7c6aaeecc23b24a941b3086716dc01, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit3_04.png
+        sprite: {fileID: 21300000, guid: cbd2b88b5ff8c8446a0ca091af4e9661, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit3_05.png
+        sprite: {fileID: 21300000, guid: 067be640bca7edd4a9f1918eef17eccb, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit3_06.png
+        sprite: {fileID: 21300000, guid: cb479d1c8ee300f4ea021c1f245183ca, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit3_07.png
+        sprite: {fileID: 21300000, guid: 5f3b1d1760339384d9f8188642e9e28e, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit3_08.png
+        sprite: {fileID: 21300000, guid: 63a84e11f1202b04ebc58cb831d27e00, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/rapier/Effects/hit3_09.png
+        sprite: {fileID: 21300000, guid: 8b2c425a020375d4bb5c6dacebeb56e2, type: 3}
+        ms: 20
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+  - id: dagger
+    name: "\uB2E8\uAC80"
+    pivotX: 62
+    pivotY: 80
+    fxPivotX: 80
+    fxPivotY: 137
+    comboWindowMs: 0
+    frames:
+    - id: F001
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F001.png
+      sprite: {fileID: 21300000, guid: 38bdc1d27cb56de45a4bc62bd73d9ab0, type: 3}
+    - id: F002
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F002.png
+      sprite: {fileID: 21300000, guid: b438f019b5153484a98f0f4f33dea5e2, type: 3}
+    - id: F003
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F003.png
+      sprite: {fileID: 21300000, guid: 6e94d4c74b6214641879b8a5d9561dc7, type: 3}
+    - id: F004
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F004.png
+      sprite: {fileID: 21300000, guid: d8a88981f3627034b8bf25f5967b9b46, type: 3}
+    - id: F005
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F005.png
+      sprite: {fileID: 21300000, guid: 23c4ff0f5a5fdd94d960d79f8e90afcf, type: 3}
+    - id: F006
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F006.png
+      sprite: {fileID: 21300000, guid: 3547c3513f8a3a945a6746327b9fa18c, type: 3}
+    - id: F007
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F007.png
+      sprite: {fileID: 21300000, guid: 8512dbe814ad8674287a285fa135205a, type: 3}
+    - id: F008
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F008.png
+      sprite: {fileID: 21300000, guid: df0150a2b273a944a84065d48cc16edb, type: 3}
+    - id: F009
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F009.png
+      sprite: {fileID: 21300000, guid: 63e637aabfc80dc479bff16d0a287dc0, type: 3}
+    - id: F010
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F010.png
+      sprite: {fileID: 21300000, guid: ec494af4ff42a9a4ea07b444c917d450, type: 3}
+    - id: F011
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F011.png
+      sprite: {fileID: 21300000, guid: 49b5fab470210d34a95829b2877d73ed, type: 3}
+    - id: F012
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F012.png
+      sprite: {fileID: 21300000, guid: 617b59f4beff05a40845d2aa6260d41f, type: 3}
+    - id: F013
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F013.png
+      sprite: {fileID: 21300000, guid: 1286afdcbd966fb45ac894eb32873a36, type: 3}
+    - id: F014
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F014.png
+      sprite: {fileID: 21300000, guid: 3f16aba567a75f246aad958f50533c9c, type: 3}
+    - id: F015
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F015.png
+      sprite: {fileID: 21300000, guid: bcdd776c5fd420a46835f6ff00a59687, type: 3}
+    - id: F016
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F016.png
+      sprite: {fileID: 21300000, guid: ada779385646c6f41ba1a05d8f046b83, type: 3}
+    - id: F017
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F017.png
+      sprite: {fileID: 21300000, guid: e4170250568ac7c46a7b89e8945079cb, type: 3}
+    - id: F018
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F018.png
+      sprite: {fileID: 21300000, guid: e55a7bb665575e44a9da21b48ea1b632, type: 3}
+    - id: F019
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F019.png
+      sprite: {fileID: 21300000, guid: aad4601791ae73d48a627a580e170dd5, type: 3}
+    - id: F020
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F020.png
+      sprite: {fileID: 21300000, guid: 6a6bc061d5255204d811ba7a7b34794b, type: 3}
+    - id: F021
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F021.png
+      sprite: {fileID: 21300000, guid: 6a942f70830cf064196564df363b1ba5, type: 3}
+    - id: F022
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F022.png
+      sprite: {fileID: 21300000, guid: 7855c1d65346cc84c8ec20a6698929e9, type: 3}
+    - id: F023
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F023.png
+      sprite: {fileID: 21300000, guid: d74a81e7034ac114ba2b6dd92ff601d5, type: 3}
+    - id: F024
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F024.png
+      sprite: {fileID: 21300000, guid: 3acf72a7f06abe9439c03ed47eb582b0, type: 3}
+    - id: F025
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F025.png
+      sprite: {fileID: 21300000, guid: ebfb3b29c138c0d4b932949c90904b18, type: 3}
+    - id: F026
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F026.png
+      sprite: {fileID: 21300000, guid: 13869cb23b3651c4384bc3276e0e9818, type: 3}
+    - id: F027
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F027.png
+      sprite: {fileID: 21300000, guid: ac252f9a0cb9a7645b209b1e27715d49, type: 3}
+    - id: F028
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F028.png
+      sprite: {fileID: 21300000, guid: f323c64181b1df848b9854b7e473256f, type: 3}
+    - id: F029
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F029.png
+      sprite: {fileID: 21300000, guid: a02a09f09da35694d86dfc59290750bf, type: 3}
+    - id: F030
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F030.png
+      sprite: {fileID: 21300000, guid: 148274b3cda5813499cd7984e357fca8, type: 3}
+    - id: F031
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F031.png
+      sprite: {fileID: 21300000, guid: 3d2290212353f8f479f9526bf3200314, type: 3}
+    - id: F032
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F032.png
+      sprite: {fileID: 21300000, guid: 5c46ec3b1589c064eb746e5b5ba2c614, type: 3}
+    - id: F033
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F033.png
+      sprite: {fileID: 21300000, guid: 1d1b7bc6d6a759d498eebf5586c91c89, type: 3}
+    - id: F034
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F034.png
+      sprite: {fileID: 21300000, guid: 4bee3ae0d53822542910bc6da5abbc50, type: 3}
+    - id: F035
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F035.png
+      sprite: {fileID: 21300000, guid: 5dfc128c61ebe5a4dace8e14212f3cf2, type: 3}
+    - id: F036
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F036.png
+      sprite: {fileID: 21300000, guid: e3e9f7cdb4da3634db0410ab161ae8df, type: 3}
+    - id: F037
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F037.png
+      sprite: {fileID: 21300000, guid: 9fe554a304d90584e85c6209465f9019, type: 3}
+    - id: F038
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F038.png
+      sprite: {fileID: 21300000, guid: 31b4a3eff8299764f89663eb09c45eee, type: 3}
+    - id: F039
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F039.png
+      sprite: {fileID: 21300000, guid: 97aaf4cc09c8f214693abbc1625f934b, type: 3}
+    - id: F040
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F040.png
+      sprite: {fileID: 21300000, guid: 9516dc8138174d045b6ae2418df7a514, type: 3}
+    - id: F041
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F041.png
+      sprite: {fileID: 21300000, guid: 96eade270210a144d9845d2d7e30d728, type: 3}
+    - id: F042
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F042.png
+      sprite: {fileID: 21300000, guid: 14423d5201c6cfe48ae680d431065ce9, type: 3}
+    - id: F043
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F043.png
+      sprite: {fileID: 21300000, guid: 329594f6be5b7a941aad7a1524412257, type: 3}
+    - id: F044
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F044.png
+      sprite: {fileID: 21300000, guid: 6d78d4474bb9f2340a60ed7918028866, type: 3}
+    - id: F045
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F045.png
+      sprite: {fileID: 21300000, guid: 388f6d6b11b4ba84baf7753cbd678337, type: 3}
+    - id: F046
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F046.png
+      sprite: {fileID: 21300000, guid: 487ed38077b7a734785866e89851d97c, type: 3}
+    - id: F047
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F047.png
+      sprite: {fileID: 21300000, guid: b95fed20254c155489f0cff0be2f57dc, type: 3}
+    - id: F048
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F048.png
+      sprite: {fileID: 21300000, guid: ac68f0fc1ad78804d9f6fdf640b6f220, type: 3}
+    - id: F049
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F049.png
+      sprite: {fileID: 21300000, guid: 494df50d15922274bb9803b5f0ef01b6, type: 3}
+    - id: F050
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F050.png
+      sprite: {fileID: 21300000, guid: f626b5b46c65ea9498e0614b64e20d2e, type: 3}
+    - id: F051
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F051.png
+      sprite: {fileID: 21300000, guid: a472ecbc123934e4abb15e274655eef6, type: 3}
+    - id: F052
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F052.png
+      sprite: {fileID: 21300000, guid: 363946a817808d2439cb40a98f1b9356, type: 3}
+    - id: F053
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F053.png
+      sprite: {fileID: 21300000, guid: 1f7b6bbe758a61349b388b2c3ca23ff9, type: 3}
+    - id: F054
+      path: Assets/Deviant/Weapons/Art/dagger/Character/F054.png
+      sprite: {fileID: 21300000, guid: 35a9c6e7bbbc0e548acd3989d468442c, type: 3}
+    modules:
+    - id: idle
+      steps:
+      - frame: F026
+        phase: "\uD638\uD761"
+        ms: 180
+        dx: 0
+        dy: 0
+      - frame: F027
+        phase: "\uD638\uD761"
+        ms: 140
+        dx: 0
+        dy: 0
+      - frame: F028
+        phase: "\uD638\uD761"
+        ms: 180
+        dx: 0
+        dy: 0
+      - frame: F029
+        phase: "\uD638\uD761"
+        ms: 140
+        dx: 0
+        dy: 0
+      loop: 1
+      duration_ms: 640
+    - id: walk
+      steps:
+      - frame: F047
+        phase: "\uBCF4\uD589"
+        ms: 80
+        dx: 0
+        dy: 0
+      - frame: F048
+        phase: "\uBCF4\uD589"
+        ms: 65
+        dx: 0
+        dy: 0
+      - frame: F049
+        phase: "\uBCF4\uD589"
+        ms: 80
+        dx: 0
+        dy: 0
+      - frame: F050
+        phase: "\uBCF4\uD589"
+        ms: 65
+        dx: 0
+        dy: 0
+      - frame: F051
+        phase: "\uBCF4\uD589"
+        ms: 80
+        dx: 0
+        dy: 0
+      - frame: F052
+        phase: "\uBCF4\uD589"
+        ms: 65
+        dx: 0
+        dy: 0
+      - frame: F053
+        phase: "\uBCF4\uD589"
+        ms: 80
+        dx: 0
+        dy: 0
+      - frame: F054
+        phase: "\uBCF4\uD589"
+        ms: 65
+        dx: 0
+        dy: 0
+      loop: 1
+      duration_ms: 580
+    - id: run
+      steps:
+      - frame: F041
+        phase: "\uC9C8\uC8FC"
+        ms: 65
+        dx: 0
+        dy: 0
+      - frame: F042
+        phase: "\uC9C8\uC8FC"
+        ms: 55
+        dx: 0
+        dy: 0
+      - frame: F043
+        phase: "\uC9C8\uC8FC"
+        ms: 65
+        dx: 0
+        dy: 0
+      - frame: F044
+        phase: "\uC9C8\uC8FC"
+        ms: 55
+        dx: 0
+        dy: 0
+      - frame: F045
+        phase: "\uC9C8\uC8FC"
+        ms: 65
+        dx: 0
+        dy: 0
+      - frame: F046
+        phase: "\uC9C8\uC8FC"
+        ms: 55
+        dx: 0
+        dy: 0
+      loop: 1
+      duration_ms: 360
+    - id: jump_start
+      steps:
+      - frame: F030
+        phase: "\uC555\uCD95"
+        ms: 40
+        dx: 0
+        dy: 0
+      - frame: F031
+        phase: "\uC774\uB959"
+        ms: 40
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 80
+    - id: jump_rise
+      steps:
+      - frame: F032
+        phase: "\uC0C1\uC2B9"
+        ms: 70
+        dx: 0
+        dy: 0
+      - frame: F033
+        phase: "\uC0C1\uC2B9"
+        ms: 70
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 140
+    - id: jump_apex
+      steps:
+      - frame: F034
+        phase: "\uC815\uC810"
+        ms: 70
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 70
+    - id: fall_start
+      steps:
+      - frame: F035
+        phase: "\uD558\uAC15 \uC9C4\uC785"
+        ms: 60
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 60
+    - id: fall_loop
+      steps:
+      - frame: F036
+        phase: "\uB099\uD558"
+        ms: 90
+        dx: 0
+        dy: 0
+      - frame: F037
+        phase: "\uB099\uD558"
+        ms: 90
+        dx: 0
+        dy: 0
+      loop: 1
+      duration_ms: 180
+    - id: land
+      steps:
+      - frame: F038
+        phase: "\uC811\uC9C0"
+        ms: 45
+        dx: 0
+        dy: 0
+      - frame: F039
+        phase: "\uCDA9\uACA9 \uD761\uC218"
+        ms: 55
+        dx: 0
+        dy: 0
+      - frame: F040
+        phase: "\uBCF5\uADC0"
+        ms: 90
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 190
+    - id: dash_start
+      steps:
+      - frame: F015
+        phase: "\uB300\uC2DC \uC9C4\uC785"
+        ms: 30
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 30
+    - id: dash_active
+      steps:
+      - frame: F016
+        phase: "\uB300\uC2DC \uC774\uB3D9"
+        ms: 55
+        dx: 0
+        dy: 0
+      - frame: F017
+        phase: "\uB300\uC2DC \uC774\uB3D9"
+        ms: 55
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 110
+    - id: dash_end
+      steps:
+      - frame: F018
+        phase: "\uAC10\uC18D"
+        ms: 50
+        dx: 0
+        dy: 0
+      - frame: F019
+        phase: "\uBCF5\uADC0"
+        ms: 80
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 130
+    - id: death_start
+      steps:
+      - frame: F020
+        phase: "\uACBD\uC9C1"
+        ms: 90
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 90
+    - id: death_fall
+      steps:
+      - frame: F021
+        phase: "\uC4F0\uB7EC\uC9D0"
+        ms: 90
+        dx: 0
+        dy: 0
+      - frame: F022
+        phase: "\uC4F0\uB7EC\uC9D0"
+        ms: 90
+        dx: 0
+        dy: 0
+      - frame: F023
+        phase: "\uC4F0\uB7EC\uC9D0"
+        ms: 100
+        dx: 0
+        dy: 0
+      - frame: F024
+        phase: "\uC4F0\uB7EC\uC9D0"
+        ms: 120
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 400
+    - id: death_hold
+      steps:
+      - frame: F025
+        phase: "\uC815\uC9C0 \uC720\uC9C0"
+        ms: 300
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 300
+    - id: attack1
+      steps:
+      - frame: F001
+        phase: "1\uD0C0 \xB7 \uC9E7\uC740 \uAC00\uB85C\uBCA0\uAE30"
+        ms: 45
+        dx: 0
+        dy: 0
+      - frame: F002
+        phase: "1\uD0C0 \xB7 \uC9E7\uC740 \uAC00\uB85C\uBCA0\uAE30"
+        ms: 75
+        dx: 0
+        dy: 0
+      - frame: F003
+        phase: "1\uD0C0 \xB7 \uC9E7\uC740 \uAC00\uB85C\uBCA0\uAE30"
+        ms: 45
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 165
+    - id: attack2
+      steps:
+      - frame: F004
+        phase: "2\uD0C0 \xB7 \uB418\uBC1B\uC544 \uC62C\uB824\uBCA0\uAE30"
+        ms: 45
+        dx: 0
+        dy: 0
+      - frame: F005
+        phase: "2\uD0C0 \xB7 \uB418\uBC1B\uC544 \uC62C\uB824\uBCA0\uAE30"
+        ms: 75
+        dx: 0
+        dy: 0
+      - frame: F006
+        phase: "2\uD0C0 \xB7 \uB418\uBC1B\uC544 \uC62C\uB824\uBCA0\uAE30"
+        ms: 45
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 165
+    - id: attack3
+      steps:
+      - frame: F007
+        phase: "3\uD0C0 \xB7 \uB0B4\uB824\uBCA0\uAE30"
+        ms: 50
+        dx: 0
+        dy: 0
+      - frame: F008
+        phase: "3\uD0C0 \xB7 \uB0B4\uB824\uBCA0\uAE30"
+        ms: 50
+        dx: 0
+        dy: 0
+      - frame: F009
+        phase: "3\uD0C0 \xB7 \uB0B4\uB824\uBCA0\uAE30"
+        ms: 110
+        dx: 0
+        dy: 0
+      - frame: F010
+        phase: "3\uD0C0 \xB7 \uB0B4\uB824\uBCA0\uAE30"
+        ms: 50
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 260
+    - id: attack4
+      steps:
+      - frame: F011
+        phase: "4\uD0C0 \xB7 \uC5ED\uC218 \uB9C8\uBB34\uB9AC"
+        ms: 55
+        dx: 0
+        dy: 0
+      - frame: F012
+        phase: "4\uD0C0 \xB7 \uC5ED\uC218 \uB9C8\uBB34\uB9AC"
+        ms: 200
+        dx: 0
+        dy: 0
+      - frame: F013
+        phase: "4\uD0C0 \xB7 \uC5ED\uC218 \uB9C8\uBB34\uB9AC"
+        ms: 90
+        dx: 0
+        dy: 0
+      - frame: F014
+        phase: "4\uD0C0 \xB7 \uC5ED\uC218 \uB9C8\uBB34\uB9AC"
+        ms: 65
+        dx: 0
+        dy: 0
+      loop: 0
+      duration_ms: 410
+    attacks:
+    - hit: 1
+      damage: 1
+      impact: 45
+      fxStart: 45
+      range: 85
+      height: 48
+      advance: 0
+      chainAt: 165
+      bufferEnd: 165
+      bufferMs: 465
+    - hit: 2
+      damage: 1
+      impact: 45
+      fxStart: 45
+      range: 85
+      height: 48
+      advance: 0
+      chainAt: 165
+      bufferEnd: 165
+      bufferMs: 465
+    - hit: 3
+      damage: 1
+      impact: 100
+      fxStart: 100
+      range: 85
+      height: 48
+      advance: 0
+      chainAt: 260
+      bufferEnd: 260
+      bufferMs: 560
+    - hit: 4
+      damage: 3
+      impact: 255
+      fxStart: 255
+      range: 100
+      height: 48
+      advance: 0
+      chainAt: 410
+      bufferEnd: 410
+      bufferMs: 710
+    effects:
+    - hit: 1
+      steps:
+      - path: Assets/Deviant/Weapons/Art/dagger/Effects/hit1_00.png
+        sprite: {fileID: 21300000, guid: 3abd5436e44f7df4ebf8795d8e7e07b8, type: 3}
+        ms: 18
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/dagger/Effects/hit1_01.png
+        sprite: {fileID: 21300000, guid: 364b980186d1df049b1487fff5518b6c, type: 3}
+        ms: 22
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/dagger/Effects/hit1_02.png
+        sprite: {fileID: 21300000, guid: 9ef699f4e4de466499c9069e484af356, type: 3}
+        ms: 28
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/dagger/Effects/hit1_03.png
+        sprite: {fileID: 21300000, guid: 6e64673263fb5654eb9cc318bb646dd0, type: 3}
+        ms: 34
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/dagger/Effects/hit1_04.png
+        sprite: {fileID: 21300000, guid: 0938a236ee34c0f408bafdbdef5949e2, type: 3}
+        ms: 30
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/dagger/Effects/hit1_05.png
+        sprite: {fileID: 21300000, guid: 45f65c849f171104192f3fedacbf071f, type: 3}
+        ms: 24
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+    - hit: 2
+      steps:
+      - path: Assets/Deviant/Weapons/Art/dagger/Effects/hit2_00.png
+        sprite: {fileID: 21300000, guid: 576981400b9d4f4469f5ecf3fd1f3524, type: 3}
+        ms: 18
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/dagger/Effects/hit2_01.png
+        sprite: {fileID: 21300000, guid: 9b666a6b480a0534b8dbd910f191ec55, type: 3}
+        ms: 22
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/dagger/Effects/hit2_02.png
+        sprite: {fileID: 21300000, guid: e3570f42ff8f33c44be439ef4d084970, type: 3}
+        ms: 28
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/dagger/Effects/hit2_03.png
+        sprite: {fileID: 21300000, guid: c7951a4bfcb011b41816fded56e9186e, type: 3}
+        ms: 34
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/dagger/Effects/hit2_04.png
+        sprite: {fileID: 21300000, guid: e4238e69344d4e84ba0a229fe7f70eb6, type: 3}
+        ms: 30
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/dagger/Effects/hit2_05.png
+        sprite: {fileID: 21300000, guid: 4f7bc48bd65c06a47bc9d47c7ec539ef, type: 3}
+        ms: 24
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+    - hit: 3
+      steps:
+      - path: Assets/Deviant/Weapons/Art/dagger/Effects/hit3_00.png
+        sprite: {fileID: 21300000, guid: f534b3a333ea0934da13595bc4458be9, type: 3}
+        ms: 18
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/dagger/Effects/hit3_01.png
+        sprite: {fileID: 21300000, guid: 2a3121b571e6d164fba7a586a9c21c5b, type: 3}
+        ms: 22
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/dagger/Effects/hit3_02.png
+        sprite: {fileID: 21300000, guid: 4f422d96633f99142a1f558ecc91a1aa, type: 3}
+        ms: 28
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/dagger/Effects/hit3_03.png
+        sprite: {fileID: 21300000, guid: 61b4eee83a158b048a930f01f2fcc409, type: 3}
+        ms: 34
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/dagger/Effects/hit3_04.png
+        sprite: {fileID: 21300000, guid: bedd597e0b28ee840bbdb08f989f1e16, type: 3}
+        ms: 30
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/dagger/Effects/hit3_05.png
+        sprite: {fileID: 21300000, guid: d824c79e0bd225841aca30eba6b8e67e, type: 3}
+        ms: 24
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+    - hit: 4
+      steps:
+      - path: Assets/Deviant/Weapons/Art/dagger/Effects/hit4_00.png
+        sprite: {fileID: 21300000, guid: cce37f8e8ea839242b1cabcff53488fd, type: 3}
+        ms: 18
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/dagger/Effects/hit4_01.png
+        sprite: {fileID: 21300000, guid: f574892a4cfbcf1458e76b0ad1cf64f6, type: 3}
+        ms: 22
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/dagger/Effects/hit4_02.png
+        sprite: {fileID: 21300000, guid: 707a0251949427f4eb877247e4b4e34a, type: 3}
+        ms: 28
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/dagger/Effects/hit4_03.png
+        sprite: {fileID: 21300000, guid: 0fe05898007907f47bf1686224ccf850, type: 3}
+        ms: 34
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/dagger/Effects/hit4_04.png
+        sprite: {fileID: 21300000, guid: 3052b50d684650142a3a0b81fd3b5384, type: 3}
+        ms: 30
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+      - path: Assets/Deviant/Weapons/Art/dagger/Effects/hit4_05.png
+        sprite: {fileID: 21300000, guid: 7b524ae3c5a037b458f07066008305ee, type: 3}
+        ms: 24
+        ox: 0
+        oy: 0
+        scale: 1
+        angle: 0
+        flip: 0
+  dummy:
+  - id: 0
+    path: Assets/Deviant/Weapons/Art/Dummy/0.png
+    sprite: {fileID: 21300000, guid: ad7e31910cc1653418f698bc58a68b56, type: 3}
+  - id: 1
+    path: Assets/Deviant/Weapons/Art/Dummy/1.png
+    sprite: {fileID: 21300000, guid: 2d9c3e694228a9f4d86c4d6f20f59ecf, type: 3}
+  - id: 2
+    path: Assets/Deviant/Weapons/Art/Dummy/2.png
+    sprite: {fileID: 21300000, guid: 40db6275c2454934b8448dd98da71856, type: 3}
+  - id: 3
+    path: Assets/Deviant/Weapons/Art/Dummy/3.png
+    sprite: {fileID: 21300000, guid: c6fe23ff063c5b84c8e2d1a5ffcb4d3b, type: 3}
+  - id: 4
+    path: Assets/Deviant/Weapons/Art/Dummy/4.png
+    sprite: {fileID: 21300000, guid: 652a0ac7f42804c4ab22011d3f5be631, type: 3}
+  - id: 5
+    path: Assets/Deviant/Weapons/Art/Dummy/5.png
+    sprite: {fileID: 21300000, guid: fe24788590a49e645a9f3f3eaff563fe, type: 3}
+  - id: 6
+    path: Assets/Deviant/Weapons/Art/Dummy/6.png
+    sprite: {fileID: 21300000, guid: eaca876a26569544ea9948251751b0a6, type: 3}
+  - id: 7
+    path: Assets/Deviant/Weapons/Art/Dummy/7.png
+    sprite: {fileID: 21300000, guid: 2e110379f12aced4f92177b88b41c7c4, type: 3}
+  - id: 8
+    path: Assets/Deviant/Weapons/Art/Dummy/8.png
+    sprite: {fileID: 21300000, guid: c95f86a4567dfcd4b8313f72308b9252, type: 3}
+  - id: 9
+    path: Assets/Deviant/Weapons/Art/Dummy/9.png
+    sprite: {fileID: 21300000, guid: b709cee89690801408e24ad8ffcb4c5f, type: 3}
+  - id: 10
+    path: Assets/Deviant/Weapons/Art/Dummy/10.png
+    sprite: {fileID: 21300000, guid: 131ed6d502baf3e49916a7abdecfd0e2, type: 3}
+  - id: 11
+    path: Assets/Deviant/Weapons/Art/Dummy/11.png
+    sprite: {fileID: 21300000, guid: f576f95112100e04a91889dc8b19366e, type: 3}
+  dummyPivotX: 63.5
+  dummyPivotY: 119.95556
+  material: {fileID: 2100000, guid: b65c9b4b8b83b3440ba0e039591ef730, type: 2}

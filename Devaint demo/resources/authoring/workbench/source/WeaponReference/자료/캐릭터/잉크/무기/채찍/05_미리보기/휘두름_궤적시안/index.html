@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>잉크 주인공 · 채찍 궤적과 잔상</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#17202a;color:#eef1f4;font:16px/1.6 system-ui,sans-serif}main{max-width:1200px;padding:28px 20px 44px;margin:auto}h1{font-size:28px;line-height:1.3;margin:6px 0 10px}p{color:#bac4cf;margin:8px 0 20px}.eyebrow{color:#e0b960;letter-spacing:.1em;font-size:12px}nav,.controls,.phases{display:flex;align-items:center;gap:8px;flex-wrap:wrap}button,select{background:#2a3949;border:1px solid #617082;border-radius:7px;color:#edf3fa;padding:10px 15px;font:inherit;cursor:pointer}button:hover{background:#354960}button[aria-pressed=true]{background:#e4c684;color:#17202a;border-color:#e4c684}button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #e4c684;outline-offset:3px}.phases{margin:18px 0 8px;color:#8e9bab;font-size:14px}.phases span{padding:4px 12px;border-radius:4px}.phases .active{background:#30455b;color:white}.stage{background:#495562;border:1px solid #697789;border-radius:8px;overflow:hidden}canvas{display:block;width:100%;image-rendering:pixelated;aspect-ratio:392/176}.caption{display:flex;gap:16px;align-items:center;padding:10px 16px;background:#243242;min-height:54px}.caption strong{color:#e4c684;white-space:nowrap}.caption span{color:#e1e7ed}.controls{margin:14px 0}input[type=range]{width:100%;accent-color:#e4c684;cursor:pointer}.frames{display:flex;gap:5px;flex-wrap:wrap;margin:12px 0}.frames button{min-width:48px;font-size:13px;padding:7px 10px}.notes{border-top:1px solid #364556;padding-top:16px;margin-top:20px}.notes p{margin:5px 0;font-size:14px}.counter{font-variant-numeric:tabular-nums;min-width:100px;color:#aab9c8}a{color:#d9bb7e}label{cursor:pointer}@media(max-width:600px){main{padding:20px 12px}h1{font-size:23px}.caption{display:block}.caption span{display:block}.controls{gap:6px}button,select{padding:8px 10px}}
+</style>
+</head>
+<body><p id="full-motion-link"><a href="../index.html?revision=full-rope-master-face#all" style="color:#e4cc8a">→ 얼굴을 맞춘 전체 모션 보기 · 대기부터 죽음까지</a></p><main>
+<div class="eyebrow">WHIP MOTION STUDY</div>
+<h1>채찍 궤적 + 흰색·회색 잔상</h1>
+<p>채찍 끝이 풀리는 길을 따라 잔상이 남고, 타격 뒤에는 가늘게 갈라지며 사라집니다.</p>
+<nav aria-label="공격 선택"><button id="horizontal" aria-pressed="true">1타 · 가로 휘두르기</button><button id="downward" aria-pressed="false">2타 · 내려치기</button><a href="비교.html">이전 버전과 비교</a></nav>
+<div class="phases" aria-label="동작 순서"><span data-phase="준비">① 뒤로 모으기</span>→<span data-phase="전달">② 접힘 전달</span>→<span data-phase="타격">③ 끝이 탁!</span>→<span data-phase="회수">④ 처지며 회수</span></div>
+<div class="stage"><canvas id="view" width="392" height="176" aria-label="잉크 주인공과 멧돼지 사이의 채찍 공격 미리보기"></canvas><div class="caption"><strong id="phase">불러오는 중</strong><span id="description"></span></div></div>
+<div class="controls"><button id="play">일시정지</button><button id="restart">처음부터</button><button id="impact">타격 순간 보기</button><select id="speed" aria-label="재생 속도"><option value="1">실제 속도</option><option value="0.5">0.5배</option><option value="0.25">0.25배 · 움직임 보기</option></select><label><input type="checkbox" id="effects" checked> 이펙트</label><label><input type="checkbox" id="tip"> 끝 위치 표시</label><label><input type="checkbox" id="loop" checked> 반복</label><span id="counter" class="counter"></span></div>
+<input id="scrub" type="range" min="0" max="715" value="0" step="5" aria-label="동작과 이펙트 재생 위치">
+<div id="frames" class="frames" aria-label="개별 프레임"></div>
+<div class="notes"><p><strong>볼 곳:</strong> 1타는 앞으로 길게 빠지는 잔상, 2타는 위에서 따라 내려오는 잔상입니다. 손 근처에는 작은 방울을 더했습니다.</p><p>이펙트를 끄면 채찍 궤적만 비교할 수 있습니다. 0.25배속이나 아래 재생 막대로 잔상이 갈라지는 과정을 확인하세요. 이펙트는 항상 무기 앞에 표시합니다.</p><p>공격 때 늘어나고 회수할 때 짧아지는 잉크 채찍 설정을 유지한 게임용 시안입니다.</p><p><a href="이펙트_합성.png" target="_blank">타격 순간 확대</a> · <a href="../../../../../../../확정7종_20261019/index.html" target="_blank">가로 공격 GIF</a> · <a href="../../../../../../../확정7종_20261019/index.html" target="_blank">내려치기 GIF</a></p></div>
+</main><script src="preview-data.js?revision=gray-trail"></script><script src="effect-data.js?revision=gray-trail"></script><script src="preview.js?revision=gray-trail"></script></body></html>

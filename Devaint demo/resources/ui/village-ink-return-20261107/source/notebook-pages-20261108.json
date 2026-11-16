@@ -1,0 +1,22 @@
+{
+  "tool": "built-in image_gen",
+  "status": "requested two-page notebook illustrations; visual review pending",
+  "assets": [
+    {
+      "id": "eroders",
+      "prompt": "Use case: illustration-story. Create ONE transparent-background illustration asset for a SMALL in-game Korean notebook, landscape 3:2 composition, no paper or UI. Supporting reference 1 is the game's approved sepia ink notebook art; preserve the exact recognizable CLOCK TOWER EXECUTIONER with a round dark clock face body, little peaked stone clocktower on top, and two large floating stone fists, but REMOVE the village destruction scene. Draw exactly FIVE boss entries together in one cohesive notebook lineup: the recognizable clock executioner fully illustrated at the LEFT, taking about 42% of the width; the other FOUR boss entries at the right arranged in a tidy 2 by 2 grid. These four must remain UNIDENTIFIED: simple solid dark-brown ink silhouettes, no faces, no eyes, no internal costume details; each has ONE large legible pale question mark '?' centered within the silhouette. Give their outer shapes subtle distinct proportions, without inventing elaborate canon boss designs. Exactly four question marks and exactly one revealed boss. The clock boss is NOT a question mark. A delicate pen-sketch horizontal ground stroke is okay; otherwise genuine alpha zero background and comfortable margins. Match the approved image's hand-inked old fairytale / game prologue style, fine small pixel contours and limited sepia shading, light hatch marks, simplified enough to be readable at 300x158 UI pixels. No photorealism, no 3D, no glossy magical effects, no rainbow color, no gold/beige ornaments, no book frame, no labels, no numbers, no Korean text. Deliver the illustration alone as one complete transparent PNG.",
+      "referenceImages": [
+        "C:/Users/SSAFY/Desktop/자율 프로젝트/03_개발/GitLab/ui-polish-mr-20261107/resources/ui/village-ink-return-20261107/runtime/ui/executioner-notebook.png"
+      ]
+    },
+    {
+      "id": "well_ink",
+      "prompt": "Use case: illustration-story. Create ONE transparent-background instructional fairytale ink illustration for a SMALL in-game notebook, landscape 3:2 composition, no paper or UI. Reference 1 supplies the exact approved sepia pen drawing style. Reference 2 supplies the square ink bottle's silhouette only (do NOT keep its glossy high-resolution rendering). Reference 3 is game world reference: use ONLY the recognizable small stone village well with two wooden uprights and a pulley crossbeam, not the rest of the screenshot. Show a single uncorked small square ink bottle FLOATING just above the well opening, tilted clearly mouth-down towards the well. Show its separated dark cap floating slightly above/aside the bottle so it is visibly OPEN. A thin continuous ribbon of dark red ink falls STRAIGHT VERTICALLY from the mouth into the water INSIDE the stone well; one modest ripple is enough. No hand and no person. The well is the main object, with readable round stone rim, a little bucket/rope and simple wooden pulley structure. Keep the bottle and detached cap clearly separated from the wood. Composition must explain: remove cap -> pour village ink into well. Match reference 1's hand-inked sepia fairytale notebook/game prologue drawing, fine clean pixel contours, limited warm brown/gray shading and a tiny restrained red accent only for ink. Must remain readable at 300x158 UI pixels, simple silhouette, comfortable transparent margins. Actual alpha zero outside the isolated drawing. No decorative beige/gold ornaments, no glowing particles, no glass glare, no 3D, no photorealism, no painted paper backdrop, no book, no UI, no arrows, no labels, no text. Deliver the single complete transparent illustration.",
+      "referenceImages": [
+        "C:/Users/SSAFY/Desktop/자율 프로젝트/03_개발/GitLab/ui-polish-mr-20261107/resources/ui/village-ink-return-20261107/runtime/ui/executioner-notebook.png",
+        "C:/Users/SSAFY/Desktop/자율 프로젝트/03_개발/GitLab/ui-polish-mr-20261107/resources/ui/village-ink-return-20261107/runtime/acquisition/red-open.png",
+        "C:/Users/SSAFY/Desktop/자율 프로젝트/03_개발/GitLab/ui-polish-mr-20261107/outputs/hub/capture/village-ink-1-pour.png"
+      ]
+    }
+  ]
+}

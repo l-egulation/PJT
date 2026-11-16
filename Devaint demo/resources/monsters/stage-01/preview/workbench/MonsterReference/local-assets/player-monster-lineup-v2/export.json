@@ -1,0 +1,43 @@
+{
+  "source": "approved/manifest.json",
+  "playerSHA256": "8adf9a881f5c01c7407bd4468bd3c1b67d012b91d951c9ee8fb1546eab9ee9fc",
+  "nativeSize": [
+    1150,
+    280
+  ],
+  "scale": 2,
+  "groundBoundaryY": 240,
+  "playerBodyHeightPx": 64,
+  "phases": [
+    {
+      "motion": "idle",
+      "startMs": 0,
+      "durationMs": 4120
+    },
+    {
+      "motion": "walk",
+      "startMs": 4120,
+      "durationMs": 4800
+    },
+    {
+      "motion": "attack",
+      "startMs": 8920,
+      "durationMs": 2840
+    },
+    {
+      "motion": "death",
+      "startMs": 11760,
+      "durationMs": 1800
+    }
+  ],
+  "durationMs": 14220,
+  "gifFrames": 296,
+  "timingPolicy": "20ms export steps, no source timing edits; player is a fixed size reference",
+  "eliteDeath": "approved small-droplet v4; 34 frames / 1790ms",
+  "boss": {
+    "source": "local-assets\\boss-two-fists-v3\\base.png",
+    "bodyHeightPx": 208,
+    "sha256": "865537bd33fb529bebceab7bad220b3cd5cc4ce970d971d00ff04aea5e976059",
+    "motion": "static two-fist base; no approval metadata changed"
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "status": "production-candidate / Unity visual review required",
+  "reference": "Stage1VillageReference/ArtDirection/phase2-selected/05-matched-terrain.png",
+  "sourceDirectory": "output\\imagegen\\phase2-production-terrain-20261027",
+  "registration": [
+    {
+      "name": "cap-one-a",
+      "source": "caps-color.png quadrant 0",
+      "sourceBounds": [
+        114,
+        153,
+        454,
+        417
+      ],
+      "targetBounds": [
+        4,
+        5,
+        38,
+        32
+      ],
+      "size": [
+        42,
+        39
+      ],
+      "opaqueSilhouetteIoU": 0.8356,
+      "alpha": "generated native alpha, no donor mask"
+    },
+    {
+      "name": "cap-one-b",
+      "source": "caps-color.png quadrant 1",
+      "sourceBounds": [
+        113,
+        153,
+        453,
+        423
+      ],
+      "targetBounds": [
+        4,
+        5,
+        38,
+        34
+      ],
+      "size": [
+        42,
+        41
+      ],
+      "opaqueSilhouetteIoU": 0.8287,
+      "alpha": "generated native alpha, no donor mask"
+    },
+    {
+      "name": "cap-wide",
+      "source": "caps-color.png quadrant 2",
+      "sourceBounds": [
+        113,
+        154,
+        533,
+        423
+      ],
+      "targetBounds": [
+        4,
+        5,
+        46,
+        34
+      ],
+      "size": [
+        50,
+        42
+      ],
+      "opaqueSilhouetteIoU": 0.8697,
+      "alpha": "generated native alpha, no donor mask"
+    },
+    {
+      "name": "cap-short",
+      "source": "caps-color.png quadrant 3",
+      "sourceBounds": [
+        130,
+        154,
+        395,
+        423
+      ],
+      "targetBounds": [
+        4,
+        4,
+        32,
+        33
+      ],
+      "size": [
+        36,
+        43
+      ],
+      "opaqueSilhouetteIoU": 0.7135,
+      "alpha": "generated native alpha, no donor mask"
+    },
+    {
+      "name": "platform",
+      "source": "platform-color.png",
+      "sourceBounds": [
+        147,
+        77,
+        1695,
+        787
+      ],
+      "targetBounds": [
+        4,
+        4,
+        167,
+        79
+      ],
+      "size": [
+        171,
+        84
+      ],
+      "opaqueSilhouetteIoU": 0.9077,
+      "alpha": "generated native alpha, no donor mask"
+    }
+  ],
+  "soilSize": [
+    160,
+    96
+  ],
+  "canvasRule": "Same canvas and placement anchors as approved sketch; complete native-alpha generated components fitted without clipping.",
+  "images": [
+    {
+      "file": "cap-one-a.png",
+      "sha256": "4c0bb78ebd694305bf8f59368e852d16b6245d6d893b89437c9ace7cc41c392b"
+    },
+    {
+      "file": "cap-one-b.png",
+      "sha256": "fbba3acd7649f42b184e0cbb1c0bb19ad0b2b046b1a8f16f85978060d5856457"
+    },
+    {
+      "file": "cap-short.png",
+      "sha256": "25bc5feb9fbc7053cf31026ed2ee0a21c61458db231f57c53922ccaabdebc7b0"
+    },
+    {
+      "file": "cap-wide.png",
+      "sha256": "dc6d17c5109648cf617b34e83788b5961f45ce78a083046b333719305579e479"
+    },
+    {
+      "file": "platform.png",
+      "sha256": "431e9c5e9ab10549e15f9c98d3883120beb6eeb9daa1103131f450d12df3829d"
+    },
+    {
+      "file": "soil.png",
+      "sha256": "cb2164a3a81e2d93e9c06a3e9e4f6d79b5b819e8c6c091dd94b22facc9fbac5f"
+    }
+  ]
+}

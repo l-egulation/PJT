@@ -1,0 +1,294 @@
+{
+  "format": "deviant-inventory-ui-skin-v1",
+  "canvas": [
+    800,
+    464
+  ],
+  "bookBody": [
+    0,
+    24,
+    800,
+    440
+  ],
+  "origin": "top-left",
+  "pixelsPerUnit": 100,
+  "textBaked": false,
+  "inkArtBaked": false,
+  "removedActions": [
+    "discard",
+    "destroy",
+    "equip"
+  ],
+  "titleText": {
+    "rect": [
+      48,
+      12,
+      180,
+      28
+    ],
+    "text": "가방 · 장비",
+    "fontSize": 24,
+    "bold": true
+  },
+  "weaponTabs": [
+    [
+      32,
+      58,
+      172,
+      36
+    ],
+    [
+      208,
+      58,
+      172,
+      36
+    ]
+  ],
+  "equipmentSlots": {
+    "form": [
+      32,
+      138,
+      170,
+      64
+    ],
+    "special": [
+      210,
+      138,
+      170,
+      64
+    ],
+    "stats": [
+      [
+        32,
+        252,
+        60,
+        64
+      ],
+      [
+        104,
+        252,
+        60,
+        64
+      ],
+      [
+        176,
+        252,
+        60,
+        64
+      ],
+      [
+        248,
+        252,
+        60,
+        64
+      ],
+      [
+        320,
+        252,
+        60,
+        64
+      ]
+    ]
+  },
+  "filters": [
+    [
+      420,
+      58,
+      84,
+      36
+    ],
+    [
+      508,
+      58,
+      84,
+      36
+    ],
+    [
+      596,
+      58,
+      84,
+      36
+    ],
+    [
+      684,
+      58,
+      84,
+      36
+    ]
+  ],
+  "bagSlots": [
+    [
+      420,
+      108,
+      66,
+      60
+    ],
+    [
+      490,
+      108,
+      66,
+      60
+    ],
+    [
+      561,
+      108,
+      66,
+      60
+    ],
+    [
+      632,
+      108,
+      66,
+      60
+    ],
+    [
+      702,
+      108,
+      66,
+      60
+    ],
+    [
+      420,
+      176,
+      66,
+      60
+    ],
+    [
+      490,
+      176,
+      66,
+      60
+    ],
+    [
+      561,
+      176,
+      66,
+      60
+    ],
+    [
+      632,
+      176,
+      66,
+      60
+    ],
+    [
+      702,
+      176,
+      66,
+      60
+    ],
+    [
+      420,
+      244,
+      66,
+      60
+    ],
+    [
+      490,
+      244,
+      66,
+      60
+    ],
+    [
+      561,
+      244,
+      66,
+      60
+    ],
+    [
+      632,
+      244,
+      66,
+      60
+    ],
+    [
+      702,
+      244,
+      66,
+      60
+    ]
+  ],
+  "rules": [
+    [
+      32,
+      404,
+      348,
+      1
+    ],
+    [
+      420,
+      320,
+      348,
+      1
+    ]
+  ],
+  "close": [
+    756,
+    28,
+    36,
+    36
+  ],
+  "closeIcon": [
+    766,
+    38,
+    16,
+    16
+  ],
+  "detail": {
+    "icon": [
+      420,
+      332,
+      40,
+      56
+    ],
+    "name": [
+      472,
+      332,
+      296,
+      24
+    ],
+    "description": [
+      472,
+      365,
+      296,
+      54
+    ]
+  },
+  "labels": [
+    {
+      "text": "형태",
+      "rect": [
+        32,
+        108,
+        170,
+        24
+      ]
+    },
+    {
+      "text": "특수",
+      "rect": [
+        210,
+        108,
+        170,
+        24
+      ]
+    },
+    {
+      "text": "능력치",
+      "rect": [
+        32,
+        222,
+        348,
+        24
+      ]
+    }
+  ],
+  "font": "existing JournalFonts regular and bold; text rendered separately",
+  "sourcePartHashes": {
+    "ui/journal-preview/preview/assets/refined/title.png": "2758254e659934a57b30ce401f320742ced8dbf421f00c949cd511c31e4dbff3",
+    "ui/journal-preview/preview/assets/refined/tab.png": "6638b9cc1332c76973c02a64697e34f6f78da803094c6b6c67b67433e8bb6803",
+    "ui/journal-preview/preview/assets/refined/tab-active.png": "7577931d4d91a392e81209cfa643e68fa5a3ca52c37ad92bc98edad79a002d57",
+    "ui/journal-preview/preview/assets/refined/slot.png": "0d77cdb6cc339d8b6682a25df2a7828a99f698cbf20e7ff6823d5612a2fcb99d",
+    "ui/journal-preview/preview/assets/refined/slot-active.png": "eb1f68fc141373d8c6a7356d95083afbaf19b745eeb69ec8eed99cd6adb59d15"
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "format": "deviant-roseblue-phase-shift-v1",
+  "status": "user-approved-html-20261108",
+  "source": "resources monsters/stage-02/boss-arena-cutscenes-20261106/preview/phase-shift/timeline.json (dialogue user-revised-20261107) + 2026-11-08 review: R4/R7 motions, breath idles",
+  "units": "times in seconds on the HTML clock; heights in px above the feet",
+  "startAt": 0.55,
+  "startNote": "The game breaks the machine the moment its HP runs out (fragments, fall from the current X: FloorBreakPause, FloorFallGravity); the HTML clock is joined there at machineBlast.",
+  "duration": 15.2,
+  "times": {
+    "machineBlast": 0.55,
+    "platformsGone": 0.75,
+    "floorRestoreStart": 0.85,
+    "floorRestoreEnd": 1.35,
+    "barsIn": 1.7,
+    "appear": 2.1,
+    "lookRose": 2.3,
+    "lookBlue": 2.6,
+    "roseRaise": 3.5,
+    "barsOut": 14.4
+  },
+  "headPx": {
+    "rose": 126,
+    "blue": 145
+  },
+  "rosePlan": [
+    {
+      "motion": "R4",
+      "from": 2.6,
+      "to": 5.0,
+      "loop": false
+    },
+    {
+      "motion": "R7",
+      "from": 12.05,
+      "to": 14.4,
+      "loop": false
+    }
+  ],
+  "bluePlan": [],
+  "dialogue": [
+    {
+      "id": "rose-huh",
+      "from": 2.6,
+      "to": 3.4,
+      "speaker": "rose",
+      "text": "어?",
+      "enter": "pop",
+      "fx": [
+        {
+          "fx": "bounce",
+          "amp": 1.5
+        }
+      ]
+    },
+    {
+      "id": "rose-wow",
+      "from": 3.5,
+      "to": 5,
+      "speaker": "rose",
+      "text": "야야야 쟤 나왔어!!",
+      "enter": "slam",
+      "fx": [
+        {
+          "fx": "shake"
+        }
+      ]
+    },
+    {
+      "id": "blue-quiet",
+      "from": 5.1,
+      "to": 6.6,
+      "speaker": "blue",
+      "text": "...시끄러",
+      "type": "instant"
+    },
+    {
+      "id": "rose-close",
+      "from": 7.05,
+      "to": 8.65,
+      "speaker": "rose",
+      "text": "아쉬울 뻔 했네~~",
+      "fx": [
+        {
+          "fx": "wave",
+          "match": "~~",
+          "amp": 1.4
+        }
+      ]
+    },
+    {
+      "id": "rose-serious",
+      "from": 8.75,
+      "to": 10.55,
+      "speaker": "rose",
+      "text": "이제 제대로\n해보는거지??",
+      "enter": "pop",
+      "fx": [
+        {
+          "fx": "bounce",
+          "match": "??"
+        }
+      ]
+    },
+    {
+      "id": "blue-silent",
+      "from": 10.7,
+      "to": 11.9,
+      "speaker": "blue",
+      "text": "...",
+      "type": "instant"
+    },
+    {
+      "id": "rose-greet",
+      "from": 12.05,
+      "to": 14.2,
+      "speaker": "rose",
+      "text": "헤헤헤..시작할게!",
+      "enter": "pop",
+      "fx": [
+        {
+          "fx": "wave",
+          "match": "헤헤헤"
+        },
+        {
+          "fx": "bounce",
+          "match": "!"
+        }
+      ]
+    }
+  ]
+}

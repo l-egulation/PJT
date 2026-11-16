@@ -1,0 +1,855 @@
+{
+  "schema": 1,
+  "assetId": "ui.village-ink-return-20261107",
+  "gameIntegration": "Unity VillageInk bindings; first-red tutorial and later well-F returns",
+  "coordinates": "top-left pixel coordinates in the untrimmed original canvas",
+  "imageProcessing": "none; original imagegen PNG bytes preserved",
+  "inks": {
+    "red": {
+      "closed": {
+        "file": "runtime/acquisition/red-closed.png",
+        "width": 1254,
+        "height": 1254,
+        "contentBounds": [
+          295,
+          151,
+          959,
+          1102
+        ],
+        "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+        "bytes": 648803,
+        "sha256": "bb4eabaa7fbadb8d672144756588aa92cc2942c0cc613d19e25e1b8a5d58ed57",
+        "preserveCanvas": true,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "filter": "Point",
+        "wrap": "Clamp"
+      },
+      "open": {
+        "file": "runtime/acquisition/red-open.png",
+        "width": 1254,
+        "height": 1254,
+        "contentBounds": [
+          294,
+          290,
+          961,
+          1101
+        ],
+        "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+        "bytes": 657760,
+        "sha256": "be19ac5a05d171ba001fb2c5b97f62ef3cef83eb3cc9ae4a2d2104286caa9a54",
+        "preserveCanvas": true,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "filter": "Point",
+        "wrap": "Clamp"
+      },
+      "cap": {
+        "file": "runtime/acquisition/red-cap.png",
+        "width": 1254,
+        "height": 1254,
+        "contentBounds": [
+          452,
+          151,
+          803,
+          344
+        ],
+        "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+        "bytes": 130441,
+        "sha256": "da0baa5c90cdcebeae36660645bb172316dee9bb95a82ec64aad319e35499ae7",
+        "preserveCanvas": true,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "filter": "Point",
+        "wrap": "Clamp"
+      },
+      "empty": {
+        "file": "runtime/acquisition/red-empty.png",
+        "width": 1254,
+        "height": 1254,
+        "contentBounds": [
+          294,
+          288,
+          961,
+          1101
+        ],
+        "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+        "bytes": 644239,
+        "sha256": "7c3b64a5ff6e99f584862d5145c7a4cda5c2042a470e81392cd8befe32d39000",
+        "preserveCanvas": true,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "filter": "Point",
+        "wrap": "Clamp"
+      },
+      "drop": {
+        "file": "runtime/drops/red.png",
+        "width": 1254,
+        "height": 1254,
+        "contentBounds": [
+          322,
+          235,
+          933,
+          1052
+        ],
+        "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+        "bytes": 478930,
+        "sha256": "c6346b6cd1afd39002c573c8e283898a6782affca37978c2403b283378d10e82",
+        "preserveCanvas": true,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "filter": "Point",
+        "wrap": "Clamp"
+      },
+      "frame": {
+        "width": 1254,
+        "height": 1254,
+        "preserveCanvasForAllStates": true,
+        "capDockPixel": [
+          627.5,
+          344
+        ],
+        "capDockNormalized": [
+          0.500399,
+          0.274322
+        ],
+        "pourOriginPixel": [
+          627.5,
+          302
+        ],
+        "recommendedDropContentHeight": 32,
+        "openEmptyBoundsDeviation": [
+          0,
+          -2,
+          0,
+          0
+        ]
+      }
+    },
+    "yellow": {
+      "closed": {
+        "file": "runtime/acquisition/yellow-closed.png",
+        "width": 1254,
+        "height": 1254,
+        "contentBounds": [
+          292,
+          187,
+          962,
+          1066
+        ],
+        "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+        "bytes": 627149,
+        "sha256": "2797d487f4075fc7555fb5f55e6331f2daafb0ffb61d42da010a92a1490529fb",
+        "preserveCanvas": true,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "filter": "Point",
+        "wrap": "Clamp"
+      },
+      "open": {
+        "file": "runtime/acquisition/yellow-open.png",
+        "width": 1254,
+        "height": 1254,
+        "contentBounds": [
+          292,
+          311,
+          963,
+          1065
+        ],
+        "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+        "bytes": 538040,
+        "sha256": "39f7418e3f03bd7d8ce4653686740a7c61104db87c7e48340c1f619f929e700f",
+        "preserveCanvas": true,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "filter": "Point",
+        "wrap": "Clamp"
+      },
+      "cap": {
+        "file": "runtime/acquisition/yellow-cap.png",
+        "width": 1254,
+        "height": 1254,
+        "contentBounds": [
+          482,
+          185,
+          771,
+          361
+        ],
+        "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+        "bytes": 115692,
+        "sha256": "52a06180a14752c70131f86e5c852d296222de5d38ccd1dfcc5bca06a048a4d7",
+        "preserveCanvas": true,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "filter": "Point",
+        "wrap": "Clamp"
+      },
+      "empty": {
+        "file": "runtime/acquisition/yellow-empty.png",
+        "width": 1254,
+        "height": 1254,
+        "contentBounds": [
+          292,
+          311,
+          963,
+          1065
+        ],
+        "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+        "bytes": 504518,
+        "sha256": "385522dcbe1d8d0bb4d105df2b4992ba44ff04e666d24ed5e37e160a6d08a430",
+        "preserveCanvas": true,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "filter": "Point",
+        "wrap": "Clamp"
+      },
+      "drop": {
+        "file": "runtime/drops/yellow.png",
+        "width": 1254,
+        "height": 1254,
+        "contentBounds": [
+          301,
+          263,
+          954,
+          1081
+        ],
+        "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+        "bytes": 474390,
+        "sha256": "4cd05531a538f1c0da0c72e5f6beaea55da6bd7cbf992a8ecf3b353a2d3b3184",
+        "preserveCanvas": true,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "filter": "Point",
+        "wrap": "Clamp"
+      },
+      "frame": {
+        "width": 1254,
+        "height": 1254,
+        "preserveCanvasForAllStates": true,
+        "capDockPixel": [
+          626.5,
+          361
+        ],
+        "capDockNormalized": [
+          0.499601,
+          0.287879
+        ],
+        "pourOriginPixel": [
+          626.5,
+          323
+        ],
+        "recommendedDropContentHeight": 32,
+        "openEmptyBoundsDeviation": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "green": {
+      "closed": {
+        "file": "runtime/acquisition/green-closed.png",
+        "width": 1254,
+        "height": 1254,
+        "contentBounds": [
+          251,
+          163,
+          1003,
+          1098
+        ],
+        "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+        "bytes": 565683,
+        "sha256": "6f88f20d8c8fee84cdc9740bd17cd3cfe8491c25a082139ecce5e7cd2b8bef19",
+        "preserveCanvas": true,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "filter": "Point",
+        "wrap": "Clamp"
+      },
+      "open": {
+        "file": "runtime/acquisition/green-open.png",
+        "width": 1254,
+        "height": 1254,
+        "contentBounds": [
+          250,
+          295,
+          1004,
+          1098
+        ],
+        "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+        "bytes": 550166,
+        "sha256": "5c83239328fe291ed61b310aa048a8ee8957cf41663a295f324226142cb706ac",
+        "preserveCanvas": true,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "filter": "Point",
+        "wrap": "Clamp"
+      },
+      "cap": {
+        "file": "runtime/acquisition/green-cap.png",
+        "width": 1254,
+        "height": 1254,
+        "contentBounds": [
+          480,
+          162,
+          771,
+          346
+        ],
+        "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+        "bytes": 117739,
+        "sha256": "9459fa1cb5ef00b97ff7b0ff054a0ba5c5fea32069c465fbc812657d317fd187",
+        "preserveCanvas": true,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "filter": "Point",
+        "wrap": "Clamp"
+      },
+      "empty": {
+        "file": "runtime/acquisition/green-empty.png",
+        "width": 1254,
+        "height": 1254,
+        "contentBounds": [
+          251,
+          294,
+          1003,
+          1097
+        ],
+        "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+        "bytes": 546949,
+        "sha256": "56c44c6397b284fce88fa2d5459eaf1d720db4372639850e35856d2d1fe44fef",
+        "preserveCanvas": true,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "filter": "Point",
+        "wrap": "Clamp"
+      },
+      "drop": {
+        "file": "runtime/drops/green.png",
+        "width": 1254,
+        "height": 1254,
+        "contentBounds": [
+          288,
+          217,
+          965,
+          1058
+        ],
+        "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+        "bytes": 415326,
+        "sha256": "14f4bbe8ad8704f1a2c349902e52b91df4a16e2f04298a9f26b9447d0766f6fa",
+        "preserveCanvas": true,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "filter": "Point",
+        "wrap": "Clamp"
+      },
+      "frame": {
+        "width": 1254,
+        "height": 1254,
+        "preserveCanvasForAllStates": true,
+        "capDockPixel": [
+          625.5,
+          346
+        ],
+        "capDockNormalized": [
+          0.498804,
+          0.275917
+        ],
+        "pourOriginPixel": [
+          625.5,
+          307
+        ],
+        "recommendedDropContentHeight": 32,
+        "openEmptyBoundsDeviation": [
+          1,
+          -1,
+          -1,
+          -1
+        ]
+      }
+    },
+    "blue": {
+      "closed": {
+        "file": "runtime/acquisition/blue-closed.png",
+        "width": 1448,
+        "height": 1086,
+        "contentBounds": [
+          334,
+          185,
+          1114,
+          951
+        ],
+        "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+        "bytes": 546878,
+        "sha256": "e5ed5c1431aa4e6784a636bf385b01cf0a5f977caea31e44df89b166c21fa1d5",
+        "preserveCanvas": true,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "filter": "Point",
+        "wrap": "Clamp"
+      },
+      "open": {
+        "file": "runtime/acquisition/blue-open.png",
+        "width": 1448,
+        "height": 1086,
+        "contentBounds": [
+          334,
+          300,
+          1115,
+          952
+        ],
+        "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+        "bytes": 518728,
+        "sha256": "8a5129917f25d6f0a7cf830780e030c8ea4a1256f030d5125a974f0b7be2da13",
+        "preserveCanvas": true,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "filter": "Point",
+        "wrap": "Clamp"
+      },
+      "cap": {
+        "file": "runtime/acquisition/blue-cap.png",
+        "width": 1448,
+        "height": 1086,
+        "contentBounds": [
+          674,
+          183,
+          945,
+          346
+        ],
+        "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+        "bytes": 113910,
+        "sha256": "1042ed188afa98e1e351d6f2a2177795fce05d60e3e2168e4039abc08fb0c138",
+        "preserveCanvas": true,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "filter": "Point",
+        "wrap": "Clamp"
+      },
+      "empty": {
+        "file": "runtime/acquisition/blue-empty.png",
+        "width": 1448,
+        "height": 1086,
+        "contentBounds": [
+          333,
+          298,
+          1116,
+          953
+        ],
+        "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+        "bytes": 521094,
+        "sha256": "8d4a3cebe4d51e3b82ab39217aa922a40f8e50cafa2cbd557a8f652de70caa60",
+        "preserveCanvas": true,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "filter": "Point",
+        "wrap": "Clamp"
+      },
+      "drop": {
+        "file": "runtime/drops/blue.png",
+        "width": 1254,
+        "height": 1254,
+        "contentBounds": [
+          219,
+          285,
+          1035,
+          1014
+        ],
+        "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+        "bytes": 462999,
+        "sha256": "601d010d10607b622608021888846ff96557056e9f4ae2437d7b8e4dc49e8c68",
+        "preserveCanvas": true,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "filter": "Point",
+        "wrap": "Clamp"
+      },
+      "frame": {
+        "width": 1448,
+        "height": 1086,
+        "preserveCanvasForAllStates": true,
+        "capDockPixel": [
+          809.5,
+          346
+        ],
+        "capDockNormalized": [
+          0.559047,
+          0.3186
+        ],
+        "pourOriginPixel": [
+          809.5,
+          312
+        ],
+        "recommendedDropContentHeight": 32,
+        "openEmptyBoundsDeviation": [
+          -1,
+          -2,
+          1,
+          1
+        ]
+      }
+    },
+    "purple": {
+      "closed": {
+        "file": "runtime/acquisition/purple-closed.png",
+        "width": 1254,
+        "height": 1254,
+        "contentBounds": [
+          328,
+          142,
+          926,
+          1111
+        ],
+        "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+        "bytes": 620644,
+        "sha256": "095e4d50ff5d1a3031f09490c062818265f6e63e909c7c81acd14302b27f9430",
+        "preserveCanvas": true,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "filter": "Point",
+        "wrap": "Clamp"
+      },
+      "open": {
+        "file": "runtime/acquisition/purple-open.png",
+        "width": 1254,
+        "height": 1254,
+        "contentBounds": [
+          327,
+          246,
+          928,
+          1111
+        ],
+        "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+        "bytes": 562551,
+        "sha256": "eeb3cb908af2830c4af2772e686ba0c8c60ffac39c35aeba3bdbee8577b28a30",
+        "preserveCanvas": true,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "filter": "Point",
+        "wrap": "Clamp"
+      },
+      "cap": {
+        "file": "runtime/acquisition/purple-cap.png",
+        "width": 1254,
+        "height": 1254,
+        "contentBounds": [
+          494,
+          141,
+          760,
+          295
+        ],
+        "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+        "bytes": 107572,
+        "sha256": "4d963ee985ce39abee96903fd5103b09632b9117e514f7c80cdcc71de464f176",
+        "preserveCanvas": true,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "filter": "Point",
+        "wrap": "Clamp"
+      },
+      "empty": {
+        "file": "runtime/acquisition/purple-empty.png",
+        "width": 1254,
+        "height": 1254,
+        "contentBounds": [
+          327,
+          246,
+          928,
+          1111
+        ],
+        "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+        "bytes": 534098,
+        "sha256": "cc2609cab026ae8dfa81788fbd6afeda657d4f09de52c82aefe16bd2e8e7b061",
+        "preserveCanvas": true,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "filter": "Point",
+        "wrap": "Clamp"
+      },
+      "drop": {
+        "file": "runtime/drops/purple.png",
+        "width": 1254,
+        "height": 1254,
+        "contentBounds": [
+          352,
+          209,
+          902,
+          1071
+        ],
+        "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+        "bytes": 406939,
+        "sha256": "cf38a9fb0fdc8aaecc3156a8d62efd578fbefbfcb50d4ede35f4b1dea073c0fa",
+        "preserveCanvas": true,
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "filter": "Point",
+        "wrap": "Clamp"
+      },
+      "frame": {
+        "width": 1254,
+        "height": 1254,
+        "preserveCanvasForAllStates": true,
+        "capDockPixel": [
+          627.0,
+          295
+        ],
+        "capDockNormalized": [
+          0.5,
+          0.235247
+        ],
+        "pourOriginPixel": [
+          627.0,
+          258
+        ],
+        "recommendedDropContentHeight": 32,
+        "openEmptyBoundsDeviation": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  },
+  "ui": {
+    "notebook-paper": {
+      "file": "runtime/ui/notebook-paper.png",
+      "width": 1254,
+      "height": 1254,
+      "contentBounds": [
+        69,
+        42,
+        1185,
+        1227
+      ],
+      "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+      "bytes": 1733039,
+      "sha256": "f79f9ea2137a4c5dfb0e53231722291d16172650cdce5ca4578361918cb88ff0",
+      "preserveCanvas": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "filter": "Point",
+      "wrap": "Clamp"
+    },
+    "executioner-notebook": {
+      "file": "runtime/ui/executioner-notebook.png",
+      "width": 1692,
+      "height": 930,
+      "contentBounds": [
+        51,
+        48,
+        1648,
+        890
+      ],
+      "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+      "bytes": 1488765,
+      "sha256": "7a27d725c64456534f3519f96638d0953cde64d6cebe894fee995af3607c76d1",
+      "preserveCanvas": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "filter": "Point",
+      "wrap": "Clamp"
+    },
+    "eroders-notebook": {
+      "file": "runtime/ui/eroders-notebook.png",
+      "width": 1536,
+      "height": 1024,
+      "contentBounds": [
+        26,
+        134,
+        1500,
+        881
+      ],
+      "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+      "bytes": 1761190,
+      "sha256": "d3deeb5f573fc2ebd6ebb9ab5cfb25ee4bec4ba408ba9282382677328ea3654e",
+      "preserveCanvas": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "filter": "Point",
+      "wrap": "Clamp"
+    },
+    "well-ink-notebook": {
+      "file": "runtime/ui/well-ink-notebook.png",
+      "width": 1536,
+      "height": 1024,
+      "contentBounds": [
+        208,
+        47,
+        1258,
+        986
+      ],
+      "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+      "bytes": 2100995,
+      "sha256": "7b1cf1748acd509330833c6d85b6dcb4f4b5258fc910ce51c60cb796365da7f5",
+      "preserveCanvas": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "filter": "Point",
+      "wrap": "Clamp"
+    },
+    "title-banner": {
+      "file": "runtime/ui/title-banner.png",
+      "width": 2191,
+      "height": 718,
+      "contentBounds": [
+        176,
+        188,
+        2015,
+        513
+      ],
+      "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+      "bytes": 570199,
+      "sha256": "fd4f9966cf5bdbde41f7f85a525cbbed90b1c75fc07533750e282b8efab55753",
+      "preserveCanvas": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "filter": "Point",
+      "wrap": "Clamp"
+    },
+    "title-banner-blank": {
+      "file": "runtime/ui/title-banner-blank.png",
+      "width": 2079,
+      "height": 756,
+      "contentBounds": [
+        182,
+        214,
+        1898,
+        537
+      ],
+      "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+      "bytes": 540870,
+      "sha256": "79393a58b4625c71ed27777ec3914793c615a858a311f4a3a8ed2f7c9229b51e",
+      "preserveCanvas": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "filter": "Point",
+      "wrap": "Clamp"
+    },
+    "counter-banner-blank": {
+      "file": "runtime/ui/counter-banner-blank.png",
+      "width": 1942,
+      "height": 809,
+      "contentBounds": [
+        118,
+        121,
+        1824,
+        681
+      ],
+      "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+      "bytes": 828008,
+      "sha256": "e93d7ffe9b6c9f3d71430342f8956c0ea9b2bcdc22665599539815ed158dc580",
+      "preserveCanvas": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "filter": "Point",
+      "wrap": "Clamp"
+    },
+    "progress-drop-empty": {
+      "file": "runtime/ui/progress-drop-empty.png",
+      "width": 1254,
+      "height": 1254,
+      "contentBounds": [
+        324,
+        237,
+        930,
+        1045
+      ],
+      "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+      "bytes": 222222,
+      "sha256": "22a13cc0fdc56bfc45089c8cd8450b08f13a8a43c88c6e889104802e382c48f7",
+      "preserveCanvas": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "filter": "Point",
+      "wrap": "Clamp"
+    },
+    "progress-drop-filled": {
+      "file": "runtime/ui/progress-drop-filled.png",
+      "width": 1254,
+      "height": 1254,
+      "contentBounds": [
+        318,
+        193,
+        933,
+        1091
+      ],
+      "contentBoundsConvention": "left-top-right-bottom, alpha>=64",
+      "bytes": 452802,
+      "sha256": "57fe9e525e71e0ac1005262d03baab7e74b6d99ac231579496ab3c89fd0f5bf1",
+      "preserveCanvas": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "filter": "Point",
+      "wrap": "Clamp"
+    }
+  }
+}

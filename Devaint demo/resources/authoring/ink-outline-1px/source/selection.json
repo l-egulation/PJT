@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "rule": {
+    "description": "PlayerOutline.shader 와 같은 바깥 먹 테두리를 PNG 에 굽는다. 4이웃 알파 최댓값 x (1 - 자기 알파) 만큼 덧칠, PPU32 기준 1텍셀. 원본 픽셀·캔버스 크기는 그대로.",
+    "inkRgb": [34, 28, 24],
+    "neighbours": 4,
+    "widthTexels": 1,
+    "approval": "사용자 A안(먹 1px) 확정 2026-11-03"
+  },
+  "includeTargets": [
+    "unity/Assets/Deviant/Stage1Monsters/Art/01_thorn-root/",
+    "unity/Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/",
+    "unity/Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/",
+    "unity/Assets/Deviant/Stage1Monsters/Art/04_well-warden/",
+    "unity/Assets/Deviant/Stage1Monsters/Art/Effects/elite-burrow-body/",
+    "unity/Assets/Deviant/Stage1Monsters/Art/Effects/elite-emerge-body/",
+    "unity/Assets/Deviant/Stage1Monsters/Resources/Chapter1NewMonsterArt/barrel-attack/",
+    "unity/Assets/Deviant/Stage1Monsters/Resources/Chapter1NewMonsterArt/barrel-idle/",
+    "unity/Assets/Deviant/Stage1Monsters/Resources/Chapter1NewMonsterArt/millstone-idle/",
+    "unity/Assets/Deviant/Stage1Monsters/Resources/Chapter1NewMonsterArt/millstone-roll/",
+    "unity/Assets/Chapter2/Resources/Chapter2Monsters/",
+    "unity/Assets/Chapter2/Resources/Chapter2EliteArt/idle/",
+    "unity/Assets/Chapter2/Resources/Chapter2EliteArt/combo/",
+    "unity/Assets/Chapter2/Resources/Chapter2EliteArt/punch/",
+    "unity/Assets/Chapter2/Resources/Chapter2EliteArt/teleport/",
+    "unity/Assets/Deviant/Hub/Resources/Hub/opening/residents/",
+    "unity/Assets/Deviant/Hub/Resources/Hub/opening/artisan-walk/",
+    "unity/Assets/Deviant/Hub/Resources/Hub/story/characters/",
+    "unity/Assets/Deviant/Game/Resources/MaintenanceShops/npc1.png",
+    "unity/Assets/Deviant/Game/Resources/MaintenanceShops/npc2.png"
+  ],
+  "excluded": {
+    "주인공": "PlayerOutline 셰이더가 이미 그린다. 구우면 2px",
+    "시계탑 집행자": "부품 그림에 먹 외곽선이 이미 있다",
+    "이펙트·투사체": "먼지·베기·경고·포탄·엘리트 돌 조각(흰 외곽선 재질 사용)"
+  }
+}

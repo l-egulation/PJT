@@ -1,0 +1,7 @@
+{
+  "name": "Deviant.CombatLab.Unity",
+  "rootNamespace": "Deviant.CombatLab",
+  "references": ["Deviant.Combat", "Deviant.Combat.Contracts", "Deviant.Control.Contracts", "Deviant.Definitions", "Deviant.Integration.Unity", "Deviant.Game.Diagnostics.Unity", "Deviant.Presentation", "Deviant.Presentation.Contracts", "Deviant.Presentation.Unity", "Deviant.Equipment", "Deviant.Equipment.Contracts", "Deviant.World", "Unity.RenderPipelines.Universal.Runtime", "Unity.RenderPipelines.Universal.2D.Runtime"],
+  "defineConstraints": ["UNITY_EDITOR || DEVIANT_COMBAT_LAB"],
+  "autoReferenced": false
+}

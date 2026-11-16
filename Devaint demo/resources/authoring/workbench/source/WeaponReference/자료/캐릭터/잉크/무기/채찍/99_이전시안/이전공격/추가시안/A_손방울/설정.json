@@ -1,0 +1,51 @@
+{
+  "motion": "C",
+  "effect": "A",
+  "render_order": [
+    "character_and_weapon",
+    "slash_effect",
+    "hand_droplets"
+  ],
+  "droplets": {
+    "count": [
+      4,
+      5
+    ],
+    "lifetime_ms": 150,
+    "colors": [
+      "#FFFFFF",
+      "#DADADA",
+      "#999999"
+    ]
+  },
+  "timings": [
+    [
+      "H1",
+      60
+    ],
+    [
+      "H2",
+      100
+    ],
+    [
+      "H3",
+      45
+    ],
+    [
+      "D1",
+      70
+    ],
+    [
+      "D2",
+      140
+    ],
+    [
+      "D3",
+      220
+    ],
+    [
+      "I",
+      110
+    ]
+  ]
+}

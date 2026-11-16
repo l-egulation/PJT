@@ -1,0 +1,37 @@
+Create one sprite sequence for a 2D side-scrolling pixel action game: the boss silently levitates off the ground from its idle stance, hangs in the air, then sinks back down into the same idle stance. Use the supplied image as the exact first frame and approved character design. Animate this same character; do not redesign it. The motion must feel SLOW, HEAVY, OMINOUS and SUPERNATURAL: the body is lifted by an unseen force like a hanging cloak or a puppet raised by a string from the crown. It is NOT a jump, NOT a hop, NOT cute or bouncy, and the character makes no effort at all.
+
+HIGHEST PRIORITY — KEEP THE FRAMING EXACTLY LIKE THE FIRST FRAME:
+Every frame uses the same camera, zoom and character size as the supplied first frame. The character stays the SAME small size in pixels, at the SAME horizontal position, with the same wide white margins around it. Do NOT zoom in, enlarge, crop, reframe, push in, centre-crop or scale the character up at any point, including the very first animated frame. The camera does NOT follow the character up: when the character rises, it moves up inside the fixed frame. The floating crossbow emblem and both boots must remain fully visible with white space above the emblem and below the boots in every frame. Do not add detail by enlarging the character; keep the same coarse pixel-art resolution and the same simple shapes as the first frame.
+
+HIGHEST PRIORITY — KEEP THE APPROVED MASK EXACTLY:
+The pale shape is a solid, inanimate mask, not a human face. Treat the head and mask in the first frame as a locked sprite layer, not as a face to regenerate. Preserve the exact angular outer contour, pointed lower tip, eye openings, the small VIOLET eye accents, asymmetry and existing color blocks. Do not replace the violet eye accents with plain dark slits. Do not make the mask rounder, wider, shorter, symmetrical, more detailed or more human. ABSOLUTELY NO mouth, mouth line, lips, teeth, tongue, nostrils, nose shading, chin crease, jaw movement, blinking, talking or expression: the lower half of the mask is one smooth pale surface. Do not interpret any dark shading as a mouth or draw new facial features.
+
+Keep the head at the same scale, angle and facing direction throughout; it only moves up and down together with the whole body, which moves as one rigid piece. No nodding, looking up or down, head tilt, turning, perspective change, squashing or stretching.
+
+ANATOMY LOCK — EXACTLY ONE ARM:
+The ONLY arm is the one on the LEFT SIDE OF THE PROVIDED IMAGE, with the exposed pale hand already raised beside the mask. Keep this same arm and keep the hand raised beside the mask in almost the same idle gesture for the whole sequence; it may only sway very slightly with the float. The opposite arm is anatomically ABSENT, not concealed under the robe. Never add or reveal a second arm, elbow, wrist, hand, fingers, sleeve bulge, limb-shaped shadow or stump. The missing-arm side's robe may drift and ripple but must never suggest an arm or hand. Do not mirror the existing arm or enlarge the hand.
+
+Preserve the approved hood, blue-and-violet robe, crossed fabric bands, wrapped legs, boots, body proportions and limited pixel-art palette. Preserve the exact floating violet magical crossbow emblem above the head: the same recognizable shape, size and spacing; it rises and sinks together with the head and keeps the same distance above it, with no redesign, deformation, rotation or firing animation. Keep the whole character and emblem inside the frame.
+
+ACTION — LEVITATE, HANG, SINK:
+The character faces the LEFT of the IMAGE. The body itself does not act; it is moved.
+1. STILLNESS: hold the idle stance completely still for a moment.
+2. LEVITATE: with NO preparation, NO knee bend, NO crouch, NO anticipation and NO push-off, the whole body starts to rise very slowly and steadily straight up, as one rigid piece. The legs stay straight and limp; the boots simply leave the ground and the toes droop down under their own weight. The robe hem is the last thing to leave the ground and hangs heavily downward. The rise is slow and even, with no acceleration burst, no overshoot and no bounce at the top.
+3. HANG: the body hangs in the air with the boots about one eighth of its own height above the original ground line (a small but clearly visible gap). The torso stays upright and rigid, the legs hang limp and straight. The body drifts up and down by only one or two pixels, very slowly. The robe hem, sleeve and hood edge sway slowly and trail toward the image-right, as if the character were gliding slowly toward the image-left. Make this part loop seamlessly: the last hanging frame must flow back into the first hanging frame.
+4. SINK: the body sinks slowly and steadily straight down, still rigid, legs straight.
+5. TOUCH DOWN: the boots settle onto EXACTLY their original positions on the original ground line with NO knee bend, NO impact, NO squash and NO bounce; the robe hem slowly settles down over the boots last.
+6. STILLNESS: the final frame matches the idle stance of the first frame exactly.
+
+Never use jump, hop, spring, squash-and-stretch, knee bending, tucked legs, kicking, arm swinging, a happy bounce or any cartoony or cute timing. Moves only straight up and down: no horizontal travel, no walking, stepping, running, spinning, leaning, flipping or turning. The arm remains attached to its original image-left shoulder at all times. Never swap shoulders, mirror the character or use two hands. Trailing cloth must never form a second arm, hand, elbow or limb-shaped shape.
+
+One continuous sequence, approximately 3.6 seconds, with slow, even spacing:
+0.00–0.30 s: STILLNESS in the supplied idle pose.
+0.30–1.10 s: LEVITATE, slow even rise, no preparation.
+1.10–2.40 s: HANG with a very slow, tiny drift and slowly swaying cloth; seamless loop section.
+2.40–3.20 s: SINK, slow even descent.
+3.20–3.40 s: TOUCH DOWN without any knee bend or bounce.
+3.40–3.60 s: STILLNESS in the exact idle pose of the first frame.
+
+NO DRAWN EFFECTS: draw NO wind, smoke, mist, shadow on the ground, dust, swirls, speed lines, glow, aura, magic circles, levitation light or sparkles anywhere, not even faint grey or white ones. The background stays pure white #FFFFFF in every frame. The floating is shown ONLY by the gap under the boots and the movement of the character's own cloth.
+
+Keep the pixel shapes crisp: no motion blur, smears or ghost images. Locked camera, fixed framing, no zoom, pure white #FFFFFF background, same facing direction, exactly the same character size in pixels as the supplied first frame. No extra characters, props, arrows, projectiles or impacts. Preserve the exact mouthless mask and single-arm anatomy in EVERY frame.

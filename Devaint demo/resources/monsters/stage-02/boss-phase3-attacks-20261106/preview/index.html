@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>강화 Blue · 유도 화살 Aether 입력</title>
+<link rel="stylesheet" href="review.css">
+<main>
+<p class="eyebrow">STAGE 02 / PHASE 03 / MOTION 01</p>
+<h1>유도 화살 · 손바닥 방출</h1>
+<p>1초 동안 읽히는 준비 → 짧고 무거운 방출 → 끝 자세 유지. 승인된 최종 보스 픽셀로 시작합니다.</p>
+<p class="notice">유도 화살 D V2 사용자 확정 · 다음 공격 5연사 입력 준비 완료 · 에셋 합성 검토 화면이며 Unity 캡처가 아닙니다.</p>
+<nav><a href="fan-sim/">확장 광역기 · B4 확정 · 실제 연출과 함께 보기</a><a href="fan-candidates/">광역기 타이밍 비교</a><a href="fan-input/">광역기 입력과 프롬프트</a></nav>
+<nav><a href="rain-sim/">화살비 · A-x2 확정 · 실제 연출과 함께 보기</a><a href="rain-candidates/">화살비 · 입 지운 정리본 타이밍 비교</a><a href="rain-input/">화살비 입력과 프롬프트</a></nav>
+<nav><a href="bounce-cleanup/">튕기는 화살 5연사 · A 확정본 재생</a><a href="bounce-v3-candidates/">2차 결과 타이밍 비교</a><a href="bounce-input/">절도 있는 프롬프트 v3</a><a href="bounce-candidates/">1차 결과(보존) 타이밍 비교</a></nav>
+<nav><a href="homing-cleanup/">D 정리 완료 · 재생 및 정리 전후 비교</a></nav>
+<p class="notice">외형 고정: 입과 표정이 없는 단단한 가면. 이미지 왼쪽의 보이는 팔 하나만 존재하며, 반대쪽 팔은 로브 안에도 추가하지 않습니다.</p>
+<nav><a href="homing-candidates/">유도 화살 연속 프레임 D/E + 원본 비교</a><a href="../source/homing-start-white-3x.png" target="_blank">Aether 시작 이미지 열기</a><a href="../source/homing-aether-prompt.txt" target="_blank">영어 프롬프트</a><a href="../source/attack-plan.md" target="_blank">네 패턴 제작 범위</a></nav>
+<section><h2>흰 배경 시작 이미지</h2><p>1536×1152 · nearest-neighbor 3배 · 원본 픽셀 유지 · 발 기준 Y=888 · 상하좌우 여백 확보. 끝 이미지는 지정하지 않습니다.</p>
+<a href="../source/homing-start-white-3x.png" target="_blank"><img id="start" class="start" src="../source/homing-start-white-3x.png" alt="흰 배경의 승인된 융합 블루 시작 자세"></a></section>
+<section><h2>승인 기본 자세와 등장 자세</h2><p>새 공격 자세 비교는 타이밍 후보 검토에서 확인합니다. 등장 자세의 97% 배율은 이미 반영됐습니다.</p>
+<div class="controls"><label>배경 <select id="background"><option value="#ffffff">흰색</option><option value="#808080">중간 회색</option><option value="#000000" selected>검정</option></select></label><label>확대 <select id="zoom"><option value="1">1배</option><option value="2" selected>2배</option><option value="3">3배</option></select></label></div>
+<div class="scroll"><div class="poses"><figure><figcaption>fused-idle · 승인 기본</figcaption><canvas id="idle" width="384" height="256"></canvas></figure><figure><figcaption>fused-arrival · 승인 등장 (추가 보정 없음)</figcaption><canvas id="arrival" width="384" height="256"></canvas></figure></div></div>
+<p>기본 전체 bounds: 107×215px / 몸체 bounds: 95×178px / 플레이어 높이: 64px. 투명 캔버스 384×256은 몸체 크기가 아닙니다.</p></section>
+<section><h2>실제 맵과 플레이어 크기 비교</h2><p>논리 화면 960×540, 원본 크기 1배. 왼쪽은 플레이어, 오른쪽은 승인된 기본 보스입니다. 발 기준 (192,232)와 공통 축척을 사용합니다.</p>
+<label>화면 표시 <select id="screenZoom"><option value="1" selected>실제 1배</option><option value="2">픽셀 2배</option></select></label><div class="scroll"><canvas id="map" width="960" height="540"></canvas></div></section>
+<section><h2>순서와 재사용</h2><table><thead><tr><th>순서 / 현재 패턴</th><th>몸체 / 전조</th><th>별도 효과</th></tr></thead><tbody>
+<tr><td>① 유도 화살</td><td>1초 장전, 짧은 손바닥 방출</td><td>생성·유도탄·잔상·적중</td></tr>
+<tr><td>② 튕기는 화살 5연사</td><td>0.5초 장전·방출 모듈, 5회</td><td>화살·반사·백색화·지연 폭발</td></tr>
+<tr><td>③ 순차 낙하·폭발</td><td>위로 올려 지시, 0.5초 전조</td><td>12발 낙하·박힘·폭발 기둥</td></tr>
+<tr><td>④ 광역기·부채꼴 화살</td><td>한 팔을 높이 들어 시전, 0.5초 전조와 긴 유지</td><td>2초 확장·6발 생성과 순차 발사</td></tr></tbody></table>
+<p>거대 석궁 3회 낙하는 최신 설계에서 삭제됐습니다. 유도탄 방출 일부는 5연사에 재사용을 검토할 수 있지만 전조 길이와 자세는 구분합니다. 기존 VFX의 실제 바인딩을 확인했으며 새 전용 VFX는 필요한 차이만 다음 검토에서 정합니다.</p>
+<p>현재 Unity는 3페이즈에도 기존 blue-standing을 사용합니다. 광역기 전 중앙 배치는 실행 코드에서 순간이동입니다. 이번 자료는 본체 모션 제작 준비만 다룹니다.</p></section>
+<section><h2>영어 Aether 프롬프트</h2><button id="copy">프롬프트 복사</button><pre id="prompt">불러오는 중…</pre></section>
+<p id="loadState" role="status">이미지 확인 중…</p>
+</main><script type="module" src="review.js"></script></html>

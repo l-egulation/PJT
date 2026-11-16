@@ -1,0 +1,403 @@
+{
+  "kind": "smoke-release-revision9",
+  "status": "pending; not applied",
+  "items": [
+    {
+      "id": "S01",
+      "number": 1,
+      "label": "낮은 압력 방출",
+      "file": "smoke09-01.wav",
+      "audio": "r13/smoke-01",
+      "sha256": "4355c871e4a138d61ec2d05d51a541d10a9679e07152d14b32403117f05dd0f6",
+      "duration": 1.1,
+      "status": "pending",
+      "sources": [
+        {
+          "archiveEntry": "Explosion_Fire_Gas/gas_leak_short_burst_03.wav",
+          "sha256": "3cf8cf494c54ad860fa35647e6d3496cfccdffe11f10abe51ee8e03dc5f0b872",
+          "cropSeconds": [
+            0.07,
+            0.77
+          ],
+          "outputSeconds": 1.1,
+          "playbackRate": 0.6363636363636364,
+          "gain": 1
+        }
+      ],
+      "edit": {
+        "mode": "recorded-air-smoke",
+        "burst": false,
+        "repeat": false,
+        "syntheticNoise": false,
+        "attackSeconds": 0.045,
+        "tailFadeSeconds": 0.45,
+        "lowpassStart": 2200,
+        "lowpassEnd": 1210.0
+      }
+    },
+    {
+      "id": "S02",
+      "number": 2,
+      "label": "넓게 빠지는 공기",
+      "file": "smoke09-02.wav",
+      "audio": "r13/smoke-02",
+      "sha256": "b7df9cf60cd57d29ac06eb17377a25e5d7dbbdfc1bfacc9625c64120d6195111",
+      "duration": 1.1,
+      "status": "pending",
+      "sources": [
+        {
+          "archiveEntry": "Doors/hydraulic_strut_air_gas_shock_door_04.wav",
+          "sha256": "8d758246dd356f52a6bea803f0091e4a676da11c48c84120fe425fe760a4e9f8",
+          "cropSeconds": [
+            0.1,
+            0.83
+          ],
+          "outputSeconds": 1.1,
+          "playbackRate": 0.6636363636363637,
+          "gain": 1
+        }
+      ],
+      "edit": {
+        "mode": "recorded-air-smoke",
+        "burst": false,
+        "repeat": false,
+        "syntheticNoise": false,
+        "attackSeconds": 0.055,
+        "tailFadeSeconds": 0.45,
+        "lowpassStart": 2400,
+        "lowpassEnd": 1320.0
+      }
+    },
+    {
+      "id": "S03",
+      "number": 3,
+      "label": "작고 부드러운 분출",
+      "file": "smoke09-03.wav",
+      "audio": "r13/smoke-03",
+      "sha256": "ce109aa56c568b8146ed9f5b70debd2e64b4378400b9113e0ef9cfa41145b832",
+      "duration": 1.1,
+      "status": "pending",
+      "sources": [
+        {
+          "archiveEntry": "Explosion_Fire_Gas/gas_leak_short_burst_02.wav",
+          "sha256": "0aea2190c40e9349a3e85ebc3b235a8d3996be309387c41d7b7b499ce47349e3",
+          "cropSeconds": [
+            0.06,
+            0.47
+          ],
+          "outputSeconds": 1.1,
+          "playbackRate": 0.37272727272727274,
+          "gain": 1
+        }
+      ],
+      "edit": {
+        "mode": "recorded-air-smoke",
+        "burst": false,
+        "repeat": false,
+        "syntheticNoise": false,
+        "attackSeconds": 0.045,
+        "tailFadeSeconds": 0.45,
+        "lowpassStart": 2600,
+        "lowpassEnd": 1430.0000000000002
+      }
+    },
+    {
+      "id": "S04",
+      "number": 4,
+      "label": "느린 공기 방출",
+      "file": "smoke09-04.wav",
+      "audio": "r13/smoke-04",
+      "sha256": "2e8a1ee7bb3a4233caea3cd555fbc680872bb38069dba8a931dc1db43a3cf8bf",
+      "duration": 1.1,
+      "status": "pending",
+      "sources": [
+        {
+          "archiveEntry": "Doors/hydraulic_strut_air_gas_shock_door_05.wav",
+          "sha256": "e51ddc6cffd13ec454b800ad5873f4a23cb9dbbf35e9504a64889012a0082576",
+          "cropSeconds": [
+            0.045,
+            0.5
+          ],
+          "outputSeconds": 1.1,
+          "playbackRate": 0.41363636363636364,
+          "gain": 1
+        }
+      ],
+      "edit": {
+        "mode": "recorded-air-smoke",
+        "burst": false,
+        "repeat": false,
+        "syntheticNoise": false,
+        "attackSeconds": 0.055,
+        "tailFadeSeconds": 0.45,
+        "lowpassStart": 2100,
+        "lowpassEnd": 1155.0
+      }
+    },
+    {
+      "id": "S05",
+      "number": 5,
+      "label": "분사 뒤 낮은 퍼짐",
+      "file": "smoke09-05.wav",
+      "audio": "r13/smoke-05",
+      "sha256": "06d8d906d2aee30c7d1edc03be5a0794859439418cdd8cc939002b7051891cac",
+      "duration": 1.1,
+      "status": "pending",
+      "sources": [
+        {
+          "archiveEntry": "Miscellaneous/Spray Bottle/spray_bottle_03.wav",
+          "sha256": "41ef55c6afff57573f9aa554b77b160ee9272f637bd0b523e5a2eb006da560e3",
+          "cropSeconds": [
+            0.045,
+            0.28
+          ],
+          "outputSeconds": 0.6,
+          "playbackRate": 0.39166666666666666,
+          "gain": 0.6
+        },
+        {
+          "archiveEntry": "Explosion_Fire_Gas/gas_leak_med_burst_02.wav",
+          "sha256": "f32e046dd14b037061e42cca359158f7a887a34eeb61842e75d99e90866564ec",
+          "cropSeconds": [
+            0.18,
+            1.45
+          ],
+          "outputSeconds": 1.1,
+          "playbackRate": 1.1545454545454545,
+          "gain": 0.65
+        }
+      ],
+      "edit": {
+        "mode": "recorded-air-smoke",
+        "burst": false,
+        "repeat": false,
+        "syntheticNoise": false,
+        "attackSeconds": 0.04,
+        "tailFadeSeconds": 0.45,
+        "lowpassStart": 2500,
+        "lowpassEnd": 1375.0
+      }
+    },
+    {
+      "id": "S06",
+      "number": 6,
+      "label": "얇은 분사와 공기",
+      "file": "smoke09-06.wav",
+      "audio": "r13/smoke-06",
+      "sha256": "1de5db0f1c7582d3d0aa66c9d271c67c93c016e6b5888496126e002524bdfee8",
+      "duration": 1.1,
+      "status": "pending",
+      "sources": [
+        {
+          "archiveEntry": "Miscellaneous/Spray Bottle/spray_bottle_05.wav",
+          "sha256": "c3b714ad757b15f7b966947ababd0ce91ab06c96cb385c93f7097733c2b67d98",
+          "cropSeconds": [
+            0.055,
+            0.5
+          ],
+          "outputSeconds": 0.76,
+          "playbackRate": 0.5855263157894737,
+          "gain": 0.65
+        },
+        {
+          "archiveEntry": "Doors/hydraulic_strut_air_gas_shock_door_04.wav",
+          "sha256": "8d758246dd356f52a6bea803f0091e4a676da11c48c84120fe425fe760a4e9f8",
+          "cropSeconds": [
+            0.13,
+            0.8
+          ],
+          "outputSeconds": 1.1,
+          "playbackRate": 0.6090909090909091,
+          "gain": 0.55
+        }
+      ],
+      "edit": {
+        "mode": "recorded-air-smoke",
+        "burst": false,
+        "repeat": false,
+        "syntheticNoise": false,
+        "attackSeconds": 0.045,
+        "tailFadeSeconds": 0.45,
+        "lowpassStart": 2900,
+        "lowpassEnd": 1595.0000000000002
+      }
+    },
+    {
+      "id": "S07",
+      "number": 7,
+      "label": "둥근 분사와 퍼짐",
+      "file": "smoke09-07.wav",
+      "audio": "r13/smoke-07",
+      "sha256": "f462ef0d517ccae6a0a06ad6666a56abbc08c33e04d8ff708b29f7e9b1060c20",
+      "duration": 1.1,
+      "status": "pending",
+      "sources": [
+        {
+          "archiveEntry": "Miscellaneous/Spray Bottle/spray_bottle_11.wav",
+          "sha256": "fa852a37a07d59fd897210430b5b1f4ef4daf5852a0a717accf85e4ef4a812e5",
+          "cropSeconds": [
+            0.04,
+            0.33
+          ],
+          "outputSeconds": 0.64,
+          "playbackRate": 0.453125,
+          "gain": 0.55
+        },
+        {
+          "archiveEntry": "Explosion_Fire_Gas/gas_leak_short_burst_03.wav",
+          "sha256": "3cf8cf494c54ad860fa35647e6d3496cfccdffe11f10abe51ee8e03dc5f0b872",
+          "cropSeconds": [
+            0.08,
+            0.79
+          ],
+          "outputSeconds": 1.1,
+          "playbackRate": 0.6454545454545455,
+          "gain": 0.7
+        }
+      ],
+      "edit": {
+        "mode": "recorded-air-smoke",
+        "burst": false,
+        "repeat": false,
+        "syntheticNoise": false,
+        "attackSeconds": 0.05,
+        "tailFadeSeconds": 0.45,
+        "lowpassStart": 2300,
+        "lowpassEnd": 1265.0
+      }
+    },
+    {
+      "id": "S08",
+      "number": 8,
+      "label": "앞이 선명한 분출",
+      "file": "smoke09-08.wav",
+      "audio": "r13/smoke-08",
+      "sha256": "a1598eb9a423a8acf328cdf719394bdbd7084ec8c102c6063fd9244a434bb371",
+      "duration": 1.1,
+      "status": "pending",
+      "sources": [
+        {
+          "archiveEntry": "Miscellaneous/Spray Bottle/spray_bottle_14.wav",
+          "sha256": "a0f5b8883b91fb5fbef018f3ca21a4d443a1f4c42cbcb959c852dfd414a82b12",
+          "cropSeconds": [
+            0.065,
+            0.39
+          ],
+          "outputSeconds": 0.68,
+          "playbackRate": 0.47794117647058826,
+          "gain": 0.6
+        },
+        {
+          "archiveEntry": "Explosion_Fire_Gas/gas_leak_04_loop.wav",
+          "sha256": "d47e4b6842e1adb3f07f1d4b3d147c05687f286d07aa64ab6e7c02820135c255",
+          "cropSeconds": [
+            0.16,
+            1.4
+          ],
+          "outputSeconds": 1.1,
+          "playbackRate": 1.1272727272727272,
+          "gain": 0.55
+        }
+      ],
+      "edit": {
+        "mode": "recorded-air-smoke",
+        "burst": false,
+        "repeat": false,
+        "syntheticNoise": false,
+        "attackSeconds": 0.04,
+        "tailFadeSeconds": 0.45,
+        "lowpassStart": 2800,
+        "lowpassEnd": 1540.0000000000002
+      }
+    },
+    {
+      "id": "S09",
+      "number": 9,
+      "label": "공기 흐름 중심",
+      "file": "smoke09-09.wav",
+      "audio": "r13/smoke-09",
+      "sha256": "95b15e225bfdcf5c303081cbf72f72d7da4a6149deaabc031171f05b5f8392b3",
+      "duration": 1.1,
+      "status": "pending",
+      "sources": [
+        {
+          "archiveEntry": "Magic_Spells/wind_blizzard_storm_spell_light_01.wav",
+          "sha256": "51125e536086f0ca0d04572430196eeeffac6e4bc6ea84a8f9b78f762a779bdd",
+          "cropSeconds": [
+            0.48,
+            1.9
+          ],
+          "outputSeconds": 1.1,
+          "playbackRate": 1.290909090909091,
+          "gain": 0.75
+        },
+        {
+          "archiveEntry": "Explosion_Fire_Gas/gas_leak_short_burst_02.wav",
+          "sha256": "0aea2190c40e9349a3e85ebc3b235a8d3996be309387c41d7b7b499ce47349e3",
+          "cropSeconds": [
+            0.075,
+            0.47
+          ],
+          "outputSeconds": 0.65,
+          "playbackRate": 0.6076923076923076,
+          "gain": 0.35
+        }
+      ],
+      "edit": {
+        "mode": "recorded-air-smoke",
+        "burst": false,
+        "repeat": false,
+        "syntheticNoise": false,
+        "attackSeconds": 0.065,
+        "tailFadeSeconds": 0.45,
+        "lowpassStart": 2500,
+        "lowpassEnd": 1375.0
+      }
+    },
+    {
+      "id": "S10",
+      "number": 10,
+      "label": "옅은 바람과 분사",
+      "file": "smoke09-10.wav",
+      "audio": "r13/smoke-10",
+      "sha256": "24bc1f6bfdbddc8103466c4fb2d4d37ea62cb2b0b88d79484dd807feb485e82c",
+      "duration": 1.1,
+      "status": "pending",
+      "sources": [
+        {
+          "archiveEntry": "Magic_Spells/wind_blizzard_storm_spell_airy_02.wav",
+          "sha256": "2e8c565f24ff737776c0bf1da210c576204d06d41382e42f3681fe9c86bb97c0",
+          "cropSeconds": [
+            1.1,
+            2.6
+          ],
+          "outputSeconds": 1.1,
+          "playbackRate": 1.3636363636363635,
+          "gain": 0.75
+        },
+        {
+          "archiveEntry": "Miscellaneous/Spray Bottle/spray_bottle_05.wav",
+          "sha256": "c3b714ad757b15f7b966947ababd0ce91ab06c96cb385c93f7097733c2b67d98",
+          "cropSeconds": [
+            0.06,
+            0.49
+          ],
+          "outputSeconds": 0.7,
+          "playbackRate": 0.6142857142857143,
+          "gain": 0.35
+        }
+      ],
+      "edit": {
+        "mode": "recorded-air-smoke",
+        "burst": false,
+        "repeat": false,
+        "syntheticNoise": false,
+        "attackSeconds": 0.065,
+        "tailFadeSeconds": 0.45,
+        "lowpassStart": 2200,
+        "lowpassEnd": 1210.0
+      }
+    }
+  ],
+  "comparisonGapSeconds": 1
+}

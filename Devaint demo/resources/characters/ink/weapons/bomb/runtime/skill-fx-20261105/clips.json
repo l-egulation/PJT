@@ -1,0 +1,358 @@
+[
+ {
+  "name": "basic",
+  "effect": "explosions/bomb-pop-a3",
+  "options": {},
+  "anchor": "center",
+  "facing": false,
+  "loop": false,
+  "segment": 0,
+  "fps": 30,
+  "frames": 37,
+  "size": [
+   126,
+   135
+  ],
+  "pivot": [
+   0.4523809523809524,
+   0.4074074074074074
+  ],
+  "crop": {
+   "x": 43,
+   "y": 30,
+   "w": 126,
+   "h": 135
+  },
+  "origin": [
+   100,
+   110
+  ]
+ },
+ {
+  "name": "triple_0",
+  "effect": "explosions/bomb-triple-hit",
+  "options": {
+   "size": 1,
+   "seed": 11
+  },
+  "anchor": "center",
+  "facing": false,
+  "loop": false,
+  "segment": 0,
+  "fps": 30,
+  "frames": 61,
+  "size": [
+   116,
+   137
+  ],
+  "pivot": [
+   0.4224137931034483,
+   0.3357664233576642
+  ],
+  "crop": {
+   "x": 61,
+   "y": 29,
+   "w": 116,
+   "h": 137
+  },
+  "origin": [
+   110,
+   120
+  ]
+ },
+ {
+  "name": "triple_1",
+  "effect": "explosions/bomb-triple-hit",
+  "options": {
+   "size": 1,
+   "seed": 29,
+   "palette": [
+    "#2a1240",
+    "#7a1f6e",
+    "#c8378f",
+    "#f05fae",
+    "#ff94c8",
+    "#ffc2e0",
+    "#ffe6f2",
+    "#ffffff"
+   ],
+   "shape": "up"
+  },
+  "anchor": "center",
+  "facing": false,
+  "loop": false,
+  "segment": 0,
+  "fps": 30,
+  "frames": 61,
+  "size": [
+   98,
+   187
+  ],
+  "pivot": [
+   0.5,
+   0.36363636363636365
+  ],
+  "crop": {
+   "x": 61,
+   "y": 1,
+   "w": 98,
+   "h": 187
+  },
+  "origin": [
+   110,
+   120
+  ]
+ },
+ {
+  "name": "triple_2",
+  "effect": "explosions/bomb-triple-hit",
+  "options": {
+   "size": 1,
+   "seed": 47,
+   "palette": [
+    "#0f2340",
+    "#1d4f86",
+    "#2f86c8",
+    "#4fb4ea",
+    "#86d6f6",
+    "#bdeafc",
+    "#e6f8ff",
+    "#ffffff"
+   ],
+   "shape": "wide"
+  },
+  "anchor": "center",
+  "facing": false,
+  "loop": false,
+  "segment": 0,
+  "fps": 30,
+  "frames": 61,
+  "size": [
+   127,
+   130
+  ],
+  "pivot": [
+   0.4566929133858268,
+   0.3230769230769231
+  ],
+  "crop": {
+   "x": 52,
+   "y": 32,
+   "w": 127,
+   "h": 130
+  },
+  "origin": [
+   110,
+   120
+  ]
+ },
+ {
+  "name": "range",
+  "effect": "explosions/bomb-big-c",
+  "options": {},
+  "anchor": "ground",
+  "facing": false,
+  "loop": false,
+  "segment": 0,
+  "fps": 30,
+  "frames": 55,
+  "size": [
+   278,
+   207
+  ],
+  "pivot": [
+   0.49280575539568344,
+   0.15942028985507245
+  ],
+  "crop": {
+   "x": 43,
+   "y": 88,
+   "w": 278,
+   "h": 207
+  },
+  "origin": [
+   180,
+   262
+  ]
+ },
+ {
+  "name": "timed_fuse",
+  "effect": "explosions/bomb-timed-fuse",
+  "options": {
+   "mark": false,
+   "style": "heat"
+  },
+  "anchor": "ground",
+  "facing": false,
+  "loop": false,
+  "segment": 0,
+  "fps": 30,
+  "frames": 46,
+  "size": [
+   44,
+   44
+  ],
+  "pivot": [
+   0.5,
+   0.36363636363636365
+  ],
+  "crop": {
+   "x": 98,
+   "y": 22,
+   "w": 44,
+   "h": 44
+  },
+  "origin": [
+   120,
+   50
+  ]
+ },
+ {
+  "name": "timed",
+  "effect": "explosions/bomb-big-b",
+  "options": {},
+  "anchor": "ground",
+  "facing": false,
+  "loop": false,
+  "segment": 0,
+  "fps": 30,
+  "frames": 85,
+  "size": [
+   278,
+   245
+  ],
+  "pivot": [
+   0.5,
+   0.1346938775510204
+  ],
+  "crop": {
+   "x": 41,
+   "y": 50,
+   "w": 278,
+   "h": 245
+  },
+  "origin": [
+   180,
+   262
+  ]
+ },
+ {
+  "name": "missile_launch",
+  "effect": "explosions/bomb-missile-launch",
+  "options": {},
+  "anchor": "center",
+  "facing": true,
+  "loop": false,
+  "segment": 0,
+  "fps": 30,
+  "frames": 28,
+  "size": [
+   103,
+   84
+  ],
+  "pivot": [
+   0.6504854368932039,
+   0.5
+  ],
+  "crop": {
+   "x": 63,
+   "y": 28,
+   "w": 103,
+   "h": 84
+  },
+  "origin": [
+   130,
+   70
+  ]
+ },
+ {
+  "name": "missile_body",
+  "effect": "explosions/bomb-missile-comet",
+  "options": {},
+  "anchor": "center",
+  "facing": true,
+  "loop": true,
+  "segment": 0,
+  "fps": 30,
+  "frames": 15,
+  "size": [
+   56,
+   37
+  ],
+  "pivot": [
+   0.7678571428571429,
+   0.4864864864864865
+  ],
+  "crop": {
+   "x": 49,
+   "y": 11,
+   "w": 56,
+   "h": 37
+  },
+  "origin": [
+   92,
+   30
+  ]
+ },
+ {
+  "name": "missile_trail",
+  "effect": "explosions/bomb-missile-trail",
+  "options": {
+   "len": 64,
+   "style": "fire"
+  },
+  "anchor": "center",
+  "facing": true,
+  "loop": false,
+  "segment": 64,
+  "fps": 30,
+  "frames": 40,
+  "size": [
+   81,
+   45
+  ],
+  "pivot": [
+   0.8641975308641975,
+   0.3333333333333333
+  ],
+  "crop": {
+   "x": 430,
+   "y": 5,
+   "w": 81,
+   "h": 45
+  },
+  "origin": [
+   500,
+   35
+  ]
+ },
+ {
+  "name": "missile_hit",
+  "effect": "explosions/bomb-missile-hit-b",
+  "options": {},
+  "anchor": "center",
+  "facing": true,
+  "loop": false,
+  "segment": 0,
+  "fps": 30,
+  "frames": 40,
+  "size": [
+   156,
+   166
+  ],
+  "pivot": [
+   0.42948717948717946,
+   0.45180722891566266
+  ],
+  "crop": {
+   "x": 43,
+   "y": 39,
+   "w": 156,
+   "h": 166
+  },
+  "origin": [
+   110,
+   130
+  ]
+ }
+]

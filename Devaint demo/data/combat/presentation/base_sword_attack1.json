@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "base_sword/attack1",
+  "actionId": "base_sword_basic_0",
+  "mode": "CombatTimeFixed",
+  "steps": [
+    {
+      "id": "sword-first-ready",
+      "frame": "CharacterApproved11/base_sword/F100",
+      "seconds": 0.1
+    },
+    {
+      "id": "sword-first-windup",
+      "frame": "CharacterApproved11/base_sword/F101",
+      "seconds": 0.03
+    },
+    {
+      "id": "sword-first-contact",
+      "frame": "CharacterApproved11/base_sword/F102",
+      "seconds": 0.07
+    },
+    {
+      "id": "sword-first-follow",
+      "frame": "CharacterApproved11/base_sword/F103",
+      "seconds": 0.04
+    },
+    {
+      "id": "sword-first-return",
+      "frame": "CharacterApproved11/base_sword/F104",
+      "seconds": 0.09
+    }
+  ],
+  "sourceImpact": 0.13,
+  "fxStart": -1
+}

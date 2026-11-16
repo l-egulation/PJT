@@ -1,0 +1,75 @@
+{
+ "format": "deviant-dagger-skill-fx-v1",
+ "pixelsPerUnit": 32,
+ "source": "tools/pixelfx (bake_dagger_fx.mjs, flurry e)",
+ "clips": {
+  "hold_breath": {
+   "frames": 31,
+   "fps": 50,
+   "loop": false,
+   "size": [
+    112,
+    104
+   ],
+   "originTopLeftPx": [
+    56,
+    96
+   ],
+   "effect": "ink/dagger-hold-breath",
+   "options": {
+    "variant": "b"
+   }
+  },
+  "ink_smoke": {
+   "frames": 109,
+   "fps": 25,
+   "loop": false,
+   "size": [
+    224,
+    120
+   ],
+   "originTopLeftPx": [
+    112,
+    112
+   ],
+   "effect": "ink/dagger-ink-smoke",
+   "options": {
+    "variant": "b"
+   }
+  },
+  "triple_leap": {
+   "frames": 31,
+   "fps": 50,
+   "loop": false,
+   "size": [
+    288,
+    104
+   ],
+   "originTopLeftPx": [
+    40,
+    96
+   ],
+   "effect": "ink/dagger-triple-leap",
+   "options": {
+    "variant": "b"
+   }
+  },
+  "flurry": {
+   "frames": 61,
+   "fps": 50,
+   "loop": false,
+   "size": [
+    176,
+    144
+   ],
+   "originTopLeftPx": [
+    88,
+    72
+   ],
+   "effect": "ink/dagger-flurry-cuts",
+   "options": {
+    "variant": "e"
+   }
+  }
+ }
+}

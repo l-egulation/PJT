@@ -1,0 +1,19 @@
+{
+  "schema":"stage2-body-idles-v2",
+  "status":"body-breathing-art-review-no-runtime",
+  "prior":"outputs/waterway/pixel-idles-8-v1-20261031",
+  "base":"outputs/waterway/pixel-base-step1-20261031",
+  "canvas":[384,224],
+  "sourceKeys":[0,0,1,2,2,3,3,0],
+  "method":"Translate the upper body and its equipment by integer pixels; taper displacement through knees/supports with discrete source-row sampling and pin the feet. Existing local breathing is retained. No regenerated art, interpolated pixels, new colors or whole-image scaling. Legless H3 floats as a whole.",
+  "assets":[
+    {"id":"K4","name":"등짐분사수","role":"근거리","cutoff":92,"pinFrom":102,"offsets":[0,1,2,2,1,0,-1,-1],"durations":[220,160,200,260,200,180,220,180],"rigidRects":[[46,0,84,73],[0,58,50,89]],"description":"가슴·골반·등통이 함께 내려앉고 올라온다. 무릎에서 변위를 흡수하고 발 고정. 호스·노즐·등통은 형태를 유지한 채 따라 움직임."},
+    {"id":"B3","name":"쐐기보행기","role":"근거리","cutoff":90,"pinFrom":95,"offsets":[0,1,2,2,1,0,-1,-1],"durations":[300,200,240,320,240,200,280,220],"rigidRects":[[6,28,117,87]],"description":"쐐기와 후면 판을 포함한 몸 전체의 하중이 오르내림. 지지대 아래에서2px 압축을 흡수하고 다섯 지면 접점 고정."},
+    {"id":"M3","name":"먹침필경사","role":"근거리","cutoff":36,"pinFrom":53,"offsets":[0,1,2,2,1,0,-1,-1],"durations":[220,160,200,260,200,160,220,180],"rigidRects":[[0,0,119,35]],"description":"낮은 몸통과 얼굴·긴 침이 한 덩어리로 들썩임. 침 길이·수평 각도 유지, 굽힌 다리 아래와 발 고정."},
+    {"id":"H3","name":"늘어진수의","role":"원거리","floating":true,"offsets":[0,-1,-2,-3,-3,-2,-1,0],"sourceKeys":[0,0,1,2,3,3,2,1],"durations":[300,260,300,380,320,280,300,260],"rigidRects":[],"description":"발이 없는 수의는 몸 전체가3px 떠오르내린다. 기존 손끝·주름의 작은 후행을 유지하며 공격 준비처럼 크게 흔들지 않음."},
+    {"id":"R-selected","name":"신호투척수","role":"원거리","cutoff":97,"pinFrom":101,"offsets":[0,1,2,2,1,0,-1,-1],"durations":[240,160,200,280,200,180,220,180],"rigidRects":[[70,68,98,95]],"description":"머리·배·앞치마·든 물건이 같이 호흡. 짧은 무릎 부위가 내려앉고 부츠는 제자리. 물건을 던지거나 들어 올리지 않음."},
+    {"id":"A3","name":"편측거구","role":"엘리트","cutoff":82,"pinFrom":143,"offsets":[0,1,2,3,2,1,0,-1],"durations":[300,240,280,380,300,240,280,280],"rigidRects":[],"description":"가슴과 큰 어깨가 최대3px 내려앉는 무거운 호흡. 팔·무릎 쪽으로 변위를 줄이며 발과 주먹 최하단의 지지점 유지."},
+    {"id":"I4-rose","name":"남매·자주색 전방","role":"보스","cutoff":82,"pinFrom":94,"offsets":[0,1,2,2,1,0,-1,-1],"durations":[240,180,200,280,220,180,240,180],"rigidRects":[[0,38,100,60]],"description":"상체와 석궁을 함께 낮췄다 세우는 호흡. 석궁 길이·각도와 손의 상대 위치 유지, 발 고정."},
+    {"id":"I4-blue","name":"남매·푸른색 후방","role":"보스","cutoff":96,"pinFrom":117,"offsets":[0,1,2,2,1,0,-1,-1],"durations":[280,200,240,320,240,200,280,240],"rigidRects":[[0,30,14,54]],"description":"후드·가슴·옷과 손 위 구체가 함께 호흡. 구체 크기와 손바닥 사이 간격 유지, 다리 아래에서 변위를 흡수하고 발 고정."}
+  ]
+}

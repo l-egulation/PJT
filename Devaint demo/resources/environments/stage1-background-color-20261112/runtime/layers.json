@@ -1,0 +1,58 @@
+{
+  "format": "stage1-background-color-v1",
+  "sky": "#BCD6E6",
+  "pixelsPerUnit": 32,
+  "layers": [
+    {
+      "file": "runtime/near-village.png",
+      "size": [
+        666,
+        334
+      ],
+      "dot": 2
+    },
+    {
+      "file": "runtime/far-village.png",
+      "size": [
+        444,
+        222
+      ],
+      "dot": 1
+    },
+    {
+      "file": "runtime/mountains.png",
+      "size": [
+        888,
+        444
+      ],
+      "dot": 1
+    }
+  ],
+  "clouds": [
+    "runtime/sky/clouds/clouds-0.png",
+    "runtime/sky/clouds/clouds-1.png",
+    "runtime/sky/clouds/clouds-2.png",
+    "runtime/sky/clouds/clouds-3.png",
+    "runtime/sky/clouds/clouds-4.png",
+    "runtime/sky/clouds/clouds-5.png"
+  ],
+  "birds": {
+    "frames": "runtime/sky/birds/birds-<flock>-<frame>.png",
+    "flocks": 6,
+    "flap": [
+      0,
+      1,
+      2,
+      1
+    ],
+    "colour": "#6A7E89"
+  },
+  "inputs": {
+    "clouds-sheet.png": "source/inputs/clouds-sheet.png",
+    "birds-sheet.png": "source/inputs/birds-sheet.png",
+    "near-village.png": "source/inputs/near-village.png",
+    "far-village.png": "source/inputs/far-village.png",
+    "mountains.png": "source/inputs/mountains.png"
+  },
+  "note": "the user's colour designs as delivered (source/inputs), fitted to the sketch layers' sizes and dot grid; silhouettes match the sketch, inner details follow the user's design"
+}

@@ -1,0 +1,186 @@
+{
+  "reference": "Stage1VillageReference/ArtDirection/approved-sketch.png",
+  "detailReference": "output/imagegen/reference-ground/platform-native-alpha.png",
+  "status": "user-approved-first-pass",
+  "ppu": 32,
+  "bodyWidth": 160,
+  "bodyHeight": 160,
+  "entries": [
+    {
+      "name": "cap-one-a",
+      "width": 42,
+      "height": 39,
+      "anchorX": 4.919540229885057,
+      "anchorY": 5.655172413793103,
+      "logicalWidth": 32,
+      "logicalHeight": 0,
+      "hardExterior": true,
+      "source": "flat-matched.png",
+      "sourceRect": [
+        271,
+        292,
+        455,
+        462
+      ]
+    },
+    {
+      "name": "cap-one-b",
+      "width": 42,
+      "height": 41,
+      "anchorX": 4.95808383233533,
+      "anchorY": 5.724550898203593,
+      "logicalWidth": 32,
+      "logicalHeight": 0,
+      "hardExterior": true,
+      "source": "flat-matched.png",
+      "sourceRect": [
+        745,
+        292,
+        923,
+        462
+      ]
+    },
+    {
+      "name": "cap-wide",
+      "width": 50,
+      "height": 42,
+      "anchorX": 4.792079207920792,
+      "anchorY": 5.782178217821782,
+      "logicalWidth": 40,
+      "logicalHeight": 0,
+      "hardExterior": true,
+      "source": "flat-matched.png",
+      "sourceRect": [
+        912,
+        292,
+        1126,
+        462
+      ]
+    },
+    {
+      "name": "cap-short",
+      "width": 36,
+      "height": 43,
+      "anchorX": 6.068965517241379,
+      "anchorY": 5.862068965517241,
+      "logicalWidth": 24,
+      "logicalHeight": 0,
+      "hardExterior": true,
+      "source": "flat-matched.png",
+      "sourceRect": [
+        75,
+        292,
+        210,
+        462
+      ]
+    },
+    {
+      "name": "wall-left",
+      "width": 37,
+      "height": 136,
+      "anchorX": 7.417890520694259,
+      "anchorY": 4.0,
+      "logicalWidth": 0,
+      "logicalHeight": 128,
+      "hardExterior": true,
+      "source": "walls.png",
+      "sourceRect": [
+        410,
+        49,
+        580,
+        798
+      ]
+    },
+    {
+      "name": "wall-right",
+      "width": 38,
+      "height": 136,
+      "anchorX": 29.63417890520694,
+      "anchorY": 4.0,
+      "logicalWidth": 0,
+      "logicalHeight": 128,
+      "hardExterior": true,
+      "source": "walls.png",
+      "sourceRect": [
+        960,
+        49,
+        1136,
+        798
+      ]
+    },
+    {
+      "name": "underside",
+      "width": 264,
+      "height": 26,
+      "anchorX": 4.0,
+      "anchorY": 18.404558404558408,
+      "logicalWidth": 256,
+      "logicalHeight": 0,
+      "hardExterior": true,
+      "source": "walls.png",
+      "sourceRect": [
+        66,
+        865,
+        1470,
+        965
+      ]
+    },
+    {
+      "name": "platform",
+      "width": 171,
+      "height": 84,
+      "anchorX": 5.73690932311622,
+      "anchorY": 16.158365261813536,
+      "logicalWidth": 160,
+      "logicalHeight": 0,
+      "hardExterior": false,
+      "source": "../reference-ground/platform-native-alpha.png",
+      "sourceRect": [
+        150,
+        65,
+        1750,
+        809
+      ]
+    }
+  ],
+  "rule": "Platform lineweight, hatch and stone scale are the detail standard. Whole native-alpha sprites with contact anchors; no color-alpha clipping or quadrant slicing.",
+  "imageFiles": [
+    {
+      "file": "body.png",
+      "sha256": "95dcd1f28db1b8f78fe13050939a703a1ceb808652de0125bdefd4dfc40a967d"
+    },
+    {
+      "file": "cap-one-a.png",
+      "sha256": "d70d668e45203a7f7bad9b08f94544f17d1f9c12d2872fc998fcaa32bdadc0f3"
+    },
+    {
+      "file": "cap-one-b.png",
+      "sha256": "14634410140c185fce23b8cc1e0604001ace5cedd1a269288d1082b46f53e1e3"
+    },
+    {
+      "file": "cap-short.png",
+      "sha256": "8630bb38e03b27dcce49e50d7655d7ae92f366342316de587f346dcb0697d35f"
+    },
+    {
+      "file": "cap-wide.png",
+      "sha256": "74a6e29e9f9d5f5247e88706f0efd5064f984ac0e9d0f41ae2d5bc0158dc843d"
+    },
+    {
+      "file": "platform.png",
+      "sha256": "17ed93c860756b201bb572b99d01b788cb97f383cdb57e4b833b72d96a35bdc4"
+    },
+    {
+      "file": "underside.png",
+      "sha256": "b54c2e61141909ababd273179a4f75a1717e436557b8f563d176bf4fabac3cdc"
+    },
+    {
+      "file": "wall-left.png",
+      "sha256": "bb578689a6d146e0421b4c7c988fe0166647b7e4f1e3b66f06c1c1a5168cd91a"
+    },
+    {
+      "file": "wall-right.png",
+      "sha256": "5590a0542593d4885fc65cbea53f700ec8db6e8f444e8f0d5daa5764e3451299"
+    }
+  ],
+  "approvalDate": "2026-10-26"
+}

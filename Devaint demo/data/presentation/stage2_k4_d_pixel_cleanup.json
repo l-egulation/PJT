@@ -1,0 +1,21 @@
+{
+  "schema": "stage2-k4-D-pixel-cleanup-v1",
+  "status": "cleaned-D-walk-approved-by-user",
+  "source": "outputs/waterway/k4-walk-D-pixel-20261031",
+  "output": "outputs/waterway/k4-walk-D-pixel-clean-20261031",
+  "maxPinholeArea": 4,
+  "protectedGapZones": [[168,151,184,168]],
+  "ankleRepairZone": [192,176,205,184],
+  "maxAnkleHoleArea": 20,
+  "temporalRegion": [150,98,234,175],
+  "registrationRegion": [171,99,212,137],
+  "maxRegistrationShift": 2,
+  "manualPixels": [
+    {"key":1,"xy":[207,82],"rgba":[37,37,45,255],"reason":"Close the one-pixel cap notch shared by loop endpoints."},
+    {"key":20,"xy":[207,82],"rgba":[37,37,45,255],"reason":"Match the first-frame cap notch repair."},
+    {"key":20,"xy":[203,79],"rgba":[0,0,0,0],"reason":"Remove a one-frame cap-tip spur at the loop seam."},
+    {"key":7,"xy":[213,88],"rgba":[244,223,183,255],"reason":"Restore the single-pixel notch in the tank shoulder."},
+    {"key":19,"xy":[213,86],"rgba":[244,223,183,255],"reason":"Restore the corresponding tank shoulder notch."}
+  ],
+  "method": "Fill enclosed pinholes and disconnected ankle material with neighboring existing colors. Preserve hose, hand and leg negative spaces. Align adjacent torso poses by integer translation for evidence only; change isolated interior color specks and supported one-pixel contour notches only when both adjacent poses agree. Never transform whole frames, interpolate colors, add frames or change D timing."
+}

@@ -1,0 +1,85 @@
+{
+  "schema": "enemy-pursuit-v1",
+  "status": "tuning-draft",
+  "appliesTo": [
+    "01_thorn-root",
+    "02_broom-stalker",
+    "draft_07_heavy_charger",
+    "K4",
+    "B3",
+    "M3"
+  ],
+  "chaseSpeedScale": 2.4,
+  "jumpHeight": 6,
+  "jumpAirSpeed": 6.0,
+  "jumpWindupSeconds": 0.12,
+  "maxDropHeight": 24,
+  "replanSeconds": 0.25,
+  "detectionScale": 2,
+  "targetFacingDeadzone": 0.125,
+  "randomHopIntervalMin": 1.5,
+  "randomHopIntervalMax": 4.0,
+  "randomHopHeightMin": 0.8,
+  "randomHopHeightMax": 2.0,
+  "pathJumpDelayMin": 0.0,
+  "pathJumpDelayMax": 0.35,
+  "dropThrough": true,
+  "walkOffLedges": true,
+  "randomHop": true,
+  "species": [
+    {
+      "id": "01_thorn-root",
+      "jumpHeight": 6,
+      "randomHop": true
+    },
+    {
+      "id": "02_broom-stalker",
+      "jumpHeight": 6,
+      "randomHop": true
+    },
+    {
+      "id": "draft_07_heavy_charger",
+      "jumpHeight": 4,
+      "randomHop": false
+    },
+    {
+      "id": "K4",
+      "jumpHeight": 6,
+      "randomHop": true
+    },
+    {
+      "id": "B3",
+      "jumpHeight": 4,
+      "randomHop": false
+    },
+    {
+      "id": "M3",
+      "jumpHeight": 6,
+      "randomHop": true
+    }
+  ],
+  "screenLeash": true,
+  "leaveScreenSeconds": 1.0,
+  "unseenGiveUpSeconds": 6.0,
+  "returnTeleportSeconds": 10.0,
+  "noRouteTeleportSeconds": 1.0,
+  "individualVariance": 0.1,
+  "alertEnabled": true,
+  "reactionDelayMin": 0.2,
+  "reactionDelayMax": 0.5,
+  "alertRadius": 12,
+  "alertDelayPerUnit": 0.05,
+  "alertJitter": 0.1,
+  "alertMarkSeconds": 1.0,
+  "alertReceivers": [
+    "01_thorn-root",
+    "02_broom-stalker",
+    "draft_07_heavy_charger",
+    "K4",
+    "B3",
+    "M3",
+    "03_gutter-spitter",
+    "R-selected",
+    "H3"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "status": "confirmed_policy_exact_values_pending_not_runtime",
+  "scope": "chapter1_actual_block_room_hp_and_clock_boss; chapter2_guardrails_only",
+  "spec": "docs/design/equipment/inks/balance-proposal.md",
+  "confirmedPolicySource": "data/combat/weapon_ink_run_design.json#inks.statusConditions",
+  "assumptions": {
+    "equalChapterTimeAllocation": true,
+    "normalRoomsBudgetShare": 0.5,
+    "bossBudgetShare": 0.15,
+    "normalAttackOpportunity": 0.55,
+    "normalAverageTargetsPerHit": 1.5,
+    "activeWeaponCount": 2
+  },
+  "exactEffectValues": null,
+  "exactEffectCooldowns": null,
+  "exactRedValuesAndCooldowns": null,
+  "notes": [
+    "시간 배분·공격 기회는 측정하지 않은 검토 가정이다.",
+    "빨강·파랑은 공격 대상 몬스터의 기절·속박·슬로우 상태를 조건으로 하며 비용·페널티가 없다.",
+    "방어막 5종의 생성량·내부 쿨타임과 회복 5종의 회복량·내부 쿨타임은 weapon_ink_run_design.json의 effectGranting에서 확정값을 참조한다. 이동속도 5종의 기본/강화 증가율·지속시간·내부 쿨타임도 같은 원본의 movementSpeedStacking 및 internalCooldown을 참조한다. 기절·속박 각 4종의 지속시간은 statusConditions.hardControlReapplication, 내부 쿨타임은 effectGranting.internalCooldown을 참조한다. 슬로우 4종의 감속률·지속시간은 statusConditions.slowEffect, 내부 쿨타임은 effectGranting.internalCooldown을 참조한다. 빨강 피해·공속 6종의 기본/강화 증가율·지속시간·쿨타임은 attackGranting을 참조한다. 파랑 쿨타임 감소 4종의 감소율·최소 총 대기 비율은 skillGranting.effects.cooldownReduction을 참조한다. 파랑의 스킬 피해 증가율·내부 쿨타임 수치는 skillGranting을 참조한다. 기본 잉크 39종의 수치는 플레이 테스트 시작값이며 런타임 이행·플레이 검증은 미완료다."
+  ],
+  "exactBlueValuesAndCooldowns": null
+}

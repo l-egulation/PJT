@@ -1,0 +1,15 @@
+{
+  "schema":"stage2-k4-loop-candidates-v1",
+  "status":"D-selected-by-user",
+  "selectedCandidate":"D",
+  "source":"outputs/waterway/k4-walk-retry-frames-20261031",
+  "output":"outputs/waterway/k4-loop-candidates-20261031",
+  "pixelPolicy":"Original full-canvas PNG copies only; no generated in-betweens, recoloring, background removal, morphing, crossfade or part composites. All candidates share one padded preview crop.",
+  "timingStatus":"review-proposals-no-original-timing-in-PNG",
+  "candidates":[
+    {"id":"A","name":"짧은 반복 · 초반 구간","start":14,"end":33,"frameMs":50,"recommended":true,"description":"상체와 다리의 끝·시작 자세가 모두 가까운 초반20장. 기본 추천.","tradeoff":"발을 모으는 자세에서 반복되므로 그 순간의 정지가 느껴지는지 확인."},
+    {"id":"B","name":"짧은 반복 · 후반 구간","start":36,"end":55,"frameMs":50,"recommended":false,"description":"다른 보행 구간의20장. A와 같은 속도로 발 디딤과 상체 흔들림을 비교.","tradeoff":"후반 원본의 무릎·등짐 모양 변화가 A와 다름."},
+    {"id":"C","name":"두 보행 · 긴 반복","start":19,"end":57,"frameMs":50,"recommended":false,"description":"두 보행을39장으로 이어 반복 경계가 돌아오는 횟수를 줄인 후보.","tradeoff":"주기는1.95초지만 걷는 속도는 같은20fps. 두 보행 사이의 원본 형태 변화도 포함."},
+    {"id":"D","name":"접합부를 빠르게 통과","start":14,"end":33,"frameMs":55,"edgeFrameMs":30,"edgeCount":2,"recommended":false,"description":"A와 같은20장. 처음·마지막2장은30ms, 나머지는55ms로 반복 지점을 빠르게 통과.","tradeoff":"전체1초는 유지하지만 접합부 근처 발 움직임이 급하게 느껴질 수 있음."}
+  ]
+}

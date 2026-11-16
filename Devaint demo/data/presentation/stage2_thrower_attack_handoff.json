@@ -1,0 +1,84 @@
+{
+  "schema": "stage2-normal-attack-handoff-v1",
+  "status": "held-hand-throw-input-ready-awaiting-user-review-and-return",
+  "activeId": "R-selected",
+  "name": "신호투척수",
+  "source": "outputs/waterway/pixel-base-step1-20261031/R-selected/native/base-frame.png",
+  "palette": "outputs/waterway/pixel-base-step1-20261031/R-selected/palette.json",
+  "combatReference": "data/combat/stage2_waterway_patterns.json",
+  "output": "outputs/waterway/thrower-held-hand-input-20261101",
+  "canvas": [
+    384,
+    224
+  ],
+  "scale": 4,
+  "background": "#ffffff",
+  "oneLine": "지금 물체를 쥐고 있는 화면 오른쪽 손으로 그대로 머리 뒤에 당겼다가, 플레이어를 향해 포물선으로 던진다.",
+  "combatPhaseIndices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "phaseProposal": [
+    {
+      "name": "플레이어 조준",
+      "seconds": 0.4,
+      "action": "물체를 들고 있는 원래 손으로 머리 뒤까지 당기고 앞어깨와 얼굴을 왼쪽 목표로 향한다."
+    },
+    {
+      "name": "조준 고정",
+      "seconds": 0.2,
+      "action": "양발을 버티고 팔을 뒤로 든 준비자세를 짧게 멈춘다. 이 순간부터 목표는 고정된다."
+    },
+    {
+      "name": "투척 동작",
+      "seconds": 0.15,
+      "action": "같은 팔을 머리 위에서 왼쪽 앞으로 빠르게 휘둘러 물체 한 개를 놓는다. 직선 분사나 밀어내기가 아닌 곡사 투척이다."
+    },
+    {
+      "name": "회복",
+      "seconds": 0.7,
+      "action": "빈손을 앞으로 남기며 숙였다가 같은 손을 옷 뒤로 가져가 다음 물체를 꺼내 원래 내린 자세로 돌아온다."
+    }
+  ],
+  "motionNoteKo": "물체를 현재 쥐고 있는 화면 오른쪽 보라색 소매의 팔이 준비·던지기·회수까지 맡는다. 화면 왼쪽 빈손은 균형만 잡고 투척하지 않는다. 손 사이 전달은 없다. 걷기와 분리한 제자리 공격이다. 시작에 화면 오른쪽 허리 옆 물체를 들고 있는 그 손으로 끝까지 던진다. 다른 손으로 옮기거나 반대쪽에서 물체가 생기지 않는다. 올려 든 팔·물체와 전방으로 뻗는 빈손이 구분되어야 한다. 목표 위치 갱신/고정은 게임 로직 개념이며 입력 그림에 플레이어·조준선은 추가하지 않는다.",
+  "effectNoteKo": "본체와 손에서 놓는 순간부터 제작한다. 분리된 투사체의 비행·회전·깨짐은 이후 별도 준비하며 이 모션에는 넣지 않는다. 손에 든 물체는 놓는 순간 없어지고 빈손 회복 뒤 옷 뒤에서 다시 꺼내야 한다. 장판·폭발·발광·잔상은 넣지 않는다.",
+  "timingPolicy": "Existing art proposal: aim0.4s + aim-lock0.2s + throw0.15s + recovery/rearm0.7s =1.45s. No new gameplay values. The airborne projectile is a separate asset; the source hand prop remains unchanged until release.",
+  "effectPolicy": "Body/held-prop release and rearm only. No independently flying projectile, target, trajectory, splash, explosion or ground hazard in the animation input.",
+  "queue": [
+    {
+      "id": "K4",
+      "name": "등짐분사수",
+      "oneLine": "A19장 채택 · 전방 잉크 분사 자세0.65초 고정."
+    },
+    {
+      "id": "B3",
+      "name": "쐐기보행기",
+      "oneLine": "다리 무보충19장 채택 · 앞부분 들기 후 한 번 내려찍기."
+    },
+    {
+      "id": "M3",
+      "name": "먹침필경사",
+      "oneLine": "빠른4연타 채택 · 찌르기70ms·회수80ms · 같은 픽셀 재사용."
+    },
+    {
+      "id": "R-selected",
+      "name": "신호투척수",
+      "oneLine": "현재 물체를 쥔 손으로 그대로 조준·곡사 투척. 반대 빈손은 균형만 잡는다."
+    },
+    {
+      "id": "H3",
+      "name": "늘어진수의",
+      "oneLine": "큰 잉크 공을 만들어 던지고 착탄한 바닥에 지속 피해 장판 생성."
+    }
+  ],
+  "prompt": "THROW WITH THE HAND THAT ALREADY HOLDS THE OBJECT IN THE REFERENCE. Follow the physical purple-sleeved arm connected to the ochre object at the image-RIGHT hip: THAT arm raises the object, winds up, throws and follows through. The image-LEFT arm is initially empty and stays empty for the ENTIRE clip; it only balances the torso and NEVER performs a throw. No handoff or transfer between hands, no mirroring, no empty-handed throwing gesture. The object must remain visibly gripped by its original hand throughout the lift and windup, until ONE clear release.\n\nAnimate ONE stationary LEFT-facing OVERHAND THROW using the exact supplied pixel-art character. The orange-apron figure holds ONE small ochre/gold object in the existing hand at the image-RIGHT rear hip. Keep the original slightly turned left-facing view; do not turn the character into a complete side profile. Begin in this exact neutral pose and end in the same pose after retrieving the next object. No walking, jumping, camera movement or travel across the canvas.\n\nAIM / WINDUP, about0.40s: with the SAME hand already holding the object, raise that arm and draw the object back behind and just above the head. Rotate the shoulder and elbow as a connected arm; the object stays gripped at the palm. The face and leading shoulder aim toward an offscreen target on the LEFT. The free arm only balances the body. The object must remain clearly visible above/behind the hood rather than melting into the head.\n\nAIM LOCK, about0.20s: brace BOTH original feet on the same ground contacts and briefly HOLD the loaded overhand pose. The target is now fixed; do not keep swiveling or tracking. Show an obvious readable held silhouette before the release. No crosshair, player, aiming line or target is drawn.\n\nTHROW / RELEASE, about0.15s: swing that SAME throwing arm over the head and sharply forward toward the LEFT, releasing ONE object upward-forward for a lobbed arc. The gesture is a high arcing throw, not a horizontal punch, underhand bowling, straight shot, gun recoil or ink spray. Keep the object's design and size unchanged while in the hand. At one clear release moment, remove it from the hand; the arm follows through as an EMPTY hand. Do not animate an independent airborne projectile in this body clip: flight, spinning and collision will be added separately in-game.\n\nRECOVER AND REARM, about0.70s: first leave the EMPTY throwing hand forward briefly as the upper body leans into the follow-through. Then lower and pull that SAME hand behind the apron/coat, retrieve the next identical small object from behind the clothing, and return to the original low carry pose beside the image-RIGHT hip. Make the hand visibly visit the hidden supply area before the next object becomes visible. Do not teleport the object into an extended hand. No second throw. Keep the hand empty between release and the retrieval; no duplicate, hovering or ghost object.\n\nCRITICAL CARRY RULE: use the SAME original hand for carrying, windup, release and retrieval. Never hand off to the other hand or swap left/right sides. Preserve the original two-arm/two-leg anatomy, hood, dark face, tiny gold eyes, orange apron, purple sleeves, visible filled trousers and both boots. Do not replace the original object with a bottle, grenade, staff or gun. Keep connected joints and filled solid cloth; preserve intentional open gaps between limbs. No new black outlines, no bright edge fringe, no holes cut through sleeves/trousers.\n\nMaintain the supplied12 actual opaque character colors, crisp solid pixel clusters and a slightly stepped game-animation rhythm. No smooth vector shading, blur, antialiasing, gradients, dithering or added colors. Only the body and the held object until release are visible; no flying projectiles, motion trails, flashes, ink, splash, ground puddle, explosion, shadow, scenery, text or grid.\n\nKeep the full1536x896 pure-white input canvas (#FFFFFF), exactly4x384x224 logical pixels. The neutral character including the lowered object occupies98x106 logical pixels; preserve this size. Ground baseline is logical y192 (input y768). Use the existing blank space ABOVE the head for the raised arm and object; keep the full hand and object visible at maximum windup. Maintain aligned4x4 blocks, identical full-canvas framing and anchor. Do not trim the upper padding, zoom, shrink, recenter or mirror. One chronological attack, about1.45s total. These timings are a review proposal, not fixed gameplay balance.",
+  "handPolicy": {
+    "throwHand": "the physical image-RIGHT purple-sleeved arm already gripping the ochre prop",
+    "emptyHand": "image-LEFT hand remains empty and only balances",
+    "transfer": "forbidden-no-handoff",
+    "rearmHand": "same original prop-holding/throwing hand",
+    "mirrorCharacter": false
+  }
+}

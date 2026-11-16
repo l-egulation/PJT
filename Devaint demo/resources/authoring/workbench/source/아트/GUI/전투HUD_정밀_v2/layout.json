@@ -1,0 +1,397 @@
+{
+  "referenceResolution": [
+    1672,
+    941
+  ],
+  "source": "C:\\Users\\SSAFY\\Desktop\\자율 프로젝트\\아트\\GUI\\전투HUD_초안_v1\\Preview\\새_게임화면_GUI.png",
+  "operations": [
+    {
+      "type": "sprite",
+      "id": "status_frame",
+      "x": 39,
+      "y": 38,
+      "w": 448,
+      "h": 169
+    },
+    {
+      "type": "sprite",
+      "id": "hp_seat",
+      "x": 63,
+      "y": 57,
+      "w": 75,
+      "h": 62
+    },
+    {
+      "type": "sprite",
+      "id": "exp_seat",
+      "x": 63,
+      "y": 128,
+      "w": 75,
+      "h": 64
+    },
+    {
+      "type": "sprite",
+      "id": "hp_track",
+      "x": 151,
+      "y": 60,
+      "w": 315,
+      "h": 55
+    },
+    {
+      "type": "sprite",
+      "id": "exp_track",
+      "x": 151,
+      "y": 132,
+      "w": 315,
+      "h": 56
+    },
+    {
+      "type": "sprite",
+      "id": "hp_fill",
+      "x": 158,
+      "y": 67,
+      "w": 217,
+      "h": 39
+    },
+    {
+      "type": "sprite",
+      "id": "exp_fill",
+      "x": 158,
+      "y": 142,
+      "w": 95,
+      "h": 37
+    },
+    {
+      "type": "sprite",
+      "id": "hp_bottle",
+      "x": 76,
+      "y": 62,
+      "w": 49,
+      "h": 51
+    },
+    {
+      "type": "sprite",
+      "id": "exp_bottle",
+      "x": 76,
+      "y": 134,
+      "w": 49,
+      "h": 51
+    },
+    {
+      "type": "sprite",
+      "id": "level_badge",
+      "x": 101,
+      "y": 121,
+      "w": 57,
+      "h": 35
+    },
+    {
+      "type": "text",
+      "text": "Lv.3",
+      "x": 106,
+      "y": 126,
+      "w": 46,
+      "h": 24,
+      "font": "arial.ttf",
+      "fontSize": 21,
+      "color": "#F3EFDF"
+    },
+    {
+      "type": "text",
+      "text": "70 / 100",
+      "x": 244,
+      "y": 73,
+      "w": 109,
+      "h": 29,
+      "font": "arial.ttf",
+      "fontSize": 26,
+      "color": "#F3EFDF"
+    },
+    {
+      "type": "text",
+      "text": "40 / 100",
+      "x": 245,
+      "y": 146,
+      "w": 112,
+      "h": 28,
+      "font": "arial.ttf",
+      "fontSize": 26,
+      "color": "#F3EFDF"
+    },
+    {
+      "type": "sprite",
+      "id": "currency_frame",
+      "x": 1293,
+      "y": 31,
+      "w": 190,
+      "h": 111
+    },
+    {
+      "type": "sprite",
+      "id": "currency_divider",
+      "x": 1303,
+      "y": 81,
+      "w": 168,
+      "h": 8
+    },
+    {
+      "type": "sprite",
+      "id": "coin",
+      "x": 1321,
+      "y": 47,
+      "w": 33,
+      "h": 31
+    },
+    {
+      "type": "sprite",
+      "id": "gem",
+      "x": 1321,
+      "y": 93,
+      "w": 33,
+      "h": 33
+    },
+    {
+      "type": "text",
+      "text": "125",
+      "x": 1404,
+      "y": 48,
+      "w": 49,
+      "h": 29,
+      "font": "arial.ttf",
+      "fontSize": 26,
+      "color": "#F3EFDF"
+    },
+    {
+      "type": "text",
+      "text": "38",
+      "x": 1411,
+      "y": 95,
+      "w": 41,
+      "h": 28,
+      "font": "arial.ttf",
+      "fontSize": 26,
+      "color": "#F3EFDF"
+    },
+    {
+      "type": "sprite",
+      "id": "pause_frame",
+      "x": 1500,
+      "y": 39,
+      "w": 55,
+      "h": 51
+    },
+    {
+      "type": "sprite",
+      "id": "escape_frame",
+      "x": 1560,
+      "y": 39,
+      "w": 73,
+      "h": 51
+    },
+    {
+      "type": "sprite",
+      "id": "pause_glyph",
+      "x": 1515,
+      "y": 55,
+      "w": 26,
+      "h": 25
+    },
+    {
+      "type": "text",
+      "text": "ESC",
+      "x": 1573,
+      "y": 51,
+      "w": 48,
+      "h": 30,
+      "font": "arial.ttf",
+      "fontSize": 25,
+      "color": "#F3EFDF"
+    },
+    {
+      "type": "sprite",
+      "id": "region_plate",
+      "x": 1502,
+      "y": 103,
+      "w": 130,
+      "h": 40
+    },
+    {
+      "type": "text",
+      "text": "숲 · 1-2",
+      "x": 1525,
+      "y": 109,
+      "w": 91,
+      "h": 29,
+      "font": "malgun.ttf",
+      "fontSize": 24,
+      "color": "#F3EFDF"
+    },
+    {
+      "type": "sprite",
+      "id": "loadout_frame",
+      "x": 519,
+      "y": 794,
+      "w": 631,
+      "h": 123
+    },
+    {
+      "type": "sprite",
+      "id": "loadout_divider",
+      "x": 666,
+      "y": 811,
+      "w": 9,
+      "h": 91
+    },
+    {
+      "type": "sprite",
+      "id": "loadout_divider",
+      "x": 922,
+      "y": 811,
+      "w": 9,
+      "h": 91
+    },
+    {
+      "type": "sprite",
+      "id": "quill",
+      "x": 550,
+      "y": 810,
+      "w": 96,
+      "h": 80
+    },
+    {
+      "type": "text",
+      "text": "깃털펜",
+      "x": 568,
+      "y": 879,
+      "w": 68,
+      "h": 29,
+      "font": "malgun.ttf",
+      "fontSize": 22,
+      "color": "#F3EFDF"
+    },
+    {
+      "type": "sprite",
+      "id": "active_bottle_shell",
+      "x": 696,
+      "y": 811,
+      "w": 91,
+      "h": 89
+    },
+    {
+      "type": "sprite",
+      "id": "ink_insert_red",
+      "x": 704,
+      "y": 850,
+      "w": 25,
+      "h": 41
+    },
+    {
+      "type": "sprite",
+      "id": "ink_insert_red_b",
+      "x": 730,
+      "y": 850,
+      "w": 25,
+      "h": 41
+    },
+    {
+      "type": "sprite",
+      "id": "ink_insert_blue",
+      "x": 756,
+      "y": 850,
+      "w": 23,
+      "h": 41
+    },
+    {
+      "type": "text",
+      "text": "장착 잉크",
+      "x": 801,
+      "y": 819,
+      "w": 99,
+      "h": 31,
+      "font": "malgunbd.ttf",
+      "fontSize": 22,
+      "color": "#F3EFDF"
+    },
+    {
+      "type": "text",
+      "text": "3 / 3",
+      "x": 818,
+      "y": 855,
+      "w": 67,
+      "h": 30,
+      "font": "arial.ttf",
+      "fontSize": 26,
+      "color": "#F3EFDF"
+    },
+    {
+      "type": "sprite",
+      "id": "drop_red",
+      "x": 951,
+      "y": 829,
+      "w": 41,
+      "h": 56
+    },
+    {
+      "type": "sprite",
+      "id": "drop_red",
+      "x": 1014,
+      "y": 829,
+      "w": 41,
+      "h": 56
+    },
+    {
+      "type": "sprite",
+      "id": "drop_blue",
+      "x": 1076,
+      "y": 829,
+      "w": 43,
+      "h": 56
+    },
+    {
+      "type": "sprite",
+      "id": "bag_frame",
+      "x": 1310,
+      "y": 846,
+      "w": 209,
+      "h": 68
+    },
+    {
+      "type": "sprite",
+      "id": "mix_frame",
+      "x": 1524,
+      "y": 846,
+      "w": 128,
+      "h": 68
+    },
+    {
+      "type": "sprite",
+      "id": "bag",
+      "x": 1330,
+      "y": 858,
+      "w": 47,
+      "h": 44
+    },
+    {
+      "type": "text",
+      "text": "가방 4 / 6",
+      "x": 1385,
+      "y": 862,
+      "w": 116,
+      "h": 35,
+      "font": "malgunbd.ttf",
+      "fontSize": 24,
+      "color": "#F3EFDF"
+    },
+    {
+      "type": "text",
+      "text": "잉크 조합",
+      "x": 1540,
+      "y": 862,
+      "w": 99,
+      "h": 35,
+      "font": "malgunbd.ttf",
+      "fontSize": 22,
+      "color": "#F3EFDF"
+    }
+  ]
+}

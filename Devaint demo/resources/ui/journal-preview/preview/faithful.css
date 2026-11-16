@@ -1,0 +1,284 @@
+
+
+/* The single authoritative game UI stylesheet. Preview navigation lives in preview.css. */
+#stage{font-family:"Malgun Gothic",sans-serif;font-size:16px;color:#171711;background:#f3ead5}
+#stage button{font-family:inherit;color:inherit;font-weight:700;cursor:pointer}
+#stage .environment{background:#f3ead5 url('assets/refined/village-sketch.png') left bottom/auto 600px no-repeat;filter:none;opacity:1}
+#stage .environment:after{height:76px;background:repeating-linear-gradient(135deg,#aca594 0 1px,#d7cfbc 1px 5px);border-top:5px double #6f6758}
+#stage .veil{background:#24231f77}
+#stage img{object-fit:contain;image-rendering:auto}
+#stage .icon{width:32px;height:32px;flex-shrink:0}
+#stage .drop{width:40px;height:56px;flex-shrink:0}
+#stage .btn{--face:url('assets/refined/secondary.png');position:relative;isolation:isolate;min-height:36px;border:0;border-image:none;background:none;padding:6px 12px;line-height:20px;font-size:16px;box-shadow:none;white-space:nowrap}
+#stage .btn::before{content:'';position:absolute;inset:0;border:0 solid transparent;border-left-width:9px;border-right-width:9px;border-image:var(--face) 0 14 fill stretch;z-index:-1;pointer-events:none}
+#stage .btn.primary,#stage .btn.active{--face:url('assets/refined/primary.png');color:#fffaf0}
+#stage .btn:disabled{--face:url('assets/refined/disabled.png');color:#8b806a;cursor:not-allowed}
+#stage .btn:hover:not(:disabled){filter:brightness(1.045)}
+#stage .btn:focus-visible{outline:2px dashed #60533d;outline-offset:3px}
+#stage .tabs{display:flex;gap:4px;margin:0 0 12px;flex:none}
+#stage .tabs .btn{flex:1;--face:url('assets/refined/tab.png');padding:6px 8px;font-size:16px;min-height:36px}
+#stage .tabs .btn.active{--face:url('assets/refined/tab-active.png')}
+#stage .tabs .btn::before{border-image-slice:0 14 fill}
+#stage .title-tab{position:absolute;z-index:3;top:-20px;left:48px;margin:0;min-width:210px;height:48px;padding:10px 24px;font-size:24px;line-height:28px;font-weight:700;color:#fffaf0;border:0;background:none}
+#stage .title-tab::before{content:'';position:absolute;inset:0;border:0 solid transparent;border-left-width:10px;border-right-width:10px;border-image:url('assets/refined/title.png') 0 14 fill stretch;z-index:-1;pointer-events:none}
+#stage .badge{position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;min-height:28px;padding:2px 10px;color:#fffaf0;font-weight:700;font-size:18px;line-height:24px;min-width:84px;background:none;white-space:nowrap}
+#stage .badge::before{content:'';position:absolute;inset:0;border:0 solid transparent;border-left-width:5px;border-right-width:5px;border-image:url('assets/refined/primary.png') 0 14 fill stretch;z-index:-1}
+#stage .card{border:4px solid transparent;border-image:url('assets/refined/card.png') 10 fill stretch;padding:10px;box-shadow:none}
+#stage .slot{position:relative;border:3px solid transparent;border-image:url('assets/refined/slot.png') 4 fill stretch;min-width:0;min-height:0;padding:2px;background:none;display:flex;align-items:center;justify-content:center}
+#stage .slot.active{border-width:6px;border-image-slice:10 fill;border-image-source:url('assets/refined/slot-active.png')}
+#stage .slot.active:after{display:none}
+#stage .slot small{display:block;font:700 14px/18px "Malgun Gothic"}
+#stage .slot:hover{border-width:6px;border-image-slice:10 fill;border-image-source:url('assets/refined/slot-active.png')}
+#stage .book{position:absolute;left:140px;top:76px;width:800px;height:440px;border:0;background:url('assets/refined/paper.png') center/100% 100% no-repeat;box-shadow:none;isolation:isolate}
+#stage .book>.paper{position:absolute;z-index:1;inset:14px 16px;border:0;background:none;padding:20px 16px 14px;display:flex;flex-direction:column}
+#stage .book:has(.spread,.pause-layout)::after{content:'';position:absolute;left:calc(50% - 12px);top:0;bottom:0;width:24px;background:url('assets/refined/spine.png') center/100% 100% no-repeat;z-index:0;pointer-events:none}
+#stage .close{position:absolute;z-index:5;right:8px;top:4px;width:36px;height:36px;min-height:36px;padding:0;font:400 28px/32px "Malgun Gothic"}
+#stage .close::before{border:3px solid transparent;border-image:url('assets/refined/slot.png') 10 fill stretch}
+#stage .spread{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;min-height:0;flex:1}
+#stage .spread:before,#stage .spread:after{display:none}
+#stage .column{display:flex;flex-direction:column;min-width:0;min-height:0;gap:8px}
+#stage .column h2{font-size:20px;line-height:24px;margin:0 0 8px}
+#stage .column h3{font-size:18px;line-height:24px;margin:0}
+#stage .row{display:flex;align-items:center;gap:8px}
+#stage .row.between{justify-content:space-between}
+#stage .bottom{margin-top:auto}
+#stage .muted{font-size:12px;line-height:18px;color:#847761}
+#stage .rule{height:1px;background:#b8aa8c;margin:4px 0}
+#stage .price{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;font-size:22px;font-weight:700;line-height:28px}
+#stage .price .icon{width:28px;height:28px}
+#stage .hud-box{border:4px solid transparent;border-image:url('assets/refined/secondary.png') 10 fill stretch;min-height:44px;padding:4px 8px;display:flex;align-items:center;gap:8px;font-size:18px;font-weight:700}
+#stage .top-hud{top:16px;left:18px;right:18px;display:flex;justify-content:space-between;align-items:flex-start}
+#stage .top-hud .right{display:flex;gap:8px}
+#stage .top-hud .right .btn{min-height:44px;font-size:16px}
+#stage .top-hud .badge{background:#f2e8d1;color:#29251c;font-size:14px;line-height:20px;min-height:24px;padding:2px 6px;border:1px solid #776d58}
+#stage .top-hud .badge::before{display:none}
+#stage .health{width:180px;height:12px;border:1px solid #82755e;background:#d5c9af}
+#stage .health i{height:100%;background:#ab3430;display:block;width:82%}
+#stage .health.small{width:48px;height:6px;border:1px solid #382e25}
+#stage .hud-box small{font-size:14px}
+/* Maintenance: one invariant shell for all tabs, with layout decoration beneath content. */
+#stage:is([data-screen="shop"],[data-screen="growth"],[data-screen="stamps"]) .book{left:244px;width:696px;top:76px;height:440px}
+#stage:is([data-screen="shop"],[data-screen="growth"],[data-screen="stamps"]) .book>.paper{inset:14px 16px;padding:26px 20px 20px}
+#stage:is([data-screen="shop"],[data-screen="growth"],[data-screen="stamps"]) .book::after{content:'';position:absolute;left:calc(50% - 12px);top:0;bottom:0;width:24px;background:url('assets/refined/spine.png') center/100% 100% no-repeat;z-index:0}
+#stage:is([data-screen="shop"],[data-screen="growth"],[data-screen="stamps"]) .tabs{height:48px;margin-bottom:20px;gap:4px}
+#stage:is([data-screen="shop"],[data-screen="growth"],[data-screen="stamps"]) .tabs .btn{height:48px;min-height:48px;font-size:20px}
+#stage:is([data-screen="shop"],[data-screen="growth"],[data-screen="stamps"]) .spread{gap:52px}
+#stage .shop-column{gap:16px}
+#stage .weapon-card{height:200px;min-height:200px;flex:none;padding:8px}
+#stage .weapon-heading{display:flex;align-items:center;gap:16px;border-bottom:1px solid #b8ac92;padding-bottom:6px;min-height:34px;font-size:18px;line-height:24px;white-space:nowrap}
+#stage .weapon-content{display:flex;align-items:center;gap:8px;margin-top:8px;min-height:116px}
+#stage .weapon-portrait{width:88px;height:116px;flex:none;display:flex;align-items:center;justify-content:center;border:3px solid transparent;border-image:url('assets/refined/slot.png') 10 fill stretch}
+#stage .weapon-portrait .icon{width:80px;height:80px}
+#stage .weapon-palette{flex:1;min-width:0}
+#stage .weapon-palette p{font-size:16px;line-height:22px;font-weight:700;text-align:center;margin:0 0 6px}
+#stage .palette-icons{display:flex;justify-content:center;gap:0}
+#stage .palette-icons .drop{width:40px;height:56px}
+#stage .weapon-card+.btn{min-height:52px;height:52px;font-size:22px;margin:0 22px;padding:6px}
+#stage .service{min-height:90px;height:90px;display:flex;align-items:center;gap:12px;padding:10px 12px;margin-bottom:8px;flex:none}
+#stage .service>.icon{width:52px;height:52px}
+#stage .service>.drop{width:44px;height:62px;margin:0 4px}
+#stage .service .desc{flex:1;min-width:0}
+#stage .service h2{font-size:22px;line-height:26px;margin:0 0 4px}
+#stage .service .desc>span{font-size:14px;font-weight:700;line-height:20px;white-space:nowrap}
+#stage .service .price{font-size:20px;gap:6px;min-width:90px}
+#stage .service .btn{width:120px;min-width:120px;height:56px;min-height:56px;font-size:20px;padding:6px}
+/* Equipment layout uses real slots and the reference's compact toolbar and bottom detail. */
+#stage:is([data-screen="bag"],[data-screen="exchange"]) .book{left:140px;width:800px;top:62px;height:448px}
+#stage:is([data-screen="bag"],[data-screen="exchange"]) .paper{inset:14px 16px;padding:30px 12px 12px}
+#stage .equipment-card{height:158px;flex:none;padding:8px}
+#stage .equipment-labels{display:grid;grid-template-columns:56px 1fr 56px;text-align:center;margin:8px 0 6px;font-size:12px;line-height:16px;font-weight:700}
+#stage .equipment-slots{display:grid;grid-template-columns:56px repeat(5,minmax(0,1fr)) 56px;gap:4px}
+#stage .equipment-slots .slot{height:58px;padding:0}
+#stage .equipment-slots .drop{width:32px;height:44px;flex:none}
+#stage .equipment-slots .icon{width:40px;height:40px}
+#stage .equipment-slots .special-slot .drop{width:40px;height:48px}
+#stage .bag-toolbar{margin-top:8px;height:36px;display:flex;align-items:center;justify-content:space-between;gap:8px;flex:none}
+#stage .bag-toolbar .tabs{margin:0;height:32px;gap:4px}
+#stage .bag-toolbar .btn{--face:url('assets/refined/secondary.png');height:32px;min-height:32px;padding:4px 8px;font-size:13px;line-height:18px}
+#stage .bag-toolbar .btn.active{--face:url('assets/refined/primary.png')}
+#stage .bag-toolbar strong{font-size:20px;white-space:nowrap}
+#stage .bag-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-auto-rows:64px;gap:4px;flex:none}
+#stage .bag-grid .slot{height:64px;padding:0}
+#stage .bag-grid .drop{width:40px;height:56px}
+#stage .empty-slot{opacity:.6}
+#stage .bag-detail{border-top:1px solid #b8aa8c;margin:0;padding-top:6px;display:flex;align-items:center;gap:12px;min-height:66px}
+#stage .bag-detail>.slot{width:60px;height:60px;min-width:60px;padding:0}
+#stage .detail h3,#stage .bag-detail h3{font-size:18px;line-height:22px;margin:0 0 4px}
+#stage .detail span{font-size:16px;line-height:20px}
+#stage .bag-actions{display:flex;align-items:stretch;gap:4px;margin:0;height:36px;min-height:36px}
+#stage .bag-actions>.btn{flex:1;height:36px;min-height:36px;font-size:16px;padding:4px 6px}
+#stage:is([data-screen="bag"],[data-screen="exchange"]) .column{gap:8px}
+#stage:is([data-screen="bag"],[data-screen="exchange"]) .column>.muted{font-size:11px;line-height:15px}
+/* Other screens reuse the same visual components. */
+#stage .grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px}
+#stage .grid:not(.bag-grid) .slot{height:60px;min-height:60px;padding:0}
+#stage .grid:not(.bag-grid) .drop{width:40px;height:52px}
+#stage .detail{display:flex;gap:12px;align-items:center;min-height:60px;margin:0}
+#stage .column .row.bottom{gap:4px;align-items:stretch}
+#stage .column .row.bottom>.btn{flex:1;font-size:14px;white-space:normal;padding:4px;height:44px;min-height:44px}
+#stage .column .tabs .btn{font-size:14px;padding:4px 6px}
+#stage .column .tabs .drop{width:20px;height:24px}
+#stage .column>.row:has(.slot){gap:6px}
+#stage .column>.row>.slot{flex:1;min-width:0;display:flex;flex-direction:column;height:100px}
+#stage .column>.row>.slot .drop{width:40px;height:56px}
+#stage .affinity-chip{display:inline-block;width:12px;height:12px;background:var(--affinity);clip-path:polygon(25% 0,75% 0,100% 25%,100% 75%,75% 100%,25% 100%,0 75%,0 25%)}
+#stage .choices{display:flex;gap:12px;justify-content:center;flex:1;min-height:0}
+#stage .choice{position:relative;flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;padding:16px 8px}
+#stage .choice.active{border-image-source:url('assets/refined/slot-active.png')}
+#stage .choice h3{font-size:20px;line-height:24px;margin:0}
+#stage .choice .large-drop{width:80px;height:112px}
+#stage .choice .large-icon{width:96px;height:96px}
+#stage .choice .btn{margin-top:auto}
+#stage .footer-buttons{display:flex;justify-content:center;gap:8px;margin-top:12px}
+#stage .footer-buttons .btn{min-width:144px}
+#stage .book.modal-small{left:268px;top:116px;width:500px;height:360px}
+#stage .book.modal-small .paper{padding:26px 24px 20px}
+#stage .pause-layout{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;height:100%}
+#stage .pause-vignette{width:100%;height:230px;object-fit:contain}
+#stage .pause-layout .stack{gap:12px}
+#stage .pause-layout .btn{height:52px;font-size:20px}
+#stage .title-screen{left:200px;top:45px;width:560px;text-align:center}
+#stage .title-logo{width:480px;height:230px;object-fit:contain}
+#stage .title-menu{width:264px;margin:20px auto;padding:24px;border:7px solid transparent;border-image:url('assets/refined/paper.png') 30 fill stretch;display:flex;flex-direction:column;gap:12px}
+#stage .title-menu .btn{height:48px;font-size:20px}
+#stage:is([data-screen="title"],[data-screen="combat"],[data-screen="boss"],[data-screen="hub"],[data-screen="toast"]) .veil{display:none}
+#stage .book:has(.result-art){left:352px;width:580px}
+#stage .result-art{width:100%;height:164px;object-fit:contain;margin:4px 0}
+#stage .result-stats{margin:0 40px}
+#stage .result-stats .row{border-bottom:1px solid #b8aa8c;padding:8px 0;font-size:20px}
+#stage .result-stats strong{font-size:24px}
+#stage .book:has(.result-art) .footer-buttons .btn{flex:1;font-size:20px;height:48px}
+#stage .map-layout{display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:26px;flex:1;min-height:0}
+#stage .map-wrap{height:auto;min-height:0;background:#34322d;border:2px solid #9d917b;position:relative;overflow:hidden;touch-action:none}
+#stage .map-content{width:650px;height:340px;position:relative}
+#stage .room{background:#615d52;border:2px solid #ece0c6;color:#f8efd9;line-height:34px;font-size:14px;white-space:nowrap}
+#stage .room.current{background:#eee3cb;color:#24231d}
+#stage .corridor{background:#eee3c9}
+#stage .map-aside{display:flex;flex-direction:column;gap:8px}
+#stage .map-aside .btn{height:44px}
+#stage .map-legend{font-size:16px;line-height:32px;margin-bottom:auto}
+#stage .mini{background:#272722;border:4px solid #e9dbc0}
+#stage .mini div{border-color:#c6c0ab}
+#stage .quickbar .btn{min-width:144px;min-height:80px;white-space:normal;font-size:16px}
+#stage .quickbar .icon{width:48px;height:48px}
+#stage .narration{border:6px solid transparent;border-image:url('assets/refined/card.png') 10 fill stretch;padding:22px 28px}
+#stage .narration p{font-size:20px;line-height:30px}
+#stage .guide-keys{gap:8px}
+#stage .guide-keys .card{padding:8px}
+#stage .facility-list .btn{min-height:48px;text-align:left;font-size:14px}
+#stage .selected-order span{font-size:13px}
+#stage .center h2{font-size:26px;line-height:32px;margin:12px 0}
+#stage #toast{border:4px solid transparent;border-image:url('assets/refined/card.png') 10 fill stretch;background:none;color:#28231a;font:700 16px/24px "Malgun Gothic";box-shadow:none;padding:8px 16px}
+
+#stage:is([data-screen="bag"],[data-screen="exchange"]) .spread{grid-template-columns:340px minmax(0,1fr);gap:50px}
+#stage:is([data-screen="bag"],[data-screen="exchange"]) .title-tab{left:88px}
+#stage[data-screen="palette"] .column{gap:6px}
+#stage[data-screen="palette"] .column>.row>.slot{height:88px}
+#stage[data-screen="palette"] .detail span{font-size:14px}
+#stage .weapon-portrait .icon,#stage .form-slot .icon{image-rendering:pixelated}
+
+#stage .stamp-placeholder{margin:12px 0 20px;padding:28px 12px}
+#stage .stamp-placeholder .large-icon{width:48px;height:48px}
+#stage .map-aside .row .btn{flex:1}
+
+#stage[data-screen="map"] .book{left:100px;width:840px}
+#stage[data-screen="pause"] .veil,#stage[data-screen="map"] .veil{background:#24231fa8}
+/* Shared alignment and the facility / selection / combat review. */
+#stage .close{display:grid;place-items:center;font-size:0;line-height:0}
+#stage .close:after{content:'';position:absolute;width:16px;height:16px;left:50%;top:50%;transform:translate(-50%,-50%);background:linear-gradient(45deg,transparent 43%,#24231d 44% 56%,transparent 57%),linear-gradient(-45deg,transparent 43%,#24231d 44% 56%,transparent 57%);pointer-events:none}
+#stage .slot{flex-direction:column;gap:2px;text-align:center}
+#stage .choice{justify-content:center}
+#stage .choice-content{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;width:100%}
+#stage .choice .choice-content img{margin:0}
+#stage .choice .choice-content h3{margin:0}
+#stage .departure-choices{margin:16px 0 8px}
+#stage .departure-choices .choice{position:relative;padding:32px 12px}
+#stage .departure-choices .choice.active{border:4px solid #24231d;border-image:none;background:#dfd1b5;box-shadow:inset 0 0 0 2px #f5ecd8}
+#stage .selection-number{position:absolute;top:12px;left:12px;right:12px;height:30px;display:flex;justify-content:center;align-items:center;background:#24231d;color:#fff4dc;font-weight:700;font-size:16px}
+#stage .color-choices{margin:12px 0}
+#stage .color-choices .choice-content{gap:20px}
+#stage .facility-list .btn{display:flex;align-items:center;justify-content:space-between;gap:8px}
+#stage .facility-visual{min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;border:4px solid transparent;border-image:url('assets/refined/card.png') 10 fill stretch;padding:18px 12px}
+#stage .preview-weapons{display:flex;flex-direction:column;gap:22px;width:100%}
+#stage .preview-weapon-row{display:flex;align-items:center;justify-content:center;gap:12px}
+#stage .preview-weapon-row>.icon{width:40px;height:40px}
+#stage .preview-slots{display:flex;align-items:center;justify-content:center;gap:5px}
+#stage .unknown-slot{width:44px;height:54px;flex:none;color:#9b907a;font-size:24px;font-weight:700}
+#stage .colorless-slot{background:#fffdf6;color:#29251b;font-size:12px;outline:2px solid #746c5a;outline-offset:-2px}
+#stage .color-swatches{display:flex;gap:8px}
+#stage .color-swatches i{width:24px;height:24px;border-radius:50%;border:1px solid #655e51}
+#stage .benefit-visual .benefit-icon{width:80px;height:80px}
+#stage .benefit-visual strong{font-size:20px}
+#stage .benefit-visual strong>span{font-size:30px}
+#stage .reclaim-flow{display:flex;align-items:center;justify-content:center;gap:24px;font-size:32px}
+#stage .well-bubble{position:absolute;left:300px;top:240px;width:360px;background:#f7efd9;border:2px solid #39362c;border-radius:12px;padding:20px 24px;text-align:center;box-shadow:3px 4px #302b2333}
+#stage .well-bubble:after{content:'';position:absolute;left:65px;bottom:-12px;width:20px;height:20px;background:#f7efd9;border-right:2px solid #39362c;border-bottom:2px solid #39362c;transform:rotate(45deg)}
+#stage .well-bubble p{margin:0 0 16px;font-size:20px}
+#stage .well-bubble .row{justify-content:center}
+#stage[data-screen="well"] .veil{display:none}
+#stage .combat-health{width:276px;height:74px;gap:10px}
+#stage .combat-health .health{width:210px;height:14px}
+#stage .combat-health .icon{width:28px;height:28px}
+#stage .combat-health small{font-size:16px}
+#stage .combat-top .right .btn{min-height:48px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:20px}
+#stage .combat-top .right .hud-box{height:48px}
+#stage .combat-top .combat-bag .icon{width:24px;height:24px}
+#stage .combat-minimap{position:absolute;right:18px;top:82px;width:200px;height:112px;padding:6px 8px;display:flex;flex-direction:column;gap:4px;align-items:stretch}
+#stage .minimap-drawing{height:72px;background:#24231f;position:relative;flex:none}
+#stage .minimap-drawing i{position:absolute;border:1px solid #ded8c7;background:#8d8a80}
+#stage .minimap-drawing b{position:absolute;left:96px;top:36px;width:6px;height:6px;background:#f7e9b8;border:1px solid #24231d}
+#stage .combat-minimap strong{font-size:16px;line-height:20px}
+#stage .combat-weapons{left:18px;bottom:18px;gap:12px}
+#stage .combat-weapon{position:relative;width:150px;height:100px;padding:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}
+#stage .combat-weapon>.icon{width:56px;height:56px}
+#stage .weapon-index{position:absolute;left:5px;top:4px;display:grid;place-items:center;width:26px;height:24px;background:#24231d;color:#f8edd5}
+#stage .combat-weapon>div{display:flex;align-items:center;justify-content:center;gap:12px;font-size:15px;font-weight:700}
+#stage .charge-dots{display:flex;gap:5px}
+#stage .charge-dots i{width:10px;height:10px;background:#999183;border-radius:50%}
+#stage .charge-dots .ready{background:#24231d}
+#stage .boss-summary{position:absolute;right:18px;bottom:18px;width:250px;height:100px;padding:8px 10px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:6px}
+#stage .boss-summary .badge{font-size:13px;min-height:22px;line-height:18px;padding:0 8px;min-width:70px}
+#stage .boss-summary .health{width:100%;height:12px}
+#stage .boss-summary b{font-size:16px}
+/* Compact floating HUD leaves the play area clear. */
+#stage .compact-hud{position:absolute;top:14px;left:16px;right:16px;display:flex;justify-content:space-between;align-items:flex-start;pointer-events:none}
+#stage .hud-left,#stage .hud-right{display:flex;align-items:center;gap:8px;pointer-events:auto;zoom:var(--hud-scale,1)}
+#stage .hud-currency{display:flex;align-items:center;gap:6px;height:30px;font-size:16px;color:#24231d;text-shadow:0 1px #fff7e5;background:#f5eddbbf;padding:2px 7px;border-radius:3px}
+#stage .hud-currency .icon{width:24px;height:24px}
+#stage .hud-control{width:30px;height:30px;display:grid;place-items:center;border:1px solid #827761;background:#f5eddbd9;padding:4px;border-radius:3px}
+#stage .hud-control:hover{background:#e0d1b3}
+#stage .ui-symbol{width:20px;height:20px;flex:none;display:block}
+#stage .slim-health{width:172px;filter:drop-shadow(0 1px 0 #fff6df)}
+#stage .hp-heading{display:flex;align-items:center;gap:6px;height:25px}
+#stage .hp-heading .icon{width:20px;height:20px}
+#stage .hp-heading strong{font-size:14px}
+#stage .hp-heading small{font-size:11px;font-weight:400}
+#stage .ink-health{height:10px;background:#c8bda6;border:2px solid #29271f;clip-path:polygon(2px 0,calc(100% - 2px) 0,100% 2px,100% calc(100% - 2px),calc(100% - 2px) 100%,2px 100%,0 calc(100% - 2px),0 2px)}
+#stage .ink-health i{height:100%;display:block;background:#a93830;box-shadow:inset 0 1px #d66e53}
+#stage .combat-minimap{top:55px;right:16px;width:136px;height:76px;padding:4px;gap:2px}
+#stage .combat-minimap .minimap-drawing{height:48px;overflow:hidden}
+#stage .combat-minimap strong{font-size:11px;line-height:14px}
+#stage .combat-weapons{bottom:14px;left:16px;gap:8px}
+#stage .combat-weapon{width:82px;height:62px;padding:3px;gap:2px;background:#f5eddbb0;border-width:3px}
+#stage .combat-weapon>.icon{width:34px;height:34px}
+#stage .combat-weapon>div{font-size:10px;gap:5px}
+#stage .weapon-index{width:16px;height:16px;left:3px;top:3px;font-size:10px}
+#stage .charge-dots{gap:3px}
+#stage .charge-dots i{width:5px;height:5px}
+#stage .boss-health{position:absolute;top:18px;left:290px;width:380px;text-align:center}
+#stage .boss-health strong{display:block;font-size:16px;margin-bottom:7px}
+#stage .boss-health .ink-health{height:13px}
+#stage .pause-buttons{position:absolute;left:360px;top:184px;width:240px;display:flex;flex-direction:column;gap:14px}
+#stage .pause-buttons .btn{height:48px;font-size:20px}
+#stage .setting-row{display:flex;align-items:center;justify-content:space-between;margin:24px 0 32px}
+#stage .facility-list .btn>span{display:flex;align-items:center;gap:5px}
+#stage .facility-list .btn .icon,#stage .column>.btn .icon{width:20px;height:20px}
+
+#stage .map-content{width:100%;height:100%;transform-origin:center}
+#stage .explored-map{width:100%;height:100%;display:block;color:#f6edd9}
+#stage .map-passages{fill:none;stroke:#d9cbb1;stroke-width:3;stroke-linejoin:round}
+#stage .map-rooms{fill:#746d5e;stroke:#eee0c6;stroke-width:1}
+#stage .map-icons{color:#fff2cb}
+#stage .player-pin{fill:#fff5df;stroke:#24231d;stroke-width:1}
+#stage .map-legend>span{display:flex;align-items:center;gap:8px}
+.map-preview-controls{font-size:10px}.map-preview-controls select{width:105px;padding:6px}.toolbar{flex-wrap:wrap}

@@ -1,0 +1,161 @@
+{
+  "format": "stage2-boss-motion-sizes-v1",
+  "base": "current-approved-pixels",
+  "playerHeightPx": 64,
+  "worldPivot": [
+    192,
+    232
+  ],
+  "motions": [
+    {
+      "id": "rose-idle",
+      "name": "로즈 · 기본",
+      "scalePercent": 100,
+      "sourcePivot": [
+        192,
+        232
+      ],
+      "source": "outputs/waterway/blue-transition-approved-20261105/edge-clean-v2/rose-idle.png"
+    },
+    {
+      "id": "rose-shot",
+      "name": "로즈 · 공중 사격",
+      "scalePercent": 101,
+      "sourcePivot": [
+        192,
+        232
+      ],
+      "source": "outputs/waterway/blue-transition-approved-20261105/edge-clean-v2/rose-shot.png"
+    },
+    {
+      "id": "rose-collapse",
+      "name": "로즈 · 쓰러짐 B",
+      "scalePercent": 100,
+      "sourcePivot": [
+        192,
+        232
+      ],
+      "source": "outputs/waterway/rose-first-absorption-preview-20261105/assets/rose-0-approved94.png"
+    },
+    {
+      "id": "rose-capture",
+      "name": "로즈 · 석궁 낙하·붙잡힘 B",
+      "scalePercent": 108,
+      "sourcePivot": [
+        192,
+        232
+      ],
+      "source": "outputs/waterway/rose-capture-polish10-20261106/frames/00.png"
+    },
+    {
+      "id": "blue-idle",
+      "name": "블루 · 기본",
+      "scalePercent": 100,
+      "sourcePivot": [
+        192,
+        232
+      ],
+      "source": "outputs/waterway/blue-transition-approved-20261105/edge-clean-v2/blue-idle.png"
+    },
+    {
+      "id": "blue-palm",
+      "name": "블루 · 구체 생성·손바닥 발사",
+      "scalePercent": 100,
+      "sourcePivot": [
+        180,
+        228
+      ],
+      "source": "resources/monsters/stage-02/boss-siblings-lineup-20261103/blue-palm-return/frames/01.png"
+    },
+    {
+      "id": "blue-landing",
+      "name": "블루 · 낙하·착지",
+      "scalePercent": 100,
+      "sourcePivot": [
+        192,
+        232
+      ],
+      "source": "outputs/waterway/blue-recovery-orb-free-clean-20261105/landing-00.png"
+    },
+    {
+      "id": "blue-recovery",
+      "name": "블루 · 착지 후 회복",
+      "scalePercent": 100,
+      "sourcePivot": [
+        192,
+        232
+      ],
+      "source": "outputs/waterway/blue-recovery-orb-free-clean-20261105/source-21.png"
+    },
+    {
+      "id": "blue-down-breathe",
+      "name": "블루 · 한쪽 무릎 대기",
+      "scalePercent": 64,
+      "sourcePivot": [
+        195,
+        239
+      ],
+      "source": "outputs/waterway/blue-down-breathe-20261105/00.png"
+    },
+    {
+      "id": "blue-collapse",
+      "name": "블루 · 쓰러짐 7프레임",
+      "scalePercent": 92,
+      "sourcePivot": [
+        192,
+        232
+      ],
+      "source": "outputs/waterway/blue-collapse-clean7-v4-20261106/00.png"
+    },
+    {
+      "id": "blue-rise",
+      "name": "블루 · 지친 채 일어서기",
+      "scalePercent": 100,
+      "sourcePivot": [
+        192,
+        232
+      ],
+      "source": "outputs/waterway/blue-rise-approved18-clean-20261106/frames/00.png"
+    },
+    {
+      "id": "blue-cast",
+      "name": "블루 · 흡수 시전 C",
+      "scalePercent": 100,
+      "sourcePivot": [
+        192,
+        232
+      ],
+      "source": "outputs/waterway/blue-absorption-cast-polish16-20261106/frames/00.png"
+    },
+    {
+      "id": "blue-roar",
+      "name": "블루 · 변신 전 포효 1번",
+      "scalePercent": 106,
+      "sourcePivot": [
+        192,
+        232
+      ],
+      "source": "outputs/waterway/blue-transition-approved-20261105/edge-clean-v2/blue-roar-01.png"
+    },
+    {
+      "id": "fused-idle",
+      "name": "강화 블루 · 기본",
+      "scalePercent": 100,
+      "sourcePivot": [
+        192,
+        232
+      ],
+      "source": "outputs/waterway/blue-transition-approved-20261105/edge-clean-v2/fused-blue-idle.png"
+    },
+    {
+      "id": "fused-arrival",
+      "name": "강화 블루 · 포효 완료·등장 4번",
+      "scalePercent": 97,
+      "sourcePivot": [
+        192,
+        232
+      ],
+      "source": "outputs/waterway/blue-transition-approved-20261105/edge-clean-v2/fused-blue-arrival-04.png"
+    }
+  ]
+}

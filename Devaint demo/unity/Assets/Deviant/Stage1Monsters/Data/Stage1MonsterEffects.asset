@@ -1,0 +1,164 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c70f6d5f4ea4334a8facd85fe3273c3, type: 3}
+  m_Name: Stage1MonsterEffects
+  m_EditorClassIdentifier: Deviant.Stage1Monsters::Deviant.Stage1Monsters.Stage1MonsterEffectCatalog
+  sourceSHA256: b8c6bdefb227ebd8539277b39187a6ccede558ccc4223255fe8a274e11907788
+  clips:
+  - id: thorn-slash
+    frames:
+    - {fileID: 21300000, guid: 1b22ffcf8c766cf42b06601b227e2aae, type: 3}
+    - {fileID: 21300000, guid: 4c6c6e46fde726b4da43e404c19d0bdf, type: 3}
+    - {fileID: 21300000, guid: 3e751500b2172f74c841bb7ad4da3625, type: 3}
+    - {fileID: 21300000, guid: f897cc1a48cbfa146822302ba1d06960, type: 3}
+    - {fileID: 21300000, guid: 38207729ff47d314aafe6f4f166d3b52, type: 3}
+    - {fileID: 21300000, guid: ae0750db6724b584abd94493f169929a, type: 3}
+    - {fileID: 21300000, guid: 8f490fb93fcd92642b88a9f39ae955dd, type: 3}
+    - {fileID: 21300000, guid: 2955f68707ee2a8499bb7175ae7b3028, type: 3}
+    - {fileID: 21300000, guid: 1a749657ee6abb6409704bdd155799da, type: 3}
+    - {fileID: 21300000, guid: f2dc0940b31a5414ab411da0dce66549, type: 3}
+    milliseconds: 14000000140000001e0000001e0000001e0000002300000023000000280000002800000032000000i
+    loop: 0
+    animation: {fileID: 0}
+    pivot: {x: 0.5833333, y: 0.11111111}
+  - id: broom-dust
+    frames:
+    - {fileID: 21300000, guid: 83374949a04274947b4da02ae8f6aa14, type: 3}
+    - {fileID: 21300000, guid: c188ff1f5d95d124b990728990ab0baf, type: 3}
+    - {fileID: 21300000, guid: 4b959bf6b8e51ea45a1850d66d2283c4, type: 3}
+    - {fileID: 21300000, guid: 15a62cf579b8d2047a8c99d14ad7d938, type: 3}
+    - {fileID: 21300000, guid: b6e55d7c697729547be5cb8e3eaf68de, type: 3}
+    - {fileID: 21300000, guid: 7492cbfcea364f149bed955b6c6c01b9, type: 3}
+    - {fileID: 21300000, guid: e51963c3ac6c16f4abbbb69fddf7def3, type: 3}
+    - {fileID: 21300000, guid: 327ecc94a289f3249aff3d9d150284ca, type: 3}
+    - {fileID: 21300000, guid: 4ae8945c11210834dbd1c2a9212c5c6e, type: 3}
+    - {fileID: 21300000, guid: 49929ade9ebe6594080de97c61a5bb2f, type: 3}
+    - {fileID: 21300000, guid: 63cb13a2892e6074b9b41e0a1407836f, type: 3}
+    - {fileID: 21300000, guid: cf739ff13c9e33744a45eed578acee67, type: 3}
+    - {fileID: 21300000, guid: 14c7c9be2c3d09e4f969c32c3196937b, type: 3}
+    - {fileID: 21300000, guid: 17f34cc9d5db0b54980e348a0572cb85, type: 3}
+    - {fileID: 21300000, guid: 013c804d38683e34ba07bb4e90d4377c, type: 3}
+    - {fileID: 21300000, guid: 674068ead36a13048b333c6bf010b3b8, type: 3}
+    milliseconds: 19000000190000001e0000001e000000280000002800000028000000280000002d0000002d000000320000003200000032000000320000003700000037000000i
+    loop: 0
+    animation: {fileID: 0}
+    pivot: {x: 0.5833333, y: 0.11111111}
+  - id: elite-claw-dust
+    frames:
+    - {fileID: 21300000, guid: bca7eb3abe04b0149a42f34bc5e80f31, type: 3}
+    - {fileID: 21300000, guid: 8cd9bccd9f00f5443b8a129c5ff0bbe0, type: 3}
+    - {fileID: 21300000, guid: fe98ac0fd0cb60c4a93135c2fdddf2f4, type: 3}
+    - {fileID: 21300000, guid: 85ff32e9ab535184da101b60e2cf809f, type: 3}
+    - {fileID: 21300000, guid: 59ed79300c356f9499f8a2e8c0a42cbe, type: 3}
+    - {fileID: 21300000, guid: 96260e4f710a252428ffd53e701acbf6, type: 3}
+    - {fileID: 21300000, guid: 6519a110160d6ff4a85f6c82c08aebae, type: 3}
+    - {fileID: 21300000, guid: 5fc9a93c4dfb4ed47aa0b2f74a647bfe, type: 3}
+    - {fileID: 21300000, guid: cb953fc0c3f58084bb2474027dce9ca2, type: 3}
+    - {fileID: 21300000, guid: 716a2d10660fa624a93d35f40b27d6f9, type: 3}
+    - {fileID: 21300000, guid: 853eba30c021be14a9399a8de3df2a05, type: 3}
+    - {fileID: 21300000, guid: c343007ec855f9a4e98066bf98990740, type: 3}
+    - {fileID: 21300000, guid: 463621f915f8b734889b53ad4bed1afe, type: 3}
+    - {fileID: 21300000, guid: 41f85b16f11f7f24e96f801d6df270b5, type: 3}
+    milliseconds: 1e0000001e0000001e0000001e00000028000000280000002800000028000000280000003200000032000000320000003200000032000000i
+    loop: 0
+    animation: {fileID: 0}
+    pivot: {x: 0.5833333, y: 0.11111111}
+  - id: elite-burrow-body
+    frames:
+    - {fileID: 21300000, guid: 2aec115d9a6fd4348bcc3bf4227d14ef, type: 3}
+    - {fileID: 21300000, guid: 2a9fa550efd06f844a267f06187377f7, type: 3}
+    - {fileID: 21300000, guid: 5451221e10e4502419a085c05d0e4d4a, type: 3}
+    - {fileID: 21300000, guid: 2a3c9104dbee3404daf162a841eb83d3, type: 3}
+    - {fileID: 21300000, guid: e6bf9f943f261f445a91dbcc6c10952b, type: 3}
+    - {fileID: 21300000, guid: d5295b1268e82814689074aba0427c4b, type: 3}
+    - {fileID: 21300000, guid: 634357b47b4e519439de14fe8f43a426, type: 3}
+    - {fileID: 21300000, guid: d4fb1c86f85df564a9a9dae8f2b186b1, type: 3}
+    - {fileID: 21300000, guid: 3de8f9d8b2fe4d340ba06c8053d08d53, type: 3}
+    - {fileID: 21300000, guid: 1f127e349697aee45989c2569bbd5953, type: 3}
+    - {fileID: 21300000, guid: b2e407764965dc745b3b1e16c1934bb6, type: 3}
+    - {fileID: 21300000, guid: 7c2020c5bfaba2f48bac651f25b11537, type: 3}
+    - {fileID: 21300000, guid: 5398428aead2c8e40b419c16c03f6d6c, type: 3}
+    - {fileID: 21300000, guid: 026b97d7781318f4b84aeb294610dc0a, type: 3}
+    milliseconds: 280000002800000028000000280000002800000028000000280000002800000028000000280000002800000028000000280000001e000000i
+    loop: 0
+    animation: {fileID: 0}
+    pivot: {x: 0.5, y: 0.18181819}
+  - id: elite-ground-warning
+    frames:
+    - {fileID: 21300000, guid: 80498288cb4138c459a6c954a8ef5ce9, type: 3}
+    - {fileID: 21300000, guid: 729064c10c064e840bc09ecec7fc4747, type: 3}
+    - {fileID: 21300000, guid: 44df645a0a3734b408627e8b45d07dd4, type: 3}
+    - {fileID: 21300000, guid: 2658a4a88f111534085931e2b885df38, type: 3}
+    - {fileID: 21300000, guid: c1f649c45a647c6459abf1712a4223ab, type: 3}
+    - {fileID: 21300000, guid: 4718378bbf7b6284d8e2672810324fd7, type: 3}
+    - {fileID: 21300000, guid: 0ec976d10543ae048ae6896160543453, type: 3}
+    - {fileID: 21300000, guid: 3a686312765b3c945acd6f185c98b08a, type: 3}
+    - {fileID: 21300000, guid: d0f110fa643387e4c9872caafcb0d8b5, type: 3}
+    - {fileID: 21300000, guid: 1feec5d9f3f81a8478e91d4cc1909025, type: 3}
+    milliseconds: 37000000370000003700000037000000370000003700000037000000370000003700000037000000i
+    loop: 0
+    animation: {fileID: 0}
+    pivot: {x: 0.5, y: 0.18181819}
+  - id: elite-eruption-fx
+    frames:
+    - {fileID: 21300000, guid: bd59dad5186b7454e96ab0b6d7aa128e, type: 3}
+    - {fileID: 21300000, guid: e2944daf6fdf9a643aafb736b79ad30b, type: 3}
+    - {fileID: 21300000, guid: ca8209df813cd3d41aa189dc2d8178a8, type: 3}
+    - {fileID: 21300000, guid: e53d17297fdc0424c84cbf96a20d0fa9, type: 3}
+    - {fileID: 21300000, guid: c162354f7db838848bdb008e2a6353a3, type: 3}
+    - {fileID: 21300000, guid: bec82cbb78379a0418399f53ed8d7f7b, type: 3}
+    - {fileID: 21300000, guid: 9f12586cb6e1dc44e9d0487686c53dae, type: 3}
+    - {fileID: 21300000, guid: 83ae72f67a6fffe49a930d4ff3839b2c, type: 3}
+    - {fileID: 21300000, guid: 2181e7734d251dd4fa34dbb34df564da, type: 3}
+    - {fileID: 21300000, guid: f2fd47bc66f45054092d35bc0d25fb1f, type: 3}
+    - {fileID: 21300000, guid: 0a23fe6048155454797a86e9cb884b90, type: 3}
+    - {fileID: 21300000, guid: 400710d3c99d2c04ea586a99d8190871, type: 3}
+    - {fileID: 21300000, guid: 865fb59d3c8a683469587ece06a84281, type: 3}
+    - {fileID: 21300000, guid: b619f5c7def48fa43b53d1dc18507b04, type: 3}
+    milliseconds: 1e0000001e0000001e0000001e0000001e0000001e0000002d0000002d0000002d0000002d0000002d0000002d0000002d0000002d000000i
+    loop: 0
+    animation: {fileID: 0}
+    pivot: {x: 0.5, y: 0.18181819}
+  - id: elite-emerge-body
+    frames:
+    - {fileID: 21300000, guid: 40a2b9967f2f82f47810009191384223, type: 3}
+    - {fileID: 21300000, guid: d742df7c2e01ce6498ba987467b8886e, type: 3}
+    - {fileID: 21300000, guid: 95370f166dab285438bc23e053c58eff, type: 3}
+    - {fileID: 21300000, guid: f5bfa4fda4a11c9479f3908169e8dcce, type: 3}
+    - {fileID: 21300000, guid: 01e39f0c93b09f94ab77cd02b25adcce, type: 3}
+    - {fileID: 21300000, guid: d59fd98bc22de984aafb27e67df6c63e, type: 3}
+    - {fileID: 21300000, guid: a482f3dce04d5d143850361391a1d5e9, type: 3}
+    - {fileID: 21300000, guid: eca57173ed02e72429961c0dcc1b7bef, type: 3}
+    - {fileID: 21300000, guid: 015c9a59b7be3a94da60851b682c5bfe, type: 3}
+    - {fileID: 21300000, guid: afc81ccb2d392844a96a83f2af2285bc, type: 3}
+    - {fileID: 21300000, guid: 5934524237e34a247bf30babd69e7e2d, type: 3}
+    - {fileID: 21300000, guid: 2ec31e328d6fad94296e2b0a692e1cd0, type: 3}
+    - {fileID: 21300000, guid: b9e09ee2c89bca444b2a8890eef60dea, type: 3}
+    - {fileID: 21300000, guid: 9b8594298fd73084496d383a0dd4f12b, type: 3}
+    milliseconds: 2800000028000000280000002800000028000000280000002800000028000000280000002800000028000000280000002800000028000000i
+    loop: 0
+    animation: {fileID: 0}
+    pivot: {x: 0.5, y: 0.18181819}
+  - id: elite-claw-sweep
+    frames:
+    - {fileID: 21300000, guid: 95ecd47bcd4247d5a654fabae7163480, type: 3}
+    - {fileID: 21300000, guid: c8c0ddd27abc45eb980a29febeb3bb99, type: 3}
+    - {fileID: 21300000, guid: 5a94789c0e8f4edda34f00c52f8905ac, type: 3}
+    - {fileID: 21300000, guid: ae5dff0db70147c59c0940b3ff3798f7, type: 3}
+    - {fileID: 21300000, guid: b2f0753f340a459591450275f816ac13, type: 3}
+    - {fileID: 21300000, guid: d47e3cf9e2b54aa9953f6124fd4a21e1, type: 3}
+    - {fileID: 21300000, guid: 8f7a7ffb4a6a48c3a587b975742cfb5e, type: 3}
+    - {fileID: 21300000, guid: 465aa76ebb1f48dd940f4d4e4ac01f14, type: 3}
+    milliseconds: 1400000014000000280000002800000028000000280000002800000028000000i
+    loop: 0
+    animation: {fileID: 0}
+    pivot: {x: 0.5, y: 0.1534091}

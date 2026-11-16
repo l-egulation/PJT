@@ -1,0 +1,196 @@
+{
+ "frames": [
+  {
+   "filename": "emp-hit_red 0",
+   "frame": {
+    "x": 0,
+    "y": 0,
+    "w": 80,
+    "h": 80
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 80,
+    "h": 80
+   },
+   "sourceSize": {
+    "w": 80,
+    "h": 80
+   },
+   "duration": 40
+  },
+  {
+   "filename": "emp-hit_red 1",
+   "frame": {
+    "x": 80,
+    "y": 0,
+    "w": 80,
+    "h": 80
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 80,
+    "h": 80
+   },
+   "sourceSize": {
+    "w": 80,
+    "h": 80
+   },
+   "duration": 40
+  },
+  {
+   "filename": "emp-hit_red 2",
+   "frame": {
+    "x": 160,
+    "y": 0,
+    "w": 80,
+    "h": 80
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 80,
+    "h": 80
+   },
+   "sourceSize": {
+    "w": 80,
+    "h": 80
+   },
+   "duration": 40
+  },
+  {
+   "filename": "emp-hit_red 3",
+   "frame": {
+    "x": 0,
+    "y": 80,
+    "w": 80,
+    "h": 80
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 80,
+    "h": 80
+   },
+   "sourceSize": {
+    "w": 80,
+    "h": 80
+   },
+   "duration": 40
+  },
+  {
+   "filename": "emp-hit_red 4",
+   "frame": {
+    "x": 80,
+    "y": 80,
+    "w": 80,
+    "h": 80
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 80,
+    "h": 80
+   },
+   "sourceSize": {
+    "w": 80,
+    "h": 80
+   },
+   "duration": 40
+  },
+  {
+   "filename": "emp-hit_red 5",
+   "frame": {
+    "x": 160,
+    "y": 80,
+    "w": 80,
+    "h": 80
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 80,
+    "h": 80
+   },
+   "sourceSize": {
+    "w": 80,
+    "h": 80
+   },
+   "duration": 40
+  },
+  {
+   "filename": "emp-hit_red 6",
+   "frame": {
+    "x": 0,
+    "y": 160,
+    "w": 80,
+    "h": 80
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 80,
+    "h": 80
+   },
+   "sourceSize": {
+    "w": 80,
+    "h": 80
+   },
+   "duration": 40
+  }
+ ],
+ "meta": {
+  "app": "https://github.com/patch-gg/pixelfx",
+  "version": "1",
+  "image": "emp-hit_red.png",
+  "format": "RGBA8888",
+  "size": {
+   "w": 240,
+   "h": 240
+  },
+  "scale": "1",
+  "frameTags": [
+   {
+    "name": "emp-hit_red",
+    "from": 0,
+    "to": 6,
+    "direction": "forward"
+   }
+  ],
+  "pixelfx": {
+   "id": "ink/emp-hit",
+   "name": "Empowered hit (ink)",
+   "fps": 25,
+   "loop": false,
+   "frames": 7,
+   "frameSize": [
+    80,
+    80
+   ],
+   "pivot": [
+    40,
+    40
+   ],
+   "columns": 3,
+   "color": "red",
+   "facing": "right",
+   "anchor": "hit-point"
+  }
+ }
+}

@@ -1,0 +1,58 @@
+{
+  "tool": "built-in image_gen",
+  "styleReferences": [
+    "house_balcony.png",
+    "courtyard_wall.png",
+    "stone_arch.png"
+  ],
+  "originals": [
+    "generated-atlas-original.png",
+    "generated-room-original.png"
+  ],
+  "prompts": "prompts.txt",
+  "processing": "Atlas crop preserving original alpha; room resized to 1280 × 615. Lighting applied in renderer.",
+  "cuts": [
+    {
+      "name": "wall",
+      "left": 46,
+      "top": 43,
+      "width": 558,
+      "height": 473
+    },
+    {
+      "name": "alcove",
+      "left": 652,
+      "top": 55,
+      "width": 498,
+      "height": 458
+    },
+    {
+      "name": "buttress",
+      "left": 1197,
+      "top": 34,
+      "width": 293,
+      "height": 478
+    },
+    {
+      "name": "gear-large",
+      "left": 108,
+      "top": 534,
+      "width": 440,
+      "height": 438
+    },
+    {
+      "name": "gear-small",
+      "left": 673,
+      "top": 611,
+      "width": 320,
+      "height": 322
+    },
+    {
+      "name": "pulley",
+      "left": 1156,
+      "top": 526,
+      "width": 272,
+      "height": 462
+    }
+  ]
+}

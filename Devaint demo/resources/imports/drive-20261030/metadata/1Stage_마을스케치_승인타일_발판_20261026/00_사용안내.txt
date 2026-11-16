@@ -1,0 +1,19 @@
+1Stage 마을 스케치 · 승인 타일과 발판
+
+범위: 지형 9 PNG(돌4종·빗금 내부·좌우 벽·밑면·일반 발판), 선택한 A 슈퍼점프의 컬러/스케치2 PNG.
+기존 최종 그림의 바이트와 투명도를 그대로 유지합니다. 근경·원경·중간 전환의 전체 미술 완료 승인을 의미하지 않습니다.
+이 패키지는 본 대화의 실험 브랜치용이며 main에 적용된 패키지가 아닙니다.
+
+받기: experiment/stage1-village-reference의 최신 소스와 .meta를 먼저 받습니다.
+Unity를 닫고 ZIP과 manifest를 다운로드한 뒤 저장소 루트에서 실행합니다:
+python tools/restore_assets.py "다운로드경로/stage1-village-approved-images.zip" --manifest docs/assets/manifests/stage1-village-approved-images.json
+
+ZIP 내부의 unity/Assets/... 상대 경로를 유지합니다. PNG만 포함하며 코드·셰이더·씬·JSON·.meta는 Git에서 받습니다.
+32px는 충돌/배치 격자이며 실제 그림은 투명 여백을 포함합니다. 32x32로 다시 Slice하면 잘립니다.
+ReferenceGround/library.json의 접촉점과 전체 캔버스를 사용합니다. 옛 모서리 조각은 쓰지 않습니다.
+빗금 내부는 월드 좌표 셰이더와 연속 지형 메시가 연결합니다. PNG 하나만 반복 배치한 결과와 다릅니다.
+A 발판의 눌림/반동은 기존 메시 애니메이션과 런타임이 담당하며 그림의 새 프레임이 아닙니다.
+
+sources.zip은 선택한 그림 재현에 필요한 원본/요청문입니다. Unity Assets에 넣지 않습니다.
+preview.png는 이전 실제 Unity 캡처이며 새 후보가 아닙니다. A 피드백 이미지는 채택한 동작 참고 시안입니다.
+일반 에셋 업데이트.bat의 공용 이미지 목록에는 이 실험 패키지를 섞지 않습니다.

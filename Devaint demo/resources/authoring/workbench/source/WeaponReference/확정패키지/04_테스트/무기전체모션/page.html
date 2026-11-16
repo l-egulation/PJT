@@ -1,0 +1,42 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>잉크 · 네 무기 전체 모션</title>
+<style>body{margin:24px auto;max-width:1700px;padding:0 20px;background:#19232d;color:#eef3f6;font:15px/1.6 'Malgun Gothic',sans-serif}h1{font-size:26px}p{color:#becbd5}button,select{background:#304355;color:#fff;border:1px solid #6a8094;border-radius:6px;padding:9px 12px;font:inherit;cursor:pointer}.tools{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;align-items:center}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}article{background:#263442;border:1px solid #556576;border-radius:10px;overflow:hidden}header{padding:12px 16px;display:flex;justify-content:space-between;align-items:center}h2{font-size:20px;margin:0}canvas{display:block;width:100%;image-rendering:pixelated;background:#48515d}.info{padding:6px 16px;color:#e1c088;min-height:26px}.local{padding:0 16px 12px}a{color:#efc78c}@media(max-width:850px){.grid{grid-template-columns:1fr}}</style>
+<h1>잉크 · 기본검 / 채찍 / 레이피어 / 단검</h1><p>대기부터 죽음까지 기존 선별 모션과 각 무기 공격을 같은 접지선에서 확인합니다. 기본검은 최신 올려베기·내려베기 시안이며 이전 공격도 선택할 수 있습니다.</p>
+<div class="tools"><select id="motion" aria-label="전체 모션"></select><button id="restart">모두 처음부터</button><button id="auto">전체 순서 재생</button><button id="pause">일시정지</button><button id="step">35ms 진행</button><select id="speed" aria-label="재생 속도"><option value="1">1배속</option><option value="0.5">0.5배속</option><option value="0.25">0.25배속</option></select><button id="fx">이펙트 켜짐</button><select id="swordVersion" aria-label="기본검 공격 버전"><option value="new">기본검 · 최신 올려베기 / 내려베기</option><option value="old">기본검 · 이전 공격</option></select></div>
+<p id="status">이미지 불러오는 중…</p><section class="grid" id="cards"></section>
+<script>
+const DATA=/*ASSETS*/,$=id=>document.getElementById(id),imgs={},states={},cards={};
+const choices={idle:'대기',walk:'걷기',run:'달리기',jump:'점프 전체',fall:'낙하 → 착지',dash:'대시 전체',death:'죽음 → 사망 유지',combo:'공격 연속',attack1:'공격 1타',attack2:'공격 2타',attack3:'공격 3타',attack4:'공격 4타'};
+const groups={jump:['jump_start','jump_rise','jump_apex','fall_start','fall_loop','land'],fall:['fall_start','fall_loop','land'],dash:['dash_start','dash_active','dash_end'],death:['death_start','death_fall','death_hold']};
+let paused=false,fx=true,auto=false,autoIndex=0,autoTime=0,last=null,oldSword=false;
+function weapon(k){return k==='sword'&&oldSword?DATA.legacySword:DATA.weapons[k];}
+function sequence(k,name){const w=weapon(k),lookup=Object.fromEntries(w.modules.map(m=>[m.id,m]));let ids=name==='combo'?Object.keys(lookup).filter(x=>x.startsWith('attack')).sort():groups[name]||[name],steps=[],effects=[],start=0;
+ for(const id of ids){const m=lookup[id];if(!m)continue;const hit=id.startsWith('attack')?Number(id.slice(6)):0,attack=w.attacks[String(hit)];let used=0,limit=name==='combo'&&id!==ids.at(-1)?attack?.chainAt:Infinity;
+  if(hit&&attack)effects.push({hit,start:start+attack.fxStart,kind:attack.effect||(hit===1?'up':'down')});
+  for(const s of m.steps){if(used>=limit)break;const ms=Math.min(s.ms,limit-used);steps.push({...s,ms,module:id});used+=ms;}start+=used;
+ }
+ return {steps,effects,duration:start};}
+function choose(k,name){states[k]={name,time:0,seq:sequence(k,name)};if(cards[k])cards[k].select.value=name;}
+function all(name){for(const k of Object.keys(DATA.weapons))choose(k,name);$('motion').value=name;autoTime=0;}
+function selected(k){const st=states[k],seq=st.seq;if(!seq.steps.length)return null;let t=st.time;if(st.name==='death')t=Math.min(t,seq.duration-1);else if(['idle','walk','run'].includes(st.name))t%=seq.duration;else{t%=seq.duration+600;if(t>=seq.duration)return {frame:weapon(k).modules.find(m=>m.id==='idle').steps[0].frame,module:'idle',phase:'복귀',local:t};}
+ const local=t;for(const s of seq.steps){if(t<s.ms)return {...s,local};t-=s.ms;}return {...seq.steps.at(-1),local};}
+function frameImage(k,id){return imgs[(k==='sword'&&oldSword?'legacy':k)+':'+id];}
+function draw(k){const c=cards[k].canvas,g=c.getContext('2d'),w=weapon(k),st=states[k],s=selected(k);g.imageSmoothingEnabled=false;g.fillStyle='#48515d';g.fillRect(0,0,896,384);g.fillStyle='#8493a3';g.fillRect(0,304,896,1);
+ if(!s){cards[k].info.textContent='이 무기에 해당 공격은 없습니다.';return;}const im=frameImage(k,s.frame),p=w.framePivots?.[s.frame]||w.pivot,o=w.frameOffsets?.[s.frame]||[0,0],dx=s.dx||0,dy=s.dy||0;
+ g.drawImage(im,Math.round((144-p[0]+o[0]+dx)*2),Math.round((152-p[1]+o[1]+dy)*2),im.width*2,im.height*2);
+ if(fx)for(const e of st.seq.effects){let age=s.local-e.start;if(age<0)continue;const timing=w.effectTiming?.[e.kind]||w.effectMs,frames=w.effects[e.kind];if(!frames)continue;let i=0;while(i<frames.length&&age>=timing[i])age-=timing[i++];if(i>=frames.length)continue;
+  const image=imgs[(k==='sword'&&oldSword?'legacy':k)+':fx:'+e.kind+':'+i],fp=w.fxPivot||w.pivot;g.save();
+  if(w.alignedFx){const cfg=w.alignedFx[e.hit-1],o=cfg.offsets[i];g.translate((144-fp[0]+o[0])*2,(152-fp[1]+o[1])*2);if(cfg.flip_x){g.translate(256,0);g.scale(-1,1);}g.drawImage(image,0,0,256,256);}
+  else{const fo=w.fxOffset||[0,0];g.drawImage(image,(144-fp[0]+fo[0])*2,(152-fp[1]+fo[1])*2,image.width*2,image.height*2);}g.restore();
+ }
+ cards[k].info.textContent=(choices[st.name]||st.name)+' · '+s.frame+' · '+(s.phase||'')+(st.name==='death'&&st.time>=st.seq.duration?' · 사망 유지':'');}
+function update(dt){for(const s of Object.values(states))s.time+=dt;if(auto){autoTime+=dt;const total=Math.max(...Object.values(states).map(s=>s.seq.duration))+850;if(autoTime>=total){autoIndex=(autoIndex+1)%8;all(['idle','walk','run','jump','fall','dash','combo','death'][autoIndex]);}}}
+function option(select,key,label){const o=document.createElement('option');o.value=key;o.textContent=label;select.append(o);}
+for(const[k,label]of Object.entries(choices))option($('motion'),k,label);
+for(const[k,w]of Object.entries(DATA.weapons)){const card=document.createElement('article'),head=document.createElement('header'),title=document.createElement('h2'),sel=document.createElement('select'),canvas=document.createElement('canvas'),info=document.createElement('div');title.textContent=w.name;canvas.width=896;canvas.height=384;info.className='info';sel.setAttribute('aria-label',w.name+' 모션');for(const[id,label]of Object.entries(choices))if(!id.startsWith('attack')||w.attacks[id.slice(6)])option(sel,id,label);sel.onchange=()=>{auto=false;choose(k,sel.value);};head.append(title,sel);card.append(head,canvas,info);$('cards').append(card);cards[k]={canvas,select:sel,info};choose(k,'idle');}
+const loads=[];for(const[k,w]of [...Object.entries(DATA.weapons),['legacy',DATA.legacySword]]){for(const[id,src]of Object.entries(w.frames))loads.push([k+':'+id,src]);for(const[n,frames]of Object.entries(w.effects))frames.forEach((src,i)=>loads.push([k+':fx:'+n+':'+i,src]));}
+Promise.all(loads.map(([key,src])=>new Promise((ok,bad)=>{const im=new Image();im.onload=()=>{imgs[key]=im;ok();};im.onerror=()=>bad(Error(key));im.src=src;}))).then(()=>{
+ $('status').textContent='모션을 선택하거나 전체 순서 재생으로 네 무기를 함께 확인하세요. 죽음은 마지막 자세를 유지합니다.';
+ $('motion').onchange=()=>{auto=false;all($('motion').value);};$('restart').onclick=()=>{for(const[k,s]of Object.entries(states))choose(k,s.name);autoTime=0;};$('auto').onclick=()=>{auto=true;autoIndex=0;all('idle');paused=false;};$('pause').onclick=()=>{paused=!paused;$('pause').textContent=paused?'재생':'일시정지';};$('step').onclick=()=>{paused=true;$('pause').textContent='재생';update(35);};$('fx').onclick=()=>{fx=!fx;$('fx').textContent=fx?'이펙트 켜짐':'이펙트 꺼짐';};$('swordVersion').onchange=()=>{oldSword=$('swordVersion').value==='old';choose('sword',states.sword.name);};
+ function tick(t){const dt=last===null?0:Math.min(60,t-last);last=t;if(!paused)update(dt*Number($('speed').value));for(const k of Object.keys(cards))draw(k);requestAnimationFrame(tick);}requestAnimationFrame(tick);
+}).catch(e=>{$('status').textContent='이미지 로딩 실패: '+e.message;});
+</script></html>

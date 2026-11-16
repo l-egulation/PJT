@@ -1,0 +1,104 @@
+{
+  "tool": "built-in imagegen",
+  "jobs": [
+    {
+      "id": "twilight",
+      "role": "far",
+      "prompt": "Create only a distant parallax forest background texture for an original pixel art side scrolling game. Style and colors from reference: dusty lavender and mauve forest, pale peach haze, plum shadows, rosy pink moss, deep eggplant soil. Wide 3:1 panorama logical 1280x400. Full opaque scene of layered enormous distant tree trunks and soft but PIXEL SHARP broad foliage silhouettes, bright atmospheric openings distributed irregularly across length. Low contrast restrained3 tone shading, large pixel clusters. No playable soil, grass platforms, foreground close bushes, characters, buildings, text or UI. Trees continue beyond left/right edges, avoid symmetrical tree-frame composition. The lower quarter is distant forest silhouettes, not terrain. Designed for horizontal scrolling, no vignette or center focal point.",
+      "refs": [
+        "C:/Users/SSAFY/Desktop/자율 프로젝트/아트/배경/숲_색상컨셉_3안_20261011/03_황혼숲.png"
+      ]
+    },
+    {
+      "id": "twilight",
+      "role": "mid",
+      "prompt": "Generate transparent parallax middle-distance forest layer, wide3:1 canvas logical1280x400. dusty lavender and mauve forest, pale peach haze, plum shadows, rosy pink moss, deep eggplant soil. Reference for art style only. 4 distinct irregularly spaced medium distance giant branching forest trees, groups of understory foliage, open transparent gaps between trees, all roots reach bottom canvas; leaves and branches fully within top boundary with transparent air above. Crisp chunky pixel-art shapes, 3 shades per material, readable silhouette, limited detail. No sky, no opaque haze, no terrain soil or platforms, no characters structures text. True transparent outside trees. Lighter muted trees than playable terrain, keep center height relatively open.",
+      "refs": [
+        "C:/Users/SSAFY/Desktop/자율 프로젝트/아트/배경/숲_색상컨셉_3안_20261011/03_황혼숲.png"
+      ]
+    },
+    {
+      "id": "twilight",
+      "role": "front",
+      "prompt": "One low isolated cluster of forest ferns and broad leaves, transparent background, wide2:1 canvas logical128x64. dusty lavender and mauve forest, pale peach haze, plum shadows, rosy pink moss, deep eggplant soil, use darkest muted shadow colors with very sparse secondary shade. Small foreground sprite for bottom screen edge of pixel platformer; chunky simple low silhouette. Entire cluster contained with transparent margin on ALL FOUR sides, no clipped leaf tips. No soil grass ground, trees, background, text. Match reference visual style with simplified detail, not a detailed illustration.",
+      "refs": [
+        "C:/Users/SSAFY/Desktop/자율 프로젝트/아트/배경/숲_색상컨셉_3안_20261011/03_황혼숲.png"
+      ]
+    },
+    {
+      "id": "twilight",
+      "role": "tiles",
+      "prompt": "EDIT the first image, a 6 columns by4 rows tile atlas, second image is ONLY target palette and style reference. Preserve the EXACT tile atlas arrangement, contours, alpha transparency, individual grass edges, soil pebble positions and corner geometry, recolor only to dusty lavender and mauve forest, pale peach haze, plum shadows, rosy pink moss, deep eggplant soil. Top grass becomes appropriate moss color, blue soil becomes palette's very dark soil, rocks have modest subdued contrast. Do NOT rearrange, add padding, add gaps, add gridlines, add frames, upscale shapes individually or draw a landscape. Canvas3:2 logically192x128. Every pixel is same tile geometry as source. Pixel art limited shading. Preserve transparent areas.",
+      "refs": [
+        "C:/Users/SSAFY/Desktop/자율 프로젝트/아트/배경/숲_새주인공_가위몬스터_v14/02_타일32/타일시트_192x128.png",
+        "C:/Users/SSAFY/Desktop/자율 프로젝트/아트/배경/숲_색상컨셉_3안_20261011/03_황혼숲.png"
+      ]
+    },
+    {
+      "id": "gold",
+      "role": "far",
+      "prompt": "Create only a distant parallax forest background texture for an original pixel art side scrolling game. Style and colors from reference: warm ivory haze, honey gold olive leaves, golden yellow moss, muted dark plum brown soil. Wide 3:1 panorama logical 1280x400. Full opaque scene of layered enormous distant tree trunks and soft but PIXEL SHARP broad foliage silhouettes, bright atmospheric openings distributed irregularly across length. Low contrast restrained3 tone shading, large pixel clusters. No playable soil, grass platforms, foreground close bushes, characters, buildings, text or UI. Trees continue beyond left/right edges, avoid symmetrical tree-frame composition. The lower quarter is distant forest silhouettes, not terrain. Designed for horizontal scrolling, no vignette or center focal point.",
+      "refs": [
+        "C:/Users/SSAFY/Desktop/자율 프로젝트/아트/배경/숲_색상컨셉_3안_20261011/01_황금숲.png"
+      ]
+    },
+    {
+      "id": "gold",
+      "role": "mid",
+      "prompt": "Generate transparent parallax middle-distance forest layer, wide3:1 canvas logical1280x400. warm ivory haze, honey gold olive leaves, golden yellow moss, muted dark plum brown soil. Reference for art style only. 4 distinct irregularly spaced medium distance giant branching forest trees, groups of understory foliage, open transparent gaps between trees, all roots reach bottom canvas; leaves and branches fully within top boundary with transparent air above. Crisp chunky pixel-art shapes, 3 shades per material, readable silhouette, limited detail. No sky, no opaque haze, no terrain soil or platforms, no characters structures text. True transparent outside trees. Lighter muted trees than playable terrain, keep center height relatively open.",
+      "refs": [
+        "C:/Users/SSAFY/Desktop/자율 프로젝트/아트/배경/숲_색상컨셉_3안_20261011/01_황금숲.png"
+      ]
+    },
+    {
+      "id": "gold",
+      "role": "front",
+      "prompt": "One low isolated cluster of forest ferns and broad leaves, transparent background, wide2:1 canvas logical128x64. warm ivory haze, honey gold olive leaves, golden yellow moss, muted dark plum brown soil, use darkest muted shadow colors with very sparse secondary shade. Small foreground sprite for bottom screen edge of pixel platformer; chunky simple low silhouette. Entire cluster contained with transparent margin on ALL FOUR sides, no clipped leaf tips. No soil grass ground, trees, background, text. Match reference visual style with simplified detail, not a detailed illustration.",
+      "refs": [
+        "C:/Users/SSAFY/Desktop/자율 프로젝트/아트/배경/숲_색상컨셉_3안_20261011/01_황금숲.png"
+      ]
+    },
+    {
+      "id": "gold",
+      "role": "tiles",
+      "prompt": "EDIT the first image, a 6 columns by4 rows tile atlas, second image is ONLY target palette and style reference. Preserve the EXACT tile atlas arrangement, contours, alpha transparency, individual grass edges, soil pebble positions and corner geometry, recolor only to warm ivory haze, honey gold olive leaves, golden yellow moss, muted dark plum brown soil. Top grass becomes appropriate moss color, blue soil becomes palette's very dark soil, rocks have modest subdued contrast. Do NOT rearrange, add padding, add gaps, add gridlines, add frames, upscale shapes individually or draw a landscape. Canvas3:2 logically192x128. Every pixel is same tile geometry as source. Pixel art limited shading. Preserve transparent areas.",
+      "refs": [
+        "C:/Users/SSAFY/Desktop/자율 프로젝트/아트/배경/숲_새주인공_가위몬스터_v14/02_타일32/타일시트_192x128.png",
+        "C:/Users/SSAFY/Desktop/자율 프로젝트/아트/배경/숲_색상컨셉_3안_20261011/01_황금숲.png"
+      ]
+    },
+    {
+      "id": "jade",
+      "role": "far",
+      "prompt": "Create only a distant parallax forest background texture for an original pixel art side scrolling game. Style and colors from reference: pale celadon haze, sage jade green leaves, restrained green moss, deep dark pine teal soil. Wide 3:1 panorama logical 1280x400. Full opaque scene of layered enormous distant tree trunks and soft but PIXEL SHARP broad foliage silhouettes, bright atmospheric openings distributed irregularly across length. Low contrast restrained3 tone shading, large pixel clusters. No playable soil, grass platforms, foreground close bushes, characters, buildings, text or UI. Trees continue beyond left/right edges, avoid symmetrical tree-frame composition. The lower quarter is distant forest silhouettes, not terrain. Designed for horizontal scrolling, no vignette or center focal point.",
+      "refs": [
+        "C:/Users/SSAFY/Desktop/자율 프로젝트/아트/배경/숲_색상컨셉_3안_20261011/02_비취숲.png"
+      ]
+    },
+    {
+      "id": "jade",
+      "role": "mid",
+      "prompt": "Generate transparent parallax middle-distance forest layer, wide3:1 canvas logical1280x400. pale celadon haze, sage jade green leaves, restrained green moss, deep dark pine teal soil. Reference for art style only. 4 distinct irregularly spaced medium distance giant branching forest trees, groups of understory foliage, open transparent gaps between trees, all roots reach bottom canvas; leaves and branches fully within top boundary with transparent air above. Crisp chunky pixel-art shapes, 3 shades per material, readable silhouette, limited detail. No sky, no opaque haze, no terrain soil or platforms, no characters structures text. True transparent outside trees. Lighter muted trees than playable terrain, keep center height relatively open.",
+      "refs": [
+        "C:/Users/SSAFY/Desktop/자율 프로젝트/아트/배경/숲_색상컨셉_3안_20261011/02_비취숲.png"
+      ]
+    },
+    {
+      "id": "jade",
+      "role": "front",
+      "prompt": "One low isolated cluster of forest ferns and broad leaves, transparent background, wide2:1 canvas logical128x64. pale celadon haze, sage jade green leaves, restrained green moss, deep dark pine teal soil, use darkest muted shadow colors with very sparse secondary shade. Small foreground sprite for bottom screen edge of pixel platformer; chunky simple low silhouette. Entire cluster contained with transparent margin on ALL FOUR sides, no clipped leaf tips. No soil grass ground, trees, background, text. Match reference visual style with simplified detail, not a detailed illustration.",
+      "refs": [
+        "C:/Users/SSAFY/Desktop/자율 프로젝트/아트/배경/숲_색상컨셉_3안_20261011/02_비취숲.png"
+      ]
+    },
+    {
+      "id": "jade",
+      "role": "tiles",
+      "prompt": "EDIT the first image, a 6 columns by4 rows tile atlas, second image is ONLY target palette and style reference. Preserve the EXACT tile atlas arrangement, contours, alpha transparency, individual grass edges, soil pebble positions and corner geometry, recolor only to pale celadon haze, sage jade green leaves, restrained green moss, deep dark pine teal soil. Top grass becomes appropriate moss color, blue soil becomes palette's very dark soil, rocks have modest subdued contrast. Do NOT rearrange, add padding, add gaps, add gridlines, add frames, upscale shapes individually or draw a landscape. Canvas3:2 logically192x128. Every pixel is same tile geometry as source. Pixel art limited shading. Preserve transparent areas.",
+      "refs": [
+        "C:/Users/SSAFY/Desktop/자율 프로젝트/아트/배경/숲_새주인공_가위몬스터_v14/02_타일32/타일시트_192x128.png",
+        "C:/Users/SSAFY/Desktop/자율 프로젝트/아트/배경/숲_색상컨셉_3안_20261011/02_비취숲.png"
+      ]
+    }
+  ]
+}

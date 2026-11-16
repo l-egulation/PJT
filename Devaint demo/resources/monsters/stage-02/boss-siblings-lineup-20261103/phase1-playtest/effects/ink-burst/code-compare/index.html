@@ -1,0 +1,15 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>잉크 분출 · 기존 / 코드 비교</title><style>body{margin:20px;background:#18232d;color:#e8e7ed;font:16px system-ui}main{max-width:1000px;margin:auto}h1{font-size:24px}p{color:#c0cfda;line-height:1.6}button,a,select{display:inline-block;padding:10px;margin:4px;color:#ead6e4;background:#33404f;border:1px solid #74879b}canvas{display:block;max-width:100%;image-rendering:pixelated;margin:12px 0}</style><main><h1>잉크 분출 · 기존 채택안 / 코드 시안</h1><p>왼쪽: 채택한 이미지 프레임 · 오른쪽: 코드로 계산한 픽셀 분출.<br>압력 축적 → 급격한 상승 → 발판 전체 폭의 잉크 기둥이 솟구친 뒤 내려앉음. 양쪽 발판 너비·바닥선 동일.</p><button id="reset">처음부터</button><button id="peak">솟구치는 순간</button><button id="pause">일시정지</button><select id="bg"><option value="map">맵 배경</option><option value="white">흰 배경</option><option value="dark">어두운 배경</option></select><a href="../../../">1페이즈 테스트</a><p id="status"></p><canvas width="960" height="540"></canvas><p>코드 시안 비교용 · 기존 채택 이펙트와 1페이즈 적용본은 유지.</p></main><script type="module">
+import {drawGeyser,makeGeyser} from './geyser.mjs?v=2';
+import {drawBurst} from '../aether-compare/a-clean/platform-fill/selected-burst.mjs?v=2';
+const load=p=>new Promise((r,j)=>{const i=new Image;i.onload=()=>r(i);i.onerror=j;i.src=p});
+const [bg,terrain,...frames]=await Promise.all(['../../../../map-preview/assets/D.png','../../../../map-preview/assets/terrain-preview.png',...Array.from({length:16},(_,i)=>'../aether-compare/a-clean/platform-fill/frames/'+String(i).padStart(2,'0')+'.png')].map(load));
+const ctx=document.querySelector('canvas').getContext('2d'),raster=makeGeyser();let time=0,last=performance.now(),running=true;
+document.querySelector('#reset').onclick=()=>{time=0;last=performance.now();running=true;document.querySelector('#pause').textContent='일시정지'};
+document.querySelector('#peak').onclick=()=>{time=1.03;running=false;document.querySelector('#pause').textContent='재생'};
+document.querySelector('#pause').onclick=e=>{running=!running;e.target.textContent=running?'일시정지':'재생'};
+function draw(now){if(running)time+=Math.max(0,Math.min(.2,(now-last)/1000));last=now;const age=time%2.8;
+ctx.imageSmoothingEnabled=false;const background=document.querySelector('#bg').value;if(background==='map')ctx.drawImage(bg,0,0);else{ctx.fillStyle=background==='white'?'#ffffff':'#17202c';ctx.fillRect(0,0,960,540)}
+for(const x of [128,608])ctx.drawImage(terrain,128,192,96,16,x,440,224,32);
+drawBurst(ctx,frames,128,440,age,224/96);drawGeyser(ctx,raster,608,440,age,224/96);
+ctx.fillStyle=background==='white'?'#25303c':'#f1d8e7';ctx.font='bold 22px system-ui';ctx.fillText('기존 채택안',170,44);ctx.fillText('코드 시안',650,44);document.querySelector('#status').textContent=age.toFixed(2)+'초 · 같은 바닥선 / 같은 폭';requestAnimationFrame(draw)}requestAnimationFrame(draw);
+</script>

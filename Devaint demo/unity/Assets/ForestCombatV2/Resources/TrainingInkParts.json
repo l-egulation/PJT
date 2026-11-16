@@ -1,0 +1,625 @@
+{
+  "parts": [
+    {
+      "id": "r_burn",
+      "name": "번지는 화상",
+      "color": "red",
+      "description": "원타격 적중 시 3초간 화상. 파츠별 독립 지속 피해.",
+      "limit": "추가타는 화상을 새로 부여하지 않음. 같은 인스턴스는 갱신만",
+      "cooldown": 0.7,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "r_chase",
+      "name": "추격타",
+      "color": "red",
+      "description": "원타격 3회 적중마다 같은 적에게 추가타.",
+      "limit": "파생 타격은 적중 횟수에 미포함",
+      "cooldown": 0.4,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "r_split",
+      "name": "분열 타격",
+      "color": "red",
+      "description": "적중한 적에게 원타격 피해의 25%인 후속타 2회.",
+      "limit": "무기당 하나. 광역의 첫 대상에만 발동",
+      "cooldown": 1.2,
+      "duplicate": false,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "r_echo",
+      "name": "잔향 타격",
+      "color": "red",
+      "description": "적중한 적에게 0.5초 뒤 잔향 피해.",
+      "limit": "적 개체의 생명 단위 고정. 재등장 적에게 이전하지 않음",
+      "cooldown": 0.9,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "r_blast",
+      "name": "파열 충격",
+      "color": "red",
+      "description": "특수공격 최초 적중점 주변에 작은 폭발.",
+      "limit": "특수 한 번에 인스턴스당 1회",
+      "cooldown": 1.5,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "r_wave",
+      "name": "관통 파동",
+      "color": "red",
+      "description": "기본 공격 적중점에서 전방으로 파동.",
+      "limit": "부가 피해만 생성. 파동은 다른 적중 파츠를 발동하지 않음",
+      "cooldown": 1.5,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "r_shard",
+      "name": "갈라지는 파편",
+      "color": "red",
+      "description": "직접 적중한 적 주변의 다른 적 최대 2명에게 파편.",
+      "limit": "같은 원타격의 첫 적중에서만 발동. 본 대상 제외",
+      "cooldown": 1,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "r_finisher",
+      "name": "마무리 충격",
+      "color": "red",
+      "description": "기본 콤보 마지막 타격이 근처에 충격파 생성.",
+      "limit": "사이클당 1회",
+      "cooldown": 0.8,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "r_blood",
+      "name": "혈인",
+      "color": "red",
+      "description": "차징 발동 준비 시 체력 최대 6을 지불하고 해당 공격 추가 피해.",
+      "limit": "체력 1 보장. 실제 지불량만 피해로 전환. 피격으로 취급하지 않음",
+      "cooldown": 0,
+      "duplicate": false,
+      "unityImplementation": "experimental_shared_combat_v1",
+      "requiresStamp": "charged_special",
+      "unityNote": "시험에서는 차징 준비 시작에 비용을 지불한다. 조기 해제·대시 취소 시에도 비용은 반환하지 않는다."
+    },
+    {
+      "id": "r_delay",
+      "name": "지연 절단",
+      "color": "red",
+      "description": "차징에 적중한 첫 대상에게 후속타 2회.",
+      "limit": "차징 한 번에 파츠당 1대상. 후속타 재귀 금지",
+      "cooldown": 1,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1",
+      "requiresStamp": "charged_special"
+    },
+    {
+      "id": "r_range",
+      "name": "넓어지는 일격",
+      "color": "red",
+      "description": "차징의 적용 가능 사거리·반경을 40% 확대.",
+      "limit": "대상당 피해 유지. 무기당 하나",
+      "cooldown": 0,
+      "duplicate": false,
+      "unityImplementation": "experimental_shared_combat_v1",
+      "requiresStamp": "charged_special"
+    },
+    {
+      "id": "r_rage",
+      "name": "광폭화",
+      "color": "red",
+      "description": "현재 체력 35 이하에서 원공격 피해 30% 증가.",
+      "limit": "실험에서는 최대 체력을 변경하지 않음. 기존 체력 감소형 후보의 대안",
+      "cooldown": 0,
+      "duplicate": false,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "y_haste",
+      "name": "연속 가속",
+      "color": "yellow",
+      "description": "원타격 적중을 쌓으면 3초간 같은 무기 사이클 간격 단축.",
+      "limit": "같은 인스턴스는 갱신. 콤보 모션·타격 간격은 가속하지 않음",
+      "cooldown": 1,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1",
+      "unityNote": "Unity 시험에서는 이후 콤보 마지막 행동의 회수 구간만 줄인다. 준비·접촉·콤보 타격 간격은 유지한다."
+    },
+    {
+      "id": "y_stride",
+      "name": "추격 보폭",
+      "color": "yellow",
+      "description": "적중 후 3초간 이동 속도 증가.",
+      "limit": "제자리 입력으로 이동량 생성 금지",
+      "cooldown": 1,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "y_cross",
+      "name": "교대 가속",
+      "color": "yellow",
+      "description": "이 무기로 적중한 적에게 다른 무기가 적중하면 다음 행동의 회수 시간 단축.",
+      "limit": "실제 무기 ID가 달라야 함. 다음 행동 1회 소비",
+      "cooldown": 1.5,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "y_cycle",
+      "name": "완주 순환",
+      "color": "yellow",
+      "description": "기본 콤보 완주 적중으로 다른 무기의 특수 쿨타임 0.5초 회수.",
+      "limit": "남은 시간 0 미만 금지. 실제 발동 전 쿨타임 생성 금지",
+      "cooldown": 1,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "y_wave",
+      "name": "질주하는 칼날",
+      "color": "yellow",
+      "description": "실제 이동 4unit마다 검기 저장, 다음 기본 공격 시작에 방출.",
+      "limit": "무기별 최대 3회. 이동 없는 입력·순간이동·강제 보정 제외",
+      "cooldown": 0,
+      "duplicate": false,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "y_refund",
+      "name": "사냥의 여세",
+      "color": "yellow",
+      "description": "차징과 그 파생 효과로 처치하면 다음 차징 게이지 15% 저장.",
+      "limit": "한 생명당 1회. 무기별 합계 75% 상한으로 준비 생략 방지",
+      "cooldown": 0,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1",
+      "requiresStamp": "charged_special"
+    },
+    {
+      "id": "y_charge_move",
+      "name": "이동 축적",
+      "color": "yellow",
+      "description": "차징 중 실제 이동 1unit당 게이지 6% 추가 축적.",
+      "limit": "실제 차징 유지시간이 최소 준비시간보다 짧아지지 않음",
+      "cooldown": 0,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1",
+      "requiresStamp": "charged_special"
+    },
+    {
+      "id": "y_recovery",
+      "name": "잔심",
+      "color": "yellow",
+      "description": "차징 공격의 회수 시간을 20% 단축.",
+      "limit": "회수 80% 단축 상한. 준비·피해는 유지",
+      "cooldown": 0,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1",
+      "requiresStamp": "charged_special"
+    },
+    {
+      "id": "y_special",
+      "name": "엇박자 준비",
+      "color": "yellow",
+      "description": "다른 무기의 특수 다음에 행동하면 준비시간 단축.",
+      "limit": "한 번만 소비. 같은 무기의 기본·특수 교차로는 미발동",
+      "cooldown": 1.5,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "y_kill",
+      "name": "사냥 보폭",
+      "color": "yellow",
+      "description": "처치 후 3초간 이동 속도 증가.",
+      "limit": "킬 수만큼 중첩하지 않고 인스턴스별 갱신",
+      "cooldown": 1.5,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "y_dodge",
+      "name": "회피 순환",
+      "color": "yellow",
+      "description": "시험 회피 성공 시 다른 무기의 특수 쿨타임 회수.",
+      "limit": "연속 입력이 아닌 적의 실제 공격 회피 기준. 회피 성공은 모델의 외생 입력",
+      "cooldown": 2,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1",
+      "unityNote": "Unity는 대시 무적 중 실제 적 공격 판정과 접촉했을 때만, 적 공격 실행당 한 번 인정한다."
+    },
+    {
+      "id": "y_distance",
+      "name": "접근 준비",
+      "color": "yellow",
+      "description": "실제 이동 6unit마다 다음 행동 준비시간을 줄임.",
+      "limit": "다음 행동 1회 저장. 저장을 중첩해 준비시간 0으로 만들 수 없음",
+      "cooldown": 2,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "g_shield",
+      "name": "생명의 박동",
+      "color": "green",
+      "description": "원타격 4회 적중마다 3초 보호막 8.",
+      "limit": "전 무기 보호막 합계 50. 같은 인스턴스는 갱신",
+      "cooldown": 2,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "g_counter",
+      "name": "반격 회복",
+      "color": "green",
+      "description": "적에게 체력 피해를 받은 뒤 1.5초 안 적중하면 실제 손실의 25% 회복.",
+      "limit": "회복은 피해 사건별 총 실제 손실 이하. 자해·보호막 흡수분 제외",
+      "cooldown": 2,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "g_guard",
+      "name": "공격적 방비",
+      "color": "green",
+      "description": "기본 콤보 완주 후 3초 안 다음 피격 피해 감소.",
+      "limit": "1회 소모. 총 피해 감소 50% 상한",
+      "cooldown": 1,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "g_seed",
+      "name": "회복 씨앗",
+      "color": "green",
+      "description": "처치 시 회복 씨앗 생성. 접근해 주우면 체력 4 회복.",
+      "limit": "실험에서 0.7초 후 회수하는 조건부 가정. 안전하지 않은 위치·회수 실패는 미재현",
+      "cooldown": 2,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1",
+      "unityNote": "Unity 시험은 실제 접근 픽업이다. 자동 회수하지 않으며 회수 거리와 수명은 unityExperiment.tuning을 따른다."
+    },
+    {
+      "id": "g_charge_shield",
+      "name": "철벽 차징",
+      "color": "green",
+      "description": "실제 준비시간에 비례해 임시 보호막 생성, 발동 때 남은 양을 피해로 전환.",
+      "limit": "받은 피해로 소모된 보호막은 전환 불가. 차징 취소 시 소멸",
+      "cooldown": 0,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1",
+      "requiresStamp": "charged_special"
+    },
+    {
+      "id": "g_armor",
+      "name": "강철 주입",
+      "color": "green",
+      "description": "시험 방어력 20의 35%를 차징 추가 피해로 전환.",
+      "limit": "방어력 부여·피해 감산 공식은 이 파츠로 새로 만들지 않음",
+      "cooldown": 0,
+      "duplicate": true,
+      "unityImplementation": "not_implemented",
+      "requiresStamp": "charged_special",
+      "unityNote": "사용자 요청으로 보류. 실제 방어력 체계가 정해지기 전까지 장착할 수 없다."
+    },
+    {
+      "id": "g_heal",
+      "name": "전투 봉합",
+      "color": "green",
+      "description": "차징 원타격 적중 시 체력 5 회복.",
+      "limit": "한 차징당 인스턴스별 1회. 적 수·다단 수만큼 증식하지 않음",
+      "cooldown": 1.5,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1",
+      "requiresStamp": "charged_special"
+    },
+    {
+      "id": "g_leech",
+      "name": "생명 수확",
+      "color": "green",
+      "description": "원타격의 실제 체력 피해 8%를 회복.",
+      "limit": "과잉 피해·표식 폭발·지속 피해로 흡혈하지 않음",
+      "cooldown": 0.6,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "g_overheal",
+      "name": "넘치는 생명",
+      "color": "green",
+      "description": "원타격에 체력 2 회복, 이 파츠의 초과 회복을 보호막으로 전환.",
+      "limit": "자기 회복만 전환. 다른 회복으로 재귀 전환하지 않음",
+      "cooldown": 2,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "g_thorns",
+      "name": "가시 반격",
+      "color": "green",
+      "description": "적의 공격으로 실제 체력 피해를 받으면 공격한 적에게 반격.",
+      "limit": "자해·보호막 흡수·낙사 미발동. 반격은 원타격이 아님",
+      "cooldown": 1.5,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "g_burst",
+      "name": "보호막 강타",
+      "color": "green",
+      "description": "특수 적중 시 남은 보호막 최대 15를 소모해 1.2배 추가 피해.",
+      "limit": "다른 전환 파츠와 실제 소모량을 공유. 보호막 중복 소비 금지",
+      "cooldown": 2,
+      "duplicate": false,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "g_full",
+      "name": "온전한 일격",
+      "color": "green",
+      "description": "체력 80 이상에서 원타격에 추가 피해 6.",
+      "limit": "다단·광역의 첫 적중에서만 발동",
+      "cooldown": 1,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "b_slow",
+      "name": "서리 잉크",
+      "color": "blue",
+      "description": "적중한 적을 2초간 25% 둔화.",
+      "limit": "둔화는 합산하지 않고 가장 강한 값 적용",
+      "cooldown": 0.8,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "b_zone",
+      "name": "냉기 흔적",
+      "color": "blue",
+      "description": "특수 적중점 반경 2의 적을 3초간 30% 둔화.",
+      "limit": "이 모델은 장판 진입·이탈을 재현하지 않고 생성 시 범위 대상만 적용",
+      "cooldown": 2,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1",
+      "unityNote": "Unity 시험은 실제 장판이다. 장판이 살아 있는 동안 범위 내 적에게 둔화를 갱신하며, 늦게 진입한 적도 적용한다."
+    },
+    {
+      "id": "b_root",
+      "name": "얼음 족쇄",
+      "color": "blue",
+      "description": "원타격 적중 4회마다 대상을 0.5초 속박.",
+      "limit": "대상 공통 제어 회복구간 1.8초. 중복으로 연장 불가",
+      "cooldown": 1.2,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "b_frost",
+      "name": "서리 축적",
+      "color": "blue",
+      "description": "냉기 축적과 약한 둔화를 부여. 축적 4에서 0.6초 빙결.",
+      "limit": "축적은 적별 공유·최대 4. 빙결 후 초기화하고 제어 회복 적용",
+      "cooldown": 0.5,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "b_shatter",
+      "name": "쇄빙 타격",
+      "color": "blue",
+      "description": "짧은 둔화를 부여하고 이전 행동부터 제어 중이던 적에게 추가 냉기 피해.",
+      "limit": "같은 적중에서 새로 건 제어로 자기 추가 피해를 발동하지 않음",
+      "cooldown": 1.2,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "b_charge",
+      "name": "서리 집중",
+      "color": "blue",
+      "description": "차징 준비 중 주변 반경 2.5를 둔화.",
+      "limit": "현재 적 위치에만 적용. 준비 자체를 무적으로 만들지 않음",
+      "cooldown": 0,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1",
+      "requiresStamp": "charged_special"
+    },
+    {
+      "id": "b_charge_shatter",
+      "name": "쇄빙 일섬",
+      "color": "blue",
+      "description": "차징이 제어된 적에게 적중하면 추가 피해와 짧은 속박.",
+      "limit": "속박은 공통 회복구간 준수. 단독 운용용 약한 둔화도 부여",
+      "cooldown": 1.5,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1",
+      "requiresStamp": "charged_special"
+    },
+    {
+      "id": "b_wave",
+      "name": "빙결 파동",
+      "color": "blue",
+      "description": "콤보 마지막 타격으로 주변에 냉기 피해와 둔화.",
+      "limit": "파동은 다른 파츠를 재귀 발동하지 않음",
+      "cooldown": 2,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "b_death",
+      "name": "서리 유산",
+      "color": "blue",
+      "description": "제어 중인 적 처치 시 주변에 냉기 피해와 둔화.",
+      "limit": "처치 폭발이 새 처치 폭발을 연쇄 생성하지 않음. 제어 공급은 별도 필요",
+      "cooldown": 1,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "b_break",
+      "name": "얼음 균열",
+      "color": "blue",
+      "description": "이 무기로 적중한 적을 다른 무기로 때리면 냉기 피해와 속박.",
+      "limit": "같은 무기의 기본·특수 교차는 제외. 제어 회복구간 공유",
+      "cooldown": 1.5,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "b_distance",
+      "name": "서리 장벽",
+      "color": "blue",
+      "description": "실제 이동 5unit마다 가까운 적에게 냉기 피해와 둔화.",
+      "limit": "이동량 소비. 이동 없는 입력으로 발동하지 않음",
+      "cooldown": 2,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "b_prison",
+      "name": "차가운 감옥",
+      "color": "blue",
+      "description": "특수 적중 대상에게 냉기 피해와 짧은 빙결.",
+      "limit": "빙결은 속박으로 간이 재현. 대상 공통 제어 회복구간 준수",
+      "cooldown": 2,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1",
+      "unityNote": "Unity 빙결은 기절과 같아 이동·공격을 막고 진행 중 공격을 취소한다. 보스도 동일하다."
+    },
+    {
+      "id": "p_mark",
+      "name": "깊은 각인",
+      "color": "purple",
+      "description": "원타격으로 표식 1을 남김. 이미 3 이상이면 이전 표식을 소모해 폭발.",
+      "limit": "신규 표식은 생성한 행동에서 소모 불가. 대상별 최대 6·5초",
+      "cooldown": 0.6,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "p_detonate",
+      "name": "저주 파열",
+      "color": "purple",
+      "description": "특수가 이전 표식을 소모해 큰 피해. 표식이 없으면 1개 부여.",
+      "limit": "표식 소모는 실제 남은 수량만. 같은 대상 표식을 여러 파츠가 중복 소비 불가",
+      "cooldown": 1.2,
+      "duplicate": false,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "p_cross",
+      "name": "교차 공명",
+      "color": "purple",
+      "description": "이 무기로 적중한 적에게 다른 무기가 적중하면 이전 표식 격발 후 표식 1 부여.",
+      "limit": "실제 무기 식별. 격발 피해가 다시 교차 발동하지 않음",
+      "cooldown": 1,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "p_spread",
+      "name": "전파 낙인",
+      "color": "purple",
+      "description": "표식이 있던 적 처치 시 주변 최대 2명에 표식 1 전파.",
+      "limit": "표식만 전파. 새 피해·처치 사건을 즉시 만들지 않음",
+      "cooldown": 0.6,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "p_heavy",
+      "name": "응축 저주",
+      "color": "purple",
+      "description": "차징이 이전 표식 3 이상을 소모하면 큰 폭발. 미충족이면 2 부여.",
+      "limit": "요구 수 미만이면 격발하지 않음. 새 표식 같은 행동 소비 금지",
+      "cooldown": 1,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1",
+      "requiresStamp": "charged_special"
+    },
+    {
+      "id": "p_echo",
+      "name": "메아리 각인",
+      "color": "purple",
+      "description": "적중 0.6초 뒤 표식 2 부여.",
+      "limit": "지연 부여도 원래 행동 ID·대상 생명 유지. 표식 생성은 적중이 아님",
+      "cooldown": 1.5,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "p_finish",
+      "name": "완결 낙인",
+      "color": "purple",
+      "description": "기본 콤보 완주에 이전 표식 격발, 이후 표식 1 부여.",
+      "limit": "표식 소모는 한 번. 기본 각 타마다 별도 격발하지 않음",
+      "cooldown": 1,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "p_link",
+      "name": "연결 저주",
+      "color": "purple",
+      "description": "본 대상에 표식 1, 가까운 다른 적 1명에게 표식 1 부여.",
+      "limit": "전파는 새 적중 아님. 대상별 표식 상한 공유",
+      "cooldown": 1.5,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "p_drain",
+      "name": "저주 수확",
+      "color": "purple",
+      "description": "이전 표식 2 이상 소모 시 피해와 체력 3 회복. 이후 표식 1 부여.",
+      "limit": "회복은 성공한 자기 격발에만 1회. 파생 피해 흡혈 아님",
+      "cooldown": 1.5,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    },
+    {
+      "id": "p_charge",
+      "name": "압축 낙인",
+      "color": "purple",
+      "description": "첫 차징에 표식 2, 다음 차징에서 이전 표식을 소모해 폭발.",
+      "limit": "같은 차징 다단 적중으로 자기 표식 소비 금지",
+      "cooldown": 1,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1",
+      "requiresStamp": "charged_special"
+    },
+    {
+      "id": "p_timer",
+      "name": "시한 저주",
+      "color": "purple",
+      "description": "표식 1 부여 후 1.5초 뒤 남아 있는 이전 표식을 소모해 피해.",
+      "limit": "먼저 소모된 표식을 중복 소비하지 않음. 예약 당시 생명 고정",
+      "cooldown": 2,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1",
+      "unityNote": "Unity는 자신의 신규 표식을 포함해 예약 당시 존재한 표식 ID 중 남아 있는 것만 소비한다. 나중에 추가된 표식은 소비하지 않는다."
+    },
+    {
+      "id": "p_distance",
+      "name": "잔류 낙인",
+      "color": "purple",
+      "description": "실제 이동 5unit마다 가까운 적에 표식 1과 약한 저주 피해.",
+      "limit": "이동량을 소비. 약한 피해는 표식·이동 효과를 재귀 발동하지 않음",
+      "cooldown": 2,
+      "duplicate": true,
+      "unityImplementation": "experimental_shared_combat_v1"
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+{
+  "tileSize": 32,
+  "ppu": 32,
+  "modules": [
+    {
+      "name": "rim_top_01",
+      "src": "terrain/rim_v3/rim_top_01.png",
+      "width": 112,
+      "height": 64,
+      "anchorX": 0,
+      "anchorY": 18,
+      "baselineY": 18,
+      "sourceRect": {
+        "left": 0,
+        "top": 49,
+        "width": 112,
+        "height": 64
+      },
+      "sha256": "a88d0c9e92e4856041799a786a5befae481cdb20e72196f3672f1ba89a8026fa"
+    },
+    {
+      "name": "rim_top_02",
+      "src": "terrain/rim_v3/rim_top_02.png",
+      "width": 112,
+      "height": 64,
+      "anchorX": 0,
+      "anchorY": 18,
+      "baselineY": 18,
+      "sourceRect": {
+        "left": 160,
+        "top": 154,
+        "width": 112,
+        "height": 64
+      },
+      "sha256": "383027276f79fe1afd5dcf704e8107b5082a04ec3d79db05aaca6d33f8005b45"
+    },
+    {
+      "name": "rim_top_03",
+      "src": "terrain/rim_v3/rim_top_03.png",
+      "width": 112,
+      "height": 64,
+      "anchorX": 0,
+      "anchorY": 18,
+      "baselineY": 18,
+      "sourceRect": {
+        "left": 248,
+        "top": 154,
+        "width": 112,
+        "height": 64
+      },
+      "sha256": "4e934003ce3fc96ac74e7b2ac81e3b8258d8d1e59754abbe4f1de0bbbda73dff"
+    },
+    {
+      "name": "rim_top_04",
+      "src": "terrain/rim_v3/rim_top_04.png",
+      "width": 112,
+      "height": 64,
+      "anchorX": 0,
+      "anchorY": 18,
+      "baselineY": 18,
+      "sourceRect": {
+        "left": 400,
+        "top": 49,
+        "width": 112,
+        "height": 64
+      },
+      "sha256": "8dd3bec1dc0ae19ef774454a21fb3e2641bd0de9b060ad718e98160f63264570"
+    },
+    {
+      "name": "rim_outer_right",
+      "src": "terrain/rim_v3/rim_outer_right.png",
+      "width": 64,
+      "height": 64,
+      "anchorX": 32,
+      "anchorY": 18,
+      "baselineY": 18,
+      "sourceRect": {
+        "left": 104,
+        "top": 49,
+        "width": 64,
+        "height": 64
+      },
+      "sha256": "d47798fb41e0a697a725b21faffd1c88c925be43440320c1c60d9b65a94337c4"
+    },
+    {
+      "name": "rim_outer_left",
+      "src": "terrain/rim_v3/rim_outer_left.png",
+      "width": 64,
+      "height": 64,
+      "anchorX": 32,
+      "anchorY": 18,
+      "baselineY": 18,
+      "sourceRect": {
+        "left": 344,
+        "top": 49,
+        "width": 64,
+        "height": 64
+      },
+      "sha256": "82e6490cffeb8e1f8c267eaadc19430d232afbefa31b0009152da60f00784a2e"
+    },
+    {
+      "name": "rim_inner_right",
+      "src": "terrain/rim_v3/rim_inner_right.png",
+      "width": 64,
+      "height": 80,
+      "anchorX": 32,
+      "anchorY": 32,
+      "baselineY": 32,
+      "sourceRect": {
+        "left": 104,
+        "top": 140,
+        "width": 64,
+        "height": 80
+      },
+      "sha256": "524773877b23f7339223a8c8846e2c4837b58bfda5e1682befc47d5bad88b1ca"
+    },
+    {
+      "name": "rim_inner_left",
+      "src": "terrain/rim_v3/rim_inner_left.png",
+      "width": 64,
+      "height": 80,
+      "anchorX": 32,
+      "anchorY": 32,
+      "baselineY": 32,
+      "sourceRect": {
+        "left": 344,
+        "top": 140,
+        "width": 64,
+        "height": 80
+      },
+      "sha256": "9f22f7386478dce2f5db52607999da607d9d232de06836cf879f160e841d5a38"
+    },
+    {
+      "name": "rim_side_right",
+      "src": "terrain/rim_v3/rim_side_right.png",
+      "width": 64,
+      "height": 32,
+      "anchorX": 32,
+      "anchorY": 0,
+      "baselineY": 0,
+      "sourceRect": {
+        "left": 104,
+        "top": 88,
+        "width": 64,
+        "height": 32
+      },
+      "sha256": "a3b44bb6758dbf6333c8974439914c2454b5b9c53fb44251705f0feabcb8123f"
+    },
+    {
+      "name": "rim_side_left",
+      "src": "terrain/rim_v3/rim_side_left.png",
+      "width": 64,
+      "height": 32,
+      "anchorX": 32,
+      "anchorY": 0,
+      "baselineY": 0,
+      "sourceRect": {
+        "left": 344,
+        "top": 88,
+        "width": 64,
+        "height": 32
+      },
+      "sha256": "1f8b33d0c1637c5f3e72a156362c895cc104e06b9c2a6dddb272d8368638ebfe"
+    },
+    {
+      "name": "rim_side_right_02",
+      "src": "terrain/rim_v3/rim_side_right_02.png",
+      "width": 64,
+      "height": 32,
+      "anchorX": 32,
+      "anchorY": 0,
+      "baselineY": 0,
+      "sourceRect": {
+        "left": 104,
+        "top": 120,
+        "width": 64,
+        "height": 32
+      },
+      "sha256": "681a94015f9431f409c359e2ba07ede5454895e35e955cde8bd329a620d65478"
+    },
+    {
+      "name": "rim_side_left_02",
+      "src": "terrain/rim_v3/rim_side_left_02.png",
+      "width": 64,
+      "height": 32,
+      "anchorX": 32,
+      "anchorY": 0,
+      "baselineY": 0,
+      "sourceRect": {
+        "left": 344,
+        "top": 120,
+        "width": 64,
+        "height": 32
+      },
+      "sha256": "ec277669c5f18f4776504521db4014868dbef21209b7967bbc620ba4e5038bd0"
+    },
+    {
+      "name": "rim_platform_left",
+      "src": "terrain/platform_v3/rim_platform_left.png",
+      "width": 32,
+      "height": 71,
+      "baselineY": 17,
+      "sourceRect": {
+        "left": 0,
+        "top": 0,
+        "width": 32,
+        "height": 71
+      },
+      "sha256": "a2dbbe697ba202ce3912d7a28fb1ad4123a48ba406898d65957737f9b0de1724"
+    },
+    {
+      "name": "rim_platform_mid_01",
+      "src": "terrain/platform_v3/rim_platform_mid_01.png",
+      "width": 128,
+      "height": 71,
+      "baselineY": 17,
+      "sourceRect": {
+        "left": 32,
+        "top": 0,
+        "width": 128,
+        "height": 71
+      },
+      "sha256": "97e428ab75513a1d98b1f31a9f5c6d61dfa31760ec5bcb4952118151e2db99d3"
+    },
+    {
+      "name": "rim_platform_mid_02",
+      "src": "terrain/platform_v3/rim_platform_mid_02.png",
+      "width": 128,
+      "height": 71,
+      "baselineY": 17,
+      "sourceRect": {
+        "left": 326,
+        "top": 0,
+        "width": 128,
+        "height": 71
+      },
+      "sha256": "586d662ed37f9e526f6ea8d69b672a4ca05a3bf592a44d3d2d1811630a2f6096"
+    },
+    {
+      "name": "rim_platform_right",
+      "src": "terrain/platform_v3/rim_platform_right.png",
+      "width": 58,
+      "height": 71,
+      "baselineY": 17,
+      "sourceRect": {
+        "left": 454,
+        "top": 0,
+        "width": 58,
+        "height": 71
+      },
+      "sha256": "8a4413c114f3518bd2b01e06af26cfd898873f5d6f361062ca3c68c400622f8c"
+    }
+  ]
+}

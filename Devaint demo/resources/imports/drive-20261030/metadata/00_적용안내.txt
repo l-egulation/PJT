@@ -1,0 +1,41 @@
+F109 승인 에셋 적용 안내
+
+승인 이미지: 3,484개 (1챕터 대기 모션 6종 포함)
+코드·씬·Unity .meta·실행기·이미지 목록은 Git에서 받습니다.
+이 공유 폴더에서는 이미지와 제작 원본을 받습니다.
+
+처음 한 번 준비
+1. Git에서 최신 main을 받습니다.
+2. Python 3.9 이상을 설치합니다. 설치 시 Add Python to PATH를 선택합니다.
+   별도 pip 패키지는 필요하지 않습니다.
+3. 데스크톱용 Google Drive에서 이 공유 폴더를 연결하고,
+   01_승인에셋을 오프라인 사용 가능으로 설정해 동기화를 기다립니다.
+   Drive를 설치하지 않아도 01_승인에셋 전체를 다운로드·압축 해제한
+   로컬 폴더를 선택할 수 있습니다.
+
+에셋 적용
+1. Git을 최신으로 받고 Unity를 닫습니다.
+2. 저장소 최상위의 에셋 업데이트.bat을 더블클릭합니다.
+3. 처음에는 assets 폴더가 들어 있는 01_승인에셋을 선택합니다.
+   그 상위 공유 폴더를 선택해도 됩니다.
+4. 완료 메시지를 확인한 뒤 Unity Hub에서 해당 저장소의 unity 폴더를 엽니다.
+   Unity 버전은 Git의 unity/ProjectSettings/ProjectVersion.txt를 따릅니다.
+   1챕터 확인 씬: Assets/MeadowDuskV3/Scenes/Chapter1MeadowCombat.unity
+
+다음부터는 Git과 Drive를 최신으로 받고 Unity를 닫은 뒤
+같은 에셋 업데이트.bat을 더블클릭하면 됩니다. 선택 경로를 기억합니다.
+Drive 연결 폴더는 동기화 완료를 기다리고, 다운로드한 로컬 폴더는
+에셋 갱신 때 최신 사본으로 다시 받아야 합니다.
+
+폴더 위치를 바꿀 때: 에셋 업데이트.bat --choose-source
+적용 전 확인만 할 때: 에셋 업데이트.bat --check
+이 실행기는 Git pull이나 브랜치 변경을 자동으로 하지 않습니다.
+
+검증에 실패하면 Drive 동기화가 끝난 후 다시 실행합니다.
+직접 수정한 이미지는 덮어쓰지 않으므로 충돌 오류는 담당자에게 전달합니다.
+승인된 이전 버전을 교체할 때는 outputs/assets-sync/backups에 백업합니다.
+이미지 이름과 폴더 경로를 바꾸지 마세요. Git의 .meta와 같은 위치에 적용해야 합니다.
+
+chapter1-idle-approved.zip은 대기 모션 제작 원본 보관용으로 유지합니다.
+최신 main의 일반 적용에는 이 ZIP이나 Pillow가 필요하지 않습니다.
+상세 안내: 저장소 docs/assets/README.md

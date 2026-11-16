@@ -1,0 +1,1403 @@
+{
+  "schemaVersion": 1,
+  "id": "opening_playable",
+  "title": "색이 있던 마을",
+  "status": "draft-pending-user-review",
+  "source": "docs/design/story/opening/opening-playable.md",
+  "coordinates": "world x in starting-village units (data/assets/starting_hub.json layoutProposal, width 84)",
+  "schema": {
+    "triggers": {
+      "start": "opening begins (new profile or resumed checkpoint)",
+      "after": "the named beat finished all its actions",
+      "reachX": "player x crosses lte/gte; grounded: also standing; minY/maxY: feet height above the ground",
+      "inputDone": "player performed action: move(distance) | jump | airJump | dash | attack1 | attack2 | skill1 | skill2",
+      "interact": "player completed F interaction with target",
+      "screenClosed": "the named hub screen closed with its goal met",
+      "touch": "player touched the named object",
+      "wait": "seconds elapsed since the action started (banner doneWhen only)",
+      "event": "named runtime event (erasureMet, runDeathReturn, bossFirstClearReturn, firstUnlockColored)",
+      "skip": "never fires by itself: the opening's skip (skip.beat) starts the beat"
+    },
+    "actions": {
+      "bubble": "speaker, text, mode auto (no input lock) | advance (F/Space)",
+      "banner": "keys, text, doneWhen trigger; the beat waits until done",
+      "lockInput / unlockInput": "via the hub control scope, never Time.timeScale",
+      "village": "color state allColor | allSketch | profile; interactables hidden | shown",
+      "autoWalk": "teleport to fromX, then walk to toX",
+      "erasureChase": "fromBehind (units left of the hero), holdAt (the front waits there until released), slowFromX (slower past it while held); the left front appears still and the hero turns to it",
+      "erasureGo / erasureRelease": "start the front / drop its hold and chase after seconds of grace (tuning in the chase block)",
+      "waitErasure": "hold the beat until the left front reaches x",
+      "heroSketch": "mode hands: the hero turns to sketch where it stands, softly from both hands (non-blocking; waitAnimation holds until it has covered the body) | revive: the helper's ink floods the sketch from the chest, then drains into the face as the colour comes back (the ink body)",
+      "waitAnimation": "hold the beat until the stage's animations (hero sketch, helper gathering until its pop, helper leap until it lands) are done",
+      "erasureClose / erasureMeet": "a right front comes in rightAhead units right of the hero, both drifting at rightSpeed/leftSpeed / both reach the hero within seconds (event erasureMet)",
+      "cameraShake / sfx / wait": "presentation",
+      "drainColor": "actor colour drains to sketch over seconds",
+      "clip": "actor, clip, x, reverse (helper clip leap: it jumps into the hero's chest; the beat waits until it lands. hero clip inkGather: the hero lies at x as a shape of gathering ink and its colour comes back; death reversed gets it up)",
+      "actor": "spawn | despawn a story actor (the helper gathers out of streaks of light from its pixel sheet; the beat waits until it pops)",
+      "checkpoint": "persist openingCheckpoint",
+      "flag": "persist a profile flag",
+      "awaken": "the opening's road, erasure and helper go; every movement opens; the hero stays the ink body",
+      "openStation": "id, doneWhen; opens that station's screen as the F key would",
+      "lesson": "keys, text, ghost: the game pauses while the recorded ghost (data/story/opening_ghosts.json) shows the move with its keys lit as it presses them; Space closes it once the ghost has shown it (that Space does not jump). Without ghost: a guide card.",
+      "abilities": "set: exactly these movements are usable (jump | airJump | wall | dash; [] = walking only) | grant: add them. Untaught movement stays locked; the end of the opening opens everything",
+      "notebook": "the investigator's notebook (notebook block) over a dark screen; Space turns the pages; the beat waits until it is closed",
+      "broom": "mode appear: the village broom (broom block) stands at x, still | fight: it walks at the hero and strikes; the beat waits until it falls",
+      "inkFlicker": "the hero's ink flickers for a moment (running short)",
+      "face": "face 1 | -1: the hero turns",
+      "mark": "id: an F keycap stays over that station until the next mark (empty id clears)",
+      "focus": "x: the camera eases onto x as if the hero stood there | heroOffset: that far right of the hero | neither: back on the hero",
+      "zoom": "zoom: the camera closes in about the hero (halfway to the helper once it is out), 1 = the usual view",
+      "exclaim": "a 「!」 pops over the artisan's head (it notices the hero)",
+      "pigment": "the village's magic pigment chip appears for the first time",
+      "controls": "mode show: small cards at the top, each playing its recorded ghost (items: ghost, keys, text) with the keys and name under the picture, while the game goes on; F closes them | hide",
+      "demo": "mode play: the recorded ghost (data/story/opening_ghosts.json) plays its move over and over where it was recorded, keys and text over it, the game going on | clear: every demonstration goes"
+    },
+    "course": "road left of the village (negative x) used only by the opening: walls are moss blocks (climbable when taller than the hero; a bottom makes one hang), fences and crates are solid wooden props, platforms are one-way stone tiles, residents stand by it. The ground runs from leftX; the camera stops at cameraLeftX so the hero walks in from off screen. dodgeGate: a solid wall whose bottom opens only after the player dashes invulnerably through a practice shot; intentional opening skip also releases it.",
+    "chase": "the left front's average speed by the hero's x (speeds) times a repeating surge pattern; leash pulls it faster when the hero is more than far units ahead (k per unit, at most max); it stops for bite.hold seconds when it swallows an object, then shakes the screen (bite.shake seconds, bite.amp px); ground turns groundLead units ahead of it, each object objectLagMin..objectLagMax behind; slow is the rate while it covers the residents; a catch (catchMargin, or a chase pit) restarts at checkpointX with the front checkpointBack behind"
+  },
+  "speakers": {
+    "hero": {
+      "bubble": "paper"
+    },
+    "helper": {
+      "bubble": "ink"
+    },
+    "merchant": {
+      "bubble": "paper",
+      "note": "course resident 주민 1"
+    },
+    "traveler": {
+      "bubble": "paper",
+      "note": "course resident 주민 2"
+    }
+  },
+  "speakerNames": [
+    {
+      "speaker": "helper",
+      "name": "의문의 조력자"
+    },
+    {
+      "speaker": "artisan",
+      "name": "마을 장인"
+    }
+  ],
+  "notebook": {
+    "book": "Hub/opening/notebook/notebook",
+    "circle": "Hub/opening/notebook/red-circle-",
+    "circleFrames": 6,
+    "circleSeconds": 0.085,
+    "circleX": 1022,
+    "circleY": 504,
+    "circleScale": 2.02,
+    "pages": [
+      {
+        "art": "Hub/opening/notebook/page-01-village",
+        "x": 30,
+        "y": 110,
+        "lines": [
+          "요즘 마을들이 하나둘 색을 잃고 있다.",
+          "색이 빠진 자리에는 연필로 그린 듯한 선만 남는다.",
+          "사람들은 이것을 스케치화라고 부른다."
+        ]
+      },
+      {
+        "art": "Hub/opening/notebook/page-02-residents",
+        "x": 100,
+        "y": 110,
+        "scale": 0.8,
+        "lines": [
+          "스케치화에 휩쓸린 사람은 그 자리에서 굳어 버리고,",
+          "지금까지 다시 움직인 사람은 한 명도 없다.",
+          "나는 신고가 들어온 마을을 찾아다니며 이 현상을 기록하는 조사원이다."
+        ]
+      },
+      {
+        "art": "Hub/opening/notebook/page-03-map",
+        "x": 74,
+        "y": 90,
+        "circled": true,
+        "lines": [
+          "이번 신고는 이 길 끝에 있는 마을에서 들어왔다.",
+          "윗마을과 연락이 끊겼다고 한다."
+        ]
+      }
+    ]
+  },
+  "checkpoints": [
+    "none",
+    "erasure",
+    "awakened",
+    "done"
+  ],
+  "skip": {
+    "holdKey": "Esc",
+    "holdSeconds": 1.0,
+    "from": [
+      "none"
+    ],
+    "beat": "chase-from-skip",
+    "to": "awakened"
+  },
+  "course": {
+    "leftX": -263,
+    "cameraLeftX": -259,
+    "pieces": [
+      {
+        "kind": "fence",
+        "x": -238,
+        "width": 0.6,
+        "top": 1.5
+      },
+      {
+        "kind": "wall",
+        "x": -230,
+        "width": 2,
+        "top": 2
+      },
+      {
+        "kind": "fence",
+        "x": -222,
+        "width": 0.6,
+        "top": 1.5
+      },
+      {
+        "kind": "fence",
+        "x": -218,
+        "width": 0.6,
+        "top": 1.5
+      },
+      {
+        "kind": "wall",
+        "x": -206,
+        "width": 10,
+        "top": 5
+      },
+      {
+        "kind": "wall",
+        "x": -188,
+        "width": 5,
+        "top": 5.5
+      },
+      {
+        "kind": "wall",
+        "x": -171,
+        "width": 4,
+        "top": 9
+      },
+      {
+        "kind": "fence",
+        "x": -162,
+        "width": 0.6,
+        "top": 1.5
+      },
+      {
+        "kind": "wall",
+        "x": -157,
+        "width": 3,
+        "top": 7
+      },
+      {
+        "kind": "wall",
+        "x": -149,
+        "width": 1.5,
+        "bottom": 3.2,
+        "top": 14.6
+      },
+      {
+        "kind": "wall",
+        "x": -144.5,
+        "width": 3,
+        "top": 12.5
+      },
+      {
+        "kind": "wall",
+        "x": -136,
+        "width": 5,
+        "top": 4
+      },
+      {
+        "kind": "dodgeGate",
+        "x": -107,
+        "width": 4,
+        "top": 32
+      },
+      {
+        "kind": "decoration",
+        "id": "bridge-pier",
+        "x": -127.5
+      },
+      {
+        "kind": "decoration",
+        "id": "bridge-pier",
+        "x": -113,
+        "face": -1
+      },
+      {
+        "kind": "resident",
+        "id": "merchant",
+        "name": "주민 1",
+        "art": "Hub/opening/residents/one",
+        "x": -92.9,
+        "face": 1,
+        "phase": 0
+      },
+      {
+        "kind": "resident",
+        "id": "traveler",
+        "name": "주민 2",
+        "art": "Hub/opening/residents/two",
+        "x": -91.0,
+        "face": -1,
+        "phase": 3
+      },
+      {
+        "kind": "decoration",
+        "id": "handcart",
+        "x": -89.2
+      },
+      {
+        "kind": "wall",
+        "x": -72,
+        "width": 2,
+        "top": 4
+      },
+      {
+        "kind": "crate",
+        "x": -63,
+        "width": 1.6,
+        "top": 2
+      },
+      {
+        "kind": "platform",
+        "x": -52,
+        "width": 7,
+        "top": 2.5
+      },
+      {
+        "kind": "wall",
+        "x": -44,
+        "width": 2,
+        "top": 5.2
+      },
+      {
+        "kind": "wall",
+        "x": -35,
+        "width": 3,
+        "top": 8
+      },
+      {
+        "kind": "wall",
+        "x": -30,
+        "width": 4,
+        "top": 4
+      },
+      {
+        "kind": "wall",
+        "x": -16,
+        "width": 4,
+        "top": 4
+      },
+      {
+        "kind": "fence",
+        "x": -8,
+        "width": 0.6,
+        "top": 1.5
+      },
+      {
+        "kind": "wall",
+        "x": -2,
+        "width": 2,
+        "top": 3
+      }
+    ]
+  },
+  "chase": {
+    "checkpointX": -80,
+    "checkpointBack": 7,
+    "catchMargin": 0.5,
+    "groundLead": 1.25,
+    "objectLagMin": 0.94,
+    "objectLagMax": 3.75,
+    "slow": 0.35,
+    "caughtLine": "윽…!",
+    "speeds": [
+      {
+        "fromX": -263,
+        "speed": 7.4
+      },
+      {
+        "fromX": -40,
+        "speed": 6.2
+      },
+      {
+        "fromX": -30,
+        "speed": 7.1
+      },
+      {
+        "fromX": -13,
+        "speed": 8.0
+      }
+    ],
+    "surge": [
+      {
+        "seconds": 0.35,
+        "rate": 0.2
+      },
+      {
+        "seconds": 0.22,
+        "rate": 1.9
+      },
+      {
+        "seconds": 0.5,
+        "rate": 0.9
+      },
+      {
+        "seconds": 0.3,
+        "rate": 0.15
+      },
+      {
+        "seconds": 0.28,
+        "rate": 2.68
+      },
+      {
+        "seconds": 0.55,
+        "rate": 0.85
+      }
+    ],
+    "leash": {
+      "far": 10,
+      "k": 0.8,
+      "max": 9
+    },
+    "bite": {
+      "hold": 0.07,
+      "shake": 0.14,
+      "amp": 4
+    }
+  },
+  "beats": [
+    {
+      "id": "prologue",
+      "part": 1,
+      "trigger": {
+        "type": "start",
+        "checkpoint": "none"
+      },
+      "actions": [
+        {
+          "type": "abilities",
+          "set": []
+        },
+        {
+          "type": "village",
+          "color": "allColor",
+          "interactables": "hidden"
+        },
+        {
+          "type": "autoWalk",
+          "fromX": -260.5,
+          "toX": -260.5
+        },
+        {
+          "type": "notebook"
+        },
+        {
+          "type": "lockInput"
+        },
+        {
+          "type": "wait",
+          "seconds": 0.5
+        },
+        {
+          "type": "autoWalk",
+          "toX": -255
+        },
+        {
+          "type": "wait",
+          "seconds": 0.25
+        },
+        {
+          "type": "bubble",
+          "speaker": "hero",
+          "mode": "advance",
+          "text": "저 마을이구나."
+        },
+        {
+          "type": "bubble",
+          "speaker": "hero",
+          "mode": "advance",
+          "text": "아직은 멀쩡해 보이는데."
+        },
+        {
+          "type": "bubble",
+          "speaker": "hero",
+          "mode": "advance",
+          "text": "해 지기 전엔 닿겠다."
+        },
+        {
+          "type": "unlockInput"
+        },
+        {
+          "type": "abilities",
+          "grant": [
+            "jump",
+            "airJump",
+            "wall",
+            "dash"
+          ]
+        },
+        {
+          "type": "controls",
+          "mode": "show",
+          "items": [
+            {
+              "keys": [
+                "←",
+                "→"
+              ],
+              "text": "달리기",
+              "ghost": "run"
+            },
+            {
+              "keys": [
+                "Space"
+              ],
+              "text": "점프",
+              "ghost": "jump"
+            },
+            {
+              "keys": [
+                "Space",
+                "Space"
+              ],
+              "text": "더블 점프",
+              "ghost": "double"
+            },
+            {
+              "keys": [
+                "Shift"
+              ],
+              "text": "대시",
+              "ghost": "dash_run"
+            }
+          ]
+        },
+        {
+          "type": "demo",
+          "mode": "play",
+          "ghost": "dodge",
+          "keys": [
+            "Shift"
+          ],
+          "text": "대시로 피하기"
+        },
+        {
+          "type": "demo",
+          "mode": "play",
+          "ghost": "climb",
+          "keys": [
+            "↑"
+          ],
+          "text": "벽타기"
+        },
+        {
+          "type": "demo",
+          "mode": "play",
+          "ghost": "wallkick",
+          "keys": [
+            "↑",
+            "Space"
+          ],
+          "text": "벽차기"
+        }
+      ]
+    },
+    {
+      "id": "road-meet",
+      "part": 2,
+      "trigger": {
+        "type": "reachX",
+        "gte": -99,
+        "grounded": true
+      },
+      "actions": [
+        {
+          "type": "controls",
+          "mode": "hide"
+        },
+        {
+          "type": "demo",
+          "mode": "clear"
+        },
+        {
+          "type": "autoWalk",
+          "toX": -94.7
+        },
+        {
+          "type": "lockInput"
+        },
+        {
+          "type": "wait",
+          "seconds": 0.3
+        },
+        {
+          "type": "bubble",
+          "speaker": "merchant",
+          "mode": "advance",
+          "text": "요샌 어딜 가나 스케치화 얘기야."
+        },
+        {
+          "type": "bubble",
+          "speaker": "traveler",
+          "mode": "advance",
+          "text": "윗마을은 며칠째 소식도 없다던데."
+        },
+        {
+          "type": "bubble",
+          "speaker": "merchant",
+          "mode": "advance",
+          "text": "조사원 보낸다더니 코빼기도 안 보이고."
+        },
+        {
+          "type": "bubble",
+          "speaker": "hero",
+          "mode": "advance",
+          "text": "나 들으라고 하는 소리 같은데... 서두르자."
+        },
+        {
+          "type": "unlockInput"
+        }
+      ]
+    },
+    {
+      "id": "erasure-begin",
+      "part": 2,
+      "trigger": {
+        "type": "reachX",
+        "gte": -83
+      },
+      "actions": [
+        {
+          "type": "checkpoint",
+          "value": "erasure"
+        },
+        {
+          "type": "lockInput"
+        },
+        {
+          "type": "wait",
+          "seconds": 0.5
+        },
+        {
+          "type": "thud",
+          "volume": 0.8
+        },
+        {
+          "type": "cameraShake",
+          "seconds": 0.18
+        },
+        {
+          "type": "wait",
+          "seconds": 0.22
+        },
+        {
+          "type": "thud",
+          "volume": 1
+        },
+        {
+          "type": "cameraShake",
+          "seconds": 0.35
+        },
+        {
+          "type": "wait",
+          "seconds": 0.6
+        },
+        {
+          "type": "bubble",
+          "speaker": "hero",
+          "mode": "advance",
+          "text": "무슨 소리지..?"
+        },
+        {
+          "type": "face",
+          "face": -1
+        },
+        {
+          "type": "wait",
+          "seconds": 0.25
+        },
+        {
+          "type": "erasureChase",
+          "fromBehind": 16.5,
+          "holdAt": -85.95,
+          "slowFromX": -95.9,
+          "rollIn": 1.4
+        },
+        {
+          "type": "focus",
+          "heroOffset": -2.5
+        },
+        {
+          "type": "sfx",
+          "id": "story-world-erase"
+        },
+        {
+          "type": "wait",
+          "seconds": 1.6
+        },
+        {
+          "type": "bubble",
+          "speaker": "hero",
+          "mode": "advance",
+          "text": "어.. 색이..!"
+        },
+        {
+          "type": "erasureGo"
+        },
+        {
+          "type": "waitErasure",
+          "x": -93.9
+        },
+        {
+          "type": "bubble",
+          "speaker": "merchant",
+          "mode": "advance",
+          "text": "으악! 이, 이게 뭐야!"
+        },
+        {
+          "type": "bubble",
+          "speaker": "hero",
+          "mode": "advance",
+          "text": "뛰어야 해!"
+        },
+        {
+          "type": "waitErasure",
+          "x": -85.96
+        },
+        {
+          "type": "focus"
+        },
+        {
+          "type": "unlockInput"
+        },
+        {
+          "type": "erasureRelease",
+          "seconds": 1.2
+        },
+        {
+          "type": "banner",
+          "keys": [
+            "→"
+          ],
+          "text": "뛰기",
+          "doneWhen": {
+            "type": "reachX",
+            "gte": -75
+          }
+        }
+      ]
+    },
+    {
+      "id": "chase-from-skip",
+      "part": 2,
+      "trigger": {
+        "type": "skip"
+      },
+      "actions": [
+        {
+          "type": "controls",
+          "mode": "hide"
+        },
+        {
+          "type": "demo",
+          "mode": "clear"
+        },
+        {
+          "type": "village",
+          "color": "allColor",
+          "interactables": "hidden"
+        },
+        {
+          "type": "abilities",
+          "set": [
+            "jump",
+            "airJump",
+            "wall",
+            "dash"
+          ]
+        },
+        {
+          "type": "autoWalk",
+          "fromX": -83.5,
+          "toX": -83.5
+        },
+        {
+          "type": "checkpoint",
+          "value": "erasure"
+        },
+        {
+          "type": "erasureChase",
+          "fromBehind": 2.45,
+          "holdAt": -85.95,
+          "slowFromX": -95.9
+        },
+        {
+          "type": "unlockInput"
+        },
+        {
+          "type": "erasureRelease",
+          "seconds": 1.2
+        },
+        {
+          "type": "banner",
+          "keys": [
+            "→"
+          ],
+          "text": "뛰기",
+          "doneWhen": {
+            "type": "reachX",
+            "gte": -75
+          }
+        }
+      ]
+    },
+    {
+      "id": "erasure-close",
+      "part": 2,
+      "trigger": {
+        "type": "reachX",
+        "gte": 12
+      },
+      "actions": [
+        {
+          "type": "lockInput"
+        },
+        {
+          "type": "erasureClose",
+          "rightAhead": 17,
+          "rightSpeed": 2,
+          "leftSpeed": 1.5
+        },
+        {
+          "type": "focus",
+          "x": 15.5
+        },
+        {
+          "type": "zoom",
+          "zoom": 1.5
+        },
+        {
+          "type": "sfx",
+          "id": "story-world-erase"
+        },
+        {
+          "type": "cameraShake",
+          "seconds": 0.35
+        },
+        {
+          "type": "wait",
+          "seconds": 0.5
+        },
+        {
+          "type": "exclaim",
+          "id": "hero"
+        },
+        {
+          "type": "wait",
+          "seconds": 1.25
+        },
+        {
+          "type": "fear",
+          "seconds": 2.2,
+          "interval": 0.75
+        },
+        {
+          "type": "bubble",
+          "speaker": "hero",
+          "mode": "advance",
+          "text": "어, 저쪽에서도..!"
+        },
+        {
+          "type": "erasureMeet",
+          "seconds": 2.2
+        },
+        {
+          "type": "sfx",
+          "id": "story-world-erase"
+        },
+        {
+          "type": "cameraShake",
+          "seconds": 0.25
+        }
+      ]
+    },
+    {
+      "id": "erasure-fall",
+      "part": 2,
+      "trigger": {
+        "type": "event",
+        "name": "erasureMet"
+      },
+      "actions": [
+        {
+          "type": "lockInput"
+        },
+        {
+          "type": "sfx",
+          "id": "story-collapse"
+        },
+        {
+          "type": "heroSketch",
+          "mode": "hands"
+        },
+        {
+          "type": "wait",
+          "seconds": 0.7
+        },
+        {
+          "type": "bubble",
+          "speaker": "hero",
+          "mode": "advance",
+          "text": "손이, 왜 이래.."
+        },
+        {
+          "type": "bubble",
+          "speaker": "hero",
+          "mode": "advance",
+          "text": "여긴 예정된 마을이 아니었는데… 왜…"
+        },
+        {
+          "type": "waitAnimation"
+        },
+        {
+          "type": "wait",
+          "seconds": 1.6
+        }
+      ]
+    },
+    {
+      "id": "helper-arrive",
+      "part": 3,
+      "trigger": {
+        "type": "after",
+        "beat": "erasure-fall"
+      },
+      "actions": [
+        {
+          "type": "actor",
+          "spawn": "helper",
+          "sprite": "Hub/opening/ink-helper",
+          "x": 17,
+          "effect": "gather"
+        },
+        {
+          "type": "zoom",
+          "zoom": 1.25
+        },
+        {
+          "type": "sfx",
+          "id": "story-ink-awaken"
+        },
+        {
+          "type": "wait",
+          "seconds": 0.85
+        },
+        {
+          "type": "bubble",
+          "speaker": "helper",
+          "mode": "advance",
+          "text": "이런, 또 당해 버렸네. 얼마 안 남았는데.."
+        },
+        {
+          "type": "bubble",
+          "speaker": "helper",
+          "mode": "advance",
+          "text": "남은 잉크를 너한테 전부 줄게. 나는 여기까지야."
+        },
+        {
+          "type": "bubble",
+          "speaker": "helper",
+          "mode": "advance",
+          "text": "나머지는 부탁해."
+        }
+      ]
+    },
+    {
+      "id": "helper-sacrifice",
+      "part": 3,
+      "trigger": {
+        "type": "after",
+        "beat": "helper-arrive"
+      },
+      "actions": [
+        {
+          "type": "clip",
+          "actor": "helper",
+          "clip": "leap"
+        },
+        {
+          "type": "heroSketch",
+          "mode": "revive"
+        },
+        {
+          "type": "sfx",
+          "id": "story-ink-sacrifice"
+        },
+        {
+          "type": "cameraShake",
+          "seconds": 0.15
+        },
+        {
+          "type": "waitAnimation"
+        },
+        {
+          "type": "actor",
+          "despawn": "helper"
+        },
+        {
+          "type": "wait",
+          "seconds": 0.3
+        },
+        {
+          "type": "bubble",
+          "speaker": "hero",
+          "mode": "advance",
+          "text": "나, 살았어..?"
+        },
+        {
+          "type": "bubble",
+          "speaker": "hero",
+          "mode": "advance",
+          "text": "잉크..가 된건가?"
+        },
+        {
+          "type": "bubble",
+          "speaker": "hero",
+          "mode": "advance",
+          "text": "일단 마을 밖으로 나가 보자."
+        }
+      ]
+    },
+    {
+      "id": "awake",
+      "part": 4,
+      "trigger": {
+        "type": "after",
+        "beat": "helper-sacrifice"
+      },
+      "actions": [
+        {
+          "type": "checkpoint",
+          "value": "awakened"
+        },
+        {
+          "type": "awaken"
+        },
+        {
+          "type": "zoom",
+          "zoom": 1
+        },
+        {
+          "type": "village",
+          "color": "allSketch",
+          "interactables": "shown"
+        },
+        {
+          "type": "unlockInput"
+        }
+      ]
+    },
+    {
+      "id": "awake-meet",
+      "part": 4,
+      "trigger": {
+        "type": "after",
+        "beat": "awake"
+      },
+      "actions": [
+        {
+          "type": "guide",
+          "id": "departure_sign"
+        },
+        {
+          "type": "banner",
+          "keys": [
+            "→"
+          ],
+          "text": "이정표로 가기",
+          "doneWhen": {
+            "type": "reachX",
+            "gte": 35.2,
+            "grounded": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "awake-blueprints",
+      "part": 4,
+      "trigger": {
+        "type": "after",
+        "beat": "awake-meet"
+      },
+      "actions": [
+        {
+          "type": "guide",
+          "id": "departure_sign"
+        },
+        {
+          "type": "banner",
+          "keys": [
+            "F"
+          ],
+          "text": "마을 밖으로 출발하기",
+          "doneWhen": {
+            "type": "interact",
+            "target": "departure_sign"
+          }
+        }
+      ]
+    },
+    {
+      "id": "first-return",
+      "part": 5,
+      "once": true,
+      "flag": "firstReturnSeen",
+      "trigger": {
+        "type": "event",
+        "name": "runDeathReturn"
+      },
+      "actions": [
+        {
+          "type": "lockInput"
+        },
+        {
+          "type": "clip",
+          "actor": "hero",
+          "clip": "inkGather",
+          "x": 14.5
+        },
+        {
+          "type": "clip",
+          "actor": "hero",
+          "clip": "death",
+          "reverse": true
+        },
+        {
+          "type": "unlockInput"
+        },
+        {
+          "type": "bubble",
+          "speaker": "hero",
+          "mode": "auto",
+          "text": "또 우물 앞이야..?"
+        },
+        {
+          "type": "wait",
+          "seconds": 2.3
+        },
+        {
+          "type": "flag",
+          "name": "firstReturnSeen"
+        }
+      ]
+    },
+    {
+      "id": "first-color-return",
+      "part": 6,
+      "once": true,
+      "trigger": {
+        "type": "event",
+        "name": "bossFirstClearReturn"
+      },
+      "actions": [
+        {
+          "type": "bubble",
+          "speaker": "hero",
+          "mode": "auto",
+          "text": "해금된 게 있을지도 몰라."
+        },
+        {
+          "type": "banner",
+          "keys": [
+            "F"
+          ],
+          "text": "장인의 공방에서 마법안료로 해금하기",
+          "doneWhen": {
+            "type": "screenClosed",
+            "screen": "artisan_hub"
+          }
+        }
+      ]
+    },
+    {
+      "id": "first-color",
+      "part": 6,
+      "once": true,
+      "trigger": {
+        "type": "event",
+        "name": "firstUnlockColored"
+      },
+      "actions": [
+        {
+          "type": "bubble",
+          "speaker": "hero",
+          "mode": "auto",
+          "text": "색이… 돌아온다."
+        },
+        {
+          "type": "flag",
+          "name": "firstColorReturnSeen"
+        }
+      ]
+    },
+    {
+      "id": "first-run-visit-met",
+      "part": 7,
+      "once": true,
+      "trigger": {
+        "type": "event",
+        "name": "firstRunVisit"
+      },
+      "actions": [
+        {
+          "type": "lockInput"
+        },
+        {
+          "type": "wait",
+          "seconds": 0.5
+        },
+        {
+          "type": "artisan",
+          "mode": "enter",
+          "heroOffset": 12,
+          "face": -1
+        },
+        {
+          "type": "wait",
+          "seconds": 0.25
+        },
+        {
+          "type": "exclaim"
+        },
+        {
+          "type": "sfx",
+          "id": "story-ink-awaken"
+        },
+        {
+          "type": "wait",
+          "seconds": 0.9
+        },
+        {
+          "type": "artisan",
+          "mode": "walk",
+          "heroOffset": 2.3,
+          "face": -1
+        },
+        {
+          "type": "wait",
+          "seconds": 0.3
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "어, 너 마을 밖 정비소에 들렀던 손님 아니니?"
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "여기서 다 만나네. 나도 이 마을 사람이거든."
+        }
+      ]
+    },
+    {
+      "id": "first-run-visit-stranger",
+      "part": 7,
+      "once": true,
+      "trigger": {
+        "type": "event",
+        "name": "firstRunVisit"
+      },
+      "actions": [
+        {
+          "type": "lockInput"
+        },
+        {
+          "type": "wait",
+          "seconds": 0.5
+        },
+        {
+          "type": "artisan",
+          "mode": "enter",
+          "heroOffset": 12,
+          "face": -1
+        },
+        {
+          "type": "wait",
+          "seconds": 0.25
+        },
+        {
+          "type": "exclaim"
+        },
+        {
+          "type": "sfx",
+          "id": "story-ink-awaken"
+        },
+        {
+          "type": "wait",
+          "seconds": 0.9
+        },
+        {
+          "type": "artisan",
+          "mode": "walk",
+          "heroOffset": 2.3,
+          "face": -1
+        },
+        {
+          "type": "wait",
+          "seconds": 0.3
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "어머, 이 마을에 손님이라니."
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "저기 공방이 내 가게야. 요즘은 마을 밖에서 장사하지만."
+        }
+      ]
+    },
+    {
+      "id": "first-run-visit",
+      "part": 7,
+      "once": true,
+      "trigger": {
+        "type": "event",
+        "name": "firstRunVisit"
+      },
+      "actions": [
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "근데 너 주머니에 반짝이는 거, 그거 뭐야?"
+        },
+        {
+          "type": "pigment"
+        },
+        {
+          "type": "wait",
+          "seconds": 0.6
+        },
+        {
+          "type": "bubble",
+          "speaker": "hero",
+          "mode": "advance",
+          "text": "..."
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "마법안료네! 스케치화된 것들이 삼킨 색이야."
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "들고만 다니면 소용없고, 작업대에 넣어야 힘이 돼."
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "같이 공방에 가 보자. 출발 전에 도와줄 일이 있어."
+        },
+        {
+          "type": "pan",
+          "id": "artisan_hub",
+          "heroOffset": 1.6,
+          "face": -1
+        },
+        {
+          "type": "wait",
+          "seconds": 0.25
+        },
+        {
+          "type": "unlockStation",
+          "id": "supply_counter"
+        },
+        {
+          "type": "wait",
+          "seconds": 1.15
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "여기가 내 공방이야. 마법안료로 출발 자금을 챙기거나 몸을 단련할 수 있어."
+        },
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "마을 밖에 나갈 때마다 조금씩 세지는 거지."
+        }
+      ]
+    },
+    {
+      "id": "first-run-visit-bye-met",
+      "part": 7,
+      "once": true,
+      "trigger": {
+        "type": "event",
+        "name": "firstRunVisit"
+      },
+      "actions": [
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "나 이제 정비소 가 봐야 해. 마을 밖에서 보자!"
+        },
+        {
+          "type": "artisan",
+          "mode": "leave"
+        },
+        {
+          "type": "unlockInput"
+        }
+      ]
+    },
+    {
+      "id": "first-run-visit-bye-stranger",
+      "part": 7,
+      "once": true,
+      "trigger": {
+        "type": "event",
+        "name": "firstRunVisit"
+      },
+      "actions": [
+        {
+          "type": "bubble",
+          "speaker": "artisan",
+          "mode": "advance",
+          "text": "나 마을 밖에서 정비소 하거든. 지나가다 들러!"
+        },
+        {
+          "type": "artisan",
+          "mode": "leave"
+        },
+        {
+          "type": "unlockInput"
+        }
+      ]
+    }
+  ]
+}

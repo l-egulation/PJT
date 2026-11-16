@@ -1,0 +1,1419 @@
+{
+  "schemaVersion": 1,
+  "status": "approved-initial-design-handoff-unity-not-implemented",
+  "date": "2026-10-18",
+  "agreementCount": 169,
+  "unityImplemented": false,
+  "unityVerified": false,
+  "sources": [
+    "MONSTER_BEHAVIOR_DRAFT.md",
+    "ATTACK_FRAME_MAPPING_DRAFT.json",
+    "ATTACK_BOX_VISUAL_REVIEW.json",
+    "MOUSE_HURTBOX_CANDIDATES.json",
+    "REMAINING_HURTBOX_CANDIDATES.json",
+    "MOVE_DEATH_PLAYBACK_CANDIDATES.json"
+  ],
+  "units": {
+    "distance": "Unity unit = 1 tile",
+    "time": "milliseconds",
+    "speed": "unit/second",
+    "ppu": 32,
+    "rootScale": 1,
+    "canvasPx": [
+      128,
+      128
+    ],
+    "monsterPivotPixelBoundaryTopLeft": [
+      64,
+      120
+    ],
+    "monsterPivotNormalized": [
+      0.5,
+      0.0625
+    ],
+    "boundsConvention": "[left, top, right, bottom]; right/bottom exclusive"
+  },
+  "common": {
+    "contactDamage": false,
+    "bodyPassesThroughCharacters": true,
+    "bodyCollidesWithTerrain": true,
+    "bodyAndHurtboxSeparateColliders": true,
+    "geometryFixedAcrossMotions": true,
+    "hitDedupeKey": [
+      "attackOwner",
+      "executionId",
+      "hitNumber",
+      "target"
+    ],
+    "simultaneousAttackPolicy": "unlimited-no-slots",
+    "simultaneousMutualHitPolicy": "apply-both-valid-hits-established-before-cancellation; cancel-enemy-remaining-direct-hits-afterward",
+    "hitStaggerMs": 300,
+    "basicHitPush": {
+      "distanceUnit": 0.25,
+      "durationMs": 100,
+      "ordinaryEnemyOnly": true,
+      "playerBasicAttackOnly": true,
+      "stopsAtSolidWalls": true,
+      "stacksWithExplicitPush": false
+    },
+    "hitStaggerRefresh": "last-valid-hit + 300ms",
+    "hitCancelsCurrentDirectAttack": true,
+    "initialIdle": "stationary-at-spawn",
+    "detection": {
+      "horizontalFeetMaxUnit": 10,
+      "verticalFeetMaxUnit": 4,
+      "additionalShapeRestriction": "none",
+      "rayOrigin": "fixed-body-box-center",
+      "targetUpperLowerPointInsetPx": 1,
+      "targetUpperLowerPointInsetUnit": 0.03125,
+      "pollIntervalMs": 100,
+      "bothDirections": true,
+      "excludeHiddenTargets": true,
+      "solidWallsAndFloorsOcclude": true,
+      "oneWayPlatformsOcclude": true,
+      "targetHurtboxVisibilityPoints": [
+        "center",
+        "upper",
+        "lower"
+      ],
+      "visibilityPolicy": "any-point-visible-plus-all-other-guards",
+      "alertPropagation": false
+    },
+    "pursuit": {
+      "walkingGroundPathsOnly": true,
+      "jump": false,
+      "intentionalFall": false,
+      "dropThroughOneWay": false,
+      "retainVisibleTargetBeyondInitialRange": true,
+      "targetOnlyBeyondSpawnBoundaryPolicy": "continue-with-valid-visibility-height-path; enforce-own-16-unit-leash; keep-return-reengage-target-14-unit-limit",
+      "spawnHorizontalLeashUnit": 16,
+      "searchWaitMs": 1500,
+      "leashPhysicalEpsilonUnit": 0.0001,
+      "leashEpsilonExpandsGameplayRange": false,
+      "waitReasonChangePolicy": "preserve-running-1500ms-wait; no-start-before-arrival-or-safe-path-failure-stop; resume-when-target-and-path-valid",
+      "lostTargetDestination": "last-confirmed-position-only",
+      "pathFailureWaitRefreshOnVisibility": false,
+      "pathRestoredWithValidTargetEndsWait": true,
+      "blockedPathRetryIntervalMs": 250,
+      "returnBlockedPathRetryIntervalMs": 250,
+      "pathRetryResetsSearchWait": false,
+      "groundSafety": {
+        "support": "full-body-width",
+        "cliffStopMarginPx": 1,
+        "cliffStopMarginUnit": 0.03125,
+        "marginDirection": "opposite-movement-from-last-fully-supported-position",
+        "nextMovementSupportCheck": "every-physics-update",
+        "walkMaxSlopeDegrees": 30,
+        "walkMaxStepUpUnit": 0.125,
+        "walkMaxStepDownUnit": 0.125,
+        "includes": [
+          "pursuit",
+          "return",
+          "boar-charge"
+        ],
+        "boarNormalDistanceIncludingBrakeUnit": 5
+      },
+      "nonAttackingLeashArrival": "return-immediately"
+    },
+    "return": {
+      "destination": "original-spawn",
+      "keepCurrentHP": true,
+      "heal": false,
+      "invulnerable": false,
+      "teleport": false,
+      "speed": "species-walk-speed",
+      "missingPath": "safe-stop-and-recheck",
+      "invalidInitialSpawn": "reject-before-spawn-and-report-error",
+      "originalSpawnBecomesInvalid": "safe-stop-at-current-position-and-recheck-every-250ms; no-teleport-or-alternate-destination",
+      "reengageOwnSpawnDistanceExclusiveMaxUnit": 16,
+      "reengageTargetSpawnDistanceInclusiveMaxUnit": 14,
+      "reengageRequires": "actual-detection AND (walking-path OR can-start-attack-now)"
+    },
+    "attack": {
+      "freezeFacingAt": "prepare-start",
+      "stopOrdinaryPursuit": true,
+      "continueFixedAttackAfterTargetLost": true,
+      "actualDamageRequiresTerrainOcclusionCheck": true,
+      "startGuardsRecheckedImmediatelyBeforePrepare": true,
+      "hitCancellationWaitsForDetectionPoll": false,
+      "terrainOcclusionSampling": {
+        "region": "attack-box-intersection-with-target-hurtbox",
+        "sampleHeights": [
+          "center",
+          "upper",
+          "lower"
+        ],
+        "rayOriginX": "attacker-body-center-x",
+        "rayOriginY": "sample-height",
+        "sampleTargetX": "overlap-center-x",
+        "positiveOverlapAreaRequired": true,
+        "upperLowerInsetUnit": "min(1/32, overlapHeight/4)",
+        "sampleTargetHeights": [
+          "bottom+inset",
+          "(bottom+top)/2",
+          "top-inset"
+        ],
+        "rayDirection": "horizontal-toward-overlap-sample",
+        "validHit": "any-sample-unblocked-by-solid-terrain-plus-existing-hit-guards",
+        "reuseDetectionVisibilityAsDamagePermission": false
+      },
+      "nextAttackAt": "prepareStartMs + species.intervalMs",
+      "preserveNextAttackAtOnInterruption": true,
+      "restartCancelledAttackFromBeginning": true,
+      "recoveryBlocks": [
+        "ordinaryMovement",
+        "turn",
+        "newAttack"
+      ],
+      "hitDuringRecovery": "keep-existing-recovery-end",
+      "leashDuringPrepareActiveBrake": "cancel-direct-attack-and-motion; species-recovery-from-interrupt; then-return",
+      "leashReturnCommitment": "keep-return-after-recovery-even-if-pushed-back-inside; apply-existing-reengage-guards-after-entering-return",
+      "overlappingCancellationPolicy": "apply-all-valid-effects-concurrently; required-recovery-once; preserve-existing-recovery-end-and-nextAttackAt; death-stops-actions",
+      "cancelledAttackVisualMapping": {
+        "duringHitStagger": "hurt-pose",
+        "remainingRecoveryAfterHitStagger": "reference-idle-pose",
+        "withoutHit": "reference-idle-pose",
+        "resumeCancelledAnimation": false,
+        "changesGameplayTimers": false,
+        "death": "existing-death-presentation"
+      },
+      "cooldownAfterRecovery": "pursue-and-turn; stop-approach-inside-start-distance"
+    },
+    "statusEffects": {
+      "hidden": "exclude-tracking-not-invulnerability",
+      "root": "no-movement; stationary-attacks-allowed; boar-charge-cancels-into-recovery",
+      "forcedMovementUnderRoot": "allow-external-push-pull; preserve-root-and-cancelled-boar-charge-recovery; never-reactivate-charge",
+      "stun": "cancel-attack; no-movement-or-new-attack; recovery-and-nextAttackAt-keep-flowing",
+      "stunReapply": "max(remaining,new-duration)",
+      "taunt": "next-target-judgement; keep-current-attack-and-leash",
+      "death": "stop-AI-and-pending-direct-attacks; death-once"
+    },
+    "individualReturnEndsChapterCombat": false,
+    "eventTiming": {
+      "policy": "chronological-activation-expiry-and-contact-event-times",
+      "sameTimeEffects": "batch-valid-hits-and-effects-at-same-event-time; then-apply-cancellations",
+      "attackWindow": "start-inclusive-end-exclusive",
+      "contactBeyondBlockingWall": "reject",
+      "wholePhysicsUpdateIsSimultaneous": false,
+      "quantizeToOneMillisecond": false
+    },
+    "safeMaintenance": {
+      "selection": "latest-user-revision-anytime-inside-designated-safe-zone",
+      "requiresCombatEnded": false,
+      "requiresCurrentPlayerAttackFinished": false,
+      "requiresDesignatedSafeLocation": true,
+      "enemyThreatsAffectOccupants": false,
+      "enemyThreatIsolationMethod": "implementation-must-preserve-no-threat-inside; no-specific-barrier-or-projectile-destruction-method-selected",
+      "equippedWeaponSwapDuringCombatStillAllowed": true,
+      "quietPeriodMs": 0,
+      "safeLocationPlacement": null
+    }
+  },
+  "unresolved": {
+    "designatedSafeLocationPlacement": null
+  },
+  "monsters": [
+    {
+      "id": "01_field_mouse",
+      "name": "곡식 들쥐",
+      "maxHP": 150,
+      "attackDamage": 10,
+      "referenceIdleSpritePath": "../outline_cleanup_all_v4/01_field_mouse/reference-native-128.png",
+      "walkAndReturnSpeedUnitPerSec": 3,
+      "bodyHurtboxSelection": "B",
+      "body": {
+        "boundsPxRight": [
+          54,
+          86,
+          89,
+          120
+        ],
+        "sizeUnit": [
+          1.09375,
+          1.0625
+        ],
+        "offsetRightUnit": [
+          0.234375,
+          0.53125
+        ],
+        "offsetLeftUnit": [
+          -0.234375,
+          0.53125
+        ]
+      },
+      "hurtbox": {
+        "boundsPxRight": [
+          54,
+          86,
+          89,
+          120
+        ],
+        "sizeUnit": [
+          1.09375,
+          1.0625
+        ],
+        "offsetRightUnit": [
+          0.234375,
+          0.53125
+        ],
+        "offsetLeftUnit": [
+          -0.234375,
+          0.53125
+        ]
+      },
+      "attackStart": {
+        "horizontalMetric": "bodyEdgeGap",
+        "minUnit": null,
+        "maxUnit": 0.75,
+        "feetVerticalDifferenceMaxUnit": 0.75,
+        "requires": [
+          "valid-target",
+          "terrain-visibility",
+          "nextAttackAt-reached",
+          "no-blocking-recovery-stagger-stun"
+        ],
+        "overlappingBodyGapPolicy": "clamp-negative-body-gap-to-zero"
+      },
+      "attack": {
+        "box": {
+          "boundsPxRight": [
+            81,
+            80,
+            121,
+            120
+          ],
+          "sizeUnit": [
+            1.25,
+            1.25
+          ],
+          "offsetRightUnit": [
+            1.15625,
+            0.625
+          ],
+          "offsetLeftUnit": [
+            -1.15625,
+            0.625
+          ]
+        },
+        "insideBodyFrontUnit": 0.25,
+        "beyondBodyFrontUnit": 1,
+        "intervalMs": 1200,
+        "phaseDurationsMs": {
+          "prepare": 350,
+          "active": 100,
+          "recovery": 450
+        },
+        "normalTotalMs": 900,
+        "selectedFrameMapping": "A",
+        "frames": [
+          {
+            "frame": 1,
+            "phase": "prepare",
+            "durationMs": 100,
+            "damage": false,
+            "startMs": 0,
+            "endMs": 100,
+            "spritePath": "../outline_cleanup_all_v4/01_field_mouse/attack/pixel128/01.png"
+          },
+          {
+            "frame": 2,
+            "phase": "prepare",
+            "durationMs": 100,
+            "damage": false,
+            "startMs": 100,
+            "endMs": 200,
+            "spritePath": "../outline_cleanup_all_v4/01_field_mouse/attack/pixel128/02.png"
+          },
+          {
+            "frame": 3,
+            "phase": "prepare",
+            "durationMs": 150,
+            "damage": false,
+            "startMs": 200,
+            "endMs": 350,
+            "spritePath": "../outline_cleanup_all_v4/01_field_mouse/attack/pixel128/03.png"
+          },
+          {
+            "frame": 4,
+            "phase": "active",
+            "durationMs": 100,
+            "damage": true,
+            "startMs": 350,
+            "endMs": 450,
+            "spritePath": "../outline_cleanup_all_v4/01_field_mouse/attack/pixel128/04.png"
+          },
+          {
+            "frame": 5,
+            "phase": "recovery",
+            "durationMs": 120,
+            "damage": false,
+            "startMs": 450,
+            "endMs": 570,
+            "spritePath": "../outline_cleanup_all_v4/01_field_mouse/attack/pixel128/05.png"
+          },
+          {
+            "frame": 6,
+            "phase": "recovery",
+            "durationMs": 110,
+            "damage": false,
+            "startMs": 570,
+            "endMs": 680,
+            "spritePath": "../outline_cleanup_all_v4/01_field_mouse/attack/pixel128/06.png"
+          },
+          {
+            "frame": 7,
+            "phase": "recovery",
+            "durationMs": 110,
+            "damage": false,
+            "startMs": 680,
+            "endMs": 790,
+            "spritePath": "../outline_cleanup_all_v4/01_field_mouse/attack/pixel128/07.png"
+          },
+          {
+            "frame": 8,
+            "phase": "recovery",
+            "durationMs": 110,
+            "damage": false,
+            "startMs": 790,
+            "endMs": 900,
+            "spritePath": "../outline_cleanup_all_v4/01_field_mouse/attack/pixel128/08.png"
+          }
+        ],
+        "directHitOnly": true,
+        "residualDamageField": false,
+        "rootMovement": "stationary"
+      },
+      "animationPlayback": {
+        "selectedMoveCandidate": "A",
+        "moveCycleMs": 500.0,
+        "moveFrameDurationsMs": [
+          62.5,
+          62.5,
+          62.5,
+          62.5,
+          62.5,
+          62.5,
+          62.5,
+          62.5
+        ],
+        "selectedDeathCandidate": "A",
+        "deathTotalMs": 600,
+        "deathFrameDurationsMs": [
+          150,
+          150,
+          150,
+          150
+        ],
+        "deathVisibleIntervalMs": 450,
+        "sourceDeathFinalFrameTransparent": true,
+        "deathLoop": false,
+        "moveRootSpeedUsesApprovedWalkSpeed": true
+      }
+    },
+    {
+      "id": "02_mole",
+      "name": "밭 두더지",
+      "maxHP": 200,
+      "attackDamage": 15,
+      "referenceIdleSpritePath": "../outline_cleanup_all_v4/02_mole/reference-native-128.png",
+      "walkAndReturnSpeedUnitPerSec": 2,
+      "bodyHurtboxSelection": "B",
+      "body": {
+        "boundsPxRight": [
+          22,
+          60,
+          106,
+          120
+        ],
+        "sizeUnit": [
+          2.625,
+          1.875
+        ],
+        "offsetRightUnit": [
+          0.0,
+          0.9375
+        ],
+        "offsetLeftUnit": [
+          -0.0,
+          0.9375
+        ]
+      },
+      "hurtbox": {
+        "boundsPxRight": [
+          22,
+          60,
+          106,
+          120
+        ],
+        "sizeUnit": [
+          2.625,
+          1.875
+        ],
+        "offsetRightUnit": [
+          0.0,
+          0.9375
+        ],
+        "offsetLeftUnit": [
+          -0.0,
+          0.9375
+        ]
+      },
+      "attackStart": {
+        "horizontalMetric": "bodyEdgeGap",
+        "minUnit": null,
+        "maxUnit": 1,
+        "feetVerticalDifferenceMaxUnit": 1,
+        "requires": [
+          "valid-target",
+          "terrain-visibility",
+          "nextAttackAt-reached",
+          "no-blocking-recovery-stagger-stun"
+        ],
+        "overlappingBodyGapPolicy": "clamp-negative-body-gap-to-zero"
+      },
+      "attack": {
+        "box": {
+          "boundsPxRight": [
+            98,
+            72,
+            154,
+            120
+          ],
+          "sizeUnit": [
+            1.75,
+            1.5
+          ],
+          "offsetRightUnit": [
+            1.9375,
+            0.75
+          ],
+          "offsetLeftUnit": [
+            -1.9375,
+            0.75
+          ]
+        },
+        "insideBodyFrontUnit": 0.25,
+        "beyondBodyFrontUnit": 1.5,
+        "intervalMs": 1700,
+        "phaseDurationsMs": {
+          "prepare": 550,
+          "active": 150,
+          "recovery": 650
+        },
+        "normalTotalMs": 1350,
+        "selectedFrameMapping": "A",
+        "frames": [
+          {
+            "frame": 1,
+            "phase": "prepare",
+            "durationMs": 100,
+            "damage": false,
+            "startMs": 0,
+            "endMs": 100,
+            "spritePath": "../outline_cleanup_all_v4/02_mole/attack/pixel128/01.png"
+          },
+          {
+            "frame": 2,
+            "phase": "prepare",
+            "durationMs": 150,
+            "damage": false,
+            "startMs": 100,
+            "endMs": 250,
+            "spritePath": "../outline_cleanup_all_v4/02_mole/attack/pixel128/02.png"
+          },
+          {
+            "frame": 3,
+            "phase": "prepare",
+            "durationMs": 150,
+            "damage": false,
+            "startMs": 250,
+            "endMs": 400,
+            "spritePath": "../outline_cleanup_all_v4/02_mole/attack/pixel128/03.png"
+          },
+          {
+            "frame": 4,
+            "phase": "prepare",
+            "durationMs": 150,
+            "damage": false,
+            "startMs": 400,
+            "endMs": 550,
+            "spritePath": "../outline_cleanup_all_v4/02_mole/attack/pixel128/04.png"
+          },
+          {
+            "frame": 5,
+            "phase": "active",
+            "durationMs": 75,
+            "damage": true,
+            "startMs": 550,
+            "endMs": 625,
+            "spritePath": "../outline_cleanup_all_v4/02_mole/attack/pixel128/05.png"
+          },
+          {
+            "frame": 6,
+            "phase": "active",
+            "durationMs": 75,
+            "damage": true,
+            "startMs": 625,
+            "endMs": 700,
+            "spritePath": "../outline_cleanup_all_v4/02_mole/attack/pixel128/06.png"
+          },
+          {
+            "frame": 7,
+            "phase": "recovery",
+            "durationMs": 350,
+            "damage": false,
+            "startMs": 700,
+            "endMs": 1050,
+            "spritePath": "../outline_cleanup_all_v4/02_mole/attack/pixel128/07.png"
+          },
+          {
+            "frame": 8,
+            "phase": "recovery",
+            "durationMs": 300,
+            "damage": false,
+            "startMs": 1050,
+            "endMs": 1350,
+            "spritePath": "../outline_cleanup_all_v4/02_mole/attack/pixel128/08.png"
+          }
+        ],
+        "directHitOnly": true,
+        "residualDamageField": false,
+        "rootMovement": "stationary"
+      },
+      "animationPlayback": {
+        "selectedMoveCandidate": "A",
+        "moveCycleMs": 750.0,
+        "moveFrameDurationsMs": [
+          93.75,
+          93.75,
+          93.75,
+          93.75,
+          93.75,
+          93.75,
+          93.75,
+          93.75
+        ],
+        "selectedDeathCandidate": "A",
+        "deathTotalMs": 600,
+        "deathFrameDurationsMs": [
+          150,
+          150,
+          150,
+          150
+        ],
+        "deathVisibleIntervalMs": 450,
+        "sourceDeathFinalFrameTransparent": true,
+        "deathLoop": false,
+        "moveRootSpeedUsesApprovedWalkSpeed": true
+      }
+    },
+    {
+      "id": "05_boar",
+      "name": "산비탈 멧돼지",
+      "maxHP": 300,
+      "attackDamage": 20,
+      "referenceIdleSpritePath": "../outline_cleanup_all_v4/05_boar/reference-native-128.png",
+      "walkAndReturnSpeedUnitPerSec": 2.5,
+      "bodyHurtboxSelection": "B",
+      "body": {
+        "boundsPxRight": [
+          16,
+          46,
+          120,
+          120
+        ],
+        "sizeUnit": [
+          3.25,
+          2.3125
+        ],
+        "offsetRightUnit": [
+          0.125,
+          1.15625
+        ],
+        "offsetLeftUnit": [
+          -0.125,
+          1.15625
+        ]
+      },
+      "hurtbox": {
+        "boundsPxRight": [
+          16,
+          46,
+          120,
+          120
+        ],
+        "sizeUnit": [
+          3.25,
+          2.3125
+        ],
+        "offsetRightUnit": [
+          0.125,
+          1.15625
+        ],
+        "offsetLeftUnit": [
+          -0.125,
+          1.15625
+        ]
+      },
+      "attackStart": {
+        "horizontalMetric": "feetHorizontalDistance",
+        "minUnit": 3,
+        "maxUnit": 5,
+        "feetVerticalDifferenceMaxUnit": 0.5,
+        "requires": [
+          "valid-target",
+          "terrain-visibility",
+          "nextAttackAt-reached",
+          "no-blocking-recovery-stagger-stun",
+          "not-rooted",
+          "flat-ground-only",
+          "full-body-supported-clear-5-unit-path-within-leash"
+        ],
+        "overlappingBodyGapPolicy": "not-applicable"
+      },
+      "attack": {
+        "box": {
+          "boundsPxRight": [
+            112,
+            80,
+            136,
+            112
+          ],
+          "sizeUnit": [
+            0.75,
+            1.0
+          ],
+          "offsetRightUnit": [
+            1.875,
+            0.75
+          ],
+          "offsetLeftUnit": [
+            -1.875,
+            0.75
+          ]
+        },
+        "insideBodyFrontUnit": 0.25,
+        "beyondBodyFrontUnit": 0.5,
+        "intervalMs": 2600,
+        "phaseDurationsMs": {
+          "prepare": 650,
+          "active": 600,
+          "brake": 150,
+          "recovery": 800
+        },
+        "normalTotalMs": 2200,
+        "selectedFrameMapping": "A",
+        "frames": [
+          {
+            "frame": 1,
+            "phase": "prepare",
+            "durationMs": 150,
+            "damage": false,
+            "startMs": 0,
+            "endMs": 150,
+            "spritePath": "../outline_cleanup_all_v4/05_boar/attack/pixel128/01.png"
+          },
+          {
+            "frame": 2,
+            "phase": "prepare",
+            "durationMs": 200,
+            "damage": false,
+            "startMs": 150,
+            "endMs": 350,
+            "spritePath": "../outline_cleanup_all_v4/05_boar/attack/pixel128/02.png"
+          },
+          {
+            "frame": 3,
+            "phase": "prepare",
+            "durationMs": 300,
+            "damage": false,
+            "startMs": 350,
+            "endMs": 650,
+            "spritePath": "../outline_cleanup_all_v4/05_boar/attack/pixel128/03.png"
+          },
+          {
+            "frame": 4,
+            "phase": "active",
+            "durationMs": 200,
+            "damage": true,
+            "startMs": 650,
+            "endMs": 850,
+            "spritePath": "../outline_cleanup_all_v4/05_boar/attack/pixel128/04.png"
+          },
+          {
+            "frame": 5,
+            "phase": "active",
+            "durationMs": 200,
+            "damage": true,
+            "startMs": 850,
+            "endMs": 1050,
+            "spritePath": "../outline_cleanup_all_v4/05_boar/attack/pixel128/05.png"
+          },
+          {
+            "frame": 6,
+            "phase": "active",
+            "durationMs": 200,
+            "damage": true,
+            "startMs": 1050,
+            "endMs": 1250,
+            "spritePath": "../outline_cleanup_all_v4/05_boar/attack/pixel128/06.png"
+          },
+          {
+            "frame": 7,
+            "phase": "brake",
+            "durationMs": 150,
+            "damage": false,
+            "startMs": 1250,
+            "endMs": 1400,
+            "spritePath": "../outline_cleanup_all_v4/05_boar/attack/pixel128/07.png"
+          },
+          {
+            "frame": 8,
+            "phase": "recovery",
+            "durationMs": 800,
+            "damage": false,
+            "startMs": 1400,
+            "endMs": 2200,
+            "spritePath": "../outline_cleanup_all_v4/05_boar/attack/pixel128/08.png"
+          }
+        ],
+        "directHitOnly": true,
+        "residualDamageField": false,
+        "rootMovement": "boar-charge-only",
+        "charge": {
+          "totalDistanceIncludingBrakeUnit": 5,
+          "constantSpeedExact": "200/27",
+          "constantSpeedUnitPerSec": 7.407407407407407,
+          "linearBrakeDecelerationExact": "4000/81",
+          "linearBrakeDecelerationUnitPerSecSquared": 49.382716049382715,
+          "activeDistanceUnit": 4.444444444444445,
+          "brakeDistanceUnit": 0.5555555555555556,
+          "onWallOrCliff": "end-motion-and-hitbox; 800ms-recovery; preserve-nextAttackAt",
+          "onRoot": "end-motion-and-hitbox; 800ms-recovery; preserve-nextAttackAt",
+          "onTargetHit": "continue-charge; dedupe-hit",
+          "insideMinimumDistance": "stop-and-face; no-retreat-or-melee",
+          "makeUpInterruptedDistance": false
+        }
+      },
+      "animationPlayback": {
+        "selectedMoveCandidate": "A",
+        "moveCycleMs": 600.0,
+        "moveFrameDurationsMs": [
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0
+        ],
+        "selectedDeathCandidate": "A",
+        "deathTotalMs": 600,
+        "deathFrameDurationsMs": [
+          150,
+          150,
+          150,
+          150
+        ],
+        "deathVisibleIntervalMs": 450,
+        "sourceDeathFinalFrameTransparent": true,
+        "deathLoop": false,
+        "moveRootSpeedUsesApprovedWalkSpeed": true
+      }
+    },
+    {
+      "id": "07_scarecrow",
+      "name": "밭 허수아비",
+      "maxHP": 200,
+      "attackDamage": 12,
+      "referenceIdleSpritePath": "../outline_cleanup_all_v4/07_scarecrow/reference-native-128.png",
+      "walkAndReturnSpeedUnitPerSec": 1.5,
+      "bodyHurtboxSelection": "B",
+      "body": {
+        "boundsPxRight": [
+          37,
+          67,
+          91,
+          120
+        ],
+        "sizeUnit": [
+          1.6875,
+          1.65625
+        ],
+        "offsetRightUnit": [
+          0.0,
+          0.828125
+        ],
+        "offsetLeftUnit": [
+          -0.0,
+          0.828125
+        ]
+      },
+      "hurtbox": {
+        "boundsPxRight": [
+          37,
+          67,
+          91,
+          120
+        ],
+        "sizeUnit": [
+          1.6875,
+          1.65625
+        ],
+        "offsetRightUnit": [
+          0.0,
+          0.828125
+        ],
+        "offsetLeftUnit": [
+          -0.0,
+          0.828125
+        ]
+      },
+      "attackStart": {
+        "horizontalMetric": "bodyEdgeGap",
+        "minUnit": null,
+        "maxUnit": 1.5,
+        "feetVerticalDifferenceMaxUnit": 1,
+        "requires": [
+          "valid-target",
+          "terrain-visibility",
+          "nextAttackAt-reached",
+          "no-blocking-recovery-stagger-stun"
+        ],
+        "overlappingBodyGapPolicy": "clamp-negative-body-gap-to-zero"
+      },
+      "attack": {
+        "box": {
+          "boundsPxRight": [
+            83,
+            64,
+            155,
+            112
+          ],
+          "sizeUnit": [
+            2.25,
+            1.5
+          ],
+          "offsetRightUnit": [
+            1.71875,
+            1.0
+          ],
+          "offsetLeftUnit": [
+            -1.71875,
+            1.0
+          ]
+        },
+        "insideBodyFrontUnit": 0.25,
+        "beyondBodyFrontUnit": 2,
+        "intervalMs": 1500,
+        "phaseDurationsMs": {
+          "prepare": 450,
+          "active": 120,
+          "recovery": 550
+        },
+        "normalTotalMs": 1120,
+        "selectedFrameMapping": "A",
+        "frames": [
+          {
+            "frame": 1,
+            "phase": "prepare",
+            "durationMs": 100,
+            "damage": false,
+            "startMs": 0,
+            "endMs": 100,
+            "spritePath": "../outline_cleanup_all_v4/07_scarecrow/attack/pixel128/01.png"
+          },
+          {
+            "frame": 2,
+            "phase": "prepare",
+            "durationMs": 150,
+            "damage": false,
+            "startMs": 100,
+            "endMs": 250,
+            "spritePath": "../outline_cleanup_all_v4/07_scarecrow/attack/pixel128/02.png"
+          },
+          {
+            "frame": 3,
+            "phase": "prepare",
+            "durationMs": 200,
+            "damage": false,
+            "startMs": 250,
+            "endMs": 450,
+            "spritePath": "../outline_cleanup_all_v4/07_scarecrow/attack/pixel128/03.png"
+          },
+          {
+            "frame": 4,
+            "phase": "active",
+            "durationMs": 120,
+            "damage": true,
+            "startMs": 450,
+            "endMs": 570,
+            "spritePath": "../outline_cleanup_all_v4/07_scarecrow/attack/pixel128/04.png"
+          },
+          {
+            "frame": 5,
+            "phase": "recovery",
+            "durationMs": 150,
+            "damage": false,
+            "startMs": 570,
+            "endMs": 720,
+            "spritePath": "../outline_cleanup_all_v4/07_scarecrow/attack/pixel128/05.png"
+          },
+          {
+            "frame": 6,
+            "phase": "recovery",
+            "durationMs": 150,
+            "damage": false,
+            "startMs": 720,
+            "endMs": 870,
+            "spritePath": "../outline_cleanup_all_v4/07_scarecrow/attack/pixel128/06.png"
+          },
+          {
+            "frame": 7,
+            "phase": "recovery",
+            "durationMs": 150,
+            "damage": false,
+            "startMs": 870,
+            "endMs": 1020,
+            "spritePath": "../outline_cleanup_all_v4/07_scarecrow/attack/pixel128/07.png"
+          },
+          {
+            "frame": 8,
+            "phase": "recovery",
+            "durationMs": 100,
+            "damage": false,
+            "startMs": 1020,
+            "endMs": 1120,
+            "spritePath": "../outline_cleanup_all_v4/07_scarecrow/attack/pixel128/08.png"
+          }
+        ],
+        "directHitOnly": true,
+        "residualDamageField": false,
+        "rootMovement": "stationary"
+      },
+      "animationPlayback": {
+        "selectedMoveCandidate": "A",
+        "moveCycleMs": 1000.0,
+        "moveFrameDurationsMs": [
+          125.0,
+          125.0,
+          125.0,
+          125.0,
+          125.0,
+          125.0,
+          125.0,
+          125.0
+        ],
+        "selectedDeathCandidate": "A",
+        "deathTotalMs": 600,
+        "deathFrameDurationsMs": [
+          150,
+          150,
+          150,
+          150
+        ],
+        "deathVisibleIntervalMs": 450,
+        "sourceDeathFinalFrameTransparent": true,
+        "deathLoop": false,
+        "moveRootSpeedUsesApprovedWalkSpeed": true
+      }
+    },
+    {
+      "id": "08_hay_bale",
+      "name": "굴러다니는 짚단",
+      "maxHP": 400,
+      "attackDamage": 25,
+      "referenceIdleSpritePath": "../outline_cleanup_all_v4/08_hay_bale/reference-native-128.png",
+      "walkAndReturnSpeedUnitPerSec": 1,
+      "bodyHurtboxSelection": "B",
+      "body": {
+        "boundsPxRight": [
+          17,
+          52,
+          111,
+          120
+        ],
+        "sizeUnit": [
+          2.9375,
+          2.125
+        ],
+        "offsetRightUnit": [
+          0.0,
+          1.0625
+        ],
+        "offsetLeftUnit": [
+          -0.0,
+          1.0625
+        ]
+      },
+      "hurtbox": {
+        "boundsPxRight": [
+          17,
+          52,
+          111,
+          120
+        ],
+        "sizeUnit": [
+          2.9375,
+          2.125
+        ],
+        "offsetRightUnit": [
+          0.0,
+          1.0625
+        ],
+        "offsetLeftUnit": [
+          -0.0,
+          1.0625
+        ]
+      },
+      "attackStart": {
+        "horizontalMetric": "bodyEdgeGap",
+        "minUnit": null,
+        "maxUnit": 1.5,
+        "feetVerticalDifferenceMaxUnit": 1,
+        "requires": [
+          "valid-target",
+          "terrain-visibility",
+          "nextAttackAt-reached",
+          "no-blocking-recovery-stagger-stun"
+        ],
+        "overlappingBodyGapPolicy": "clamp-negative-body-gap-to-zero"
+      },
+      "attack": {
+        "box": {
+          "boundsPxRight": [
+            95,
+            80,
+            191,
+            120
+          ],
+          "sizeUnit": [
+            3.0,
+            1.25
+          ],
+          "offsetRightUnit": [
+            2.46875,
+            0.625
+          ],
+          "offsetLeftUnit": [
+            -2.46875,
+            0.625
+          ]
+        },
+        "insideBodyFrontUnit": 0.5,
+        "beyondBodyFrontUnit": 2.5,
+        "intervalMs": 3200,
+        "phaseDurationsMs": {
+          "raise": 200,
+          "hold": 1000,
+          "fall": 150,
+          "active": 150,
+          "recovery": 1000
+        },
+        "normalTotalMs": 2500,
+        "selectedFrameMapping": "A",
+        "frames": [
+          {
+            "frame": 1,
+            "phase": "raise",
+            "durationMs": 100,
+            "damage": false,
+            "startMs": 0,
+            "endMs": 100,
+            "spritePath": "../outline_cleanup_all_v4/08_hay_bale/attack/pixel128/01.png"
+          },
+          {
+            "frame": 2,
+            "phase": "raise",
+            "durationMs": 100,
+            "damage": false,
+            "startMs": 100,
+            "endMs": 200,
+            "spritePath": "../outline_cleanup_all_v4/08_hay_bale/attack/pixel128/02.png"
+          },
+          {
+            "frame": 3,
+            "phase": "hold",
+            "durationMs": 1000,
+            "damage": false,
+            "startMs": 200,
+            "endMs": 1200,
+            "spritePath": "../outline_cleanup_all_v4/08_hay_bale/attack/pixel128/03.png"
+          },
+          {
+            "frame": 4,
+            "phase": "fall",
+            "durationMs": 150,
+            "damage": false,
+            "startMs": 1200,
+            "endMs": 1350,
+            "spritePath": "../outline_cleanup_all_v4/08_hay_bale/attack/pixel128/04.png"
+          },
+          {
+            "frame": 5,
+            "phase": "active",
+            "durationMs": 150,
+            "damage": true,
+            "startMs": 1350,
+            "endMs": 1500,
+            "spritePath": "../outline_cleanup_all_v4/08_hay_bale/attack/pixel128/05.png"
+          },
+          {
+            "frame": 6,
+            "phase": "recovery",
+            "durationMs": 350,
+            "damage": false,
+            "startMs": 1500,
+            "endMs": 1850,
+            "spritePath": "../outline_cleanup_all_v4/08_hay_bale/attack/pixel128/06.png"
+          },
+          {
+            "frame": 7,
+            "phase": "recovery",
+            "durationMs": 350,
+            "damage": false,
+            "startMs": 1850,
+            "endMs": 2200,
+            "spritePath": "../outline_cleanup_all_v4/08_hay_bale/attack/pixel128/07.png"
+          },
+          {
+            "frame": 8,
+            "phase": "recovery",
+            "durationMs": 300,
+            "damage": false,
+            "startMs": 2200,
+            "endMs": 2500,
+            "spritePath": "../outline_cleanup_all_v4/08_hay_bale/attack/pixel128/08.png"
+          }
+        ],
+        "directHitOnly": true,
+        "residualDamageField": false,
+        "rootMovement": "stationary"
+      },
+      "animationPlayback": {
+        "selectedMoveCandidate": "B",
+        "moveCycleMs": 1125.0,
+        "moveFrameDurationsMs": [
+          140.625,
+          140.625,
+          140.625,
+          140.625,
+          140.625,
+          140.625,
+          140.625,
+          140.625
+        ],
+        "selectedDeathCandidate": "A",
+        "deathTotalMs": 600,
+        "deathFrameDurationsMs": [
+          150,
+          150,
+          150,
+          150
+        ],
+        "deathVisibleIntervalMs": 450,
+        "sourceDeathFinalFrameTransparent": true,
+        "deathLoop": false,
+        "moveRootSpeedUsesApprovedWalkSpeed": true
+      }
+    },
+    {
+      "id": "10_water_bucket",
+      "name": "우물 두레박",
+      "maxHP": 300,
+      "attackDamage": 18,
+      "referenceIdleSpritePath": "../outline_cleanup_all_v4/10_water_bucket/reference-native-128.png",
+      "walkAndReturnSpeedUnitPerSec": 1.25,
+      "bodyHurtboxSelection": "A",
+      "body": {
+        "boundsPxRight": [
+          38,
+          69,
+          89,
+          120
+        ],
+        "sizeUnit": [
+          1.59375,
+          1.59375
+        ],
+        "offsetRightUnit": [
+          -0.015625,
+          0.796875
+        ],
+        "offsetLeftUnit": [
+          0.015625,
+          0.796875
+        ]
+      },
+      "hurtbox": {
+        "boundsPxRight": [
+          38,
+          69,
+          89,
+          120
+        ],
+        "sizeUnit": [
+          1.59375,
+          1.59375
+        ],
+        "offsetRightUnit": [
+          -0.015625,
+          0.796875
+        ],
+        "offsetLeftUnit": [
+          0.015625,
+          0.796875
+        ]
+      },
+      "attackStart": {
+        "horizontalMetric": "bodyEdgeGap",
+        "minUnit": null,
+        "maxUnit": 2,
+        "feetVerticalDifferenceMaxUnit": 1,
+        "requires": [
+          "valid-target",
+          "terrain-visibility",
+          "nextAttackAt-reached",
+          "no-blocking-recovery-stagger-stun"
+        ],
+        "overlappingBodyGapPolicy": "clamp-negative-body-gap-to-zero"
+      },
+      "attack": {
+        "box": {
+          "boundsPxRight": [
+            81,
+            72,
+            185,
+            120
+          ],
+          "sizeUnit": [
+            3.25,
+            1.5
+          ],
+          "offsetRightUnit": [
+            2.15625,
+            0.75
+          ],
+          "offsetLeftUnit": [
+            -2.15625,
+            0.75
+          ]
+        },
+        "insideBodyFrontUnit": 0.25,
+        "beyondBodyFrontUnit": 3,
+        "intervalMs": 2500,
+        "phaseDurationsMs": {
+          "prepare": 700,
+          "active": 250,
+          "recovery": 900
+        },
+        "normalTotalMs": 1850,
+        "selectedFrameMapping": "A",
+        "frames": [
+          {
+            "frame": 1,
+            "phase": "prepare",
+            "durationMs": 200,
+            "damage": false,
+            "startMs": 0,
+            "endMs": 200,
+            "spritePath": "../outline_cleanup_all_v4/10_water_bucket/attack/pixel128/01.png"
+          },
+          {
+            "frame": 2,
+            "phase": "prepare",
+            "durationMs": 250,
+            "damage": false,
+            "startMs": 200,
+            "endMs": 450,
+            "spritePath": "../outline_cleanup_all_v4/10_water_bucket/attack/pixel128/02.png"
+          },
+          {
+            "frame": 3,
+            "phase": "prepare",
+            "durationMs": 250,
+            "damage": false,
+            "startMs": 450,
+            "endMs": 700,
+            "spritePath": "../outline_cleanup_all_v4/10_water_bucket/attack/pixel128/03.png"
+          },
+          {
+            "frame": 4,
+            "phase": "active",
+            "durationMs": 80,
+            "damage": true,
+            "startMs": 700,
+            "endMs": 780,
+            "spritePath": "../outline_cleanup_all_v4/10_water_bucket/attack/pixel128/04.png"
+          },
+          {
+            "frame": 5,
+            "phase": "active",
+            "durationMs": 90,
+            "damage": true,
+            "startMs": 780,
+            "endMs": 870,
+            "spritePath": "../outline_cleanup_all_v4/10_water_bucket/attack/pixel128/05.png"
+          },
+          {
+            "frame": 6,
+            "phase": "active",
+            "durationMs": 80,
+            "damage": true,
+            "startMs": 870,
+            "endMs": 950,
+            "spritePath": "../outline_cleanup_all_v4/10_water_bucket/attack/pixel128/06.png"
+          },
+          {
+            "frame": 7,
+            "phase": "recovery",
+            "durationMs": 450,
+            "damage": false,
+            "startMs": 950,
+            "endMs": 1400,
+            "spritePath": "../outline_cleanup_all_v4/10_water_bucket/attack/pixel128/07.png"
+          },
+          {
+            "frame": 8,
+            "phase": "recovery",
+            "durationMs": 450,
+            "damage": false,
+            "startMs": 1400,
+            "endMs": 1850,
+            "spritePath": "../outline_cleanup_all_v4/10_water_bucket/attack/pixel128/08.png"
+          }
+        ],
+        "directHitOnly": true,
+        "residualDamageField": false,
+        "rootMovement": "stationary"
+      },
+      "animationPlayback": {
+        "selectedMoveCandidate": "A",
+        "moveCycleMs": 1200.0,
+        "moveFrameDurationsMs": [
+          150.0,
+          150.0,
+          150.0,
+          150.0,
+          150.0,
+          150.0,
+          150.0,
+          150.0
+        ],
+        "selectedDeathCandidate": "A",
+        "deathTotalMs": 600,
+        "deathFrameDurationsMs": [
+          150,
+          150,
+          150,
+          150
+        ],
+        "deathVisibleIntervalMs": 450,
+        "sourceDeathFinalFrameTransparent": true,
+        "deathLoop": false,
+        "moveRootSpeedUsesApprovedWalkSpeed": true
+      }
+    }
+  ]
+}

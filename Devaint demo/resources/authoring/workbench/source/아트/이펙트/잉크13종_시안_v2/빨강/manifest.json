@@ -1,0 +1,93 @@
+{
+  "role": "빨강 / 표식 누적·폭발",
+  "frameSize": [
+    128,
+    128
+  ],
+  "grid": [
+    4,
+    3
+  ],
+  "clips": {
+    "mark": {
+      "frames": 12,
+      "behavior": "생성 애니메이션 후 마지막 프레임 유지; 인스턴스를 3개까지 개별 배치"
+    },
+    "burst": {
+      "frames": 12,
+      "seconds": [
+        0.06,
+        0.05,
+        0.04,
+        0.03,
+        0.03,
+        0.04,
+        0.04,
+        0.04,
+        0.04,
+        0.04,
+        0.04,
+        0.04
+      ],
+      "behavior": "세 표식이 모이고 폭발; 끝나면 제거"
+    }
+  },
+  "anchors": [
+    [
+      64,
+      58
+    ],
+    [
+      47,
+      87
+    ],
+    [
+      81,
+      87
+    ]
+  ],
+  "markSizeInDemo": [
+    14,
+    20
+  ],
+  "thirdMarkSettleSeconds": 0.18,
+  "heroHitFramesOneBased": [
+    5,
+    8
+  ],
+  "heroFrameSeconds": [
+    0.08,
+    0.11,
+    0.07,
+    0.04,
+    0.05,
+    0.12,
+    0.1,
+    0.04,
+    0.11,
+    0.1,
+    0.11,
+    0.12
+  ],
+  "demoHitTimes": [
+    0.6,
+    0.8700000000000001,
+    1.85,
+    2.12
+  ],
+  "note": "실제 Unity 스프라이트를 합성한 시안 GIF. 세 번째 표식 생성 후 0.18초에 세 표식이 모이기 시작합니다. 다음 타격의 새 표식은 별도 인스턴스입니다.",
+  "sourceHashes": {
+    "outputs\\ink_forest\\UnityProject\\Assets\\InkForestTest\\Art\\Character\\attack\\01.png": "1ecc649965024018592a46113f53f6b92d74d1d1ad09e08e2f44a1a47969c7e8",
+    "outputs\\ink_forest\\UnityProject\\Assets\\InkForestTest\\Art\\Character\\attack\\02.png": "dda0d0ce0f292a2ba972bdd91c714c1bce9d251588d106096967a5109da47c0f",
+    "outputs\\ink_forest\\UnityProject\\Assets\\InkForestTest\\Art\\Character\\attack\\03.png": "dd54a881a15d7e32f701e6dfe4b9b6e1aa66ed58f0316c69a5d6473d42a8d468",
+    "outputs\\ink_forest\\UnityProject\\Assets\\InkForestTest\\Art\\Character\\attack\\04.png": "cb87927faf3569dae0c09818f9b404f1256d662ea740e81aba6dc2ae62d7dea3",
+    "outputs\\ink_forest\\UnityProject\\Assets\\InkForestTest\\Art\\Character\\attack\\05.png": "1b755b42972288fbae29155c353f6305cc6bdca531d0302b1126e48015cf2525",
+    "outputs\\ink_forest\\UnityProject\\Assets\\InkForestTest\\Art\\Character\\attack\\06.png": "f9276ad58320990607f37592ab909993c24ac4559c1963437c9aba2b3ade6d27",
+    "outputs\\ink_forest\\UnityProject\\Assets\\InkForestTest\\Art\\Character\\attack\\07.png": "0f5ce8fe2110238a95f22bbc56a69c81108e69d56815d2bb9a5f7a3965489b3d",
+    "outputs\\ink_forest\\UnityProject\\Assets\\InkForestTest\\Art\\Character\\attack\\08.png": "ab90d784216330ace636ab3857d6bcd16824735dc38615d68f8e3fd8ad8b2b2f",
+    "outputs\\ink_forest\\UnityProject\\Assets\\InkForestTest\\Art\\Character\\attack\\09.png": "e5b0fb0881707c57a9bdd58cf6cd7f467fc43d8bfd09f29d55efbc7f551fedcd",
+    "outputs\\ink_forest\\UnityProject\\Assets\\InkForestTest\\Art\\Character\\attack\\10.png": "87866d6b0239af734465912caaf05c5b050624a45fed69548036b0b409a0b699",
+    "outputs\\ink_forest\\UnityProject\\Assets\\InkForestTest\\Art\\Character\\attack\\11.png": "4e7052070f1b4dad38a983541336da2a8c1f1815513cb8e7493c43079c58c74f",
+    "outputs\\ink_forest\\UnityProject\\Assets\\InkForestTest\\Art\\Character\\attack\\12.png": "54c76f4ec2eae5f81b8bbd8b0c7d5d98c9461c9087ceb379d5345ed25974f905"
+  }
+}

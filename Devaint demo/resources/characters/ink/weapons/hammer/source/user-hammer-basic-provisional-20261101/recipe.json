@@ -1,0 +1,45 @@
+{
+  "mode": "provisional-local-retouch; no full pixelization",
+  "originalSheets": {
+    "A": {
+      "path": "C:\\Users\\SSAFY\\Downloads\\26ab93e2-15ea-4387-84ca-1ea29b418393.png",
+      "sha256": "36eb049a579aeebf6f7191e0257ae401c0481e13a56e9719f57c31b503b8eb69"
+    },
+    "B": {
+      "path": "C:\\Users\\SSAFY\\Downloads\\62a9435b-d012-4c4b-910d-4f187a5db07e.png",
+      "sha256": "00641ddde4aa1befa2f5b3e47038a786007a2e121be1bc15e8d3208f788d9dae"
+    }
+  },
+  "selectedFrames": "selected-preview-timing.json",
+  "generatedCandidate": "imagegen-candidate-not-used.png",
+  "generation": "connected built-in image_gen; generated candidate rejected for color fringe and artwork drift",
+  "retouch": "tools/prepare_hammer_provisional.py; explicit waist stripe/buckle masks only",
+  "background": "white extraction including internal holes; exterior matte replaced from nearest interior pigment",
+  "interior": "Original high-resolution RGB unchanged outside waist and four-pixel exterior band; no palette quantization",
+  "native224": {
+    "size": [
+      224,
+      192
+    ],
+    "pivotPixels": [
+      96,
+      151
+    ],
+    "ppu": 32
+  },
+  "detail4x": {
+    "size": [
+      896,
+      768
+    ],
+    "pivotPixels": [
+      384,
+      604
+    ],
+    "ppu": 128,
+    "preferredFor": "temporary high-detail use without full pixelization"
+  },
+  "unityMeta": "No .meta modified or created. Existing normal/death assets and runtime bindings unchanged.",
+  "approval": "pending-user-art-review",
+  "gameIntegration": "not-deployed"
+}

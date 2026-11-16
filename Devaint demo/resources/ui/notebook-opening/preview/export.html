@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Deviant · 책의 첫 장</title>
+<link rel="stylesheet" href="preview.css">
+</head>
+<body>
+<main>
+  <header><div><p class="eyebrow">DEVIANT · OPENING</p><h1>책의 첫 장</h1></div><span class="badge">연출 시안 02</span></header>
+  <section class="theatre" aria-label="책 오프닝 미리보기">
+    <canvas id="scene" aria-label="제목 없는 가죽 표지가 열리고, 글씨가 적힌 책장이 넘어갑니다."></canvas>
+    <button id="begin" class="begin"><span>책 펼치기</span><small>SPACE</small></button>
+    <div id="loading">책을 준비하고 있어요…</div>
+    <button id="next" class="next" hidden>다음 기록 <span>→</span></button>
+    <button id="exitFull" class="exit-full" aria-label="전체화면 닫기">×</button>
+    <span id="pageNumber" class="page-number"></span>
+  </section>
+  <section class="controls" aria-label="미리보기 재생 조작">
+    <div class="transport"><button id="replay" title="처음부터 다시 재생">↺ <span>다시 보기</span></button><button id="play" aria-label="재생">▶</button><div class="speed"><button data-speed=".5">0.5×</button><button data-speed="1" class="active">1×</button></div><button id="fullscreen" title="전체화면">⛶</button></div>
+    <div class="timeline"><input id="seek" type="range" min="0" max="9" step=".01" value="0" aria-label="연출 시점"><div class="chapters"><button data-time=".35">표지</button><button data-time="2.05">펼침</button><button data-time="3.45">책장 넘김</button><button data-time="8.8">첫 기록</button></div></div>
+    <p class="hint"><span id="phase">제목 없는 조사 수첩</span><span>Space 재생 · R 다시 보기 · F 전체화면</span></p>
+  </section>
+</main>
+<script src="preview.js"></script>
+<button id="exportUnity" style="position:fixed;top:8px;right:8px;z-index:99">Unity 텍스처 내보내기</button>
+<script>
+document.querySelector('#exportUnity').onclick=async function(){
+ if(!state.ready)return;
+ const files={paper:paper.toDataURL(),liner:liner.toDataURL()};
+ written.forEach((c,i)=>files['written-'+i]=c.toDataURL());
+ revealPages.forEach((r,i)=>{files['page-'+i+'-draft']=r.draft.toDataURL();files['page-'+i+'-final']=r.final.toDataURL()});
+ const desk=surface(1280,800),d=desk.getContext('2d'),bg=d.createRadialGradient(640,330,70,640,400,740);
+ bg.addColorStop(0,'#3a2f20');bg.addColorStop(.48,'#211a13');bg.addColorStop(1,'#0b0908');d.fillStyle=bg;d.fillRect(0,0,1280,800);files.desk=desk.toDataURL();
+ const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(files)],{type:'application/json'}));a.download='notebook-textures.json';a.click();this.textContent='내보내기 완료';
+};
+</script></body>
+</html>

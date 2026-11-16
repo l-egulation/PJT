@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>잉크 시뮬레이터 · 50종</title>
+<style>{{STYLE}}</style>
+<main>
+ <header class="page-head"><div><p class="eyebrow">LOST WORDS · INK LAB</p><h1>잉크 시뮬레이터 <span>50종</span></h1><p class="muted">두 무기의 파츠를 조합하고, 공격과 교대로 효과를 확인하세요.</p></div><a href="encyclopedia.html">파츠 도감 ↗</a></header>
+ <p class="notice">수치와 미정 규칙을 시험하는 <strong>독립 실험 모델</strong>입니다. 아래 표식·연쇄·중복·CC 설정은 제품 확정 규칙이 아닙니다. 무기·판정·AI는 간이 모델이며 Unity 전투와 구분합니다. 자유 6칸 실험과 MVP 정비소 모드를 전환할 수 있습니다. MVP 모드는 획득·색상 호환·귀속·판매·슬롯 강화 및 확정 표식 규칙을 적용합니다.</p>
+ <section id="growth-panel" class="panel" aria-label="MVP 정비소"></section>
+ <section class="workspace">
+  <div class="arena-panel panel">
+   <div class="section-head"><h2>전투 실험</h2><div class="row"><button id="pause" aria-pressed="false">일시정지</button><button id="reset">전투 초기화</button></div></div>
+   <div class="row scenario-controls"><label>상황<select id="scenario"></select></label><label class="check"><input id="enemyAI" type="checkbox">몬스터 이동·공격</label><label class="check"><input id="respawn" type="checkbox">처치 후 재등장</label><button id="fit-view" aria-pressed="false">전체 보기</button></div>
+   <canvas id="arena" width="1000" height="556" tabindex="0" aria-label="전투 실험장. 몬스터를 클릭해 표적을 선택하고 아래 공격 버튼을 사용하세요."></canvas>
+   <p class="help">몬스터 클릭: 표적 선택 · 방향키: 이동 · Q/W: A/B 기본 · E/R: A/B 스킬 · Space: 교대 공격</p>
+   <div class="attack-buttons"><button id="attack-a">A 기본 <kbd>Q</kbd></button><button id="attack-b">B 기본 <kbd>W</kbd></button><button id="skill-a">A 스킬 <kbd>E</kbd></button><button id="skill-b">B 스킬 <kbd>R</kbd></button><button id="switch" class="primary">A → B 교대 공격</button></div>
+   <div class="row utilities"><div class="move-pad" aria-label="이동"><button data-move="-1,0" aria-label="왼쪽 이동">←</button><button data-move="0,-1" aria-label="위로 이동">↑</button><button data-move="0,1" aria-label="아래로 이동">↓</button><button data-move="1,0" aria-label="오른쪽 이동">→</button></div><button id="manual-mark">선택 표적에 표식 +1</button><button id="receive">피격 20</button></div>
+   <p id="message" role="status">파츠를 선택한 뒤 기본·스킬·교대 공격을 시험하세요.</p>
+   <div id="stats" class="stats"></div>
+   <details class="log-box"><summary>최근 발동 기록 · A 효과 → 교대 → B 공격 순서 확인</summary><ol id="event-log"></ol></details>
+  </div>
+  <aside class="loadout-panel panel">
+   <h2>두 무기의 팔레트</h2><p class="help">각 6칸은 자유 조합 실험용입니다. 슬롯 색상·획득·제작 규칙을 확정하지 않습니다.</p>
+   <div id="weapons"></div>
+   <label>조합 예시<select id="example"></select></label><button id="apply-example">조합 적용 · 전투 초기화</button>
+   <div id="active-status" class="active-status"></div>
+   <div class="switch-rule">스위칭 순서<br><strong>떠나는 무기 효과 모두 발동<br>→ 무기 전환 → 자동 공격</strong><br><small>파츠 설명의 A는 떠나는 무기, B는 들어오는 무기를 뜻합니다.</small></div>
+  </aside>
+ </section>
+ <details class="settings panel"><summary>미정 규칙 실험 설정 <span>변경하면 전투가 초기화됩니다</span></summary><div class="settings-grid">
+  <label>표식 부여 방식<select id="markMode"><option value="hit">적중 시 부여 · 실험</option><option value="manual">수동 버튼으로만 부여</option></select></label>
+  <label class="check"><input id="marksOnExtra" type="checkbox">추가타도 표식 부여 · 실험</label>
+  <label>적중당 표식 수<input id="marksPerHit" type="number" min="1" max="5" step="1"></label>
+  <label>표식 최대 수<input id="markCap" type="number" min="1" max="20" step="1"></label>
+  <label>표식 유지(초)<input id="markDuration" type="number" min="1" max="30" step="1"></label>
+  <label>격발 시 표식 소비<select id="markConsume"><option value="all">전량 소비 · 실험</option><option value="one">1개 소비 · 실험</option></select></label>
+  <label>격발 자체 피해 · 파츠 피해와 별도<input id="detonationDamage" type="number" min="0" max="100" step="1"></label>
+  <label>추가타 연쇄 깊이 · 안전 한도<input id="chainLimit" type="number" min="0" max="6" step="1"></label>
+  <label>파츠별 내부 쿨타임(초)<input id="internalCooldown" type="number" min="0" max="5" step="0.05"></label>
+  <label>동일 계열 강화 효과<select id="modifierPolicy"><option value="strongest">강한 값만 · 실험</option><option value="sum">합산 · 실험</option></select></label>
+  <label class="check"><input id="allowDuplicates" type="checkbox">동일 파츠 중복 장착 실험</label>
+  <label>보스 CC 지속·변위 배율<input id="bossCcScale" type="number" min="0" max="1" step="0.05"></label>
+  <label>강제 제어 후 회복 구간(초)<input id="ccRecovery" type="number" min="0" max="5" step="0.1"></label>
+  <label class="check"><input id="autoAim" type="checkbox">선택·가까운 표적 자동 조준</label>
+ </div><p class="help">표식은 다른 무기의 표식이 있는 적에게 전환 후 적중하면 격발하고, 그 뒤 새 표식을 부여합니다. 기본 격발 피해는 0이며 장착한 격발 파츠가 별도 효과를 만듭니다. 시간 경과 피해는 없습니다.</p></details>
+ <section class="library panel"><div class="section-head"><div><h2>파츠 선택</h2><p class="help">편집할 팔레트를 고른 뒤 파츠를 장착하세요. 변경하면 전투가 초기화됩니다.</p></div><div class="row" role="group" aria-label="편집할 팔레트"><button id="edit-a" aria-pressed="true">A 편집</button><button id="edit-b" aria-pressed="false">B 편집</button></div></div>
+ <div class="row filters"><label>색상<select id="color"><option value="all">전체 색상</option></select></label><label>트리거<select id="trigger"><option value="all">전체 트리거</option></select></label><label class="search">검색<input id="query" type="search" placeholder="이름·효과·목표"></label><p id="count" aria-live="polite"></p></div>
+ <div id="part-grid"></div><p id="empty" hidden>조건에 맞는 파츠가 없습니다.</p></section>
+ <footer>피해·회복·쿨타임·범위·CC는 이 브라우저 모델에서 계산합니다. 물리 지형·투사체 비행·실제 모션·획득 경제·제품의 차징 스탬프는 재현하지 않습니다. 무기 프리셋도 파츠 비교용 시험값입니다.</footer>
+</main>
+<script id="ink-data" type="application/json">{{CATALOG}}</script>
+<script id="experiment-data" type="application/json">{{EXPERIMENT}}</script>
+<script id="build-data" type="application/json">{{BUILDS}}</script>
+<script id="tuning-data" type="application/json">{{TUNING}}</script>
+<script id="economy-data" type="application/json">{{ECONOMY}}</script>
+<script>{{GROWTH}}</script>
+<script>{{ENGINE}}</script>
+<script>{{APP}}</script>
+<script>{{GROWTHAPP}}</script>
+</html>

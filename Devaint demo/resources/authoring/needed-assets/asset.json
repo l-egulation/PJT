@@ -1,0 +1,26 @@
+{
+  "format": "deviant-resource-asset-v1",
+  "id": "authoring.needed-assets",
+  "path": "authoring/needed-assets",
+  "name": "추가 필요 에셋의 규격·출처·검토",
+  "status": "review-candidates",
+  "approval": "pending-user-art-review",
+  "gameIntegration": "not-applied",
+  "files": [
+    "preview/index.html",
+    "preview/keycaps-overview.png",
+    "preview/static-overview.png",
+    "source/audio-reuse.json",
+    "source/coverage.json",
+    "source/output-layout.json",
+    "source/provenance.json"
+  ],
+  "workingSets": {
+    "needed-art": {
+      "approval": "pending-user-art-review",
+      "gameIntegration": "not-applied",
+      "consumerSelection": "not-added-to-unity-deployment",
+      "layoutPathFromResourceRoot": "authoring/needed-assets/source/output-layout.json"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:Style src="LocomotionWindow.uss" />
+    <ui:ScrollView class="locomotion-editor">
+        <ui:Label text="검 1타 모션 · 전투 시간 고정" class="heading" />
+        <ui:Label text="프레임의 원본 유지 시간과 접촉·Cue 시작 마커를 편집합니다. 실제 타격·종료 시각은 전투 정의를 따릅니다. 같은 구간에서 한 프레임을 늘리면 다른 프레임의 실제 표시 시간이 줄 수 있습니다." class="description" />
+        <ui:Label name="source" class="description" />
+        <uie:ObjectField name="runtime" label="적용할 전투" />
+        <ui:VisualElement name="geometryPreview" />
+        <ui:FloatField name="sourceImpact" label="원본 접촉 시각 (s)" />
+        <ui:FloatField name="fxStart" label="원본 Cue 시작 (s, -1 끔)" />
+        <ui:VisualElement name="frames" />
+        <ui:Label name="preview" class="description" />
+        <ui:Label name="diff" class="description" />
+        <ui:VisualElement class="actions">
+            <ui:Button name="applyNext" text="다음 1타부터 적용" />
+            <ui:Button name="applyReset" text="리셋 후 적용" />
+            <ui:Button name="reload" text="원본 재로드 (편집 폐기)" />
+        </ui:VisualElement>
+        <ui:TextField name="python" label="Python 실행 파일" />
+        <ui:Button name="save" text="모션 원본 저장 · 카탈로그 재생성" />
+        <ui:Label name="state" class="description" />
+        <ui:Label name="status" class="description" />
+        <ui:Label text="저장과 실행 적용은 별도입니다. Undo는 편집 값만 되돌립니다. 스텝 ID·프레임 참조·이미지·피벗·공유 패키지는 유지합니다. 장면은 같은 시간 컴파일러로 본체만 읽으며 Cue를 실행하지 않습니다. 프레임 기준 타격·종료·원본 모드 전환은 Frame Timing Preview를 사용합니다." class="description" />
+    </ui:ScrollView>
+</ui:UXML>

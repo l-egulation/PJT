@@ -1,0 +1,225 @@
+{
+  "source": "material-master.png",
+  "units": "source PNG pixels",
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "parts": [
+    {
+      "id": "top-0",
+      "rect": [
+        67,
+        118,
+        250,
+        102
+      ],
+      "normalizedSize": [
+        32,
+        16
+      ]
+    },
+    {
+      "id": "half-0",
+      "rect": [
+        130,
+        354,
+        124,
+        125
+      ],
+      "normalizedSize": [
+        16,
+        16
+      ]
+    },
+    {
+      "id": "under-0",
+      "rect": [
+        66,
+        598,
+        251,
+        103
+      ],
+      "normalizedSize": [
+        32,
+        16
+      ]
+    },
+    {
+      "id": "wood-0",
+      "rect": [
+        49,
+        840,
+        286,
+        87
+      ],
+      "normalizedSize": [
+        32,
+        8
+      ]
+    },
+    {
+      "id": "top-1",
+      "rect": [
+        451,
+        118,
+        250,
+        102
+      ],
+      "normalizedSize": [
+        32,
+        16
+      ]
+    },
+    {
+      "id": "half-1",
+      "rect": [
+        514,
+        354,
+        124,
+        125
+      ],
+      "normalizedSize": [
+        16,
+        16
+      ]
+    },
+    {
+      "id": "under-1",
+      "rect": [
+        450,
+        598,
+        251,
+        103
+      ],
+      "normalizedSize": [
+        32,
+        16
+      ]
+    },
+    {
+      "id": "wood-1",
+      "rect": [
+        433,
+        840,
+        286,
+        87
+      ],
+      "normalizedSize": [
+        32,
+        8
+      ]
+    },
+    {
+      "id": "top-2",
+      "rect": [
+        835,
+        118,
+        250,
+        102
+      ],
+      "normalizedSize": [
+        32,
+        16
+      ]
+    },
+    {
+      "id": "half-2",
+      "rect": [
+        898,
+        354,
+        124,
+        125
+      ],
+      "normalizedSize": [
+        16,
+        16
+      ]
+    },
+    {
+      "id": "under-2",
+      "rect": [
+        834,
+        598,
+        251,
+        103
+      ],
+      "normalizedSize": [
+        32,
+        16
+      ]
+    },
+    {
+      "id": "wood-2",
+      "rect": [
+        817,
+        839,
+        286,
+        88
+      ],
+      "normalizedSize": [
+        32,
+        8
+      ]
+    },
+    {
+      "id": "top-3",
+      "rect": [
+        1219,
+        118,
+        250,
+        102
+      ],
+      "normalizedSize": [
+        32,
+        16
+      ]
+    },
+    {
+      "id": "half-3",
+      "rect": [
+        1282,
+        354,
+        124,
+        125
+      ],
+      "normalizedSize": [
+        16,
+        16
+      ]
+    },
+    {
+      "id": "under-3",
+      "rect": [
+        1218,
+        598,
+        251,
+        103
+      ],
+      "normalizedSize": [
+        32,
+        16
+      ]
+    },
+    {
+      "id": "wood-3",
+      "rect": [
+        1201,
+        839,
+        286,
+        88
+      ],
+      "normalizedSize": [
+        32,
+        8
+      ]
+    }
+  ],
+  "rules": [
+    "Master bytes unchanged.",
+    "Normalize each material once with premultiplied-alpha resampling; opaque masonry fills occupied pixels.",
+    "Body material is shaded from underside material; never rotate upper face for walls/undersides.",
+    "Runtime art remains 32x32 and is not stretched during assembly.",
+    "Wood detail 4px and iron endcaps fit within the first 12px of the canvas."
+  ]
+}

@@ -1,0 +1,239 @@
+{
+ "format": "stage2-boss-motions-v8-index",
+ "motions": [
+  {
+   "id": "rose-triple-shot",
+   "name": "Rose 공중 3연사",
+   "use": "1페이즈 LayerShots: 벽 끝 공중에서 화살 3발",
+   "frames": 36,
+   "steps": 36,
+   "totalMs": 2520,
+   "gameCueKeys": false
+  },
+  {
+   "id": "blue-ink-burst",
+   "name": "Blue 잉크 터뜨리기",
+   "use": "1페이즈 MachineAndPlatforms: 장치 발판에서 잉크 폭발",
+   "frames": 36,
+   "steps": 36,
+   "totalMs": 2520,
+   "gameCueKeys": true
+  },
+  {
+   "id": "rose-stun-shot",
+   "name": "Rose 조준 사격",
+   "use": "2페이즈 StunAndInk: 기절 화살",
+   "frames": 36,
+   "steps": 36,
+   "totalMs": 2520,
+   "gameCueKeys": true
+  },
+  {
+   "id": "blue-ink-throw",
+   "name": "Blue 잉크 던지기",
+   "use": "2페이즈 StunAndInk: 잉크 공",
+   "frames": 36,
+   "steps": 36,
+   "totalMs": 2520,
+   "gameCueKeys": true
+  },
+  {
+   "id": "rose-sky-volley",
+   "name": "Rose 하늘 일제 사격",
+   "use": "2페이즈 Swap: 로즈 쪽 화살 울타리",
+   "frames": 36,
+   "steps": 36,
+   "totalMs": 2520,
+   "gameCueKeys": true
+  },
+  {
+   "id": "blue-ink-whirl",
+   "name": "Blue 회오리 시전",
+   "use": "2페이즈 Swap: 블루 쪽 잉크 회오리",
+   "frames": 36,
+   "steps": 36,
+   "totalMs": 2520,
+   "gameCueKeys": true
+  },
+  {
+   "id": "rose-stun",
+   "name": "Rose 기절",
+   "use": "2페이즈 교환 뒤 기절 2초(ExchangeStun)",
+   "frames": 6,
+   "steps": 10,
+   "totalMs": 2000,
+   "gameCueKeys": false
+  },
+  {
+   "id": "blue-stun",
+   "name": "Blue 기절",
+   "use": "2페이즈 교환 뒤 기절 2초(ExchangeStun)",
+   "frames": 5,
+   "steps": 8,
+   "totalMs": 2000,
+   "gameCueKeys": false
+  },
+  {
+   "id": "p3-homing",
+   "name": "흑화 Blue 유도 화살",
+   "use": "3페이즈 Homing",
+   "frames": 35,
+   "steps": 35,
+   "totalMs": 1995,
+   "gameCueKeys": true
+  },
+  {
+   "id": "p3-bounce",
+   "name": "흑화 Blue 튕기는 화살 5연사",
+   "use": "3페이즈 Bounce",
+   "frames": 35,
+   "steps": 35,
+   "totalMs": 3475,
+   "gameCueKeys": true
+  },
+  {
+   "id": "p3-rain",
+   "name": "흑화 Blue 순차 폭발 화살비",
+   "use": "3페이즈 ArrowRain",
+   "frames": 27,
+   "steps": 27,
+   "totalMs": 2220,
+   "gameCueKeys": true
+  },
+  {
+   "id": "p3-fan",
+   "name": "흑화 Blue 확장 광역기",
+   "use": "3페이즈 ExpandingFan",
+   "frames": 35,
+   "steps": 35,
+   "totalMs": 3160,
+   "gameCueKeys": true
+  },
+  {
+   "id": "p3-hover",
+   "name": "흑화 Blue 떠오르기·떠 있기·착지",
+   "use": "3페이즈 쉬는 동안 이동(FusedMove)",
+   "frames": 35,
+   "steps": 35,
+   "totalMs": 2975,
+   "gameCueKeys": false
+  },
+  {
+   "id": "p3-stun",
+   "name": "흑화 Blue 기절 2초",
+   "use": "3페이즈 기절",
+   "frames": 35,
+   "steps": 35,
+   "totalMs": 2310,
+   "gameCueKeys": false
+  },
+  {
+   "id": "p3-defeat",
+   "name": "흑화 Blue 처치 쓰러짐",
+   "use": "3페이즈 처치",
+   "frames": 23,
+   "steps": 23,
+   "totalMs": 2200,
+   "gameCueKeys": false
+  },
+  {
+   "id": "p3-transform",
+   "name": "흡수 뒤 변신(흑화 Blue 등장)",
+   "use": "흡수 컷씬 transformStart~idleStart(1.8초)",
+   "frames": 23,
+   "steps": 23,
+   "totalMs": 1705,
+   "gameCueKeys": false
+  },
+  {
+   "id": "R1-rose-smug-laugh",
+   "name": "입장 R1 로즈 거만한 웃음",
+   "use": "입장 컷씬 3.6~5.0초, 반복",
+   "frames": 31,
+   "steps": 31,
+   "totalMs": 1450,
+   "gameCueKeys": false
+  },
+  {
+   "id": "R2-rose-boast-aim",
+   "name": "입장 R2 로즈 석궁 겨누고 멈춤",
+   "use": "입장 컷씬 7.4초 시작, 11.1초까지 마지막 칸 유지",
+   "frames": 7,
+   "steps": 7,
+   "totalMs": 1835,
+   "gameCueKeys": false
+  },
+  {
+   "id": "R3-rose-aim-release",
+   "name": "입장 R3 로즈 겨눔 풀기",
+   "use": "입장 컷씬 11.1~12.0초",
+   "frames": 7,
+   "steps": 7,
+   "totalMs": 900,
+   "gameCueKeys": false
+  },
+  {
+   "id": "R6-rose-panic-reload",
+   "name": "입장 R6 로즈 허둥지둥 장전",
+   "use": "입장 컷씬 17.8초~퇴장",
+   "frames": 29,
+   "steps": 29,
+   "totalMs": 1210,
+   "gameCueKeys": false
+  },
+  {
+   "id": "B3-blue-scene-cast",
+   "name": "입장 B3 블루 환각 전장 시전",
+   "use": "입장 컷씬 castStart(16.4초)부터, 기존 blue-cast 자리",
+   "frames": 35,
+   "steps": 35,
+   "totalMs": 2100,
+   "gameCueKeys": false
+  },
+  {
+   "id": "R4-rose-surprise-point",
+   "name": "전환 R4 로즈 놀람 손가락질",
+   "use": "1→2 전환 컷씬 2.6~5.0초",
+   "frames": 33,
+   "steps": 33,
+   "totalMs": 1810,
+   "gameCueKeys": false
+  },
+  {
+   "id": "R7-rose-battle-ready",
+   "name": "전환 R7 로즈 전투 자세 진입",
+   "use": "1→2 전환 컷씬 12.05~14.4초",
+   "frames": 10,
+   "steps": 10,
+   "totalMs": 1030,
+   "gameCueKeys": false
+  },
+  {
+   "id": "R5-rose-backstep",
+   "name": "흡수 R5 로즈 뒷걸음질",
+   "use": "흡수 컷씬(블루 먼저) 2.6~5.85초",
+   "frames": 15,
+   "steps": 15,
+   "totalMs": 1180,
+   "gameCueKeys": false
+  },
+  {
+   "id": "R8-rose-downed-aim",
+   "name": "흡수 R8 로즈 쓰러진 채 겨눔",
+   "use": "흡수 컷씬(로즈 먼저) 4.62초~붙잡힐 때까지 마지막 칸",
+   "frames": 15,
+   "steps": 15,
+   "totalMs": 1840,
+   "gameCueKeys": false
+  },
+  {
+   "id": "B2-blue-after-absorb",
+   "name": "흡수 B2 블루 흡수 직후 정적",
+   "use": "흡수 컷씬 absorbEnd~roarStart",
+   "frames": 35,
+   "steps": 35,
+   "totalMs": 1750,
+   "gameCueKeys": false
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "decidedBy": "사용자 2026-11-12",
+ "timing": "B 끊어치기",
+ "sequence": {
+  "1타": [
+   {
+    "cell": 9,
+    "seconds": 0.1
+   },
+   {
+    "cell": 10,
+    "seconds": 0.02
+   },
+   {
+    "cell": 11,
+    "seconds": 0.06
+   },
+   {
+    "cell": 12,
+    "seconds": 0.06
+   },
+   {
+    "cell": 14,
+    "seconds": 0.05
+   },
+   {
+    "cell": 15,
+    "seconds": 0.07
+   }
+  ],
+  "2타": [
+   {
+    "cell": 20,
+    "seconds": 0.1
+   },
+   {
+    "cell": 22,
+    "seconds": 0.02
+   },
+   {
+    "cell": 23,
+    "seconds": 0.07
+   },
+   {
+    "cell": 26,
+    "seconds": 0.07
+   },
+   {
+    "cell": 32,
+    "seconds": 0.06
+   }
+  ]
+ },
+ "frames": "4_정리본/<타>_<순서>_칸<번호>.png (640x360, 발밑 (220,327), 1유닛 106.67px)",
+ "effect": {
+  "variant": "나",
+  "frames": {
+   "1타": "5_이펙트/나_jab/00~04.png",
+   "2타": "5_이펙트/나_jab_big/00~04.png"
+  },
+  "secondsPerFrame": 0.03,
+  "startsAt": 0.12,
+  "pixelsPerUnit": 32,
+  "size": [
+   104,
+   88
+  ],
+  "originTopLeftPx": [
+   34,
+   44
+  ],
+  "fistTipCellPx": {
+   "1타": [
+    386,
+    219.8
+   ],
+   "2타": [
+    391,
+    219.2
+   ]
+  }
+ },
+ "gameNumbersUnchanged": "data/combat/unarmed_basic.json: 1타 0.36초·타격 0.12, 2타 0.32초·타격 0.12"
+}

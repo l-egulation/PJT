@@ -1,0 +1,130 @@
+{
+  "effects": [
+    {
+      "form": "launcher",
+      "kind": "cannon",
+      "variant": "A",
+      "angle": 0,
+      "muzzle": {
+        "name": "muzzle",
+        "frames": [
+          "EffectsApproved11/launcher/muzzle/F00",
+          "EffectsApproved11/launcher/muzzle/F01",
+          "EffectsApproved11/launcher/muzzle/F02",
+          "EffectsApproved11/launcher/muzzle/F03",
+          "EffectsApproved11/launcher/muzzle/F04",
+          "EffectsApproved11/launcher/muzzle/F05"
+        ],
+        "seconds": [
+          0.03,
+          0.03,
+          0.04,
+          0.04,
+          0.045,
+          0.045
+        ]
+      },
+      "muzzleScale": 1
+    },
+    {
+      "form": "launcher_laser",
+      "kind": "laser",
+      "variant": "B",
+      "angle": 0,
+      "muzzle": null,
+      "muzzleScale": 1,
+      "beam": {
+        "name": "beam",
+        "frames": [
+          "EffectsApproved11/launcher_laser/beam/F00",
+          "EffectsApproved11/launcher_laser/beam/F01",
+          "EffectsApproved11/launcher_laser/beam/F02",
+          "EffectsApproved11/launcher_laser/beam/F03",
+          "EffectsApproved11/launcher_laser/beam/F04",
+          "EffectsApproved11/launcher_laser/beam/F05"
+        ],
+        "seconds": [
+          0.08,
+          0.08,
+          0.08,
+          0.08,
+          0.08,
+          0.08
+        ]
+      },
+      "core": "EffectsApproved11/launcher_laser/core"
+    },
+    {
+      "form": "launcher_shotgun",
+      "kind": "shotgun",
+      "variant": "A",
+      "angle": 0,
+      "muzzle": {
+        "name": "muzzle",
+        "frames": [
+          "EffectsApproved11/launcher_shotgun/muzzle/F00",
+          "EffectsApproved11/launcher_shotgun/muzzle/F01",
+          "EffectsApproved11/launcher_shotgun/muzzle/F02",
+          "EffectsApproved11/launcher_shotgun/muzzle/F03",
+          "EffectsApproved11/launcher_shotgun/muzzle/F04",
+          "EffectsApproved11/launcher_shotgun/muzzle/F05"
+        ],
+        "seconds": [
+          0.012,
+          0.024,
+          0.024,
+          0.02,
+          0.016,
+          0.012
+        ]
+      },
+      "muzzleScale": 1
+    },
+    {
+      "form": "launcher_grenade",
+      "kind": "grenade",
+      "variant": "B",
+      "angle": 0,
+      "muzzle": {
+        "name": "muzzle",
+        "frames": [
+          "EffectsApproved11/launcher_grenade/muzzle/F00",
+          "EffectsApproved11/launcher_grenade/muzzle/F01",
+          "EffectsApproved11/launcher_grenade/muzzle/F02",
+          "EffectsApproved11/launcher_grenade/muzzle/F03",
+          "EffectsApproved11/launcher_grenade/muzzle/F04",
+          "EffectsApproved11/launcher_grenade/muzzle/F05"
+        ],
+        "seconds": [
+          0.01,
+          0.016,
+          0.016,
+          0.012,
+          0.01,
+          0.01
+        ]
+      },
+      "muzzleScale": 0.4,
+      "blast": {
+        "name": "blast",
+        "frames": [
+          "EffectsApproved11/launcher_grenade/blast/F00",
+          "EffectsApproved11/launcher_grenade/blast/F01",
+          "EffectsApproved11/launcher_grenade/blast/F02",
+          "EffectsApproved11/launcher_grenade/blast/F03",
+          "EffectsApproved11/launcher_grenade/blast/F04",
+          "EffectsApproved11/launcher_grenade/blast/F05"
+        ],
+        "seconds": [
+          0.02,
+          0.045,
+          0.055,
+          0.05,
+          0.045,
+          0.035
+        ]
+      },
+      "projectile": "EffectsApproved11/launcher_grenade/projectile"
+    }
+  ]
+}

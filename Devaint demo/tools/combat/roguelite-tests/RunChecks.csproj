@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems><Nullable>disable</Nullable><NuGetAudit>false</NuGetAudit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../../unity/Assets/Deviant/Run/Runtime/**/*.cs" />
+    <Compile Include="../../../unity/Assets/Deviant/Equipment/Contracts/**/*.cs" />
+    <Compile Include="../../../unity/Assets/Deviant/Equipment/Runtime/**/*.cs" />
+    <Compile Include="Program.cs" />
+  </ItemGroup>
+</Project>

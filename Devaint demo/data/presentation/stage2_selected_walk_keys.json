@@ -1,0 +1,14 @@
+{
+  "schema":"stage2-selected-walk-keys-v1",
+  "status":"selected-keys-for-art-review-not-user-approved",
+  "prior":"outputs/waterway/walk-retouch-v2-20261031",
+  "base":"outputs/waterway/pixel-base-step1-20261031",
+  "output":"outputs/waterway/selected-walk-keys-20261031",
+  "throwerStatus":"Previous upper/lower body composite rejected for truncating thigh anatomy; omitted from selection. Recommend a new walk take with fixed handedness and full feet framing, retaining the chosen static design.",
+  "clips":[
+    {"id":"K4","name":"등짐분사수","sourceId":"K4","frames":[1,3,5,7,9,11,13,15],"durations":[160,140,140,160,160,140,140,160],"reason":"첫 보행 구간에서 발 벌림·밀기·통과·반대 디딤이 이어지는8키. 반복 동작과 첫 입력 정지를 제외.","limitation":"원본 등통 상단 일부 잘림·장비 형태 변화는 남아 있어 아트 검토 필요."},
+    {"id":"B3","name":"쐐기보행기","sourceId":"B3-alt","frames":[1,4,8,12,17,22,27,31],"durations":[180,140,160,160,160,160,180,160],"reason":"36장 버전에서 지지대 전진·하중 받기·회수 자세를 선택. 100장 버전보다 판과 지지대의 형태 변화가 적은 쪽을 사용.","limitation":"지지대 형태와 재질 경계에 추가 픽셀 정리가 필요하며 최종 승인 전임."},
+    {"id":"M3","name":"먹침필경사","sourceId":"M3","frames":[1,3,5,7,9,11,13,15],"durations":[100,100,100,100,100,100,100,100],"reason":"첫 교차보행 구간에서 낮은 자세·발 교차·뻗기·회수8키를 선택. 이후 반복과 큰 자세 변화 구간은 제외.","limitation":"침·가면·등판의 작은 생성 변형은 남아 있어 길이·형태 검토 필요."},
+    {"id":"H3","name":"늘어진수의","sourceId":"H3","frames":[0,1,2,3,5,6],"durations":[300,260,300,420,300,320],"reason":"위·아래 전환을 읽을 수 있는6키 부유. 기존 픽셀 움직임만 사용.","limitation":"부유 이동 아트 시안이며 실제 월드 이동속도와 연결은 별도."}
+  ]
+}

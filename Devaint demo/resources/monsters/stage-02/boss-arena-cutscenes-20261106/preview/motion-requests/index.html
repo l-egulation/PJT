@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>보스 컷씬 모션 제작 요청</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#171c25;color:#e8ecf2;font:14px/1.7 'Malgun Gothic',system-ui,sans-serif}
+main{max-width:1240px;margin:28px auto;padding:0 24px 48px}h1{font-size:25px;margin:4px 0 10px}.eyebrow{font-size:11px;letter-spacing:2px;color:#a9b7cb}
+p{color:#b9c4d1;margin:8px 0}a{color:#b8d7fc}a:hover{color:#fff}
+.how{background:#202a38;border:1px solid #45546b;border-radius:6px;padding:14px 18px;margin:16px 0}.how ol{margin:6px 0 0;padding-left:20px;color:#cfd8e4}
+.filters{display:flex;gap:8px;margin:18px 0 10px;flex-wrap:wrap}.filters button{font:inherit;font-size:13px;color:#e9eef8;background:#2b3647;border:1px solid #56677e;padding:6px 12px;border-radius:5px;cursor:pointer}.filters button[aria-pressed=true]{background:#4b627f;border-color:#9abce3}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:22px}th,td{border-bottom:1px solid #34404f;padding:7px 8px;text-align:left;vertical-align:top}th{color:#a9b7cb;font-weight:600}td a{white-space:nowrap}
+.card{border:1px solid #45546b;border-radius:8px;background:#1d2532;margin:18px 0;overflow:hidden}.card>header{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:12px 16px;background:#232d3b;border-bottom:1px solid #45546b}
+.card h2{font-size:18px;margin:0}.id{font:12px ui-monospace,monospace;color:#a9b7cb}.pri{font-size:12px;padding:2px 8px;border-radius:10px;background:#7a3550;color:#ffe6f0}.pri.p2{background:#3a4a63;color:#dbe7ff}
+.who{font-size:12px;padding:2px 8px;border-radius:10px}.who.rose{background:#a8325f;color:#ffe6f0}.who.blue{background:#2f4f9e;color:#e4ecff}
+.body{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:14px 16px}@media(max-width:900px){.body{grid-template-columns:1fr}}
+dl{margin:0;display:grid;grid-template-columns:88px 1fr;gap:4px 10px}dt{color:#a9b7cb}dd{margin:0}
+.scene{background:#232d3b;border-radius:5px;padding:8px 10px;margin:0 0 8px}.scene b{color:#f0d9e6}.scene q{display:block;color:#e8ecf2;quotes:none}
+.imgs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}figure{margin:0;border:1px solid #45546b;border-radius:5px;overflow:hidden;background:#232d3b}figure img{display:block;width:100%;background:#fff;image-rendering:pixelated}
+figcaption{font-size:12px;padding:6px 8px}figcaption a{margin-right:8px}.none{display:grid;place-items:center;aspect-ratio:16/9;background:#2a3342;color:#9eacc0;font-size:12px;padding:8px;text-align:center}
+.note{font-size:12px;color:#d9c7a8}pre{white-space:pre-wrap;font:12px/1.6 ui-monospace,monospace;background:#111924;border:1px solid #45546b;color:#d4dfec;padding:12px;margin:8px 0 0;max-height:260px;overflow:auto}
+.copy{font:inherit;font-size:12px;color:#fff;background:#466284;border:1px solid #8aa3c4;border-radius:5px;padding:4px 10px;cursor:pointer}.status{font-size:12px;color:#c3dbbf;margin-left:8px}
+footer{color:#9eacc0;font-size:12px;margin-top:28px}
+</style>
+<main>
+ <span class="eyebrow">STAGE 02 / ROSE BLUE · AETHER 제작 요청</span>
+ <h1>보스 컷씬 모션 제작 요청</h1>
+ <p>입장·1→2 전환·흡수 컷씬의 새 대사 연출에 맞춰 필요한 로즈·블루 모션 목록입니다. 지금 컷씬은 대부분 1장짜리 기본 자세로 대사를 처리하고 있어서, 아래 모션이 들어가면 장면이 자연스러워집니다. 각 항목의 「장면 보기」로 해당 컷씬의 그 시각을 바로 열 수 있습니다.</p>
+ <div class="how"><b>Aether에서 뽑는 방법</b><ol>
+  <li>항목의 <b>시작</b>·<b>끝</b> 이미지를 각각 시작·끝 참조로, <b>참고</b> 이미지가 있으면 참고 이미지로 첨부합니다. 모두 승인 런타임 프레임을 흰 배경 1280×720(4배, 발 위치 y 672)으로 키운 것으로, 기존 흡수 연결 모션 요청과 같은 구도입니다.</li>
+  <li><b>영문 프롬프트 복사</b>로 붙여넣습니다. 프롬프트에는 캐릭터 유지 조건과 화면 규칙이 함께 들어 있습니다.</li>
+  <li>끝 이미지가 없는 항목은 끝 자세를 새로 만드는 동작입니다(예: R2의 마지막 장이 R3의 시작 이미지가 됩니다).</li>
+  <li>채택한 프레임은 기존 승인 모션과 같은 384×256 투명 캔버스, 발 기준점 (192, 232)로 맞춰 주세요(<a href="../../../boss-motion-size-review-20261106/runtime/rose-idle/00.png">rose-idle/00.png</a> 참고).</li></ol></div>
+ <div class="filters" role="group" aria-label="우선순위"><button data-p="all" aria-pressed="true">전체</button><button data-p="1" aria-pressed="false">1순위</button><button data-p="2" aria-pressed="false">2순위</button></div>
+ <table><thead><tr><th>ID</th><th>우선</th><th>모션</th><th>컷씬 · 시각</th><th>대사</th><th>이미지</th></tr></thead><tbody id="summary"></tbody></table>
+ <div id="cards"></div>
+ <footer>요청 데이터: <a href="requests.json">requests.json</a> · 참조 이미지·프롬프트 생성: <code>source/make-motion-requests.mjs</code> · 아직 생성·채택·Unity 적용 전입니다. <a href="../flow/">컷씬 이어 보기로 돌아가기</a></footer>
+</main>
+<script type="module">
+const $=s=>document.querySelector(s),R=await (await fetch('requests.json')).json();
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const WHO={rose:'로즈',blue:'블루'},src=f=>`../../../boss-motion-size-review-20261106/runtime/${f}`;
+function figure(m,role,label){const f=m[role],note=m[role+'Note'];
+ if(!f)return `<figure><div class="none">${label} 이미지 없음${note?`<br>${esc(note)}`:''}</div><figcaption>${label}</figcaption></figure>`;
+ return `<figure><img src="${m.id}/${role}.png" alt="${esc(m.name)} ${label} 참조" loading="lazy"><figcaption><b>${label}</b> · ${esc(f)}<br><a href="${m.id}/${role}.png" download="${m.id}-${role}.png">흰 배경 확대본</a><a href="${src(f)}" download>픽셀 원본</a>${note?`<div class="note">${esc(note)}</div>`:''}</figcaption></figure>`;}
+$('#summary').innerHTML=R.motions.map(m=>`<tr data-p="${m.priority}"><td><a href="#${m.id}">${m.id.split('-')[0]}</a></td><td>${m.priority}순위</td><td><span class="who ${m.character}">${WHO[m.character]}</span> ${esc(m.name.split('·')[1]?.trim()??m.name)}</td>
+ <td>${m.scenes.map(s=>`${esc(s.cutscene)} ${esc(s.time)} <a href="${s.page}" target="_blank">장면 보기</a>`).join('<br>')}</td><td>${m.scenes.flatMap(s=>s.lines).map(esc).join('<br>')}</td>
+ <td>${['start','end','reference'].map(r=>m[r]?({start:'시작',end:'끝',reference:'참고'})[r]:'').filter(Boolean).join('·')||'—'}</td></tr>`).join('');
+$('#cards').innerHTML=R.motions.map(m=>`<section class="card" id="${m.id}" data-p="${m.priority}"><header><span class="pri ${m.priority===2?'p2':''}">${m.priority}순위</span><span class="who ${m.character}">${WHO[m.character]}</span><h2>${esc(m.name)}</h2><span class="id">${m.id}</span></header>
+ <div class="body"><div>${m.scenes.map(s=>`<div class="scene"><b>${esc(s.cutscene)}</b> · ${esc(s.time)} · <a href="${s.page}" target="_blank">장면 보기</a>${s.lines.map(l=>`<q>${esc(l)}</q>`).join('')}</div>`).join('')}
+  <dl><dt>동작</dt><dd>${esc(m.action)}</dd><dt>길이</dt><dd>${esc(m.length)}${m.loop?' · 반복':' · 1회'}</dd><dt>바꿀 대상</dt><dd>${esc(m.replaces)}</dd></dl></div>
+  <div><div class="imgs">${figure(m,'start','시작')}${figure(m,'end','끝')}${figure(m,'reference','참고')}</div>
+  <p style="margin-top:10px"><button class="copy" data-id="${m.id}">영문 프롬프트 복사</button><a href="${m.id}/prompt.txt" download="${m.id}-prompt.txt" style="margin-left:10px">TXT 저장</a><span class="status" role="status"></span></p><pre data-prompt="${m.id}">불러오는 중…</pre></div></div></section>`).join('');
+for(const m of R.motions){const box=document.querySelector(`[data-prompt="${m.id}"]`);try{const r=await fetch(`${m.id}/prompt.txt`);if(!r.ok)throw Error(r.status);box.textContent=await r.text();}catch(e){box.textContent='프롬프트를 열지 못했습니다: '+e.message;}}
+document.querySelectorAll('.copy').forEach(b=>b.onclick=async()=>{const st=b.parentElement.querySelector('.status');try{await navigator.clipboard.writeText(document.querySelector(`[data-prompt="${b.dataset.id}"]`).textContent);st.textContent='복사했어요.';}catch{st.textContent='아래 내용을 선택하거나 TXT로 저장해 주세요.';}});
+document.querySelectorAll('.filters button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.filters button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+ document.querySelectorAll('[data-p]').forEach(el=>{if(el.tagName==='BUTTON')return;el.hidden=b.dataset.p!=='all'&&el.dataset.p!==b.dataset.p;});});
+</script>
+</html>

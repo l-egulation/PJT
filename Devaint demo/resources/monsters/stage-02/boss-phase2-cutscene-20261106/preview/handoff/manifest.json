@@ -1,0 +1,81 @@
+{
+  "format": "stage2-blue-absorption-bridge-handoff-v1",
+  "status": "reference-pair-for-new-motion-not-generated-or-integrated",
+  "motion": "upright landing-recovery end to absorption gripping pose",
+  "reason": "Current recovery ends palm-up, while old casting begins with arms hanging. Replace only this disconnected transition.",
+  "requestedUse": "Preserve approved stand-up; insert new bridge and hold the gripping pose during absorption.",
+  "references": [
+    {
+      "id": "start",
+      "source": "monsters/stage-02/boss-motion-size-review-20261106/runtime/blue-recovery/15.png",
+      "sourceSha256": "b0078ab5739e1af93e40dc52f0515b02f818efe5e2a9fd151e6d0534db61efab",
+      "native": "start-native.png",
+      "reference": "start.png",
+      "referenceSha256": "d8169831e5e5ebfa975d827a4c51df4e0dc1ca6be41581f88defc37bb0864367",
+      "nativeCanvas": [
+        384,
+        256
+      ],
+      "nativePivot": [
+        192,
+        232
+      ],
+      "sharedCrop": [
+        32,
+        64,
+        352,
+        244
+      ],
+      "logicalCanvas": [
+        320,
+        180
+      ],
+      "logicalPivot": [
+        160,
+        168
+      ],
+      "enlargement": 4,
+      "referenceCanvas": [
+        1280,
+        720
+      ],
+      "referenceGroundY": 672
+    },
+    {
+      "id": "end",
+      "source": "monsters/stage-02/boss-motion-size-review-20261106/runtime/blue-cast/15.png",
+      "sourceSha256": "c2a45cb4aae89f809b2f6749672f1b6b821e3b3f268e8a58ace4f0319cfbf151",
+      "native": "end-native.png",
+      "reference": "end.png",
+      "referenceSha256": "7a589fb5e04e233d5b56c3cab284ed613bc3ca292e0c274f1ae73778632eceb3",
+      "nativeCanvas": [
+        384,
+        256
+      ],
+      "nativePivot": [
+        192,
+        232
+      ],
+      "sharedCrop": [
+        32,
+        64,
+        352,
+        244
+      ],
+      "logicalCanvas": [
+        320,
+        180
+      ],
+      "logicalPivot": [
+        160,
+        168
+      ],
+      "enlargement": 4,
+      "referenceCanvas": [
+        1280,
+        720
+      ],
+      "referenceGroundY": 672
+    }
+  ]
+}

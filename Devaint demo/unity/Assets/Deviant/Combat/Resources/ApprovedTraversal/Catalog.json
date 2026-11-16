@@ -1,0 +1,1485 @@
+{
+  "wallContact": {
+    "name": "wall_contact",
+    "frames": [
+      "ApprovedTraversal/wall/F08",
+      "ApprovedTraversal/wall/F09",
+      "ApprovedTraversal/wall/F10",
+      "ApprovedTraversal/wall/F11",
+      "ApprovedTraversal/wall/F12",
+      "ApprovedTraversal/wall/F13",
+      "ApprovedTraversal/wall/F14",
+      "ApprovedTraversal/wall/F15",
+      "ApprovedTraversal/wall/F16",
+      "ApprovedTraversal/wall/F17",
+      "ApprovedTraversal/wall/F18",
+      "ApprovedTraversal/wall/F19",
+      "ApprovedTraversal/wall/F20",
+      "ApprovedTraversal/wall/F21",
+      "ApprovedTraversal/wall/F22",
+      "ApprovedTraversal/wall/F23"
+    ],
+    "seconds": [
+      0.08,
+      0.08,
+      0.09,
+      0.09,
+      0.1,
+      0.1,
+      0.11,
+      0.12,
+      0.14,
+      0.14,
+      0.14,
+      0.14,
+      0.14,
+      0.14,
+      0.14,
+      0.07
+    ]
+  },
+  "wallKick": {
+    "name": "wall_kick",
+    "frames": [
+      "ApprovedTraversal/wall/F24",
+      "ApprovedTraversal/wall/F25",
+      "ApprovedTraversal/wall/F26",
+      "ApprovedTraversal/wall/F27",
+      "ApprovedTraversal/wall/F28",
+      "ApprovedTraversal/wall/F29"
+    ],
+    "seconds": [
+      0.06,
+      0.08,
+      0.09,
+      0.09,
+      0.09,
+      0.09
+    ]
+  },
+  "jumps": [
+    {
+      "form": "bomb",
+      "clips": [
+        {
+          "name": "jump",
+          "frames": [
+            "ApprovedTraversal/jump/bomb/F01",
+            "ApprovedTraversal/jump/bomb/F02",
+            "ApprovedTraversal/jump/bomb/F03",
+            "ApprovedTraversal/jump/bomb/F04",
+            "ApprovedTraversal/jump/bomb/F05",
+            "ApprovedTraversal/jump/bomb/F06",
+            "ApprovedTraversal/jump/bomb/F07",
+            "ApprovedTraversal/jump/bomb/F08",
+            "ApprovedTraversal/jump/bomb/F09",
+            "ApprovedTraversal/jump/bomb/F10",
+            "ApprovedTraversal/jump/bomb/F11"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ]
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "ApprovedTraversal/jump/bomb/F01",
+            "ApprovedTraversal/jump/bomb/F02"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ]
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "ApprovedTraversal/jump/bomb/F03",
+            "ApprovedTraversal/jump/bomb/F04"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ]
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "ApprovedTraversal/jump/bomb/F05"
+          ],
+          "seconds": [
+            0.07
+          ]
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "ApprovedTraversal/jump/bomb/F06"
+          ],
+          "seconds": [
+            0.06
+          ]
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "ApprovedTraversal/jump/bomb/F07",
+            "ApprovedTraversal/jump/bomb/F08"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ]
+        },
+        {
+          "name": "land",
+          "frames": [
+            "ApprovedTraversal/jump/bomb/F09",
+            "ApprovedTraversal/jump/bomb/F10",
+            "ApprovedTraversal/jump/bomb/F11"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ]
+        }
+      ]
+    },
+    {
+      "form": "launcher",
+      "clips": [
+        {
+          "name": "jump",
+          "frames": [
+            "ApprovedTraversal/jump/launcher/F01",
+            "ApprovedTraversal/jump/launcher/F02",
+            "ApprovedTraversal/jump/launcher/F03",
+            "ApprovedTraversal/jump/launcher/F04",
+            "ApprovedTraversal/jump/launcher/F05",
+            "ApprovedTraversal/jump/launcher/F06",
+            "ApprovedTraversal/jump/launcher/F07",
+            "ApprovedTraversal/jump/launcher/F08",
+            "ApprovedTraversal/jump/launcher/F09",
+            "ApprovedTraversal/jump/launcher/F10",
+            "ApprovedTraversal/jump/launcher/F11"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ]
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "ApprovedTraversal/jump/launcher/F01",
+            "ApprovedTraversal/jump/launcher/F02"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ]
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "ApprovedTraversal/jump/launcher/F03",
+            "ApprovedTraversal/jump/launcher/F04"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ]
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "ApprovedTraversal/jump/launcher/F05"
+          ],
+          "seconds": [
+            0.07
+          ]
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "ApprovedTraversal/jump/launcher/F06"
+          ],
+          "seconds": [
+            0.06
+          ]
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "ApprovedTraversal/jump/launcher/F07",
+            "ApprovedTraversal/jump/launcher/F08"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ]
+        },
+        {
+          "name": "land",
+          "frames": [
+            "ApprovedTraversal/jump/launcher/F09",
+            "ApprovedTraversal/jump/launcher/F10",
+            "ApprovedTraversal/jump/launcher/F11"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ]
+        }
+      ]
+    },
+    {
+      "form": "dagger",
+      "clips": [
+        {
+          "name": "jump",
+          "frames": [
+            "ApprovedTraversal/jump/dagger/F01",
+            "ApprovedTraversal/jump/dagger/F02",
+            "ApprovedTraversal/jump/dagger/F03",
+            "ApprovedTraversal/jump/dagger/F04",
+            "ApprovedTraversal/jump/dagger/F05",
+            "ApprovedTraversal/jump/dagger/F06",
+            "ApprovedTraversal/jump/dagger/F07",
+            "ApprovedTraversal/jump/dagger/F08",
+            "ApprovedTraversal/jump/dagger/F09",
+            "ApprovedTraversal/jump/dagger/F10",
+            "ApprovedTraversal/jump/dagger/F11"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ]
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "ApprovedTraversal/jump/dagger/F01",
+            "ApprovedTraversal/jump/dagger/F02"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ]
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "ApprovedTraversal/jump/dagger/F03",
+            "ApprovedTraversal/jump/dagger/F04"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ]
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "ApprovedTraversal/jump/dagger/F05"
+          ],
+          "seconds": [
+            0.07
+          ]
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "ApprovedTraversal/jump/dagger/F06"
+          ],
+          "seconds": [
+            0.06
+          ]
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "ApprovedTraversal/jump/dagger/F07",
+            "ApprovedTraversal/jump/dagger/F08"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ]
+        },
+        {
+          "name": "land",
+          "frames": [
+            "ApprovedTraversal/jump/dagger/F09",
+            "ApprovedTraversal/jump/dagger/F10",
+            "ApprovedTraversal/jump/dagger/F11"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ]
+        }
+      ]
+    },
+    {
+      "form": "shuriken",
+      "clips": [
+        {
+          "name": "jump",
+          "frames": [
+            "ApprovedTraversal/jump/shuriken/F01",
+            "ApprovedTraversal/jump/shuriken/F02",
+            "ApprovedTraversal/jump/shuriken/F03",
+            "ApprovedTraversal/jump/shuriken/F04",
+            "ApprovedTraversal/jump/shuriken/F05",
+            "ApprovedTraversal/jump/shuriken/F06",
+            "ApprovedTraversal/jump/shuriken/F07",
+            "ApprovedTraversal/jump/shuriken/F08",
+            "ApprovedTraversal/jump/shuriken/F09",
+            "ApprovedTraversal/jump/shuriken/F10",
+            "ApprovedTraversal/jump/shuriken/F11"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ]
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "ApprovedTraversal/jump/shuriken/F01",
+            "ApprovedTraversal/jump/shuriken/F02"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ]
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "ApprovedTraversal/jump/shuriken/F03",
+            "ApprovedTraversal/jump/shuriken/F04"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ]
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "ApprovedTraversal/jump/shuriken/F05"
+          ],
+          "seconds": [
+            0.07
+          ]
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "ApprovedTraversal/jump/shuriken/F06"
+          ],
+          "seconds": [
+            0.06
+          ]
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "ApprovedTraversal/jump/shuriken/F07",
+            "ApprovedTraversal/jump/shuriken/F08"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ]
+        },
+        {
+          "name": "land",
+          "frames": [
+            "ApprovedTraversal/jump/shuriken/F09",
+            "ApprovedTraversal/jump/shuriken/F10",
+            "ApprovedTraversal/jump/shuriken/F11"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ]
+        }
+      ]
+    },
+    {
+      "form": "greatsword",
+      "clips": [
+        {
+          "name": "jump",
+          "frames": [
+            "ApprovedTraversal/jump/greatsword/F01",
+            "ApprovedTraversal/jump/greatsword/F02",
+            "ApprovedTraversal/jump/greatsword/F03",
+            "ApprovedTraversal/jump/greatsword/F04",
+            "ApprovedTraversal/jump/greatsword/F05",
+            "ApprovedTraversal/jump/greatsword/F06",
+            "ApprovedTraversal/jump/greatsword/F07",
+            "ApprovedTraversal/jump/greatsword/F08",
+            "ApprovedTraversal/jump/greatsword/F09",
+            "ApprovedTraversal/jump/greatsword/F10",
+            "ApprovedTraversal/jump/greatsword/F11"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ]
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "ApprovedTraversal/jump/greatsword/F01",
+            "ApprovedTraversal/jump/greatsword/F02"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ]
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "ApprovedTraversal/jump/greatsword/F03",
+            "ApprovedTraversal/jump/greatsword/F04"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ]
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "ApprovedTraversal/jump/greatsword/F05"
+          ],
+          "seconds": [
+            0.07
+          ]
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "ApprovedTraversal/jump/greatsword/F06"
+          ],
+          "seconds": [
+            0.06
+          ]
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "ApprovedTraversal/jump/greatsword/F07",
+            "ApprovedTraversal/jump/greatsword/F08"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ]
+        },
+        {
+          "name": "land",
+          "frames": [
+            "ApprovedTraversal/jump/greatsword/F09",
+            "ApprovedTraversal/jump/greatsword/F10",
+            "ApprovedTraversal/jump/greatsword/F11"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ]
+        }
+      ]
+    },
+    {
+      "form": "launcher_grenade",
+      "clips": [
+        {
+          "name": "jump",
+          "frames": [
+            "ApprovedTraversal/jump/launcher_grenade/F01",
+            "ApprovedTraversal/jump/launcher_grenade/F02",
+            "ApprovedTraversal/jump/launcher_grenade/F03",
+            "ApprovedTraversal/jump/launcher_grenade/F04",
+            "ApprovedTraversal/jump/launcher_grenade/F05",
+            "ApprovedTraversal/jump/launcher_grenade/F06",
+            "ApprovedTraversal/jump/launcher_grenade/F07",
+            "ApprovedTraversal/jump/launcher_grenade/F08",
+            "ApprovedTraversal/jump/launcher_grenade/F09",
+            "ApprovedTraversal/jump/launcher_grenade/F10",
+            "ApprovedTraversal/jump/launcher_grenade/F11"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ]
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "ApprovedTraversal/jump/launcher_grenade/F01",
+            "ApprovedTraversal/jump/launcher_grenade/F02"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ]
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "ApprovedTraversal/jump/launcher_grenade/F03",
+            "ApprovedTraversal/jump/launcher_grenade/F04"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ]
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "ApprovedTraversal/jump/launcher_grenade/F05"
+          ],
+          "seconds": [
+            0.07
+          ]
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "ApprovedTraversal/jump/launcher_grenade/F06"
+          ],
+          "seconds": [
+            0.06
+          ]
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "ApprovedTraversal/jump/launcher_grenade/F07",
+            "ApprovedTraversal/jump/launcher_grenade/F08"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ]
+        },
+        {
+          "name": "land",
+          "frames": [
+            "ApprovedTraversal/jump/launcher_grenade/F09",
+            "ApprovedTraversal/jump/launcher_grenade/F10",
+            "ApprovedTraversal/jump/launcher_grenade/F11"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ]
+        }
+      ]
+    },
+    {
+      "form": "hammer",
+      "clips": [
+        {
+          "name": "jump",
+          "frames": [
+            "ApprovedTraversal/jump/hammer/F01",
+            "ApprovedTraversal/jump/hammer/F02",
+            "ApprovedTraversal/jump/hammer/F03",
+            "ApprovedTraversal/jump/hammer/F04",
+            "ApprovedTraversal/jump/hammer/F05",
+            "ApprovedTraversal/jump/hammer/F06",
+            "ApprovedTraversal/jump/hammer/F07",
+            "ApprovedTraversal/jump/hammer/F08",
+            "ApprovedTraversal/jump/hammer/F09",
+            "ApprovedTraversal/jump/hammer/F10",
+            "ApprovedTraversal/jump/hammer/F11"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ]
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "ApprovedTraversal/jump/hammer/F01",
+            "ApprovedTraversal/jump/hammer/F02"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ]
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "ApprovedTraversal/jump/hammer/F03",
+            "ApprovedTraversal/jump/hammer/F04"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ]
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "ApprovedTraversal/jump/hammer/F05"
+          ],
+          "seconds": [
+            0.07
+          ]
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "ApprovedTraversal/jump/hammer/F06"
+          ],
+          "seconds": [
+            0.06
+          ]
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "ApprovedTraversal/jump/hammer/F07",
+            "ApprovedTraversal/jump/hammer/F08"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ]
+        },
+        {
+          "name": "land",
+          "frames": [
+            "ApprovedTraversal/jump/hammer/F09",
+            "ApprovedTraversal/jump/hammer/F10",
+            "ApprovedTraversal/jump/hammer/F11"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ]
+        }
+      ]
+    },
+    {
+      "form": "launcher_laser",
+      "clips": [
+        {
+          "name": "jump",
+          "frames": [
+            "ApprovedTraversal/jump/launcher_laser/F01",
+            "ApprovedTraversal/jump/launcher_laser/F02",
+            "ApprovedTraversal/jump/launcher_laser/F03",
+            "ApprovedTraversal/jump/launcher_laser/F04",
+            "ApprovedTraversal/jump/launcher_laser/F05",
+            "ApprovedTraversal/jump/launcher_laser/F06",
+            "ApprovedTraversal/jump/launcher_laser/F07",
+            "ApprovedTraversal/jump/launcher_laser/F08",
+            "ApprovedTraversal/jump/launcher_laser/F09",
+            "ApprovedTraversal/jump/launcher_laser/F10",
+            "ApprovedTraversal/jump/launcher_laser/F11"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ]
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "ApprovedTraversal/jump/launcher_laser/F01",
+            "ApprovedTraversal/jump/launcher_laser/F02"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ]
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "ApprovedTraversal/jump/launcher_laser/F03",
+            "ApprovedTraversal/jump/launcher_laser/F04"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ]
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "ApprovedTraversal/jump/launcher_laser/F05"
+          ],
+          "seconds": [
+            0.07
+          ]
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "ApprovedTraversal/jump/launcher_laser/F06"
+          ],
+          "seconds": [
+            0.06
+          ]
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "ApprovedTraversal/jump/launcher_laser/F07",
+            "ApprovedTraversal/jump/launcher_laser/F08"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ]
+        },
+        {
+          "name": "land",
+          "frames": [
+            "ApprovedTraversal/jump/launcher_laser/F09",
+            "ApprovedTraversal/jump/launcher_laser/F10",
+            "ApprovedTraversal/jump/launcher_laser/F11"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ]
+        }
+      ]
+    },
+    {
+      "form": "rapier",
+      "clips": [
+        {
+          "name": "jump",
+          "frames": [
+            "ApprovedTraversal/jump/rapier/F01",
+            "ApprovedTraversal/jump/rapier/F02",
+            "ApprovedTraversal/jump/rapier/F03",
+            "ApprovedTraversal/jump/rapier/F04",
+            "ApprovedTraversal/jump/rapier/F05",
+            "ApprovedTraversal/jump/rapier/F06",
+            "ApprovedTraversal/jump/rapier/F07",
+            "ApprovedTraversal/jump/rapier/F08",
+            "ApprovedTraversal/jump/rapier/F09",
+            "ApprovedTraversal/jump/rapier/F10",
+            "ApprovedTraversal/jump/rapier/F11"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ]
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "ApprovedTraversal/jump/rapier/F01",
+            "ApprovedTraversal/jump/rapier/F02"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ]
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "ApprovedTraversal/jump/rapier/F03",
+            "ApprovedTraversal/jump/rapier/F04"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ]
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "ApprovedTraversal/jump/rapier/F05"
+          ],
+          "seconds": [
+            0.07
+          ]
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "ApprovedTraversal/jump/rapier/F06"
+          ],
+          "seconds": [
+            0.06
+          ]
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "ApprovedTraversal/jump/rapier/F07",
+            "ApprovedTraversal/jump/rapier/F08"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ]
+        },
+        {
+          "name": "land",
+          "frames": [
+            "ApprovedTraversal/jump/rapier/F09",
+            "ApprovedTraversal/jump/rapier/F10",
+            "ApprovedTraversal/jump/rapier/F11"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ]
+        }
+      ]
+    },
+    {
+      "form": "shield",
+      "clips": [
+        {
+          "name": "jump",
+          "frames": [
+            "ApprovedTraversal/jump/shield/F01",
+            "ApprovedTraversal/jump/shield/F02",
+            "ApprovedTraversal/jump/shield/F03",
+            "ApprovedTraversal/jump/shield/F04",
+            "ApprovedTraversal/jump/shield/F05",
+            "ApprovedTraversal/jump/shield/F06",
+            "ApprovedTraversal/jump/shield/F07",
+            "ApprovedTraversal/jump/shield/F08",
+            "ApprovedTraversal/jump/shield/F09",
+            "ApprovedTraversal/jump/shield/F10",
+            "ApprovedTraversal/jump/shield/F11"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ]
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "ApprovedTraversal/jump/shield/F01",
+            "ApprovedTraversal/jump/shield/F02"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ]
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "ApprovedTraversal/jump/shield/F03",
+            "ApprovedTraversal/jump/shield/F04"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ]
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "ApprovedTraversal/jump/shield/F05"
+          ],
+          "seconds": [
+            0.07
+          ]
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "ApprovedTraversal/jump/shield/F06"
+          ],
+          "seconds": [
+            0.06
+          ]
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "ApprovedTraversal/jump/shield/F07",
+            "ApprovedTraversal/jump/shield/F08"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ]
+        },
+        {
+          "name": "land",
+          "frames": [
+            "ApprovedTraversal/jump/shield/F09",
+            "ApprovedTraversal/jump/shield/F10",
+            "ApprovedTraversal/jump/shield/F11"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ]
+        }
+      ]
+    },
+    {
+      "form": "launcher_shotgun",
+      "clips": [
+        {
+          "name": "jump",
+          "frames": [
+            "ApprovedTraversal/jump/launcher_shotgun/F01",
+            "ApprovedTraversal/jump/launcher_shotgun/F02",
+            "ApprovedTraversal/jump/launcher_shotgun/F03",
+            "ApprovedTraversal/jump/launcher_shotgun/F04",
+            "ApprovedTraversal/jump/launcher_shotgun/F05",
+            "ApprovedTraversal/jump/launcher_shotgun/F06",
+            "ApprovedTraversal/jump/launcher_shotgun/F07",
+            "ApprovedTraversal/jump/launcher_shotgun/F08",
+            "ApprovedTraversal/jump/launcher_shotgun/F09",
+            "ApprovedTraversal/jump/launcher_shotgun/F10",
+            "ApprovedTraversal/jump/launcher_shotgun/F11"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ]
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "ApprovedTraversal/jump/launcher_shotgun/F01",
+            "ApprovedTraversal/jump/launcher_shotgun/F02"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ]
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "ApprovedTraversal/jump/launcher_shotgun/F03",
+            "ApprovedTraversal/jump/launcher_shotgun/F04"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ]
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "ApprovedTraversal/jump/launcher_shotgun/F05"
+          ],
+          "seconds": [
+            0.07
+          ]
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "ApprovedTraversal/jump/launcher_shotgun/F06"
+          ],
+          "seconds": [
+            0.06
+          ]
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "ApprovedTraversal/jump/launcher_shotgun/F07",
+            "ApprovedTraversal/jump/launcher_shotgun/F08"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ]
+        },
+        {
+          "name": "land",
+          "frames": [
+            "ApprovedTraversal/jump/launcher_shotgun/F09",
+            "ApprovedTraversal/jump/launcher_shotgun/F10",
+            "ApprovedTraversal/jump/launcher_shotgun/F11"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ]
+        }
+      ]
+    },
+    {
+      "form": "base_sword",
+      "clips": [
+        {
+          "name": "jump",
+          "frames": [
+            "ApprovedTraversal/jump/base_sword/F01",
+            "ApprovedTraversal/jump/base_sword/F02",
+            "ApprovedTraversal/jump/base_sword/F03",
+            "ApprovedTraversal/jump/base_sword/F04",
+            "ApprovedTraversal/jump/base_sword/F05",
+            "ApprovedTraversal/jump/base_sword/F06",
+            "ApprovedTraversal/jump/base_sword/F07",
+            "ApprovedTraversal/jump/base_sword/F08",
+            "ApprovedTraversal/jump/base_sword/F09",
+            "ApprovedTraversal/jump/base_sword/F10",
+            "ApprovedTraversal/jump/base_sword/F11"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ]
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "ApprovedTraversal/jump/base_sword/F01",
+            "ApprovedTraversal/jump/base_sword/F02"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ]
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "ApprovedTraversal/jump/base_sword/F03",
+            "ApprovedTraversal/jump/base_sword/F04"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ]
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "ApprovedTraversal/jump/base_sword/F05"
+          ],
+          "seconds": [
+            0.07
+          ]
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "ApprovedTraversal/jump/base_sword/F06"
+          ],
+          "seconds": [
+            0.06
+          ]
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "ApprovedTraversal/jump/base_sword/F07",
+            "ApprovedTraversal/jump/base_sword/F08"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ]
+        },
+        {
+          "name": "land",
+          "frames": [
+            "ApprovedTraversal/jump/base_sword/F09",
+            "ApprovedTraversal/jump/base_sword/F10",
+            "ApprovedTraversal/jump/base_sword/F11"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ]
+        }
+      ]
+    },
+    {
+      "form": "whip",
+      "clips": [
+        {
+          "name": "jump",
+          "frames": [
+            "ApprovedTraversal/jump/whip/F01",
+            "ApprovedTraversal/jump/whip/F02",
+            "ApprovedTraversal/jump/whip/F03",
+            "ApprovedTraversal/jump/whip/F04",
+            "ApprovedTraversal/jump/whip/F05",
+            "ApprovedTraversal/jump/whip/F06",
+            "ApprovedTraversal/jump/whip/F07",
+            "ApprovedTraversal/jump/whip/F08",
+            "ApprovedTraversal/jump/whip/F09",
+            "ApprovedTraversal/jump/whip/F10",
+            "ApprovedTraversal/jump/whip/F11"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ]
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "ApprovedTraversal/jump/whip/F01",
+            "ApprovedTraversal/jump/whip/F02"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ]
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "ApprovedTraversal/jump/whip/F03",
+            "ApprovedTraversal/jump/whip/F04"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ]
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "ApprovedTraversal/jump/whip/F05"
+          ],
+          "seconds": [
+            0.07
+          ]
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "ApprovedTraversal/jump/whip/F06"
+          ],
+          "seconds": [
+            0.06
+          ]
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "ApprovedTraversal/jump/whip/F07",
+            "ApprovedTraversal/jump/whip/F08"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ]
+        },
+        {
+          "name": "land",
+          "frames": [
+            "ApprovedTraversal/jump/whip/F09",
+            "ApprovedTraversal/jump/whip/F10",
+            "ApprovedTraversal/jump/whip/F11"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ]
+        }
+      ]
+    }
+  ],
+  "portalDraw": {
+    "name": "portal_draw",
+    "frames": [
+      "ApprovedTraversal/portal_draw/F001",
+      "ApprovedTraversal/portal_draw/F002",
+      "ApprovedTraversal/portal_draw/F003",
+      "ApprovedTraversal/portal_draw/F004",
+      "ApprovedTraversal/portal_draw/F005",
+      "ApprovedTraversal/portal_draw/F006",
+      "ApprovedTraversal/portal_draw/F007",
+      "ApprovedTraversal/portal_draw/F008",
+      "ApprovedTraversal/portal_draw/F009",
+      "ApprovedTraversal/portal_draw/F010",
+      "ApprovedTraversal/portal_draw/F011",
+      "ApprovedTraversal/portal_draw/F012",
+      "ApprovedTraversal/portal_draw/F013",
+      "ApprovedTraversal/portal_draw/F014",
+      "ApprovedTraversal/portal_draw/F015",
+      "ApprovedTraversal/portal_draw/F016",
+      "ApprovedTraversal/portal_draw/F017",
+      "ApprovedTraversal/portal_draw/F018",
+      "ApprovedTraversal/portal_draw/F019",
+      "ApprovedTraversal/portal_draw/F020"
+    ],
+    "seconds": [
+      0.11,
+      0.11,
+      0.11,
+      0.11,
+      0.11,
+      0.11,
+      0.11,
+      0.11,
+      0.11,
+      0.11,
+      0.11,
+      0.11,
+      0.11,
+      0.11,
+      0.11,
+      0.11,
+      0.11,
+      0.11,
+      0.11,
+      0.22
+    ]
+  },
+  "portalMelt": {
+    "name": "portal_melt_B",
+    "frames": [
+      "ApprovedTraversal/portal_melt_B/F001",
+      "ApprovedTraversal/portal_melt_B/F002",
+      "ApprovedTraversal/portal_melt_B/F003",
+      "ApprovedTraversal/portal_melt_B/F004",
+      "ApprovedTraversal/portal_melt_B/F005",
+      "ApprovedTraversal/portal_melt_B/F006",
+      "ApprovedTraversal/portal_melt_B/F007",
+      "ApprovedTraversal/portal_melt_B/F008",
+      "ApprovedTraversal/portal_melt_B/F009",
+      "ApprovedTraversal/portal_melt_B/F010",
+      "ApprovedTraversal/portal_melt_B/F011",
+      "ApprovedTraversal/portal_melt_B/F012",
+      "ApprovedTraversal/portal_melt_B/F013",
+      "ApprovedTraversal/portal_melt_B/F014",
+      "ApprovedTraversal/portal_melt_B/F015",
+      "ApprovedTraversal/portal_melt_B/F016",
+      "ApprovedTraversal/portal_melt_B/F017",
+      "ApprovedTraversal/portal_melt_B/F018",
+      "ApprovedTraversal/portal_melt_B/F019",
+      "ApprovedTraversal/portal_melt_B/F020",
+      "ApprovedTraversal/portal_melt_B/F021",
+      "ApprovedTraversal/portal_melt_B/F022",
+      "ApprovedTraversal/portal_melt_B/F023",
+      "ApprovedTraversal/portal_melt_B/F024",
+      "ApprovedTraversal/portal_melt_B/F025",
+      "ApprovedTraversal/portal_melt_B/F026",
+      "ApprovedTraversal/portal_melt_B/F027",
+      "ApprovedTraversal/portal_melt_B/F028",
+      "ApprovedTraversal/portal_melt_B/F029",
+      "ApprovedTraversal/portal_melt_B/F030"
+    ],
+    "seconds": [
+      0.13,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.23
+    ]
+  },
+  "portalDrawStartSeconds": 1.61,
+  "entryInk": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.091,
+    0.182,
+    0.273,
+    0.364,
+    0.455,
+    0.545,
+    0.636,
+    0.727,
+    0.818,
+    0.909,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ]
+}

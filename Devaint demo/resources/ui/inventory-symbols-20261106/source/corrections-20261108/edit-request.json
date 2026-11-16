@@ -1,0 +1,14 @@
+{
+  "id": "ink3_green_10",
+  "name": "갑옷 깁기",
+  "tool": "built-in image_gen",
+  "intent": "precise-object-edit",
+  "beforeSha256": "2e33d259c8a478cde96419b17d6746924a508afcd90da3cc6bc4de9ebd6f1bec",
+  "afterSha256": "71d387af3d24f943a6c8eb88e5f29eabb8ea3be881b488acef30c956948bfe93",
+  "prompt": "Use case: precise-object-edit. Production game inventory icon correction, single isolated icon on a genuinely transparent square canvas. Input image 1 is the EDIT TARGET, a green ink droplet containing an armour-mending black shield and a cream sewing needle with stitches; image 2 is a STYLE AND CLEAN GREEN BACKING REFERENCE. Fix ONLY the erroneous large cream circular badge covering the lower part of image 1. REMOVE the large cream circle and its curved black circle outline entirely. Seamlessly continue the green droplet fill across the entire body all the way to its thick dark outer droplet edge, matching image 2. The ONLY cream pixels inside the green droplet should be the thin sewing needle and stitches cutout crossing the BLACK shield glyph. Preserve the armour-mending glyph: solid black shield crossed diagonally by a clearly readable cream sewing needle with 3 simple stitches, centred in the lower/middle body, not touching the outer droplet edge. Keep the same hand-drawn crisp dark outline, green palette and subtle paper texture, droplet silhouette, centred scale and margins, simple logo-like readability at tiny UI sizes. Preserve transparency OUTSIDE the droplet. No circular medallion, no cream or white disc behind the shield, no halo, no extra border inside the droplet, no background plane, no text, no cast shadow. Output one corrected icon, square.",
+  "width": 1254,
+  "height": 1254,
+  "editTarget": "ink3_green_10-before.png",
+  "generatedSource": "ink3_green_10-generated.png",
+  "styleReference": "../../runtime/items/backing-ink-green.png"
+}

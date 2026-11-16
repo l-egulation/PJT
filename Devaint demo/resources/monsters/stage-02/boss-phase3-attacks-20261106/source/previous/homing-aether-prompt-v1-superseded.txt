@@ -1,0 +1,17 @@
+Create one non-looping body animation for a 2D side-scrolling pixel action game, using the supplied image as the exact first frame and identity reference. This is the approved fused Blue boss, not a redesign.
+
+Locked camera, fixed framing, pure white #FFFFFF background throughout. Keep the same facing direction as the reference. Preserve the exact hood, pale expressionless mask, blue and violet robe, crossed fabric bands, arm count, normal-sized hands, wrapped legs, boots, palette and body proportions. Preserve the clear violet magical crossbow emblem floating above the head, with its existing shape and spacing; keep it stable and attached to the boss's head position. It is an energy emblem, not metal hardware. Keep the same crisp unoutlined pixel blocks and limited shading. Do not add a mouth, facial expression, black outline, enlarged arm or extra limbs.
+
+Action: a readable, restrained charge followed by a fast, weighty directional palm release for ONE homing magic arrow. Animate the character only. The arrow, charge glow, trails, magic circles, particles, hit and explosion effects will be composited separately; do not draw them into this clip. The existing eye-violet accents and overhead crossbow emblem remain, without additional effects.
+
+Use the exposed pale hand that is ALREADY RAISED BESIDE THE MASK on the LEFT SIDE OF THE PROVIDED IMAGE, emerging from the violet-lined hanging sleeve. This is the casting hand. Do not swap it with the other arm or invent a second raised hand. The other arm stays close to its reference position.
+
+One action, approximately 1.8 seconds:
+0.00-0.15 s: match and hold the supplied idle pose.
+0.15-0.75 s: slowly draw that already-raised hand slightly inward toward the upper chest, flexing its elbow. Set the shoulder and use only a small backward torso weight shift; do not change body scale. Keep the mask facing the same direction. Make the preparation easy to read.
+0.75-0.90 s: hold the charged anticipation pose, creating a brief visual pause.
+0.90-1.00 s: snap that SAME hand outward toward the LEFT EDGE OF THE IMAGE in one short, decisive elbow extension, opening its palm toward the target. The release gesture finishes at 1.00 s. A restrained shoulder follow-through makes it weighty without a large punch or lunge.
+1.00-1.20 s: let only the sleeve and robe settle slightly while the arm remains extended.
+1.20-1.80 s: hold the final extended-palm casting pose still. Do not lower the hand. Do not return to idle. Do not loop or repeat the attack.
+
+Both boots stay planted on the same ground line and at the same horizontal positions throughout. Natural knee and torso articulation is allowed, without sliding, scaling or deforming the boots. No walking, stepping, jumping, hovering, spinning, camera motion, zoom, extra characters or added props. Keep the full character and complete overhead crossbow within the generous white margins. Use stepped pixel movement rather than smooth vector rendering or motion blur. Do not interpolate into a different character design.

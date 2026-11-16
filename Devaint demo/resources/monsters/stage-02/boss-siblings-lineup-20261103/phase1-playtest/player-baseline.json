@@ -1,0 +1,234 @@
+{
+  "id": "base-sword-unupgraded",
+  "label": "기본검 · 강화/잉크 없음",
+  "basics": [
+    {
+      "damage": 10,
+      "duration": 0.33,
+      "impact": 0.13,
+      "active": 0.08,
+      "box": {
+        "width": 3.1875,
+        "height": 2,
+        "x": 1.0625,
+        "y": 1.0
+      }
+    },
+    {
+      "damage": 10,
+      "duration": 0.37,
+      "impact": 0.13,
+      "active": 0.08,
+      "box": {
+        "width": 3.1875,
+        "height": 2,
+        "x": 1.0625,
+        "y": 1.0
+      }
+    }
+  ],
+  "special": {
+    "id": "base_sword_default",
+    "name": "강베기",
+    "slot": "default",
+    "description": "기존 사용자 확정값. 추가 경직/밀기 없음.",
+    "vertical": "normal",
+    "facing": "windup_start",
+    "cooldown": 5,
+    "activation": 0.155,
+    "end": 0.37,
+    "inputSpeed": 0,
+    "hits": [
+      {
+        "time": 0.155,
+        "damage": 35,
+        "active": 0.1,
+        "anchor": "actor",
+        "targets": "all",
+        "box": {
+          "width": 7.15625,
+          "height": 2.5,
+          "x": 3.046875,
+          "y": 1.25
+        },
+        "root": 0,
+        "stun": 0,
+        "push": 0,
+        "pushSeconds": 0.1,
+        "pushWithCaster": false
+      }
+    ],
+    "movement": null,
+    "effect": null,
+    "invulStart": [],
+    "invulEnd": [],
+    "chargeMin": 0,
+    "chargeMax": 0,
+    "chargeMinDamage": 0,
+    "chargeMaxDamage": 0,
+    "capacity": 1
+  },
+  "lateCombo": 0.3,
+  "movement": {
+    "schemaVersion": 2,
+    "id": "player",
+    "runSpeed": 7.5,
+    "dashSpeed": 22.5,
+    "dashDuration": 0.2,
+    "dashRecovery": 1.0,
+    "dashInvulnerability": 0.15,
+    "dashJumpCarrySpeed": 5.0,
+    "dashJumpCarryDuration": 0.1,
+    "firstJumpVelocity": 20.0,
+    "secondJumpVelocity": 20.0,
+    "riseGravity": 66.6666667,
+    "fallGravity": 104.1666667,
+    "jumpApexSeconds": 0.06,
+    "jumpAssist": {
+      "groundBufferDuration": 0.12,
+      "wallCoyoteDuration": 0.1,
+      "releaseVelocityScale": 0.5
+    },
+    "horizontalControl": {
+      "groundAccelerationSeconds": 0.05,
+      "groundDecelerationSeconds": 0.03,
+      "airAccelerationSeconds": 0.1,
+      "airDecelerationSeconds": 0.08
+    },
+    "wallJump": {
+      "horizontalSpeed": 15.0,
+      "carryDuration": 0.35,
+      "bufferDuration": 0.1,
+      "detachDuration": 0.1,
+      "awayHorizontalSpeed": 18.0,
+      "releaseCarryDuration": 0.15,
+      "controlRecoveryDuration": 0.2,
+      "arrivalClingDuration": 0.2,
+      "ledgeHopHeight": 1.0,
+      "jumpCheckDistance": 0.15
+    },
+    "wallSlide": {
+      "clingDuration": 0.15,
+      "startSpeed": 2.0,
+      "maxSpeed": 6.0,
+      "acceleration": 8.0,
+      "staminaDuration": 1.0
+    }
+  },
+  "variance": {
+    "schema": 1,
+    "varyPlayerReceivedDamage": false,
+    "minimum": 0.9,
+    "maximum": 1.1
+  },
+  "feel": {
+    "schema": 1,
+    "stepGap": 0.15,
+    "actions": [
+      {
+        "action": "base_sword_basic_0",
+        "push": 0.5,
+        "pushSeconds": 0.12,
+        "step": 0.5
+      },
+      {
+        "action": "base_sword_basic_1",
+        "push": 0.8125,
+        "pushSeconds": 0.12,
+        "step": 0.75
+      },
+      {
+        "action": "hammer_basic_0",
+        "push": 1.75,
+        "pushSeconds": 0.16,
+        "step": 0.3125
+      },
+      {
+        "action": "hammer_basic_1",
+        "push": 1.75,
+        "pushSeconds": 0.16,
+        "step": 0.3125
+      },
+      {
+        "action": "base_sword_default",
+        "push": 1.5,
+        "pushSeconds": 0.16,
+        "step": 0
+      }
+    ]
+  },
+  "hurtbox": {
+    "status": "user_approved_design",
+    "unity_applied": false,
+    "source": "unity/Assets/Deviant/World/Art/Character/idle/01.png",
+    "source_sha256": "8ADF9A881F5C01C7407BD4468BD3C1B67D012B91D951C9EE8FB1546EAB9EE9FC",
+    "canvas_px": [
+      128,
+      128
+    ],
+    "pixels_per_unit": 32,
+    "origin_px_top_left": [
+      64,
+      121
+    ],
+    "hurtbox_px": {
+      "left": 55,
+      "right": 85,
+      "top": 57,
+      "bottom": 121
+    },
+    "size_unity": [
+      0.9375,
+      2
+    ],
+    "offset_unity_facing_right": [
+      0.1875,
+      1
+    ],
+    "offset_unity_facing_left": [
+      -0.1875,
+      1
+    ],
+    "fixed_across_weapon_and_motion": true,
+    "is_trigger_design": true,
+    "terrain_collider_final_status": "user_approved_same_geometry_separate_non_trigger",
+    "terrain_collider_design": {
+      "size": [
+        0.9375,
+        2
+      ],
+      "offset_facing_right": [
+        0.1875,
+        1
+      ],
+      "offset_facing_left": [
+        -0.1875,
+        1
+      ],
+      "is_trigger": false
+    },
+    "note": "User selected full dotted body reference rectangle, replacing reduced A proposal. Local coordinates with root scale 1 and identity child transform."
+  },
+  "sources": [
+    {
+      "path": "unity/Assets/Deviant/Combat/Resources/MeleeCatalog.json",
+      "sha256": "bc36566886fadb429e6ff0cbeed9db890e0445812ef205d766b76c24deeaba90"
+    },
+    {
+      "path": "data/combat/locomotion/player.json",
+      "sha256": "1c625aedcc1b3f323719543e5d14d49ca1b30ae9aa26d0c0d2dffad7ec2fff60"
+    },
+    {
+      "path": "unity/Assets/Deviant/Combat/Resources/CombatDamageVariance.json",
+      "sha256": "70d345f625e71e6baf4b6c2b9388099ce2191df70e3303b0470431f28e977002"
+    },
+    {
+      "path": "data/combat/attack_feel_motion.json",
+      "sha256": "416c5baea25089b0dedd777d212edac71c2444824ead9f48cb721a19ca101701"
+    },
+    {
+      "path": "data/combat/player_hurtbox.json",
+      "sha256": "ee7626c011279ef73afec73d9d500b07256851e9b895c88321ef9f91d76a766a"
+    }
+  ]
+}

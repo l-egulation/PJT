@@ -1,0 +1,1176 @@
+{
+  "sourceManifestSHA256": "98fab8d514456114e1ec2c436685c378a031fee1f5e6eed24986098fdc17fc9c",
+  "version": "normal-outline-free-v3_elite-outline-free-v4",
+  "palette": [
+    "#171716",
+    "#41413D",
+    "#575451",
+    "#817D77",
+    "#9C968D",
+    "#D6D0C7"
+  ],
+  "monsters": [
+    {
+      "id": "01_thorn-root",
+      "name": "가시뿌리",
+      "motions": {
+        "base": {
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "frameCount": 1,
+          "ms": [
+            100
+          ],
+          "loop": false,
+          "groundBoundaryY": 120,
+          "frames": [
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/base/00.png"
+          ],
+          "sheet": "SpriteSheets/01_thorn-root/base.png"
+        },
+        "idle": {
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "frameCount": 12,
+          "ms": [
+            140,
+            100,
+            150,
+            180,
+            120,
+            100,
+            90,
+            80,
+            160,
+            230,
+            100,
+            90
+          ],
+          "loop": true,
+          "groundBoundaryY": 120,
+          "frames": [
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/idle/00.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/idle/01.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/idle/02.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/idle/03.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/idle/04.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/idle/05.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/idle/06.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/idle/07.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/idle/08.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/idle/09.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/idle/10.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/idle/11.png"
+          ],
+          "sheet": "SpriteSheets/01_thorn-root/idle.png"
+        },
+        "death": {
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "frameCount": 14,
+          "ms": [
+            100,
+            80,
+            80,
+            80,
+            90,
+            90,
+            100,
+            100,
+            120,
+            160,
+            180,
+            180,
+            160,
+            80
+          ],
+          "loop": false,
+          "groundBoundaryY": 120,
+          "frames": [
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/00.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/01.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/02.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/03.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/04.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/05.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/06.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/07.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/08.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/09.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/10.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/11.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/12.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/death/13.png"
+          ],
+          "sheet": "SpriteSheets/01_thorn-root/death.png"
+        },
+        "walk": {
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "frameCount": 8,
+          "ms": [
+            80,
+            80,
+            80,
+            80,
+            80,
+            80,
+            80,
+            80
+          ],
+          "loop": true,
+          "groundBoundaryY": 120,
+          "frames": [
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/walk/00.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/walk/01.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/walk/02.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/walk/03.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/walk/04.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/walk/05.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/walk/06.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/walk/07.png"
+          ],
+          "sheet": "SpriteSheets/01_thorn-root/walk.png"
+        },
+        "attack": {
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "frameCount": 9,
+          "ms": [
+            60,
+            70,
+            80,
+            440,
+            40,
+            110,
+            60,
+            70,
+            90
+          ],
+          "loop": false,
+          "groundBoundaryY": 120,
+          "frames": [
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/attack/00.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/attack/01.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/attack/02.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/attack/03.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/attack/04.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/attack/05.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/attack/06.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/attack/07.png",
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/attack/08.png"
+          ],
+          "sheet": "SpriteSheets/01_thorn-root/attack.png"
+        },
+        "hit": {
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "frameCount": 1,
+          "ms": [
+            120
+          ],
+          "loop": false,
+          "groundBoundaryY": 120,
+          "frames": [
+            "Assets/Deviant/Stage1Monsters/Art/01_thorn-root/hit/00.png"
+          ],
+          "sheet": "SpriteSheets/01_thorn-root/hit.png"
+        }
+      }
+    },
+    {
+      "id": "02_broom-stalker",
+      "name": "먹빗자루",
+      "motions": {
+        "base": {
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "frameCount": 1,
+          "ms": [
+            100
+          ],
+          "loop": false,
+          "groundBoundaryY": 120,
+          "frames": [
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/base/00.png"
+          ],
+          "sheet": "SpriteSheets/02_broom-stalker/base.png"
+        },
+        "idle": {
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "frameCount": 12,
+          "ms": [
+            140,
+            100,
+            150,
+            180,
+            120,
+            100,
+            90,
+            80,
+            160,
+            230,
+            100,
+            90
+          ],
+          "loop": true,
+          "groundBoundaryY": 120,
+          "frames": [
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/idle/00.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/idle/01.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/idle/02.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/idle/03.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/idle/04.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/idle/05.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/idle/06.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/idle/07.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/idle/08.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/idle/09.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/idle/10.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/idle/11.png"
+          ],
+          "sheet": "SpriteSheets/02_broom-stalker/idle.png"
+        },
+        "death": {
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "frameCount": 14,
+          "ms": [
+            100,
+            80,
+            80,
+            80,
+            90,
+            90,
+            100,
+            100,
+            120,
+            160,
+            180,
+            180,
+            160,
+            80
+          ],
+          "loop": false,
+          "groundBoundaryY": 120,
+          "frames": [
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/00.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/01.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/02.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/03.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/04.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/05.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/06.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/07.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/08.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/09.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/10.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/11.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/12.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/death/13.png"
+          ],
+          "sheet": "SpriteSheets/02_broom-stalker/death.png"
+        },
+        "walk": {
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "frameCount": 8,
+          "ms": [
+            90,
+            90,
+            90,
+            90,
+            90,
+            90,
+            90,
+            90
+          ],
+          "loop": true,
+          "groundBoundaryY": 120,
+          "frames": [
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/walk/00.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/walk/01.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/walk/02.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/walk/03.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/walk/04.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/walk/05.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/walk/06.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/walk/07.png"
+          ],
+          "sheet": "SpriteSheets/02_broom-stalker/walk.png"
+        },
+        "attack": {
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "frameCount": 16,
+          "ms": [
+            60,
+            70,
+            80,
+            90,
+            400,
+            50,
+            50,
+            40,
+            40,
+            60,
+            70,
+            80,
+            80,
+            90,
+            90,
+            100
+          ],
+          "loop": false,
+          "groundBoundaryY": 120,
+          "frames": [
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/00.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/01.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/02.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/03.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/04.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/05.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/06.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/07.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/08.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/09.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/10.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/11.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/12.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/13.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/14.png",
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/attack/15.png"
+          ],
+          "sheet": "SpriteSheets/02_broom-stalker/attack.png"
+        },
+        "hit": {
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "frameCount": 1,
+          "ms": [
+            120
+          ],
+          "loop": false,
+          "groundBoundaryY": 120,
+          "frames": [
+            "Assets/Deviant/Stage1Monsters/Art/02_broom-stalker/hit/00.png"
+          ],
+          "sheet": "SpriteSheets/02_broom-stalker/hit.png"
+        }
+      }
+    },
+    {
+      "id": "03_gutter-spitter",
+      "name": "배수관 포수",
+      "motions": {
+        "base": {
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "frameCount": 1,
+          "ms": [
+            100
+          ],
+          "loop": false,
+          "groundBoundaryY": 120,
+          "frames": [
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/base/00.png"
+          ],
+          "sheet": "SpriteSheets/03_gutter-spitter/base.png"
+        },
+        "idle": {
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "frameCount": 12,
+          "ms": [
+            140,
+            100,
+            150,
+            180,
+            120,
+            100,
+            90,
+            80,
+            160,
+            230,
+            100,
+            90
+          ],
+          "loop": true,
+          "groundBoundaryY": 120,
+          "frames": [
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/idle/00.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/idle/01.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/idle/02.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/idle/03.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/idle/04.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/idle/05.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/idle/06.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/idle/07.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/idle/08.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/idle/09.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/idle/10.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/idle/11.png"
+          ],
+          "sheet": "SpriteSheets/03_gutter-spitter/idle.png"
+        },
+        "death": {
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "frameCount": 14,
+          "ms": [
+            100,
+            80,
+            80,
+            80,
+            90,
+            90,
+            100,
+            100,
+            120,
+            160,
+            180,
+            180,
+            160,
+            80
+          ],
+          "loop": false,
+          "groundBoundaryY": 120,
+          "frames": [
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/00.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/01.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/02.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/03.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/04.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/05.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/06.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/07.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/08.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/09.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/10.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/11.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/12.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/death/13.png"
+          ],
+          "sheet": "SpriteSheets/03_gutter-spitter/death.png"
+        },
+        "attack": {
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "frameCount": 26,
+          "ms": [
+            120,
+            80,
+            40,
+            40,
+            50,
+            40,
+            100,
+            60,
+            30,
+            30,
+            40,
+            30,
+            80,
+            90,
+            100,
+            100,
+            110,
+            110,
+            30,
+            50,
+            60,
+            60,
+            30,
+            30,
+            70,
+            140
+          ],
+          "loop": false,
+          "groundBoundaryY": 120,
+          "frames": [
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/00.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/01.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/02.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/03.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/04.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/05.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/06.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/07.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/08.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/09.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/10.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/11.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/12.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/13.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/14.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/15.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/16.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/17.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/18.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/19.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/20.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/21.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/22.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/23.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/24.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/attack/25.png"
+          ],
+          "sheet": "SpriteSheets/03_gutter-spitter/attack.png",
+          "layers": {
+            "body": {
+              "frames": [
+                "SourceLayers/03_gutter-spitter/attack/body/00.png",
+                "SourceLayers/03_gutter-spitter/attack/body/01.png",
+                "SourceLayers/03_gutter-spitter/attack/body/02.png",
+                "SourceLayers/03_gutter-spitter/attack/body/03.png",
+                "SourceLayers/03_gutter-spitter/attack/body/04.png",
+                "SourceLayers/03_gutter-spitter/attack/body/05.png",
+                "SourceLayers/03_gutter-spitter/attack/body/06.png",
+                "SourceLayers/03_gutter-spitter/attack/body/07.png",
+                "SourceLayers/03_gutter-spitter/attack/body/08.png",
+                "SourceLayers/03_gutter-spitter/attack/body/09.png",
+                "SourceLayers/03_gutter-spitter/attack/body/10.png",
+                "SourceLayers/03_gutter-spitter/attack/body/11.png",
+                "SourceLayers/03_gutter-spitter/attack/body/12.png",
+                "SourceLayers/03_gutter-spitter/attack/body/13.png",
+                "SourceLayers/03_gutter-spitter/attack/body/14.png",
+                "SourceLayers/03_gutter-spitter/attack/body/15.png",
+                "SourceLayers/03_gutter-spitter/attack/body/16.png",
+                "SourceLayers/03_gutter-spitter/attack/body/17.png",
+                "SourceLayers/03_gutter-spitter/attack/body/18.png",
+                "SourceLayers/03_gutter-spitter/attack/body/19.png",
+                "SourceLayers/03_gutter-spitter/attack/body/20.png",
+                "SourceLayers/03_gutter-spitter/attack/body/21.png",
+                "SourceLayers/03_gutter-spitter/attack/body/22.png",
+                "SourceLayers/03_gutter-spitter/attack/body/23.png",
+                "SourceLayers/03_gutter-spitter/attack/body/24.png",
+                "SourceLayers/03_gutter-spitter/attack/body/25.png"
+              ],
+              "width": 128,
+              "height": 128
+            },
+            "effects": {
+              "frames": [
+                "SourceLayers/03_gutter-spitter/attack/effects/00.png",
+                "SourceLayers/03_gutter-spitter/attack/effects/01.png",
+                "SourceLayers/03_gutter-spitter/attack/effects/02.png",
+                "SourceLayers/03_gutter-spitter/attack/effects/03.png",
+                "SourceLayers/03_gutter-spitter/attack/effects/04.png",
+                "SourceLayers/03_gutter-spitter/attack/effects/05.png",
+                "SourceLayers/03_gutter-spitter/attack/effects/06.png",
+                "SourceLayers/03_gutter-spitter/attack/effects/07.png",
+                "SourceLayers/03_gutter-spitter/attack/effects/08.png",
+                "SourceLayers/03_gutter-spitter/attack/effects/09.png",
+                "SourceLayers/03_gutter-spitter/attack/effects/10.png",
+                "SourceLayers/03_gutter-spitter/attack/effects/11.png",
+                "SourceLayers/03_gutter-spitter/attack/effects/12.png",
+                "SourceLayers/03_gutter-spitter/attack/effects/13.png",
+                "SourceLayers/03_gutter-spitter/attack/effects/14.png",
+                "SourceLayers/03_gutter-spitter/attack/effects/15.png",
+                "SourceLayers/03_gutter-spitter/attack/effects/16.png",
+                "SourceLayers/03_gutter-spitter/attack/effects/17.png",
+                "SourceLayers/03_gutter-spitter/attack/effects/18.png",
+                "SourceLayers/03_gutter-spitter/attack/effects/19.png",
+                "SourceLayers/03_gutter-spitter/attack/effects/20.png",
+                "SourceLayers/03_gutter-spitter/attack/effects/21.png",
+                "SourceLayers/03_gutter-spitter/attack/effects/22.png",
+                "SourceLayers/03_gutter-spitter/attack/effects/23.png",
+                "SourceLayers/03_gutter-spitter/attack/effects/24.png",
+                "SourceLayers/03_gutter-spitter/attack/effects/25.png"
+              ],
+              "width": 128,
+              "height": 128
+            }
+          }
+        },
+        "walk": {
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "frameCount": 24,
+          "ms": [
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "loop": true,
+          "groundBoundaryY": 120,
+          "frames": [
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/00.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/01.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/02.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/03.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/04.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/05.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/06.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/07.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/08.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/09.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/10.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/11.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/12.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/13.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/14.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/15.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/16.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/17.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/18.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/19.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/20.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/21.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/22.png",
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/walk/23.png"
+          ],
+          "sheet": "SpriteSheets/03_gutter-spitter/walk.png"
+        },
+        "hit": {
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "frameCount": 1,
+          "ms": [
+            120
+          ],
+          "loop": false,
+          "groundBoundaryY": 120,
+          "frames": [
+            "Assets/Deviant/Stage1Monsters/Art/03_gutter-spitter/hit/00.png"
+          ],
+          "sheet": "SpriteSheets/03_gutter-spitter/hit.png"
+        }
+      }
+    },
+    {
+      "id": "04_well-warden",
+      "name": "우물 도르래 수문장",
+      "motions": {
+        "base": {
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "frameCount": 1,
+          "ms": [
+            100
+          ],
+          "loop": false,
+          "groundBoundaryY": 120,
+          "frames": [
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/base/00.png"
+          ],
+          "sheet": "SpriteSheets/04_well-warden/base.png"
+        },
+        "idle": {
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "frameCount": 20,
+          "ms": [
+            120,
+            100,
+            90,
+            90,
+            90,
+            90,
+            110,
+            120,
+            120,
+            110,
+            90,
+            90,
+            90,
+            90,
+            100,
+            110,
+            110,
+            110,
+            110,
+            120
+          ],
+          "loop": true,
+          "groundBoundaryY": 120,
+          "frames": [
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/00.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/01.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/02.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/03.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/04.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/05.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/06.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/07.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/08.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/09.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/10.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/11.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/12.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/13.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/14.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/15.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/16.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/17.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/18.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/idle/19.png"
+          ],
+          "sheet": "SpriteSheets/04_well-warden/idle.png"
+        },
+        "attack": {
+          "width": 448,
+          "height": 180,
+          "ppu": 32,
+          "pivot": [
+            0.6383928571428571,
+            0.08333333333333333
+          ],
+          "frameCount": 34,
+          "ms": [
+            100,
+            80,
+            80,
+            80,
+            80,
+            90,
+            320,
+            70,
+            50,
+            40,
+            30,
+            40,
+            240,
+            50,
+            50,
+            60,
+            70,
+            70,
+            60,
+            60,
+            60,
+            60,
+            70,
+            70,
+            160,
+            40,
+            40,
+            40,
+            90,
+            110,
+            70,
+            70,
+            70,
+            160
+          ],
+          "loop": false,
+          "groundBoundaryY": 165,
+          "frames": [
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/00.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/01.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/02.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/03.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/04.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/05.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/06.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/07.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/08.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/09.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/10.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/11.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/12.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/13.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/14.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/15.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/16.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/17.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/18.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/19.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/20.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/21.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/22.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/23.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/24.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/25.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/26.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/27.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/28.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/29.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/30.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/31.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/32.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/attack/33.png"
+          ],
+          "sheet": "SpriteSheets/04_well-warden/attack.png"
+        },
+        "walk": {
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "frameCount": 24,
+          "ms": [
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "loop": true,
+          "groundBoundaryY": 120,
+          "frames": [
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/00.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/01.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/02.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/03.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/04.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/05.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/06.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/07.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/08.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/09.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/10.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/11.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/12.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/13.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/14.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/15.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/16.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/17.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/18.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/19.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/20.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/21.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/22.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/walk/23.png"
+          ],
+          "sheet": "SpriteSheets/04_well-warden/walk.png"
+        },
+        "death": {
+          "width": 192,
+          "height": 160,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.1
+          ],
+          "frameCount": 34,
+          "ms": [
+            100,
+            40,
+            40,
+            90,
+            40,
+            50,
+            50,
+            50,
+            50,
+            40,
+            40,
+            40,
+            40,
+            40,
+            40,
+            40,
+            40,
+            40,
+            40,
+            40,
+            40,
+            40,
+            50,
+            50,
+            60,
+            60,
+            60,
+            60,
+            60,
+            60,
+            60,
+            60,
+            60,
+            120
+          ],
+          "loop": false,
+          "groundBoundaryY": 144,
+          "frames": [
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/00.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/01.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/02.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/03.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/04.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/05.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/06.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/07.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/08.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/09.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/10.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/11.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/12.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/13.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/14.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/15.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/16.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/17.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/18.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/19.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/20.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/21.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/22.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/23.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/24.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/25.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/26.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/27.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/28.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/29.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/30.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/31.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/32.png",
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/death/33.png"
+          ],
+          "sheet": "SpriteSheets/04_well-warden/death.png",
+          "layers": {
+            "body": {
+              "frames": [
+                "SourceLayers/04_well-warden/death/body/00.png",
+                "SourceLayers/04_well-warden/death/body/01.png",
+                "SourceLayers/04_well-warden/death/body/02.png",
+                "SourceLayers/04_well-warden/death/body/03.png",
+                "SourceLayers/04_well-warden/death/body/04.png",
+                "SourceLayers/04_well-warden/death/body/05.png",
+                "SourceLayers/04_well-warden/death/body/06.png",
+                "SourceLayers/04_well-warden/death/body/07.png",
+                "SourceLayers/04_well-warden/death/body/08.png",
+                "SourceLayers/04_well-warden/death/body/09.png",
+                "SourceLayers/04_well-warden/death/body/10.png",
+                "SourceLayers/04_well-warden/death/body/11.png",
+                "SourceLayers/04_well-warden/death/body/12.png",
+                "SourceLayers/04_well-warden/death/body/13.png",
+                "SourceLayers/04_well-warden/death/body/14.png",
+                "SourceLayers/04_well-warden/death/body/15.png",
+                "SourceLayers/04_well-warden/death/body/16.png",
+                "SourceLayers/04_well-warden/death/body/17.png",
+                "SourceLayers/04_well-warden/death/body/18.png",
+                "SourceLayers/04_well-warden/death/body/19.png",
+                "SourceLayers/04_well-warden/death/body/20.png",
+                "SourceLayers/04_well-warden/death/body/21.png",
+                "SourceLayers/04_well-warden/death/body/22.png",
+                "SourceLayers/04_well-warden/death/body/23.png",
+                "SourceLayers/04_well-warden/death/body/24.png",
+                "SourceLayers/04_well-warden/death/body/25.png",
+                "SourceLayers/04_well-warden/death/body/26.png",
+                "SourceLayers/04_well-warden/death/body/27.png",
+                "SourceLayers/04_well-warden/death/body/28.png",
+                "SourceLayers/04_well-warden/death/body/29.png",
+                "SourceLayers/04_well-warden/death/body/30.png",
+                "SourceLayers/04_well-warden/death/body/31.png",
+                "SourceLayers/04_well-warden/death/body/32.png",
+                "SourceLayers/04_well-warden/death/body/33.png"
+              ],
+              "width": 128,
+              "height": 128
+            },
+            "fx": {
+              "frames": [
+                "SourceLayers/04_well-warden/death/fx/00.png",
+                "SourceLayers/04_well-warden/death/fx/01.png",
+                "SourceLayers/04_well-warden/death/fx/02.png",
+                "SourceLayers/04_well-warden/death/fx/03.png",
+                "SourceLayers/04_well-warden/death/fx/04.png",
+                "SourceLayers/04_well-warden/death/fx/05.png",
+                "SourceLayers/04_well-warden/death/fx/06.png",
+                "SourceLayers/04_well-warden/death/fx/07.png",
+                "SourceLayers/04_well-warden/death/fx/08.png",
+                "SourceLayers/04_well-warden/death/fx/09.png",
+                "SourceLayers/04_well-warden/death/fx/10.png",
+                "SourceLayers/04_well-warden/death/fx/11.png",
+                "SourceLayers/04_well-warden/death/fx/12.png",
+                "SourceLayers/04_well-warden/death/fx/13.png",
+                "SourceLayers/04_well-warden/death/fx/14.png",
+                "SourceLayers/04_well-warden/death/fx/15.png",
+                "SourceLayers/04_well-warden/death/fx/16.png",
+                "SourceLayers/04_well-warden/death/fx/17.png",
+                "SourceLayers/04_well-warden/death/fx/18.png",
+                "SourceLayers/04_well-warden/death/fx/19.png",
+                "SourceLayers/04_well-warden/death/fx/20.png",
+                "SourceLayers/04_well-warden/death/fx/21.png",
+                "SourceLayers/04_well-warden/death/fx/22.png",
+                "SourceLayers/04_well-warden/death/fx/23.png",
+                "SourceLayers/04_well-warden/death/fx/24.png",
+                "SourceLayers/04_well-warden/death/fx/25.png",
+                "SourceLayers/04_well-warden/death/fx/26.png",
+                "SourceLayers/04_well-warden/death/fx/27.png",
+                "SourceLayers/04_well-warden/death/fx/28.png",
+                "SourceLayers/04_well-warden/death/fx/29.png",
+                "SourceLayers/04_well-warden/death/fx/30.png",
+                "SourceLayers/04_well-warden/death/fx/31.png",
+                "SourceLayers/04_well-warden/death/fx/32.png",
+                "SourceLayers/04_well-warden/death/fx/33.png"
+              ],
+              "width": 192,
+              "height": 160
+            }
+          },
+          "bodyOffset": [
+            32,
+            24
+          ]
+        },
+        "hit": {
+          "width": 128,
+          "height": 128,
+          "ppu": 32,
+          "pivot": [
+            0.5,
+            0.0625
+          ],
+          "frameCount": 1,
+          "ms": [
+            120
+          ],
+          "loop": false,
+          "groundBoundaryY": 120,
+          "frames": [
+            "Assets/Deviant/Stage1Monsters/Art/04_well-warden/hit/00.png"
+          ],
+          "sheet": "SpriteSheets/04_well-warden/hit.png"
+        }
+      }
+    }
+  ]
+}

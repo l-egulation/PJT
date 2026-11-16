@@ -1,0 +1,28 @@
+망치 모션 제작 입력
+
+참조: preview/user-hammer-normal-20261031/aether-start-8x.png 및 aether-end-8x.png
+두 파일은 같은 대기 자세다. 하나의 연속 2타 영상의 시작/끝에 사용한다.
+원본 224×192, 발/root=(96,151), 확대 1792×1536, 발/root=(768,1208).
+캐릭터를 화면 가운데로 재배치하거나 크롭하지 않는다. 확대본은 최근접 8배다.
+모델 출력의 프레임 수/재생시간은 전투 판정의 편집 원본이 아니다.
+실제 연결 때 준비·접촉·유지·복귀 프레임을 선택하고 기존 판정 시각에 맞춘다.
+
+평타 2타 — 아래 영어 문단을 한 번에 입력
+
+Create one continuous, readable TWO-HIT heavy hammer attack animation for the exact pixel-art character in the supplied start and end reference images. Face right throughout. Keep the camera locked, orthographic side view, with the exact same canvas, framing, character proportions and ground/root position. Start and finish in the exact reference holding pose. The hammer has the exact supplied asymmetric heavy head, open gaps and long straight handle; both head and handle are solid ink-black, without brown, blue highlights, shine or an added outline. Preserve its shape and size consistently across every frame.
+
+Hit 1: from the reference holding pose, lower the hammer head slightly toward the front and bend the knees in a small readable anticipation. Drive the hammer quickly diagonally upward through the space in front of the character, using both arms and a small torso turn. Show ONE clear front-facing impact, then a brief high follow-through. Keep the hammer raised as the bridge into hit 2; do not return to idle between the two hits.
+
+Hit 2: carry that raised hammer continuously over the head, briefly gather weight, then drive one stronger, fast downward hammer blow into the space immediately in front of the character. Show ONE distinct second impact. Hold the heavy low follow-through briefly, then lift and settle back into the exact initial holding pose. This is a front enemy strike, without an expanding ground shockwave. No extra strikes, no spinning combo, no repeated bounces. Clear slow anticipation, very fast contact, short impact hold and deliberate recovery. Do not make all phases move at a constant speed. Feet may change shape naturally with the stance, while remaining grounded at the same root; no forward dash, root drift or size change.
+
+Preserve the exact approved character: black face and body, only the original yellow eyes, beige hood and robe over narrow black trousers. The beige lower shapes are robe panels, not beige trousers. No black skirt and no new black waist belt. Keep the hood, head height and robe hem proportions. Preserve exactly two scarf tails; they lag behind torso motion and settle naturally with each action. Both hands must hold the same handle continuously with believable grip and no sliding or detached fingers. Preserve crisp native pixel edges and solid, complete material fills. No antialiasing, outline, stray bright pixels, holes inside solid fabric, new colors or effects. Transparent background, no floor graphic, shadow, text, camera movement, zoom or crop. Return a single complete animation, not a contact sheet.
+
+Runtime alignment, for the editor only: damage 16 then 24. Attack 1 local contact 0.21s/end 0.37s; attack 2 local contact 0.29s/end 0.72s. Trial attack speed 0.8175 and final extra recovery 0.2s remain engine settings; do not bake altered combat values into the art.
+
+기본 스킬 횡강타 — 아래 영어 문단을 별도로 입력
+
+Animate ONE powerful HORIZONTAL heavy hammer strike using the exact supplied pixel-art character and black hammer. Use the supplied identical start/end images as exact framing and pose constraints. Face right, locked orthographic side camera, same scale and ground/root position throughout. Begin in the reference holding pose. Widen the stance naturally without moving the root, draw the hammer back behind the torso and visibly twist the shoulders and waist to store weight. Hold the anticipation long enough to read. Then rapidly unwind and swing the hammer across the front at waist-to-chest height. Show exactly ONE strong horizontal impact pushing toward the right, with a short fully extended follow-through hold. Recover deliberately to the exact starting pose. Keep both hands attached to the handle. The hammer follows a heavy horizontal arc, not an overhead ground slam, uppercut, dash, projectile attack or full-body 360-degree spin. No second hit or extra bounce. Separate readable anticipation, fast strike, short held impact and recovery; do not simply accelerate the entire clip.
+
+Preserve the supplied asymmetric hammer silhouette, head openings, handle proportions and solid ink-black material. Preserve the exact character design: black face/body, original yellow eyes, beige hood and robe over narrow black trousers, original head/hood/hem proportions, and exactly two naturally lagging scarf tails. No beige trousers, black skirt, new waist belt, outline, shine, new colors, added shockwave or extra objects. Keep the feet grounded with natural articulation and no root drift. Crisp consistent pixel art, no antialiasing, bright stray pixels or missing fabric pixels. Transparent background; no floor, shadows, text, camera movement, zoom, crop or resizing. Finish in the exact reference pose.
+
+Runtime alignment, for the editor only: contact 0.40s, active window 0.12s, body end 0.95s, damage 40, cooldown 6s. Normal-enemy push 1.5 units over 0.2s; boss takes damage without push. These existing gameplay numbers stay unchanged.

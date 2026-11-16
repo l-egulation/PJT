@@ -1,0 +1,74 @@
+{
+  "schema": "enemy-pursuit-v1",
+  "status": "tuning-draft",
+  "tuner": "tools/combat/monster_pursuit_tuner/index.html",
+  "pursuit": {
+    "appliesTo": ["01_thorn-root", "02_broom-stalker", "draft_07_heavy_charger", "K4", "B3", "M3"],
+    "persistAfterDetection": true,
+    "knowsTargetPositionAfterDetection": true,
+    "leash": "screenLeash",
+    "chaseSpeedScale": 2.4,
+    "jumpHeight": 6,
+    "jumpAirSpeed": 6.0,
+    "jumpWindupSeconds": 0.12,
+    "dropThrough": true,
+    "walkOffLedges": true,
+    "maxDropHeight": 24,
+    "replanSeconds": 0.25,
+    "detectionScale": 2,
+    "targetFacingDeadzone": 0.125,
+    "randomHop": true,
+    "randomHopIntervalMin": 1.5,
+    "randomHopIntervalMax": 4.0,
+    "randomHopHeightMin": 0.8,
+    "randomHopHeightMax": 2.0,
+    "pathJumpDelayMin": 0.0,
+    "pathJumpDelayMax": 0.35
+  },
+  "species": {
+    "note": "per-species jump ceiling and random hop while walking; missing fields use pursuit.jumpHeight / pursuit.randomHop",
+    "01_thorn-root": {"jumpHeight": 6, "randomHop": true},
+    "02_broom-stalker": {"jumpHeight": 6, "randomHop": true},
+    "draft_07_heavy_charger": {"jumpHeight": 4, "randomHop": false},
+    "K4": {"jumpHeight": 6, "randomHop": true},
+    "B3": {"jumpHeight": 4, "randomHop": false},
+    "M3": {"jumpHeight": 6, "randomHop": true}
+  },
+  "screenLeash": {
+    "enabled": true,
+    "offscreen": "the body box is entirely outside the view camera rectangle",
+    "leaveScreenSeconds": 1.0,
+    "startsAfterFirstOnScreen": "a hunter detected or alerted off screen is judged only after it has entered the screen once",
+    "unseenGiveUpSeconds": 6.0,
+    "return": "walk the pursuit route to the spawn point at the normal walk speed; no random hops",
+    "returnTeleportSeconds": 10.0,
+    "noRouteTeleportSeconds": 1.0,
+    "teleport": "only while both the enemy and its spawn point are off screen, after returnTeleportSeconds or after standing with no route for noRouteTeleportSeconds",
+    "health": "kept",
+    "redetect": "while returning, only when the enemy is on screen and detects the target; shows the reaction again; chain alerts are ignored until it arrives",
+    "neverDuringAttackOrJump": true
+  },
+  "individuality": {
+    "seed": "stage generation seed + species id + spawn position; the same seed replays the same values",
+    "appliesTo": "pursuit.appliesTo",
+    "individualVariance": 0.1
+  },
+  "alert": {
+    "alertEnabled": true,
+    "receivers": ["01_thorn-root", "02_broom-stalker", "draft_07_heavy_charger", "K4", "B3", "M3", "03_gutter-spitter", "R-selected", "H3"],
+    "reactionDelayMin": 0.2,
+    "reactionDelayMax": 0.5,
+    "alertRadius": 12,
+    "propagation": "one-step-from-first-spotter; sight not required",
+    "alertDelayPerUnit": 0.05,
+    "alertJitter": 0.1,
+    "alertMarkSeconds": 1.0,
+    "markArt": "temporary-code-drawn"
+  },
+  "rangedRange": {
+    "03_gutter-spitter": {"current": 10.5, "proposed": 10.5, "previous": 7, "appliedTo": "data/combat/stage1_village_monsters.json startGap"},
+    "R-selected": {"current": 20, "proposed": 20, "previous": 10, "appliedTo": "data/combat/stage2_monster_stats.json attackStartRange"},
+    "H3": {"current": 22, "proposed": 22, "previous": 11, "appliedTo": "data/combat/stage2_monster_stats.json attackStartRange"},
+    "draft_06_stationary_turret": {"current": 24, "proposed": 24, "previous": 16, "appliedTo": "data/combat/chapter1_new_monsters.json activationDistance"}
+  }
+}

@@ -1,0 +1,1356 @@
+{
+  "schemaVersion": 1,
+  "status": "approved-art-unity-local-test",
+  "resourceCatalog": "resources/catalog.json",
+  "productionManifest": "resources/generated-assets.json",
+  "spriteLayout": "resources/ui/roguelite-hub/source/sprite-layout.json",
+  "preview": "resources/ui/roguelite-hub/preview/index.html",
+  "rulesSource": "data/combat/roguelite_progression.json",
+  "sprites": [
+    {
+      "id": "palette_atelier.color",
+      "path": "environments/village/approved-hub-20261101/runtime/buildings/color/palette-atelier.png",
+      "size": [
+        317,
+        380
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "contactLineFromTop": 248,
+      "state": "color",
+      "alpha": "binary",
+      "geometry": "shared-with-paired-state",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/buildings/color/palette-atelier.png"
+    },
+    {
+      "id": "palette_atelier.sketch",
+      "path": "environments/village/approved-hub-20261101/runtime/buildings/sketch/palette-atelier.png",
+      "size": [
+        317,
+        380
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "contactLineFromTop": 248,
+      "state": "sketch",
+      "alpha": "binary",
+      "geometry": "shared-with-paired-state",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/buildings/sketch/palette-atelier.png"
+    },
+    {
+      "id": "supply_office.color",
+      "path": "environments/village/approved-hub-20261101/runtime/buildings/color/supply-office.png",
+      "size": [
+        302,
+        380
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "contactLineFromTop": 248,
+      "state": "color",
+      "alpha": "binary",
+      "geometry": "shared-with-paired-state",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/buildings/color/supply-office.png"
+    },
+    {
+      "id": "supply_office.sketch",
+      "path": "environments/village/approved-hub-20261101/runtime/buildings/sketch/supply-office.png",
+      "size": [
+        302,
+        380
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "contactLineFromTop": 248,
+      "state": "sketch",
+      "alpha": "binary",
+      "geometry": "shared-with-paired-state",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/buildings/sketch/supply-office.png"
+    },
+    {
+      "id": "reclaim_workshop.color",
+      "path": "environments/village/approved-hub-20261101/runtime/buildings/color/reclaim-workshop.png",
+      "size": [
+        320,
+        357
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "contactLineFromTop": 248,
+      "state": "color",
+      "alpha": "binary",
+      "geometry": "shared-with-paired-state",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/buildings/color/reclaim-workshop.png"
+    },
+    {
+      "id": "reclaim_workshop.sketch",
+      "path": "environments/village/approved-hub-20261101/runtime/buildings/sketch/reclaim-workshop.png",
+      "size": [
+        320,
+        357
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "contactLineFromTop": 248,
+      "state": "sketch",
+      "alpha": "binary",
+      "geometry": "shared-with-paired-state",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/buildings/sketch/reclaim-workshop.png"
+    },
+    {
+      "id": "palette_bench.color",
+      "path": "environments/village/approved-hub-20261101/runtime/props/color/palette-bench.png",
+      "size": [
+        106,
+        88
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "contactLineFromTop": 72,
+      "state": "color",
+      "alpha": "binary",
+      "geometry": "shared-with-paired-state",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/props/color/palette-bench.png"
+    },
+    {
+      "id": "palette_bench.sketch",
+      "path": "environments/village/approved-hub-20261101/runtime/props/sketch/palette-bench.png",
+      "size": [
+        106,
+        88
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "contactLineFromTop": 72,
+      "state": "sketch",
+      "alpha": "binary",
+      "geometry": "shared-with-paired-state",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/props/sketch/palette-bench.png"
+    },
+    {
+      "id": "supply_counter.color",
+      "path": "environments/village/approved-hub-20261101/runtime/props/color/supply-counter.png",
+      "size": [
+        120,
+        88
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "contactLineFromTop": 72,
+      "state": "color",
+      "alpha": "binary",
+      "geometry": "shared-with-paired-state",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/props/color/supply-counter.png"
+    },
+    {
+      "id": "supply_counter.sketch",
+      "path": "environments/village/approved-hub-20261101/runtime/props/sketch/supply-counter.png",
+      "size": [
+        120,
+        88
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "contactLineFromTop": 72,
+      "state": "sketch",
+      "alpha": "binary",
+      "geometry": "shared-with-paired-state",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/props/sketch/supply-counter.png"
+    },
+    {
+      "id": "reclaim_bench.color",
+      "path": "environments/village/approved-hub-20261101/runtime/props/color/reclaim-bench.png",
+      "size": [
+        93,
+        88
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "contactLineFromTop": 72,
+      "state": "color",
+      "alpha": "binary",
+      "geometry": "shared-with-paired-state",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/props/color/reclaim-bench.png"
+    },
+    {
+      "id": "reclaim_bench.sketch",
+      "path": "environments/village/approved-hub-20261101/runtime/props/sketch/reclaim-bench.png",
+      "size": [
+        93,
+        88
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "contactLineFromTop": 72,
+      "state": "sketch",
+      "alpha": "binary",
+      "geometry": "shared-with-paired-state",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/props/sketch/reclaim-bench.png"
+    },
+    {
+      "id": "record_desk.color",
+      "path": "environments/village/approved-hub-20261101/runtime/props/color/record-desk.png",
+      "size": [
+        93,
+        71
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "contactLineFromTop": 72,
+      "state": "color",
+      "alpha": "binary",
+      "geometry": "shared-with-paired-state",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/props/color/record-desk.png"
+    },
+    {
+      "id": "record_desk.sketch",
+      "path": "environments/village/approved-hub-20261101/runtime/props/sketch/record-desk.png",
+      "size": [
+        93,
+        71
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "contactLineFromTop": 72,
+      "state": "sketch",
+      "alpha": "binary",
+      "geometry": "shared-with-paired-state",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/props/sketch/record-desk.png"
+    },
+    {
+      "id": "return_well.color",
+      "path": "environments/village/approved-hub-20261101/runtime/props/color/return-well.png",
+      "size": [
+        127,
+        138
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "contactLineFromTop": 136,
+      "state": "color",
+      "alpha": "binary",
+      "geometry": "shared-with-paired-state",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/props/color/return-well.png"
+    },
+    {
+      "id": "return_well.sketch",
+      "path": "environments/village/approved-hub-20261101/runtime/props/sketch/return-well.png",
+      "size": [
+        127,
+        138
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "contactLineFromTop": 136,
+      "state": "sketch",
+      "alpha": "binary",
+      "geometry": "shared-with-paired-state",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/props/sketch/return-well.png"
+    },
+    {
+      "id": "departure_gate.color",
+      "path": "environments/village/runtime/props/starting-hub/color/departure-gate.png",
+      "size": [
+        192,
+        208
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.038461538461538464
+      ],
+      "contactLineFromTop": 200,
+      "state": "color",
+      "alpha": "binary",
+      "geometry": "shared-with-paired-state",
+      "sourcePath": "resources/environments/village/runtime/props/starting-hub/color/departure-gate.png"
+    },
+    {
+      "id": "departure_gate.sketch",
+      "path": "environments/village/runtime/props/starting-hub/sketch/departure-gate.png",
+      "size": [
+        192,
+        208
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.038461538461538464
+      ],
+      "contactLineFromTop": 200,
+      "state": "sketch",
+      "alpha": "binary",
+      "geometry": "shared-with-paired-state",
+      "sourcePath": "resources/environments/village/runtime/props/starting-hub/sketch/departure-gate.png"
+    },
+    {
+      "id": "departure_table.color",
+      "path": "environments/village/approved-hub-20261101/runtime/props/color/departure-table.png",
+      "size": [
+        124,
+        83
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "contactLineFromTop": 72,
+      "state": "color",
+      "alpha": "binary",
+      "geometry": "shared-with-paired-state",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/props/color/departure-table.png"
+    },
+    {
+      "id": "departure_table.sketch",
+      "path": "environments/village/approved-hub-20261101/runtime/props/sketch/departure-table.png",
+      "size": [
+        124,
+        83
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "contactLineFromTop": 72,
+      "state": "sketch",
+      "alpha": "binary",
+      "geometry": "shared-with-paired-state",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/props/sketch/departure-table.png"
+    },
+    {
+      "id": "palette_slots_4",
+      "path": "ui/roguelite-hub/runtime/icons/palette_slots_4.png",
+      "size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "tint": "uGUI-color",
+      "source": "native-pixel-glyph",
+      "sourcePath": "resources/ui/roguelite-hub/runtime/icons/palette_slots_4.png"
+    },
+    {
+      "id": "palette_slots_5",
+      "path": "ui/roguelite-hub/runtime/icons/palette_slots_5.png",
+      "size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "tint": "uGUI-color",
+      "source": "native-pixel-glyph",
+      "sourcePath": "resources/ui/roguelite-hub/runtime/icons/palette_slots_5.png"
+    },
+    {
+      "id": "palette_wildcard_1",
+      "path": "ui/roguelite-hub/runtime/icons/palette_wildcard_1.png",
+      "size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "tint": "uGUI-color",
+      "source": "native-pixel-glyph",
+      "sourcePath": "resources/ui/roguelite-hub/runtime/icons/palette_wildcard_1.png"
+    },
+    {
+      "id": "palette_wildcard_2",
+      "path": "ui/roguelite-hub/runtime/icons/palette_wildcard_2.png",
+      "size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "tint": "uGUI-color",
+      "source": "native-pixel-glyph",
+      "sourcePath": "resources/ui/roguelite-hub/runtime/icons/palette_wildcard_2.png"
+    },
+    {
+      "id": "starting_gold_100",
+      "path": "ui/roguelite-hub/runtime/icons/starting_gold_100.png",
+      "size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "tint": "uGUI-color",
+      "source": "native-pixel-glyph",
+      "sourcePath": "resources/ui/roguelite-hub/runtime/icons/starting_gold_100.png"
+    },
+    {
+      "id": "destroyed_ink_gold_20",
+      "path": "ui/roguelite-hub/runtime/icons/destroyed_ink_gold_20.png",
+      "size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "tint": "uGUI-color",
+      "source": "native-pixel-glyph",
+      "sourcePath": "resources/ui/roguelite-hub/runtime/icons/destroyed_ink_gold_20.png"
+    },
+    {
+      "id": "magic_pigment",
+      "path": "ui/roguelite-hub/runtime/icons/magic_pigment.png",
+      "size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "tint": "uGUI-color",
+      "source": "native-pixel-glyph",
+      "sourcePath": "resources/ui/roguelite-hub/runtime/icons/magic_pigment.png"
+    },
+    {
+      "id": "palette_atelier",
+      "path": "ui/roguelite-hub/runtime/icons/palette_atelier.png",
+      "size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "tint": "uGUI-color",
+      "source": "native-pixel-glyph",
+      "sourcePath": "resources/ui/roguelite-hub/runtime/icons/palette_atelier.png"
+    },
+    {
+      "id": "supply_office",
+      "path": "ui/roguelite-hub/runtime/icons/supply_office.png",
+      "size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "tint": "uGUI-color",
+      "source": "native-pixel-glyph",
+      "sourcePath": "resources/ui/roguelite-hub/runtime/icons/supply_office.png"
+    },
+    {
+      "id": "reclaim_workshop",
+      "path": "ui/roguelite-hub/runtime/icons/reclaim_workshop.png",
+      "size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "tint": "uGUI-color",
+      "source": "native-pixel-glyph",
+      "sourcePath": "resources/ui/roguelite-hub/runtime/icons/reclaim_workshop.png"
+    },
+    {
+      "id": "record_farmhouse",
+      "path": "ui/roguelite-hub/runtime/icons/record_farmhouse.png",
+      "size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "tint": "uGUI-color",
+      "source": "native-pixel-glyph",
+      "sourcePath": "resources/ui/roguelite-hub/runtime/icons/record_farmhouse.png"
+    },
+    {
+      "id": "departure_lane",
+      "path": "ui/roguelite-hub/runtime/icons/departure_lane.png",
+      "size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "tint": "uGUI-color",
+      "source": "native-pixel-glyph",
+      "sourcePath": "resources/ui/roguelite-hub/runtime/icons/departure_lane.png"
+    },
+    {
+      "id": "locked",
+      "path": "ui/roguelite-hub/runtime/icons/locked.png",
+      "size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "tint": "uGUI-color",
+      "source": "native-pixel-glyph",
+      "sourcePath": "resources/ui/roguelite-hub/runtime/icons/locked.png"
+    },
+    {
+      "id": "unlocked",
+      "path": "ui/roguelite-hub/runtime/icons/unlocked.png",
+      "size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "tint": "uGUI-color",
+      "source": "native-pixel-glyph",
+      "sourcePath": "resources/ui/roguelite-hub/runtime/icons/unlocked.png"
+    },
+    {
+      "id": "story_record",
+      "path": "ui/roguelite-hub/runtime/icons/story_record.png",
+      "size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "tint": "uGUI-color",
+      "source": "native-pixel-glyph",
+      "sourcePath": "resources/ui/roguelite-hub/runtime/icons/story_record.png"
+    },
+    {
+      "id": "destroy_ink",
+      "path": "ui/roguelite-hub/runtime/icons/destroy_ink.png",
+      "size": [
+        32,
+        32
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "tint": "uGUI-color",
+      "source": "native-pixel-glyph",
+      "sourcePath": "resources/ui/roguelite-hub/runtime/icons/destroy_ink.png"
+    },
+    {
+      "id": "unlock.01",
+      "path": "effects/hub-unlock/runtime/unlock/01.png",
+      "size": [
+        64,
+        64
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "frameDurationMs": 80,
+      "sourcePath": "resources/effects/hub-unlock/runtime/unlock/01.png"
+    },
+    {
+      "id": "unlock.02",
+      "path": "effects/hub-unlock/runtime/unlock/02.png",
+      "size": [
+        64,
+        64
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "frameDurationMs": 80,
+      "sourcePath": "resources/effects/hub-unlock/runtime/unlock/02.png"
+    },
+    {
+      "id": "unlock.03",
+      "path": "effects/hub-unlock/runtime/unlock/03.png",
+      "size": [
+        64,
+        64
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "frameDurationMs": 80,
+      "sourcePath": "resources/effects/hub-unlock/runtime/unlock/03.png"
+    },
+    {
+      "id": "unlock.04",
+      "path": "effects/hub-unlock/runtime/unlock/04.png",
+      "size": [
+        64,
+        64
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "frameDurationMs": 80,
+      "sourcePath": "resources/effects/hub-unlock/runtime/unlock/04.png"
+    },
+    {
+      "id": "unlock.05",
+      "path": "effects/hub-unlock/runtime/unlock/05.png",
+      "size": [
+        64,
+        64
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "frameDurationMs": 80,
+      "sourcePath": "resources/effects/hub-unlock/runtime/unlock/05.png"
+    },
+    {
+      "id": "unlock.06",
+      "path": "effects/hub-unlock/runtime/unlock/06.png",
+      "size": [
+        64,
+        64
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "frameDurationMs": 80,
+      "sourcePath": "resources/effects/hub-unlock/runtime/unlock/06.png"
+    },
+    {
+      "id": "unlock.07",
+      "path": "effects/hub-unlock/runtime/unlock/07.png",
+      "size": [
+        64,
+        64
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "frameDurationMs": 80,
+      "sourcePath": "resources/effects/hub-unlock/runtime/unlock/07.png"
+    },
+    {
+      "id": "unlock.08",
+      "path": "effects/hub-unlock/runtime/unlock/08.png",
+      "size": [
+        64,
+        64
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "frameDurationMs": 80,
+      "sourcePath": "resources/effects/hub-unlock/runtime/unlock/08.png"
+    },
+    {
+      "id": "pigment-pickup.01",
+      "path": "effects/hub-unlock/runtime/pigment-pickup/01.png",
+      "size": [
+        64,
+        64
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "frameDurationMs": 80,
+      "sourcePath": "resources/effects/hub-unlock/runtime/pigment-pickup/01.png"
+    },
+    {
+      "id": "pigment-pickup.02",
+      "path": "effects/hub-unlock/runtime/pigment-pickup/02.png",
+      "size": [
+        64,
+        64
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "frameDurationMs": 80,
+      "sourcePath": "resources/effects/hub-unlock/runtime/pigment-pickup/02.png"
+    },
+    {
+      "id": "pigment-pickup.03",
+      "path": "effects/hub-unlock/runtime/pigment-pickup/03.png",
+      "size": [
+        64,
+        64
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "frameDurationMs": 80,
+      "sourcePath": "resources/effects/hub-unlock/runtime/pigment-pickup/03.png"
+    },
+    {
+      "id": "pigment-pickup.04",
+      "path": "effects/hub-unlock/runtime/pigment-pickup/04.png",
+      "size": [
+        64,
+        64
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "frameDurationMs": 80,
+      "sourcePath": "resources/effects/hub-unlock/runtime/pigment-pickup/04.png"
+    },
+    {
+      "id": "pigment-pickup.05",
+      "path": "effects/hub-unlock/runtime/pigment-pickup/05.png",
+      "size": [
+        64,
+        64
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "frameDurationMs": 80,
+      "sourcePath": "resources/effects/hub-unlock/runtime/pigment-pickup/05.png"
+    },
+    {
+      "id": "pigment-pickup.06",
+      "path": "effects/hub-unlock/runtime/pigment-pickup/06.png",
+      "size": [
+        64,
+        64
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "frameDurationMs": 80,
+      "sourcePath": "resources/effects/hub-unlock/runtime/pigment-pickup/06.png"
+    },
+    {
+      "id": "pigment-pickup.07",
+      "path": "effects/hub-unlock/runtime/pigment-pickup/07.png",
+      "size": [
+        64,
+        64
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "frameDurationMs": 80,
+      "sourcePath": "resources/effects/hub-unlock/runtime/pigment-pickup/07.png"
+    },
+    {
+      "id": "pigment-pickup.08",
+      "path": "effects/hub-unlock/runtime/pigment-pickup/08.png",
+      "size": [
+        64,
+        64
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "alpha": "binary",
+      "frameDurationMs": 80,
+      "sourcePath": "resources/effects/hub-unlock/runtime/pigment-pickup/08.png"
+    },
+    {
+      "id": "record-hall",
+      "path": "sequences/starting-village-intro/runtime/record-hall.png",
+      "size": [
+        960,
+        540
+      ],
+      "kind": "static-story-backdrop",
+      "charactersBakedIn": false,
+      "sourcePath": "resources/sequences/starting-village-intro/runtime/record-hall.png"
+    },
+    {
+      "id": "erased-farm",
+      "path": "sequences/starting-village-intro/runtime/erased-farm.png",
+      "size": [
+        960,
+        540
+      ],
+      "kind": "static-story-backdrop",
+      "charactersBakedIn": false,
+      "sourcePath": "resources/sequences/starting-village-intro/runtime/erased-farm.png"
+    },
+    {
+      "id": "awakening-courtyard",
+      "path": "sequences/starting-village-intro/runtime/awakening-courtyard.png",
+      "size": [
+        960,
+        540
+      ],
+      "kind": "static-story-backdrop",
+      "charactersBakedIn": false,
+      "sourcePath": "resources/sequences/starting-village-intro/runtime/awakening-courtyard.png"
+    },
+    {
+      "id": "departure_sign.color",
+      "path": "environments/village/approved-hub-20261101/runtime/props/color/departure-sign.png",
+      "size": [
+        63,
+        84
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "state": "color",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/props/color/departure-sign.png"
+    },
+    {
+      "id": "departure_sign.sketch",
+      "path": "environments/village/approved-hub-20261101/runtime/props/sketch/departure-sign.png",
+      "size": [
+        63,
+        84
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "state": "sketch",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/props/sketch/departure-sign.png"
+    },
+    {
+      "id": "low_wall.color",
+      "path": "environments/village/approved-hub-20261101/runtime/props/color/low-wall.png",
+      "size": [
+        91,
+        48
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "state": "color",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/props/color/low-wall.png"
+    },
+    {
+      "id": "low_wall.sketch",
+      "path": "environments/village/approved-hub-20261101/runtime/props/sketch/low-wall.png",
+      "size": [
+        91,
+        48
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "state": "sketch",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/props/sketch/low-wall.png"
+    },
+    {
+      "id": "handcart.color",
+      "path": "environments/village/approved-hub-20261101/runtime/props/color/handcart.png",
+      "size": [
+        96,
+        63
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "state": "color",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/props/color/handcart.png"
+    },
+    {
+      "id": "handcart.sketch",
+      "path": "environments/village/approved-hub-20261101/runtime/props/sketch/handcart.png",
+      "size": [
+        96,
+        63
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "state": "sketch",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/props/sketch/handcart.png"
+    },
+    {
+      "id": "background_sky.color",
+      "path": "environments/village/approved-hub-20261101/runtime/background/color/sky.png",
+      "size": [
+        960,
+        540
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "state": "color",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/background/color/sky.png"
+    },
+    {
+      "id": "background_clouds.color",
+      "path": "environments/village/approved-hub-20261101/runtime/background/color/clouds.png",
+      "size": [
+        600,
+        160
+      ],
+      "ppu": 32,
+      "pivot": [
+        0,
+        0
+      ],
+      "state": "color",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/background/color/clouds.png"
+    },
+    {
+      "id": "background_tower.color",
+      "path": "environments/village/approved-hub-20261101/runtime/background/color/tower.png",
+      "size": [
+        280,
+        311
+      ],
+      "ppu": 32,
+      "pivot": [
+        0,
+        0
+      ],
+      "state": "color",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/background/color/tower.png"
+    },
+    {
+      "id": "background_trees.color",
+      "path": "environments/village/approved-hub-20261101/runtime/background/color/trees.png",
+      "size": [
+        1400,
+        389
+      ],
+      "ppu": 32,
+      "pivot": [
+        0,
+        0
+      ],
+      "state": "color",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/background/color/trees.png"
+    },
+    {
+      "id": "background_market.color",
+      "path": "environments/village/approved-hub-20261101/runtime/background/color/market.png",
+      "size": [
+        1456,
+        412
+      ],
+      "ppu": 32,
+      "pivot": [
+        0,
+        0
+      ],
+      "state": "color",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/background/color/market.png"
+    },
+    {
+      "id": "background_sky.sketch",
+      "path": "environments/village/approved-hub-20261101/runtime/background/sketch/sky.png",
+      "size": [
+        960,
+        540
+      ],
+      "ppu": 32,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "state": "sketch",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/background/sketch/sky.png"
+    },
+    {
+      "id": "background_clouds.sketch",
+      "path": "environments/village/approved-hub-20261101/runtime/background/sketch/clouds.png",
+      "size": [
+        600,
+        160
+      ],
+      "ppu": 32,
+      "pivot": [
+        0,
+        0
+      ],
+      "state": "sketch",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/background/sketch/clouds.png"
+    },
+    {
+      "id": "background_tower.sketch",
+      "path": "environments/village/approved-hub-20261101/runtime/background/sketch/tower.png",
+      "size": [
+        280,
+        311
+      ],
+      "ppu": 32,
+      "pivot": [
+        0,
+        0
+      ],
+      "state": "sketch",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/background/sketch/tower.png"
+    },
+    {
+      "id": "background_trees.sketch",
+      "path": "environments/village/approved-hub-20261101/runtime/background/sketch/trees.png",
+      "size": [
+        1400,
+        389
+      ],
+      "ppu": 32,
+      "pivot": [
+        0,
+        0
+      ],
+      "state": "sketch",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/background/sketch/trees.png"
+    },
+    {
+      "id": "background_market.sketch",
+      "path": "environments/village/approved-hub-20261101/runtime/background/sketch/market.png",
+      "size": [
+        1456,
+        412
+      ],
+      "ppu": 32,
+      "pivot": [
+        0,
+        0
+      ],
+      "state": "sketch",
+      "sourcePath": "resources/environments/village/approved-hub-20261101/runtime/background/sketch/market.png"
+    }
+  ],
+  "unlockIcons": {
+    "palette_slots_4": "palette_slots_4",
+    "palette_slots_5": "palette_slots_5",
+    "palette_wildcard_1": "palette_wildcard_1",
+    "palette_wildcard_2": "palette_wildcard_2",
+    "starting_gold_100": "starting_gold_100",
+    "destroyed_ink_gold_20": "destroyed_ink_gold_20"
+  },
+  "reuseResources": [
+    {
+      "id": "farmhouse",
+      "path": "environments/village/runtime/buildings/reference-map-phase2/color/house_balcony.png"
+    },
+    {
+      "id": "farmhouse-sketch",
+      "path": "environments/village/runtime/buildings/reference-map-phase2/sketch/house_balcony.png"
+    },
+    {
+      "id": "terrain-and-vegetation",
+      "path": "environments/village/asset.json"
+    },
+    {
+      "id": "player-and-weapon-motions",
+      "path": "characters/ink/common/asset.json"
+    },
+    {
+      "id": "portal-sequence",
+      "path": "sequences/portal/asset.json"
+    }
+  ],
+  "reuseMain": [
+    "unity/Assets/Deviant/Inventory/Resources/PixelInventory/Fonts/Galmuri11.ttf",
+    "unity/Assets/Deviant/TemporaryGUI/Resources/TemporaryGUI/panel-warm.png",
+    "unity/Assets/Deviant/TemporaryGUI/Resources/TemporaryGUI/button-warm.png",
+    "unity/Assets/Deviant/TemporaryGUI/Resources/TemporaryGUI/card-warm.png",
+    "unity/Assets/Deviant/TemporaryGUI/Resources/TemporaryGUI/slot-warm.png",
+    "unity/Assets/Deviant/TemporaryGUI/Resources/TemporaryGUI/icon-coin.png"
+  ],
+  "targetImportRoot": "unity/Assets/Deviant/Hub",
+  "import": {
+    "filter": "Point",
+    "compression": "None",
+    "mipmaps": false,
+    "spriteMesh": "FullRect",
+    "preserveTransparentCanvas": true
+  },
+  "layoutProposal": {
+    "colourBlotsNote": "docs/design/progression/village-palette-pieces.md: where the colour comes back with each village palette piece (x, y in units above the ground line, r radius; the HTML opening prototype BLOTS, seed 11)",
+    "colourBlots": [
+      { "piece": 1, "x": 14.5, "y": 1.5, "r": 3.2 },
+      { "piece": 1, "x": 10.5, "y": 4.5, "r": 2.6 },
+      { "piece": 1, "x": 18.0, "y": 6.5, "r": 2.2 },
+      { "piece": 1, "x": 4.007, "y": 4.022, "r": 1.68 },
+      { "piece": 1, "x": 7.432, "y": 7.744, "r": 1.768 },
+      { "piece": 1, "x": 25.442, "y": 4.208, "r": 1.825 },
+      { "piece": 1, "x": 23.715, "y": 1.967, "r": 2.042 },
+      { "piece": 1, "x": 22.501, "y": 3.2, "r": 6.6 },
+      { "piece": 1, "x": 22.501, "y": 9.0, "r": 6.6 },
+      { "piece": 1, "x": 28.501, "y": 1.4, "r": 3.0 },
+      { "piece": 2, "x": 11.093, "y": 3.704, "r": 4.341 },
+      { "piece": 2, "x": 41.034, "y": 3.74, "r": 3.535 },
+      { "piece": 2, "x": 17.711, "y": 9.029, "r": 4.348 },
+      { "piece": 2, "x": 28.657, "y": 5.181, "r": 3.776 },
+      { "piece": 2, "x": 32.414, "y": 9.943, "r": 3.419 },
+      { "piece": 2, "x": 15.607, "y": 6.64, "r": 4.541 },
+      { "piece": 2, "x": 0.164, "y": 3.763, "r": 4.819 },
+      { "piece": 2, "x": 26.014, "y": -0.546, "r": 4.377 },
+      { "piece": 2, "x": 43.462, "y": 2.808, "r": 4.842 },
+      { "piece": 2, "x": 0.61, "y": 8.761, "r": 4.693 },
+      { "piece": 2, "x": 43.283, "y": 2.304, "r": 3.667 },
+      { "piece": 2, "x": 40.536, "y": 12.22, "r": 4.571 },
+      { "piece": 2, "x": 44.984, "y": 10.008, "r": 4.09 },
+      { "piece": 2, "x": 37.553, "y": 3.2, "r": 6.6 },
+      { "piece": 2, "x": 37.553, "y": 8.6, "r": 6.4 },
+      { "piece": 2, "x": 39.013, "y": 1.4, "r": 2.8 },
+      { "piece": 3, "x": 30.032, "y": 7.233, "r": 4.238 },
+      { "piece": 3, "x": 43.331, "y": 10.474, "r": 4.763 },
+      { "piece": 3, "x": 41.906, "y": -1.981, "r": 5.266 },
+      { "piece": 3, "x": 43.318, "y": 6.246, "r": 5.287 },
+      { "piece": 3, "x": 24.917, "y": 10.796, "r": 4.894 },
+      { "piece": 3, "x": 42.885, "y": 12.971, "r": 4.881 },
+      { "piece": 3, "x": 40.75, "y": 5.617, "r": 4.561 },
+      { "piece": 3, "x": 3.119, "y": -1.22, "r": 5.524 },
+      { "piece": 3, "x": 8.366, "y": 3.262, "r": 5.081 },
+      { "piece": 3, "x": 35.517, "y": 5.084, "r": 4.37 },
+      { "piece": 3, "x": 35.624, "y": 0.618, "r": 5.117 },
+      { "piece": 3, "x": 28.475, "y": 11.875, "r": 4.358 },
+      { "piece": 3, "x": 43.838, "y": 12.911, "r": 5.439 },
+      { "piece": 3, "x": 29.137, "y": 3.543, "r": 5.578 },
+      { "piece": 3, "x": 37.719, "y": 5.534, "r": 4.689 },
+      { "piece": 3, "x": 26.941, "y": 1.849, "r": 5.74 },
+      { "piece": 3, "x": 29.327, "y": 11.655, "r": 4.435 },
+      { "piece": 4, "x": 12.703, "y": 12.424, "r": 6.105 },
+      { "piece": 4, "x": 31.527, "y": 10.397, "r": 5.582 },
+      { "piece": 4, "x": 41.993, "y": 5.249, "r": 5.814 },
+      { "piece": 4, "x": 18.486, "y": -0.494, "r": 6.277 },
+      { "piece": 4, "x": 41.889, "y": 1.937, "r": 6.212 },
+      { "piece": 4, "x": 33.876, "y": 10.927, "r": 5.696 },
+      { "piece": 4, "x": -0.923, "y": -1.693, "r": 5.053 },
+      { "piece": 4, "x": 28.78, "y": 2.435, "r": 6.293 },
+      { "piece": 4, "x": 32.821, "y": 7.585, "r": 6.584 },
+      { "piece": 4, "x": 23.505, "y": 9.353, "r": 5.276 },
+      { "piece": 4, "x": 37.86, "y": 5.422, "r": 5.39 },
+      { "piece": 4, "x": 30.48, "y": 5.457, "r": 5.997 },
+      { "piece": 4, "x": 21.452, "y": 2.52, "r": 5.786 },
+      { "piece": 4, "x": 24.93, "y": -0.236, "r": 6.007 },
+      { "piece": 4, "x": 40.844, "y": 5.447, "r": 5.896 },
+      { "piece": 4, "x": 17.394, "y": 9.601, "r": 5.598 },
+      { "piece": 4, "x": 7.973, "y": 6.581, "r": 5.618 },
+      { "piece": 4, "x": 15.97, "y": 5.676, "r": 6.475 },
+      { "piece": 4, "x": 36.119, "y": 0.457, "r": 6.341 },
+      { "piece": 4, "x": 41.164, "y": 8.894, "r": 5.385 },
+      { "piece": 4, "x": 31.268, "y": 1.536, "r": 5.499 },
+      { "piece": 5, "x": 14.5, "y": 3, "r": 95 }
+    ],
+    "worldWidthUnits": 44,
+    "groundY": 0,
+    "cameraReference": [
+      960,
+      540
+    ],
+    "spawnX": 18,
+    "stations": [
+      {
+        "id": "record_desk",
+        "label": "기록",
+        "x": 10.75,
+        "y": 0
+      },
+      {
+        "id": "return_well",
+        "label": "우물",
+        "x": 14.5,
+        "y": 0
+      },
+      {
+        "id": "artisan_hub",
+        "label": "장인의 공방",
+        "x": 28.5,
+        "y": -0.03125
+      },
+      {
+        "id": "departure_sign",
+        "label": "출발 이정표",
+        "x": 36,
+        "y": 0
+      }
+    ],
+    "buildings": [
+      {
+        "id": "record_farmhouse",
+        "x": 6.5,
+        "y": 0
+      },
+      {
+        "id": "palette_atelier",
+        "x": 22.5,
+        "y": -0.15625
+      }
+    ],
+    "decorations": [
+      {
+        "id": "low_wall",
+        "x": 39.78125,
+        "y": 0
+      },
+      {
+        "id": "low_wall",
+        "x": 43.90625,
+        "y": 0
+      },
+      {
+        "id": "handcart",
+        "x": 38.4375,
+        "y": -0.03125
+      }
+    ]
+  },
+  "integration": {
+    "unityImportsCreated": false,
+    "sceneCreated": false,
+    "runtimeBonusesWired": false,
+    "playtested": false
+  }
+}

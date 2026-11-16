@@ -1,0 +1,158 @@
+{
+  "status": "first-balance-trial",
+  "stampSaleGold": 25,
+  "excludedFormInks": [
+    "base_sword",
+    "hammer",
+    "launcher"
+  ],
+  "roomClearHealth": {
+    "combat": 10,
+    "elite": 10,
+    "boss": 30
+  },
+  "source": "docs/design/run/progression-and-economy.md, docs/design/progression/content-costs.md",
+  "rewards": [
+    {
+      "role": "normal",
+      "gold": {
+        "min": 6,
+        "max": 10
+      },
+      "partsChance": 0,
+      "parts": {
+        "min": 0,
+        "max": 0
+      },
+      "stampChance": 0,
+      "stampCount": 0,
+      "inkCount": 0,
+      "specialInkCount": 0
+    },
+    {
+      "role": "elite",
+      "gold": {
+        "min": 200,
+        "max": 280
+      },
+      "partsChance": 0,
+      "parts": {
+        "min": 0,
+        "max": 0
+      },
+      "stampChance": 1,
+      "stampCount": 1,
+      "inkCount": 0,
+      "specialInkCount": 0
+    },
+    {
+      "role": "boss",
+      "gold": {
+        "min": 600,
+        "max": 720
+      },
+      "partsChance": 0,
+      "parts": {
+        "min": 0,
+        "max": 0
+      },
+      "stampChance": 1,
+      "stampCount": 1,
+      "inkCount": 0,
+      "specialInkCount": 0
+    }
+  ],
+  "prices": [
+    {
+      "id": "statUpgrade",
+      "start": 60,
+      "step": 30
+    },
+    {
+      "id": "slotUpgrade",
+      "start": 50,
+      "step": 25
+    }
+  ],
+  "inkShop": {
+    "grades": [
+      3,
+      4
+    ],
+    "offerCount": {
+      "min": 2,
+      "max": 3
+    },
+    "gradePrices": [
+      {
+        "grade": 3,
+        "gold": 420
+      },
+      {
+        "grade": 4,
+        "gold": 600
+      }
+    ],
+    "saleGold": 8
+  },
+  "weaponStampShare": 0.5,
+  "stampSwapCost": 20,
+  "stageStampLimit": 3,
+  "slotUpgradeCosts": [
+    50,
+    100,
+    180,
+    350,
+    600
+  ],
+  "chapter2Rewards": [
+    {
+      "role": "normal",
+      "gold": {
+        "min": 13,
+        "max": 16
+      },
+      "partsChance": 0,
+      "parts": {
+        "min": 0,
+        "max": 0
+      },
+      "stampChance": 0,
+      "stampCount": 0,
+      "inkCount": 0,
+      "specialInkCount": 0
+    },
+    {
+      "role": "elite",
+      "gold": {
+        "min": 450,
+        "max": 550
+      },
+      "partsChance": 0,
+      "parts": {
+        "min": 0,
+        "max": 0
+      },
+      "stampChance": 1,
+      "stampCount": 1,
+      "inkCount": 0,
+      "specialInkCount": 0
+    },
+    {
+      "role": "boss",
+      "gold": {
+        "min": 600,
+        "max": 720
+      },
+      "partsChance": 0,
+      "parts": {
+        "min": 0,
+        "max": 0
+      },
+      "stampChance": 1,
+      "stampCount": 1,
+      "inkCount": 0,
+      "specialInkCount": 0
+    }
+  ]
+}

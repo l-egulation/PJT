@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 1,
+  "id": "opening",
+  "title": "지워진 마을과 첫 각성",
+  "status": "draft-narration-pending-user-review",
+  "source": "docs/design/story/opening/opening.md (초반 진행 순서 1-11)",
+  "presentation": "three static backdrops (resources/sequences/starting-village-intro) with narration and still character sprites per line (resources/characters/story, art pending user review); no walking motion, city or tutorial scenes",
+  "scenes": [
+    {
+      "backdrop": "Hub/story/record-hall",
+      "steps": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "lines": [
+        "도시의 평범한 행정원인 나를, 이웃 어르신은 부모처럼 돌봐 주었다.",
+        "어르신은 조용하고 새로운 삶을 찾아 외딴 시골 마을로 떠났다.",
+        "어느 밤, 나는 경비가 지키는 대서적 보관소에 몰래 들어갔다.",
+        "건물처럼 거대한 대서적의 이름 목록에서, 어르신의 이름이 흐려지고 있었다."
+      ],
+      "cast": [
+        {
+          "actors": [
+            {
+              "sprite": "Hub/story/characters/human-clerk",
+              "x": 330,
+              "baseline": 400,
+              "scale": 2,
+              "flipX": false
+            }
+          ]
+        },
+        {
+          "actors": [
+            {
+              "sprite": "Hub/story/characters/human-clerk",
+              "x": 330,
+              "baseline": 400,
+              "scale": 2,
+              "flipX": false
+            }
+          ]
+        },
+        {
+          "actors": [
+            {
+              "sprite": "Hub/story/characters/human-clerk",
+              "x": 480,
+              "baseline": 400,
+              "scale": 2,
+              "flipX": false
+            }
+          ]
+        },
+        {
+          "actors": [
+            {
+              "sprite": "Hub/story/characters/human-clerk",
+              "x": 480,
+              "baseline": 400,
+              "scale": 2,
+              "flipX": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "backdrop": "Hub/story/erased-farm",
+      "steps": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "lines": [
+        "농로와 도랑을 지나 도착한 마을은 색이 빠진 스케치처럼 지워지고 있었다.",
+        "마을 안쪽 농가와 우물 앞에서, 색이 거의 빠진 어르신을 찾았다.",
+        "어르신은 바로 그 자리에서 숨을 거두었다. 나도 그 곁에서 지워짐에 휘말려 쓰러졌다.",
+        "크고 온화한 잉크의 존재가 같은 우물 앞에 나타나, 자신의 몸을 이루는 잉크를 내게 내주었다."
+      ],
+      "cast": [
+        {
+          "actors": [
+            {
+              "sprite": "Hub/story/characters/human-clerk",
+              "x": 300,
+              "baseline": 400,
+              "scale": 2,
+              "flipX": false
+            }
+          ]
+        },
+        {
+          "actors": [
+            {
+              "sprite": "Hub/story/characters/human-clerk",
+              "x": 470,
+              "baseline": 400,
+              "scale": 2,
+              "flipX": false
+            },
+            {
+              "sprite": "Hub/story/characters/benefactor-erased",
+              "x": 600,
+              "baseline": 400,
+              "scale": 2,
+              "flipX": true
+            }
+          ]
+        },
+        {
+          "actors": [
+            {
+              "sprite": "Hub/story/characters/benefactor-erased",
+              "x": 600,
+              "baseline": 400,
+              "scale": 2,
+              "flipX": true
+            }
+          ]
+        },
+        {
+          "actors": [
+            {
+              "sprite": "Hub/story/characters/ink-helper",
+              "x": 600,
+              "baseline": 400,
+              "scale": 2,
+              "flipX": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "backdrop": "Hub/story/awakening-courtyard",
+      "steps": [
+        10,
+        11
+      ],
+      "lines": [
+        "같은 농가, 같은 우물 앞에서 나는 잉크로 이루어진 몸으로 처음 깨어났다.",
+        "나를 살린 조력자는 이제 함께할 수 없다.",
+        "도시와 대서적 보관소로 돌아가, 마을을 지운 손을 바로잡아야 한다."
+      ],
+      "cast": [
+        {
+          "actors": []
+        },
+        {
+          "actors": [
+            {
+              "sprite": "Hub/story/characters/ink-helper",
+              "x": 560,
+              "baseline": 400,
+              "scale": 2,
+              "flipX": true,
+              "clip": "Hub/story/characters/ink-helper-sacrifice"
+            }
+          ]
+        },
+        {
+          "actors": []
+        }
+      ]
+    }
+  ]
+}

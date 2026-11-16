@@ -1,0 +1,206 @@
+{
+  "schema": "deviant-approved-bright-stage-style-v1",
+  "status": "art-approved",
+  "approvedAt": "2026-11-11",
+  "gameIntegration": "not-applied",
+  "tileAsset": "environments.stage1-modular-tiles-20261111",
+  "layerAsset": "environments.stage1-actual-layered-bright-20261111",
+  "units": {
+    "pixelsPerUnit": 32,
+    "cellPx": [
+      32,
+      32
+    ],
+    "artSubdivisionPx": 16,
+    "spritePivot": [
+      0.5,
+      0.5
+    ],
+    "tileAnchor": [
+      0.5,
+      0.5
+    ],
+    "scale": [
+      1,
+      1
+    ],
+    "worldY": "up",
+    "forestDataY": "down",
+    "blockRoomY": "up",
+    "newLandingEdgePx": 0,
+    "preservePlatformYOffset": true
+  },
+  "solid": {
+    "brickPx": [
+      32,
+      16
+    ],
+    "halfBrickPx": [
+      16,
+      16
+    ],
+    "rimDepthPx": 16,
+    "mortarPx": 1,
+    "includesMortar": true,
+    "opaqueOccupiedCell": true,
+    "neighborBits": [
+      "N",
+      "NE",
+      "E",
+      "SE",
+      "S",
+      "SW",
+      "W",
+      "NW"
+    ],
+    "normalizeDiagonal": "Keep only if both adjacent cardinal neighbors are occupied",
+    "canonicalForms": 47,
+    "rotationOfShading": false,
+    "clippedToCell": true,
+    "phaseAnchor": "final-world-pixel-origin",
+    "borderOwnership": "each visible contour and quadrant once",
+    "oneCellShelfPx": 32,
+    "oneCellPillarPx": 32
+  },
+  "oneWay": {
+    "canvasPx": [
+      32,
+      32
+    ],
+    "visibleHeightPx": 12,
+    "plankHeightPx": 8,
+    "detailHeightPx": 4,
+    "colliderHeightPx": 4,
+    "contactEdgePx": 0,
+    "material": "wood-and-iron",
+    "endpointStates": [
+      "free",
+      "wall"
+    ],
+    "variants": [
+      "single-free-free",
+      "single-wall-free",
+      "single-free-wall",
+      "single-wall-wall",
+      "left-free",
+      "left-wall",
+      "middle-a",
+      "middle-b",
+      "middle-c",
+      "right-free",
+      "right-wall"
+    ],
+    "widthFormula": "N*32; endcaps are inside first and last cell",
+    "horizontalPartialCellsAllowed": false
+  },
+  "layers": {
+    "order": [
+      "far-scenery",
+      "background-architecture",
+      "playable-terrain",
+      "characters-and-interactables"
+    ],
+    "farCameraRatio": 0.2,
+    "architectureCameraRatio": 1,
+    "terrainCameraRatio": 1,
+    "apertures": "true alpha transparency",
+    "canvasRule": "four layers same room size and origin",
+    "backgroundSourceSizes": {
+      "near-wide.png": [
+        1774,
+        887
+      ],
+      "near-tall.png": [
+        1182,
+        1330
+      ],
+      "far-scenery.png": [
+        1448,
+        1086
+      ]
+    },
+    "tallSourceCropTopPx": 30,
+    "fit": "uniform scale plus crop, never independent axis stretch",
+    "roomCanvasesPx": [
+      [
+        1536,
+        768
+      ],
+      [
+        1024,
+        1152
+      ]
+    ]
+  },
+  "appearance": {
+    "foreground": "strongest outline and readable walkable highlight; stone vs thin timber differentiate collision",
+    "background": "no black outlines, no white walkable cap, clean forms with lower contrast; no global blur/fog",
+    "architectureContrastSpanRelativeToWalkable": [
+      0.22,
+      0.28
+    ],
+    "referenceMetrics": {
+      "method": "sRGB weighted luma; HSV S; alpha >=240; background every4px, foreground top16px everypixel",
+      "walkable": {
+        "lumaP5MedianP95": [
+          80.49,
+          166.74,
+          245.97
+        ],
+        "saturationMedianPercent": 45.41
+      },
+      "nearWide": {
+        "lumaP5MedianP95": [
+          176.38,
+          205.38,
+          212.45
+        ],
+        "saturationMedianPercent": 18.41
+      },
+      "nearTall": {
+        "lumaP5MedianP95": [
+          163.08,
+          199.73,
+          209.65
+        ],
+        "saturationMedianPercent": 18.92
+      },
+      "far": {
+        "lumaP5MedianP95": [
+          179.06,
+          207.89,
+          216.8
+        ],
+        "saturationMedianPercent": 29.25
+      }
+    },
+    "brightVariantAdvisory": {
+      "architectureLumaSpan": [
+        30,
+        50
+      ],
+      "architectureMedianSaturationPercent": [
+        16,
+        22
+      ],
+      "engineConstraint": false
+    },
+    "alternatePalettes": "retain contrast hierarchy and compare with approved PNGs; absolute bright luma is not a sketch/dark-version limit"
+  },
+  "referenceImages": [
+    "preview/assembled-2x.png",
+    "preview/junctions-4x.png",
+    "../stage1-actual-layered-bright-20261111/preview/four-rooms-overview.png",
+    "../stage1-actual-layered-bright-20261111/preview/layer-breakdown.png"
+  ],
+  "productionLimits": [
+    "backgrounds remain authored prototype sources, not complete modular world kit",
+    "Unity integration and camera execution not verified"
+  ],
+  "futureVersions": {
+    "preserveApprovedPixels": true,
+    "newAssetIdAndDirectoryRequired": true,
+    "initialStatus": "pending-user-art-review",
+    "reuse": "dimensions, topology, layer rules, reference PNGs and appearance hierarchy"
+  }
+}

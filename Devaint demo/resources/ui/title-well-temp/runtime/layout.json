@@ -1,0 +1,305 @@
+{
+  "format": "deviant-title-well-assets-v1",
+  "referenceResolution": [
+    1672,
+    941
+  ],
+  "imageAspect": 1.7768331562167907,
+  "preferredTemporaryMode": "layered-with-shared-selection",
+  "flat": {
+    "calm": "flat/title_calm.png",
+    "erased": "flat/title_erased_eye.png"
+  },
+  "layered": {
+    "calm": "backgrounds/title_calm_no_ui.png",
+    "erased": "backgrounds/title_erased_eye_no_ui.png",
+    "overlay": "ui/title_ui_overlay.png",
+    "note": "For interactive selection, compose no-UI background + logo + reusable selection ink + three independent tintable labels. The old combined overlay is reference only."
+  },
+  "sprites": {
+    "logo": {
+      "file": "ui/logo.png",
+      "rectTopLeftPx": {
+        "x": 54,
+        "y": 171,
+        "width": 821,
+        "height": 285
+      }
+    },
+    "start_selected": {
+      "file": "ui/start_selected.png",
+      "rectTopLeftPx": {
+        "x": 97,
+        "y": 481,
+        "width": 322,
+        "height": 78
+      }
+    },
+    "settings": {
+      "file": "ui/settings.png",
+      "rectTopLeftPx": {
+        "x": 153,
+        "y": 573,
+        "width": 83,
+        "height": 46
+      }
+    },
+    "quit": {
+      "file": "ui/quit.png",
+      "rectTopLeftPx": {
+        "x": 153,
+        "y": 647,
+        "width": 85,
+        "height": 44
+      }
+    }
+  },
+  "buttons": {
+    "start": {
+      "rectTopLeftNormalized": [
+        0.062,
+        0.508,
+        0.19,
+        0.081
+      ],
+      "action": "start-after-sequence"
+    },
+    "settings": {
+      "rectTopLeftNormalized": [
+        0.062,
+        0.595,
+        0.19,
+        0.081
+      ],
+      "action": "existing-settings-or-disabled-if-unimplemented"
+    },
+    "quit": {
+      "rectTopLeftNormalized": [
+        0.062,
+        0.675,
+        0.19,
+        0.081
+      ],
+      "action": "quit"
+    }
+  },
+  "wellBoundsTopLeftNormalized": [
+    0.615,
+    0.135,
+    0.25,
+    0.405
+  ],
+  "audio": {
+    "file": "audio/title_glitch.wav",
+    "sampleRate": 44100,
+    "channels": 1,
+    "bitsPerSample": 16,
+    "durationSeconds": 0.68,
+    "peak": 0.1550077428551456,
+    "rms": 0.023828486665793125,
+    "bursts": [
+      [
+        0.1,
+        0.085,
+        0.1
+      ],
+      [
+        0.155,
+        0.055,
+        0.075
+      ],
+      [
+        0.2962,
+        0.12,
+        0.11
+      ],
+      [
+        0.3892,
+        0.07,
+        0.095
+      ],
+      [
+        0.46,
+        0.13,
+        0.1
+      ],
+      [
+        0.575,
+        0.045,
+        0.06
+      ]
+    ]
+  },
+  "sequence": {
+    "clock": "unscaled",
+    "startAudioAtMs": 0,
+    "rejectRepeatedStartClicks": true,
+    "phases": [
+      {
+        "id": "acknowledge",
+        "fromMs": 0,
+        "toMs": 120,
+        "image": "calm"
+      },
+      {
+        "id": "first-glimpse",
+        "fromMs": 120,
+        "toMs": 249.2,
+        "image": "erased",
+        "glitchStrength": 1.35
+      },
+      {
+        "id": "normal-interruption",
+        "fromMs": 249.2,
+        "toMs": 304.2,
+        "image": "calm",
+        "darken": 0.12
+      },
+      {
+        "id": "second-glimpse",
+        "fromMs": 304.2,
+        "toMs": 555,
+        "image": "erased",
+        "glitchStrength": 1.1
+      },
+      {
+        "id": "fade-to-black",
+        "fromMs": 555,
+        "toMs": 855,
+        "image": "erased",
+        "fade": 1
+      }
+    ],
+    "onFinished": "Invoke existing start-game action once, after black; do not return to title in game."
+  },
+  "glitch": {
+    "style": "horizontal-slice-displacement-and-grain",
+    "sliceCount": 13,
+    "sliceHeightPx": [
+      4,
+      28
+    ],
+    "horizontalDisplacementPx": [
+      16,
+      68
+    ],
+    "updateEveryMs": 22,
+    "grainOpacity": 0.15,
+    "avoidFullWhiteFlash": true
+  },
+  "unityImport": {
+    "textureType": "Sprite (2D and UI)",
+    "spriteMode": "Single",
+    "spriteMeshType": "Full Rect",
+    "filterMode": "Point",
+    "compression": "None",
+    "mipmaps": false,
+    "wrapMode": "Clamp",
+    "maxSize": 2048,
+    "alphaIsTransparency": true,
+    "canvasScaleMode": "Scale With Screen Size",
+    "referenceResolution": [
+      1672,
+      941
+    ],
+    "sfxLoadType": "Decompress On Load",
+    "sfxCompression": "PCM",
+    "sfxLoop": false
+  },
+  "approval": {
+    "composition": "user-selected-for-temporary-title",
+    "eye": "B-round-lidless-burgundy-eye",
+    "separatedLayers": "extracted-from-approved-composition",
+    "gameIntegration": "assets-prepared-not-wired"
+  },
+  "menu": {
+    "selection": {
+      "file": "ui/menu/selection_ink.png",
+      "sizePx": [
+        322,
+        78
+      ],
+      "defaultSelected": "start",
+      "positionsTopLeftPx": {
+        "start": [
+          97,
+          481
+        ],
+        "settings": [
+          97,
+          557
+        ],
+        "quit": [
+          97,
+          631
+        ]
+      },
+      "raycastTarget": false
+    },
+    "labels": {
+      "start": {
+        "file": "ui/menu/label_start.png",
+        "rectTopLeftPx": {
+          "x": 156,
+          "y": 500,
+          "width": 166,
+          "height": 43
+        },
+        "alphaZeroFraction": 0.7293821510297482,
+        "tintable": true
+      },
+      "settings": {
+        "file": "ui/menu/label_settings.png",
+        "rectTopLeftPx": {
+          "x": 156,
+          "y": 574,
+          "width": 82,
+          "height": 45
+        },
+        "alphaZeroFraction": 0.6638709677419354,
+        "tintable": true
+      },
+      "quit": {
+        "file": "ui/menu/label_quit.png",
+        "rectTopLeftPx": {
+          "x": 156,
+          "y": 648,
+          "width": 85,
+          "height": 44
+        },
+        "alphaZeroFraction": 0.692258064516129,
+        "tintable": true
+      }
+    },
+    "normalTintRgba": [
+      0.13,
+      0.11,
+      0.09,
+      1
+    ],
+    "selectedTintRgba": [
+      0.969,
+      0.933,
+      0.843,
+      1
+    ],
+    "hierarchy": [
+      "Background",
+      "Logo",
+      "SelectionInk",
+      "Labels",
+      "ButtonHitTargets"
+    ],
+    "behavior": {
+      "pointerEnter": "Move selection to hovered button; tint that label selected and others normal.",
+      "select": "Use the same selection for mouse, keyboard and gamepad focus.",
+      "click": "Keep selection on the clicked button; invoke its existing action.",
+      "doNotBakeInkIntoText": true
+    },
+    "legacyCompositeFiles": [
+      "ui/start_selected.png",
+      "ui/title_ui_overlay.png"
+    ],
+    "legacyNote": "Preserved reference only. These composites cannot move the ink selection to another row."
+  }
+}

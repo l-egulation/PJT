@@ -1,0 +1,88 @@
+{
+  "format": "stage1-background-cream-v1",
+  "sky": "#FCF7EE",
+  "floorLean": "#fef7ee (R+6 G+1 B-10 over lightness)",
+  "rule": "lightness kept per dot; floor cream lean added; farther layers blended toward the sky by depth",
+  "files": [
+    {
+      "file": "runtime/mountains.png",
+      "from": "environments/stage1-pixel-background-native-20261111/runtime/mountains.png",
+      "depth": 0.3
+    },
+    {
+      "file": "runtime/far-village.png",
+      "from": "environments/stage1-pixel-background-native-20261111/runtime/far-village.png",
+      "depth": 0.16
+    },
+    {
+      "file": "runtime/near-village.png",
+      "from": "environments/stage1-pixel-background-native-20261111/runtime/near-village.png",
+      "depth": 0.0
+    },
+    {
+      "file": "runtime/boss-room-rose-window.png",
+      "from": "environments/stage1-boss-approach-pixel-20261112/runtime/boss-room-rose-window.png",
+      "depth": 0.22
+    },
+    {
+      "file": "runtime/sky/clouds/clouds-0.png",
+      "from": "environments/stage1-atmosphere-sky-ash-20261111/runtime/clouds/clouds-0.png",
+      "depth": 0.2
+    },
+    {
+      "file": "runtime/sky/clouds/clouds-1.png",
+      "from": "environments/stage1-atmosphere-sky-ash-20261111/runtime/clouds/clouds-1.png",
+      "depth": 0.2
+    },
+    {
+      "file": "runtime/sky/clouds/clouds-2.png",
+      "from": "environments/stage1-atmosphere-sky-ash-20261111/runtime/clouds/clouds-2.png",
+      "depth": 0.2
+    },
+    {
+      "file": "runtime/sky/clouds/clouds-3.png",
+      "from": "environments/stage1-atmosphere-sky-ash-20261111/runtime/clouds/clouds-3.png",
+      "depth": 0.2
+    },
+    {
+      "file": "runtime/sky/clouds/clouds-4.png",
+      "from": "environments/stage1-atmosphere-sky-ash-20261111/runtime/clouds/clouds-4.png",
+      "depth": 0.2
+    },
+    {
+      "file": "runtime/sky/clouds/clouds-5.png",
+      "from": "environments/stage1-atmosphere-sky-ash-20261111/runtime/clouds/clouds-5.png",
+      "depth": 0.2
+    },
+    {
+      "file": "runtime/sky/birds/birds-0.png",
+      "from": "environments/stage1-atmosphere-sky-ash-20261111/runtime/birds/birds-0.png",
+      "depth": 0.0
+    },
+    {
+      "file": "runtime/sky/birds/birds-1.png",
+      "from": "environments/stage1-atmosphere-sky-ash-20261111/runtime/birds/birds-1.png",
+      "depth": 0.0
+    },
+    {
+      "file": "runtime/sky/birds/birds-2.png",
+      "from": "environments/stage1-atmosphere-sky-ash-20261111/runtime/birds/birds-2.png",
+      "depth": 0.0
+    },
+    {
+      "file": "runtime/sky/birds/birds-3.png",
+      "from": "environments/stage1-atmosphere-sky-ash-20261111/runtime/birds/birds-3.png",
+      "depth": 0.0
+    },
+    {
+      "file": "runtime/sky/birds/birds-4.png",
+      "from": "environments/stage1-atmosphere-sky-ash-20261111/runtime/birds/birds-4.png",
+      "depth": 0.0
+    },
+    {
+      "file": "runtime/sky/birds/birds-5.png",
+      "from": "environments/stage1-atmosphere-sky-ash-20261111/runtime/birds/birds-5.png",
+      "depth": 0.0
+    }
+  ]
+}

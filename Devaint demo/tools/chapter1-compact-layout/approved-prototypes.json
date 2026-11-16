@@ -1,0 +1,567 @@
+{
+  "schema": 1,
+  "status": "user_approved_design_pending_unity_validation",
+  "approvedDate": "2026-10-26",
+  "scope": "four_preview_templates_only",
+  "templates": [
+    {
+      "name": "숲의 이중 공터 · 축소 시안",
+      "width": 32,
+      "height": 18,
+      "terrain": [
+        {
+          "x": 0,
+          "y": 15,
+          "w": 4,
+          "h": 3,
+          "kind": "earth",
+          "id": "compact-surface-01"
+        },
+        {
+          "x": 4,
+          "y": 13,
+          "w": 5,
+          "h": 5,
+          "kind": "earth",
+          "id": "compact-surface-02"
+        },
+        {
+          "x": 9,
+          "y": 11,
+          "w": 10,
+          "h": 7,
+          "kind": "earth",
+          "id": "compact-surface-03"
+        },
+        {
+          "x": 19,
+          "y": 12,
+          "w": 4,
+          "h": 6,
+          "kind": "earth",
+          "id": "compact-surface-04"
+        },
+        {
+          "x": 23,
+          "y": 13,
+          "w": 5,
+          "h": 5,
+          "kind": "earth",
+          "id": "compact-surface-05"
+        },
+        {
+          "x": 28,
+          "y": 15,
+          "w": 4,
+          "h": 3,
+          "kind": "earth",
+          "id": "compact-surface-06"
+        },
+        {
+          "x": 5,
+          "y": 10,
+          "w": 3,
+          "h": 0.5,
+          "kind": "wood",
+          "id": "compact-surface-07"
+        }
+      ],
+      "monsters": [
+        {
+          "x": 3,
+          "y": 15,
+          "species": "01_field_mouse",
+          "id": "enemy-01"
+        },
+        {
+          "x": 5.5,
+          "y": 13,
+          "species": "01_field_mouse",
+          "id": "enemy-02"
+        },
+        {
+          "x": 8,
+          "y": 13,
+          "species": "02_mole",
+          "id": "enemy-03"
+        },
+        {
+          "x": 10.5,
+          "y": 11,
+          "species": "01_field_mouse",
+          "id": "enemy-04"
+        },
+        {
+          "x": 13,
+          "y": 11,
+          "species": "05_boar",
+          "id": "enemy-05"
+        },
+        {
+          "x": 16,
+          "y": 11,
+          "species": "08_hay_bale",
+          "id": "enemy-06"
+        },
+        {
+          "x": 18,
+          "y": 11,
+          "species": "07_scarecrow",
+          "id": "enemy-07"
+        },
+        {
+          "x": 21,
+          "y": 12,
+          "species": "01_field_mouse",
+          "id": "enemy-08"
+        },
+        {
+          "x": 24.5,
+          "y": 13,
+          "species": "10_water_bucket",
+          "id": "enemy-09"
+        },
+        {
+          "x": 27,
+          "y": 13,
+          "species": "05_boar",
+          "id": "enemy-10"
+        }
+      ],
+      "ports": [
+        {
+          "side": "left",
+          "y": 15,
+          "role": "entry"
+        },
+        {
+          "side": "right",
+          "y": 15,
+          "role": "exit"
+        }
+      ],
+      "route": [
+        [
+          1,
+          15
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          5,
+          13
+        ],
+        [
+          8,
+          13
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          18,
+          11
+        ],
+        [
+          21,
+          12
+        ],
+        [
+          26,
+          13
+        ],
+        [
+          30,
+          15
+        ]
+      ],
+      "id": "forest_double_clearing_01"
+    },
+    {
+      "name": "ㄷ자 회랑 · 축소 시안",
+      "width": 32,
+      "height": 27,
+      "terrain": [
+        {
+          "x": 6,
+          "y": 6,
+          "w": 26,
+          "h": 12,
+          "kind": "earth",
+          "id": "compact-surface-01"
+        },
+        {
+          "x": 0,
+          "y": 24,
+          "w": 32,
+          "h": 3,
+          "kind": "earth",
+          "id": "compact-surface-02"
+        },
+        {
+          "x": 0,
+          "y": 9,
+          "w": 4,
+          "h": 0.5,
+          "kind": "wood",
+          "id": "compact-surface-03"
+        },
+        {
+          "x": 0,
+          "y": 12,
+          "w": 4,
+          "h": 0.5,
+          "kind": "wood",
+          "id": "compact-surface-04"
+        },
+        {
+          "x": 0,
+          "y": 15,
+          "w": 4,
+          "h": 0.5,
+          "kind": "wood",
+          "id": "compact-surface-05"
+        },
+        {
+          "x": 0,
+          "y": 18,
+          "w": 4,
+          "h": 0.5,
+          "kind": "wood",
+          "id": "compact-surface-06"
+        },
+        {
+          "x": 0,
+          "y": 21,
+          "w": 4,
+          "h": 0.5,
+          "kind": "wood",
+          "id": "compact-surface-07"
+        }
+      ],
+      "monsters": [
+        {
+          "x": 29,
+          "y": 6,
+          "species": "01_field_mouse",
+          "id": "enemy-01"
+        },
+        {
+          "x": 24,
+          "y": 6,
+          "species": "01_field_mouse",
+          "id": "enemy-02"
+        },
+        {
+          "x": 19,
+          "y": 6,
+          "species": "02_mole",
+          "id": "enemy-03"
+        },
+        {
+          "x": 14,
+          "y": 6,
+          "species": "01_field_mouse",
+          "id": "enemy-04"
+        },
+        {
+          "x": 9,
+          "y": 6,
+          "species": "05_boar",
+          "id": "enemy-05"
+        },
+        {
+          "x": 5,
+          "y": 24,
+          "species": "08_hay_bale",
+          "id": "enemy-06"
+        },
+        {
+          "x": 10,
+          "y": 24,
+          "species": "07_scarecrow",
+          "id": "enemy-07"
+        },
+        {
+          "x": 16,
+          "y": 24,
+          "species": "01_field_mouse",
+          "id": "enemy-08"
+        },
+        {
+          "x": 22,
+          "y": 24,
+          "species": "10_water_bucket",
+          "id": "enemy-09"
+        },
+        {
+          "x": 28,
+          "y": 24,
+          "species": "05_boar",
+          "id": "enemy-10"
+        }
+      ],
+      "ports": [
+        {
+          "side": "right",
+          "y": 6,
+          "role": "entry"
+        },
+        {
+          "side": "right",
+          "y": 24,
+          "role": "exit"
+        }
+      ],
+      "route": [
+        [
+          31,
+          6
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          2,
+          21
+        ],
+        [
+          4,
+          24
+        ],
+        [
+          31,
+          24
+        ]
+      ],
+      "id": "digeut_10"
+    },
+    {
+      "name": "ㄹ자 층계 회랑 · 축소 시안",
+      "width": 32,
+      "height": 27,
+      "terrain": [
+        {
+          "x": 0,
+          "y": 6,
+          "w": 26,
+          "h": 3,
+          "kind": "earth",
+          "id": "compact-surface-01"
+        },
+        {
+          "x": 6,
+          "y": 15,
+          "w": 26,
+          "h": 3,
+          "kind": "earth",
+          "id": "compact-surface-02"
+        },
+        {
+          "x": 0,
+          "y": 24,
+          "w": 32,
+          "h": 3,
+          "kind": "earth",
+          "id": "compact-surface-03"
+        },
+        {
+          "x": 28,
+          "y": 9,
+          "w": 4,
+          "h": 0.5,
+          "kind": "wood",
+          "id": "compact-surface-04"
+        },
+        {
+          "x": 28,
+          "y": 12,
+          "w": 4,
+          "h": 0.5,
+          "kind": "wood",
+          "id": "compact-surface-05"
+        },
+        {
+          "x": 0,
+          "y": 18,
+          "w": 4,
+          "h": 0.5,
+          "kind": "wood",
+          "id": "compact-surface-06"
+        },
+        {
+          "x": 0,
+          "y": 21,
+          "w": 4,
+          "h": 0.5,
+          "kind": "wood",
+          "id": "compact-surface-07"
+        }
+      ],
+      "monsters": [
+        {
+          "x": 3,
+          "y": 6,
+          "species": "01_field_mouse",
+          "id": "enemy-01"
+        },
+        {
+          "x": 12,
+          "y": 6,
+          "species": "02_mole",
+          "id": "enemy-02"
+        },
+        {
+          "x": 23,
+          "y": 6,
+          "species": "05_boar",
+          "id": "enemy-03"
+        },
+        {
+          "x": 29,
+          "y": 15,
+          "species": "07_scarecrow",
+          "id": "enemy-04"
+        },
+        {
+          "x": 22,
+          "y": 15,
+          "species": "08_hay_bale",
+          "id": "enemy-05"
+        },
+        {
+          "x": 15,
+          "y": 15,
+          "species": "10_water_bucket",
+          "id": "enemy-06"
+        },
+        {
+          "x": 8,
+          "y": 15,
+          "species": "01_field_mouse",
+          "id": "enemy-07"
+        },
+        {
+          "x": 5,
+          "y": 24,
+          "species": "02_mole",
+          "id": "enemy-08"
+        },
+        {
+          "x": 16,
+          "y": 24,
+          "species": "05_boar",
+          "id": "enemy-09"
+        },
+        {
+          "x": 28,
+          "y": 24,
+          "species": "07_scarecrow",
+          "id": "enemy-10"
+        }
+      ],
+      "ports": [
+        {
+          "side": "left",
+          "y": 6,
+          "role": "entry"
+        },
+        {
+          "side": "right",
+          "y": 24,
+          "role": "exit"
+        }
+      ],
+      "route": [
+        [
+          1,
+          6
+        ],
+        [
+          24,
+          6
+        ],
+        [
+          30,
+          9
+        ],
+        [
+          30,
+          12
+        ],
+        [
+          29,
+          15
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          2,
+          18
+        ],
+        [
+          2,
+          21
+        ],
+        [
+          5,
+          24
+        ],
+        [
+          31,
+          24
+        ]
+      ],
+      "id": "rieul_11"
+    },
+    {
+      "name": "짧은 직선 통로 · 축소 시안",
+      "width": 10,
+      "height": 12,
+      "terrain": [
+        {
+          "x": 0,
+          "y": 9,
+          "w": 10,
+          "h": 3,
+          "kind": "ground",
+          "id": "compact-surface-01"
+        }
+      ],
+      "monsters": [],
+      "ports": [
+        {
+          "side": "left",
+          "y": 9,
+          "role": "entry"
+        },
+        {
+          "side": "right",
+          "y": 9,
+          "role": "exit"
+        }
+      ],
+      "route": [
+        [
+          1,
+          9
+        ],
+        [
+          9,
+          9
+        ]
+      ],
+      "id": "straight"
+    }
+  ]
+}

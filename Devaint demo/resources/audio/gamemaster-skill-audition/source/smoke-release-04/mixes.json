@@ -1,0 +1,81 @@
+{
+  "kind": "smoke-release-revision4",
+  "status": "pending; not applied",
+  "items": [
+    {
+      "id": "S8",
+      "basedOn": "S6",
+      "file": "S8.wav",
+      "duration": 0.6,
+      "sha256": "420d65dfa56c9961cce3302fb9ed04c913dad1902376b9212069d04ff1af5baa",
+      "status": "pending",
+      "source": {
+        "file": "../smoke-release-03/S6.wav",
+        "sha256": "81555d64eda117bce48311eb63a0b145ffccfab93f5b922d04637ad30b8c1da8"
+      },
+      "edit": {
+        "preserveFrontSeconds": 0.1,
+        "decayStartSeconds": 0.1,
+        "decayEndSeconds": 0.6,
+        "curve": "cosine power 2.2",
+        "playbackRate": 1,
+        "normalization": false,
+        "addedSound": false
+      }
+    },
+    {
+      "id": "S9",
+      "basedOn": "S7",
+      "file": "S9.wav",
+      "duration": 0.6,
+      "sha256": "301516c161cbad1c9a83df8bef53f81af6ea57d8f60ad63fe2854de515f51325",
+      "status": "pending",
+      "source": {
+        "file": "../smoke-release-03/S7.wav",
+        "sha256": "1e5b93c9709fc752f6dc2f445467e5fc23ad0812d7db2efb133578c4e5e2e278"
+      },
+      "edit": {
+        "preserveFrontSeconds": 0.1,
+        "decayStartSeconds": 0.1,
+        "decayEndSeconds": 0.6,
+        "curve": "cosine power 2.2",
+        "playbackRate": 1,
+        "normalization": false,
+        "addedSound": false
+      }
+    }
+  ],
+  "confirmedBomb": {
+    "candidate": "B3",
+    "file": "source/focused-mixes-01/B3.wav",
+    "sha256": "822a47da3fe91fdce647b2196cb4103857468f142e35ae09c70bfdf7aa827af1",
+    "status": "user-confirmed; not applied",
+    "instruction": "폭탄 b3할게",
+    "mix": {
+      "id": "B3",
+      "label": "큰 물풍선 방향",
+      "file": "B3.wav",
+      "duration": 1.05,
+      "sha256": "822a47da3fe91fdce647b2196cb4103857468f142e35ae09c70bfdf7aa827af1",
+      "peak": 0.47998046875,
+      "sources": [
+        "Magic_Spells/water_blast_projectile_spell_04.wav",
+        "Water/water_splash_object_body_05.wav"
+      ],
+      "edit": {
+        "kind": "layered-water-release",
+        "mainStart": 0.09939583333333334,
+        "wetStart": 0.25066666666666665,
+        "wetOnset": 0.025,
+        "mainGain": 0.72,
+        "wetGain": 0.82,
+        "decay": 0.175,
+        "noExplosionRecording": true,
+        "noThud": true,
+        "noCartoonPop": true,
+        "noSyntheticNoise": true
+      }
+    }
+  },
+  "comparisonGapSeconds": 1
+}

@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "status": "runtime_integrated_playtest_pending",
+  "spec": "docs/design/combat/rules.md#보스의-기절-상태와-패턴",
+  "stunCanBeApplied": true,
+  "stunDurationCanBeConsumedByInk": false,
+  "stunStopsOrCancelsBossPatterns": false,
+  "stunPausesBossPatternClock": false,
+  "controlInternalCooldown": {
+    "status": "no_reapplication_gate",
+    "stunSeconds": 0,
+    "rootSeconds": 0,
+    "startsWhen": "applied",
+    "duringCooldown": "application_fails",
+    "independentPerControl": true
+  },
+  "notes": [
+    "기절·속박·슬로우 상태와 아이콘 및 조건 판정은 유지한다.",
+    "잉크 상태는 보스의 패턴·이동·공격 동작을 중단하거나 감속하지 않는다.",
+    "기절·속박의 보스 전용 재부여 제한은 없다."
+  ],
+  "slowChangesMovementOrAttackMotion": false,
+  "rootStopsMovement": false
+}

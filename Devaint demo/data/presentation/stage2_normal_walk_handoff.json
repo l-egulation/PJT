@@ -1,0 +1,46 @@
+{
+  "schema": "stage2-normal-walk-handoff-v1",
+  "status": "reference-and-prompts-only-awaiting-user-motion-frames",
+  "base": "outputs/waterway/pixel-base-step1-20261031",
+  "output": "outputs/waterway/normal-walk-handoff-20261031",
+  "canvas": [384, 224],
+  "scale": 4,
+  "commonPrompt": "Animate ONLY the exact supplied pixel-art character into an 8-frame seamless in-place locomotion loop facing LEFT. Use eight distinct frames; connect the last frame naturally back to the first without duplicating an endpoint. Preserve the reference's slightly turned torso, face, proportions, colors and material-color edges, with no added outlines. Preserve the original design and number of visible limbs and accessories. Keep the camera, character center, framing and scale locked; the character travels in place, not across the canvas. The reference uses a 384x224 logical-pixel canvas enlarged exactly 4x to 1536x896. Every logical pixel must remain a crisp aligned 4x4 block; move pixel clusters in logical-pixel increments, with no smoothing, blur, gradients, dithering or new texture. Keep the transparent background and identical canvas dimensions in every frame. Start from the supplied pose and retain generous canvas padding. Return eight separate full-canvas transparent PNG frames in order if supported; otherwise use the tool's ordered frame export, preserving identical per-frame dimensions and alignment. No captions, grids, background, cast shadows or effects. This is ordinary locomotion; keep hands, carried objects and weapons in their resting configuration.",
+  "assets": [
+    {
+      "id": "K4",
+      "name": "등짐분사수",
+      "motion": "장비 무게를 받는 짧은 보행",
+      "cycleSecondsProposal": 1.0,
+      "prompt": "Use short, deliberate alternating steps with bent knees, carrying a heavy backpack tank. Show clear foot lift, forward placement, planted support and rear-foot push-off. Let the torso settle and rise by only 1-2 logical pixels with the steps; shoulders and the single tank follow the torso's weight. Keep the tank rigid with constant size, straps attached, and both hands holding the same hose/nozzle assembly. Allow only a small delayed hose bend while preserving its length and continuous connection. Keep the nozzle pointed down-left in its resting pose throughout. Do not spray ink, aim, inflate the tank, add equipment or turn this into a run. Suggested loop duration: about 1.0 second, an animation study rather than a gameplay speed setting."
+    },
+    {
+      "id": "B3",
+      "name": "쐐기보행기",
+      "motion": "다중 지지대를 번갈아 옮기는 무거운 보행",
+      "cycleSecondsProposal": 1.3,
+      "prompt": "Create a slow, heavy multi-support crawl. Preserve the reference's five visible ground-contact structures and their distinct shapes; do not add or remove limbs or convert it into a four-legged animal. Shift weight onto some supports while the others lift slightly, reach forward and plant, then exchange support groups. Keep at least several contacts bearing weight at any moment. Let the main body and rear plates settle by 1-2 logical pixels. Keep the long pale front wedge rigid, low and at the same resting angle; it follows the body's small vertical weight shift. No front-body rearing, slamming, charge wind-up, sliding dash, spinning plates or new joints. Suggested loop duration: about 1.3 seconds, not a final gameplay movement speed."
+    },
+    {
+      "id": "M3",
+      "name": "먹침필경사",
+      "motion": "낮게 기어오는 교차보행",
+      "cycleSecondsProposal": 0.8,
+      "prompt": "Use a quick, low cross-stepping creep: the existing near and far legs alternately reach, briefly overlap in side projection, plant and push backward under the low torso. Separate the near/far step phases while retaining the reference limb count and anatomy. Do not invent extra legs to illustrate the crossing. Keep the body very low with only 1 logical pixel of vertical bounce. The face and entire long needle travel together as a rigid unit, maintaining the exact needle length, thickness and nearly horizontal resting angle. The needle must not telescope, shorten, detach or stab. No repeated forward jabs, projectile or attack anticipation. Suggested loop duration: about 0.8 seconds, not a final gameplay movement speed."
+    },
+    {
+      "id": "H3",
+      "name": "늘어진수의",
+      "motion": "수의 끝이 뒤따르는 부유 이동",
+      "cycleSecondsProposal": 1.6,
+      "prompt": "This character has NO feet and must NOT acquire legs. Animate an in-place LEFTWARD floating travel loop, with the main body gently rising and falling through a 2-3 logical-pixel range. Give a slight persistent forward lean while keeping the mask orientation recognizable. The long cloth tips and loose arms lag toward the RIGHT, then settle with offset timing, so this reads as directional travel rather than stationary breathing. Keep the mask rigid, cloth length and body volume consistent; bend existing cloth clusters rather than stretching the whole sprite. Hands stay loosely lowered. No ink ball, casting gesture, throwing, puddle, teleportation, disappearing pixels or newly revealed anatomy. Suggested loop duration: about 1.6 seconds, not a final gameplay movement speed."
+    },
+    {
+      "id": "R-selected",
+      "name": "신호투척수",
+      "motion": "물건을 들고 걷는 짧은 보행",
+      "cycleSecondsProposal": 0.9,
+      "prompt": "Create compact alternating boot steps with a slightly cautious forward lean. Clearly show lift, forward placement, planted support and push-off, retaining the short legs and rounded torso. Let the head and torso bob by only 1-2 logical pixels; the orange apron hem follows each step with a small delayed sway. Preserve the exact ochre carried object, its size and its grip in the same hand; the object follows the arm rigidly near the hip rather than swinging independently. The free arm may make a small counter-swing. Keep the face directed left. No raising the object overhead, player aiming, throwing, reloading, extra bottles or attack effects. Suggested loop duration: about 0.9 seconds, not a final gameplay movement speed."
+    }
+  ]
+}

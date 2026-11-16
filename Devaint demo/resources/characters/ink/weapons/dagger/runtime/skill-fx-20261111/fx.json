@@ -1,0 +1,25 @@
+{
+ "format": "deviant-dagger-skill-fx-v1",
+ "pixelsPerUnit": 32,
+ "fps": 25,
+ "source": "tools/pixelfx/dagger-smoke-ref.js (bake_skill_fx_20261111.mjs, style fog, vanish rise)",
+ "clips": {
+  "ink_smoke_fog": {
+   "tone": "fog",
+   "use": "먹안개 뭉게 연막 — 시전 화면 배경이 어두울 때(밝은 회색)"
+  },
+  "ink_smoke_fog_ink": {
+   "tone": "fogInk",
+   "use": "먹안개 뭉게 연막 — 시전 화면 배경이 밝을 때(옅은 먹색, 아래로 짙게)"
+  }
+ },
+ "size": [
+  460,
+  260
+ ],
+ "originTopLeftPx": [
+  230,
+  236
+ ],
+ "rules": "판정 10×5(±5u, 높이 0~5u) 안에서만 그림. 크고 작은 둥근 덩이가 겹친 반투명 구름, 4초 유지 뒤 옅어지며 떠올라 걷힘"
+}

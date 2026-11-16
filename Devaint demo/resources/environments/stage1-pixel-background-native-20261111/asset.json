@@ -1,0 +1,52 @@
+{
+  "format": "deviant-resource-asset-v1",
+  "id": "environments.stage1-pixel-background-native-20261111",
+  "path": "environments/stage1-pixel-background-native-20261111",
+  "status": "user-approved-art",
+  "gameIntegration": "isolated-unity-review-only",
+  "selected": "../stage1-atmosphere-sky-ash-20261111/preview/index.html",
+  "generationTool": "builtin-imagegen + deterministic native-grid palette exporter",
+  "layersContract": "runtime/layers.json",
+  "sourceRequests": "source/requests.json",
+  "files": [
+    "README.md",
+    "runtime/far-village.png",
+    "runtime/layers.json",
+    "runtime/mountains.png",
+    "runtime/near-village.png",
+    "source/BuildNativeBackground.cs",
+    "source/NativeBackground.shader",
+    "source/VirtualWallOutlineSoil.shader",
+    "source/build.ps1",
+    "source/far-village-redraw.png",
+    "source/inputs/far-village.png",
+    "source/inputs/mountains.png",
+    "source/inputs/near-village.png",
+    "source/mountains-redraw.png",
+    "source/near-village-redraw.png",
+    "source/references.json",
+    "source/requests.json"
+  ],
+  "fileHashes": {
+    "README.md": "f317c8ec4afe14d654275906d979fb0501d21e9cc5764ef3c6abbbcf7e855e65",
+    "runtime/far-village.png": "be224a6842e8e52fd8d164512604eb5bae0d5edd42d7419abb9363d0ddb59feb",
+    "runtime/layers.json": "bd5695dbd7216bcdcb5816a1e07987acdcb161247105301bb1d9c5782ee243d8",
+    "runtime/mountains.png": "174559be48dec49612311c6c83761b63d046b15ba2cf91d7efc7e101acef12fb",
+    "runtime/near-village.png": "7c70d95fd92ada82c3b3c0abb2cec77f63395c9aea617754f5eafaec4e768ab1",
+    "source/BuildNativeBackground.cs": "dc3a5a7df197b0ba5bd3590a3a1e1cc54634283ea007b9b4afc5dae634d9d164",
+    "source/NativeBackground.shader": "1c56d58dbd93a8535f269c85a9891d2b4e700bae4da72265db9a4238c8b946db",
+    "source/VirtualWallOutlineSoil.shader": "b59aa7feb9acf74edb090ead7080d250b3b85a6e61cb984b50353a18c6e277e9",
+    "source/build.ps1": "552713c3733febadbaea31898ded07584b1860476535cc3444cf16dfaf0aa985",
+    "source/far-village-redraw.png": "87e2719b5fe19baafe94a6876d26af77b48c5f10df27cafbfedc172a0c22919b",
+    "source/inputs/far-village.png": "fb0a18fe3cc5a9999c117aaca9e7b601f417ae834a163930e2b524de4538e84f",
+    "source/inputs/mountains.png": "053e5fae7e0565161a741b9a746c99c4ff3210131e64f72fa8bfd83c95bc16f4",
+    "source/inputs/near-village.png": "03746fc043456ed3af84e72db40519aa76d0ba6737c24afa2aeae31f16964cfb",
+    "source/mountains-redraw.png": "09a8dd329b2378b995d0384fa56c69adad0af73704068b17a923a35a9a798092",
+    "source/near-village-redraw.png": "fd62279642071c830cfb2915be6515f87a20243620541c000e4c53d992056c43",
+    "source/references.json": "5fcac77192b6fa9a4b007b916dc73e2a949cabef5c761decf3d292a724351720",
+    "source/requests.json": "f82e1a7988ba6f6f4f1fbd1817ea793323462404e25c38decb9ac36d99027426"
+  },
+  "approvedScope": [
+    "runtime"
+  ]
+}

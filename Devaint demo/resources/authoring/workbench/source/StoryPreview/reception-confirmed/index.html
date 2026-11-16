@@ -1,0 +1,730 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>대도서관 접수실 · 1차 확정</title><style>
+*{box-sizing:border-box}body{margin:0;background:#0d1728;color:#ede5d4;font:15px system-ui}header{max-width:1000px;margin:22px auto;padding:0 20px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}h1{font-size:20px;margin:0 auto 0 0}button{background:#233956;border:1px solid #627b98;color:inherit;border-radius:6px;padding:9px 14px;cursor:pointer}main{margin:auto;max-width:1000px;padding:0 20px}.view{width:100%;background:#091323;overflow:hidden;position:relative;outline:1px solid #425570}canvas{display:block;width:100%;image-rendering:pixelated}#ref{display:none}body.compare #ref{display:block}body.compare main{max-width:1960px}body.compare .views{display:grid;grid-template-columns:1fr 1fr;gap:12px}.caption{padding:8px;color:#c3d1e6;font-size:13px}footer{margin:15px 0;color:#acbdd5;font-size:13px}#message{color:#f4cd81;min-height:24px}canvas:fullscreen{object-fit:contain;width:100vw;height:100vh;background:#091323}a{color:#a4cdfb}
+.scene-stage{position:relative;aspect-ratio:16/9}.scene-stage>#scene{width:100%;height:100%}.text-overlay{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;image-rendering:auto!important}#sceneFull:fullscreen{width:100vw;height:100vh;background:#091323;display:flex;align-items:center;justify-content:center}#sceneFull:fullscreen .scene-stage{width:min(100vw,177.777778vh);flex:none}</style><header><h1>대도서관 · 접수실 1차 확정</h1><button id="pause">동작 멈춤</button><button id="reset">중앙으로</button><button id="deskDemo">책상 대화</button><button id="full">전체화면</button></header><main><div class="views"><div class="view"><div id="sceneFull"><div class="scene-stage"><canvas id="scene" width="960" height="540" tabindex="0"></canvas><canvas id="textOverlay" class="text-overlay" width="960" height="540" aria-hidden="true"></canvas></div></div><div class="caption">접수실 · 1차 확정</div></div></div><footer>← → / A D 이동 · 책상·수레·포탈 근처에서 E · 화면 클릭으로 이동 · 부유/흔들림은 검토용 실시간 동작</footer><div id="message"></div></main><script>
+// Text is rasterized at the display's physical resolution, above the 960x540 art.
+class HighResolutionTextLayer {
+ constructor(scene,overlay){
+  this.scene=scene;this.canvas=overlay;this.enabled=!!(overlay&&overlay.getContext);
+  this.ctx=this.enabled?overlay.getContext('2d'):null;
+  this.dpr=0;this.drawCount=0;this.resize();
+ }
+ resize(){
+  if(!this.enabled)return;
+  const rect=this.scene.getBoundingClientRect(),dpr=window.devicePixelRatio||1;
+  const w=Math.max(1,Math.round(rect.width*dpr)),h=Math.max(1,Math.round(rect.height*dpr));
+  if(this.canvas.width!==w)this.canvas.width=w;
+  if(this.canvas.height!==h)this.canvas.height=h;
+  this.dpr=dpr;this.scaleX=w/960;this.scaleY=h/540;
+ }
+ begin(){
+  this.drawCount=0;if(!this.enabled)return;
+  if((window.devicePixelRatio||1)!==this.dpr)this.resize();
+  const c=this.ctx;c.setTransform(1,0,0,1,0,0);c.clearRect(0,0,this.canvas.width,this.canvas.height);
+  c.setTransform(this.scaleX,0,0,this.scaleY,0,0);
+ }
+ draw(source,text,x,y){
+  const c=this.ctx;c.save();c.font=source.font;c.fillStyle=source.fillStyle;
+  c.textAlign=source.textAlign;c.textBaseline=source.textBaseline;c.globalAlpha=source.globalAlpha;
+  c.shadowBlur=0;c.shadowOffsetX=0;c.shadowOffsetY=0;c.filter='none';
+  c.fillText(text,x,y);c.restore();this.drawCount++;
+ }
+ cover(x,y,w,h){if(this.enabled)this.ctx.clearRect(x,y,w,h);}
+}
+
+// Keep standalone speech previews usable when no high-resolution overlay is attached.
+function drawSceneText(ctx,text,x,y){
+ const layer=ctx.highResolutionText;
+ if(layer&&layer.enabled)layer.draw(ctx,text,x,y);else ctx.fillText(text,x,y);
+}
+function coverSceneText(ctx,x,y,w,h){
+ const layer=ctx.highResolutionText;if(layer&&layer.enabled)layer.cover(x,y,w,h);
+}
+// Asset-backed 9-slice speech bubbles. No text is baked into the PNGs.
+class HeadSpeech {
+ constructor(ctx,body,tail,config,sprites={}){this.ctx=ctx;this.body=body;this.tail=tail;this.config=config;this.skins={};for(const [role,theme] of Object.entries(config.themes||{}))this.skins[role]={...theme,body:sprites[theme.body.replace('.png','')]||body,tail:sprites[theme.tail.replace('.png','')]||tail};this.active=false;this.pages=[];this.index=0;this.elapsed=0;this.visible=0;this.lastBox=null;this.lastLines=[];this.font=`${config.font_px||13}px "Malgun Gothic", sans-serif`;this.nameFont=`600 ${config.name_font_px||15}px "Malgun Gothic", sans-serif`}
+ roleFor(page){const role=page.role||this.config.speaker_roles?.[page.speaker]||(page.anchor==='hero'?'hero':'general');return this.config.themes?.[role]?role:'general'}
+ wrap(text,maxWidth){
+  const c=this.ctx;c.font=this.font;const lines=[];
+  for(const paragraph of String(text).replace(/\r/g,'').split('\n')){
+   if(!paragraph){lines.push('');continue}let line='';
+   for(const token of paragraph.match(/\S+|\s+/gu)||[]){
+    if(/^\s+$/u.test(token)){if(line&&!line.endsWith(' '))line+=' ';continue}
+    if(c.measureText(line+token).width<=maxWidth){line+=token;continue}
+    if(c.measureText(token).width<=maxWidth){if(line.trim())lines.push(line.trimEnd());line=token;continue}
+    for(const char of Array.from(token)){if(line&&c.measureText(line+char).width>maxWidth){lines.push(line.trimEnd());line=char}else line+=char}
+   }
+   if(line)lines.push(line.trimEnd());
+  }return lines.length?lines:[''];
+ }
+ begin(entries){this.pages=[];for(const entry of entries){const lines=this.wrap(entry.text,this.config.max_width-24);for(let i=0;i<lines.length;i+=this.config.max_lines_per_page)this.pages.push({...entry,lines:lines.slice(i,i+this.config.max_lines_per_page)})}this.index=0;this.active=this.pages.length>0;this.elapsed=0;this.visible=0}
+ get page(){return this.pages[this.index]}
+ close(){this.active=false;this.lastBox=null}
+ next(){if(!this.active)return;const total=Array.from(this.page.lines.join('\n')).length;if(this.visible<total){this.visible=total;this.elapsed=total/35;return}if(++this.index>=this.pages.length){this.close();return}this.elapsed=0;this.visible=0}
+ update(dt){if(this.active){this.elapsed+=dt;this.visible=Math.min(Array.from(this.page.lines.join('\n')).length,Math.floor(this.elapsed*35))}}
+ nineSlice(x,y,w,h,body=this.body){coverSceneText(this.ctx,x,y,w,h);const c=this.ctx,s=body,b=8,xs=[0,b,s.width-b,s.width],ys=[0,b,s.height-b,s.height],dx=[x,x+b,x+w-b,x+w],dy=[y,y+b,y+h-b,y+h];
+  for(let row=0;row<3;row++)for(let col=0;col<3;col++){const sx=col===1?Math.floor(s.width/2):xs[col],sy=row===1?Math.floor(s.height/2):ys[row],sw=col===1?1:xs[col+1]-xs[col],sh=row===1?1:ys[row+1]-ys[row];c.drawImage(s,sx,sy,sw,sh,dx[col],dy[row],dx[col+1]-dx[col],dy[row+1]-dy[row])}
+ }
+ draw(heroX){if(!this.active)return;const c=this.ctx,p=this.page,anchorX=p.anchorX??(p.anchor==='book'?775:heroX),anchorY=p.anchorY??(p.anchor==='book'?342:352),role=this.roleFor(p),skin=this.skins[role]||{body:this.body,tail:this.tail,name:'#e4c77f',text:'#f7f0df'};
+  c.save();c.filter='none';c.globalAlpha=1;c.imageSmoothingEnabled=false;c.font=this.font;
+  const showName=role!=='hero'&&Boolean(p.speaker);
+  const widest=Math.max(...p.lines.map(line=>c.measureText(line).width));c.font=this.nameFont;const nameWidth=showName?c.measureText(p.speaker).width:0;
+  const lineHeight=this.config.line_height||19,textBaseline=showName?(this.config.text_baseline||50):(this.config.text_baseline_without_name||24);
+  const w=Math.ceil(Math.max(this.config.min_width,Math.min(this.config.max_width,Math.max(widest,nameWidth)+24))),h=textBaseline+(p.lines.length-1)*lineHeight+18;
+  const bx=Math.round(Math.max(8,Math.min(952-w,anchorX-w/2))),by=Math.round(Math.max(8,anchorY-h-14)),tailX=Math.round(Math.max(bx+14,Math.min(bx+w-14,anchorX)));
+  this.nineSlice(bx,by,w,h,skin.body);c.drawImage(skin.tail,tailX-10,by+h-this.config.tail_overlap_px);
+  c.textAlign='left';c.textBaseline='alphabetic';if(showName){c.fillStyle=skin.name;c.font=this.nameFont;drawSceneText(c,p.speaker,bx+12,by+(this.config.name_baseline||24));}
+  c.fillStyle=skin.text;c.font=this.font;let remaining=this.visible;this.lastLines=[];
+  p.lines.forEach((line,i)=>{const chars=Array.from(line),shown=chars.slice(0,Math.max(0,remaining)).join('');remaining-=chars.length+1;drawSceneText(c,shown,bx+12,by+textBaseline+i*lineHeight);this.lastLines.push(shown)});
+  if(this.visible>=Array.from(p.lines.join('\n')).length){c.fillStyle=skin.name;const xx=bx+w-16,yy=by+h-10;c.fillRect(xx,yy,5,1);c.fillRect(xx+1,yy+1,3,1);c.fillRect(xx+2,yy+2,1,1)}
+  this.lastBox={x:bx,y:by,width:w,height:h,tailX,anchorX,anchorY,role,nameVisible:showName,nameFontPx:showName?this.config.name_font_px:null,bodyFontPx:this.config.font_px,nameBaseline:showName?by+(this.config.name_baseline||24):null,textBaseline:by+textBaseline,page:this.index+1,pages:this.pages.length};c.restore();
+ }
+}
+
+// Baked native-resolution poses. Rendering copies a complete pixel frame 1:1;
+// it never rotates, shears, filters or interpolates the source sprite at runtime.
+class PixelMotionBank {
+ constructor(){this.items=new Map();this.frames=24;this.padding=4;this.fps=12;}
+ build(name,image){
+  const w=image.width,h=image.height,p=this.padding;
+  const input=document.createElement('canvas');input.width=w;input.height=h;
+  const ic=input.getContext('2d');ic.imageSmoothingEnabled=false;ic.drawImage(image,0,0);
+  const source=ic.getImageData(0,0,w,h).data;
+  const configs={
+   '19_mobile_near':{fixed:12,bodyAmp:1.1,parts:[[0,69,15,28,-.7,1.8,1],[49,69,15,28,.7,1.8,1],[22,80,21,32,1.5,2.5,1]]},
+   '12_mobile':{fixed:18,bodyAmp:1.8,parts:[[27,32,17,31,.6,1,2],[14,74,19,18,1.4,2,1]]},
+   '20_mobile_far_a':{fixed:14,bodyAmp:.8,parts:[[0,49,9,27,.8,2,2],[29,49,9,22,.8,-2,2]]},
+   '21_mobile_far_b':{fixed:13,bodyAmp:.6,parts:[[0,23,10,37,.3,1.4,2],[12,23,12,51,1.2,2.2,1],[25,23,11,42,2.4,1.5,2]]}
+  };
+  const basis={'19_mobile_near':[64,112],'12_mobile':[46,92],'20_mobile_far_a':[38,76],'21_mobile_far_b':[36,74]};
+  let config=configs[name];
+  if(config){const [bw,bh]=basis[name];config={...config,fixed:Math.round(config.fixed*h/bh),parts:config.parts.map(([x,y,pw,ph,lag,amp,frequency])=>[Math.round(x*w/bw),Math.round(y*h/bh),Math.round(pw*w/bw),Math.round(ph*h/bh),lag,amp,frequency])};}
+  const frames=[];
+  for(let index=0;index<this.frames;index++){
+   const phase=index/this.frames*Math.PI*2;
+   const cv=document.createElement('canvas');cv.width=w+p*2;cv.height=h+p*2;
+   const cx=cv.getContext('2d'),out=cx.createImageData(cv.width,cv.height);
+   const put=(x,y,si)=>{x+=p;y+=p;if(x<0||y<0||x>=cv.width||y>=cv.height)return;const di=(y*cv.width+x)*4;out.data[di]=source[si];out.data[di+1]=source[si+1];out.data[di+2]=source[si+2];out.data[di+3]=source[si+3];};
+   for(let y=0;y<h;y++)for(let x=0;x<w;x++){
+    const si=(y*w+x)*4;if(!source[si+3])continue;
+    let dx=0,dy=0;
+    if(config){
+     const body=Math.round(Math.sin(phase)*(config.bodyAmp||1.1));
+     dx=y<config.fixed?0:Math.round(body*Math.min(1,(y-config.fixed)/8));
+     for(const [rx,ry,rw,rh,lag,amp,frequency] of config.parts){if(x>=rx&&x<rx+rw&&y>=ry&&y<ry+rh){
+      // Pendants lag the rigid frame; their attachment pixels stay connected.
+      const weight=Math.min(1,(y-ry)/Math.max(3,rh*.5));
+      dx=body+Math.round(Math.sin(phase*(frequency||1)-lag)*amp*weight);
+      break;
+     }}
+    }else if(name==='11_banner'){
+     // Cloth changes contour below its fixed hanging edge. Lower folds travel
+     // later than upper folds, rather than shearing the entire rectangle.
+     const weight=Math.max(0,(y-10)/(h-10));
+     dx=Math.round(Math.sin(phase*2-y*.075)*2.2*weight);
+     if(y>h*.82)dx=Math.round(Math.sin(phase*2-1.6)*2);
+    }else if(name==='08_floating_book'){
+     // Covers/spine hold their shape; page halves flex around the gutter.
+     const edge=Math.abs(x-w/2)/(w/2),page=Math.max(0,1-y/(h*.78));
+     dy=Math.round(Math.sin(phase*2+(x<w/2?0:.9))*edge*page*2);
+     dy+=Math.round(Math.sin(phase)*.65);
+    }else if(name==='09_quill'){
+     // Bend the feather above a stable nib. Avoid whole-image rotation.
+     const weight=(h-1-y)/(h-1);
+     dx=Math.round(Math.sin(phase*2-weight*.7)*2*weight);
+     dy=Math.round(Math.sin(phase)*.6);
+    }else{
+     // Paper strips: fixed attachment and a delayed lower edge.
+     dx=Math.round(Math.sin(phase*2-y*.11)*Math.min(1.5,y/h*2));
+    }
+    put(x+dx,y+dy,si);
+   }
+   if(name==='08_floating_book'){
+    // Inverse sampling of the bending pages avoids holes from forward-mapped
+    // pixels separating when the page flexes upward. Source colors stay exact.
+    out.data.fill(0);
+    for(let yy=-p;yy<h+p;yy++)for(let xx=0;xx<w;xx++){
+     let sy=yy;
+     for(let k=0;k<3;k++){
+      const edge=Math.abs(xx-w/2)/(w/2),page=Math.max(0,1-sy/(h*.78));
+      sy=yy-Math.round(Math.sin(phase*2+(xx<w/2?0:.9))*edge*page*2)-Math.round(Math.sin(phase)*.65);
+     }
+     if(sy>=0&&sy<h){const si=(sy*w+xx)*4;if(source[si+3])put(xx,yy,si)}
+    }
+   }
+   cx.putImageData(out,0,0);frames.push(cv);
+  }
+  this.items.set(name,{w,h,frames,padding:p});
+ }
+ frameIndex(time,offset=0){return (Math.floor(time*7.5)+Math.round(offset*4))%this.frames;}
+ draw(ctx,name,time,offset=0){
+  const item=this.items.get(name),index=this.frameIndex(time,offset);
+  ctx.save();ctx.imageSmoothingEnabled=false;ctx.drawImage(item.frames[index],-item.padding,-item.padding);ctx.restore();
+ }
+}
+
+// All positions and flame poses use the scene's native pixel grid and paused clock.
+class LibraryInkEffects {
+ constructor(ctx) {
+  this.ctx=ctx;
+  this.wisps={
+  "small": [
+    [
+      "010",
+      "010",
+      "110",
+      "111",
+      "121",
+      "010"
+    ],
+    [
+      "001",
+      "001",
+      "011",
+      "111",
+      "121",
+      "010"
+    ],
+    [
+      "000",
+      "010",
+      "110",
+      "111",
+      "121",
+      "010"
+    ],
+    [
+      "100",
+      "100",
+      "100",
+      "111",
+      "121",
+      "010"
+    ],
+    [
+      "100",
+      "100",
+      "100",
+      "111",
+      "121",
+      "010"
+    ],
+    [
+      "000",
+      "010",
+      "110",
+      "111",
+      "121",
+      "010"
+    ]
+  ],
+  "medium": [
+    [
+      "00100",
+      "00100",
+      "00110",
+      "01110",
+      "01110",
+      "11111",
+      "11211",
+      "12221",
+      "01210"
+    ],
+    [
+      "00010",
+      "00010",
+      "00011",
+      "00111",
+      "01110",
+      "11111",
+      "11211",
+      "12221",
+      "01210"
+    ],
+    [
+      "00000",
+      "00100",
+      "00110",
+      "01110",
+      "01110",
+      "11111",
+      "11211",
+      "12221",
+      "01210"
+    ],
+    [
+      "01000",
+      "01000",
+      "01100",
+      "11100",
+      "01110",
+      "11111",
+      "11211",
+      "12221",
+      "01210"
+    ],
+    [
+      "01000",
+      "01000",
+      "01100",
+      "11100",
+      "01110",
+      "11111",
+      "11211",
+      "12221",
+      "01210"
+    ],
+    [
+      "00000",
+      "00100",
+      "00110",
+      "01110",
+      "01110",
+      "11111",
+      "11211",
+      "12221",
+      "01210"
+    ]
+  ],
+  "large": [
+    [
+      "0001000",
+      "0001000",
+      "0011000",
+      "0011100",
+      "0111100",
+      "0111110",
+      "1111110",
+      "1112111",
+      "1122211",
+      "1122211",
+      "0112110",
+      "0011100"
+    ],
+    [
+      "0000100",
+      "0000100",
+      "0001100",
+      "0001110",
+      "0011110",
+      "0011111",
+      "1111110",
+      "1112111",
+      "1122211",
+      "1122211",
+      "0112110",
+      "0011100"
+    ],
+    [
+      "0000000",
+      "0001000",
+      "0011000",
+      "0011100",
+      "0111100",
+      "0111110",
+      "1111110",
+      "1112111",
+      "1122211",
+      "1122211",
+      "0112110",
+      "0011100"
+    ],
+    [
+      "0010000",
+      "0010000",
+      "0110000",
+      "0111000",
+      "1111000",
+      "1111100",
+      "1111110",
+      "1112111",
+      "1122211",
+      "1122211",
+      "0112110",
+      "0011100"
+    ],
+    [
+      "0010000",
+      "0010000",
+      "0110000",
+      "0111000",
+      "1111000",
+      "1111100",
+      "1111110",
+      "1112111",
+      "1122211",
+      "1122211",
+      "0112110",
+      "0011100"
+    ],
+    [
+      "0000000",
+      "0001000",
+      "0011000",
+      "0011100",
+      "0111100",
+      "0111110",
+      "1111110",
+      "1112111",
+      "1122211",
+      "1122211",
+      "0112110",
+      "0011100"
+    ]
+  ]
+};
+  this.runes=[
+   ['00100','01010','10001','01010','00100','01110','00100'],
+   ['10001','01010','00100','01110','00100','00100','01010'],
+   ['00100','01110','10001','00100','10001','01110','00100'],
+   ['10000','11000','10100','10010','10100','11000','10000'],
+   ['00100','10101','01110','00100','01110','10101','00100'],
+   ['01100','10010','00100','01000','00100','10010','01100'],
+   ['00100','01010','01010','11111','01010','01010','00100'],
+   ['10001','11011','01010','00100','01010','11011','10001'],
+  ].map(rows=>rows.join(''));
+  this.flames=[
+   ['00100','00100','00110','01110','01110','11111','11211','12221','01210'],
+   ['00010','00110','00100','01100','01110','11110','11211','12221','01210'],
+   ['00000','00100','01100','01100','01110','11111','11211','12221','01210'],
+   ['01000','01100','00100','00110','01110','01111','11211','12221','01210'],
+   ['00100','01100','01100','00100','01110','11110','11211','12221','01210'],
+   ['00000','00010','00110','00110','01110','11111','11211','12221','01210'],
+  ];
+ }
+ drawInk(time,bright=false) {
+  const c=this.ctx,tick=Math.floor(time*7.5);
+  c.save();c.filter='none';
+  // Small written fragments dissolve and rise through the ink; architecture occludes them.
+  for(let column=0;column<14;column++)for(let row=0;row<6;row++) {
+   const phase=column*1.73+row*2.31;
+   const xx=34+column*67+Math.round(Math.sin(time*.72+phase)*2);
+   const yy=((row*83+column*29-Math.floor(tick/3))%500+500)%500-20;
+   const pulse=.5+.5*Math.sin(time*1.3+phase);
+   const glyph=this.runes[(column*3+row)%this.runes.length];
+   c.globalAlpha=bright?.08+.23*pulse:.16+.48*pulse;c.fillStyle=bright?(row%3===0?'#5576b1':'#7487c5'):(row%3===0?'#bed7ff':'#8bbcff');
+   for(let p=0;p<35;p++)if(glyph[p]==='1')c.fillRect(xx+p%5,yy+Math.floor(p/5),1,1);
+   // Occasional residual ink, detached from the writing as it dissipates.
+   if(pulse>.66){c.globalAlpha=(pulse-.66)*.5;c.fillRect(xx+1,yy+8+tick%2,1,2);}
+  }
+  c.restore();
+ }
+ drawWisp(o,time) {
+  const c=this.ctx,frames=this.wisps[o.wispSize],index=(Math.floor(time*7.5)+Math.round(o.phase*3))%frames.length;
+  const rows=frames[index],pulse=.5+.5*Math.sin(time*1.8+o.phase);
+  const cx=Math.floor(o.w/2),cy=Math.floor(o.h*.65),radius=(o.w+6)*(1.0+.45*pulse);
+  c.save();c.filter='none';
+  const glow=c.createRadialGradient(cx,cy,0,cx,cy,radius);
+  glow.addColorStop(0,'rgba(72,181,255,'+(.45+.15*pulse)+')');
+  glow.addColorStop(.4,'rgba(71,156,255,.18)');glow.addColorStop(1,'rgba(71,156,255,0)');
+  c.fillStyle=glow;c.fillRect(cx-radius,cy-radius,radius*2,radius*2);
+  rows.forEach((line,y)=>Array.from(line).forEach((p,x)=>{
+   if(p==='0')return;
+   c.fillStyle=p==='2'?'#edffff':y<rows.length/2?'#86e8ff':'#46bcff';
+   c.fillRect(x,y,1,1);
+  }));
+  c.restore();
+ }
+ drawFlame(o,time) {
+  const c=this.ctx,index=(Math.floor(time*7.5)+Math.round(o.phase*3))%this.flames.length;
+  c.save();c.translate(0,-(o.flameCropTop||0));c.globalAlpha=1;c.filter='none';
+  // The original 13x32 lamp glass is x3..9 / y17..27; keep the gold housing intact.
+  c.fillStyle='#28599c';c.fillRect(3,17,7,11);
+  c.fillStyle='#427bb8';c.fillRect(3,17,1,11);c.fillRect(9,17,1,11);
+  const frame=this.flames[index];
+  frame.forEach((line,y)=>Array.from(line).forEach((pixel,x)=>{
+   if(pixel==='0')return;c.fillStyle=pixel==='2'?'#e7ffff':y<4?'#70d9ff':'#40baff';c.fillRect(4+x,19+y,1,1);
+  }));
+  c.fillStyle='#b9f5ff';c.fillRect(6,25,1,2);
+  c.restore();
+ }
+}
+
+class LibrarySceneUI {
+ constructor(ctx,sprites){this.ctx=ctx;this.sprites=sprites;this.questBackdrop=this.objectiveBackdrop();}
+ objectiveBackdrop(){
+  const canvas=document.createElement('canvas');canvas.width=272;canvas.height=80;
+  const c=canvas.getContext('2d'),fade=c.createLinearGradient(0,0,272,0);
+  fade.addColorStop(0,'rgba(9,20,37,0)');fade.addColorStop(.22,'rgba(9,20,37,.025)');
+  fade.addColorStop(.68,'rgba(9,20,37,.44)');fade.addColorStop(1,'rgba(9,20,37,.68)');
+  c.fillStyle=fade;
+  for(let y=0;y<80;y++){
+   c.globalAlpha=Math.min(1,y/12,(79-y)/12);c.fillRect(0,y,272,1);
+  }
+  return canvas;
+ }
+ frame(sprite,x,y,w,h){
+  coverSceneText(this.ctx,x,y,w,h);
+  const c=this.ctx,s=this.sprites[sprite],b=9;
+  const sx=[0,b,s.width-b,s.width],sy=[0,b,s.height-b,s.height];
+  const dx=[x,x+b,x+w-b,x+w],dy=[y,y+b,y+h-b,y+h];
+  for(let row=0;row<3;row++)for(let col=0;col<3;col++)
+   c.drawImage(s,col===1?Math.floor(s.width/2):sx[col],row===1?Math.floor(s.height/2):sy[row],col===1?1:sx[col+1]-sx[col],row===1?1:sy[row+1]-sy[row],dx[col],dy[row],dx[col+1]-dx[col],dy[row+1]-dy[row]);
+ }
+ interaction(center,y,label){
+  const c=this.ctx;c.save();c.font='12px "Malgun Gothic", sans-serif';
+  const labelWidth=Math.ceil(c.measureText(label).width)+26,total=32+4+labelWidth;
+  const left=Math.round(Math.max(8,Math.min(952-total,center-total/2)));
+  this.frame('ui_keycap_normal',left,y,32,30);
+  this.frame('ui_interaction_label_frame',left+36,y,labelWidth,30);
+  c.fillStyle='#f5f2e7';c.textAlign='center';c.textBaseline='alphabetic';
+  c.font='14px "Malgun Gothic", sans-serif';drawSceneText(c,'E',left+16,y+20);
+  c.font='12px "Malgun Gothic", sans-serif';drawSceneText(c,label,left+36+labelWidth/2,y+19);
+  c.drawImage(this.sprites.ui_prompt_pointer,Math.round(center)-9,y+31);c.restore();
+ }
+ objective(complete){
+  const c=this.ctx,y=160,right=938;c.save();
+  // Flush to the right edge, below the hanging banner; fade into the scene on the left.
+  c.drawImage(this.questBackdrop,688,y);
+  c.textAlign='right';c.textBaseline='alphabetic';
+  c.shadowBlur=0;c.shadowOffsetX=0;c.shadowOffsetY=0;
+  c.font='11px "Malgun Gothic", sans-serif';
+  c.fillStyle=complete?'#a8d9c0':'#d3d4d7';drawSceneText(c,complete?'대화 완료':'다음 할 일',right,y+25);
+  c.font='14px "Malgun Gothic", sans-serif';c.fillStyle=complete?'#bce5d0':'#f4eddb';
+  drawSceneText(c,'접수 안내서와 대화',right,y+48);
+  c.restore();
+ }
+}
+
+// Native pixel poses: suspension points stay fixed; only ropes stretch and shelf bodies bob.
+class LibraryBackgroundMotion {
+ constructor(){this.items=new Map();this.padding=8;}
+ build(o,image){
+  const w=image.width,h=image.height,p=this.padding,canvas=document.createElement('canvas');canvas.width=w;canvas.height=h;
+  const c=canvas.getContext('2d');c.drawImage(image,0,0);const source=c.getImageData(0,0,w,h).data,frames=[];
+  for(let f=0;f<o.frameCount;f++){
+   const phase=f/o.frameCount*Math.PI*2,bob=Math.round(Math.sin(phase)*o.amplitude);
+   const outCanvas=document.createElement('canvas');outCanvas.width=w+p*2;outCanvas.height=h+p*2;
+   const oc=outCanvas.getContext('2d'),out=oc.createImageData(outCanvas.width,outCanvas.height);
+   for(let yy=-p;yy<h+p;yy++)for(let xx=0;xx<w;xx++){
+    let sy;
+    if(o.motion==='libraryShelf'){
+     const fixed=8,rigid=o.rigidStart;
+     // Inverse row sampling keeps the rope continuous when it lengthens or contracts.
+     sy=yy<fixed?yy:yy<rigid+bob?fixed+Math.round((yy-fixed)*(rigid-fixed)/(rigid+bob-fixed)):yy-bob;
+    }else{
+     sy=yy-bob;
+     for(let k=0;k<3;k++){
+      const gutter=w*.47,edge=Math.min(1,Math.abs(xx-gutter)/(w*.53));
+      const page=Math.max(0,1-sy/(h*.8));
+      const flutter=Math.round(Math.sin(phase*(o.pageCycles||2)+(xx<gutter?0:.8))*edge*page*(o.pageAmplitude??1));
+      sy=yy-bob-flutter;
+     }
+    }
+    if(sy<0||sy>=h)continue;const si=(sy*w+xx)*4;if(!source[si+3])continue;
+    const di=((yy+p)*outCanvas.width+xx+p)*4;out.data.set(source.subarray(si,si+4),di);
+   }
+   oc.putImageData(out,0,0);frames.push(outCanvas);
+  }
+  const renderFrames=frames.map(frame=>libraryDepthAppearance(frame,o));
+  this.items.set(o.asset,{frames,renderFrames,padding:p,w,h,motion:o.motion});
+ }
+ frameIndex(o,time){return (Math.floor((o.frozen?0:time)*7.5*(o.motionSpeed??1))+Math.round(o.phase*7.5))%o.frameCount;}
+ draw(ctx,o,time){const item=this.items.get(o.asset);ctx.drawImage(item.renderFrames[this.frameIndex(o,time)],-item.padding,-item.padding);}
+}
+
+// Cache display treatment separately, preserving the original native pixel poses.
+function libraryDepthAppearance(source,o){
+ const cv=document.createElement('canvas');cv.width=source.width;cv.height=source.height;
+ const treated=o.backgroundNoOutline?backgroundWithoutInkContour(source,o.outlineWidth??2):source;
+ const c=cv.getContext('2d');c.filter=`saturate(${o.displaySaturation??1})${o.displayBlur>0?' blur('+o.displayBlur+'px)':''}`;c.drawImage(treated,0,0);c.filter='none';
+ if(o.displayTint){c.globalCompositeOperation='source-atop';c.globalAlpha=o.displayTint;c.fillStyle='#d7e6f5';c.fillRect(0,0,cv.width,cv.height)}
+ return cv;
+}
+
+// A native-grid material pass: absorb a dark silhouette stroke into its inner surface.
+// Alpha, position and the authored interior shading remain intact.
+function backgroundWithoutInkContour(source,width){
+ const cv=document.createElement('canvas');cv.width=source.width;cv.height=source.height;
+ const c=cv.getContext('2d');c.drawImage(source,0,0);
+ const img=c.getImageData(0,0,cv.width,cv.height),src=new Uint8ClampedArray(img.data),w=cv.width,h=cv.height;
+ const solid=(x,y)=>x>=0&&y>=0&&x<w&&y<h&&src[(y*w+x)*4+3]>200;
+ const luminance=i=>src[i]*.2126+src[i+1]*.7152+src[i+2]*.0722;
+ const depth=new Uint8Array(w*h);
+ for(let y=0;y<h;y++)for(let x=0;x<w;x++){
+  if(!solid(x,y))continue;let d=width+1;
+  for(let r=1;r<=width;r++){
+   if(!solid(x-r,y)||!solid(x+r,y)||!solid(x,y-r)||!solid(x,y+r)){d=r;break;}
+  }
+  depth[y*w+x]=d;
+ }
+ for(let y=0;y<h;y++)for(let x=0;x<w;x++){
+  const offset=y*w+x,d=depth[offset];if(!d)continue;
+  const i=offset*4,light=luminance(i);let best=null,bestScore=Infinity;
+  if(d>width){
+   // Remove narrow dark separator strokes as well as the outside ink rim.
+   // Broad spine shadows stay intact; warm gold material is excluded.
+   if(light>150||src[i]>src[i+2]+8)continue;
+   for(const [dx,dy] of [[1,0],[0,1],[1,1],[1,-1]])for(let step=1;step<=2;step++){
+    const ax=x+dx*step,ay=y+dy*step,bx=x-dx*step,by=y-dy*step;
+    if(!solid(ax,ay)||!solid(bx,by))continue;
+    const a=(ay*w+ax)*4,b=(by*w+bx)*4,al=luminance(a),bl=luminance(b);
+    if(Math.min(al,bl)<light+22)continue;
+    const candidate=al<bl?a:b,score=step*8+Math.min(al,bl)-light;
+    if(score<bestScore){bestScore=score;best=candidate;}
+   }
+   if(best!==null)for(let k=0;k<3;k++)img.data[i+k]=src[best+k];
+   continue;
+  }
+  // Only a brighter inward surface can replace an outline; highlights stay untouched.
+  for(let dy=-width-2;dy<=width+2;dy++)for(let dx=-width-2;dx<=width+2;dx++){
+   const xx=x+dx,yy=y+dy;if(xx<0||yy<0||xx>=w||yy>=h)continue;
+   const target=yy*w+xx;if(depth[target]<=d)continue;
+   const ti=target*4,delta=luminance(ti)-light;if(delta<8)continue;
+   // Prefer a nearby face of similar hue rather than crossing into ivory/gold trim.
+   const hue=Math.abs((src[i+2]-src[i])-(src[ti+2]-src[ti]));
+   const score=dx*dx+dy*dy+hue*.12+delta*.015;
+   if(score<bestScore){bestScore=score;best=ti;}
+  }
+  if(best!==null)for(let k=0;k<3;k++)img.data[i+k]=src[best+k];
+ }
+ c.putImageData(img,0,0);return cv;
+}
+
+const DATA={"layers": [{"asset": "26_library_far_bright", "x": 0, "y": 0, "w": 960, "h": 540, "motion": "", "phase": 0, "depth": "distant", "saturation": 0.55, "blueTint": 0, "preBlur": 0.4, "fogColor": "#e5f0fa", "fogOpacity": 0.48}, {"asset": "28_library_mid_static", "x": 0, "y": 0, "w": 960, "h": 540, "motion": "", "phase": 0, "displayBlur": 0.35, "displaySaturation": 0.68, "displayTint": 0.23, "backgroundNoOutline": true, "outlineWidth": 2}, {"asset": "40_blue_wisp_medium", "x": 110, "y": 164, "w": 5, "h": 9, "motion": "wisp", "phase": 0.0, "wispSize": "medium", "floatX": 2, "floatY": 4, "floatRate": 0.65}, {"asset": "40_blue_wisp_small", "x": 345, "y": 48, "w": 3, "h": 6, "motion": "wisp", "phase": 1.31, "wispSize": "small", "floatX": 2, "floatY": 4, "floatRate": 0.685}, {"asset": "40_blue_wisp_large", "x": 466, "y": 140, "w": 7, "h": 12, "motion": "wisp", "phase": 2.62, "wispSize": "large", "floatX": 2, "floatY": 4, "floatRate": 0.72}, {"asset": "40_blue_wisp_small", "x": 429, "y": 289, "w": 3, "h": 6, "motion": "wisp", "phase": 3.93, "wispSize": "small", "floatX": 2, "floatY": 4, "floatRate": 0.755}, {"asset": "40_blue_wisp_medium", "x": 593, "y": 283, "w": 5, "h": 9, "motion": "wisp", "phase": 5.24, "wispSize": "medium", "floatX": 2, "floatY": 4, "floatRate": 0.79}, {"asset": "40_blue_wisp_large", "x": 842, "y": 169, "w": 7, "h": 12, "motion": "wisp", "phase": 6.550000000000001, "wispSize": "large", "floatX": 2, "floatY": 4, "floatRate": 0.8250000000000001}, {"asset": "40_blue_wisp_small", "x": 929, "y": 240, "w": 3, "h": 6, "motion": "wisp", "phase": 7.86, "wispSize": "small", "floatX": 2, "floatY": 4, "floatRate": 0.8600000000000001}, {"asset": "40_blue_wisp_small", "x": 126, "y": 96, "w": 3, "h": 6, "motion": "wisp", "phase": 9.17, "wispSize": "small", "floatX": 2, "floatY": 4, "floatRate": 0.895}, {"asset": "40_blue_wisp_small", "x": 414, "y": 114, "w": 3, "h": 6, "motion": "wisp", "phase": 10.48, "wispSize": "small", "floatX": 2, "floatY": 4, "floatRate": 0.93}, {"asset": "40_blue_wisp_medium", "x": 493, "y": 67, "w": 5, "h": 9, "motion": "wisp", "phase": 11.790000000000001, "wispSize": "medium", "floatX": 2, "floatY": 4, "floatRate": 0.9650000000000001}, {"asset": "40_blue_wisp_small", "x": 501, "y": 226, "w": 3, "h": 6, "motion": "wisp", "phase": 13.100000000000001, "wispSize": "small", "floatX": 2, "floatY": 4, "floatRate": 1.0}, {"asset": "40_blue_wisp_small", "x": 357, "y": 325, "w": 3, "h": 6, "motion": "wisp", "phase": 14.41, "wispSize": "small", "floatX": 2, "floatY": 4, "floatRate": 1.0350000000000001}, {"asset": "40_blue_wisp_large", "x": 456, "y": 357, "w": 7, "h": 12, "motion": "wisp", "phase": 15.72, "wispSize": "large", "floatX": 2, "floatY": 4, "floatRate": 1.07}, {"asset": "40_blue_wisp_small", "x": 611, "y": 313, "w": 3, "h": 6, "motion": "wisp", "phase": 17.03, "wispSize": "small", "floatX": 2, "floatY": 4, "floatRate": 1.105}, {"asset": "40_blue_wisp_medium", "x": 889, "y": 127, "w": 5, "h": 9, "motion": "wisp", "phase": 18.34, "wispSize": "medium", "floatX": 2, "floatY": 4, "floatRate": 1.1400000000000001}, {"asset": "02_pillar_left", "x": 142, "y": -94, "w": 174, "h": 512, "motion": "", "phase": 0, "backgroundNoOutline": true, "outlineWidth": 3, "displaySaturation": 0.78, "displayTint": 0.24}, {"asset": "03_pillar_right", "x": 621, "y": -79, "w": 195, "h": 497, "motion": "", "phase": 0, "backgroundNoOutline": true, "outlineWidth": 3, "displaySaturation": 0.78, "displayTint": 0.24}, {"asset": "04_portal", "x": 51, "y": 191, "w": 144, "h": 226, "motion": "portal", "phase": 0}, {"asset": "10_book_pile", "x": 204, "y": 364, "w": 78, "h": 53, "motion": "", "phase": 0}, {"asset": "10_book_pile", "x": 625, "y": 364, "w": 78, "h": 53, "motion": "", "phase": 0}, {"asset": "10_book_pile", "x": 865, "y": 364, "w": 78, "h": 53, "motion": "", "phase": 0}, {"asset": "10_book_pile", "x": 906, "y": 364, "w": 78, "h": 53, "motion": "", "phase": 0}, {"asset": "07_book_cart", "x": 286, "y": 342, "w": 94, "h": 75, "motion": "", "phase": 0}, {"asset": "06_crescent_screen", "x": 686, "y": 270, "w": 214, "h": 129, "motion": "", "phase": 0}, {"asset": "05_book_desk", "x": 693, "y": 385, "w": 178, "h": 32, "motion": "", "phase": 0}, {"asset": "08_floating_book", "x": 748, "y": 342, "w": 54, "h": 26, "motion": "float", "phase": 0}, {"asset": "09_quill", "x": 809, "y": 338, "w": 23, "h": 37, "motion": "float", "phase": 1.5}, {"asset": "14_talisman", "x": 695, "y": 289, "w": 7, "h": 30, "motion": "sway", "phase": 69.5}, {"asset": "14_talisman", "x": 665, "y": 341, "w": 7, "h": 30, "motion": "sway", "phase": 66.5}, {"asset": "14_talisman", "x": 846, "y": 330, "w": 7, "h": 30, "motion": "sway", "phase": 84.6}, {"asset": "14_talisman", "x": 889, "y": 358, "w": 7, "h": 30, "motion": "sway", "phase": 88.9}, {"asset": "14_talisman", "x": 43, "y": 94, "w": 7, "h": 30, "motion": "sway", "phase": 4.3}, {"asset": "14_talisman", "x": 856, "y": 94, "w": 7, "h": 30, "motion": "sway", "phase": 85.6}, {"asset": "40_blue_wisp_medium", "x": 870, "y": 304, "w": 5, "h": 9, "motion": "wisp", "phase": 0.8, "wispSize": "medium", "floatX": 2, "floatY": 3, "floatRate": 0.85}, {"asset": "11_banner", "x": 38, "y": -8, "w": 71, "h": 154, "motion": "sway", "phase": 0}, {"asset": "11_banner", "x": 851, "y": -8, "w": 71, "h": 154, "motion": "sway", "phase": 1.1}, {"asset": "18_floor_gold", "x": 0, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "17_floor_plain", "x": 32, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "17_floor_plain", "x": 64, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "18_floor_gold", "x": 96, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "17_floor_plain", "x": 128, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "17_floor_plain", "x": 160, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "18_floor_gold", "x": 192, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "17_floor_plain", "x": 224, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "17_floor_plain", "x": 256, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "18_floor_gold", "x": 288, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "17_floor_plain", "x": 320, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "17_floor_plain", "x": 352, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "18_floor_gold", "x": 384, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "17_floor_plain", "x": 416, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "17_floor_plain", "x": 448, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "18_floor_gold", "x": 480, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "17_floor_plain", "x": 512, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "17_floor_plain", "x": 544, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "18_floor_gold", "x": 576, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "17_floor_plain", "x": 608, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "17_floor_plain", "x": 640, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "18_floor_gold", "x": 672, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "17_floor_plain", "x": 704, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "17_floor_plain", "x": 736, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "18_floor_gold", "x": 768, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "17_floor_plain", "x": 800, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "17_floor_plain", "x": 832, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "18_floor_gold", "x": 864, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "17_floor_plain", "x": 896, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "17_floor_plain", "x": 928, "y": 416, "w": 32, "h": 32, "motion": "", "phase": 0}, {"asset": "15_foreground_books", "x": -20, "y": 384, "w": 478, "h": 168, "motion": "", "phase": 0, "depth": "foreground", "blur": 2.2}, {"asset": "16_foreground_railing", "x": 623, "y": 457, "w": 342, "h": 95, "motion": "", "phase": 0, "depth": "foreground", "blur": 1.8}], "heroInsert": 68, "floorY": 416, "hero": "assets/hero.png", "walk": ["assets/walk_01.png", "assets/walk_02.png", "assets/walk_03.png", "assets/walk_04.png", "assets/walk_05.png", "assets/walk_06.png", "assets/walk_07.png", "assets/walk_08.png", "assets/walk_09.png", "assets/walk_10.png", "assets/walk_11.png", "assets/walk_12.png"], "sprites": {"02_pillar_left": "assets/02_pillar_left.png", "03_pillar_right": "assets/03_pillar_right.png", "04_portal": "assets/04_portal.png", "05_book_desk": "assets/05_book_desk.png", "06_crescent_screen": "assets/06_crescent_screen.png", "07_book_cart": "assets/07_book_cart.png", "08_floating_book": "assets/08_floating_book.png", "09_quill": "assets/09_quill.png", "10_book_pile": "assets/10_book_pile.png", "11_banner": "assets/11_banner.png", "14_talisman": "assets/14_talisman.png", "15_foreground_books": "assets/15_foreground_books.png", "16_foreground_railing": "assets/16_foreground_railing.png", "17_floor_plain": "assets/17_floor_plain.png", "18_floor_gold": "assets/18_floor_gold.png", "26_library_far_bright": "assets/26_library_far_bright.png", "28_library_mid_static": "assets/28_library_mid_static.png", "40_blue_wisp_small": "assets/40_blue_wisp_small.png", "40_blue_wisp_medium": "assets/40_blue_wisp_medium.png", "40_blue_wisp_large": "assets/40_blue_wisp_large.png", "ui_interaction_label_frame": "assets/ui_interaction_label_frame.png", "ui_keycap_normal": "assets/ui_keycap_normal.png", "ui_prompt_pointer": "assets/ui_prompt_pointer.png", "speech_body": "assets/speech_body.png", "speech_tail": "assets/speech_tail.png", "speech_general_body": "assets/speech_general_body.png", "speech_general_tail": "assets/speech_general_tail.png", "speech_major_body": "assets/speech_major_body.png", "speech_major_tail": "assets/speech_major_tail.png"}, "speechConfig": {"body": "speech_body.png", "tail": "speech_tail.png", "body_size": [32, 32], "border": {"left": 8, "right": 8, "top": 8, "bottom": 8}, "padding": {"left": 12, "right": 12, "top": 11, "bottom": 18}, "font_px": 13, "name_font_px": 15, "name_baseline": 24, "text_baseline": 50, "text_baseline_without_name": 24, "line_height": 19, "min_width": 76, "max_width": 252, "max_lines_per_page": 4, "tail_overlap_px": 3, "namePlacement": "inside-first-row", "gold_border_px": 2, "themes": {"hero": {"label": "주인공", "outline": "#081324", "border": "#e4c77f", "fill": "#111d32", "name": "#e4c77f", "text": "#f7f0df", "body": "speech_body.png", "tail": "speech_tail.png"}, "general": {"label": "일반 인물·사물", "outline": "#172333", "border": "#515c6b", "fill": "#f4f1e8", "name": "#26374c", "text": "#293443", "body": "speech_general_body.png", "tail": "speech_general_tail.png"}, "major": {"label": "주요 인물", "outline": "#081324", "border": "#79b4e1", "fill": "#111d32", "name": "#e4c77f", "text": "#f7f0df", "body": "speech_major_body.png", "tail": "speech_major_tail.png"}}, "speaker_roles": {"주인공": "hero", "할머니": "major", "접수 안내서": "general"}, "generation": "Native Canvas integer pixel geometry; no generated raster resampling.", "Unity": {"SpriteMeshType": "FullRect", "FilterMode": "Point", "Compression": "None", "MipMaps": false, "ImageType": "Sliced"}}, "dialogue": {"note": "동작 확인용 임시 예문입니다. 실제 확정 대사가 아닙니다.", "desk": [{"speaker": "접수 안내서", "role": "general", "anchor": "book", "text": "어서 오세요."}, {"speaker": "주인공", "role": "hero", "anchor": "hero", "text": "여기가 대도서관인가요?"}, {"speaker": "접수 안내서", "anchor": "book", "text": "네. 찾고 있는 책이 있다면 제목이나 기억나는 단서를 알려 주세요."}, {"speaker": "접수 안내서", "anchor": "book", "text": "이 문장은 긴 대사의 줄바꿈과 페이지 넘김을 확인하기 위한 임시 예문이에요. 말풍선이 너무 넓어져 다른 캐릭터를 가리지 않도록 최대 너비를 제한했어요. 정해진 줄 수를 넘으면 다음 말풍선 페이지로 이어집니다. 실제 대사는 이 파일의 text 항목에서 바꿀 수 있어요."}], "major_preview": [{"speaker": "할머니", "role": "major", "anchor": "npc", "text": "먼 길 오느라 고생했구나. 잠시 쉬어 가렴."}], "cart": [{"speaker": "주인공", "anchor": "hero", "text": "책이 잔뜩 실려 있어. 접수대에서 먼저 물어보자."}]}};
+const c=document.getElementById('scene'),ctx=c.getContext('2d');ctx.imageSmoothingEnabled=false;
+const textLayer=new HighResolutionTextLayer(c,document.getElementById('textOverlay'));ctx.highResolutionText=textLayer;
+const load=src=>new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>resolve(im);im.onerror=reject;im.src=src});
+let imgs,hero,walk,x=512,target=null,keys=new Set(),paused=false,t=0,last=0,ready=false,portalActivated=false;
+const msg=document.getElementById('message');
+let speech=null,sceneUI=null,dialogueKind=null;
+const inkEffects=new LibraryInkEffects(ctx);
+function startDialogue(kind){if(!speech)return;keys.clear();target=null;dialogueKind=kind;speech.begin(DATA.dialogue[kind]);}
+function advanceDialogue(){if(!speech||!speech.active)return;speech.next();if(!speech.active&&dialogueKind==='desk')state.objectiveComplete=true;}
+const state=window.reviewState={ready:false,heroX:x,floorY:416,heroScale:1,cameraX:0,interactionCount:0,frames:0,objectiveComplete:false};
+const depthSprites=new Map(),portalOverlays=[],lampMasks=new Map(),pixelMotion=new PixelMotionBank(),deskFocus=new Map();
+const libraryMotion=new LibraryBackgroundMotion();
+let portalOutline,portalFocus;
+// Cache an integer-pixel contour from the exact sprite or animation pose.
+function pixelContour(source,radius,color,ringOnly=false){
+ const raster=document.createElement('canvas');raster.width=source.width;raster.height=source.height;const rc=raster.getContext('2d');rc.drawImage(source,0,0);
+ const px=rc.getImageData(0,0,source.width,source.height),pad=4,pw=source.width+pad*2,ph=source.height+pad*2;
+ const solid=(xx,yy)=>xx>=0&&yy>=0&&xx<source.width&&yy<source.height&&px.data[(yy*source.width+xx)*4+3]>200;
+ const cv=document.createElement('canvas');cv.width=pw;cv.height=ph;const ct=cv.getContext('2d'),out=ct.createImageData(pw,ph);
+ for(let yy=0;yy<ph;yy++)for(let xx=0;xx<pw;xx++){
+  const sx=xx-pad,sy=yy-pad;let distance=99;
+  for(let dy=-radius;dy<=radius;dy++)for(let dx=-radius;dx<=radius;dx++)if(solid(sx+dx,sy+dy))distance=Math.min(distance,Math.max(Math.abs(dx),Math.abs(dy)));
+  if(distance>radius||(ringOnly&&distance<radius))continue;
+  out.data.set([...color,255],(yy*pw+xx)*4);
+ }
+ ct.putImageData(out,0,0);return cv;
+}
+function prepareEffects(){
+ DATA.layers.filter(o=>o.motion==='libraryShelf'||o.motion==='libraryBook').forEach(o=>libraryMotion.build(o,imgs[o.asset]));
+ DATA.layers.filter(o=>o.asset==='28_library_mid_static'||o.asset==='02_pillar_left'||o.asset==='03_pillar_right').forEach(o=>depthSprites.set(o.asset,libraryDepthAppearance(imgs[o.asset],o)));
+ DATA.layers.filter(o=>o.motion==='sway'||o.motion==='float').forEach(o=>{if(!pixelMotion.items.has(o.asset))pixelMotion.build(o.asset,imgs[o.asset])});
+ for(const name of ['05_book_desk','08_floating_book','09_quill']){
+  const moving=pixelMotion.items.get(name),poses=moving?moving.frames:[imgs[name]];
+  deskFocus.set(name,{frames:poses.map(pose=>pixelContour(pose,3,[255,255,255],true)),padding:4+(moving?moving.padding:0)});
+ }
+ DATA.layers.forEach(o=>{if(o.depth==='distant'&&!depthSprites.has(o.asset)){
+  const src=imgs[o.asset],off=document.createElement('canvas');off.width=src.width;off.height=src.height;const oc=off.getContext('2d');oc.imageSmoothingEnabled=false;
+  if(o.fogColor){oc.fillStyle=o.fogColor;oc.fillRect(0,0,off.width,off.height)}
+  oc.filter=`saturate(${o.saturation})${o.preBlur?' blur('+o.preBlur+'px)':''}`;oc.drawImage(src,0,0);oc.filter='none';oc.globalCompositeOperation='source-atop';
+  if(o.blueTint){oc.globalAlpha=o.blueTint;oc.fillStyle='#90b8e8';oc.fillRect(0,0,off.width,off.height)}
+  if(o.fogColor){oc.globalAlpha=o.fogOpacity;oc.fillStyle=o.fogColor;oc.fillRect(0,0,off.width,off.height)}
+  depthSprites.set(o.asset,off);
+ }});
+ DATA.layers.filter(o=>o.glow).forEach(o=>{if(lampMasks.has(o.asset))return;
+  const im=imgs[o.asset],cv=document.createElement('canvas');cv.width=im.width;cv.height=im.height;const lc=cv.getContext('2d');lc.drawImage(im,0,0);const pixels=lc.getImageData(0,0,im.width,im.height);
+  for(let i=0;i<pixels.data.length;i+=4){const d=pixels.data,light=d[i]>210&&d[i+1]>195&&d[i+2]>160&&d[i+3]>200;d[i]=255;d[i+1]=238;d[i+2]=193;d[i+3]=light?210:0;}lc.putImageData(pixels,0,0);lampMasks.set(o.asset,cv);
+ });
+ const portal=DATA.layers.find(o=>o.motion==='portal'),src=imgs[portal.asset];
+ const raster=document.createElement('canvas');raster.width=portal.w;raster.height=portal.h;const rc=raster.getContext('2d');rc.imageSmoothingEnabled=false;rc.drawImage(src,0,0,portal.w,portal.h);const px=rc.getImageData(0,0,portal.w,portal.h);
+ portalOutline=pixelContour(src,1,[36,46,67]);
+ portalFocus=pixelContour(src,3,[255,255,255],true);
+ for(let frame=0;frame<8;frame++){
+  const off=document.createElement('canvas');off.width=portal.w;off.height=portal.h;const oc=off.getContext('2d'),out=oc.createImageData(off.width,off.height);
+  for(let y=0;y<off.height;y++)for(let xx=0;xx<off.width;xx++){
+   const i=(y*off.width+xx)*4,r=px.data[i],g=px.data[i+1],b=px.data[i+2];
+   // A color-derived interior mask keeps all animation off the ivory frame/gold ring.
+   if(px.data[i+3]>200&&xx>off.width*.22&&xx<off.width*.78&&b>r*1.5&&b>g*1.2){
+    const band=(y*0.11+xx*.075+frame*Math.PI/4),pulse=Math.max(0,Math.sin(band));
+    out.data[i]=35;out.data[i+1]=150;out.data[i+2]=255;out.data[i+3]=Math.round(16+pulse*65);
+   }
+  }
+  oc.putImageData(out,0,0);portalOverlays.push(off);
+ }
+}
+function drawSway(o,sprite){
+ pixelMotion.draw(ctx,o.asset,t,o.phase);
+}
+function lampHalo(o,time){
+ const pulse=0.5+0.5*Math.sin(time*(o.depth==='distant'?1.8:2.2)+o.phase);
+ return {pulse,cx:o.w/2,cy:o.glassCenterY??o.h*.68,r:o.w*1.15*(o.depth==='distant'?(0.40+1.80*pulse):1)};
+}
+function lampDrift(o,time){return {x:o.floatX?Math.round(Math.sin(time*(o.floatRate||.7)*.73+o.phase)*o.floatX):0,y:o.floatY?Math.round(Math.sin(time*(o.floatRate||.7)+o.phase)*o.floatY):0};}
+function drawPortal(o){
+ const index=Math.floor(t*7.5)%8,strength=portalActivated?1:0.65;
+ ctx.save();ctx.globalCompositeOperation='screen';
+ ctx.globalAlpha=strength;ctx.drawImage(portalOverlays[index],0,0);ctx.restore();
+ // Crisp stepped runes rise within the narrow ink opening, without touching the frame.
+ const tick=Math.floor(t*8);
+ for(let n=0;n<6;n++){
+  const yy=Math.round(o.h*.87-((tick*2+n*27)%(o.h*.64))),xx=Math.round(o.w*.5+Math.sin(n*2+tick*.12)*o.w*.055);
+  ctx.globalAlpha=0.3+0.35*(.5+.5*Math.sin(t*2+n));ctx.fillStyle=n%2?'#a9e9ff':'#479dff';
+  ctx.fillRect(xx,yy-2,1,5);ctx.fillRect(xx-2,yy,5,1);
+ }
+ ctx.globalAlpha=1;
+ if(portalActivated){ctx.save();ctx.globalCompositeOperation='screen';ctx.globalAlpha=.2+.12*Math.sin(t*9);ctx.fillStyle='#64c7ff';ctx.fillRect(Math.round(o.w*.43),Math.round(o.h*.2),Math.round(o.w*.13),Math.round(o.h*.75));ctx.restore()}
+}
+Promise.all([Promise.all(Object.entries(DATA.sprites).map(async([n,s])=>[n,await load(s)])),load(DATA.hero),Promise.all(DATA.walk.map(load))]).then(([entries,h,w])=>{imgs=Object.fromEntries(entries);hero=h;walk=w;prepareEffects();sceneUI=new LibrarySceneUI(ctx,imgs);speech=new HeadSpeech(ctx,imgs.speech_body,imgs.speech_tail,DATA.speechConfig,imgs);window.speechReview=speech;ready=true;state.ready=true;requestAnimationFrame(frame)}).catch(e=>{msg.textContent='이미지 로드 실패: '+e.message;state.error=e.message});
+function frame(now){const dt=Math.min((now-last)/1000||0,0.05);last=now;if(!paused)t+=dt*1.6;
+ let dir=keys.has('arrowright')||keys.has('d')?1:keys.has('arrowleft')||keys.has('a')?-1:0;
+ if(!dir&&target!==null){if(Math.abs(target-x)<3)target=null;else dir=Math.sign(target-x)}
+ if(speech&&speech.active){dir=0;target=null}
+ if(dir)x=Math.max(26,Math.min(934,x+dir*115*dt));state.heroX=x;state.frames++;state.deskNear=Math.abs(x-775)<98;
+ textLayer.begin();
+ ctx.fillStyle='#08152a';ctx.fillRect(0,0,960,540);
+ DATA.layers.forEach((o,i)=>{if(i===DATA.heroInsert){const sprite=dir?walk[Math.floor(t*12)%12]:hero;ctx.save();ctx.translate(Math.round(x),416);if(dir<0)ctx.scale(-1,1);ctx.drawImage(sprite,-64,-120);ctx.restore()}
+ if(i===2){ctx.fillStyle='#08152a';ctx.fillRect(0,448,960,92)}
+ const drift=lampDrift(o,t);
+ ctx.save();ctx.translate(o.x+drift.x,o.y+drift.y);
+ if(o.blur)ctx.filter=`blur(${o.blur}px)`;
+ ctx.globalAlpha=(o.opacity||1)*(o.motion==='lantern'?0.95+0.05*Math.sin(t*1.6+o.phase):1);
+ if(o.glow){ctx.save();ctx.filter='none';const {pulse,cx,cy,r}=lampHalo(o,t),blue=o.depth==='distant';const glow=ctx.createRadialGradient(cx,cy,1,cx,cy,r);glow.addColorStop(0,blue?'rgba(100,218,255,'+(0.46+0.28*pulse)+')':'rgba(255,224,156,'+(0.22+0.13*pulse)+')');glow.addColorStop(.38,blue?'rgba(75,163,255,'+(0.12+0.13*pulse)+')':'rgba(255,211,135,.09)');glow.addColorStop(1,blue?'rgba(68,150,255,0)':'rgba(255,211,135,0)');ctx.fillStyle=glow;ctx.fillRect(cx-r,cy-r,r*2,r*2);ctx.restore();}
+ const sprite=depthSprites.get(o.asset)||imgs[o.asset];
+ if(state.deskNear&&deskFocus.has(o.asset)){
+  const focus=deskFocus.get(o.asset),index=focus.frames.length===1?0:pixelMotion.frameIndex(t,o.phase);
+  ctx.drawImage(focus.frames[index],-focus.padding,-focus.padding);
+ }
+ if(o.motion==='portal'){
+  state.portalNear=Math.abs(x-126)<69;
+  if(state.portalNear||portalActivated)ctx.drawImage(portalFocus,-4,-4);
+  ctx.drawImage(portalOutline,-4,-4);
+ }
+ if(o.motion==='sway'){
+  if(sprite.width!==o.w||sprite.height!==o.h){const key=o.asset+'_'+o.w+'x'+o.h;if(!depthSprites.has(key)){const off=document.createElement('canvas');off.width=o.w;off.height=o.h;const oc=off.getContext('2d');oc.imageSmoothingEnabled=false;oc.drawImage(sprite,0,0,o.w,o.h);depthSprites.set(key,off)}drawSway(o,depthSprites.get(key))}else drawSway(o,sprite);
+ }else if(o.motion==='libraryShelf'||o.motion==='libraryBook'){
+  libraryMotion.draw(ctx,o,t);
+ }else if(o.motion==='wisp'){
+  inkEffects.drawWisp(o,t);
+ }else if(o.motion==='float'){
+  pixelMotion.draw(ctx,o.asset,t,o.phase);
+ }else ctx.drawImage(sprite,0,0,o.w,o.h);
+ if(o.asset==='26_library_far_bright')inkEffects.drawInk(t,true);
+ if(o.glow&&o.depth==='distant')inkEffects.drawFlame(o,t);
+ else if(o.glow){ctx.save();ctx.filter='none';ctx.globalCompositeOperation='screen';ctx.globalAlpha=0.18+0.48*(0.5+0.5*Math.sin(t*2.2+o.phase));ctx.drawImage(lampMasks.get(o.asset),0,0,o.w,o.h);ctx.restore();}
+ if(o.motion==='portal')drawPortal(o);
+ ctx.restore()});
+ const near=Math.abs(x-126)<69,nearDesk=state.deskNear,nearCart=Math.abs(x-333)<55;
+ sceneUI.objective(state.objectiveComplete);
+ if(!speech.active&&(near||nearDesk||nearCart)){const px=near?128:nearDesk?775:333,py=near?137:286,label=near?'포탈 살펴보기':nearDesk?'접수 안내서와 대화':'책 수레 살펴보기';sceneUI.interaction(px,py,label);}
+ speech.update(dt);speech.draw(x);state.textRendering={separate:textLayer.enabled,width:textLayer.canvas?.width||960,height:textLayer.canvas?.height||540,drawCount:textLayer.drawCount};state.dialogueActive=speech.active;state.bubble=speech.lastBox;
+ msg.textContent=speech.active?'E / Space / 클릭: 글자 모두 보기 · 다음 대사 | Esc: 닫기':portalActivated?'포탈의 잉크 문양이 반응합니다. 방 전환은 연결하지 않은 검토 화면입니다.':near?'E 키로 포탈 반응을 확인하세요.':nearDesk?'E 키로 접수 안내서와 대화하세요.':nearCart?'E 키로 책 수레를 살펴보세요.':'';
+ requestAnimationFrame(frame)}
+addEventListener('keydown',e=>{const key=e.key.toLowerCase();if(speech&&speech.active){if(['e',' ','escape','arrowleft','arrowright','a','d'].includes(key))e.preventDefault();if(e.repeat)return;if(key==='escape')speech.close();else if(key==='e'||key===' ')advanceDialogue();return}if(['ArrowLeft','ArrowRight','a','d','A','D','e','E'].includes(e.key)){e.preventDefault();keys.add(key);target=null}if(key==='e'&&!e.repeat){if(Math.abs(x-775)<98)startDialogue('desk');else if(Math.abs(x-333)<55)startDialogue('cart');else if(Math.abs(x-126)<69){portalActivated=true;state.interactionCount++;setTimeout(()=>portalActivated=false,2200)}}});addEventListener('keyup',e=>keys.delete(e.key.toLowerCase()));addEventListener('blur',()=>keys.clear());
+c.onclick=e=>{if(speech&&speech.active){advanceDialogue();return}const r=c.getBoundingClientRect();target=(e.clientX-r.left)/r.width*960;c.focus()};
+
+document.getElementById('pause').onclick=e=>{paused=!paused;e.target.textContent=paused?'동작 재생':'동작 멈춤'};
+document.getElementById('reset').onclick=()=>{x=512;target=null;keys.clear();if(speech)speech.close()};document.getElementById('full').onclick=()=>{const stage=document.getElementById('sceneFull')||c;stage.requestFullscreen()};
+document.getElementById('deskDemo').onclick=()=>{x=721;startDialogue('desk');c.focus()};
+window.reviewTest={moveTo(value){x=Math.max(26,Math.min(934,value));target=null},getLayerPositions(){return DATA.layers.map(o=>[o.asset,o.x,o.y])}};
+// Integer physical scaling keeps a uniform pixel grid. At fractional scales,
+// interpolation avoids alternating pixel widths and dropped fine detail.
+function displaySampling(cssWidth,nativeWidth,dpr){const scale=cssWidth*dpr/nativeWidth;return scale>=1&&Math.abs(scale-Math.round(scale))<.001?'pixelated':'auto'}
+if(typeof ResizeObserver!=='undefined'){
+ const displays=[c];
+ const fitSampling=()=>{textLayer.resize();displays.forEach(cv=>{const r=cv.getBoundingClientRect(),w=Math.min(r.width,r.height*cv.width/cv.height);cv.style.imageRendering=displaySampling(w,cv.width,window.devicePixelRatio||1)})};
+ const observer=new ResizeObserver(fitSampling);displays.forEach(cv=>observer.observe(cv));addEventListener('resize',fitSampling);addEventListener('fullscreenchange',fitSampling);fitSampling();
+}
+</script></html>

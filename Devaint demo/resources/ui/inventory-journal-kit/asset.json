@@ -1,0 +1,213 @@
+{
+  "format": "deviant-resource-asset-v1",
+  "id": "ui.inventory-journal-kit",
+  "path": "ui/inventory-journal-kit",
+  "name": "잉크 없는 인벤토리 수첩 UI 원형과 부품",
+  "status": "runtime-ui-kit",
+  "approval": "user-selected-for-runtime-use",
+  "gameIntegration": "main-owned",
+  "sources": [
+    "ui.inventory-journal-concept/preview/inventory-journal-concept.png",
+    "imagegen CLI gpt-image-2",
+    "ui.journal-preview refined raster parts"
+  ],
+  "files": [
+    "preview/inventory-empty.png",
+    "preview/parts.png",
+    "runtime/bag-slot-selected.png",
+    "runtime/bag-slot.png",
+    "runtime/close-button.png",
+    "runtime/close-icon.png",
+    "runtime/equipment-slot.png",
+    "runtime/filter-tab-active.png",
+    "runtime/filter-tab.png",
+    "runtime/inventory-base.png",
+    "runtime/inventory-book.png",
+    "runtime/inventory-title.png",
+    "runtime/layout.json",
+    "runtime/section-rule.png",
+    "runtime/stat-slot.png",
+    "runtime/weapon-tab-active.png",
+    "runtime/weapon-tab.png",
+    "source/empty-book-generated.png",
+    "source/empty-book-prompt.txt",
+    "source/prepare_assets.py"
+  ],
+  "preview": "preview/inventory-empty.png",
+  "runtime": "runtime",
+  "layout": "runtime/layout.json",
+  "mainImage": "runtime/inventory-base.png",
+  "bookOnly": "runtime/inventory-book.png",
+  "pngAssets": [
+    {
+      "file": "runtime/bag-slot-selected.png",
+      "size": [
+        66,
+        60
+      ],
+      "mode": "RGBA",
+      "alpha": [
+        34,
+        255
+      ]
+    },
+    {
+      "file": "runtime/bag-slot.png",
+      "size": [
+        66,
+        60
+      ],
+      "mode": "RGBA",
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "runtime/close-button.png",
+      "size": [
+        36,
+        36
+      ],
+      "mode": "RGBA",
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "runtime/close-icon.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "RGBA",
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "runtime/equipment-slot.png",
+      "size": [
+        170,
+        64
+      ],
+      "mode": "RGBA",
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "runtime/filter-tab-active.png",
+      "size": [
+        84,
+        36
+      ],
+      "mode": "RGBA",
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "runtime/filter-tab.png",
+      "size": [
+        84,
+        36
+      ],
+      "mode": "RGBA",
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "runtime/inventory-base.png",
+      "size": [
+        800,
+        464
+      ],
+      "mode": "RGBA",
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "runtime/inventory-book.png",
+      "size": [
+        800,
+        464
+      ],
+      "mode": "RGBA",
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "runtime/inventory-title.png",
+      "size": [
+        210,
+        48
+      ],
+      "mode": "RGBA",
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "runtime/section-rule.png",
+      "size": [
+        348,
+        1
+      ],
+      "mode": "RGBA",
+      "alpha": [
+        255,
+        255
+      ]
+    },
+    {
+      "file": "runtime/stat-slot.png",
+      "size": [
+        60,
+        64
+      ],
+      "mode": "RGBA",
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "runtime/weapon-tab-active.png",
+      "size": [
+        172,
+        36
+      ],
+      "mode": "RGBA",
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "runtime/weapon-tab.png",
+      "size": [
+        172,
+        36
+      ],
+      "mode": "RGBA",
+      "alpha": [
+        0,
+        255
+      ]
+    }
+  ],
+  "textBaked": false,
+  "inkArtBaked": false
+}

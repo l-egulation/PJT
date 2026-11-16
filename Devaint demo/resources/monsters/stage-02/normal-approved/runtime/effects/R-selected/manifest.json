@@ -1,0 +1,228 @@
+{
+  "schema": "stage2-thrower-waste-ink-can-break-v1",
+  "status": "pending-user-review",
+  "output": "outputs/waterway/thrower-can-break-20261101",
+  "source": "outputs/waterway/thrower-prop-original-shape-20261101",
+  "attackSource": "outputs/waterway/thrower-pocket-attack-return-20261101",
+  "objectConcept": "오염된 잉크가 든 작은 폐잉크통",
+  "releaseMs": 680,
+  "contactMsIllustration": 1480,
+  "contactWorld": [
+    165,
+    288
+  ],
+  "effectCanvas": [
+    128,
+    96
+  ],
+  "groundAnchorPx": [
+    64,
+    72
+  ],
+  "effectDurationsMs": [
+    40,
+    40,
+    60,
+    60,
+    80,
+    80,
+    100,
+    100
+  ],
+  "reviewGapMs": 600,
+  "inkRgb": [
+    [
+      37,
+      36,
+      43
+    ],
+    [
+      97,
+      76,
+      105
+    ]
+  ],
+  "fragmentVelocitiesPxPerSecond": [
+    [
+      -90,
+      -130
+    ],
+    [
+      -60,
+      -190
+    ],
+    [
+      130,
+      -155
+    ],
+    [
+      65,
+      -100
+    ]
+  ],
+  "fragmentLifetimesMs": [
+    280,
+    320,
+    360,
+    260
+  ],
+  "fragmentGravityPxPerSecondSquared": 600,
+  "policy": "Split current repaired cylinder pixels into the dark cap and3 Voronoi shell pieces; preserve all source pixels exactly once in the fragment assets. Use the same unchanging intact projectile until contact, then remove it and show separate break FX. Draw short ink spurts/drops with only2 existing character colors. Binary alpha; no new colors, glow, explosion damage, lingering pool, secondary projectile damage or Unity/gameplay integration. Timings/trajectories are art review proposals.",
+  "breakKeyStartMs": [
+    0,
+    40,
+    80,
+    140,
+    200,
+    280,
+    360,
+    460
+  ],
+  "effectMs": 560,
+  "previewTotalMs": 2640,
+  "fragmentAssets": [
+    {
+      "path": "outputs/waterway/thrower-can-break-20261101/fragments/native/piece-01.png",
+      "sha256": "64f0f15b0592f443e004842ca6317fb53949401647a1cd2b80d1e35bd33160f6",
+      "bbox": [
+        20,
+        38,
+        40,
+        50
+      ]
+    },
+    {
+      "path": "outputs/waterway/thrower-can-break-20261101/fragments/native/piece-02.png",
+      "sha256": "d24a7a4f4a84ae66e4ee1a606477c0603d6a2ad277d9ad83ab029c00226de864",
+      "bbox": [
+        21,
+        24,
+        35,
+        38
+      ]
+    },
+    {
+      "path": "outputs/waterway/thrower-can-break-20261101/fragments/native/piece-03.png",
+      "sha256": "d268a931b07642d5eb782399271f24448e1082d946accdeb8d455f9a40faa88e",
+      "bbox": [
+        22,
+        15,
+        43,
+        29
+      ]
+    },
+    {
+      "path": "outputs/waterway/thrower-can-break-20261101/fragments/native/piece-04.png",
+      "sha256": "25a5c5aecfee0aed4fdf83a08d116b358ab385caf940e19e015b4b5b9b28085c",
+      "bbox": [
+        33,
+        18,
+        45,
+        38
+      ]
+    }
+  ],
+  "effectAssets": [
+    {
+      "path": "outputs/waterway/thrower-can-break-20261101/break/native/break-01.png",
+      "sha256": "cc47b22fbec4ad419308a8b89db8ffcaf5ea0be9998ce399a5413525c48963eb",
+      "bbox": [
+        47,
+        33,
+        79,
+        73
+      ]
+    },
+    {
+      "path": "outputs/waterway/thrower-can-break-20261101/break/native/break-02.png",
+      "sha256": "e58ef0a03be44aba9cc3a6d37441c93c64b7ce12dbd792acca67c08da1e2870e",
+      "bbox": [
+        45,
+        28,
+        84,
+        73
+      ]
+    },
+    {
+      "path": "outputs/waterway/thrower-can-break-20261101/break/native/break-03.png",
+      "sha256": "78f88059eb9239d20ab2576aefeef87e34ff643c6457707758ff5096e5c3bc0b",
+      "bbox": [
+        42,
+        24,
+        89,
+        73
+      ]
+    },
+    {
+      "path": "outputs/waterway/thrower-can-break-20261101/break/native/break-04.png",
+      "sha256": "01131a92f19220f58a2ad35cd1fe244c3a8bc245b4fa17ba29099672114cb2cf",
+      "bbox": [
+        41,
+        16,
+        94,
+        68
+      ]
+    },
+    {
+      "path": "outputs/waterway/thrower-can-break-20261101/break/native/break-05.png",
+      "sha256": "38277271ec71877ab3067dbc5238a131edfb1dee7e87f4da831a20b8aa52937d",
+      "bbox": [
+        31,
+        17,
+        105,
+        69
+      ]
+    },
+    {
+      "path": "outputs/waterway/thrower-can-break-20261101/break/native/break-06.png",
+      "sha256": "d347fb87360a1c6236831f2f0bad8b09b54bcdd350be18ea5ee825697cff653a",
+      "bbox": [
+        34,
+        14,
+        112,
+        60
+      ]
+    },
+    {
+      "path": "outputs/waterway/thrower-can-break-20261101/break/native/break-07.png",
+      "sha256": "7817ccffe5a360a622dce3ee93454e41b3210de679612c1999a5d9b551fe81e4",
+      "bbox": [
+        79,
+        43,
+        81,
+        45
+      ]
+    },
+    {
+      "path": "outputs/waterway/thrower-can-break-20261101/break/native/break-08.png",
+      "sha256": "a4f17933f8d0c29aaac60b76de1f23630c27521e728351d0b0a4f9a92498d758",
+      "bbox": null
+    }
+  ],
+  "bodyFileHashes": [
+    "a36aafeb1b0db23ef99606c1cf281f550b58732118f4667d7a708509c6d2a5f8",
+    "6abc7a9c11538596e7834c60cc0299546b666378015e79d4204ff8e02459a548",
+    "48f1c1c46d3fc100330686b75fb8a6d0bde95407d371fd7a809590a3ca472d80",
+    "cc13b22199462c95e6fb3305edeaccb7e285b7370f72ed2308de500c781a6fb8",
+    "7f05ccf2d98c24936737b41d8cd407f38bb17a824199c1fb51a04ebce1b5dea4",
+    "a7fa3b27e7fae9c0dee39e6294cc05ab9eeb9c8c6213e92675b39458055b60ec",
+    "c88af7c72b5138b7c2b5d6ed4abdb08553744f73f52331314e7c384827be7452",
+    "fde43bcc986b0204bc488b29f146ac4020d049219066622e65df9ccabb8db236",
+    "22b3cb41a8c7ceb1de326dfd6a0509b44443361618eb008be9b4a3c575c54721",
+    "9cccebea1e721b2723d40df49b5a3f1dee9489d1ba1dac02f9ba525f5efba09b",
+    "734f81b9342729d7ee4f38e9a8cbd31df3f95850824caabcb7d2c5f2a3209a66",
+    "ee3443ca7dd4a4614a69277eb55a31f14f0e85db7a3aa99cbc410115aa85d04c",
+    "5c1d558491c46bf6e3fc1eb2de3e3a8ce45d9e0c647fe725c0a66c79bbef5687",
+    "7d554afc423fa11ee6ef07c90c94efb507f8b188398d39c8294e060dba7fae59",
+    "08b22283343ca39e07e8a10906ef4eb68a46e492be6f44f313e69b1f6e8246a3",
+    "0c8dce59c393a4fa7e10186916ec97eef845bb66df0d9994ed75c83e21a4e1c0",
+    "13f7a2dbbefd8b7c9f0cbca0328ca9a557bad1488177dc5de4bbfa45b04656c4",
+    "bb01bac95468894f6a5dff849937a3272e5bcd567a63d1774448fb806317c684",
+    "a36aafeb1b0db23ef99606c1cf281f550b58732118f4667d7a708509c6d2a5f8"
+  ],
+  "projectileFileSha256": "8064b4e09dc8c8cacb96d15039341453bbcf40b89d34f7fc5544685109510881",
+  "partitionAllSourcePixelsExactlyOnce": true,
+  "noRemainingPool": true,
+  "sourcePropRepairPixels": 33,
+  "runtimeIntegration": "not-performed"
+}

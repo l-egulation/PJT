@@ -1,0 +1,142 @@
+{
+  "status": "user_approved_launcher_ink_skills_20261106",
+  "attack_model": "S_ball_always_D_skill_selected_by_ink",
+  "S_attack": "ranged_basic_design.json#launcher",
+  "D_input": "new_D_press_per_skill_common_special_rules",
+  "damage_scaling": "special_damage_snapshot_on_release",
+  "cooldown_scaling": "special_cooldown_reduction",
+  "attack_speed_scaling": "none_specials_ignore_basic_attack_speed",
+  "ground_input_speed": 0,
+  "vertical": "normal_gravity",
+  "facing": "windup_input_else_facing",
+  "balance_rule": "user_approved_per_skill_values",
+  "basic": {
+    "id": "launcher_basic_special",
+    "slot": "base",
+    "name": "모아쏘기",
+    "cooldown": 6,
+    "charge": {
+      "min_hold": 0.2,
+      "max_hold": 0.8,
+      "min_damage": 200,
+      "max_damage": 350,
+      "steps": 3,
+      "release": "early_release_fires_at_min_auto_fire_at_max",
+      "step_rule": "three_equal_hold_bands_0.2_0.4_0.6_0.8_give_200_275_350"
+    },
+    "windup": 0.2,
+    "recovery": 0.3,
+    "duration": 0.5,
+    "ranged": {
+      "type": "charge_ball",
+      "distance": 8,
+      "speed": 20,
+      "radius": 0.15,
+      "chargeRadius": 0.3,
+      "spawnHeight": 1,
+      "spawnX": 0.85625,
+      "impactBoxSize": 2,
+      "ignoreTerrain": true
+    },
+    "enemy_policy": "enemy_contact_point_centered_square_each_actor_once_no_direct_bonus_solid_occlusion",
+    "terrain_policy": "ignore_solid_and_one_way_terrain_keep_existing_range_and_enemy_policy",
+    "size_rule": "collision_radius_steps_with_charge_amount_like_damage",
+    "impact_policy": "enemy_only_no_burst_on_terrain_or_range_expiry"
+  },
+  "laser": {
+    "id": "launcher_range_special",
+    "slot": "range",
+    "name": "레이저",
+    "cooldown": 8,
+    "damage": 200,
+    "windup": 0.15,
+    "recovery": 0.45,
+    "duration": 0.6,
+    "ranged": {
+      "type": "laser",
+      "distance": 0,
+      "thickness": 0.25,
+      "radius": 0.125,
+      "spawnHeight": 1,
+      "spawnGap": 0.05,
+      "unlimitedRange": true,
+      "ignoreTerrain": true
+    },
+    "enemy_policy": "all_once_on_release",
+    "terrain_policy": "ignore_solid_and_one_way_terrain_keep_existing_range_and_enemy_policy"
+  },
+  "shotgun": {
+    "id": "launcher_move_special",
+    "slot": "move",
+    "name": "샷건",
+    "cooldown": 7,
+    "damage": 100,
+    "windup": 0.15,
+    "recovery": 0.65,
+    "duration": 0.8,
+    "ranged": {
+      "type": "shotgun",
+      "distance": 6,
+      "speed": 20,
+      "radius": 0.1,
+      "spawnHeight": 1,
+      "spawnGap": 0.05,
+      "angles": [
+        -20,
+        -10,
+        0,
+        10,
+        20
+      ],
+      "recoilDistance": 6,
+      "recoilDuration": 0.3117691447076827,
+      "recoilHopHeight": 1,
+      "pierce": true,
+      "ignoreTerrain": true
+    },
+    "enemy_policy": "each_pellet_pierces_all_actors_once_five_can_hit_each_actor_max_100",
+    "terrain_policy": "ignore_solid_and_one_way_terrain_keep_existing_range_and_enemy_policy",
+    "recoil": "ground_and_air_backward_6_over_full_low_jump_arc_normal_gravity_wall_stop_dash_cancel_no_invulnerability"
+  },
+  "grenade": {
+    "id": "launcher_followup_special",
+    "slot": "followup",
+    "name": "유탄·파편",
+    "cooldown": 9,
+    "damage": 225,
+    "windup": 0.2,
+    "recovery": 0.8,
+    "duration": 1.0,
+    "bomb": {
+      "angle": 30,
+      "speed": 10,
+      "gravity": 20,
+      "radius": 0.2,
+      "blastRadius": 1.2,
+      "lifetime": 5,
+      "spawnHeight": 1,
+      "spawnGap": 0.05,
+      "explodeOnExpiry": false,
+      "fragmentDamage": 60,
+      "fragmentSpeed": 6,
+      "fragmentGravity": 20,
+      "fragmentRadius": 0.1,
+      "fragmentBlastRadius": 0.6,
+      "fragmentLifetime": 0.6,
+      "fragmentSpawnOffset": 0.2,
+      "fragmentAngles": [
+        30,
+        60,
+        120,
+        150
+      ]
+    },
+    "contact": "enemy_or_solid_first_or_one_way_descending_from_above",
+    "blast_policy": "all_targets_once_per_blast_solid_wall_occlusion_no_self_damage_no_direct_bonus",
+    "same_target": "one_main_plus_up_to_four_fragment_blasts_total_93_before_bonuses",
+    "fragments": "spawn_immediately_offset_0.2_overlap_explodes_immediately_otherwise_contact_or_expiry_explodes_once",
+    "prototype_defaults_not_individually_approved": {
+      "fragment_collision_diameter": 0.2
+    }
+  }
+}

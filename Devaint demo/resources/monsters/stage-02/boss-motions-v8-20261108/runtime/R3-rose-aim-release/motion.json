@@ -1,0 +1,63 @@
+{
+ "format": "stage2-boss-motion-v8",
+ "id": "R3-rose-aim-release",
+ "name": "입장 R3 로즈 겨눔 풀기",
+ "use": "입장 컷씬 11.1~12.0초",
+ "canvas": [
+  384,
+  256
+ ],
+ "pivot": [
+  192,
+  232
+ ],
+ "frames": [
+  "00.png",
+  "01.png",
+  "02.png",
+  "03.png",
+  "04.png",
+  "05.png",
+  "06.png"
+ ],
+ "sheet": {
+  "file": "sheet.png",
+  "columns": 7,
+  "cell": [
+   384,
+   256
+  ],
+  "order": "frames, left-to-right then top-to-bottom"
+ },
+ "sequence": [
+  "06.png",
+  "05.png",
+  "04.png",
+  "03.png",
+  "02.png",
+  "01.png",
+  "00.png"
+ ],
+ "durationsMs": [
+  100,
+  100,
+  100,
+  100,
+  100,
+  100,
+  300
+ ],
+ "totalMs": 900,
+ "loop": false,
+ "workFolder": "cutscene/입장_R3_Rose-겨눔풀고대기",
+ "footShiftPx": {
+  "01.png": 6,
+  "02.png": 6,
+  "03.png": 6,
+  "04.png": 6,
+  "05.png": 6,
+  "06.png": 6
+ },
+ "projectilePixelsRemoved": {},
+ "status": "user-approved-not-unity-integrated"
+}

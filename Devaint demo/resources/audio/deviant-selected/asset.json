@@ -1,0 +1,726 @@
+{
+  "format": "deviant-resource-asset-v1",
+  "id": "audio.deviant-selected",
+  "path": "audio/deviant-selected",
+  "status": "user-selected",
+  "gameIntegration": "selected-for-runtime-binding",
+  "distribution": "project-team",
+  "licenseReview": {
+    "product": "Gamemaster Audio - Pro Sound Collection",
+    "licenseReference": "https://assetstore.unity.com/packages/audio/sound-fx/pro-sound-collection-50235",
+    "teamDistribution": "user-confirmed-team-sharing"
+  },
+  "sources": {
+    "sfx_story_world_erase": {
+      "source": "Magic_Spells/magic_spell_book_page_flips_01.wav",
+      "sourceSha256": "d1487c69f5254311694c469e449cc21209b6fa099eecb5d63f300d49df0dfe94",
+      "use": "주민·마을·우물 앞의 지워짐 이벤트. 종이를 스치는 넓은 역방향 질감과 색이 빠진 뒤의 정적.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Story/sfx_story_world_erase_01_v02.wav",
+      "resourceFile": "runtime/Story/sfx_story_world_erase_01_v02.wav",
+      "sha256": "10e5b37da65508209637e52004a38380d69290dc0f02f250e9d1637768caf7d6"
+    },
+    "sfx_story_ink_awaken": {
+      "source": "Magic_Spells/water_bubble_spell_heal_01.wav",
+      "sourceSha256": "c80020157521025aa6bcb54f67b7a508d773df53c6b8db9e7fa8ea230144083a",
+      "use": "같은 우물에서 깨어나는 비트. 얇게 맺히는 잉크와 맑은 상승음.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Story/sfx_story_ink_awaken_01_v02.wav",
+      "resourceFile": "runtime/Story/sfx_story_ink_awaken_01_v02.wav",
+      "sha256": "81046c04563dfb146fd5bc705c21df27b996cf2eccb00367c643d10f571ff06d"
+    },
+    "sfx_story_collapse": {
+      "source": "Footsteps/footstep_dirt_land_01.wav",
+      "sourceSha256": "2e779a8a6910ea3bb9353b01f724510aad866adbbf66dcbee54bac90f184d290",
+      "use": "오프닝에서 힘을 잃고 바닥에 닿는 한 번. 옷자락과 둔한 흙 접촉.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Story/sfx_story_collapse_01_v02.wav",
+      "resourceFile": "runtime/Story/sfx_story_collapse_01_v02.wav",
+      "sha256": "3a29df1eeb5ff532826f3e1f1928714a09e2df6f98468d24adfc25396347245b"
+    },
+    "sfx_story_page_turn": {
+      "source": "Magic_Spells/magic_spell_book_page_turn_01.wav",
+      "sourceSha256": "c7e062d2480026bad7dfd425ed9b297360a9777e3bace10ec8c04d0bfb17cd69",
+      "use": "실제로 페이지나 기록 탭이 바뀌는 순간. 현행 기록 UI용 후보.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Story/sfx_story_page_turn_01_v02.wav",
+      "resourceFile": "runtime/Story/sfx_story_page_turn_01_v02.wav",
+      "sha256": "44545c01d972f96bb98c2e24e8d2570df92d395012f68fbc2086654e8271e443"
+    },
+    "bgm_opening_road": {
+      "source": "Ω_Bonus_Music_16bit44kOnly/music_calm_green_lake_serenade.wav",
+      "sourceSha256": "889e5cf2e11e556237461739fd2029a1c6ac40950e84089e03b45cea2961047a",
+      "use": "마을에 오기 전 평온한 길과 조작 튜토리얼. 짧은 대화 사이에 공간을 남긴다.",
+      "unityPath": "unity/Assets/Deviant/Audio/Music/bgm_opening_road_01_v01.wav",
+      "resourceFile": "runtime/Music/bgm_opening_road_01_v01.wav",
+      "sha256": "889e5cf2e11e556237461739fd2029a1c6ac40950e84089e03b45cea2961047a"
+    },
+    "bgm_opening_erase": {
+      "source": "Ω_Bonus_Music_16bit44kOnly/music_epic_orchestral_bg_underscore.wav",
+      "sourceSha256": "7a7277a6ed95fc07ff49b457eb349bc4b9f62f29834036e44046d3987d10287a",
+      "use": "추격 시작에서 양쪽 전선이 우물에 닿기 전까지. 낮은 긴장과 정지의 대비.",
+      "unityPath": "unity/Assets/Deviant/Audio/Music/bgm_opening_erase_01_v01.wav",
+      "resourceFile": "runtime/Music/bgm_opening_erase_01_v01.wav",
+      "sha256": "7a7277a6ed95fc07ff49b457eb349bc4b9f62f29834036e44046d3987d10287a"
+    },
+    "bgm_title": {
+      "source": "Ω_Bonus_Music_16bit44kOnly/music_harp_peaceful_loop.wav",
+      "sourceSha256": "188ca010121f9b733ba1cb8b77584f3a3631910b4da9fd2f958f401503b6afd1",
+      "use": "잉크와 기록 세계로 들어가는 첫 인상. 피아노·하프·현의 간결한 선율.",
+      "unityPath": "unity/Assets/Deviant/Audio/Music/bgm_title_01_v01.wav",
+      "resourceFile": "runtime/Music/bgm_title_01_v01.wav",
+      "sha256": "188ca010121f9b733ba1cb8b77584f3a3631910b4da9fd2f958f401503b6afd1"
+    },
+    "bgm_maintenance_placeholder": {
+      "source": "Ω_Bonus_Music_16bit44kOnly/music_misty_woods_calling.wav",
+      "sourceSha256": "38338f2f11faaff28387518be20775e1967f3d2ddbb127c38e5f5cadd60829fb",
+      "use": "1·2챕터 정비소 방의 차분한 곡. 제작 중인 대장간 곡이 오기 전까지 쓰는 임시 대체곡.",
+      "unityPath": "unity/Assets/Deviant/Audio/Music/bgm_maintenance_placeholder_01_v01.wav",
+      "resourceFile": "runtime/Music/bgm_maintenance_placeholder_01_v01.wav",
+      "sha256": "38338f2f11faaff28387518be20775e1967f3d2ddbb127c38e5f5cadd60829fb"
+    },
+    "sfx_story_game_over_bell": {
+      "source": "Collectibles_Items_Powerup/game_over_dark_bell_chime_01.wav",
+      "sourceSha256": "a9bdef25d821f123ab7ae58a221665914f3fd9110fffcdae00b8c3353f163a0c",
+      "use": "보스전 중 사망한 순간 한 번. 어두운 종 차임 뒤 음악은 정적으로 남는다. 좌우 평균 모노·-16dBFS 피크.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Story/sfx_story_game_over_bell_01_v01.wav",
+      "resourceFile": "runtime/Story/sfx_story_game_over_bell_01_v01.wav",
+      "sha256": "4ac0e0c354abe8a79dc1a3485b2d350645b4dc13a708c295bb31f7068444b1b0"
+    },
+    "sfx_player_step_dirt": {
+      "source": "Footsteps/footstep_dirt_walk_run_02.wav",
+      "sourceSha256": "132e232fe43ce5a948182955c0a9d94e0462d3dbd23be5e6f0fc620be6217279",
+      "use": "grounded 달리기 3·6프레임 접촉. 1발 단위.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Player/sfx_player_step_dirt_01_v02.wav",
+      "resourceFile": "runtime/Player/sfx_player_step_dirt_01_v02.wav",
+      "sha256": "ce41a4c060fc76cb2e8772f266fa41c9b8006167888b70c36406a27569968479"
+    },
+    "sfx_player_step_grass": {
+      "source": "Footsteps/footstep_grass_run_02.wav",
+      "sourceSha256": "108f626297d2f2d77e974f79c3d881bbf75dd9f74b5238704cf991b3b9e167cc",
+      "use": "달리기 실제 발 접촉 1회.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Player/sfx_player_step_grass_01_v02.wav",
+      "resourceFile": "runtime/Player/sfx_player_step_grass_01_v02.wav",
+      "sha256": "ece90824e99c30f7dc19686d0c7ee635b2fec3079f4e9c7cda1db466c6620a0c"
+    },
+    "sfx_player_step_stone": {
+      "source": "Footsteps/footstep_concrete_walk_01.wav",
+      "sourceSha256": "b3e41cd865c0860045ad5fd0948fb7b048fee2b8d3ae1f200835e5bd8f8877d8",
+      "use": "마을 돌 캡과 2챕터 석조 표면. 달리기 실제 접촉.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Player/sfx_player_step_stone_01_v02.wav",
+      "resourceFile": "runtime/Player/sfx_player_step_stone_01_v02.wav",
+      "sha256": "f6c048c4dd7514ab40a78b28b2ccc0cea2c9b5b20871f185466d3f1cbf945599"
+    },
+    "sfx_player_step_wood": {
+      "source": "Footsteps/footstep_wood_run_01.wav",
+      "sourceSha256": "5c028eb41ac117fef3125b194f8869c73fb3b82354c1279b1dc152f0b28d7d1c",
+      "use": "나무 발판의 단일 발 접촉.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Player/sfx_player_step_wood_01_v02.wav",
+      "resourceFile": "runtime/Player/sfx_player_step_wood_01_v02.wav",
+      "sha256": "512c1f4b37c3b5044ce3a21f50063d2f3715cd700b55d3a9bde08a1ce6bb5488"
+    },
+    "sfx_player_jump": {
+      "source": "Foley/foley_cloth_light_fast_movement_13.wav",
+      "sourceSha256": "1bdda57ff34df712938cffd18eae516bcbf781b4a200641d6803b767ac0adbe0",
+      "use": "땅이나 코요테 시간에 첫 점프가 수락될 때. 바로 시작하는 짧은 천 휘날림.",
+      "recipe": {
+        "tool": "tools/mix_selected_sfx.py",
+        "length": 0.26,
+        "highpassHz": 180.0,
+        "peakDbfs": -16.0,
+        "fadeIn": 0.003,
+        "fadeOut": 0.08,
+        "layers": [
+          {
+            "source": "Foley/foley_cloth_light_fast_movement_13.wav",
+            "sourceSha256": "1bdda57ff34df712938cffd18eae516bcbf781b4a200641d6803b767ac0adbe0",
+            "start": 0.0,
+            "gainDb": 0.0
+          }
+        ]
+      },
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Player/sfx_player_jump_01_v02.wav",
+      "resourceFile": "runtime/Player/sfx_player_jump_01_v02.wav",
+      "sha256": "8c99156fcb3f9e81c4aba083073e9c74cc18afae8f9417312ce60397af105e61"
+    },
+    "sfx_player_double_jump": {
+      "source": "Foley/foley_cloth_light_fast_movement_13.wav",
+      "sourceSha256": "1bdda57ff34df712938cffd18eae516bcbf781b4a200641d6803b767ac0adbe0",
+      "use": "공중 두 번째 점프가 수락될 때. 첫 점프와 같은 천 휘날림을 써서 점프 소리를 통일한다.",
+      "recipe": {
+        "tool": "tools/mix_selected_sfx.py",
+        "length": 0.26,
+        "highpassHz": 180.0,
+        "peakDbfs": -16.0,
+        "fadeIn": 0.003,
+        "fadeOut": 0.08,
+        "layers": [
+          {
+            "source": "Foley/foley_cloth_light_fast_movement_13.wav",
+            "sourceSha256": "1bdda57ff34df712938cffd18eae516bcbf781b4a200641d6803b767ac0adbe0",
+            "start": 0.0,
+            "gainDb": 0.0
+          }
+        ]
+      },
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Player/sfx_player_jump_01_v02.wav",
+      "resourceFile": "runtime/Player/sfx_player_jump_01_v02.wav",
+      "sha256": "8c99156fcb3f9e81c4aba083073e9c74cc18afae8f9417312ce60397af105e61"
+    },
+    "sfx_player_wall_kick": {
+      "source": "Whooshes/whoosh_swish_med_fast_01.wav",
+      "sourceSha256": "2b9859652a1efb4c7a4a78fe939f130cc12b9c84a1c033ebc07201176c3ecf06",
+      "use": "벽에서 떨어져 도약할 때 1회. 접촉과 천 스침이 짧게 이어지는 재질.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Player/sfx_player_wall_kick_01_v01.wav",
+      "resourceFile": "runtime/Player/sfx_player_wall_kick_01_v01.wav",
+      "sha256": "e0ae5285c7d824164dd1923226e4af013214df5cbe5ba2dc375929a8e9bc77b5"
+    },
+    "sfx_player_dash": {
+      "source": "Foley/foley_cloth_light_fast_movement_11.wav",
+      "sourceSha256": "1e47925a6971b0f35acb1cffda136ea4bcb4bec78d0571831908904a75ace38d",
+      "use": "대시가 수락되고 첫 이동이 시작될 때. 빠른 천 휘날림의 본체만 잘라 입력 직후 들리게 한 0.25초 단발.",
+      "recipe": {
+        "tool": "tools/mix_selected_sfx.py",
+        "length": 0.25,
+        "highpassHz": 180.0,
+        "peakDbfs": -16.0,
+        "fadeIn": 0.008,
+        "fadeOut": 0.08,
+        "layers": [
+          {
+            "source": "Foley/foley_cloth_light_fast_movement_11.wav",
+            "sourceSha256": "1e47925a6971b0f35acb1cffda136ea4bcb4bec78d0571831908904a75ace38d",
+            "peakAt": 0.09,
+            "gainDb": 0.0
+          }
+        ]
+      },
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Player/sfx_player_dash_01_v03.wav",
+      "resourceFile": "runtime/Player/sfx_player_dash_01_v03.wav",
+      "sha256": "bd678df4a68ddc03ac6be296098f14763190c931959e7e274d2242c938cb08b0"
+    },
+    "sfx_player_hurt": {
+      "source": "Punches/punch_general_body_impact_01.wav",
+      "sourceSha256": "714a58636c6f358a29152f838a93819e7c4d63216b2244c33dc11598443afd13",
+      "use": "수락된 피해 한 번. 공격 시전음과 구분되는 먹 번짐.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Player/sfx_player_hurt_01_v02.wav",
+      "resourceFile": "runtime/Player/sfx_player_hurt_01_v02.wav",
+      "sha256": "3f5523cc9f35ee16059d995d4e0f790f008f5976fca4e8de3e0366711c15766e"
+    },
+    "sfx_player_heal": {
+      "source": "Magic_Spells/vanish_spell_flash_potion_03.wav",
+      "sourceSha256": "2e9c1523ce63f14570fa939e135c56c561e5272931a2a76c2a26ccd576568d4d",
+      "use": "플레이어 체력이 실제로 오른 순간 한 번. 회복 펌프·방 정리·증강·상자·봉인·잉크 회복 공통. 좌우 평균 모노·-16dBFS 피크.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Player/sfx_player_heal_01_v01.wav",
+      "resourceFile": "runtime/Player/sfx_player_heal_01_v01.wav",
+      "sha256": "40797956eef34e103190111b570768b9576757a18c6ab08a825781c590b0f7f9"
+    },
+    "sfx_ui_confirm": {
+      "source": "User_Interface_Menu/ui_stamp_01.wav",
+      "sourceSha256": "69f2ba19abb03ad8c16f23e46146b5321ecb11f815301518595dd75ca5e0626b",
+      "use": "유효한 도면 선택 또는 메뉴 확인 수락.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/UI/sfx_ui_confirm_01_v02.wav",
+      "resourceFile": "runtime/UI/sfx_ui_confirm_01_v02.wav",
+      "sha256": "f27af175d08a7feb0a354532db9f008cdef061a96288812affd27272a732f0d4"
+    },
+    "sfx_ui_cancel": {
+      "source": "User_Interface_Menu/ui_button_simple_click_01.wav",
+      "sourceSha256": "a4d5789e8140f9b323804e86f57bc79fca1f79a441ab38d5b30d26194319392b",
+      "use": "활성 패널을 취소·뒤로 이동할 때.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/UI/sfx_ui_cancel_01_v02.wav",
+      "resourceFile": "runtime/UI/sfx_ui_cancel_01_v02.wav",
+      "sha256": "81e6607cbf2501a6ef2e8599c0e4a4a5f7023364fa1b888457bf797c8c82b832"
+    },
+    "sfx_ui_reject": {
+      "source": "User_Interface_Menu/ui_menu_button_error_01.wav",
+      "sourceSha256": "2da1d04d76364232c2c8acefef4531630fc6f8ea89f1358b4803fddae081c899",
+      "use": "실패가 확정될 때 1회. 높은 경보음보다 낮은 목재 클릭.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/UI/sfx_ui_reject_01_v02.wav",
+      "resourceFile": "runtime/UI/sfx_ui_reject_01_v02.wav",
+      "sha256": "fb8361ef83b1773cc46f33ff466b9a36a9dab77bbef524c5e71f199792bea920"
+    },
+    "sfx_ui_dialogue_next": {
+      "source": "User_Interface_Menu/ui_button_simple_click_01.wav",
+      "sourceSha256": "a4d5789e8140f9b323804e86f57bc79fca1f79a441ab38d5b30d26194319392b",
+      "use": "F로 다음 말풍선이 실제 표시될 때. 장인·상인 음성과 분리.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/UI/sfx_ui_dialogue_next_01_v02.wav",
+      "resourceFile": "runtime/UI/sfx_ui_dialogue_next_01_v02.wav",
+      "sha256": "81e6607cbf2501a6ef2e8599c0e4a4a5f7023364fa1b888457bf797c8c82b832"
+    },
+    "sfx_ui_inventory_open": {
+      "source": "Magic_Spells/magic_spell_book_page_turn_01.wav",
+      "sourceSha256": "c7e062d2480026bad7dfd425ed9b297360a9777e3bace10ec8c04d0bfb17cd69",
+      "use": "가방 화면이 열릴 때 종이 펼침.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/UI/sfx_ui_inventory_open_01_v02.wav",
+      "resourceFile": "runtime/UI/sfx_ui_inventory_open_01_v02.wav",
+      "sha256": "44545c01d972f96bb98c2e24e8d2570df92d395012f68fbc2086654e8271e443"
+    },
+    "sfx_ui_resume": {
+      "source": "User_Interface_Menu/ui_button_simple_click_01.wav",
+      "sourceSha256": "a4d5789e8140f9b323804e86f57bc79fca1f79a441ab38d5b30d26194319392b",
+      "use": "조작이 풀리는 순간.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/UI/sfx_ui_resume_01_v02.wav",
+      "resourceFile": "runtime/UI/sfx_ui_resume_01_v02.wav",
+      "sha256": "81e6607cbf2501a6ef2e8599c0e4a4a5f7023364fa1b888457bf797c8c82b832"
+    },
+    "sfx_ui_station_open": {
+      "source": "User_Interface_Menu/ui_menu_popup_01.wav",
+      "sourceSha256": "b90d339d9b771a9aa8208cd408fb5db640f53de4a3aad833954c3924a0421b92",
+      "use": "F 상호작용으로 유효한 작업대 화면이 열린 시점.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/UI/sfx_ui_station_open_01_v01.wav",
+      "resourceFile": "runtime/UI/sfx_ui_station_open_01_v01.wav",
+      "sha256": "78a63718559344f7c7360be790f17515d6fcc6bb31df792b520679b897230bfe"
+    },
+    "sfx_items_unlock": {
+      "source": "User_Interface_Menu/ui_stamp_01.wav",
+      "sourceSha256": "69f2ba19abb03ad8c16f23e46146b5321ecb11f815301518595dd75ca5e0626b",
+      "use": "프로필 구매 성공 뒤 재생. 현재 재사용 음원과 비교.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Items/sfx_items_unlock_01_v01.wav",
+      "resourceFile": "runtime/Items/sfx_items_unlock_01_v01.wav",
+      "sha256": "f27af175d08a7feb0a354532db9f008cdef061a96288812affd27272a732f0d4"
+    },
+    "sfx_items_pigment_pickup": {
+      "source": "Water/water_drop_drip_single_01.wav",
+      "sourceSha256": "003b66be5dd6510e5faa4cbaf092f77cc9b650fa723e09ec17595727b54c0139",
+      "use": "안료 지급과 획득 효과 시작. 처치마다 중복하지 않음.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Items/sfx_items_pigment_pickup_01_v01.wav",
+      "resourceFile": "runtime/Items/sfx_items_pigment_pickup_01_v01.wav",
+      "sha256": "45a4ae7d0566403fbda47837011f4afa8a06361f389376dae513bd47d1f925ca"
+    },
+    "sfx_items_ink_destroy": {
+      "source": "Water/water_splash_small_item_01.wav",
+      "sourceSha256": "1714bb10313dd10fef64f69928f5aa0e34fea8e40ab1e222a4ec32d19b47f472",
+      "use": "파괴 성공 시점. 깨지는 순간과 작은 잉크 꼬리.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Items/sfx_items_ink_destroy_01_v01.wav",
+      "resourceFile": "runtime/Items/sfx_items_ink_destroy_01_v01.wav",
+      "sha256": "bfe9d857b5745ce8e367557c9c3a939cae90780fb194415e7e2228bfdad0e8a6"
+    },
+    "sfx_items_equip": {
+      "source": "User_Interface_Menu/ui_button_socket_movement_01.wav",
+      "sourceSha256": "6cf63fd19a046c705452bd7c194f3c2009d4be78d28fecaaacb164ce3a6320cb",
+      "use": "슬롯 장착 성공. 작은 도장·끼움음.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Items/sfx_items_equip_01_v02.wav",
+      "resourceFile": "runtime/Items/sfx_items_equip_01_v02.wav",
+      "sha256": "2637d87d6022e758eafc51c9c58404520defa17455102ed30a8bd42a3b537112"
+    },
+    "sfx_items_stamp": {
+      "source": "User_Interface_Menu/ui_stamp_01.wav",
+      "sourceSha256": "69f2ba19abb03ad8c16f23e46146b5321ecb11f815301518595dd75ca5e0626b",
+      "use": "스탬프 적용이 성공했을 때. 잉크 찍힘 중심.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Items/sfx_items_stamp_01_v02.wav",
+      "resourceFile": "runtime/Items/sfx_items_stamp_01_v02.wav",
+      "sha256": "f27af175d08a7feb0a354532db9f008cdef061a96288812affd27272a732f0d4"
+    },
+    "sfx_combat_hit_feedback": {
+      "source": "Punches/punch_slap_whack_hit_01.wav",
+      "sourceSha256": "a6c9310c806b3be3b98376a59186ee02b77b942f900200b0b4fd89fbf244f062",
+      "use": "수락된 명중. 기존 합성 타격음 및 무기별 승인 큐 위에 중복 재생하지 않도록 비교.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_combat_hit_feedback_01_v01.wav",
+      "resourceFile": "runtime/Weapons/sfx_combat_hit_feedback_01_v01.wav",
+      "sha256": "46a4f80a06c4340becd3d0efaa116d4e5886afe5092e917d4f08c96083b30982"
+    },
+    "sfx_special_bomb_movement": {
+      "source": "Magic_Spells/water_blast_projectile_spell_01.wav",
+      "sourceSha256": "fd7a2e3c592a345b3f2a6fc6b89d9897fb649062fd7e661958e34ee9716e951e",
+      "use": "실제 변신 발동 시 한 번. 기존 비행 루프·충돌 폭발과 별도.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_special_bomb_movement_01_v01.wav",
+      "resourceFile": "runtime/Weapons/sfx_special_bomb_movement_01_v01.wav",
+      "sha256": "0f9bbc2098e21d9fcb2a6dc822fc238dc1703009d39404d5791a9cd436f60359"
+    },
+    "sfx_combat_hit_ink": {
+      "source": "Magic_Spells/water_spell_impact_hit_01.wav",
+      "sourceSha256": "cdff09d2c35e2fb85af21d1726cda96eaa97f55c2a06dd98af121b39b253be18",
+      "use": "수락된 적중의 재질 단발. 잉크가 찢기거나 튀는 질감.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_combat_hit_ink_01_v02.wav",
+      "resourceFile": "runtime/Weapons/sfx_combat_hit_ink_01_v02.wav",
+      "sha256": "f5d1cfeea2cf479d51c4f3113cc401cbfeb3cfb24b54bf73b712683fa5c7c8f9"
+    },
+    "sfx_combat_hit_metal": {
+      "source": "Metal/metal_hit_small_01.wav",
+      "sourceSha256": "ec060b53d880bda139e294163c709504a18bc4f5da7e131d2527de63f85b2ee2",
+      "use": "철제 외피의 실제 명중 순간. 시전음과 구분.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_combat_hit_metal_01_v02.wav",
+      "resourceFile": "runtime/Weapons/sfx_combat_hit_metal_01_v02.wav",
+      "sha256": "a6d5c5c2fa813c5bb5f667283855b9af0840501f5d80a5fa85a782b7a1608029"
+    },
+    "sfx_combat_missile_flight": {
+      "source": "Animals_Nature_Ambiences/wind_general_soft_low_loop_01.wav",
+      "sourceSha256": "6a339c7bc120a61b1d156205df6b91493b7359c13525185f8a6b39911cfd414a",
+      "use": "변신 뒤 비행 활성 동안. 변신·충돌 폭발과 분리.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_combat_missile_flight_01_v02.wav",
+      "resourceFile": "runtime/Weapons/sfx_combat_missile_flight_01_v02.wav",
+      "sha256": "3086d78eeb369009f2698fc196ed89733e762c7e9e165e33881d6879307649f7"
+    },
+    "sfx_weapon_hammer_contact": {
+      "source": "Miscellaneous/Object Deep Thud/impact_deep_thud_bounce_01.wav",
+      "sourceSha256": "c0b7773d8571f280c7c62a92ffe99eca3cb6cedfecff6d96e843c2d8fddfc3dd",
+      "use": "두 타의 접점에서 쓸 원샷 소스. 승인 기준의 2타 완성 타임라인과 비교.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_hammer_contact_01_v01.wav",
+      "resourceFile": "runtime/Weapons/sfx_weapon_hammer_contact_01_v01.wav",
+      "sha256": "bbe7d6814aabd128e0776dce1ea9690ca1f9127cd730fff431fae097823d4b18"
+    },
+    "sfx_weapon_shield_basic_cycle": {
+      "source": "Metal/metal_tin_impacts_hit_hard_01.wav",
+      "sourceSha256": "272ded74538f124caa476491859a5116bf60758d6f8c7c3332023f614124baa9",
+      "use": "방패가 밀고 부딪히는 한 타. 패링 성공과 분리.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_shield_basic_cycle_01_v02.wav",
+      "resourceFile": "runtime/Weapons/sfx_weapon_shield_basic_cycle_01_v02.wav",
+      "sha256": "cfbbb2d0af4a30c49b0534a53a1bcf33c2d44a4a8bd1422c3095c17bdfa553a4"
+    },
+    "sfx_weapon_launcher_basic_cycle": {
+      "source": "Whooshes/whoosh_swish_high_fast_01.wav",
+      "sourceSha256": "1d6ee6fbbf2040b836bb8a677bb7645c98b29a09b15a69d268999b76a1299fe9",
+      "use": "실제 볼 발사 1회. 총성보다 압축된 잉크 배출 재질.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_launcher_basic_cycle_01_v02.wav",
+      "resourceFile": "runtime/Weapons/sfx_weapon_launcher_basic_cycle_01_v02.wav",
+      "sha256": "31eaca5c5460a9f1dd9e5477afb07fd541ffc0fbfd261f6fe8cd7b4069f79f4a"
+    },
+    "sfx_weapon_bomb_basic_cycle": {
+      "source": "Whooshes/whoosh_swish_med_fast_01.wav",
+      "sourceSha256": "2b9859652a1efb4c7a4a78fe939f130cc12b9c84a1c033ebc07201176c3ecf06",
+      "use": "실제 투척할 때의 손놀림과 짧은 스윽. 미래 폭발음을 포함하지 않는다.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_bomb_basic_cycle_01_v02.wav",
+      "resourceFile": "runtime/Weapons/sfx_weapon_bomb_basic_cycle_01_v02.wav",
+      "sha256": "e0ae5285c7d824164dd1923226e4af013214df5cbe5ba2dc375929a8e9bc77b5"
+    },
+    "sfx_monster_thorn_root_attack": {
+      "source": "Whooshes/whoosh_swish_small_harsh_01.wav",
+      "sourceSha256": "01a838b17119673886121dd4f9ef9b912d5b4c8a96bb6ce0a938d7fa3e669a0e",
+      "use": "가시가 지면에서 뻗는 실제 공격. 흙 긁기와 가벼운 파열.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_thorn_root_attack_01_v01.wav",
+      "resourceFile": "runtime/Monsters/sfx_monster_thorn_root_attack_01_v01.wav",
+      "sha256": "a0f7d0ac394e48f009d98fb3a2e128dab3cee8fb9fe77b4b843db4886fb3dca6"
+    },
+    "sfx_monster_broom_stalker_attack": {
+      "source": "Whooshes/whoosh_swish_small_harsh_01.wav",
+      "sourceSha256": "01a838b17119673886121dd4f9ef9b912d5b4c8a96bb6ce0a938d7fa3e669a0e",
+      "use": "공격 모션의 휘두름. 마른 솔과 나무자루 질감.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_broom_stalker_attack_01_v01.wav",
+      "resourceFile": "runtime/Monsters/sfx_monster_broom_stalker_attack_01_v01.wav",
+      "sha256": "a0f7d0ac394e48f009d98fb3a2e128dab3cee8fb9fe77b4b843db4886fb3dca6"
+    },
+    "sfx_monster_barrel_explosion": {
+      "source": "Explosion_Fire_Gas/explosion_deep_low_1.wav",
+      "sourceSha256": "0f4eeb1fedb45c59588bedf10e6ae4d3f997d3a8bfa08d7d259ea8782090fc43",
+      "use": "시험 포탄의 실제 폭발 시점.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_barrel_explosion_01_v01.wav",
+      "resourceFile": "runtime/Monsters/sfx_monster_barrel_explosion_01_v01.wav",
+      "sha256": "449fc2d42a028779cd889df90da5929dfa99066e2d79cb9974452fb1c02de50c"
+    },
+    "sfx_monster_millstone_charge": {
+      "source": "Impacts_Smashable/rock_avalanche_landslide_debris_01.wav",
+      "sourceSha256": "deb75a82f629d88f24a59a9fa2decef9211cd7960e3d23122a02ac10d9d5c8f6",
+      "use": "시험 개체가 돌진을 실제 시작할 때. 굴러오는 돌과 잔해가 쏟아지는 우르르.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_millstone_charge_02_v01.wav",
+      "resourceFile": "runtime/Monsters/sfx_monster_millstone_charge_02_v01.wav",
+      "sha256": "a6a5163666eab062c008298a9ccb2e799a62c418400391f40e20d3f2b1f88648"
+    },
+    "sfx_monster_well_hook": {
+      "source": "Metal/metal_scrape_deep_grind_squeak_01.wav",
+      "sourceSha256": "7ad474c677304fd05cac971854ae40437e457383bb1d979eed036b6be35b0b8e",
+      "use": "갈고리 발사와 회수용 금속 단발 후보. 할퀴기와 별도.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_well_hook_01_v01.wav",
+      "resourceFile": "runtime/Monsters/sfx_monster_well_hook_01_v01.wav",
+      "sha256": "019fd94be4d4da169d46ad8073f78a40ff97ea9b2731646f255f18af4c901d4e"
+    },
+    "sfx_monster_well_slash": {
+      "source": "Whooshes/whoosh_swish_small_harsh_01.wav",
+      "sourceSha256": "01a838b17119673886121dd4f9ef9b912d5b4c8a96bb6ce0a938d7fa3e669a0e",
+      "use": "근접 단독 및 갈고리 후속 할퀴기 실제 발동.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_well_slash_01_v01.wav",
+      "resourceFile": "runtime/Monsters/sfx_monster_well_slash_01_v01.wav",
+      "sha256": "a0f7d0ac394e48f009d98fb3a2e128dab3cee8fb9fe77b4b843db4886fb3dca6"
+    },
+    "sfx_monster_well_erupt": {
+      "source": "Magic_Spells/water_spell_wave_crash_01.wav",
+      "sourceSha256": "2bd434c05ba19d0d85107cde15a3296f2d6d9ddca34d155f0a7e0439ab965d19",
+      "use": "녹는 예고 이후 지면에서 실제 분출할 때.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_well_erupt_01_v01.wav",
+      "resourceFile": "runtime/Monsters/sfx_monster_well_erupt_01_v01.wav",
+      "sha256": "abbe40b57180d25222307e2cb319bea58cc7ffe34a72c6c3f66ebcc11feb3f05"
+    },
+    "sfx_monster_clock_fist": {
+      "source": "Miscellaneous/Object Deep Thud/impact_deep_thud_bounce_01.wav",
+      "sourceSha256": "c0b7773d8571f280c7c62a92ffe99eca3cb6cedfecff6d96e843c2d8fddfc3dd",
+      "use": "큰 주먹 발동과 충격. 짧고 무거운 기계적 재질.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_clock_fist_01_v01.wav",
+      "resourceFile": "runtime/Monsters/sfx_monster_clock_fist_01_v01.wav",
+      "sha256": "bbe7d6814aabd128e0776dce1ea9690ca1f9127cd730fff431fae097823d4b18"
+    },
+    "sfx_monster_clock_mixer": {
+      "source": "Metal/metal_scrape_deep_grind_squeak_01.wav",
+      "sourceSha256": "7ad474c677304fd05cac971854ae40437e457383bb1d979eed036b6be35b0b8e",
+      "use": "회전 개시와 활성 구간. 계속 재생한다면 루프 경계 별도 확인.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_clock_mixer_01_v01.wav",
+      "resourceFile": "runtime/Monsters/sfx_monster_clock_mixer_01_v01.wav",
+      "sha256": "019fd94be4d4da169d46ad8073f78a40ff97ea9b2731646f255f18af4c901d4e"
+    },
+    "sfx_monster_clock_needle": {
+      "source": "Miscellaneous/Clock/clock_tick_01.wav",
+      "sourceSha256": "bd890dea830f75389ad0c1bcc9065916e0aa783aadb3017ed50bcf45db64ff24",
+      "use": "날카로운 침 발동. 작은 태엽과 빠른 스윽.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_clock_needle_01_v01.wav",
+      "resourceFile": "runtime/Monsters/sfx_monster_clock_needle_01_v01.wav",
+      "sha256": "a1a1c115eed90a5b26cfc1dfa6b47839c4dfb161442b53e1334b749704a3ffab"
+    },
+    "sfx_monster_clock_chain": {
+      "source": "Whooshes/whoosh_swish_small_harsh_01.wav",
+      "sourceSha256": "01a838b17119673886121dd4f9ef9b912d5b4c8a96bb6ce0a938d7fa3e669a0e",
+      "use": "사슬이 바닥을 실제 긁는 패턴. 금속 찰랑임과 긁힘.",
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_clock_chain_01_v01.wav",
+      "resourceFile": "runtime/Monsters/sfx_monster_clock_chain_01_v01.wav",
+      "sha256": "a0f7d0ac394e48f009d98fb3a2e128dab3cee8fb9fe77b4b843db4886fb3dca6"
+    },
+    "sfx_weapon_greatsword_basic_0": {
+      "source": "Whooshes/whoosh_slow_deep_09.wav",
+      "sourceSha256": "5862ca84bf6815d2250b1b0a226788873f48cd4e98c1381c5b2b70b993cf8753",
+      "use": "대검 기본 1타 가로베기(0.36초, 0.21초 타격). 낮고 긴 휙이 타격 시점에 가장 크게 오도록 맞춘 단발.",
+      "recipe": {
+        "tool": "tools/mix_selected_sfx.py",
+        "length": 0.36,
+        "highpassHz": 60.0,
+        "peakDbfs": -12.0,
+        "fadeIn": 0.003,
+        "fadeOut": 0.1,
+        "layers": [
+          {
+            "source": "Whooshes/whoosh_slow_deep_09.wav",
+            "sourceSha256": "5862ca84bf6815d2250b1b0a226788873f48cd4e98c1381c5b2b70b993cf8753",
+            "peakAt": 0.21,
+            "gainDb": 0.0
+          }
+        ]
+      },
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_greatsword_basic_0_01_v01.wav",
+      "resourceFile": "runtime/Weapons/sfx_weapon_greatsword_basic_0_01_v01.wav",
+      "sha256": "47a97eade128210eb0e1fdcc4000a0e5018e4ee81fb5822287c7b593a290bd08"
+    },
+    "sfx_weapon_greatsword_basic_1": {
+      "source": "Whooshes/whoosh_slow_deep_09.wav",
+      "sourceSha256": "5862ca84bf6815d2250b1b0a226788873f48cd4e98c1381c5b2b70b993cf8753",
+      "use": "대검 기본 2타 올려베기(0.29초, 0.10초 타격). 낮고 긴 휙이 타격 시점에 가장 크게 오도록 맞춘 단발.",
+      "recipe": {
+        "tool": "tools/mix_selected_sfx.py",
+        "length": 0.29,
+        "highpassHz": 60.0,
+        "peakDbfs": -12.0,
+        "fadeIn": 0.01,
+        "fadeOut": 0.09,
+        "layers": [
+          {
+            "source": "Whooshes/whoosh_slow_deep_09.wav",
+            "sourceSha256": "5862ca84bf6815d2250b1b0a226788873f48cd4e98c1381c5b2b70b993cf8753",
+            "peakAt": 0.1,
+            "gainDb": 0.0
+          }
+        ]
+      },
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_greatsword_basic_1_01_v01.wav",
+      "resourceFile": "runtime/Weapons/sfx_weapon_greatsword_basic_1_01_v01.wav",
+      "sha256": "4450bc970cf2fa21a2da865b4e70e21975418f9fda0f1fa30860da8c297ba03e"
+    },
+    "sfx_weapon_greatsword_basic_2": {
+      "source": "Whooshes/whoosh_slow_deep_09.wav",
+      "sourceSha256": "5862ca84bf6815d2250b1b0a226788873f48cd4e98c1381c5b2b70b993cf8753",
+      "use": "대검 기본 3타 내려베기(0.58초, 0.28초 타격). 낮고 긴 휙이 타격 시점에 가장 크게 오도록 맞춘 단발.",
+      "recipe": {
+        "tool": "tools/mix_selected_sfx.py",
+        "length": 0.58,
+        "highpassHz": 60.0,
+        "peakDbfs": -12.0,
+        "fadeIn": 0.003,
+        "fadeOut": 0.16,
+        "layers": [
+          {
+            "source": "Whooshes/whoosh_slow_deep_09.wav",
+            "sourceSha256": "5862ca84bf6815d2250b1b0a226788873f48cd4e98c1381c5b2b70b993cf8753",
+            "peakAt": 0.28,
+            "gainDb": 0.0
+          }
+        ]
+      },
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Weapons/sfx_weapon_greatsword_basic_2_01_v01.wav",
+      "resourceFile": "runtime/Weapons/sfx_weapon_greatsword_basic_2_01_v01.wav",
+      "sha256": "bdee93b1a2f68bc7739a063f34605d994b8d1387a819f40971bb054a33392bae"
+    },
+    "sfx_monster_thorn_root_hurt": {
+      "source": "Punches/punch_grit_wet_impact_01.wav",
+      "sourceSha256": "657b139b4020a62a9fe8b9efa3f9035af7a70db5005b56d7d3b161543257237f",
+      "use": "1챕터 가시뿌리가 플레이어 공격을 맞은 순간 한 번. 잉크 구근이 젖게 눌리는 '퍽'. 잉크 파츠 타격에도 이 소리를 쓴다.",
+      "recipe": {
+        "tool": "tools/mix_selected_sfx.py",
+        "length": 0.35,
+        "highpassHz": 80.0,
+        "peakDbfs": -16.0,
+        "fadeIn": 0.002,
+        "fadeOut": 0.12,
+        "layers": [
+          {
+            "source": "Punches/punch_grit_wet_impact_01.wav",
+            "sourceSha256": "657b139b4020a62a9fe8b9efa3f9035af7a70db5005b56d7d3b161543257237f",
+            "start": 0.0,
+            "gainDb": 0.0
+          }
+        ]
+      },
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_thorn_root_hurt_01_v01.wav",
+      "resourceFile": "runtime/Monsters/sfx_monster_thorn_root_hurt_01_v01.wav",
+      "sha256": "a657998ed84fe20a93f65afc195a43ae1f92ea9f6d4d11a14592a10ea827c5e8"
+    },
+    "sfx_monster_barrel_hurt_01": {
+      "source": "Guns_Weapons/Bullets/bullet_impact_wood_heavy_01.wav",
+      "sourceSha256": "148e57b3800ca05ee9a566e2373f6173bdc6121a4659fe341dd76e13de3406ae",
+      "use": "1챕터 술통 포격수의 홀수 번째 피격(1·3·5…). 두꺼운 나무통 '퍽'. 짝수 번째는 sfx_monster_barrel_hurt_02와 번갈아 쓴다.",
+      "recipe": {
+        "tool": "tools/mix_selected_sfx.py",
+        "length": 0.35,
+        "highpassHz": 80.0,
+        "peakDbfs": -16.0,
+        "fadeIn": 0.002,
+        "fadeOut": 0.12,
+        "layers": [
+          {
+            "source": "Guns_Weapons/Bullets/bullet_impact_wood_heavy_01.wav",
+            "sourceSha256": "148e57b3800ca05ee9a566e2373f6173bdc6121a4659fe341dd76e13de3406ae",
+            "start": 0.025,
+            "gainDb": 0.0
+          }
+        ]
+      },
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_barrel_hurt_01_v01.wav",
+      "resourceFile": "runtime/Monsters/sfx_monster_barrel_hurt_01_v01.wav",
+      "sha256": "ee279d2515752a3256c3e364c3123ef33f4f3ab3312f392b6bcdd315428009f4"
+    },
+    "sfx_monster_barrel_hurt_02": {
+      "source": "Doors/door_old_wooden_close_thud_04.wav",
+      "sourceSha256": "f79d590c38a75b4890c2c17ef0a3cda250defc603e50394d033ab526ee00da07",
+      "use": "1챕터 술통 포격수의 짝수 번째 피격(2·4·6…). 속 빈 나무통이 울리는 '쿵'. 문 닫힘 앞 움직임이 없는 04번 변형만 쓴다.",
+      "recipe": {
+        "tool": "tools/mix_selected_sfx.py",
+        "length": 0.35,
+        "highpassHz": 80.0,
+        "peakDbfs": -16.0,
+        "fadeIn": 0.002,
+        "fadeOut": 0.12,
+        "layers": [
+          {
+            "source": "Doors/door_old_wooden_close_thud_04.wav",
+            "sourceSha256": "f79d590c38a75b4890c2c17ef0a3cda250defc603e50394d033ab526ee00da07",
+            "start": 0.0,
+            "gainDb": 0.0
+          }
+        ]
+      },
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_barrel_hurt_02_v01.wav",
+      "resourceFile": "runtime/Monsters/sfx_monster_barrel_hurt_02_v01.wav",
+      "sha256": "cfaf26b60d9e82f0074478a334c2559f309e3e8fe7a21bfefc6b2df34e3a102a"
+    },
+    "sfx_monster_clock_hurt": {
+      "source": "Punches/punch_heavy_huge_distorted_01.wav",
+      "sourceSha256": "faeb3d8801890e44e99f66ebbeae4180ae890a77a3f6ce0eda211e0051ba2afc",
+      "use": "1챕터 시계탑 집행자가 플레이어 공격을 맞은 순간 한 번. 거대한 몸을 때리는 묵직하고 거친 타격.",
+      "recipe": {
+        "tool": "tools/mix_selected_sfx.py",
+        "length": 0.4,
+        "highpassHz": 60.0,
+        "peakDbfs": -16.0,
+        "fadeIn": 0.002,
+        "fadeOut": 0.12,
+        "layers": [
+          {
+            "source": "Punches/punch_heavy_huge_distorted_01.wav",
+            "sourceSha256": "faeb3d8801890e44e99f66ebbeae4180ae890a77a3f6ce0eda211e0051ba2afc",
+            "start": 0.0,
+            "gainDb": 0.0
+          }
+        ]
+      },
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_clock_hurt_01_v01.wav",
+      "resourceFile": "runtime/Monsters/sfx_monster_clock_hurt_01_v01.wav",
+      "sha256": "568c2f105c7f2fa6d608883ea7089de3eda68be305e9a216cb791657a39e3076"
+    },
+    "sfx_monster_broom_stalker_hurt": {
+      "source": "Guns_Weapons/Bullets/bullet_impact_grass_01.wav",
+      "sourceSha256": "f209708f209db17625c45a4f824826003af196f6e0f33eda0d76a5facc4defd2",
+      "use": "1챕터 먹빗자루가 플레이어 공격을 맞은 순간 한 번. 마른 짚 다발을 치는 짧고 가벼운 '퍽'. 잉크 파츠 타격에도 이 소리를 쓴다.",
+      "recipe": {
+        "tool": "tools/mix_selected_sfx.py",
+        "length": 0.35,
+        "highpassHz": 80.0,
+        "peakDbfs": -16.0,
+        "fadeIn": 0.002,
+        "fadeOut": 0.12,
+        "layers": [
+          {
+            "source": "Guns_Weapons/Bullets/bullet_impact_grass_01.wav",
+            "sourceSha256": "f209708f209db17625c45a4f824826003af196f6e0f33eda0d76a5facc4defd2",
+            "peakAt": 0.03,
+            "gainDb": 0.0
+          }
+        ]
+      },
+      "unityPath": "unity/Assets/Deviant/Audio/SFX/Monsters/sfx_monster_broom_stalker_hurt_01_v01.wav",
+      "resourceFile": "runtime/Monsters/sfx_monster_broom_stalker_hurt_01_v01.wav",
+      "sha256": "c9779908301ab317473b56e00840e4939b3a2f8325ae16f2830c474305d555db"
+    }
+  },
+  "files": [
+    "runtime/Items/sfx_items_equip_01_v02.wav",
+    "runtime/Items/sfx_items_ink_destroy_01_v01.wav",
+    "runtime/Items/sfx_items_pigment_pickup_01_v01.wav",
+    "runtime/Items/sfx_items_stamp_01_v02.wav",
+    "runtime/Items/sfx_items_unlock_01_v01.wav",
+    "runtime/Monsters/sfx_monster_barrel_explosion_01_v01.wav",
+    "runtime/Monsters/sfx_monster_barrel_hurt_01_v01.wav",
+    "runtime/Monsters/sfx_monster_barrel_hurt_02_v01.wav",
+    "runtime/Monsters/sfx_monster_broom_stalker_attack_01_v01.wav",
+    "runtime/Monsters/sfx_monster_broom_stalker_hurt_01_v01.wav",
+    "runtime/Monsters/sfx_monster_clock_chain_01_v01.wav",
+    "runtime/Monsters/sfx_monster_clock_fist_01_v01.wav",
+    "runtime/Monsters/sfx_monster_clock_hurt_01_v01.wav",
+    "runtime/Monsters/sfx_monster_clock_mixer_01_v01.wav",
+    "runtime/Monsters/sfx_monster_clock_needle_01_v01.wav",
+    "runtime/Monsters/sfx_monster_millstone_charge_01_v01.wav",
+    "runtime/Monsters/sfx_monster_millstone_charge_02_v01.wav",
+    "runtime/Monsters/sfx_monster_thorn_root_attack_01_v01.wav",
+    "runtime/Monsters/sfx_monster_thorn_root_hurt_01_v01.wav",
+    "runtime/Monsters/sfx_monster_well_erupt_01_v01.wav",
+    "runtime/Monsters/sfx_monster_well_hook_01_v01.wav",
+    "runtime/Monsters/sfx_monster_well_slash_01_v01.wav",
+    "runtime/Music/bgm_maintenance_placeholder_01_v01.wav",
+    "runtime/Music/bgm_opening_erase_01_v01.wav",
+    "runtime/Music/bgm_opening_road_01_v01.wav",
+    "runtime/Music/bgm_title_01_v01.wav",
+    "runtime/Player/sfx_player_dash_01_v02.wav",
+    "runtime/Player/sfx_player_dash_01_v03.wav",
+    "runtime/Player/sfx_player_double_jump_01_v02.wav",
+    "runtime/Player/sfx_player_heal_01_v01.wav",
+    "runtime/Player/sfx_player_hurt_01_v02.wav",
+    "runtime/Player/sfx_player_jump_01_v02.wav",
+    "runtime/Player/sfx_player_step_dirt_01_v02.wav",
+    "runtime/Player/sfx_player_step_grass_01_v02.wav",
+    "runtime/Player/sfx_player_step_stone_01_v02.wav",
+    "runtime/Player/sfx_player_step_wood_01_v02.wav",
+    "runtime/Player/sfx_player_wall_kick_01_v01.wav",
+    "runtime/Story/sfx_story_collapse_01_v02.wav",
+    "runtime/Story/sfx_story_game_over_bell_01_v01.wav",
+    "runtime/Story/sfx_story_ink_awaken_01_v02.wav",
+    "runtime/Story/sfx_story_page_turn_01_v02.wav",
+    "runtime/Story/sfx_story_world_erase_01_v02.wav",
+    "runtime/UI/sfx_ui_cancel_01_v02.wav",
+    "runtime/UI/sfx_ui_confirm_01_v02.wav",
+    "runtime/UI/sfx_ui_dialogue_next_01_v02.wav",
+    "runtime/UI/sfx_ui_inventory_open_01_v02.wav",
+    "runtime/UI/sfx_ui_reject_01_v02.wav",
+    "runtime/UI/sfx_ui_resume_01_v02.wav",
+    "runtime/UI/sfx_ui_station_open_01_v01.wav",
+    "runtime/Weapons/sfx_combat_hit_feedback_01_v01.wav",
+    "runtime/Weapons/sfx_combat_hit_ink_01_v02.wav",
+    "runtime/Weapons/sfx_combat_hit_metal_01_v02.wav",
+    "runtime/Weapons/sfx_combat_missile_flight_01_v02.wav",
+    "runtime/Weapons/sfx_special_bomb_movement_01_v01.wav",
+    "runtime/Weapons/sfx_weapon_bomb_basic_cycle_01_v02.wav",
+    "runtime/Weapons/sfx_weapon_greatsword_basic_0_01_v01.wav",
+    "runtime/Weapons/sfx_weapon_greatsword_basic_1_01_v01.wav",
+    "runtime/Weapons/sfx_weapon_greatsword_basic_2_01_v01.wav",
+    "runtime/Weapons/sfx_weapon_hammer_contact_01_v01.wav",
+    "runtime/Weapons/sfx_weapon_launcher_basic_cycle_01_v02.wav",
+    "runtime/Weapons/sfx_weapon_shield_basic_cycle_01_v02.wav"
+  ]
+}

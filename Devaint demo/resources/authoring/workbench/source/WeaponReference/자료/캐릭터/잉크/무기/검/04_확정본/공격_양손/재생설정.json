@@ -1,0 +1,65 @@
+{
+  "id": "B",
+  "name": "B 확정 · 양손 두 타",
+  "description": "1타 가로베기 → 2타 내려베기 · 가로 4프레임은 입력 시간 만료 시에만 사용",
+  "fxStep": 30,
+  "D": [
+    [
+      16,
+      60
+    ],
+    [
+      20,
+      70
+    ],
+    [
+      28,
+      110
+    ],
+    [
+      36,
+      80
+    ]
+  ],
+  "H": [
+    [
+      15,
+      65
+    ],
+    [
+      19,
+      145
+    ],
+    [
+      27,
+      65
+    ],
+    [
+      36,
+      85
+    ]
+  ],
+  "impact": [
+    2,
+    1
+  ],
+  "totals": [
+    320,
+    360
+  ],
+  "impactMs": [
+    130,
+    65
+  ],
+  "combo": {
+    "order": [
+      "H",
+      "D"
+    ],
+    "secondClickWindowMs": 300,
+    "firstActiveFrames": 3,
+    "firstRecoveryFrame": 4,
+    "bufferSecondClick": true
+  },
+  "effects_enabled": false
+}

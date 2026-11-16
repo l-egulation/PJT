@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "styleId": "STAGE1_WARM_PAPER_HATCH",
+  "approvedDate": "2026-10-25",
+  "status": "approved_visual_direction_not_runtime_or_production_tiles",
+  "branch": "experiment/stage1-village-reference",
+  "userThread": "01a16e9e-30e8-79e1-81af-d9c960e7477b",
+  "files": [
+    {
+      "path": "Stage1VillageReference/ArtDirection/approved-transition.png",
+      "sha256": "48125fd8cf7ba17cb313b3c1f2d249d09c4230a4a12a3bf5c53f5256dfcec393",
+      "bytes": 2363782,
+      "sourceWorkspacePath": "output/imagegen/1stage_color_sketch_transition_20261025/village-half-color-half-sketch.png"
+    },
+    {
+      "path": "Stage1VillageReference/ArtDirection/approved-sketch.png",
+      "sha256": "1e4cc06464d771d87994043f534afa74d5db15ff0226a9b205d437e0b85a3ae7",
+      "bytes": 2401283,
+      "sourceWorkspacePath": "output/imagegen/1stage_simple_background_20261025/sketch-simple-background.png"
+    },
+    {
+      "path": "Stage1VillageReference/ArtDirection/color-reference.png",
+      "sha256": "d3d5a879ea617ccf4944605755ccbb5884d2d315f73a505cf1917e9d87675481",
+      "bytes": 385468,
+      "sourceWorkspacePath": "02_에셋/배경/공통맵화풍/01_참고자료/03_normal.png"
+    },
+    {
+      "path": "Stage1VillageReference/ArtDirection/sketch-prompt.txt",
+      "sha256": "cfd200bf5b7400073230870960bcbc2ac947e022f86f44e61c2542726a42f644",
+      "bytes": 2508,
+      "sourceWorkspacePath": "output/imagegen/1stage_simple_background_20261025/edit-prompt.txt"
+    },
+    {
+      "path": "Stage1VillageReference/ArtDirection/transition-prompt.txt",
+      "sha256": "494c37c95e6684db0555025c03b4dab4d0b9f2df9e2a67894d890708dcb99e44",
+      "bytes": 4158,
+      "sourceWorkspacePath": "output/imagegen/1stage_color_sketch_transition_20261025/edit-prompt.txt"
+    }
+  ],
+  "activeSketchReference": "Stage1VillageReference/ArtDirection/approved-sketch.png",
+  "activeTerrainLibrary": "unity/Assets/Stage1VillageExperiment/Resources/Village/ReferenceGround/library.json",
+  "activeTerrainStatus": "user-approved-first-pass",
+  "sourcePrompts": "output/imagegen/platform-unified",
+  "reviewOutputs": "outputs/village/reference-ground",
+  "inactiveCandidateArchive": "outputs/village/99-rejected-before-reference-reset",
+  "terrainDetailReference": "unity/Assets/Stage1VillageExperiment/Resources/Village/ReferenceGround/platform.png",
+  "terrainDetailReferenceSha256": "17ed93c860756b201bb572b99d01b788cb97f383cdb57e4b833b72d96a35bdc4",
+  "terrainApprovalDate": "2026-10-26",
+  "approvedTerrainSnapshot": "outputs/village/approved-terrain-v1",
+  "activeNearStatus": "applied-awaiting-user-art-review",
+  "activeNearReview": "outputs/village/near-structure",
+  "activeJumpPadLibrary": "unity/Assets/Stage1VillageExperiment/Resources/Village/JumpPadArt/layout.json",
+  "activeJumpPadStatus": "functional-playtest-verified",
+  "activeJumpPadCandidate": "A-stone-spring",
+  "jumpPadFeedbackReference": "output/imagegen/super-jump-press-preview/a-press-rebound-final.png",
+  "jumpPadMotionSource": "data/stage1-village-experiment/jump-pad-motion.json"
+}

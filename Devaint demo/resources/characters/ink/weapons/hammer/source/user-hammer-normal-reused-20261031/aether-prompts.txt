@@ -1,0 +1,39 @@
+망치 모션 제작 입력 — 크게 채운 32배 참조
+
+사용 이미지: preview/user-hammer-normal-reused-20261031/aether-large-32x-white.png
+투명본: preview/user-hammer-normal-reused-20261031/aether-large-32x-transparent.png
+시작·끝에 같은 큰 이미지를 사용한다. 아래 동작 프롬프트는 그대로 사용한다.
+입력 캔버스 4096×3072, 발/root=(1536,2784). 카메라·배율·위치를 유지한다.
+캐릭터와 망치의 실제 점유 크기는 2400×2080픽셀이다.
+원본 픽셀은 그대로다. 원본 224×192의 (48,64)~(176,160)을 자른 뒤 최근접 32배 확대했다.
+게임 복원: 최근접 1/32 축소 후 기존 224×192 캔버스의 (48,64)에 배치한다.
+게임용 이미지·피벗·PPU·전투 수치는 변경하지 않는다.
+이전 8배 참조와 새 큰 참조를 한 작업의 시작·끝에 섞지 않는다.
+
+평타 2타 — 가벼운 내려치기 → 무게를 실은 내려치기 (사용자 지정)
+
+첫 타의 접촉과 짧은 반동을 먼저 보여준 뒤, 다시 들어 올려 더 강하게 두 번째 타격을 한다.
+
+Create one continuous, readable TWO-HIT hammer combo with TWO DISTINCT DOWNWARD STRIKES for the exact pixel-art character in the supplied start and end reference images. Face right throughout. Keep the camera locked, orthographic side view, with the exact same canvas, framing, character proportions and ground/root position. Start and finish in the exact reference holding pose. The hammer has the exact supplied rigid angular head, flat striking faces, short chamfers and straight handle; both head and handle are solid ink-black, without brown, blue highlights, shine or an added outline. Preserve its shape and size consistently across every frame.
+
+Hit 1 — LIGHT DOWNWARD HIT: from the reference holding pose, raise the hammer only a short distance, then make a compact, quick downward strike into the space in front at enemy body height. Show a definite FIRST CONTACT and briefly stop the hammer at contact, followed by a small recoil. This must read as one completed light attack before the hammer is lifted again. Keep the motion compact and lighter than the second strike.
+
+Re-cock BETWEEN the two completed attacks: lift the hammer from the first low follow-through into a higher overhead preparation. This lift happens AFTER the first visible contact and recoil. Preserve a clear rhythm: light HIT, brief recoil, re-cock, heavy HIT. Do not return to idle between hits.
+
+Hit 2 — HEAVY DOWNWARD HIT: after re-cocking overhead, visibly gather weight with a deeper knee bend and torso preparation. Drive a larger, fast downward blow into the space in front, putting the body's weight behind it. Show a definite SECOND CONTACT, with a firmer short impact hold and a deeper low follow-through than hit 1. Recover deliberately to the exact initial holding pose. Exactly two separate contacts must be readable. Both strikes travel downward. Use readable preparation, fast striking intervals, separate impact holds and recovery rather than constant-speed swinging. Keep the root stationary while the feet articulate naturally. No extra strikes, bounces or ground shockwave.
+
+Preserve the exact approved character: black face and body, only the original yellow eyes, beige hood and robe over narrow black trousers. The beige lower shapes are robe panels, not beige trousers. No black skirt and no new black waist belt. Keep the hood, head height and robe hem proportions. Preserve exactly two scarf tails; they lag behind torso motion and settle naturally with each action. Both hands must hold the same handle continuously with believable grip and no sliding or detached fingers. Preserve crisp native pixel edges and solid, complete material fills. No antialiasing, outline, stray bright pixels, holes inside solid fabric, new colors or effects. Transparent background, no floor graphic, shadow, text, camera movement, zoom or crop. Return a single complete animation, not a contact sheet.
+
+Runtime alignment, for the editor only: damage 16 then 24. Attack 1 local contact 0.21s/end 0.37s; attack 2 local contact 0.29s/end 0.72s. Trial attack speed 0.8175 and final extra recovery 0.2s remain engine settings; do not bake altered combat values into the art.
+
+기본 스킬 횡강타 — 아래 영어 문단을 별도로 입력
+
+Animate ONE powerful HORIZONTAL heavy hammer strike using the exact supplied pixel-art character and black hammer. Use the supplied identical start/end images as exact framing and pose constraints. Face right, locked orthographic side camera, same scale and ground/root position throughout. Begin in the reference holding pose. Widen the stance naturally without moving the root, draw the hammer back behind the torso and visibly twist the shoulders and waist to store weight. Hold the anticipation long enough to read. Then rapidly unwind and swing the hammer across the front at waist-to-chest height. Show exactly ONE strong horizontal impact pushing toward the right, with a short fully extended follow-through hold. Recover deliberately to the exact starting pose. Keep both hands attached to the handle. The hammer follows a heavy horizontal arc, not an overhead ground slam, uppercut, dash, projectile attack or full-body 360-degree spin. No second hit or extra bounce. Separate readable anticipation, fast strike, short held impact and recovery; do not simply accelerate the entire clip.
+
+Preserve the supplied angular hammer silhouette, flat striking faces, handle proportions and solid ink-black material. Preserve the exact character design: black face/body, original yellow eyes, beige hood and robe over narrow black trousers, original head/hood/hem proportions, and exactly two naturally lagging scarf tails. No beige trousers, black skirt, new waist belt, outline, shine, new colors, added shockwave or extra objects. Keep the feet grounded with natural articulation and no root drift. Crisp consistent pixel art, no antialiasing, bright stray pixels or missing fabric pixels. Transparent background; no floor, shadows, text, camera movement, zoom, crop or resizing. Finish in the exact reference pose.
+
+Runtime alignment, for the editor only: contact 0.40s, active window 0.12s, body end 0.95s, damage 40, cooldown 6s. Normal-enemy push 1.5 units over 0.2s; boss takes damage without push. These existing gameplay numbers stay unchanged.
+
+Keep the hammer head rigid: flat striking faces, straight long edges and short angular chamfers. No rounded or rubbery silhouette.
+
+Reuse the supplied approved body, fabric shading and scarf exactly. Change only the weapon and the requested attack poses; do not add contour bands or repaint the reference body.

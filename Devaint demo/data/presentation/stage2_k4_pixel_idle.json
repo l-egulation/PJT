@@ -1,0 +1,32 @@
+{
+  "schema": "stage2-local-pixel-idle-v1",
+  "id": "K4",
+  "status": "single-monster-idle-review",
+  "source": "outputs/waterway/pixel-base-step1-20261031/K4/native/base-frame.png",
+  "sourceSha256": "c41dc6ae5e56bf4be5ba3bbb2f08b877d7c1cee84ee9c8ba76c907735b0b9b62",
+  "canvas": [384,224],
+  "artOrigin": [150,80],
+  "visibleSize": [84,112],
+  "baseline": 192,
+  "maskCoordinates": "Relative to base-cropped.png. Half-open rectangles and inclusive row spans.",
+  "face": {
+    "bounds": [18,16,35,44],
+    "colors": ["4c5056","75858e","eaaa16"],
+    "visorRows": [[29,33,19],[34,38,20]],
+    "note": "Face plate and its amber visor move as one rigid pixel cluster. Hood stays fixed."
+  },
+  "shoulders": {
+    "bounds": [[8,38,24,54],[47,35,67,55]],
+    "colors": ["b85f55","d07b6b","874e4d"],
+    "note": "Only coral upper-sleeve shoulder caps. Straps, forearms, hands, chest and all equipment remain fixed."
+  },
+  "keys": [
+    {"name":"기본","faceDy":0,"shoulderDy":0,"durationMs":620},
+    {"name":"어깨 +1px","faceDy":0,"shoulderDy":-1,"durationMs":180},
+    {"name":"얼굴·어깨 +1px","faceDy":-1,"shoulderDy":-1,"durationMs":520},
+    {"name":"어깨 복귀·얼굴 유지","faceDy":-1,"shoulderDy":0,"durationMs":180}
+  ],
+  "pixelMethod": "Copy original selected pixels upward exactly one native pixel; locally expose the next row at vacated boundaries. Do not interpolate, regenerate, recolor or scale. Exclude straps and equipment from shoulder destinations.",
+  "fixed": ["feet","legs","tank","tank cap","tank straps","chest straps","hose","nozzle","hands","forearms","lower clothing"],
+  "scope": "K4 only. Four deterministic keys, 1.5-second loop proposal. Other seven monsters untouched. No attack, walking or Unity integration."
+}

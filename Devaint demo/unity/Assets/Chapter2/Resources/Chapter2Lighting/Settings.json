@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "contactFlash": {
+    "body":{"sparks":5,"duration":0.26,"speed":4.2,"length":0.26,"width":0.09375,"spreadDegrees":75,"gravity":4.5,"flashDuration":0.055,"flashRadius":0.16},
+    "melee":{"sparks":8,"duration":0.32,"speed":6,"length":0.45,"width":0.109375,"spreadDegrees":72,"gravity":5,"flashDuration":0.08,"flashRadius":0.4}
+  },
+  "pendulum": {"length":1.4,"gravity":9.81,"damping":1.1,"maxAngleDegrees":35,"maxAngularSpeed":4,"bodyImpulseScale":0.12,"attackImpulse":1.8},
+  "suspension": {"style":"chain","segments":24,"linkPitch":0.16,"chainWidth":0.14,"ropeWidth":0.045,"linkOverlap":1.55,"maxBend":0.08,"lagScale":0.045,"response":10},
+  "lantern": {"id":"lantern","color":[1,0.68,0.30],"intensity":2.4,"radius":3.2,"normalDistance":2,"shadowStrength":0,"shadowSoftness":0.55,"shadowFalloff":0.5,"lightFalloff":0.6,"flickerAmplitude":0.04,"flickerPeriod":0.7},
+  "torch": {"id":"torch","color":[1,0.64,0.24],"intensity":2.7,"radius":3.5,"normalDistance":2,"shadowStrength":0,"shadowSoftness":0.55,"shadowFalloff":0.5,"lightFalloff":0.6,"flickerAmplitude":0.06,"flickerPeriod":0.6},
+  "window": {"id":"window","color":[0.68,0.8,1],"intensity":0.65,"radius":7,"normalDistance":3,"shadowStrength":0.75,"shadowSoftness":0.45,"shadowFalloff":0.5,"lightFalloff":0.65,"flickerAmplitude":0,"flickerPeriod":1},
+  "windowBeam": {"angleDegrees":-58,"length":7,"edgeFeather":0.08,"beamOpacity":0.095,"endFade":2},
+  "placements": [
+    {"id":"start-trial","room":"S","origin":"spawn","lanternX":3,"torchX":-3,"centerHeight":1.5,"torchHeight":2.5},
+    {"id":"combat-trial","room":"F01","origin":"room-floor","lanternX":1.5,"torchX":-2,"centerHeight":1.5,"torchHeight":2.7}
+  ]
+}

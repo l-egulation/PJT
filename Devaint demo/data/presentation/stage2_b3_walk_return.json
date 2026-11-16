@@ -1,0 +1,21 @@
+{
+  "schema": "stage2-b3-walk-return-v1",
+  "status": "selected-19-frame-pixel-walk-approved-by-user",
+  "sourceFile": "C:/Users/SSAFY/Downloads/18878604-f43b-475c-bb6e-76fd04fd3156.png",
+  "output": "outputs/waterway/b3-walk-return-20261031",
+  "base": "outputs/waterway/pixel-base-step1-20261031/B3",
+  "grid": [10,10],
+  "cellSize": [1280,720],
+  "selectedRangeInclusiveZeroBased": [40,58],
+  "cycleMsProposal": 1300,
+  "canvas": [384,224],
+  "baseline": 192,
+  "scaleReferenceFrames": [0,1,2,3,4,5,6,7,8,9],
+  "targetReferenceHeight": 100,
+  "supersampleGrid": 4,
+  "coverageMinimum": 0.5,
+  "matte": {"opaqueRmsMax":25,"compositeRmsMax":12,"alphaMinimum":0.8,"matteAdvantage":8},
+  "pinholeCleanup": {"maxPinholeArea":4,"ankleRepairZone":[0,0,0,0],"maxAnkleHoleArea":0},
+  "selectionBasis": "Exclude initial/final holds. Use consecutive moving poses with compatible support phase and body/plate position across the loop boundary. Compare boundary motion as well as pose; do not duplicate an endpoint or synthesize intermediate poses.",
+  "pixelPolicy": "Existing B3 base 10 colors only. Fixed scale/offset from returned initial reference poses for every selected frame. Keep source motion and intentional spaces between supports. Binary alpha; conservative tiny-component cleanup and enclosed pinhole repair only. No new outlines, gradients, per-frame scaling, body-part replacement or foot pinning."
+}

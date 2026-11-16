@@ -1,0 +1,117 @@
+{
+  "kind": "smoke-release-revision7",
+  "status": "pending; not applied",
+  "items": [
+    {
+      "id": "S14",
+      "file": "S14.wav",
+      "sha256": "8da849b3545a0230abb104c5cce70ace6ec33f92a1cbc43de2b18fd8ea733ea1",
+      "duration": 1.1,
+      "status": "pending",
+      "basedOn": "S12",
+      "parts": {
+        "burst": {
+          "file": "S14-bang.wav",
+          "sha256": "165234e5aa2ccff4802b38f378b6b43e1e1eca1656070db92d10bede5c393498",
+          "duration": 0.08
+        },
+        "spread": {
+          "file": "S14-spread.wav",
+          "sha256": "c652210a4cd8ab061f69d09ec78b1dfae24c096bf3531ead8537332a5d6a877f",
+          "duration": 1.1
+        }
+      },
+      "sources": {
+        "burst": {
+          "file": "../smoke-release-06/S12-bang.wav",
+          "sha256": "9d7922b287bb8d825a5ebb599efdc039b94d30eac50c76d2f282f9f09f48ce9e"
+        },
+        "spread": {
+          "file": "../smoke-release-06/S12-spread.wav",
+          "sha256": "c652210a4cd8ab061f69d09ec78b1dfae24c096bf3531ead8537332a5d6a877f"
+        }
+      },
+      "edit": {
+        "burstLowpass": 1800,
+        "burstAttack": 0.012,
+        "bodyGain": 1.0206059910949745,
+        "burstDuration": 0.08,
+        "spreadByteIdentical": true,
+        "mixedTailByteIdenticalFromSeconds": 0.08,
+        "postMixNormalization": false
+      }
+    },
+    {
+      "id": "S15",
+      "file": "S15.wav",
+      "sha256": "2e2072a453b3c518cfbf5d161184509f963972c362ce593143ac511156652161",
+      "duration": 1.1,
+      "status": "pending",
+      "basedOn": "S13",
+      "parts": {
+        "burst": {
+          "file": "S15-bang.wav",
+          "sha256": "1130adfbaea57eab71be489912099f3802962110a94e82e7b2472b3153e1d814",
+          "duration": 0.08
+        },
+        "spread": {
+          "file": "S15-spread.wav",
+          "sha256": "2a772b7feb3f77a4c024262f17c798727500e94742962190d083f6c3ab0a4e75",
+          "duration": 1.1
+        }
+      },
+      "sources": {
+        "burst": {
+          "file": "../smoke-release-06/S13-bang.wav",
+          "sha256": "c5fe11ceeb20c7f75ebff392a59fa432de5664d8749f91f09ab739a7f9bf0ca5"
+        },
+        "spread": {
+          "file": "../smoke-release-06/S13-spread.wav",
+          "sha256": "2a772b7feb3f77a4c024262f17c798727500e94742962190d083f6c3ab0a4e75"
+        }
+      },
+      "edit": {
+        "burstLowpass": 2100,
+        "burstAttack": 0.01,
+        "bodyGain": 1.0480096818058178,
+        "burstDuration": 0.08,
+        "spreadByteIdentical": true,
+        "mixedTailByteIdenticalFromSeconds": 0.08,
+        "postMixNormalization": false
+      }
+    }
+  ],
+  "confirmedBomb": {
+    "candidate": "B3",
+    "file": "source/focused-mixes-01/B3.wav",
+    "sha256": "822a47da3fe91fdce647b2196cb4103857468f142e35ae09c70bfdf7aa827af1",
+    "status": "user-confirmed; not applied",
+    "instruction": "폭탄 b3할게",
+    "mix": {
+      "id": "B3",
+      "label": "큰 물풍선 방향",
+      "file": "B3.wav",
+      "duration": 1.05,
+      "sha256": "822a47da3fe91fdce647b2196cb4103857468f142e35ae09c70bfdf7aa827af1",
+      "peak": 0.47998046875,
+      "sources": [
+        "Magic_Spells/water_blast_projectile_spell_04.wav",
+        "Water/water_splash_object_body_05.wav"
+      ],
+      "edit": {
+        "kind": "layered-water-release",
+        "mainStart": 0.09939583333333334,
+        "wetStart": 0.25066666666666665,
+        "wetOnset": 0.025,
+        "mainGain": 0.72,
+        "wetGain": 0.82,
+        "decay": 0.175,
+        "noExplosionRecording": true,
+        "noThud": true,
+        "noCartoonPop": true,
+        "noSyntheticNoise": true
+      }
+    }
+  },
+  "comparisonGapSeconds": 1
+}

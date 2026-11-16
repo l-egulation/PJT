@@ -1,0 +1,146 @@
+{
+  "version": 5,
+  "canvas": [
+    960,
+    540
+  ],
+  "bossPartsCanvas": [
+    384,
+    416
+  ],
+  "bossPartsOrigin": [
+    288,
+    35
+  ],
+  "unitsToPixels": 32,
+  "simulationHz": 120,
+  "assembly": "Runtime integer-pixel part transforms; see asset-manifest for layer pivots and FX sheet FPS.",
+  "idle": {
+    "periodSeconds": 1.2,
+    "poseFPS": 20,
+    "bodyVerticalAmplitudePx": 5,
+    "handsLagSeconds": 0.15,
+    "chainStretch": false
+  },
+  "intro": {
+    "durationSeconds": 4.8,
+    "emptyRoomUntil": 1.65,
+    "cameraSettleSeconds": 1.4,
+    "dropStart": 1.65,
+    "impact": 2.15,
+    "roar": 2.6,
+    "barsOut": 4,
+    "combatClockStarts": 4.8
+  },
+  "longFist": {
+    "warning": 1.0,
+    "extend": 0.3,
+    "hold": 0.3,
+    "retract": 0.5,
+    "recovery": 2.0,
+    "wait": 2.0,
+    "hitWindow": [
+      1.0,
+      1.3
+    ],
+    "damage": 25,
+    "knockbackPx": 96,
+    "hitRegionMax": [
+      640,
+      192
+    ],
+    "nativeHandReturnSeconds": 0.45,
+    "ceilingAnchorsPx": {
+      "left": [
+        401,
+        111
+      ],
+      "right": [
+        559,
+        111
+      ]
+    },
+    "chainMotion": "Fixed ceiling anchor; rigid links extend toward departing fist; same-side giant attack and return."
+  },
+  "needles": {
+    "count": 13,
+    "interval": 0.3,
+    "warningEach": 1.0,
+    "fall": 0.3,
+    "fade": 0.5,
+    "recovery": 2.0,
+    "wait": 2.0,
+    "lastImpact": 4.9,
+    "nextPattern": 8.9,
+    "damage": 25,
+    "dangerWidthPx": 96
+  },
+  "mixer": {
+    "travel": 4.5,
+    "return": 1.0,
+    "recovery": 2.0,
+    "wait": 2.0,
+    "radiusPx": 192,
+    "distancePx": 288,
+    "tickSeconds": 0.25,
+    "damageAlternating": [
+      7,
+      8
+    ],
+    "stunImmune": true,
+    "approachWarning": 1.0,
+    "bodyScale": 1.8,
+    "visual": "Body jumps upward offscreen, pauses hidden, then approaches from below the floor. Enlarged dial bottom meets floor; lower ink is occluded. Return recedes below floor before original body descends.",
+    "upwardExitSeconds": 0.35,
+    "emptyGapSeconds": 0.15,
+    "foregroundApproachSeconds": 0.5,
+    "dialBottomNativeY": 301,
+    "clipAtFloorY": 464,
+    "centerY": 363.2
+  },
+  "enrage": {
+    "atSeconds": 120,
+    "speed": 1.25,
+    "startsNextPattern": true,
+    "presentationProvisional": true
+  },
+  "deadlineSeconds": 240,
+  "death": {
+    "presentationProvisional": true,
+    "resultAfterSeconds": 5.2,
+    "hazardsCancelImmediately": true,
+    "reference": "2026-10-29 100824: large mass leans then lands; tall dust obscures the collapse",
+    "leanSeconds": 0.66,
+    "mainImpactSeconds": 0.96,
+    "dustFrames": 60,
+    "dustFPS": 24,
+    "dustCanvas": [
+      800,
+      400
+    ],
+    "dustColors": 3
+  },
+  "encounterClock": {
+    "sixOClockSeconds": 120,
+    "enrageSpeedMultiplier": 1.25,
+    "twelveOClockSeconds": 240,
+    "deadline": "instant player defeat"
+  },
+  "inkWarning": {
+    "seconds": 1,
+    "dangerWidth": 96,
+    "source": "ceiling",
+    "visual": "Ink flows down from above the landing point; no ground bubbles."
+  },
+  "mixerArt": {
+    "body": "assets/boss/mixer-body-native-v5.png",
+    "pivot": [
+      260,
+      334
+    ],
+    "floorOffset": 125,
+    "minuteRadiansPerSecond": 44,
+    "hourRadiansPerSecond": -57.64,
+    "collisionRadius": 192
+  }
+}

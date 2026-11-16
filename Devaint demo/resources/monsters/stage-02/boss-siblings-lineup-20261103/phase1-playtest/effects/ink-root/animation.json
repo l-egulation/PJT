@@ -1,0 +1,64 @@
+{
+  "trap": {
+    "size": [
+      96,
+      24
+    ],
+    "surfaceY": 20,
+    "frames": 8,
+    "frameMs": 120
+  },
+  "root": {
+    "size": [
+      44,
+      22
+    ],
+    "footOffset": [
+      -32,
+      -28
+    ],
+    "durationSeconds": 2,
+    "palette": [
+      [
+        32,
+        24,
+        41
+      ],
+      [
+        61,
+        41,
+        73
+      ],
+      [
+        99,
+        71,
+        111
+      ],
+      [
+        150,
+        115,
+        145
+      ]
+    ],
+    "emergence": {
+      "stepMs": 45,
+      "offsetY": [
+        30,
+        24,
+        15,
+        6,
+        -2,
+        -1,
+        0
+      ],
+      "groundClip": true,
+      "releaseSinkMs": 150
+    },
+    "displaySize": [
+      56,
+      30
+    ]
+  },
+  "status": "concept-review",
+  "gameIntegration": "not-performed"
+}

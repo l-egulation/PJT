@@ -1,0 +1,99 @@
+# Unity regenerates these directories on each machine.
+**/[Ll]ibrary/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Ll]ogs/
+**/[Uu]ser[Ss]ettings/
+**/[Mm]emoryCaptures/
+**/[Rr]ecordings/
+**/[Bb]uild/
+**/[Bb]uilds/
+**/.vs/
+**/.idea/
+**/.vscode/
+**/node_modules/
+**/__pycache__/
+**/_tools/
+*.csproj
+!tools/combat/roguelite-tests/RunChecks.csproj
+*.sln
+*.slnx
+*.suo
+*.user
+*.pidb
+*.booproj
+*.opendb
+*.VC.db
+*.log
+*.tmp
+*.pyc
+.DS_Store
+Thumbs.db
+.env
+.env.*
+/outputs/
+/.wrangler/
+/local-verification/
+**/Assets/Resources/PerformanceTestRunInfo.json*
+**/Assets/Resources/PerformanceTestRunSettings.json*
+
+# Media is owned by resources (Git LFS); Unity copies are local deployment outputs.
+# Keep authoritative Unity .meta, scenes, materials, shaders and generated catalogs in main.
+*.[pP][nN][gG]
+*.[jJ][pP][gG]
+*.[jJ][pP][eE][gG]
+*.[gG][iI][fF]
+*.[wW][eE][bB][pP]
+*.[bB][mM][pP]
+*.[tT][gG][aA]
+*.[tT][iI][fF]
+*.[tT][iI][fF][fF]
+*.[pP][sS][dD]
+*.[pP][sS][bB]
+*.[iI][cC][oO]
+*.[sS][vV][gG]
+*.[eE][xX][rR]
+*.[hH][dD][rR]
+*.[dD][dD][sS]
+*.[zZ][iI][pP]
+*.[uU][nN][iI][tT][yY][pP][aA][cC][kK][aA][gG][eE]
+
+# Audio/font payloads are restored from the pinned resource contract. Keep their .meta in main.
+*.[wW][aA][vV]
+*.[oO][gG][gG]
+*.[mM][pP]3
+*.[fF][lL][aA][cC]
+*.[tT][tT][fF]
+*.[oO][tT][fF]
+
+# Project-specific feedback bindings are generated from the retained vendor assets.
+/unity/Assets/Deviant/Presentation/Resources/HitFeedback/Generated/
+/unity/Assets/Deviant/Presentation/Resources/HitFeedback/Generated.meta
+
+# Standalone local playtest builds are not game sources.
+/Playtest/InkForest-Hwang-Windows/
+/unity/Assets/ForestCombatV2/Resources/ClockBossEnvironment/*.bytes
+
+# Boss PNG TextAsset and embedded-media editor bundles are restored from resources.
+/unity/Assets/ForestCombatV2/Resources/ClockExecutioner/StationaryBytes.bytes
+/tools/chapter1-map-editor/맵 편집기.html
+/tools/chapter1-map-editor/이전_지형용_편집기.html
+
+# Source media live in resources; restored using the deployment manifest.
+/unity/Assets/Chapter2/Resources/RoseBlue/*.bytes
+
+/unity/Assets/Deviant/Game/Resources/NotebookOpening/*.png
+
+# Encoded Opus payloads are restored from the pinned compressed-media resource selection.
+/unity/Assets/Deviant/Media/Resources/CompressedAudio/Payloads/*.bytes
+
+# Temporary source-clip relocation during player packaging.
+/unity/Assets/Deviant/Media/ExcludedAudioBuild/
+/unity/Assets/Deviant/Media/ExcludedAudioBuild.meta
+
+# Approved theme media restored from pinned resources.
+/unity/Assets/Deviant/UI/Theme/Resources/ApprovedTheme/sources/**/*.png
+/unity/Assets/Deviant/UI/Fonts/Resources/ApprovedTheme/Fonts/*.ttf
+
+# Recovered map icon media restored from the pinned resource selection.
+/unity/Assets/Deviant/UI/Theme/Resources/RecoveredMapIcons/*.png

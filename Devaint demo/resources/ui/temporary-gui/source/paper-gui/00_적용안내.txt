@@ -1,0 +1,19 @@
+임시 GUI 도트 에셋 적용본 (2026-10-31)
+
+main 반영: aa37a7d0 / MR !84
+https://lab.ssafy.com/s15-final/S15P31F109/-/merge_requests/84
+
+구성
+- unity/: 게임 적용 32x32 PNG 20개와 GUID를 보존하는 .meta
+- 원본/: 단순 도트 문양 20종 생성 원본 시트
+- 실제화면/: 실제 Unity 실행 HUD·가방·정비소·팔레트 관리 화면
+
+적용
+1. Git main을 최신으로 받습니다.
+2. 패키지의 unity 폴더를 저장소의 unity 폴더에 같은 상대 경로로 복사합니다.
+3. Unity 6000.6.5f1에서 Chapter1Title 씬을 열고 Play를 누릅니다.
+
+문양 원본은 먹색 단색입니다. main의 TemporaryGuiSpriteImporter가 알파를 보존한 흰색 마스크로 임포트하고, 실제 GUI가 속성별 빨강·노랑·초록·파랑·보라를 입힙니다. 명암과 입자 장식은 없습니다.
+프레임과 버튼은 PaperGuiSkin 코드로 생성합니다. 텍스트와 버튼 동작은 main의 실제 uGUI 컴포넌트가 담당합니다. 실제화면 PNG는 확인용이며 게임 UI로 배치하지 않습니다.
+기존 작업용 무기 변경 UI도 전환 버튼으로 사용할 수 있습니다.
+검증: main 병합 후 GUI 121항목 통과, 글꼴 회귀 4개 통과.

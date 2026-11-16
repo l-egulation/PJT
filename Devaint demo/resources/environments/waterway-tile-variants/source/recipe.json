@@ -1,0 +1,62 @@
+{
+  "status": "user-selected-style; assembled HTML review; Unity integration pending",
+  "cellPx": 32,
+  "ppu": 32,
+  "seed": 20261101,
+  "motifs": [
+    {
+      "name": "plain-a",
+      "cells": 1,
+      "file": "runtime/plain-a.png",
+      "sha256": "b850984d891a96c4ab36e07ef880e895c6b84e36b74f1761725671b9c3f04637"
+    },
+    {
+      "name": "plain-b",
+      "cells": 1,
+      "file": "runtime/plain-b.png",
+      "sha256": "0c85dc92c79a8f72d000e16630a5bcc192f3c8686a362f0ca08a4f6186a8fe3f"
+    },
+    {
+      "name": "plain-c",
+      "cells": 1,
+      "file": "runtime/plain-c.png",
+      "sha256": "f251c6e287465bf10c8ecf0f08604542bed706f8bb6644cb0f7b9491e1af41bf"
+    },
+    {
+      "name": "moss-light-a",
+      "cells": 1,
+      "file": "runtime/moss-light-a.png",
+      "sha256": "d1f50c6c7b435b89d53b8951d858ae691458edf551671c15b0f8c15913572454"
+    },
+    {
+      "name": "moss-light-b",
+      "cells": 1,
+      "file": "runtime/moss-light-b.png",
+      "sha256": "03e4fd2b0e5d3c0ded802b281052aa6ade84e19f2c7f2e0611f5441d5acd2f53"
+    },
+    {
+      "name": "moss-wide-2",
+      "cells": 2,
+      "file": "runtime/moss-wide-2.png",
+      "sha256": "10fe91440719704d45d1aa19da45ac3b928c879304f0121c8336bcce5dcb3bcc"
+    },
+    {
+      "name": "moss-wide-3",
+      "cells": 3,
+      "file": "runtime/moss-wide-3.png",
+      "sha256": "5e65d7ee5784a37c3ef1530253e6e7f800585cf5e4e047f1b206386841353c56"
+    }
+  ],
+  "horizontalSeams": "all outer edge RGBA pixels identical; internal 2/3-cell order preserved",
+  "coverage": "straight floor runs >=4 cells; existing endcaps blended over1cell; stairs/walls/ceilings retain original geometry-aware tiles",
+  "limits": "32px motifs derived from selected generated study. Full new wall/corner/ceiling atlas is not authored.",
+  "unityApplied": false,
+  "verticalConnection": {
+    "method": "same selected stone faces; native-pixel distance to air for continuous interior shading; remove repeated walk highlight on vertical faces",
+    "tool": "tools/connect_waterway_vertical_faces.py",
+    "coverage": "vertical sides and adjoining floor corners",
+    "geometryUnchanged": true,
+    "fadeToCorePx": 40,
+    "fullBrightnessDepthPx": 8
+  }
+}

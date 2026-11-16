@@ -1,0 +1,44 @@
+{
+  "cooldown_start": "projectile_spawn",
+  "base_damage": 40,
+  "target_count": "all_valid_targets_along_path",
+  "max_travel_distance_units": 8,
+  "base_cooldown_seconds": 7,
+  "distance_origin": "spawn_position",
+  "projectile_count": 1,
+  "special_ink": "range",
+  "trajectory": "horizontal_straight_facing_direction",
+  "name": "검기",
+  "hits_per_target_per_projectile": 1,
+  "unity_applied": false,
+  "weapon": "basic_sword",
+  "status": "user_approved_initial_design",
+  "solid_wall_collision": "despawn",
+  "survives_weapon_switch": true,
+  "stats": "source_weapon_snapshot_at_activation",
+  "pending": [],
+  "speed_units_per_second": 16,
+  "max_lifetime_seconds": 0.5,
+  "distance_reference": "projectile_center_from_spawn",
+  "hitbox_size": [
+    1,
+    2
+  ],
+  "spawn_right_offset": [
+    1.15625,
+    1
+  ],
+  "spawn_left_offset": [
+    -1.15625,
+    1
+  ],
+  "windup_seconds": 0.2,
+  "recovery_seconds": 0.3,
+  "total_motion_seconds": 0.5,
+  "horizontal_input_during_motion": "disabled",
+  "vertical_physics": "unchanged",
+  "additional_control_effect": "none",
+  "applies_basic_hit_stagger": false,
+  "spawn_obstruction": "despawn_on_solid_overlap_or_blocked_spawn_path",
+  "facing_lock": "windup_start"
+}

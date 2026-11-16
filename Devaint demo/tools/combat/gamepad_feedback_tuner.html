@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DualSense 피드백 스튜디오</title>
+<style>
+:root{color-scheme:dark;--bg:#101419;--panel:#191f27;--raised:#202833;--line:#303b49;--text:#eaf1f7;--muted:#9baabb;--teal:#70e3c0;--violet:#b4a1ff;--orange:#ffbb82;--red:#ff9f9f}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 10% 0%,#1a2e30 0,transparent 45%),var(--bg);color:var(--text);font:14px/1.55 "Malgun Gothic",system-ui,sans-serif}button,input,select,textarea{font:inherit}button,select,input[type=number]{border:1px solid var(--line);border-radius:8px;background:#11171e;color:var(--text);padding:8px 11px}button{cursor:pointer;transition:background .15s,border-color .15s}button:hover:not(:disabled){background:#293640;border-color:#67817f}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--teal);outline-offset:3px}button:disabled{opacity:.4;cursor:not-allowed}button.primary{background:var(--teal);border-color:var(--teal);color:#10281f;font-weight:700}button.primary:hover:not(:disabled){background:#a1f3d8}button.stop{color:var(--red);border-color:#69434b}.quiet{color:var(--muted)}[hidden]{display:none!important}main{max-width:1450px;margin:auto;padding:34px 32px 24px}header{display:flex;justify-content:space-between;gap:24px;align-items:flex-start;margin-bottom:26px}.eyebrow{color:var(--teal);font-size:11px;letter-spacing:.18em;font-weight:700;margin-bottom:8px}h1{font-size:30px;letter-spacing:-1px;margin:0 0 9px}h2{font-size:17px;margin:0}h3{font-size:13px;margin:0}p{margin:8px 0;color:var(--muted)}.header-copy{max-width:650px}.tag{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:20px;padding:4px 10px;font-size:11px;color:var(--muted);white-space:nowrap}.tag.good{color:var(--teal);border-color:#355d51}.tag.edited{color:var(--orange);border-color:#69533e}.top-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}.toolbar{display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap;background:#171e25;border:1px solid var(--line);border-radius:12px;padding:13px 17px;margin-bottom:20px}.toolbar-left,.button-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.toolbar p{font-size:12px;margin:0}.layout{display:grid;grid-template-columns:254px minmax(0,1fr);gap:20px}.panel{background:linear-gradient(140deg,#1b232d,#181e26);border:1px solid var(--line);border-radius:14px;overflow:hidden}.panel-head{padding:18px 20px 0;display:flex;justify-content:space-between;align-items:center;gap:12px}.panel-body{padding:18px 20px}.event-heading{padding:19px 18px 13px;font-size:12px;color:var(--muted)}.event-list{padding:0 9px 9px;display:flex;flex-direction:column;gap:5px}.event{width:100%;display:block;text-align:left;border-color:transparent;background:transparent;padding:12px 11px;border-radius:9px}.event[aria-pressed=true]{background:#283c3b;border-color:#45675a}.event-title{display:flex;align-items:center;justify-content:space-between;font-weight:700}.event-meta{color:var(--muted);font-size:11px;margin-top:3px;font-variant-numeric:tabular-nums}.event[aria-pressed=true] .event-title{color:var(--teal)}.event-mark{width:6px;height:6px;border-radius:50%;background:var(--orange);display:none}.event.changed .event-mark{display:block}.sidebar-note{border-top:1px solid var(--line);padding:14px 18px;font-size:11px;color:var(--muted)}aside.panel{align-self:start;position:sticky;top:18px}.main-stack{display:grid;gap:20px;min-width:0}.pulse-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr);gap:22px}.description{font-size:12px;min-height:20px;margin-top:5px}.legend{display:flex;gap:14px;font-size:11px;color:var(--muted);flex-wrap:wrap;margin-top:12px}.legend span:before{content:"";display:inline-block;width:14px;height:3px;background:var(--teal);vertical-align:middle;margin-right:6px}.legend .high:before{background:var(--violet)}.legend .saved:before{background:transparent;border-top:2px dashed #a4acb4;height:0}.chart{display:block;width:100%;height:215px;touch-action:pan-y}.control{margin:0 0 15px}.control-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:7px}.control label{color:var(--muted);font-size:12px}.number-unit{display:flex;align-items:center;gap:6px;color:var(--muted);font-size:11px}.number-unit input{width:85px;padding:5px 7px;text-align:right;font-size:13px;font-variant-numeric:tabular-nums}.control input[type=range]{width:100%;margin:0;accent-color:var(--teal);height:18px}.control.high input[type=range]{accent-color:var(--violet)}input:invalid{border-color:var(--red)}.range-ends{display:flex;justify-content:space-between;font-size:10px;color:#6e7f91}.pulse-note{font-size:11px;color:var(--muted);margin-top:14px}.trigger-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:28px}.trigger-controls{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}.trigger-controls .wide{grid-column:1/-1}.trigger-stage{border:1px solid var(--line);border-radius:11px;background:#111820;padding:16px;margin-bottom:14px}.slot-select{display:flex;gap:5px;margin:12px 0}.slot-select button{padding:5px 13px;font-size:12px}.slot-select button[aria-pressed=true]{border-color:var(--teal);color:var(--teal);background:#203831}[data-preview][aria-pressed=true]{border-color:var(--teal);color:var(--teal);background:#203831}.trigger-label{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-bottom:6px}.zones{display:grid;grid-template-columns:repeat(10,1fr);gap:4px;height:44px;align-items:end}.zone{height:8px;border-radius:3px 3px 1px 1px;background:#33404d;transition:height .12s,background .12s}.zone.active{background:var(--teal)}.zone.kick{background:var(--orange)}.trigger-lane+.trigger-lane{margin-top:16px}.zone-ticks{display:flex;justify-content:space-between;font-size:10px;color:#738598;margin:6px 0 0}.motors{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}.motor-bar{height:5px;background:#29333e;border-radius:5px;overflow:hidden;margin-top:6px}.motor-bar i{display:block;height:100%;width:0;background:var(--teal)}.motor-bar.high i{background:var(--violet)}.mini-label{display:flex;justify-content:space-between;font-size:10px;color:var(--muted)}.device-box{border-top:1px solid var(--line);padding:17px 20px;background:#151c24}.device-box .button-row{margin-top:9px}.device-box p{font-size:11px}.device-title{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.device-box select{max-width:100%;font-size:11px;padding:6px}.advanced{padding:13px 20px}.advanced summary{cursor:pointer;color:var(--muted);font-size:12px}.advanced-body{padding-top:15px;display:grid;grid-template-columns:minmax(220px,.45fr) minmax(0,1fr);gap:22px}.code-area{width:100%;height:240px;padding:13px;background:#10161d;border:1px solid var(--line);border-radius:8px;color:#bed5d6;font:12px/1.7 Consolas,monospace;resize:vertical;tab-size:2}.diff-list{padding:0;margin:7px 0;list-style:none;font-size:11px;color:var(--muted)}.diff-list li{padding:5px 0;border-bottom:1px solid #2a3440;display:flex;justify-content:space-between;gap:12px}.diff-list b{color:var(--orange);font-weight:400}.footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:#8292a2;font-size:11px;padding:18px 0 0}.footer code{overflow-wrap:anywhere}.message{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);z-index:5;max-width:min(680px,calc(100% - 32px));border:1px solid #497362;background:#203e34;border-radius:10px;color:#d8f9e9;padding:12px 18px;box-shadow:0 8px 35px #0006}.message.error{background:#422b31;border-color:#965a67;color:#ffd9df}.validation{color:var(--red);font-size:12px;min-height:18px}.kbd{font-size:10px;border:1px solid #485462;border-radius:4px;padding:1px 5px;color:var(--muted)}.empty{padding:12px 0;color:var(--orange);font-size:12px}.file-input{display:none}.compare-label{font-size:11px;color:var(--muted);display:flex;gap:6px;align-items:center}.compare-label input{accent-color:var(--teal)}
+@media(max-width:1050px){main{padding:24px 20px}.layout{grid-template-columns:214px minmax(0,1fr)}.pulse-grid,.trigger-grid{grid-template-columns:1fr}.pulse-grid{gap:12px}.trigger-controls{gap:0 16px}.trigger-stage{margin-bottom:10px}header{flex-direction:column}.top-actions{justify-content:flex-start}.advanced-body{grid-template-columns:1fr}.chart{height:190px}}
+@media(max-width:660px){aside.panel{position:static}main{padding:20px 12px}.layout{grid-template-columns:1fr}.event-list{display:grid;grid-template-columns:1fr 1fr}.event-heading{padding:13px 16px 8px}.event{padding:9px}.sidebar-note{display:none}h1{font-size:25px}.panel-head{padding:15px 15px 0}.panel-body{padding:15px}.trigger-controls{grid-template-columns:1fr 1fr;gap:0 12px}.number-unit input{width:65px}.control label{font-size:11px}.toolbar{padding:12px}.top-actions button{font-size:12px}.device-box{padding:14px}.device-box select{width:100%}.footer{font-size:10px}.advanced{padding:13px 15px}.compare-label{font-size:10px}}
+.pattern-tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding-top:18px;border-top:1px solid var(--line);margin-top:16px}.pattern-tools select{max-width:100%;min-width:180px}.pattern-tools .spacer{flex:1}.timeline{display:flex;gap:4px;overflow-x:auto;padding:14px 0 8px;min-width:0}.timeline button{flex-shrink:0;min-width:50px;text-align:left;padding:8px;font-size:11px;background:#203a35;white-space:nowrap}.timeline button.rest{background:#242b34;color:var(--muted);border-style:dashed}.timeline button[aria-pressed=true]{border-color:var(--teal);box-shadow:inset 0 0 0 1px var(--teal)}.segment-list{display:grid;gap:5px;margin-top:8px}.segment-row{display:flex;gap:5px;align-items:center;border:1px solid var(--line);border-radius:8px;padding:5px}.segment-row.selected{border-color:#50796a;background:#1d302c}.segment-select{flex:1;text-align:left;min-width:0;border-color:transparent;background:transparent}.segment-select strong{display:block;font-size:12px}.segment-select small{display:block;color:var(--muted);font-size:11px}.segment-actions{display:flex;gap:3px}.segment-actions button{padding:5px 8px;font-size:11px}.segment-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px;font-size:12px}.segment-heading select{font-size:12px;padding:5px;max-width:135px}.pattern-total{font-size:12px;color:var(--muted);margin:7px 0}.pattern-total.error{color:var(--red)}@media(max-width:660px){.pattern-tools{gap:6px}.pattern-tools select{width:100%}.pattern-tools .spacer{display:none}.segment-actions button{padding:5px 6px}.segment-select{padding:6px}.segment-select small{font-size:10px}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div class="header-copy"><div class="eyebrow">DEVIANT · CONTROLLER FEEDBACK</div><h1>DualSense 피드백 스튜디오</h1><p>공격의 짧은 울림부터 차지의 묵직한 저항까지.<br>현재 게임 데이터를 기준으로 조정하고, 패드에서 직접 느껴보세요.</p></div>
+  <div class="top-actions"><span class="tag" id="save-status">불러오는 중</span><button id="load-file">JSON 불러오기</button><button id="download">JSON 내려받기</button><button class="primary" id="save" disabled>원본 저장 + Unity 반영</button></div>
+</header>
+<div class="toolbar"><div class="toolbar-left"><span class="tag" id="source-status">원본 확인 중</span><p id="source-note">로컬 서버에 연결하고 있습니다.</p></div><div class="button-row"><button id="reload">원본 다시 불러오기</button><button id="revert" disabled>변경 되돌리기</button></div></div>
+<div id="empty" class="empty" hidden>HTML만 연 상태입니다. gamepad_feedback.json을 불러오거나 로컬 실행 파일을 사용하세요.</div>
+<div class="layout">
+<aside class="panel"><div class="event-heading">이벤트별 진동 <span class="quiet">/ 8</span></div><nav class="event-list" id="events" aria-label="피드백 이벤트"></nav><div class="sidebar-note">저주파는 묵직한 울림,<br>고주파는 날카로운 타격감입니다.<br><br>점선은 불러온 원본,<br>실선은 편집 중인 값입니다.</div></aside>
+<div class="main-stack">
+<section class="panel" aria-labelledby="pulse-title"><div class="panel-head"><h2 id="pulse-title">기본 공격</h2><div class="button-row"><label class="compare-label"><input id="compare" type="checkbox" checked> 원본 비교</label><button class="primary" id="play-pulse">재생 <span class="kbd">× · □ · △ · ○</span></button></div></div><div class="panel-body"><p class="description" id="pulse-description"></p><div class="pulse-grid"><div><canvas id="envelope" class="chart" aria-label="시간에 따른 저주파와 고주파 진동 감쇠 곡선"></canvas><div class="legend"><span>저주파</span><span class="high">고주파</span><span class="saved">불러온 원본</span></div></div><div><div class="segment-heading"><strong id="segment-heading">구간 1</strong><select id="segment-curve" aria-label="선택 구간의 강도 변화"><option value="decay">강하게 → 감쇠</option><option value="hold">일정하게</option><option value="rise">약하게 → 증가</option></select></div><div id="pulse-controls"></div></div></div><div class="pattern-tools"><select id="preset" aria-label="진동 패턴 예시"></select><button id="apply-preset">예시 적용</button><span class="spacer"></span><button id="add-segment">+ 진동 구간</button><button id="add-rest">+ 쉼</button></div><p class="pattern-total" id="pattern-total"></p><div class="timeline" id="timeline" aria-label="진동 패턴 타임라인"></div><div class="segment-list" id="segment-list"></div><p class="pulse-note">구간별 세기·시간·강도 변화를 편집합니다. 저주파와 고주파가 모두 0이면 쉼입니다. 최대 16구간·총 2초이며, 예시는 선택한 이벤트에 적용 버튼을 눌렀을 때만 반영됩니다. 여러 이벤트가 겹치면 게임은 모터별 가장 큰 세기를 출력합니다.</p></div></section>
+<section class="panel" aria-labelledby="trigger-title"><div class="panel-head"><h2 id="trigger-title">어댑티브 트리거</h2><span class="tag">L2 · 무기 1 / R2 · 무기 2</span></div><div class="panel-body trigger-grid"><div><div class="trigger-controls" id="trigger-controls"></div></div><div><h3>L2/R2를 당겨 선택한 효과 시험하기</h3><p class="pulse-note" id="controller-input" aria-live="polite">L2 0% · R2 0%</p><div class="trigger-stage"><div class="trigger-lane"><div class="trigger-label"><span>L2 · 무기 1</span><span id="left-label">출력 없음</span></div><div class="zones" id="left-zones" aria-label="L2 저항 구간"></div></div><div class="trigger-lane"><div class="trigger-label"><span>R2 · 무기 2</span><span id="right-label">출력 없음</span></div><div class="zones" id="right-zones" aria-label="R2 저항 구간"></div></div><div class="zone-ticks"><span>0 · 누르기 시작</span><span>9 · 끝까지 누름</span></div><div class="motors"><div><div class="mini-label"><span>저주파</span><span id="low-level">0%</span></div><div class="motor-bar"><i id="low-meter"></i></div></div><div><div class="mini-label"><span>고주파</span><span id="high-level">0%</span></div><div class="motor-bar high"><i id="high-meter"></i></div></div></div></div><div class="button-row" role="group" aria-label="트리거를 당길 때 적용할 효과"><button data-preview="ready" aria-pressed="false">준비 저항</button><button data-preview="charge" aria-pressed="false">차지 저항</button><button data-preview="kick" aria-pressed="true">스킬 킥</button><button data-preview="sequence" aria-pressed="false">차지 → 발동 · 2초</button></div><p class="pulse-note" id="preview-status" aria-live="polite">×·□·△·○는 선택한 진동을 재생합니다. L2/R2의 스킬 킥은 설정 시간이 지나면 저항 없이 종료됩니다.</p></div></div><div class="device-box"><div class="device-title"><h3>패드에서 시험하기</h3><span class="tag" id="device-status">화면 미리보기</span></div><div class="button-row"><select id="gamepad" aria-label="일반 진동을 시험할 패드"><option value="">게임패드에서 버튼을 눌러 인식하세요</option></select><button id="connect-hid">DualSense 연결</button><button id="disconnect-hid" hidden>연결 해제</button><button class="stop" id="stop">모두 정지 <span class="kbd">Esc</span></button></div><p id="device-note">일반 패드는 목록에서 고르고, DualSense 트리거 시험은 Chrome·Edge의 연결 버튼을 사용하세요. ×·□·△·○는 선택한 진동, L2/R2는 각각 트리거 효과, Options는 모두 정지입니다. 게임 실행을 멈추고 시험하세요. 창을 벗어나면 출력을 멈춥니다.</p></div></section>
+<section class="panel advanced"><details id="data-details"><summary>공통 시간 · 변경 내역 · JSON</summary><div class="advanced-body"><div id="common-controls"></div><div><h3>불러온 원본과 비교</h3><ul class="diff-list" id="diff"></ul><div class="button-row"><button id="copy-json">JSON 복사</button></div></div></div><label class="quiet" for="json" style="display:block;margin:12px 0 6px;font-size:11px">내려받거나 저장할 프로필</label><textarea id="json" class="code-area" readonly spellcheck="false" aria-label="현재 JSON 프로필"></textarea></details></section>
+<div id="validation" class="validation" role="alert"></div>
+</div></div>
+<footer class="footer"><span>원본 <code>data/combat/presentation/gamepad_feedback.json</code><br>저장 시 Unity 카탈로그도 함께 갱신합니다. 실행 중인 게임은 다시 시작해서 확인하세요.</span><span>모터 진동 기반 미리보기 · L2/R2는 놓으면 해제<br>저장 <span class="kbd">Ctrl S</span> · 정지 <span class="kbd">Options / Esc</span></span></footer>
+</main>
+<input type="file" id="file" class="file-input" accept=".json,application/json">
+<div class="message" id="message" role="status" hidden></div>
+<script>
+'use strict';
+(() => {
+const $ = id => document.getElementById(id);
+const EVENTS = {
+ basic:['기본 공격','기본 공격이 실제로 시작될 때의 짧은 진동'],
+ special:['스킬 시작','스킬이 실제로 시작될 때의 진동'],
+ dash:['대시','대시 시작 순간의 가벼운 진동'],
+ jump:['점프','점프 시작 순간의 짧은 진동'],
+ hit:['기본 명중','기본 공격의 확정 명중. 완전 흡수·0 피해도 포함'],
+ heavyHit:['강한 명중','특수 공격·폭발·미사일의 확정 명중'],
+ hurt:['플레이어 피격','플레이어에게 피해가 수락됐을 때의 진동'],
+ parry:['패링 · 반사','패링이나 반사된 공격이 명중했을 때의 진동']
+};
+const TRIGGERS = {
+ triggerStart:{label:'저항 시작 위치',min:0,max:9,step:1,unit:'구간',scale:1,note:'0부터 9까지 10개 구간'},
+ readyStrength:{label:'준비 상태 저항',min:0,max:8,step:1,unit:'/ 8',scale:1,note:'0이면 저항을 완전히 해제합니다.'},
+ chargingStrength:{label:'차지 중 저항',min:0,max:8,step:1,unit:'/ 8',scale:1},
+ kickStrength:{label:'스킬 킥 세기',min:1,max:8,step:1,unit:'/ 8',scale:1},
+ kickFrequency:{label:'스킬 킥 주파수',min:1,max:255,step:1,unit:'Hz',scale:1},
+ kickDuration:{label:'스킬 킥 시간',min:.1,max:1000,step:.1,unit:'ms',scale:1000}
+};
+const COMMON = {maximumEventAge:{label:'오래된 이벤트 제한',min:.1,max:1000,step:.1,unit:'ms',scale:1000,note:'이 시간보다 늦게 관측한 사건은 게임에서 재생하지 않습니다.'}};
+const CURVES={decay:'감쇠',hold:'일정',rise:'증가'},MAX_SEGMENTS=16,MAX_DURATION=2;
+const SEGMENT=(low,high,duration,curve='decay')=>({low,high,duration,curve});
+const PRESETS={
+ crisp:{label:'짧고 선명한 명중',segments:[SEGMENT(.15,.55,.04)]},
+ heavy:{label:'묵직한 타격',segments:[SEGMENT(.7,.3,.12)]},
+ hurt:{label:'피격 · 두 박자',segments:[SEGMENT(.65,.2,.04),SEGMENT(0,0,.035,'hold'),SEGMENT(.5,.35,.095)]},
+ parry:{label:'패링 · 날카로움과 여운',segments:[SEGMENT(.1,.8,.03),SEGMENT(.4,.15,.06)]},
+ ready:{label:'차지 완료 · 세 박자',segments:[SEGMENT(.16,.28,.03,'hold'),SEGMENT(0,0,.04,'hold'),SEGMENT(.16,.28,.03,'hold'),SEGMENT(0,0,.04,'hold'),SEGMENT(.16,.28,.03,'hold')]},
+ explosion:{label:'폭발 · 충격과 잔향',segments:[SEGMENT(.85,.6,.04),SEGMENT(.45,.15,.16)]},
+ rise:{label:'서서히 커지는 진동',segments:[SEGMENT(.5,.4,.2,'rise')]},
+ silent:{label:'무음',segments:[SEGMENT(0,0,.05,'hold')]}
+};
+const PULSE_FIELDS = {low:{label:'저주파 세기',min:0,max:100,step:.1,unit:'%',scale:100},high:{label:'고주파 세기',min:0,max:100,step:.1,unit:'%',scale:100},duration:{label:'구간 지속시간',min:.1,max:1000,step:.1,unit:'ms',scale:1000}};
+let draft=null, baseline=null, revision=null, server=false, pending=false, selected='basic', selectedSegment=0, triggerMode='kick';
+let preview=null, messageTimer=0, lastPadSignature='', lastGamepadWrite=0, activeActuator=null;
+let inputFocused=true, inputSource='', previousFaces=[false,false,false,false], requireNeutral=true;
+let triggerHolds={left:null,right:null}, lastOutputKey='', lastInputLabel='';
+const clone = value => JSON.parse(JSON.stringify(value));
+function stable(value) { if(value===null||typeof value!=='object')return JSON.stringify(value);return Array.isArray(value)?'['+value.map(stable).join(',')+']':'{'+Object.keys(value).sort().map(k=>JSON.stringify(k)+':'+stable(value[k])).join(',')+'}'; }
+function validate(data) {
+ const expected=['schemaVersion',...Object.keys(EVENTS),...Object.keys(TRIGGERS),'maximumEventAge'].sort();
+ if(!data||Array.isArray(data)||typeof data!=='object'||Object.keys(data).sort().join('|')!==expected.join('|'))throw Error('프로필에 필요한 항목이 없거나 알 수 없는 항목이 있습니다.');
+ if(![1,2].includes(data.schemaVersion))throw Error('지원하는 프로필 버전은 1과 2입니다.');
+ const number=(value,min,max,label,positive=false)=>{if(typeof value!=='number'||!Number.isFinite(value)||value<min||value>max||positive&&value===0)throw Error(label+' 값의 범위를 확인하세요.');};
+ for(const [name,[label]] of Object.entries(EVENTS)) {
+  const pulse=data[name];
+  if(!pulse||typeof pulse!=='object'||Array.isArray(pulse))throw Error(label+' 패턴이 올바르지 않습니다.');
+  const levels=(segment,part)=>{number(segment.low,0,1,part+' 저주파');number(segment.high,0,1,part+' 고주파');number(segment.duration,0,1,part+' 지속시간',true);};
+  if('segments' in pulse){
+   if(data.schemaVersion!==2||Object.keys(pulse).join('|')!=='segments'||!Array.isArray(pulse.segments)||pulse.segments.length<1||pulse.segments.length>MAX_SEGMENTS)throw Error(label+'은 1~16구간이어야 합니다.');
+   for(const [index,segment] of pulse.segments.entries()){
+    if(!segment||typeof segment!=='object'||Array.isArray(segment)||Object.keys(segment).sort().join('|')!=='curve|duration|high|low'||!['decay','hold','rise'].includes(segment.curve))throw Error(label+' 구간 '+(index+1)+'의 강도 변화나 항목을 확인하세요.');
+    levels(segment,label+' 구간 '+(index+1));
+   }
+   if(pulseDuration(pulse)>MAX_DURATION+1e-9)throw Error(label+' 패턴의 전체 시간은 2초 이하여야 합니다.');
+  }else{if(Object.keys(pulse).sort().join('|')!=='duration|high|low')throw Error(label+'에 저주파·고주파·지속시간이 필요합니다.');levels(pulse,label);}
+ }
+ for(const [key,spec] of Object.entries(TRIGGERS)) {
+  if(spec.scale===1){number(data[key],spec.min,spec.max,spec.label);if(!Number.isInteger(data[key]))throw Error(spec.label+'은 정수여야 합니다.');}
+  else number(data[key],0,1,spec.label,true);
+ }
+ number(data.maximumEventAge,0,1,'오래된 이벤트 제한',true);return data;
+}
+function normalize(data){
+ validate(data);const profile=clone(data);profile.schemaVersion=2;
+ for(const key of Object.keys(EVENTS))if(!profile[key].segments){const pulse=profile[key];profile[key]={segments:[SEGMENT(pulse.low,pulse.high,pulse.duration)]};}
+ return profile;
+}
+function pulseSegments(pulse){return pulse.segments||[SEGMENT(pulse.low,pulse.high,pulse.duration)];}
+function pulseDuration(pulse){return pulse.segments?pulse.segments.reduce((total,segment)=>total+segment.duration,0):pulse.duration;}
+function samplePulse(pulse,elapsed){
+ if(elapsed<0)return {low:0,high:0};
+ for(const segment of pulseSegments(pulse)){
+  if(elapsed<segment.duration){const progress=Math.max(0,Math.min(1,elapsed/segment.duration)),gain=segment.curve==='hold'?1:segment.curve==='rise'?progress:1-progress;return {low:segment.low*gain,high:segment.high*gain};}
+  elapsed-=segment.duration;
+ }
+ return {low:0,high:0};
+}
+function notify(text,error=false) {clearTimeout(messageTimer);$('message').textContent=text;$('message').classList.toggle('error',error);$('message').hidden=false;messageTimer=setTimeout(()=>$('message').hidden=true,error?9000:4200);}
+function get(path,object=draft) {return path.split('.').reduce((value,key)=>value?.[key],object);}
+function set(path,value) {const keys=path.split('.');let parent=draft;for(const key of keys.slice(0,-1))parent=parent[key];parent[keys.at(-1)]=value;}
+function changes(){
+ if(!draft||!baseline)return [];const list=[];
+ for(const key of Object.keys(draft)){
+  if(EVENTS[key]){const current=draft[key].segments,original=baseline[key].segments;for(let index=0;index<Math.max(current.length,original.length);index++){
+   if(!current[index]||!original[index])list.push([key+'.segments.'+index,original[index],current[index]]);
+   else for(const field of ['low','high','duration','curve'])if(current[index][field]!==original[index][field])list.push([key+'.segments.'+index+'.'+field,original[index][field],current[index][field]]);
+  }}else if(draft[key]!==baseline[key])list.push([key,baseline[key],draft[key]]);
+ }
+ return list;
+}
+function validationMessage(){
+ if(document.querySelector('input[data-number]:invalid'))return '입력 범위를 벗어난 값이 있습니다. 값을 고치면 저장과 재생을 사용할 수 있습니다.';
+ if(draft)try{validate(draft);}catch(error){return error.message;}
+ return '';
+}
+function invalid(){return !!validationMessage();}
+function refresh() {
+ const edits=changes();$('save-status').textContent=!draft?'프로필 없음':edits.length?'미저장 · '+edits.length+'개 변경':'변경 없음';$('save-status').className='tag'+(edits.length?' edited':' good');
+ $('save').disabled=!server||pending||!draft||invalid();$('save').textContent=pending?'저장 중…':'원본 저장 + Unity 반영';
+ for(const id of ['download','copy-json','play-pulse'])$(id).disabled=!draft||invalid();$('revert').disabled=!edits.length;
+ document.querySelectorAll('[data-preview]').forEach(button=>button.disabled=!draft||invalid());
+ $('json').value=draft?JSON.stringify(draft,null,2)+'\n':'';
+ $('validation').textContent=validationMessage();
+ $('apply-preset').disabled=!draft;$('add-segment').disabled=$('add-rest').disabled=!draft||draft[selected].segments.length>=MAX_SEGMENTS;
+ for(const [key,[label]] of Object.entries(EVENTS)){
+  const node=document.querySelector('[data-event="'+key+'"]');node.setAttribute('aria-pressed',String(selected===key));node.classList.toggle('changed',!!draft&&!!baseline&&stable(draft[key])!==stable(baseline[key]));
+  node.querySelector('.event-meta').textContent=draft?draft[key].segments.length+'구간 · '+format(pulseDuration(draft[key])*1000)+' ms':'프로필을 불러오세요';
+ }
+ const list=$('diff');list.replaceChildren();if(!edits.length){const li=document.createElement('li');li.textContent='아직 변경한 값이 없습니다.';list.append(li);}else for(const [path,before,after] of edits){const li=document.createElement('li');const label=document.createElement('span');const value=document.createElement('b');label.textContent=pathLabel(path);value.textContent=diffValue(before)+' → '+diffValue(after);li.append(label,value);list.append(li);}
+ renderSegments();drawChart();
+}
+function format(value){return Number(value.toFixed(4)).toString();}
+function diffValue(value){if(value===undefined)return '없음';if(typeof value==='string')return CURVES[value]||value;if(typeof value==='object')return format(value.duration*1000)+'ms · '+Math.round(value.low*100)+'/'+Math.round(value.high*100)+'%';return format(value);}
+function pathLabel(path){const [root,part,index,field]=path.split('.');if(part==='segments')return EVENTS[root][0]+' · 구간 '+(Number(index)+1)+(field?' · '+(PULSE_FIELDS[field]?.label||'강도 변화'):'');return TRIGGERS[root]?.label||COMMON[root]?.label||root;}
+function control(path,spec){
+ const div=document.createElement('div');div.className='control'+(path.endsWith('.high')?' high':'');
+ const top=document.createElement('div');top.className='control-top';const label=document.createElement('label');label.textContent=spec.label;label.htmlFor='number-'+path;
+ const box=document.createElement('span');box.className='number-unit';const number=document.createElement('input');number.type='number';number.id='number-'+path;number.dataset.number=path;number.min=spec.scale===1000?0:spec.min;number.max=spec.max;number.step='any';number.inputMode='decimal';number.setAttribute('aria-label',spec.label);
+ const unit=document.createElement('span');unit.textContent=spec.unit;box.append(number,unit);top.append(label,box);
+ const range=document.createElement('input');range.type='range';range.id='range-'+path;range.min=spec.min;range.max=spec.max;range.step=spec.step;range.dataset.range=path;range.setAttribute('aria-label',spec.label+' 슬라이더');
+ const ends=document.createElement('div');ends.className='range-ends';ends.innerHTML='<span>'+spec.min+'</span><span>'+spec.max+' '+spec.unit+'</span>';
+ const edit=event=>{if(!draft)return;stopPreview();if(event.target===range){number.value=range.value;}if(!number.checkValidity()||number.value.trim()===''){number.setCustomValidity(number.value.trim()===''?'값을 입력하세요.':'');refresh();return;}number.setCustomValidity('');const value=Number(number.value)/spec.scale;if(spec.scale===1000&&value<=0){number.setCustomValidity('시간은 0보다 커야 합니다.');refresh();return;}set(path,value);range.value=number.value;refresh();};
+ number.addEventListener('input',event=>{number.setCustomValidity('');edit(event);});range.addEventListener('input',event=>{number.setCustomValidity('');edit(event);});
+ div.append(top,range,ends);if(spec.note){const note=document.createElement('p');note.className='pulse-note';note.textContent=spec.note;div.append(note);}return div;
+}
+function populate(){
+ if(draft)selectedSegment=Math.min(selectedSegment,draft[selected].segments.length-1);
+ $('pulse-title').textContent=EVENTS[selected][0];$('pulse-description').textContent=EVENTS[selected][1];
+ const prefix=selected+'.segments.'+selectedSegment;
+ $('pulse-controls').replaceChildren(...Object.entries(PULSE_FIELDS).map(([key,spec])=>control(prefix+'.'+key,spec)));
+ for(const [path,spec] of [...Object.entries(PULSE_FIELDS).map(([key,spec])=>[prefix+'.'+key,spec]),...Object.entries(TRIGGERS),...Object.entries(COMMON)]){
+  const number=$('number-'+path),range=$('range-'+path);number.value=draft?format(get(path)*spec.scale):'';range.value=number.value||spec.min;number.disabled=range.disabled=!draft;number.setCustomValidity('');
+ }
+ $('segment-curve').disabled=!draft;$('segment-curve').value=draft?draft[selected].segments[selectedSegment].curve:'decay';refresh();
+}
+function selectSegment(index){stopPreview();selectedSegment=index;populate();}
+function editSegments(action,index=selectedSegment){
+ if(!draft)return;stopPreview();const segments=draft[selected].segments;
+ if(action==='add'&&segments.length<MAX_SEGMENTS){segments.push(SEGMENT(.3,.4,.05));selectedSegment=segments.length-1;}
+ if(action==='rest'&&segments.length<MAX_SEGMENTS){segments.push(SEGMENT(0,0,.04,'hold'));selectedSegment=segments.length-1;}
+ if(action==='duplicate'&&segments.length<MAX_SEGMENTS){segments.splice(index+1,0,clone(segments[index]));selectedSegment=index+1;}
+ if(action==='delete'&&segments.length>1){segments.splice(index,1);selectedSegment=Math.min(index,segments.length-1);}
+ if(action==='up'&&index>0){[segments[index-1],segments[index]]=[segments[index],segments[index-1]];selectedSegment=index-1;}
+ if(action==='down'&&index<segments.length-1){[segments[index+1],segments[index]]=[segments[index],segments[index+1]];selectedSegment=index+1;}
+ populate();
+}
+function renderSegments(){
+ const timeline=$('timeline'),list=$('segment-list');timeline.replaceChildren();list.replaceChildren();
+ if(!draft){$('segment-heading').textContent='구간 1';$('pattern-total').textContent='프로필을 불러오면 구간을 편집할 수 있습니다.';return;}
+ const segments=draft[selected].segments,total=pulseDuration(draft[selected]);
+ const selectedPart=segments[selectedSegment];$('segment-heading').textContent='구간 '+(selectedSegment+1)+(selectedPart.low===0&&selectedPart.high===0?' · 쉼':'');
+ $('pattern-total').textContent=segments.length+'구간 · 전체 '+format(total*1000)+' ms / 최대 2000 ms';$('pattern-total').className='pattern-total'+(total>MAX_DURATION+1e-9?' error':'');
+ for(const [index,segment] of segments.entries()){
+  const rest=segment.low===0&&segment.high===0,title=(index+1)+' · '+(rest?'쉼':CURVES[segment.curve]),summary=format(segment.duration*1000)+' ms · 저주파 '+format(segment.low*100)+'% / 고주파 '+format(segment.high*100)+'%';
+  const bar=document.createElement('button');bar.textContent=title+' '+format(segment.duration*1000)+'ms';bar.className=rest?'rest':'';bar.style.flex='0 0 '+segment.duration/total*100+'%';bar.setAttribute('aria-pressed',String(index===selectedSegment));bar.setAttribute('aria-label','구간 '+(index+1)+' 선택');bar.onclick=()=>selectSegment(index);timeline.append(bar);
+  const row=document.createElement('div');row.className='segment-row'+(index===selectedSegment?' selected':'');row.dataset.segment=index;
+  const choose=document.createElement('button');choose.className='segment-select';const strong=document.createElement('strong'),small=document.createElement('small');strong.textContent=title;small.textContent=summary;choose.append(strong,small);choose.onclick=()=>selectSegment(index);row.append(choose);
+  const actions=document.createElement('div');actions.className='segment-actions';
+  for(const [action,label,symbol] of [['up','위로','↑'],['down','아래로','↓'],['duplicate','복제','복제'],['delete','삭제','삭제']]){
+   const button=document.createElement('button');button.textContent=symbol;button.dataset.segmentAction=action;button.setAttribute('aria-label','구간 '+(index+1)+' '+label);button.disabled=action==='up'&&index===0||action==='down'&&index===segments.length-1||action==='duplicate'&&segments.length>=MAX_SEGMENTS||action==='delete'&&segments.length===1;button.onclick=()=>editSegments(action,index);actions.append(button);
+  }
+  row.append(actions);list.append(row);
+ }
+}
+function drawChart(){
+ const canvas=$('envelope'),box=canvas.getBoundingClientRect(),w=box.width,h=box.height,dpr=window.devicePixelRatio||1;if(!w)return;
+ if(canvas.width!==Math.round(w*dpr)||canvas.height!==Math.round(h*dpr)){canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);}const ctx=canvas.getContext('2d');ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,h);
+ const left=35,right=w-14,top=15,bottom=h-28;ctx.font='10px system-ui';ctx.lineWidth=1;ctx.setLineDash([]);
+ for(let i=0;i<=4;i++){const y=top+(bottom-top)*i/4;ctx.strokeStyle='#2c3743';ctx.beginPath();ctx.moveTo(left,y);ctx.lineTo(right,y);ctx.stroke();ctx.fillStyle='#8597a9';ctx.fillText(String(100-i*25),3,y+3);}
+ if(!draft)return;const pulse=draft[selected],saved=baseline?.[selected]||pulse,span=Math.max(.1,pulseDuration(pulse),pulseDuration(saved))*1.15;ctx.fillStyle='#8597a9';for(let i=0;i<=4;i++){const x=left+(right-left)*i/4;ctx.fillText(format(span*i/4*1000)+' ms',Math.min(x-12,w-52),h-6);}
+ const selectedStart=pulse.segments.slice(0,selectedSegment).reduce((sum,segment)=>sum+segment.duration,0);ctx.fillStyle='#70e3c00c';ctx.fillRect(left+selectedStart/span*(right-left),top,pulse.segments[selectedSegment].duration/span*(right-left),bottom-top);
+ const plot=(pattern,channel,colour,dashed)=>{ctx.strokeStyle=colour;ctx.lineWidth=dashed?1.5:2.5;ctx.setLineDash(dashed?[4,4]:[]);ctx.beginPath();ctx.moveTo(left,bottom);let at=0;for(const segment of pulseSegments(pattern)){const start=segment.curve==='rise'?0:segment[channel],end=segment.curve==='decay'?0:segment[channel];ctx.lineTo(left+at/span*(right-left),bottom-start*(bottom-top));at+=segment.duration;ctx.lineTo(left+at/span*(right-left),bottom-end*(bottom-top));}ctx.lineTo(left+at/span*(right-left),bottom);ctx.lineTo(right,bottom);ctx.stroke();};
+ if($('compare').checked){plot(saved,'low','#76978e',true);plot(saved,'high','#817894',true);}plot(pulse,'low','#70e3c0',false);plot(pulse,'high','#b4a1ff',false);
+ ctx.setLineDash([]);if(preview?.kind==='pulse'){const elapsed=(performance.now()-preview.start)/1000,x=left+Math.min(elapsed/span,1)*(right-left);ctx.strokeStyle='#f2f7fa';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(x,top);ctx.lineTo(x,bottom);ctx.stroke();}
+}
+const OFF=()=>({mode:'off',start:0,strength:0,frequency:0});
+function sample(profile,kind,elapsed,side,event='basic'){
+ const state={low:0,high:0,left:OFF(),right:OFF(),phase:'출력 없음'};let effect=OFF(),pulse=null,age=elapsed;
+ if(kind==='pulse'){pulse=profile[event];state.phase=EVENTS[event][0];}
+ if(kind==='ready')effect={mode:'resistance',start:profile.triggerStart,strength:profile.readyStrength,frequency:0};
+ if(kind==='charge')effect={mode:'resistance',start:profile.triggerStart,strength:profile.chargingStrength,frequency:0};
+ if(kind==='kick'){pulse=profile.special;effect=elapsed<profile.kickDuration?{mode:'vibration',start:profile.triggerStart,strength:profile.kickStrength,frequency:profile.kickFrequency}:OFF();}
+ if(kind==='sequence'){
+  if(elapsed<.5)effect={mode:'resistance',start:profile.triggerStart,strength:profile.readyStrength,frequency:0};
+  else if(elapsed<1.5)effect={mode:'resistance',start:profile.triggerStart,strength:profile.chargingStrength,frequency:0};
+  else {age=elapsed-1.5;pulse=profile.special;effect=age<profile.kickDuration?{mode:'vibration',start:profile.triggerStart,strength:profile.kickStrength,frequency:profile.kickFrequency}:OFF();}
+ }
+ if(pulse){const level=samplePulse(pulse,age);state.low=level.low;state.high=level.high;}
+ if(effect.strength===0)effect=OFF();
+ if(side==='left'||side==='both')state.left=effect;if(side==='right'||side==='both')state.right=effect;
+ if(effect.mode!=='off')state.phase=effect.mode==='vibration'?'스킬 킥':kind==='charge'||kind==='sequence'&&elapsed>=.5&&elapsed<1.5?'차지 저항':'준비 저항';return state;
+}
+function showOutput(state){
+ for(const side of ['left','right']){const effect=state[side];$(side+'-label').textContent=effect.mode==='off'?'출력 없음':effect.mode==='vibration'?effect.strength+'/8 · '+effect.frequency+' Hz':effect.strength+'/8 저항';for(const [index,node] of [...$(side+'-zones').children].entries()){const active=effect.mode!=='off'&&index>=effect.start;node.className='zone'+(active?' active':'')+(active&&effect.mode==='vibration'?' kick':'');node.style.height=(active?8+effect.strength*4:8)+'px';}}
+ for(const key of ['low','high']){$(key+'-level').textContent=Math.round(state[key]*100)+'%';$(key+'-meter').style.width=(state[key]*100)+'%';}
+}
+function crcByte(crc,value){crc=(crc^value)>>>0;for(let bit=0;bit<8;bit++)crc=(crc&1)?((crc>>>1)^0xedb88320)>>>0:crc>>>1;return crc;}
+function encodeReport(size,sequence,state){
+ if(size!==48&&(size<78||size>1024))throw Error('지원하지 않는 DualSense 출력 길이입니다.');const report=new Uint8Array(size),bluetooth=size!==48,payload=bluetooth?3:1;report[0]=bluetooth?0x31:2;if(bluetooth){report[1]=(sequence&15)<<4;report[2]=0x10;}report[payload]=15;report[payload+2]=Math.round(state.high*255);report[payload+3]=Math.round(state.low*255);
+ const effect=(offset,value)=>{if(value.mode==='off'||value.strength===0){report[offset]=5;return;}report[offset]=value.mode==='resistance'?0x21:0x26;let mask=0,forces=0;for(let zone=value.start;zone<10;zone++){mask|=1<<zone;forces=(forces|((value.strength-1)<<(3*zone)))>>>0;}report[offset+1]=mask&255;report[offset+2]=mask>>>8;for(let i=0;i<4;i++)report[offset+3+i]=(forces>>>(8*i))&255;if(value.mode==='vibration')report[offset+9]=value.frequency;};effect(payload+10,state.right);effect(payload+21,state.left);
+ if(bluetooth){let crc=crcByte(0xffffffff,0xa2);for(let i=0;i<74;i++)crc=crcByte(crc,report[i]);crc=(crc^0xffffffff)>>>0;for(let i=0;i<4;i++)report[74+i]=(crc>>>(8*i))&255;}return report;
+}
+// WebHID data excludes the report ID. Layouts match the Unity DualSense input adapter.
+function decodeInputReport(reportId,data){
+ const bytes=data instanceof DataView?new Uint8Array(data.buffer,data.byteOffset,data.byteLength):new Uint8Array(data);
+ let triggers,buttons;
+ if(reportId===0x31&&bytes.length>=10){triggers=5;buttons=8;}
+ else if(reportId===1&&(bytes.length===9||bytes.length===77)){triggers=7;buttons=4;}
+ else if(reportId===1&&bytes.length>=63){triggers=4;buttons=7;}
+ else return null;
+ const face=bytes[buttons],other=bytes[buttons+1];
+ return {faces:[!!(face&0x20),!!(face&0x40),!!(face&0x10),!!(face&0x80)],left:bytes[triggers]/255,right:bytes[triggers+1]/255,stop:!!(other&0x20)};
+}
+class HidOutput{
+ constructor(){this.device=null;this.size=0;this.sequence=0;this.pending=null;this.writing=false;this.last='';this.input=null;this.connection=0;this.receive=event=>{if(event.device&&event.device!==this.device)return;const input=decodeInputReport(event.reportId,event.data);if(input)this.input=input;};}
+ async connect(){
+  if(!navigator.hid)throw Error('DualSense 직접 시험은 Chrome·Edge에서 사용할 수 있습니다.');
+  await this.disconnect();const devices=await navigator.hid.requestDevice({filters:[{vendorId:0x054c,productId:0x0ce6},{vendorId:0x054c,productId:0x0df2}]});if(!devices.length)return;
+  const device=devices[0];if(!device.opened)await device.open();let reports=[];const visit=collection=>{reports.push(...(collection.outputReports||[]));for(const child of collection.children||[])visit(child);};for(const collection of device.collections)visit(collection);
+  const report=reports.find(r=>r.reportId===2)||reports.find(r=>r.reportId===0x31);
+  if(!report){await device.close();throw Error('이 장치에서 DualSense 출력 리포트를 찾지 못했습니다.');}
+  const bytes=Math.ceil((report.items||[]).reduce((sum,item)=>sum+item.reportSize*item.reportCount,0)/8)+1;const size=report.reportId===2?48:Number.isFinite(bytes)?Math.max(78,bytes):78;
+  if(size>1024){await device.close();throw Error('지원하지 않는 DualSense 출력 길이입니다.');}
+  this.device=device;this.size=size;this.sequence=0;this.last='';this.input=null;this.connection++;device.addEventListener('inputreport',this.receive);lastOutputKey='';updateDevice();notify('DualSense가 연결됐습니다. 버튼과 트리거를 놓은 뒤 눌러 시험하세요.');
+ }
+ send(state){if(!this.device)return;this.pending=clone(state);void this.drain();}
+ async drain(){
+  if(this.writing||!this.device)return;this.writing=true;
+  try{while(this.pending&&this.device){const state=this.pending;this.pending=null;const key=stable(state);if(key===this.last)continue;const report=encodeReport(this.size,this.sequence++,state);await this.device.sendReport(report[0],report.subarray(1));this.last=key;}}
+  catch(error){this.pending=null;stopPreview();$('preview-status').textContent='출력에 실패해 미리보기를 멈췄습니다.';this.last='';try{if(this.device){const off=encodeReport(this.size,this.sequence++,{low:0,high:0,left:OFF(),right:OFF()});await this.device.sendReport(off[0],off.subarray(1));}}catch{}this.pending=null;notify('패드 출력 실패: '+error.message,true);}
+  finally{this.writing=false;}
+ }
+ async stop(){if(!this.device)return;this.last='';this.send({low:0,high:0,left:OFF(),right:OFF()});while(this.writing)await new Promise(resolve=>setTimeout(resolve,5));}
+ async disconnect(){stopPreview();await this.stop();const device=this.device;if(device)device.removeEventListener('inputreport',this.receive);this.device=null;this.input=null;this.pending=null;this.last='';lastOutputKey='';if(device?.opened)await device.close();updateDevice();}
+}
+const hid=new HidOutput();
+function activePad(){const id=$('gamepad').value;return id===''?null:navigator.getGamepads?.()[Number(id)];}
+function updateDevice(){const device=hid.device,pad=activePad(),rumble=pad?.vibrationActuator?.playEffect||pad?.hapticActuators?.[0]?.playEffect;$('device-status').textContent=device?'DualSense · '+(hid.size===48?'USB':'Bluetooth'):pad?(rumble?'일반 진동 · ':'진동 API 미지원 · ')+pad.id:'화면 미리보기';$('device-status').className='tag'+(device||pad?' good':'');$('connect-hid').hidden=!!device;$('disconnect-hid').hidden=!device;}
+function pollPads(){
+ const pads=[...(navigator.getGamepads?.()||[])].filter(Boolean),signature=pads.map(p=>p.index+':'+p.id).join('|');
+ if(signature===lastPadSignature)return;
+ lastPadSignature=signature;const chosen=$('gamepad').value;$('gamepad').replaceChildren();
+ const none=document.createElement('option');none.value='';none.textContent=pads.length?'화면에서만 미리보기':'게임패드에서 버튼을 눌러 인식하세요';$('gamepad').append(none);
+ for(const pad of pads){const option=document.createElement('option');option.value=String(pad.index);option.textContent=pad.id;$('gamepad').append(option);}
+ const sony=pads.filter(pad=>/dualsense|054c|sony|wireless controller/i.test(pad.id));
+ $('gamepad').value=pads.some(pad=>String(pad.index)===chosen)?chosen:pads.length===1?String(pads[0].index):sony.length===1?String(sony[0].index):'';updateDevice();
+}
+function controllerInput(){
+ let pad=activePad();
+ if(hid.device){
+  if(hid.input)return {key:'hid:'+hid.connection,state:hid.input};
+  // Until a native report arrives, only use a uniquely identified Sony pad.
+  const sony=[...(navigator.getGamepads?.()||[])].filter(value=>value&&/dualsense|054c|sony|wireless controller/i.test(value.id));
+  pad=sony.length===1?sony[0]:null;
+ }
+ if(!pad)return null;
+ const pressed=index=>!!pad.buttons?.[index]?.pressed||Number(pad.buttons?.[index]?.value)>=.5;
+ const trigger=index=>{const value=pad.buttons?.[index]?.value;return typeof value==='number'&&Number.isFinite(value)?Math.min(1,Math.max(0,value)):pressed(index)?1:0;};
+ return {key:'gamepad:'+pad.index+':'+pad.id,state:{faces:[0,1,2,3].map(pressed),left:trigger(6),right:trigger(7),stop:pressed(9)}};
+}
+function pollController(){
+ const input=controllerInput();
+ if(!input){if(inputSource){stopPreview();inputSource='';}if(lastInputLabel!=='none'){$('controller-input').textContent='버튼을 눌러 패드를 인식하거나 DualSense를 연결하세요.';lastInputLabel='none';}return;}
+ const state=input.state;
+ const label=[...state.faces.flatMap((down,index)=>down?['×','○','□','△'][index]:[]),state.stop?'Options':'','L2 '+Math.round(state.left*100)+'%','R2 '+Math.round(state.right*100)+'%'].filter(Boolean).join(' · ');
+ if(label!==lastInputLabel){$('controller-input').textContent=label;lastInputLabel=label;}
+ if(input.key!==inputSource){stopPreview();inputSource=input.key;previousFaces=[...state.faces];}
+ if(!inputFocused||document.hidden||!draft||invalid())return;
+ const neutral=!state.faces.some(Boolean)&&state.left<=.02&&state.right<=.02&&!state.stop;
+ if(requireNeutral){previousFaces=[...state.faces];if(neutral)requireNeutral=false;return;}
+ if(state.stop){stopPreview();return;}
+ if(state.faces.some((down,index)=>down&&!previousFaces[index]))play('pulse');
+ previousFaces=[...state.faces];
+ const now=performance.now();
+ for(const side of ['left','right']){
+  if(!triggerHolds[side]&&state[side]>=.05)triggerHolds[side]={start:now,profile:clone(draft),mode:triggerMode};
+  else if(triggerHolds[side]&&state[side]<=.02)triggerHolds[side]=null;
+ }
+}
+function clearActuator(){
+ const actuator=activeActuator;activeActuator=null;lastGamepadWrite=0;
+ if(actuator)try{const result=actuator.reset?.()||actuator.playEffect?.('dual-rumble',{duration:0,strongMagnitude:0,weakMagnitude:0});Promise.resolve(result).catch(()=>{});}catch{}
+}
+function writeOutput(state){
+ if(hid.device){hid.send(state);return true;}
+ if(state.low===0&&state.high===0){clearActuator();return true;}
+ const pad=activePad(),actuator=pad?.vibrationActuator||pad?.hapticActuators?.[0];if(!actuator?.playEffect)return true;
+ if(performance.now()-lastGamepadWrite<24)return false;lastGamepadWrite=performance.now();activeActuator=actuator;
+ try{Promise.resolve(actuator.playEffect('dual-rumble',{startDelay:0,duration:55,strongMagnitude:state.low,weakMagnitude:state.high})).catch(()=>{notify('이 패드의 브라우저 진동 출력은 지원되지 않습니다.',true);stopPreview();});}
+ catch{notify('이 패드의 브라우저 진동 출력은 지원되지 않습니다.',true);stopPreview();}
+ return true;
+}
+function emptyOutput(){return {low:0,high:0,left:OFF(),right:OFF(),phase:'출력 없음'};}
+function outputKey(state){return stable({low:state.low,high:state.high,left:state.left,right:state.right});}
+function stopPreview(){
+ preview=null;triggerHolds={left:null,right:null};requireNeutral=true;const off=emptyOutput();lastOutputKey=outputKey(off);showOutput(off);void hid.stop();clearActuator();drawChart();$('preview-status').textContent='출력을 멈췄습니다. 버튼과 트리거를 놓은 뒤 다시 누르세요.';
+}
+function play(kind){
+ if(kind!=='pulse'||!draft||invalid()||!inputFocused||document.hidden)return;
+ const profile=clone(draft);preview={kind,start:performance.now(),profile,event:selected,duration:pulseDuration(profile[selected])};
+}
+function heldOutput(hold,side,now){
+ if(!hold)return {effect:OFF(),phase:'출력 없음'};
+ const elapsed=(now-hold.start)/1000;
+ if(hold.mode==='sequence'&&elapsed>=2)return {effect:OFF(),phase:'시험 완료 · 놓고 다시 당기세요'};
+ if(hold.mode==='kick'&&elapsed>=hold.profile.kickDuration)return {effect:OFF(),phase:'킥 완료 · 저항 해제'};
+ const result=sample(hold.profile,hold.mode,elapsed,side);return {effect:result[side],phase:result.phase};
+}
+function renderPreview(){
+ const now=performance.now(),hadPulse=!!preview;let state=emptyOutput();
+ if(preview){const elapsed=(now-preview.start)/1000;if(elapsed>=preview.duration)preview=null;else state=sample(preview.profile,'pulse',elapsed,'left',preview.event);}
+ const labels=[];
+ for(const side of ['left','right']){
+  const hold=triggerHolds[side];if(!hold)continue;
+  const result=heldOutput(hold,side,now);state[side]=result.effect;labels.push((side==='left'?'L2':'R2')+' '+result.phase);
+ }
+ const key=outputKey(state),changed=key!==lastOutputKey;
+ if(changed){showOutput(state);if(writeOutput(state))lastOutputKey=key;}
+ if(preview||hadPulse)drawChart();
+ if(preview||labels.length)$('preview-status').textContent=[preview?EVENTS[preview.event][0]+' 진동':'',...labels,!hid.device&&labels.length?'트리거는 화면 미리보기':''].filter(Boolean).join(' · ');
+ else if(hadPulse)$('preview-status').textContent='진동 재생을 마쳤습니다. 버튼을 새로 누르면 다시 재생합니다.';
+ else if(changed)$('preview-status').textContent='출력 없음 · 버튼이나 트리거를 새로 눌러 시험하세요.';
+}
+function inputFrame(){pollController();renderPreview();requestAnimationFrame(inputFrame);}
+async function loadSource(){
+ stopPreview();const wasConnected=server;try{if(location.protocol==='file:')throw Error('파일 편집 모드');const response=await fetch('/api/profile',{cache:'no-store'});if(!response.ok)throw Error('원본을 읽지 못했습니다.');const data=await response.json();validate(data.profile);server=true;revision=data.revision;draft=normalize(data.profile);baseline=clone(draft);$('source-status').textContent='저장소 원본';$('source-status').className='tag good';$('source-note').textContent=data.catalogMatches?'현재 Unity 카탈로그와 일치합니다.':'Unity 카탈로그가 다릅니다. 저장하면 함께 갱신합니다.';$('empty').hidden=true;populate();if(wasConnected)notify('저장소 원본을 다시 불러왔습니다.');}
+ catch(error){if(server){notify(error.message,true);return;}server=false;$('source-status').textContent='파일 편집 모드';$('source-note').textContent='JSON을 불러와 편집하고 내려받을 수 있습니다.';$('empty').hidden=!!draft;$('reload').disabled=true;populate();}
+}
+async function save(){
+ if(!server||!draft||pending||invalid())return;stopPreview();const submitted=clone(validate(draft));pending=true;refresh();
+ try{const response=await fetch('/api/profile',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({profile:submitted,revision})});const result=await response.json();if(!response.ok)throw Error(result.error||'저장하지 못했습니다.');revision=result.revision;baseline=normalize(result.profile);$('source-note').textContent='원본과 Unity 카탈로그를 저장했습니다. 게임을 다시 시작해 확인하세요.';notify('원본 저장과 Unity 반영을 완료했습니다.');}
+ catch(error){notify(error.message,true);}finally{pending=false;refresh();}
+}
+function download(){if(!draft||invalid())return;const blob=new Blob([JSON.stringify(validate(draft),null,2)+'\n'],{type:'application/json'}),url=URL.createObjectURL(blob),anchor=document.createElement('a');anchor.href=url;anchor.download='gamepad_feedback.json';anchor.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+for(const [key,[title]] of Object.entries(EVENTS)){const button=document.createElement('button');button.className='event';button.dataset.event=key;button.setAttribute('aria-pressed',String(selected===key));button.innerHTML='<span class="event-title"><span>'+title+'</span><i class="event-mark"></i></span><span class="event-meta"></span>';button.onclick=()=>{stopPreview();selected=key;selectedSegment=0;populate();};$('events').append(button);}
+for(const [key,spec] of Object.entries(TRIGGERS))$('trigger-controls').append(control(key,spec));for(const [key,spec] of Object.entries(COMMON))$('common-controls').append(control(key,spec));
+for(const side of ['left','right'])for(let i=0;i<10;i++){const zone=document.createElement('span');zone.className='zone';$(side+'-zones').append(zone);}
+for(const [key,preset] of Object.entries(PRESETS)){const option=document.createElement('option');option.value=key;option.textContent=preset.label;$('preset').append(option);}
+$('apply-preset').onclick=()=>{if(!draft)return;stopPreview();draft[selected]={segments:clone(PRESETS[$('preset').value].segments)};selectedSegment=0;populate();notify('선택한 이벤트에 예시를 적용했습니다. 저장 전까지 원본은 바뀌지 않습니다.');};
+$('add-segment').onclick=()=>editSegments('add');$('add-rest').onclick=()=>editSegments('rest');
+$('segment-curve').onchange=()=>{if(!draft)return;stopPreview();draft[selected].segments[selectedSegment].curve=$('segment-curve').value;refresh();};
+$('play-pulse').onclick=()=>play('pulse');$('stop').onclick=stopPreview;$('save').onclick=save;$('reload').onclick=loadSource;$('download').onclick=download;$('revert').onclick=()=>{stopPreview();draft=clone(baseline);populate();};$('compare').onchange=drawChart;
+$('load-file').onclick=()=>$('file').click();$('file').onchange=async event=>{const file=event.target.files[0];if(!file)return;try{const profile=normalize(JSON.parse(await file.text()));stopPreview();draft=clone(profile);if(!baseline)baseline=clone(profile);$('empty').hidden=true;populate();notify('JSON을 불러왔습니다.'+(server?' 원본에 반영하려면 저장하세요.':''));}catch(error){notify('불러오기 실패: '+error.message,true);}finally{event.target.value='';}};
+$('copy-json').onclick=async()=>{try{await navigator.clipboard.writeText($('json').value);notify('JSON을 복사했습니다.');}catch{$('data-details').open=true;$('json').focus();$('json').select();notify('JSON을 선택했습니다. Ctrl+C로 복사하세요.');}};
+$('connect-hid').onclick=()=>{stopPreview();hid.connect().catch(error=>notify(error.message,true));};$('disconnect-hid').onclick=()=>{stopPreview();hid.disconnect().catch(error=>notify(error.message,true));};$('gamepad').onchange=()=>{stopPreview();updateDevice();};
+for(const button of document.querySelectorAll('[data-preview]'))button.onclick=()=>{stopPreview();triggerMode=button.dataset.preview;document.querySelectorAll('[data-preview]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));$('preview-status').textContent=button.textContent+' 선택 · L2/R2를 당겨 시험하세요.';};
+window.addEventListener('blur',()=>{inputFocused=false;stopPreview();});window.addEventListener('focus',()=>{inputFocused=true;requireNeutral=true;});window.addEventListener('pagehide',()=>{inputFocused=false;stopPreview();void hid.disconnect();});document.addEventListener('visibilitychange',()=>{if(document.hidden)stopPreview();else requireNeutral=true;});window.addEventListener('gamepadconnected',pollPads);window.addEventListener('gamepaddisconnected',()=>{stopPreview();pollPads();});
+if(navigator.hid)navigator.hid.addEventListener('disconnect',event=>{if(event.device===hid.device){hid.device.removeEventListener('inputreport',hid.receive);hid.device=null;hid.input=null;stopPreview();updateDevice();notify('DualSense 연결이 해제됐습니다.');}});else{$('connect-hid').disabled=true;$('connect-hid').title='Chrome·Edge에서 DualSense를 직접 연결할 수 있습니다.';}
+window.addEventListener('resize',drawChart);window.addEventListener('keydown',event=>{if(event.key==='Escape'){event.preventDefault();stopPreview();return;}if((event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==='s'){event.preventDefault();void save();}});
+window.FeedbackTuner={validate,normalize,pulseDuration,samplePulse,encodeReport,decodeInputReport,sample,get profile(){return clone(draft);},get baseline(){return clone(baseline);},get playing(){const now=performance.now();return !!preview||Object.entries(triggerHolds).some(([side,hold])=>heldOutput(hold,side,now).effect.mode!=='off');}};
+populate();void loadSource();pollPads();setInterval(pollPads,750);requestAnimationFrame(inputFrame);
+})();
+</script>
+</body>
+</html>

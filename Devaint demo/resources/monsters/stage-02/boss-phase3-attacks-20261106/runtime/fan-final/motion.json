@@ -1,0 +1,1088 @@
+{
+  "format": "stage2-fan-final-v1",
+  "status": "user-approved-fan-B4-not-unity-integrated",
+  "pattern": "ExpandingFan",
+  "canvas": [
+    384,
+    256
+  ],
+  "pivot": [
+    192,
+    232
+  ],
+  "repeat": false,
+  "holdLastFrame": true,
+  "totalMs": 4450,
+  "frameCount": 47,
+  "sourceFrames": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    17,
+    16,
+    15,
+    14,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    18.5,
+    19,
+    19.5,
+    20,
+    20.5,
+    21,
+    21.5,
+    22,
+    22.5,
+    23,
+    23.5,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "durationsMs": [
+    240,
+    60,
+    60,
+    70,
+    70,
+    100,
+    80,
+    80,
+    80,
+    80,
+    80,
+    85,
+    85,
+    85,
+    85,
+    85,
+    85,
+    85,
+    85,
+    85,
+    85,
+    85,
+    85,
+    85,
+    85,
+    85,
+    85,
+    80,
+    60,
+    46,
+    46,
+    46,
+    46,
+    46,
+    46,
+    46,
+    46,
+    46,
+    46,
+    40,
+    150,
+    216,
+    216,
+    217,
+    217,
+    217,
+    217
+  ],
+  "cues": {
+    "spreadMs": 500,
+    "clenchStartMs": 2500,
+    "releaseMs": 3000,
+    "game": "FanTell 0.5 s field spawn; 2.5-3.0 s six arrows form; fire 3.0/3.5/3.6/4.1/4.2/4.3 s; the body holds the last frame until the pattern ends"
+  },
+  "timing": "B2와 같은 분출·폭풍. 18→24 사이에 합성 중간 장 6장(앞뒤 장 윤곽의 가운데, 원본 픽셀만 사용)을 넣어 주먹 쥐는 동안 천이 솟는 흐름을 촘촘하게. 19는 2.5초 그대로, 주먹 구간 11장을 약 46ms씩.",
+  "frameIdNote": "x.5 = synthesised in-between of source frames x and x+1",
+  "sourceSheet": "../../source/fan-aether-03/aether-original.png",
+  "sourceSheetSha256": "fcc21bd8fb642ce3885493b28714757b5f9a0441063075a2b1ba8b5d90a82815",
+  "prompt": "../../source/fan-aether/prompt.txt (v4)",
+  "cleanup": "../../preview/fan-candidates/clean-all.json",
+  "tweens": "../../preview/fan-candidates/tweens.json",
+  "timingCandidates": "../../preview/fan-candidates/candidates.json",
+  "inGamePreview": "../../preview/fan-sim/index.html",
+  "transform": {
+    "destinationSize": [
+      666,
+      374
+    ],
+    "scale": [
+      1.040625,
+      1.038888888888889
+    ],
+    "rasterOffset": [
+      -141,
+      -59
+    ],
+    "resampling": "nearest-neighbor",
+    "perFrameAutoFit": false,
+    "basis": "same size as Bounce: frame 01 body 92x171 at feet row 280"
+  },
+  "matteProcessing": "clean_stage2_bounce_a.matte_body (homing maths + Bounce preservation fixes), enclosed restoration only below min channel 228 as on the rain sheet",
+  "face": "generated mask has no mouth; kept as drawn",
+  "handShrink": {
+    "frames": [
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "scale": 0.7,
+    "method": "shrink_hand: open hand (skin + its own creases/outline, holes filled) scaled about the wrist contact with the sleeve, nearest-neighbour; wrist bridge closes the hand-to-sleeve gap within 12 px of the wrist with the nearest wrist skin colour (user: 손부분이랑 옷 소매 부분 사이가 비어서 그 부분 보강해줘)",
+    "userRequest": "손 크기 줄이기 가넝? 마지막쯤에?"
+  },
+  "edgePolish": {
+    "method": "polish: 1 px spurs (except hand), leg-zone pale bumps / dark non-bluish sole hooks shaved by a 3x3 opening (pieces <= 10 px), 1 px notches filled",
+    "userRequest": "약간 외곽 좀 덜 정리 됐다"
+  },
+  "footCleanup": "clean_stage2_bounce_a.clean_feet with leg specks up to 12 px removed (detached 9 px toe-sole fragment)",
+  "crossbow": {
+    "method": "exact approved RGBA crop, translation only",
+    "cropBounds": [
+      139,
+      17,
+      246,
+      58
+    ],
+    "scale": 1,
+    "file": "approved-crossbow.png",
+    "approvedSource": "../../source/approved-fused-idle-original.png"
+  },
+  "identity": {
+    "newLimbs": false,
+    "maskRedrawn": false,
+    "generativeRedraw": false,
+    "synthesisedFrames": "6 clench in-betweens from neighbouring cleaned frames only (no new drawing)"
+  },
+  "frames": [
+    {
+      "file": "frames/00.png",
+      "sourceFrame": 1,
+      "from": "clean/01.png",
+      "synthesised": false,
+      "role": "coil",
+      "durationMs": 240,
+      "bounds": [
+        139,
+        18,
+        246,
+        232
+      ],
+      "sha256": "65d6dc697352baab4777cb8df3cf10c58e83d2f2ed55e5b0013b941d2baf5cfb",
+      "crossbowPosition": [
+        139,
+        18
+      ]
+    },
+    {
+      "file": "frames/01.png",
+      "sourceFrame": 2,
+      "from": "clean/02.png",
+      "synthesised": false,
+      "role": "coil",
+      "durationMs": 60,
+      "bounds": [
+        140,
+        19,
+        247,
+        232
+      ],
+      "sha256": "6010391315e51dd45ba265d6ce312242e3a53f293001da2becb73104054e0c33",
+      "crossbowPosition": [
+        140,
+        19
+      ]
+    },
+    {
+      "file": "frames/02.png",
+      "sourceFrame": 3,
+      "from": "clean/03.png",
+      "synthesised": false,
+      "role": "coil",
+      "durationMs": 60,
+      "bounds": [
+        139,
+        21,
+        246,
+        232
+      ],
+      "sha256": "e2db10119833c0f9c52eb2cc31c512aa26bbcdd6bb5f6720b381a3577b28dcce",
+      "crossbowPosition": [
+        139,
+        21
+      ]
+    },
+    {
+      "file": "frames/03.png",
+      "sourceFrame": 4,
+      "from": "clean/04.png",
+      "synthesised": false,
+      "role": "coil",
+      "durationMs": 70,
+      "bounds": [
+        138,
+        22,
+        245,
+        232
+      ],
+      "sha256": "e06bd2eb8b4c006475ab264bf73dcad80eac1defe510b7f81ffccc887de0d0f6",
+      "crossbowPosition": [
+        138,
+        22
+      ]
+    },
+    {
+      "file": "frames/04.png",
+      "sourceFrame": 5,
+      "from": "clean/05.png",
+      "synthesised": false,
+      "role": "coil",
+      "durationMs": 70,
+      "bounds": [
+        119,
+        21,
+        246,
+        232
+      ],
+      "sha256": "3628386ec0d5ad72e14cea29cc49c8e6e89801f44aeb7cf439d1dd320213fe30",
+      "crossbowPosition": [
+        139,
+        21
+      ]
+    },
+    {
+      "file": "frames/05.png",
+      "sourceFrame": 6,
+      "from": "clean/06.png",
+      "synthesised": false,
+      "role": "hit",
+      "durationMs": 100,
+      "bounds": [
+        84,
+        20,
+        245,
+        232
+      ],
+      "sha256": "00e0525beb6c0bcbc99cf07532a767d11b29163cc17280e191ab118d1760296d",
+      "crossbowPosition": [
+        138,
+        20
+      ]
+    },
+    {
+      "file": "frames/06.png",
+      "sourceFrame": 7,
+      "from": "clean/07.png",
+      "synthesised": false,
+      "role": "lock",
+      "durationMs": 80,
+      "bounds": [
+        86,
+        18,
+        250,
+        232
+      ],
+      "sha256": "5608e6e9bea5a7b405e7b4b68e1292cb7c88f57ddd0db34bc33e669090906862",
+      "crossbowPosition": [
+        138,
+        18
+      ]
+    },
+    {
+      "file": "frames/07.png",
+      "sourceFrame": 8,
+      "from": "clean/08.png",
+      "synthesised": false,
+      "role": "lock",
+      "durationMs": 80,
+      "bounds": [
+        85,
+        16,
+        266,
+        232
+      ],
+      "sha256": "a1df97d7158e3f863dc09558e1fd46758f78fc7e2de2027e58c923c9b87c8493",
+      "crossbowPosition": [
+        138,
+        16
+      ]
+    },
+    {
+      "file": "frames/08.png",
+      "sourceFrame": 9,
+      "from": "clean/09.png",
+      "synthesised": false,
+      "role": "lock",
+      "durationMs": 80,
+      "bounds": [
+        85,
+        13,
+        274,
+        232
+      ],
+      "sha256": "a676b7e3bc0e3e4bdad4aa0f0ebd98dc32beb808a083f8a73ad6cbed732be79b",
+      "crossbowPosition": [
+        138,
+        13
+      ]
+    },
+    {
+      "file": "frames/09.png",
+      "sourceFrame": 10,
+      "from": "clean/10.png",
+      "synthesised": false,
+      "role": "lock",
+      "durationMs": 80,
+      "bounds": [
+        85,
+        12,
+        284,
+        232
+      ],
+      "sha256": "427d8c511ae683f2e44f1a261245fab3657dd21ffb17f72c018af435cad32f90",
+      "crossbowPosition": [
+        139,
+        12
+      ]
+    },
+    {
+      "file": "frames/10.png",
+      "sourceFrame": 11,
+      "from": "clean/11.png",
+      "synthesised": false,
+      "role": "lock",
+      "durationMs": 80,
+      "bounds": [
+        85,
+        12,
+        286,
+        232
+      ],
+      "sha256": "14dff26ea7c34fe15937ee917eeb20c6f54ee31fa8fb51b588d2d5dae59997b7",
+      "crossbowPosition": [
+        138,
+        12
+      ]
+    },
+    {
+      "file": "frames/11.png",
+      "sourceFrame": 12,
+      "from": "clean/12.png",
+      "synthesised": false,
+      "role": "lock",
+      "durationMs": 85,
+      "bounds": [
+        85,
+        12,
+        279,
+        232
+      ],
+      "sha256": "230adc6912bdf04d95eb19ce522565102816881f5eacbf94ddce215a296362c0",
+      "crossbowPosition": [
+        138,
+        12
+      ]
+    },
+    {
+      "file": "frames/12.png",
+      "sourceFrame": 13,
+      "from": "clean/13.png",
+      "synthesised": false,
+      "role": "lock",
+      "durationMs": 85,
+      "bounds": [
+        85,
+        14,
+        269,
+        232
+      ],
+      "sha256": "9e95d49223f3822c95f3cc0381354c6a95159939fe033405afc2419641b9b29f",
+      "crossbowPosition": [
+        138,
+        14
+      ]
+    },
+    {
+      "file": "frames/13.png",
+      "sourceFrame": 14,
+      "from": "clean/14.png",
+      "synthesised": false,
+      "role": "lock",
+      "durationMs": 85,
+      "bounds": [
+        85,
+        16,
+        268,
+        232
+      ],
+      "sha256": "7e0333c51f93620ddafb8bc84f5a44a9b0d91793aea8fb3dd3a69a87b61eaae5",
+      "crossbowPosition": [
+        138,
+        16
+      ]
+    },
+    {
+      "file": "frames/14.png",
+      "sourceFrame": 15,
+      "from": "clean/15.png",
+      "synthesised": false,
+      "role": "lock",
+      "durationMs": 85,
+      "bounds": [
+        85,
+        17,
+        273,
+        232
+      ],
+      "sha256": "a1c828f7d27ebb2b52a2b1403e1a9e878ba92c2b8adba220ec8e47c27785c291",
+      "crossbowPosition": [
+        139,
+        17
+      ]
+    },
+    {
+      "file": "frames/15.png",
+      "sourceFrame": 16,
+      "from": "clean/16.png",
+      "synthesised": false,
+      "role": "lock",
+      "durationMs": 85,
+      "bounds": [
+        85,
+        17,
+        275,
+        232
+      ],
+      "sha256": "97f89871e7175f639a8781bfc84311985882ee802995f08d4b9cbb95ac82d1e7",
+      "crossbowPosition": [
+        139,
+        17
+      ]
+    },
+    {
+      "file": "frames/16.png",
+      "sourceFrame": 17,
+      "from": "clean/17.png",
+      "synthesised": false,
+      "role": "lock",
+      "durationMs": 85,
+      "bounds": [
+        85,
+        19,
+        273,
+        232
+      ],
+      "sha256": "e09e4b26b2ace9955d17d46a5cde216fb8e360c286e2e3f5cf7a30b7d48886bf",
+      "crossbowPosition": [
+        139,
+        19
+      ]
+    },
+    {
+      "file": "frames/17.png",
+      "sourceFrame": 18,
+      "from": "clean/18.png",
+      "synthesised": false,
+      "role": "lock",
+      "durationMs": 85,
+      "bounds": [
+        85,
+        20,
+        260,
+        232
+      ],
+      "sha256": "243bf468d37c3e68a300c6f6027b35a2d92b2340632c9431ed8c9b6e0973eadc",
+      "crossbowPosition": [
+        139,
+        20
+      ]
+    },
+    {
+      "file": "frames/18.png",
+      "sourceFrame": 17,
+      "from": "clean/17.png",
+      "synthesised": false,
+      "role": "lock",
+      "durationMs": 85,
+      "bounds": [
+        85,
+        19,
+        273,
+        232
+      ],
+      "sha256": "e09e4b26b2ace9955d17d46a5cde216fb8e360c286e2e3f5cf7a30b7d48886bf",
+      "crossbowPosition": [
+        139,
+        19
+      ]
+    },
+    {
+      "file": "frames/19.png",
+      "sourceFrame": 16,
+      "from": "clean/16.png",
+      "synthesised": false,
+      "role": "lock",
+      "durationMs": 85,
+      "bounds": [
+        85,
+        17,
+        275,
+        232
+      ],
+      "sha256": "97f89871e7175f639a8781bfc84311985882ee802995f08d4b9cbb95ac82d1e7",
+      "crossbowPosition": [
+        139,
+        17
+      ]
+    },
+    {
+      "file": "frames/20.png",
+      "sourceFrame": 15,
+      "from": "clean/15.png",
+      "synthesised": false,
+      "role": "lock",
+      "durationMs": 85,
+      "bounds": [
+        85,
+        17,
+        273,
+        232
+      ],
+      "sha256": "a1c828f7d27ebb2b52a2b1403e1a9e878ba92c2b8adba220ec8e47c27785c291",
+      "crossbowPosition": [
+        139,
+        17
+      ]
+    },
+    {
+      "file": "frames/21.png",
+      "sourceFrame": 14,
+      "from": "clean/14.png",
+      "synthesised": false,
+      "role": "lock",
+      "durationMs": 85,
+      "bounds": [
+        85,
+        16,
+        268,
+        232
+      ],
+      "sha256": "7e0333c51f93620ddafb8bc84f5a44a9b0d91793aea8fb3dd3a69a87b61eaae5",
+      "crossbowPosition": [
+        138,
+        16
+      ]
+    },
+    {
+      "file": "frames/22.png",
+      "sourceFrame": 13,
+      "from": "clean/13.png",
+      "synthesised": false,
+      "role": "lock",
+      "durationMs": 85,
+      "bounds": [
+        85,
+        14,
+        269,
+        232
+      ],
+      "sha256": "9e95d49223f3822c95f3cc0381354c6a95159939fe033405afc2419641b9b29f",
+      "crossbowPosition": [
+        138,
+        14
+      ]
+    },
+    {
+      "file": "frames/23.png",
+      "sourceFrame": 14,
+      "from": "clean/14.png",
+      "synthesised": false,
+      "role": "lock",
+      "durationMs": 85,
+      "bounds": [
+        85,
+        16,
+        268,
+        232
+      ],
+      "sha256": "7e0333c51f93620ddafb8bc84f5a44a9b0d91793aea8fb3dd3a69a87b61eaae5",
+      "crossbowPosition": [
+        138,
+        16
+      ]
+    },
+    {
+      "file": "frames/24.png",
+      "sourceFrame": 15,
+      "from": "clean/15.png",
+      "synthesised": false,
+      "role": "lock",
+      "durationMs": 85,
+      "bounds": [
+        85,
+        17,
+        273,
+        232
+      ],
+      "sha256": "a1c828f7d27ebb2b52a2b1403e1a9e878ba92c2b8adba220ec8e47c27785c291",
+      "crossbowPosition": [
+        139,
+        17
+      ]
+    },
+    {
+      "file": "frames/25.png",
+      "sourceFrame": 16,
+      "from": "clean/16.png",
+      "synthesised": false,
+      "role": "lock",
+      "durationMs": 85,
+      "bounds": [
+        85,
+        17,
+        275,
+        232
+      ],
+      "sha256": "97f89871e7175f639a8781bfc84311985882ee802995f08d4b9cbb95ac82d1e7",
+      "crossbowPosition": [
+        139,
+        17
+      ]
+    },
+    {
+      "file": "frames/26.png",
+      "sourceFrame": 17,
+      "from": "clean/17.png",
+      "synthesised": false,
+      "role": "lock",
+      "durationMs": 85,
+      "bounds": [
+        85,
+        19,
+        273,
+        232
+      ],
+      "sha256": "e09e4b26b2ace9955d17d46a5cde216fb8e360c286e2e3f5cf7a30b7d48886bf",
+      "crossbowPosition": [
+        139,
+        19
+      ]
+    },
+    {
+      "file": "frames/27.png",
+      "sourceFrame": 18,
+      "from": "clean/18.png",
+      "synthesised": false,
+      "role": "lock",
+      "durationMs": 80,
+      "bounds": [
+        85,
+        20,
+        260,
+        232
+      ],
+      "sha256": "243bf468d37c3e68a300c6f6027b35a2d92b2340632c9431ed8c9b6e0973eadc",
+      "crossbowPosition": [
+        139,
+        20
+      ]
+    },
+    {
+      "file": "frames/28.png",
+      "sourceFrame": 18.5,
+      "from": "clean/t18-19.png",
+      "synthesised": true,
+      "role": "lock",
+      "durationMs": 60,
+      "bounds": [
+        90,
+        20,
+        253,
+        232
+      ],
+      "sha256": "63e98fff11c989391e30bca815fc5cbc184a1323110992c5d27f8a1047d67ea4",
+      "crossbowPosition": [
+        139,
+        20
+      ]
+    },
+    {
+      "file": "frames/29.png",
+      "sourceFrame": 19,
+      "from": "clean/19.png",
+      "synthesised": false,
+      "role": "coil",
+      "durationMs": 46,
+      "bounds": [
+        91,
+        20,
+        253,
+        232
+      ],
+      "sha256": "7bf042ddd38cb3e6ff6370c3769d8c4e9990ed2b2845a8cee77adc57b633a9ac",
+      "crossbowPosition": [
+        139,
+        20
+      ]
+    },
+    {
+      "file": "frames/30.png",
+      "sourceFrame": 19.5,
+      "from": "clean/t19-20.png",
+      "synthesised": true,
+      "role": "coil",
+      "durationMs": 46,
+      "bounds": [
+        93,
+        20,
+        257,
+        232
+      ],
+      "sha256": "5e8835a4afd5f22e43aaeeeef07ac084ef1a76dd3bd428d8eb4891f3ba0aeeb0",
+      "crossbowPosition": [
+        139,
+        20
+      ]
+    },
+    {
+      "file": "frames/31.png",
+      "sourceFrame": 20,
+      "from": "clean/20.png",
+      "synthesised": false,
+      "role": "coil",
+      "durationMs": 46,
+      "bounds": [
+        95,
+        20,
+        261,
+        232
+      ],
+      "sha256": "8cdd9dc2f9a8c46668953d1695654882448d1e272928e610c6f1947d1007dbf2",
+      "crossbowPosition": [
+        139,
+        20
+      ]
+    },
+    {
+      "file": "frames/32.png",
+      "sourceFrame": 20.5,
+      "from": "clean/t20-21.png",
+      "synthesised": true,
+      "role": "coil",
+      "durationMs": 46,
+      "bounds": [
+        95,
+        19,
+        264,
+        232
+      ],
+      "sha256": "97db53fe1ec8148eccb46e7ff68b12a7a1d1dc3edb827a220fc03009bb803cb0",
+      "crossbowPosition": [
+        139,
+        19
+      ]
+    },
+    {
+      "file": "frames/33.png",
+      "sourceFrame": 21,
+      "from": "clean/21.png",
+      "synthesised": false,
+      "role": "coil",
+      "durationMs": 46,
+      "bounds": [
+        95,
+        18,
+        268,
+        232
+      ],
+      "sha256": "bb4d3f1771afb5acfa912b71f0903ec3280c5f1a0f8885cb81c51da025e1e577",
+      "crossbowPosition": [
+        139,
+        18
+      ]
+    },
+    {
+      "file": "frames/34.png",
+      "sourceFrame": 21.5,
+      "from": "clean/t21-22.png",
+      "synthesised": true,
+      "role": "coil",
+      "durationMs": 46,
+      "bounds": [
+        95,
+        18,
+        271,
+        232
+      ],
+      "sha256": "49847dbdde627c17f8d43a2e523d9398e720a1d12341679d53a6d8a2a7b025bd",
+      "crossbowPosition": [
+        139,
+        18
+      ]
+    },
+    {
+      "file": "frames/35.png",
+      "sourceFrame": 22,
+      "from": "clean/22.png",
+      "synthesised": false,
+      "role": "coil",
+      "durationMs": 46,
+      "bounds": [
+        94,
+        17,
+        275,
+        232
+      ],
+      "sha256": "4b3baf05a97ff03493a80ef8e3c3d1c54d82c8fee1c363879d372abc0e71d936",
+      "crossbowPosition": [
+        139,
+        17
+      ]
+    },
+    {
+      "file": "frames/36.png",
+      "sourceFrame": 22.5,
+      "from": "clean/t22-23.png",
+      "synthesised": true,
+      "role": "coil",
+      "durationMs": 46,
+      "bounds": [
+        100,
+        16,
+        276,
+        232
+      ],
+      "sha256": "6e70a4e88a450d8f2e53e892bc1ca3a3cb72296710a5c55485b2356cfcb56a39",
+      "crossbowPosition": [
+        139,
+        16
+      ]
+    },
+    {
+      "file": "frames/37.png",
+      "sourceFrame": 23,
+      "from": "clean/23.png",
+      "synthesised": false,
+      "role": "coil",
+      "durationMs": 46,
+      "bounds": [
+        105,
+        15,
+        284,
+        232
+      ],
+      "sha256": "33784dc7765be09495047a1235023ed8a943856f29181e9ca214c427819bed73",
+      "crossbowPosition": [
+        139,
+        15
+      ]
+    },
+    {
+      "file": "frames/38.png",
+      "sourceFrame": 23.5,
+      "from": "clean/t23-24.png",
+      "synthesised": true,
+      "role": "coil",
+      "durationMs": 46,
+      "bounds": [
+        112,
+        14,
+        277,
+        232
+      ],
+      "sha256": "9e0c0da2dec0c52ee0fae595eb94a3d13565bc39b840cc49302fc52406553c30",
+      "crossbowPosition": [
+        139,
+        14
+      ]
+    },
+    {
+      "file": "frames/39.png",
+      "sourceFrame": 24,
+      "from": "clean/24.png",
+      "synthesised": false,
+      "role": "strike",
+      "durationMs": 40,
+      "bounds": [
+        107,
+        13,
+        286,
+        232
+      ],
+      "sha256": "810444f5c2247cfde0e109dd29449c5433db8d83fec21c9732f1cf538a73cfa9",
+      "crossbowPosition": [
+        139,
+        13
+      ]
+    },
+    {
+      "file": "frames/40.png",
+      "sourceFrame": 25,
+      "from": "clean/25.png",
+      "synthesised": false,
+      "role": "hit",
+      "durationMs": 150,
+      "bounds": [
+        111,
+        12,
+        278,
+        232
+      ],
+      "sha256": "68daff163090b65abe81ab058210ac7714c4fbdcfb62ec6553ad44c8c138178a",
+      "crossbowPosition": [
+        139,
+        12
+      ]
+    },
+    {
+      "file": "frames/41.png",
+      "sourceFrame": 26,
+      "from": "clean/26.png",
+      "synthesised": false,
+      "role": "lock",
+      "durationMs": 216,
+      "bounds": [
+        115,
+        12,
+        271,
+        232
+      ],
+      "sha256": "76481008b8e829d21d1a4c1269e1389c84f04684c7c6455b243b616da8a12997",
+      "crossbowPosition": [
+        139,
+        12
+      ]
+    },
+    {
+      "file": "frames/42.png",
+      "sourceFrame": 27,
+      "from": "clean/27.png",
+      "synthesised": false,
+      "role": "lock",
+      "durationMs": 216,
+      "bounds": [
+        121,
+        12,
+        268,
+        232
+      ],
+      "sha256": "284a8a5082d189caafa6a91665e2d993b1b4269d11b424a9a38c34d33b86d8b3",
+      "crossbowPosition": [
+        139,
+        12
+      ]
+    },
+    {
+      "file": "frames/43.png",
+      "sourceFrame": 28,
+      "from": "clean/28.png",
+      "synthesised": false,
+      "role": "lock",
+      "durationMs": 217,
+      "bounds": [
+        125,
+        13,
+        269,
+        232
+      ],
+      "sha256": "ef22a0523315bcedf2d03969c0911e40f8feb467bda5df952d4be541365f83cd",
+      "crossbowPosition": [
+        140,
+        13
+      ]
+    },
+    {
+      "file": "frames/44.png",
+      "sourceFrame": 29,
+      "from": "clean/29.png",
+      "synthesised": false,
+      "role": "lock",
+      "durationMs": 217,
+      "bounds": [
+        125,
+        13,
+        271,
+        232
+      ],
+      "sha256": "a3a86482a61d149fec8f4e84009130d8993c3e3cc8b6452e589207878fc5a058",
+      "crossbowPosition": [
+        139,
+        13
+      ]
+    },
+    {
+      "file": "frames/45.png",
+      "sourceFrame": 30,
+      "from": "clean/30.png",
+      "synthesised": false,
+      "role": "lock",
+      "durationMs": 217,
+      "bounds": [
+        125,
+        15,
+        267,
+        232
+      ],
+      "sha256": "84ea8593c2f34ea0c6af14171e29bdc6262efa2fb16432e23aae10c4f5c52d83",
+      "crossbowPosition": [
+        138,
+        15
+      ]
+    },
+    {
+      "file": "frames/46.png",
+      "sourceFrame": 31,
+      "from": "clean/31.png",
+      "synthesised": false,
+      "role": "hold",
+      "durationMs": 217,
+      "bounds": [
+        124,
+        16,
+        252,
+        232
+      ],
+      "sha256": "d55c6ffe8a730b62889fa4926d78e463b17104ea54007c965d9c6a2799bd95c6",
+      "crossbowPosition": [
+        138,
+        16
+      ]
+    }
+  ],
+  "approval": {
+    "userSelected": "B4",
+    "userRequest": "B4로 확정",
+    "date": "2026-11-07",
+    "scope": "fan-aether-03 (prompt v4) source, matte/edge/foot cleanup, edge polish, hand x0.7 with wrist bridge on 25-31, B2 storm re-sequencing, six synthesised clench in-betweens, approved crossbow, timing B4"
+  },
+  "unityIntegrated": false
+}

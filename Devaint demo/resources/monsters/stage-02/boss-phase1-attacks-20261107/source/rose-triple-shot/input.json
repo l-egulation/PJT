@@ -1,0 +1,20 @@
+{
+  "format": "stage2-phase1-aether-input-v1",
+  "status": "prompt-ready-awaiting-aether-output",
+  "purpose": "1페이즈 패턴 1 Rose 공중 3연사 (지금 게임은 정지 그림 1장)",
+  "timing": "shots at 0.7/1.7/2.7 s = Phase1ShotTell 0.7 + Phase1ShotInterval 1",
+  "startImage": "start-white-3x.png",
+  "startImageSha256": "a75f1a96d9d4f97dcf0e0d989de0614d10075ff3cb1dcca8a91d4f9ae18343ed",
+  "approvedSource": "approved-rose-shot.png",
+  "approvedSourceSha256": "ae9d3461bb0b646aba2e34dcc31601fb39b4f0c979d2e2bb1681e2e917a2c777",
+  "approvedSourceOrigin": "monsters/stage-02/boss-motion-size-review-20261106/runtime (master dca9c9b5, size standard 100%)",
+  "layout": "384x256 approved canvas on a 512x384 logical white canvas at (64,64), 3x nearest-neighbour; feet y 888 for grounded poses",
+  "sheet": "6x6, 36 cells, 640x360, frame 00 = input",
+  "userRequest": "1순위로 전투 공격 모션을 먼저 뽑아보려고 해 1페이즈 부터 하자",
+  "startImageV2": {
+    "file": "start-white-5x-1920.png",
+    "sha256": "55d9034e88f4a388cc60192abd6ee16419a8e1599c65fcc08148b453151f67fe",
+    "layout": "1920x1080 white, approved 384x256 canvas at 5x nearest at (0,-30); sprite centred vertically (airborne pose)",
+    "reason": "user: 너무 작아 저러면 에테르가 뽑았을때 화질이 안 좋아 보여서 좀 더 확대한 버전으로 줘 (3x version kept as start-white-3x.png)"
+  }
+}

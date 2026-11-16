@@ -1,0 +1,21 @@
+Mode: built-in image_gen; transparent background; original images preserved.
+
+ATTACK 1
+Use case: stylized-concept. Asset type: transparent 2D game VFX sprite sheet, effects ONLY. Input image 1 is STYLE reference only: match its pure white luminous slashes and white star impact, thin sculpted edges and subtle alpha falloff, not its exact grid.
+Create one new 4-column by 2-row sprite sheet on a genuinely transparent background, eight equally sized square cells, no gutters, no grid lines, no labels or text. All sprites remain safely within their own cell. Pure WHITE RGB 255,255,255 effect art, opacity variation only; no yellow, gray paint, dark outline, other colors, characters, hands, rocks or ground.
+Top row (4-frame blink/teleport vanish animation read left to right): frame1 a tiny white pinched vertical split with a few short horizontal speed scratches; frame2 stretches into an energetic thin crescent/silhouette-free slash stretched horizontally, with long tapering parallel streaks; frame3 quickly tears apart into a few sharp horizontal ribbons; frame4 only three sparse fading tiny streaks. Center stable in all four cells; space feels sliced open for a split-second dash, not a circular magic portal. Overall silhouette is taller than the punch flash, centered at local 50%,50%.
+Bottom row (4-frame straight punch hit animation read left to right): frame1 compact sharp four-point contact star at local50%,50%; frame2 large fierce WHITE starburst at that SAME contact, with a short angular tapered pressure slash sweeping toward screen RIGHT; frame3 the star releases into a thin open crescent wrapping its contact and a few fast scratches; frame4 sparse tapered flecks fading. Strong impact, small→large→dissolve, not a glowing ball or explosion cloud. Keep the center readable and the white strokes thin. Fit a pixel-art fantasy action game viewed from side/three-quarter angle. Render at high resolution so it can be exported to native128x128 per cell.
+
+ATTACK 2
+Use case: stylized-concept. Asset type: transparent 2D ground-slam VFX sprite sheet, effect ONLY. Input image 1 is STYLE reference only: match its pure white center, clean thin sculpted luminous slashes, variable alpha rim. New effect for an enormous stone fist pounding the floor.
+Create one 4-column by 2-row sheet with EIGHT equally sized square cells, a single continuous eight-frame animation read left-to-right then next row, genuinely transparent background. No gutters, grid, numbers, text, character, fist, rocks, brown dust, ground rectangle or added props. WHITE RGB255,255,255 strokes only, opacity variation only, no colored or gray paint, no black outline.
+IMPORTANT fixed contact pivot in every cell at local x50%,y75%. Horizontal floor at y75% is an invisible alignment guide, NOT drawn. Shape is a LOW WIDE energetic impact crown and ellipse across ground, NOT a round airborne explosion. Small→large→thin→disappear:
+frame1 tiny compressed white floor-contact spark exactly at pivot.
+frame2 violent short jagged upward crown with solid white center, a very thin flattened ground crescent starting to expand.
+frame3 PEAK: readable sharp upward pressure blades, large low elliptical shockwave spreading LEFT and RIGHT symmetrically; most energy sideways close to ground, thin bands, no thick white blob.
+frame4 expand the ground ellipse wider, center already clearing, three tapering white vertical impulse scratches.
+frame5 even wider thinner broken ellipse with open negative space.
+frame6 wave tears into a few sharp angular streaks near floor, fading.
+frame7 two faint side wisps and sparse flecks, almost gone.
+frame8 only two tiny fading end flecks, no persistent center.
+Maximum widths stay inside84% of cell, top reaches about35% cell and bottom stays below85%. Preserve fixed contact point, no drift, no clipping, strong rapid physical heavy impact, clean pixel-game readable silhouette. Export target native128x128 cells. This one sequence will be played smaller for hits1,2 and1.55x larger for the heavy final slam.

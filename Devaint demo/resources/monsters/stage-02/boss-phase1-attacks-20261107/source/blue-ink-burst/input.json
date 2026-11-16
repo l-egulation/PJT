@@ -1,0 +1,20 @@
+{
+  "format": "stage2-phase1-aether-input-v1",
+  "status": "prompt-ready-awaiting-aether-output",
+  "purpose": "1페이즈 패턴 3 Blue 기계 발판 잉크 폭발 (지금 게임은 서 있는 그림이 0.35초)",
+  "timing": "slam at 0.5 s of the clip; the game burst is at MachineBurstTell 1.0 s, so the clip starts 0.5 s before it",
+  "startImage": "start-white-3x.png",
+  "startImageSha256": "62896022b7e8f2ff0da3fe5fd480ecb389be7a76fc291ff90b29dbdca3a15afb",
+  "approvedSource": "approved-blue-idle.png",
+  "approvedSourceSha256": "0889332306733e634c834f67abcafdce8f15c9acd1ae4e227e5ab56835a7913a",
+  "approvedSourceOrigin": "monsters/stage-02/boss-motion-size-review-20261106/runtime (master dca9c9b5, size standard 100%)",
+  "layout": "384x256 approved canvas on a 512x384 logical white canvas at (64,64), 3x nearest-neighbour; feet y 888 for grounded poses",
+  "sheet": "6x6, 36 cells, 640x360, frame 00 = input",
+  "userRequest": "1순위로 전투 공격 모션을 먼저 뽑아보려고 해 1페이즈 부터 하자",
+  "startImageV2": {
+    "file": "start-white-5x-1920.png",
+    "sha256": "f348139dd497e652a649d75c33d912380aa169fea84e7412a6e721b9a9d691a5",
+    "layout": "1920x1080 white, approved 384x256 canvas at 5x nearest at (0,-160); feet y 1000",
+    "reason": "user: 너무 작아 저러면 에테르가 뽑았을때 화질이 안 좋아 보여서 좀 더 확대한 버전으로 줘 (3x version kept as start-white-3x.png)"
+  }
+}

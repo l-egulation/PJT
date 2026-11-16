@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>보스 들썩 대기</title>
+<style>
+:root{--bg:#f4f2f6;--panel:#ffffff;--line:#d6cfdd;--text:#211b2a;--dim:#6b6175}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:14px/1.5 system-ui,"Malgun Gothic",sans-serif}
+main{max-width:1180px;margin:0 auto;padding:16px 16px 40px}
+h1{font-size:20px;margin:0 0 4px}p{margin:4px 0;color:var(--dim)}
+.bar{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin:8px 0}
+button,select{background:#fff;color:var(--text);border:1px solid var(--line);padding:5px 10px;font:inherit;cursor:pointer;border-radius:4px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);padding:12px;border-radius:6px}
+.card h2{font-size:16px;margin:0}
+.row{display:flex;gap:8px}
+.row figure{margin:0;flex:1}
+.row figcaption{font-size:12px;color:var(--dim)}
+canvas{width:100%;height:auto;image-rendering:pixelated;display:block}
+.meta{font:12px ui-monospace,monospace;color:var(--dim)}
+@media(max-width:900px){.cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main>
+<h1>보스 들썩 대기 · Rose · Blue · 흑화 Blue</h1>
+<p>승인 기본 자세의 픽셀만 썼습니다. 허리선(손 아래)과 목선에서 한 줄씩 지워 위쪽을 1px씩 내렸다 올리고, 머리가 어깨보다 한 장 늦게 따라옵니다. 발과 로브 끝단은 움직이지 않고 새 색은 없습니다. 왼쪽은 지금(멈춤), 오른쪽은 시안입니다.</p>
+<div class="bar">
+  <label>배경 <select id="bg"><option value="#ffffff" selected>흰색</option><option value="#808080">회색</option><option value="#24202c">어두운색</option></select></label>
+  <label>크기 <select id="zoom"><option value="4" selected>칸에 맞춤</option><option value="1">실제 크기</option></select></label>
+  <button id="all">셋 다 처음부터</button>
+</div>
+<div class="cards" id="cards"></div>
+</main>
+<script>
+const $=s=>document.querySelector(s);
+const load=src=>new Promise((ok,no)=>{const i=new Image();i.onload=()=>ok(i);i.onerror=()=>no(src);i.src=src});
+const cards=[];
+function crop(c){return{x:192-70,y:232-190,w:140,h:200}}
+function draw(card){
+  const z=Number($('#zoom').value),r=crop(card.c),bg=$('#bg').value;
+  for(const [cv,img,sx] of [[card.still,card.src,0],[card.anim,card.sheet,card.frame*384]]){
+    cv.width=r.w;cv.height=r.h;const x=cv.getContext('2d');x.imageSmoothingEnabled=false;x.fillStyle=bg;x.fillRect(0,0,r.w,r.h);
+    x.drawImage(img,sx+r.x,r.y,r.w,r.h,0,0,r.w,r.h);x.strokeStyle='rgba(255,60,60,.5)';x.beginPath();x.moveTo(0,232-r.y+.5);x.lineTo(r.w,232-r.y+.5);x.stroke();
+    cv.style.width=z===1?r.w+'px':'100%';}
+  card.info.textContent=`${String(card.frame).padStart(2,'0')}번 장 / ${card.c.frames}장 · 한 장 ${card.c.frameMs}ms · 반복 ${(card.c.frames*card.c.frameMs/1000).toFixed(1)}초 · ${card.run?'재생 중':'멈춤'}`;
+}
+(async()=>{
+  const clips=await (await fetch('clips.json')).json();
+  for(const c of clips){
+    const el=document.createElement('div');el.className='card';
+    el.innerHTML=`<h2>${c.name}</h2><p>${c.mood}</p><div class="row"><figure><canvas class="s"></canvas><figcaption>지금</figcaption></figure><figure><canvas class="a"></canvas><figcaption>시안</figcaption></figure></div>
+    <div class="bar"><button class="play">일시정지</button><button class="prev">◀ 한 장</button><button class="next">한 장 ▶</button><select class="speed"><option value="0.5">0.5배</option><option value="1" selected>1배</option><option value="2">2배</option></select></div><div class="meta"></div>`;
+    $('#cards').append(el);
+    const card={c,el,still:el.querySelector('.s'),anim:el.querySelector('.a'),info:el.querySelector('.meta'),src:await load(c.source),sheet:await load(c.sheet),frame:0,acc:0,run:true};
+    el.querySelector('.play').onclick=()=>{card.run=!card.run;el.querySelector('.play').textContent=card.run?'일시정지':'재생';draw(card)};
+    el.querySelector('.prev').onclick=()=>{card.run=false;el.querySelector('.play').textContent='재생';card.frame=(card.frame+c.frames-1)%c.frames;draw(card)};
+    el.querySelector('.next').onclick=()=>{card.run=false;el.querySelector('.play').textContent='재생';card.frame=(card.frame+1)%c.frames;draw(card)};
+    cards.push(card);draw(card);
+  }
+  $('#bg').onchange=$('#zoom').onchange=()=>cards.forEach(draw);
+  $('#all').onclick=()=>cards.forEach(c=>{c.frame=0;c.acc=0;c.run=true;c.el.querySelector('.play').textContent='일시정지';draw(c)});
+  let last=performance.now();
+  (function tick(now){const dt=now-last;last=now;for(const c of cards){if(!c.run)continue;c.acc+=dt*Number(c.el.querySelector('.speed').value);let ch=false;while(c.acc>=c.c.frameMs){c.acc-=c.c.frameMs;c.frame=(c.frame+1)%c.c.frames;ch=true}if(ch)draw(c)}requestAnimationFrame(tick)})(last);
+})();
+</script>
+</body>
+</html>

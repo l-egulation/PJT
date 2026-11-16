@@ -1,0 +1,172 @@
+{
+  "schema": "chapter1-new-monsters-v1",
+  "status": "approved-attack-art-combat-integration",
+  "monsters": [
+    {
+      "id": "draft_06_stationary_turret",
+      "name": "술통 포격수 (가칭)",
+      "resource": "Chapter1NewMonsters/barrel-05/base",
+      "ranged": true,
+      "windupSeconds": 1.5,
+      "warningSeconds": 1.3,
+      "ascentSeconds": 0.36,
+      "offscreenSeconds": 0.46,
+      "fallSeconds": 0.48,
+      "stopBeforeChargeSeconds": 0,
+      "windupTint": [
+        0,
+        0,
+        0
+      ],
+      "windupTintMax": 0,
+      "playerLaunchSpeed": 0,
+      "playerLaunchSeconds": 0,
+      "playerLaunchUp": 0,
+      "definition": {
+        "id": "draft_06_stationary_turret",
+        "maxHP": 230,
+        "damage": 30,
+        "bodySize": [
+          2.1,
+          2.8
+        ],
+        "bodyOffset": [
+          0,
+          1.4
+        ],
+        "hurtSize": [
+          2.4,
+          3.1
+        ],
+        "hurtOffset": [
+          0,
+          1.55
+        ],
+        "attackSize": [
+          2.4,
+          3.1
+        ],
+        "attackOffset": [
+          0,
+          1.55
+        ],
+        "walkSpeed": 0,
+        "senseX": 24,
+        "senseY": 24,
+        "sensePeriod": 0.1,
+        "pathPeriod": 0.1,
+        "leash": 1000,
+        "reengageTargetLimit": 1000,
+        "searchWait": 0,
+        "stagger": 0.3,
+        "epsilon": 0.01,
+        "cliffMargin": 0.1,
+        "startGap": 24,
+        "startHeight": 2,
+        "prepare": 2.8,
+        "active": 0.01,
+        "recovery": 2,
+        "interval": 4.8,
+        "chargeDistance": 0,
+        "chargeSpeed": 0,
+        "deathDuration": 0.3,
+        "attackFrameDurations": [
+          1
+        ],
+        "moveCycle": 1,
+        "hitStaggerImmune": false,
+        "immovable": true
+      },
+      "firstDelayMin": 0,
+      "firstDelayMax": 1.5,
+      "blastSize": [
+        2,
+        2
+      ],
+      "sourceSha256": "4a19d5bd7588039244d7b5bd05a2daa7f0854ea3cb9de968605a655e79a2bdfe"
+    },
+    {
+      "id": "draft_07_heavy_charger",
+      "name": "맷돌 돌진체 (가칭)",
+      "resource": "Chapter1NewMonsters/millstone-A/base",
+      "ranged": false,
+      "windupSeconds": 0,
+      "warningSeconds": 0,
+      "ascentSeconds": 0,
+      "offscreenSeconds": 0,
+      "fallSeconds": 0,
+      "stopBeforeChargeSeconds": 0.2,
+      "windupTint": [
+        214,
+        44,
+        32
+      ],
+      "windupTintMax": 0.55,
+      "playerLaunchSpeed": 13,
+      "playerLaunchSeconds": 0.45,
+      "playerLaunchUp": 11,
+      "definition": {
+        "id": "draft_07_heavy_charger",
+        "maxHP": 390,
+        "damage": 40,
+        "bodySize": [
+          4,
+          3.6
+        ],
+        "bodyOffset": [
+          -0.6,
+          1.8
+        ],
+        "hurtSize": [
+          4.6,
+          3.9
+        ],
+        "hurtOffset": [
+          -0.6,
+          1.95
+        ],
+        "attackSize": [
+          4.6,
+          3.9
+        ],
+        "attackOffset": [
+          -0.6,
+          1.95
+        ],
+        "walkSpeed": 1.5,
+        "senseX": 12,
+        "senseY": 12,
+        "sensePeriod": 0.1,
+        "pathPeriod": 0.1,
+        "leash": 1000,
+        "reengageTargetLimit": 1000,
+        "searchWait": 0,
+        "stagger": 0.3,
+        "epsilon": 0.01,
+        "cliffMargin": 0.1,
+        "startGap": 12,
+        "startHeight": 2,
+        "prepare": 2,
+        "active": 1.0,
+        "recovery": 3,
+        "interval": 6,
+        "chargeDistance": 12,
+        "chargeSpeed": 12,
+        "deathDuration": 0.3,
+        "attackFrameDurations": [
+          1
+        ],
+        "moveCycle": 1,
+        "hitStaggerImmune": false,
+        "immovable": false
+      },
+      "firstDelayMin": 0,
+      "firstDelayMax": 0,
+      "blastSize": [
+        0,
+        0
+      ],
+      "sourceSha256": "23cf98eda141fffbb796d8132bec269dd60f3712d871c78f1612588f55f94a9d"
+    }
+  ]
+}

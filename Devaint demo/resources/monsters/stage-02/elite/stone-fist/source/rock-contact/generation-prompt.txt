@@ -1,0 +1,16 @@
+Asset type: transparent eight-frame impact VFX sprite sheet for a 2D pixel-art game.
+Reference image is STYLE ONLY: the already-approved bright white crescent pressure-wave. Use its thin tapered white strokes and soft alpha edges. Do not copy a charging monster scene.
+Create ONE heavy stone-fist HIT effect at the point of contact, oriented for a punch traveling toward screen LEFT. No monster, fist, stone, weapon, ground or text.
+EXACT layout: 4 columns by2 rows, eight equal256x256 square cells on1024x512 transparent canvas, read left to right then top to bottom. Lock the hit origin at(128,128) inside every cell. Leave clean gutters; no cell overlap, no frame borders.
+Animation length about0.18 seconds: tiny pressure compression → sudden white impact burst → thin expanding pressure arc → rapidly fading wisps.
+Frame1: very small compressed white glint at center.
+Frame2: sharp compact flash, starting thin vertical pressure crescent just LEFT of center.
+Frame3: strongest impact, luminous PURE WHITE #FFFFFF opaque core with a few sharp short tapered rays, mostly projecting LEFT, thin expanding curved pressure crest around it.
+Frame4: core contracts as the crest expands further, maintaining a thin bright middle and softly translucent fringe.
+Frame5: broader, thinner broken pressure arc; only a little central light remains.
+Frame6: the arc opens and dissipates into a few elegant tapered strokes.
+Frame7: sparse short translucent white streaks close to the same arc.
+Frame8: almost gone, a few faint tiny fading ends.
+Core must be pure bright white, not cream, tan, warm gray or beige. Edges use soft graduated alpha transparency, NOT an opaque gray outline. Feather the edge over a few pixels while retaining crisp stylized pixel-art energy shapes. A clean energetic pressure hit, not smoke or fire. Keep the band thin and the punch contact readable. Avoid thick solid discs, a full magical circle, long static rings, excessive rays, extra debris, yellow coloring, checkerboards, gray background haze, labels, shadows or any characters. True transparent background.
+
+Mode: built-in image_gen. Reference thread: 몬스터 이팩트 생성 (01a19c97-8247-7f00-b81d-dc444945b08d). Character artwork and motion unchanged.

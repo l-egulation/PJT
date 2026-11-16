@@ -1,0 +1,15 @@
+{
+  "schema": "stage2-k4-attack-reduced-v1",
+  "status": "A19-pixel-attack-approved-by-user",
+  "source": "outputs/waterway/k4-attack-hold-20261101",
+  "output": "outputs/waterway/k4-attack-reduced-20261101",
+  "phaseDurationsMs": [550,650,700],
+  "previewGapMs": 500,
+  "candidates": [
+    {"id":"A","name":"살짝 줄임","windupKeys":[1,4,5,6,7,8,9,10,11],"holdKey":12,"recoveryKeys":[13,15,16,17,18,19,20,22,24],"description":"24장 → 19장. 기존 흐름을 유지하면서 중간 연결을 조금 덜어냄.","recommended":false},
+    {"id":"B","name":"박자 또렷하게","windupKeys":[1,5,6,7,9,10,11],"holdKey":12,"recoveryKeys":[13,16,17,18,20,22,24],"description":"24장 → 15장. 노즐 들기와 회복의 자세 변화가 더 또렷하게 보임.","recommended":true},
+    {"id":"C","name":"끊어치는 느낌","windupKeys":[1,5,7,9,11],"holdKey":12,"recoveryKeys":[13,17,19,21,24],"description":"24장 → 11장. 주요 자세를 길게 보여주는 강한 도트 동작 비교.","recommended":false}
+  ],
+  "selectedCandidate": "A",
+  "policy": "Copy subsets of already-pixelized native/indexed/white/4x PNGs byte-for-byte. Each candidate keeps windup550ms, exact same still spray pose650ms, recovery700ms, first/last pose, logical scale and original11 colors. Divide phase time evenly across retained keys using integer cumulative rounding. Preview repeat gap500ms is excluded from attack time. No new poses, effects, palette conversion, interpolation or combat/Unity changes."
+}

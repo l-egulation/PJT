@@ -1,0 +1,688 @@
+{
+  "source": "02_에셋/캐릭터/잉크/무기/검/04_확정본/게임용_최종",
+  "status": "사용자확정",
+  "date": "2026-10-16",
+  "weapon": "검",
+  "pivot": [
+    64,
+    115
+  ],
+  "cell": [
+    144,
+    128
+  ],
+  "native_pixel_scale": 1,
+  "frames": {
+    "F001": {
+      "src": "hero/frames/F001.png"
+    },
+    "F002": {
+      "src": "hero/frames/F002.png"
+    },
+    "F003": {
+      "src": "hero/frames/F003.png"
+    },
+    "F004": {
+      "src": "hero/frames/F004.png"
+    },
+    "F005": {
+      "src": "hero/frames/F005.png"
+    },
+    "F006": {
+      "src": "hero/frames/F006.png"
+    },
+    "F007": {
+      "src": "hero/frames/F007.png"
+    },
+    "F008": {
+      "src": "hero/frames/F008.png"
+    },
+    "F009": {
+      "src": "hero/frames/F009.png"
+    },
+    "F010": {
+      "src": "hero/frames/F010.png"
+    },
+    "F011": {
+      "src": "hero/frames/F011.png"
+    },
+    "F012": {
+      "src": "hero/frames/F012.png"
+    },
+    "F013": {
+      "src": "hero/frames/F013.png"
+    },
+    "F014": {
+      "src": "hero/frames/F014.png"
+    },
+    "F015": {
+      "src": "hero/frames/F015.png"
+    },
+    "F016": {
+      "src": "hero/frames/F016.png"
+    },
+    "F017": {
+      "src": "hero/frames/F017.png"
+    },
+    "F018": {
+      "src": "hero/frames/F018.png"
+    },
+    "F019": {
+      "src": "hero/frames/F019.png"
+    },
+    "F020": {
+      "src": "hero/frames/F020.png"
+    },
+    "F021": {
+      "src": "hero/frames/F021.png"
+    },
+    "F022": {
+      "src": "hero/frames/F022.png"
+    },
+    "F023": {
+      "src": "hero/frames/F023.png"
+    },
+    "F024": {
+      "src": "hero/frames/F024.png"
+    },
+    "F025": {
+      "src": "hero/frames/F025.png"
+    },
+    "F026": {
+      "src": "hero/frames/F026.png"
+    },
+    "F027": {
+      "src": "hero/frames/F027.png"
+    },
+    "F028": {
+      "src": "hero/frames/F028.png"
+    },
+    "F029": {
+      "src": "hero/frames/F029.png"
+    },
+    "F030": {
+      "src": "hero/frames/F030.png"
+    },
+    "F031": {
+      "src": "hero/frames/F031.png"
+    },
+    "F032": {
+      "src": "hero/frames/F032.png"
+    },
+    "F033": {
+      "src": "hero/frames/F033.png"
+    },
+    "F034": {
+      "src": "hero/frames/F034.png"
+    },
+    "F035": {
+      "src": "hero/frames/F035.png"
+    },
+    "F036": {
+      "src": "hero/frames/F036.png"
+    },
+    "F037": {
+      "src": "hero/frames/F037.png"
+    },
+    "F038": {
+      "src": "hero/frames/F038.png"
+    },
+    "F039": {
+      "src": "hero/frames/F039.png"
+    },
+    "F040": {
+      "src": "hero/frames/F040.png"
+    },
+    "F041": {
+      "src": "hero/frames/F041.png"
+    },
+    "F042": {
+      "src": "hero/frames/F042.png"
+    },
+    "F043": {
+      "src": "hero/frames/F043.png"
+    },
+    "F044": {
+      "src": "hero/frames/F044.png"
+    },
+    "F045": {
+      "src": "hero/frames/F045.png"
+    }
+  },
+  "modules": [
+    {
+      "id": "idle",
+      "steps": [
+        {
+          "frame": "F006",
+          "ms": 180,
+          "phase": "호흡",
+          "source_frame": "I01"
+        },
+        {
+          "frame": "F007",
+          "ms": 140,
+          "phase": "호흡",
+          "source_frame": "I04"
+        },
+        {
+          "frame": "F008",
+          "ms": 180,
+          "phase": "호흡",
+          "source_frame": "I07"
+        },
+        {
+          "frame": "F009",
+          "ms": 140,
+          "phase": "호흡",
+          "source_frame": "I10"
+        }
+      ],
+      "duration_ms": 640,
+      "loop": true,
+      "on_complete": "이동 상태 또는 입력에 따라 전환",
+      "hold_last": false
+    },
+    {
+      "id": "walk",
+      "steps": [
+        {
+          "frame": "F038",
+          "ms": 80,
+          "phase": "보행",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "walk_01"
+        },
+        {
+          "frame": "F039",
+          "ms": 65,
+          "phase": "보행",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "walk_02"
+        },
+        {
+          "frame": "F040",
+          "ms": 80,
+          "phase": "보행",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "walk_04"
+        },
+        {
+          "frame": "F041",
+          "ms": 65,
+          "phase": "보행",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "walk_05"
+        },
+        {
+          "frame": "F042",
+          "ms": 80,
+          "phase": "보행",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "walk_07"
+        },
+        {
+          "frame": "F043",
+          "ms": 65,
+          "phase": "보행",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "walk_08"
+        },
+        {
+          "frame": "F044",
+          "ms": 80,
+          "phase": "보행",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "walk_10"
+        },
+        {
+          "frame": "F045",
+          "ms": 65,
+          "phase": "보행",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "walk_11"
+        }
+      ],
+      "duration_ms": 580,
+      "loop": true,
+      "on_complete": "이동 상태 또는 입력에 따라 전환",
+      "hold_last": false
+    },
+    {
+      "id": "run",
+      "steps": [
+        {
+          "frame": "F032",
+          "ms": 65,
+          "phase": "질주",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "run_01"
+        },
+        {
+          "frame": "F033",
+          "ms": 55,
+          "phase": "질주",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "run_03"
+        },
+        {
+          "frame": "F034",
+          "ms": 65,
+          "phase": "질주",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "run_05"
+        },
+        {
+          "frame": "F035",
+          "ms": 55,
+          "phase": "질주",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "run_07"
+        },
+        {
+          "frame": "F036",
+          "ms": 65,
+          "phase": "질주",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "run_09"
+        },
+        {
+          "frame": "F037",
+          "ms": 55,
+          "phase": "질주",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "run_11"
+        }
+      ],
+      "duration_ms": 360,
+      "loop": true,
+      "on_complete": "이동 상태 또는 입력에 따라 전환",
+      "hold_last": false
+    },
+    {
+      "id": "jump_start",
+      "steps": [
+        {
+          "frame": "F021",
+          "ms": 40,
+          "phase": "압축",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "jump_02"
+        },
+        {
+          "frame": "F022",
+          "ms": 40,
+          "phase": "이륙",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "jump_03"
+        }
+      ],
+      "duration_ms": 80,
+      "loop": false,
+      "on_complete": "이륙 완료 → jump_rise",
+      "hold_last": false
+    },
+    {
+      "id": "jump_rise",
+      "steps": [
+        {
+          "frame": "F023",
+          "ms": 70,
+          "phase": "상승",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "jump_04"
+        },
+        {
+          "frame": "F024",
+          "ms": 70,
+          "phase": "상승",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "jump_06"
+        }
+      ],
+      "duration_ms": 140,
+      "loop": false,
+      "on_complete": "수직 속도가 0에 가까워지면 jump_apex",
+      "hold_last": true
+    },
+    {
+      "id": "jump_apex",
+      "steps": [
+        {
+          "frame": "F025",
+          "ms": 70,
+          "phase": "정점",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "jump_07"
+        }
+      ],
+      "duration_ms": 70,
+      "loop": false,
+      "on_complete": "수직 속도 < 0 → fall_start",
+      "hold_last": true
+    },
+    {
+      "id": "fall_start",
+      "steps": [
+        {
+          "frame": "F026",
+          "ms": 60,
+          "phase": "하강 진입",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "land_03"
+        }
+      ],
+      "duration_ms": 60,
+      "loop": false,
+      "on_complete": "1장 이후 fall_loop",
+      "hold_last": false
+    },
+    {
+      "id": "fall_loop",
+      "steps": [
+        {
+          "frame": "F027",
+          "ms": 90,
+          "phase": "낙하",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "land_04"
+        },
+        {
+          "frame": "F028",
+          "ms": 90,
+          "phase": "낙하",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "land_05"
+        }
+      ],
+      "duration_ms": 180,
+      "loop": true,
+      "on_complete": "접지 → land",
+      "hold_last": false
+    },
+    {
+      "id": "land",
+      "steps": [
+        {
+          "frame": "F029",
+          "ms": 45,
+          "phase": "접지",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "land_07"
+        },
+        {
+          "frame": "F030",
+          "ms": 55,
+          "phase": "충격 흡수",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "land_09"
+        },
+        {
+          "frame": "F031",
+          "ms": 90,
+          "phase": "복귀",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "land_12"
+        }
+      ],
+      "duration_ms": 190,
+      "loop": false,
+      "on_complete": "완료 → idle 또는 walk/run",
+      "hold_last": false
+    },
+    {
+      "id": "dash_start",
+      "steps": [
+        {
+          "frame": "F010",
+          "ms": 30,
+          "phase": "대시 진입",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "dash_03"
+        }
+      ],
+      "duration_ms": 30,
+      "loop": false,
+      "on_complete": "30ms → dash_active",
+      "hold_last": false
+    },
+    {
+      "id": "dash_active",
+      "steps": [
+        {
+          "frame": "F011",
+          "ms": 55,
+          "phase": "대시 이동",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "dash_05"
+        },
+        {
+          "frame": "F012",
+          "ms": 55,
+          "phase": "대시 이동",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "dash_07"
+        }
+      ],
+      "duration_ms": 110,
+      "loop": false,
+      "on_complete": "대시 이동 종료 → dash_end",
+      "hold_last": false
+    },
+    {
+      "id": "dash_end",
+      "steps": [
+        {
+          "frame": "F013",
+          "ms": 50,
+          "phase": "감속",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "dash_10"
+        },
+        {
+          "frame": "F014",
+          "ms": 80,
+          "phase": "복귀",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "dash_12"
+        }
+      ],
+      "duration_ms": 130,
+      "loop": false,
+      "on_complete": "완료 → idle 또는 walk/run",
+      "hold_last": false
+    },
+    {
+      "id": "death_start",
+      "steps": [
+        {
+          "frame": "F015",
+          "ms": 90,
+          "phase": "경직",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "death_03"
+        }
+      ],
+      "duration_ms": 90,
+      "loop": false,
+      "on_complete": "경직 완료 → death_fall",
+      "hold_last": false
+    },
+    {
+      "id": "death_fall",
+      "steps": [
+        {
+          "frame": "F016",
+          "ms": 90,
+          "phase": "쓰러짐",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "death_05"
+        },
+        {
+          "frame": "F017",
+          "ms": 90,
+          "phase": "쓰러짐",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "death_07"
+        },
+        {
+          "frame": "F018",
+          "ms": 100,
+          "phase": "쓰러짐",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "death_09"
+        },
+        {
+          "frame": "F019",
+          "ms": 120,
+          "phase": "쓰러짐",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "death_11"
+        }
+      ],
+      "duration_ms": 400,
+      "loop": false,
+      "on_complete": "완료 → death_hold",
+      "hold_last": false
+    },
+    {
+      "id": "death_hold",
+      "steps": [
+        {
+          "frame": "F020",
+          "ms": 300,
+          "phase": "정지 유지",
+          "dx": 0,
+          "dy": 0,
+          "source_frame": "death_12"
+        }
+      ],
+      "duration_ms": 300,
+      "loop": false,
+      "on_complete": "사망 해제 전까지 유지",
+      "hold_last": true
+    },
+    {
+      "id": "attack1",
+      "steps": [
+        {
+          "frame": "F006",
+          "ms": 60,
+          "phase": "1타 · 올려베기 · 5단계",
+          "source_frame": "I01"
+        },
+        {
+          "frame": "F001",
+          "ms": 95,
+          "phase": "1타 · 올려베기 · 5단계",
+          "source_frame": "F04"
+        },
+        {
+          "frame": "F002",
+          "ms": 35,
+          "phase": "1타 · 올려베기 · 5단계",
+          "source_frame": "F05"
+        },
+        {
+          "frame": "F003",
+          "ms": 95,
+          "phase": "1타 · 올려베기 · 5단계",
+          "source_frame": "F06"
+        },
+        {
+          "frame": "F006",
+          "ms": 85,
+          "phase": "1타 · 올려베기 · 5단계",
+          "source_frame": "I01"
+        }
+      ],
+      "duration_ms": 370
+    },
+    {
+      "id": "attack2",
+      "steps": [
+        {
+          "frame": "F003",
+          "ms": 105,
+          "phase": "2타 · 내려베기 · 4단계",
+          "source_frame": "F06"
+        },
+        {
+          "frame": "F004",
+          "ms": 40,
+          "phase": "2타 · 내려베기 · 4단계",
+          "source_frame": "F08"
+        },
+        {
+          "frame": "F005",
+          "ms": 105,
+          "phase": "2타 · 내려베기 · 4단계",
+          "source_frame": "F10"
+        },
+        {
+          "frame": "F006",
+          "ms": 100,
+          "phase": "2타 · 내려베기 · 4단계",
+          "source_frame": "I01"
+        }
+      ],
+      "duration_ms": 350
+    }
+  ],
+  "attack_events": {
+    "1": {
+      "fxStart": 125,
+      "chainAt": 285,
+      "effect": "up",
+      "impact": 155
+    },
+    "2": {
+      "fxStart": 75,
+      "chainAt": 350,
+      "effect": "down",
+      "impact": 105
+    }
+  },
+  "combo_window_ms": 220,
+  "root_motion": "최종 PNG에서 발 위치가 이미 정렬됨. 별도 프레임 자동정렬/추가 Y 보정 없음.",
+  "notes": [
+    "프레임 원본 바이트 그대로 복사",
+    "모든 steps.ms와 hold_last 보존",
+    "2026-10-16 현재확정본.json이 가리키는 검 모션 사용"
+  ]
+}

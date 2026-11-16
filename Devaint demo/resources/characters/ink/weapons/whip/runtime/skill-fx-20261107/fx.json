@@ -1,0 +1,222 @@
+{
+  "format": "deviant-whip-skill-fx-v1",
+  "pixelsPerUnit": 32,
+  "fps": 25,
+  "clips": {
+    "snap": {
+      "frames": 12,
+      "size": [
+        140,
+        120
+      ],
+      "originTopLeftPx": [
+        70,
+        64
+      ],
+      "use": "휘감기 고리가 닿는 순간(0.25초) 고리 자리에서 한 번"
+    },
+    "bind_small_front": {
+      "frames": 11,
+      "in": 3,
+      "hold": 4,
+      "out": 4,
+      "size": [
+        128,
+        96
+      ],
+      "originTopLeftPx": [
+        64,
+        48
+      ],
+      "use": "채찍 스킬 속박 동안 적 몸 가운데. front 는 몸 앞, back 은 몸 뒤. 몸 폭 2유닛 이상 large"
+    },
+    "bind_small_back": {
+      "frames": 11,
+      "in": 3,
+      "hold": 4,
+      "out": 4,
+      "size": [
+        128,
+        96
+      ],
+      "originTopLeftPx": [
+        64,
+        48
+      ],
+      "use": "채찍 스킬 속박 동안 적 몸 가운데. front 는 몸 앞, back 은 몸 뒤. 몸 폭 2유닛 이상 large"
+    },
+    "bind_large_front": {
+      "frames": 11,
+      "in": 3,
+      "hold": 4,
+      "out": 4,
+      "size": [
+        128,
+        96
+      ],
+      "originTopLeftPx": [
+        64,
+        48
+      ],
+      "use": "채찍 스킬 속박 동안 적 몸 가운데. front 는 몸 앞, back 은 몸 뒤. 몸 폭 2유닛 이상 large"
+    },
+    "bind_large_back": {
+      "frames": 11,
+      "in": 3,
+      "hold": 4,
+      "out": 4,
+      "size": [
+        128,
+        96
+      ],
+      "originTopLeftPx": [
+        64,
+        48
+      ],
+      "use": "채찍 스킬 속박 동안 적 몸 가운데. front 는 몸 앞, back 은 몸 뒤. 몸 폭 2유닛 이상 large"
+    },
+    "loosen_small_front": {
+      "frames": 30,
+      "timed": true,
+      "size": [
+        128,
+        96
+      ],
+      "originTopLeftPx": [
+        64,
+        48
+      ],
+      "use": "휘감기 감김(위 바퀴 45%·아래 75% 에 끊김), 1.2초"
+    },
+    "loosen_small_back": {
+      "frames": 30,
+      "timed": true,
+      "size": [
+        128,
+        96
+      ],
+      "originTopLeftPx": [
+        64,
+        48
+      ],
+      "use": ""
+    },
+    "loosen_large_front": {
+      "frames": 30,
+      "timed": true,
+      "size": [
+        128,
+        96
+      ],
+      "originTopLeftPx": [
+        64,
+        48
+      ],
+      "use": ""
+    },
+    "loosen_large_back": {
+      "frames": 30,
+      "timed": true,
+      "size": [
+        128,
+        96
+      ],
+      "originTopLeftPx": [
+        64,
+        48
+      ],
+      "use": ""
+    },
+    "thorn_small_front": {
+      "frames": 20,
+      "timed": true,
+      "size": [
+        128,
+        96
+      ],
+      "originTopLeftPx": [
+        64,
+        48
+      ],
+      "use": "가시 그물 가시 감김, 0.8초"
+    },
+    "thorn_small_back": {
+      "frames": 20,
+      "timed": true,
+      "size": [
+        128,
+        96
+      ],
+      "originTopLeftPx": [
+        64,
+        48
+      ],
+      "use": ""
+    },
+    "thorn_large_front": {
+      "frames": 20,
+      "timed": true,
+      "size": [
+        128,
+        96
+      ],
+      "originTopLeftPx": [
+        64,
+        48
+      ],
+      "use": ""
+    },
+    "thorn_large_back": {
+      "frames": 20,
+      "timed": true,
+      "size": [
+        128,
+        96
+      ],
+      "originTopLeftPx": [
+        64,
+        48
+      ],
+      "use": ""
+    },
+    "knot_mark": {
+      "frames": 80,
+      "timed": true,
+      "size": [
+        200,
+        120
+      ],
+      "originTopLeftPx": [
+        100,
+        60
+      ],
+      "use": "매듭 접근 머리 위 매듭 + 3초 고리"
+    },
+    "knot_tighten": {
+      "frames": 27,
+      "timed": true,
+      "size": [
+        200,
+        120
+      ],
+      "originTopLeftPx": [
+        100,
+        60
+      ],
+      "use": "매듭 조이기 조여듦 0.6초 → 터짐"
+    },
+    "net_mark": {
+      "frames": 12,
+      "timed": true,
+      "size": [
+        200,
+        120
+      ],
+      "originTopLeftPx": [
+        100,
+        60
+      ],
+      "use": "가시 그물 바닥 가시 자국(판정 폭)"
+    }
+  }
+}

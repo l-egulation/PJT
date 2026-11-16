@@ -1,0 +1,259 @@
+{
+  "status": "production-candidate / actual-camera review required",
+  "sourceDirectory": "output/imagegen/phase2-production-scenery-20261027",
+  "pairing": "Each state uses its own generated native alpha; shared canvas and floor anchor; no donor masks.",
+  "entries": [
+    {
+      "kind": "phase2_residential",
+      "width": 248,
+      "height": 273,
+      "groundOffsetPixels": 5,
+      "source": "output/imagegen/phase2-production-scenery-20261027/residential-pair.png",
+      "contactRows": [
+        267,
+        267
+      ],
+      "silhouetteIoU": 0.9935,
+      "sourceBounds": [
+        [
+          125,
+          104,
+          810,
+          862
+        ],
+        [
+          54,
+          104,
+          742,
+          862
+        ]
+      ],
+      "files": [
+        {
+          "path": "unity/Assets/Stage1VillageExperiment/Resources/Village/reference-sketch/color/props/phase2_residential.png",
+          "sha256": "550259bf887f6bbb988733881cbcf091b69280f664d8d814e72d6458a1a87beb"
+        },
+        {
+          "path": "unity/Assets/Stage1VillageExperiment/Resources/Village/color/props/phase2_residential.png",
+          "sha256": "ef6def938127623c1b034b0d022c754dff12dbacbace0b9ae82c4b9e4a06e9ef"
+        }
+      ]
+    },
+    {
+      "kind": "phase2_market",
+      "width": 256,
+      "height": 223,
+      "groundOffsetPixels": 6,
+      "source": "output/imagegen/phase2-production-scenery-20261027/market-pair.png",
+      "contactRows": [
+        216,
+        216
+      ],
+      "silhouetteIoU": 0.9964,
+      "sourceBounds": [
+        [
+          81,
+          76,
+          905,
+          790
+        ],
+        [
+          46,
+          76,
+          870,
+          791
+        ]
+      ],
+      "files": [
+        {
+          "path": "unity/Assets/Stage1VillageExperiment/Resources/Village/reference-sketch/color/props/phase2_market.png",
+          "sha256": "90f5afaf2256fdc5e6acd02e292f182654134406c02a311d8e0277f70f8c1d3f"
+        },
+        {
+          "path": "unity/Assets/Stage1VillageExperiment/Resources/Village/color/props/phase2_market.png",
+          "sha256": "cd0cf2135132d306ae134fa66513661e0d799c6bc3fa325d12c8b998e47dd949"
+        }
+      ]
+    },
+    {
+      "kind": "phase2_plaza",
+      "width": 218,
+      "height": 129,
+      "groundOffsetPixels": 7,
+      "source": "output/imagegen/phase2-scene-grounding-20261027/plaza-grounded-pair.png",
+      "contactRows": [
+        121,
+        121
+      ],
+      "silhouetteIoU": 0.9932,
+      "sourceBounds": [
+        [
+          45,
+          301,
+          783,
+          725
+        ],
+        [
+          44,
+          301,
+          782,
+          725
+        ]
+      ],
+      "files": [
+        {
+          "path": "unity/Assets/Stage1VillageExperiment/Resources/Village/reference-sketch/color/props/phase2_plaza.png",
+          "sha256": "2cd9ddd4bb92269abe69d888f697f19eeb10ebd17584791d16f146075a4e8dc8"
+        },
+        {
+          "path": "unity/Assets/Stage1VillageExperiment/Resources/Village/color/props/phase2_plaza.png",
+          "sha256": "55044cd2266f3034cd56cdc527cb66459bd437eae7f9b0ca641516e1de7f3bdc"
+        }
+      ]
+    },
+    {
+      "kind": "phase2_tree",
+      "width": 188,
+      "height": 191,
+      "groundOffsetPixels": 5,
+      "source": null,
+      "contactRows": [
+        185,
+        185
+      ],
+      "silhouetteIoU": 0.9763,
+      "sourceBounds": [
+        [
+          41,
+          1,
+          504,
+          473
+        ],
+        [
+          11,
+          1,
+          476,
+          473
+        ]
+      ],
+      "files": [
+        {
+          "path": "unity/Assets/Stage1VillageExperiment/Resources/Village/reference-sketch/color/props/phase2_tree.png",
+          "sha256": "58624b02dbfd18b42fd70a47fef0987d89547359ddfd54e8c9ed4f71817bb5cf"
+        },
+        {
+          "path": "unity/Assets/Stage1VillageExperiment/Resources/Village/color/props/phase2_tree.png",
+          "sha256": "c614985f5ab88298f2659b79bc3200c023dbcf74596d8323f198c56465d05339"
+        }
+      ]
+    },
+    {
+      "kind": "phase2_cypress",
+      "width": 84,
+      "height": 199,
+      "groundOffsetPixels": 5,
+      "source": null,
+      "contactRows": [
+        193,
+        193
+      ],
+      "silhouetteIoU": 0.9854,
+      "sourceBounds": [
+        [
+          184,
+          1,
+          399,
+          541
+        ],
+        [
+          154,
+          0,
+          369,
+          541
+        ]
+      ],
+      "files": [
+        {
+          "path": "unity/Assets/Stage1VillageExperiment/Resources/Village/reference-sketch/color/props/phase2_cypress.png",
+          "sha256": "d3f61ebe2370bd949ee300d0f6acb0bf6b9715e6d5af0eebf31922a5ef1cec17"
+        },
+        {
+          "path": "unity/Assets/Stage1VillageExperiment/Resources/Village/color/props/phase2_cypress.png",
+          "sha256": "3504574a30eb467c4e5c232e416ff219d78ccfdb1f258a2264e7ece240325f45"
+        }
+      ]
+    },
+    {
+      "kind": "phase2_shrub",
+      "width": 108,
+      "height": 63,
+      "groundOffsetPixels": 7,
+      "source": null,
+      "contactRows": [
+        55,
+        55
+      ],
+      "silhouetteIoU": 0.9761,
+      "sourceBounds": [
+        [
+          108,
+          1,
+          464,
+          199
+        ],
+        [
+          76,
+          2,
+          432,
+          199
+        ]
+      ],
+      "files": [
+        {
+          "path": "unity/Assets/Stage1VillageExperiment/Resources/Village/reference-sketch/color/props/phase2_shrub.png",
+          "sha256": "49645bfa4c718845509a0db1c9474e3f87fc72a5fced1527fd30739f8d2006b9"
+        },
+        {
+          "path": "unity/Assets/Stage1VillageExperiment/Resources/Village/color/props/phase2_shrub.png",
+          "sha256": "3190e09c33c86f72f47c3626b6726314e7bcff65bbafba8821487b6fb43db739"
+        }
+      ]
+    },
+    {
+      "kind": "phase2_grass",
+      "width": 44,
+      "height": 27,
+      "groundOffsetPixels": 5,
+      "source": null,
+      "contactRows": [
+        21,
+        21
+      ],
+      "silhouetteIoU": 0.9641,
+      "sourceBounds": [
+        [
+          168,
+          1,
+          386,
+          115
+        ],
+        [
+          138,
+          1,
+          356,
+          115
+        ]
+      ],
+      "files": [
+        {
+          "path": "unity/Assets/Stage1VillageExperiment/Resources/Village/reference-sketch/color/props/phase2_grass.png",
+          "sha256": "8c2a4f5b71eca56a515486622d633045996fc0673f5d3a10b00f518619cac675"
+        },
+        {
+          "path": "unity/Assets/Stage1VillageExperiment/Resources/Village/color/props/phase2_grass.png",
+          "sha256": "1312e62c309b0d2c26b501222290281224c3d6906c1f2d5f5309ca8a0394f0e1"
+        }
+      ]
+    }
+  ]
+}

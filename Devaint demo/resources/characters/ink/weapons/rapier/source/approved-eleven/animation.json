@@ -1,0 +1,1372 @@
+{
+  "id": "rapier",
+  "name": "레이피어",
+  "pivot": [
+    80,
+    137
+  ],
+  "pivots": {
+    "idle1": [
+      64,
+      88
+    ],
+    "idle4": [
+      64,
+      88
+    ],
+    "idle7": [
+      64,
+      88
+    ],
+    "idle10": [
+      64,
+      88
+    ],
+    "ready": [
+      64,
+      88
+    ],
+    "thrust1": [
+      64,
+      88
+    ],
+    "recoil": [
+      64,
+      88
+    ],
+    "thrust2": [
+      64,
+      88
+    ],
+    "lift": [
+      64,
+      88
+    ],
+    "finish": [
+      64,
+      88
+    ],
+    "recover": [
+      64,
+      88
+    ],
+    "death12_01": [
+      80,
+      137
+    ],
+    "death12_02": [
+      80,
+      137
+    ],
+    "death12_03": [
+      80,
+      137
+    ],
+    "death12_04": [
+      80,
+      137
+    ],
+    "death12_05": [
+      80,
+      137
+    ],
+    "death12_06": [
+      80,
+      137
+    ],
+    "death12_07": [
+      80,
+      137
+    ],
+    "death12_08": [
+      80,
+      137
+    ],
+    "death12_09": [
+      80,
+      137
+    ],
+    "death12_10": [
+      80,
+      137
+    ],
+    "death12_11": [
+      80,
+      137
+    ],
+    "death12_12": [
+      80,
+      137
+    ]
+  },
+  "offsets": {
+    "dash_03": [
+      -8,
+      1
+    ],
+    "dash_05": [
+      -11,
+      1
+    ],
+    "dash_07": [
+      -11,
+      1
+    ],
+    "dash_10": [
+      -4,
+      1
+    ],
+    "dash_12": [
+      -1,
+      1
+    ],
+    "jump_02": [
+      0,
+      0
+    ],
+    "jump_03": [
+      0,
+      0
+    ],
+    "jump_04": [
+      0,
+      -1
+    ],
+    "jump_06": [
+      0,
+      25
+    ],
+    "jump_07": [
+      0,
+      28
+    ],
+    "land_03": [
+      0,
+      19
+    ],
+    "land_04": [
+      0,
+      13
+    ],
+    "land_05": [
+      0,
+      -1
+    ],
+    "land_07": [
+      0,
+      0
+    ],
+    "land_09": [
+      0,
+      0
+    ],
+    "land_12": [
+      0,
+      0
+    ]
+  },
+  "sequences": {
+    "idle": [
+      {
+        "frame": "idle1",
+        "ms": 180,
+        "phase": "호흡",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "idle4",
+        "ms": 140,
+        "phase": "호흡",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "idle7",
+        "ms": 180,
+        "phase": "호흡",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "idle10",
+        "ms": 140,
+        "phase": "호흡",
+        "dx": 0,
+        "dy": 0
+      }
+    ],
+    "walk": [
+      {
+        "frame": "walk_01",
+        "ms": 80,
+        "phase": "보행",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "walk_02",
+        "ms": 65,
+        "phase": "보행",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "walk_04",
+        "ms": 80,
+        "phase": "보행",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "walk_05",
+        "ms": 65,
+        "phase": "보행",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "walk_07",
+        "ms": 80,
+        "phase": "보행",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "walk_08",
+        "ms": 65,
+        "phase": "보행",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "walk_10",
+        "ms": 80,
+        "phase": "보행",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "walk_11",
+        "ms": 65,
+        "phase": "보행",
+        "dx": 0,
+        "dy": 0
+      }
+    ],
+    "run": [
+      {
+        "frame": "run_01",
+        "ms": 65,
+        "phase": "질주",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "run_03",
+        "ms": 55,
+        "phase": "질주",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "run_05",
+        "ms": 65,
+        "phase": "질주",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "run_07",
+        "ms": 55,
+        "phase": "질주",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "run_09",
+        "ms": 65,
+        "phase": "질주",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "run_11",
+        "ms": 55,
+        "phase": "질주",
+        "dx": 0,
+        "dy": 0
+      }
+    ],
+    "jump": [
+      {
+        "frame": "jump_02",
+        "ms": 40,
+        "phase": "압축",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "jump_03",
+        "ms": 40,
+        "phase": "이륙",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "jump_04",
+        "ms": 70,
+        "phase": "상승",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "jump_06",
+        "ms": 70,
+        "phase": "상승",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "jump_07",
+        "ms": 70,
+        "phase": "정점",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "land_03",
+        "ms": 60,
+        "phase": "하강 진입",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "land_04",
+        "ms": 90,
+        "phase": "낙하",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "land_05",
+        "ms": 90,
+        "phase": "낙하",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "land_07",
+        "ms": 45,
+        "phase": "접지",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "land_09",
+        "ms": 55,
+        "phase": "충격 흡수",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "land_12",
+        "ms": 90,
+        "phase": "복귀",
+        "dx": 0,
+        "dy": 0
+      }
+    ],
+    "dash": [
+      {
+        "frame": "dash_03",
+        "ms": 30,
+        "phase": "대시 진입",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "dash_05",
+        "ms": 55,
+        "phase": "대시 이동",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "dash_07",
+        "ms": 55,
+        "phase": "대시 이동",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "dash_10",
+        "ms": 50,
+        "phase": "감속",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "dash_12",
+        "ms": 80,
+        "phase": "복귀",
+        "dx": 0,
+        "dy": 0
+      }
+    ],
+    "attack": [
+      {
+        "frame": "ready",
+        "ms": 40,
+        "phase": "1타 준비",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "thrust1",
+        "ms": 50,
+        "phase": "1타 타격",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "recoil",
+        "ms": 45,
+        "phase": "1타 회수",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "thrust2",
+        "ms": 45,
+        "phase": "2타 타격",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "recoil",
+        "ms": 40,
+        "phase": "2타 회수",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "lift",
+        "ms": 140,
+        "phase": "3타 힘 모으기",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "finish",
+        "ms": 75,
+        "phase": "3타 타격",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "recover",
+        "ms": 95,
+        "phase": "대기로 회수",
+        "dx": 0,
+        "dy": 0
+      }
+    ],
+    "death": [
+      {
+        "frame": "death12_01",
+        "phase": "경직",
+        "original_frame": 1,
+        "ms": 60
+      },
+      {
+        "frame": "death12_02",
+        "phase": "경직",
+        "original_frame": 2,
+        "ms": 60
+      },
+      {
+        "frame": "death12_03",
+        "phase": "경직",
+        "original_frame": 3,
+        "ms": 60
+      },
+      {
+        "frame": "death12_04",
+        "phase": "쓰러짐",
+        "original_frame": 4,
+        "ms": 60
+      },
+      {
+        "frame": "death12_05",
+        "phase": "쓰러짐",
+        "original_frame": 5,
+        "ms": 60
+      },
+      {
+        "frame": "death12_06",
+        "phase": "쓰러짐",
+        "original_frame": 6,
+        "ms": 60
+      },
+      {
+        "frame": "death12_07",
+        "phase": "쓰러짐",
+        "original_frame": 7,
+        "ms": 60
+      },
+      {
+        "frame": "death12_08",
+        "phase": "쓰러짐",
+        "original_frame": 8,
+        "ms": 40
+      },
+      {
+        "frame": "death12_09",
+        "phase": "쓰러짐",
+        "original_frame": 9,
+        "ms": 40
+      },
+      {
+        "frame": "death12_10",
+        "phase": "쓰러짐",
+        "original_frame": 10,
+        "ms": 60
+      },
+      {
+        "frame": "death12_11",
+        "phase": "쓰러짐",
+        "original_frame": 11,
+        "ms": 60
+      },
+      {
+        "frame": "death12_12",
+        "phase": "사망 유지",
+        "original_frame": 12,
+        "ms": 180
+      }
+    ],
+    "single": [
+      {
+        "frame": "ready",
+        "ms": 40,
+        "phase": "1타 준비",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "thrust1",
+        "ms": 50,
+        "phase": "1타 타격",
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "frame": "recoil",
+        "ms": 45,
+        "phase": "1타 회수",
+        "dx": 0,
+        "dy": 0
+      }
+    ]
+  },
+  "hits": [
+    {
+      "number": 1,
+      "start": 0,
+      "end": 135,
+      "duration": 220,
+      "steps": [
+        {
+          "frame": "ready",
+          "ms": 40,
+          "phase": "1타 준비",
+          "dx": 0,
+          "dy": 0
+        },
+        {
+          "frame": "thrust1",
+          "ms": 50,
+          "phase": "1타 타격",
+          "dx": 0,
+          "dy": 0
+        },
+        {
+          "frame": "recoil",
+          "ms": 45,
+          "phase": "1타 회수",
+          "dx": 0,
+          "dy": 0
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "start": 135,
+      "end": 220,
+      "duration": 180,
+      "steps": [
+        {
+          "frame": "thrust2",
+          "ms": 45,
+          "phase": "2타 타격",
+          "dx": 0,
+          "dy": 0
+        },
+        {
+          "frame": "recoil",
+          "ms": 40,
+          "phase": "2타 회수",
+          "dx": 0,
+          "dy": 0
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "start": 220,
+      "end": 530,
+      "duration": 340,
+      "steps": [
+        {
+          "frame": "lift",
+          "ms": 140,
+          "phase": "3타 힘 모으기",
+          "dx": 0,
+          "dy": 0
+        },
+        {
+          "frame": "finish",
+          "ms": 75,
+          "phase": "3타 타격",
+          "dx": 0,
+          "dy": 0
+        },
+        {
+          "frame": "recover",
+          "ms": 95,
+          "phase": "대기로 회수",
+          "dx": 0,
+          "dy": 0
+        }
+      ]
+    }
+  ],
+  "manualInput": {
+    "chainAt": [
+      135,
+      85,
+      310
+    ],
+    "maxQueued": null
+  },
+  "kind": "melee",
+  "frames": {
+    "dash_03": "프레임/dash_03.png",
+    "dash_05": "프레임/dash_05.png",
+    "dash_07": "프레임/dash_07.png",
+    "dash_10": "프레임/dash_10.png",
+    "dash_12": "프레임/dash_12.png",
+    "jump_02": "프레임/jump_02.png",
+    "jump_03": "프레임/jump_03.png",
+    "jump_04": "프레임/jump_04.png",
+    "jump_06": "프레임/jump_06.png",
+    "jump_07": "프레임/jump_07.png",
+    "land_03": "프레임/land_03.png",
+    "land_04": "프레임/land_04.png",
+    "land_05": "프레임/land_05.png",
+    "land_07": "프레임/land_07.png",
+    "land_09": "프레임/land_09.png",
+    "land_12": "프레임/land_12.png",
+    "run_01": "프레임/run_01.png",
+    "run_03": "프레임/run_03.png",
+    "run_05": "프레임/run_05.png",
+    "run_07": "프레임/run_07.png",
+    "run_09": "프레임/run_09.png",
+    "run_11": "프레임/run_11.png",
+    "walk_01": "프레임/walk_01.png",
+    "walk_02": "프레임/walk_02.png",
+    "walk_04": "프레임/walk_04.png",
+    "walk_05": "프레임/walk_05.png",
+    "walk_07": "프레임/walk_07.png",
+    "walk_08": "프레임/walk_08.png",
+    "walk_10": "프레임/walk_10.png",
+    "walk_11": "프레임/walk_11.png",
+    "idle1": "프레임/idle1.png",
+    "idle4": "프레임/idle4.png",
+    "idle7": "프레임/idle7.png",
+    "idle10": "프레임/idle10.png",
+    "ready": "프레임/ready.png",
+    "thrust1": "프레임/thrust1.png",
+    "recoil": "프레임/recoil.png",
+    "thrust2": "프레임/thrust2.png",
+    "lift": "프레임/lift.png",
+    "finish": "프레임/finish.png",
+    "recover": "프레임/recover.png",
+    "death12_01": "프레임/death12_01.png",
+    "death12_02": "프레임/death12_02.png",
+    "death12_03": "프레임/death12_03.png",
+    "death12_04": "프레임/death12_04.png",
+    "death12_05": "프레임/death12_05.png",
+    "death12_06": "프레임/death12_06.png",
+    "death12_07": "프레임/death12_07.png",
+    "death12_08": "프레임/death12_08.png",
+    "death12_09": "프레임/death12_09.png",
+    "death12_10": "프레임/death12_10.png",
+    "death12_11": "프레임/death12_11.png",
+    "death12_12": "프레임/death12_12.png"
+  },
+  "sheets": {
+    "idle": {
+      "file": "시트/idle.png",
+      "cell": [
+        192,
+        100
+      ],
+      "columns": 4,
+      "frameCount": 4,
+      "pivot": [
+        64,
+        88
+      ],
+      "timingsMs": [
+        180,
+        140,
+        180,
+        140
+      ]
+    },
+    "walk": {
+      "file": "시트/walk.png",
+      "cell": [
+        192,
+        160
+      ],
+      "columns": 8,
+      "frameCount": 8,
+      "pivot": [
+        80,
+        137
+      ],
+      "timingsMs": [
+        80,
+        65,
+        80,
+        65,
+        80,
+        65,
+        80,
+        65
+      ]
+    },
+    "run": {
+      "file": "시트/run.png",
+      "cell": [
+        192,
+        160
+      ],
+      "columns": 6,
+      "frameCount": 6,
+      "pivot": [
+        80,
+        137
+      ],
+      "timingsMs": [
+        65,
+        55,
+        65,
+        55,
+        65,
+        55
+      ]
+    },
+    "jump": {
+      "file": "시트/jump.png",
+      "cell": [
+        192,
+        189
+      ],
+      "columns": 8,
+      "frameCount": 11,
+      "pivot": [
+        80,
+        138
+      ],
+      "timingsMs": [
+        40,
+        40,
+        70,
+        70,
+        70,
+        60,
+        90,
+        90,
+        45,
+        55,
+        90
+      ]
+    },
+    "dash": {
+      "file": "시트/dash.png",
+      "cell": [
+        202,
+        160
+      ],
+      "columns": 5,
+      "frameCount": 5,
+      "pivot": [
+        91,
+        136
+      ],
+      "timingsMs": [
+        30,
+        55,
+        55,
+        50,
+        80
+      ]
+    },
+    "attack": {
+      "file": "시트/attack.png",
+      "cell": [
+        192,
+        100
+      ],
+      "columns": 8,
+      "frameCount": 8,
+      "pivot": [
+        64,
+        88
+      ],
+      "timingsMs": [
+        40,
+        50,
+        45,
+        45,
+        40,
+        140,
+        75,
+        95
+      ]
+    },
+    "death": {
+      "file": "시트/death.png",
+      "cell": [
+        192,
+        160
+      ],
+      "columns": 8,
+      "frameCount": 12,
+      "pivot": [
+        80,
+        137
+      ],
+      "timingsMs": [
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        40,
+        40,
+        60,
+        60,
+        180
+      ]
+    },
+    "single": {
+      "file": "시트/single.png",
+      "cell": [
+        192,
+        100
+      ],
+      "columns": 3,
+      "frameCount": 3,
+      "pivot": [
+        64,
+        88
+      ],
+      "timingsMs": [
+        40,
+        50,
+        45
+      ]
+    }
+  },
+  "effects": {
+    "attack": [
+      {
+        "x": 5,
+        "y": -91,
+        "width": 192,
+        "height": 112,
+        "start": 40,
+        "end": 50,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 1,
+        "cell": 1,
+        "file": "이펙트/001.png"
+      },
+      {
+        "x": 5,
+        "y": -91,
+        "width": 192,
+        "height": 112,
+        "start": 50,
+        "end": 70,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 1,
+        "cell": 2,
+        "file": "이펙트/002.png"
+      },
+      {
+        "x": 5,
+        "y": -91,
+        "width": 192,
+        "height": 112,
+        "start": 70,
+        "end": 90,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 1,
+        "cell": 3,
+        "file": "이펙트/003.png"
+      },
+      {
+        "x": 5,
+        "y": -91,
+        "width": 192,
+        "height": 112,
+        "start": 90,
+        "end": 110,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 1,
+        "cell": 4,
+        "file": "이펙트/004.png"
+      },
+      {
+        "x": 5,
+        "y": -91,
+        "width": 192,
+        "height": 112,
+        "start": 110,
+        "end": 130,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 1,
+        "cell": 5,
+        "file": "이펙트/005.png"
+      },
+      {
+        "x": 5,
+        "y": -91,
+        "width": 192,
+        "height": 112,
+        "start": 130,
+        "end": 150,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 1,
+        "cell": 6,
+        "file": "이펙트/006.png"
+      },
+      {
+        "x": 5,
+        "y": -91,
+        "width": 192,
+        "height": 112,
+        "start": 150,
+        "end": 170,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 1,
+        "cell": 7,
+        "file": "이펙트/007.png"
+      },
+      {
+        "x": 5,
+        "y": -91,
+        "width": 192,
+        "height": 112,
+        "start": 170,
+        "end": 190,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 1,
+        "cell": 8,
+        "file": "이펙트/008.png"
+      },
+      {
+        "x": 5,
+        "y": -91,
+        "width": 192,
+        "height": 112,
+        "start": 190,
+        "end": 210,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 1,
+        "cell": 9,
+        "file": "이펙트/009.png"
+      },
+      {
+        "x": 5,
+        "y": -96,
+        "width": 202,
+        "height": 118,
+        "start": 135,
+        "end": 145,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 2,
+        "cell": 1,
+        "file": "이펙트/001.png"
+      },
+      {
+        "x": 5,
+        "y": -96,
+        "width": 202,
+        "height": 118,
+        "start": 145,
+        "end": 165,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 2,
+        "cell": 2,
+        "file": "이펙트/002.png"
+      },
+      {
+        "x": 5,
+        "y": -96,
+        "width": 202,
+        "height": 118,
+        "start": 165,
+        "end": 185,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 2,
+        "cell": 3,
+        "file": "이펙트/003.png"
+      },
+      {
+        "x": 5,
+        "y": -96,
+        "width": 202,
+        "height": 118,
+        "start": 185,
+        "end": 205,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 2,
+        "cell": 4,
+        "file": "이펙트/004.png"
+      },
+      {
+        "x": 5,
+        "y": -96,
+        "width": 202,
+        "height": 118,
+        "start": 205,
+        "end": 225,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 2,
+        "cell": 5,
+        "file": "이펙트/005.png"
+      },
+      {
+        "x": 5,
+        "y": -96,
+        "width": 202,
+        "height": 118,
+        "start": 225,
+        "end": 245,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 2,
+        "cell": 6,
+        "file": "이펙트/006.png"
+      },
+      {
+        "x": 5,
+        "y": -96,
+        "width": 202,
+        "height": 118,
+        "start": 245,
+        "end": 265,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 2,
+        "cell": 7,
+        "file": "이펙트/007.png"
+      },
+      {
+        "x": 5,
+        "y": -96,
+        "width": 202,
+        "height": 118,
+        "start": 265,
+        "end": 285,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 2,
+        "cell": 8,
+        "file": "이펙트/008.png"
+      },
+      {
+        "x": 5,
+        "y": -96,
+        "width": 202,
+        "height": 118,
+        "start": 285,
+        "end": 305,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 2,
+        "cell": 9,
+        "file": "이펙트/009.png"
+      },
+      {
+        "x": 4,
+        "y": -91,
+        "width": 221,
+        "height": 129,
+        "start": 360,
+        "end": 370,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 3,
+        "cell": 1,
+        "file": "이펙트/001.png"
+      },
+      {
+        "x": 4,
+        "y": -91,
+        "width": 221,
+        "height": 129,
+        "start": 370,
+        "end": 390,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 3,
+        "cell": 2,
+        "file": "이펙트/002.png"
+      },
+      {
+        "x": 4,
+        "y": -91,
+        "width": 221,
+        "height": 129,
+        "start": 390,
+        "end": 410,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 3,
+        "cell": 3,
+        "file": "이펙트/003.png"
+      },
+      {
+        "x": 4,
+        "y": -91,
+        "width": 221,
+        "height": 129,
+        "start": 410,
+        "end": 430,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 3,
+        "cell": 4,
+        "file": "이펙트/004.png"
+      },
+      {
+        "x": 4,
+        "y": -91,
+        "width": 221,
+        "height": 129,
+        "start": 430,
+        "end": 450,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 3,
+        "cell": 5,
+        "file": "이펙트/005.png"
+      },
+      {
+        "x": 4,
+        "y": -91,
+        "width": 221,
+        "height": 129,
+        "start": 450,
+        "end": 470,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 3,
+        "cell": 6,
+        "file": "이펙트/006.png"
+      },
+      {
+        "x": 4,
+        "y": -91,
+        "width": 221,
+        "height": 129,
+        "start": 470,
+        "end": 490,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 3,
+        "cell": 7,
+        "file": "이펙트/007.png"
+      },
+      {
+        "x": 4,
+        "y": -91,
+        "width": 221,
+        "height": 129,
+        "start": 490,
+        "end": 510,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 3,
+        "cell": 8,
+        "file": "이펙트/008.png"
+      },
+      {
+        "x": 4,
+        "y": -91,
+        "width": 221,
+        "height": 129,
+        "start": 510,
+        "end": 530,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 3,
+        "cell": 9,
+        "file": "이펙트/009.png"
+      }
+    ],
+    "single": [
+      {
+        "x": 5,
+        "y": -91,
+        "width": 192,
+        "height": 112,
+        "start": 40,
+        "end": 50,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 1,
+        "cell": 1,
+        "file": "이펙트/001.png"
+      },
+      {
+        "x": 5,
+        "y": -91,
+        "width": 192,
+        "height": 112,
+        "start": 50,
+        "end": 70,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 1,
+        "cell": 2,
+        "file": "이펙트/002.png"
+      },
+      {
+        "x": 5,
+        "y": -91,
+        "width": 192,
+        "height": 112,
+        "start": 70,
+        "end": 90,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 1,
+        "cell": 3,
+        "file": "이펙트/003.png"
+      },
+      {
+        "x": 5,
+        "y": -91,
+        "width": 192,
+        "height": 112,
+        "start": 90,
+        "end": 110,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 1,
+        "cell": 4,
+        "file": "이펙트/004.png"
+      },
+      {
+        "x": 5,
+        "y": -91,
+        "width": 192,
+        "height": 112,
+        "start": 110,
+        "end": 130,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 1,
+        "cell": 5,
+        "file": "이펙트/005.png"
+      },
+      {
+        "x": 5,
+        "y": -91,
+        "width": 192,
+        "height": 112,
+        "start": 130,
+        "end": 150,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 1,
+        "cell": 6,
+        "file": "이펙트/006.png"
+      },
+      {
+        "x": 5,
+        "y": -91,
+        "width": 192,
+        "height": 112,
+        "start": 150,
+        "end": 170,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 1,
+        "cell": 7,
+        "file": "이펙트/007.png"
+      },
+      {
+        "x": 5,
+        "y": -91,
+        "width": 192,
+        "height": 112,
+        "start": 170,
+        "end": 190,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 1,
+        "cell": 8,
+        "file": "이펙트/008.png"
+      },
+      {
+        "x": 5,
+        "y": -91,
+        "width": 192,
+        "height": 112,
+        "start": 190,
+        "end": 210,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "hit": 1,
+        "cell": 9,
+        "file": "이펙트/009.png"
+      }
+    ]
+  }
+}

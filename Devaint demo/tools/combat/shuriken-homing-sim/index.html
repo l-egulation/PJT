@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>수리검 유도 시뮬레이터</title>
+<style>
+:root{
+  --bg:#f4f2ee; --panel:#ffffff; --ink:#1d1b19; --muted:#6b665f; --line:#d9d4cc;
+  --field:#fbfaf7; --floor:#8a8178; --plat:#b9b0a5; --player:#2f6fd6; --enemy:#c8553d; --enemy-hit:#ffb000;
+  --shot:#1d1b19; --ghost:#9a948c; --cone:rgba(47,111,214,.10); --cone-line:rgba(47,111,214,.45);
+  --trail:#2f6fd6; --miss:#c8553d; --accent:#2f6fd6;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#161514; --panel:#201f1d; --ink:#ece8e1; --muted:#a29c93; --line:#36332f;
+  --field:#1b1a18; --floor:#6f675f; --plat:#4d4741; --player:#6ea0f0; --enemy:#e07a62; --enemy-hit:#ffc84a;
+  --shot:#ece8e1; --ghost:#6d6861; --cone:rgba(110,160,240,.10); --cone-line:rgba(110,160,240,.5);
+  --trail:#6ea0f0; --miss:#e07a62; --accent:#6ea0f0;
+}}
+:root[data-theme="dark"]{
+  --bg:#161514; --panel:#201f1d; --ink:#ece8e1; --muted:#a29c93; --line:#36332f;
+  --field:#1b1a18; --floor:#6f675f; --plat:#4d4741; --player:#6ea0f0; --enemy:#e07a62; --enemy-hit:#ffc84a;
+  --shot:#ece8e1; --ghost:#6d6861; --cone:rgba(110,160,240,.10); --cone-line:rgba(110,160,240,.5);
+  --trail:#6ea0f0; --miss:#e07a62; --accent:#6ea0f0;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 system-ui,-apple-system,"Malgun Gothic","Apple SD Gothic Neo",sans-serif}
+header{padding:14px 16px 6px}
+h1{font-size:18px;margin:0 0 2px}
+header p{margin:0;color:var(--muted);font-size:13px}
+main{display:grid;grid-template-columns:300px 1fr;gap:12px;padding:10px 16px 16px}
+@media (max-width:860px){main{grid-template-columns:1fr}}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px}
+.panel h2{font-size:13px;margin:10px 0 6px;color:var(--muted);font-weight:600}
+.panel h2:first-child{margin-top:0}
+.row{display:grid;grid-template-columns:1fr 64px;gap:4px 8px;align-items:center;margin:6px 0}
+.row label{font-size:13px}
+.row input[type=range]{grid-column:1/3;width:100%;accent-color:var(--accent)}
+.row output{text-align:right;font-variant-numeric:tabular-nums;font-size:13px}
+.check{display:flex;gap:6px;align-items:center;margin:4px 0;font-size:13px}
+select,button{font:inherit;color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:6px;padding:5px 9px}
+button{cursor:pointer}
+button.primary{background:var(--accent);color:#fff;border-color:transparent}
+.btns{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
+.stage{display:flex;flex-direction:column;gap:10px;min-width:0}
+canvas{width:100%;height:auto;display:block;background:var(--field);border:1px solid var(--line);border-radius:10px;touch-action:none}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.stat b{display:block;font-size:20px;font-variant-numeric:tabular-nums}
+.stat span{font-size:12px;color:var(--muted)}
+.help{font-size:12px;color:var(--muted);margin:0}
+.help kbd{font:inherit;border:1px solid var(--line);border-radius:4px;padding:0 4px;background:var(--field)}
+pre{margin:6px 0 0;font-size:12px;background:var(--field);border:1px solid var(--line);border-radius:6px;padding:8px;white-space:pre-wrap}
+</style>
+</head>
+<body>
+<header>
+  <h1>수리검 기본공격 유도 시뮬레이터</h1>
+  <p>Unity <code>PlayerProjectile.Home</code>와 같은 규칙으로 움직입니다. 값은 <code>data/combat/ranged_basic_design.json</code>의 <code>shuriken.homing</code>·<code>range_units</code> 기준이며 슬라이더로 바꿔 볼 수 있습니다.</p>
+</header>
+<main>
+  <section class="panel" aria-label="설정">
+    <h2>유도</h2>
+    <label class="check"><input type="checkbox" id="homingOn" checked> 유도 켜기</label>
+    <div class="row"><label for="turn">회전 속도 (°/초)</label><output id="turnOut"></output><input type="range" id="turn" min="0" max="720" step="10" value="90"></div>
+    <div class="row"><label for="cone">탐지 반각 (°, 던진 방향 기준)</label><output id="coneOut"></output><input type="range" id="cone" min="5" max="90" step="1" value="20"></div>
+    <div class="row"><label for="maxAngle">최대 꺾임 (°, 던진 방향 기준)</label><output id="maxAngleOut"></output><input type="range" id="maxAngle" min="5" max="90" step="1" value="40"></div>
+    <h2>탄</h2>
+    <div class="row"><label for="range">사거리 (unit)</label><output id="rangeOut"></output><input type="range" id="range" min="3" max="30" step="0.5" value="15"></div>
+    <div class="row"><label for="speed">속도 (unit/초)</label><output id="speedOut"></output><input type="range" id="speed" min="5" max="45" step="1" value="22"></div>
+    <div class="row"><label for="slow">시간 배속</label><output id="slowOut"></output><input type="range" id="slow" min="0.1" max="1" step="0.05" value="1"></div>
+    <h2>장면</h2>
+    <select id="scene" style="width:100%">
+      <option value="line">정면 일직선 (멧돼지 3마리)</option>
+      <option value="above">위쪽 적 (점프·공중)</option>
+      <option value="platform">발판 위 적</option>
+      <option value="low">작은 적이 낮게</option>
+      <option value="bob">위아래로 나는 적</option>
+      <option value="walk">다가오는 멧돼지</option>
+      <option value="spread">여러 높이에 흩어진 적</option>
+      <option value="behind">뒤쪽·측면 적 (무시 확인)</option>
+      <option value="far">먼 적 (예전 사거리 6 밖)</option>
+    </select>
+    <h2>표시</h2>
+    <label class="check"><input type="checkbox" id="ghost" checked> 직선 탄 비교(회색 점선)</label>
+    <label class="check"><input type="checkbox" id="showCone" checked> 탐지 범위 표시</label>
+    <label class="check"><input type="checkbox" id="oldRange" checked> 예전 사거리 6 표시</label>
+    <label class="check"><input type="checkbox" id="auto"> 자동 연사 (2타 콤보 리듬 0.10/0.37초, 주기 0.6초)</label>
+    <div class="btns">
+      <button class="primary" id="throw">던지기 (A)</button>
+      <button id="reset">통계 초기화</button>
+    </div>
+    <h2>값 되돌리기</h2>
+    <div class="btns">
+      <button id="original">원래 값 (사거리 6·유도 없음)</button>
+      <button id="defaults">현재 적용 값 (사거리 15·약한 유도)</button>
+    </div>
+    <h2>데이터로 옮기기</h2>
+    <button id="copy" style="width:100%">현재 값 JSON 복사</button>
+    <pre id="json"></pre>
+  </section>
+  <section class="stage">
+    <canvas id="cv" width="1280" height="480" aria-label="시뮬레이션 화면"></canvas>
+    <p class="help"><b>게임과 같은 키</b> — <kbd>←</kbd><kbd>→</kbd> 이동 · <kbd>Space</kbd> 점프(2단) · <kbd>A</kbd> 수리검 던지기(2타 연계) · <kbd>T</kbd> 자동 연사 켜기/끄기 · 마우스: 플레이어·적 드래그, 빈 곳 더블클릭 적 추가, 적 더블클릭 삭제</p>
+    <div class="stats">
+      <div class="stat"><b id="sThrown">0</b><span>던진 수</span></div>
+      <div class="stat"><b id="sHit">0</b><span>명중</span></div>
+      <div class="stat"><b id="sRate">–</b><span>명중률</span></div>
+      <div class="stat"><b id="sGhost">–</b><span>직선이었다면 명중률</span></div>
+      <div class="stat"><b id="sBend">–</b><span>마지막 탄 꺾인 각도</span></div>
+      <div class="stat"><b id="sFlight">–</b><span>마지막 탄 비행 시간</span></div>
+    </div>
+  </section>
+</main>
+<script>
+(() => {
+'use strict';
+// ---- 월드 상수 (Unity 단위) ----
+const PPU = 40, W = 32, H = 12;           // 1unit = 40px, 화면 32x12unit
+const FLOOR = 0;                          // 바닥 높이 (고체)
+const RADIUS = 0.2;                       // 탄 반지름 (지름 0.4)
+const SPAWN = {x: 0.85625, y: 1};         // 발 기준 발사 중심 (오른쪽)
+const PLAYER_BOX = {w: 0.9375, h: 2, ox: 0.1875, oy: 1};
+const DT = 1 / 60;
+const DEF = {turn: 90, cone: 20, maxAngle: 40, range: 15, speed: 22};
+
+const $ = id => document.getElementById(id);
+const cv = $('cv'), ctx = cv.getContext('2d');
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+const P = {};
+for (const k of ['turn','cone','maxAngle','range','speed','slow']) {
+  const el = $(k), out = $(k + 'Out');
+  const sync = () => { P[k] = +el.value; out.textContent = k === 'slow' ? '×' + (+el.value).toFixed(2) : (+el.value) + (k==='range'||k==='speed' ? '' : '°'); writeJson(); };
+  el.addEventListener('input', sync); sync();
+}
+function writeJson() {
+  if (!('turn' in P && 'cone' in P && 'maxAngle' in P && 'range' in P && 'speed' in P)) return;
+  $('json').textContent = JSON.stringify({
+    speed: P.speed, range_units: P.range,
+    base_flight_seconds: +(P.range / P.speed).toFixed(10),
+    homing: {turn_rate_degrees_per_second: P.turn, acquire_cone_half_angle_degrees: P.cone, max_deflection_degrees: P.maxAngle}
+  }, null, 2);
+}
+
+// ---- 상태 ----
+const player = {x: 3, y: 0, vx: 0, vy: 0, facing: 1, grounded: true, jumps: 0, motion: null, buffered: false, combo: 0, comboUntil: 0};
+// 플레이어 이동 수치 (data/combat/locomotion/player.json · ranged_basic_design.json)
+const RUN = 7.5, ATTACK_GROUND_SPEED = 5, JUMP_V = 20, RISE_G = 66.6666667, FALL_G = 104.1666667, MAX_JUMPS = 2;
+const COMBO = [{dur: 0.25, release: 0.10}, {dur: 0.35, release: 0.12}], COMBO_LATE = 0.3;
+const keys = {left: false, right: false};
+let enemies = [], shots = [], ghosts = [], trails = [];
+let nextId = 1, stats = {thrown: 0, hit: 0, ghostThrown: 0, ghostHit: 0};
+let simTime = 0, autoClock = 0, autoIdx = 0;
+
+const SIZES = {boar: {w: 2.65, h: 1.9, oy: 0.95}, eye: {w: 1.3, h: 1.2, oy: 0.6}, small: {w: 0.8, h: 0.8, oy: 0.4}};
+function enemy(x, y, kind = 'boar', move = null) {
+  const s = SIZES[kind];
+  return {id: nextId++, x, y, baseX: x, baseY: y, w: s.w, h: s.h, oy: s.oy, move, flash: 0, t: Math.random() * 6};
+}
+const platforms = [];
+const SCENES = {
+  line:     () => { platforms.length = 0; return [enemy(10, 0), enemy(15, 0), enemy(21, 0)]; },
+  above:    () => { platforms.length = 0; return [enemy(9, 2.4, 'eye'), enemy(13, 3.6, 'eye'), enemy(17, 1.8, 'eye')]; },
+  platform: () => { platforms.length = 0; platforms.push({x: 9, y: 3, w: 5}, {x: 15, y: 5, w: 5}); return [enemy(11.5, 3, 'boar'), enemy(17.5, 5, 'eye', null)]; },
+  low:      () => { platforms.length = 0; return [enemy(8, 0, 'small'), enemy(12, 0, 'small'), enemy(16, 0, 'small')]; },
+  bob:      () => { platforms.length = 0; return [enemy(10, 2.5, 'eye', 'bob'), enemy(15, 3, 'eye', 'bob')]; },
+  walk:     () => { platforms.length = 0; return [enemy(16, 0, 'boar', 'walk'), enemy(22, 0, 'boar', 'walk')]; },
+  spread:   () => { platforms.length = 0; return [enemy(8, 0, 'small'), enemy(10, 3, 'eye'), enemy(12.5, 1.2, 'eye'), enemy(14, 5.5, 'eye'), enemy(18, 0, 'boar')]; },
+  behind:   () => { platforms.length = 0; return [enemy(1, 0, 'boar'), enemy(6, 7, 'eye'), enemy(4.5, 4.8, 'eye'), enemy(14, 0, 'boar')]; },
+  far:      () => { platforms.length = 0; return [enemy(11, 0, 'boar'), enemy(14, 2, 'eye')]; },
+};
+function loadScene() { enemies = SCENES[$('scene').value](); shots = []; ghosts = []; trails = []; resetStats(); }
+$('scene').addEventListener('change', loadScene);
+
+const aim = e => ({x: e.x, y: e.y + e.oy});                 // 피격 상자 중심
+const box = e => ({l: e.x - e.w / 2, r: e.x + e.w / 2, b: e.y, t: e.y + e.h});
+const alive = e => e && !e.dead;
+
+// ---- 투사체: Unity PlayerProjectile.Home + 거리 기반 이동과 같은 규칙 ----
+function spawn(homing) {
+  const sx = player.x + SPAWN.x * player.facing, sy = player.y + SPAWN.y;
+  return {x: sx, y: sy, vx: P.speed * player.facing, vy: 0, dir: {x: player.facing, y: 0}, traveled: 0, age: 0,
+          range: P.range, homing, target: null, path: [[sx, sy]], done: false, result: null, maxBend: 0};
+}
+function candidate(s, e) {
+  if (!alive(e)) return false;
+  const a = aim(e), dx = a.x - s.x, dy = a.y - s.y, d = Math.hypot(dx, dy);
+  if (d <= 1e-6) return true;
+  const remaining = s.range - s.traveled;
+  const cos = (s.dir.x * dx + s.dir.y * dy) / d;
+  return d <= remaining + RADIUS && Math.acos(Math.max(-1, Math.min(1, cos))) * 180 / Math.PI <= P.cone;
+}
+const deltaAngle = (a, b) => { let d = ((b - a) % 360 + 540) % 360 - 180; return d; };
+const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+function home(s, dt) {
+  const speed = Math.hypot(s.vx, s.vy); if (speed <= 1e-6) return;
+  if (!candidate(s, s.target)) {
+    s.target = null; let best = Infinity;
+    for (const e of enemies) {
+      if (!candidate(s, e)) continue;
+      const a = aim(e), d = (a.x - s.x) ** 2 + (a.y - s.y) ** 2;
+      if (d < best || d === best && s.target && e.id < s.target.id) { best = d; s.target = e; }
+    }
+  }
+  if (!s.target) return;
+  const cur = Math.atan2(s.vy, s.vx) * 180 / Math.PI;
+  const a = aim(s.target);
+  const want = Math.atan2(a.y - s.y, a.x - s.x) * 180 / Math.PI;
+  const turn = clamp(deltaAngle(cur, want), -P.turn * dt, P.turn * dt);
+  const base = Math.atan2(s.dir.y, s.dir.x) * 180 / Math.PI;
+  const heading = base + clamp(deltaAngle(base, cur + turn), -P.maxAngle, P.maxAngle);
+  s.vx = Math.cos(heading * Math.PI / 180) * speed; s.vy = Math.sin(heading * Math.PI / 180) * speed;
+  s.maxBend = Math.max(s.maxBend, Math.abs(deltaAngle(base, heading)));
+}
+function circleHitsBox(cx, cy, r, b) {
+  const nx = clamp(cx, b.l, b.r), ny = clamp(cy, b.b, b.t);
+  return (cx - nx) ** 2 + (cy - ny) ** 2 <= r * r;
+}
+function stepShot(s, dt, live) {
+  if (s.done) return;
+  if (s.homing) home(s, dt);
+  const speed = Math.hypot(s.vx, s.vy);
+  let length = Math.min(s.range - s.traveled, speed * dt);
+  const ux = s.vx / speed, uy = s.vy / speed;
+  // 0.05unit 단위로 쓸고 지나가며 첫 적/바닥을 찾는다 (일방향 발판은 통과).
+  while (length > 1e-6 && !s.done) {
+    const step = Math.min(0.05, length);
+    s.x += ux * step; s.y += uy * step; s.traveled += step; length -= step;
+    if (s.y - RADIUS <= FLOOR || s.x < -1 || s.x > W + 1) { finish(s, 'floor'); break; }
+    let hit = null, bestD = Infinity;
+    for (const e of enemies) {
+      if (!alive(e) || !circleHitsBox(s.x, s.y, RADIUS, box(e))) continue;
+      const d = (aim(e).x - s.x) ** 2 + (aim(e).y - s.y) ** 2;
+      if (d < bestD) { bestD = d; hit = e; }
+    }
+    if (hit) { if (live) hit.flash = 0.18; finish(s, 'enemy'); }
+  }
+  s.age += dt;
+  s.path.push([s.x, s.y]);
+  if (!s.done && s.traveled >= s.range - 1e-6) finish(s, 'range');
+}
+function finish(s, why) { s.done = true; s.result = why; s.path.push([s.x, s.y]); }
+
+function throwOnce() {
+  const s = spawn($('homingOn').checked); shots.push(s); stats.thrown++;
+  const g = spawn(false); ghosts.push(g); stats.ghostThrown++;
+  updateStats(null);
+}
+function resetStats() { stats = {thrown: 0, hit: 0, ghostThrown: 0, ghostHit: 0}; updateStats(null); }
+
+// ---- 플레이어 조작 ----
+function attackPress() {
+  if (player.motion) { player.buffered = true; return; }
+  startMotion();
+}
+function startMotion() {
+  const idx = simTime <= player.comboUntil ? player.combo : 0;
+  player.motion = {idx, t: 0, released: false};
+  player.buffered = false;
+}
+function jumpPress() {
+  if (player.grounded) { player.vy = JUMP_V; player.grounded = false; player.jumps = 1; }
+  else if (player.jumps < MAX_JUMPS) { player.vy = JUMP_V; player.jumps = Math.max(player.jumps, 1) + 1; }
+}
+function movePlayer(dt) {
+  const dir = (keys.right ? 1 : 0) - (keys.left ? 1 : 0);
+  const m = player.motion;
+  if (dir && !m) player.facing = dir;                         // 공격 중에는 방향 고정
+  const speed = m && player.grounded ? ATTACK_GROUND_SPEED : RUN;
+  player.vx = dir * speed;
+  if (player !== drag) {
+    player.x = clamp(player.x + player.vx * dt, 0.5, W - 0.5);
+    if (!player.grounded) {
+      const prevY = player.y;
+      player.vy -= (player.vy > 0 ? RISE_G : FALL_G) * dt;
+      player.y += player.vy * dt;
+      if (player.y <= FLOOR) { player.y = FLOOR; player.vy = 0; player.grounded = true; player.jumps = 0; }
+      else if (player.vy <= 0) for (const p of platforms)
+        if (prevY >= p.y && player.y <= p.y && player.x >= p.x && player.x <= p.x + p.w) { player.y = p.y; player.vy = 0; player.grounded = true; player.jumps = 0; }
+    } else {
+      const onFloor = player.y <= FLOOR + 1e-6, onPlat = platforms.some(p => Math.abs(player.y - p.y) < 1e-6 && player.x >= p.x && player.x <= p.x + p.w);
+      if (!onFloor && !onPlat) { player.grounded = false; player.jumps = 1; }
+    }
+  }
+  if (m) {
+    const c = COMBO[m.idx];
+    m.t += dt;
+    if (!m.released && m.t >= c.release) { m.released = true; throwOnce(); }
+    if (m.t >= c.dur) {
+      player.combo = (m.idx + 1) % 2; player.comboUntil = simTime + COMBO_LATE; player.motion = null;
+      if (player.buffered) startMotion();
+    }
+  }
+}
+
+// ---- 적 움직임 ----
+function moveEnemies(dt) {
+  for (const e of enemies) {
+    e.t += dt; if (e.flash > 0) e.flash -= dt;
+    if (e === drag) continue;
+    if (e.move === 'bob') e.y = e.baseY + Math.sin(e.t * Math.PI) * 1.5;
+    if (e.move === 'walk') {
+      const dir = Math.sign(player.x - e.x) || -1;
+      e.x += dir * 2.2 * dt;
+      if (Math.abs(e.x - player.x) < 1.6) e.x = e.baseX;
+    }
+  }
+}
+
+// ---- 루프 ----
+let last = performance.now(), acc = 0;
+function frame(now) {
+  const real = Math.min(0.1, (now - last) / 1000); last = now;
+  acc += real * P.slow;
+  while (acc >= DT) { tick(DT); acc -= DT; }
+  draw(); requestAnimationFrame(frame);
+}
+function tick(dt) {
+  simTime += dt;
+  if ($('auto').checked) {
+    autoClock += dt;
+    const marks = [0.10, 0.37];
+    while (autoIdx < 2 && autoClock >= marks[autoIdx]) { throwOnce(); autoIdx++; }
+    if (autoClock >= 0.6) { autoClock -= 0.6; autoIdx = 0; }
+  }
+  movePlayer(dt);
+  moveEnemies(dt);
+  for (const s of shots) { const was = s.done; stepShot(s, dt, true); if (!was && s.done) { if (s.result === 'enemy') stats.hit++; updateStats(s); trails.push({path: s.path, result: s.result, life: 1.2}); } }
+  for (const g of ghosts) { const was = g.done; stepShot(g, dt, false); if (!was && g.done) { if (g.result === 'enemy') stats.ghostHit++; updateStats(null); } }
+  shots = shots.filter(s => !s.done); ghosts = ghosts.filter(g => !g.done);
+  for (const t of trails) t.life -= dt; trails = trails.filter(t => t.life > 0);
+}
+function updateStats(s) {
+  $('sThrown').textContent = stats.thrown; $('sHit').textContent = stats.hit;
+  const done = stats.thrown - shots.filter(x => !x.done).length;
+  $('sRate').textContent = stats.thrown ? Math.round(stats.hit / Math.max(1, done) * 100) + '%' : '–';
+  const gdone = stats.ghostThrown - ghosts.filter(x => !x.done).length;
+  $('sGhost').textContent = stats.ghostThrown && gdone ? Math.round(stats.ghostHit / gdone * 100) + '%' : '–';
+  if (s) { $('sBend').textContent = s.maxBend.toFixed(1) + '°'; $('sFlight').textContent = s.age.toFixed(2) + '초'; }
+}
+
+// ---- 그리기 ----
+const sx = x => x * PPU, sy = y => cv.height - 40 - y * PPU;
+function draw() {
+  const C = n => css(n);
+  ctx.clearRect(0, 0, cv.width, cv.height);
+  // 눈금
+  ctx.strokeStyle = C('--line'); ctx.lineWidth = 1; ctx.globalAlpha = .5;
+  for (let x = 0; x <= W; x++) { ctx.beginPath(); ctx.moveTo(sx(x), sy(FLOOR)); ctx.lineTo(sx(x), 0); ctx.stroke(); }
+  for (let y = 0; y <= H; y++) { ctx.beginPath(); ctx.moveTo(0, sy(y)); ctx.lineTo(cv.width, sy(y)); ctx.stroke(); }
+  ctx.globalAlpha = 1;
+  ctx.fillStyle = C('--muted'); ctx.font = '11px system-ui';
+  for (let x = 0; x <= W; x += 2) ctx.fillText(x, sx(x) + 2, sy(FLOOR) + 14);
+  // 바닥·발판
+  ctx.fillStyle = C('--floor'); ctx.fillRect(0, sy(FLOOR), cv.width, 40);
+  ctx.fillStyle = C('--plat'); for (const p of platforms) ctx.fillRect(sx(p.x), sy(p.y), p.w * PPU, 6);
+
+  const ox = player.x + SPAWN.x * player.facing, oy = player.y + SPAWN.y;
+  // 탐지 범위
+  if ($('showCone').checked && $('homingOn').checked) {
+    const base = player.facing > 0 ? 0 : Math.PI, r = (P.range + RADIUS) * PPU, c = P.cone * Math.PI / 180;
+    ctx.fillStyle = C('--cone'); ctx.strokeStyle = C('--cone-line'); ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(sx(ox), sy(oy)); ctx.arc(sx(ox), sy(oy), r, -base - c, -base + c); ctx.closePath(); ctx.fill(); ctx.stroke();
+    // 최대 꺾임 가이드
+    ctx.setLineDash([2, 4]);
+    for (const sgn of [-1, 1]) { const a = base + sgn * P.maxAngle * Math.PI / 180; ctx.beginPath(); ctx.moveTo(sx(ox), sy(oy)); ctx.lineTo(sx(ox + Math.cos(a) * 3), sy(oy + Math.sin(a) * 3)); ctx.stroke(); }
+    ctx.setLineDash([]);
+  }
+  // 사거리 표시
+  ctx.lineWidth = 2;
+  const mark = (d, col, label) => { const x = sx(ox + d * player.facing); ctx.strokeStyle = col; ctx.setLineDash([6, 4]); ctx.beginPath(); ctx.moveTo(x, sy(oy) - 30); ctx.lineTo(x, sy(oy) + 30); ctx.stroke(); ctx.setLineDash([]); ctx.fillStyle = col; ctx.fillText(label, x + 4, sy(oy) - 32); };
+  if ($('oldRange').checked) mark(6, C('--ghost'), '예전 6');
+  mark(P.range, C('--accent'), '사거리 ' + P.range);
+
+  // 지난 궤적
+  for (const t of trails) {
+    ctx.globalAlpha = Math.min(1, t.life); ctx.strokeStyle = t.result === 'enemy' ? C('--trail') : C('--miss'); ctx.lineWidth = 1.5;
+    ctx.beginPath(); t.path.forEach(([x, y], i) => i ? ctx.lineTo(sx(x), sy(y)) : ctx.moveTo(sx(x), sy(y))); ctx.stroke();
+  }
+  ctx.globalAlpha = 1;
+  // 적
+  for (const e of enemies) {
+    const b = box(e);
+    ctx.fillStyle = e.flash > 0 ? C('--enemy-hit') : C('--enemy'); ctx.globalAlpha = .85;
+    ctx.fillRect(sx(b.l), sy(b.t), e.w * PPU, e.h * PPU); ctx.globalAlpha = 1;
+    const a = aim(e); ctx.fillStyle = C('--ink'); ctx.beginPath(); ctx.arc(sx(a.x), sy(a.y), 2.5, 0, Math.PI * 2); ctx.fill();
+  }
+  // 플레이어
+  const pb = {l: player.x + PLAYER_BOX.ox * player.facing - PLAYER_BOX.w / 2, b: player.y};
+  ctx.fillStyle = C('--player'); ctx.fillRect(sx(pb.l), sy(pb.b + PLAYER_BOX.h), PLAYER_BOX.w * PPU, PLAYER_BOX.h * PPU);
+  ctx.beginPath(); ctx.moveTo(sx(ox), sy(oy)); ctx.lineTo(sx(ox - .35 * player.facing), sy(oy) - 7); ctx.lineTo(sx(ox - .35 * player.facing), sy(oy) + 7); ctx.fill();
+  // 직선 비교 탄
+  if ($('ghost').checked) for (const g of ghosts) {
+    ctx.strokeStyle = C('--ghost'); ctx.setLineDash([4, 4]); ctx.lineWidth = 1.5;
+    ctx.beginPath(); g.path.forEach(([x, y], i) => i ? ctx.lineTo(sx(x), sy(y)) : ctx.moveTo(sx(x), sy(y))); ctx.stroke(); ctx.setLineDash([]);
+    ctx.beginPath(); ctx.arc(sx(g.x), sy(g.y), RADIUS * PPU, 0, Math.PI * 2); ctx.stroke();
+  }
+  // 실제 탄
+  for (const s of shots) {
+    ctx.strokeStyle = C('--trail'); ctx.lineWidth = 2;
+    ctx.beginPath(); s.path.forEach(([x, y], i) => i ? ctx.lineTo(sx(x), sy(y)) : ctx.moveTo(sx(x), sy(y))); ctx.stroke();
+    if (s.target) { const a = aim(s.target); ctx.strokeStyle = C('--accent'); ctx.globalAlpha = .4; ctx.beginPath(); ctx.moveTo(sx(s.x), sy(s.y)); ctx.lineTo(sx(a.x), sy(a.y)); ctx.stroke(); ctx.globalAlpha = 1; }
+    ctx.save(); ctx.translate(sx(s.x), sy(s.y)); ctx.rotate(-s.age * 720 * Math.PI / 180 * s.dir.x);
+    ctx.fillStyle = C('--shot');
+    for (let i = 0; i < 4; i++) { ctx.rotate(Math.PI / 2); ctx.beginPath(); ctx.moveTo(0, -3); ctx.lineTo(RADIUS * PPU * 1.3, 0); ctx.lineTo(0, 3); ctx.fill(); }
+    ctx.restore();
+  }
+}
+
+// ---- 입력 ----
+let drag = null, dragOff = null;
+function worldAt(ev) {
+  const r = cv.getBoundingClientRect(), k = cv.width / r.width;
+  const px = (ev.clientX - r.left) * k, py = (ev.clientY - r.top) * k;
+  return {x: px / PPU, y: (cv.height - 40 - py) / PPU};
+}
+function pick(w) {
+  for (let i = enemies.length - 1; i >= 0; i--) { const b = box(enemies[i]); if (w.x >= b.l && w.x <= b.r && w.y >= b.b && w.y <= b.t) return enemies[i]; }
+  const pl = player.x + PLAYER_BOX.ox * player.facing - PLAYER_BOX.w / 2;
+  if (w.x >= pl - .3 && w.x <= pl + PLAYER_BOX.w + .3 && w.y >= player.y && w.y <= player.y + PLAYER_BOX.h) return player;
+  return null;
+}
+cv.addEventListener('pointerdown', ev => { const w = worldAt(ev); drag = pick(w); if (drag) { dragOff = {x: drag.x - w.x, y: drag.y - w.y}; cv.setPointerCapture(ev.pointerId); } });
+cv.addEventListener('pointermove', ev => {
+  if (!drag) return; const w = worldAt(ev);
+  drag.x = clamp(w.x + dragOff.x, 0, W); drag.y = clamp(w.y + dragOff.y, 0, H - 2);
+  if (drag !== player) { drag.baseX = drag.x; drag.baseY = drag.y; }
+});
+cv.addEventListener('pointerup', () => { if (drag === player) { player.grounded = player.y <= FLOOR + 1e-6; player.vy = 0; player.jumps = player.grounded ? 0 : 1; } drag = null; });
+cv.addEventListener('dblclick', ev => {
+  const w = worldAt(ev), hit = pick(w);
+  if (hit && hit !== player) enemies = enemies.filter(e => e !== hit);
+  else if (!hit) enemies.push(enemy(w.x, Math.max(0, w.y - .6), 'eye'));
+});
+// 게임 키는 슬라이더·버튼에 초점이 있어도 항상 캐릭터 조작으로 쓴다 (화살표가 슬라이더를 움직이지 않게).
+const GAME_KEYS = ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Space', 'KeyA', 'KeyT'];
+window.addEventListener('keydown', ev => {
+  if (!GAME_KEYS.includes(ev.code)) return;
+  ev.preventDefault();
+  if (document.activeElement && document.activeElement !== document.body) document.activeElement.blur();
+  if (ev.code === 'ArrowLeft') keys.left = true;
+  if (ev.code === 'ArrowRight') keys.right = true;
+  if (ev.repeat) return;
+  if (ev.code === 'Space') jumpPress();
+  if (ev.code === 'KeyA') attackPress();
+  if (ev.code === 'KeyT') $('auto').checked = !$('auto').checked;
+});
+window.addEventListener('keyup', ev => {
+  if (ev.code === 'ArrowLeft') keys.left = false;
+  if (ev.code === 'ArrowRight') keys.right = false;
+});
+window.addEventListener('blur', () => { keys.left = keys.right = false; });
+$('throw').onclick = attackPress;
+$('reset').onclick = resetStats;
+function setValues(values, homing) {
+  for (const [k, v] of Object.entries(values)) { $(k).value = v; $(k).dispatchEvent(new Event('input')); }
+  $('homingOn').checked = homing; resetStats();
+}
+const ORIGINAL = {turn: DEF.turn, cone: DEF.cone, maxAngle: DEF.maxAngle, range: 6, speed: 22};
+$('original').onclick = () => setValues(ORIGINAL, false);
+$('defaults').onclick = () => setValues(DEF, true);
+$('copy').onclick = async () => { try { await navigator.clipboard.writeText($('json').textContent); $('copy').textContent = '복사됨'; } catch { $('copy').textContent = '복사 실패 — 아래 글을 직접 복사'; } setTimeout(() => $('copy').textContent = '현재 값 JSON 복사', 1500); };
+
+loadScene();
+requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>

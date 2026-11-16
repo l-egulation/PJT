@@ -1,0 +1,24 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>1스테이지 밝은 배경 레이어</title>
+<style>body{margin:24px;background:#e8e1d6;color:#38312c;font:16px "Malgun Gothic",sans-serif}main{max-width:1080px;margin:auto}h1{font-size:26px}canvas{width:100%;background:#d8d1c7;border:1px solid #aaa;display:block;margin:16px 0}label{display:inline-block;margin:8px 16px 8px 0}input[type=range]{width:240px}a{color:#446b78}small{display:block;line-height:1.7}</style>
+<main><h1>실제 방 구조 · 밝은 버전</h1><select id="room"></select>
+<label><input id="far" type="checkbox" checked>원경</label><label><input id="near" type="checkbox" checked>건축 배경</label><label><input id="tiles" type="checkbox" checked>지형</label><label><input id="actor" type="checkbox" checked>캐릭터 크기 참조</label>
+<canvas id="view" width="960" height="540"></canvas>
+<label>좌우 카메라 <input id="cx" type="range" min="0" value="0"></label><label>상하 카메라 <input id="cy" type="range" min="0" value="0"></label>
+<label><input id="auto" type="checkbox">자동 상하 이동</label>
+<small>건축·지형은 같은 속도로 이동하고, 창밖 풍경은 0.2배로 이동합니다. 레이어를 꺼서 투명한 창과 아치를 확인할 수 있습니다. 화살표 키로도 카메라를 이동합니다.</small>
+<p><a href="four-rooms-overview.png">전체 방 4종</a> · <a href="layer-breakdown.png">레이어 분리 보기</a></p><p id="status"></p></main>
+<script src="rooms.js"></script><script>
+const $=id=>document.getElementById(id),ctx=$('view').getContext('2d');let images=[],room,token=0;
+ROOMS.forEach((r,i)=>{const o=document.createElement('option');o.value=i;o.textContent=r.id+' '+r.name;$('room').append(o)});
+async function select(){const t=++token;room=ROOMS[+$('room').value];$('status').textContent='불러오는 중…';
+const loaded=await Promise.all([room.far,room.near,room.terrain,room.actors].map(p=>new Promise((resolve,reject)=>{const im=new Image;im.onload=()=>resolve(im);im.onerror=reject;im.src='../'+p})));
+if(t!==token)return;images=loaded;$('cx').max=Math.max(0,room.width-960);$('cy').max=Math.max(0,room.height-540);$('cx').value=0;$('cy').value=$('cy').max;$('status').textContent=room.worldUnits.join(' × ')+'u · 1u=32px · 출입구 전부 열린 원형';draw();}
+function draw(){if(images.length!==4)return;const x=+$('cx').value,y=+$('cy').value;ctx.clearRect(0,0,960,540);ctx.fillStyle='#e6ded0';ctx.fillRect(0,0,960,540);
+const enabled=['far','near','tiles','actor'];
+images.forEach((im,i)=>{if(!$(enabled[i]).checked)return;ctx.imageSmoothingEnabled=i<2;
+const fx=i===0?-(room.width-960)*.4-x*.2:-x,fy=i===0?-(room.height-540)*.8-y*.2:-y;
+ctx.drawImage(im,Math.round(fx),Math.round(fy));});}
+$('room').onchange=select;document.querySelectorAll('input').forEach(el=>el.oninput=draw);
+window.addEventListener('keydown',e=>{if(!e.key.startsWith('Arrow'))return;e.preventDefault();if(e.key==='ArrowLeft')$('cx').value=+$('cx').value-32;if(e.key==='ArrowRight')$('cx').value=+$('cx').value+32;if(e.key==='ArrowUp')$('cy').value=+$('cy').value-32;if(e.key==='ArrowDown')$('cy').value=+$('cy').value+32;draw()});
+function tick(t){if($('auto').checked&&images.length===4){$('cy').value=(.5+.5*Math.cos(t/3500))*(+$('cy').max);draw()}requestAnimationFrame(tick)}select().catch(e=>$('status').textContent='이미지를 불러오지 못했습니다: '+e);requestAnimationFrame(tick);
+</script></html>

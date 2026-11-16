@@ -1,0 +1,312 @@
+{
+  "status": "proposal_pending_user_decision",
+  "unity_applied": false,
+  "doc": "docs/design/run/game-loop-balance-proposal.md",
+  "note": "★추천안 기준 수치. confirmed=true 항목은 기존 문서의 확정·시험값을 그대로 옮긴 것이다.",
+  "run": {
+    "chapters": 3,
+    "target_minutes": [
+      45,
+      60
+    ],
+    "combat_maps_per_chapter": 8,
+    "mobs_per_map": {
+      "1": 10,
+      "2": 11,
+      "3": 12
+    },
+    "elite_spaces": {
+      "1": 1,
+      "2": 1,
+      "3": 2
+    },
+    "mid_maintenance_shop": {
+      "1": 1,
+      "2": 1,
+      "3": 1
+    },
+    "post_boss_maintenance_space": {
+      "1": 1,
+      "2": 1,
+      "3": 0
+    },
+    "pre_final_boss_shop": {
+      "3": 1
+    },
+    "seconds_per_combat_map": {
+      "1": 65,
+      "2": 75,
+      "3": 85
+    },
+    "seconds_elite": {
+      "1": 60,
+      "2": 75,
+      "3": 90
+    },
+    "seconds_boss": {
+      "1": 90,
+      "2": 120,
+      "3": 150
+    }
+  },
+  "player": {
+    "base_max_hp": 100,
+    "reference_effective_dps": 18,
+    "reference_multi_target_hits": 1.6
+  },
+  "enemy_scaling": {
+    "hp_mult": {
+      "1": 1.0,
+      "2": 1.5,
+      "3": 1.95
+    },
+    "damage_mult": {
+      "1": 1.0,
+      "2": 1.25,
+      "3": 1.5
+    },
+    "elite": {
+      "hp_mult": 5.0,
+      "damage_mult": 1.3,
+      "attack_interval_mult": 0.85,
+      "basic_stagger_seconds": 0,
+      "push_pull_immune": false,
+      "visual_scale": 1.3,
+      "escorts": 4
+    },
+    "boss": {
+      "max_hp": {
+        "1": 1600,
+        "2": 2700,
+        "3": 3800
+      },
+      "hit_damage": {
+        "1": [
+          25,
+          35
+        ],
+        "2": [
+          35,
+          45
+        ],
+        "3": [
+          45,
+          55
+        ]
+      },
+      "basic_stagger_seconds": 0
+    }
+  },
+  "recovery": {
+    "decision": "maintenance_paid_heal_only",
+    "maintenance_heal": {
+      "heal_max_hp_ratio": 0.4,
+      "price": 25,
+      "limit": null,
+      "shares_growth_price_counter": false
+    },
+    "heal_orb": null,
+    "chapter_transition_full_heal": false,
+    "open_issue": "회복 지점 사이 생존 예산 초과 — 결정 질문 11"
+  },
+  "rewards": {
+    "normal_gold": {
+      "1": [
+        3,
+        5
+      ],
+      "2": [
+        5,
+        7
+      ],
+      "3": [
+        7,
+        9
+      ]
+    },
+    "normal_gold_ch1_confirmed": true,
+    "normal_part_drop_chance": 0.03,
+    "elite": {
+      "gold": {
+        "1": [
+          100,
+          140
+        ],
+        "2": [
+          130,
+          182
+        ],
+        "3": [
+          160,
+          224
+        ]
+      },
+      "palette_chance": 0.5,
+      "parts": [
+        2,
+        3
+      ],
+      "stamp_chance": 0.3,
+      "ch1_confirmed": true
+    },
+    "boss": {
+      "gold": {
+        "1": [
+          300,
+          360
+        ],
+        "2": [
+          390,
+          468
+        ],
+        "3": [
+          0,
+          0
+        ]
+      },
+      "palette_chance": 1.0,
+      "parts": [
+        3,
+        4
+      ],
+      "stamp_chance": 1.0,
+      "ch1_confirmed": true
+    },
+    "stamp_weapon_skill_ratio": [
+      0.5,
+      0.5
+    ],
+    "ink_grades": [
+      {
+        "id": "faint",
+        "name": "흐린 잉크",
+        "mult": 1.0,
+        "chance": {
+          "1": 0.8,
+          "2": 0.6,
+          "3": 0.45
+        }
+      },
+      {
+        "id": "deep",
+        "name": "진한 잉크",
+        "mult": 1.3,
+        "chance": {
+          "1": 0.18,
+          "2": 0.32,
+          "3": 0.4
+        }
+      },
+      {
+        "id": "condensed",
+        "name": "농축 잉크",
+        "mult": 1.6,
+        "chance": {
+          "1": 0.02,
+          "2": 0.08,
+          "3": 0.15
+        }
+      }
+    ],
+    "ink_grade_scales": [
+      "damage",
+      "heal",
+      "shield",
+      "duration"
+    ],
+    "ink_color_weights": {
+      "red": 0.2,
+      "yellow": 0.2,
+      "green": 0.2,
+      "blue": 0.2,
+      "purple": 0.2
+    },
+    "palette_slot_count": {
+      "elite": {
+        "3": 0.45,
+        "4": 0.4,
+        "5": 0.15
+      },
+      "boss": {
+        "4": 0.5,
+        "5": 0.5
+      },
+      "shop": {
+        "3": 0.3,
+        "4": 0.5,
+        "5": 0.2
+      }
+    },
+    "palette_colorless_count": {
+      "3": {
+        "0": 0.7,
+        "1": 0.3
+      },
+      "4": {
+        "0": 0.6,
+        "1": 0.4
+      },
+      "5": {
+        "0": 0.5,
+        "1": 0.4,
+        "2": 0.1
+      }
+    },
+    "palette_min_same_color_slots": 2
+  },
+  "maintenance": {
+    "prices_confirmed": true,
+    "palette": [
+      100,
+      50
+    ],
+    "gacha": [
+      40,
+      20
+    ],
+    "stat": [
+      60,
+      30
+    ],
+    "slot": [
+      50,
+      25
+    ],
+    "stamp_swap": 20,
+    "stamp_sell": 25,
+    "character_stats": {
+      "attack": {
+        "per_level_damage": 0.08,
+        "max_level": 10,
+        "stacking": "separate_multiplier"
+      },
+      "max_hp": {
+        "per_level": 10,
+        "max_level": 10,
+        "heals_gained_amount": true
+      },
+      "selection": "player_chooses_stat_each_purchase_shared_price_counter",
+      "list_status": "pending_question_12"
+    },
+    "palette_slot_upgrade": {
+      "per_level_effect": 0.15,
+      "max_level_per_slot": 3,
+      "bound_to": "slot",
+      "kept_on_partial_replace": true,
+      "lost_on_rebuild": true
+    },
+    "craft_costs": {
+      "first_activation": 30,
+      "fill_empty_slot": 15,
+      "partial_replace": 80,
+      "rebuild_confirm": 60
+    },
+    "safe_maintenance": "maintenance_spaces_only"
+  },
+  "decisions": {
+    "enemy_hp_mult": "B",
+    "character_stat": "player_selects",
+    "recovery": "paid_maintenance_only",
+    "safe_maintenance": "maintenance_spaces_only"
+  }
+}

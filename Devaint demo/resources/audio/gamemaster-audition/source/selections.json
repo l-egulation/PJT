@@ -1,0 +1,133 @@
+{
+  "base_sword": {
+    "number": 5,
+    "file": "whoosh_swish_high_big_01.wav",
+    "archiveEntry": "Whooshes/whoosh_swish_high_big_01.wav",
+    "sha256": "7df8e272526831a50f7f3f6dff638662be2a8aba17055dbba05b1ea78d459b98",
+    "offsetMs": 0,
+    "status": "applied-locally",
+    "sourceChoice": "base_sword 5"
+  },
+  "whip": {
+    "number": 9,
+    "file": "whoosh_swish_small_harsh_02.wav",
+    "archiveEntry": "Whooshes/whoosh_swish_small_harsh_02.wav",
+    "sha256": "5343ace6dd6bbbab6447badcfb491e47100691063d8fec38d4e4d570e98ee52d",
+    "offsetMs": 0,
+    "status": "applied-locally",
+    "sourceChoice": "whip 9"
+  },
+  "rapier": {
+    "number": 10,
+    "file": "whoosh_swish_small_harsh_03.wav",
+    "archiveEntry": "Whooshes/whoosh_swish_small_harsh_03.wav",
+    "sha256": "3d5534259dbe3df8109fa86c89af99b2a7498aebbdb6a571780e3a299c39010f",
+    "offsetMs": 0,
+    "status": "applied-locally",
+    "sourceChoice": "rapier 10"
+  },
+  "dagger": {
+    "number": 9,
+    "file": "whoosh_swish_small_01.wav",
+    "archiveEntry": "Whooshes/whoosh_swish_small_01.wav",
+    "sha256": "753945c79af4d630dde8a51e9a28c7f4e62e08d8fe5f06267c67160c052c853f",
+    "offsetMs": 0,
+    "status": "applied-locally",
+    "sourceChoice": "dagger 9"
+  },
+  "shield": {
+    "number": 1,
+    "file": "whoosh_low_deep_01.wav",
+    "archiveEntry": "Whooshes/whoosh_low_deep_01.wav",
+    "sha256": "23acec8fa8ccbf69b4aacd6034a9a0d17b3ee2afd488b51d045da38d410fe592",
+    "offsetMs": 0,
+    "status": "applied-locally",
+    "sourceChoice": "shield 1"
+  },
+  "greatsword": {
+    "number": 4,
+    "file": "whoosh_swish_high_big_04.wav",
+    "archiveEntry": "Whooshes/whoosh_swish_high_big_04.wav",
+    "sha256": "f594fda391f61e0ed9cb8c3841769f937a666dd8c90dba0bef5a91b6b3d3056e",
+    "offsetMs": 0,
+    "status": "applied-locally",
+    "sourceChoice": "greatsword 4"
+  },
+  "bomb": {
+    "number": 1,
+    "file": "whoosh_swish_high_big_01.wav",
+    "archiveEntry": "Whooshes/whoosh_swish_high_big_01.wav",
+    "sha256": "7df8e272526831a50f7f3f6dff638662be2a8aba17055dbba05b1ea78d459b98",
+    "offsetMs": 0,
+    "status": "applied-locally",
+    "sourceChoice": "bomb 1"
+  },
+  "unarmed": {
+    "number": 10,
+    "file": "whoosh_low_deep_soft_02.wav",
+    "archiveEntry": "Whooshes/whoosh_low_deep_soft_02.wav",
+    "sha256": "833e5b5705f6bd13a4daea1bc407145502c6207eb80732e3e5b701cc59ac2dfa",
+    "offsetMs": 0,
+    "status": "applied-locally",
+    "sourceChoice": "unarmed 10"
+  },
+  "shuriken": {
+    "number": 10,
+    "file": "whoosh_swish_high_big_02.wav",
+    "archiveEntry": "Whooshes/whoosh_swish_high_big_02.wav",
+    "sha256": "eaed3add1004991ac171d7e88222a92a5a4c3d6811c6273bb94d0c87468bec15",
+    "offsetMs": 0,
+    "status": "applied-locally",
+    "sourceChoice": "bomb 2"
+  },
+  "launcher": {
+    "number": 11,
+    "file": "sfx_weapon_launcher_basic_0_01_v01.wav",
+    "sha256": "fc43c2bafb1a1c603686de4512f6fa5385810558237685b2dae7e10f1c1c3e6b",
+    "offsetMs": 0,
+    "status": "approved-current",
+    "sourceChoice": "current-runtime"
+  },
+  "hammer": {
+    "number": 5,
+    "file": "hammer-r5-05",
+    "recipeId": "hammer-r5-05",
+    "offsetMs": 0,
+    "layerOffsetsMs": {
+      "swing": 0,
+      "impact": 210
+    },
+    "status": "applied-locally",
+    "sourceChoice": "exported selected candidate and sole favorite",
+    "inputSha256": "55dc7611b8cbd5af546e9a19b67c5e476fd5431ddd3cd26d288e785d05454eea",
+    "runtimeHeadroomGain": 1,
+    "layers": {
+      "attack2": {
+        "swing": {
+          "file": "hammer-05-hit-2-swing.wav",
+          "sha256": "8106be4d1a963e6197fbe40186ef30583ae3d51e1d75a6de02bdcda5deecb22f",
+          "nominalDuration": 0.59,
+          "accentSeconds": 0.24999999999999997
+        },
+        "impact": {
+          "file": "hammer-05-hit-2-impact.wav",
+          "sha256": "7d492743e8a00efd204f04e2d3e5879b0e7607997f8021349ceee2a1df20c5ce",
+          "nominalDuration": 0.59,
+          "accentSeconds": 0.24999999999999997
+        }
+      }
+    },
+    "variants": {
+      "attack1": {
+        "file": "hammer-05-hit-1.wav",
+        "sha256": "a2513fa8fd5cb82afb38f8a73e46d9312bfbc8e9dac3c21dc61dbfb18ce8e3c4",
+        "nominalDuration": 0.96
+      },
+      "attack2": {
+        "file": "hammer-05-hit-2.wav",
+        "sha256": "9b6144bee14d73aedca2a56e36ac3dbf80ea1ed6707d2c454bfab8e13c5408b6",
+        "nominalDuration": 0.59
+      }
+    }
+  }
+}

@@ -1,0 +1,553 @@
+{
+  "status": "direction rejected by user (wanted less threatening, not cut or sped up); kept for comparison",
+  "feedback": "1,2번에서 좀 더 가벼운 소리. 지금은 3D 실사 게임 같은 사운드, 우리는 2D 픽셀 횡스크롤",
+  "levelMatch": "K-weighted 400 ms maximum equal to the slot current file",
+  "candidates": [
+    {
+      "slot": "basic",
+      "number": 1,
+      "name": "짧은 실제 폭발 · 가볍게",
+      "fromCandidate": 1,
+      "archiveEntry": "Explosion_Fire_Gas/explosion_small_short_01.wav",
+      "sourceSha256": "a06cba9ccd093c90656d651cd108563f7d5ecc59d221d4f92acd73dc9b6b8db3",
+      "trim": {
+        "startSeconds": 0.0,
+        "endRule": "recording decay to -54 dB"
+      },
+      "speed": 1.15,
+      "lowCutHz": 120,
+      "lowCutOrder": 4,
+      "keptSeconds": 0.6,
+      "fadeSeconds": 0.15,
+      "endRule": "capped at 0.6 s with cosine fade",
+      "grenadeCluster": null,
+      "gainDb": -9.24,
+      "limitedTo089": false,
+      "loudnessDb": -22.81,
+      "targetDb": -22.81,
+      "peak": 0.5532,
+      "file": "runtime/basic-1.wav",
+      "sha256": "5064ba6bf0ce177e5064641334fac4aa032dd5fa69edb39fb74c178ae87359c2"
+    },
+    {
+      "slot": "basic",
+      "number": 2,
+      "name": "짧은 실제 폭발 · 더 가볍게",
+      "fromCandidate": 1,
+      "archiveEntry": "Explosion_Fire_Gas/explosion_small_short_01.wav",
+      "sourceSha256": "a06cba9ccd093c90656d651cd108563f7d5ecc59d221d4f92acd73dc9b6b8db3",
+      "trim": {
+        "startSeconds": 0.0,
+        "endRule": "recording decay to -54 dB"
+      },
+      "speed": 1.3,
+      "lowCutHz": 180,
+      "lowCutOrder": 4,
+      "keptSeconds": 0.45,
+      "fadeSeconds": 0.12,
+      "endRule": "capped at 0.45 s with cosine fade",
+      "grenadeCluster": null,
+      "gainDb": -8.43,
+      "limitedTo089": false,
+      "loudnessDb": -22.81,
+      "targetDb": -22.81,
+      "peak": 0.6036,
+      "file": "runtime/basic-2.wav",
+      "sha256": "f7e82137022a3b61e070e1e0c833815d29afec7b0b7bfe7c6faa64364e4cac8f"
+    },
+    {
+      "slot": "basic",
+      "number": 3,
+      "name": "짧은 실제 폭발 · 아주 가볍게",
+      "fromCandidate": 1,
+      "archiveEntry": "Explosion_Fire_Gas/explosion_small_short_01.wav",
+      "sourceSha256": "a06cba9ccd093c90656d651cd108563f7d5ecc59d221d4f92acd73dc9b6b8db3",
+      "trim": {
+        "startSeconds": 0.0,
+        "endRule": "recording decay to -54 dB"
+      },
+      "speed": 1.5,
+      "lowCutHz": 250,
+      "lowCutOrder": 4,
+      "keptSeconds": 0.32,
+      "fadeSeconds": 0.1,
+      "endRule": "capped at 0.32 s with cosine fade",
+      "grenadeCluster": null,
+      "gainDb": -7.59,
+      "limitedTo089": false,
+      "loudnessDb": -22.81,
+      "targetDb": -22.81,
+      "peak": 0.6475,
+      "file": "runtime/basic-3.wav",
+      "sha256": "1368ba7bf51cdd132346265515c1bafb737a53ec514b7b289338ab1952dd1d5a"
+    },
+    {
+      "slot": "basic",
+      "number": 4,
+      "name": "꼬리 없는 폭발 · 가볍게",
+      "fromCandidate": 2,
+      "archiveEntry": "Explosion_Fire_Gas/explosion_small_no_tail_03.wav",
+      "sourceSha256": "53413cd8ce45f39f1c8a33943b2d99662cbf6e1b3f991c263445faf55cc8fb83",
+      "trim": {
+        "startSeconds": 0.0,
+        "endRule": "recording decay to -54 dB"
+      },
+      "speed": 1.15,
+      "lowCutHz": 120,
+      "lowCutOrder": 4,
+      "keptSeconds": 0.6,
+      "fadeSeconds": 0.15,
+      "endRule": "capped at 0.6 s with cosine fade",
+      "grenadeCluster": null,
+      "gainDb": -12.54,
+      "limitedTo089": false,
+      "loudnessDb": -22.81,
+      "targetDb": -22.81,
+      "peak": 0.3611,
+      "file": "runtime/basic-4.wav",
+      "sha256": "0af0bdc0e9c8f07f5dc88b994ac77a27ef4fa1d7ef941c98febfbe139cb2bfce"
+    },
+    {
+      "slot": "basic",
+      "number": 5,
+      "name": "꼬리 없는 폭발 · 더 가볍게",
+      "fromCandidate": 2,
+      "archiveEntry": "Explosion_Fire_Gas/explosion_small_no_tail_03.wav",
+      "sourceSha256": "53413cd8ce45f39f1c8a33943b2d99662cbf6e1b3f991c263445faf55cc8fb83",
+      "trim": {
+        "startSeconds": 0.0,
+        "endRule": "recording decay to -54 dB"
+      },
+      "speed": 1.3,
+      "lowCutHz": 180,
+      "lowCutOrder": 4,
+      "keptSeconds": 0.45,
+      "fadeSeconds": 0.12,
+      "endRule": "capped at 0.45 s with cosine fade",
+      "grenadeCluster": null,
+      "gainDb": -11.86,
+      "limitedTo089": false,
+      "loudnessDb": -22.81,
+      "targetDb": -22.81,
+      "peak": 0.4058,
+      "file": "runtime/basic-5.wav",
+      "sha256": "78c5655a657aec172b3e1f28e7401eae9c18bda0da6edb3cf3c16fc0cb22ff33"
+    },
+    {
+      "slot": "basic",
+      "number": 6,
+      "name": "꼬리 없는 폭발 · 아주 가볍게",
+      "fromCandidate": 2,
+      "archiveEntry": "Explosion_Fire_Gas/explosion_small_no_tail_03.wav",
+      "sourceSha256": "53413cd8ce45f39f1c8a33943b2d99662cbf6e1b3f991c263445faf55cc8fb83",
+      "trim": {
+        "startSeconds": 0.0,
+        "endRule": "recording decay to -54 dB"
+      },
+      "speed": 1.5,
+      "lowCutHz": 250,
+      "lowCutOrder": 4,
+      "keptSeconds": 0.32,
+      "fadeSeconds": 0.1,
+      "endRule": "capped at 0.32 s with cosine fade",
+      "grenadeCluster": null,
+      "gainDb": -11.2,
+      "limitedTo089": false,
+      "loudnessDb": -22.81,
+      "targetDb": -22.81,
+      "peak": 0.4192,
+      "file": "runtime/basic-6.wav",
+      "sha256": "90bdd1bdb3a86e1fe71d947880753ef6e75d3df2d9216692551e708313b3b887"
+    },
+    {
+      "slot": "large",
+      "number": 1,
+      "name": "큰 실제 폭발 · 가볍게",
+      "fromCandidate": 1,
+      "archiveEntry": "Explosion_Fire_Gas/explosion_large_06.wav",
+      "sourceSha256": "72ba780991b965ded32b7541c1977e673e0505ac3ae9f1c2bc0e0300f19de930",
+      "trim": {
+        "startSeconds": 0.0,
+        "endRule": "recording decay to -54 dB"
+      },
+      "speed": 1.15,
+      "lowCutHz": 120,
+      "lowCutOrder": 4,
+      "keptSeconds": 0.96,
+      "fadeSeconds": 0.15,
+      "endRule": "capped at 0.96 s with cosine fade",
+      "grenadeCluster": null,
+      "gainDb": -8.99,
+      "limitedTo089": false,
+      "loudnessDb": -22.32,
+      "targetDb": -22.32,
+      "peak": 0.633,
+      "file": "runtime/large-1.wav",
+      "sha256": "460fccdf3bafda43ab9436d63ccf0e0e90b2a9e8562ef30b22f63cf40320c797"
+    },
+    {
+      "slot": "large",
+      "number": 2,
+      "name": "큰 실제 폭발 · 더 가볍게",
+      "fromCandidate": 1,
+      "archiveEntry": "Explosion_Fire_Gas/explosion_large_06.wav",
+      "sourceSha256": "72ba780991b965ded32b7541c1977e673e0505ac3ae9f1c2bc0e0300f19de930",
+      "trim": {
+        "startSeconds": 0.0,
+        "endRule": "recording decay to -54 dB"
+      },
+      "speed": 1.3,
+      "lowCutHz": 180,
+      "lowCutOrder": 4,
+      "keptSeconds": 0.72,
+      "fadeSeconds": 0.12,
+      "endRule": "capped at 0.72 s with cosine fade",
+      "grenadeCluster": null,
+      "gainDb": -8.1,
+      "limitedTo089": false,
+      "loudnessDb": -22.32,
+      "targetDb": -22.32,
+      "peak": 0.6893,
+      "file": "runtime/large-2.wav",
+      "sha256": "885b3487da03f16eae7b6f44bbee9da46ec29026831746ae301dc04b76be50b4"
+    },
+    {
+      "slot": "large",
+      "number": 3,
+      "name": "큰 실제 폭발 · 아주 가볍게",
+      "fromCandidate": 1,
+      "archiveEntry": "Explosion_Fire_Gas/explosion_large_06.wav",
+      "sourceSha256": "72ba780991b965ded32b7541c1977e673e0505ac3ae9f1c2bc0e0300f19de930",
+      "trim": {
+        "startSeconds": 0.0,
+        "endRule": "recording decay to -54 dB"
+      },
+      "speed": 1.5,
+      "lowCutHz": 250,
+      "lowCutOrder": 4,
+      "keptSeconds": 0.512,
+      "fadeSeconds": 0.1,
+      "endRule": "capped at 0.512 s with cosine fade",
+      "grenadeCluster": null,
+      "gainDb": -7.35,
+      "limitedTo089": false,
+      "loudnessDb": -22.32,
+      "targetDb": -22.32,
+      "peak": 0.7268,
+      "file": "runtime/large-3.wav",
+      "sha256": "550955445e70de897490439e198bff595accbf7d3aa2cced28d6756d3abcaa93"
+    },
+    {
+      "slot": "large",
+      "number": 4,
+      "name": "꼬리 짧은 큰 폭발 · 가볍게",
+      "fromCandidate": 2,
+      "archiveEntry": "Explosion_Fire_Gas/explosion_large_no_tail_06.wav",
+      "sourceSha256": "58344c25604fce4472db38e1589caab36868cf158ca7dd6aa84fc6018a56d577",
+      "trim": {
+        "startSeconds": 0.0,
+        "endRule": "recording decay to -54 dB"
+      },
+      "speed": 1.15,
+      "lowCutHz": 120,
+      "lowCutOrder": 4,
+      "keptSeconds": 0.753,
+      "fadeSeconds": 0.15,
+      "endRule": "natural -54 dB",
+      "grenadeCluster": null,
+      "gainDb": -9.03,
+      "limitedTo089": false,
+      "loudnessDb": -22.32,
+      "targetDb": -22.32,
+      "peak": 0.5663,
+      "file": "runtime/large-4.wav",
+      "sha256": "180e1d6cd4c8ba4c37291fb6a783a1c3d0922d8b6cc639189654aae5c587b8bd"
+    },
+    {
+      "slot": "large",
+      "number": 5,
+      "name": "꼬리 짧은 큰 폭발 · 더 가볍게",
+      "fromCandidate": 2,
+      "archiveEntry": "Explosion_Fire_Gas/explosion_large_no_tail_06.wav",
+      "sourceSha256": "58344c25604fce4472db38e1589caab36868cf158ca7dd6aa84fc6018a56d577",
+      "trim": {
+        "startSeconds": 0.0,
+        "endRule": "recording decay to -54 dB"
+      },
+      "speed": 1.3,
+      "lowCutHz": 180,
+      "lowCutOrder": 4,
+      "keptSeconds": 0.661,
+      "fadeSeconds": 0.12,
+      "endRule": "natural -54 dB",
+      "grenadeCluster": null,
+      "gainDb": -7.97,
+      "limitedTo089": false,
+      "loudnessDb": -22.32,
+      "targetDb": -22.32,
+      "peak": 0.5656,
+      "file": "runtime/large-5.wav",
+      "sha256": "2f2f37d9525bd874ac24f0438963cba6d355e0ee304ae8417549d8472010eced"
+    },
+    {
+      "slot": "large",
+      "number": 6,
+      "name": "꼬리 짧은 큰 폭발 · 아주 가볍게",
+      "fromCandidate": 2,
+      "archiveEntry": "Explosion_Fire_Gas/explosion_large_no_tail_06.wav",
+      "sourceSha256": "58344c25604fce4472db38e1589caab36868cf158ca7dd6aa84fc6018a56d577",
+      "trim": {
+        "startSeconds": 0.0,
+        "endRule": "recording decay to -54 dB"
+      },
+      "speed": 1.5,
+      "lowCutHz": 250,
+      "lowCutOrder": 4,
+      "keptSeconds": 0.512,
+      "fadeSeconds": 0.1,
+      "endRule": "capped at 0.512 s with cosine fade",
+      "grenadeCluster": null,
+      "gainDb": -7.07,
+      "limitedTo089": false,
+      "loudnessDb": -22.32,
+      "targetDb": -22.32,
+      "peak": 0.5844,
+      "file": "runtime/large-6.wav",
+      "sha256": "92729334dbd85b70f80c2bb3074ac995677faae8b4a570116b4283410668fc52"
+    },
+    {
+      "slot": "grenade",
+      "number": 1,
+      "name": "짧은 폭발 3연쇄 · 가볍게",
+      "fromCandidate": 1,
+      "archiveEntry": "Explosion_Fire_Gas/explosion_small_short_02.wav",
+      "sourceSha256": "5b09ff3540c29a1b46b3f0850e4c7dbbc1bccc8d75943df1b790c1beceea2bcf",
+      "trim": {
+        "startSeconds": 0.0,
+        "endRule": "recording decay to -54 dB"
+      },
+      "speed": 1.15,
+      "lowCutHz": 120,
+      "lowCutOrder": 4,
+      "keptSeconds": 0.48,
+      "fadeSeconds": 0.15,
+      "endRule": "capped at 0.48 s with cosine fade",
+      "grenadeCluster": [
+        [
+          0,
+          0.7
+        ],
+        [
+          0.13,
+          0.55
+        ],
+        [
+          0.27,
+          0.85
+        ]
+      ],
+      "gainDb": -15.12,
+      "limitedTo089": false,
+      "loudnessDb": -30.98,
+      "targetDb": -30.98,
+      "peak": 0.1477,
+      "file": "runtime/grenade-1.wav",
+      "sha256": "39cdd3aed604b67043276250d06704f74a57c3a93a07695ce62bf1635cab67f9"
+    },
+    {
+      "slot": "grenade",
+      "number": 2,
+      "name": "짧은 폭발 3연쇄 · 더 가볍게",
+      "fromCandidate": 1,
+      "archiveEntry": "Explosion_Fire_Gas/explosion_small_short_02.wav",
+      "sourceSha256": "5b09ff3540c29a1b46b3f0850e4c7dbbc1bccc8d75943df1b790c1beceea2bcf",
+      "trim": {
+        "startSeconds": 0.0,
+        "endRule": "recording decay to -54 dB"
+      },
+      "speed": 1.3,
+      "lowCutHz": 180,
+      "lowCutOrder": 4,
+      "keptSeconds": 0.36,
+      "fadeSeconds": 0.12,
+      "endRule": "capped at 0.36 s with cosine fade",
+      "grenadeCluster": [
+        [
+          0,
+          0.7
+        ],
+        [
+          0.13,
+          0.55
+        ],
+        [
+          0.27,
+          0.85
+        ]
+      ],
+      "gainDb": -14.62,
+      "limitedTo089": false,
+      "loudnessDb": -30.98,
+      "targetDb": -30.98,
+      "peak": 0.1893,
+      "file": "runtime/grenade-2.wav",
+      "sha256": "4bd215fd11a583eaa9706c9e4e58fe313458177cbc500878f41b450ea101a485"
+    },
+    {
+      "slot": "grenade",
+      "number": 3,
+      "name": "짧은 폭발 3연쇄 · 아주 가볍게",
+      "fromCandidate": 1,
+      "archiveEntry": "Explosion_Fire_Gas/explosion_small_short_02.wav",
+      "sourceSha256": "5b09ff3540c29a1b46b3f0850e4c7dbbc1bccc8d75943df1b790c1beceea2bcf",
+      "trim": {
+        "startSeconds": 0.0,
+        "endRule": "recording decay to -54 dB"
+      },
+      "speed": 1.5,
+      "lowCutHz": 250,
+      "lowCutOrder": 4,
+      "keptSeconds": 0.256,
+      "fadeSeconds": 0.1,
+      "endRule": "capped at 0.256 s with cosine fade",
+      "grenadeCluster": [
+        [
+          0,
+          0.7
+        ],
+        [
+          0.13,
+          0.55
+        ],
+        [
+          0.27,
+          0.85
+        ]
+      ],
+      "gainDb": -14.32,
+      "limitedTo089": false,
+      "loudnessDb": -30.98,
+      "targetDb": -30.98,
+      "peak": 0.1632,
+      "file": "runtime/grenade-3.wav",
+      "sha256": "c2441bd0ea350f68edd4d6891d303e8c02a86a910d53d18ae3baaa48ebfa8f4a"
+    },
+    {
+      "slot": "grenade",
+      "number": 4,
+      "name": "꼬리 없는 폭발 3연쇄 · 가볍게",
+      "fromCandidate": 2,
+      "archiveEntry": "Explosion_Fire_Gas/explosion_small_no_tail_01.wav",
+      "sourceSha256": "9eb0841ff49656b7e65425c128a4ec1f9719f6c7855dfe50389b03fc316a795e",
+      "trim": {
+        "startSeconds": 0.0,
+        "endRule": "recording decay to -54 dB"
+      },
+      "speed": 1.15,
+      "lowCutHz": 120,
+      "lowCutOrder": 4,
+      "keptSeconds": 0.48,
+      "fadeSeconds": 0.15,
+      "endRule": "capped at 0.48 s with cosine fade",
+      "grenadeCluster": [
+        [
+          0,
+          0.7
+        ],
+        [
+          0.13,
+          0.55
+        ],
+        [
+          0.27,
+          0.85
+        ]
+      ],
+      "gainDb": -22.23,
+      "limitedTo089": false,
+      "loudnessDb": -30.98,
+      "targetDb": -30.98,
+      "peak": 0.1416,
+      "file": "runtime/grenade-4.wav",
+      "sha256": "b2a3acbdb3514132d05de7d1e2f2742883a231a8631cc081697d27d140a1a6c2"
+    },
+    {
+      "slot": "grenade",
+      "number": 5,
+      "name": "꼬리 없는 폭발 3연쇄 · 더 가볍게",
+      "fromCandidate": 2,
+      "archiveEntry": "Explosion_Fire_Gas/explosion_small_no_tail_01.wav",
+      "sourceSha256": "9eb0841ff49656b7e65425c128a4ec1f9719f6c7855dfe50389b03fc316a795e",
+      "trim": {
+        "startSeconds": 0.0,
+        "endRule": "recording decay to -54 dB"
+      },
+      "speed": 1.3,
+      "lowCutHz": 180,
+      "lowCutOrder": 4,
+      "keptSeconds": 0.36,
+      "fadeSeconds": 0.12,
+      "endRule": "capped at 0.36 s with cosine fade",
+      "grenadeCluster": [
+        [
+          0,
+          0.7
+        ],
+        [
+          0.13,
+          0.55
+        ],
+        [
+          0.27,
+          0.85
+        ]
+      ],
+      "gainDb": -21.32,
+      "limitedTo089": false,
+      "loudnessDb": -30.98,
+      "targetDb": -30.98,
+      "peak": 0.122,
+      "file": "runtime/grenade-5.wav",
+      "sha256": "fe5d53789170d34b6dc4eb0486d9a78c91bb8be0e265faba4d4ce5cc53a62d91"
+    },
+    {
+      "slot": "grenade",
+      "number": 6,
+      "name": "꼬리 없는 폭발 3연쇄 · 아주 가볍게",
+      "fromCandidate": 2,
+      "archiveEntry": "Explosion_Fire_Gas/explosion_small_no_tail_01.wav",
+      "sourceSha256": "9eb0841ff49656b7e65425c128a4ec1f9719f6c7855dfe50389b03fc316a795e",
+      "trim": {
+        "startSeconds": 0.0,
+        "endRule": "recording decay to -54 dB"
+      },
+      "speed": 1.5,
+      "lowCutHz": 250,
+      "lowCutOrder": 4,
+      "keptSeconds": 0.256,
+      "fadeSeconds": 0.1,
+      "endRule": "capped at 0.256 s with cosine fade",
+      "grenadeCluster": [
+        [
+          0,
+          0.7
+        ],
+        [
+          0.13,
+          0.55
+        ],
+        [
+          0.27,
+          0.85
+        ]
+      ],
+      "gainDb": -20.23,
+      "limitedTo089": false,
+      "loudnessDb": -30.98,
+      "targetDb": -30.98,
+      "peak": 0.141,
+      "file": "runtime/grenade-6.wav",
+      "sha256": "35c44a565c61aa17014bee3e7f968f2dc9f9a2abf4d92fa0ca376acb3072463d"
+    }
+  ]
+}

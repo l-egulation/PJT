@@ -1,0 +1,32 @@
+[
+  {
+    "id": "01_thorn-root",
+    "name": "가시뿌리",
+    "attack": "몸을 낮추고 양팔을 뒤로 벌려 잠깐 멈춘다 → 앞으로 짧게 파고들며 양쪽 가시 팔로 동시에 쏵 벤다 → 낮은 마무리 자세를 남긴 뒤 복귀한다.",
+    "move": "짧은 뿌리발을 번갈아 디디는 빠른 종종걸음. 잎과 가시 팔은 한 박자 늦게 흔들린다.",
+    "prompts": [
+      "prompts/01_thorn-root-move.txt",
+      "prompts/01_thorn-root-attack.txt"
+    ]
+  },
+  {
+    "id": "02_broom-stalker",
+    "name": "먹빗자루",
+    "attack": "몸을 공격 반대쪽으로 크게 기울이고 잠깐 멈춘다 → 자기 몸의 빗자루 밑단으로 바닥을 세게 확 쓸어 먼지를 일으킨다 → 기울어진 자세로 여운을 남긴 뒤 일어난다.",
+    "move": "빗자루 밑단 좌우를 번갈아 지지하며 뒤뚱뒤뚱 미끄러지듯 걷는다. 손잡이는 길이를 유지한다.",
+    "prompts": [
+      "prompts/02_broom-stalker-move.txt",
+      "prompts/02_broom-stalker-attack.txt"
+    ]
+  },
+  {
+    "id": "03_gutter-spitter",
+    "name": "배수관 포수",
+    "attack": "다리를 벌려 버티고 잉크 몸통을 서서히 부풀린 채 잠깐 멈춘다 → 몸통이 맥동하며 줄어들면서 투투투투투 연사한다 → 압력이 빠진 자세에서 원래 체형으로 복귀한다. 초안은 5발 한 묶음이다.",
+    "move": "포신을 오른쪽으로 유지하며 무거운 두 발을 번갈아 내딛는다. 상체는 작게 내려앉는다.",
+    "prompts": [
+      "prompts/03_gutter-spitter-move.txt",
+      "prompts/03_gutter-spitter-attack.txt"
+    ]
+  }
+]

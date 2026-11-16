@@ -1,0 +1,11356 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 278041ce1ac43e84d834d279298d40f5, type: 3}
+  m_Name: ForestIntegration
+  m_EditorClassIdentifier: Assembly-CSharp::Deviant.World.InkForestData
+  clips:
+  - id: idle
+    frames:
+    - {fileID: 21300000, guid: aa7faf19156aadb47bfd5b534883d74b, type: 3}
+    - {fileID: 21300000, guid: dbbf2a79fdc6c934ab46f4b7191f2fe9, type: 3}
+    - {fileID: 21300000, guid: 958e3acefcaec8b4e8e2edd48929ec83, type: 3}
+    - {fileID: 21300000, guid: 6cb0a6fbce1c2304bbe71d99b52a50eb, type: 3}
+    - {fileID: 21300000, guid: 05700a6bb2dbc874c8358ed6e498b2d0, type: 3}
+    - {fileID: 21300000, guid: 03eb3c7a06e699f47818875778b9f07c, type: 3}
+    - {fileID: 21300000, guid: 9478f078f3cba144aa8473b9910c265c, type: 3}
+    - {fileID: 21300000, guid: 59c09ee57fa3e404fa94b3a7e2010a25, type: 3}
+    - {fileID: 21300000, guid: 5e62c9259a70e6942ac5cc8ce4bab164, type: 3}
+    - {fileID: 21300000, guid: 2649d7123bfe9ff43bf8a14254f2e036, type: 3}
+    - {fileID: 21300000, guid: 6b02a118353a8be4096fd894ec38611a, type: 3}
+    - {fileID: 21300000, guid: 3d9f3d519414e854baad7265bafb6690, type: 3}
+    seconds:
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    feet: 790000007900000079000000790000007900000079000000790000007900000079000000790000007900000079000000i
+    loop: 1
+  - id: walk
+    frames:
+    - {fileID: 21300000, guid: fdadd32c58ad02e42972dfa21dcb807b, type: 3}
+    - {fileID: 21300000, guid: be51e60fbd0db1248ab78e947f6003f4, type: 3}
+    - {fileID: 21300000, guid: 1438dd2071abfdc43a505b34aa9878ee, type: 3}
+    - {fileID: 21300000, guid: 8c50cf48df04ed349936c8ebab95b1b9, type: 3}
+    - {fileID: 21300000, guid: 726dd0ec21df7af41a3b1bf470b3996e, type: 3}
+    - {fileID: 21300000, guid: f0df6ac4db543134988640b8de556926, type: 3}
+    - {fileID: 21300000, guid: 6de617d922643f1479b3d78681c2418a, type: 3}
+    - {fileID: 21300000, guid: 6787c81d5109d1746b8349ef4e2babbf, type: 3}
+    - {fileID: 21300000, guid: 9ace7484b60be8f4289552f5bfc621bc, type: 3}
+    - {fileID: 21300000, guid: bc7e35ceebd3be945a91745ddbfe4091, type: 3}
+    - {fileID: 21300000, guid: a1e7de9254259a7449246bdd43858641, type: 3}
+    - {fileID: 21300000, guid: adb8a701de5836948a84f5e36b2601cc, type: 3}
+    seconds:
+    - 0.08
+    - 0.08
+    - 0.08
+    - 0.08
+    - 0.08
+    - 0.08
+    - 0.08
+    - 0.08
+    - 0.08
+    - 0.08
+    - 0.08
+    - 0.08
+    feet: 790000007900000079000000790000007900000079000000790000007900000079000000790000007900000079000000i
+    loop: 1
+  - id: run
+    frames:
+    - {fileID: 21300000, guid: bcaadf1407701124a87eeae247de5a2e, type: 3}
+    - {fileID: 21300000, guid: b4eb2df6ec0ec354bb6963e2700e6f23, type: 3}
+    - {fileID: 21300000, guid: 8b24c7a8f22957e49b12a496b2a2bb4e, type: 3}
+    - {fileID: 21300000, guid: a7fa27d3faf78fc47bcf2c389a76da32, type: 3}
+    - {fileID: 21300000, guid: 83f763e90c8938d44ab759741f531f48, type: 3}
+    - {fileID: 21300000, guid: 28160fe089223a14e942ea015b3418fa, type: 3}
+    - {fileID: 21300000, guid: d0f2cd3de84ac0643a3a8e8caeb1371d, type: 3}
+    - {fileID: 21300000, guid: c164a8305a2b2a84c8969a6447c2555e, type: 3}
+    - {fileID: 21300000, guid: 2b6e0dfc59b56eb41a5d9d527cf05aff, type: 3}
+    - {fileID: 21300000, guid: ab49ef0bd2e59f54ea4ec03bec130c1b, type: 3}
+    - {fileID: 21300000, guid: d5b53e3bab1f89440910d20e4c19acf1, type: 3}
+    - {fileID: 21300000, guid: f9297ac4e1c35a2408597891b87cb9da, type: 3}
+    seconds:
+    - 0.06
+    - 0.06
+    - 0.06
+    - 0.06
+    - 0.06
+    - 0.06
+    - 0.06
+    - 0.06
+    - 0.06
+    - 0.06
+    - 0.06
+    - 0.06
+    feet: 790000007300000077000000790000007900000079000000770000007300000072000000790000007900000079000000i
+    loop: 1
+  - id: jump
+    frames:
+    - {fileID: 21300000, guid: 6d0fb2017efaeb44cb77eae57597d4ad, type: 3}
+    - {fileID: 21300000, guid: aafa2fdd988e9f94cbcd2c07730b5baf, type: 3}
+    - {fileID: 21300000, guid: 8e2209f5832dafe4b84e884bec13d6c5, type: 3}
+    - {fileID: 21300000, guid: 95a3f0ce935ba2442b1b619d0d97b8cf, type: 3}
+    - {fileID: 21300000, guid: db9da1beaae0b0e47a04ee2037b72dd1, type: 3}
+    - {fileID: 21300000, guid: f39782443453a3b4d9924744f89ad8ec, type: 3}
+    - {fileID: 21300000, guid: 2d5e785676be79343a61f32575dd5028, type: 3}
+    - {fileID: 21300000, guid: 7a89fe3cc266b3645be79a148ac41c2c, type: 3}
+    - {fileID: 21300000, guid: 4acc752a89e6e7e4ea8d7112099c8337, type: 3}
+    - {fileID: 21300000, guid: c4a7fae9077b6d546adbca52bc1e57a5, type: 3}
+    - {fileID: 21300000, guid: 57a91afcb5c32c941b9a35c82183df94, type: 3}
+    - {fileID: 21300000, guid: 73fc0733b6072fd4e98a7c28a958209e, type: 3}
+    seconds:
+    - 0.06
+    - 0.07
+    - 0.07
+    - 0.06
+    - 0.07
+    - 0.08
+    - 0.1
+    - 0.07
+    - 0.06
+    - 0.06
+    - 0.07
+    - 0.09
+    feet: 7800000079000000790000007a0000006a000000600000005d000000660000007a000000790000007900000079000000i
+    loop: 0
+  - id: land
+    frames:
+    - {fileID: 21300000, guid: eb061cd9c180fcd43823d68ae61d851c, type: 3}
+    - {fileID: 21300000, guid: 4a62ada283f735c498a78f4c555b7422, type: 3}
+    - {fileID: 21300000, guid: a6f99f46558a0af459d7577af1b43872, type: 3}
+    - {fileID: 21300000, guid: 891748a195aeee6428ba19b1353f9a0a, type: 3}
+    - {fileID: 21300000, guid: 17f5f20ef81f0464782feeab7cac0f68, type: 3}
+    - {fileID: 21300000, guid: 6bad2e000c052a34ab22aa5e89e9605e, type: 3}
+    - {fileID: 21300000, guid: a2fe95b9cdc189448a6946b19c6f94fb, type: 3}
+    - {fileID: 21300000, guid: a82e006c738b6e942993bd0e1b20eeae, type: 3}
+    - {fileID: 21300000, guid: 7ecc6893bec846840a480b9fd775b723, type: 3}
+    - {fileID: 21300000, guid: 0e1f93a3e241dfd4fa77b2cb460ee3fb, type: 3}
+    - {fileID: 21300000, guid: face12585ff756b4dbd4f4b01b919383, type: 3}
+    - {fileID: 21300000, guid: a4c676d784d5c2b42af38a777e0b6da5, type: 3}
+    seconds:
+    - 0.07
+    - 0.06
+    - 0.06
+    - 0.06
+    - 0.05
+    - 0.05
+    - 0.07
+    - 0.06
+    - 0.07
+    - 0.07
+    - 0.07
+    - 0.08
+    feet: 5e00000061000000660000006c0000007a00000079000000790000007900000079000000790000007900000079000000i
+    loop: 0
+  - id: attack
+    frames:
+    - {fileID: 21300000, guid: 3821b417489897848ab9e7350608051c, type: 3}
+    - {fileID: 21300000, guid: a85c7ecb1f05c93439aab89dd30a1656, type: 3}
+    - {fileID: 21300000, guid: 7bfab082768d58a4d992e8962545e69b, type: 3}
+    - {fileID: 21300000, guid: 2c322a91d1e8d6f4a965d7a2ce9c3bb4, type: 3}
+    - {fileID: 21300000, guid: f1ab41801b91a56408574a58988fedd8, type: 3}
+    - {fileID: 21300000, guid: 7075d2f56785c7949a5cd849814fc1b7, type: 3}
+    - {fileID: 21300000, guid: 398d33870569dbd44af97b4af6104083, type: 3}
+    - {fileID: 21300000, guid: b6b52c0f02b30e04fb28a8f0c99c9300, type: 3}
+    - {fileID: 21300000, guid: ae90e149d33809f449a3b611cd6b6004, type: 3}
+    - {fileID: 21300000, guid: 49f0eb037899f174b956c08001e803a4, type: 3}
+    - {fileID: 21300000, guid: 84d3cf0ac302aaa47b7e76698aa07f9f, type: 3}
+    - {fileID: 21300000, guid: 589b168d470ff6e478f6fc288c76e739, type: 3}
+    seconds:
+    - 0.08
+    - 0.11
+    - 0.07
+    - 0.04
+    - 0.05
+    - 0.12
+    - 0.1
+    - 0.04
+    - 0.11
+    - 0.1
+    - 0.11
+    - 0.12
+    feet: 780000007c00000079000000790000007900000079000000790000007900000079000000790000007900000079000000i
+    loop: 0
+  - id: death1_legacy
+    frames:
+    - {fileID: 21300000, guid: 11f3d5521848f074c93aff3b7ad9b58d, type: 3}
+    - {fileID: 21300000, guid: a64c19eae120a0642b9e1bec9cc95cfe, type: 3}
+    - {fileID: 21300000, guid: 496359ae8434c744c895d18991832846, type: 3}
+    - {fileID: 21300000, guid: b9296f8ea15adc746885e904ed90363a, type: 3}
+    - {fileID: 21300000, guid: e80c6c6ca6ca9644fa8437fea3679f48, type: 3}
+    - {fileID: 21300000, guid: 9a7900e72ef9f7a4cbf5f6aff3ba3be0, type: 3}
+    - {fileID: 21300000, guid: 77ec1e804959dd44683dcd336d8be0d6, type: 3}
+    - {fileID: 21300000, guid: 022ac55acea05c54fac142a1bd9ed9cd, type: 3}
+    - {fileID: 21300000, guid: 049c0cb81dfb61344a1e894c1919f179, type: 3}
+    - {fileID: 21300000, guid: d4a11e1b4490f90499386addc21c62cd, type: 3}
+    - {fileID: 21300000, guid: 28bc019c4a6531342bf56c3fb2cd0b8e, type: 3}
+    - {fileID: 21300000, guid: e9936326f9f0b2746aa8d6ea088e0c5a, type: 3}
+    seconds:
+    - 0.09
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.08
+    - 0.07
+    - 0.08
+    - 0.11
+    - 0.18
+    feet: 7800000079000000790000007900000079000000790000007b0000007c0000007d0000007d0000007d0000007e000000i
+    loop: 0
+  - id: death2
+    frames:
+    - {fileID: 21300000, guid: f97c2b842de27e24d9c8dc6e1b6215f7, type: 3}
+    - {fileID: 21300000, guid: efacdf47111045043a0cb13cb75deb8a, type: 3}
+    - {fileID: 21300000, guid: 44896a4305721394eb3c419f30314cf7, type: 3}
+    - {fileID: 21300000, guid: 26f1ffc28a8b0554cafad87e364c88b1, type: 3}
+    - {fileID: 21300000, guid: 513313df483576f43acbc339ebba7672, type: 3}
+    - {fileID: 21300000, guid: 8e26c31c9ab79404385989bc3ee8c7de, type: 3}
+    - {fileID: 21300000, guid: 364afcc763c68cc469e54976c9e0f8ae, type: 3}
+    - {fileID: 21300000, guid: 2d968725d97852547a5440aca9bb8647, type: 3}
+    - {fileID: 21300000, guid: a299cd20343c4df4abc282aa1bfef29c, type: 3}
+    - {fileID: 21300000, guid: 9fa183ad34fcb6a458dde89ecbbc2d94, type: 3}
+    - {fileID: 21300000, guid: 0aad50e7b10660a45a99632377e30b7d, type: 3}
+    - {fileID: 21300000, guid: 9bb43ca08d56b814981be0fe0710b807, type: 3}
+    seconds:
+    - 0.08
+    - 0.09
+    - 0.09
+    - 0.1
+    - 0.1
+    - 0.09
+    - 0.09
+    - 0.07
+    - 0.07
+    - 0.09
+    - 0.1
+    - 0.18
+    feet: 780000007900000079000000790000007b0000007b0000007d0000007d0000007d0000007d0000007e0000007e000000i
+    loop: 0
+  - id: dash
+    frames:
+    - {fileID: 21300000, guid: 7cd04a5d15e68614380d3cee5e6a5555, type: 3}
+    - {fileID: 21300000, guid: e58a20984b7ec634db128f2f71c92558, type: 3}
+    - {fileID: 21300000, guid: 44f2da6d7ce51824babace11b633a628, type: 3}
+    - {fileID: 21300000, guid: 18d69cf386006964caa6688135b5cf8d, type: 3}
+    - {fileID: 21300000, guid: 411c25a89b3189d469823cbd5c0697a3, type: 3}
+    - {fileID: 21300000, guid: c797c50be8053da41a8829e0da0b9a69, type: 3}
+    - {fileID: 21300000, guid: a91d8d7eea33836498e6a90d5cc27419, type: 3}
+    - {fileID: 21300000, guid: 8d7b3472c0d71f84ebf36ab035a6d861, type: 3}
+    - {fileID: 21300000, guid: 4b1c985343b4c9e45bcc85b125c34096, type: 3}
+    - {fileID: 21300000, guid: 2adc42faa6cff444fb65db6c1d8d2ade, type: 3}
+    - {fileID: 21300000, guid: 9426f487dfbed0a4b98ad0e1c9a5218f, type: 3}
+    - {fileID: 21300000, guid: e34199cd76c5ac24d9e536809d157512, type: 3}
+    seconds:
+    - 0.03
+    - 0.03
+    - 0.03
+    - 0.03
+    - 0.03
+    - 0.03
+    - 0.03
+    - 0.03
+    - 0.03
+    - 0.03
+    - 0.03
+    - 0.03
+    feet: 520100005201000052010000520100005201000052010000520100005201000052010000520100005201000052010000i
+    loop: 0
+  - id: attack1
+    frames:
+    - {fileID: 21300000, guid: dcf49dc9147a74642a4e4e076eb76a9a, type: 3}
+    - {fileID: 21300000, guid: 571c671d36c546248b2b701a5b80da85, type: 3}
+    - {fileID: 21300000, guid: 6eddf874e2697e94db67995f247bc397, type: 3}
+    - {fileID: 21300000, guid: b620b2d28b295c94dbdb872aae008dd3, type: 3}
+    - {fileID: 21300000, guid: f05de6dbc5fff3048845f3f134782f5e, type: 3}
+    - {fileID: 21300000, guid: f59d1d5963f45364d8ba71199d15f5cd, type: 3}
+    seconds:
+    - 0.08
+    - 0.11
+    - 0.07
+    - 0.04
+    - 0.05
+    - 0.12
+    feet: 770000007b00000078000000780000007800000078000000i
+    loop: 0
+  - id: attack2
+    frames:
+    - {fileID: 21300000, guid: 1bd226f8647fe1142bc18f6c285cabae, type: 3}
+    - {fileID: 21300000, guid: 511a993324be1724e80869f0979a480f, type: 3}
+    - {fileID: 21300000, guid: 7ea06f2ac66ec4c43baf9ba9523c6dc7, type: 3}
+    - {fileID: 21300000, guid: 5b0446f1978d62d40aca60e8be4d28bf, type: 3}
+    - {fileID: 21300000, guid: d791ae4575ccdc6409b8db2c42cebc4e, type: 3}
+    - {fileID: 21300000, guid: 35cc64a1b03040c449cc77a8a1aa6133, type: 3}
+    - {fileID: 21300000, guid: 1a8f8b9a201d83c4ba8eff347f853624, type: 3}
+    seconds:
+    - 0.04
+    - 0.1
+    - 0.04
+    - 0.11
+    - 0.1
+    - 0.11
+    - 0.12
+    feet: 78000000780000007800000079000000780000007800000078000000i
+    loop: 0
+  - id: attackReturn
+    frames:
+    - {fileID: 21300000, guid: a091e07d4c24bf347a1e30674db0b65c, type: 3}
+    - {fileID: 21300000, guid: d8dff8de15713cb4592916be80b8f835, type: 3}
+    - {fileID: 21300000, guid: cd194261631a11048923ca1ecd6ca0ff, type: 3}
+    seconds:
+    - 0.08
+    - 0.1
+    - 0.08
+    feet: 780000007800000077000000i
+    loop: 0
+  - id: death1
+    frames:
+    - {fileID: 21300000, guid: 006277781332b2f4b93f66b11ac7d6d3, type: 3}
+    - {fileID: 21300000, guid: d62b233a3c6e9c345935dcb33822654d, type: 3}
+    - {fileID: 21300000, guid: 38785c2bb4eadc3409c7012649a9a32d, type: 3}
+    - {fileID: 21300000, guid: 745660544f48eb0428dae34dad374c41, type: 3}
+    - {fileID: 21300000, guid: 25a23bc48fe43fa48813fc6cba56553d, type: 3}
+    - {fileID: 21300000, guid: 9d7bc91c350faa847b771aa88738dc4b, type: 3}
+    - {fileID: 21300000, guid: 101892a92738b804e8dd54e2b276a638, type: 3}
+    - {fileID: 21300000, guid: b7ccccc95cde8d741842c89e2eaec511, type: 3}
+    - {fileID: 21300000, guid: c4a5b8d5db452a04da4924a59ceda487, type: 3}
+    - {fileID: 21300000, guid: 39c72886f39cdc94b86aff099cb72b69, type: 3}
+    - {fileID: 21300000, guid: eb66889966fa4de4f97aadb96af028b5, type: 3}
+    - {fileID: 21300000, guid: bc66cda9f40a1ac41ab9d41f94565581, type: 3}
+    seconds:
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.09
+    - 0.09
+    - 0.09
+    - 0.09
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.14
+    feet: 510100005501000055010000550100005501000055010000550100005501000055010000550100005501000055010000i
+    loop: 0
+  - id: attackHold
+    frames:
+    - {fileID: 21300000, guid: f59d1d5963f45364d8ba71199d15f5cd, type: 3}
+    seconds:
+    - 0.12
+    feet: 78000000i
+    loop: 0
+  themes:
+  - id: twilight
+    far: {fileID: 21300000, guid: ba86b783e3874b64f9e22d4f594c9229, type: 3}
+    mid: {fileID: 21300000, guid: 77606c1e1c5e523408e9572aadd67342, type: 3}
+    front: {fileID: 21300000, guid: 244e09a524ea56a4a8b3f77b9687e250, type: 3}
+    tileIds:
+    - top_left
+    - top0
+    - top1
+    - top2
+    - top3
+    - top_right
+    - side_left
+    - side_right
+    - body0
+    - body1
+    - body2
+    - body3
+    - bottom_left
+    - bottom0
+    - bottom1
+    - bottom2
+    - bottom3
+    - bottom_right
+    - inner_tl
+    - inner_tr
+    - inner_bl
+    - inner_br
+    - single
+    - ledge
+    tiles:
+    - {fileID: 11400000, guid: a7e4ed4817028bd428e2cff15064c9dc, type: 2}
+    - {fileID: 11400000, guid: ebe4c48d3af1e064f88c63e2f2f505b4, type: 2}
+    - {fileID: 11400000, guid: 7b213c49ea3201c469a8e1cfaa2d9119, type: 2}
+    - {fileID: 11400000, guid: 4266ec41425b0d54eaad577af0cf2253, type: 2}
+    - {fileID: 11400000, guid: 7d246ab0d63a74c4796adce257bc6bee, type: 2}
+    - {fileID: 11400000, guid: 57de792ca97d3aa4da79da7a0c4716a4, type: 2}
+    - {fileID: 11400000, guid: 3c459aef3c63c734ca860b78e4032c0a, type: 2}
+    - {fileID: 11400000, guid: 30aa148375fa00c4aa52603bb4ce5da3, type: 2}
+    - {fileID: 11400000, guid: 8d0ab0147b4319e48ac44e04f464409e, type: 2}
+    - {fileID: 11400000, guid: ccece292f439e2f44b69e59002a5234c, type: 2}
+    - {fileID: 11400000, guid: 8e84fa310f0c21a49a1f5560a8db4c7a, type: 2}
+    - {fileID: 11400000, guid: 61225baa5f4bb9249a146121f35f2c2e, type: 2}
+    - {fileID: 11400000, guid: 87061a8e1eb8bd641a8686fe4cbac84f, type: 2}
+    - {fileID: 11400000, guid: 91c5f57c430247546a8bb2526c39fa5c, type: 2}
+    - {fileID: 11400000, guid: 811d2f3d2de77314d9db21ac5cf9a32d, type: 2}
+    - {fileID: 11400000, guid: 96c00e23ea76c074eba572fe71ad92bb, type: 2}
+    - {fileID: 11400000, guid: dbb8dc8e300a45642b1c54987537d56c, type: 2}
+    - {fileID: 11400000, guid: a47edd5610015b14d94b942992d9a133, type: 2}
+    - {fileID: 11400000, guid: c48e2be886a16bb4ea3ba1e47fd9effe, type: 2}
+    - {fileID: 11400000, guid: d7b6e7c650e3f064eb00b400c7f1550d, type: 2}
+    - {fileID: 11400000, guid: 9fba6f988d3aa124bba0928d550a0415, type: 2}
+    - {fileID: 11400000, guid: f2949a80fda2bbd459531f944ed6907b, type: 2}
+    - {fileID: 11400000, guid: 6668e139101733a489d339488d3ad3a5, type: 2}
+    - {fileID: 11400000, guid: e8fbfc7ec5ad86c4da22f23faa60b6de, type: 2}
+  - id: gold
+    far: {fileID: 21300000, guid: b2a720cbeed61cd4287407add9264c4f, type: 3}
+    mid: {fileID: 21300000, guid: 8cb1fa9a1b1c24d4a9854c98ba929d6a, type: 3}
+    front: {fileID: 21300000, guid: c17b6a255b8dc494783184c81432490f, type: 3}
+    tileIds:
+    - top_left
+    - top0
+    - top1
+    - top2
+    - top3
+    - top_right
+    - side_left
+    - side_right
+    - body0
+    - body1
+    - body2
+    - body3
+    - bottom_left
+    - bottom0
+    - bottom1
+    - bottom2
+    - bottom3
+    - bottom_right
+    - inner_tl
+    - inner_tr
+    - inner_bl
+    - inner_br
+    - single
+    - ledge
+    tiles:
+    - {fileID: 11400000, guid: e84c117a2ba186245b96c47c01d172af, type: 2}
+    - {fileID: 11400000, guid: fa99664c37ed00743b475e26d5a88cc2, type: 2}
+    - {fileID: 11400000, guid: 832ac2ccf21e7444fa5bda7d840bc1b0, type: 2}
+    - {fileID: 11400000, guid: 4acb72a371e51874ab484cedfe0bdc69, type: 2}
+    - {fileID: 11400000, guid: 58c079ab867d3dd44bcc06eab43ef1b5, type: 2}
+    - {fileID: 11400000, guid: db86d7598c99b1b43a878780a8838b17, type: 2}
+    - {fileID: 11400000, guid: 20f12c3f4ff075347b69fdeb39dbf7b8, type: 2}
+    - {fileID: 11400000, guid: ed28d0d87d3a3174db5cf73dbe12cf27, type: 2}
+    - {fileID: 11400000, guid: cea1f42500d6ae343ab4fe7499044d05, type: 2}
+    - {fileID: 11400000, guid: a6a325cba414ce747acf83c6c6e5852f, type: 2}
+    - {fileID: 11400000, guid: 4618535eb78f9c448a1846dc9c7fd9ea, type: 2}
+    - {fileID: 11400000, guid: 874136eb2c361cb46baa2f449acc55fe, type: 2}
+    - {fileID: 11400000, guid: 17147a9f6ab928d429a800615a7fa353, type: 2}
+    - {fileID: 11400000, guid: 9d3bed800c0beff4d916490b34feee5e, type: 2}
+    - {fileID: 11400000, guid: 342bdf80a01f58242a0013f35176f62b, type: 2}
+    - {fileID: 11400000, guid: 50551849cb842a944b96e5af4d1c2a91, type: 2}
+    - {fileID: 11400000, guid: cb0fce9fe052ab94898c73b90f04858e, type: 2}
+    - {fileID: 11400000, guid: ba57cc16c3d47be478c6f3e46e92b4f4, type: 2}
+    - {fileID: 11400000, guid: bb7ea79b848e3cd49af6b190c221ceee, type: 2}
+    - {fileID: 11400000, guid: d5bfb8e93fe0f584281aa1daeb750274, type: 2}
+    - {fileID: 11400000, guid: fba44130f94494246bdf783ef51d6eba, type: 2}
+    - {fileID: 11400000, guid: bf57770e42625df4582c89c58bb4a5eb, type: 2}
+    - {fileID: 11400000, guid: 85f68fedc52ddef4db69936d8b72833a, type: 2}
+    - {fileID: 11400000, guid: bfda253b162d33d428cb3c30aa846caa, type: 2}
+  - id: jade
+    far: {fileID: 21300000, guid: 52c84a9451295c7458384ddd93035ed1, type: 3}
+    mid: {fileID: 21300000, guid: 4ee0e9ef9cfc62a49908d1d52f6c856a, type: 3}
+    front: {fileID: 21300000, guid: d32b75a539bc7e445b57ca3f0d0bc1dd, type: 3}
+    tileIds:
+    - top_left
+    - top0
+    - top1
+    - top2
+    - top3
+    - top_right
+    - side_left
+    - side_right
+    - body0
+    - body1
+    - body2
+    - body3
+    - bottom_left
+    - bottom0
+    - bottom1
+    - bottom2
+    - bottom3
+    - bottom_right
+    - inner_tl
+    - inner_tr
+    - inner_bl
+    - inner_br
+    - single
+    - ledge
+    tiles:
+    - {fileID: 11400000, guid: 54b63e4b304ce7e4e9e3b6df11bc081f, type: 2}
+    - {fileID: 11400000, guid: 377ecef3e59bf99478c901b610bdd2ec, type: 2}
+    - {fileID: 11400000, guid: 5b375367f116ed442802831e6def37dc, type: 2}
+    - {fileID: 11400000, guid: d983eff3187f7b041997d80fe2aa3cbe, type: 2}
+    - {fileID: 11400000, guid: 59c6e48437879ed408d99f336f102a4c, type: 2}
+    - {fileID: 11400000, guid: 467bb6ec5fefa534d9bc7f3dd586a787, type: 2}
+    - {fileID: 11400000, guid: 2c274fecb94ab974daebbcb45b16ebf5, type: 2}
+    - {fileID: 11400000, guid: cb86b567009cf234fbebed5762b6fe49, type: 2}
+    - {fileID: 11400000, guid: dc997bceaef526f46920a995e74fb27e, type: 2}
+    - {fileID: 11400000, guid: 5b5bc329d1690d641bbbe68db3ff10a1, type: 2}
+    - {fileID: 11400000, guid: 97b0de4e4b699664490418766d02b3ce, type: 2}
+    - {fileID: 11400000, guid: 791ee4032ba932742aef94e28c1cea5e, type: 2}
+    - {fileID: 11400000, guid: dbfb0562d2a04a4498feaca5e04d27b8, type: 2}
+    - {fileID: 11400000, guid: 77ab030a39ea48f4a9bb2faba1bd5573, type: 2}
+    - {fileID: 11400000, guid: 20f5ac28db6bc54449e58a69a63cebbc, type: 2}
+    - {fileID: 11400000, guid: e864aa59b87ff3e47ad4a08bac037a48, type: 2}
+    - {fileID: 11400000, guid: 71937c96bf6256549b2b2aa2256fef13, type: 2}
+    - {fileID: 11400000, guid: 237423527cc819d46846bdcd9cef1995, type: 2}
+    - {fileID: 11400000, guid: c94e87862b135d34b8bcbb189ec0253e, type: 2}
+    - {fileID: 11400000, guid: 76be04a7c1c64bc428bee129893edaaa, type: 2}
+    - {fileID: 11400000, guid: 9c256acf18dd3cb4ab910cfb2c50e01c, type: 2}
+    - {fileID: 11400000, guid: b68b96d48b18d2545bbd4c0fde9ada6d, type: 2}
+    - {fileID: 11400000, guid: aacb6dacaf1d0324f9f1b6d28d42a0b1, type: 2}
+    - {fileID: 11400000, guid: 0599b79e33135114e8107b3ecd350371, type: 2}
+  cells:
+  - id: top3
+    x: 0
+    y: -10
+  - id: body2
+    x: 0
+    y: -11
+  - id: body3
+    x: 0
+    y: -12
+  - id: body0
+    x: 0
+    y: -13
+  - id: top0
+    x: 1
+    y: -10
+  - id: body0
+    x: 1
+    y: -11
+  - id: body0
+    x: 1
+    y: -12
+  - id: body3
+    x: 1
+    y: -13
+  - id: top1
+    x: 2
+    y: -10
+  - id: body1
+    x: 2
+    y: -11
+  - id: body2
+    x: 2
+    y: -12
+  - id: body1
+    x: 2
+    y: -13
+  - id: top3
+    x: 3
+    y: -10
+  - id: body2
+    x: 3
+    y: -11
+  - id: body1
+    x: 3
+    y: -12
+  - id: body1
+    x: 3
+    y: -13
+  - id: top2
+    x: 4
+    y: -10
+  - id: body0
+    x: 4
+    y: -11
+  - id: body1
+    x: 4
+    y: -12
+  - id: body3
+    x: 4
+    y: -13
+  - id: top0
+    x: 5
+    y: -10
+  - id: body1
+    x: 5
+    y: -11
+  - id: body2
+    x: 5
+    y: -12
+  - id: body0
+    x: 5
+    y: -13
+  - id: top2
+    x: 6
+    y: -10
+  - id: body0
+    x: 6
+    y: -11
+  - id: body3
+    x: 6
+    y: -12
+  - id: body3
+    x: 6
+    y: -13
+  - id: top1
+    x: 7
+    y: -10
+  - id: body3
+    x: 7
+    y: -11
+  - id: body2
+    x: 7
+    y: -12
+  - id: body3
+    x: 7
+    y: -13
+  - id: top0
+    x: 8
+    y: -10
+  - id: body2
+    x: 8
+    y: -11
+  - id: body1
+    x: 8
+    y: -12
+  - id: body1
+    x: 8
+    y: -13
+  - id: top0
+    x: 9
+    y: -10
+  - id: body2
+    x: 9
+    y: -11
+  - id: body0
+    x: 9
+    y: -12
+  - id: body2
+    x: 9
+    y: -13
+  - id: top1
+    x: 10
+    y: -10
+  - id: body2
+    x: 10
+    y: -11
+  - id: body0
+    x: 10
+    y: -12
+  - id: body1
+    x: 10
+    y: -13
+  - id: top3
+    x: 11
+    y: -10
+  - id: body1
+    x: 11
+    y: -11
+  - id: body3
+    x: 11
+    y: -12
+  - id: body1
+    x: 11
+    y: -13
+  - id: top0
+    x: 12
+    y: -10
+  - id: body0
+    x: 12
+    y: -11
+  - id: body0
+    x: 12
+    y: -12
+  - id: body1
+    x: 12
+    y: -13
+  - id: top1
+    x: 13
+    y: -10
+  - id: body0
+    x: 13
+    y: -11
+  - id: body1
+    x: 13
+    y: -12
+  - id: body3
+    x: 13
+    y: -13
+  - id: top3
+    x: 14
+    y: -10
+  - id: body2
+    x: 14
+    y: -11
+  - id: body0
+    x: 14
+    y: -12
+  - id: body3
+    x: 14
+    y: -13
+  - id: top2
+    x: 15
+    y: -10
+  - id: body2
+    x: 15
+    y: -11
+  - id: body2
+    x: 15
+    y: -12
+  - id: body2
+    x: 15
+    y: -13
+  - id: top3
+    x: 16
+    y: -10
+  - id: body2
+    x: 16
+    y: -11
+  - id: body0
+    x: 16
+    y: -12
+  - id: body3
+    x: 16
+    y: -13
+  - id: top0
+    x: 17
+    y: -10
+  - id: body2
+    x: 17
+    y: -11
+  - id: body3
+    x: 17
+    y: -12
+  - id: body3
+    x: 17
+    y: -13
+  - id: top3
+    x: 18
+    y: -10
+  - id: body2
+    x: 18
+    y: -11
+  - id: body0
+    x: 18
+    y: -12
+  - id: body0
+    x: 18
+    y: -13
+  - id: top3
+    x: 19
+    y: -10
+  - id: body2
+    x: 19
+    y: -11
+  - id: body3
+    x: 19
+    y: -12
+  - id: body1
+    x: 19
+    y: -13
+  - id: top0
+    x: 20
+    y: -10
+  - id: body1
+    x: 20
+    y: -11
+  - id: body3
+    x: 20
+    y: -12
+  - id: body3
+    x: 20
+    y: -13
+  - id: top0
+    x: 21
+    y: -10
+  - id: body1
+    x: 21
+    y: -11
+  - id: body0
+    x: 21
+    y: -12
+  - id: body3
+    x: 21
+    y: -13
+  - id: top3
+    x: 22
+    y: -10
+  - id: body2
+    x: 22
+    y: -11
+  - id: body1
+    x: 22
+    y: -12
+  - id: body1
+    x: 22
+    y: -13
+  - id: top1
+    x: 23
+    y: -10
+  - id: body3
+    x: 23
+    y: -11
+  - id: body0
+    x: 23
+    y: -12
+  - id: body1
+    x: 23
+    y: -13
+  - id: top2
+    x: 24
+    y: -10
+  - id: body3
+    x: 24
+    y: -11
+  - id: body3
+    x: 24
+    y: -12
+  - id: body3
+    x: 24
+    y: -13
+  - id: top3
+    x: 25
+    y: -10
+  - id: body3
+    x: 25
+    y: -11
+  - id: body2
+    x: 25
+    y: -12
+  - id: body3
+    x: 25
+    y: -13
+  - id: top0
+    x: 26
+    y: -10
+  - id: body3
+    x: 26
+    y: -11
+  - id: body2
+    x: 26
+    y: -12
+  - id: body3
+    x: 26
+    y: -13
+  - id: top2
+    x: 27
+    y: -10
+  - id: body1
+    x: 27
+    y: -11
+  - id: body0
+    x: 27
+    y: -12
+  - id: body3
+    x: 27
+    y: -13
+  - id: top3
+    x: 28
+    y: -10
+  - id: body1
+    x: 28
+    y: -11
+  - id: body0
+    x: 28
+    y: -12
+  - id: body2
+    x: 28
+    y: -13
+  - id: top0
+    x: 29
+    y: -10
+  - id: body3
+    x: 29
+    y: -11
+  - id: body2
+    x: 29
+    y: -12
+  - id: body0
+    x: 29
+    y: -13
+  - id: top2
+    x: 30
+    y: -10
+  - id: body0
+    x: 30
+    y: -11
+  - id: body1
+    x: 30
+    y: -12
+  - id: body1
+    x: 30
+    y: -13
+  - id: top3
+    x: 31
+    y: -10
+  - id: body1
+    x: 31
+    y: -11
+  - id: body0
+    x: 31
+    y: -12
+  - id: body0
+    x: 31
+    y: -13
+  - id: top0
+    x: 32
+    y: -10
+  - id: body2
+    x: 32
+    y: -11
+  - id: body3
+    x: 32
+    y: -12
+  - id: body1
+    x: 32
+    y: -13
+  - id: top1
+    x: 33
+    y: -10
+  - id: body1
+    x: 33
+    y: -11
+  - id: body3
+    x: 33
+    y: -12
+  - id: body2
+    x: 33
+    y: -13
+  - id: top2
+    x: 34
+    y: -10
+  - id: body1
+    x: 34
+    y: -11
+  - id: body0
+    x: 34
+    y: -12
+  - id: body1
+    x: 34
+    y: -13
+  - id: top1
+    x: 35
+    y: -10
+  - id: body3
+    x: 35
+    y: -11
+  - id: body2
+    x: 35
+    y: -12
+  - id: body1
+    x: 35
+    y: -13
+  - id: top2
+    x: 36
+    y: -10
+  - id: body3
+    x: 36
+    y: -11
+  - id: body2
+    x: 36
+    y: -12
+  - id: body1
+    x: 36
+    y: -13
+  - id: top0
+    x: 37
+    y: -10
+  - id: body0
+    x: 37
+    y: -11
+  - id: body0
+    x: 37
+    y: -12
+  - id: body1
+    x: 37
+    y: -13
+  - id: top3
+    x: 38
+    y: -10
+  - id: body0
+    x: 38
+    y: -11
+  - id: body2
+    x: 38
+    y: -12
+  - id: body2
+    x: 38
+    y: -13
+  - id: top3
+    x: 39
+    y: -10
+  - id: body2
+    x: 39
+    y: -11
+  - id: body3
+    x: 39
+    y: -12
+  - id: body0
+    x: 39
+    y: -13
+  - id: top0
+    x: 40
+    y: -10
+  - id: body2
+    x: 40
+    y: -11
+  - id: body3
+    x: 40
+    y: -12
+  - id: body3
+    x: 40
+    y: -13
+  - id: top0
+    x: 41
+    y: -10
+  - id: body1
+    x: 41
+    y: -11
+  - id: body0
+    x: 41
+    y: -12
+  - id: body3
+    x: 41
+    y: -13
+  - id: top2
+    x: 42
+    y: -10
+  - id: body1
+    x: 42
+    y: -11
+  - id: body0
+    x: 42
+    y: -12
+  - id: body0
+    x: 42
+    y: -13
+  - id: top3
+    x: 43
+    y: -10
+  - id: body3
+    x: 43
+    y: -11
+  - id: body1
+    x: 43
+    y: -12
+  - id: body3
+    x: 43
+    y: -13
+  - id: top3
+    x: 44
+    y: -10
+  - id: body2
+    x: 44
+    y: -11
+  - id: body3
+    x: 44
+    y: -12
+  - id: body0
+    x: 44
+    y: -13
+  - id: top2
+    x: 45
+    y: -10
+  - id: body1
+    x: 45
+    y: -11
+  - id: body3
+    x: 45
+    y: -12
+  - id: body0
+    x: 45
+    y: -13
+  - id: top0
+    x: 46
+    y: -10
+  - id: body2
+    x: 46
+    y: -11
+  - id: body2
+    x: 46
+    y: -12
+  - id: body2
+    x: 46
+    y: -13
+  - id: top3
+    x: 47
+    y: -10
+  - id: body0
+    x: 47
+    y: -11
+  - id: body1
+    x: 47
+    y: -12
+  - id: body0
+    x: 47
+    y: -13
+  - id: top_left
+    x: 48
+    y: -9
+  - id: inner_tl
+    x: 48
+    y: -10
+  - id: body3
+    x: 48
+    y: -11
+  - id: body2
+    x: 48
+    y: -12
+  - id: body2
+    x: 48
+    y: -13
+  - id: top0
+    x: 49
+    y: -9
+  - id: body1
+    x: 49
+    y: -10
+  - id: body0
+    x: 49
+    y: -11
+  - id: body0
+    x: 49
+    y: -12
+  - id: body1
+    x: 49
+    y: -13
+  - id: top1
+    x: 50
+    y: -9
+  - id: body1
+    x: 50
+    y: -10
+  - id: body1
+    x: 50
+    y: -11
+  - id: body3
+    x: 50
+    y: -12
+  - id: body0
+    x: 50
+    y: -13
+  - id: top0
+    x: 51
+    y: -9
+  - id: body1
+    x: 51
+    y: -10
+  - id: body2
+    x: 51
+    y: -11
+  - id: body0
+    x: 51
+    y: -12
+  - id: body0
+    x: 51
+    y: -13
+  - id: top0
+    x: 52
+    y: -9
+  - id: body0
+    x: 52
+    y: -10
+  - id: body2
+    x: 52
+    y: -11
+  - id: body1
+    x: 52
+    y: -12
+  - id: body3
+    x: 52
+    y: -13
+  - id: top2
+    x: 53
+    y: -9
+  - id: body2
+    x: 53
+    y: -10
+  - id: body0
+    x: 53
+    y: -11
+  - id: body3
+    x: 53
+    y: -12
+  - id: body1
+    x: 53
+    y: -13
+  - id: top3
+    x: 54
+    y: -9
+  - id: body2
+    x: 54
+    y: -10
+  - id: body2
+    x: 54
+    y: -11
+  - id: body1
+    x: 54
+    y: -12
+  - id: body3
+    x: 54
+    y: -13
+  - id: top2
+    x: 55
+    y: -9
+  - id: body3
+    x: 55
+    y: -10
+  - id: body3
+    x: 55
+    y: -11
+  - id: body3
+    x: 55
+    y: -12
+  - id: body2
+    x: 55
+    y: -13
+  - id: top_left
+    x: 56
+    y: -8
+  - id: inner_tl
+    x: 56
+    y: -9
+  - id: body3
+    x: 56
+    y: -10
+  - id: body1
+    x: 56
+    y: -11
+  - id: body0
+    x: 56
+    y: -12
+  - id: body0
+    x: 56
+    y: -13
+  - id: top3
+    x: 57
+    y: -8
+  - id: body0
+    x: 57
+    y: -9
+  - id: body3
+    x: 57
+    y: -10
+  - id: body1
+    x: 57
+    y: -11
+  - id: body2
+    x: 57
+    y: -12
+  - id: body2
+    x: 57
+    y: -13
+  - id: top3
+    x: 58
+    y: -8
+  - id: body0
+    x: 58
+    y: -9
+  - id: body1
+    x: 58
+    y: -10
+  - id: body2
+    x: 58
+    y: -11
+  - id: body2
+    x: 58
+    y: -12
+  - id: body0
+    x: 58
+    y: -13
+  - id: top1
+    x: 59
+    y: -8
+  - id: body1
+    x: 59
+    y: -9
+  - id: body1
+    x: 59
+    y: -10
+  - id: body0
+    x: 59
+    y: -11
+  - id: body2
+    x: 59
+    y: -12
+  - id: body2
+    x: 59
+    y: -13
+  - id: top3
+    x: 60
+    y: -8
+  - id: body0
+    x: 60
+    y: -9
+  - id: body0
+    x: 60
+    y: -10
+  - id: body3
+    x: 60
+    y: -11
+  - id: body1
+    x: 60
+    y: -12
+  - id: body3
+    x: 60
+    y: -13
+  - id: top3
+    x: 61
+    y: -8
+  - id: body0
+    x: 61
+    y: -9
+  - id: body0
+    x: 61
+    y: -10
+  - id: body3
+    x: 61
+    y: -11
+  - id: body2
+    x: 61
+    y: -12
+  - id: body0
+    x: 61
+    y: -13
+  - id: top0
+    x: 62
+    y: -8
+  - id: body0
+    x: 62
+    y: -9
+  - id: body2
+    x: 62
+    y: -10
+  - id: body3
+    x: 62
+    y: -11
+  - id: body0
+    x: 62
+    y: -12
+  - id: body3
+    x: 62
+    y: -13
+  - id: top1
+    x: 63
+    y: -8
+  - id: body2
+    x: 63
+    y: -9
+  - id: body0
+    x: 63
+    y: -10
+  - id: body2
+    x: 63
+    y: -11
+  - id: body2
+    x: 63
+    y: -12
+  - id: body0
+    x: 63
+    y: -13
+  - id: top2
+    x: 64
+    y: -8
+  - id: body1
+    x: 64
+    y: -9
+  - id: body3
+    x: 64
+    y: -10
+  - id: body0
+    x: 64
+    y: -11
+  - id: body1
+    x: 64
+    y: -12
+  - id: body1
+    x: 64
+    y: -13
+  - id: top3
+    x: 65
+    y: -8
+  - id: body2
+    x: 65
+    y: -9
+  - id: body0
+    x: 65
+    y: -10
+  - id: body1
+    x: 65
+    y: -11
+  - id: body1
+    x: 65
+    y: -12
+  - id: body2
+    x: 65
+    y: -13
+  - id: top1
+    x: 66
+    y: -8
+  - id: body3
+    x: 66
+    y: -9
+  - id: body0
+    x: 66
+    y: -10
+  - id: body0
+    x: 66
+    y: -11
+  - id: body1
+    x: 66
+    y: -12
+  - id: body1
+    x: 66
+    y: -13
+  - id: top1
+    x: 67
+    y: -8
+  - id: body2
+    x: 67
+    y: -9
+  - id: body1
+    x: 67
+    y: -10
+  - id: body3
+    x: 67
+    y: -11
+  - id: body3
+    x: 67
+    y: -12
+  - id: body3
+    x: 67
+    y: -13
+  - id: top0
+    x: 68
+    y: -8
+  - id: body3
+    x: 68
+    y: -9
+  - id: body2
+    x: 68
+    y: -10
+  - id: body0
+    x: 68
+    y: -11
+  - id: body1
+    x: 68
+    y: -12
+  - id: body0
+    x: 68
+    y: -13
+  - id: top3
+    x: 69
+    y: -8
+  - id: body3
+    x: 69
+    y: -9
+  - id: body0
+    x: 69
+    y: -10
+  - id: body0
+    x: 69
+    y: -11
+  - id: body0
+    x: 69
+    y: -12
+  - id: body0
+    x: 69
+    y: -13
+  - id: top3
+    x: 70
+    y: -8
+  - id: body1
+    x: 70
+    y: -9
+  - id: body2
+    x: 70
+    y: -10
+  - id: body1
+    x: 70
+    y: -11
+  - id: body2
+    x: 70
+    y: -12
+  - id: body2
+    x: 70
+    y: -13
+  - id: top0
+    x: 71
+    y: -8
+  - id: body1
+    x: 71
+    y: -9
+  - id: body1
+    x: 71
+    y: -10
+  - id: body3
+    x: 71
+    y: -11
+  - id: body3
+    x: 71
+    y: -12
+  - id: body1
+    x: 71
+    y: -13
+  - id: top2
+    x: 72
+    y: -8
+  - id: body3
+    x: 72
+    y: -9
+  - id: body0
+    x: 72
+    y: -10
+  - id: body1
+    x: 72
+    y: -11
+  - id: body0
+    x: 72
+    y: -12
+  - id: body1
+    x: 72
+    y: -13
+  - id: top1
+    x: 73
+    y: -8
+  - id: body3
+    x: 73
+    y: -9
+  - id: body1
+    x: 73
+    y: -10
+  - id: body0
+    x: 73
+    y: -11
+  - id: body1
+    x: 73
+    y: -12
+  - id: body1
+    x: 73
+    y: -13
+  - id: top2
+    x: 74
+    y: -8
+  - id: body3
+    x: 74
+    y: -9
+  - id: body2
+    x: 74
+    y: -10
+  - id: body3
+    x: 74
+    y: -11
+  - id: body3
+    x: 74
+    y: -12
+  - id: body3
+    x: 74
+    y: -13
+  - id: top3
+    x: 75
+    y: -8
+  - id: body3
+    x: 75
+    y: -9
+  - id: body3
+    x: 75
+    y: -10
+  - id: body3
+    x: 75
+    y: -11
+  - id: body3
+    x: 75
+    y: -12
+  - id: body2
+    x: 75
+    y: -13
+  - id: top2
+    x: 76
+    y: -8
+  - id: body0
+    x: 76
+    y: -9
+  - id: body2
+    x: 76
+    y: -10
+  - id: body0
+    x: 76
+    y: -11
+  - id: body2
+    x: 76
+    y: -12
+  - id: body0
+    x: 76
+    y: -13
+  - id: top1
+    x: 77
+    y: -8
+  - id: body0
+    x: 77
+    y: -9
+  - id: body3
+    x: 77
+    y: -10
+  - id: body0
+    x: 77
+    y: -11
+  - id: body0
+    x: 77
+    y: -12
+  - id: body0
+    x: 77
+    y: -13
+  - id: top3
+    x: 78
+    y: -8
+  - id: body3
+    x: 78
+    y: -9
+  - id: body3
+    x: 78
+    y: -10
+  - id: body1
+    x: 78
+    y: -11
+  - id: body0
+    x: 78
+    y: -12
+  - id: body2
+    x: 78
+    y: -13
+  - id: top2
+    x: 79
+    y: -8
+  - id: body1
+    x: 79
+    y: -9
+  - id: body1
+    x: 79
+    y: -10
+  - id: body1
+    x: 79
+    y: -11
+  - id: body2
+    x: 79
+    y: -12
+  - id: body0
+    x: 79
+    y: -13
+  - id: top2
+    x: 80
+    y: -8
+  - id: body1
+    x: 80
+    y: -9
+  - id: body3
+    x: 80
+    y: -10
+  - id: body3
+    x: 80
+    y: -11
+  - id: body3
+    x: 80
+    y: -12
+  - id: body2
+    x: 80
+    y: -13
+  - id: top0
+    x: 81
+    y: -8
+  - id: body1
+    x: 81
+    y: -9
+  - id: body1
+    x: 81
+    y: -10
+  - id: body3
+    x: 81
+    y: -11
+  - id: body2
+    x: 81
+    y: -12
+  - id: body2
+    x: 81
+    y: -13
+  - id: top0
+    x: 82
+    y: -8
+  - id: body1
+    x: 82
+    y: -9
+  - id: body1
+    x: 82
+    y: -10
+  - id: body1
+    x: 82
+    y: -11
+  - id: body3
+    x: 82
+    y: -12
+  - id: body2
+    x: 82
+    y: -13
+  - id: top2
+    x: 83
+    y: -8
+  - id: body3
+    x: 83
+    y: -9
+  - id: body0
+    x: 83
+    y: -10
+  - id: body3
+    x: 83
+    y: -11
+  - id: body3
+    x: 83
+    y: -12
+  - id: body0
+    x: 83
+    y: -13
+  - id: top1
+    x: 84
+    y: -8
+  - id: body0
+    x: 84
+    y: -9
+  - id: body2
+    x: 84
+    y: -10
+  - id: body2
+    x: 84
+    y: -11
+  - id: body1
+    x: 84
+    y: -12
+  - id: body3
+    x: 84
+    y: -13
+  - id: top3
+    x: 85
+    y: -8
+  - id: body0
+    x: 85
+    y: -9
+  - id: body3
+    x: 85
+    y: -10
+  - id: body3
+    x: 85
+    y: -11
+  - id: body1
+    x: 85
+    y: -12
+  - id: body1
+    x: 85
+    y: -13
+  - id: top1
+    x: 86
+    y: -8
+  - id: body3
+    x: 86
+    y: -9
+  - id: body3
+    x: 86
+    y: -10
+  - id: body1
+    x: 86
+    y: -11
+  - id: body0
+    x: 86
+    y: -12
+  - id: body3
+    x: 86
+    y: -13
+  - id: top3
+    x: 87
+    y: -8
+  - id: body3
+    x: 87
+    y: -9
+  - id: body2
+    x: 87
+    y: -10
+  - id: body1
+    x: 87
+    y: -11
+  - id: body0
+    x: 87
+    y: -12
+  - id: body3
+    x: 87
+    y: -13
+  - id: top2
+    x: 88
+    y: -8
+  - id: body2
+    x: 88
+    y: -9
+  - id: body3
+    x: 88
+    y: -10
+  - id: body1
+    x: 88
+    y: -11
+  - id: body3
+    x: 88
+    y: -12
+  - id: body0
+    x: 88
+    y: -13
+  - id: top1
+    x: 89
+    y: -8
+  - id: body2
+    x: 89
+    y: -9
+  - id: body3
+    x: 89
+    y: -10
+  - id: body0
+    x: 89
+    y: -11
+  - id: body1
+    x: 89
+    y: -12
+  - id: body3
+    x: 89
+    y: -13
+  - id: top0
+    x: 90
+    y: -8
+  - id: body2
+    x: 90
+    y: -9
+  - id: body0
+    x: 90
+    y: -10
+  - id: body3
+    x: 90
+    y: -11
+  - id: body2
+    x: 90
+    y: -12
+  - id: body0
+    x: 90
+    y: -13
+  - id: top0
+    x: 91
+    y: -8
+  - id: body3
+    x: 91
+    y: -9
+  - id: body0
+    x: 91
+    y: -10
+  - id: body3
+    x: 91
+    y: -11
+  - id: body0
+    x: 91
+    y: -12
+  - id: body2
+    x: 91
+    y: -13
+  - id: top3
+    x: 92
+    y: -8
+  - id: body0
+    x: 92
+    y: -9
+  - id: body1
+    x: 92
+    y: -10
+  - id: body2
+    x: 92
+    y: -11
+  - id: body1
+    x: 92
+    y: -12
+  - id: body1
+    x: 92
+    y: -13
+  - id: top0
+    x: 93
+    y: -8
+  - id: body1
+    x: 93
+    y: -9
+  - id: body3
+    x: 93
+    y: -10
+  - id: body1
+    x: 93
+    y: -11
+  - id: body1
+    x: 93
+    y: -12
+  - id: body2
+    x: 93
+    y: -13
+  - id: top3
+    x: 94
+    y: -8
+  - id: body3
+    x: 94
+    y: -9
+  - id: body3
+    x: 94
+    y: -10
+  - id: body2
+    x: 94
+    y: -11
+  - id: body1
+    x: 94
+    y: -12
+  - id: body3
+    x: 94
+    y: -13
+  - id: top0
+    x: 95
+    y: -8
+  - id: body2
+    x: 95
+    y: -9
+  - id: body0
+    x: 95
+    y: -10
+  - id: body3
+    x: 95
+    y: -11
+  - id: body0
+    x: 95
+    y: -12
+  - id: body2
+    x: 95
+    y: -13
+  - id: top3
+    x: 96
+    y: -8
+  - id: body1
+    x: 96
+    y: -9
+  - id: body3
+    x: 96
+    y: -10
+  - id: body3
+    x: 96
+    y: -11
+  - id: body1
+    x: 96
+    y: -12
+  - id: body0
+    x: 96
+    y: -13
+  - id: top1
+    x: 97
+    y: -8
+  - id: body2
+    x: 97
+    y: -9
+  - id: body0
+    x: 97
+    y: -10
+  - id: body0
+    x: 97
+    y: -11
+  - id: body3
+    x: 97
+    y: -12
+  - id: body0
+    x: 97
+    y: -13
+  - id: top2
+    x: 98
+    y: -8
+  - id: body3
+    x: 98
+    y: -9
+  - id: body2
+    x: 98
+    y: -10
+  - id: body0
+    x: 98
+    y: -11
+  - id: body3
+    x: 98
+    y: -12
+  - id: body3
+    x: 98
+    y: -13
+  - id: top2
+    x: 99
+    y: -8
+  - id: body2
+    x: 99
+    y: -9
+  - id: body0
+    x: 99
+    y: -10
+  - id: body0
+    x: 99
+    y: -11
+  - id: body1
+    x: 99
+    y: -12
+  - id: body1
+    x: 99
+    y: -13
+  - id: top2
+    x: 100
+    y: -8
+  - id: body3
+    x: 100
+    y: -9
+  - id: body0
+    x: 100
+    y: -10
+  - id: body3
+    x: 100
+    y: -11
+  - id: body1
+    x: 100
+    y: -12
+  - id: body3
+    x: 100
+    y: -13
+  - id: top1
+    x: 101
+    y: -8
+  - id: body0
+    x: 101
+    y: -9
+  - id: body3
+    x: 101
+    y: -10
+  - id: body1
+    x: 101
+    y: -11
+  - id: body1
+    x: 101
+    y: -12
+  - id: body1
+    x: 101
+    y: -13
+  - id: top0
+    x: 102
+    y: -8
+  - id: body3
+    x: 102
+    y: -9
+  - id: body2
+    x: 102
+    y: -10
+  - id: body2
+    x: 102
+    y: -11
+  - id: body3
+    x: 102
+    y: -12
+  - id: body0
+    x: 102
+    y: -13
+  - id: top3
+    x: 103
+    y: -8
+  - id: body3
+    x: 103
+    y: -9
+  - id: body3
+    x: 103
+    y: -10
+  - id: body3
+    x: 103
+    y: -11
+  - id: body0
+    x: 103
+    y: -12
+  - id: body3
+    x: 103
+    y: -13
+  - id: top0
+    x: 104
+    y: -8
+  - id: body2
+    x: 104
+    y: -9
+  - id: body0
+    x: 104
+    y: -10
+  - id: body0
+    x: 104
+    y: -11
+  - id: body0
+    x: 104
+    y: -12
+  - id: body2
+    x: 104
+    y: -13
+  - id: top3
+    x: 105
+    y: -8
+  - id: body0
+    x: 105
+    y: -9
+  - id: body1
+    x: 105
+    y: -10
+  - id: body1
+    x: 105
+    y: -11
+  - id: body1
+    x: 105
+    y: -12
+  - id: body0
+    x: 105
+    y: -13
+  - id: top3
+    x: 106
+    y: -8
+  - id: body2
+    x: 106
+    y: -9
+  - id: body2
+    x: 106
+    y: -10
+  - id: body3
+    x: 106
+    y: -11
+  - id: body3
+    x: 106
+    y: -12
+  - id: body3
+    x: 106
+    y: -13
+  - id: top0
+    x: 107
+    y: -8
+  - id: body1
+    x: 107
+    y: -9
+  - id: body1
+    x: 107
+    y: -10
+  - id: body0
+    x: 107
+    y: -11
+  - id: body3
+    x: 107
+    y: -12
+  - id: body0
+    x: 107
+    y: -13
+  - id: top1
+    x: 108
+    y: -8
+  - id: body2
+    x: 108
+    y: -9
+  - id: body1
+    x: 108
+    y: -10
+  - id: body1
+    x: 108
+    y: -11
+  - id: body0
+    x: 108
+    y: -12
+  - id: body0
+    x: 108
+    y: -13
+  - id: top3
+    x: 109
+    y: -8
+  - id: body0
+    x: 109
+    y: -9
+  - id: body3
+    x: 109
+    y: -10
+  - id: body3
+    x: 109
+    y: -11
+  - id: body0
+    x: 109
+    y: -12
+  - id: body2
+    x: 109
+    y: -13
+  - id: top1
+    x: 110
+    y: -8
+  - id: body1
+    x: 110
+    y: -9
+  - id: body3
+    x: 110
+    y: -10
+  - id: body3
+    x: 110
+    y: -11
+  - id: body2
+    x: 110
+    y: -12
+  - id: body0
+    x: 110
+    y: -13
+  - id: top3
+    x: 111
+    y: -8
+  - id: body1
+    x: 111
+    y: -9
+  - id: body1
+    x: 111
+    y: -10
+  - id: body0
+    x: 111
+    y: -11
+  - id: body1
+    x: 111
+    y: -12
+  - id: body1
+    x: 111
+    y: -13
+  - id: top2
+    x: 112
+    y: -8
+  - id: body2
+    x: 112
+    y: -9
+  - id: body0
+    x: 112
+    y: -10
+  - id: body3
+    x: 112
+    y: -11
+  - id: body0
+    x: 112
+    y: -12
+  - id: body2
+    x: 112
+    y: -13
+  - id: top1
+    x: 113
+    y: -8
+  - id: body3
+    x: 113
+    y: -9
+  - id: body3
+    x: 113
+    y: -10
+  - id: body1
+    x: 113
+    y: -11
+  - id: body1
+    x: 113
+    y: -12
+  - id: body1
+    x: 113
+    y: -13
+  - id: top1
+    x: 114
+    y: -8
+  - id: body0
+    x: 114
+    y: -9
+  - id: body1
+    x: 114
+    y: -10
+  - id: body0
+    x: 114
+    y: -11
+  - id: body1
+    x: 114
+    y: -12
+  - id: body2
+    x: 114
+    y: -13
+  - id: top2
+    x: 115
+    y: -8
+  - id: body1
+    x: 115
+    y: -9
+  - id: body0
+    x: 115
+    y: -10
+  - id: body3
+    x: 115
+    y: -11
+  - id: body2
+    x: 115
+    y: -12
+  - id: body1
+    x: 115
+    y: -13
+  - id: top_left
+    x: 116
+    y: -7
+  - id: inner_tl
+    x: 116
+    y: -8
+  - id: body0
+    x: 116
+    y: -9
+  - id: body0
+    x: 116
+    y: -10
+  - id: body0
+    x: 116
+    y: -11
+  - id: body1
+    x: 116
+    y: -12
+  - id: body3
+    x: 116
+    y: -13
+  - id: top1
+    x: 117
+    y: -7
+  - id: body3
+    x: 117
+    y: -8
+  - id: body1
+    x: 117
+    y: -9
+  - id: body0
+    x: 117
+    y: -10
+  - id: body0
+    x: 117
+    y: -11
+  - id: body0
+    x: 117
+    y: -12
+  - id: body0
+    x: 117
+    y: -13
+  - id: top1
+    x: 118
+    y: -7
+  - id: body1
+    x: 118
+    y: -8
+  - id: body2
+    x: 118
+    y: -9
+  - id: body0
+    x: 118
+    y: -10
+  - id: body0
+    x: 118
+    y: -11
+  - id: body0
+    x: 118
+    y: -12
+  - id: body3
+    x: 118
+    y: -13
+  - id: top0
+    x: 119
+    y: -7
+  - id: body2
+    x: 119
+    y: -8
+  - id: body3
+    x: 119
+    y: -9
+  - id: body1
+    x: 119
+    y: -10
+  - id: body0
+    x: 119
+    y: -11
+  - id: body0
+    x: 119
+    y: -12
+  - id: body1
+    x: 119
+    y: -13
+  - id: top2
+    x: 120
+    y: -7
+  - id: body3
+    x: 120
+    y: -8
+  - id: body1
+    x: 120
+    y: -9
+  - id: body0
+    x: 120
+    y: -10
+  - id: body1
+    x: 120
+    y: -11
+  - id: body3
+    x: 120
+    y: -12
+  - id: body3
+    x: 120
+    y: -13
+  - id: top0
+    x: 121
+    y: -7
+  - id: body3
+    x: 121
+    y: -8
+  - id: body0
+    x: 121
+    y: -9
+  - id: body2
+    x: 121
+    y: -10
+  - id: body0
+    x: 121
+    y: -11
+  - id: body0
+    x: 121
+    y: -12
+  - id: body0
+    x: 121
+    y: -13
+  - id: top_left
+    x: 122
+    y: -6
+  - id: inner_tl
+    x: 122
+    y: -7
+  - id: body3
+    x: 122
+    y: -8
+  - id: body3
+    x: 122
+    y: -9
+  - id: body2
+    x: 122
+    y: -10
+  - id: body0
+    x: 122
+    y: -11
+  - id: body2
+    x: 122
+    y: -12
+  - id: body2
+    x: 122
+    y: -13
+  - id: top3
+    x: 123
+    y: -6
+  - id: body0
+    x: 123
+    y: -7
+  - id: body3
+    x: 123
+    y: -8
+  - id: body1
+    x: 123
+    y: -9
+  - id: body2
+    x: 123
+    y: -10
+  - id: body1
+    x: 123
+    y: -11
+  - id: body1
+    x: 123
+    y: -12
+  - id: body1
+    x: 123
+    y: -13
+  - id: top1
+    x: 124
+    y: -6
+  - id: body1
+    x: 124
+    y: -7
+  - id: body0
+    x: 124
+    y: -8
+  - id: body1
+    x: 124
+    y: -9
+  - id: body2
+    x: 124
+    y: -10
+  - id: body2
+    x: 124
+    y: -11
+  - id: body1
+    x: 124
+    y: -12
+  - id: body1
+    x: 124
+    y: -13
+  - id: top2
+    x: 125
+    y: -6
+  - id: body0
+    x: 125
+    y: -7
+  - id: body0
+    x: 125
+    y: -8
+  - id: body0
+    x: 125
+    y: -9
+  - id: body1
+    x: 125
+    y: -10
+  - id: body2
+    x: 125
+    y: -11
+  - id: body0
+    x: 125
+    y: -12
+  - id: body1
+    x: 125
+    y: -13
+  - id: top2
+    x: 126
+    y: -6
+  - id: body0
+    x: 126
+    y: -7
+  - id: body3
+    x: 126
+    y: -8
+  - id: body1
+    x: 126
+    y: -9
+  - id: body1
+    x: 126
+    y: -10
+  - id: body3
+    x: 126
+    y: -11
+  - id: body0
+    x: 126
+    y: -12
+  - id: body2
+    x: 126
+    y: -13
+  - id: top1
+    x: 127
+    y: -6
+  - id: body1
+    x: 127
+    y: -7
+  - id: body1
+    x: 127
+    y: -8
+  - id: body2
+    x: 127
+    y: -9
+  - id: body0
+    x: 127
+    y: -10
+  - id: body3
+    x: 127
+    y: -11
+  - id: body3
+    x: 127
+    y: -12
+  - id: body2
+    x: 127
+    y: -13
+  - id: top0
+    x: 128
+    y: -6
+  - id: body2
+    x: 128
+    y: -7
+  - id: body0
+    x: 128
+    y: -8
+  - id: body1
+    x: 128
+    y: -9
+  - id: body0
+    x: 128
+    y: -10
+  - id: body2
+    x: 128
+    y: -11
+  - id: body1
+    x: 128
+    y: -12
+  - id: body0
+    x: 128
+    y: -13
+  - id: top1
+    x: 129
+    y: -6
+  - id: body0
+    x: 129
+    y: -7
+  - id: body0
+    x: 129
+    y: -8
+  - id: body3
+    x: 129
+    y: -9
+  - id: body2
+    x: 129
+    y: -10
+  - id: body1
+    x: 129
+    y: -11
+  - id: body2
+    x: 129
+    y: -12
+  - id: body0
+    x: 129
+    y: -13
+  - id: top2
+    x: 130
+    y: -6
+  - id: body0
+    x: 130
+    y: -7
+  - id: body2
+    x: 130
+    y: -8
+  - id: body3
+    x: 130
+    y: -9
+  - id: body3
+    x: 130
+    y: -10
+  - id: body1
+    x: 130
+    y: -11
+  - id: body3
+    x: 130
+    y: -12
+  - id: body0
+    x: 130
+    y: -13
+  - id: top2
+    x: 131
+    y: -6
+  - id: body3
+    x: 131
+    y: -7
+  - id: body3
+    x: 131
+    y: -8
+  - id: body2
+    x: 131
+    y: -9
+  - id: body0
+    x: 131
+    y: -10
+  - id: body1
+    x: 131
+    y: -11
+  - id: body3
+    x: 131
+    y: -12
+  - id: body1
+    x: 131
+    y: -13
+  - id: top1
+    x: 132
+    y: -6
+  - id: body1
+    x: 132
+    y: -7
+  - id: body0
+    x: 132
+    y: -8
+  - id: body2
+    x: 132
+    y: -9
+  - id: body2
+    x: 132
+    y: -10
+  - id: body3
+    x: 132
+    y: -11
+  - id: body0
+    x: 132
+    y: -12
+  - id: body3
+    x: 132
+    y: -13
+  - id: top1
+    x: 133
+    y: -6
+  - id: body3
+    x: 133
+    y: -7
+  - id: body0
+    x: 133
+    y: -8
+  - id: body0
+    x: 133
+    y: -9
+  - id: body0
+    x: 133
+    y: -10
+  - id: body1
+    x: 133
+    y: -11
+  - id: body0
+    x: 133
+    y: -12
+  - id: body1
+    x: 133
+    y: -13
+  - id: top1
+    x: 134
+    y: -6
+  - id: body3
+    x: 134
+    y: -7
+  - id: body3
+    x: 134
+    y: -8
+  - id: body3
+    x: 134
+    y: -9
+  - id: body2
+    x: 134
+    y: -10
+  - id: body1
+    x: 134
+    y: -11
+  - id: body0
+    x: 134
+    y: -12
+  - id: body2
+    x: 134
+    y: -13
+  - id: top0
+    x: 135
+    y: -6
+  - id: body0
+    x: 135
+    y: -7
+  - id: body1
+    x: 135
+    y: -8
+  - id: body3
+    x: 135
+    y: -9
+  - id: body2
+    x: 135
+    y: -10
+  - id: body0
+    x: 135
+    y: -11
+  - id: body2
+    x: 135
+    y: -12
+  - id: body2
+    x: 135
+    y: -13
+  - id: top0
+    x: 136
+    y: -6
+  - id: body3
+    x: 136
+    y: -7
+  - id: body1
+    x: 136
+    y: -8
+  - id: body3
+    x: 136
+    y: -9
+  - id: body1
+    x: 136
+    y: -10
+  - id: body1
+    x: 136
+    y: -11
+  - id: body2
+    x: 136
+    y: -12
+  - id: body3
+    x: 136
+    y: -13
+  - id: top1
+    x: 137
+    y: -6
+  - id: body0
+    x: 137
+    y: -7
+  - id: body2
+    x: 137
+    y: -8
+  - id: body2
+    x: 137
+    y: -9
+  - id: body1
+    x: 137
+    y: -10
+  - id: body1
+    x: 137
+    y: -11
+  - id: body1
+    x: 137
+    y: -12
+  - id: body3
+    x: 137
+    y: -13
+  - id: top0
+    x: 138
+    y: -6
+  - id: body1
+    x: 138
+    y: -7
+  - id: body3
+    x: 138
+    y: -8
+  - id: body2
+    x: 138
+    y: -9
+  - id: body2
+    x: 138
+    y: -10
+  - id: body3
+    x: 138
+    y: -11
+  - id: body0
+    x: 138
+    y: -12
+  - id: body3
+    x: 138
+    y: -13
+  - id: top0
+    x: 139
+    y: -6
+  - id: body2
+    x: 139
+    y: -7
+  - id: body0
+    x: 139
+    y: -8
+  - id: body3
+    x: 139
+    y: -9
+  - id: body2
+    x: 139
+    y: -10
+  - id: body1
+    x: 139
+    y: -11
+  - id: body3
+    x: 139
+    y: -12
+  - id: body2
+    x: 139
+    y: -13
+  - id: top2
+    x: 140
+    y: -6
+  - id: body2
+    x: 140
+    y: -7
+  - id: body2
+    x: 140
+    y: -8
+  - id: body1
+    x: 140
+    y: -9
+  - id: body1
+    x: 140
+    y: -10
+  - id: body2
+    x: 140
+    y: -11
+  - id: body0
+    x: 140
+    y: -12
+  - id: body3
+    x: 140
+    y: -13
+  - id: top2
+    x: 141
+    y: -6
+  - id: body3
+    x: 141
+    y: -7
+  - id: body2
+    x: 141
+    y: -8
+  - id: body3
+    x: 141
+    y: -9
+  - id: body0
+    x: 141
+    y: -10
+  - id: body0
+    x: 141
+    y: -11
+  - id: body2
+    x: 141
+    y: -12
+  - id: body2
+    x: 141
+    y: -13
+  - id: top2
+    x: 142
+    y: -6
+  - id: body3
+    x: 142
+    y: -7
+  - id: body2
+    x: 142
+    y: -8
+  - id: body0
+    x: 142
+    y: -9
+  - id: body1
+    x: 142
+    y: -10
+  - id: body1
+    x: 142
+    y: -11
+  - id: body2
+    x: 142
+    y: -12
+  - id: body3
+    x: 142
+    y: -13
+  - id: top3
+    x: 143
+    y: -6
+  - id: body1
+    x: 143
+    y: -7
+  - id: body1
+    x: 143
+    y: -8
+  - id: body2
+    x: 143
+    y: -9
+  - id: body0
+    x: 143
+    y: -10
+  - id: body3
+    x: 143
+    y: -11
+  - id: body1
+    x: 143
+    y: -12
+  - id: body2
+    x: 143
+    y: -13
+  - id: top2
+    x: 144
+    y: -6
+  - id: body1
+    x: 144
+    y: -7
+  - id: body1
+    x: 144
+    y: -8
+  - id: body2
+    x: 144
+    y: -9
+  - id: body0
+    x: 144
+    y: -10
+  - id: body0
+    x: 144
+    y: -11
+  - id: body0
+    x: 144
+    y: -12
+  - id: body2
+    x: 144
+    y: -13
+  - id: top3
+    x: 145
+    y: -6
+  - id: body1
+    x: 145
+    y: -7
+  - id: body2
+    x: 145
+    y: -8
+  - id: body3
+    x: 145
+    y: -9
+  - id: body3
+    x: 145
+    y: -10
+  - id: body3
+    x: 145
+    y: -11
+  - id: body3
+    x: 145
+    y: -12
+  - id: body1
+    x: 145
+    y: -13
+  - id: top2
+    x: 146
+    y: -6
+  - id: body3
+    x: 146
+    y: -7
+  - id: body0
+    x: 146
+    y: -8
+  - id: body0
+    x: 146
+    y: -9
+  - id: body0
+    x: 146
+    y: -10
+  - id: body2
+    x: 146
+    y: -11
+  - id: body0
+    x: 146
+    y: -12
+  - id: body2
+    x: 146
+    y: -13
+  - id: top1
+    x: 147
+    y: -6
+  - id: body2
+    x: 147
+    y: -7
+  - id: body1
+    x: 147
+    y: -8
+  - id: body0
+    x: 147
+    y: -9
+  - id: body1
+    x: 147
+    y: -10
+  - id: body2
+    x: 147
+    y: -11
+  - id: body1
+    x: 147
+    y: -12
+  - id: body1
+    x: 147
+    y: -13
+  - id: top0
+    x: 148
+    y: -6
+  - id: body1
+    x: 148
+    y: -7
+  - id: body2
+    x: 148
+    y: -8
+  - id: body2
+    x: 148
+    y: -9
+  - id: body2
+    x: 148
+    y: -10
+  - id: body3
+    x: 148
+    y: -11
+  - id: body1
+    x: 148
+    y: -12
+  - id: body3
+    x: 148
+    y: -13
+  - id: top0
+    x: 149
+    y: -6
+  - id: body2
+    x: 149
+    y: -7
+  - id: body1
+    x: 149
+    y: -8
+  - id: body1
+    x: 149
+    y: -9
+  - id: body1
+    x: 149
+    y: -10
+  - id: body1
+    x: 149
+    y: -11
+  - id: body3
+    x: 149
+    y: -12
+  - id: body3
+    x: 149
+    y: -13
+  - id: top3
+    x: 150
+    y: -6
+  - id: body2
+    x: 150
+    y: -7
+  - id: body0
+    x: 150
+    y: -8
+  - id: body2
+    x: 150
+    y: -9
+  - id: body0
+    x: 150
+    y: -10
+  - id: body1
+    x: 150
+    y: -11
+  - id: body1
+    x: 150
+    y: -12
+  - id: body2
+    x: 150
+    y: -13
+  - id: top3
+    x: 151
+    y: -6
+  - id: body0
+    x: 151
+    y: -7
+  - id: body2
+    x: 151
+    y: -8
+  - id: body1
+    x: 151
+    y: -9
+  - id: body0
+    x: 151
+    y: -10
+  - id: body1
+    x: 151
+    y: -11
+  - id: body1
+    x: 151
+    y: -12
+  - id: body2
+    x: 151
+    y: -13
+  - id: top3
+    x: 152
+    y: -6
+  - id: body0
+    x: 152
+    y: -7
+  - id: body3
+    x: 152
+    y: -8
+  - id: body1
+    x: 152
+    y: -9
+  - id: body0
+    x: 152
+    y: -10
+  - id: body3
+    x: 152
+    y: -11
+  - id: body0
+    x: 152
+    y: -12
+  - id: body3
+    x: 152
+    y: -13
+  - id: top1
+    x: 153
+    y: -6
+  - id: body1
+    x: 153
+    y: -7
+  - id: body0
+    x: 153
+    y: -8
+  - id: body0
+    x: 153
+    y: -9
+  - id: body3
+    x: 153
+    y: -10
+  - id: body1
+    x: 153
+    y: -11
+  - id: body2
+    x: 153
+    y: -12
+  - id: body2
+    x: 153
+    y: -13
+  - id: top1
+    x: 154
+    y: -6
+  - id: body1
+    x: 154
+    y: -7
+  - id: body1
+    x: 154
+    y: -8
+  - id: body3
+    x: 154
+    y: -9
+  - id: body2
+    x: 154
+    y: -10
+  - id: body1
+    x: 154
+    y: -11
+  - id: body2
+    x: 154
+    y: -12
+  - id: body1
+    x: 154
+    y: -13
+  - id: top3
+    x: 155
+    y: -6
+  - id: body1
+    x: 155
+    y: -7
+  - id: body3
+    x: 155
+    y: -8
+  - id: body3
+    x: 155
+    y: -9
+  - id: body3
+    x: 155
+    y: -10
+  - id: body1
+    x: 155
+    y: -11
+  - id: body0
+    x: 155
+    y: -12
+  - id: body1
+    x: 155
+    y: -13
+  - id: top1
+    x: 156
+    y: -6
+  - id: body0
+    x: 156
+    y: -7
+  - id: body0
+    x: 156
+    y: -8
+  - id: body2
+    x: 156
+    y: -9
+  - id: body2
+    x: 156
+    y: -10
+  - id: body3
+    x: 156
+    y: -11
+  - id: body2
+    x: 156
+    y: -12
+  - id: body0
+    x: 156
+    y: -13
+  - id: top3
+    x: 157
+    y: -6
+  - id: body2
+    x: 157
+    y: -7
+  - id: body3
+    x: 157
+    y: -8
+  - id: body2
+    x: 157
+    y: -9
+  - id: body0
+    x: 157
+    y: -10
+  - id: body1
+    x: 157
+    y: -11
+  - id: body2
+    x: 157
+    y: -12
+  - id: body3
+    x: 157
+    y: -13
+  - id: top1
+    x: 158
+    y: -6
+  - id: body1
+    x: 158
+    y: -7
+  - id: body0
+    x: 158
+    y: -8
+  - id: body2
+    x: 158
+    y: -9
+  - id: body0
+    x: 158
+    y: -10
+  - id: body0
+    x: 158
+    y: -11
+  - id: body3
+    x: 158
+    y: -12
+  - id: body2
+    x: 158
+    y: -13
+  - id: top2
+    x: 159
+    y: -6
+  - id: body2
+    x: 159
+    y: -7
+  - id: body1
+    x: 159
+    y: -8
+  - id: body2
+    x: 159
+    y: -9
+  - id: body0
+    x: 159
+    y: -10
+  - id: body0
+    x: 159
+    y: -11
+  - id: body2
+    x: 159
+    y: -12
+  - id: body1
+    x: 159
+    y: -13
+  - id: top1
+    x: 160
+    y: -6
+  - id: body3
+    x: 160
+    y: -7
+  - id: body2
+    x: 160
+    y: -8
+  - id: body3
+    x: 160
+    y: -9
+  - id: body2
+    x: 160
+    y: -10
+  - id: body0
+    x: 160
+    y: -11
+  - id: body1
+    x: 160
+    y: -12
+  - id: body1
+    x: 160
+    y: -13
+  - id: top0
+    x: 161
+    y: -6
+  - id: body2
+    x: 161
+    y: -7
+  - id: body1
+    x: 161
+    y: -8
+  - id: body1
+    x: 161
+    y: -9
+  - id: body3
+    x: 161
+    y: -10
+  - id: body3
+    x: 161
+    y: -11
+  - id: body1
+    x: 161
+    y: -12
+  - id: body3
+    x: 161
+    y: -13
+  - id: top0
+    x: 162
+    y: -6
+  - id: body3
+    x: 162
+    y: -7
+  - id: body0
+    x: 162
+    y: -8
+  - id: body3
+    x: 162
+    y: -9
+  - id: body2
+    x: 162
+    y: -10
+  - id: body1
+    x: 162
+    y: -11
+  - id: body2
+    x: 162
+    y: -12
+  - id: body3
+    x: 162
+    y: -13
+  - id: top2
+    x: 163
+    y: -6
+  - id: body3
+    x: 163
+    y: -7
+  - id: body2
+    x: 163
+    y: -8
+  - id: body1
+    x: 163
+    y: -9
+  - id: body1
+    x: 163
+    y: -10
+  - id: body3
+    x: 163
+    y: -11
+  - id: body0
+    x: 163
+    y: -12
+  - id: body2
+    x: 163
+    y: -13
+  - id: top0
+    x: 164
+    y: -6
+  - id: body0
+    x: 164
+    y: -7
+  - id: body0
+    x: 164
+    y: -8
+  - id: body3
+    x: 164
+    y: -9
+  - id: body1
+    x: 164
+    y: -10
+  - id: body2
+    x: 164
+    y: -11
+  - id: body3
+    x: 164
+    y: -12
+  - id: body2
+    x: 164
+    y: -13
+  - id: top2
+    x: 165
+    y: -6
+  - id: body2
+    x: 165
+    y: -7
+  - id: body3
+    x: 165
+    y: -8
+  - id: body3
+    x: 165
+    y: -9
+  - id: body1
+    x: 165
+    y: -10
+  - id: body0
+    x: 165
+    y: -11
+  - id: body0
+    x: 165
+    y: -12
+  - id: body2
+    x: 165
+    y: -13
+  - id: top3
+    x: 166
+    y: -6
+  - id: body0
+    x: 166
+    y: -7
+  - id: body0
+    x: 166
+    y: -8
+  - id: body1
+    x: 166
+    y: -9
+  - id: body0
+    x: 166
+    y: -10
+  - id: body1
+    x: 166
+    y: -11
+  - id: body2
+    x: 166
+    y: -12
+  - id: body2
+    x: 166
+    y: -13
+  - id: top1
+    x: 167
+    y: -6
+  - id: body2
+    x: 167
+    y: -7
+  - id: body3
+    x: 167
+    y: -8
+  - id: body0
+    x: 167
+    y: -9
+  - id: body1
+    x: 167
+    y: -10
+  - id: body2
+    x: 167
+    y: -11
+  - id: body1
+    x: 167
+    y: -12
+  - id: body1
+    x: 167
+    y: -13
+  - id: top2
+    x: 168
+    y: -6
+  - id: body0
+    x: 168
+    y: -7
+  - id: body3
+    x: 168
+    y: -8
+  - id: body0
+    x: 168
+    y: -9
+  - id: body0
+    x: 168
+    y: -10
+  - id: body1
+    x: 168
+    y: -11
+  - id: body2
+    x: 168
+    y: -12
+  - id: body0
+    x: 168
+    y: -13
+  - id: top2
+    x: 169
+    y: -6
+  - id: body2
+    x: 169
+    y: -7
+  - id: body2
+    x: 169
+    y: -8
+  - id: body0
+    x: 169
+    y: -9
+  - id: body2
+    x: 169
+    y: -10
+  - id: body3
+    x: 169
+    y: -11
+  - id: body3
+    x: 169
+    y: -12
+  - id: body3
+    x: 169
+    y: -13
+  - id: top2
+    x: 170
+    y: -6
+  - id: body2
+    x: 170
+    y: -7
+  - id: body1
+    x: 170
+    y: -8
+  - id: body0
+    x: 170
+    y: -9
+  - id: body1
+    x: 170
+    y: -10
+  - id: body1
+    x: 170
+    y: -11
+  - id: body1
+    x: 170
+    y: -12
+  - id: body2
+    x: 170
+    y: -13
+  - id: top1
+    x: 171
+    y: -6
+  - id: body3
+    x: 171
+    y: -7
+  - id: body1
+    x: 171
+    y: -8
+  - id: body0
+    x: 171
+    y: -9
+  - id: body2
+    x: 171
+    y: -10
+  - id: body1
+    x: 171
+    y: -11
+  - id: body2
+    x: 171
+    y: -12
+  - id: body0
+    x: 171
+    y: -13
+  - id: top2
+    x: 172
+    y: -6
+  - id: body2
+    x: 172
+    y: -7
+  - id: body3
+    x: 172
+    y: -8
+  - id: body0
+    x: 172
+    y: -9
+  - id: body0
+    x: 172
+    y: -10
+  - id: body2
+    x: 172
+    y: -11
+  - id: body0
+    x: 172
+    y: -12
+  - id: body3
+    x: 172
+    y: -13
+  - id: top1
+    x: 173
+    y: -6
+  - id: body1
+    x: 173
+    y: -7
+  - id: body0
+    x: 173
+    y: -8
+  - id: body3
+    x: 173
+    y: -9
+  - id: body3
+    x: 173
+    y: -10
+  - id: body1
+    x: 173
+    y: -11
+  - id: body2
+    x: 173
+    y: -12
+  - id: body3
+    x: 173
+    y: -13
+  - id: top0
+    x: 174
+    y: -6
+  - id: body1
+    x: 174
+    y: -7
+  - id: body0
+    x: 174
+    y: -8
+  - id: body1
+    x: 174
+    y: -9
+  - id: body2
+    x: 174
+    y: -10
+  - id: body3
+    x: 174
+    y: -11
+  - id: body0
+    x: 174
+    y: -12
+  - id: body1
+    x: 174
+    y: -13
+  - id: top1
+    x: 175
+    y: -6
+  - id: body2
+    x: 175
+    y: -7
+  - id: body0
+    x: 175
+    y: -8
+  - id: body3
+    x: 175
+    y: -9
+  - id: body0
+    x: 175
+    y: -10
+  - id: body3
+    x: 175
+    y: -11
+  - id: body2
+    x: 175
+    y: -12
+  - id: body3
+    x: 175
+    y: -13
+  - id: top3
+    x: 176
+    y: -6
+  - id: body2
+    x: 176
+    y: -7
+  - id: body1
+    x: 176
+    y: -8
+  - id: body2
+    x: 176
+    y: -9
+  - id: body1
+    x: 176
+    y: -10
+  - id: body3
+    x: 176
+    y: -11
+  - id: body2
+    x: 176
+    y: -12
+  - id: body1
+    x: 176
+    y: -13
+  - id: top2
+    x: 177
+    y: -6
+  - id: body1
+    x: 177
+    y: -7
+  - id: body3
+    x: 177
+    y: -8
+  - id: body2
+    x: 177
+    y: -9
+  - id: body3
+    x: 177
+    y: -10
+  - id: body0
+    x: 177
+    y: -11
+  - id: body0
+    x: 177
+    y: -12
+  - id: body2
+    x: 177
+    y: -13
+  - id: top2
+    x: 178
+    y: -6
+  - id: body1
+    x: 178
+    y: -7
+  - id: body3
+    x: 178
+    y: -8
+  - id: body0
+    x: 178
+    y: -9
+  - id: body3
+    x: 178
+    y: -10
+  - id: body0
+    x: 178
+    y: -11
+  - id: body1
+    x: 178
+    y: -12
+  - id: body3
+    x: 178
+    y: -13
+  - id: top2
+    x: 179
+    y: -6
+  - id: body0
+    x: 179
+    y: -7
+  - id: body3
+    x: 179
+    y: -8
+  - id: body0
+    x: 179
+    y: -9
+  - id: body0
+    x: 179
+    y: -10
+  - id: body2
+    x: 179
+    y: -11
+  - id: body1
+    x: 179
+    y: -12
+  - id: body3
+    x: 179
+    y: -13
+  - id: top1
+    x: 180
+    y: -6
+  - id: body3
+    x: 180
+    y: -7
+  - id: body1
+    x: 180
+    y: -8
+  - id: body1
+    x: 180
+    y: -9
+  - id: body1
+    x: 180
+    y: -10
+  - id: body2
+    x: 180
+    y: -11
+  - id: body2
+    x: 180
+    y: -12
+  - id: body2
+    x: 180
+    y: -13
+  - id: top2
+    x: 181
+    y: -6
+  - id: body2
+    x: 181
+    y: -7
+  - id: body2
+    x: 181
+    y: -8
+  - id: body2
+    x: 181
+    y: -9
+  - id: body0
+    x: 181
+    y: -10
+  - id: body2
+    x: 181
+    y: -11
+  - id: body0
+    x: 181
+    y: -12
+  - id: body0
+    x: 181
+    y: -13
+  - id: top3
+    x: 182
+    y: -6
+  - id: body0
+    x: 182
+    y: -7
+  - id: body3
+    x: 182
+    y: -8
+  - id: body2
+    x: 182
+    y: -9
+  - id: body0
+    x: 182
+    y: -10
+  - id: body1
+    x: 182
+    y: -11
+  - id: body3
+    x: 182
+    y: -12
+  - id: body1
+    x: 182
+    y: -13
+  - id: top1
+    x: 183
+    y: -6
+  - id: body2
+    x: 183
+    y: -7
+  - id: body0
+    x: 183
+    y: -8
+  - id: body0
+    x: 183
+    y: -9
+  - id: body1
+    x: 183
+    y: -10
+  - id: body3
+    x: 183
+    y: -11
+  - id: body2
+    x: 183
+    y: -12
+  - id: body0
+    x: 183
+    y: -13
+  - id: top1
+    x: 184
+    y: -6
+  - id: body0
+    x: 184
+    y: -7
+  - id: body0
+    x: 184
+    y: -8
+  - id: body0
+    x: 184
+    y: -9
+  - id: body2
+    x: 184
+    y: -10
+  - id: body1
+    x: 184
+    y: -11
+  - id: body0
+    x: 184
+    y: -12
+  - id: body3
+    x: 184
+    y: -13
+  - id: top0
+    x: 185
+    y: -6
+  - id: body0
+    x: 185
+    y: -7
+  - id: body0
+    x: 185
+    y: -8
+  - id: body0
+    x: 185
+    y: -9
+  - id: body3
+    x: 185
+    y: -10
+  - id: body3
+    x: 185
+    y: -11
+  - id: body0
+    x: 185
+    y: -12
+  - id: body2
+    x: 185
+    y: -13
+  - id: top3
+    x: 186
+    y: -6
+  - id: body0
+    x: 186
+    y: -7
+  - id: body3
+    x: 186
+    y: -8
+  - id: body0
+    x: 186
+    y: -9
+  - id: body3
+    x: 186
+    y: -10
+  - id: body1
+    x: 186
+    y: -11
+  - id: body1
+    x: 186
+    y: -12
+  - id: body2
+    x: 186
+    y: -13
+  - id: top3
+    x: 187
+    y: -6
+  - id: body0
+    x: 187
+    y: -7
+  - id: body0
+    x: 187
+    y: -8
+  - id: body3
+    x: 187
+    y: -9
+  - id: body0
+    x: 187
+    y: -10
+  - id: body0
+    x: 187
+    y: -11
+  - id: body0
+    x: 187
+    y: -12
+  - id: body1
+    x: 187
+    y: -13
+  - id: top0
+    x: 188
+    y: -6
+  - id: body0
+    x: 188
+    y: -7
+  - id: body2
+    x: 188
+    y: -8
+  - id: body2
+    x: 188
+    y: -9
+  - id: body0
+    x: 188
+    y: -10
+  - id: body2
+    x: 188
+    y: -11
+  - id: body3
+    x: 188
+    y: -12
+  - id: body0
+    x: 188
+    y: -13
+  - id: top1
+    x: 189
+    y: -6
+  - id: body1
+    x: 189
+    y: -7
+  - id: body1
+    x: 189
+    y: -8
+  - id: body1
+    x: 189
+    y: -9
+  - id: body1
+    x: 189
+    y: -10
+  - id: body0
+    x: 189
+    y: -11
+  - id: body1
+    x: 189
+    y: -12
+  - id: body3
+    x: 189
+    y: -13
+  - id: top0
+    x: 190
+    y: -6
+  - id: body0
+    x: 190
+    y: -7
+  - id: body2
+    x: 190
+    y: -8
+  - id: body2
+    x: 190
+    y: -9
+  - id: body1
+    x: 190
+    y: -10
+  - id: body0
+    x: 190
+    y: -11
+  - id: body0
+    x: 190
+    y: -12
+  - id: body1
+    x: 190
+    y: -13
+  - id: top2
+    x: 191
+    y: -6
+  - id: body3
+    x: 191
+    y: -7
+  - id: body1
+    x: 191
+    y: -8
+  - id: body0
+    x: 191
+    y: -9
+  - id: body2
+    x: 191
+    y: -10
+  - id: body2
+    x: 191
+    y: -11
+  - id: body2
+    x: 191
+    y: -12
+  - id: body1
+    x: 191
+    y: -13
+  - id: top2
+    x: 192
+    y: -6
+  - id: body3
+    x: 192
+    y: -7
+  - id: body3
+    x: 192
+    y: -8
+  - id: body3
+    x: 192
+    y: -9
+  - id: body2
+    x: 192
+    y: -10
+  - id: body2
+    x: 192
+    y: -11
+  - id: body1
+    x: 192
+    y: -12
+  - id: body2
+    x: 192
+    y: -13
+  - id: top0
+    x: 193
+    y: -6
+  - id: body2
+    x: 193
+    y: -7
+  - id: body0
+    x: 193
+    y: -8
+  - id: body3
+    x: 193
+    y: -9
+  - id: body3
+    x: 193
+    y: -10
+  - id: body1
+    x: 193
+    y: -11
+  - id: body3
+    x: 193
+    y: -12
+  - id: body0
+    x: 193
+    y: -13
+  - id: top2
+    x: 194
+    y: -6
+  - id: body2
+    x: 194
+    y: -7
+  - id: body2
+    x: 194
+    y: -8
+  - id: body2
+    x: 194
+    y: -9
+  - id: body1
+    x: 194
+    y: -10
+  - id: body1
+    x: 194
+    y: -11
+  - id: body0
+    x: 194
+    y: -12
+  - id: body3
+    x: 194
+    y: -13
+  - id: top2
+    x: 195
+    y: -6
+  - id: body3
+    x: 195
+    y: -7
+  - id: body2
+    x: 195
+    y: -8
+  - id: body2
+    x: 195
+    y: -9
+  - id: body3
+    x: 195
+    y: -10
+  - id: body3
+    x: 195
+    y: -11
+  - id: body3
+    x: 195
+    y: -12
+  - id: body3
+    x: 195
+    y: -13
+  - id: top1
+    x: 196
+    y: -6
+  - id: body0
+    x: 196
+    y: -7
+  - id: body2
+    x: 196
+    y: -8
+  - id: body1
+    x: 196
+    y: -9
+  - id: body3
+    x: 196
+    y: -10
+  - id: body1
+    x: 196
+    y: -11
+  - id: body3
+    x: 196
+    y: -12
+  - id: body3
+    x: 196
+    y: -13
+  - id: top0
+    x: 197
+    y: -6
+  - id: body2
+    x: 197
+    y: -7
+  - id: body1
+    x: 197
+    y: -8
+  - id: body3
+    x: 197
+    y: -9
+  - id: body2
+    x: 197
+    y: -10
+  - id: body0
+    x: 197
+    y: -11
+  - id: body3
+    x: 197
+    y: -12
+  - id: body3
+    x: 197
+    y: -13
+  - id: top3
+    x: 198
+    y: -6
+  - id: body0
+    x: 198
+    y: -7
+  - id: body3
+    x: 198
+    y: -8
+  - id: body3
+    x: 198
+    y: -9
+  - id: body1
+    x: 198
+    y: -10
+  - id: body2
+    x: 198
+    y: -11
+  - id: body0
+    x: 198
+    y: -12
+  - id: body0
+    x: 198
+    y: -13
+  - id: top0
+    x: 199
+    y: -6
+  - id: body3
+    x: 199
+    y: -7
+  - id: body0
+    x: 199
+    y: -8
+  - id: body3
+    x: 199
+    y: -9
+  - id: body2
+    x: 199
+    y: -10
+  - id: body1
+    x: 199
+    y: -11
+  - id: body1
+    x: 199
+    y: -12
+  - id: body1
+    x: 199
+    y: -13
+  - id: top1
+    x: 200
+    y: -6
+  - id: body3
+    x: 200
+    y: -7
+  - id: body3
+    x: 200
+    y: -8
+  - id: body2
+    x: 200
+    y: -9
+  - id: body0
+    x: 200
+    y: -10
+  - id: body2
+    x: 200
+    y: -11
+  - id: body2
+    x: 200
+    y: -12
+  - id: body3
+    x: 200
+    y: -13
+  - id: top1
+    x: 201
+    y: -6
+  - id: body2
+    x: 201
+    y: -7
+  - id: body3
+    x: 201
+    y: -8
+  - id: body0
+    x: 201
+    y: -9
+  - id: body2
+    x: 201
+    y: -10
+  - id: body1
+    x: 201
+    y: -11
+  - id: body0
+    x: 201
+    y: -12
+  - id: body2
+    x: 201
+    y: -13
+  - id: top2
+    x: 202
+    y: -6
+  - id: body0
+    x: 202
+    y: -7
+  - id: body2
+    x: 202
+    y: -8
+  - id: body3
+    x: 202
+    y: -9
+  - id: body3
+    x: 202
+    y: -10
+  - id: body3
+    x: 202
+    y: -11
+  - id: body3
+    x: 202
+    y: -12
+  - id: body1
+    x: 202
+    y: -13
+  - id: top3
+    x: 203
+    y: -6
+  - id: body0
+    x: 203
+    y: -7
+  - id: body2
+    x: 203
+    y: -8
+  - id: body1
+    x: 203
+    y: -9
+  - id: body3
+    x: 203
+    y: -10
+  - id: body2
+    x: 203
+    y: -11
+  - id: body2
+    x: 203
+    y: -12
+  - id: body3
+    x: 203
+    y: -13
+  - id: top1
+    x: 204
+    y: -6
+  - id: body2
+    x: 204
+    y: -7
+  - id: body1
+    x: 204
+    y: -8
+  - id: body1
+    x: 204
+    y: -9
+  - id: body2
+    x: 204
+    y: -10
+  - id: body2
+    x: 204
+    y: -11
+  - id: body2
+    x: 204
+    y: -12
+  - id: body2
+    x: 204
+    y: -13
+  - id: top3
+    x: 205
+    y: -6
+  - id: body2
+    x: 205
+    y: -7
+  - id: body0
+    x: 205
+    y: -8
+  - id: body0
+    x: 205
+    y: -9
+  - id: body3
+    x: 205
+    y: -10
+  - id: body2
+    x: 205
+    y: -11
+  - id: body0
+    x: 205
+    y: -12
+  - id: body1
+    x: 205
+    y: -13
+  - id: top0
+    x: 206
+    y: -6
+  - id: body1
+    x: 206
+    y: -7
+  - id: body3
+    x: 206
+    y: -8
+  - id: body1
+    x: 206
+    y: -9
+  - id: body2
+    x: 206
+    y: -10
+  - id: body3
+    x: 206
+    y: -11
+  - id: body2
+    x: 206
+    y: -12
+  - id: body2
+    x: 206
+    y: -13
+  - id: top0
+    x: 207
+    y: -6
+  - id: body1
+    x: 207
+    y: -7
+  - id: body1
+    x: 207
+    y: -8
+  - id: body1
+    x: 207
+    y: -9
+  - id: body1
+    x: 207
+    y: -10
+  - id: body0
+    x: 207
+    y: -11
+  - id: body0
+    x: 207
+    y: -12
+  - id: body2
+    x: 207
+    y: -13
+  - id: top2
+    x: 208
+    y: -6
+  - id: body0
+    x: 208
+    y: -7
+  - id: body2
+    x: 208
+    y: -8
+  - id: body1
+    x: 208
+    y: -9
+  - id: body0
+    x: 208
+    y: -10
+  - id: body0
+    x: 208
+    y: -11
+  - id: body2
+    x: 208
+    y: -12
+  - id: body2
+    x: 208
+    y: -13
+  - id: top2
+    x: 209
+    y: -6
+  - id: body2
+    x: 209
+    y: -7
+  - id: body2
+    x: 209
+    y: -8
+  - id: body2
+    x: 209
+    y: -9
+  - id: body3
+    x: 209
+    y: -10
+  - id: body3
+    x: 209
+    y: -11
+  - id: body0
+    x: 209
+    y: -12
+  - id: body1
+    x: 209
+    y: -13
+  - id: top3
+    x: 210
+    y: -6
+  - id: body1
+    x: 210
+    y: -7
+  - id: body1
+    x: 210
+    y: -8
+  - id: body2
+    x: 210
+    y: -9
+  - id: body0
+    x: 210
+    y: -10
+  - id: body0
+    x: 210
+    y: -11
+  - id: body3
+    x: 210
+    y: -12
+  - id: body3
+    x: 210
+    y: -13
+  - id: top2
+    x: 211
+    y: -6
+  - id: body2
+    x: 211
+    y: -7
+  - id: body1
+    x: 211
+    y: -8
+  - id: body0
+    x: 211
+    y: -9
+  - id: body2
+    x: 211
+    y: -10
+  - id: body1
+    x: 211
+    y: -11
+  - id: body1
+    x: 211
+    y: -12
+  - id: body1
+    x: 211
+    y: -13
+  - id: top2
+    x: 212
+    y: -6
+  - id: body3
+    x: 212
+    y: -7
+  - id: body3
+    x: 212
+    y: -8
+  - id: body3
+    x: 212
+    y: -9
+  - id: body0
+    x: 212
+    y: -10
+  - id: body1
+    x: 212
+    y: -11
+  - id: body3
+    x: 212
+    y: -12
+  - id: body0
+    x: 212
+    y: -13
+  - id: top2
+    x: 213
+    y: -6
+  - id: body3
+    x: 213
+    y: -7
+  - id: body0
+    x: 213
+    y: -8
+  - id: body0
+    x: 213
+    y: -9
+  - id: body0
+    x: 213
+    y: -10
+  - id: body0
+    x: 213
+    y: -11
+  - id: body3
+    x: 213
+    y: -12
+  - id: body0
+    x: 213
+    y: -13
+  - id: top0
+    x: 214
+    y: -6
+  - id: body3
+    x: 214
+    y: -7
+  - id: body2
+    x: 214
+    y: -8
+  - id: body1
+    x: 214
+    y: -9
+  - id: body2
+    x: 214
+    y: -10
+  - id: body0
+    x: 214
+    y: -11
+  - id: body3
+    x: 214
+    y: -12
+  - id: body1
+    x: 214
+    y: -13
+  - id: top2
+    x: 215
+    y: -6
+  - id: body3
+    x: 215
+    y: -7
+  - id: body2
+    x: 215
+    y: -8
+  - id: body1
+    x: 215
+    y: -9
+  - id: body2
+    x: 215
+    y: -10
+  - id: body3
+    x: 215
+    y: -11
+  - id: body0
+    x: 215
+    y: -12
+  - id: body2
+    x: 215
+    y: -13
+  - id: top1
+    x: 216
+    y: -6
+  - id: body0
+    x: 216
+    y: -7
+  - id: body3
+    x: 216
+    y: -8
+  - id: body0
+    x: 216
+    y: -9
+  - id: body2
+    x: 216
+    y: -10
+  - id: body0
+    x: 216
+    y: -11
+  - id: body2
+    x: 216
+    y: -12
+  - id: body0
+    x: 216
+    y: -13
+  - id: top1
+    x: 217
+    y: -6
+  - id: body0
+    x: 217
+    y: -7
+  - id: body0
+    x: 217
+    y: -8
+  - id: body0
+    x: 217
+    y: -9
+  - id: body1
+    x: 217
+    y: -10
+  - id: body3
+    x: 217
+    y: -11
+  - id: body3
+    x: 217
+    y: -12
+  - id: body0
+    x: 217
+    y: -13
+  - id: top0
+    x: 218
+    y: -6
+  - id: body3
+    x: 218
+    y: -7
+  - id: body0
+    x: 218
+    y: -8
+  - id: body1
+    x: 218
+    y: -9
+  - id: body0
+    x: 218
+    y: -10
+  - id: body2
+    x: 218
+    y: -11
+  - id: body1
+    x: 218
+    y: -12
+  - id: body2
+    x: 218
+    y: -13
+  - id: top1
+    x: 219
+    y: -6
+  - id: body0
+    x: 219
+    y: -7
+  - id: body3
+    x: 219
+    y: -8
+  - id: body1
+    x: 219
+    y: -9
+  - id: body3
+    x: 219
+    y: -10
+  - id: body0
+    x: 219
+    y: -11
+  - id: body3
+    x: 219
+    y: -12
+  - id: body3
+    x: 219
+    y: -13
+  - id: top2
+    x: 220
+    y: -6
+  - id: body1
+    x: 220
+    y: -7
+  - id: body3
+    x: 220
+    y: -8
+  - id: body1
+    x: 220
+    y: -9
+  - id: body1
+    x: 220
+    y: -10
+  - id: body2
+    x: 220
+    y: -11
+  - id: body0
+    x: 220
+    y: -12
+  - id: body0
+    x: 220
+    y: -13
+  - id: top2
+    x: 221
+    y: -6
+  - id: body2
+    x: 221
+    y: -7
+  - id: body0
+    x: 221
+    y: -8
+  - id: body1
+    x: 221
+    y: -9
+  - id: body1
+    x: 221
+    y: -10
+  - id: body1
+    x: 221
+    y: -11
+  - id: body2
+    x: 221
+    y: -12
+  - id: body0
+    x: 221
+    y: -13
+  - id: top0
+    x: 222
+    y: -6
+  - id: body0
+    x: 222
+    y: -7
+  - id: body1
+    x: 222
+    y: -8
+  - id: body0
+    x: 222
+    y: -9
+  - id: body0
+    x: 222
+    y: -10
+  - id: body0
+    x: 222
+    y: -11
+  - id: body1
+    x: 222
+    y: -12
+  - id: body0
+    x: 222
+    y: -13
+  - id: top0
+    x: 223
+    y: -6
+  - id: body1
+    x: 223
+    y: -7
+  - id: body3
+    x: 223
+    y: -8
+  - id: body3
+    x: 223
+    y: -9
+  - id: body2
+    x: 223
+    y: -10
+  - id: body1
+    x: 223
+    y: -11
+  - id: body0
+    x: 223
+    y: -12
+  - id: body2
+    x: 223
+    y: -13
+  - id: top3
+    x: 224
+    y: -6
+  - id: body2
+    x: 224
+    y: -7
+  - id: body3
+    x: 224
+    y: -8
+  - id: body1
+    x: 224
+    y: -9
+  - id: body3
+    x: 224
+    y: -10
+  - id: body3
+    x: 224
+    y: -11
+  - id: body2
+    x: 224
+    y: -12
+  - id: body3
+    x: 224
+    y: -13
+  - id: top2
+    x: 225
+    y: -6
+  - id: body2
+    x: 225
+    y: -7
+  - id: body1
+    x: 225
+    y: -8
+  - id: body3
+    x: 225
+    y: -9
+  - id: body1
+    x: 225
+    y: -10
+  - id: body0
+    x: 225
+    y: -11
+  - id: body1
+    x: 225
+    y: -12
+  - id: body3
+    x: 225
+    y: -13
+  - id: top2
+    x: 226
+    y: -6
+  - id: body1
+    x: 226
+    y: -7
+  - id: body1
+    x: 226
+    y: -8
+  - id: body0
+    x: 226
+    y: -9
+  - id: body2
+    x: 226
+    y: -10
+  - id: body0
+    x: 226
+    y: -11
+  - id: body0
+    x: 226
+    y: -12
+  - id: body2
+    x: 226
+    y: -13
+  - id: top3
+    x: 227
+    y: -6
+  - id: body2
+    x: 227
+    y: -7
+  - id: body0
+    x: 227
+    y: -8
+  - id: body2
+    x: 227
+    y: -9
+  - id: body2
+    x: 227
+    y: -10
+  - id: body1
+    x: 227
+    y: -11
+  - id: body1
+    x: 227
+    y: -12
+  - id: body2
+    x: 227
+    y: -13
+  - id: top3
+    x: 228
+    y: -6
+  - id: body0
+    x: 228
+    y: -7
+  - id: body2
+    x: 228
+    y: -8
+  - id: body1
+    x: 228
+    y: -9
+  - id: body0
+    x: 228
+    y: -10
+  - id: body2
+    x: 228
+    y: -11
+  - id: body3
+    x: 228
+    y: -12
+  - id: body2
+    x: 228
+    y: -13
+  - id: top0
+    x: 229
+    y: -6
+  - id: body1
+    x: 229
+    y: -7
+  - id: body2
+    x: 229
+    y: -8
+  - id: body1
+    x: 229
+    y: -9
+  - id: body2
+    x: 229
+    y: -10
+  - id: body2
+    x: 229
+    y: -11
+  - id: body0
+    x: 229
+    y: -12
+  - id: body2
+    x: 229
+    y: -13
+  - id: top2
+    x: 230
+    y: -6
+  - id: body3
+    x: 230
+    y: -7
+  - id: body2
+    x: 230
+    y: -8
+  - id: body1
+    x: 230
+    y: -9
+  - id: body3
+    x: 230
+    y: -10
+  - id: body3
+    x: 230
+    y: -11
+  - id: body0
+    x: 230
+    y: -12
+  - id: body0
+    x: 230
+    y: -13
+  - id: top0
+    x: 231
+    y: -6
+  - id: body3
+    x: 231
+    y: -7
+  - id: body1
+    x: 231
+    y: -8
+  - id: body1
+    x: 231
+    y: -9
+  - id: body1
+    x: 231
+    y: -10
+  - id: body1
+    x: 231
+    y: -11
+  - id: body2
+    x: 231
+    y: -12
+  - id: body1
+    x: 231
+    y: -13
+  - id: top_left
+    x: 232
+    y: -5
+  - id: inner_tl
+    x: 232
+    y: -6
+  - id: body2
+    x: 232
+    y: -7
+  - id: body1
+    x: 232
+    y: -8
+  - id: body1
+    x: 232
+    y: -9
+  - id: body3
+    x: 232
+    y: -10
+  - id: body0
+    x: 232
+    y: -11
+  - id: body3
+    x: 232
+    y: -12
+  - id: body0
+    x: 232
+    y: -13
+  - id: top3
+    x: 233
+    y: -5
+  - id: body1
+    x: 233
+    y: -6
+  - id: body3
+    x: 233
+    y: -7
+  - id: body1
+    x: 233
+    y: -8
+  - id: body0
+    x: 233
+    y: -9
+  - id: body0
+    x: 233
+    y: -10
+  - id: body3
+    x: 233
+    y: -11
+  - id: body3
+    x: 233
+    y: -12
+  - id: body1
+    x: 233
+    y: -13
+  - id: top2
+    x: 234
+    y: -5
+  - id: body0
+    x: 234
+    y: -6
+  - id: body1
+    x: 234
+    y: -7
+  - id: body0
+    x: 234
+    y: -8
+  - id: body1
+    x: 234
+    y: -9
+  - id: body3
+    x: 234
+    y: -10
+  - id: body1
+    x: 234
+    y: -11
+  - id: body3
+    x: 234
+    y: -12
+  - id: body1
+    x: 234
+    y: -13
+  - id: top0
+    x: 235
+    y: -5
+  - id: body0
+    x: 235
+    y: -6
+  - id: body3
+    x: 235
+    y: -7
+  - id: body1
+    x: 235
+    y: -8
+  - id: body1
+    x: 235
+    y: -9
+  - id: body2
+    x: 235
+    y: -10
+  - id: body2
+    x: 235
+    y: -11
+  - id: body2
+    x: 235
+    y: -12
+  - id: body2
+    x: 235
+    y: -13
+  - id: top1
+    x: 236
+    y: -5
+  - id: body3
+    x: 236
+    y: -6
+  - id: body3
+    x: 236
+    y: -7
+  - id: body2
+    x: 236
+    y: -8
+  - id: body2
+    x: 236
+    y: -9
+  - id: body0
+    x: 236
+    y: -10
+  - id: body1
+    x: 236
+    y: -11
+  - id: body1
+    x: 236
+    y: -12
+  - id: body1
+    x: 236
+    y: -13
+  - id: top1
+    x: 237
+    y: -5
+  - id: body1
+    x: 237
+    y: -6
+  - id: body1
+    x: 237
+    y: -7
+  - id: body0
+    x: 237
+    y: -8
+  - id: body3
+    x: 237
+    y: -9
+  - id: body0
+    x: 237
+    y: -10
+  - id: body0
+    x: 237
+    y: -11
+  - id: body3
+    x: 237
+    y: -12
+  - id: body0
+    x: 237
+    y: -13
+  - id: top0
+    x: 238
+    y: -5
+  - id: body0
+    x: 238
+    y: -6
+  - id: body3
+    x: 238
+    y: -7
+  - id: body0
+    x: 238
+    y: -8
+  - id: body2
+    x: 238
+    y: -9
+  - id: body1
+    x: 238
+    y: -10
+  - id: body2
+    x: 238
+    y: -11
+  - id: body0
+    x: 238
+    y: -12
+  - id: body2
+    x: 238
+    y: -13
+  - id: top3
+    x: 239
+    y: -5
+  - id: body2
+    x: 239
+    y: -6
+  - id: body1
+    x: 239
+    y: -7
+  - id: body3
+    x: 239
+    y: -8
+  - id: body0
+    x: 239
+    y: -9
+  - id: body3
+    x: 239
+    y: -10
+  - id: body3
+    x: 239
+    y: -11
+  - id: body0
+    x: 239
+    y: -12
+  - id: body1
+    x: 239
+    y: -13
+  - id: top_left
+    x: 240
+    y: -4
+  - id: inner_tl
+    x: 240
+    y: -5
+  - id: body0
+    x: 240
+    y: -6
+  - id: body1
+    x: 240
+    y: -7
+  - id: body3
+    x: 240
+    y: -8
+  - id: body3
+    x: 240
+    y: -9
+  - id: body3
+    x: 240
+    y: -10
+  - id: body0
+    x: 240
+    y: -11
+  - id: body3
+    x: 240
+    y: -12
+  - id: body1
+    x: 240
+    y: -13
+  - id: top0
+    x: 241
+    y: -4
+  - id: body0
+    x: 241
+    y: -5
+  - id: body1
+    x: 241
+    y: -6
+  - id: body0
+    x: 241
+    y: -7
+  - id: body3
+    x: 241
+    y: -8
+  - id: body3
+    x: 241
+    y: -9
+  - id: body0
+    x: 241
+    y: -10
+  - id: body1
+    x: 241
+    y: -11
+  - id: body0
+    x: 241
+    y: -12
+  - id: body3
+    x: 241
+    y: -13
+  - id: top1
+    x: 242
+    y: -4
+  - id: body2
+    x: 242
+    y: -5
+  - id: body0
+    x: 242
+    y: -6
+  - id: body1
+    x: 242
+    y: -7
+  - id: body3
+    x: 242
+    y: -8
+  - id: body2
+    x: 242
+    y: -9
+  - id: body3
+    x: 242
+    y: -10
+  - id: body3
+    x: 242
+    y: -11
+  - id: body0
+    x: 242
+    y: -12
+  - id: body3
+    x: 242
+    y: -13
+  - id: top2
+    x: 243
+    y: -4
+  - id: body1
+    x: 243
+    y: -5
+  - id: body3
+    x: 243
+    y: -6
+  - id: body0
+    x: 243
+    y: -7
+  - id: body0
+    x: 243
+    y: -8
+  - id: body3
+    x: 243
+    y: -9
+  - id: body0
+    x: 243
+    y: -10
+  - id: body1
+    x: 243
+    y: -11
+  - id: body2
+    x: 243
+    y: -12
+  - id: body1
+    x: 243
+    y: -13
+  - id: top0
+    x: 244
+    y: -4
+  - id: body3
+    x: 244
+    y: -5
+  - id: body3
+    x: 244
+    y: -6
+  - id: body0
+    x: 244
+    y: -7
+  - id: body1
+    x: 244
+    y: -8
+  - id: body3
+    x: 244
+    y: -9
+  - id: body2
+    x: 244
+    y: -10
+  - id: body0
+    x: 244
+    y: -11
+  - id: body0
+    x: 244
+    y: -12
+  - id: body1
+    x: 244
+    y: -13
+  - id: top3
+    x: 245
+    y: -4
+  - id: body2
+    x: 245
+    y: -5
+  - id: body0
+    x: 245
+    y: -6
+  - id: body1
+    x: 245
+    y: -7
+  - id: body2
+    x: 245
+    y: -8
+  - id: body1
+    x: 245
+    y: -9
+  - id: body2
+    x: 245
+    y: -10
+  - id: body0
+    x: 245
+    y: -11
+  - id: body2
+    x: 245
+    y: -12
+  - id: body1
+    x: 245
+    y: -13
+  - id: top0
+    x: 246
+    y: -4
+  - id: body1
+    x: 246
+    y: -5
+  - id: body0
+    x: 246
+    y: -6
+  - id: body1
+    x: 246
+    y: -7
+  - id: body0
+    x: 246
+    y: -8
+  - id: body3
+    x: 246
+    y: -9
+  - id: body2
+    x: 246
+    y: -10
+  - id: body1
+    x: 246
+    y: -11
+  - id: body0
+    x: 246
+    y: -12
+  - id: body3
+    x: 246
+    y: -13
+  - id: top0
+    x: 247
+    y: -4
+  - id: body2
+    x: 247
+    y: -5
+  - id: body2
+    x: 247
+    y: -6
+  - id: body3
+    x: 247
+    y: -7
+  - id: body1
+    x: 247
+    y: -8
+  - id: body3
+    x: 247
+    y: -9
+  - id: body2
+    x: 247
+    y: -10
+  - id: body2
+    x: 247
+    y: -11
+  - id: body0
+    x: 247
+    y: -12
+  - id: body0
+    x: 247
+    y: -13
+  - id: top2
+    x: 248
+    y: -4
+  - id: body2
+    x: 248
+    y: -5
+  - id: body2
+    x: 248
+    y: -6
+  - id: body0
+    x: 248
+    y: -7
+  - id: body3
+    x: 248
+    y: -8
+  - id: body2
+    x: 248
+    y: -9
+  - id: body0
+    x: 248
+    y: -10
+  - id: body1
+    x: 248
+    y: -11
+  - id: body1
+    x: 248
+    y: -12
+  - id: body3
+    x: 248
+    y: -13
+  - id: top1
+    x: 249
+    y: -4
+  - id: body1
+    x: 249
+    y: -5
+  - id: body0
+    x: 249
+    y: -6
+  - id: body1
+    x: 249
+    y: -7
+  - id: body2
+    x: 249
+    y: -8
+  - id: body1
+    x: 249
+    y: -9
+  - id: body0
+    x: 249
+    y: -10
+  - id: body0
+    x: 249
+    y: -11
+  - id: body1
+    x: 249
+    y: -12
+  - id: body1
+    x: 249
+    y: -13
+  - id: top0
+    x: 250
+    y: -4
+  - id: body2
+    x: 250
+    y: -5
+  - id: body2
+    x: 250
+    y: -6
+  - id: body2
+    x: 250
+    y: -7
+  - id: body3
+    x: 250
+    y: -8
+  - id: body2
+    x: 250
+    y: -9
+  - id: body3
+    x: 250
+    y: -10
+  - id: body0
+    x: 250
+    y: -11
+  - id: body2
+    x: 250
+    y: -12
+  - id: body3
+    x: 250
+    y: -13
+  - id: top3
+    x: 251
+    y: -4
+  - id: body1
+    x: 251
+    y: -5
+  - id: body1
+    x: 251
+    y: -6
+  - id: body3
+    x: 251
+    y: -7
+  - id: body1
+    x: 251
+    y: -8
+  - id: body0
+    x: 251
+    y: -9
+  - id: body1
+    x: 251
+    y: -10
+  - id: body3
+    x: 251
+    y: -11
+  - id: body3
+    x: 251
+    y: -12
+  - id: body1
+    x: 251
+    y: -13
+  - id: top0
+    x: 252
+    y: -4
+  - id: body1
+    x: 252
+    y: -5
+  - id: body1
+    x: 252
+    y: -6
+  - id: body2
+    x: 252
+    y: -7
+  - id: body2
+    x: 252
+    y: -8
+  - id: body1
+    x: 252
+    y: -9
+  - id: body0
+    x: 252
+    y: -10
+  - id: body0
+    x: 252
+    y: -11
+  - id: body3
+    x: 252
+    y: -12
+  - id: body1
+    x: 252
+    y: -13
+  - id: top2
+    x: 253
+    y: -4
+  - id: body2
+    x: 253
+    y: -5
+  - id: body0
+    x: 253
+    y: -6
+  - id: body0
+    x: 253
+    y: -7
+  - id: body0
+    x: 253
+    y: -8
+  - id: body0
+    x: 253
+    y: -9
+  - id: body1
+    x: 253
+    y: -10
+  - id: body3
+    x: 253
+    y: -11
+  - id: body3
+    x: 253
+    y: -12
+  - id: body1
+    x: 253
+    y: -13
+  - id: top1
+    x: 254
+    y: -4
+  - id: body0
+    x: 254
+    y: -5
+  - id: body2
+    x: 254
+    y: -6
+  - id: body2
+    x: 254
+    y: -7
+  - id: body3
+    x: 254
+    y: -8
+  - id: body1
+    x: 254
+    y: -9
+  - id: body3
+    x: 254
+    y: -10
+  - id: body1
+    x: 254
+    y: -11
+  - id: body2
+    x: 254
+    y: -12
+  - id: body2
+    x: 254
+    y: -13
+  - id: top2
+    x: 255
+    y: -4
+  - id: body2
+    x: 255
+    y: -5
+  - id: body0
+    x: 255
+    y: -6
+  - id: body0
+    x: 255
+    y: -7
+  - id: body0
+    x: 255
+    y: -8
+  - id: body3
+    x: 255
+    y: -9
+  - id: body2
+    x: 255
+    y: -10
+  - id: body2
+    x: 255
+    y: -11
+  - id: body1
+    x: 255
+    y: -12
+  - id: body1
+    x: 255
+    y: -13
+  - id: top1
+    x: 256
+    y: -4
+  - id: body0
+    x: 256
+    y: -5
+  - id: body3
+    x: 256
+    y: -6
+  - id: body0
+    x: 256
+    y: -7
+  - id: body2
+    x: 256
+    y: -8
+  - id: body3
+    x: 256
+    y: -9
+  - id: body2
+    x: 256
+    y: -10
+  - id: body3
+    x: 256
+    y: -11
+  - id: body0
+    x: 256
+    y: -12
+  - id: body1
+    x: 256
+    y: -13
+  - id: top1
+    x: 257
+    y: -4
+  - id: body3
+    x: 257
+    y: -5
+  - id: body2
+    x: 257
+    y: -6
+  - id: body2
+    x: 257
+    y: -7
+  - id: body1
+    x: 257
+    y: -8
+  - id: body1
+    x: 257
+    y: -9
+  - id: body2
+    x: 257
+    y: -10
+  - id: body3
+    x: 257
+    y: -11
+  - id: body1
+    x: 257
+    y: -12
+  - id: body2
+    x: 257
+    y: -13
+  - id: top3
+    x: 258
+    y: -4
+  - id: body2
+    x: 258
+    y: -5
+  - id: body3
+    x: 258
+    y: -6
+  - id: body1
+    x: 258
+    y: -7
+  - id: body0
+    x: 258
+    y: -8
+  - id: body1
+    x: 258
+    y: -9
+  - id: body0
+    x: 258
+    y: -10
+  - id: body1
+    x: 258
+    y: -11
+  - id: body3
+    x: 258
+    y: -12
+  - id: body3
+    x: 258
+    y: -13
+  - id: top1
+    x: 259
+    y: -4
+  - id: body3
+    x: 259
+    y: -5
+  - id: body0
+    x: 259
+    y: -6
+  - id: body2
+    x: 259
+    y: -7
+  - id: body2
+    x: 259
+    y: -8
+  - id: body2
+    x: 259
+    y: -9
+  - id: body0
+    x: 259
+    y: -10
+  - id: body1
+    x: 259
+    y: -11
+  - id: body1
+    x: 259
+    y: -12
+  - id: body2
+    x: 259
+    y: -13
+  - id: top2
+    x: 260
+    y: -4
+  - id: body1
+    x: 260
+    y: -5
+  - id: body0
+    x: 260
+    y: -6
+  - id: body0
+    x: 260
+    y: -7
+  - id: body0
+    x: 260
+    y: -8
+  - id: body3
+    x: 260
+    y: -9
+  - id: body2
+    x: 260
+    y: -10
+  - id: body3
+    x: 260
+    y: -11
+  - id: body3
+    x: 260
+    y: -12
+  - id: body0
+    x: 260
+    y: -13
+  - id: top1
+    x: 261
+    y: -4
+  - id: body2
+    x: 261
+    y: -5
+  - id: body3
+    x: 261
+    y: -6
+  - id: body1
+    x: 261
+    y: -7
+  - id: body1
+    x: 261
+    y: -8
+  - id: body1
+    x: 261
+    y: -9
+  - id: body0
+    x: 261
+    y: -10
+  - id: body1
+    x: 261
+    y: -11
+  - id: body3
+    x: 261
+    y: -12
+  - id: body2
+    x: 261
+    y: -13
+  - id: top1
+    x: 262
+    y: -4
+  - id: body1
+    x: 262
+    y: -5
+  - id: body0
+    x: 262
+    y: -6
+  - id: body2
+    x: 262
+    y: -7
+  - id: body0
+    x: 262
+    y: -8
+  - id: body1
+    x: 262
+    y: -9
+  - id: body1
+    x: 262
+    y: -10
+  - id: body3
+    x: 262
+    y: -11
+  - id: body2
+    x: 262
+    y: -12
+  - id: body2
+    x: 262
+    y: -13
+  - id: top0
+    x: 263
+    y: -4
+  - id: body0
+    x: 263
+    y: -5
+  - id: body3
+    x: 263
+    y: -6
+  - id: body3
+    x: 263
+    y: -7
+  - id: body0
+    x: 263
+    y: -8
+  - id: body2
+    x: 263
+    y: -9
+  - id: body1
+    x: 263
+    y: -10
+  - id: body0
+    x: 263
+    y: -11
+  - id: body2
+    x: 263
+    y: -12
+  - id: body0
+    x: 263
+    y: -13
+  - id: top0
+    x: 264
+    y: -4
+  - id: body3
+    x: 264
+    y: -5
+  - id: body2
+    x: 264
+    y: -6
+  - id: body2
+    x: 264
+    y: -7
+  - id: body2
+    x: 264
+    y: -8
+  - id: body1
+    x: 264
+    y: -9
+  - id: body3
+    x: 264
+    y: -10
+  - id: body0
+    x: 264
+    y: -11
+  - id: body1
+    x: 264
+    y: -12
+  - id: body0
+    x: 264
+    y: -13
+  - id: top2
+    x: 265
+    y: -4
+  - id: body2
+    x: 265
+    y: -5
+  - id: body3
+    x: 265
+    y: -6
+  - id: body1
+    x: 265
+    y: -7
+  - id: body3
+    x: 265
+    y: -8
+  - id: body2
+    x: 265
+    y: -9
+  - id: body1
+    x: 265
+    y: -10
+  - id: body2
+    x: 265
+    y: -11
+  - id: body3
+    x: 265
+    y: -12
+  - id: body1
+    x: 265
+    y: -13
+  - id: top2
+    x: 266
+    y: -4
+  - id: body3
+    x: 266
+    y: -5
+  - id: body0
+    x: 266
+    y: -6
+  - id: body2
+    x: 266
+    y: -7
+  - id: body1
+    x: 266
+    y: -8
+  - id: body3
+    x: 266
+    y: -9
+  - id: body2
+    x: 266
+    y: -10
+  - id: body2
+    x: 266
+    y: -11
+  - id: body3
+    x: 266
+    y: -12
+  - id: body0
+    x: 266
+    y: -13
+  - id: top0
+    x: 267
+    y: -4
+  - id: body2
+    x: 267
+    y: -5
+  - id: body0
+    x: 267
+    y: -6
+  - id: body3
+    x: 267
+    y: -7
+  - id: body3
+    x: 267
+    y: -8
+  - id: body3
+    x: 267
+    y: -9
+  - id: body1
+    x: 267
+    y: -10
+  - id: body1
+    x: 267
+    y: -11
+  - id: body3
+    x: 267
+    y: -12
+  - id: body2
+    x: 267
+    y: -13
+  - id: top2
+    x: 268
+    y: -4
+  - id: body2
+    x: 268
+    y: -5
+  - id: body2
+    x: 268
+    y: -6
+  - id: body2
+    x: 268
+    y: -7
+  - id: body3
+    x: 268
+    y: -8
+  - id: body2
+    x: 268
+    y: -9
+  - id: body1
+    x: 268
+    y: -10
+  - id: body0
+    x: 268
+    y: -11
+  - id: body1
+    x: 268
+    y: -12
+  - id: body2
+    x: 268
+    y: -13
+  - id: top3
+    x: 269
+    y: -4
+  - id: body2
+    x: 269
+    y: -5
+  - id: body3
+    x: 269
+    y: -6
+  - id: body1
+    x: 269
+    y: -7
+  - id: body3
+    x: 269
+    y: -8
+  - id: body0
+    x: 269
+    y: -9
+  - id: body1
+    x: 269
+    y: -10
+  - id: body1
+    x: 269
+    y: -11
+  - id: body0
+    x: 269
+    y: -12
+  - id: body2
+    x: 269
+    y: -13
+  - id: top3
+    x: 270
+    y: -4
+  - id: body3
+    x: 270
+    y: -5
+  - id: body0
+    x: 270
+    y: -6
+  - id: body2
+    x: 270
+    y: -7
+  - id: body2
+    x: 270
+    y: -8
+  - id: body2
+    x: 270
+    y: -9
+  - id: body0
+    x: 270
+    y: -10
+  - id: body1
+    x: 270
+    y: -11
+  - id: body0
+    x: 270
+    y: -12
+  - id: body1
+    x: 270
+    y: -13
+  - id: top1
+    x: 271
+    y: -4
+  - id: body2
+    x: 271
+    y: -5
+  - id: body3
+    x: 271
+    y: -6
+  - id: body3
+    x: 271
+    y: -7
+  - id: body2
+    x: 271
+    y: -8
+  - id: body1
+    x: 271
+    y: -9
+  - id: body1
+    x: 271
+    y: -10
+  - id: body2
+    x: 271
+    y: -11
+  - id: body3
+    x: 271
+    y: -12
+  - id: body3
+    x: 271
+    y: -13
+  - id: top2
+    x: 272
+    y: -4
+  - id: body1
+    x: 272
+    y: -5
+  - id: body1
+    x: 272
+    y: -6
+  - id: body1
+    x: 272
+    y: -7
+  - id: body2
+    x: 272
+    y: -8
+  - id: body3
+    x: 272
+    y: -9
+  - id: body2
+    x: 272
+    y: -10
+  - id: body1
+    x: 272
+    y: -11
+  - id: body2
+    x: 272
+    y: -12
+  - id: body1
+    x: 272
+    y: -13
+  - id: top0
+    x: 273
+    y: -4
+  - id: body2
+    x: 273
+    y: -5
+  - id: body2
+    x: 273
+    y: -6
+  - id: body1
+    x: 273
+    y: -7
+  - id: body0
+    x: 273
+    y: -8
+  - id: body1
+    x: 273
+    y: -9
+  - id: body0
+    x: 273
+    y: -10
+  - id: body2
+    x: 273
+    y: -11
+  - id: body0
+    x: 273
+    y: -12
+  - id: body0
+    x: 273
+    y: -13
+  - id: top0
+    x: 274
+    y: -4
+  - id: body1
+    x: 274
+    y: -5
+  - id: body0
+    x: 274
+    y: -6
+  - id: body0
+    x: 274
+    y: -7
+  - id: body0
+    x: 274
+    y: -8
+  - id: body2
+    x: 274
+    y: -9
+  - id: body0
+    x: 274
+    y: -10
+  - id: body2
+    x: 274
+    y: -11
+  - id: body3
+    x: 274
+    y: -12
+  - id: body1
+    x: 274
+    y: -13
+  - id: top2
+    x: 275
+    y: -4
+  - id: body3
+    x: 275
+    y: -5
+  - id: body0
+    x: 275
+    y: -6
+  - id: body1
+    x: 275
+    y: -7
+  - id: body0
+    x: 275
+    y: -8
+  - id: body2
+    x: 275
+    y: -9
+  - id: body2
+    x: 275
+    y: -10
+  - id: body3
+    x: 275
+    y: -11
+  - id: body3
+    x: 275
+    y: -12
+  - id: body3
+    x: 275
+    y: -13
+  - id: top3
+    x: 276
+    y: -4
+  - id: body0
+    x: 276
+    y: -5
+  - id: body1
+    x: 276
+    y: -6
+  - id: body0
+    x: 276
+    y: -7
+  - id: body3
+    x: 276
+    y: -8
+  - id: body3
+    x: 276
+    y: -9
+  - id: body0
+    x: 276
+    y: -10
+  - id: body0
+    x: 276
+    y: -11
+  - id: body0
+    x: 276
+    y: -12
+  - id: body1
+    x: 276
+    y: -13
+  - id: top3
+    x: 277
+    y: -4
+  - id: body3
+    x: 277
+    y: -5
+  - id: body3
+    x: 277
+    y: -6
+  - id: body0
+    x: 277
+    y: -7
+  - id: body3
+    x: 277
+    y: -8
+  - id: body2
+    x: 277
+    y: -9
+  - id: body3
+    x: 277
+    y: -10
+  - id: body1
+    x: 277
+    y: -11
+  - id: body0
+    x: 277
+    y: -12
+  - id: body3
+    x: 277
+    y: -13
+  - id: top2
+    x: 278
+    y: -4
+  - id: body2
+    x: 278
+    y: -5
+  - id: body3
+    x: 278
+    y: -6
+  - id: body1
+    x: 278
+    y: -7
+  - id: body2
+    x: 278
+    y: -8
+  - id: body3
+    x: 278
+    y: -9
+  - id: body2
+    x: 278
+    y: -10
+  - id: body0
+    x: 278
+    y: -11
+  - id: body2
+    x: 278
+    y: -12
+  - id: body3
+    x: 278
+    y: -13
+  - id: top1
+    x: 279
+    y: -4
+  - id: body3
+    x: 279
+    y: -5
+  - id: body2
+    x: 279
+    y: -6
+  - id: body1
+    x: 279
+    y: -7
+  - id: body3
+    x: 279
+    y: -8
+  - id: body0
+    x: 279
+    y: -9
+  - id: body3
+    x: 279
+    y: -10
+  - id: body3
+    x: 279
+    y: -11
+  - id: body2
+    x: 279
+    y: -12
+  - id: body0
+    x: 279
+    y: -13
+  - id: top3
+    x: 280
+    y: -4
+  - id: body1
+    x: 280
+    y: -5
+  - id: body1
+    x: 280
+    y: -6
+  - id: body2
+    x: 280
+    y: -7
+  - id: body2
+    x: 280
+    y: -8
+  - id: body1
+    x: 280
+    y: -9
+  - id: body3
+    x: 280
+    y: -10
+  - id: body1
+    x: 280
+    y: -11
+  - id: body3
+    x: 280
+    y: -12
+  - id: body0
+    x: 280
+    y: -13
+  - id: top2
+    x: 281
+    y: -4
+  - id: body3
+    x: 281
+    y: -5
+  - id: body1
+    x: 281
+    y: -6
+  - id: body1
+    x: 281
+    y: -7
+  - id: body3
+    x: 281
+    y: -8
+  - id: body2
+    x: 281
+    y: -9
+  - id: body2
+    x: 281
+    y: -10
+  - id: body1
+    x: 281
+    y: -11
+  - id: body2
+    x: 281
+    y: -12
+  - id: body2
+    x: 281
+    y: -13
+  - id: top3
+    x: 282
+    y: -4
+  - id: body0
+    x: 282
+    y: -5
+  - id: body1
+    x: 282
+    y: -6
+  - id: body1
+    x: 282
+    y: -7
+  - id: body1
+    x: 282
+    y: -8
+  - id: body2
+    x: 282
+    y: -9
+  - id: body2
+    x: 282
+    y: -10
+  - id: body2
+    x: 282
+    y: -11
+  - id: body0
+    x: 282
+    y: -12
+  - id: body3
+    x: 282
+    y: -13
+  - id: top1
+    x: 283
+    y: -4
+  - id: body0
+    x: 283
+    y: -5
+  - id: body1
+    x: 283
+    y: -6
+  - id: body0
+    x: 283
+    y: -7
+  - id: body0
+    x: 283
+    y: -8
+  - id: body2
+    x: 283
+    y: -9
+  - id: body0
+    x: 283
+    y: -10
+  - id: body0
+    x: 283
+    y: -11
+  - id: body0
+    x: 283
+    y: -12
+  - id: body1
+    x: 283
+    y: -13
+  - id: top0
+    x: 284
+    y: -4
+  - id: body0
+    x: 284
+    y: -5
+  - id: body3
+    x: 284
+    y: -6
+  - id: body3
+    x: 284
+    y: -7
+  - id: body2
+    x: 284
+    y: -8
+  - id: body2
+    x: 284
+    y: -9
+  - id: body0
+    x: 284
+    y: -10
+  - id: body3
+    x: 284
+    y: -11
+  - id: body2
+    x: 284
+    y: -12
+  - id: body3
+    x: 284
+    y: -13
+  - id: top1
+    x: 285
+    y: -4
+  - id: body1
+    x: 285
+    y: -5
+  - id: body0
+    x: 285
+    y: -6
+  - id: body0
+    x: 285
+    y: -7
+  - id: body0
+    x: 285
+    y: -8
+  - id: body3
+    x: 285
+    y: -9
+  - id: body0
+    x: 285
+    y: -10
+  - id: body1
+    x: 285
+    y: -11
+  - id: body3
+    x: 285
+    y: -12
+  - id: body1
+    x: 285
+    y: -13
+  - id: top2
+    x: 286
+    y: -4
+  - id: body0
+    x: 286
+    y: -5
+  - id: body1
+    x: 286
+    y: -6
+  - id: body3
+    x: 286
+    y: -7
+  - id: body1
+    x: 286
+    y: -8
+  - id: body0
+    x: 286
+    y: -9
+  - id: body1
+    x: 286
+    y: -10
+  - id: body0
+    x: 286
+    y: -11
+  - id: body2
+    x: 286
+    y: -12
+  - id: body0
+    x: 286
+    y: -13
+  - id: top2
+    x: 287
+    y: -4
+  - id: body3
+    x: 287
+    y: -5
+  - id: body3
+    x: 287
+    y: -6
+  - id: body0
+    x: 287
+    y: -7
+  - id: body3
+    x: 287
+    y: -8
+  - id: body0
+    x: 287
+    y: -9
+  - id: body2
+    x: 287
+    y: -10
+  - id: body0
+    x: 287
+    y: -11
+  - id: body1
+    x: 287
+    y: -12
+  - id: body1
+    x: 287
+    y: -13
+  - id: top0
+    x: 288
+    y: -4
+  - id: body0
+    x: 288
+    y: -5
+  - id: body0
+    x: 288
+    y: -6
+  - id: body0
+    x: 288
+    y: -7
+  - id: body1
+    x: 288
+    y: -8
+  - id: body1
+    x: 288
+    y: -9
+  - id: body0
+    x: 288
+    y: -10
+  - id: body3
+    x: 288
+    y: -11
+  - id: body2
+    x: 288
+    y: -12
+  - id: body1
+    x: 288
+    y: -13
+  - id: top3
+    x: 289
+    y: -4
+  - id: body3
+    x: 289
+    y: -5
+  - id: body3
+    x: 289
+    y: -6
+  - id: body2
+    x: 289
+    y: -7
+  - id: body0
+    x: 289
+    y: -8
+  - id: body2
+    x: 289
+    y: -9
+  - id: body2
+    x: 289
+    y: -10
+  - id: body1
+    x: 289
+    y: -11
+  - id: body2
+    x: 289
+    y: -12
+  - id: body2
+    x: 289
+    y: -13
+  - id: top3
+    x: 290
+    y: -4
+  - id: body0
+    x: 290
+    y: -5
+  - id: body0
+    x: 290
+    y: -6
+  - id: body0
+    x: 290
+    y: -7
+  - id: body2
+    x: 290
+    y: -8
+  - id: body1
+    x: 290
+    y: -9
+  - id: body3
+    x: 290
+    y: -10
+  - id: body1
+    x: 290
+    y: -11
+  - id: body2
+    x: 290
+    y: -12
+  - id: body1
+    x: 290
+    y: -13
+  - id: top1
+    x: 291
+    y: -4
+  - id: body3
+    x: 291
+    y: -5
+  - id: body2
+    x: 291
+    y: -6
+  - id: body2
+    x: 291
+    y: -7
+  - id: body1
+    x: 291
+    y: -8
+  - id: body1
+    x: 291
+    y: -9
+  - id: body0
+    x: 291
+    y: -10
+  - id: body1
+    x: 291
+    y: -11
+  - id: body3
+    x: 291
+    y: -12
+  - id: body3
+    x: 291
+    y: -13
+  - id: top1
+    x: 292
+    y: -4
+  - id: body2
+    x: 292
+    y: -5
+  - id: body2
+    x: 292
+    y: -6
+  - id: body3
+    x: 292
+    y: -7
+  - id: body3
+    x: 292
+    y: -8
+  - id: body3
+    x: 292
+    y: -9
+  - id: body1
+    x: 292
+    y: -10
+  - id: body3
+    x: 292
+    y: -11
+  - id: body3
+    x: 292
+    y: -12
+  - id: body1
+    x: 292
+    y: -13
+  - id: top2
+    x: 293
+    y: -4
+  - id: body2
+    x: 293
+    y: -5
+  - id: body2
+    x: 293
+    y: -6
+  - id: body3
+    x: 293
+    y: -7
+  - id: body1
+    x: 293
+    y: -8
+  - id: body1
+    x: 293
+    y: -9
+  - id: body2
+    x: 293
+    y: -10
+  - id: body2
+    x: 293
+    y: -11
+  - id: body3
+    x: 293
+    y: -12
+  - id: body0
+    x: 293
+    y: -13
+  - id: top3
+    x: 294
+    y: -4
+  - id: body0
+    x: 294
+    y: -5
+  - id: body1
+    x: 294
+    y: -6
+  - id: body2
+    x: 294
+    y: -7
+  - id: body3
+    x: 294
+    y: -8
+  - id: body3
+    x: 294
+    y: -9
+  - id: body3
+    x: 294
+    y: -10
+  - id: body1
+    x: 294
+    y: -11
+  - id: body3
+    x: 294
+    y: -12
+  - id: body2
+    x: 294
+    y: -13
+  - id: top0
+    x: 295
+    y: -4
+  - id: body0
+    x: 295
+    y: -5
+  - id: body2
+    x: 295
+    y: -6
+  - id: body0
+    x: 295
+    y: -7
+  - id: body2
+    x: 295
+    y: -8
+  - id: body0
+    x: 295
+    y: -9
+  - id: body3
+    x: 295
+    y: -10
+  - id: body2
+    x: 295
+    y: -11
+  - id: body0
+    x: 295
+    y: -12
+  - id: body0
+    x: 295
+    y: -13
+  - id: top3
+    x: 296
+    y: -4
+  - id: body1
+    x: 296
+    y: -5
+  - id: body0
+    x: 296
+    y: -6
+  - id: body0
+    x: 296
+    y: -7
+  - id: body3
+    x: 296
+    y: -8
+  - id: body2
+    x: 296
+    y: -9
+  - id: body2
+    x: 296
+    y: -10
+  - id: body1
+    x: 296
+    y: -11
+  - id: body3
+    x: 296
+    y: -12
+  - id: body0
+    x: 296
+    y: -13
+  - id: top1
+    x: 297
+    y: -4
+  - id: body3
+    x: 297
+    y: -5
+  - id: body0
+    x: 297
+    y: -6
+  - id: body3
+    x: 297
+    y: -7
+  - id: body1
+    x: 297
+    y: -8
+  - id: body1
+    x: 297
+    y: -9
+  - id: body0
+    x: 297
+    y: -10
+  - id: body0
+    x: 297
+    y: -11
+  - id: body2
+    x: 297
+    y: -12
+  - id: body3
+    x: 297
+    y: -13
+  - id: top3
+    x: 298
+    y: -4
+  - id: body3
+    x: 298
+    y: -5
+  - id: body1
+    x: 298
+    y: -6
+  - id: body3
+    x: 298
+    y: -7
+  - id: body0
+    x: 298
+    y: -8
+  - id: body0
+    x: 298
+    y: -9
+  - id: body0
+    x: 298
+    y: -10
+  - id: body1
+    x: 298
+    y: -11
+  - id: body0
+    x: 298
+    y: -12
+  - id: body0
+    x: 298
+    y: -13
+  - id: top1
+    x: 299
+    y: -4
+  - id: body0
+    x: 299
+    y: -5
+  - id: body3
+    x: 299
+    y: -6
+  - id: body3
+    x: 299
+    y: -7
+  - id: body2
+    x: 299
+    y: -8
+  - id: body3
+    x: 299
+    y: -9
+  - id: body3
+    x: 299
+    y: -10
+  - id: body1
+    x: 299
+    y: -11
+  - id: body3
+    x: 299
+    y: -12
+  - id: body0
+    x: 299
+    y: -13
+  - id: top1
+    x: 300
+    y: -4
+  - id: body3
+    x: 300
+    y: -5
+  - id: body1
+    x: 300
+    y: -6
+  - id: body3
+    x: 300
+    y: -7
+  - id: body1
+    x: 300
+    y: -8
+  - id: body0
+    x: 300
+    y: -9
+  - id: body2
+    x: 300
+    y: -10
+  - id: body2
+    x: 300
+    y: -11
+  - id: body0
+    x: 300
+    y: -12
+  - id: body2
+    x: 300
+    y: -13
+  - id: top3
+    x: 301
+    y: -4
+  - id: body0
+    x: 301
+    y: -5
+  - id: body2
+    x: 301
+    y: -6
+  - id: body0
+    x: 301
+    y: -7
+  - id: body1
+    x: 301
+    y: -8
+  - id: body1
+    x: 301
+    y: -9
+  - id: body3
+    x: 301
+    y: -10
+  - id: body0
+    x: 301
+    y: -11
+  - id: body2
+    x: 301
+    y: -12
+  - id: body2
+    x: 301
+    y: -13
+  - id: top0
+    x: 302
+    y: -4
+  - id: body0
+    x: 302
+    y: -5
+  - id: body2
+    x: 302
+    y: -6
+  - id: body2
+    x: 302
+    y: -7
+  - id: body1
+    x: 302
+    y: -8
+  - id: body0
+    x: 302
+    y: -9
+  - id: body3
+    x: 302
+    y: -10
+  - id: body1
+    x: 302
+    y: -11
+  - id: body2
+    x: 302
+    y: -12
+  - id: body3
+    x: 302
+    y: -13
+  - id: top2
+    x: 303
+    y: -4
+  - id: body0
+    x: 303
+    y: -5
+  - id: body3
+    x: 303
+    y: -6
+  - id: body0
+    x: 303
+    y: -7
+  - id: body3
+    x: 303
+    y: -8
+  - id: body3
+    x: 303
+    y: -9
+  - id: body3
+    x: 303
+    y: -10
+  - id: body3
+    x: 303
+    y: -11
+  - id: body1
+    x: 303
+    y: -12
+  - id: body0
+    x: 303
+    y: -13
+  - id: top0
+    x: 304
+    y: -4
+  - id: body2
+    x: 304
+    y: -5
+  - id: body0
+    x: 304
+    y: -6
+  - id: body3
+    x: 304
+    y: -7
+  - id: body1
+    x: 304
+    y: -8
+  - id: body1
+    x: 304
+    y: -9
+  - id: body0
+    x: 304
+    y: -10
+  - id: body1
+    x: 304
+    y: -11
+  - id: body1
+    x: 304
+    y: -12
+  - id: body2
+    x: 304
+    y: -13
+  - id: top2
+    x: 305
+    y: -4
+  - id: body1
+    x: 305
+    y: -5
+  - id: body2
+    x: 305
+    y: -6
+  - id: body3
+    x: 305
+    y: -7
+  - id: body3
+    x: 305
+    y: -8
+  - id: body0
+    x: 305
+    y: -9
+  - id: body2
+    x: 305
+    y: -10
+  - id: body1
+    x: 305
+    y: -11
+  - id: body0
+    x: 305
+    y: -12
+  - id: body2
+    x: 305
+    y: -13
+  - id: top0
+    x: 306
+    y: -4
+  - id: body3
+    x: 306
+    y: -5
+  - id: body3
+    x: 306
+    y: -6
+  - id: body1
+    x: 306
+    y: -7
+  - id: body2
+    x: 306
+    y: -8
+  - id: body3
+    x: 306
+    y: -9
+  - id: body3
+    x: 306
+    y: -10
+  - id: body2
+    x: 306
+    y: -11
+  - id: body2
+    x: 306
+    y: -12
+  - id: body0
+    x: 306
+    y: -13
+  - id: top2
+    x: 307
+    y: -4
+  - id: body3
+    x: 307
+    y: -5
+  - id: body0
+    x: 307
+    y: -6
+  - id: body2
+    x: 307
+    y: -7
+  - id: body3
+    x: 307
+    y: -8
+  - id: body1
+    x: 307
+    y: -9
+  - id: body0
+    x: 307
+    y: -10
+  - id: body3
+    x: 307
+    y: -11
+  - id: body1
+    x: 307
+    y: -12
+  - id: body3
+    x: 307
+    y: -13
+  - id: top3
+    x: 308
+    y: -4
+  - id: body1
+    x: 308
+    y: -5
+  - id: body2
+    x: 308
+    y: -6
+  - id: body0
+    x: 308
+    y: -7
+  - id: body2
+    x: 308
+    y: -8
+  - id: body0
+    x: 308
+    y: -9
+  - id: body3
+    x: 308
+    y: -10
+  - id: body3
+    x: 308
+    y: -11
+  - id: body1
+    x: 308
+    y: -12
+  - id: body2
+    x: 308
+    y: -13
+  - id: top1
+    x: 309
+    y: -4
+  - id: body3
+    x: 309
+    y: -5
+  - id: body1
+    x: 309
+    y: -6
+  - id: body0
+    x: 309
+    y: -7
+  - id: body0
+    x: 309
+    y: -8
+  - id: body2
+    x: 309
+    y: -9
+  - id: body2
+    x: 309
+    y: -10
+  - id: body0
+    x: 309
+    y: -11
+  - id: body1
+    x: 309
+    y: -12
+  - id: body0
+    x: 309
+    y: -13
+  - id: top1
+    x: 310
+    y: -4
+  - id: body1
+    x: 310
+    y: -5
+  - id: body0
+    x: 310
+    y: -6
+  - id: body0
+    x: 310
+    y: -7
+  - id: body0
+    x: 310
+    y: -8
+  - id: body3
+    x: 310
+    y: -9
+  - id: body0
+    x: 310
+    y: -10
+  - id: body1
+    x: 310
+    y: -11
+  - id: body1
+    x: 310
+    y: -12
+  - id: body1
+    x: 310
+    y: -13
+  - id: top_right
+    x: 311
+    y: -4
+  - id: inner_tr
+    x: 311
+    y: -5
+  - id: body1
+    x: 311
+    y: -6
+  - id: body2
+    x: 311
+    y: -7
+  - id: body1
+    x: 311
+    y: -8
+  - id: body1
+    x: 311
+    y: -9
+  - id: body3
+    x: 311
+    y: -10
+  - id: body1
+    x: 311
+    y: -11
+  - id: body1
+    x: 311
+    y: -12
+  - id: body2
+    x: 311
+    y: -13
+  - id: top2
+    x: 312
+    y: -5
+  - id: body0
+    x: 312
+    y: -6
+  - id: body3
+    x: 312
+    y: -7
+  - id: body1
+    x: 312
+    y: -8
+  - id: body1
+    x: 312
+    y: -9
+  - id: body2
+    x: 312
+    y: -10
+  - id: body0
+    x: 312
+    y: -11
+  - id: body0
+    x: 312
+    y: -12
+  - id: body3
+    x: 312
+    y: -13
+  - id: top0
+    x: 313
+    y: -5
+  - id: body3
+    x: 313
+    y: -6
+  - id: body3
+    x: 313
+    y: -7
+  - id: body1
+    x: 313
+    y: -8
+  - id: body2
+    x: 313
+    y: -9
+  - id: body2
+    x: 313
+    y: -10
+  - id: body0
+    x: 313
+    y: -11
+  - id: body3
+    x: 313
+    y: -12
+  - id: body3
+    x: 313
+    y: -13
+  - id: top0
+    x: 314
+    y: -5
+  - id: body3
+    x: 314
+    y: -6
+  - id: body1
+    x: 314
+    y: -7
+  - id: body3
+    x: 314
+    y: -8
+  - id: body3
+    x: 314
+    y: -9
+  - id: body2
+    x: 314
+    y: -10
+  - id: body1
+    x: 314
+    y: -11
+  - id: body3
+    x: 314
+    y: -12
+  - id: body3
+    x: 314
+    y: -13
+  - id: top3
+    x: 315
+    y: -5
+  - id: body0
+    x: 315
+    y: -6
+  - id: body2
+    x: 315
+    y: -7
+  - id: body1
+    x: 315
+    y: -8
+  - id: body1
+    x: 315
+    y: -9
+  - id: body2
+    x: 315
+    y: -10
+  - id: body1
+    x: 315
+    y: -11
+  - id: body0
+    x: 315
+    y: -12
+  - id: body3
+    x: 315
+    y: -13
+  - id: top3
+    x: 316
+    y: -5
+  - id: body3
+    x: 316
+    y: -6
+  - id: body1
+    x: 316
+    y: -7
+  - id: body0
+    x: 316
+    y: -8
+  - id: body1
+    x: 316
+    y: -9
+  - id: body1
+    x: 316
+    y: -10
+  - id: body1
+    x: 316
+    y: -11
+  - id: body0
+    x: 316
+    y: -12
+  - id: body2
+    x: 316
+    y: -13
+  - id: top1
+    x: 317
+    y: -5
+  - id: body0
+    x: 317
+    y: -6
+  - id: body1
+    x: 317
+    y: -7
+  - id: body1
+    x: 317
+    y: -8
+  - id: body0
+    x: 317
+    y: -9
+  - id: body1
+    x: 317
+    y: -10
+  - id: body0
+    x: 317
+    y: -11
+  - id: body2
+    x: 317
+    y: -12
+  - id: body3
+    x: 317
+    y: -13
+  - id: top2
+    x: 318
+    y: -5
+  - id: body1
+    x: 318
+    y: -6
+  - id: body3
+    x: 318
+    y: -7
+  - id: body1
+    x: 318
+    y: -8
+  - id: body1
+    x: 318
+    y: -9
+  - id: body0
+    x: 318
+    y: -10
+  - id: body3
+    x: 318
+    y: -11
+  - id: body1
+    x: 318
+    y: -12
+  - id: body2
+    x: 318
+    y: -13
+  - id: top2
+    x: 319
+    y: -5
+  - id: body3
+    x: 319
+    y: -6
+  - id: body3
+    x: 319
+    y: -7
+  - id: body1
+    x: 319
+    y: -8
+  - id: body0
+    x: 319
+    y: -9
+  - id: body3
+    x: 319
+    y: -10
+  - id: body0
+    x: 319
+    y: -11
+  - id: body1
+    x: 319
+    y: -12
+  - id: body1
+    x: 319
+    y: -13
+  - id: top2
+    x: 320
+    y: -5
+  - id: body0
+    x: 320
+    y: -6
+  - id: body2
+    x: 320
+    y: -7
+  - id: body0
+    x: 320
+    y: -8
+  - id: body2
+    x: 320
+    y: -9
+  - id: body3
+    x: 320
+    y: -10
+  - id: body2
+    x: 320
+    y: -11
+  - id: body1
+    x: 320
+    y: -12
+  - id: body1
+    x: 320
+    y: -13
+  - id: top1
+    x: 321
+    y: -5
+  - id: body2
+    x: 321
+    y: -6
+  - id: body2
+    x: 321
+    y: -7
+  - id: body2
+    x: 321
+    y: -8
+  - id: body0
+    x: 321
+    y: -9
+  - id: body1
+    x: 321
+    y: -10
+  - id: body1
+    x: 321
+    y: -11
+  - id: body1
+    x: 321
+    y: -12
+  - id: body1
+    x: 321
+    y: -13
+  - id: top0
+    x: 322
+    y: -5
+  - id: body2
+    x: 322
+    y: -6
+  - id: body3
+    x: 322
+    y: -7
+  - id: body3
+    x: 322
+    y: -8
+  - id: body0
+    x: 322
+    y: -9
+  - id: body1
+    x: 322
+    y: -10
+  - id: body1
+    x: 322
+    y: -11
+  - id: body1
+    x: 322
+    y: -12
+  - id: body0
+    x: 322
+    y: -13
+  - id: top1
+    x: 323
+    y: -5
+  - id: body0
+    x: 323
+    y: -6
+  - id: body2
+    x: 323
+    y: -7
+  - id: body2
+    x: 323
+    y: -8
+  - id: body2
+    x: 323
+    y: -9
+  - id: body0
+    x: 323
+    y: -10
+  - id: body2
+    x: 323
+    y: -11
+  - id: body1
+    x: 323
+    y: -12
+  - id: body2
+    x: 323
+    y: -13
+  - id: top3
+    x: 324
+    y: -5
+  - id: body0
+    x: 324
+    y: -6
+  - id: body3
+    x: 324
+    y: -7
+  - id: body1
+    x: 324
+    y: -8
+  - id: body2
+    x: 324
+    y: -9
+  - id: body2
+    x: 324
+    y: -10
+  - id: body2
+    x: 324
+    y: -11
+  - id: body2
+    x: 324
+    y: -12
+  - id: body1
+    x: 324
+    y: -13
+  - id: top3
+    x: 325
+    y: -5
+  - id: body2
+    x: 325
+    y: -6
+  - id: body0
+    x: 325
+    y: -7
+  - id: body3
+    x: 325
+    y: -8
+  - id: body3
+    x: 325
+    y: -9
+  - id: body1
+    x: 325
+    y: -10
+  - id: body3
+    x: 325
+    y: -11
+  - id: body2
+    x: 325
+    y: -12
+  - id: body0
+    x: 325
+    y: -13
+  - id: top2
+    x: 326
+    y: -5
+  - id: body0
+    x: 326
+    y: -6
+  - id: body2
+    x: 326
+    y: -7
+  - id: body2
+    x: 326
+    y: -8
+  - id: body0
+    x: 326
+    y: -9
+  - id: body3
+    x: 326
+    y: -10
+  - id: body0
+    x: 326
+    y: -11
+  - id: body0
+    x: 326
+    y: -12
+  - id: body0
+    x: 326
+    y: -13
+  - id: top1
+    x: 327
+    y: -5
+  - id: body3
+    x: 327
+    y: -6
+  - id: body2
+    x: 327
+    y: -7
+  - id: body1
+    x: 327
+    y: -8
+  - id: body0
+    x: 327
+    y: -9
+  - id: body3
+    x: 327
+    y: -10
+  - id: body0
+    x: 327
+    y: -11
+  - id: body2
+    x: 327
+    y: -12
+  - id: body1
+    x: 327
+    y: -13
+  - id: top2
+    x: 328
+    y: -5
+  - id: body3
+    x: 328
+    y: -6
+  - id: body2
+    x: 328
+    y: -7
+  - id: body2
+    x: 328
+    y: -8
+  - id: body1
+    x: 328
+    y: -9
+  - id: body3
+    x: 328
+    y: -10
+  - id: body3
+    x: 328
+    y: -11
+  - id: body2
+    x: 328
+    y: -12
+  - id: body1
+    x: 328
+    y: -13
+  - id: top0
+    x: 329
+    y: -5
+  - id: body0
+    x: 329
+    y: -6
+  - id: body3
+    x: 329
+    y: -7
+  - id: body3
+    x: 329
+    y: -8
+  - id: body0
+    x: 329
+    y: -9
+  - id: body0
+    x: 329
+    y: -10
+  - id: body1
+    x: 329
+    y: -11
+  - id: body3
+    x: 329
+    y: -12
+  - id: body2
+    x: 329
+    y: -13
+  - id: top0
+    x: 330
+    y: -5
+  - id: body2
+    x: 330
+    y: -6
+  - id: body1
+    x: 330
+    y: -7
+  - id: body1
+    x: 330
+    y: -8
+  - id: body3
+    x: 330
+    y: -9
+  - id: body3
+    x: 330
+    y: -10
+  - id: body3
+    x: 330
+    y: -11
+  - id: body1
+    x: 330
+    y: -12
+  - id: body1
+    x: 330
+    y: -13
+  - id: top3
+    x: 331
+    y: -5
+  - id: body2
+    x: 331
+    y: -6
+  - id: body1
+    x: 331
+    y: -7
+  - id: body2
+    x: 331
+    y: -8
+  - id: body2
+    x: 331
+    y: -9
+  - id: body0
+    x: 331
+    y: -10
+  - id: body0
+    x: 331
+    y: -11
+  - id: body3
+    x: 331
+    y: -12
+  - id: body0
+    x: 331
+    y: -13
+  - id: top0
+    x: 332
+    y: -5
+  - id: body1
+    x: 332
+    y: -6
+  - id: body2
+    x: 332
+    y: -7
+  - id: body3
+    x: 332
+    y: -8
+  - id: body2
+    x: 332
+    y: -9
+  - id: body0
+    x: 332
+    y: -10
+  - id: body2
+    x: 332
+    y: -11
+  - id: body3
+    x: 332
+    y: -12
+  - id: body2
+    x: 332
+    y: -13
+  - id: top3
+    x: 333
+    y: -5
+  - id: body0
+    x: 333
+    y: -6
+  - id: body1
+    x: 333
+    y: -7
+  - id: body2
+    x: 333
+    y: -8
+  - id: body3
+    x: 333
+    y: -9
+  - id: body3
+    x: 333
+    y: -10
+  - id: body0
+    x: 333
+    y: -11
+  - id: body0
+    x: 333
+    y: -12
+  - id: body1
+    x: 333
+    y: -13
+  - id: top3
+    x: 334
+    y: -5
+  - id: body3
+    x: 334
+    y: -6
+  - id: body1
+    x: 334
+    y: -7
+  - id: body0
+    x: 334
+    y: -8
+  - id: body1
+    x: 334
+    y: -9
+  - id: body0
+    x: 334
+    y: -10
+  - id: body1
+    x: 334
+    y: -11
+  - id: body2
+    x: 334
+    y: -12
+  - id: body1
+    x: 334
+    y: -13
+  - id: top2
+    x: 335
+    y: -5
+  - id: body2
+    x: 335
+    y: -6
+  - id: body0
+    x: 335
+    y: -7
+  - id: body1
+    x: 335
+    y: -8
+  - id: body1
+    x: 335
+    y: -9
+  - id: body2
+    x: 335
+    y: -10
+  - id: body1
+    x: 335
+    y: -11
+  - id: body2
+    x: 335
+    y: -12
+  - id: body3
+    x: 335
+    y: -13
+  - id: top0
+    x: 336
+    y: -5
+  - id: body3
+    x: 336
+    y: -6
+  - id: body2
+    x: 336
+    y: -7
+  - id: body3
+    x: 336
+    y: -8
+  - id: body2
+    x: 336
+    y: -9
+  - id: body1
+    x: 336
+    y: -10
+  - id: body1
+    x: 336
+    y: -11
+  - id: body2
+    x: 336
+    y: -12
+  - id: body2
+    x: 336
+    y: -13
+  - id: top3
+    x: 337
+    y: -5
+  - id: body3
+    x: 337
+    y: -6
+  - id: body1
+    x: 337
+    y: -7
+  - id: body2
+    x: 337
+    y: -8
+  - id: body3
+    x: 337
+    y: -9
+  - id: body2
+    x: 337
+    y: -10
+  - id: body0
+    x: 337
+    y: -11
+  - id: body3
+    x: 337
+    y: -12
+  - id: body1
+    x: 337
+    y: -13
+  - id: top0
+    x: 338
+    y: -5
+  - id: body0
+    x: 338
+    y: -6
+  - id: body0
+    x: 338
+    y: -7
+  - id: body3
+    x: 338
+    y: -8
+  - id: body2
+    x: 338
+    y: -9
+  - id: body2
+    x: 338
+    y: -10
+  - id: body0
+    x: 338
+    y: -11
+  - id: body3
+    x: 338
+    y: -12
+  - id: body3
+    x: 338
+    y: -13
+  - id: top2
+    x: 339
+    y: -5
+  - id: body1
+    x: 339
+    y: -6
+  - id: body0
+    x: 339
+    y: -7
+  - id: body0
+    x: 339
+    y: -8
+  - id: body0
+    x: 339
+    y: -9
+  - id: body0
+    x: 339
+    y: -10
+  - id: body2
+    x: 339
+    y: -11
+  - id: body0
+    x: 339
+    y: -12
+  - id: body0
+    x: 339
+    y: -13
+  - id: top0
+    x: 340
+    y: -5
+  - id: body0
+    x: 340
+    y: -6
+  - id: body0
+    x: 340
+    y: -7
+  - id: body1
+    x: 340
+    y: -8
+  - id: body2
+    x: 340
+    y: -9
+  - id: body3
+    x: 340
+    y: -10
+  - id: body0
+    x: 340
+    y: -11
+  - id: body1
+    x: 340
+    y: -12
+  - id: body3
+    x: 340
+    y: -13
+  - id: top3
+    x: 341
+    y: -5
+  - id: body2
+    x: 341
+    y: -6
+  - id: body0
+    x: 341
+    y: -7
+  - id: body0
+    x: 341
+    y: -8
+  - id: body2
+    x: 341
+    y: -9
+  - id: body1
+    x: 341
+    y: -10
+  - id: body0
+    x: 341
+    y: -11
+  - id: body3
+    x: 341
+    y: -12
+  - id: body0
+    x: 341
+    y: -13
+  - id: top1
+    x: 342
+    y: -5
+  - id: body1
+    x: 342
+    y: -6
+  - id: body0
+    x: 342
+    y: -7
+  - id: body3
+    x: 342
+    y: -8
+  - id: body3
+    x: 342
+    y: -9
+  - id: body1
+    x: 342
+    y: -10
+  - id: body2
+    x: 342
+    y: -11
+  - id: body2
+    x: 342
+    y: -12
+  - id: body1
+    x: 342
+    y: -13
+  - id: top_right
+    x: 343
+    y: -5
+  - id: inner_tr
+    x: 343
+    y: -6
+  - id: body1
+    x: 343
+    y: -7
+  - id: body0
+    x: 343
+    y: -8
+  - id: body3
+    x: 343
+    y: -9
+  - id: body0
+    x: 343
+    y: -10
+  - id: body2
+    x: 343
+    y: -11
+  - id: body0
+    x: 343
+    y: -12
+  - id: body0
+    x: 343
+    y: -13
+  - id: top0
+    x: 344
+    y: -6
+  - id: body0
+    x: 344
+    y: -7
+  - id: body2
+    x: 344
+    y: -8
+  - id: body1
+    x: 344
+    y: -9
+  - id: body0
+    x: 344
+    y: -10
+  - id: body3
+    x: 344
+    y: -11
+  - id: body0
+    x: 344
+    y: -12
+  - id: body2
+    x: 344
+    y: -13
+  - id: top3
+    x: 345
+    y: -6
+  - id: body1
+    x: 345
+    y: -7
+  - id: body2
+    x: 345
+    y: -8
+  - id: body0
+    x: 345
+    y: -9
+  - id: body3
+    x: 345
+    y: -10
+  - id: body3
+    x: 345
+    y: -11
+  - id: body1
+    x: 345
+    y: -12
+  - id: body0
+    x: 345
+    y: -13
+  - id: top1
+    x: 346
+    y: -6
+  - id: body2
+    x: 346
+    y: -7
+  - id: body3
+    x: 346
+    y: -8
+  - id: body1
+    x: 346
+    y: -9
+  - id: body2
+    x: 346
+    y: -10
+  - id: body0
+    x: 346
+    y: -11
+  - id: body2
+    x: 346
+    y: -12
+  - id: body3
+    x: 346
+    y: -13
+  - id: top3
+    x: 347
+    y: -6
+  - id: body1
+    x: 347
+    y: -7
+  - id: body2
+    x: 347
+    y: -8
+  - id: body2
+    x: 347
+    y: -9
+  - id: body2
+    x: 347
+    y: -10
+  - id: body0
+    x: 347
+    y: -11
+  - id: body1
+    x: 347
+    y: -12
+  - id: body2
+    x: 347
+    y: -13
+  - id: top0
+    x: 348
+    y: -6
+  - id: body3
+    x: 348
+    y: -7
+  - id: body3
+    x: 348
+    y: -8
+  - id: body2
+    x: 348
+    y: -9
+  - id: body3
+    x: 348
+    y: -10
+  - id: body2
+    x: 348
+    y: -11
+  - id: body3
+    x: 348
+    y: -12
+  - id: body0
+    x: 348
+    y: -13
+  - id: top1
+    x: 349
+    y: -6
+  - id: body3
+    x: 349
+    y: -7
+  - id: body2
+    x: 349
+    y: -8
+  - id: body3
+    x: 349
+    y: -9
+  - id: body0
+    x: 349
+    y: -10
+  - id: body1
+    x: 349
+    y: -11
+  - id: body3
+    x: 349
+    y: -12
+  - id: body2
+    x: 349
+    y: -13
+  - id: top0
+    x: 350
+    y: -6
+  - id: body0
+    x: 350
+    y: -7
+  - id: body1
+    x: 350
+    y: -8
+  - id: body2
+    x: 350
+    y: -9
+  - id: body2
+    x: 350
+    y: -10
+  - id: body0
+    x: 350
+    y: -11
+  - id: body3
+    x: 350
+    y: -12
+  - id: body3
+    x: 350
+    y: -13
+  - id: top_right
+    x: 351
+    y: -6
+  - id: inner_tr
+    x: 351
+    y: -7
+  - id: body3
+    x: 351
+    y: -8
+  - id: body3
+    x: 351
+    y: -9
+  - id: body0
+    x: 351
+    y: -10
+  - id: body0
+    x: 351
+    y: -11
+  - id: body3
+    x: 351
+    y: -12
+  - id: body3
+    x: 351
+    y: -13
+  - id: top1
+    x: 352
+    y: -7
+  - id: body1
+    x: 352
+    y: -8
+  - id: body2
+    x: 352
+    y: -9
+  - id: body2
+    x: 352
+    y: -10
+  - id: body1
+    x: 352
+    y: -11
+  - id: body3
+    x: 352
+    y: -12
+  - id: body2
+    x: 352
+    y: -13
+  - id: top3
+    x: 353
+    y: -7
+  - id: body1
+    x: 353
+    y: -8
+  - id: body0
+    x: 353
+    y: -9
+  - id: body3
+    x: 353
+    y: -10
+  - id: body0
+    x: 353
+    y: -11
+  - id: body0
+    x: 353
+    y: -12
+  - id: body1
+    x: 353
+    y: -13
+  - id: top0
+    x: 354
+    y: -7
+  - id: body2
+    x: 354
+    y: -8
+  - id: body2
+    x: 354
+    y: -9
+  - id: body0
+    x: 354
+    y: -10
+  - id: body1
+    x: 354
+    y: -11
+  - id: body1
+    x: 354
+    y: -12
+  - id: body0
+    x: 354
+    y: -13
+  - id: top3
+    x: 355
+    y: -7
+  - id: body3
+    x: 355
+    y: -8
+  - id: body0
+    x: 355
+    y: -9
+  - id: body2
+    x: 355
+    y: -10
+  - id: body0
+    x: 355
+    y: -11
+  - id: body1
+    x: 355
+    y: -12
+  - id: body0
+    x: 355
+    y: -13
+  - id: top2
+    x: 356
+    y: -7
+  - id: body2
+    x: 356
+    y: -8
+  - id: body1
+    x: 356
+    y: -9
+  - id: body3
+    x: 356
+    y: -10
+  - id: body3
+    x: 356
+    y: -11
+  - id: body3
+    x: 356
+    y: -12
+  - id: body0
+    x: 356
+    y: -13
+  - id: top0
+    x: 357
+    y: -7
+  - id: body1
+    x: 357
+    y: -8
+  - id: body0
+    x: 357
+    y: -9
+  - id: body3
+    x: 357
+    y: -10
+  - id: body3
+    x: 357
+    y: -11
+  - id: body3
+    x: 357
+    y: -12
+  - id: body1
+    x: 357
+    y: -13
+  - id: top1
+    x: 358
+    y: -7
+  - id: body3
+    x: 358
+    y: -8
+  - id: body0
+    x: 358
+    y: -9
+  - id: body0
+    x: 358
+    y: -10
+  - id: body2
+    x: 358
+    y: -11
+  - id: body3
+    x: 358
+    y: -12
+  - id: body0
+    x: 358
+    y: -13
+  - id: top2
+    x: 359
+    y: -7
+  - id: body1
+    x: 359
+    y: -8
+  - id: body0
+    x: 359
+    y: -9
+  - id: body2
+    x: 359
+    y: -10
+  - id: body2
+    x: 359
+    y: -11
+  - id: body2
+    x: 359
+    y: -12
+  - id: body1
+    x: 359
+    y: -13
+  - id: top2
+    x: 360
+    y: -7
+  - id: body2
+    x: 360
+    y: -8
+  - id: body3
+    x: 360
+    y: -9
+  - id: body2
+    x: 360
+    y: -10
+  - id: body2
+    x: 360
+    y: -11
+  - id: body3
+    x: 360
+    y: -12
+  - id: body3
+    x: 360
+    y: -13
+  - id: top0
+    x: 361
+    y: -7
+  - id: body3
+    x: 361
+    y: -8
+  - id: body3
+    x: 361
+    y: -9
+  - id: body3
+    x: 361
+    y: -10
+  - id: body0
+    x: 361
+    y: -11
+  - id: body2
+    x: 361
+    y: -12
+  - id: body2
+    x: 361
+    y: -13
+  - id: top3
+    x: 362
+    y: -7
+  - id: body1
+    x: 362
+    y: -8
+  - id: body0
+    x: 362
+    y: -9
+  - id: body3
+    x: 362
+    y: -10
+  - id: body0
+    x: 362
+    y: -11
+  - id: body2
+    x: 362
+    y: -12
+  - id: body1
+    x: 362
+    y: -13
+  - id: top0
+    x: 363
+    y: -7
+  - id: body1
+    x: 363
+    y: -8
+  - id: body2
+    x: 363
+    y: -9
+  - id: body3
+    x: 363
+    y: -10
+  - id: body1
+    x: 363
+    y: -11
+  - id: body1
+    x: 363
+    y: -12
+  - id: body1
+    x: 363
+    y: -13
+  - id: top1
+    x: 364
+    y: -7
+  - id: body1
+    x: 364
+    y: -8
+  - id: body1
+    x: 364
+    y: -9
+  - id: body1
+    x: 364
+    y: -10
+  - id: body3
+    x: 364
+    y: -11
+  - id: body3
+    x: 364
+    y: -12
+  - id: body0
+    x: 364
+    y: -13
+  - id: top0
+    x: 365
+    y: -7
+  - id: body3
+    x: 365
+    y: -8
+  - id: body0
+    x: 365
+    y: -9
+  - id: body0
+    x: 365
+    y: -10
+  - id: body3
+    x: 365
+    y: -11
+  - id: body1
+    x: 365
+    y: -12
+  - id: body1
+    x: 365
+    y: -13
+  - id: top3
+    x: 366
+    y: -7
+  - id: body1
+    x: 366
+    y: -8
+  - id: body1
+    x: 366
+    y: -9
+  - id: body3
+    x: 366
+    y: -10
+  - id: body3
+    x: 366
+    y: -11
+  - id: body3
+    x: 366
+    y: -12
+  - id: body0
+    x: 366
+    y: -13
+  - id: top0
+    x: 367
+    y: -7
+  - id: body3
+    x: 367
+    y: -8
+  - id: body1
+    x: 367
+    y: -9
+  - id: body3
+    x: 367
+    y: -10
+  - id: body2
+    x: 367
+    y: -11
+  - id: body2
+    x: 367
+    y: -12
+  - id: body2
+    x: 367
+    y: -13
+  - id: top0
+    x: 368
+    y: -7
+  - id: body2
+    x: 368
+    y: -8
+  - id: body3
+    x: 368
+    y: -9
+  - id: body1
+    x: 368
+    y: -10
+  - id: body2
+    x: 368
+    y: -11
+  - id: body3
+    x: 368
+    y: -12
+  - id: body2
+    x: 368
+    y: -13
+  - id: top1
+    x: 369
+    y: -7
+  - id: body1
+    x: 369
+    y: -8
+  - id: body3
+    x: 369
+    y: -9
+  - id: body1
+    x: 369
+    y: -10
+  - id: body1
+    x: 369
+    y: -11
+  - id: body2
+    x: 369
+    y: -12
+  - id: body0
+    x: 369
+    y: -13
+  - id: top2
+    x: 370
+    y: -7
+  - id: body2
+    x: 370
+    y: -8
+  - id: body0
+    x: 370
+    y: -9
+  - id: body1
+    x: 370
+    y: -10
+  - id: body0
+    x: 370
+    y: -11
+  - id: body3
+    x: 370
+    y: -12
+  - id: body3
+    x: 370
+    y: -13
+  - id: top3
+    x: 371
+    y: -7
+  - id: body2
+    x: 371
+    y: -8
+  - id: body3
+    x: 371
+    y: -9
+  - id: body1
+    x: 371
+    y: -10
+  - id: body3
+    x: 371
+    y: -11
+  - id: body3
+    x: 371
+    y: -12
+  - id: body1
+    x: 371
+    y: -13
+  - id: top1
+    x: 372
+    y: -7
+  - id: body0
+    x: 372
+    y: -8
+  - id: body0
+    x: 372
+    y: -9
+  - id: body2
+    x: 372
+    y: -10
+  - id: body0
+    x: 372
+    y: -11
+  - id: body1
+    x: 372
+    y: -12
+  - id: body3
+    x: 372
+    y: -13
+  - id: top1
+    x: 373
+    y: -7
+  - id: body2
+    x: 373
+    y: -8
+  - id: body3
+    x: 373
+    y: -9
+  - id: body3
+    x: 373
+    y: -10
+  - id: body1
+    x: 373
+    y: -11
+  - id: body1
+    x: 373
+    y: -12
+  - id: body1
+    x: 373
+    y: -13
+  - id: top3
+    x: 374
+    y: -7
+  - id: body3
+    x: 374
+    y: -8
+  - id: body0
+    x: 374
+    y: -9
+  - id: body0
+    x: 374
+    y: -10
+  - id: body1
+    x: 374
+    y: -11
+  - id: body0
+    x: 374
+    y: -12
+  - id: body1
+    x: 374
+    y: -13
+  - id: top0
+    x: 375
+    y: -7
+  - id: body0
+    x: 375
+    y: -8
+  - id: body3
+    x: 375
+    y: -9
+  - id: body0
+    x: 375
+    y: -10
+  - id: body3
+    x: 375
+    y: -11
+  - id: body1
+    x: 375
+    y: -12
+  - id: body1
+    x: 375
+    y: -13
+  - id: top0
+    x: 376
+    y: -7
+  - id: body1
+    x: 376
+    y: -8
+  - id: body3
+    x: 376
+    y: -9
+  - id: body0
+    x: 376
+    y: -10
+  - id: body3
+    x: 376
+    y: -11
+  - id: body3
+    x: 376
+    y: -12
+  - id: body0
+    x: 376
+    y: -13
+  - id: top3
+    x: 377
+    y: -7
+  - id: body3
+    x: 377
+    y: -8
+  - id: body3
+    x: 377
+    y: -9
+  - id: body0
+    x: 377
+    y: -10
+  - id: body0
+    x: 377
+    y: -11
+  - id: body2
+    x: 377
+    y: -12
+  - id: body3
+    x: 377
+    y: -13
+  - id: top0
+    x: 378
+    y: -7
+  - id: body1
+    x: 378
+    y: -8
+  - id: body1
+    x: 378
+    y: -9
+  - id: body2
+    x: 378
+    y: -10
+  - id: body0
+    x: 378
+    y: -11
+  - id: body0
+    x: 378
+    y: -12
+  - id: body1
+    x: 378
+    y: -13
+  - id: top0
+    x: 379
+    y: -7
+  - id: body0
+    x: 379
+    y: -8
+  - id: body3
+    x: 379
+    y: -9
+  - id: body0
+    x: 379
+    y: -10
+  - id: body0
+    x: 379
+    y: -11
+  - id: body0
+    x: 379
+    y: -12
+  - id: body0
+    x: 379
+    y: -13
+  - id: top2
+    x: 380
+    y: -7
+  - id: body2
+    x: 380
+    y: -8
+  - id: body1
+    x: 380
+    y: -9
+  - id: body3
+    x: 380
+    y: -10
+  - id: body0
+    x: 380
+    y: -11
+  - id: body1
+    x: 380
+    y: -12
+  - id: body0
+    x: 380
+    y: -13
+  - id: top0
+    x: 381
+    y: -7
+  - id: body2
+    x: 381
+    y: -8
+  - id: body2
+    x: 381
+    y: -9
+  - id: body2
+    x: 381
+    y: -10
+  - id: body2
+    x: 381
+    y: -11
+  - id: body1
+    x: 381
+    y: -12
+  - id: body0
+    x: 381
+    y: -13
+  - id: top1
+    x: 382
+    y: -7
+  - id: body3
+    x: 382
+    y: -8
+  - id: body2
+    x: 382
+    y: -9
+  - id: body1
+    x: 382
+    y: -10
+  - id: body1
+    x: 382
+    y: -11
+  - id: body0
+    x: 382
+    y: -12
+  - id: body1
+    x: 382
+    y: -13
+  - id: top1
+    x: 383
+    y: -7
+  - id: body1
+    x: 383
+    y: -8
+  - id: body1
+    x: 383
+    y: -9
+  - id: body1
+    x: 383
+    y: -10
+  - id: body1
+    x: 383
+    y: -11
+  - id: body3
+    x: 383
+    y: -12
+  - id: body3
+    x: 383
+    y: -13
+  - id: top2
+    x: 384
+    y: -7
+  - id: body2
+    x: 384
+    y: -8
+  - id: body2
+    x: 384
+    y: -9
+  - id: body2
+    x: 384
+    y: -10
+  - id: body1
+    x: 384
+    y: -11
+  - id: body2
+    x: 384
+    y: -12
+  - id: body1
+    x: 384
+    y: -13
+  - id: top2
+    x: 385
+    y: -7
+  - id: body0
+    x: 385
+    y: -8
+  - id: body0
+    x: 385
+    y: -9
+  - id: body3
+    x: 385
+    y: -10
+  - id: body1
+    x: 385
+    y: -11
+  - id: body3
+    x: 385
+    y: -12
+  - id: body1
+    x: 385
+    y: -13
+  - id: top1
+    x: 386
+    y: -7
+  - id: body1
+    x: 386
+    y: -8
+  - id: body2
+    x: 386
+    y: -9
+  - id: body1
+    x: 386
+    y: -10
+  - id: body0
+    x: 386
+    y: -11
+  - id: body2
+    x: 386
+    y: -12
+  - id: body2
+    x: 386
+    y: -13
+  - id: top3
+    x: 387
+    y: -7
+  - id: body1
+    x: 387
+    y: -8
+  - id: body0
+    x: 387
+    y: -9
+  - id: body2
+    x: 387
+    y: -10
+  - id: body3
+    x: 387
+    y: -11
+  - id: body0
+    x: 387
+    y: -12
+  - id: body0
+    x: 387
+    y: -13
+  - id: top2
+    x: 388
+    y: -7
+  - id: body3
+    x: 388
+    y: -8
+  - id: body3
+    x: 388
+    y: -9
+  - id: body2
+    x: 388
+    y: -10
+  - id: body3
+    x: 388
+    y: -11
+  - id: body3
+    x: 388
+    y: -12
+  - id: body3
+    x: 388
+    y: -13
+  - id: top0
+    x: 389
+    y: -7
+  - id: body0
+    x: 389
+    y: -8
+  - id: body1
+    x: 389
+    y: -9
+  - id: body1
+    x: 389
+    y: -10
+  - id: body3
+    x: 389
+    y: -11
+  - id: body0
+    x: 389
+    y: -12
+  - id: body1
+    x: 389
+    y: -13
+  - id: top2
+    x: 390
+    y: -7
+  - id: body1
+    x: 390
+    y: -8
+  - id: body2
+    x: 390
+    y: -9
+  - id: body1
+    x: 390
+    y: -10
+  - id: body0
+    x: 390
+    y: -11
+  - id: body1
+    x: 390
+    y: -12
+  - id: body0
+    x: 390
+    y: -13
+  - id: top3
+    x: 391
+    y: -7
+  - id: body1
+    x: 391
+    y: -8
+  - id: body3
+    x: 391
+    y: -9
+  - id: body1
+    x: 391
+    y: -10
+  - id: body3
+    x: 391
+    y: -11
+  - id: body1
+    x: 391
+    y: -12
+  - id: body0
+    x: 391
+    y: -13
+  - id: top1
+    x: 392
+    y: -7
+  - id: body0
+    x: 392
+    y: -8
+  - id: body1
+    x: 392
+    y: -9
+  - id: body0
+    x: 392
+    y: -10
+  - id: body0
+    x: 392
+    y: -11
+  - id: body2
+    x: 392
+    y: -12
+  - id: body2
+    x: 392
+    y: -13
+  - id: top1
+    x: 393
+    y: -7
+  - id: body2
+    x: 393
+    y: -8
+  - id: body1
+    x: 393
+    y: -9
+  - id: body3
+    x: 393
+    y: -10
+  - id: body1
+    x: 393
+    y: -11
+  - id: body3
+    x: 393
+    y: -12
+  - id: body0
+    x: 393
+    y: -13
+  - id: top2
+    x: 394
+    y: -7
+  - id: body1
+    x: 394
+    y: -8
+  - id: body1
+    x: 394
+    y: -9
+  - id: body1
+    x: 394
+    y: -10
+  - id: body0
+    x: 394
+    y: -11
+  - id: body2
+    x: 394
+    y: -12
+  - id: body3
+    x: 394
+    y: -13
+  - id: top2
+    x: 395
+    y: -7
+  - id: body1
+    x: 395
+    y: -8
+  - id: body0
+    x: 395
+    y: -9
+  - id: body1
+    x: 395
+    y: -10
+  - id: body1
+    x: 395
+    y: -11
+  - id: body1
+    x: 395
+    y: -12
+  - id: body1
+    x: 395
+    y: -13
+  - id: top1
+    x: 396
+    y: -7
+  - id: body3
+    x: 396
+    y: -8
+  - id: body0
+    x: 396
+    y: -9
+  - id: body1
+    x: 396
+    y: -10
+  - id: body2
+    x: 396
+    y: -11
+  - id: body1
+    x: 396
+    y: -12
+  - id: body3
+    x: 396
+    y: -13
+  - id: top0
+    x: 397
+    y: -7
+  - id: body0
+    x: 397
+    y: -8
+  - id: body1
+    x: 397
+    y: -9
+  - id: body2
+    x: 397
+    y: -10
+  - id: body3
+    x: 397
+    y: -11
+  - id: body2
+    x: 397
+    y: -12
+  - id: body2
+    x: 397
+    y: -13
+  - id: top3
+    x: 398
+    y: -7
+  - id: body1
+    x: 398
+    y: -8
+  - id: body2
+    x: 398
+    y: -9
+  - id: body2
+    x: 398
+    y: -10
+  - id: body3
+    x: 398
+    y: -11
+  - id: body3
+    x: 398
+    y: -12
+  - id: body1
+    x: 398
+    y: -13
+  - id: top2
+    x: 399
+    y: -7
+  - id: body2
+    x: 399
+    y: -8
+  - id: body2
+    x: 399
+    y: -9
+  - id: body1
+    x: 399
+    y: -10
+  - id: body0
+    x: 399
+    y: -11
+  - id: body0
+    x: 399
+    y: -12
+  - id: body1
+    x: 399
+    y: -13
+  - id: top3
+    x: 400
+    y: -7
+  - id: body1
+    x: 400
+    y: -8
+  - id: body3
+    x: 400
+    y: -9
+  - id: body0
+    x: 400
+    y: -10
+  - id: body0
+    x: 400
+    y: -11
+  - id: body2
+    x: 400
+    y: -12
+  - id: body0
+    x: 400
+    y: -13
+  - id: top2
+    x: 401
+    y: -7
+  - id: body2
+    x: 401
+    y: -8
+  - id: body0
+    x: 401
+    y: -9
+  - id: body0
+    x: 401
+    y: -10
+  - id: body0
+    x: 401
+    y: -11
+  - id: body2
+    x: 401
+    y: -12
+  - id: body0
+    x: 401
+    y: -13
+  - id: top2
+    x: 402
+    y: -7
+  - id: body1
+    x: 402
+    y: -8
+  - id: body3
+    x: 402
+    y: -9
+  - id: body3
+    x: 402
+    y: -10
+  - id: body2
+    x: 402
+    y: -11
+  - id: body2
+    x: 402
+    y: -12
+  - id: body1
+    x: 402
+    y: -13
+  - id: top2
+    x: 403
+    y: -7
+  - id: body3
+    x: 403
+    y: -8
+  - id: body3
+    x: 403
+    y: -9
+  - id: body2
+    x: 403
+    y: -10
+  - id: body3
+    x: 403
+    y: -11
+  - id: body1
+    x: 403
+    y: -12
+  - id: body3
+    x: 403
+    y: -13
+  - id: top2
+    x: 404
+    y: -7
+  - id: body0
+    x: 404
+    y: -8
+  - id: body2
+    x: 404
+    y: -9
+  - id: body0
+    x: 404
+    y: -10
+  - id: body2
+    x: 404
+    y: -11
+  - id: body0
+    x: 404
+    y: -12
+  - id: body1
+    x: 404
+    y: -13
+  - id: top1
+    x: 405
+    y: -7
+  - id: body3
+    x: 405
+    y: -8
+  - id: body0
+    x: 405
+    y: -9
+  - id: body2
+    x: 405
+    y: -10
+  - id: body3
+    x: 405
+    y: -11
+  - id: body2
+    x: 405
+    y: -12
+  - id: body2
+    x: 405
+    y: -13
+  - id: top3
+    x: 406
+    y: -7
+  - id: body1
+    x: 406
+    y: -8
+  - id: body0
+    x: 406
+    y: -9
+  - id: body2
+    x: 406
+    y: -10
+  - id: body3
+    x: 406
+    y: -11
+  - id: body0
+    x: 406
+    y: -12
+  - id: body1
+    x: 406
+    y: -13
+  - id: top1
+    x: 407
+    y: -7
+  - id: body1
+    x: 407
+    y: -8
+  - id: body1
+    x: 407
+    y: -9
+  - id: body0
+    x: 407
+    y: -10
+  - id: body2
+    x: 407
+    y: -11
+  - id: body0
+    x: 407
+    y: -12
+  - id: body1
+    x: 407
+    y: -13
+  - id: top0
+    x: 408
+    y: -7
+  - id: body3
+    x: 408
+    y: -8
+  - id: body0
+    x: 408
+    y: -9
+  - id: body1
+    x: 408
+    y: -10
+  - id: body2
+    x: 408
+    y: -11
+  - id: body2
+    x: 408
+    y: -12
+  - id: body0
+    x: 408
+    y: -13
+  - id: top0
+    x: 409
+    y: -7
+  - id: body1
+    x: 409
+    y: -8
+  - id: body0
+    x: 409
+    y: -9
+  - id: body0
+    x: 409
+    y: -10
+  - id: body0
+    x: 409
+    y: -11
+  - id: body3
+    x: 409
+    y: -12
+  - id: body0
+    x: 409
+    y: -13
+  - id: top3
+    x: 410
+    y: -7
+  - id: body0
+    x: 410
+    y: -8
+  - id: body0
+    x: 410
+    y: -9
+  - id: body3
+    x: 410
+    y: -10
+  - id: body3
+    x: 410
+    y: -11
+  - id: body2
+    x: 410
+    y: -12
+  - id: body1
+    x: 410
+    y: -13
+  - id: top3
+    x: 411
+    y: -7
+  - id: body2
+    x: 411
+    y: -8
+  - id: body3
+    x: 411
+    y: -9
+  - id: body0
+    x: 411
+    y: -10
+  - id: body3
+    x: 411
+    y: -11
+  - id: body1
+    x: 411
+    y: -12
+  - id: body0
+    x: 411
+    y: -13
+  - id: top2
+    x: 412
+    y: -7
+  - id: body2
+    x: 412
+    y: -8
+  - id: body0
+    x: 412
+    y: -9
+  - id: body2
+    x: 412
+    y: -10
+  - id: body2
+    x: 412
+    y: -11
+  - id: body2
+    x: 412
+    y: -12
+  - id: body2
+    x: 412
+    y: -13
+  - id: top1
+    x: 413
+    y: -7
+  - id: body1
+    x: 413
+    y: -8
+  - id: body3
+    x: 413
+    y: -9
+  - id: body1
+    x: 413
+    y: -10
+  - id: body2
+    x: 413
+    y: -11
+  - id: body0
+    x: 413
+    y: -12
+  - id: body1
+    x: 413
+    y: -13
+  - id: top0
+    x: 414
+    y: -7
+  - id: body1
+    x: 414
+    y: -8
+  - id: body1
+    x: 414
+    y: -9
+  - id: body2
+    x: 414
+    y: -10
+  - id: body1
+    x: 414
+    y: -11
+  - id: body1
+    x: 414
+    y: -12
+  - id: body0
+    x: 414
+    y: -13
+  - id: top1
+    x: 415
+    y: -7
+  - id: body1
+    x: 415
+    y: -8
+  - id: body0
+    x: 415
+    y: -9
+  - id: body2
+    x: 415
+    y: -10
+  - id: body1
+    x: 415
+    y: -11
+  - id: body2
+    x: 415
+    y: -12
+  - id: body0
+    x: 415
+    y: -13
+  - id: top1
+    x: 416
+    y: -7
+  - id: body2
+    x: 416
+    y: -8
+  - id: body2
+    x: 416
+    y: -9
+  - id: body2
+    x: 416
+    y: -10
+  - id: body2
+    x: 416
+    y: -11
+  - id: body3
+    x: 416
+    y: -12
+  - id: body3
+    x: 416
+    y: -13
+  - id: top0
+    x: 417
+    y: -7
+  - id: body1
+    x: 417
+    y: -8
+  - id: body1
+    x: 417
+    y: -9
+  - id: body1
+    x: 417
+    y: -10
+  - id: body3
+    x: 417
+    y: -11
+  - id: body2
+    x: 417
+    y: -12
+  - id: body0
+    x: 417
+    y: -13
+  - id: top0
+    x: 418
+    y: -7
+  - id: body2
+    x: 418
+    y: -8
+  - id: body0
+    x: 418
+    y: -9
+  - id: body3
+    x: 418
+    y: -10
+  - id: body2
+    x: 418
+    y: -11
+  - id: body3
+    x: 418
+    y: -12
+  - id: body0
+    x: 418
+    y: -13
+  - id: top3
+    x: 419
+    y: -7
+  - id: body2
+    x: 419
+    y: -8
+  - id: body3
+    x: 419
+    y: -9
+  - id: body3
+    x: 419
+    y: -10
+  - id: body2
+    x: 419
+    y: -11
+  - id: body1
+    x: 419
+    y: -12
+  - id: body3
+    x: 419
+    y: -13
+  - id: top0
+    x: 420
+    y: -7
+  - id: body0
+    x: 420
+    y: -8
+  - id: body0
+    x: 420
+    y: -9
+  - id: body1
+    x: 420
+    y: -10
+  - id: body1
+    x: 420
+    y: -11
+  - id: body0
+    x: 420
+    y: -12
+  - id: body1
+    x: 420
+    y: -13
+  - id: top1
+    x: 421
+    y: -7
+  - id: body2
+    x: 421
+    y: -8
+  - id: body0
+    x: 421
+    y: -9
+  - id: body0
+    x: 421
+    y: -10
+  - id: body3
+    x: 421
+    y: -11
+  - id: body2
+    x: 421
+    y: -12
+  - id: body0
+    x: 421
+    y: -13
+  - id: top2
+    x: 422
+    y: -7
+  - id: body1
+    x: 422
+    y: -8
+  - id: body1
+    x: 422
+    y: -9
+  - id: body2
+    x: 422
+    y: -10
+  - id: body2
+    x: 422
+    y: -11
+  - id: body0
+    x: 422
+    y: -12
+  - id: body1
+    x: 422
+    y: -13
+  - id: top_right
+    x: 423
+    y: -7
+  - id: inner_tr
+    x: 423
+    y: -8
+  - id: body0
+    x: 423
+    y: -9
+  - id: body3
+    x: 423
+    y: -10
+  - id: body2
+    x: 423
+    y: -11
+  - id: body3
+    x: 423
+    y: -12
+  - id: body3
+    x: 423
+    y: -13
+  - id: top1
+    x: 424
+    y: -8
+  - id: body0
+    x: 424
+    y: -9
+  - id: body1
+    x: 424
+    y: -10
+  - id: body0
+    x: 424
+    y: -11
+  - id: body0
+    x: 424
+    y: -12
+  - id: body1
+    x: 424
+    y: -13
+  - id: top3
+    x: 425
+    y: -8
+  - id: body2
+    x: 425
+    y: -9
+  - id: body2
+    x: 425
+    y: -10
+  - id: body0
+    x: 425
+    y: -11
+  - id: body2
+    x: 425
+    y: -12
+  - id: body1
+    x: 425
+    y: -13
+  - id: top1
+    x: 426
+    y: -8
+  - id: body1
+    x: 426
+    y: -9
+  - id: body2
+    x: 426
+    y: -10
+  - id: body3
+    x: 426
+    y: -11
+  - id: body1
+    x: 426
+    y: -12
+  - id: body3
+    x: 426
+    y: -13
+  - id: top2
+    x: 427
+    y: -8
+  - id: body1
+    x: 427
+    y: -9
+  - id: body2
+    x: 427
+    y: -10
+  - id: body2
+    x: 427
+    y: -11
+  - id: body0
+    x: 427
+    y: -12
+  - id: body2
+    x: 427
+    y: -13
+  - id: top2
+    x: 428
+    y: -8
+  - id: body3
+    x: 428
+    y: -9
+  - id: body0
+    x: 428
+    y: -10
+  - id: body1
+    x: 428
+    y: -11
+  - id: body3
+    x: 428
+    y: -12
+  - id: body2
+    x: 428
+    y: -13
+  - id: top2
+    x: 429
+    y: -8
+  - id: body0
+    x: 429
+    y: -9
+  - id: body0
+    x: 429
+    y: -10
+  - id: body0
+    x: 429
+    y: -11
+  - id: body0
+    x: 429
+    y: -12
+  - id: body1
+    x: 429
+    y: -13
+  - id: top2
+    x: 430
+    y: -8
+  - id: body1
+    x: 430
+    y: -9
+  - id: body1
+    x: 430
+    y: -10
+  - id: body2
+    x: 430
+    y: -11
+  - id: body3
+    x: 430
+    y: -12
+  - id: body0
+    x: 430
+    y: -13
+  - id: top_right
+    x: 431
+    y: -8
+  - id: inner_tr
+    x: 431
+    y: -9
+  - id: body0
+    x: 431
+    y: -10
+  - id: body1
+    x: 431
+    y: -11
+  - id: body1
+    x: 431
+    y: -12
+  - id: body1
+    x: 431
+    y: -13
+  - id: top3
+    x: 432
+    y: -9
+  - id: body2
+    x: 432
+    y: -10
+  - id: body1
+    x: 432
+    y: -11
+  - id: body1
+    x: 432
+    y: -12
+  - id: body2
+    x: 432
+    y: -13
+  - id: top2
+    x: 433
+    y: -9
+  - id: body0
+    x: 433
+    y: -10
+  - id: body0
+    x: 433
+    y: -11
+  - id: body1
+    x: 433
+    y: -12
+  - id: body0
+    x: 433
+    y: -13
+  - id: top1
+    x: 434
+    y: -9
+  - id: body0
+    x: 434
+    y: -10
+  - id: body0
+    x: 434
+    y: -11
+  - id: body3
+    x: 434
+    y: -12
+  - id: body1
+    x: 434
+    y: -13
+  - id: top2
+    x: 435
+    y: -9
+  - id: body1
+    x: 435
+    y: -10
+  - id: body2
+    x: 435
+    y: -11
+  - id: body2
+    x: 435
+    y: -12
+  - id: body0
+    x: 435
+    y: -13
+  - id: top2
+    x: 436
+    y: -9
+  - id: body1
+    x: 436
+    y: -10
+  - id: body2
+    x: 436
+    y: -11
+  - id: body3
+    x: 436
+    y: -12
+  - id: body3
+    x: 436
+    y: -13
+  - id: top1
+    x: 437
+    y: -9
+  - id: body3
+    x: 437
+    y: -10
+  - id: body2
+    x: 437
+    y: -11
+  - id: body2
+    x: 437
+    y: -12
+  - id: body3
+    x: 437
+    y: -13
+  - id: top2
+    x: 438
+    y: -9
+  - id: body3
+    x: 438
+    y: -10
+  - id: body3
+    x: 438
+    y: -11
+  - id: body0
+    x: 438
+    y: -12
+  - id: body0
+    x: 438
+    y: -13
+  - id: top2
+    x: 439
+    y: -9
+  - id: body3
+    x: 439
+    y: -10
+  - id: body0
+    x: 439
+    y: -11
+  - id: body1
+    x: 439
+    y: -12
+  - id: body0
+    x: 439
+    y: -13
+  - id: top1
+    x: 440
+    y: -9
+  - id: body3
+    x: 440
+    y: -10
+  - id: body1
+    x: 440
+    y: -11
+  - id: body1
+    x: 440
+    y: -12
+  - id: body3
+    x: 440
+    y: -13
+  - id: top2
+    x: 441
+    y: -9
+  - id: body0
+    x: 441
+    y: -10
+  - id: body0
+    x: 441
+    y: -11
+  - id: body0
+    x: 441
+    y: -12
+  - id: body1
+    x: 441
+    y: -13
+  - id: top0
+    x: 442
+    y: -9
+  - id: body3
+    x: 442
+    y: -10
+  - id: body3
+    x: 442
+    y: -11
+  - id: body3
+    x: 442
+    y: -12
+  - id: body3
+    x: 442
+    y: -13
+  - id: top3
+    x: 443
+    y: -9
+  - id: body3
+    x: 443
+    y: -10
+  - id: body1
+    x: 443
+    y: -11
+  - id: body3
+    x: 443
+    y: -12
+  - id: body1
+    x: 443
+    y: -13
+  - id: top2
+    x: 444
+    y: -9
+  - id: body0
+    x: 444
+    y: -10
+  - id: body0
+    x: 444
+    y: -11
+  - id: body3
+    x: 444
+    y: -12
+  - id: body2
+    x: 444
+    y: -13
+  - id: top3
+    x: 445
+    y: -9
+  - id: body3
+    x: 445
+    y: -10
+  - id: body0
+    x: 445
+    y: -11
+  - id: body0
+    x: 445
+    y: -12
+  - id: body0
+    x: 445
+    y: -13
+  - id: top3
+    x: 446
+    y: -9
+  - id: body2
+    x: 446
+    y: -10
+  - id: body1
+    x: 446
+    y: -11
+  - id: body3
+    x: 446
+    y: -12
+  - id: body1
+    x: 446
+    y: -13
+  - id: top2
+    x: 447
+    y: -9
+  - id: body0
+    x: 447
+    y: -10
+  - id: body0
+    x: 447
+    y: -11
+  - id: body3
+    x: 447
+    y: -12
+  - id: body3
+    x: 447
+    y: -13
+  - id: top0
+    x: 448
+    y: -9
+  - id: body0
+    x: 448
+    y: -10
+  - id: body3
+    x: 448
+    y: -11
+  - id: body0
+    x: 448
+    y: -12
+  - id: body2
+    x: 448
+    y: -13
+  - id: top0
+    x: 449
+    y: -9
+  - id: body3
+    x: 449
+    y: -10
+  - id: body3
+    x: 449
+    y: -11
+  - id: body1
+    x: 449
+    y: -12
+  - id: body2
+    x: 449
+    y: -13
+  - id: top2
+    x: 450
+    y: -9
+  - id: body3
+    x: 450
+    y: -10
+  - id: body1
+    x: 450
+    y: -11
+  - id: body1
+    x: 450
+    y: -12
+  - id: body1
+    x: 450
+    y: -13
+  - id: top0
+    x: 451
+    y: -9
+  - id: body2
+    x: 451
+    y: -10
+  - id: body3
+    x: 451
+    y: -11
+  - id: body2
+    x: 451
+    y: -12
+  - id: body1
+    x: 451
+    y: -13
+  - id: top1
+    x: 452
+    y: -9
+  - id: body3
+    x: 452
+    y: -10
+  - id: body2
+    x: 452
+    y: -11
+  - id: body1
+    x: 452
+    y: -12
+  - id: body1
+    x: 452
+    y: -13
+  - id: top1
+    x: 453
+    y: -9
+  - id: body0
+    x: 453
+    y: -10
+  - id: body0
+    x: 453
+    y: -11
+  - id: body0
+    x: 453
+    y: -12
+  - id: body0
+    x: 453
+    y: -13
+  - id: top0
+    x: 454
+    y: -9
+  - id: body3
+    x: 454
+    y: -10
+  - id: body1
+    x: 454
+    y: -11
+  - id: body2
+    x: 454
+    y: -12
+  - id: body0
+    x: 454
+    y: -13
+  - id: top2
+    x: 455
+    y: -9
+  - id: body2
+    x: 455
+    y: -10
+  - id: body3
+    x: 455
+    y: -11
+  - id: body2
+    x: 455
+    y: -12
+  - id: body3
+    x: 455
+    y: -13
+  - id: top0
+    x: 456
+    y: -9
+  - id: body1
+    x: 456
+    y: -10
+  - id: body3
+    x: 456
+    y: -11
+  - id: body0
+    x: 456
+    y: -12
+  - id: body3
+    x: 456
+    y: -13
+  - id: top0
+    x: 457
+    y: -9
+  - id: body0
+    x: 457
+    y: -10
+  - id: body1
+    x: 457
+    y: -11
+  - id: body2
+    x: 457
+    y: -12
+  - id: body3
+    x: 457
+    y: -13
+  - id: top1
+    x: 458
+    y: -9
+  - id: body3
+    x: 458
+    y: -10
+  - id: body3
+    x: 458
+    y: -11
+  - id: body1
+    x: 458
+    y: -12
+  - id: body2
+    x: 458
+    y: -13
+  - id: top3
+    x: 459
+    y: -9
+  - id: body3
+    x: 459
+    y: -10
+  - id: body0
+    x: 459
+    y: -11
+  - id: body2
+    x: 459
+    y: -12
+  - id: body3
+    x: 459
+    y: -13
+  - id: top3
+    x: 460
+    y: -9
+  - id: body0
+    x: 460
+    y: -10
+  - id: body0
+    x: 460
+    y: -11
+  - id: body0
+    x: 460
+    y: -12
+  - id: body3
+    x: 460
+    y: -13
+  - id: top3
+    x: 461
+    y: -9
+  - id: body0
+    x: 461
+    y: -10
+  - id: body0
+    x: 461
+    y: -11
+  - id: body2
+    x: 461
+    y: -12
+  - id: body0
+    x: 461
+    y: -13
+  - id: top0
+    x: 462
+    y: -9
+  - id: body3
+    x: 462
+    y: -10
+  - id: body0
+    x: 462
+    y: -11
+  - id: body3
+    x: 462
+    y: -12
+  - id: body1
+    x: 462
+    y: -13
+  - id: top0
+    x: 463
+    y: -9
+  - id: body0
+    x: 463
+    y: -10
+  - id: body1
+    x: 463
+    y: -11
+  - id: body2
+    x: 463
+    y: -12
+  - id: body0
+    x: 463
+    y: -13
+  - id: top1
+    x: 464
+    y: -9
+  - id: body1
+    x: 464
+    y: -10
+  - id: body0
+    x: 464
+    y: -11
+  - id: body1
+    x: 464
+    y: -12
+  - id: body3
+    x: 464
+    y: -13
+  - id: top0
+    x: 465
+    y: -9
+  - id: body0
+    x: 465
+    y: -10
+  - id: body2
+    x: 465
+    y: -11
+  - id: body2
+    x: 465
+    y: -12
+  - id: body0
+    x: 465
+    y: -13
+  - id: top3
+    x: 466
+    y: -9
+  - id: body2
+    x: 466
+    y: -10
+  - id: body1
+    x: 466
+    y: -11
+  - id: body2
+    x: 466
+    y: -12
+  - id: body1
+    x: 466
+    y: -13
+  - id: top3
+    x: 467
+    y: -9
+  - id: body0
+    x: 467
+    y: -10
+  - id: body2
+    x: 467
+    y: -11
+  - id: body3
+    x: 467
+    y: -12
+  - id: body2
+    x: 467
+    y: -13
+  - id: top0
+    x: 468
+    y: -9
+  - id: body2
+    x: 468
+    y: -10
+  - id: body0
+    x: 468
+    y: -11
+  - id: body1
+    x: 468
+    y: -12
+  - id: body0
+    x: 468
+    y: -13
+  - id: top2
+    x: 469
+    y: -9
+  - id: body1
+    x: 469
+    y: -10
+  - id: body1
+    x: 469
+    y: -11
+  - id: body2
+    x: 469
+    y: -12
+  - id: body1
+    x: 469
+    y: -13
+  - id: top0
+    x: 470
+    y: -9
+  - id: body0
+    x: 470
+    y: -10
+  - id: body0
+    x: 470
+    y: -11
+  - id: body3
+    x: 470
+    y: -12
+  - id: body0
+    x: 470
+    y: -13
+  - id: top1
+    x: 471
+    y: -9
+  - id: body0
+    x: 471
+    y: -10
+  - id: body0
+    x: 471
+    y: -11
+  - id: body2
+    x: 471
+    y: -12
+  - id: body2
+    x: 471
+    y: -13
+  - id: top1
+    x: 472
+    y: -9
+  - id: body3
+    x: 472
+    y: -10
+  - id: body1
+    x: 472
+    y: -11
+  - id: body3
+    x: 472
+    y: -12
+  - id: body1
+    x: 472
+    y: -13
+  - id: top2
+    x: 473
+    y: -9
+  - id: body2
+    x: 473
+    y: -10
+  - id: body2
+    x: 473
+    y: -11
+  - id: body0
+    x: 473
+    y: -12
+  - id: body1
+    x: 473
+    y: -13
+  - id: top1
+    x: 474
+    y: -9
+  - id: body3
+    x: 474
+    y: -10
+  - id: body0
+    x: 474
+    y: -11
+  - id: body0
+    x: 474
+    y: -12
+  - id: body1
+    x: 474
+    y: -13
+  - id: top3
+    x: 475
+    y: -9
+  - id: body1
+    x: 475
+    y: -10
+  - id: body0
+    x: 475
+    y: -11
+  - id: body2
+    x: 475
+    y: -12
+  - id: body0
+    x: 475
+    y: -13
+  - id: top3
+    x: 476
+    y: -9
+  - id: body1
+    x: 476
+    y: -10
+  - id: body2
+    x: 476
+    y: -11
+  - id: body0
+    x: 476
+    y: -12
+  - id: body3
+    x: 476
+    y: -13
+  - id: top1
+    x: 477
+    y: -9
+  - id: body0
+    x: 477
+    y: -10
+  - id: body1
+    x: 477
+    y: -11
+  - id: body3
+    x: 477
+    y: -12
+  - id: body2
+    x: 477
+    y: -13
+  - id: top2
+    x: 478
+    y: -9
+  - id: body2
+    x: 478
+    y: -10
+  - id: body2
+    x: 478
+    y: -11
+  - id: body2
+    x: 478
+    y: -12
+  - id: body2
+    x: 478
+    y: -13
+  - id: top2
+    x: 479
+    y: -9
+  - id: body1
+    x: 479
+    y: -10
+  - id: body3
+    x: 479
+    y: -11
+  - id: body3
+    x: 479
+    y: -12
+  - id: body0
+    x: 479
+    y: -13
+  - id: top2
+    x: 480
+    y: -9
+  - id: body2
+    x: 480
+    y: -10
+  - id: body3
+    x: 480
+    y: -11
+  - id: body2
+    x: 480
+    y: -12
+  - id: body1
+    x: 480
+    y: -13
+  - id: top1
+    x: 481
+    y: -9
+  - id: body3
+    x: 481
+    y: -10
+  - id: body2
+    x: 481
+    y: -11
+  - id: body0
+    x: 481
+    y: -12
+  - id: body3
+    x: 481
+    y: -13
+  - id: top1
+    x: 482
+    y: -9
+  - id: body3
+    x: 482
+    y: -10
+  - id: body1
+    x: 482
+    y: -11
+  - id: body3
+    x: 482
+    y: -12
+  - id: body0
+    x: 482
+    y: -13
+  - id: top2
+    x: 483
+    y: -9
+  - id: body3
+    x: 483
+    y: -10
+  - id: body2
+    x: 483
+    y: -11
+  - id: body1
+    x: 483
+    y: -12
+  - id: body0
+    x: 483
+    y: -13
+  - id: top3
+    x: 484
+    y: -9
+  - id: body0
+    x: 484
+    y: -10
+  - id: body1
+    x: 484
+    y: -11
+  - id: body0
+    x: 484
+    y: -12
+  - id: body0
+    x: 484
+    y: -13
+  - id: top3
+    x: 485
+    y: -9
+  - id: body2
+    x: 485
+    y: -10
+  - id: body0
+    x: 485
+    y: -11
+  - id: body3
+    x: 485
+    y: -12
+  - id: body0
+    x: 485
+    y: -13
+  - id: top0
+    x: 486
+    y: -9
+  - id: body1
+    x: 486
+    y: -10
+  - id: body1
+    x: 486
+    y: -11
+  - id: body2
+    x: 486
+    y: -12
+  - id: body0
+    x: 486
+    y: -13
+  - id: top3
+    x: 487
+    y: -9
+  - id: body1
+    x: 487
+    y: -10
+  - id: body0
+    x: 487
+    y: -11
+  - id: body3
+    x: 487
+    y: -12
+  - id: body1
+    x: 487
+    y: -13
+  - id: top2
+    x: 488
+    y: -9
+  - id: body3
+    x: 488
+    y: -10
+  - id: body1
+    x: 488
+    y: -11
+  - id: body3
+    x: 488
+    y: -12
+  - id: body0
+    x: 488
+    y: -13
+  - id: top1
+    x: 489
+    y: -9
+  - id: body2
+    x: 489
+    y: -10
+  - id: body2
+    x: 489
+    y: -11
+  - id: body0
+    x: 489
+    y: -12
+  - id: body0
+    x: 489
+    y: -13
+  - id: top0
+    x: 490
+    y: -9
+  - id: body1
+    x: 490
+    y: -10
+  - id: body3
+    x: 490
+    y: -11
+  - id: body3
+    x: 490
+    y: -12
+  - id: body0
+    x: 490
+    y: -13
+  - id: top1
+    x: 491
+    y: -9
+  - id: body2
+    x: 491
+    y: -10
+  - id: body1
+    x: 491
+    y: -11
+  - id: body3
+    x: 491
+    y: -12
+  - id: body0
+    x: 491
+    y: -13
+  - id: top3
+    x: 492
+    y: -9
+  - id: body2
+    x: 492
+    y: -10
+  - id: body0
+    x: 492
+    y: -11
+  - id: body3
+    x: 492
+    y: -12
+  - id: body1
+    x: 492
+    y: -13
+  - id: top1
+    x: 493
+    y: -9
+  - id: body2
+    x: 493
+    y: -10
+  - id: body2
+    x: 493
+    y: -11
+  - id: body1
+    x: 493
+    y: -12
+  - id: body3
+    x: 493
+    y: -13
+  - id: top0
+    x: 494
+    y: -9
+  - id: body3
+    x: 494
+    y: -10
+  - id: body2
+    x: 494
+    y: -11
+  - id: body3
+    x: 494
+    y: -12
+  - id: body0
+    x: 494
+    y: -13
+  - id: top_right
+    x: 495
+    y: -9
+  - id: inner_tr
+    x: 495
+    y: -10
+  - id: body1
+    x: 495
+    y: -11
+  - id: body3
+    x: 495
+    y: -12
+  - id: body0
+    x: 495
+    y: -13
+  - id: top0
+    x: 496
+    y: -10
+  - id: body3
+    x: 496
+    y: -11
+  - id: body1
+    x: 496
+    y: -12
+  - id: body1
+    x: 496
+    y: -13
+  - id: top1
+    x: 497
+    y: -10
+  - id: body0
+    x: 497
+    y: -11
+  - id: body2
+    x: 497
+    y: -12
+  - id: body1
+    x: 497
+    y: -13
+  - id: top1
+    x: 498
+    y: -10
+  - id: body0
+    x: 498
+    y: -11
+  - id: body3
+    x: 498
+    y: -12
+  - id: body0
+    x: 498
+    y: -13
+  - id: top3
+    x: 499
+    y: -10
+  - id: body2
+    x: 499
+    y: -11
+  - id: body2
+    x: 499
+    y: -12
+  - id: body2
+    x: 499
+    y: -13
+  - id: top1
+    x: 500
+    y: -10
+  - id: body3
+    x: 500
+    y: -11
+  - id: body0
+    x: 500
+    y: -12
+  - id: body2
+    x: 500
+    y: -13
+  - id: top0
+    x: 501
+    y: -10
+  - id: body3
+    x: 501
+    y: -11
+  - id: body3
+    x: 501
+    y: -12
+  - id: body1
+    x: 501
+    y: -13
+  - id: top0
+    x: 502
+    y: -10
+  - id: body2
+    x: 502
+    y: -11
+  - id: body3
+    x: 502
+    y: -12
+  - id: body1
+    x: 502
+    y: -13
+  - id: top1
+    x: 503
+    y: -10
+  - id: body3
+    x: 503
+    y: -11
+  - id: body2
+    x: 503
+    y: -12
+  - id: body2
+    x: 503
+    y: -13
+  - id: top3
+    x: 504
+    y: -10
+  - id: body2
+    x: 504
+    y: -11
+  - id: body3
+    x: 504
+    y: -12
+  - id: body3
+    x: 504
+    y: -13
+  - id: top1
+    x: 505
+    y: -10
+  - id: body0
+    x: 505
+    y: -11
+  - id: body0
+    x: 505
+    y: -12
+  - id: body1
+    x: 505
+    y: -13
+  - id: top3
+    x: 506
+    y: -10
+  - id: body2
+    x: 506
+    y: -11
+  - id: body0
+    x: 506
+    y: -12
+  - id: body1
+    x: 506
+    y: -13
+  - id: top0
+    x: 507
+    y: -10
+  - id: body2
+    x: 507
+    y: -11
+  - id: body1
+    x: 507
+    y: -12
+  - id: body1
+    x: 507
+    y: -13
+  - id: top1
+    x: 508
+    y: -10
+  - id: body0
+    x: 508
+    y: -11
+  - id: body0
+    x: 508
+    y: -12
+  - id: body3
+    x: 508
+    y: -13
+  - id: top0
+    x: 509
+    y: -10
+  - id: body3
+    x: 509
+    y: -11
+  - id: body0
+    x: 509
+    y: -12
+  - id: body1
+    x: 509
+    y: -13
+  - id: top3
+    x: 510
+    y: -10
+  - id: body0
+    x: 510
+    y: -11
+  - id: body3
+    x: 510
+    y: -12
+  - id: body0
+    x: 510
+    y: -13
+  - id: top2
+    x: 511
+    y: -10
+  - id: body0
+    x: 511
+    y: -11
+  - id: body3
+    x: 511
+    y: -12
+  - id: body0
+    x: 511
+    y: -13
+  platforms:
+  - x: 10
+    top: -6
+    width: 10
+  - x: 48
+    top: -5
+    width: 8
+  - x: 74
+    top: -4
+    width: 12
+  - x: 106
+    top: -4
+    width: 8
+  - x: 138
+    top: -2
+    width: 10
+  - x: 170
+    top: -2
+    width: 8
+  - x: 202
+    top: -2
+    width: 10
+  - x: 240
+    top: 0
+    width: 8
+  - x: 266
+    top: 0
+    width: 8
+  - x: 298
+    top: 0
+    width: 12
+  - x: 330
+    top: -1
+    width: 8
+  - x: 362
+    top: -3
+    width: 12
+  - x: 394
+    top: -3
+    width: 10
+  - x: 432
+    top: -5
+    width: 12
+  - x: 458
+    top: -5
+    width: 12
+  - x: 496
+    top: -6
+    width: 10
+  material: {fileID: 2100000, guid: b65c9b4b8b83b3440ba0e039591ef730, type: 2}
+  frictionless: {fileID: 6200000, guid: b9ef6ff89df4a1148b66514ee12dc7f7, type: 2}

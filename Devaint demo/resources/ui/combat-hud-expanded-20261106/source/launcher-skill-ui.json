@@ -1,0 +1,9 @@
+{
+  "authority": "User direction in this UI editing conversation",
+  "weaponId": "launcher",
+  "defaultSkill": "Charge then fire",
+  "equippedSkillPresentations": ["default", "shotgun", "grenade", "laser"],
+  "presentationRule": "The equipped skill selects both the large HUD weapon art and the run palette badge/name. These are not independent selectable weapons.",
+  "basicAttack": "Keep the base launcher basic attack slot separate from the equipped skill.",
+  "gameplayIntegration": "Another session owns gameplay changes. UI skill identifiers are provisional aliases until mapped to the updated gameplay catalog. No timings, damage, cooldown, or charging rules are defined here."
+}

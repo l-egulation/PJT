@@ -1,0 +1,1310 @@
+{
+  "format": "stage2-bounce-a-clean-v1",
+  "status": "user-approved-bounce-A-not-unity-integrated",
+  "pattern": "Bounce",
+  "canvas": [
+    384,
+    256
+  ],
+  "pivot": [
+    192,
+    232
+  ],
+  "repeat": false,
+  "holdLastFrame": true,
+  "totalMs": 2950,
+  "releaseCuesMs": [
+    500,
+    1000,
+    1500,
+    2000,
+    2500
+  ],
+  "peakFrames": [
+    6,
+    12,
+    17,
+    23,
+    28
+  ],
+  "visualDirections": [
+    "upper-left",
+    "right",
+    "upper-left",
+    "right",
+    "upper-left"
+  ],
+  "sourceFrames": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+  ],
+  "durationsMs": [
+    200,
+    70,
+    70,
+    100,
+    60,
+    90,
+    90,
+    90,
+    90,
+    90,
+    50,
+    100,
+    100,
+    90,
+    90,
+    120,
+    90,
+    90,
+    90,
+    90,
+    90,
+    50,
+    100,
+    100,
+    90,
+    90,
+    120,
+    80,
+    80,
+    80,
+    80,
+    130
+  ],
+  "sourceSheet": "../../source/bounce-aether-02/aether-original.png",
+  "sourceSheetSha256": "126d68f871e8f404fff1c1b31e7b13f59ddfc6ad0577b8189de12c0538f87e48",
+  "prompt": "../../source/bounce-aether/prompt.txt",
+  "timingCandidates": "../../preview/bounce-v3-candidates/candidates.json",
+  "frames": [
+    {
+      "file": "frames/00.png",
+      "sourceFrame": 1,
+      "role": "idle",
+      "durationMs": 200,
+      "bounds": [
+        139,
+        18,
+        246,
+        232
+      ],
+      "sourceCellSha256": "3ecf41c581c0ea2ccf5a45344620fa3d1ff5c9815e1101ef4f6ce273939e5036",
+      "sha256": "93cde639e177aac0161ac2efc8f184c9ce6d9f28d2218a28176b175cee609ef6",
+      "crossbowPosition": [
+        139,
+        18
+      ],
+      "sourceCrossbowBounds": [
+        269,
+        74,
+        372,
+        113
+      ],
+      "sourcePixelsRestored": 881,
+      "edgeRefinement": {
+        "changedPixels": 941,
+        "removedSpurPixels": 0,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 19,
+        "footResidueRecolored": 9
+      }
+    },
+    {
+      "file": "frames/01.png",
+      "sourceFrame": 2,
+      "role": "coil",
+      "durationMs": 70,
+      "bounds": [
+        139,
+        18,
+        246,
+        232
+      ],
+      "sourceCellSha256": "b3722f224101cc4dcfb7e19e7fdd9526dd6eddc78b77f0e4d77f50fce726619d",
+      "sha256": "5c3f3a32dd897a09974a860bb6c64d24f6c18610e02ee41a5e3a3a973fad878c",
+      "crossbowPosition": [
+        139,
+        18
+      ],
+      "sourceCrossbowBounds": [
+        269,
+        74,
+        372,
+        113
+      ],
+      "sourcePixelsRestored": 869,
+      "edgeRefinement": {
+        "changedPixels": 933,
+        "removedSpurPixels": 0,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 26,
+        "footResidueRecolored": 8
+      }
+    },
+    {
+      "file": "frames/02.png",
+      "sourceFrame": 3,
+      "role": "coil",
+      "durationMs": 70,
+      "bounds": [
+        139,
+        17,
+        246,
+        232
+      ],
+      "sourceCellSha256": "69d48636f7c3e4ad181d184a4a4445ccb30e2891d621c1f7917a04c86f652204",
+      "sha256": "19ddc716f99faa372ea7b2784e4a630e94544c9aa81a599aa53f015fa5c88f8f",
+      "crossbowPosition": [
+        139,
+        17
+      ],
+      "sourceCrossbowBounds": [
+        269,
+        73,
+        372,
+        112
+      ],
+      "sourcePixelsRestored": 943,
+      "edgeRefinement": {
+        "changedPixels": 928,
+        "removedSpurPixels": 0,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 21,
+        "footResidueRecolored": 8
+      }
+    },
+    {
+      "file": "frames/03.png",
+      "sourceFrame": 4,
+      "role": "coil",
+      "durationMs": 100,
+      "bounds": [
+        140,
+        17,
+        247,
+        232
+      ],
+      "sourceCellSha256": "c2f3768ac7c6ffeb22a26ced1074471221843c1ddbfb6dfa596b9766a199995b",
+      "sha256": "7c9e2e2a8f4faba454d8a06e6d3c59e8c348b47fc7dccff736b8321e45331d11",
+      "crossbowPosition": [
+        140,
+        17
+      ],
+      "sourceCrossbowBounds": [
+        270,
+        73,
+        372,
+        112
+      ],
+      "sourcePixelsRestored": 852,
+      "edgeRefinement": {
+        "changedPixels": 817,
+        "removedSpurPixels": 0,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 20,
+        "footResidueRecolored": 5
+      }
+    },
+    {
+      "file": "frames/04.png",
+      "sourceFrame": 5,
+      "role": "strike",
+      "durationMs": 60,
+      "bounds": [
+        140,
+        16,
+        247,
+        232
+      ],
+      "sourceCellSha256": "884c9622ce0a1c0cc444bcc313fd8111e8ab36e232e8a2578ebc7dc3bb3e3809",
+      "sha256": "98df4d00e2e2ba409a60dd7589aa9fdc3c90482f9fb06760225f3d38d68bea13",
+      "crossbowPosition": [
+        140,
+        16
+      ],
+      "sourceCrossbowBounds": [
+        270,
+        72,
+        372,
+        111
+      ],
+      "sourcePixelsRestored": 848,
+      "edgeRefinement": {
+        "changedPixels": 792,
+        "removedSpurPixels": 0,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 34,
+        "footResidueRecolored": 20
+      }
+    },
+    {
+      "file": "frames/05.png",
+      "sourceFrame": 6,
+      "role": "hit",
+      "durationMs": 90,
+      "bounds": [
+        107,
+        15,
+        247,
+        232
+      ],
+      "sourceCellSha256": "1c7b249afe3c1614b12a7f7bb88a78555d79bb8cc4639ee19599c2e9b721a836",
+      "sha256": "cc1ec5a6ff6036d9d7c13a50788a3ad2dac7c204165206b1b8308b315a2235d4",
+      "crossbowPosition": [
+        140,
+        15
+      ],
+      "sourceCrossbowBounds": [
+        270,
+        71,
+        372,
+        110
+      ],
+      "sourcePixelsRestored": 866,
+      "edgeRefinement": {
+        "changedPixels": 975,
+        "removedSpurPixels": 0,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 31,
+        "footResidueRecolored": 17
+      }
+    },
+    {
+      "file": "frames/06.png",
+      "sourceFrame": 7,
+      "role": "lock",
+      "durationMs": 90,
+      "bounds": [
+        107,
+        14,
+        247,
+        232
+      ],
+      "sourceCellSha256": "709f78625826be944cbe5917760fd1877a8cf1cb93c81880c32f17b20ca81f13",
+      "sha256": "31b034a0706653e2d913858c410f21d9804c0e230df745f0e0b7c83a3822fb1e",
+      "crossbowPosition": [
+        140,
+        14
+      ],
+      "sourceCrossbowBounds": [
+        270,
+        70,
+        372,
+        110
+      ],
+      "sourcePixelsRestored": 941,
+      "edgeRefinement": {
+        "changedPixels": 1013,
+        "removedSpurPixels": 0,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 39,
+        "footResidueRecolored": 21
+      }
+    },
+    {
+      "file": "frames/07.png",
+      "sourceFrame": 8,
+      "role": "lock",
+      "durationMs": 90,
+      "bounds": [
+        107,
+        13,
+        247,
+        232
+      ],
+      "sourceCellSha256": "30c8ad5157dc7260252087fb0b60a9d4b75d4024d5a37f091f95298dee484f41",
+      "sha256": "c2acfc1487914e39fb561ec563ca648200a6fea51c4fa80664b9953405de3e77",
+      "crossbowPosition": [
+        140,
+        13
+      ],
+      "sourceCrossbowBounds": [
+        270,
+        70,
+        372,
+        109
+      ],
+      "sourcePixelsRestored": 947,
+      "edgeRefinement": {
+        "changedPixels": 1021,
+        "removedSpurPixels": 0,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 32,
+        "footResidueRecolored": 14
+      }
+    },
+    {
+      "file": "frames/08.png",
+      "sourceFrame": 9,
+      "role": "lock",
+      "durationMs": 90,
+      "bounds": [
+        107,
+        13,
+        247,
+        232
+      ],
+      "sourceCellSha256": "c8cf683ec5b2929482a8981435f314e282eae5982cb5a92c40fbc97e2f4d546d",
+      "sha256": "73b284afde188a8d2928b10bcf88c4e7afbc22c0568e59ceaeb42e7ba85024e8",
+      "crossbowPosition": [
+        140,
+        13
+      ],
+      "sourceCrossbowBounds": [
+        270,
+        69,
+        372,
+        109
+      ],
+      "sourcePixelsRestored": 946,
+      "edgeRefinement": {
+        "changedPixels": 1029,
+        "removedSpurPixels": 1,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 21,
+        "footResidueRecolored": 7
+      }
+    },
+    {
+      "file": "frames/09.png",
+      "sourceFrame": 10,
+      "role": "lock",
+      "durationMs": 90,
+      "bounds": [
+        107,
+        12,
+        247,
+        232
+      ],
+      "sourceCellSha256": "4dc6ce7246ff1342bd006bad9ad47daac129057da6116eaadc8aca172d2afad8",
+      "sha256": "1a65144924f3b71c782b77dc697645c826e9af432989b4de093d22baff41cfef",
+      "crossbowPosition": [
+        140,
+        12
+      ],
+      "sourceCrossbowBounds": [
+        270,
+        69,
+        372,
+        108
+      ],
+      "sourcePixelsRestored": 909,
+      "edgeRefinement": {
+        "changedPixels": 1015,
+        "removedSpurPixels": 0,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 26,
+        "footResidueRecolored": 9
+      }
+    },
+    {
+      "file": "frames/10.png",
+      "sourceFrame": 11,
+      "role": "strike",
+      "durationMs": 50,
+      "bounds": [
+        139,
+        12,
+        247,
+        232
+      ],
+      "sourceCellSha256": "a1e2b3cbd8dfc252a3b24d653f75ef22c70add242ca1b83bc2f27135c35a3e18",
+      "sha256": "9e9f8b61b129e9d174c027211693609f3acd2ea234973d64c0ec4bd7ea7d72c7",
+      "crossbowPosition": [
+        140,
+        12
+      ],
+      "sourceCrossbowBounds": [
+        270,
+        69,
+        372,
+        108
+      ],
+      "sourcePixelsRestored": 1127,
+      "edgeRefinement": {
+        "changedPixels": 988,
+        "removedSpurPixels": 4,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 83,
+        "footResidueDeleted": 27,
+        "footResidueRecolored": 10
+      }
+    },
+    {
+      "file": "frames/11.png",
+      "sourceFrame": 12,
+      "role": "hit",
+      "durationMs": 100,
+      "bounds": [
+        140,
+        12,
+        247,
+        232
+      ],
+      "sourceCellSha256": "2504cf408333f0767e468f9daf3919ba1d23c36799421681ac7c3295dd10a4fe",
+      "sha256": "9b2071f24cb66a025b5b1821f21f90f9376b56a2aa7ff0540f4dd372f4f5f726",
+      "crossbowPosition": [
+        140,
+        12
+      ],
+      "sourceCrossbowBounds": [
+        270,
+        69,
+        372,
+        108
+      ],
+      "sourcePixelsRestored": 776,
+      "edgeRefinement": {
+        "changedPixels": 780,
+        "removedSpurPixels": 0,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 31,
+        "footResidueRecolored": 12
+      }
+    },
+    {
+      "file": "frames/12.png",
+      "sourceFrame": 13,
+      "role": "lock",
+      "durationMs": 100,
+      "bounds": [
+        140,
+        13,
+        247,
+        232
+      ],
+      "sourceCellSha256": "aea6fc3c0f76e8c6e43439a6503dedf5ad6b876372fd54cab206f102a305255e",
+      "sha256": "3360cbf6c8453328665f649a6e1b5af2921046af1779c1db13b7ba6368cfdc59",
+      "crossbowPosition": [
+        140,
+        13
+      ],
+      "sourceCrossbowBounds": [
+        270,
+        69,
+        372,
+        109
+      ],
+      "sourcePixelsRestored": 783,
+      "edgeRefinement": {
+        "changedPixels": 778,
+        "removedSpurPixels": 0,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 29,
+        "footResidueRecolored": 16
+      }
+    },
+    {
+      "file": "frames/13.png",
+      "sourceFrame": 14,
+      "role": "lock",
+      "durationMs": 90,
+      "bounds": [
+        140,
+        14,
+        247,
+        232
+      ],
+      "sourceCellSha256": "381b64877e919fe8900126a58d7a947c72938a54e2418d49d303f4762fa2fe29",
+      "sha256": "9c181c045be762ee08c0e5980607a2346bb1a0643d63b5116b65ebf89c534d5c",
+      "crossbowPosition": [
+        140,
+        14
+      ],
+      "sourceCrossbowBounds": [
+        270,
+        70,
+        372,
+        110
+      ],
+      "sourcePixelsRestored": 755,
+      "edgeRefinement": {
+        "changedPixels": 779,
+        "removedSpurPixels": 0,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 23,
+        "footResidueRecolored": 5
+      }
+    },
+    {
+      "file": "frames/14.png",
+      "sourceFrame": 15,
+      "role": "lock",
+      "durationMs": 90,
+      "bounds": [
+        139,
+        15,
+        246,
+        232
+      ],
+      "sourceCellSha256": "4a270e7606be730b438583fe4af8728e39674ff926011ce46152347eec4e577a",
+      "sha256": "e0e28ca8b1633724f47c40b73ee4ea16df469d425bc7ac9daace8325632b1900",
+      "crossbowPosition": [
+        139,
+        15
+      ],
+      "sourceCrossbowBounds": [
+        269,
+        71,
+        372,
+        110
+      ],
+      "sourcePixelsRestored": 800,
+      "edgeRefinement": {
+        "changedPixels": 782,
+        "removedSpurPixels": 0,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 24,
+        "footResidueRecolored": 7
+      }
+    },
+    {
+      "file": "frames/15.png",
+      "sourceFrame": 16,
+      "role": "coil",
+      "durationMs": 120,
+      "bounds": [
+        140,
+        16,
+        247,
+        232
+      ],
+      "sourceCellSha256": "01e4f83f1a03b645ff29bcf219bcf06164d2131b14c51601261507b5214a290c",
+      "sha256": "72bfd60f5268813f2cc3d219415decfdbd9dc0b75b68d9af2bf113a39c72c5df",
+      "crossbowPosition": [
+        140,
+        16
+      ],
+      "sourceCrossbowBounds": [
+        270,
+        72,
+        372,
+        111
+      ],
+      "sourcePixelsRestored": 830,
+      "edgeRefinement": {
+        "changedPixels": 810,
+        "removedSpurPixels": 0,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 38,
+        "footResidueRecolored": 18
+      }
+    },
+    {
+      "file": "frames/16.png",
+      "sourceFrame": 17,
+      "role": "hit",
+      "durationMs": 90,
+      "bounds": [
+        106,
+        17,
+        247,
+        232
+      ],
+      "sourceCellSha256": "a57050626c8cc5becff3353dea94674062fa3f884392b974fcd7cd18eb2f5c33",
+      "sha256": "783b5943852e15dac702458d350e280fa48abfbe81e46175fd79ff7280dd6c51",
+      "crossbowPosition": [
+        140,
+        17
+      ],
+      "sourceCrossbowBounds": [
+        270,
+        73,
+        372,
+        112
+      ],
+      "sourcePixelsRestored": 866,
+      "edgeRefinement": {
+        "changedPixels": 967,
+        "removedSpurPixels": 0,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 38,
+        "footResidueRecolored": 15
+      }
+    },
+    {
+      "file": "frames/17.png",
+      "sourceFrame": 18,
+      "role": "lock",
+      "durationMs": 90,
+      "bounds": [
+        107,
+        18,
+        246,
+        232
+      ],
+      "sourceCellSha256": "a3aa7ac25071e6609c9d2bed2a6d21bd5c8325494d91a630ecc2fbf6e053d839",
+      "sha256": "f87379a9a99b97d116d4abe69987daf97e2927a6dbde11aa7087be9f09164cd0",
+      "crossbowPosition": [
+        139,
+        18
+      ],
+      "sourceCrossbowBounds": [
+        269,
+        74,
+        372,
+        113
+      ],
+      "sourcePixelsRestored": 904,
+      "edgeRefinement": {
+        "changedPixels": 1018,
+        "removedSpurPixels": 2,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 44,
+        "footResidueRecolored": 22
+      }
+    },
+    {
+      "file": "frames/18.png",
+      "sourceFrame": 19,
+      "role": "lock",
+      "durationMs": 90,
+      "bounds": [
+        107,
+        19,
+        246,
+        232
+      ],
+      "sourceCellSha256": "9c76b3c1c25de04f1fcbbd495d2b7f6d60036caaf6b839f2a4818fba6946a107",
+      "sha256": "50104922de3598c7bb5aacdf65f843594c37ebc279ac3e0f97c9f233402162a7",
+      "crossbowPosition": [
+        139,
+        19
+      ],
+      "sourceCrossbowBounds": [
+        269,
+        75,
+        372,
+        114
+      ],
+      "sourcePixelsRestored": 923,
+      "edgeRefinement": {
+        "changedPixels": 1029,
+        "removedSpurPixels": 1,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 39,
+        "footResidueRecolored": 27
+      }
+    },
+    {
+      "file": "frames/19.png",
+      "sourceFrame": 20,
+      "role": "lock",
+      "durationMs": 90,
+      "bounds": [
+        107,
+        19,
+        246,
+        232
+      ],
+      "sourceCellSha256": "bd9fb05a2b47098628703e0468fa6ebada689c701d1af5fdcb79a7cd36a57105",
+      "sha256": "298a27c37274c27ae3ea6fbc4ae3aadfa2501f36745c0f94965f4a7b18754ee1",
+      "crossbowPosition": [
+        139,
+        19
+      ],
+      "sourceCrossbowBounds": [
+        269,
+        75,
+        372,
+        114
+      ],
+      "sourcePixelsRestored": 910,
+      "edgeRefinement": {
+        "changedPixels": 1023,
+        "removedSpurPixels": 1,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 28,
+        "footResidueRecolored": 9
+      }
+    },
+    {
+      "file": "frames/20.png",
+      "sourceFrame": 21,
+      "role": "lock",
+      "durationMs": 90,
+      "bounds": [
+        107,
+        18,
+        246,
+        232
+      ],
+      "sourceCellSha256": "036988e8533597fc99a70ca18bb1c8f6e2f9637afeba48d0a6b08ee92d0d03e6",
+      "sha256": "ee58836be02b8b2ba03d514fd9f7916e8d87984cacb57f0d885af308f6053d5a",
+      "crossbowPosition": [
+        139,
+        18
+      ],
+      "sourceCrossbowBounds": [
+        269,
+        74,
+        372,
+        114
+      ],
+      "sourcePixelsRestored": 897,
+      "edgeRefinement": {
+        "changedPixels": 1038,
+        "removedSpurPixels": 2,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 29,
+        "footResidueRecolored": 10
+      }
+    },
+    {
+      "file": "frames/21.png",
+      "sourceFrame": 22,
+      "role": "strike",
+      "durationMs": 50,
+      "bounds": [
+        137,
+        18,
+        246,
+        232
+      ],
+      "sourceCellSha256": "9e27c83cddc1434316b4c2754e44b2fe14c0c206ad8ecab45e83e2d1f1341c24",
+      "sha256": "a63c5479bf9bc081edc346b70cb2ef890d4f3363512a56af35c343378f9ca497",
+      "crossbowPosition": [
+        139,
+        18
+      ],
+      "sourceCrossbowBounds": [
+        269,
+        74,
+        372,
+        113
+      ],
+      "sourcePixelsRestored": 978,
+      "edgeRefinement": {
+        "changedPixels": 980,
+        "removedSpurPixels": 2,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 65,
+        "footResidueDeleted": 30,
+        "footResidueRecolored": 14
+      }
+    },
+    {
+      "file": "frames/22.png",
+      "sourceFrame": 23,
+      "role": "hit",
+      "durationMs": 100,
+      "bounds": [
+        139,
+        17,
+        246,
+        232
+      ],
+      "sourceCellSha256": "d76c3814a961b3fd42887e09eedecee461d8683041c981490dac50b7b0b3b604",
+      "sha256": "0aaebcfcc15973103a9b2fd0ab2d48bb6c6e698135d07808e390b9a3d65a8787",
+      "crossbowPosition": [
+        139,
+        17
+      ],
+      "sourceCrossbowBounds": [
+        269,
+        73,
+        372,
+        112
+      ],
+      "sourcePixelsRestored": 723,
+      "edgeRefinement": {
+        "changedPixels": 778,
+        "removedSpurPixels": 1,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 24,
+        "footResidueRecolored": 9
+      }
+    },
+    {
+      "file": "frames/23.png",
+      "sourceFrame": 24,
+      "role": "lock",
+      "durationMs": 100,
+      "bounds": [
+        139,
+        16,
+        246,
+        232
+      ],
+      "sourceCellSha256": "c4688a7466b67d7717246674fa78026e7795b62cb7ae6247da0d0eca8bc4b240",
+      "sha256": "3be1988f521af0a7d7c536861113c403c8605674eadb01614701d5c4dd5df7a1",
+      "crossbowPosition": [
+        139,
+        16
+      ],
+      "sourceCrossbowBounds": [
+        269,
+        72,
+        372,
+        111
+      ],
+      "sourcePixelsRestored": 728,
+      "edgeRefinement": {
+        "changedPixels": 776,
+        "removedSpurPixels": 1,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 32,
+        "footResidueRecolored": 16
+      }
+    },
+    {
+      "file": "frames/24.png",
+      "sourceFrame": 25,
+      "role": "lock",
+      "durationMs": 90,
+      "bounds": [
+        139,
+        15,
+        246,
+        232
+      ],
+      "sourceCellSha256": "c7598ad0e6016ba9b35b5129a3fa377e0ea5f05e2789344563afb5faee3b7330",
+      "sha256": "c8834c1df864069b71029599cd06f546ca368cfdaef8a84223342915c148dbfc",
+      "crossbowPosition": [
+        139,
+        15
+      ],
+      "sourceCrossbowBounds": [
+        269,
+        71,
+        372,
+        110
+      ],
+      "sourcePixelsRestored": 748,
+      "edgeRefinement": {
+        "changedPixels": 779,
+        "removedSpurPixels": 1,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 30,
+        "footResidueRecolored": 9
+      }
+    },
+    {
+      "file": "frames/25.png",
+      "sourceFrame": 26,
+      "role": "lock",
+      "durationMs": 90,
+      "bounds": [
+        140,
+        14,
+        247,
+        232
+      ],
+      "sourceCellSha256": "35e36e0ca9d751c56a040e9607d5425dfdca4ff8facec9967b77e9f7689db894",
+      "sha256": "14496966d29014829578cb40e8366dac2cf18a02816b4473b54cf20ceea5f20c",
+      "crossbowPosition": [
+        140,
+        14
+      ],
+      "sourceCrossbowBounds": [
+        270,
+        70,
+        372,
+        110
+      ],
+      "sourcePixelsRestored": 764,
+      "edgeRefinement": {
+        "changedPixels": 777,
+        "removedSpurPixels": 0,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 31,
+        "footResidueRecolored": 12
+      }
+    },
+    {
+      "file": "frames/26.png",
+      "sourceFrame": 27,
+      "role": "coil",
+      "durationMs": 120,
+      "bounds": [
+        140,
+        13,
+        247,
+        232
+      ],
+      "sourceCellSha256": "4348d53c20a29db538f0f3ac8a15fa7cc441ed7853c11c399ffab943b82cbe26",
+      "sha256": "16d1c60ba8d08409d4ff6a35a9b93594cc88cfc8e0655f8352f3c954c0789b5b",
+      "crossbowPosition": [
+        140,
+        13
+      ],
+      "sourceCrossbowBounds": [
+        270,
+        69,
+        372,
+        109
+      ],
+      "sourcePixelsRestored": 843,
+      "edgeRefinement": {
+        "changedPixels": 817,
+        "removedSpurPixels": 1,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 41,
+        "footResidueRecolored": 24
+      }
+    },
+    {
+      "file": "frames/27.png",
+      "sourceFrame": 28,
+      "role": "hit",
+      "durationMs": 80,
+      "bounds": [
+        106,
+        13,
+        247,
+        232
+      ],
+      "sourceCellSha256": "7026f3ea7ee2630471f69df3078289ea14ba46b33bc835f2f05adaef3d4359d2",
+      "sha256": "eb4a84f8670f31cc0395d9cd22d1192ff5634254f1fff487e0e655b7a6bee56b",
+      "crossbowPosition": [
+        140,
+        13
+      ],
+      "sourceCrossbowBounds": [
+        270,
+        69,
+        372,
+        109
+      ],
+      "sourcePixelsRestored": 888,
+      "edgeRefinement": {
+        "changedPixels": 973,
+        "removedSpurPixels": 0,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 32,
+        "footResidueRecolored": 9
+      }
+    },
+    {
+      "file": "frames/28.png",
+      "sourceFrame": 29,
+      "role": "lock",
+      "durationMs": 80,
+      "bounds": [
+        107,
+        12,
+        247,
+        232
+      ],
+      "sourceCellSha256": "d2e1d5922d8e953ede02ff3d87d51ecf15b7e545e5d872ce5501f62bd0aada59",
+      "sha256": "01a89e8254968160d3b0d5dbe00a42409a0c7f90510ba1268e356163f41997a6",
+      "crossbowPosition": [
+        140,
+        12
+      ],
+      "sourceCrossbowBounds": [
+        270,
+        69,
+        372,
+        108
+      ],
+      "sourcePixelsRestored": 919,
+      "edgeRefinement": {
+        "changedPixels": 1012,
+        "removedSpurPixels": 1,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 35,
+        "footResidueRecolored": 11
+      }
+    },
+    {
+      "file": "frames/29.png",
+      "sourceFrame": 30,
+      "role": "lock",
+      "durationMs": 80,
+      "bounds": [
+        107,
+        13,
+        247,
+        232
+      ],
+      "sourceCellSha256": "e13ae484ff601bcc5e28deb8a4a477594ec61ffad84cd947d1b4cf3308e5b164",
+      "sha256": "8044e04547f13e576f21b18429b767ad3f3a1498b463e9feeabeea14d7f2a1f5",
+      "crossbowPosition": [
+        140,
+        13
+      ],
+      "sourceCrossbowBounds": [
+        270,
+        69,
+        372,
+        109
+      ],
+      "sourcePixelsRestored": 972,
+      "edgeRefinement": {
+        "changedPixels": 1044,
+        "removedSpurPixels": 0,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 46,
+        "footResidueRecolored": 19
+      }
+    },
+    {
+      "file": "frames/30.png",
+      "sourceFrame": 31,
+      "role": "lock",
+      "durationMs": 80,
+      "bounds": [
+        107,
+        13,
+        247,
+        232
+      ],
+      "sourceCellSha256": "412e11768df5414c9b2c599eecc43f2903a196c41071db3ed100d79ca40b6001",
+      "sha256": "5ed7a45f768975076db0a7e99fbb51ab5dd2f3c7f3ab7c76fc0f1a5f604456a2",
+      "crossbowPosition": [
+        140,
+        13
+      ],
+      "sourceCrossbowBounds": [
+        270,
+        70,
+        372,
+        109
+      ],
+      "sourcePixelsRestored": 913,
+      "edgeRefinement": {
+        "changedPixels": 1028,
+        "removedSpurPixels": 0,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 32,
+        "footResidueRecolored": 16
+      }
+    },
+    {
+      "file": "frames/31.png",
+      "sourceFrame": 32,
+      "role": "hold",
+      "durationMs": 130,
+      "bounds": [
+        107,
+        15,
+        247,
+        232
+      ],
+      "sourceCellSha256": "b55897ac96c1daabaed22f011faf64e4d414071c187d02dbb73cbda6f52a1dda",
+      "sha256": "88c8b0e7b06eec0a95ce86f30f8a33deb62f220cf0bbc161536c0644977edd91",
+      "crossbowPosition": [
+        140,
+        15
+      ],
+      "sourceCrossbowBounds": [
+        270,
+        71,
+        372,
+        110
+      ],
+      "sourcePixelsRestored": 917,
+      "edgeRefinement": {
+        "changedPixels": 1013,
+        "removedSpurPixels": 3,
+        "protectedPixelsUnchanged": true,
+        "bodyInteriorUnchanged": true,
+        "crossbowUnchanged": true,
+        "removedStreakPixels": 0,
+        "footResidueDeleted": 31,
+        "footResidueRecolored": 8
+      }
+    }
+  ],
+  "matteProcessing": {
+    "method": "homing D matte (source-resolution local white-compositing inversion, binary alpha, same thresholds) before nearest-neighbor resize, plus preservation fixes: body = all core pieces >=30 px except the bow, keeping every component containing its interior (boots in source 01/04/32 were dropped otherwise); skin-hued non-white source pixels touching the body below source row 235 restored to exact source colour up to 6 px (lower shins only; hands keep the homing matte); opaque edge pixels with max channel < 110 keep exact source colour (boot sole line); and restore enclosed non-white pixels (min channel < 240) to exact source colour (mask eye area, between shins)",
+    "alphaValues": [
+      0,
+      255
+    ],
+    "transparentRgb": [
+      0,
+      0,
+      0
+    ],
+    "interiorSourceColorsChanged": false,
+    "perFrameAutoFit": false,
+    "destinationSize": [
+      666,
+      374
+    ],
+    "scale": [
+      1.040625,
+      1.038888888888889
+    ],
+    "rasterOffset": [
+      -141,
+      -59
+    ],
+    "paletteQuantization": false
+  },
+  "edgeRefinement": {
+    "method": "refine_stage2_homing_d_edges.refine unchanged: cloth rim 1-2 px to local approved palette, isolated cloth spurs removed",
+    "maskHandShinsBootsProtected": true,
+    "crossbowPixelsUnchanged": true,
+    "timingUnchanged": true,
+    "streakRemoval": {
+      "sourceFrames": [
+        11,
+        22
+      ],
+      "canvasRegion": [
+        0,
+        85,
+        165,
+        160
+      ],
+      "method": "remove pixels lost to a 4x4 opening (components >=4 px spanning >=4 px, skin protected) plus pieces left disconnected from the body inside the region",
+      "reason": "Aether motion-streak lines beside the swinging sleeve; the sleeve swoosh itself is kept as a 50 ms in-between"
+    },
+    "footCleanup": {
+      "scope": "canvas rows >= 195 only",
+      "method": "clean_feet: grey / light-grey / lower-boot bluish residue within 3 px of the boots deleted on the edge or recoloured from the nearest boot pixel; near-white leg edge blends deleted; leg specks <= 8 px removed. Brown, near-black sole, shins and robe hem kept.",
+      "reason": "user review: 발 부분 약간 덜 제거 됐다"
+    }
+  },
+  "crossbow": {
+    "method": "exact approved RGBA crop, translation only",
+    "file": "approved-crossbow.png",
+    "approvedSource": "../../source/approved-fused-idle-original.png",
+    "approvedSourceSha256": "0e9a137b80718ba4ae083da68f3a78fc1091e9a66deed1ec6a45348f1499d466",
+    "cropBounds": [
+      139,
+      17,
+      246,
+      58
+    ],
+    "scale": 1,
+    "placement": "source bow bounding-box center through the shared affine; rounded to integer pixel",
+    "pixelIdentityCheckedEveryFrame": true
+  },
+  "identity": {
+    "newLimbs": false,
+    "maskRedrawn": false,
+    "generativeRedraw": false
+  },
+  "unityIntegrated": false,
+  "approval": {
+    "userSelected": "A",
+    "scope": "attempt 2 (prompt v3) source, timing A, transparent frames with matte, streak and foot cleanup",
+    "userRequest": "A 확정",
+    "date": "2026-11-07"
+  }
+}

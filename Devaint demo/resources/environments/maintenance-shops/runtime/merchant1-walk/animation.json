@@ -1,0 +1,156 @@
+{
+  "asset": "chapter1-maintenance-merchant-walk",
+  "status": "User accepted pixel-clean-v4, local handoff; not installed in Unity or committed",
+  "frameCount": 20,
+  "fps": 24,
+  "durationSeconds": 0.8333333333333334,
+  "loop": true,
+  "frameSize": [
+    128,
+    144
+  ],
+  "sheet": {
+    "file": "merchant1-walk-20f.png",
+    "size": [
+      1280,
+      288
+    ],
+    "columns": 10,
+    "rows": 2,
+    "order": "left to right, then next row",
+    "cellSize": [
+      128,
+      144
+    ],
+    "padding": 0
+  },
+  "pivot": {
+    "pixelsFromTopLeft": [
+      64,
+      136
+    ],
+    "unityNormalizedBottomLeft": [
+      0.5,
+      0.05555555555555555
+    ],
+    "note": "Shared fixed pivot; preserve natural per-frame bob. No individual tight-fit realignment."
+  },
+  "unitySuggestedImport": {
+    "spriteMode": "Multiple",
+    "filterMode": "Point",
+    "compression": "None",
+    "generateMipMaps": false,
+    "pixelsPerUnit": 32,
+    "note": "PPU32 matches existing game. Reference settings, not yet applied."
+  },
+  "source": {
+    "sheet": "C:\\Users\\SSAFY\\Desktop\\자율 프로젝트\\03_개발\\Worktrees\\stage2-maintenance-current-main\\outputs\\maintenance\\merchant1-frame-candidates-20261102\\source-sheet.png",
+    "originalFrames": [
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "reviewVersion": "pixel-clean-v4",
+    "idleReference": "approved-idle-reference.png"
+  },
+  "paletteAuthority": "Opaque RGB colors from approved idle reference, exact membership verified; no independent authored palette found",
+  "frames": [
+    {
+      "path": "frames/walk-01.png",
+      "sha256": "523ea16a156decbd1ee06ef1b824107ce2425323d3803c705c2c66281b813b22"
+    },
+    {
+      "path": "frames/walk-02.png",
+      "sha256": "dae1e1573540c6a63d976b41b376e40474d20b7993a7f537782f75f0ede28217"
+    },
+    {
+      "path": "frames/walk-03.png",
+      "sha256": "224b26128ee9a6c52e6c744c99d8d9e8bf92aa8c5702cfffdbb1314240f2d13f"
+    },
+    {
+      "path": "frames/walk-04.png",
+      "sha256": "e4b084f657e732acf74c0beb9adf54c1821f1b229152dec098dbee66c567ba53"
+    },
+    {
+      "path": "frames/walk-05.png",
+      "sha256": "b3af9d0156048dceeb66d24e6f53064738f9fb08cfa9db24cbf57047eb7233f2"
+    },
+    {
+      "path": "frames/walk-06.png",
+      "sha256": "70792e15f4e2610becf7ac20d6a4436a95daabc1ec6487d3924cf4ce76e00f37"
+    },
+    {
+      "path": "frames/walk-07.png",
+      "sha256": "9dc3e7015bc3da7118c1a1c20c57b7557bfab72228a01e18da6084c145360f86"
+    },
+    {
+      "path": "frames/walk-08.png",
+      "sha256": "828c5a95a85c194fcc0ab3ce9961ea365177859409775f6c4f7937d1f39931cc"
+    },
+    {
+      "path": "frames/walk-09.png",
+      "sha256": "f4852fdf8124026910eb0720311691c56b13f20bfe8982d2decae2cb0c4c4f0d"
+    },
+    {
+      "path": "frames/walk-10.png",
+      "sha256": "390a91cf1d8792fed3259cf4cf48d2b8209c7f866e68805d400e2b6c892158b3"
+    },
+    {
+      "path": "frames/walk-11.png",
+      "sha256": "0f63532a0755feebd631339a98d10664d2d9cd8438773d1c1938704e95cd64ac"
+    },
+    {
+      "path": "frames/walk-12.png",
+      "sha256": "20223a3000f3d45baa5acbf78c1ee0626c3fdd8d79320bccf438c84330875f71"
+    },
+    {
+      "path": "frames/walk-13.png",
+      "sha256": "913c59e964326f1600596778475e9503b1cf5d6548bef9f6b089e78a328939ec"
+    },
+    {
+      "path": "frames/walk-14.png",
+      "sha256": "22237f7076a8f0c0f9fe8d2097998f142242158b4f6dffee436db9338833aed1"
+    },
+    {
+      "path": "frames/walk-15.png",
+      "sha256": "8942549fe3e79c5632ee607a9c3e973b23f667eaa217a59176d097dbe4563eea"
+    },
+    {
+      "path": "frames/walk-16.png",
+      "sha256": "b2ad4ba1ca8122eda42a11433ee4f02863c45e585f718bf70fcac9129a28f5f8"
+    },
+    {
+      "path": "frames/walk-17.png",
+      "sha256": "e1d171f725e3783246364cc1b61bb7e7844ac3b02f8ed9c7efa9f611a7ef23b1"
+    },
+    {
+      "path": "frames/walk-18.png",
+      "sha256": "0c29ed6fb5751e9eca74013125b1e46349da983b9140913e36dfa8fdf94f6273"
+    },
+    {
+      "path": "frames/walk-19.png",
+      "sha256": "4b8857f956fb64348e64bd080dfdf944c78c15c96add728ecc1ae1446b9cfae6"
+    },
+    {
+      "path": "frames/walk-20.png",
+      "sha256": "b7bdcdbfd7dc7610121e5c50a334a167d9e528ba0a457a4fb4f87e30a372b357"
+    }
+  ]
+}

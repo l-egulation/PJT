@@ -1,0 +1,20 @@
+{
+  "schema": "stage2-thrower-waste-ink-can-break-v1",
+  "status": "pending-user-review",
+  "output": "outputs/waterway/thrower-can-break-20261101",
+  "source": "outputs/waterway/thrower-prop-original-shape-20261101",
+  "attackSource": "outputs/waterway/thrower-pocket-attack-return-20261101",
+  "objectConcept": "오염된 잉크가 든 작은 폐잉크통",
+  "releaseMs": 680,
+  "contactMsIllustration": 1480,
+  "contactWorld": [165,288],
+  "effectCanvas": [128,96],
+  "groundAnchorPx": [64,72],
+  "effectDurationsMs": [40,40,60,60,80,80,100,100],
+  "reviewGapMs": 600,
+  "inkRgb": [[37,36,43],[97,76,105]],
+  "fragmentVelocitiesPxPerSecond": [[-90,-130],[-60,-190],[130,-155],[65,-100]],
+  "fragmentLifetimesMs": [280,320,360,260],
+  "fragmentGravityPxPerSecondSquared": 600,
+  "policy": "Split current repaired cylinder pixels into the dark cap and3 Voronoi shell pieces; preserve all source pixels exactly once in the fragment assets. Use the same unchanging intact projectile until contact, then remove it and show separate break FX. Draw short ink spurts/drops with only2 existing character colors. Binary alpha; no new colors, glow, explosion damage, lingering pool, secondary projectile damage or Unity/gameplay integration. Timings/trajectories are art review proposals."
+}

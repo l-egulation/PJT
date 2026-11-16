@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19356c54c3cd89746b00a38dc9cd3912, type: 3}
+  m_Name: boar
+  m_EditorClassIdentifier: Assembly-CSharp::Deviant.World.InkMonsterData
+  species: boar
+  move:
+    id: move
+    frames:
+    - {fileID: 21300000, guid: cf189e5406183504698793350309e775, type: 3}
+    - {fileID: 21300000, guid: 5de9baab66a8a464db0be9ecb11caf3a, type: 3}
+    - {fileID: 21300000, guid: c0b2a3a8a4fb361439673861f4af57f9, type: 3}
+    - {fileID: 21300000, guid: 8eaae0697f44f8b4498ece881967edc2, type: 3}
+    - {fileID: 21300000, guid: 42f559027b66299489c61eef20f8ed0a, type: 3}
+    - {fileID: 21300000, guid: 68600122f3582a94a826f9d1ccaae42f, type: 3}
+    - {fileID: 21300000, guid: 25d68c17febb1d340b3a7079ef6705de, type: 3}
+    - {fileID: 21300000, guid: a0c28a10d85c8e941af5d3c65b7b62dc, type: 3}
+    - {fileID: 21300000, guid: c728fbe4936c5924fba87908341c599b, type: 3}
+    - {fileID: 21300000, guid: 8524fd434c4d1c14eb9285a90c03fe22, type: 3}
+    - {fileID: 21300000, guid: 70e89d2b7b3550e45b1cc0a60bd4929a, type: 3}
+    - {fileID: 21300000, guid: cdc22b1be935c4d498ff4e495a11718e, type: 3}
+    seconds:
+    - 0.11
+    - 0.11
+    - 0.11
+    - 0.11
+    - 0.11
+    - 0.11
+    - 0.11
+    - 0.11
+    - 0.11
+    - 0.11
+    - 0.11
+    - 0.11
+    feet: 
+    loop: 1
+  attack:
+    id: attack
+    frames:
+    - {fileID: 21300000, guid: 95632e7c151fcd2408caf95b7474fe5d, type: 3}
+    - {fileID: 21300000, guid: a3be63d9826fe804ca73aa2801a28f7b, type: 3}
+    - {fileID: 21300000, guid: db5f013cd2194024e806bf2071608deb, type: 3}
+    - {fileID: 21300000, guid: 08ddd372c1c43424a962d3d0a9ce8350, type: 3}
+    - {fileID: 21300000, guid: 3cfb349b3a9059e4d826db6f0d422d26, type: 3}
+    - {fileID: 21300000, guid: 86a8da3329c9ef84fb4eb0718562ef01, type: 3}
+    - {fileID: 21300000, guid: ddda79dfe824b2b47b1903500f8d6bdb, type: 3}
+    - {fileID: 21300000, guid: 9a9fb64e905db5c4ebd0b34bd02b5c11, type: 3}
+    - {fileID: 21300000, guid: 09e20a046fda3fe4fb52f7d8fe5d521f, type: 3}
+    - {fileID: 21300000, guid: d30c5c7ab05b6ff42b1cff367d58dfc9, type: 3}
+    - {fileID: 21300000, guid: ebaa7e05c07ea3a4b9200fba0ed147ca, type: 3}
+    - {fileID: 21300000, guid: 372955761b5ab1c45a5ebc9edf9bafe7, type: 3}
+    seconds:
+    - 0.11
+    - 0.09
+    - 0.08
+    - 0.07
+    - 0.05
+    - 0.04
+    - 0.05
+    - 0.06
+    - 0.07
+    - 0.09
+    - 0.11
+    - 0.16
+    feet: 
+    loop: 0
+  sourceFacesLeft: 1
+  bodySize: {x: 2.65, y: 1.9}
+  bodyOffset: {x: -0.18, y: 0.95}
+  moveHurt:
+  - {x: 0.140625, y: 1.2329861, z: 2.7625, w: 2.0984375}
+  - {x: -0.015625, y: 1.2798611, z: 3.0812502, w: 2.125}
+  - {x: -0.015625, y: 1.2486111, z: 3.0812502, w: 2.125}
+  - {x: -0.015625, y: 1.2329861, z: 3.0812502, w: 2.0984375}
+  - {x: 0.171875, y: 1.2173611, z: 2.7625, w: 2.071875}
+  - {x: -0.015625, y: 1.2017361, z: 3.0812502, w: 2.0453126}
+  - {x: 0.15625, y: 1.2329861, z: 2.7890625, w: 2.0984375}
+  - {x: 0.171875, y: 1.2486111, z: 2.7625, w: 2.125}
+  - {x: -0.015625, y: 1.2642361, z: 3.0812502, w: 2.1515625}
+  - {x: -0.015625, y: 1.2486111, z: 3.0812502, w: 2.125}
+  - {x: 0.15625, y: 1.2329861, z: 2.7890625, w: 2.0984375}
+  - {x: -0.03125, y: 1.2329861, z: 3.0546875, w: 2.0984375}
+  attackHurt:
+  - {x: -0.01562512, y: 1.2486111, z: 2.65625, w: 2.01875}
+  - {x: 0.12499988, y: 1.2017361, z: 2.9484377, w: 1.9921875}
+  - {x: 0.20312488, y: 1.0923611, z: 3.028125, w: 1.965625}
+  - {x: 0.07812488, y: 1.1861111, z: 2.7625, w: 2.01875}
+  - {x: -0.14062512, y: 1.2798611, z: 3.29375, w: 2.125}
+  - {x: -0.26562512, y: 1.2954861, z: 3.4, w: 2.1515625}
+  - {x: -0.46875012, y: 1.2486111, z: 3.5859375, w: 2.071875}
+  - {x: -0.46875012, y: 1.2017361, z: 3.5859375, w: 1.9921875}
+  - {x: -0.31250012, y: 1.2329861, z: 3.3734376, w: 2.0984375}
+  - {x: 0.07812488, y: 1.2329861, z: 2.7625, w: 2.0984375}
+  - {x: 0.34374988, y: 1.2173611, z: 2.7890625, w: 2.071875}
+  - {x: -0.01562512, y: 1.2329861, z: 2.7625, w: 2.0984375}
+  hitSize: {x: 1.8, y: 1.4}
+  hitOffset: {x: 1.75, y: 0.95}
+  moveSpeed: 2.2
+  chargeSpeed: 9.5
+  attackRange: 4.6
+  windupSeconds: 0.15
+  recoverySeconds: 0.5
+  hoverHeight: 0

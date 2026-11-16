@@ -1,0 +1,193 @@
+{
+  "tilePackage": "../stage2-unified-stone-v21",
+  "layout": "current",
+  "source": "../source/chapter2-layouts.json",
+  "sourceSha256": "08e9e77a4fcc3adc95fa0cbbff556002d24eaae20678bfc235cc6fe1940a3310",
+  "pixelsPerUnit": 32,
+  "heroVisibleNativeSize": [
+    66,
+    64
+  ],
+  "characterResampled": false,
+  "background": "white",
+  "views": [
+    {
+      "id": "S",
+      "title": "시작 구간",
+      "screen": "01-S-960x540.png",
+      "wholeRoom": "01-S-whole-room-native.png",
+      "camera": [
+        -11.4062,
+        7.6875
+      ],
+      "heroFeet": [
+        -13.4062,
+        3
+      ],
+      "size": [
+        960,
+        540
+      ],
+      "roomNativeSize": [
+        640,
+        768
+      ]
+    },
+    {
+      "id": "F01",
+      "title": "독립형 통과 발판",
+      "screen": "02-F01-960x540.png",
+      "wholeRoom": "02-F01-whole-room-native.png",
+      "camera": [
+        30.25,
+        -6.0625
+      ],
+      "heroFeet": [
+        28.25,
+        -10.75
+      ],
+      "size": [
+        960,
+        540
+      ],
+      "roomNativeSize": [
+        1088,
+        960
+      ]
+    },
+    {
+      "id": "F02",
+      "title": "벽 부착·긴 발판",
+      "screen": "03-F02-960x540.png",
+      "wholeRoom": "03-F02-whole-room-native.png",
+      "camera": [
+        12.25,
+        -23.3125
+      ],
+      "heroFeet": [
+        10.25,
+        -28
+      ],
+      "size": [
+        960,
+        540
+      ],
+      "roomNativeSize": [
+        960,
+        1024
+      ]
+    },
+    {
+      "id": "F03",
+      "title": "장거리 통과 발판",
+      "screen": "04-F03-960x540.png",
+      "wholeRoom": "04-F03-whole-room-native.png",
+      "camera": [
+        5,
+        -60.8125
+      ],
+      "heroFeet": [
+        3,
+        -65.5
+      ],
+      "size": [
+        960,
+        540
+      ],
+      "roomNativeSize": [
+        896,
+        1088
+      ]
+    },
+    {
+      "id": "F04",
+      "title": "하부 착지 구간",
+      "screen": "05-F04-960x540.png",
+      "wholeRoom": "05-F04-whole-room-native.png",
+      "camera": [
+        -15,
+        -92.0625
+      ],
+      "heroFeet": [
+        -17,
+        -96.75
+      ],
+      "size": [
+        960,
+        540
+      ],
+      "roomNativeSize": [
+        896,
+        896
+      ]
+    },
+    {
+      "id": "F05",
+      "title": "수직방 발판",
+      "screen": "06-F05-960x540.png",
+      "wholeRoom": "06-F05-whole-room-native.png",
+      "camera": [
+        -18.25,
+        -109.5625
+      ],
+      "heroFeet": [
+        -20.25,
+        -114.25
+      ],
+      "size": [
+        960,
+        540
+      ],
+      "roomNativeSize": [
+        768,
+        1216
+      ]
+    },
+    {
+      "id": "F06",
+      "title": "좁은 석재 발판",
+      "screen": "07-F06-960x540.png",
+      "wholeRoom": "07-F06-whole-room-native.png",
+      "camera": [
+        33,
+        -113.0625
+      ],
+      "heroFeet": [
+        31,
+        -117.75
+      ],
+      "size": [
+        960,
+        540
+      ],
+      "roomNativeSize": [
+        960,
+        1024
+      ]
+    },
+    {
+      "id": "F09",
+      "title": "벽·발판 연결",
+      "screen": "08-F09-960x540.png",
+      "wholeRoom": "08-F09-whole-room-native.png",
+      "camera": [
+        59.25,
+        -29.0625
+      ],
+      "heroFeet": [
+        57.25,
+        -33.75
+      ],
+      "size": [
+        960,
+        540
+      ],
+      "roomNativeSize": [
+        1088,
+        1088
+      ]
+    }
+  ],
+  "unityModified": false,
+  "foregroundReconstructsPreviousScreensExactly": true
+}

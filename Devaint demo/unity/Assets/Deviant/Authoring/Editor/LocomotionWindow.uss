@@ -1,0 +1,23 @@
+.locomotion-editor {
+    flex-grow: 1;
+    padding: 12px;
+}
+.locomotion-editor .heading {
+    -unity-font-style: bold;
+    margin-bottom: 8px;
+}
+.locomotion-editor .description {
+    white-space: normal;
+    margin-bottom: 8px;
+}
+.locomotion-editor .actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.locomotion-editor .actions > Button {
+    flex-grow: 1;
+    margin-right: 4px;
+    margin-bottom: 4px;
+}

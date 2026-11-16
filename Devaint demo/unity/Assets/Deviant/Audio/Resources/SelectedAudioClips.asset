@@ -1,0 +1,275 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf23f97b80450fca9968cdb7cf766b3, type: 3}
+  m_Name: SelectedAudioClips
+  m_EditorClassIdentifier:
+  entries:
+  - id: bgm_maintenance_placeholder
+    clip: {fileID: 8300000, guid: 995ae2244d454b759be17635e7dcfef4, type: 3}
+  - id: bgm_opening_erase
+    clip: {fileID: 8300000, guid: ba715831edda5c6e828eec509aaf06fa, type: 3}
+  - id: bgm_opening_road
+    clip: {fileID: 8300000, guid: 88b8df6b7b925468bfaa5a67256a3af0, type: 3}
+  - id: bgm_title
+    clip: {fileID: 8300000, guid: 73691b0ef8be5cc799d26d95d50076a8, type: 3}
+  - id: sfx_combat_hit_feedback
+    clip: {fileID: 8300000, guid: e8c9fb5d1d1755d5bde2c567e52bba56, type: 3}
+  - id: sfx_combat_hit_ink
+    clip: {fileID: 8300000, guid: c0043380630858febe76c203f4320e45, type: 3}
+  - id: sfx_combat_hit_metal
+    clip: {fileID: 8300000, guid: d1b77d58aa79512f9ee4f7c02f0a3c94, type: 3}
+  - id: sfx_combat_missile_flight
+    clip: {fileID: 8300000, guid: 3665e609c3f35be29ec4aa85c3827bc9, type: 3}
+  - id: sfx_items_equip
+    clip: {fileID: 8300000, guid: 47c85eb4c96553d9bc74759bfb75e5ba, type: 3}
+  - id: sfx_items_ink_destroy
+    clip: {fileID: 8300000, guid: e695c93006e6503cb3597a1346ea5771, type: 3}
+  - id: sfx_items_pigment_pickup
+    clip: {fileID: 8300000, guid: f16439ee53ce59038d812b9247353fc0, type: 3}
+  - id: sfx_items_stamp
+    clip: {fileID: 8300000, guid: 511b5d7191f55a1da813929032a1f236, type: 3}
+  - id: sfx_items_unlock
+    clip: {fileID: 8300000, guid: 110a885275ef552f8ee994bdb89f301e, type: 3}
+  - id: sfx_monster_barrel_explosion
+    clip: {fileID: 8300000, guid: 50bd7e134ba35bb3957806a02528231c, type: 3}
+  - id: sfx_monster_barrel_hurt_01
+    clip: {fileID: 8300000, guid: 7dc364fbcc4a486bb33953c11949d1a0, type: 3}
+  - id: sfx_monster_barrel_hurt_02
+    clip: {fileID: 8300000, guid: b1560d3db10d4644ba9e8ae8c99e5fe2, type: 3}
+  - id: sfx_monster_broom_stalker_attack
+    clip: {fileID: 8300000, guid: dfff61b4b3185c66aaa5bf65727cad1e, type: 3}
+  - id: sfx_monster_broom_stalker_hurt
+    clip: {fileID: 8300000, guid: 0178961b69d5475c9c6f712685f6672e, type: 3}
+  - id: sfx_monster_clock_chain
+    clip: {fileID: 8300000, guid: c22f87b875d25f58af025d9ee85b8563, type: 3}
+  - id: sfx_monster_clock_fist
+    clip: {fileID: 8300000, guid: 47ec339b825752cb8173ed8bbf6f4ebe, type: 3}
+  - id: sfx_monster_clock_hurt
+    clip: {fileID: 8300000, guid: f76434ef328b44fcb87a4d9ed8fdf31b, type: 3}
+  - id: sfx_monster_clock_mixer
+    clip: {fileID: 8300000, guid: e8843e181a955766a4304b1cd8f22b75, type: 3}
+  - id: sfx_monster_clock_needle
+    clip: {fileID: 8300000, guid: b0b35a368f445aff8573f9bf4d72198c, type: 3}
+  - id: sfx_monster_millstone_charge
+    clip: {fileID: 8300000, guid: 8c0ffb4884974b69ac2112babdbd9b85, type: 3}
+  - id: sfx_monster_thorn_root_attack
+    clip: {fileID: 8300000, guid: 09887d64a8545405a17da1f73e22fac0, type: 3}
+  - id: sfx_monster_thorn_root_hurt
+    clip: {fileID: 8300000, guid: 5de581bd70b04cd5aac2dad0e6f59aa5, type: 3}
+  - id: sfx_monster_well_erupt
+    clip: {fileID: 8300000, guid: 75e549720afa593fb5d4e6712765ab36, type: 3}
+  - id: sfx_monster_well_hook
+    clip: {fileID: 8300000, guid: 77b9c65e67d5522cb98ca969861700ed, type: 3}
+  - id: sfx_monster_well_slash
+    clip: {fileID: 8300000, guid: 8a481afb59775e7fa4d2604e7782127f, type: 3}
+  - id: sfx_player_dash
+    clip: {fileID: 8300000, guid: ca535b5a9893407bb87b0bcccbb5fa75, type: 3}
+  - id: sfx_player_double_jump
+    clip: {fileID: 8300000, guid: be4d54f085d34bf29896f18bcedd08c2, type: 3}
+  - id: sfx_player_hurt
+    clip: {fileID: 8300000, guid: 0e0bbc72565657f19a3b8365a03e91cf, type: 3}
+  - id: sfx_player_heal
+    clip: {fileID: 8300000, guid: 56da1e6b79a24c40921c1c32c403877e, type: 3}
+  - id: sfx_player_jump
+    clip: {fileID: 8300000, guid: be4d54f085d34bf29896f18bcedd08c2, type: 3}
+  - id: sfx_player_step_dirt
+    clip: {fileID: 8300000, guid: 54b06da38b3c53d5813e2a9411fbe2d3, type: 3}
+  - id: sfx_player_step_grass
+    clip: {fileID: 8300000, guid: 25d12485b3865869bf7ddf7730eb8b40, type: 3}
+  - id: sfx_player_step_stone
+    clip: {fileID: 8300000, guid: 7821ff60fb3c5c97ba21a892a4cc1379, type: 3}
+  - id: sfx_player_step_wood
+    clip: {fileID: 8300000, guid: 517145439c3d527d8d0750db6ff718d7, type: 3}
+  - id: sfx_player_wall_kick
+    clip: {fileID: 8300000, guid: a8fe8801f5045523872ee0a00c83b8b0, type: 3}
+  - id: sfx_special_bomb_movement
+    clip: {fileID: 8300000, guid: 5591eaf954be522c9c8caf598eaffe53, type: 3}
+  - id: sfx_story_collapse
+    clip: {fileID: 8300000, guid: dd9d860bd6235744889db21b904a2193, type: 3}
+  - id: sfx_story_game_over_bell
+    clip: {fileID: 8300000, guid: a3943d181c3a48dba858b8615099b9d5, type: 3}
+  - id: sfx_story_ink_awaken
+    clip: {fileID: 8300000, guid: 7d6e4d7a6db957dda5dc0e73f14f9cb7, type: 3}
+  - id: sfx_story_page_turn
+    clip: {fileID: 8300000, guid: 5e750d5264e35253afedfd55bc8620a5, type: 3}
+  - id: sfx_story_world_erase
+    clip: {fileID: 8300000, guid: de0e1600bd2d53249e8f9ea5a1b26b99, type: 3}
+  - id: sfx_ui_cancel
+    clip: {fileID: 8300000, guid: 03d9c402b0995248bb7d930e2bb9ad96, type: 3}
+  - id: sfx_ui_confirm
+    clip: {fileID: 8300000, guid: accf99f46c315834927452b018fa6cc7, type: 3}
+  - id: sfx_ui_dialogue_next
+    clip: {fileID: 8300000, guid: 7950201ab82250b3bfe9ac269b0cf118, type: 3}
+  - id: sfx_ui_inventory_open
+    clip: {fileID: 8300000, guid: 4384a521dea95330b91f21bc57c49197, type: 3}
+  - id: sfx_ui_reject
+    clip: {fileID: 8300000, guid: a63fc5977edd51e0906f5e357446d50e, type: 3}
+  - id: sfx_ui_resume
+    clip: {fileID: 8300000, guid: 5991c7b71e6c565faea8538e909ff128, type: 3}
+  - id: sfx_ui_station_open
+    clip: {fileID: 8300000, guid: cab1ca02a9b4548eb4581cf90f8f9344, type: 3}
+  - id: sfx_weapon_bomb_basic_cycle
+    clip: {fileID: 8300000, guid: 60fe33ca5fd55a5a8f4cbae64f8729bf, type: 3}
+  - id: sfx_weapon_hammer_contact
+    clip: {fileID: 8300000, guid: 397ba53b853351f785dac6602df94699, type: 3}
+  - id: sfx_weapon_launcher_basic_cycle
+    clip: {fileID: 8300000, guid: 83e4ad29fb79525abb8dc1e96b01fd3c, type: 3}
+  - id: sfx_weapon_shield_basic_cycle
+    clip: {fileID: 8300000, guid: b0fbc842fb345a83999ee97c96220809, type: 3}
+  - id: sfx_hit_dagger
+    clip: {fileID: 8300000, guid: bc7cd8f8a22c4dbab39da23b456d1ccc, type: 3}
+  - id: sfx_hit_greatsword
+    clip: {fileID: 8300000, guid: bc7cd8f8a22c4dbab39da23b456d1ccc, type: 3}
+  - id: sfx_hit_hammer
+    clip: {fileID: 8300000, guid: bc7cd8f8a22c4dbab39da23b456d1ccc, type: 3}
+  - id: sfx_hit_launcher_ball
+    clip: {fileID: 8300000, guid: bc7cd8f8a22c4dbab39da23b456d1ccc, type: 3}
+  - id: sfx_hit_launcher_laser
+    clip: {fileID: 8300000, guid: bc7cd8f8a22c4dbab39da23b456d1ccc, type: 3}
+  - id: sfx_hit_rapier
+    clip: {fileID: 8300000, guid: bc7cd8f8a22c4dbab39da23b456d1ccc, type: 3}
+  - id: sfx_hit_shield
+    clip: {fileID: 8300000, guid: bc7cd8f8a22c4dbab39da23b456d1ccc, type: 3}
+  - id: sfx_hit_shuriken
+    clip: {fileID: 8300000, guid: bc7cd8f8a22c4dbab39da23b456d1ccc, type: 3}
+  - id: sfx_hit_sword
+    clip: {fileID: 8300000, guid: bc7cd8f8a22c4dbab39da23b456d1ccc, type: 3}
+  - id: sfx_hit_unarmed
+    clip: {fileID: 8300000, guid: bc7cd8f8a22c4dbab39da23b456d1ccc, type: 3}
+  - id: sfx_hit_whip
+    clip: {fileID: 8300000, guid: bc7cd8f8a22c4dbab39da23b456d1ccc, type: 3}
+  - id: sfx_weapon_base_sword_basic_0
+    clip: {fileID: 8300000, guid: 64bdd4b14a05451c8acacfb8e4da91e4, type: 3}
+  - id: sfx_weapon_base_sword_basic_1
+    clip: {fileID: 8300000, guid: 581066a570b041debc6126d38e6a36e8, type: 3}
+  - id: sfx_weapon_base_sword_default
+    clip: {fileID: 8300000, guid: 0ec023c23f1c44898968ce177b5c3180, type: 3}
+  - id: sfx_weapon_base_sword_follow_up
+    clip: {fileID: 8300000, guid: 484d0ae124834f9b99767eea6a253705, type: 3}
+  - id: sfx_weapon_base_sword_movement
+    clip: {fileID: 8300000, guid: fc87f33f15d94a968aaa22874e6e33d2, type: 3}
+  - id: sfx_weapon_base_sword_range
+    clip: {fileID: 8300000, guid: 4490131b068a41699de2eba456c58c76, type: 3}
+  - id: sfx_weapon_bomb_basic_0
+    clip: {fileID: 8300000, guid: 71e583e5e64b441ebcf94e59d1a3b1d3, type: 3}
+  - id: sfx_weapon_bomb_basic_special
+    clip: {fileID: 8300000, guid: 583db91c889847b7a2a7a7a456051462, type: 3}
+  - id: sfx_weapon_bomb_followup_special
+    clip: {fileID: 8300000, guid: 12124c4010574c2987a6454780318323, type: 3}
+  - id: sfx_weapon_bomb_move_special
+    clip: {fileID: 8300000, guid: 621a60ce284440929a45076b3be02352, type: 3}
+  - id: sfx_weapon_bomb_range_special
+    clip: {fileID: 8300000, guid: 00eaad2defe04e0ebd6735017d8e64b9, type: 3}
+  - id: sfx_weapon_dagger_basic_0
+    clip: {fileID: 8300000, guid: 8a436de049624e4e8891102c64a5a981, type: 3}
+  - id: sfx_weapon_dagger_basic_1
+    clip: {fileID: 8300000, guid: 137654824d4e42a2a96d3b2c26f58594, type: 3}
+  - id: sfx_weapon_dagger_basic_2
+    clip: {fileID: 8300000, guid: 3ee7ec45f2194b9da7781d8b8aef44f4, type: 3}
+  - id: sfx_weapon_dagger_basic_3
+    clip: {fileID: 8300000, guid: b0b5e798713943b79b6aa2fdb428912d, type: 3}
+  - id: sfx_weapon_dagger_default
+    clip: {fileID: 8300000, guid: 336c6e86a1154fc58ce1861a5a459a01, type: 3}
+  - id: sfx_weapon_dagger_follow_up
+    clip: {fileID: 8300000, guid: 5a4afd09b6044acfbee05b155af4672b, type: 3}
+  - id: sfx_weapon_dagger_movement
+    clip: {fileID: 8300000, guid: 5889f49e0e0d462aaae9bf099fb66b8a, type: 3}
+  - id: sfx_weapon_dagger_range
+    clip: {fileID: 8300000, guid: 56da112f6a2c4511bfc7d46609f7dd82, type: 3}
+  - id: sfx_weapon_greatsword_basic_0
+    clip: {fileID: 8300000, guid: 096a358585544f30b60c5122fa74239a, type: 3}
+  - id: sfx_weapon_greatsword_basic_1
+    clip: {fileID: 8300000, guid: e05b8228978c4130b344308e1dc13394, type: 3}
+  - id: sfx_weapon_greatsword_basic_2
+    clip: {fileID: 8300000, guid: f124e00a63894501ba2d86373c059c7c, type: 3}
+  - id: sfx_weapon_greatsword_default
+    clip: {fileID: 8300000, guid: 3a611d70f4644894872837ee0b95e7f6, type: 3}
+  - id: sfx_weapon_greatsword_follow_up
+    clip: {fileID: 8300000, guid: db6ad6ed58274cf4887b43f1d65c0c0a, type: 3}
+  - id: sfx_weapon_greatsword_movement
+    clip: {fileID: 8300000, guid: f29b4b5118ae485183b50d5e9b9db2d6, type: 3}
+  - id: sfx_weapon_greatsword_range
+    clip: {fileID: 8300000, guid: 8ec58cd5a2364ef9be2c705b9a9be710, type: 3}
+  - id: sfx_weapon_hammer_basic_0
+    clip: {fileID: 8300000, guid: f2ae239be39d44399a6a96a589e6b34b, type: 3}
+  - id: sfx_weapon_hammer_basic_1
+    clip: {fileID: 8300000, guid: d0d1beda2a6b45ccaa668fcdc4ab62d7, type: 3}
+  - id: sfx_weapon_hammer_default
+    clip: {fileID: 8300000, guid: 32ec9e74e48d488cba91e4183690c08a, type: 3}
+  - id: sfx_weapon_hammer_follow_up
+    clip: {fileID: 8300000, guid: 9128ca9cf2df4cd08d27c3366ba90819, type: 3}
+  - id: sfx_weapon_hammer_movement
+    clip: {fileID: 8300000, guid: 3262c9a482744516b85ed08987b6ce75, type: 3}
+  - id: sfx_weapon_hammer_range
+    clip: {fileID: 8300000, guid: f002bb01bd1541c98d8f466e3650349b, type: 3}
+  - id: sfx_weapon_launcher_basic_0
+    clip: {fileID: 8300000, guid: a1483ec7e1b14904868d855096492bac, type: 3}
+  - id: sfx_weapon_launcher_basic_special
+    clip: {fileID: 8300000, guid: 7b686ddc444b4ec7913d2764da3c107f, type: 3}
+  - id: sfx_weapon_launcher_followup_special
+    clip: {fileID: 8300000, guid: 2e8450e8e0de425aba295bd99e375a1f, type: 3}
+  - id: sfx_weapon_launcher_move_special
+    clip: {fileID: 8300000, guid: 391305526dbe4cbc8a113919763cac00, type: 3}
+  - id: sfx_weapon_launcher_range_special
+    clip: {fileID: 8300000, guid: 03ee97db1f4a43119a9682ea07fc0705, type: 3}
+  - id: sfx_weapon_rapier_basic_0
+    clip: {fileID: 8300000, guid: e1e0988a943c4e00ab60c1af723b8f10, type: 3}
+  - id: sfx_weapon_rapier_basic_1
+    clip: {fileID: 8300000, guid: 719d007bd4d8475f872852222b259751, type: 3}
+  - id: sfx_weapon_rapier_basic_2
+    clip: {fileID: 8300000, guid: aa8ceab4657646fb8b9c2a3d975eda4f, type: 3}
+  - id: sfx_weapon_rapier_default
+    clip: {fileID: 8300000, guid: 9c95e468532b4707acb12640d3176ab7, type: 3}
+  - id: sfx_weapon_rapier_follow_up
+    clip: {fileID: 8300000, guid: cf5af826ef774fa7b2354b84a688c093, type: 3}
+  - id: sfx_weapon_rapier_movement
+    clip: {fileID: 8300000, guid: 65f0e3ab23414d579afb303cc57555d0, type: 3}
+  - id: sfx_weapon_rapier_range
+    clip: {fileID: 8300000, guid: d96a5d33bb9748969c69647e41d4d5f2, type: 3}
+  - id: sfx_weapon_shield_basic_0
+    clip: {fileID: 8300000, guid: d6ec20115cd64a3f909638d7fc271e8e, type: 3}
+  - id: sfx_weapon_shield_default
+    clip: {fileID: 8300000, guid: d72c8781e3794108979450f46cfa0d46, type: 3}
+  - id: sfx_weapon_shield_follow_up
+    clip: {fileID: 8300000, guid: c6dd85733b84484ba1b0195d4117d849, type: 3}
+  - id: sfx_weapon_shield_movement
+    clip: {fileID: 8300000, guid: 07304068e67f4166b34075d9dd2e26ed, type: 3}
+  - id: sfx_weapon_shield_range
+    clip: {fileID: 8300000, guid: e1801b93ff3241c6b2e6cb0e76130e9d, type: 3}
+  - id: sfx_weapon_shuriken_basic_0
+    clip: {fileID: 8300000, guid: 9fc2ba19b1c5498da3f504214aaabaa8, type: 3}
+  - id: sfx_weapon_shuriken_basic_1
+    clip: {fileID: 8300000, guid: c1590cf162534cd3b3c9b3a425506fa1, type: 3}
+  - id: sfx_weapon_shuriken_basic_special
+    clip: {fileID: 8300000, guid: 7da33af0b91540df81261797e1bd164c, type: 3}
+  - id: sfx_weapon_shuriken_followup_special
+    clip: {fileID: 8300000, guid: 7e4db796415547e3a1b75db4646531a6, type: 3}
+  - id: sfx_weapon_shuriken_move_special
+    clip: {fileID: 8300000, guid: 04e059dff9d54435a757ba816cd930b0, type: 3}
+  - id: sfx_weapon_shuriken_range_special
+    clip: {fileID: 8300000, guid: 15c4c59cc6044ea2ad55b54045f1d4bc, type: 3}
+  - id: sfx_weapon_unarmed_basic_0
+    clip: {fileID: 8300000, guid: a7eedb765e354f7bb460ec871b5f769b, type: 3}
+  - id: sfx_weapon_unarmed_basic_1
+    clip: {fileID: 8300000, guid: d57c7db64be24d26a902598e3aa42842, type: 3}
+  - id: sfx_weapon_whip_basic_0
+    clip: {fileID: 8300000, guid: 1996f184c05a46e3922e2e159e215083, type: 3}
+  - id: sfx_weapon_whip_basic_1
+    clip: {fileID: 8300000, guid: a866727c9748491f9a8986920e384027, type: 3}
+  - id: sfx_weapon_whip_default
+    clip: {fileID: 8300000, guid: 87d21dd18a66495f9d71223f2b104676, type: 3}
+  - id: sfx_weapon_whip_follow_up
+    clip: {fileID: 8300000, guid: c2dcd435532d490ab9da212c5323ffac, type: 3}
+  - id: sfx_weapon_whip_movement
+    clip: {fileID: 8300000, guid: 4d0d56ce33584598936ce0f96ab0eae5, type: 3}
+  - id: sfx_weapon_whip_range
+    clip: {fileID: 8300000, guid: 76db43a9db1446878d0d631cadfa861c, type: 3}

@@ -1,0 +1,75 @@
+{
+  "format": "stage2-idle-breath-v1",
+  "id": "fused-idle-breath",
+  "name": "흑화 블루 · 들썩 대기",
+  "status": "user-approved-not-unity-integrated",
+  "canvas": [
+    384,
+    256
+  ],
+  "pivot": [
+    192,
+    232
+  ],
+  "repeat": true,
+  "totalMs": 1800,
+  "mood": "무겁고 느린 호흡",
+  "source": "../../../../monsters/stage-02/boss-phase3-redesign-20261107/runtime/idle/00.png",
+  "sourceSha256": "a4f09fa23c96c4f6f8a12a63478dccc0f8778db31a918d4fffa1237471de5984",
+  "cuts": {
+    "lowerLine": "knee",
+    "waistRow": 193,
+    "waistRemovalCost": 2,
+    "neckRow": 97,
+    "neckRemovalCost": 12
+  },
+  "method": "row deletion only: no resampling, redraw or new colours; rows below the waist line identical to the approved idle",
+  "frames": [
+    {
+      "file": "frames/00.png",
+      "durationMs": 300,
+      "shoulderDown": 0,
+      "headDown": 0,
+      "sha256": "a4f09fa23c96c4f6f8a12a63478dccc0f8778db31a918d4fffa1237471de5984"
+    },
+    {
+      "file": "frames/01.png",
+      "durationMs": 300,
+      "shoulderDown": 1,
+      "headDown": 1,
+      "sha256": "bae2bdb133e49cda56dcd04e05c468206f1ee5815b233b9e16905cf21175a7af"
+    },
+    {
+      "file": "frames/02.png",
+      "durationMs": 300,
+      "shoulderDown": 1,
+      "headDown": 2,
+      "sha256": "a05881878f8d03599f2d1e2ec64604a527bfc3ca274fd15260b94b817beac492"
+    },
+    {
+      "file": "frames/03.png",
+      "durationMs": 300,
+      "shoulderDown": 1,
+      "headDown": 2,
+      "sha256": "a05881878f8d03599f2d1e2ec64604a527bfc3ca274fd15260b94b817beac492"
+    },
+    {
+      "file": "frames/04.png",
+      "durationMs": 300,
+      "shoulderDown": 0,
+      "headDown": 1,
+      "sha256": "8eef201c7bfe37472527418607a40c37c2cb49c0a3afac682f47bc05fec5dbd1"
+    },
+    {
+      "file": "frames/05.png",
+      "durationMs": 300,
+      "shoulderDown": 0,
+      "headDown": 0,
+      "sha256": "a4f09fa23c96c4f6f8a12a63478dccc0f8778db31a918d4fffa1237471de5984"
+    }
+  ],
+  "approval": {
+    "date": "2026-11-07",
+    "user": "일단 채택할게"
+  }
+}

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>1챕터 전투방 설계</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>.terrain-lock{display:flex;align-items:center;gap:5px;padding:0 7px;color:#d9e4d6;font-size:11px;white-space:nowrap;cursor:pointer}.terrain-lock input{accent-color:#c6d48b}</style>
+  <style>.review .recommend-button{display:block;width:100%;margin-top:18px;background:#c6d48b;color:#1c2a26;font-weight:700;font-size:11px}.review .text-button{margin-top:12px}</style>
+</head>
+<body>
+  <header class="app-header">
+    <div class="identity"><span class="mark">LW</span><div><strong>1챕터 방 설계</strong><span id="headerRoom">숲의 이중 공터 · 전투방 01</span></div></div>
+    <div class="header-actions">
+      <a href="../chapter1-connector-editor/index.html" style="color:#cbdcc8;text-decoration:none;font-size:12px;padding:8px">길목 설계 보기</a>
+      <span class="saved" id="saveState">초안</span>
+      <button id="importButton" type="button">불러오기</button>
+      <button id="exportButton" class="primary" type="button">JSON 저장</button>
+      <input id="importFile" type="file" accept=".json,application/json" hidden>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <section class="editor">
+      <div class="section-head"><div><span class="kicker" id="roomNumber">ROOM 01 / COMBAT</span><h1 id="roomTitle">숲의 이중 공터</h1><p id="roomDescription">이어진 흙 언덕을 따라 중앙 전투면을 넘어가는 전투방</p></div><div class="metrics"><span><b id="platformCount">0</b> 지형</span><span><b id="monsterCount">0</b> 몬스터</span><span><b id="roomDimensions">32 × 18</b> 칸</span></div></div>
+      <nav class="room-tabs" id="roomTabs" aria-label="전투방 선택"></nav>
+
+      <div class="toolbar" role="toolbar" aria-label="방 편집 도구">
+        <div class="tool-group" id="toolGroup">
+          <button type="button" data-tool="select" class="active" title="선택하고 드래그해 이동">선택</button>
+          <button type="button" data-tool="wood" title="클릭해 나무 발판 추가">나무 발판</button>
+          <button type="button" data-tool="earth" title="클릭해 흙 지형 추가">흙 지형</button>
+          <button type="button" data-tool="ground" title="클릭해 지면 추가">지면</button>
+          <button type="button" data-tool="monster" title="클릭해 선택한 몬스터 추가">몬스터</button>
+        </div>
+        <select id="variantPicker" aria-label="ㄷ자 출입구 방향" hidden><option value="right">오른쪽 입구·출구</option><option value="left">왼쪽 입구·출구</option></select><select id="speciesPicker" aria-label="추가할 몬스터 종류"></select>
+        <label class="terrain-lock"><input id="terrainLock" type="checkbox" checked> 지형 잠금</label>
+        <span class="toolbar-spacer"></span>
+        <button id="undoButton" class="icon-button" type="button" title="되돌리기" aria-label="되돌리기">↶</button>
+        <button id="redoButton" class="icon-button" type="button" title="다시 실행" aria-label="다시 실행">↷</button>
+        <button id="deleteButton" class="icon-button" type="button" title="선택 항목 삭제" aria-label="선택 항목 삭제">⌫</button>
+        <span class="toolbar-divider"></span>
+        <button id="zoomOut" class="icon-button" type="button" title="축소" aria-label="축소">−</button>
+        <span id="zoomValue" class="zoom-label">맞춤</span>
+        <button id="zoomIn" class="icon-button" type="button" title="확대" aria-label="확대">+</button>
+        <button id="zoomFit" type="button">맞춤</button>
+      </div>
+
+      <div class="canvas-scroll" id="canvasScroll"><canvas id="room" width="1024" height="576" aria-label="편집 가능한 전투방 지형과 몬스터 배치"></canvas></div>
+      <div class="canvas-footer"><div class="legend"><span><i class="ground-dot"></i>지면·언덕</span><span><i class="wood-dot"></i>나무 발판</span><span><i class="monster-dot"></i>몬스터</span><span><i class="route-dot"></i>주 경로</span></div><label><input id="gridToggle" type="checkbox"> 격자</label></div>
+
+      <div class="room-notes"><div><span class="note-label">진입 / 탈출</span><strong id="noteRouteTitle">입구에서 출구로 이어지는 언덕</strong><p id="noteRouteBody">연속된 언덕을 따라 진행하며 전투하거나 적을 피해 통과할 수 있습니다.</p></div><div><span class="note-label">전투 구조</span><strong id="noteCombatTitle">왼쪽 진입 → 중앙 언덕 → 오른쪽 하강</strong><p id="noteCombatBody">전멸 동선은 한 번 올라간 뒤 오른쪽으로만 진행합니다.</p></div><div><span class="note-label">연결 규격</span><strong>방마다 입구·출구 위치 지정</strong><p>방 바깥 길목은 별도 제작하고 이 지점에 연결합니다.</p></div></div>
+    </section>
+
+    <aside class="sidebar">
+      <div class="sidebar-section"><div class="sidebar-title"><h2>선택 항목</h2><span id="selectionKind">선택 없음</span></div><div id="emptyInspector" class="empty-inspector">몬스터를 선택해 배치를 수정하세요.</div><div id="inspector" hidden><div class="fields" id="geometryFields"><label>X <input id="fieldX" type="number" min="0" max="32" step="0.5"></label><label>Y <input id="fieldY" type="number" min="0" max="27" step="0.5"></label><label>너비 <input id="fieldW" type="number" min="1" max="32" step="0.5"></label><label>높이 <input id="fieldH" type="number" min="0.5" max="27" step="0.5"></label></div><label id="speciesField" class="select-field" hidden>몬스터 종류<select id="fieldSpecies"></select></label><button id="inspectorDelete" class="danger" type="button">선택 항목 삭제</button></div></div>
+      <div class="sidebar-section"><div class="sidebar-title"><h2>몬스터 배치</h2><span id="encounterState">0 / 10</span></div><div id="roster" class="roster"></div></div>
+      <div class="sidebar-section review"><div class="sidebar-title"><h2>검토</h2><span id="reviewBadge">초안</span></div><ul id="checks"></ul><button id="recommendButton" class="recommend-button" type="button">순방향 몬스터 배치 적용</button><button id="resetButton" class="text-button" type="button">몬스터 처음 배치로 되돌리기</button></div>
+    </aside>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>

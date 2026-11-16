@@ -1,0 +1,326 @@
+{
+  "format": "stage2-absorption-cutscene-draft-v1",
+  "dialogueStatus": "user-revised-20261107",
+  "branches": {
+    "blue-first": {
+      "name": "블루 선행 · 기립 → 텔레포트 → 흡수",
+      "duration": 20.3,
+      "koEnd": 0.65,
+      "riseStart": 2.55,
+      "riseEnd": 4.35,
+      "teleportStart": 5.85,
+      "teleportEnd": 6.03,
+      "castStart": 6.15,
+      "captureStart": 7.05,
+      "absorbStart": 10,
+      "absorbEnd": 11.85,
+      "roarStart": 13.68,
+      "transformStart": 15.18,
+      "idleStart": 16.98,
+      "releaseStart": 19.6,
+      "dialogue": [
+        {
+          "id": "rose-worry",
+          "from": 0.8,
+          "to": 2.5,
+          "speaker": "rose",
+          "text": "야 괜찮아??",
+          "enter": "pop",
+          "fx": [
+            {
+              "fx": "bounce",
+              "match": "??"
+            }
+          ]
+        },
+        {
+          "id": "rose-retreat",
+          "from": 2.6,
+          "to": 5.85,
+          "speaker": "rose",
+          "text": "그래.. 이번엔 잠깐 물러나자.\n쟤 심상치 않아. 정비를 좀 하고"
+        },
+        {
+          "id": "rose-confused",
+          "from": 7.1,
+          "to": 7.9,
+          "speaker": "rose",
+          "text": "..?",
+          "enter": "pop",
+          "fx": [
+            {
+              "fx": "bounce",
+              "amp": 1.5
+            }
+          ]
+        },
+        {
+          "id": "rose-cliche",
+          "from": 9.3,
+          "to": 10.42,
+          "speaker": "rose",
+          "text": "에이..그런 뻔한 레퍼토리 아니지..?\n이건 진짜 재미없ㅇ",
+          "cps": 18,
+          "exit": {
+            "type": "fade",
+            "seconds": 0.6
+          }
+        },
+        {
+          "id": "blue-quiet",
+          "from": 11.95,
+          "to": 13.55,
+          "speaker": "blue",
+          "text": "...이제 좀 조용하군.",
+          "style": "dark",
+          "cps": 12
+        },
+        {
+          "id": "blue-rampage",
+          "from": 17.4,
+          "to": 19.5,
+          "speaker": "blue",
+          "text": "지금까지와는 다를거다.",
+          "style": "dark",
+          "cps": 14,
+          "quake": 2,
+          "fx": [
+            {
+              "fx": "tremble"
+            }
+          ]
+        }
+      ],
+      "cues": [
+        {
+          "time": 0,
+          "name": "블루 쓰러짐"
+        },
+        {
+          "time": 0.8,
+          "name": "로즈의 걱정"
+        },
+        {
+          "time": 2.55,
+          "name": "후퇴 제안·기립"
+        },
+        {
+          "time": 5.85,
+          "name": "텔레포트·제압"
+        },
+        {
+          "time": 6.15,
+          "name": "흡수 시전"
+        },
+        {
+          "time": 7.05,
+          "name": "석궁 낙하·붙잡힘"
+        },
+        {
+          "time": 9.3,
+          "name": "로즈의 농담"
+        },
+        {
+          "time": 10,
+          "name": "흡수"
+        },
+        {
+          "time": 11.95,
+          "name": "조용해짐"
+        },
+        {
+          "time": 13.68,
+          "name": "폭주"
+        },
+        {
+          "time": 15.18,
+          "name": "강화형 등장"
+        },
+        {
+          "time": 17.4,
+          "name": "폭주 뒤 한마디"
+        },
+        {
+          "time": 19.6,
+          "name": "3페이즈 진입"
+        }
+      ]
+    },
+    "rose-first": {
+      "name": "로즈 선행 · 쓰러짐 → 블루 착지 → 흡수",
+      "duration": 22.1,
+      "koEnd": 0.8,
+      "teleportStart": 2.55,
+      "teleportEnd": 2.7,
+      "landingStart": 2.7,
+      "landingEnd": 3.24,
+      "recoveryEnd": 4.52,
+      "castStart": 7,
+      "captureStart": 8.84,
+      "absorbStart": 11.81,
+      "absorbEnd": 13.66,
+      "roarStart": 15.48,
+      "transformStart": 16.98,
+      "idleStart": 18.78,
+      "releaseStart": 21.4,
+      "dialogue": [
+        {
+          "id": "rose-hurt",
+          "from": 0.85,
+          "to": 2.5,
+          "speaker": "rose",
+          "text": "아..아파...",
+          "cps": 12,
+          "fx": [
+            {
+              "fx": "tremble"
+            }
+          ]
+        },
+        {
+          "id": "rose-stall",
+          "from": 4.62,
+          "to": 6.95,
+          "speaker": "rose",
+          "text": "조금만 시간 끌어줘.\n내가 저 녀석 머리에 반드시 한 발 박아넣으",
+          "cps": 18
+        },
+        {
+          "id": "blue-refuse",
+          "from": 6.95,
+          "to": 8.2,
+          "speaker": "blue",
+          "text": "필요없어.",
+          "type": "instant",
+          "enter": "slam",
+          "cover": "rose-stall"
+        },
+        {
+          "id": "rose-scream",
+          "from": 8.9,
+          "to": 9.9,
+          "speaker": "rose",
+          "text": "아악!!!",
+          "enter": "slam",
+          "flash": true,
+          "quake": 3,
+          "fx": [
+            {
+              "fx": "shake",
+              "amp": 2
+            }
+          ]
+        },
+        {
+          "id": "rose-curse",
+          "from": 11.5,
+          "to": 12.28,
+          "speaker": "rose",
+          "text": "너..넌 반드시 내가 죽여",
+          "color": "#9c1430",
+          "fx": [
+            {
+              "fx": "tremble"
+            }
+          ],
+          "cps": 12,
+          "exit": {
+            "type": "fade",
+            "seconds": 0.34
+          }
+        },
+        {
+          "id": "blue-quiet",
+          "from": 13.75,
+          "to": 15.35,
+          "speaker": "blue",
+          "text": "...이제 좀 조용하군.",
+          "style": "dark",
+          "cps": 12
+        },
+        {
+          "id": "blue-rampage",
+          "from": 19.2,
+          "to": 21.3,
+          "speaker": "blue",
+          "text": "지금까지와는 다를거다.",
+          "style": "dark",
+          "cps": 14,
+          "quake": 2,
+          "fx": [
+            {
+              "fx": "tremble"
+            }
+          ]
+        }
+      ],
+      "cues": [
+        {
+          "time": 0,
+          "name": "로즈 쓰러짐"
+        },
+        {
+          "time": 0.85,
+          "name": "로즈의 신음"
+        },
+        {
+          "time": 2.55,
+          "name": "블루 사라짐"
+        },
+        {
+          "time": 2.7,
+          "name": "낙하·착지"
+        },
+        {
+          "time": 3.24,
+          "name": "착지 후 회복"
+        },
+        {
+          "time": 4.62,
+          "name": "시간 끌어 달라"
+        },
+        {
+          "time": 6.95,
+          "name": "블루가 말 끊기"
+        },
+        {
+          "time": 7,
+          "name": "흡수 시전"
+        },
+        {
+          "time": 8.84,
+          "name": "마력에 붙잡힘"
+        },
+        {
+          "time": 11.5,
+          "name": "로즈의 저주"
+        },
+        {
+          "time": 11.81,
+          "name": "흡수"
+        },
+        {
+          "time": 13.75,
+          "name": "조용해짐"
+        },
+        {
+          "time": 15.48,
+          "name": "폭주"
+        },
+        {
+          "time": 16.98,
+          "name": "강화형 등장"
+        },
+        {
+          "time": 19.2,
+          "name": "폭주 뒤 한마디"
+        },
+        {
+          "time": 21.4,
+          "name": "3페이즈 진입"
+        }
+      ],
+      "castEnd": 8.76
+    }
+  }
+}

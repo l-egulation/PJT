@@ -1,0 +1,75 @@
+{
+  "kind": "smoke-release-revision2",
+  "status": "pending; not applied",
+  "items": [
+    {
+      "id": "S4",
+      "label": "압력 분출 중심",
+      "file": "S4.wav",
+      "duration": 1,
+      "sha256": "e6b9d67e527c81dd9f8da044f63058db9533b84978a911b280286b7484802452",
+      "status": "pending",
+      "sources": [
+        {
+          "archiveEntry": "Explosion_Fire_Gas/gas_leak_med_burst_01.wav",
+          "sha256": "4b2aeb359ccc396720362515de3d3352db2718977694eedd43588efc88b6d4ff",
+          "start": 0.1,
+          "end": 1.1
+        },
+        {
+          "archiveEntry": "Whooshes/whoosh_low_deep_soft_01.wav",
+          "sha256": "6aa55bc4d6dc924c66c4621f84b80566aef64bbe31628408f1128b4c088f3f5d"
+        }
+      ],
+      "edit": {
+        "lowpass": 5200,
+        "highpass": 350,
+        "frontGain": 0.34,
+        "tailGain": 0.66,
+        "pressureDecaySeconds": 0.7,
+        "attackSeconds": 0.012,
+        "tailFadeSeconds": 0.2,
+        "noExplosion": true,
+        "noMechanicalSource": true,
+        "noSyntheticNoise": true
+      }
+    },
+    {
+      "id": "S5",
+      "label": "낮은 푸 강조",
+      "file": "S5.wav",
+      "duration": 1,
+      "sha256": "784b7cf58d4656ee5c8d4571c1e213b73a2192f16ead0016cedb2b13e70483ad",
+      "status": "pending",
+      "sources": [
+        {
+          "archiveEntry": "Explosion_Fire_Gas/gas_leak_long_burst_01.wav",
+          "sha256": "b9ae64a7184827191f8e453fd98f6abd7b138e2fae2157bd7d030a8e6a8302fa",
+          "start": 0.12,
+          "end": 1.12
+        },
+        {
+          "archiveEntry": "Whooshes/whoosh_low_deep_soft_02.wav",
+          "sha256": "833e5b5705f6bd13a4daea1bc407145502c6207eb80732e3e5b701cc59ac2dfa"
+        }
+      ],
+      "edit": {
+        "lowpass": 4300,
+        "highpass": 350,
+        "frontGain": 0.48,
+        "tailGain": 0.66,
+        "pressureDecaySeconds": 0.7,
+        "attackSeconds": 0.012,
+        "tailFadeSeconds": 0.2,
+        "noExplosion": true,
+        "noMechanicalSource": true,
+        "noSyntheticNoise": true
+      }
+    }
+  ],
+  "confirmedBomb": {
+    "file": "../focused-mixes-01/B3.wav",
+    "sha256": "822a47da3fe91fdce647b2196cb4103857468f142e35ae09c70bfdf7aa827af1"
+  },
+  "comparisonGapSeconds": 1
+}

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1→2페이즈 전환 컷씬</title>
+<link rel="stylesheet" href="../../../boss-phase2-cutscene-20261106/preview/cutscene.css">
+<main>
+  <header><div><span class="eyebrow">STAGE 02 / ROSE BLUE</span><h1>장치 파괴 → 2페이즈 컷씬</h1></div><span class="draft">HTML 연출 시안</span></header>
+  <p class="intro">중앙 장치가 부서지면 발판이 사라지고 바닥이 돌아옵니다. 플레이어는 지금 X 그대로 떨어져 착지하고, 남매가 바닥 양끝에 나타나 짧게 말을 주고받은 뒤 2페이즈가 시작됩니다.</p>
+  <p class="intro"><a href="../intro/" style="color:#b6d3f3">← 보스방 입장 컷씬</a>　<a href="../../../boss-phase2-cutscene-20261106/preview/" style="color:#b6d3f3">2페이즈 종료 흡수 컷씬 →</a></p>
+  <div class="stage"><canvas id="stage" width="960" height="540" tabindex="0" aria-label="1→2페이즈 전환 컷씬"></canvas><div id="error" role="alert" hidden></div></div>
+  <div class="playbar"><button id="play">재생</button><button id="restart">처음부터</button><label>속도 <select id="speed"><option value="0.5">0.5배</option><option value="1" selected>1배</option><option value="1.5">1.5배</option></select></label><label><input id="loop" type="checkbox"> 반복</label><span id="status" role="status">불러오는 중…</span></div>
+  <div class="seekbar"><input id="seek" type="range" min="0" max="11.6" step="0.01" value="0" aria-label="컷씬 시간"><output id="clock">0.00 / 11.60s</output></div>
+  <nav id="cues" aria-label="장면 바로 보기"></nav>
+  <p class="notes">Space 재생·정지 / ← → 0.1초 이동. 발판·장치·2페이즈 남매 위치는 main 의 chapter2_rose_blue_arena.json 좌표입니다. 전환 중 플레이어 피해 없음, HP 회복 없음. 대사는 1차 초안입니다.</p>
+  <details><summary>대사 바꿔서 보기</summary><p>문장을 바꾸면 해당 말풍선에 바로 반영됩니다. ‘대사 JSON 저장’으로 수정안을 남길 수 있어요.</p><div id="dialogues"></div><button id="export-dialogue">대사 JSON 저장</button></details>
+</main>
+<script type="module" src="phase-shift.js"></script>
+</html>

@@ -1,0 +1,119 @@
+{
+  "schema": "stage2-h3-slow-arc-impact-v1",
+  "status": "slow-charge-arc-impact-bubbling-puddle-approved-by-user",
+  "approval": "approved-by-user",
+  "output": "outputs/waterway/h3-slow-arc-impact-20261101",
+  "orbReturn": "outputs/waterway/h3-orb-return-20261101",
+  "bodyFloat": "outputs/waterway/h3-float-travel-20261101/B",
+  "impactGeneratedSource": "C:/Users/SSAFY/.codex/generated_images/01a18def-9c96-7602-bc0f-d707e8e958ed/exec-d94b35ed-14ad-4f28-abbb-dc3c33394925.png",
+  "impactGenerationPrompt": "outputs/waterway/h3-slow-arc-impact-20261101/impact-generation-prompt.txt",
+  "formationDurationsMs": [
+    100,
+    150,
+    200,
+    200,
+    200,
+    200,
+    250,
+    300
+  ],
+  "formationMs": 1600,
+  "flightMs": 1000,
+  "arcHeightPx": 90,
+  "startCenterWorld": [
+    372,
+    193
+  ],
+  "landingXWorld": 276,
+  "groundYWorld": 354,
+  "impactWidth": 80,
+  "impactCanvas": [
+    160,
+    64
+  ],
+  "impactAnchor": [
+    80,
+    52
+  ],
+  "pixelsPerUnit": 32,
+  "puddleWidthUnitsTrial": 3.5,
+  "puddleWidthPx": 112,
+  "puddleBubbleDurationsMs": [
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100
+  ],
+  "burstKeyDurationsMs": [
+    50,
+    50,
+    50,
+    50,
+    50,
+    50
+  ],
+  "puddleMs": 3000,
+  "fadeMs": 200,
+  "previewCycleMs": 6400,
+  "stepMs": 50,
+  "orbPaletteRgb": [
+    [
+      41,
+      37,
+      47
+    ],
+    [
+      128,
+      88,
+      110
+    ],
+    [
+      113,
+      130,
+      139
+    ],
+    [
+      217,
+      198,
+      171
+    ]
+  ],
+  "impactPaletteRgb": [
+    [
+      41,
+      37,
+      47
+    ],
+    [
+      128,
+      88,
+      110
+    ],
+    [
+      113,
+      130,
+      139
+    ]
+  ],
+  "bodyOffsetWorld": [
+    238,
+    94
+  ],
+  "whitePreviewCrop": [
+    200,
+    105,
+    485,
+    375
+  ],
+  "mapReference": "outputs/waterway/pixel-base-step1-20261031/references/C-game.png",
+  "combatReference": "data/combat/stage2_waterway_patterns.json",
+  "policy": "Reuse exact formation1-8 pixels retimed850->1600ms including300ms formed hold. Discard the source launch/tail poses for this version. Reuse complete orb for integer-position parabolic flight, then ground-contact ink rupture and the existing puddle direction. New static splash uses built-in image_gen, preserved raw/prompt and quantized to3 existing colors; derived nearest-neighbor impact keys are review effects. Body B16 and100ms timing remain unchanged. Puddle total width3.5units=112px at project PPU32 is a trial within user3-4units, with12 directly edited pixel bubble keys looping1200ms; it is not a radius. Arc geometry/1s flight/80px splash are illustration proposals, not game collision or damage implementation. Keep existing3s puddle trial and do not add explosion damage."
+}

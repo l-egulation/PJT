@@ -1,0 +1,3189 @@
+version: 1
+defaults:
+  duration: 2.0
+  steps: 8
+  seed: -1
+delivery:
+  root: AudioWork
+  sample_rate: 48000
+  peak_db: -16.0
+sfx:
+- id: sfx_player_step_grass
+  name: 발걸음 · 풀·잔디 · 한 발
+  prompt: One very quiet soft shoe brushing short grass, delicate dry grass friction and tiny leaf rustle, no heavy
+    thud Close isolated game sound effect, dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Player
+    mode: oneshot
+    length: 0.12
+    unit_length: 0.16
+    pre_peak: 0.025
+    rms_db: -28.0
+    revision: movement-ui-v1
+    events: []
+    trigger: 'grounded && run 프레임 3/6 진입: 120ms/305ms, 매 360ms 반복'
+    evidence:
+    - unity/Assets/Deviant/Combat/Resources/CharacterV2/AnimationCatalog.json; resources/authoring/workbench/source/WeaponReference/확정11종_20261021/manifest.json
+    status: current
+    notes: 좌우 별도 긴 루프 불필요. 같은 모노 클립을 두 접촉에 재사용. 실제 표현 Elapsed와 형태/상태 리셋을 함께 따름. 정지·공중·대시·공격·사망 시 중단. 접촉 시각에서 JSON
+      foot_peak_offset_samples만큼 앞서 재생. 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.
+    foot_contacts:
+    - time: 0.12
+      gain: 1.0
+    - time: 0.305
+      gain: 0.96
+    foot_cycle: 0.36
+    regions: []
+  seed: 896966230
+  steps: 8
+- id: sfx_player_step_dirt
+  name: 발걸음 · 흙 · 한 발
+  prompt: One light cloth-boot step on compact dry dirt, small dull tap and fine sandy scuff Close isolated game
+    sound effect, dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Player
+    mode: oneshot
+    length: 0.12
+    unit_length: 0.16
+    pre_peak: 0.025
+    rms_db: -28.0
+    revision: movement-ui-v1
+    events: []
+    trigger: 'grounded && run 프레임 3/6 진입: 120ms/305ms, 매 360ms 반복'
+    evidence:
+    - unity/Assets/Deviant/Combat/Resources/CharacterV2/AnimationCatalog.json; resources/authoring/workbench/source/WeaponReference/확정11종_20261021/manifest.json
+    status: current
+    notes: 좌우 별도 긴 루프 불필요. 같은 모노 클립을 두 접촉에 재사용. 실제 표현 Elapsed와 형태/상태 리셋을 함께 따름. 정지·공중·대시·공격·사망 시 중단. 접촉 시각에서 JSON
+      foot_peak_offset_samples만큼 앞서 재생. 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.
+    foot_contacts:
+    - time: 0.12
+      gain: 1.0
+    - time: 0.305
+      gain: 0.96
+    foot_cycle: 0.36
+    regions: []
+  seed: 3546546657
+  steps: 8
+- id: sfx_player_step_stone
+  name: 발걸음 · 돌·석재 · 한 발
+  prompt: One light soft-soled boot contacting a stone floor, restrained dry stone tap Close isolated game sound
+    effect, dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Player
+    mode: oneshot
+    length: 0.12
+    unit_length: 0.16
+    pre_peak: 0.025
+    rms_db: -28.0
+    revision: movement-ui-v1
+    events: []
+    trigger: 'grounded && run 프레임 3/6 진입: 120ms/305ms, 매 360ms 반복'
+    evidence:
+    - unity/Assets/Deviant/Combat/Resources/CharacterV2/AnimationCatalog.json; resources/authoring/workbench/source/WeaponReference/확정11종_20261021/manifest.json
+    status: current
+    notes: 좌우 별도 긴 루프 불필요. 같은 모노 클립을 두 접촉에 재사용. 실제 표현 Elapsed와 형태/상태 리셋을 함께 따름. 정지·공중·대시·공격·사망 시 중단. 접촉 시각에서 JSON
+      foot_peak_offset_samples만큼 앞서 재생. 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.
+    foot_contacts:
+    - time: 0.12
+      gain: 1.0
+    - time: 0.305
+      gain: 0.96
+    foot_cycle: 0.36
+    regions: []
+  seed: 1145480844
+  steps: 8
+- id: sfx_player_step_wood
+  name: 발걸음 · 목재 · 한 발
+  prompt: One light soft-soled boot step on an old wooden plank, a short hollow wooden tap without a long creak
+    Close isolated game sound effect, dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Player
+    mode: oneshot
+    length: 0.12
+    unit_length: 0.16
+    pre_peak: 0.025
+    rms_db: -28.0
+    revision: movement-ui-v1
+    events: []
+    trigger: 'grounded && run 프레임 3/6 진입: 120ms/305ms, 매 360ms 반복'
+    evidence:
+    - unity/Assets/Deviant/Combat/Resources/CharacterV2/AnimationCatalog.json; resources/authoring/workbench/source/WeaponReference/확정11종_20261021/manifest.json
+    status: current
+    notes: 좌우 별도 긴 루프 불필요. 같은 모노 클립을 두 접촉에 재사용. 실제 표현 Elapsed와 형태/상태 리셋을 함께 따름. 정지·공중·대시·공격·사망 시 중단. 접촉 시각에서 JSON
+      foot_peak_offset_samples만큼 앞서 재생. 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.
+    foot_contacts:
+    - time: 0.12
+      gain: 1.0
+    - time: 0.305
+      gain: 0.96
+    foot_cycle: 0.36
+    regions: []
+  seed: 4171732095
+  steps: 8
+- id: sfx_player_jump
+  name: 첫 점프
+  prompt: One light cloth-clad jump takeoff, a tiny shoe scuff and soft fabric lift Close isolated game sound effect,
+    dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Player
+    mode: oneshot
+    length: 0.18
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: movement-ui-v1
+    events: []
+    trigger: 해당 실제 게임 이벤트
+    evidence:
+    - docs/design/combat/rules.md
+    status: current
+    notes: ' 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.'
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 2503221754
+  steps: 8
+- id: sfx_player_double_jump
+  name: 공중 두 번째 점프
+  prompt: One small airy ink puff and light cloth flick, a restrained upward magical impulse Close isolated game
+    sound effect, dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Player
+    mode: oneshot
+    length: 0.22
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: movement-ui-v1
+    events: []
+    trigger: 해당 실제 게임 이벤트
+    evidence:
+    - docs/design/combat/rules.md
+    status: current
+    notes: ' 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.'
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 3425131199
+  steps: 8
+- id: sfx_player_land
+  name: 착지
+  prompt: One soft-soled boot landing on dry ground, a compact dull tap and gentle cloth settle Close isolated game
+    sound effect, dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Player
+    mode: oneshot
+    length: 0.2
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: movement-ui-v1
+    events: []
+    trigger: 해당 실제 게임 이벤트
+    evidence:
+    - docs/design/combat/rules.md
+    status: current
+    notes: ' 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.'
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 246294467
+  steps: 8
+- id: sfx_player_dash
+  name: 대시
+  prompt: 'One extremely quick agile dash pass: a tight thin dry sss-shk air and fabric friction sweep, wispy high-mid
+    rustling strokes flowing into one sharp clean release. Nimble, light, fast and close, around 0.2 seconds for
+    the gesture with a clean silent tail. No low boom, no thud, no impact, no metallic ring, no footsteps, no voice,
+    music or background sound. A single isolated game movement sound effect.'
+  duration: 2.0
+  production:
+    category: Player
+    mode: oneshot
+    length: 0.2
+    unit_length: 0.16
+    pre_peak: 0.03
+    rms_db: -28.0
+    revision: dash-agile-friction-v2
+    events: []
+    trigger: 해당 실제 게임 이벤트
+    evidence:
+    - docs/design/combat/rules.md
+    status: current
+    notes: ' 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관. 사용자 요청: 짧고 날렵한 스스슥 질감. 무거운 저음과 충격을 제외하고
+      얇은 공기·옷감 마찰 중심.'
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 545861431
+  steps: 8
+- id: sfx_player_hurt
+  name: 플레이어 피격
+  prompt: One compact soft wet ink impact with a muted body thud, no vocalization Close isolated game sound effect,
+    dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Player
+    mode: oneshot
+    length: 0.24
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: combat-related-v1
+    events: []
+    trigger: 해당 실제 게임 이벤트
+    evidence:
+    - docs/design/combat/rules.md
+    status: current
+    notes: ' 전투 관련 후속 후보. 실제 사건에서 재생하는 한 번의 소리. 원본 최소 2초·포화 차단·피크 상한 -16dBFS.'
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 1773160539
+  steps: 8
+- id: sfx_player_death
+  name: 잉크 몸 사망
+  prompt: One small liquid ink body collapsing and scattering into droplets, dark soft splash Close isolated game
+    sound effect, dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Player
+    mode: oneshot
+    length: 0.6
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: combat-related-v1
+    events: []
+    trigger: 해당 실제 게임 이벤트
+    evidence:
+    - docs/design/combat/rules.md
+    status: current
+    notes: ' 전투 관련 후속 후보. 실제 사건에서 재생하는 한 번의 소리. 원본 최소 2초·포화 차단·피크 상한 -16dBFS.'
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 505521240
+  steps: 8
+- id: sfx_player_swap
+  name: 무기 교체
+  prompt: One quick paper fold followed by a soft ink click, compact and tactile Close isolated game sound effect,
+    dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Player
+    mode: oneshot
+    length: 0.22
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: combat-related-v1
+    events: []
+    trigger: 해당 실제 게임 이벤트
+    evidence:
+    - docs/design/combat/rules.md
+    status: current
+    notes: ' 전투 관련 후속 후보. 실제 사건에서 재생하는 한 번의 소리. 원본 최소 2초·포화 차단·피크 상한 -16dBFS.'
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 1936836949
+  steps: 8
+- id: sfx_player_fall_return
+  name: 낙사 복귀
+  prompt: One short descending airy sweep resolving into a soft ink splash Close isolated game sound effect, dry
+    short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Player
+    mode: oneshot
+    length: 0.45
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: movement-ui-v1
+    events: []
+    trigger: 해당 실제 게임 이벤트
+    evidence:
+    - docs/design/combat/rules.md
+    status: current
+    notes: ' 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.'
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 3089737802
+  steps: 8
+- id: sfx_weapon_base_sword_basic_cycle
+  name: 검 기본공격 · 1사이클
+  prompt: One medium steel blade slicing through air, clean dry midrange sword swish, no collision Close isolated
+    game sound effect, dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: cycle
+    length: 1.0
+    unit_length: 0.3
+    pre_peak: 0.1
+    rms_db: -28.0
+    revision: basic-sword-v2
+    events:
+    - time: 0.2
+      gain: 1.0
+    - time: 0.6
+      gain: 1.0
+    trigger: 최단 기본 연계 검수 / 런타임은 각 타 영역을 해당 타 모션 시작에 재생
+    evidence:
+    - docs/development/presentation/audio/basic-attack-audio-timing.md
+    status: current
+    notes: 검만 재제작. 2초 AI 원본에서 정상 휘두름을 추출하고 200/600ms 피크로 합성. 원본 포화 0.1% 초과 시 실패. 완성 길이 1초, 피크 상한 -16dBFS, 발음 구간
+      RMS 목표 -28dBFS. 실제 적중음 없음.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions:
+    - hit: 1
+      start: 0.0
+      end: 0.4
+      peak: 0.2
+      local_peak: 0.2
+    - hit: 2
+      start: 0.4
+      end: 1.0
+      peak: 0.6000000000000001
+      local_peak: 0.2
+  seed: 2570958268
+  steps: 8
+- id: sfx_weapon_rapier_basic_cycle
+  name: 레이피어 기본공격 · 1사이클
+  prompt: One slender steel rapier thrust through air, thin fast bright swish, no collision Close isolated game
+    sound effect, dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: cycle
+    length: 0.8
+    unit_length: 0.3
+    pre_peak: 0.1
+    rms_db: -28.0
+    revision: basic-attacks-v2
+    events:
+    - time: 0.1
+      gain: 1.0
+    - time: 0.32
+      gain: 1.0
+    - time: 0.56
+      gain: 1.0
+    trigger: 최단 기본 연계 검수 / 런타임은 각 타 영역을 해당 타 모션 시작에 재생
+    evidence:
+    - docs/development/presentation/audio/basic-attack-audio-timing.md
+    status: current
+    notes: 공속 ×1 기본값. 실제 명중음 없음. 입력 대기·취소 시 전체 사이클 예약 금지. JSON regions로 한 WAV의 타별 영역 사용. 시간표의 판정 기준에 피크를 정렬한 제작
+      후보이며 시각 휘두름 시작은 인게임 최종 확인 필요. 2초 원본·포화 검사 적용. 피크 상한 -16dBFS, 발음 구간 RMS 목표 -28dBFS. 각 타 영역 이전으로 소리 시작이 넘어가지
+      않도록 어택을 제한.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions:
+    - hit: 1
+      start: 0.0
+      end: 0.22
+      peak: 0.1
+      local_peak: 0.1
+    - hit: 2
+      start: 0.22
+      end: 0.44
+      peak: 0.32
+      local_peak: 0.1
+    - hit: 3
+      start: 0.44
+      end: 0.8
+      peak: 0.56
+      local_peak: 0.12
+  seed: 2570958268
+  steps: 8
+- id: sfx_weapon_dagger_basic_cycle
+  name: 한손 단검 기본공격 · 1사이클
+  prompt: One tiny short dagger air cut, very fast tight soft blade flick, no collision Close isolated game sound
+    effect, dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: cycle
+    length: 1.0
+    unit_length: 0.3
+    pre_peak: 0.1
+    rms_db: -28.0
+    revision: basic-attacks-v2
+    events:
+    - time: 0.045
+      gain: 1.0
+    - time: 0.21000000000000002
+      gain: 1.0
+    - time: 0.43000000000000005
+      gain: 1.0
+    - time: 0.8450000000000001
+      gain: 1.0
+    trigger: 최단 기본 연계 검수 / 런타임은 각 타 영역을 해당 타 모션 시작에 재생
+    evidence:
+    - docs/development/presentation/audio/basic-attack-audio-timing.md
+    status: current
+    notes: 공속 ×1 기본값. 실제 명중음 없음. 입력 대기·취소 시 전체 사이클 예약 금지. JSON regions로 한 WAV의 타별 영역 사용. 시간표의 판정 기준에 피크를 정렬한 제작
+      후보이며 시각 휘두름 시작은 인게임 최종 확인 필요. 2초 원본·포화 검사 적용. 피크 상한 -16dBFS, 발음 구간 RMS 목표 -28dBFS. 각 타 영역 이전으로 소리 시작이 넘어가지
+      않도록 어택을 제한.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions:
+    - hit: 1
+      start: 0.0
+      end: 0.165
+      peak: 0.045
+      local_peak: 0.045
+    - hit: 2
+      start: 0.165
+      end: 0.33
+      peak: 0.21000000000000002
+      local_peak: 0.045
+    - hit: 3
+      start: 0.33
+      end: 0.5900000000000001
+      peak: 0.43000000000000005
+      local_peak: 0.1
+    - hit: 4
+      start: 0.5900000000000001
+      end: 1.0
+      peak: 0.8450000000000001
+      local_peak: 0.255
+  seed: 2570958268
+  steps: 8
+- id: sfx_weapon_hammer_basic_cycle
+  name: 망치 기본공격 · 1사이클
+  prompt: One heavy hammer head sweeping through air, low compact weighty whoosh, no collision Close isolated game
+    sound effect, dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: cycle
+    length: 1.0899999999999999
+    unit_length: 0.3
+    pre_peak: 0.1
+    rms_db: -28.0
+    revision: basic-attacks-v2
+    events:
+    - time: 0.21
+      gain: 1.0
+    - time: 0.6599999999999999
+      gain: 1.0
+    trigger: 최단 기본 연계 검수 / 런타임은 각 타 영역을 해당 타 모션 시작에 재생
+    evidence:
+    - docs/development/presentation/audio/basic-attack-audio-timing.md
+    status: current
+    notes: 공속 ×1 기본값. 실제 명중음 없음. 입력 대기·취소 시 전체 사이클 예약 금지. JSON regions로 한 WAV의 타별 영역 사용. 시간표의 판정 기준에 피크를 정렬한 제작
+      후보이며 시각 휘두름 시작은 인게임 최종 확인 필요. 2초 원본·포화 검사 적용. 피크 상한 -16dBFS, 발음 구간 RMS 목표 -28dBFS. 각 타 영역 이전으로 소리 시작이 넘어가지
+      않도록 어택을 제한.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions:
+    - hit: 1
+      start: 0.0
+      end: 0.37
+      peak: 0.21
+      local_peak: 0.21
+    - hit: 2
+      start: 0.37
+      end: 1.0899999999999999
+      peak: 0.6599999999999999
+      local_peak: 0.29
+  seed: 2570958268
+  steps: 8
+- id: sfx_weapon_shield_basic_cycle
+  name: 방패 기본공격 · 1사이클
+  prompt: A single heavy iron-reinforced wooden shield bash with the weight of a large war hammer blow. One powerful
+    compact low wooden thud and a dense blunt iron knock, deep chesty body resonance with a short tight metal rim
+    rattle. Strong substantial physical weight, no tiny bright click, no ringing bell, no cinematic explosion, no
+    music or speech. Close dry isolated game sound effect.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: cycle
+    length: 0.6
+    unit_length: 0.42
+    pre_peak: 0.12
+    rms_db: -28.0
+    revision: shield-heavy-hammer-v4
+    events:
+    - time: 0.25
+      gain: 1.0
+    trigger: 최단 기본 연계 검수 / 런타임은 각 타 영역을 해당 타 모션 시작에 재생
+    evidence:
+    - docs/development/presentation/audio/basic-attack-audio-timing.md
+    status: current
+    notes: '공속 ×1 기본값. 실제 명중음 없음. 입력 대기·취소 시 전체 사이클 예약 금지. JSON regions로 한 WAV의 타별 영역 사용. 시간표의 판정 기준에 피크를 정렬한 제작
+      후보이며 시각 휘두름 시작은 인게임 최종 확인 필요. 2초 원본·포화 검사 적용. 피크 상한 -16dBFS, 발음 구간 RMS 목표 -28dBFS. 각 타 영역 이전으로 소리 시작이 넘어가지
+      않도록 어택을 제한. 사용자 요청: 망치 한 방처럼 묵직하고 강한 방패 배시. 음량 상한은 유지하고 저중역의 단단한 질감과 짧은 공명을 강화.'
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions:
+    - hit: 1
+      start: 0.0
+      end: 0.6
+      peak: 0.25
+      local_peak: 0.25
+  seed: 2188390375
+  steps: 8
+- id: sfx_weapon_greatsword_basic_cycle
+  name: 대검 기본공격 · 1사이클
+  prompt: One large heavy two handed steel greatsword cutting through air with substantial momentum, a deep broad
+    rushing blade whoosh, gritty low metallic shimmer and a short cloth grip movement. Weighty and controlled, no
+    sword collision, no explosion, no music or speech, dry isolated game sound.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: cycle
+    length: 1.23
+    unit_length: 0.42
+    pre_peak: 0.16
+    rms_db: -28.0
+    revision: basic-attacks-tone-v3
+    events:
+    - time: 0.21
+      gain: 1.0
+    - time: 0.45999999999999996
+      gain: 1.0
+    - time: 0.9299999999999999
+      gain: 1.0
+    trigger: 최단 기본 연계 검수 / 런타임은 각 타 영역을 해당 타 모션 시작에 재생
+    evidence:
+    - docs/development/presentation/audio/basic-attack-audio-timing.md
+    status: current
+    notes: 공속 ×1 기본값. 실제 명중음 없음. 입력 대기·취소 시 전체 사이클 예약 금지. JSON regions로 한 WAV의 타별 영역 사용. 시간표의 판정 기준에 피크를 정렬한 제작
+      후보이며 시각 휘두름 시작은 인게임 최종 확인 필요. 2초 원본·포화 검사 적용. 피크 상한 -16dBFS, 발음 구간 RMS 목표 -28dBFS. 각 타 영역 이전으로 소리 시작이 넘어가지
+      않도록 어택을 제한.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions:
+    - hit: 1
+      start: 0.0
+      end: 0.36
+      peak: 0.21
+      local_peak: 0.21
+    - hit: 2
+      start: 0.36
+      end: 0.6499999999999999
+      peak: 0.45999999999999996
+      local_peak: 0.1
+    - hit: 3
+      start: 0.6499999999999999
+      end: 1.23
+      peak: 0.9299999999999999
+      local_peak: 0.28
+  seed: 3447471663
+  steps: 8
+- id: sfx_weapon_launcher_basic_cycle
+  name: 발사기 볼 탄환 기본공격 · 1사이클
+  prompt: One compact mechanical ink ball launcher pop, short pneumatic punch, no explosion Close isolated game
+    sound effect, dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: cycle
+    length: 0.4
+    unit_length: 0.3
+    pre_peak: 0.1
+    rms_db: -28.0
+    revision: basic-attacks-v2
+    events:
+    - time: 0.12
+      gain: 1.0
+    trigger: 발사/투척 모션 시작; 타별 영역 사용
+    evidence:
+    - docs/development/presentation/audio/basic-attack-audio-timing.md
+    status: current
+    notes: 폭발·명중·비행시간은 포함하지 않음. 샷건은 동시 한 발사음. 공속 ×1. 2초 원본·포화 검사 적용. 피크 상한 -16dBFS, 발음 구간 RMS 목표 -28dBFS. 각 타 영역
+      이전으로 소리 시작이 넘어가지 않도록 어택을 제한.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions:
+    - hit: 1
+      start: 0.0
+      end: 0.4
+      peak: 0.12
+      local_peak: 0.12
+  seed: 2570958268
+  steps: 8
+- id: sfx_weapon_bomb_basic_cycle
+  name: 폭탄 투척 기본공격 · 1사이클
+  prompt: One compact hand throwing a small heavy object, cloth flick and short air whoosh, no explosion Close isolated
+    game sound effect, dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: cycle
+    length: 0.9
+    unit_length: 0.3
+    pre_peak: 0.1
+    rms_db: -28.0
+    revision: basic-attacks-v2
+    events:
+    - time: 0.2
+      gain: 1.0
+    trigger: 발사/투척 모션 시작; 타별 영역 사용
+    evidence:
+    - docs/development/presentation/audio/basic-attack-audio-timing.md
+    status: current
+    notes: 폭발·명중·비행시간은 포함하지 않음. 샷건은 동시 한 발사음. 공속 ×1. 2초 원본·포화 검사 적용. 피크 상한 -16dBFS, 발음 구간 RMS 목표 -28dBFS. 각 타 영역
+      이전으로 소리 시작이 넘어가지 않도록 어택을 제한.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions:
+    - hit: 1
+      start: 0.0
+      end: 0.9
+      peak: 0.2
+      local_peak: 0.2
+  seed: 2570958268
+  steps: 8
+- id: sfx_weapon_shuriken_basic_cycle
+  name: 수리검 기본공격 · 1사이클
+  prompt: One small spinning steel throwing star release, light tight metallic air flick, no impact Close isolated
+    game sound effect, dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: cycle
+    length: 0.6
+    unit_length: 0.3
+    pre_peak: 0.1
+    rms_db: -28.0
+    revision: basic-attacks-v2
+    events:
+    - time: 0.1
+      gain: 1.0
+    - time: 0.37
+      gain: 1.0
+    trigger: 발사/투척 모션 시작; 타별 영역 사용
+    evidence:
+    - docs/development/presentation/audio/basic-attack-audio-timing.md
+    status: current
+    notes: 폭발·명중·비행시간은 포함하지 않음. 샷건은 동시 한 발사음. 공속 ×1. 2초 원본·포화 검사 적용. 피크 상한 -16dBFS, 발음 구간 RMS 목표 -28dBFS. 각 타 영역
+      이전으로 소리 시작이 넘어가지 않도록 어택을 제한.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions:
+    - hit: 1
+      start: 0.0
+      end: 0.25
+      peak: 0.1
+      local_peak: 0.1
+    - hit: 2
+      start: 0.25
+      end: 0.6
+      peak: 0.37
+      local_peak: 0.12
+  seed: 2570958268
+  steps: 8
+- id: sfx_weapon_launcher_laser_basic_cycle
+  name: 발사기 레이저 기본공격 · 1사이클
+  prompt: One short focused magical laser discharge, crisp bright electric zap with clean decay, not a sustained
+    beam Close isolated game sound effect, dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: cycle
+    length: 0.6
+    unit_length: 0.3
+    pre_peak: 0.1
+    rms_db: -28.0
+    revision: basic-attacks-v2
+    events:
+    - time: 0.15
+      gain: 1.0
+    trigger: 발사/투척 모션 시작; 타별 영역 사용
+    evidence:
+    - docs/development/presentation/audio/basic-attack-audio-timing.md
+    status: current
+    notes: 폭발·명중·비행시간은 포함하지 않음. 샷건은 동시 한 발사음. 공속 ×1. 2초 원본·포화 검사 적용. 피크 상한 -16dBFS, 발음 구간 RMS 목표 -28dBFS. 각 타 영역
+      이전으로 소리 시작이 넘어가지 않도록 어택을 제한.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions:
+    - hit: 1
+      start: 0.0
+      end: 0.6
+      peak: 0.15
+      local_peak: 0.15
+  seed: 2570958268
+  steps: 8
+- id: sfx_weapon_launcher_shotgun_basic_cycle
+  name: 발사기 샷건 기본공격 · 1사이클
+  prompt: One simultaneous wide shotgun blast, one single compact punch, not five sequential shots Close isolated
+    game sound effect, dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: cycle
+    length: 0.8
+    unit_length: 0.3
+    pre_peak: 0.1
+    rms_db: -28.0
+    revision: basic-attacks-v2
+    events:
+    - time: 0.15
+      gain: 1.0
+    trigger: 발사/투척 모션 시작; 타별 영역 사용
+    evidence:
+    - docs/development/presentation/audio/basic-attack-audio-timing.md
+    status: current
+    notes: 폭발·명중·비행시간은 포함하지 않음. 샷건은 동시 한 발사음. 공속 ×1. 2초 원본·포화 검사 적용. 피크 상한 -16dBFS, 발음 구간 RMS 목표 -28dBFS. 각 타 영역
+      이전으로 소리 시작이 넘어가지 않도록 어택을 제한.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions:
+    - hit: 1
+      start: 0.0
+      end: 0.8
+      peak: 0.15
+      local_peak: 0.15
+  seed: 2570958268
+  steps: 8
+- id: sfx_weapon_launcher_grenade_basic_cycle
+  name: 발사기 유탄·파편 기본공격 · 1사이클
+  prompt: One small grenade launcher firing, hollow mechanical thunk and short air puff, no explosion Close isolated
+    game sound effect, dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: cycle
+    length: 1.0
+    unit_length: 0.3
+    pre_peak: 0.1
+    rms_db: -28.0
+    revision: basic-attacks-v2
+    events:
+    - time: 0.2
+      gain: 1.0
+    trigger: 발사/투척 모션 시작; 타별 영역 사용
+    evidence:
+    - docs/development/presentation/audio/basic-attack-audio-timing.md
+    status: current
+    notes: 폭발·명중·비행시간은 포함하지 않음. 샷건은 동시 한 발사음. 공속 ×1. 2초 원본·포화 검사 적용. 피크 상한 -16dBFS, 발음 구간 RMS 목표 -28dBFS. 각 타 영역
+      이전으로 소리 시작이 넘어가지 않도록 어택을 제한.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions:
+    - hit: 1
+      start: 0.0
+      end: 1.0
+      peak: 0.2
+      local_peak: 0.2
+  seed: 2570958268
+  steps: 8
+- id: sfx_special_base_sword_default
+  name: 검 · 강베기
+  prompt: One forceful broad steel sword air slash, weighty clean attack Close isolated game sound effect, dry short
+    decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.32
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: melee-specials-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 효과 발생 이벤트
+    evidence:
+    - data/combat/melee_weapon_design.json
+    status: current
+    notes: 기준 activation=0.3s, motion_end=0.7s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용
+      단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 3413880565
+  steps: 8
+- id: sfx_special_base_sword_range
+  name: 검 · 검기
+  prompt: One thin magical ink blade released through air, sharp papery energy swish Close isolated game sound effect,
+    dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.32
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: melee-specials-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 효과 발생 이벤트
+    evidence:
+    - data/combat/melee_weapon_design.json
+    status: current
+    notes: 기준 activation=0.2s, motion_end=0.5s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용
+      단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 2643276672
+  steps: 8
+- id: sfx_special_base_sword_movement
+  name: 검 · 돌진 찌르기
+  prompt: One fast forward sword thrust, cloth dash and tight blade swish Close isolated game sound effect, dry
+    short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.32
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: melee-specials-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 효과 발생 이벤트
+    evidence:
+    - data/combat/melee_weapon_design.json
+    status: current
+    notes: 기준 activation=0.15s, motion_end=0.6s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의
+      재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 1705166291
+  steps: 8
+- id: sfx_special_base_sword_follow_up
+  name: 검 · 잔상
+  prompt: One light spectral steel afterimage slash, airy soft doubled texture without repeated strikes Close isolated
+    game sound effect, dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.32
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: melee-specials-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 효과 발생 이벤트
+    evidence:
+    - data/combat/melee_weapon_design.json
+    status: current
+    notes: 기준 activation=0.2s, motion_end=0.5s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용
+      단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 3241555283
+  steps: 8
+- id: sfx_special_rapier_default
+  name: 레이피어 · 모아찌르기
+  prompt: One focused charged rapier thrust, narrow sharp steel air stab Close isolated game sound effect, dry short
+    decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.32
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: melee-specials-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 효과 발생 이벤트
+    evidence:
+    - data/combat/melee_weapon_design.json
+    status: current
+    notes: 기준 activation=0.2s, motion_end=0.53s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의
+      재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 590012765
+  steps: 8
+- id: sfx_special_rapier_range
+  name: 레이피어 · 장침
+  prompt: One long thin spectral needle launched, fine metallic air hiss Close isolated game sound effect, dry short
+    decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.32
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: melee-specials-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 효과 발생 이벤트
+    evidence:
+    - data/combat/melee_weapon_design.json
+    status: current
+    notes: 기준 activation=0.3s, motion_end=0.7s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용
+      단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 774391182
+  steps: 8
+- id: sfx_special_rapier_movement
+  name: 레이피어 · 흘려찌르기
+  prompt: One tiny teleport air fold followed by a delicate blade flick Close isolated game sound effect, dry short
+    decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.32
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: melee-specials-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 효과 발생 이벤트
+    evidence:
+    - data/combat/melee_weapon_design.json
+    status: current
+    notes: 기준 activation=0.1s, motion_end=0.45s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의
+      재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 3559581896
+  steps: 8
+- id: sfx_special_rapier_follow_up
+  name: 레이피어 · 섬광 연침
+  prompt: One extremely short brilliant rapier air thrust, fine crisp steel flick Close isolated game sound effect,
+    dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.32
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: melee-specials-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 효과 발생 이벤트
+    evidence:
+    - data/combat/melee_weapon_design.json
+    status: current
+    notes: 기준 activation=0.1s, motion_end=0.95s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의
+      재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 1847675457
+  steps: 8
+- id: sfx_special_dagger_default
+  name: 한손 단검 · 숨죽이기
+  prompt: One quiet shadow hiding transition, soft inward ink and fabric whisper Close isolated game sound effect,
+    dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.32
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: melee-specials-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 효과 발생 이벤트
+    evidence:
+    - data/combat/melee_weapon_design.json
+    status: current
+    notes: 기준 activation=0.1s, motion_end=0.35s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의
+      재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 1204631589
+  steps: 8
+- id: sfx_special_dagger_range
+  name: 한손 단검 · 먹안개
+  prompt: 'One small smoke bomb deploying: a muted short pop immediately followed by a broad soft pressurized PFFFFSHHH
+    release, dry particulate air billowing outward and thinning into a smooth fading hiss. Clearly a smoke screen
+    blooming, no fiery blast or debris impacts, no magical chime, no voices or music. One isolated close game effect
+    with a clean decay.'
+  duration: 3.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.8
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: ink-smoke-bloom-v2
+    extraction: event
+    events: []
+    trigger: 먹안개가 실제 생성되는 150ms 발동 사건
+    evidence:
+    - data/combat/melee_weapon_design.json
+    status: current
+    notes: 연막탄처럼 퍼지는 공기·입자 방출. 피해 폭발음이 아니며 연막 3초의 전체 유지시간을 파일에 굽지 않는다.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 2821357472
+  steps: 8
+- id: sfx_special_dagger_movement
+  name: 한손 단검 · 삼연 도약
+  prompt: One short quick dagger dash, very tight low fabric and blade flick Close isolated game sound effect, dry
+    short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.32
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: melee-specials-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 효과 발생 이벤트
+    evidence:
+    - data/combat/melee_weapon_design.json
+    status: current
+    notes: 기준 activation=0.08s, motion_end=0.38s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의
+      재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 68377914
+  steps: 8
+- id: sfx_special_dagger_follow_up
+  name: 한손 단검 · 그림자 난무
+  prompt: One tiny dark spectral dagger slash, very fast dry air cut Close isolated game sound effect, dry short
+    decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.32
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: melee-specials-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 효과 발생 이벤트
+    evidence:
+    - data/combat/melee_weapon_design.json
+    status: current
+    notes: 기준 activation=0.15s, motion_end=0.95s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의
+      재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 1096213679
+  steps: 8
+- id: sfx_special_hammer_default
+  name: 망치 · 횡강타
+  prompt: One broad heavy hammer sweep, compact bass air rush Close isolated game sound effect, dry short decay,
+    no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.45
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: melee-specials-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 효과 발생 이벤트
+    evidence:
+    - data/combat/melee_weapon_design.json
+    status: current
+    notes: 기준 activation=0.4s, motion_end=0.95s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의
+      재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 3261740791
+  steps: 8
+- id: sfx_special_hammer_range
+  name: 망치 · 지축 강타
+  prompt: One short deep earth shock pulse, tight earthy thump with stone grains Close isolated game sound effect,
+    dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.45
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: melee-specials-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 효과 발생 이벤트
+    evidence:
+    - data/combat/melee_weapon_design.json
+    status: current
+    notes: 기준 activation=0.5s, motion_end=1.1s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용
+      단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 2551173008
+  steps: 8
+- id: sfx_special_hammer_movement
+  name: 망치 · 몰아치기
+  prompt: One heavy weapon rushing forward, short low cloth and air push Close isolated game sound effect, dry short
+    decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.45
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: melee-specials-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 효과 발생 이벤트
+    evidence:
+    - data/combat/melee_weapon_design.json
+    status: current
+    notes: 기준 activation=0.2s, motion_end=0.85s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의
+      재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 86175138
+  steps: 8
+- id: sfx_special_hammer_follow_up
+  name: 망치 · 여진
+  prompt: One compact ground aftershock, small low rumble and grit crack Close isolated game sound effect, dry short
+    decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.45
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: melee-specials-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 효과 발생 이벤트
+    evidence:
+    - data/combat/melee_weapon_design.json
+    status: current
+    notes: 기준 activation=0.4s, motion_end=0.9s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용
+      단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 1901303208
+  steps: 8
+- id: sfx_special_shield_default
+  name: 방패 · 받아치기
+  prompt: One shield raised into a ready position, firm short equipment clack, not a parry impact Close isolated
+    game sound effect, dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.32
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: melee-specials-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 효과 발생 이벤트
+    evidence:
+    - data/combat/melee_weapon_design.json
+    status: current
+    notes: 기준 activation=0s, motion_end=0.45s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용
+      단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 465029390
+  steps: 8
+- id: sfx_special_shield_range
+  name: 방패 · 수호막
+  prompt: One small magical guard barrier forming, soft glassy ink shimmer Close isolated game sound effect, dry
+    short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.32
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: melee-specials-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 효과 발생 이벤트
+    evidence:
+    - data/combat/melee_weapon_design.json
+    status: current
+    notes: 기준 activation=0.1s, motion_end=0.5s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용
+      단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 1566797553
+  steps: 8
+- id: sfx_special_shield_movement
+  name: 방패 · 방패 밀기
+  prompt: One solid shield air shove, blunt compact wooden and metal movement Close isolated game sound effect,
+    dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.32
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: melee-specials-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 효과 발생 이벤트
+    evidence:
+    - data/combat/melee_weapon_design.json
+    status: current
+    notes: 기준 activation=0.15s, motion_end=0.8s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의
+      재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 2640568618
+  steps: 8
+- id: sfx_special_shield_follow_up
+  name: 방패 · 미끼 방패
+  prompt: One wooden shield decoy materializing, small hollow wood clack and ink puff Close isolated game sound
+    effect, dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.32
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: melee-specials-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 효과 발생 이벤트
+    evidence:
+    - data/combat/melee_weapon_design.json
+    status: current
+    notes: 기준 activation=0.2s, motion_end=0.55s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의
+      재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 1455796743
+  steps: 8
+- id: sfx_special_greatsword_default
+  name: 대검 · 모아내려찍기
+  prompt: One massive two-handed blade downstroke, dense short bass whoosh, no ground impact Close isolated game
+    sound effect, dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.45
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: melee-specials-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 효과 발생 이벤트
+    evidence:
+    - data/combat/melee_weapon_design.json
+    status: current
+    notes: 기준 activation=0.25s, motion_end=0.7s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의
+      재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 521390033
+  steps: 8
+- id: sfx_special_greatsword_range
+  name: 대검 · 반월참
+  prompt: One broad crescent energy blade, sweeping papery steel hiss Close isolated game sound effect, dry short
+    decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.45
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: melee-specials-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 효과 발생 이벤트
+    evidence:
+    - data/combat/melee_weapon_design.json
+    status: current
+    notes: 기준 activation=0.45s, motion_end=1.05s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의
+      재사용 단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 3323825870
+  steps: 8
+- id: sfx_special_greatsword_movement
+  name: 대검 · 회전 전진
+  prompt: One heavy rotating blade pass, short low steel air sweep Close isolated game sound effect, dry short decay,
+    no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.45
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: melee-specials-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 효과 발생 이벤트
+    evidence:
+    - data/combat/melee_weapon_design.json
+    status: current
+    notes: 기준 activation=0.2s, motion_end=1.3s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용
+      단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 2406551343
+  steps: 8
+- id: sfx_special_greatsword_follow_up
+  name: 대검 · 낙인 대검
+  prompt: One spectral heavy sword manifesting, low ink swell and metallic shimmer Close isolated game sound effect,
+    dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.45
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: melee-specials-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 효과 발생 이벤트
+    evidence:
+    - data/combat/melee_weapon_design.json
+    status: current
+    notes: 기준 activation=0.3s, motion_end=0.7s. 조건부·차지·후속 발생은 실제 상태기 이벤트로 재생. 긴 기술 전체를 파일에 굽지 않음. 승인된 근접 특수공격의 재사용
+      단일 발음. 차지 해제·개별 타격·조건부 후속 사건에서 필요한 횟수만 재생하고 연계 대기/취소 시간을 WAV에 굽지 않음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 1269107114
+  steps: 8
+- id: sfx_special_shuriken_default
+  name: 큰 관통 수리검
+  prompt: One large spinning metal throwing blade release, broad metallic air buzz Close isolated game sound effect,
+    dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.3
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: remaining-content-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 투척/복귀/설치 이벤트
+    evidence:
+    - data/combat/ranged_basic_design.json
+    status: current
+    notes: 타겟·착지·접촉·취소에 따라 발생이 달라짐. 반복/폭발 타이머를 WAV에 고정하지 않음. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다. 몬스터
+      이동은 한 접촉/짧은 마찰이며 미정 접지 주기를 임의 확정하지 않는다.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 2623724319
+  steps: 8
+- id: sfx_special_shuriken_range
+  name: 폭발 수리검 발사
+  prompt: One small spinning steel star release with a compact energy tick, no explosion Close isolated game sound
+    effect, dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.3
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: remaining-content-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 투척/복귀/설치 이벤트
+    evidence:
+    - data/combat/ranged_basic_design.json
+    status: current
+    notes: 타겟·착지·접촉·취소에 따라 발생이 달라짐. 반복/폭발 타이머를 WAV에 고정하지 않음. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다. 몬스터
+      이동은 한 접촉/짧은 마찰이며 미정 접지 주기를 임의 확정하지 않는다.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 1124298465
+  steps: 8
+- id: sfx_special_shuriken_movement
+  name: 수리검 순간이동
+  prompt: One fast folded air teleport, soft ink flick Close isolated game sound effect, dry short decay, no music,
+    no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.3
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: remaining-content-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 투척/복귀/설치 이벤트
+    evidence:
+    - data/combat/ranged_basic_design.json
+    status: current
+    notes: 타겟·착지·접촉·취소에 따라 발생이 달라짐. 반복/폭발 타이머를 WAV에 고정하지 않음. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다. 몬스터
+      이동은 한 접촉/짧은 마찰이며 미정 접지 주기를 임의 확정하지 않는다.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 2166358349
+  steps: 8
+- id: sfx_special_shuriken_follow_up
+  name: 전진 회전 수리검
+  prompt: One short rotating metal blade pass, tight dry air buzz Close isolated game sound effect, dry short decay,
+    no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.3
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: remaining-content-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 투척/복귀/설치 이벤트
+    evidence:
+    - data/combat/ranged_basic_design.json
+    status: current
+    notes: 타겟·착지·접촉·취소에 따라 발생이 달라짐. 반복/폭발 타이머를 WAV에 고정하지 않음. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다. 몬스터
+      이동은 한 접촉/짧은 마찰이며 미정 접지 주기를 임의 확정하지 않는다.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 2822867383
+  steps: 8
+- id: sfx_special_bomb_default
+  name: 3연속 폭탄 투척의 한 투척
+  prompt: One short hand throw of a small heavy bomb, cloth air flick, no explosion Close isolated game sound effect,
+    dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.3
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: remaining-content-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 투척/복귀/설치 이벤트
+    evidence:
+    - data/combat/ranged_basic_design.json
+    status: current
+    notes: 타겟·착지·접촉·취소에 따라 발생이 달라짐. 반복/폭발 타이머를 WAV에 고정하지 않음. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다. 몬스터
+      이동은 한 접촉/짧은 마찰이며 미정 접지 주기를 임의 확정하지 않는다.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 1623151365
+  steps: 8
+- id: sfx_special_bomb_range
+  name: 대형 폭탄 투척
+  prompt: One heavy object being thrown, short weighty cloth and air whoosh, no explosion Close isolated game sound
+    effect, dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.3
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: remaining-content-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 투척/복귀/설치 이벤트
+    evidence:
+    - data/combat/ranged_basic_design.json
+    status: current
+    notes: 타겟·착지·접촉·취소에 따라 발생이 달라짐. 반복/폭발 타이머를 WAV에 고정하지 않음. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다. 몬스터
+      이동은 한 접촉/짧은 마찰이며 미정 접지 주기를 임의 확정하지 않는다.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 4105022229
+  steps: 8
+- id: sfx_special_bomb_follow_up
+  name: 착지 시한폭탄 설치
+  prompt: One small metal bomb placed and armed, compact mechanical click, no ticking timer or explosion Close isolated
+    game sound effect, dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.3
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: remaining-content-v1
+    extraction: event
+    events: []
+    trigger: 기술 실제 발동/개별 투척/복귀/설치 이벤트
+    evidence:
+    - data/combat/ranged_basic_design.json
+    status: current
+    notes: 타겟·착지·접촉·취소에 따라 발생이 달라짐. 반복/폭발 타이머를 WAV에 고정하지 않음. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다. 몬스터
+      이동은 한 접촉/짧은 마찰이며 미정 접지 주기를 임의 확정하지 않는다.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 1599399755
+  steps: 8
+- id: sfx_combat_hit_ink
+  name: 잉크 몸 실제 적중
+  prompt: One compact wet ink splat with a restrained dull impact Close isolated game sound effect, dry short decay,
+    no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.2
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: combat-related-v1
+    events: []
+    trigger: 해당 실제 적중/접촉/패링/차지 시작·종료 이벤트
+    evidence:
+    - docs/design/combat/rules.md
+    status: current
+    notes: 폭발은 실제 접촉·신관 이벤트에서만 재생. 차지/비행은 반복 클립의 재생 핸들을 종료 시 정리. 전투 관련 후속 후보. 실제 사건에서 재생하는 한 번의 소리. 원본 최소 2초·포화
+      차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 1194391081
+  steps: 8
+- id: sfx_combat_hit_metal
+  name: 금속 실제 적중
+  prompt: One short steel clink against metal, no long ring Close isolated game sound effect, dry short decay, no
+    music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.18
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: combat-related-v1
+    events: []
+    trigger: 해당 실제 적중/접촉/패링/차지 시작·종료 이벤트
+    evidence:
+    - docs/design/combat/rules.md
+    status: current
+    notes: 폭발은 실제 접촉·신관 이벤트에서만 재생. 차지/비행은 반복 클립의 재생 핸들을 종료 시 정리. 전투 관련 후속 후보. 실제 사건에서 재생하는 한 번의 소리. 원본 최소 2초·포화
+      차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 2280268659
+  steps: 8
+- id: sfx_combat_hit_wood
+  name: 목재 실제 적중
+  prompt: One short wooden body hit with dry splinters Close isolated game sound effect, dry short decay, no music,
+    no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.2
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: combat-related-v1
+    events: []
+    trigger: 해당 실제 적중/접촉/패링/차지 시작·종료 이벤트
+    evidence:
+    - docs/design/combat/rules.md
+    status: current
+    notes: 폭발은 실제 접촉·신관 이벤트에서만 재생. 차지/비행은 반복 클립의 재생 핸들을 종료 시 정리. 전투 관련 후속 후보. 실제 사건에서 재생하는 한 번의 소리. 원본 최소 2초·포화
+      차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 1660644942
+  steps: 8
+- id: sfx_combat_parry_success
+  name: 패링 성공
+  prompt: One clean short metal shield deflection, bright restrained clang Close isolated game sound effect, dry
+    short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.28
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: combat-related-v1
+    events: []
+    trigger: 해당 실제 적중/접촉/패링/차지 시작·종료 이벤트
+    evidence:
+    - docs/design/combat/rules.md
+    status: current
+    notes: 폭발은 실제 접촉·신관 이벤트에서만 재생. 차지/비행은 반복 클립의 재생 핸들을 종료 시 정리. 전투 관련 후속 후보. 실제 사건에서 재생하는 한 번의 소리. 원본 최소 2초·포화
+      차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 90201492
+  steps: 8
+- id: sfx_combat_bomb_explosion
+  name: 폭탄 접촉 폭발
+  prompt: One small stylized bomb explosion, tight low punch and brief debris, no gunfire Close isolated game sound
+    effect, dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.48
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: combat-related-v1
+    events: []
+    trigger: 해당 실제 적중/접촉/패링/차지 시작·종료 이벤트
+    evidence:
+    - docs/design/combat/rules.md
+    status: current
+    notes: 폭발은 실제 접촉·신관 이벤트에서만 재생. 차지/비행은 반복 클립의 재생 핸들을 종료 시 정리. 전투 관련 후속 후보. 실제 사건에서 재생하는 한 번의 소리. 원본 최소 2초·포화
+      차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 2922092716
+  steps: 8
+- id: sfx_combat_grenade_explosion
+  name: 유탄 본체 접촉 폭발
+  prompt: 'One close fragmentation grenade detonating on contact: an abrupt explosive broadband CRACK, an immediate
+    compact deep pressure THUMP, then gritty debris scattering into a short decaying rumble. Clearly an actual blast,
+    powerful and dense but restrained game mix, no firing or launching sound, no rising whoosh, no voices or music.
+    A single dry isolated explosion with a clean tail.'
+  duration: 3.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.7
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: grenade-contact-blast-v2
+    extraction: event
+    events: []
+    trigger: 유탄 본체의 실제 최초 유효 접촉 폭발 사건
+    evidence:
+    - docs/design/combat/rules.md
+    status: current
+    notes: 반경 1.2 본체 폭발용. 발사음/금속 충돌음과 구분. 선행 파열음·저음 압력·잔해 꼬리를 함께 보존한다. 고정 비행 시간이나 파편 폭발을 포함하지 않음.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 89593427
+  steps: 8
+- id: sfx_combat_fragment_explosion
+  name: 파편 개별 폭발
+  prompt: 'One miniature explosive fragment charge detonating: a sharp explosive CRACK-POP with a tiny tight bass
+    punch and a brief gritty fizz of debris, fast attack and very short clean decay. Clearly a small detonation,
+    not a metallic ping, not a ricochet, not a bounce, not a laser. Smaller and shorter than the parent grenade
+    blast, no firing sound, no voices or music, isolated game sound.'
+  duration: 3.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.28
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: fragment-small-blast-v2
+    extraction: event
+    events: []
+    trigger: 각 파편의 실제 접촉 또는 수명 만료 폭발 사건에서 한 번
+    evidence:
+    - docs/design/combat/rules.md
+    status: current
+    notes: 반경 0.6 개별 파편 폭발용. 최대 4개가 근접 발생할 수 있어 본체보다 짧고 간결한 하나의 폭발. 4연속 소리를 파일에 굽지 않는다.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 1152848936
+  steps: 8
+- id: sfx_combat_large_bomb_explosion
+  name: 대형 폭탄 접촉 폭발
+  prompt: One heavy low stylized explosion with a short earthy debris tail Close isolated game sound effect, dry
+    short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.65
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: blast-items-story-v1
+    extraction: event
+    events: []
+    trigger: 해당 실제 적중/접촉/패링/차지 시작·종료 이벤트
+    evidence:
+    - docs/design/combat/rules.md
+    status: current
+    notes: 폭발은 실제 접촉·신관 이벤트에서만 재생. 차지/비행은 반복 클립의 재생 핸들을 종료 시 정리. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한
+      검수 후보.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 3000764849
+  steps: 8
+- id: sfx_combat_projectile_wall
+  name: 투사체 벽 충돌
+  prompt: One tiny metal pellet hitting stone with an ink fleck Close isolated game sound effect, dry short decay,
+    no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.15
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: combat-related-v1
+    events: []
+    trigger: 해당 실제 적중/접촉/패링/차지 시작·종료 이벤트
+    evidence:
+    - docs/design/combat/rules.md
+    status: current
+    notes: 폭발은 실제 접촉·신관 이벤트에서만 재생. 차지/비행은 반복 클립의 재생 핸들을 종료 시 정리. 전투 관련 후속 후보. 실제 사건에서 재생하는 한 번의 소리. 원본 최소 2초·포화
+      차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 2391441481
+  steps: 8
+- id: sfx_combat_charge
+  name: 차지 유지 레이어
+  prompt: A quiet steady focused magical ink tension hum, even texture without a release Seamless even texture,
+    no music, no intelligible speech, no foreground actions.
+  duration: 3.0
+  production:
+    category: Weapons
+    mode: loop
+    length: 1.5
+    unit_length: 0.16
+    pre_peak: 0.025
+    rms_db: -28.0
+    revision: melee-specials-v1
+    events: []
+    trigger: 해당 실제 적중/접촉/패링/차지 시작·종료 이벤트
+    evidence:
+    - docs/design/combat/rules.md
+    status: current
+    notes: 폭발은 실제 접촉·신관 이벤트에서만 재생. 차지/비행은 반복 클립의 재생 핸들을 종료 시 정리. 차지 소유자가 유지하는 짧은 반복 레이어. 해제·취소·사망·리셋에서 종료하며 발동음을
+      섞지 않음.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 3355841489
+  steps: 8
+- id: sfx_combat_missile_flight
+  name: 미사일 비행 레이어
+  prompt: A small steady airy rocket motor hiss, restrained even texture without an explosion Seamless even texture,
+    no music, no intelligible speech, no foreground actions.
+  duration: 3.0
+  production:
+    category: Weapons
+    mode: loop
+    length: 1.5
+    unit_length: 0.16
+    pre_peak: 0.025
+    rms_db: -30.0
+    revision: remaining-content-v1
+    events: []
+    trigger: 해당 실제 적중/접촉/패링/차지 시작·종료 이벤트
+    evidence:
+    - docs/design/combat/rules.md
+    status: current
+    notes: 폭발은 실제 접촉·신관 이벤트에서만 재생. 차지/비행은 반복 클립의 재생 핸들을 종료 시 정리. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다.
+      몬스터 이동은 한 접촉/짧은 마찰이며 미정 접지 주기를 임의 확정하지 않는다.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 3224954018
+  steps: 8
+- id: sfx_combat_guard_break
+  name: 보호막 파괴
+  prompt: One small magical glass barrier breaking with soft bright fragments Close isolated game sound effect,
+    dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Weapons
+    mode: oneshot
+    length: 0.3
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: combat-related-v1
+    events: []
+    trigger: 해당 실제 적중/접촉/패링/차지 시작·종료 이벤트
+    evidence:
+    - docs/design/combat/rules.md
+    status: current
+    notes: 폭발은 실제 접촉·신관 이벤트에서만 재생. 차지/비행은 반복 클립의 재생 핸들을 종료 시 정리. 전투 관련 후속 후보. 실제 사건에서 재생하는 한 번의 소리. 원본 최소 2초·포화
+      차단·피크 상한 -16dBFS.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 2566540050
+  steps: 8
+- id: sfx_monster_01_field_mouse_attack
+  name: 곡식 들쥐 · 공격
+  prompt: One tiny dry rodent claw swipe through air Close isolated game sound effect, dry short decay, no music,
+    no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Monsters
+    mode: oneshot
+    length: 0.3
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: monsters-v1
+    events: []
+    trigger: 공격 활성 시작 350ms / 실제 공격 이벤트
+    evidence:
+    - data/monsters/chapter1_approved.json
+    status: current
+    notes: 몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서
+      재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 2580749032
+  steps: 8
+- id: sfx_monster_01_field_mouse_hurt
+  name: 곡식 들쥐 · 피격
+  prompt: One small rodent body hit, tiny strained nonverbal squeak Close isolated game sound effect, dry short
+    decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Monsters
+    mode: oneshot
+    length: 0.22
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: monsters-v1
+    events: []
+    trigger: 실제 피격 이벤트
+    evidence:
+    - data/monsters/chapter1_approved.json
+    status: current
+    notes: 몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서
+      재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 966737205
+  steps: 8
+- id: sfx_monster_01_field_mouse_death
+  name: 곡식 들쥐 · 사망
+  prompt: One small rodent dissolving into soft wet ink flecks Close isolated game sound effect, dry short decay,
+    no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Monsters
+    mode: oneshot
+    length: 0.55
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: monsters-v1
+    events: []
+    trigger: 실제 사망 이벤트
+    evidence:
+    - data/monsters/chapter1_approved.json
+    status: current
+    notes: 몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서
+      재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 3526618892
+  steps: 8
+- id: sfx_monster_02_mole_attack
+  name: 밭 두더지 · 공격
+  prompt: One large mole forepaw striking dry earth, compact soil thump Close isolated game sound effect, dry short
+    decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Monsters
+    mode: oneshot
+    length: 0.3
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: monsters-v1
+    events: []
+    trigger: 공격 활성 시작 550ms / 실제 공격 이벤트
+    evidence:
+    - data/monsters/chapter1_approved.json
+    status: current
+    notes: 몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서
+      재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 4191526420
+  steps: 8
+- id: sfx_monster_02_mole_hurt
+  name: 밭 두더지 · 피격
+  prompt: One low muted furry body thud with a short nonverbal grunt Close isolated game sound effect, dry short
+    decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Monsters
+    mode: oneshot
+    length: 0.22
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: monsters-v1
+    events: []
+    trigger: 실제 피격 이벤트
+    evidence:
+    - data/monsters/chapter1_approved.json
+    status: current
+    notes: 몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서
+      재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 4188903466
+  steps: 8
+- id: sfx_monster_02_mole_death
+  name: 밭 두더지 · 사망
+  prompt: One heavy soft animal collapsing into wet ink and earth Close isolated game sound effect, dry short decay,
+    no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Monsters
+    mode: oneshot
+    length: 0.55
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: monsters-v1
+    events: []
+    trigger: 실제 사망 이벤트
+    evidence:
+    - data/monsters/chapter1_approved.json
+    status: current
+    notes: 몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서
+      재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 2391808382
+  steps: 8
+- id: sfx_monster_05_boar_attack
+  name: 산비탈 멧돼지 · 공격
+  prompt: One short wild boar charge snort with a tight rushing air sound Close isolated game sound effect, dry
+    short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Monsters
+    mode: oneshot
+    length: 0.3
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: monsters-v1
+    events: []
+    trigger: 공격 활성 시작 650ms / 실제 공격 이벤트
+    evidence:
+    - data/monsters/chapter1_approved.json
+    status: current
+    notes: 몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서
+      재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 4113794385
+  steps: 8
+- id: sfx_monster_05_boar_hurt
+  name: 산비탈 멧돼지 · 피격
+  prompt: One short low boar pain grunt and compact body impact Close isolated game sound effect, dry short decay,
+    no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Monsters
+    mode: oneshot
+    length: 0.22
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: monsters-v1
+    events: []
+    trigger: 실제 피격 이벤트
+    evidence:
+    - data/monsters/chapter1_approved.json
+    status: current
+    notes: 몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서
+      재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 1257284061
+  steps: 8
+- id: sfx_monster_05_boar_death
+  name: 산비탈 멧돼지 · 사망
+  prompt: One short heavy boar collapse into an ink splash, no long animal cry Close isolated game sound effect,
+    dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Monsters
+    mode: oneshot
+    length: 0.55
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: monsters-v1
+    events: []
+    trigger: 실제 사망 이벤트
+    evidence:
+    - data/monsters/chapter1_approved.json
+    status: current
+    notes: 몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서
+      재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 4184111358
+  steps: 8
+- id: sfx_monster_07_scarecrow_attack
+  name: 밭 허수아비 · 공격
+  prompt: One long dry wooden arm swinging with straw rustle Close isolated game sound effect, dry short decay,
+    no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Monsters
+    mode: oneshot
+    length: 0.3
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: monsters-v1
+    events: []
+    trigger: 공격 활성 시작 450ms / 실제 공격 이벤트
+    evidence:
+    - data/monsters/chapter1_approved.json
+    status: current
+    notes: 몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서
+      재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 3796587227
+  steps: 8
+- id: sfx_monster_07_scarecrow_hurt
+  name: 밭 허수아비 · 피격
+  prompt: One dry straw stuffed body thump and small wood creak Close isolated game sound effect, dry short decay,
+    no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Monsters
+    mode: oneshot
+    length: 0.22
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: monsters-v1
+    events: []
+    trigger: 실제 피격 이벤트
+    evidence:
+    - data/monsters/chapter1_approved.json
+    status: current
+    notes: 몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서
+      재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 828561621
+  steps: 8
+- id: sfx_monster_07_scarecrow_death
+  name: 밭 허수아비 · 사망
+  prompt: One wooden scarecrow collapsing with short brittle straw scatter Close isolated game sound effect, dry
+    short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Monsters
+    mode: oneshot
+    length: 0.55
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: monsters-v1
+    events: []
+    trigger: 실제 사망 이벤트
+    evidence:
+    - data/monsters/chapter1_approved.json
+    status: current
+    notes: 몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서
+      재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 446812937
+  steps: 8
+- id: sfx_monster_08_hay_bale_attack
+  name: 굴러다니는 짚단 · 공격
+  prompt: One dense hay bundle slamming onto earth, compact straw and soil thump Close isolated game sound effect,
+    dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Monsters
+    mode: oneshot
+    length: 0.3
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: monsters-v1
+    events: []
+    trigger: 공격 활성 시작 1350ms / 실제 공격 이벤트
+    evidence:
+    - data/monsters/chapter1_approved.json
+    status: current
+    notes: 몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서
+      재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 3376161089
+  steps: 8
+- id: sfx_monster_08_hay_bale_hurt
+  name: 굴러다니는 짚단 · 피격
+  prompt: One compressed dry hay crunch Close isolated game sound effect, dry short decay, no music, no speech,
+    no background ambience.
+  duration: 2.0
+  production:
+    category: Monsters
+    mode: oneshot
+    length: 0.22
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: monsters-v1
+    events: []
+    trigger: 실제 피격 이벤트
+    evidence:
+    - data/monsters/chapter1_approved.json
+    status: current
+    notes: 몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서
+      재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 1840534508
+  steps: 8
+- id: sfx_monster_08_hay_bale_death
+  name: 굴러다니는 짚단 · 사망
+  prompt: One dry hay bundle breaking apart into straw and soft ink Close isolated game sound effect, dry short
+    decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Monsters
+    mode: oneshot
+    length: 0.55
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: monsters-v1
+    events: []
+    trigger: 실제 사망 이벤트
+    evidence:
+    - data/monsters/chapter1_approved.json
+    status: current
+    notes: 몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서
+      재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 3040331038
+  steps: 8
+- id: sfx_monster_10_water_bucket_attack
+  name: 우물 두레박 · 공격
+  prompt: One small wooden bucket pouring a short compact splash of water Close isolated game sound effect, dry
+    short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Monsters
+    mode: oneshot
+    length: 0.3
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: monsters-v1
+    events: []
+    trigger: 공격 활성 시작 700ms / 실제 공격 이벤트
+    evidence:
+    - data/monsters/chapter1_approved.json
+    status: current
+    notes: 몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서
+      재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 2633954961
+  steps: 8
+- id: sfx_monster_10_water_bucket_hurt
+  name: 우물 두레박 · 피격
+  prompt: One hollow wooden bucket knock with a little water slosh Close isolated game sound effect, dry short decay,
+    no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Monsters
+    mode: oneshot
+    length: 0.22
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: monsters-v1
+    events: []
+    trigger: 실제 피격 이벤트
+    evidence:
+    - data/monsters/chapter1_approved.json
+    status: current
+    notes: 몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서
+      재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 219638621
+  steps: 8
+- id: sfx_monster_10_water_bucket_death
+  name: 우물 두레박 · 사망
+  prompt: One small wooden bucket breaking into a brief water and ink splash Close isolated game sound effect, dry
+    short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Monsters
+    mode: oneshot
+    length: 0.55
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: monsters-v1
+    events: []
+    trigger: 실제 사망 이벤트
+    evidence:
+    - data/monsters/chapter1_approved.json
+    status: current
+    notes: 몸 접촉만으로 피해음 재생 금지. 실제 이벤트를 사용. 승인된 6종 대상의 한 번의 효과음. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 행동/유효 피격/사망 사건에서
+      재생하며 전체 모션의 무음 구간을 파일에 굽지 않음.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 1887534196
+  steps: 8
+- id: sfx_ui_navigate
+  name: 메뉴 이동
+  prompt: One tiny dry paper and wood interface tick Close isolated game sound effect, dry short decay, no music,
+    no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: UI
+    mode: oneshot
+    length: 0.09
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: movement-ui-v1
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/ui/ui-and-interaction.md
+    status: current
+    notes: ' 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.'
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 2292573625
+  steps: 8
+- id: sfx_ui_confirm
+  name: 메뉴 확인
+  prompt: One small warm tactile paper stamp click with a gentle bright tone Close isolated game sound effect, dry
+    short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: UI
+    mode: oneshot
+    length: 0.2
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: movement-ui-v1
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/ui/ui-and-interaction.md
+    status: current
+    notes: ' 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.'
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 1296553629
+  steps: 8
+- id: sfx_ui_cancel
+  name: 메뉴 취소
+  prompt: One soft downward wooden interface click Close isolated game sound effect, dry short decay, no music,
+    no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: UI
+    mode: oneshot
+    length: 0.15
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: movement-ui-v1
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/ui/ui-and-interaction.md
+    status: current
+    notes: ' 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.'
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 2886394126
+  steps: 8
+- id: sfx_ui_reject
+  name: 사용 불가
+  prompt: One restrained short dull double-textured paper click, no alarm Close isolated game sound effect, dry
+    short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: UI
+    mode: oneshot
+    length: 0.18
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: movement-ui-v1
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/ui/ui-and-interaction.md
+    status: current
+    notes: ' 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.'
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 795086657
+  steps: 8
+- id: sfx_ui_pause
+  name: 일시정지
+  prompt: One quiet paper fold and low soft tap Close isolated game sound effect, dry short decay, no music, no
+    speech, no background ambience.
+  duration: 2.0
+  production:
+    category: UI
+    mode: oneshot
+    length: 0.18
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: movement-ui-v1
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/ui/ui-and-interaction.md
+    status: current
+    notes: ' 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.'
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 3388317690
+  steps: 8
+- id: sfx_ui_resume
+  name: 일시정지 복귀
+  prompt: One light paper unfold and soft tap Close isolated game sound effect, dry short decay, no music, no speech,
+    no background ambience.
+  duration: 2.0
+  production:
+    category: UI
+    mode: oneshot
+    length: 0.18
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: movement-ui-v1
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/ui/ui-and-interaction.md
+    status: current
+    notes: ' 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.'
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 3493725971
+  steps: 8
+- id: sfx_ui_inventory_open
+  name: 가방 열기
+  prompt: One small book opening with a soft paper flutter Close isolated game sound effect, dry short decay, no
+    music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: UI
+    mode: oneshot
+    length: 0.25
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: movement-ui-v1
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/ui/ui-and-interaction.md
+    status: current
+    notes: ' 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.'
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 1679696373
+  steps: 8
+- id: sfx_ui_inventory_close
+  name: 가방 닫기
+  prompt: One small book closing with a soft papery thump Close isolated game sound effect, dry short decay, no
+    music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: UI
+    mode: oneshot
+    length: 0.22
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: movement-ui-v1
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/ui/ui-and-interaction.md
+    status: current
+    notes: ' 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.'
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 1446343231
+  steps: 8
+- id: sfx_ui_map_open
+  name: 지도 열기
+  prompt: One folded parchment map unfolding briefly Close isolated game sound effect, dry short decay, no music,
+    no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: UI
+    mode: oneshot
+    length: 0.3
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: movement-ui-v1
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/ui/ui-and-interaction.md
+    status: current
+    notes: ' 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.'
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 658276949
+  steps: 8
+- id: sfx_ui_dialogue_next
+  name: 대화 진행
+  prompt: One tiny soft page corner flick Close isolated game sound effect, dry short decay, no music, no speech,
+    no background ambience.
+  duration: 2.0
+  production:
+    category: UI
+    mode: oneshot
+    length: 0.1
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: movement-ui-v1
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/ui/ui-and-interaction.md
+    status: current
+    notes: ' 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.'
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 1806092606
+  steps: 8
+- id: sfx_items_ink_pickup
+  name: 잉크 획득
+  prompt: One tiny liquid ink droplet absorbed with a soft warm plink Close isolated game sound effect, dry short
+    decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Items
+    mode: oneshot
+    length: 0.25
+    unit_length: 0.16
+    pre_peak: 0.012
+    rms_db: -28.0
+    revision: movement-ui-v1
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/equipment/rules.md
+    status: current
+    notes: ' 이동·UI 검수 후보. 2초 이상 AI 원본·포화 검사·피크 상한 -16dBFS. 이전 확정본과 분리 보관.'
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 3878301770
+  steps: 8
+- id: sfx_items_drop_land
+  name: 아이템 바닥 착지
+  prompt: One tiny glass ink bottle landing gently with a short dull tap Close isolated game sound effect, dry short
+    decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Items
+    mode: oneshot
+    length: 0.18
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: blast-items-story-v1
+    extraction: event
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/equipment/rules.md
+    status: current
+    notes: ' 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.'
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 766304012
+  steps: 8
+- id: sfx_items_equip
+  name: 잉크·팔레트 장착
+  prompt: One small snug glass and paper fitting click Close isolated game sound effect, dry short decay, no music,
+    no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Items
+    mode: oneshot
+    length: 0.22
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: blast-items-story-v1
+    extraction: event
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/equipment/rules.md
+    status: current
+    notes: ' 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.'
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 2964361656
+  steps: 8
+- id: sfx_items_unequip
+  name: 잉크 해제
+  prompt: One small glass fitting released with a soft click Close isolated game sound effect, dry short decay,
+    no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Items
+    mode: oneshot
+    length: 0.18
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: blast-items-story-v1
+    extraction: event
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/equipment/rules.md
+    status: current
+    notes: ' 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.'
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 772482936
+  steps: 8
+- id: sfx_items_exchange
+  name: 가방 수동 교환
+  prompt: One quick tactile glass and paper exchange, soft paired texture Close isolated game sound effect, dry
+    short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Items
+    mode: oneshot
+    length: 0.24
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: blast-items-story-v1
+    extraction: event
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/equipment/rules.md
+    status: current
+    notes: ' 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.'
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 2266435102
+  steps: 8
+- id: sfx_items_stamp
+  name: 무기·스킬 스탬프 적용
+  prompt: One firm rubber stamp pressed on thick paper, short tactile thump Close isolated game sound effect, dry
+    short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Items
+    mode: oneshot
+    length: 0.23
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: blast-items-story-v1
+    extraction: event
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/equipment/rules.md
+    status: planned
+    notes: 설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 3593872958
+  steps: 8
+- id: sfx_items_bake
+  name: 팔레트 굽기 활성화
+  prompt: One short warm magical ink fusing shimmer with a quiet soft sizzle Close isolated game sound effect, dry
+    short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Items
+    mode: oneshot
+    length: 0.65
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: blast-items-story-v1
+    extraction: event
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/equipment/rules.md
+    status: planned
+    notes: 설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 1196683854
+  steps: 8
+- id: sfx_items_palette_break
+  name: 팔레트 교체 파괴
+  prompt: 'One small rigid paint palette snapping and breaking apart: a sudden hard dry CRACK, several crunchy brittle
+    wood and dried-resin fractures, then many little hard chips clattering and settling rapidly. Clearly an object
+    being destroyed into pieces, a dense midrange break with short debris texture, not a paper fold or a gentle
+    click. No magical shimmer, no musical chime, no glass-only tinkling, no explosion, no voices or music. Close
+    dry isolated game sound, one destruction event followed by a short natural decay.'
+  duration: 3.0
+  production:
+    category: Items
+    mode: oneshot
+    length: 0.7
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: palette-break-fracture-v2
+    extraction: event
+    events: []
+    trigger: 팔레트 구성 교체가 확정되어 기존 팔레트가 실제로 파괴될 때 한 번
+    evidence:
+    - docs/design/equipment/rules.md
+    status: planned
+    notes: '사용자 요청: 더 분명한 파괴·부서짐. 단단한 균열과 연속된 작은 파열, 조각이 부딪혀 떨어지는 꼬리를 보존. 실제 제작 확정 사건에 사용하며 취소/미정 실패 규칙을 추가하지 않음.'
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 4105080941
+  steps: 8
+- id: sfx_items_upgrade
+  name: 정비소 강화 성공
+  prompt: One small warm magical crafting completion chime with an ink plink Close isolated game sound effect, dry
+    short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Items
+    mode: oneshot
+    length: 0.4
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: blast-items-story-v1
+    extraction: event
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/equipment/rules.md
+    status: planned
+    notes: 설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 455307193
+  steps: 8
+- id: sfx_items_draw
+  name: 랜덤 색상 잉크 획득
+  prompt: One tiny glass ink bottle appearing with a soft colorful plink Close isolated game sound effect, dry short
+    decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Items
+    mode: oneshot
+    length: 0.3
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: blast-items-story-v1
+    extraction: event
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/equipment/rules.md
+    status: planned
+    notes: 설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 2298546947
+  steps: 8
+- id: sfx_items_gold_pay
+  name: 골드 결제
+  prompt: One restrained small coin clink, dry and brief Close isolated game sound effect, dry short decay, no music,
+    no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Items
+    mode: oneshot
+    length: 0.18
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: blast-items-story-v1
+    extraction: event
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/equipment/rules.md
+    status: planned
+    notes: 설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 3155828218
+  steps: 8
+- id: sfx_story_page_turn
+  name: 대서적·작은 책 페이지
+  prompt: One thick old book page turning slowly with a short dry paper flutter Close isolated game sound effect,
+    dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Story
+    mode: oneshot
+    length: 0.7
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: blast-items-story-v1
+    extraction: event
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/story/opening/opening.md
+    status: planned
+    notes: 설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 1121568299
+  steps: 8
+- id: sfx_story_record_erase
+  name: 이름 기록 삭제
+  prompt: One dry graphite mark rubbing away into a soft airy papery hiss Close isolated game sound effect, dry
+    short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Story
+    mode: oneshot
+    length: 0.7
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: blast-items-story-v1
+    extraction: event
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/story/opening/opening.md
+    status: planned
+    notes: 설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 3649571155
+  steps: 8
+- id: sfx_story_world_erase
+  name: 마을 색·질감 소거
+  prompt: One unsettling wave of dry paper and charcoal texture dissolving, subdued low airy rumble Close isolated
+    game sound effect, dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Story
+    mode: oneshot
+    length: 1.4
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: blast-items-story-v1
+    extraction: event
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/story/opening/opening.md
+    status: planned
+    notes: 설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 3210636248
+  steps: 8
+- id: sfx_story_ink_sacrifice
+  name: 조력자 잉크 희생
+  prompt: One gentle large viscous ink flow thinning into small liquid droplets Close isolated game sound effect,
+    dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Story
+    mode: oneshot
+    length: 1.2
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: blast-items-story-v1
+    extraction: event
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/story/opening/opening.md
+    status: planned
+    notes: 설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 360701497
+  steps: 8
+- id: sfx_story_ink_awaken
+  name: 첫 잉크 몸 각성
+  prompt: One restrained warm ink body reforming, small liquid swell and soft release Close isolated game sound
+    effect, dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Story
+    mode: oneshot
+    length: 0.9
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: blast-items-story-v1
+    extraction: event
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/story/opening/opening.md
+    status: planned
+    notes: 설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 214890724
+  steps: 8
+- id: sfx_story_collapse
+  name: 쓰러짐
+  prompt: One soft clothed human body settling onto dry ground, compact muted thump Close isolated game sound effect,
+    dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Story
+    mode: oneshot
+    length: 0.5
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: blast-items-story-v1
+    extraction: event
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/story/opening/opening.md
+    status: planned
+    notes: 설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 1765768820
+  steps: 8
+- id: sfx_story_door
+  name: 농가·보관소 문
+  prompt: One old wooden door latch opening with a restrained short hinge creak Close isolated game sound effect,
+    dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: Story
+    mode: oneshot
+    length: 0.6
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: blast-items-story-v1
+    extraction: event
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/story/opening/opening.md
+    status: planned
+    notes: 설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 2초 이상 원본·포화 차단·피크 상한 -16dBFS. 실제 사건의 시작과 감쇠를 보존한 검수 후보.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 4060236619
+  steps: 8
+- id: sfx_world_forest_air
+  name: 숲·들판 환경 레이어
+  prompt: A quiet steady rural evening breeze through soft grass and distant leaves, no footsteps, no animal calls
+    Seamless even texture, no music, no intelligible speech, no foreground actions.
+  duration: 8.0
+  production:
+    category: World
+    mode: loop
+    length: 8.0
+    unit_length: 0.16
+    pre_peak: 0.025
+    rms_db: -36.0
+    revision: remaining-content-v1
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/world/world-and-levels.md
+    status: planned
+    notes: 설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다. 몬스터 이동은 한 접촉/짧은 마찰이며
+      미정 접지 주기를 임의 확정하지 않는다.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 2646041033
+  steps: 8
+- id: sfx_world_library_air
+  name: 대서적 보관소 환경 레이어
+  prompt: A very quiet old stone library interior room tone, soft steady air and distant muted wooden settling,
+    no voices Seamless even texture, no music, no intelligible speech, no foreground actions.
+  duration: 8.0
+  production:
+    category: World
+    mode: loop
+    length: 8.0
+    unit_length: 0.16
+    pre_peak: 0.025
+    rms_db: -36.0
+    revision: remaining-content-v1
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/world/world-and-levels.md
+    status: planned
+    notes: 설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다. 몬스터 이동은 한 접촉/짧은 마찰이며
+      미정 접지 주기를 임의 확정하지 않는다.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 848707408
+  steps: 8
+- id: sfx_world_village_air
+  name: 농가·우물 주변 환경 레이어
+  prompt: A quiet steady rural courtyard breeze, light distant leaf rustling, no people, no footsteps Seamless even
+    texture, no music, no intelligible speech, no foreground actions.
+  duration: 8.0
+  production:
+    category: World
+    mode: loop
+    length: 8.0
+    unit_length: 0.16
+    pre_peak: 0.025
+    rms_db: -36.0
+    revision: remaining-content-v1
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/world/world-and-levels.md
+    status: planned
+    notes: 설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다. 몬스터 이동은 한 접촉/짧은 마찰이며
+      미정 접지 주기를 임의 확정하지 않는다.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 2197908110
+  steps: 8
+- id: sfx_world_erased_air
+  name: 삭제된 마을 환경 레이어
+  prompt: A very faint steady dry papery wind, empty hushed atmosphere, no musical drones Seamless even texture,
+    no music, no intelligible speech, no foreground actions.
+  duration: 8.0
+  production:
+    category: World
+    mode: loop
+    length: 8.0
+    unit_length: 0.16
+    pre_peak: 0.025
+    rms_db: -36.0
+    revision: remaining-content-v1
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/world/world-and-levels.md
+    status: planned
+    notes: 설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다. 몬스터 이동은 한 접촉/짧은 마찰이며
+      미정 접지 주기를 임의 확정하지 않는다.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 2936449578
+  steps: 8
+- id: sfx_world_grass_brush
+  name: 풀 접촉
+  prompt: One gentle fabric brushing dry grass, very quiet thin leafy friction Close isolated game sound effect,
+    dry short decay, no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: World
+    mode: oneshot
+    length: 0.2
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: remaining-content-v1
+    extraction: event
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/world/world-and-levels.md
+    status: planned
+    notes: 설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다. 몬스터 이동은 한 접촉/짧은 마찰이며
+      미정 접지 주기를 임의 확정하지 않는다.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 1026230663
+  steps: 8
+- id: sfx_world_water_splash
+  name: 도랑 물 접촉
+  prompt: One small shallow water splash with a soft brief decay Close isolated game sound effect, dry short decay,
+    no music, no speech, no background ambience.
+  duration: 2.0
+  production:
+    category: World
+    mode: oneshot
+    length: 0.35
+    unit_length: 0.16
+    pre_peak: 0.02
+    rms_db: -28.0
+    revision: remaining-content-v1
+    extraction: event
+    events: []
+    trigger: 해당 상호작용 성공 / 환경 레이어 소유자 시작·종료
+    evidence:
+    - docs/design/world/world-and-levels.md
+    status: planned
+    notes: 설계 기반 제작 후보. 공간별 믹싱·제품 연결은 별도 확인. 남은 계획 콘텐츠의 검수 후보. 반복 레이어는 실제 소유자 종료/취소/리셋에 정리한다. 몬스터 이동은 한 접촉/짧은 마찰이며
+      미정 접지 주기를 임의 확정하지 않는다.
+    foot_contacts: []
+    foot_cycle: 0.36
+    regions: []
+  seed: 242417625
+  steps: 8

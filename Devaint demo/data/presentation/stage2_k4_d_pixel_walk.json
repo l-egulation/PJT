@@ -1,0 +1,16 @@
+{
+  "schema":"stage2-k4-D-pixel-walk-v1",
+  "status":"D-motion-user-selected-pixel-conversion-review",
+  "candidate":"D",
+  "source":"outputs/waterway/k4-loop-candidates-20261031",
+  "base":"outputs/waterway/pixel-base-step1-20261031/K4",
+  "output":"outputs/waterway/k4-walk-D-pixel-20261031",
+  "canvas":[384,224],
+  "baseline":192,
+  "targetMedianVisibleHeight":112,
+  "supersampleGrid":4,
+  "coverageMinimum":0.5,
+  "palettePolicy":"Use only the11 colors actually used by the selected K4 base. No added colors, gradients, dithering, glow or dark contour.",
+  "matte":{"opaqueRmsMax":25,"compositeRmsMax":12,"alphaMinimum":0.8,"matteAdvantage":8},
+  "method":"Infer foreground and palette material before downsampling, rejecting white-matte contamination. Use one fixed scale/translation for all20 frames; sample16 source points per logical pixel and vote among existing palette colors. Limited logical-pixel cleanup preserves base needle/nozzle/tank tips and eye gold. No framewise stretch, foot pinning or body-part composites. Preserve selected D durations exactly."
+}

@@ -1,0 +1,931 @@
+{
+  "format": "deviant-complete-ui-layout-v1",
+  "referenceResolution": [
+    1670,
+    942
+  ],
+  "coordinates": "top-left pixels",
+  "sprites": [
+    {
+      "id": "health-plaque-0",
+      "sprite": "health-plaque",
+      "rect": [
+        96,
+        61,
+        428,
+        82
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "health-fill-mask-1",
+      "sprite": "health-fill-mask",
+      "rect": [
+        165,
+        112,
+        330,
+        18
+      ],
+      "scene": "battle",
+      "tint": "#ff7062",
+      "flipX": false,
+      "role": "health-fill"
+    },
+    {
+      "id": "hero-portrait-2",
+      "sprite": "hero-portrait",
+      "rect": [
+        29,
+        30,
+        147,
+        118
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "gold-coin-3",
+      "sprite": "gold-coin",
+      "rect": [
+        1255,
+        28,
+        47,
+        47
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "pigment-existing-game-4",
+      "sprite": "pigment-existing-game",
+      "rect": [
+        1390,
+        29,
+        46,
+        46
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "button-frame-5",
+      "sprite": "button-frame",
+      "rect": [
+        1510,
+        24,
+        61,
+        61
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "bag-glyph-6",
+      "sprite": "bag-glyph",
+      "rect": [
+        1527,
+        37,
+        28,
+        32
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "button-frame-7",
+      "sprite": "button-frame",
+      "rect": [
+        1583,
+        24,
+        61,
+        61
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "pause-glyph-8",
+      "sprite": "pause-glyph",
+      "rect": [
+        1600,
+        40,
+        27,
+        30
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "minimap-frame-9",
+      "sprite": "minimap-frame",
+      "rect": [
+        1251,
+        89,
+        394,
+        144
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "weapon-disc-10",
+      "sprite": "weapon-disc",
+      "rect": [
+        52,
+        781,
+        141,
+        141
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "weapon-disc-11",
+      "sprite": "weapon-disc",
+      "rect": [
+        184,
+        814,
+        84,
+        84
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "weapon-disc-12",
+      "sprite": "weapon-disc",
+      "rect": [
+        266,
+        812,
+        87,
+        87
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "progress-ring-mask-13",
+      "sprite": "progress-ring-mask",
+      "rect": [
+        57,
+        787,
+        130,
+        130
+      ],
+      "scene": "battle",
+      "tint": "#00dcdf",
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "weapon-sword-14",
+      "sprite": "weapon-sword",
+      "rect": [
+        83,
+        808,
+        74,
+        78
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": "replaceable-weapon"
+    },
+    {
+      "id": "skill-slash-15",
+      "sprite": "skill-slash",
+      "rect": [
+        204,
+        835,
+        43,
+        43
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": "replaceable-skill"
+    },
+    {
+      "id": "skill-swirl-16",
+      "sprite": "skill-swirl",
+      "rect": [
+        282,
+        830,
+        56,
+        56
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": "replaceable-skill"
+    },
+    {
+      "id": "button-frame-17",
+      "sprite": "button-frame",
+      "rect": [
+        205,
+        792,
+        42,
+        33
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "button-frame-18",
+      "sprite": "button-frame",
+      "rect": [
+        286,
+        792,
+        42,
+        33
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "palette-tray-19",
+      "sprite": "palette-tray",
+      "rect": [
+        126,
+        879,
+        171,
+        49
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "drop-blue-20",
+      "sprite": "drop-blue",
+      "rect": [
+        154,
+        886,
+        26,
+        33
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": "palette-color"
+    },
+    {
+      "id": "drop-yellow-21",
+      "sprite": "drop-yellow",
+      "rect": [
+        196,
+        886,
+        26,
+        33
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": "palette-color"
+    },
+    {
+      "id": "drop-blue-22",
+      "sprite": "drop-blue",
+      "rect": [
+        238,
+        886,
+        26,
+        33
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": "palette-color"
+    },
+    {
+      "id": "weapon-disc-23",
+      "sprite": "weapon-disc",
+      "rect": [
+        407,
+        781,
+        141,
+        141
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "weapon-disc-24",
+      "sprite": "weapon-disc",
+      "rect": [
+        539,
+        814,
+        84,
+        84
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "weapon-disc-25",
+      "sprite": "weapon-disc",
+      "rect": [
+        621,
+        812,
+        87,
+        87
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "weapon-hammer-26",
+      "sprite": "weapon-hammer",
+      "rect": [
+        438,
+        808,
+        74,
+        78
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": "replaceable-weapon"
+    },
+    {
+      "id": "skill-impact-27",
+      "sprite": "skill-impact",
+      "rect": [
+        559,
+        835,
+        43,
+        43
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": "replaceable-skill"
+    },
+    {
+      "id": "progress-ring-mask-28",
+      "sprite": "progress-ring-mask",
+      "rect": [
+        621,
+        812,
+        87,
+        87
+      ],
+      "scene": "battle",
+      "tint": "#ece8df",
+      "flipX": false,
+      "role": "cooldown-ring"
+    },
+    {
+      "id": "button-frame-29",
+      "sprite": "button-frame",
+      "rect": [
+        560,
+        792,
+        42,
+        33
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "button-frame-30",
+      "sprite": "button-frame",
+      "rect": [
+        641,
+        792,
+        42,
+        33
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "palette-tray-31",
+      "sprite": "palette-tray",
+      "rect": [
+        481,
+        879,
+        171,
+        49
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "drop-red-32",
+      "sprite": "drop-red",
+      "rect": [
+        509,
+        886,
+        26,
+        33
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": "palette-color"
+    },
+    {
+      "id": "drop-green-33",
+      "sprite": "drop-green",
+      "rect": [
+        551,
+        886,
+        26,
+        33
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": "palette-color"
+    },
+    {
+      "id": "drop-yellow-34",
+      "sprite": "drop-yellow",
+      "rect": [
+        593,
+        886,
+        26,
+        33
+      ],
+      "scene": "battle",
+      "tint": null,
+      "flipX": false,
+      "role": "palette-color"
+    },
+    {
+      "id": "heading-plaque-35",
+      "sprite": "heading-plaque",
+      "rect": [
+        691,
+        248,
+        289,
+        67
+      ],
+      "scene": "palette",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "chevron-36",
+      "sprite": "chevron",
+      "rect": [
+        720,
+        271,
+        9,
+        15
+      ],
+      "scene": "palette",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "chevron-37",
+      "sprite": "chevron",
+      "rect": [
+        940,
+        271,
+        9,
+        15
+      ],
+      "scene": "palette",
+      "tint": null,
+      "flipX": true,
+      "role": null
+    },
+    {
+      "id": "run-card-38",
+      "sprite": "run-card",
+      "rect": [
+        516,
+        332,
+        313,
+        201
+      ],
+      "scene": "palette",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "weapon-disc-39",
+      "sprite": "weapon-disc",
+      "rect": [
+        608,
+        290,
+        90,
+        90
+      ],
+      "scene": "palette",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "weapon-sword-40",
+      "sprite": "weapon-sword",
+      "rect": [
+        626,
+        307,
+        54,
+        56
+      ],
+      "scene": "palette",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "divider-41",
+      "sprite": "divider",
+      "rect": [
+        558,
+        423,
+        232,
+        4
+      ],
+      "scene": "palette",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "drop-blue-42",
+      "sprite": "drop-blue",
+      "rect": [
+        581,
+        441,
+        49,
+        64
+      ],
+      "scene": "palette",
+      "tint": null,
+      "flipX": false,
+      "role": "palette-color"
+    },
+    {
+      "id": "drop-yellow-43",
+      "sprite": "drop-yellow",
+      "rect": [
+        651,
+        441,
+        49,
+        64
+      ],
+      "scene": "palette",
+      "tint": null,
+      "flipX": false,
+      "role": "palette-color"
+    },
+    {
+      "id": "drop-blue-44",
+      "sprite": "drop-blue",
+      "rect": [
+        721,
+        441,
+        49,
+        64
+      ],
+      "scene": "palette",
+      "tint": null,
+      "flipX": false,
+      "role": "palette-color"
+    },
+    {
+      "id": "corner-accent-45",
+      "sprite": "corner-accent",
+      "rect": [
+        526,
+        491,
+        31,
+        31
+      ],
+      "scene": "palette",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "run-card-46",
+      "sprite": "run-card",
+      "rect": [
+        841,
+        332,
+        313,
+        201
+      ],
+      "scene": "palette",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "weapon-disc-47",
+      "sprite": "weapon-disc",
+      "rect": [
+        969,
+        290,
+        90,
+        90
+      ],
+      "scene": "palette",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "weapon-hammer-48",
+      "sprite": "weapon-hammer",
+      "rect": [
+        987,
+        307,
+        54,
+        56
+      ],
+      "scene": "palette",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "divider-49",
+      "sprite": "divider",
+      "rect": [
+        883,
+        423,
+        232,
+        4
+      ],
+      "scene": "palette",
+      "tint": null,
+      "flipX": false,
+      "role": null
+    },
+    {
+      "id": "drop-red-50",
+      "sprite": "drop-red",
+      "rect": [
+        906,
+        441,
+        49,
+        64
+      ],
+      "scene": "palette",
+      "tint": null,
+      "flipX": false,
+      "role": "palette-color"
+    },
+    {
+      "id": "drop-green-51",
+      "sprite": "drop-green",
+      "rect": [
+        976,
+        441,
+        49,
+        64
+      ],
+      "scene": "palette",
+      "tint": null,
+      "flipX": false,
+      "role": "palette-color"
+    },
+    {
+      "id": "drop-yellow-52",
+      "sprite": "drop-yellow",
+      "rect": [
+        1046,
+        441,
+        49,
+        64
+      ],
+      "scene": "palette",
+      "tint": null,
+      "flipX": false,
+      "role": "palette-color"
+    },
+    {
+      "id": "corner-accent-53",
+      "sprite": "corner-accent",
+      "rect": [
+        1112,
+        491,
+        31,
+        31
+      ],
+      "scene": "palette",
+      "tint": null,
+      "flipX": true,
+      "role": null
+    }
+  ],
+  "texts": [
+    {
+      "text": "82",
+      "x": 192,
+      "y": 61,
+      "size": 43,
+      "color": "#fff3de",
+      "scene": "battle",
+      "center": false,
+      "role": "health-value",
+      "font": "Malgun Gothic Bold"
+    },
+    {
+      "text": "/ 100",
+      "x": 249,
+      "y": 74,
+      "size": 29,
+      "color": "#fff3de",
+      "scene": "battle",
+      "center": false,
+      "role": null,
+      "font": "Malgun Gothic Bold"
+    },
+    {
+      "text": "240",
+      "x": 1306,
+      "y": 32,
+      "size": 34,
+      "color": "#191b18",
+      "scene": "battle",
+      "center": false,
+      "role": null,
+      "font": "Malgun Gothic Bold"
+    },
+    {
+      "text": "18",
+      "x": 1442,
+      "y": 32,
+      "size": 34,
+      "color": "#191b18",
+      "scene": "battle",
+      "center": false,
+      "role": null,
+      "font": "Malgun Gothic Bold"
+    },
+    {
+      "text": "Q",
+      "x": 226,
+      "y": 793,
+      "size": 24,
+      "color": "#161915",
+      "scene": "battle",
+      "center": true,
+      "role": null,
+      "font": "Malgun Gothic Bold"
+    },
+    {
+      "text": "E",
+      "x": 307,
+      "y": 793,
+      "size": 24,
+      "color": "#161915",
+      "scene": "battle",
+      "center": true,
+      "role": null,
+      "font": "Malgun Gothic Bold"
+    },
+    {
+      "text": "3.2",
+      "x": 664,
+      "y": 836,
+      "size": 29,
+      "color": "#fff3de",
+      "scene": "battle",
+      "center": true,
+      "role": "cooldown-value",
+      "font": "Malgun Gothic Bold"
+    },
+    {
+      "text": "W",
+      "x": 581,
+      "y": 793,
+      "size": 24,
+      "color": "#161915",
+      "scene": "battle",
+      "center": true,
+      "role": null,
+      "font": "Malgun Gothic Bold"
+    },
+    {
+      "text": "R",
+      "x": 662,
+      "y": 793,
+      "size": 24,
+      "color": "#161915",
+      "scene": "battle",
+      "center": true,
+      "role": null,
+      "font": "Malgun Gothic Bold"
+    },
+    {
+      "text": "출발 팔레트",
+      "x": 835,
+      "y": 254,
+      "size": 35,
+      "color": "#fff3de",
+      "scene": "palette",
+      "center": true,
+      "role": null,
+      "font": "Malgun Gothic Bold"
+    },
+    {
+      "text": "기본검",
+      "x": 673,
+      "y": 376,
+      "size": 35,
+      "color": "#151914",
+      "scene": "palette",
+      "center": true,
+      "role": null,
+      "font": "Malgun Gothic Bold"
+    },
+    {
+      "text": "기본망치",
+      "x": 998,
+      "y": 376,
+      "size": 35,
+      "color": "#151914",
+      "scene": "palette",
+      "center": true,
+      "role": null,
+      "font": "Malgun Gothic Bold"
+    }
+  ],
+  "runtimeDrawn": [
+    "HP fill with Image Filled Horizontal",
+    "cooldown with Image Filled Radial360",
+    "map geometry from data",
+    "numbers, weapon names and keycaps with live TMP text"
+  ],
+  "anchors": {
+    "health": "top-left",
+    "weapons": "bottom-left",
+    "currencies-controls-map": "top-right",
+    "run-palette": "center"
+  },
+  "unity": {
+    "textureType": "Sprite (2D and UI)",
+    "spriteMode": "Single",
+    "meshType": "FullRect",
+    "pixelsPerUnit": 100,
+    "alphaIsTransparency": true,
+    "mipmaps": false,
+    "filterMode": "Bilinear",
+    "compression": "None",
+    "maxTextureSize": 4096,
+    "canvasScaler": "ScaleWithScreenSize",
+    "referenceResolution": [
+      1670,
+      942
+    ],
+    "matchWidthOrHeight": 0.5
+  },
+  "approval": "Design references selected; new independent sprite artwork pending visual review",
+  "gameIntegration": false
+}

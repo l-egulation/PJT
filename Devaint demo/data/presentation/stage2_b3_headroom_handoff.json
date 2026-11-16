@@ -1,0 +1,18 @@
+{
+  "schema": "stage2-b3-headroom-handoff-v1",
+  "status": "expanded-upper-margin-input-ready-awaiting-return",
+  "sourceInput": "outputs/waterway/b3-high-lift-retry-20261101/B3-attack-white-input-4x.png",
+  "base": "outputs/waterway/pixel-base-step1-20261031/B3/native/base-frame.png",
+  "palette": "outputs/waterway/pixel-base-step1-20261031/B3/palette.json",
+  "sourcePrompt": "outputs/waterway/b3-high-lift-retry-20261101/prompt-en.txt",
+  "output": "outputs/waterway/b3-high-lift-headroom-20261101",
+  "sourceSize": [1536,896],
+  "outputSize": [1536,1536],
+  "pasteOffset": [0,640],
+  "sourceLogicalCanvas": [384,224],
+  "workingLogicalCanvas": [384,384],
+  "logicalPasteOffset": [0,160],
+  "scale": 4,
+  "background": "#ffffff",
+  "policy": "Extend only the upper white canvas by640px. Paste the previous full image at[0,640] without resampling. Preserve character pixels,180x100 logical body size,10 colors, horizontal position and128px bottom margin. The taller384x384 working canvas is an animation input only; game scale and existing approved384x224 assets stay unchanged. Preserve previous input/prompt/base/palette and exact translation for processing the returned animation. No generated drawing or pose edits."
+}

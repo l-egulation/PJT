@@ -1,0 +1,16 @@
+{
+  "mode": "built-in image_gen",
+  "jobs": [
+    {
+      "key": "ui_ink_only",
+      "file": "selection_ink.png",
+      "prompt": "Use case: precise-object-edit / background-extraction. The input is the APPROVED teal brush-stroke selected-menu sprite containing the Korean word 시작하기. Extract the BRUSH STROKE ONLY. Remove EVERY pixel of the cream/white Korean lettering and seamlessly restore matching teal ink texture underneath it. Absolutely NO letters, text, symbols, numbers or pale glyph fragments anywhere in the result. Preserve the same horizontal teal dry-ink brush silhouette, irregular fringes, holes, grain, colors, opacity, proportions and orientation. It must become a reusable selection BACKPLATE behind ANY menu label, not just the start label. GENUINELY TRANSPARENT alpha outside the stroke and in existing transparent holes; no background color or checkerboard pixels. Keep original wide horizontal canvas/aspect ratio and stroke framing as closely as possible, no stretching or decorative changes. Do not draw a new generic rounded rectangle. A single brush stroke, no shadow, no extra elements. UI asset, high fidelity to input."
+    },
+    {
+      "key": "ui_labels_only",
+      "file": "menu_labels_white.png",
+      "prompt": "Use case: background-extraction. Extract ONLY THREE Korean MENU LABELS from the supplied title UI overlay. Exact text: \"시작하기\", \"설정\", \"종료\". Keep each label's EXACT original shape, glyph styling, baseline, size and original normalized position on the SAME full 16:9 canvas. REMOVE the teal brush-stroke selection banner entirely to transparent alpha. REMOVE the Deviant logo and all logo underline/construction strokes entirely. REMOVE every other object and background. Make all three labels SOLID WHITE / warm-neutral white glyphs with antialiased transparent edges, so the SAME PNG letters can be tinted dark when normal and pale when selected inside Unity. No black shadow, no colored border, no panel or ink stroke behind any label, no visible checkerboard. Only the three original labels at their existing original positions on a genuinely TRANSPARENT full 16:9 alpha canvas. Preserve original typography, not a different Korean font. Do not add any label, frame, legend, text, menu logo or symbols. Output a transparent PNG. Input is the exact approved overlay; this is a production UI layer separation, not a redesign."
+    }
+  ],
+  "conditioning": "Source images preserved. RGB of extracted label pixels normalized to white without changing alpha for Unity Image tinting. Shared ink trimmed and scaled to 322x78. Existing combined assets retained as reference only."
+}

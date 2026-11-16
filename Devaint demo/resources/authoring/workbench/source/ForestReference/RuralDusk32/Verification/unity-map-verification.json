@@ -1,0 +1,148 @@
+{
+    "pass": true,
+    "playModeExecuted": true,
+    "unityVersion": "6000.6.4f1",
+    "width": 20480,
+    "height": 2048,
+    "groundCells": 29852,
+    "platformCells": 449,
+    "visualCells": 32915,
+    "uniqueTiles": 1084,
+    "checks": [
+        {
+            "name": "Partial sketch preserves every source alpha pixel and terrain silhouette",
+            "pass": true,
+            "evidence": ""
+        },
+        {
+            "name": "All pixels outside sketch patches and dark soil fill remain unchanged",
+            "pass": true,
+            "evidence": ""
+        },
+        {
+            "name": "Most terrain stays colored; sketch is localized",
+            "pass": true,
+            "evidence": "210052 changed of 2078771 visible decorative pixels; 44 patches"
+        },
+        {
+            "name": "Colored and partial foliage platforms preserve landing and have no root row",
+            "pass": true,
+            "evidence": "14 assemblies,32..896px; alpha at unchanged landing baseline;3 visual rows retain proportional leaf tips; no soil or roots"
+        },
+        {
+            "name": "Continuous 20,480px forest generated",
+            "pass": true,
+            "evidence": "29852 ground cells; 449 one-way cells"
+        },
+        {
+            "name": "Editable ground and one-way collision layers installed",
+            "pass": true,
+            "evidence": ""
+        },
+        {
+            "name": "Separate sky, woodland and low tree layers installed",
+            "pass": true,
+            "evidence": "1152x768 each / PPU32; sky0.08, woodland0.55, low trees0.62; all behind gameplay; no ground-tree sprites"
+        },
+        {
+            "name": "Soft palette applied to scenery only",
+            "pass": true,
+            "evidence": "Approved character keeps original material; source tiles and all alpha remain intact"
+        },
+        {
+            "name": "Sky opaque and forest openings genuinely transparent",
+            "pass": true,
+            "evidence": "Generated forest alpha retained; sky visible through canopy and trunk openings"
+        },
+        {
+            "name": "Low tree layer retains transparent space and leaf silhouettes",
+            "pass": true,
+            "evidence": "Original generated alpha; proportional resize; no opaque sky behind low trees"
+        },
+        {
+            "name": "Sky and forest cover viewport with soft parallax",
+            "pass": true,
+            "evidence": "No reflected lower trunks or empty edges"
+        },
+        {
+            "name": "Vertical forest travel is small and independent of terrain",
+            "pass": true,
+            "evidence": "Terrain anchoring disabled; forest total range10px,sky4px;200px camera rise changes forest by4px or less"
+        },
+        {
+            "name": "Named reusable 32x32 PNGs and Unity Tile assets installed",
+            "pass": true,
+            "evidence": "204 role-named pieces; individual Tile Palette saved"
+        },
+        {
+            "name": "Ground surfaces, walls and all 47 neighbor shapes have sketch tiles",
+            "pass": true,
+            "evidence": "Two sketch styles, including inner corners, outer corners, cavities and fill"
+        },
+        {
+            "name": "All platform lengths reuse existing named tiles",
+            "pass": true,
+            "evidence": "21 assemblies from32px to896px; no long-platform raster is generated"
+        },
+        {
+            "name": "Modular platform landing baseline matches unchanged collision",
+            "pass": true,
+            "evidence": "All21 assemblies at cell Y0; rounded caps extend9px beyond supported center, matching18px actor foot width"
+        },
+        {
+            "name": "Platform middle tiles can be reordered without open seams",
+            "pass": true,
+            "evidence": "All48 connector pairs across clean, unfinished and colored styles; three vertical32px pieces per column; foliage only"
+        },
+        {
+            "name": "Browser atlas exported from actual Unity tile composition",
+            "pass": true,
+            "evidence": "1084 unique 32px tiles"
+        },
+        {
+            "name": "Seven native-scale Unity camera views rendered",
+            "pass": true,
+            "evidence": "960x540; characters use exact approved F006 sprite"
+        },
+        {
+            "name": "Saved long-map Tilemap loads in Play mode",
+            "pass": true,
+            "evidence": ""
+        },
+        {
+            "name": "Unity physics landing: 들길과 긴 전투 구역",
+            "pass": true,
+            "evidence": "(23.75, -7.98)"
+        },
+        {
+            "name": "Unity physics landing: 512px 능선과 굴 입구",
+            "pass": true,
+            "evidence": "(176.31, -20.98)"
+        },
+        {
+            "name": "Unity physics landing: 능선 아래 굴",
+            "pass": true,
+            "evidence": "(188.75, -20.98)"
+        },
+        {
+            "name": "Unity physics landing: 높은 숲길의 긴 전투 공간",
+            "pass": true,
+            "evidence": "(263.75, -7.98)"
+        },
+        {
+            "name": "Unity physics landing: 뿌리 아래 통로",
+            "pass": true,
+            "evidence": "(320.75, -24.98)"
+        },
+        {
+            "name": "Unity physics landing: 다시 오르는 깊은 숲",
+            "pass": true,
+            "evidence": "(508.75, -30.98)"
+        },
+        {
+            "name": "Unity physics landing: 노을 끝자락",
+            "pass": true,
+            "evidence": "(608.75, -5.98)"
+        }
+    ]
+}

@@ -1,0 +1,132 @@
+{
+ "format": "deviant-rapier-fx-v1",
+ "fps": 50,
+ "source": "평타 thrust_*: tools/make_thrust2.py G (은빛 칼빛 + 칼끝 납작 타원 고리 둘) / 특수: tools/pixelfx/rapier-special-fx-v4.js",
+ "clips": {
+  "thrust_hit1": {
+   "dir": "thrust/hit1",
+   "frames": 11,
+   "pixelsPerUnit": 64,
+   "size": [
+    320,
+    176
+   ],
+   "originTopLeftPx": [
+    20,
+    128
+   ],
+   "usedBy": [
+    "attack1",
+    "attack2"
+   ],
+   "startsAt": "clip fxStart (타격 0.03초 전)"
+  },
+  "thrust_hit3": {
+   "dir": "thrust/hit3",
+   "frames": 11,
+   "pixelsPerUnit": 64,
+   "size": [
+    320,
+    176
+   ],
+   "originTopLeftPx": [
+    20,
+    128
+   ],
+   "usedBy": [
+    "attack3"
+   ],
+   "startsAt": "clip fxStart (타격 0.03초 전)"
+  },
+  "charge": {
+   "dir": "special/charge",
+   "frames": 46,
+   "pixelsPerUnit": 32,
+   "size": [
+    320,
+    184
+   ],
+   "originTopLeftPx": [
+    44,
+    150
+   ],
+   "skill": "rapier_default",
+   "anchor": "character",
+   "startTime": 0.2,
+   "fps": 50,
+   "source": "ink/rapier-special-fx-v4 {'skill': 'charge', 'variant': 'c1'}"
+  },
+  "needle": {
+   "dir": "special/needle",
+   "frames": 12,
+   "pixelsPerUnit": 32,
+   "size": [
+    320,
+    184
+   ],
+   "originTopLeftPx": [
+    44,
+    150
+   ],
+   "skill": "rapier_range",
+   "anchor": "character",
+   "startTime": 0.3,
+   "fps": 50,
+   "source": "ink/rapier-special-fx-v4 {'skill': 'needle', 'variant': 'n1'}"
+  },
+  "slip_out": {
+   "dir": "special/slip_out",
+   "frames": 17,
+   "pixelsPerUnit": 32,
+   "size": [
+    320,
+    184
+   ],
+   "originTopLeftPx": [
+    44,
+    150
+   ],
+   "skill": "rapier_movement",
+   "anchor": "cast_start",
+   "startTime": 0.06,
+   "fps": 50,
+   "source": "ink/rapier-special-fx-v4 {'skill': 'slip_out', 'variant': 's2'}"
+  },
+  "slip_in": {
+   "dir": "special/slip_in",
+   "frames": 23,
+   "pixelsPerUnit": 32,
+   "size": [
+    320,
+    184
+   ],
+   "originTopLeftPx": [
+    44,
+    150
+   ],
+   "skill": "rapier_movement",
+   "anchor": "character",
+   "startTime": 0.1,
+   "fps": 50,
+   "source": "ink/rapier-special-fx-v4 {'skill': 'slip_in', 'variant': 's2'}"
+  },
+  "flurry": {
+   "dir": "special/flurry",
+   "frames": 38,
+   "pixelsPerUnit": 32,
+   "size": [
+    320,
+    184
+   ],
+   "originTopLeftPx": [
+    44,
+    150
+   ],
+   "skill": "rapier_follow_up",
+   "anchor": "character",
+   "startTime": 0.16,
+   "fps": 50,
+   "source": "ink/rapier-special-fx-v4 {'skill': 'flurry', 'variant': 'f1'}"
+  }
+ }
+}

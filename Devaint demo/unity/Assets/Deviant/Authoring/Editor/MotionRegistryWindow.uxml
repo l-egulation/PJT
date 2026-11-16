@@ -1,0 +1,35 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:Style src="LocomotionWindow.uss" />
+    <ui:ScrollView class="locomotion-editor">
+        <ui:Label text="공격 본체 모션 · 공유 원본 / 전투 시간 고정" class="heading" />
+        <ui:Label text="실행 가능한 모든 기본/특수/발사기 변환을 선택합니다. 실제 공급된 11개 공격 클립을 공유하며 없는 형태의 아트를 생성하지 않습니다. 프레임 가중치/순서는 본체 표시만 바꾸고 피해·이동·방출·차지·독립 효과의 시간은 기존 행동 정의가 소유합니다." class="description" />
+        <ui:DropdownField name="action" label="행동 / 변환" />
+        <ui:Label name="binding" class="description" />
+        <ui:Label name="affected" class="description" />
+        <uie:ObjectField name="runtime" label="적용할 전투" />
+        <ui:FloatField name="sourceImpact" label="원본 접촉 시각 (s)" />
+        <ui:FloatField name="fxStart" label="원본 기본 Cue 시작 (s, -1 끔)" />
+        <ui:VisualElement name="frames" />
+        <ui:TextField name="newId" label="삽입할 안정 스텝 ID" />
+        <ui:DropdownField name="newFrame" label="삽입할 기존 프레임" />
+        <ui:Button name="append" text="기존 매체 프레임 스텝 추가" />
+        <ui:Slider name="time" label="행동 시간 (s)" low-value="0" high-value="1" show-input-field="true" />
+        <ui:Toggle name="left" label="왼쪽 보기" />
+        <ui:VisualElement name="bodyPreview" />
+        <ui:Label name="preview" class="description" />
+        <ui:Label name="diff" class="description" />
+        <ui:Label name="framePolicy" class="description" />
+        <ui:Button name="frameEditor" text="기존 검 1타 Frame Timing Preview 열기" />
+        <ui:VisualElement class="actions">
+            <ui:Button name="applyNext" text="전체 공유 후보를 다음 시작부터 적용" />
+            <ui:Button name="applyReset" text="전체 공유 후보를 리셋 후 적용" />
+            <ui:Button name="reload" text="원본 재로드 (편집 폐기)" />
+        </ui:VisualElement>
+        <ui:TextField name="python" label="Python 실행 파일" />
+        <ui:Button name="save" text="선택 원본 저장 · 전체 모션 생성" />
+        <ui:Label name="source" class="description" />
+        <ui:Label name="state" class="description" />
+        <ui:Label name="status" class="description" />
+        <ui:Label text="없는 형태는 기존 본체 대체만 읽기 전용으로 표시합니다. 공급된 형태를 선택하면 같은 클립을 쓰는 모든 행동에 편집이 반영됩니다. 검 1타는 기존 JSON 원본만 편집하며 FrameTime 활성 중에는 고정 매체를 편집할 수 없습니다. 미리보기는 본체만 읽고 전투·Cue·음향을 실행하지 않습니다. 저장/생성·현재 실행 적용·전체 시나리오 캡처는 별도 동작입니다." class="description" />
+    </ui:ScrollView>
+</ui:UXML>

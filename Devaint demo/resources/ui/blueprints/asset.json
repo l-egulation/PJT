@@ -1,0 +1,31 @@
+{
+  "format": "deviant-resource-asset-v1",
+  "id": "ui.blueprints",
+  "path": "ui/blueprints",
+  "name": "기본 도면 카드와 큰 무기 그림",
+  "status": "review-candidates",
+  "approval": "pending-user-art-review",
+  "gameIntegration": "not-applied",
+  "files": [
+    "runtime/needed-art/blueprint-blunt.png",
+    "runtime/needed-art/blueprint-ranged.png",
+    "runtime/needed-art/blueprint-sword.png",
+    "runtime/needed-art/illustrations/blueprint-blunt-art.png",
+    "runtime/needed-art/illustrations/blueprint-ranged-art.png",
+    "runtime/needed-art/illustrations/blueprint-sword-art.png",
+    "source/needed-art/generated/blueprint-blunt.png",
+    "source/needed-art/generated/blueprint-ranged.png",
+    "source/needed-art/generated/blueprint-sword.png",
+    "source/needed-art/prompts/blueprint-blunt.txt",
+    "source/needed-art/prompts/blueprint-ranged.txt",
+    "source/needed-art/prompts/blueprint-sword.txt"
+  ],
+  "workingSets": {
+    "needed-art": {
+      "approval": "pending-user-art-review",
+      "gameIntegration": "not-applied",
+      "consumerSelection": "not-added-to-unity-deployment",
+      "layoutPathFromResourceRoot": "authoring/needed-assets/source/output-layout.json"
+    }
+  }
+}

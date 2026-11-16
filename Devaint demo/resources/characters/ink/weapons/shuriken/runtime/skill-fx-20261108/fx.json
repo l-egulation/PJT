@@ -1,0 +1,124 @@
+{
+ "format": "deviant-shuriken-skill-fx-v1",
+ "fps": 50,
+ "pixelsPerUnit": 32,
+ "source": "tools/pixelfx/shuriken-skill-fx.js (bake_shuriken_fx.mjs)",
+ "clips": {
+  "star": {
+   "frames": 30,
+   "loop": true,
+   "size": [
+    240,
+    240
+   ],
+   "originTopLeftPx": [
+    120,
+    120
+   ],
+   "options": {
+    "kind": "star",
+    "variant": "b"
+   }
+  },
+  "star_basic": {
+   "frames": 30,
+   "loop": true,
+   "size": [
+    240,
+    240
+   ],
+   "originTopLeftPx": [
+    120,
+    120
+   ],
+   "options": {
+    "kind": "star",
+    "variant": "b",
+    "r": 6.5,
+    "tag": "star-b-basic"
+   }
+  },
+  "sweep": {
+   "frames": 18,
+   "loop": false,
+   "size": [
+    240,
+    240
+   ],
+   "originTopLeftPx": [
+    120,
+    120
+   ],
+   "options": {
+    "kind": "sweep",
+    "variant": "a"
+   }
+  },
+  "blast": {
+   "frames": 31,
+   "loop": false,
+   "size": [
+    240,
+    240
+   ],
+   "originTopLeftPx": [
+    120,
+    120
+   ],
+   "options": {
+    "kind": "blast",
+    "variant": "a"
+   }
+  },
+  "step_out": {
+   "frames": 18,
+   "loop": false,
+   "size": [
+    240,
+    240
+   ],
+   "originTopLeftPx": [
+    120,
+    120
+   ],
+   "options": {
+    "kind": "step",
+    "variant": "a",
+    "mode": "out"
+   }
+  },
+  "step_in": {
+   "frames": 18,
+   "loop": false,
+   "size": [
+    240,
+    240
+   ],
+   "originTopLeftPx": [
+    120,
+    120
+   ],
+   "options": {
+    "kind": "step",
+    "variant": "a",
+    "mode": "in"
+   }
+  },
+  "roll": {
+   "frames": 30,
+   "loop": true,
+   "size": [
+    240,
+    240
+   ],
+   "originTopLeftPx": [
+    120,
+    120
+   ],
+   "options": {
+    "kind": "giant",
+    "variant": "c2"
+   }
+  }
+ }
+}

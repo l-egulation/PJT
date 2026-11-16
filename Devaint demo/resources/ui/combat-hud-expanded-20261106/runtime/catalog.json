@@ -1,0 +1,1548 @@
+{
+  "schema": "deviant-expandable-combat-ui-v1",
+  "sourceData": [
+    {
+      "file": "source/reference-data/ApprovedWeaponCatalog.json",
+      "upstream": "unity/Assets/Deviant/Combat/Resources/CharacterV2/ApprovedWeaponCatalog.json",
+      "sha256": "b4084bdd72adae6660f85eda3ca086c2fab966ad4dde106bccb7be778e7d629f"
+    },
+    {
+      "file": "source/launcher-skill-ui.json",
+      "authority": "user-directed UI contract; gameplay binding pending",
+      "sha256": "1b5634e20748e78cc434f772d8f30f5a5835b4d615bca6325cf6be3901168af6"
+    },
+    {
+      "file": "source/reference-data/melee_weapon_design.json",
+      "upstream": "data/combat/melee_weapon_design.json",
+      "sha256": "14ad6c7d8462ee106da7eb6fefa2427f4a4e3f9977ec397f8dc48049adc871c0"
+    },
+    {
+      "file": "source/reference-data/ranged_basic_design.json",
+      "upstream": "data/combat/ranged_basic_design.json",
+      "sha256": "1881c4aa444bddc014572afd248a05fd6ecbb625752b4c22cd094f5df2e826e2"
+    },
+    {
+      "file": "source/reference-data/ink_color_parts_proposal.json",
+      "upstream": "data/combat/ink_color_parts_proposal.json",
+      "sha256": "180d966cd9694a94ddaf39175a2670308de46bad7699a58c10563f95217ee0ec"
+    },
+    {
+      "file": "source/reference-data/ink_color_parts_tuning.json",
+      "upstream": "data/combat/ink_color_parts_tuning.json",
+      "sha256": "ccfbd38e5140a23a2ff5c4356028d612f94d1816347baade893aabbaba9db3c0"
+    },
+    {
+      "file": "source/reference-data/launcher_attack_conversions.json",
+      "upstream": "data/combat/launcher_attack_conversions.json",
+      "sha256": "77710f308da517f804fe54e030b0f125d7181a21e89b9836de14c2e16d7b30d1"
+    },
+    {
+      "file": "source/reference-data/weapon_growth_mvp_proposal.json",
+      "upstream": "data/combat/weapon_growth_mvp_proposal.json",
+      "sha256": "5d63ee400836523ec7326e97197e73ba9e4b637aa05969dc752f493aac5efc51"
+    }
+  ],
+  "weapons": [
+    {
+      "id": "base_sword",
+      "name": "기본검",
+      "family": "sword",
+      "gameplayBinding": {
+        "formId": "base_sword"
+      },
+      "icon": "weapon-sword",
+      "basicIcon": "skill-slash",
+      "specials": [
+        "base_sword_default",
+        "base_sword_range",
+        "base_sword_movement",
+        "base_sword_follow_up"
+      ],
+      "modes": [],
+      "specialPolicy": "cooldown-and-charges",
+      "identityOrigin": "base-blueprint"
+    },
+    {
+      "id": "rapier",
+      "name": "레이피어",
+      "family": "sword",
+      "gameplayBinding": {
+        "formId": "rapier"
+      },
+      "icon": "weapon-rapier",
+      "basicIcon": "action-thrust",
+      "specials": [
+        "rapier_default",
+        "rapier_range",
+        "rapier_movement",
+        "rapier_follow_up"
+      ],
+      "modes": [],
+      "specialPolicy": "cooldown-and-charges",
+      "identityOrigin": "shape-stamp-result"
+    },
+    {
+      "id": "whip",
+      "name": "채찍",
+      "family": "sword",
+      "gameplayBinding": {
+        "formId": "whip"
+      },
+      "icon": "weapon-whip",
+      "basicIcon": "action-bind",
+      "specials": [
+        "whip_default",
+        "whip_range",
+        "whip_movement",
+        "whip_follow_up"
+      ],
+      "modes": [],
+      "specialPolicy": "cooldown-and-charges",
+      "identityOrigin": "shape-stamp-result"
+    },
+    {
+      "id": "dagger",
+      "name": "한손 단검",
+      "family": "sword",
+      "gameplayBinding": {
+        "formId": "dagger"
+      },
+      "icon": "weapon-dagger",
+      "basicIcon": "action-thrust",
+      "specials": [
+        "dagger_default",
+        "dagger_range",
+        "dagger_movement",
+        "dagger_follow_up"
+      ],
+      "modes": [],
+      "specialPolicy": "cooldown-and-charges",
+      "identityOrigin": "shape-stamp-result"
+    },
+    {
+      "id": "hammer",
+      "name": "기본망치",
+      "family": "blunt",
+      "gameplayBinding": {
+        "formId": "hammer"
+      },
+      "icon": "weapon-hammer",
+      "basicIcon": "skill-impact",
+      "specials": [
+        "hammer_default",
+        "hammer_range",
+        "hammer_movement",
+        "hammer_follow_up"
+      ],
+      "modes": [],
+      "specialPolicy": "cooldown-and-charges",
+      "identityOrigin": "base-blueprint"
+    },
+    {
+      "id": "greatsword",
+      "name": "대검",
+      "family": "blunt",
+      "gameplayBinding": {
+        "formId": "greatsword"
+      },
+      "icon": "weapon-greatsword",
+      "basicIcon": "skill-slash",
+      "specials": [
+        "greatsword_default",
+        "greatsword_range",
+        "greatsword_movement",
+        "greatsword_follow_up"
+      ],
+      "modes": [],
+      "specialPolicy": "cooldown-and-charges",
+      "identityOrigin": "shape-stamp-result"
+    },
+    {
+      "id": "shield",
+      "name": "방패",
+      "family": "blunt",
+      "gameplayBinding": {
+        "formId": "shield"
+      },
+      "icon": "weapon-shield",
+      "basicIcon": "action-guard",
+      "specials": [
+        "shield_default",
+        "shield_range",
+        "shield_movement",
+        "shield_follow_up"
+      ],
+      "modes": [],
+      "specialPolicy": "cooldown-and-charges",
+      "identityOrigin": "shape-stamp-result"
+    },
+    {
+      "id": "launcher",
+      "name": "기본 발사기",
+      "family": "ranged",
+      "icon": "weapon-launcher",
+      "basicIcon": "action-ball",
+      "specials": [
+        "launcher_default",
+        "launcher_laser",
+        "launcher_shotgun",
+        "launcher_grenade"
+      ],
+      "modes": [],
+      "specialPolicy": "cooldown-and-charges",
+      "gameplayBinding": {
+        "formId": "launcher",
+        "skillBinding": "pending-other-session"
+      },
+      "identityOrigin": "base-blueprint"
+    },
+    {
+      "id": "shuriken",
+      "name": "수리검",
+      "family": "ranged",
+      "icon": "weapon-shuriken",
+      "basicIcon": "weapon-shuriken",
+      "specials": [
+        "shuriken_default",
+        "shuriken_range",
+        "shuriken_movement",
+        "shuriken_follow_up"
+      ],
+      "modes": [],
+      "specialPolicy": "cooldown-and-charges",
+      "gameplayBinding": {
+        "formId": "shuriken"
+      },
+      "identityOrigin": "shape-stamp-result"
+    },
+    {
+      "id": "bomb",
+      "name": "폭탄",
+      "family": "ranged",
+      "icon": "weapon-bomb",
+      "basicIcon": "weapon-bomb",
+      "specials": [
+        "bomb_default",
+        "bomb_range",
+        "bomb_movement",
+        "bomb_follow_up"
+      ],
+      "modes": [],
+      "specialPolicy": "cooldown-and-charges",
+      "gameplayBinding": {
+        "formId": "bomb"
+      },
+      "identityOrigin": "shape-stamp-result"
+    }
+  ],
+  "skills": [
+    {
+      "id": "base_sword_default",
+      "weaponId": "base_sword",
+      "name": "강베기",
+      "icon": "special-base_sword_default",
+      "slot": "default",
+      "cooldownSeconds": 5,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/base_sword/specials/base_sword_default"
+    },
+    {
+      "id": "base_sword_range",
+      "weaponId": "base_sword",
+      "name": "검기",
+      "icon": "special-base_sword_range",
+      "slot": "range",
+      "cooldownSeconds": 7,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/base_sword/specials/base_sword_range"
+    },
+    {
+      "id": "base_sword_movement",
+      "weaponId": "base_sword",
+      "name": "돌진 찌르기",
+      "icon": "special-base_sword_movement",
+      "slot": "movement",
+      "cooldownSeconds": 7,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/base_sword/specials/base_sword_movement"
+    },
+    {
+      "id": "base_sword_follow_up",
+      "weaponId": "base_sword",
+      "name": "잔상",
+      "icon": "special-base_sword_follow_up",
+      "slot": "follow_up",
+      "cooldownSeconds": 8,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/base_sword/specials/base_sword_follow_up"
+    },
+    {
+      "id": "whip_default",
+      "weaponId": "whip",
+      "name": "휘감기",
+      "icon": "special-whip_default",
+      "slot": "default",
+      "cooldownSeconds": 5,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/whip/specials/whip_default"
+    },
+    {
+      "id": "whip_range",
+      "weaponId": "whip",
+      "name": "가시 그물",
+      "icon": "special-whip_range",
+      "slot": "range",
+      "cooldownSeconds": 8,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/whip/specials/whip_range"
+    },
+    {
+      "id": "whip_movement",
+      "weaponId": "whip",
+      "name": "매듭 접근",
+      "icon": "special-whip_movement",
+      "slot": "movement",
+      "cooldownSeconds": 7,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/whip/specials/whip_movement"
+    },
+    {
+      "id": "whip_follow_up",
+      "weaponId": "whip",
+      "name": "매듭 조이기",
+      "icon": "special-whip_follow_up",
+      "slot": "follow_up",
+      "cooldownSeconds": 8,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/whip/specials/whip_follow_up"
+    },
+    {
+      "id": "rapier_default",
+      "weaponId": "rapier",
+      "name": "모아찌르기",
+      "icon": "special-rapier_default",
+      "slot": "default",
+      "cooldownSeconds": 6,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/rapier/specials/rapier_default"
+    },
+    {
+      "id": "rapier_range",
+      "weaponId": "rapier",
+      "name": "장침",
+      "icon": "special-rapier_range",
+      "slot": "range",
+      "cooldownSeconds": 7,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/rapier/specials/rapier_range"
+    },
+    {
+      "id": "rapier_movement",
+      "weaponId": "rapier",
+      "name": "흘려찌르기",
+      "icon": "special-rapier_movement",
+      "slot": "movement",
+      "cooldownSeconds": 6,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/rapier/specials/rapier_movement"
+    },
+    {
+      "id": "rapier_follow_up",
+      "weaponId": "rapier",
+      "name": "섬광 연침",
+      "icon": "special-rapier_follow_up",
+      "slot": "follow_up",
+      "cooldownSeconds": 9,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/rapier/specials/rapier_follow_up"
+    },
+    {
+      "id": "dagger_default",
+      "weaponId": "dagger",
+      "name": "숨죽이기",
+      "icon": "special-dagger_default",
+      "slot": "default",
+      "cooldownSeconds": 8,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/dagger/specials/dagger_default"
+    },
+    {
+      "id": "dagger_range",
+      "weaponId": "dagger",
+      "name": "먹안개",
+      "icon": "special-dagger_range",
+      "slot": "range",
+      "cooldownSeconds": 10,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/dagger/specials/dagger_range"
+    },
+    {
+      "id": "dagger_movement",
+      "weaponId": "dagger",
+      "name": "삼연 도약",
+      "icon": "special-dagger_movement",
+      "slot": "movement",
+      "cooldownSeconds": 5,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/dagger/specials/dagger_movement"
+    },
+    {
+      "id": "dagger_follow_up",
+      "weaponId": "dagger",
+      "name": "그림자 난무",
+      "icon": "special-dagger_follow_up",
+      "slot": "follow_up",
+      "cooldownSeconds": 9,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/dagger/specials/dagger_follow_up"
+    },
+    {
+      "id": "hammer_default",
+      "weaponId": "hammer",
+      "name": "횡강타",
+      "icon": "special-hammer_default",
+      "slot": "default",
+      "cooldownSeconds": 6,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/hammer/specials/hammer_default"
+    },
+    {
+      "id": "hammer_range",
+      "weaponId": "hammer",
+      "name": "지축 강타",
+      "icon": "special-hammer_range",
+      "slot": "range",
+      "cooldownSeconds": 10,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/hammer/specials/hammer_range"
+    },
+    {
+      "id": "hammer_movement",
+      "weaponId": "hammer",
+      "name": "몰아치기",
+      "icon": "special-hammer_movement",
+      "slot": "movement",
+      "cooldownSeconds": 8,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/hammer/specials/hammer_movement"
+    },
+    {
+      "id": "hammer_follow_up",
+      "weaponId": "hammer",
+      "name": "여진",
+      "icon": "special-hammer_follow_up",
+      "slot": "follow_up",
+      "cooldownSeconds": 9,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/hammer/specials/hammer_follow_up"
+    },
+    {
+      "id": "shield_default",
+      "weaponId": "shield",
+      "name": "받아치기",
+      "icon": "special-shield_default",
+      "slot": "default",
+      "cooldownSeconds": 6,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/shield/specials/shield_default"
+    },
+    {
+      "id": "shield_range",
+      "weaponId": "shield",
+      "name": "수호막",
+      "icon": "special-shield_range",
+      "slot": "range",
+      "cooldownSeconds": 10,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/shield/specials/shield_range"
+    },
+    {
+      "id": "shield_movement",
+      "weaponId": "shield",
+      "name": "방패 밀기",
+      "icon": "special-shield_movement",
+      "slot": "movement",
+      "cooldownSeconds": 8,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/shield/specials/shield_movement"
+    },
+    {
+      "id": "shield_follow_up",
+      "weaponId": "shield",
+      "name": "미끼 방패",
+      "icon": "special-shield_follow_up",
+      "slot": "follow_up",
+      "cooldownSeconds": 10,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/shield/specials/shield_follow_up"
+    },
+    {
+      "id": "greatsword_default",
+      "weaponId": "greatsword",
+      "name": "모아내려찍기",
+      "icon": "special-greatsword_default",
+      "slot": "default",
+      "cooldownSeconds": 7,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/greatsword/specials/greatsword_default"
+    },
+    {
+      "id": "greatsword_range",
+      "weaponId": "greatsword",
+      "name": "반월참",
+      "icon": "special-greatsword_range",
+      "slot": "range",
+      "cooldownSeconds": 9,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/greatsword/specials/greatsword_range"
+    },
+    {
+      "id": "greatsword_movement",
+      "weaponId": "greatsword",
+      "name": "회전 전진",
+      "icon": "special-greatsword_movement",
+      "slot": "movement",
+      "cooldownSeconds": 9,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/greatsword/specials/greatsword_movement"
+    },
+    {
+      "id": "greatsword_follow_up",
+      "weaponId": "greatsword",
+      "name": "낙인 대검",
+      "icon": "special-greatsword_follow_up",
+      "slot": "follow_up",
+      "cooldownSeconds": 10,
+      "idOrigin": "game-design-id",
+      "source": "melee_weapon_design.json#/forms/greatsword/specials/greatsword_follow_up"
+    },
+    {
+      "id": "launcher_default",
+      "weaponId": "launcher",
+      "name": "차징 후 발사",
+      "icon": "launcher-ball",
+      "slot": "default",
+      "presentationIcon": "weapon-launcher",
+      "presentationForm": "launcher",
+      "presentationName": "기본 발사기",
+      "idOrigin": "ui-alias-pending-gameplay-skill-binding",
+      "source": "source/launcher-skill-ui.json",
+      "cooldownSeconds": null,
+      "inputPresentation": "charge-and-release"
+    },
+    {
+      "id": "launcher_laser",
+      "weaponId": "launcher",
+      "name": "레이저",
+      "icon": "launcher-laser",
+      "slot": "laser",
+      "presentationIcon": "weapon-launcher-laser",
+      "presentationForm": "launcher_laser",
+      "presentationName": "레이저",
+      "idOrigin": "ui-alias-pending-gameplay-skill-binding",
+      "source": "source/launcher-skill-ui.json",
+      "cooldownSeconds": null,
+      "inputPresentation": "game-owned"
+    },
+    {
+      "id": "launcher_shotgun",
+      "weaponId": "launcher",
+      "name": "샷건",
+      "icon": "launcher-shotgun",
+      "slot": "shotgun",
+      "presentationIcon": "weapon-launcher-shotgun",
+      "presentationForm": "launcher_shotgun",
+      "presentationName": "샷건",
+      "idOrigin": "ui-alias-pending-gameplay-skill-binding",
+      "source": "source/launcher-skill-ui.json",
+      "cooldownSeconds": null,
+      "inputPresentation": "game-owned"
+    },
+    {
+      "id": "launcher_grenade",
+      "weaponId": "launcher",
+      "name": "유탄포",
+      "icon": "launcher-grenade",
+      "slot": "grenade",
+      "presentationIcon": "weapon-launcher-grenade",
+      "presentationForm": "launcher_grenade",
+      "presentationName": "유탄포",
+      "idOrigin": "ui-alias-pending-gameplay-skill-binding",
+      "source": "source/launcher-skill-ui.json",
+      "cooldownSeconds": null,
+      "inputPresentation": "game-owned"
+    },
+    {
+      "id": "shuriken_default",
+      "weaponId": "shuriken",
+      "name": "관통 수리검",
+      "icon": "special-shuriken_default",
+      "slot": "default",
+      "cooldownSeconds": 5,
+      "idOrigin": "ui-alias-for-design-field",
+      "source": "ranged_basic_design.json#/shuriken/basic_special_design"
+    },
+    {
+      "id": "shuriken_range",
+      "weaponId": "shuriken",
+      "name": "폭발 수리검",
+      "icon": "special-shuriken_range",
+      "slot": "range",
+      "cooldownSeconds": 7,
+      "idOrigin": "ui-alias-for-design-field",
+      "source": "ranged_basic_design.json#/shuriken/range_special_design"
+    },
+    {
+      "id": "shuriken_movement",
+      "weaponId": "shuriken",
+      "name": "뒤로 이동 · 복귀",
+      "icon": "special-shuriken_movement",
+      "slot": "movement",
+      "cooldownSeconds": 10,
+      "idOrigin": "ui-alias-for-design-field",
+      "source": "ranged_basic_design.json#/shuriken/movement_special_design"
+    },
+    {
+      "id": "shuriken_follow_up",
+      "weaponId": "shuriken",
+      "name": "전진 회전 수리검",
+      "icon": "special-shuriken_follow_up",
+      "slot": "follow_up",
+      "cooldownSeconds": 9,
+      "idOrigin": "ui-alias-for-design-field",
+      "source": "ranged_basic_design.json#/shuriken/followup_special_design"
+    },
+    {
+      "id": "bomb_default",
+      "weaponId": "bomb",
+      "name": "3연속 투척",
+      "icon": "special-bomb_default",
+      "slot": "default",
+      "cooldownSeconds": 8,
+      "idOrigin": "ui-alias-for-design-field",
+      "source": "ranged_basic_design.json#/bomb/basic_special_design"
+    },
+    {
+      "id": "bomb_range",
+      "weaponId": "bomb",
+      "name": "대형 폭탄",
+      "icon": "special-bomb_range",
+      "slot": "range",
+      "cooldownSeconds": 9,
+      "idOrigin": "ui-alias-for-design-field",
+      "source": "ranged_basic_design.json#/bomb/range_special_design"
+    },
+    {
+      "id": "bomb_movement",
+      "weaponId": "bomb",
+      "name": "미사일 변신",
+      "icon": "special-bomb_movement",
+      "slot": "movement",
+      "cooldownSeconds": 10,
+      "idOrigin": "ui-alias-for-design-field",
+      "source": "ranged_basic_design.json#/bomb/movement_special_design"
+    },
+    {
+      "id": "bomb_follow_up",
+      "weaponId": "bomb",
+      "name": "착지 시한폭탄",
+      "icon": "special-bomb_follow_up",
+      "slot": "follow_up",
+      "cooldownSeconds": 10,
+      "idOrigin": "ui-alias-for-design-field",
+      "source": "ranged_basic_design.json#/bomb/followup_special_design"
+    }
+  ],
+  "inks": [
+    {
+      "id": "ink3_red_01",
+      "name": "덧칠",
+      "color": "red",
+      "kind": "extra_hit",
+      "trigger": "hit",
+      "fixedGrade": 1,
+      "colorIcon": "drop-red",
+      "partIcon": "part-ink3_red_01",
+      "effectGlyph": "skill-slash",
+      "triggerGlyph": "skill-impact",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_red_01"
+    },
+    {
+      "id": "ink3_red_02",
+      "name": "집중 공격",
+      "color": "red",
+      "kind": "focus_stack_damage",
+      "trigger": "hit",
+      "fixedGrade": 3,
+      "colorIcon": "drop-red",
+      "partIcon": "part-ink3_red_02",
+      "effectGlyph": "action-mark",
+      "triggerGlyph": "skill-impact",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_red_02"
+    },
+    {
+      "id": "ink3_red_03",
+      "name": "힘 실어 건네기",
+      "color": "red",
+      "kind": "next_attack_power",
+      "trigger": "switch",
+      "fixedGrade": 2,
+      "colorIcon": "drop-red",
+      "partIcon": "part-ink3_red_03",
+      "effectGlyph": "action-thrust",
+      "triggerGlyph": "action-teleport",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_red_03"
+    },
+    {
+      "id": "ink3_red_04",
+      "name": "터지는 잉크",
+      "color": "red",
+      "kind": "burst_extra_hit",
+      "trigger": "mark_burst",
+      "fixedGrade": 4,
+      "colorIcon": "drop-red",
+      "partIcon": "part-ink3_red_04",
+      "effectGlyph": "skill-impact",
+      "triggerGlyph": "action-shockwave",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_red_04"
+    },
+    {
+      "id": "ink3_red_05",
+      "name": "사방으로 튀는 잉크",
+      "color": "red",
+      "kind": "kill_area_hit",
+      "trigger": "kill",
+      "fixedGrade": 1,
+      "colorIcon": "drop-red",
+      "partIcon": "part-ink3_red_05",
+      "effectGlyph": "action-shockwave",
+      "triggerGlyph": "weapon-dagger",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_red_05"
+    },
+    {
+      "id": "ink3_red_06",
+      "name": "기세를 몰아",
+      "color": "red",
+      "kind": "kill_stack_attack_power",
+      "trigger": "kill",
+      "fixedGrade": 2,
+      "colorIcon": "drop-red",
+      "partIcon": "part-ink3_red_06",
+      "effectGlyph": "action-echo",
+      "triggerGlyph": "weapon-dagger",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_red_06"
+    },
+    {
+      "id": "ink3_red_07",
+      "name": "붉은 낙관",
+      "color": "red",
+      "kind": "mark_damage_bonus",
+      "trigger": "passive",
+      "fixedGrade": 3,
+      "colorIcon": "drop-red",
+      "partIcon": "part-ink3_red_07",
+      "effectGlyph": "action-mark",
+      "triggerGlyph": "action-ball",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_red_07"
+    },
+    {
+      "id": "ink3_red_08",
+      "name": "결정타",
+      "color": "red",
+      "kind": "execute_damage",
+      "trigger": "hit",
+      "fixedGrade": 2,
+      "colorIcon": "drop-red",
+      "partIcon": "part-ink3_red_08",
+      "effectGlyph": "weapon-dagger",
+      "triggerGlyph": "skill-impact",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_red_08"
+    },
+    {
+      "id": "ink3_red_09",
+      "name": "농묵",
+      "color": "red",
+      "kind": "risky_attack_power",
+      "trigger": "passive",
+      "fixedGrade": 3,
+      "colorIcon": "drop-red",
+      "partIcon": "part-ink3_red_09",
+      "effectGlyph": "skill-slash",
+      "triggerGlyph": "action-ball",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_red_09"
+    },
+    {
+      "id": "ink3_red_10",
+      "name": "밑줄 긋기",
+      "color": "red",
+      "kind": "underline_mark",
+      "trigger": "hit",
+      "fixedGrade": 2,
+      "colorIcon": "drop-red",
+      "partIcon": "part-ink3_red_10",
+      "effectGlyph": "action-mark",
+      "triggerGlyph": "skill-impact",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_red_10"
+    },
+    {
+      "id": "ink3_yellow_01",
+      "name": "전기 발자국",
+      "color": "yellow",
+      "kind": "electric_field",
+      "trigger": "move",
+      "fixedGrade": 3,
+      "colorIcon": "drop-yellow",
+      "partIcon": "part-ink3_yellow_01",
+      "effectGlyph": "action-lightning",
+      "triggerGlyph": "action-dash",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_yellow_01"
+    },
+    {
+      "id": "ink3_yellow_02",
+      "name": "뛰어난 발걸음",
+      "color": "yellow",
+      "kind": "attack_and_move_speed",
+      "trigger": "passive",
+      "fixedGrade": 1,
+      "colorIcon": "drop-yellow",
+      "partIcon": "part-ink3_yellow_02",
+      "effectGlyph": "action-dash",
+      "triggerGlyph": "action-ball",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_yellow_02"
+    },
+    {
+      "id": "ink3_yellow_03",
+      "name": "몸통 박치기",
+      "color": "yellow",
+      "kind": "dash_hit",
+      "trigger": "dash",
+      "fixedGrade": 2,
+      "colorIcon": "drop-yellow",
+      "partIcon": "part-ink3_yellow_03",
+      "effectGlyph": "action-thrust",
+      "triggerGlyph": "action-thrust",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_yellow_03"
+    },
+    {
+      "id": "ink3_yellow_04",
+      "name": "휘몰아치기",
+      "color": "yellow",
+      "kind": "attack_and_move_speed",
+      "trigger": "switch",
+      "fixedGrade": 2,
+      "colorIcon": "drop-yellow",
+      "partIcon": "part-ink3_yellow_04",
+      "effectGlyph": "action-dash",
+      "triggerGlyph": "action-teleport",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_yellow_04"
+    },
+    {
+      "id": "ink3_yellow_05",
+      "name": "전기 장판",
+      "color": "yellow",
+      "kind": "electric_field",
+      "trigger": "mark_burst",
+      "fixedGrade": 4,
+      "colorIcon": "drop-yellow",
+      "partIcon": "part-ink3_yellow_05",
+      "effectGlyph": "action-lightning",
+      "triggerGlyph": "action-shockwave",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_yellow_05"
+    },
+    {
+      "id": "ink3_yellow_06",
+      "name": "신난다",
+      "color": "yellow",
+      "kind": "moving_attack_power",
+      "trigger": "kill",
+      "fixedGrade": 1,
+      "colorIcon": "drop-yellow",
+      "partIcon": "part-ink3_yellow_06",
+      "effectGlyph": "action-dash",
+      "triggerGlyph": "weapon-dagger",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_yellow_06"
+    },
+    {
+      "id": "ink3_yellow_07",
+      "name": "끊어 치기",
+      "color": "yellow",
+      "kind": "hit_recovery_cancel",
+      "trigger": "hit",
+      "fixedGrade": 3,
+      "colorIcon": "drop-yellow",
+      "partIcon": "part-ink3_yellow_07",
+      "effectGlyph": "action-echo",
+      "triggerGlyph": "skill-impact",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_yellow_07"
+    },
+    {
+      "id": "ink3_yellow_08",
+      "name": "번개 표식",
+      "color": "yellow",
+      "kind": "chain_lightning",
+      "trigger": "mark_pop",
+      "fixedGrade": 2,
+      "colorIcon": "drop-yellow",
+      "partIcon": "part-ink3_yellow_08",
+      "effectGlyph": "action-lightning",
+      "triggerGlyph": "action-mark",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_yellow_08"
+    },
+    {
+      "id": "ink3_yellow_09",
+      "name": "번지는 표식",
+      "color": "yellow",
+      "kind": "mark_chain_spread",
+      "trigger": "mark_burst",
+      "fixedGrade": 4,
+      "colorIcon": "drop-yellow",
+      "partIcon": "part-ink3_yellow_09",
+      "effectGlyph": "action-net",
+      "triggerGlyph": "action-shockwave",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_yellow_09"
+    },
+    {
+      "id": "ink3_yellow_10",
+      "name": "질주 충전",
+      "color": "yellow",
+      "kind": "move_charge",
+      "trigger": "move",
+      "fixedGrade": 1,
+      "colorIcon": "drop-yellow",
+      "partIcon": "part-ink3_yellow_10",
+      "effectGlyph": "action-ball",
+      "triggerGlyph": "action-dash",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_yellow_10"
+    },
+    {
+      "id": "ink3_yellow_11",
+      "name": "내달린 획",
+      "color": "yellow",
+      "kind": "dash_followup",
+      "trigger": "passive",
+      "fixedGrade": 2,
+      "colorIcon": "drop-yellow",
+      "partIcon": "part-ink3_yellow_11",
+      "effectGlyph": "action-echo",
+      "triggerGlyph": "action-ball",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_yellow_11"
+    },
+    {
+      "id": "ink3_yellow_12",
+      "name": "옮겨 쓰기",
+      "color": "yellow",
+      "kind": "switch_slide",
+      "trigger": "switch",
+      "fixedGrade": 3,
+      "colorIcon": "drop-yellow",
+      "partIcon": "part-ink3_yellow_12",
+      "effectGlyph": "action-teleport",
+      "triggerGlyph": "action-teleport",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_yellow_12"
+    },
+    {
+      "id": "ink3_green_01",
+      "name": "든든한 배리어",
+      "color": "green",
+      "kind": "shielded_attack_power",
+      "trigger": "passive",
+      "fixedGrade": 3,
+      "colorIcon": "drop-green",
+      "partIcon": "part-ink3_green_01",
+      "effectGlyph": "weapon-shield",
+      "triggerGlyph": "action-ball",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_green_01"
+    },
+    {
+      "id": "ink3_green_02",
+      "name": "보호막 교체",
+      "color": "green",
+      "kind": "shield",
+      "trigger": "switch",
+      "fixedGrade": 2,
+      "colorIcon": "drop-green",
+      "partIcon": "part-ink3_green_02",
+      "effectGlyph": "action-guard",
+      "triggerGlyph": "action-teleport",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_green_02"
+    },
+    {
+      "id": "ink3_green_03",
+      "name": "가시갑옷",
+      "color": "green",
+      "kind": "homing_counter",
+      "trigger": "damaged",
+      "fixedGrade": 4,
+      "colorIcon": "drop-green",
+      "partIcon": "part-ink3_green_03",
+      "effectGlyph": "action-thrust",
+      "triggerGlyph": "action-guard",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_green_03"
+    },
+    {
+      "id": "ink3_green_04",
+      "name": "전투 식량",
+      "color": "green",
+      "kind": "heal",
+      "trigger": "kill",
+      "fixedGrade": 1,
+      "colorIcon": "drop-green",
+      "partIcon": "part-ink3_green_04",
+      "effectGlyph": "action-heal",
+      "triggerGlyph": "weapon-dagger",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_green_04"
+    },
+    {
+      "id": "ink3_green_05",
+      "name": "티끌 모아 태산",
+      "color": "green",
+      "kind": "heal",
+      "trigger": "hit",
+      "fixedGrade": 1,
+      "colorIcon": "drop-green",
+      "partIcon": "part-ink3_green_05",
+      "effectGlyph": "action-heal",
+      "triggerGlyph": "skill-impact",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_green_05"
+    },
+    {
+      "id": "ink3_green_06",
+      "name": "풀컨디션",
+      "color": "green",
+      "kind": "high_health_attack_power",
+      "trigger": "passive",
+      "fixedGrade": 2,
+      "colorIcon": "drop-green",
+      "partIcon": "part-ink3_green_06",
+      "effectGlyph": "action-heal",
+      "triggerGlyph": "action-ball",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_green_06"
+    },
+    {
+      "id": "ink3_green_07",
+      "name": "초록 수액",
+      "color": "green",
+      "kind": "heal",
+      "trigger": "mark_pop",
+      "fixedGrade": 3,
+      "colorIcon": "drop-green",
+      "partIcon": "part-ink3_green_07",
+      "effectGlyph": "action-heal",
+      "triggerGlyph": "action-mark",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_green_07"
+    },
+    {
+      "id": "ink3_green_08",
+      "name": "단단한 껍질",
+      "color": "green",
+      "kind": "hit_guard_shield",
+      "trigger": "damaged",
+      "fixedGrade": 2,
+      "colorIcon": "drop-green",
+      "partIcon": "part-ink3_green_08",
+      "effectGlyph": "action-guard",
+      "triggerGlyph": "action-guard",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_green_08"
+    },
+    {
+      "id": "ink3_green_09",
+      "name": "되갚는 잉크",
+      "color": "green",
+      "kind": "stored_retaliation",
+      "trigger": "damaged",
+      "fixedGrade": 2,
+      "colorIcon": "drop-green",
+      "partIcon": "part-ink3_green_09",
+      "effectGlyph": "skill-impact",
+      "triggerGlyph": "action-guard",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_green_09"
+    },
+    {
+      "id": "ink3_green_10",
+      "name": "갑옷 깁기",
+      "color": "green",
+      "kind": "shield",
+      "trigger": "kill",
+      "fixedGrade": 2,
+      "colorIcon": "drop-green",
+      "partIcon": "part-ink3_green_10",
+      "effectGlyph": "action-guard",
+      "triggerGlyph": "weapon-dagger",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_green_10"
+    },
+    {
+      "id": "ink3_blue_01",
+      "name": "범위 증폭",
+      "color": "blue",
+      "kind": "area_radius",
+      "trigger": "passive",
+      "fixedGrade": 2,
+      "colorIcon": "drop-blue",
+      "partIcon": "part-ink3_blue_01",
+      "effectGlyph": "action-shockwave",
+      "triggerGlyph": "action-ball",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_blue_01"
+    },
+    {
+      "id": "ink3_blue_02",
+      "name": "교대 타격",
+      "color": "blue",
+      "kind": "cooldown_reduce",
+      "trigger": "switch",
+      "fixedGrade": 1,
+      "colorIcon": "drop-blue",
+      "partIcon": "part-ink3_blue_02",
+      "effectGlyph": "action-timer",
+      "triggerGlyph": "action-teleport",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_blue_02"
+    },
+    {
+      "id": "ink3_blue_03",
+      "name": "여의봉",
+      "color": "blue",
+      "kind": "attack_reach",
+      "trigger": "passive",
+      "fixedGrade": 2,
+      "colorIcon": "drop-blue",
+      "partIcon": "part-ink3_blue_03",
+      "effectGlyph": "action-thrust",
+      "triggerGlyph": "action-ball",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_blue_03"
+    },
+    {
+      "id": "ink3_blue_04",
+      "name": "난무",
+      "color": "blue",
+      "kind": "cooldown_reduce",
+      "trigger": "hit",
+      "fixedGrade": 3,
+      "colorIcon": "drop-blue",
+      "partIcon": "part-ink3_blue_04",
+      "effectGlyph": "action-timer",
+      "triggerGlyph": "skill-impact",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_blue_04"
+    },
+    {
+      "id": "ink3_blue_05",
+      "name": "공명",
+      "color": "blue",
+      "kind": "cooldown_reduce",
+      "trigger": "mark_burst",
+      "fixedGrade": 4,
+      "colorIcon": "drop-blue",
+      "partIcon": "part-ink3_blue_05",
+      "effectGlyph": "action-timer",
+      "triggerGlyph": "action-shockwave",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_blue_05"
+    },
+    {
+      "id": "ink3_blue_06",
+      "name": "학살",
+      "color": "blue",
+      "kind": "area_radius",
+      "trigger": "kill",
+      "fixedGrade": 1,
+      "colorIcon": "drop-blue",
+      "partIcon": "part-ink3_blue_06",
+      "effectGlyph": "action-shockwave",
+      "triggerGlyph": "weapon-dagger",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_blue_06"
+    },
+    {
+      "id": "ink3_blue_07",
+      "name": "푸른 순환",
+      "color": "blue",
+      "kind": "cooldown_reduce",
+      "trigger": "mark_pop",
+      "fixedGrade": 3,
+      "colorIcon": "drop-blue",
+      "partIcon": "part-ink3_blue_07",
+      "effectGlyph": "action-timer",
+      "triggerGlyph": "action-mark",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_blue_07"
+    },
+    {
+      "id": "ink3_blue_08",
+      "name": "색 번짐",
+      "color": "blue",
+      "kind": "mark_spread",
+      "trigger": "hit",
+      "fixedGrade": 4,
+      "colorIcon": "drop-blue",
+      "partIcon": "part-ink3_blue_08",
+      "effectGlyph": "action-net",
+      "triggerGlyph": "skill-impact",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_blue_08"
+    },
+    {
+      "id": "ink3_blue_09",
+      "name": "겹쳐 쓰기",
+      "color": "blue",
+      "kind": "extra_skill_charge",
+      "trigger": "passive",
+      "fixedGrade": 4,
+      "colorIcon": "drop-blue",
+      "partIcon": "part-ink3_blue_09",
+      "effectGlyph": "action-echo",
+      "triggerGlyph": "action-ball",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_blue_09"
+    },
+    {
+      "id": "ink3_blue_10",
+      "name": "정리 정돈",
+      "color": "blue",
+      "kind": "cooldown_reduce",
+      "trigger": "kill",
+      "fixedGrade": 1,
+      "colorIcon": "drop-blue",
+      "partIcon": "part-ink3_blue_10",
+      "effectGlyph": "action-timer",
+      "triggerGlyph": "weapon-dagger",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_blue_10"
+    },
+    {
+      "id": "ink3_blue_11",
+      "name": "앞당긴 획",
+      "color": "blue",
+      "kind": "next_attack_geometry",
+      "trigger": "switch",
+      "fixedGrade": 2,
+      "colorIcon": "drop-blue",
+      "partIcon": "part-ink3_blue_11",
+      "effectGlyph": "action-wave",
+      "triggerGlyph": "action-teleport",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_blue_11"
+    },
+    {
+      "id": "ink3_purple_01",
+      "name": "먹물 늪",
+      "color": "purple",
+      "kind": "bind",
+      "trigger": "hit",
+      "fixedGrade": 2,
+      "colorIcon": "drop-purple",
+      "partIcon": "part-ink3_purple_01",
+      "effectGlyph": "action-bind",
+      "triggerGlyph": "skill-impact",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_purple_01"
+    },
+    {
+      "id": "ink3_purple_02",
+      "name": "잔류 폭발",
+      "color": "purple",
+      "kind": "area_hit",
+      "trigger": "bind_end",
+      "fixedGrade": 3,
+      "colorIcon": "drop-purple",
+      "partIcon": "part-ink3_purple_02",
+      "effectGlyph": "skill-impact",
+      "triggerGlyph": "action-bind",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_purple_02"
+    },
+    {
+      "id": "ink3_purple_03",
+      "name": "선제 제압",
+      "color": "purple",
+      "kind": "stun",
+      "trigger": "hit",
+      "fixedGrade": 2,
+      "colorIcon": "drop-purple",
+      "partIcon": "part-ink3_purple_03",
+      "effectGlyph": "action-lightning",
+      "triggerGlyph": "skill-impact",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_purple_03"
+    },
+    {
+      "id": "ink3_purple_04",
+      "name": "뇌진탕",
+      "color": "purple",
+      "kind": "stunned_dot",
+      "trigger": "passive",
+      "fixedGrade": 3,
+      "colorIcon": "drop-purple",
+      "partIcon": "part-ink3_purple_04",
+      "effectGlyph": "action-timer",
+      "triggerGlyph": "action-ball",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_purple_04"
+    },
+    {
+      "id": "ink3_purple_05",
+      "name": "사약",
+      "color": "purple",
+      "kind": "poison",
+      "trigger": "hit",
+      "fixedGrade": 1,
+      "colorIcon": "drop-purple",
+      "partIcon": "part-ink3_purple_05",
+      "effectGlyph": "action-poison",
+      "triggerGlyph": "skill-impact",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_purple_05"
+    },
+    {
+      "id": "ink3_purple_06",
+      "name": "종합 병원",
+      "color": "purple",
+      "kind": "cc_count_hit",
+      "trigger": "mark_burst",
+      "fixedGrade": 4,
+      "colorIcon": "drop-purple",
+      "partIcon": "part-ink3_purple_06",
+      "effectGlyph": "action-net",
+      "triggerGlyph": "action-shockwave",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_purple_06"
+    },
+    {
+      "id": "ink3_purple_07",
+      "name": "쪽빛 족쇄",
+      "color": "purple",
+      "kind": "bind",
+      "trigger": "mark_pop",
+      "fixedGrade": 3,
+      "colorIcon": "drop-purple",
+      "partIcon": "part-ink3_purple_07",
+      "effectGlyph": "action-bind",
+      "triggerGlyph": "action-mark",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_purple_07"
+    },
+    {
+      "id": "ink3_purple_08",
+      "name": "보랏빛 낙인",
+      "color": "purple",
+      "kind": "poison",
+      "trigger": "mark_pop",
+      "fixedGrade": 4,
+      "colorIcon": "drop-purple",
+      "partIcon": "part-ink3_purple_08",
+      "effectGlyph": "action-poison",
+      "triggerGlyph": "action-mark",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_purple_08"
+    },
+    {
+      "id": "ink3_purple_09",
+      "name": "독폭탄",
+      "color": "purple",
+      "kind": "poison_burst",
+      "trigger": "hit",
+      "fixedGrade": 2,
+      "colorIcon": "drop-purple",
+      "partIcon": "part-ink3_purple_09",
+      "effectGlyph": "action-poison",
+      "triggerGlyph": "skill-impact",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_purple_09"
+    },
+    {
+      "id": "ink3_purple_10",
+      "name": "넘어뜨리기",
+      "color": "purple",
+      "kind": "stun",
+      "trigger": "dash",
+      "fixedGrade": 3,
+      "colorIcon": "drop-purple",
+      "partIcon": "part-ink3_purple_10",
+      "effectGlyph": "action-lightning",
+      "triggerGlyph": "action-thrust",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_purple_10"
+    },
+    {
+      "id": "ink3_purple_11",
+      "name": "약점 찌르기",
+      "color": "purple",
+      "kind": "controlled_damage",
+      "trigger": "passive",
+      "fixedGrade": 2,
+      "colorIcon": "drop-purple",
+      "partIcon": "part-ink3_purple_11",
+      "effectGlyph": "action-thrust",
+      "triggerGlyph": "action-ball",
+      "source": "ink_color_parts_proposal.json#/parts/ink3_purple_11"
+    }
+  ],
+  "launcherSkillPresentations": [
+    {
+      "skillId": "launcher_default",
+      "name": "차징 후 발사",
+      "icon": "weapon-launcher",
+      "form": "launcher"
+    },
+    {
+      "skillId": "launcher_laser",
+      "name": "레이저",
+      "icon": "weapon-launcher-laser",
+      "form": "launcher_laser"
+    },
+    {
+      "skillId": "launcher_shotgun",
+      "name": "샷건",
+      "icon": "weapon-launcher-shotgun",
+      "form": "launcher_shotgun"
+    },
+    {
+      "skillId": "launcher_grenade",
+      "name": "유탄포",
+      "icon": "weapon-launcher-grenade",
+      "form": "launcher_grenade"
+    }
+  ],
+  "legacyWeaponSelections": {
+    "launcher_laser": {
+      "weaponId": "launcher",
+      "skillId": "launcher_laser"
+    },
+    "launcher_shotgun": {
+      "weaponId": "launcher",
+      "skillId": "launcher_shotgun"
+    },
+    "launcher_grenade": {
+      "weaponId": "launcher",
+      "skillId": "launcher_grenade"
+    }
+  },
+  "weaponIdentityPolicy": "10 selectable weapons. Launcher has four equipped skills; its large icon and run card follow the equipped skill presentation.",
+  "familyCounts": {
+    "sword": 4,
+    "blunt": 3,
+    "ranged": 3
+  },
+  "inkColors": [
+    {
+      "color": "red",
+      "name": "빨강",
+      "role": "직접 피해",
+      "summary": "추가타·다음 공격 강화처럼 피해를 직접 더한다."
+    },
+    {
+      "color": "yellow",
+      "name": "노랑",
+      "role": "이동으로 피해",
+      "summary": "걷기·대시·전기장과 공속·이속 증가를 피해로 연결한다."
+    },
+    {
+      "color": "green",
+      "name": "초록",
+      "role": "체력으로 피해",
+      "summary": "보호막·체력 상태와 피격 반격을 피해로 연결한다. 회복은 전투 누적으로만 얻는다."
+    },
+    {
+      "color": "blue",
+      "name": "파랑",
+      "role": "공격하기 쉽게",
+      "summary": "공격 범위·사거리와 남은 특수 쿨타임 감소로 공격 기회를 늘린다."
+    },
+    {
+      "color": "purple",
+      "name": "보라",
+      "role": "CC로 피해",
+      "summary": "속박·기절·독을 걸고 그 상태를 피해로 연결한다."
+    }
+  ],
+  "triggers": [
+    {
+      "id": "passive",
+      "name": "상시",
+      "description": "트리거 없이 적용한다. 마지막으로 실제 공격을 시작한 무기의 팔레트 효과만 적용한다."
+    },
+    {
+      "id": "hit",
+      "name": "몬스터 적중 시",
+      "description": "원타격과 추가타의 적중. 지속 피해·장판 피해는 적중으로 세지 않는다."
+    },
+    {
+      "id": "kill",
+      "name": "몬스터 처치 시",
+      "description": "몬스터 한 생명당 한 번."
+    },
+    {
+      "id": "switch",
+      "name": "스위칭 시",
+      "description": "이 잉크를 낀 무기에서 다른 무기로 바꿀 때. 바꾸기 전 무기의 잉크 효과를 먼저 모두 처리한 뒤 다른 무기로 바꾸고, 바꿔 든 무기가 자동 공격한다."
+    },
+    {
+      "id": "mark_burst",
+      "name": "표식 터트릴 시",
+      "description": "표식을 쌓은 무기가 아닌 무기로 맞혀 쌓인 표식을 모두 터트릴 때. 역순으로 터지는 연쇄의 마지막 빨강 표식이 터질 때 한 번 발동한다."
+    },
+    {
+      "id": "mark_pop",
+      "name": "색 표식이 터질 때",
+      "description": "표식 연쇄에서 그 순번 색의 표식이 터질 때. 그 색까지 표식이 쌓여 있어야 한다."
+    },
+    {
+      "id": "move",
+      "name": "이동 시",
+      "description": "걷기·대시의 실제 가로 이동 거리. 넉백·순간이동·위치 보정은 제외한다."
+    },
+    {
+      "id": "dash",
+      "name": "대시 시",
+      "description": "대시 중 몬스터와 겹쳤을 때. 대시 한 번에 몬스터마다 한 번."
+    },
+    {
+      "id": "damaged",
+      "name": "피격 시",
+      "description": "몬스터 공격으로 실제 체력 피해를 받았을 때. 보호막에 모두 막힌 피해·낙사·자해는 제외한다."
+    },
+    {
+      "id": "bind_end",
+      "name": "속박이 풀릴 때",
+      "description": "몬스터에게 걸린 속박이 시간이 다 되어 풀릴 때. 처치로 사라진 속박은 제외한다."
+    }
+  ],
+  "palette": {
+    "initialSlots": 3,
+    "supportedSlots": [
+      3,
+      4,
+      5
+    ],
+    "colorlessIsInkColor": false,
+    "colorlessIcon": "drop-colorless",
+    "emptyIcon": "slot-empty",
+    "lockedIcon": "slot-locked",
+    "revealUses": "colorIcon-only",
+    "revealSeconds": 3.5,
+    "slotData": [
+      "color",
+      "partId|null",
+      "locked",
+      "universal"
+    ],
+    "firstUnlockDefault": "first-slot-universal",
+    "rulesOwnedByGame": true
+  },
+  "unknownContent": {
+    "weaponIcon": "state-empty-weapon",
+    "skillIcon": "state-unavailable",
+    "neverSubstituteSword": true
+  },
+  "stateContract": {
+    "weapon": [
+      "active",
+      "idle",
+      "empty"
+    ],
+    "skill": [
+      "ready",
+      "cooldown",
+      "charging",
+      "charged",
+      "unavailable"
+    ],
+    "fields": [
+      "weaponId",
+      "skillId",
+      "launcherMode",
+      "selected",
+      "remainingSeconds",
+      "cooldownFraction",
+      "chargeProgress",
+      "availableCharges",
+      "chargeCapacity",
+      "paletteSlots"
+    ],
+    "cooldownFraction": "remaining / duration; radial clockwise from 12 oclock",
+    "chargeProgress": "held / required; independent from cooldown",
+    "launcher": "one weapon; default charged shot or laser/shotgun/grenade skill changes the large icon and run-card badge; basic attack remains the launcher basic attack; gameplay timing and IDs require the gameplay adapter",
+    "charges": "available / capacity; recovery independent per weapon",
+    "experimentalChargeStamp": "render charging separately; gameplay adapter decides whether the stamp exists"
+  }
+}

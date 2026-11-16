@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>deviant · 황혼 숲 · 긴 맵 v6</title>
+<link rel="stylesheet" href="style.css?v=matched-platform-v3-20261016">
+</head>
+<body>
+<main>
+  <header>
+    <div><span class="eyebrow">deviant · 긴 숲 맵 v6</span><h1>황혼의 들길 <span>굴과 높은 능선으로 이어지는 숲</span></h1></div>
+    <nav aria-label="보기 모드"><button id="sceneMode" class="active">조립 화면</button><button id="tilesMode">개별 에셋</button></nav>
+  </header>
+  <section id="scenePanel">
+    <div class="scene-toolbar"><strong>첫 챕터 · 몬스터 6종</strong><label>배치 <select id="monsterMode"><option value="placed">숲길에 배치 · 23마리</option><option value="lineup">6종 나란히 비교</option><option value="hidden">몬스터 숨기기</option></select></label><label><input id="monsterLabels" type="checkbox"> 이름 표시</label><span>종별 5~6색 · 128/192px · 확정 크기 · 네이티브 1:1</span><label>색감 <select id="monsterPalette"><option value="dusk">황혼 숲 · 5~6색</option><option value="original">이전 픽셀본 · 크기 비교</option></select></label><span></span></div>
+    <div class="scene-viewport"><div class="scene-frame" data-zoom="1"><canvas id="game" width="960" height="540" aria-label="시골 황혼 숲 모듈 조립 화면" tabindex="0"></canvas><div id="loading">조립용 에셋을 읽고 있어요…</div></div><button id="exitFullscreen" aria-label="전체화면 나가기">나가기 · Esc</button></div>
+    <div class="scene-toolbar"><strong id="zoneTitle">마을 밖 들판</strong><span id="position">0 / 20,480 px</span><label>화면 <select id="sceneZoom"><option value="1">1배 · 960 px</option><option value="2">2배 · 1,920 px</option><option value="fit">창에 맞춤</option></select></label><button id="download">화면 저장</button><button id="reset">처음으로</button></div>
+    <button id="fullscreen" class="fullscreen-launch">전체화면으로 플레이 · F</button>
+    <label class="timeline"><span class="sr-only">카메라 위치</span><input id="camera" type="range" min="0" max="19520" step="1" value="0"></label>
+    <p id="zoneHint" class="zone-hint">긴 평지와 두 갈래 길</p>
+    <canvas id="overview" width="1280" height="160" role="img" aria-label="전체 숲 지도. 황금색은 지면, 녹색은 윗길, 파란 점은 현재 위치" title="지도를 누르면 해당 구간으로 이동합니다"></canvas>
+    <div class="destinations" aria-label="구간 바로 보기"><button data-x="0">1. 들길 입구</button><button data-x="2560">2. 낮은 숲길</button><button data-x="5120">3. 능선 오름길</button><button data-x="7680">4. 황금빛 고원</button><button data-x="10240">5. 갈림 협곡</button><button data-x="12800">6. 깊은 숲 분지</button><button data-x="15360">7. 다시 오르는 길</button><button data-x="17920">8. 노을 끝자락</button></div>
+    <div class="destinations" aria-label="굴 바로 보기"><button data-cave="0">굴 1 · 능선 아래</button><button data-cave="1">굴 2 · 뿌리 아래</button><button data-cave="2">굴 3 · 깊은 숲</button></div><p><a href="tiles/index.html" target="_blank" style="color:#efd18c">부분 스케치32 · 개별 타일과 실제 조립</a></p><div class="motion-toolbar" aria-label="캐릭터 모션 시험"><output id="motionStatus">캐릭터 모션 준비 중</output><div><button data-action="jump" disabled>점프 <kbd>Space</kbd></button><button data-action="attack" disabled>공격 <kbd>J</kbd></button><button data-action="dash" disabled>대시 <kbd>Ctrl</kbd></button><button data-action="die" disabled>죽음 <kbd>K</kbd></button><button data-action="revive" disabled>부활 <kbd>R</kbd></button></div></div>
+    <details class="settings"><summary>레이어·접합 확인</summary><div class="checks"><label><input type="checkbox" data-layer="far" checked>가까운 숲 배경</label><label><input type="checkbox" data-layer="ground" checked>땅·발판</label><label><input type="checkbox" data-layer="hero" checked>주인공 크기</label><label><input type="checkbox" data-layer="grid">32 px 격자</label><label><input type="checkbox" data-layer="collisions">충돌선</label></div></details>
+    <p class="help"><kbd>←</kbd><kbd>→</kbd> 또는 <kbd>A</kbd><kbd>D</kbd> 걷기 · <kbd>Shift</kbd> 달리기 · <kbd>Space</kbd> 2단 점프 · <kbd>↓</kbd>+<kbd>Space</kbd> 발판 내려가기 · <kbd>J</kbd> 재입력으로 2타 · 화면을 클릭하면 조작됩니다.</p>
+    <p class="scope">20,480px · 8구간 · 3개 굴과 수직 복귀 통로. 채색 지형과 풀 발판을 유지하고44곳만 부분 스케치로 연결했습니다. 몬스터 6종 23마리의 색감·크기 검토용 정지 배치입니다.</p>
+  </section>
+  <details style="margin:16px 0"><summary>몬스터 6종 · 누르면 배치 위치로 이동</summary><div id="monsterShelf" style="display:flex;flex-wrap:wrap;gap:8px"></div></details>
+  <style>#monsterShelf button{display:grid;justify-items:center;background:#24212a;color:#eedec5;padding:8px}#monsterShelf img{image-rendering:pixelated}</style>
+  <section id="tilesPanel" hidden>
+    <div class="asset-toolbar"><div><h2>각각 분리된 PNG</h2><p>체크무늬는 투명 영역입니다. 타일을 누르면 원본 파일이 열립니다.</p></div><label>크기 <select id="assetZoom"><option value="2">2배</option><option value="3" selected>3배</option><option value="4">4배</option></select></label></div>
+    <div id="assetGroups"></div>
+  </section>
+  <footer><span>960×540 시야 · 32px 타일 · 20,480px · 발판 43개 · 하늘 / 숲 / 낮은 나무 · 채색 지형 · 부분 스케치</span><span id="assetCount"></span></footer>
+</main>
+<script src="level.js"></script><script src="terrain.js"></script><script src="background-layers.js?v=soft-forest-v2-20261017"></script><script src="forest-presentation.js?v=soft-forest-v2-20261017"></script><script src="monsters.js"></script><script type="module" src="app.js?v=soft-forest-v2-20261017"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+Built-in image_gen: two independent assets, mark appearance and burst.
+Pillow: grid slicing, nearest-neighbor 128px scaling, unmodified Unity sprite compositing and GIF assembly.
+
+Use case: stylized-concept
+Asset type: minimal pixel art red ink MARK appearance animation, transparent 4-column 3-row sprite sheet, 12 equal square cells.
+Produce ONE sprite sheet with an exact 4:3 aspect ratio, no gutters, all twelve cells identical size, row-major reading order.
+In each cell depict only ONE simple tiny red ink drop symbol centered exactly in the cell. Its maximum bounding size is 20% of cell width by 24% of cell height. Clear red silhouette, 2 colors only: dark crimson edge and flat vermilion fill. No gloss, no white highlights, no shading gradients, no realistic liquid, no fire, no gore. Sharp chunky pixel art, designed for final 128x128 cell size.
+This sheet animates a SINGLE mark arriving and settling, NOT a three-stage stack and NOT an explosion. The game will place three instances of this same mark as separate symbols.
+Frame1 tiny red seed at center, frame2 a slightly taller seed, frame3 small diamond drop grows, frame4 drop at 70% size, frame5 85%, frame6 100%, frame7 108% slight pop overshoot, frame8 102%, frame9 100%, frames10 11 and12 same stable drop. Shape is like a very simple pointed ink droplet or rounded diamond, not a glossy tear. Keep center stable. No extra particles, no orbit lines, no effects surrounding it.
+Background genuinely transparent. Effect only: no text, no numbering, no grid, no character, no labels, no drawn checkerboard. Every cell fully isolated.
+
+Use case: stylized-concept
+Asset type: simple pixel art RED INK burst animation sprite sheet, transparent 4-column 3-row 12 equal square cells, final each128x128.
+Create ONE sheet exact aspect4:3 no gutters. Crisp limited-palette pixel-art, flat vermilion and dark crimson ONLY, big simple shapes, no gradients no gloss no white cores no light effects. Minimal 2D gameplay readability. Entire effect maximum diameter 55% of each cell, all centers identical.
+This is ONLY the burst triggered when THREE small separate red ink marks come together. NOT a growing ornamental ring.
+Frames1-3: three separate small plain diamond/drop shapes arranged in a compact triangle progressively move closer to the common center. Frame1 triangle radius14% cell, frame2 radius9%, frame3 radius4%.
+Frame4: the three marks merge into a small solid diamond.
+Frame5: very short sharp angular four-point red flash, 25% diameter.
+Frame6: maximum simple angular ink splash, 50% diameter, four thick tapered diagonal strokes pointing outward and THREE small plain red droplets, mostly empty transparent space, no detailed texture.
+Frame7: same four strokes separate from center, center becomes empty.
+Frame8: strokes become shorter and travel slightly outward; just three drops nearby.
+Frame9: only three small separate red droplets at radius23%.
+Frame10: droplets smaller, frame11 three tiny specks, frame12 empty transparent frame.
+Constraints: extremely simple silhouettes, no complex swirls, NO CIRCULAR RING, no realistic fluid, no gore, no decorative runes, no starfield, no text, no numbering, no grid lines no background no character. Real alpha transparency. Order left to right top to bottom.

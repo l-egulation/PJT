@@ -1,0 +1,17 @@
+{
+  "schema": "stage2-returned-walk-review-v1",
+  "status": "art-review-not-approved-no-runtime",
+  "output": "outputs/waterway/walk-review-20261031",
+  "base": "outputs/waterway/pixel-base-step1-20261031",
+  "canvas": [384,224],
+  "baseline": 192,
+  "method": "Preserve uploaded files and every decoded GIF frame. Separately remove white background and isolated sub-256-source-pixel components, map to the existing palette, sample with one fixed nearest-neighbor scale and translation per clip. Never resize or ground-align individual frames. Review playback omits source frame zero; raw extraction includes it. Derived pixels are review normalization, not approved source art.",
+  "clips": [
+    {"id":"K4","name":"등짐분사수","source":"94a30c7b-7e64-45f0-b2a4-2a1fd5c4011f.gif","sheet":"1bd9381b-7c4d-45d6-97ed-799177111660.png","scaleBy":"height","note":"짧은 교대보행. 원본 여러 프레임에서 등통 꼭대기가 화면 상단에 닿아 잘린 부분이 있다. 복원 없이 검토용 추출."},
+    {"id":"B3","name":"쐐기보행기 · 100장 버전","source":"e4264f88-0f93-43ab-ace4-af531748be04.gif","sheet":"bd865476-d0b9-467d-a5a5-4cb64e544898.png","scaleBy":"height","note":"큰 지지대를 옮기는 보행. 첫 정지 입력과 동작 크기 차이·원본 첫 장 쐐기 끝 잘림은 원본에 보존. 다리와 판 형태 변화는 검토 필요."},
+    {"id":"B3-alt","baseId":"B3","name":"쐐기보행기 · 36장 비교 버전","source":"0f079bc0-7a6b-467c-b061-80fb6744bee2.gif","sheet":"cee8167b-6e11-45c3-896b-eab1edcb084f.png","scaleBy":"height","note":"같은 보행기의 별도 입력 버전. 두 버전 모두 보존하며 최종 선택은 미정."},
+    {"id":"M3","name":"먹침필경사","source":"18be6d2d-501c-49d2-bb64-7092542581b0.gif","sheet":"d7fb1b4d-370a-472e-a2fa-19903d464b7c.png","scaleBy":"width","note":"낮은 교차보행. 긴 침을 포함한 전체 폭 기준으로 고정 배율을 적용. 첫 입력은 침 끝이 왼쪽에 닿고 이후 동작보다 크다. 동작 중 침·등판 형태 변화는 원본 그대로 확인."},
+    {"id":"R-selected","name":"신호투척수","source":"f672a62e-cafb-45a3-a022-7975a9332178.gif","sheet":"ebd846b0-35bf-4e71-829a-3b4f61a9d1ed.png","scaleBy":"height","note":"교대보행과 앞치마 흔들림. 첫 입력과 동작 크기 차이, 소품 이동폭과 손·앞치마 형태 변화를 검토. 소품을 새로 그리지 않음."},
+    {"id":"H3","name":"늘어진수의","pixelFloat":true,"note":"사용자 지시에 따라 기존 8키 픽셀 부유 대기를 이동용 참고로 사용. 전체가 3px 오르내리고 기존 손끝·주름 변화 유지. 화면 가로 이동은 합성에서 별도 연출."}
+  ]
+}

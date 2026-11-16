@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 1,
+  "clips": [
+    {
+      "ms": [
+        20,
+        20,
+        30,
+        30,
+        30,
+        35,
+        35,
+        40,
+        40,
+        50
+      ],
+      "width": 192,
+      "height": 144,
+      "pivot": [
+        112,
+        128
+      ],
+      "palette": [
+        "#817D77",
+        "#9C968D",
+        "#D6D0C7"
+      ],
+      "frameCount": 10,
+      "ppu": 32,
+      "activeAtMs": 650,
+      "damageWindowMs": [
+        650,
+        850
+      ],
+      "attackSizePx": [
+        57.6,
+        48
+      ],
+      "attackOffsetPx": [
+        -28.8,
+        -24
+      ],
+      "notes": "Cosmetic tail outlasts the live hitbox.",
+      "id": "thorn-slash",
+      "key": "thorn",
+      "frames": [
+        "thorn-slash/frames/00.png",
+        "thorn-slash/frames/01.png",
+        "thorn-slash/frames/02.png",
+        "thorn-slash/frames/03.png",
+        "thorn-slash/frames/04.png",
+        "thorn-slash/frames/05.png",
+        "thorn-slash/frames/06.png",
+        "thorn-slash/frames/07.png",
+        "thorn-slash/frames/08.png",
+        "thorn-slash/frames/09.png"
+      ]
+    },
+    {
+      "ms": [
+        25,
+        25,
+        30,
+        30,
+        40,
+        40,
+        40,
+        40,
+        45,
+        45,
+        50,
+        50,
+        50,
+        50,
+        55,
+        55
+      ],
+      "width": 192,
+      "height": 144,
+      "pivot": [
+        112,
+        128
+      ],
+      "palette": [
+        "#575451",
+        "#817D77",
+        "#9C968D"
+      ],
+      "frameCount": 16,
+      "ppu": 32,
+      "activeAtMs": 700,
+      "damageWindowMs": [
+        700,
+        880
+      ],
+      "attackSizePx": [
+        83.2,
+        38.4
+      ],
+      "attackOffsetPx": [
+        -36.8,
+        -19.2
+      ],
+      "alphaPolicy": "Uniform frame opacity for requested smoke fade; pixel boundaries remain hard.",
+      "opacity": [
+        255,
+        255,
+        255,
+        255,
+        255,
+        245,
+        225,
+        200,
+        170,
+        140,
+        110,
+        80,
+        54,
+        32,
+        16,
+        0
+      ],
+      "id": "broom-dust",
+      "key": "broom",
+      "frames": [
+        "broom-dust/frames/00.png",
+        "broom-dust/frames/01.png",
+        "broom-dust/frames/02.png",
+        "broom-dust/frames/03.png",
+        "broom-dust/frames/04.png",
+        "broom-dust/frames/05.png",
+        "broom-dust/frames/06.png",
+        "broom-dust/frames/07.png",
+        "broom-dust/frames/08.png",
+        "broom-dust/frames/09.png",
+        "broom-dust/frames/10.png",
+        "broom-dust/frames/11.png",
+        "broom-dust/frames/12.png",
+        "broom-dust/frames/13.png",
+        "broom-dust/frames/14.png",
+        "broom-dust/frames/15.png"
+      ]
+    },
+    {
+      "ms": [
+        30,
+        30,
+        30,
+        30,
+        40,
+        40,
+        40,
+        40,
+        40,
+        50,
+        50,
+        50,
+        50,
+        50
+      ],
+      "width": 192,
+      "height": 144,
+      "pivot": [
+        112,
+        128
+      ],
+      "palette": [
+        "#575451",
+        "#817D77",
+        "#9C968D"
+      ],
+      "frameCount": 14,
+      "ppu": 32,
+      "activeAtMs": 2240,
+      "damageWindowMs": [
+        2240,
+        2410
+      ],
+      "attackSizePx": [
+        80,
+        76.8
+      ],
+      "attackOffsetPx": [
+        -32,
+        -38.4
+      ],
+      "notes": "Dust accompanies the claw; existing slash trail is retained.",
+      "id": "elite-claw-dust",
+      "key": "elite",
+      "frames": [
+        "elite-claw-dust/frames/00.png",
+        "elite-claw-dust/frames/01.png",
+        "elite-claw-dust/frames/02.png",
+        "elite-claw-dust/frames/03.png",
+        "elite-claw-dust/frames/04.png",
+        "elite-claw-dust/frames/05.png",
+        "elite-claw-dust/frames/06.png",
+        "elite-claw-dust/frames/07.png",
+        "elite-claw-dust/frames/08.png",
+        "elite-claw-dust/frames/09.png",
+        "elite-claw-dust/frames/10.png",
+        "elite-claw-dust/frames/11.png",
+        "elite-claw-dust/frames/12.png",
+        "elite-claw-dust/frames/13.png"
+      ]
+    },
+    {
+      "ms": [
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        30
+      ],
+      "width": 192,
+      "height": 176,
+      "pivot": [
+        96,
+        144
+      ],
+      "palette": [
+        "#171716",
+        "#41413D",
+        "#575451",
+        "#817D77",
+        "#9C968D",
+        "#D6D0C7"
+      ],
+      "frameCount": 14,
+      "ppu": 32,
+      "role": "body",
+      "id": "elite-burrow-body",
+      "key": "melt",
+      "frames": [
+        "elite-burrow-body/frames/00.png",
+        "elite-burrow-body/frames/01.png",
+        "elite-burrow-body/frames/02.png",
+        "elite-burrow-body/frames/03.png",
+        "elite-burrow-body/frames/04.png",
+        "elite-burrow-body/frames/05.png",
+        "elite-burrow-body/frames/06.png",
+        "elite-burrow-body/frames/07.png",
+        "elite-burrow-body/frames/08.png",
+        "elite-burrow-body/frames/09.png",
+        "elite-burrow-body/frames/10.png",
+        "elite-burrow-body/frames/11.png",
+        "elite-burrow-body/frames/12.png",
+        "elite-burrow-body/frames/13.png"
+      ]
+    },
+    {
+      "ms": [
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55
+      ],
+      "width": 192,
+      "height": 176,
+      "pivot": [
+        96,
+        144
+      ],
+      "palette": [
+        "#171716",
+        "#41413D",
+        "#575451"
+      ],
+      "frameCount": 10,
+      "ppu": 32,
+      "role": "fx",
+      "id": "elite-ground-warning",
+      "key": "bubbles",
+      "frames": [
+        "elite-ground-warning/frames/00.png",
+        "elite-ground-warning/frames/01.png",
+        "elite-ground-warning/frames/02.png",
+        "elite-ground-warning/frames/03.png",
+        "elite-ground-warning/frames/04.png",
+        "elite-ground-warning/frames/05.png",
+        "elite-ground-warning/frames/06.png",
+        "elite-ground-warning/frames/07.png",
+        "elite-ground-warning/frames/08.png",
+        "elite-ground-warning/frames/09.png"
+      ]
+    },
+    {
+      "ms": [
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45
+      ],
+      "width": 192,
+      "height": 176,
+      "pivot": [
+        96,
+        144
+      ],
+      "palette": [
+        "#171716",
+        "#41413D",
+        "#575451"
+      ],
+      "frameCount": 14,
+      "ppu": 32,
+      "role": "fx",
+      "id": "elite-eruption-fx",
+      "key": "burst",
+      "frames": [
+        "elite-eruption-fx/frames/00.png",
+        "elite-eruption-fx/frames/01.png",
+        "elite-eruption-fx/frames/02.png",
+        "elite-eruption-fx/frames/03.png",
+        "elite-eruption-fx/frames/04.png",
+        "elite-eruption-fx/frames/05.png",
+        "elite-eruption-fx/frames/06.png",
+        "elite-eruption-fx/frames/07.png",
+        "elite-eruption-fx/frames/08.png",
+        "elite-eruption-fx/frames/09.png",
+        "elite-eruption-fx/frames/10.png",
+        "elite-eruption-fx/frames/11.png",
+        "elite-eruption-fx/frames/12.png",
+        "elite-eruption-fx/frames/13.png"
+      ]
+    },
+    {
+      "ms": [
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40
+      ],
+      "width": 192,
+      "height": 176,
+      "pivot": [
+        96,
+        144
+      ],
+      "palette": [
+        "#171716",
+        "#41413D",
+        "#575451",
+        "#817D77",
+        "#9C968D",
+        "#D6D0C7"
+      ],
+      "frameCount": 14,
+      "ppu": 32,
+      "role": "body",
+      "id": "elite-emerge-body",
+      "key": "emerge",
+      "frames": [
+        "elite-emerge-body/frames/00.png",
+        "elite-emerge-body/frames/01.png",
+        "elite-emerge-body/frames/02.png",
+        "elite-emerge-body/frames/03.png",
+        "elite-emerge-body/frames/04.png",
+        "elite-emerge-body/frames/05.png",
+        "elite-emerge-body/frames/06.png",
+        "elite-emerge-body/frames/07.png",
+        "elite-emerge-body/frames/08.png",
+        "elite-emerge-body/frames/09.png",
+        "elite-emerge-body/frames/10.png",
+        "elite-emerge-body/frames/11.png",
+        "elite-emerge-body/frames/12.png",
+        "elite-emerge-body/frames/13.png"
+      ]
+    }
+  ]
+}

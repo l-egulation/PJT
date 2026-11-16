@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>몬스터 추격 조정기</title>
+<style>
+:root{--bg:#15171c;--panel:#1e2128;--line:#2e333d;--text:#e6e8ec;--dim:#9aa1ad;--accent:#e0a84b;--solid:#59606e;--oneway:#7aa6c9;--player:#f4f1e8;--good:#7ccf8a;--warn:#e4785c}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:13px/1.45 "Malgun Gothic","Apple SD Gothic Neo",system-ui,sans-serif;display:flex;height:100vh;overflow:hidden}
+#stage{flex:1;position:relative;min-width:0}
+canvas{display:block;width:100%;height:100%;background:#101216}
+#hud{position:absolute;left:12px;top:10px;pointer-events:none;color:var(--dim);font-size:12px;white-space:pre}
+#toolbar{position:absolute;left:12px;bottom:10px;display:flex;gap:6px;flex-wrap:wrap;max-width:calc(100% - 24px)}
+#side{width:360px;background:var(--panel);border-left:1px solid var(--line);overflow-y:auto;padding:12px 14px 40px}
+h1{font-size:15px;margin:0 0 4px}
+h2{font-size:13px;margin:16px 0 6px;color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:3px}
+p.note{color:var(--dim);margin:4px 0 8px;font-size:12px}
+.row{display:grid;grid-template-columns:1fr 64px;gap:2px 8px;align-items:center;margin:6px 0}
+.row label{grid-column:1/3;display:flex;justify-content:space-between}
+.row label span.v{color:var(--accent);font-variant-numeric:tabular-nums}
+.row input[type=range]{grid-column:1/2;width:100%}
+.row input[type=number]{grid-column:2/3;width:64px;background:#111;border:1px solid var(--line);color:var(--text);padding:2px 4px}
+.hint{grid-column:1/3;color:var(--dim);font-size:11px}
+button,select{background:#2a2f39;color:var(--text);border:1px solid var(--line);padding:5px 9px;border-radius:4px;cursor:pointer;font:inherit}
+button:hover{border-color:var(--accent)}
+button.on{background:var(--accent);color:#1a1a1a;border-color:var(--accent)}
+.chk{display:flex;gap:6px;align-items:center;margin:5px 0}
+textarea{width:100%;height:220px;background:#0f1114;color:#cfd3da;border:1px solid var(--line);font:11px/1.35 Consolas,monospace}
+table{width:100%;border-collapse:collapse;font-size:12px}
+td,th{border-bottom:1px solid var(--line);padding:3px 2px;text-align:left}
+th{color:var(--dim);font-weight:normal}
+@media (max-width:1000px){body{flex-direction:column}#stage{flex:none;height:58vh}#side{width:auto;flex:1;border-left:0;border-top:1px solid var(--line)}}
+.dot{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px;vertical-align:middle}
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="c"></canvas>
+  <div id="hud"></div>
+  <div id="toolbar">
+    <select id="mapSel"></select>
+    <label style="color:var(--dim);display:flex;align-items:center;gap:4px">시드 <input id="seed" type="number" value="1" style="width:70px;background:#111;border:1px solid var(--line);color:var(--text);padding:3px"></label>
+    <button id="btnReset">배치 초기화 (R)</button>
+    <button id="btnPause">일시정지 (P)</button>
+    <button data-mode="play" class="mode on">조작</button>
+    <button data-mode="solid" class="mode">벽돌 그리기</button>
+    <button data-mode="oneway" class="mode">일방 발판 그리기</button>
+    <button data-mode="erase" class="mode">지형 삭제</button>
+    <button data-mode="spawn" class="mode">몬스터 배치</button>
+    <select id="spawnSel"></select>
+  </div>
+</div>
+<div id="side">
+  <h1>몬스터 추격 조정기</h1>
+  <p class="note">← → / A D 이동 · Space/W/↑ 점프(2단) · ↓+점프 일방 발판 하향 · 마우스 휠 확대, 우클릭 드래그 화면 이동. 근접 이동형은 한 번 감지하면 위치를 계속 알고 발판 경로를 찾아 점프·하향점프·낙하로 추격한다. 원거리·고정형은 사정범위만 넓힌다.</p>
+
+  <h2>근접 이동형 추격</h2>
+  <div id="pursuitControls"></div>
+  <h2>종별 점프</h2>
+  <p class="note">점프 최대 높이는 상한이다(필요한 만큼만 뛴다). 플레이어 1단 점프 ≈ 3.0, 2단 ≈ 6.0. 무작위 점프 높이는 이 상한을 넘지 않는다.</p>
+  <div id="speciesControls"></div>
+  <div class="chk"><input type="checkbox" id="dropThrough" checked><label for="dropThrough">일방 발판 하향점프 사용</label></div>
+  <div class="chk"><input type="checkbox" id="walkOff" checked><label for="walkOff">절벽에서 걸어 내려가기 사용</label></div>
+  <div class="chk"><input type="checkbox" id="alertEnabled" checked><label for="alertEnabled">"!" 연쇄 경보 사용</label></div>
+  <div class="chk"><input type="checkbox" id="screenLeash" checked><label for="screenLeash">화면 밖이면 추격 포기·복귀</label></div>
+  <div class="chk"><input type="checkbox" id="showPath" checked><label for="showPath">경로·발판 표시</label></div>
+
+  <h2>원거리·고정형 사정범위</h2>
+  <div id="rangeControls"></div>
+
+  <h2>종별 추격 결과</h2>
+  <table id="speciesTable"></table>
+
+  <h2>내보내기</h2>
+  <p class="note">아래 JSON을 복사해 전달하면 <code>data/combat/enemy_pursuit.json</code>과 종별 사거리 원본에 반영한다. 붙여넣고 [불러오기]로 이전 값을 복원할 수 있다.</p>
+  <textarea id="out" spellcheck="false"></textarea>
+  <div style="display:flex;gap:6px;margin-top:6px"><button id="btnCopy">복사</button><button id="btnLoad">불러오기</button><button id="btnDefaults">초안값으로</button></div>
+</div>
+<script>
+"use strict";
+// ---- 고정 물리값: data/combat/locomotion/player.json 과 같은 중력 ----
+const G_RISE=66.6666667, G_FALL=104.1666667, PLAYER_RUN=7.5, PLAYER_JUMP_V=20, MAX_FALL=40;
+
+// ---- 종 정의(현재 원본 값). body는 몸 판정 [폭,높이]. ----
+// startGap: 공격 시작 가로 거리, sense: 최초 감지 가로 거리, kind: melee / ranged / stationary
+const SPECIES=[
+ {id:"01_thorn-root",name:"가시뿌리",ch:1,kind:"melee",walk:2.5,sense:13,senseY:4,startGap:4.5,gapMode:"body",body:[1.0,1.3],color:"#c96b4b",attack:{prepare:.65,dash:3,dashSpeed:15,interval:1.6}},
+ {id:"02_broom-stalker",name:"먹빗자루",ch:1,kind:"melee",walk:1.5,sense:13,senseY:4,startGap:2.55,gapMode:"body",body:[.85,2.6],color:"#9b7bd1",attack:{prepare:.7,interval:2.0}},
+ {id:"draft_07_heavy_charger",name:"맷돌 돌진체",ch:1,kind:"melee",walk:1.5,sense:12,senseY:12,senseMetric:"euclid",startGap:12,gapMode:"center",body:[4,3.6],color:"#b0a58a",attack:{prepare:2,dash:12,dashSpeed:12,interval:6}},
+ {id:"K4",name:"K4 분사",ch:2,kind:"melee",walk:2.4,sense:5.5,senseY:2,startGap:5.5,gapMode:"center",body:[1.6,3.0],color:"#5fb3a1",attack:{prepare:.65,interval:3.2},note:"2챕터 몸 크기는 근사치"},
+ {id:"B3",name:"B3 돌진",ch:2,kind:"melee",walk:1.6,sense:7.5,senseY:2,startGap:7.5,gapMode:"center",body:[3.0,2.4],color:"#d0a05a",attack:{prepare:.6,dash:6,dashSpeed:12,interval:4.4,ledge:"stop"}},
+ {id:"M3",name:"M3 연타",ch:2,kind:"melee",walk:2.8,sense:3.5,senseY:2,startGap:3.5,gapMode:"center",body:[1.2,2.4],color:"#d97a9a",attack:{prepare:.5,interval:2.49}},
+ {id:"03_gutter-spitter",name:"배수관 포수",ch:1,kind:"ranged",walk:1.0,sense:13,senseY:4,range:10.5,shot:"line",shotSpeed:8,body:[1.5,1.7],color:"#6f9bd6",attack:{prepare:1.25,interval:2.5}},
+ {id:"R-selected",name:"R 투척",ch:2,kind:"ranged",walk:1.8,sense:20,senseY:12,range:20,shot:"arc",shotSpeed:6,body:[1.2,2.4],color:"#8fc46a",attack:{prepare:.65,interval:2.75}},
+ {id:"H3",name:"H3 투척",ch:2,kind:"ranged",walk:1.2,sense:22,senseY:12,range:22,shot:"arc",shotSpeed:6,body:[1.4,2.6],color:"#c8c35a",attack:{prepare:1.6,interval:4.3}},
+ {id:"draft_06_stationary_turret",name:"술통 포격수",ch:1,kind:"stationary",walk:0,sense:24,senseY:24,senseMetric:"euclid",range:24,shot:"bomb",body:[2.1,2.8],color:"#e07b52",attack:{prepare:1.5,interval:4.8}},
+];
+const SP=Object.fromEntries(SPECIES.map(s=>[s.id,s]));
+
+// ---- 조정값 (초안) ----
+const DEFAULTS={
+ chaseSpeedScale:2.4, jumpHeight:6, jumpAirSpeed:6.0, jumpWindupSeconds:0.12,
+ maxDropHeight:24, replanSeconds:0.25, detectionScale:2, targetFacingDeadzone:0.125,
+ dropThrough:true, walkOffLedges:true,
+ randomHop:true, randomHopIntervalMin:1.5, randomHopIntervalMax:4.0, randomHopHeightMin:0.8, randomHopHeightMax:2.0,
+ pathJumpDelayMin:0.0, pathJumpDelayMax:0.35,
+ species:{"01_thorn-root":{jumpHeight:6,randomHop:true},"02_broom-stalker":{jumpHeight:6,randomHop:true},"draft_07_heavy_charger":{jumpHeight:4,randomHop:false},
+  "K4":{jumpHeight:6,randomHop:true},"B3":{jumpHeight:4,randomHop:false},"M3":{jumpHeight:6,randomHop:true}},
+ individualVariance:0.1, reactionDelayMin:0.2, reactionDelayMax:0.5,
+ alertEnabled:true, alertRadius:12, alertDelayPerUnit:0.05, alertJitter:0.1, alertMarkSeconds:1.0,
+ screenLeash:true, leaveScreenSeconds:1.0, unseenGiveUpSeconds:6.0, returnTeleportSeconds:10.0, noRouteTeleportSeconds:1.0,
+ ranges:{"03_gutter-spitter":10.5,"R-selected":20,"H3":22,"draft_06_stationary_turret":24},
+};
+let T=JSON.parse(JSON.stringify(DEFAULTS));
+const PURSUIT_UI=[
+ ["targetFacingDeadzone","목표 방향 유지 폭(u)",0,.5,.03125,"X 차이가 이 값 이내면 방향을 유지한다. 0.125u = 4도트. 경로 이동 방향은 유지"],
+ ["chaseSpeedScale","추격 속도 배율",1,3,.05,"감지 후 이동속도 = 기존 이동속도 × 배율. 플레이어 달리기 7.5"],
+ ["jumpAirSpeed","점프 중 가로 속도 상한",2,12,.25,"점프로 건널 수 있는 틈 길이를 정한다"],
+ ["jumpWindupSeconds","점프 전 웅크림 (초)",0,.5,.01,"도약 직전 정지 시간"],
+ ["maxDropHeight","최대 낙하 높이 (유닛)",2,40,.5,"이보다 높은 절벽·하향점프는 경로에서 제외"],
+ ["replanSeconds","경로 재계산 주기 (초)",.05,1,.05,""],
+ ["detectionScale","근접형 최초 감지 거리 배율",.5,3,.05,"감지 전 활동 반경. 감지 후에는 거리 무관하게 추격"],
+ ["randomHopIntervalMin","무작위 점프 간격 최소 (초)",.2,10,.1,"추격하며 걷는 중에 이 간격(최소~최대 무작위)마다 깡충 뛴다"],
+ ["randomHopIntervalMax","무작위 점프 간격 최대 (초)",.2,10,.1,""],
+ ["randomHopHeightMin","무작위 점프 높이 최소",.2,6,.1,"공격 사거리 안·착지가 발판 밖·낮은 천장이면 뛰지 않는다"],
+ ["randomHopHeightMax","무작위 점프 높이 최대",.2,6,.1,""],
+ ["pathJumpDelayMin","경로 점프·하향점프 전 대기 최소 (초)",0,2,.05,"도약 지점에서 멈춰 이만큼(최소~최대 무작위) 기다린 뒤 웅크리고 뛴다"],
+ ["pathJumpDelayMax","경로 점프·하향점프 전 대기 최대 (초)",0,2,.05,""],
+ ["individualVariance","개체 편차 (±비율)",0,.5,.01,"근접 추격형의 추격 속도·점프 준비 시간을 개체마다 이만큼 다르게. 시드·종·생성 위치로 고정"],
+ ["reactionDelayMin","발견 반응 최소 (초)",0,2,.05,"감지하면 \"!\"를 띄우고 이만큼 멈췄다가 움직인다"],
+ ["reactionDelayMax","발견 반응 최대 (초)",0,2,.05,""],
+ ["alertRadius","연쇄 경보 반경 (유닛)",0,40,.5,"첫 발견자 주변 이 반경 안이면 시야와 무관하게 한 단계 경보"],
+ ["alertDelayPerUnit","경보 거리당 지연 (초/유닛)",0,.3,.005,"멀수록 늦게 \"!\""],
+ ["alertJitter","경보 무작위 지연 (초)",0,1,.01,""],
+ ["alertMarkSeconds","\"!\" 표시 시간 (초)",.2,3,.05,""],
+ ["leaveScreenSeconds","화면 이탈 후 포기 (초)",0,5,.1,"근접 추격형의 몸이 게임 화면(점선)을 완전히 벗어난 채 이만큼 지나면 추격을 멈추고 원래 자리로 걸어 돌아간다"],
+ ["unseenGiveUpSeconds","화면 밖 감지 후 미진입 포기 (초)",.5,20,.5,"화면 밖에서 감지·경보된 개체는 화면에 한 번 들어온 뒤부터 판정. 이 시간 안에 못 들어오면 포기"],
+ ["returnTeleportSeconds","복귀 순간이동까지 (초)",1,30,.5,"복귀가 이만큼 걸리면 순간이동. 자신과 원래 자리가 모두 화면 밖일 때만"],
+ ["noRouteTeleportSeconds","복귀 경로 막힘 순간이동 (초)",0,5,.1,"복귀 중 길이 없어 이만큼 서 있으면 순간이동(위와 같은 화면 조건)"],
+];
+
+// ---- 맵 ----
+function R(x,y,w,h,oneWay){return{x,y,w,h,oneWay:!!oneWay}}
+const MAPS={
+ "1챕터식 계단·구덩이":()=>({w:104,h:24,rects:[
+  R(-2,-2,2,26),R(102,-2,2,26),
+  R(0,-4,30,4),R(36,-4,66,4),R(30,-4,6,1.5),
+  R(8,2.6,6,.4,1),R(14,5.6,6,.4,1),R(10,8.6,6,.4,1),R(20,7.5,6,1),
+  R(44,0,3,2),R(52,0,2,1),
+  R(62,2.6,4,.4,1),R(68,2.6,3,.4,1),R(66,0,2,5.5),R(70,4,5,.4,1),
+  R(78,0,6,2.5),R(84,0,6,5),R(92,2.5,7,.4,1),R(92,5.5,7,.4,1),
+ ],player:[5,0],spawns:[["01_thorn-root",40],["02_broom-stalker",58],["draft_07_heavy_charger",88,5.5],["03_gutter-spitter",24,9.5],["draft_06_stationary_turret",96,6.4],
+  ["01_thorn-root",14],["02_broom-stalker",19],["01_thorn-root",11,3],["02_broom-stalker",17,6],["01_thorn-root",22,8.5],["03_gutter-spitter",4,0],
+  ["01_thorn-root",42],["02_broom-stalker",48],["draft_07_heavy_charger",58],["01_thorn-root",62,3],["02_broom-stalker",72,4.4],["01_thorn-root",74],
+  ["02_broom-stalker",80,2.5],["01_thorn-root",94,2.9],["draft_07_heavy_charger",96],["03_gutter-spitter",66,5.5],["03_gutter-spitter",33,-2.5]]}),
+ "2챕터식 다층 수로":()=>({w:90,h:28,rects:[
+  R(-2,-2,2,30),R(88,-2,2,30),
+  R(0,-2,88,2),
+  R(4,2.6,12,.4,1),R(36,2.6,14,.4,1),R(70,2.6,14,.4,1),
+  R(16,4.5,18,1),R(52,4.5,16,1),
+  R(2,8.1,14,.4,1),R(34,8.1,18,.4,1),R(68,8.1,18,.4,1),
+  R(26,0,3,1.5),
+ ],player:[44,0],spawns:[["K4",10,3],["B3",60,5.5],["M3",40,8.5],["R-selected",78,8.5],["H3",8,8.5],
+  ["K4",30],["M3",36],["B3",52],["M3",56],["K4",64],["M3",22,5.5],["K4",28,5.5],["B3",20,5.5],["M3",66,5.5],["K4",48,3],
+  ["M3",74,3],["K4",4,8.5],["M3",12,8.5],["B3",48,8.5],["K4",84,8.5],["R-selected",16],["H3",72],["R-selected",58,5.5]]}),
+ "높은 벽 우회":()=>({w:70,h:24,rects:[
+  R(-2,-2,2,26),R(68,-2,2,26),R(0,-2,68,2),
+  R(30,0,2,9),R(18,2.6,6,.4,1),R(22,5.4,6,.4,1),R(25,8.2,5,.4,1),R(32,8.2,7,.4,1),
+ ],player:[50,0],spawns:[["01_thorn-root",8],["M3",12],["K4",4],["02_broom-stalker",16],["B3",22],["01_thorn-root",20,3],
+  ["M3",25,5.8],["K4",27,8.6],["draft_07_heavy_charger",10],["03_gutter-spitter",6],["R-selected",14,0],["H3",2]]}),
+};
+let map, rects, actors, player, segs, segVersion=0, time=0, paused=false, mode="play";
+let cam={x:0,y:-3,scale:22}, mouse={x:0,y:0,wx:0,wy:0}, drag=null, panning=null;
+const shots=[];
+// 시드 고정 무작위(Unity EnemyRandom과 같은 원칙): 시드·종·생성 위치·용도 번호로 개체 값이 정해진다
+function hashSeed(...xs){let h=2166136261>>>0;for(const x of xs){const str=String(x);for(let i=0;i<str.length;i++){h^=str.charCodeAt(i);h=Math.imul(h,16777619)>>>0}}return h}
+function mulberry(a){return()=>{a=a+0x6D2B79F5>>>0;let t=a;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return((t^t>>>14)>>>0)/4294967296}}
+const rng=(m,stream)=>mulberry(hashSeed(stageSeed,m.sp.id,Math.round(m.spawnX*100),Math.round(m.spawnY*100),stream));
+const rr=(r,a,b)=>b<=a?a:a+r()*(b-a);
+let stageSeed=1;
+function loadMap(name){
+ stageSeed=+document.getElementById("seed").value||0;stats.hops=0;stats.giveUps=stats.teleports=0;
+ const m=MAPS[name]();map=m;rects=m.rects.map(r=>({...r}));
+ player={x:m.player[0],y:m.player[1],w:.9375,h:2,vx:0,vy:0,grounded:false,jumps:0,dropIgnore:null,dropUntil:0,isPlayer:true,flash:0};
+ actors=[];for(const s of m.spawns)spawnMonster(s[0],s[1],s[2]??0);
+ rebuild();cam.x=player.x-20;time=0;shots.length=0;
+}
+function spawnMonster(id,x,y){
+ const s=SP[id];const m={sp:s,x,y,w:s.body[0],h:s.body[1],vx:0,vy:0,grounded:false,dropIgnore:null,dropUntil:0,
+  facing:-1,state:"대기",hunting:false,plan:null,planAt:-9,air:null,windupUntil:0,atk:null,nextAtk:0,edgeFails:{},spawnX:x,spawnY:y,detectT:null,lastSeg:null,flash:0};
+ // 개체 편차(근접 추격형만), 반응 시간, 경보 지연, 점프 무작위는 각자 정해진 난수열을 쓴다
+ const v=s.kind==="melee"?T.individualVariance:0,rv=rng(m,1);m.speedF=rr(rv,1-v,1+v);m.windF=rr(rv,1-v,1+v);
+ m.rHop=rng(m,2);m.rAlert=rng(m,3);m.reaction=rr(m.rAlert,T.reactionDelayMin,T.reactionDelayMax);
+ m.alerted=false;m.pendingAt=null;m.readyAt=0;m.markUntil=0;actors.push(m);
+}
+const alertReceiver=m=>T.alertEnabled&&m.sp.kind!=="stationary";
+function raiseAlert(m){m.alerted=true;m.pendingAt=null;m.readyAt=time+m.reaction;m.markUntil=time+T.alertMarkSeconds}
+// 첫 발견자만 반경 안의 다른 몬스터에게 한 단계 경보를 보낸다(시야 무관, 가까운 순·거리 비례 지연)
+function spotAlert(m){
+ if(m.alerted)return;raiseAlert(m);stats.spots++;
+ for(const o of actors){if(o===m||o.alerted||o.pendingAt!=null||o.returning||!alertReceiver(o))continue;
+  const d=Math.hypot(o.x-m.x,o.y-m.y);if(d>T.alertRadius)continue;
+  o.pendingAt=time+d*T.alertDelayPerUnit+rr(o.rAlert,0,T.alertJitter)}}
+
+// ---- 물리 ----
+function overX(a0,a1,r){return a1>r.x+1e-4&&a0<r.x+r.w-1e-4}
+function step(a,dt,desiredVx){
+ a.vx=desiredVx;
+ const g=a.vy>0?G_RISE:G_FALL;
+ let vy0=a.vy;a.vy=Math.max(-MAX_FALL,a.vy-g*dt);
+ const dy=(vy0+a.vy)/2*dt;
+ // horizontal
+ let nx=a.x+a.vx*dt;a.hitWall=false;
+ for(const r of rects){if(r.oneWay)continue;
+  if(a.y+a.h>r.y+1e-3&&a.y<r.y+r.h-1e-3&&overX(nx-a.w/2,nx+a.w/2,r)){
+   if(a.vx>0&&a.x+a.w/2<=r.x+1e-3){nx=r.x-a.w/2-1e-4;a.hitWall=true}
+   else if(a.vx<0&&a.x-a.w/2>=r.x+r.w-1e-3){nx=r.x+r.w+a.w/2+1e-4;a.hitWall=true}
+  }}
+ a.x=nx;
+ // vertical
+ let ny=a.y+dy;const wasGrounded=a.grounded;a.grounded=false;let best=null;
+ if(dy<=0){for(const r of rects){const top=r.y+r.h;
+   if(!overX(a.x-a.w/2,a.x+a.w/2,r))continue;
+   if(r.oneWay&&(a.dropIgnore===r&&time<a.dropUntil))continue;
+   if(a.y>=top-1e-3&&ny<=top+1e-4&&(!best||top>best.y+best.h))best=r}
+  if(best){ny=best.y+best.h;a.vy=0;a.grounded=true;a.ground=best}}
+ else{for(const r of rects){if(r.oneWay)continue;
+   if(overX(a.x-a.w/2,a.x+a.w/2,r)&&a.y+a.h<=r.y+1e-3&&ny+a.h>r.y){ny=r.y-a.h;a.vy=0}}}
+ a.y=ny;
+ if(a.dropIgnore&&time>=a.dropUntil)a.dropIgnore=null;
+ if(a.y<-40){a.y=5;a.x=a.spawnX??5;a.vy=0}
+}
+function dropThrough(a){if(!a.grounded||!a.ground||!a.ground.oneWay)return false;a.dropIgnore=a.ground;a.dropUntil=time+.35;a.grounded=false;a.vy=-2;a.y-=.05;return true}
+
+// ---- 발판 구간 (Unity 이식 대상과 같은 규칙) ----
+// 같은 높이·같은 종류(일방/고체) 윗면을 이어 붙이고, 그 위 몸 높이 안에 걸친 고체로 잘라 낸다.
+// 몸 높이가 다르면 설 수 있는 곳도 달라지므로 종의 몸 크기마다 구간·간선을 따로 만든다.
+const SOLID_MARGIN=0.3,VIEW_H=0.6;
+const navCache=new Map();
+function rebuild(){segVersion++;navCache.clear();segs=buildSegs(VIEW_H)}
+function solidIn(x0,x1,y0,y1){return rects.some(r=>!r.oneWay&&r.x<x1-1e-4&&r.x+r.w>x0+1e-4&&r.y<y1-1e-4&&r.y+r.h>y0+1e-4)}
+function ceilingAbove(x0,x1,y){let c=Infinity;for(const r of rects)if(!r.oneWay&&r.x<x1-1e-4&&r.x+r.w>x0+1e-4&&r.y>=y-1e-3)c=Math.min(c,r.y);return c}
+function buildSegs(clear){
+ const groups=new Map();
+ for(const r of rects){const top=+(r.y+r.h).toFixed(3),k=top+"|"+(r.oneWay?1:0);
+  if(!groups.has(k))groups.set(k,{y:top,oneWay:r.oneWay,spans:[]});groups.get(k).spans.push([r.x,r.x+r.w])}
+ const out=[];
+ for(const g of groups.values()){
+  g.spans.sort((a,b)=>a[0]-b[0]);const merged=[];
+  for(const s of g.spans){const l=merged[merged.length-1];if(l&&s[0]<=l[1]+.02)l[1]=Math.max(l[1],s[1]);else merged.push([s[0],s[1],false,false])}
+  let pieces=merged;
+  for(const o of rects){if(o.oneWay)continue;if(!(o.y<g.y+clear&&o.y+o.h>g.y+.02))continue;
+   const next=[];for(const p of pieces){
+    if(o.x+o.w<=p[0]||o.x>=p[1]){next.push(p);continue}
+    if(o.x>p[0])next.push([p[0],o.x,p[2],true]);
+    if(o.x+o.w<p[1])next.push([o.x+o.w,p[1],true,p[3]]);}
+   pieces=next}
+  for(const p of pieces)if(p[1]-p[0]>.3)out.push({id:out.length,x0:p[0],x1:p[1],y:g.y,oneWay:g.oneWay,blockedL:p[2],blockedR:p[3]});
+ }
+ return out;
+}
+function segAt(list,x,y,hw,tol=.06){let best=null;
+ for(const s of list){if(Math.abs(s.y-y)>tol)continue;if(x+hw<s.x0-.05||x-hw>s.x1+.05)continue;
+  const d=Math.max(0,(s.c0??s.x0)-x,x-(s.c1??s.x1));if(!best||d<best.d)best={s,d}}return best?best.s:null}
+// 몸 중심 x에서 떨어지면 몸이 처음 걸치는 가장 높은 발판
+function segBelow(list,x,y,hw){let best=null;
+ for(const s of list){if(s.y>y+.05)continue;if(x+hw<=s.x0+.05||x-hw>=s.x1-.05)continue;if(s.c1<s.c0)continue;if(!best||s.y>best.y)best=s}return best}
+function airTime(dy,h){if(dy>h)return Infinity;return Math.sqrt(2*h/G_RISE)+Math.sqrt(2*Math.max(0,h-dy)/G_FALL)}
+// 도약 지점 위 천장이 허용하는 점프 높이
+const jh=m=>(T.species[m.sp.id]||{}).jumpHeight??T.jumpHeight;
+const hops=m=>(T.species[m.sp.id]||{}).randomHop??T.randomHop;
+function jumpRoom(x,hw,y,bh,H=T.jumpHeight){return Math.min(H,ceilingAbove(x-hw,x+hw,y+bh)-y-bh-.02)}
+// 몸은 일부만 걸쳐도 선다. 발 폭(최대 1유닛)이 발판 위에 있으면 서고, 벽 쪽 끝은 몸 폭 전체로 막힌다.
+const FOOT_HALF=0.5;
+// 공중 가로 속도는 복귀 중에도 추격 기준(그래프와 같은 값)
+const airV=m=>Math.max(m.sp.walk*T.chaseSpeedScale*(m.speedF??1),T.jumpAirSpeed);
+function navFor(m){
+ const hw=m.w/2,bh=m.h,fw=Math.min(hw,FOOT_HALF),V=airV(m);
+ const H=jh(m),key=[segVersion,hw,bh,H,V,T.maxDropHeight,T.dropThrough,T.walkOffLedges].join("|");
+ if(navCache.has(key))return navCache.get(key);
+ const S=buildSegs(bh),E=S.map(()=>[]);
+ for(const a of S){ // 몸 중심이 머물 수 있는 범위
+  a.wallL=a.blockedL||solidIn(a.x0-hw,a.x0,a.y+.02,a.y+bh);a.wallR=a.blockedR||solidIn(a.x1,a.x1+hw,a.y+.02,a.y+bh);
+  a.c0=a.wallL?a.x0+hw:a.x0+fw;a.c1=a.wallR?a.x1-hw:a.x1-fw;
+  // 벽 쪽은 몸이 닿는 실제 벽 위치까지 다시 계산
+  if(a.wallL&&!a.blockedL){let w=a.x0;for(const r of rects)if(!r.oneWay&&r.x+r.w<=a.x0+1e-3&&r.x+r.w>a.x0-hw&&r.y<a.y+bh&&r.y+r.h>a.y+.02)w=Math.min(w,r.x+r.w);a.c0=Math.max(a.x0+fw,w+hw)}
+  if(a.wallR&&!a.blockedR){let w=a.x1;for(const r of rects)if(!r.oneWay&&r.x>=a.x1-1e-3&&r.x<a.x1+hw&&r.y<a.y+bh&&r.y+r.h>a.y+.02)w=Math.max(w,r.x);a.c1=Math.min(a.x1-fw,w-hw)}
+ }
+ const ok=s=>s.c1>=s.c0-1e-3;
+ const clamp=(x,s)=>Math.min(Math.max(x,s.c0),s.c1);
+ const add=(a,b,kind,t0,t1,land,extra={})=>E[a.id].push({from:a.id,to:b.id,toOneWay:b.oneWay,kind,t0,t1,land,...extra});
+ for(const a of S){if(!ok(a))continue;
+  // 걸어 내려가기: 몸 전체가 모서리를 벗어나야 떨어진다. 벽 쪽 끝은 내려갈 수 없다.
+  if(T.walkOffLedges)for(const dir of[-1,1]){
+   if(dir<0?a.wallL:a.wallR)continue;
+   const tx=dir<0?a.x0-hw-.05:a.x1+hw+.05;
+   if(solidIn(tx-hw,tx+hw,a.y+.02,a.y+bh))continue;
+   const b=segBelow(S,tx,a.y-.1,hw);
+   if(b&&a.y-b.y<=T.maxDropHeight)add(a,b,"fall",tx,tx,clamp(tx+dir*.3,b),{dir})
+  }
+  for(const b of S){if(b===a||!ok(b))continue;
+   const dy=b.y-a.y,xOverlap=a.x0<b.x1&&b.x0<a.x1,ol0=Math.max(a.c0,b.c0),ol1=Math.min(a.c1,b.c1),overlap=ol1>=ol0;
+   // 하향점프
+   if(T.dropThrough&&a.oneWay&&dy<-.05&&-dy<=T.maxDropHeight&&overlap){
+    const mid=(ol0+ol1)/2;if(segBelow(S,mid,a.y-.1,hw)===b)add(a,b,"drop",ol0,ol1,null)}
+   if(dy<-T.maxDropHeight||dy>H)continue;
+   if(xOverlap&&dy>0){
+    if(b.oneWay&&overlap){ // 일방 발판은 아래에서 통과해 올라탄다. 사이에 고체가 없는 구간만 사용
+     let spans=[[ol0,ol1]];
+     for(const r of rects){if(r.oneWay||!(r.y<b.y+bh&&r.y+r.h>a.y+.02))continue;const l=r.x-hw,rr=r.x+r.w+hw;
+      spans=spans.flatMap(([p,q])=>rr<=p||l>=q?[[p,q]]:[...(l>p?[[p,l]]:[]),...(rr<q?[[rr,q]]:[])])}
+     for(const[p,q]of spans){const room=jumpRoom((p+q)/2,hw,a.y,bh,H);if(dy<=room-.15)add(a,b,"jump",p,q,null,{dy,need:0,room})}}
+    else if(!b.oneWay)for(const dir of[-1,1]){ // 고체 발판은 옆에서 수직으로 뛰어 모서리 위로 올라탄다
+     const tx=dir<0?b.x0-hw-.1:b.x1+hw+.1;
+     if(tx<a.c0-.01||tx>a.c1+.01)continue;
+     const room=jumpRoom(tx,hw,a.y,bh,H);if(dy<=room-SOLID_MARGIN)add(a,b,"jump",tx,tx,clamp(dir<0?b.x0+hw+.1:b.x1-hw-.1,b),{dy,need:.2,room})}
+    continue}
+   if(xOverlap)continue;
+   if(Math.abs(dy)<.05&&Math.max(b.x0-a.x1,a.x0-b.x1)<.05)continue;
+   // 벽 쪽 끝 너머로는 바로 붙은 장애물 윗면(틈 0)만 올라탄다. 더 먼 곳은 장애물 윗면을 거쳐 간다.
+   const right=b.x0>=a.x1-.01,gap=right?b.x0-a.x1:a.x0-b.x1;if((right?a.wallR:a.wallL)&&(gap>.05||dy<=0))continue;
+   // 착지는 몸이 발판에 조금이라도 걸치면 성립하므로 필요한 공중 이동 거리는 틈 + 0.2
+   // 더 높은 고체 발판으로 뛸 때는 올라가는 동안 몸이 그 발판 밑면에 걸리지 않게 옆에서 출발한다
+   let tx=right?a.c1:a.c0;if(!b.oneWay&&dy>0)tx=right?Math.min(tx,b.x0-hw-.05):Math.max(tx,b.x1+hw+.05);
+   if(tx<a.c0-.01||tx>a.c1+.01)continue;
+   const lx=right?b.c0:b.c1,need=Math.max(.2,right?b.x0-hw+.1-tx:tx-(b.x1+hw-.1));
+   const room=jumpRoom(tx,hw,a.y,bh,H),top=Math.max(a.y,b.y);
+   if(dy>room-(b.oneWay?.15:SOLID_MARGIN))continue;
+   // 두 발판 사이 몸 높이 통로에 고체가 있으면 못 건넌다
+   if(solidIn(Math.min(a.x1,b.x1),Math.max(a.x0,b.x0),top+.02,top+bh))continue;
+   if(need<=V*airTime(dy,room))add(a,b,"jump",tx,tx,lx,{dy,need,room});
+  }}
+ const nav={S,E};navCache.set(key,nav);if(navCache.size>40)navCache.delete(navCache.keys().next().value);
+ return nav;
+}
+// 구간 그래프 Dijkstra: 비용 = 걷는 시간 + 공중 시간 + 도약 벌점.
+// 대상 발판에 못 가면 도달 가능한 발판 중 플레이어와 가장 가까운 곳으로 간다.
+function plan(m,goalSeg,goalX,goalY){
+ const hw=m.w/2,speed=chaseSpeed(m),{S,E}=navFor(m),start=segAt(S,m.x,m.y,hw);
+ if(!start||!goalSeg)return null;
+ const dist=new Map([[start.id,{c:0,x:m.x,prev:null}]]),open=[start.id],done=new Set();
+ const route=k=>{const path=[];while(dist.get(k).prev){path.unshift(dist.get(k).prev);k=dist.get(k).prev.from}return path};
+ const near=s=>Math.max(0,s.x0-goalX,goalX-s.x1)+Math.abs(s.y-goalY)*1.5;
+ let best=start.id,bestD=near(start);
+ while(open.length){
+  open.sort((p,q)=>dist.get(p).c-dist.get(q).c);const u=open.shift();if(done.has(u))continue;done.add(u);
+  const du=dist.get(u);if(u===goalSeg.id)return route(u);
+  const nd=near(S[u]);if(nd<bestD-.5){bestD=nd;best=u}
+  for(const e of E[u]){
+   if(m.edgeFails[edgeKey(e)]>time)continue;
+   const tx=Math.min(Math.max(du.x,e.t0),e.t1),lx=e.land??tx,b=S[e.to];
+   const air=e.kind==="jump"?airTime(e.dy,e.room)+T.jumpWindupSeconds+.25:Math.sqrt(2*Math.max(0,S[e.from].y-b.y)/G_FALL)+.1;
+   const c=du.c+Math.abs(tx-du.x)/speed+air+(e.to===goalSeg.id?Math.abs(goalX-lx)/speed:0)*0;
+   const cur=dist.get(e.to);if(!cur||c<cur.c){dist.set(e.to,{c,x:lx,prev:{...e,tx,lx,ay:S[e.from].y,by:b.y}});open.push(e.to)}
+  }}
+ return best===start.id?null:Object.assign(route(best),{partial:true});
+}
+function edgeKey(e){return e.from+">"+e.to+":"+e.kind+":"+e.t0.toFixed(1)}
+function chaseSpeed(m){return m.sp.walk*(m.hunting?T.chaseSpeedScale*(m.speedF??1):1)}
+
+// ---- 시야 ----
+function segHitsRect(x0,y0,x1,y1,r){ // Liang–Barsky
+ let t0=0,t1=1;const dx=x1-x0,dy=y1-y0;
+ for(const[p,q]of[[-dx,x0-r.x],[dx,r.x+r.w-x0],[-dy,y0-r.y],[dy,r.y+r.h-y0]]){
+  if(Math.abs(p)<1e-9){if(q<0)return false}else{const t=q/p;if(p<0){if(t>t1)return false;if(t>t0)t0=t}else{if(t<t0)return false;if(t<t1)t1=t}}}
+ return true}
+function occluded(ax,ay,bx,by){for(const r of rects)if(segHitsRect(ax,ay,bx,by,r))return true;return false}
+function visible(m,p){const cx=m.x,cy=m.y+m.h/2;return[p.y+p.h/2,p.y+p.h-.03,p.y+.03].some(y=>!occluded(cx,cy,p.x,y))}
+
+// ---- 몬스터 ----
+function senseDist(m){return m.sp.sense*(m.sp.kind==="melee"?T.detectionScale:1)}
+function rangeOf(m){return m.sp.kind==="melee"?m.sp.startGap:(T.ranges[m.sp.id]??m.sp.range)}
+function inAttackRange(m,p){return m.sp.kind==="melee"&&inAttack(m,p)}
+function inAttack(m,p){
+ const s=m.sp,dyF=Math.abs(p.y-m.y);
+ if(s.kind==="melee"){if(dyF>2)return false;
+  const gap=s.gapMode==="body"?Math.max(0,Math.abs(p.x-m.x)-(p.w+m.w)/2):Math.abs(p.x-m.x);
+  return gap<=s.startGap&&visible(m,p)}
+ const r=rangeOf(m);
+ if(s.shot==="line")return dyF<=2&&Math.abs(p.x-m.x)<=r&&visible(m,p);
+ if(s.shot==="arc")return Math.abs(p.x-m.x)<=r&&visible(m,p);
+ return Math.hypot(p.x-m.x,p.y-m.y)<=r;
+}
+function detect(m,p){
+ const s=m.sp,dx=Math.abs(p.x-m.x),dy=Math.abs(p.y-m.y),r=s.kind==="melee"?senseDist(m):Math.max(senseDist(m),rangeOf(m));
+ if(s.senseMetric==="euclid")return Math.hypot(dx,dy)<=r&&(s.kind==="stationary"||visible(m,p));
+ return dx<=r&&dy<=(s.kind==="melee"?s.senseY:Math.max(s.senseY,4))&&visible(m,p);
+}
+// 발판 밖으로 나가는 방향일 때만 막는다(이미 걸쳐 있으면 안쪽으로는 움직일 수 있다)
+function outward(seg,nx,hw,vx,margin){const c0=seg.c0??seg.x0+hw,c1=seg.c1??seg.x1-hw;return vx<0&&nx<c0+margin||vx>0&&nx>c1-margin}
+
+// 추격 중 걷기에 무작위 점프를 얹는다(Unity EnemyPursuit.Walk와 같은 규칙)
+function hopWalk(m,cur,vx,hold){
+ if(!vx||hold||m.returning||!hops(m)||!cur)return vx;
+ if(m.nextHopAt==null)m.nextHopAt=time+rr(m.rHop,T.randomHopIntervalMin,T.randomHopIntervalMax);
+ if(time<m.nextHopAt)return vx;
+ const room=ceilingAbove(m.x-m.w/2,m.x+m.w/2,m.y+m.h)-m.y-m.h-.02,h=Math.min(rr(m.rHop,T.randomHopHeightMin,T.randomHopHeightMax),jh(m),room);
+ const land=m.x+vx*airTime(0,Math.max(h,.01));
+ if(h<T.randomHopHeightMin||land<cur.c0||land>cur.c1){m.nextHopAt=time+.3;return vx}
+ m.vy=Math.sqrt(2*G_RISE*h);m.grounded=false;m.hop={vx};m.nextHopAt=time+rr(m.rHop,T.randomHopIntervalMin,T.randomHopIntervalMax);m.state="무작위 점프";stats.hops++;return vx}
+// ---- 화면 밖 포기·복귀(Unity EnemyPursuit.StepReturn과 같은 규칙) ----
+const GAME_HW=15,GAME_HH=8.4375,gcam={x:0,y:0};
+function onScreen(x,y,w,h){return Math.abs(x-gcam.x)<GAME_HW+w/2&&Math.abs(y+h/2-gcam.y)<GAME_HH+h/2}
+function resetAlert(m){m.alerted=false;m.pendingAt=null;m.readyAt=0;m.markUntil=0}
+function giveUp(m){m.hunting=false;m.alert=false;m.returning=true;m.returnSince=time;m.stuckSince=null;m.plan=null;m.hop=null;m.pendingAt=null;m.markUntil=0;m.waitKey=null;stats.giveUps++}
+function arrive(m){m.returning=false;m.plan=null;resetAlert(m)}
+function leash(m,dt){
+ if(!T.screenLeash||m.sp.kind!=="melee")return;
+ const here=onScreen(m.x,m.y,m.w,m.h);
+ if(m.hunting){ // 화면 안 여부는 공격 중에도 기록하고, 포기는 공격·점프가 끝난 뒤에만
+  if(here){m.seen=true;m.offSince=null}
+  else{if(m.seen&&m.offSince==null)m.offSince=time;
+   if(!m.atk&&m.windupUntil<=time&&m.grounded&&!m.air&&!m.hop&&(m.seen?time-m.offSince>=T.leaveScreenSeconds:time-m.huntSince>=T.unseenGiveUpSeconds))giveUp(m)}}
+ if(!m.returning)return;
+ if(here&&detect(m,player)){m.returning=false;resetAlert(m);return} // 화면 안에서 다시 감지: "!"부터 다시
+ const {S}=navFor(m),cur=m.grounded?segAt(S,m.x,m.y,m.w/2):null,home=segAt(S,m.spawnX,m.spawnY,m.w/2)||segBelow(S,m.spawnX,m.spawnY+.1,m.w/2);
+ if(cur&&(!home||cur.id===home.id)&&Math.abs(m.x-m.spawnX)<.15){arrive(m);return}
+ const waiting=m.state==="복귀 · 하향 대기"||m.state==="복귀 · 도약 대기"||m.state==="하향 대기"||m.state==="도약 대기";
+ if(m.grounded&&!m.air&&m.windupUntil<=time&&!waiting&&Math.abs(m.x-(m.prevX??m.x))<1e-4){if(m.stuckSince==null)m.stuckSince=time}else m.stuckSince=null;
+ const stuck=m.stuckSince!=null&&time-m.stuckSince>=T.noRouteTeleportSeconds;
+ if((stuck||time-m.returnSince>=T.returnTeleportSeconds)&&!here&&!onScreen(m.spawnX,home?home.y:m.spawnY,m.w,m.h)){
+  m.x=m.spawnX;m.y=home?home.y:m.spawnY;m.vx=m.vy=0;m.air=null;m.pending=null;m.windupUntil=0;stats.teleports++;arrive(m)}
+}
+function faceTarget(m,x){if(Math.abs(x-m.x)>T.targetFacingDeadzone)m.facing=x<m.x?-1:1}
+function updateMonster(m,dt){
+ const p=player,s=m.sp;let vx=0;
+ m.flash=Math.max(0,m.flash-dt);
+ leash(m,dt);m.prevX=m.x;
+ if(alertReceiver(m)&&!m.returning){
+  if(detect(m,p))spotAlert(m);
+  if(m.pendingAt!=null&&time>=m.pendingAt)raiseAlert(m);
+  if(m.alerted&&time<m.readyAt&&!m.atk){faceTarget(m,p.x);m.state="! 반응";step(m,dt,0);return}
+  if(m.alerted){if(s.kind==="melee"){if(!m.hunting)startHunt(m)}else m.alert=true}
+ }else if(!m.hunting&&!m.returning&&detect(m,p)){if(s.kind==="melee")startHunt(m);m.alert=true}
+ if(s.kind==="stationary"&&!detect(m,p)&&!m.atk)m.alert=false;
+ // 공격 진행
+ if(m.atk){const a=m.atk,age=time-a.t;
+  if(age<s.attack.prepare){m.state="공격 준비";step(m,dt,0);return}
+  if(s.attack.dash&&a.travel<s.attack.dash){m.state="돌진";let v=a.dir*s.attack.dashSpeed;const ox=m.x;
+   // 짧은 돌진: 돌아올 경로가 없는 모서리(B3는 모든 모서리)에서 멈춘다. 돌아올 수 있으면 떨어지며 계속 돌진
+   const lim=limitCharge(m,v*dt,s.attack.ledge==="stop");if(lim.stopped){v=lim.delta/dt;a.travel=s.attack.dash}
+   step(m,dt,v);if(!lim.stopped)a.travel+=Math.abs(m.x-ox);
+   if(Math.abs(m.x-ox)<1e-4)a.travel=s.attack.dash;hitCheck(m);return}
+  if(!a.fired){a.fired=true;fire(m);if(!s.attack.dash)hitCheck(m)}
+  if(age>=s.attack.prepare+.35){m.atk=null;m.nextAtk=time+s.attack.interval-.35-s.attack.prepare}
+  m.state="공격";step(m,dt,0);return}
+ if(m.windupUntil>time){m.state="점프 준비";step(m,dt,0);if(time+dt>=m.windupUntil)launchJump(m);return}
+ if((m.hunting||m.alert)&&!m.returning&&time>=m.nextAtk&&m.grounded&&inAttack(m,p)){
+  faceTarget(m,p.x);m.atk={t:time,dir:m.facing,travel:0,fired:false};m.state="공격 준비";step(m,dt,0);return}
+ if(s.kind==="stationary"){m.state=m.alert?"사거리 안 대기":"대기";step(m,dt,0);return}
+ if(s.kind==="ranged"){ // 원거리 이동형: 기존처럼 자기 발판 안에서만 사거리까지 접근
+  if(m.alert&&Math.abs(p.x-m.x)>rangeOf(m)*.9&&m.grounded){
+   const seg=segAt(navFor(m).S,m.x,m.y,m.w/2),dir=p.x<m.x?-1:1;m.facing=dir;vx=dir*s.walk;
+   if(seg&&outward(seg,m.x+vx*dt,m.w/2,vx,.03))vx=0
+   m.state=vx?"사거리로 접근":"사거리 밖 대기"}else m.state=m.alert?"사거리 안 대기":"대기";
+  step(m,dt,vx);return}
+ if(!m.hunting&&!m.returning){m.state="대기";step(m,dt,0);return}
+ const back=m.returning,g=back?{x:m.spawnX,y:m.spawnY,w:m.w,grounded:true}:p,tag=back?"복귀 · ":"";
+ // ---- 근접 이동형 끝까지 추격 ----
+ const hw=m.w/2,speed=chaseSpeed(m);
+ if(!m.grounded){ // 공중: 착지 지점으로 조향
+  if(m.hop){m.state="무작위 점프";step(m,dt,m.hop.vx);if(m.grounded)m.hop=null;return}
+  if(m.air){const d=m.air.x-m.x;vx=Math.sign(d)*Math.min(airV(m),Math.abs(d)/dt);m.state=m.air.kind==="jump"?"점프":"낙하"}
+  else m.state="공중";
+  step(m,dt,vx);if(m.grounded)land(m);return}
+ const {S}=navFor(m),pSeg=g.grounded?segAt(S,g.x,g.y,g.w/2)||segBelow(S,g.x,g.y+.1,g.w/2):segBelow(S,g.x,g.y,g.w/2);
+ const cur=segAt(S,m.x,m.y,hw);
+ if(time-m.planAt>=T.replanSeconds||!m.plan){m.plan=pSeg?plan(m,pSeg,g.x,g.y):null;m.planAt=time;m.goalSeg=pSeg}
+ if(cur&&pSeg&&cur.id===pSeg.id){ // 같은 발판: 바로 접근
+  const dir=g.x<m.x?-1:1;if(back)m.facing=dir;else faceTarget(m,g.x);vx=dir*(back?Math.min(speed,Math.abs(g.x-m.x)/dt):speed);
+  if(outward(cur,m.x+vx*dt,hw,vx,0))vx=0;
+  if(Math.abs(g.x-m.x)<=(back?.05:Math.max(.05,T.targetFacingDeadzone)))vx=0;m.state=back?"복귀":"추격";const hold=!back&&inAttackRange(m,p);if(hold)vx=0;vx=hopWalk(m,cur,vx,hold);step(m,dt,vx);return}
+ const e=m.plan&&m.plan[0];
+ if(!e||!cur||e.from!==cur.id){ // 경로 없음: 같은 발판 끝까지 접근 후 대기
+  if(cur&&(back||Math.abs(g.x-m.x)>T.targetFacingDeadzone)){const dir=g.x<m.x?-1:1;m.facing=dir;vx=dir*speed;if(outward(cur,m.x+vx*dt,hw,vx,0))vx=0}
+  m.state=tag+(e?"경로 재계산":"경로 없음 · 대기");if(e)m.planAt=-9;vx=hopWalk(m,cur,vx,false);step(m,dt,vx);return}
+ const tx=Math.min(Math.max(m.x,e.t0),e.t1);
+ if(e.kind==="fall"){m.facing=e.dir;vx=e.dir*speed;m.air={kind:"fall",x:e.land,edge:e};m.state="절벽으로";step(m,dt,vx);return}
+ if(Math.abs(tx-m.x)>.08&&!(m.hitWall&&Math.abs(tx-m.x)<m.w/2+.6)){const dir=Math.sign(tx-m.x);m.facing=dir;vx=dir*Math.min(speed,Math.abs(tx-m.x)/dt);m.state=e.kind==="drop"?"하향 지점으로":"도약 지점으로";if(Math.abs(tx-m.x)>1.5)vx=hopWalk(m,cur,vx,false);step(m,dt,vx);return}
+ // 도약 지점 도착: 무작위 텀만큼 멈춰 기다린다(링크마다 한 번 굴림)
+ const wk=edgeKey(e);if(m.waitKey!==wk){m.waitKey=wk;m.waitUntil=time+rr(m.rHop,T.pathJumpDelayMin,T.pathJumpDelayMax)}
+ if(time<m.waitUntil){m.state=e.kind==="drop"?"하향 대기":"도약 대기";step(m,dt,0);return}
+ m.waitKey=null;
+ if(e.kind==="drop"){m.air={kind:"drop",x:m.x,edge:e};dropThrough(m);m.state="하향점프";step(m,dt,0);return}
+ const wu=T.jumpWindupSeconds*(m.windF??1);m.pending=e;m.windupUntil=time+wu;m.state="점프 준비";if(wu<=0)launchJump(m);step(m,dt,0);
+}
+// 돌진 이동 제한(Unity EnemyPursuit.LimitCharge와 같은 규칙)
+function canReturnAfterFall(S,E,from,dir){
+ if(dir>0?from.wallR:from.wallL)return false;
+ const hw=from._hw,land=segBelow(S,dir>0?from.x1+hw+.05:from.x0-hw-.05,from.y-.1,hw);if(!land)return false;
+ const seen=new Set([land.id]),q=[land.id];
+ while(q.length){const u=q.shift();if(u===from.id)return true;for(const e of E[u])if(!seen.has(e.to)){seen.add(e.to);q.push(e.to)}}
+ return false}
+function limitCharge(m,delta,stopAtAnyEdge){
+ if(!delta||!m.grounded)return{delta,stopped:false};
+ const {S,E}=navFor(m),cur=segAt(S,m.x,m.y,m.w/2);if(!cur)return{delta,stopped:false};
+ cur._hw=m.w/2;const dir=delta>0?1:-1,limit=dir>0?cur.c1:cur.c0;
+ if(dir>0?m.x+delta<=limit:m.x+delta>=limit)return{delta,stopped:false};
+ if(!stopAtAnyEdge&&canReturnAfterFall(S,E,cur,dir))return{delta,stopped:false};
+ return{delta:dir>0?Math.max(0,limit-m.x):Math.min(0,limit-m.x),stopped:true}}
+// 점프 최대 높이는 상한이다. 필요한 만큼만 뛴다(고체 윗면은 모서리 위에 떠 있는 동안 옆으로 올라탄다)
+function lowestJump(dy,need,room,solidUp,V){
+ for(let h=Math.max(dy+(solidUp?.6:.5),1);h<room;h+=.1){
+  const t=solidUp?Math.sqrt(2*(h-dy)/G_RISE)+Math.sqrt(2*(h-dy)/G_FALL):airTime(dy,h);
+  if(need<=V*t)return h}
+ return room}
+function launchJump(m){
+ const e=m.pending;if(!e)return;m.pending=null;
+ const lx=e.land??m.x,V=airV(m);
+ const h=lowestJump(e.dy,e.need||0,e.room,e.dy>0&&!e.toOneWay,V);
+ m.vy=Math.sqrt(2*G_RISE*h);m.grounded=false;m.air={kind:"jump",x:lx,edge:e};if(lx!==m.x)m.facing=Math.sign(lx-m.x);
+}
+function land(m){
+ const e=m.air&&m.air.edge;m.air=null;
+ if(e&&!navFor(m).S.some(s=>s.id===e.to&&Math.abs(s.y-m.y)<.08&&m.x+m.w/2>s.x0-.05&&m.x-m.w/2<s.x1+.05))m.edgeFails[edgeKey(e)]=time+3;
+ m.plan=null;
+}
+function hitCheck(m){const p=player,s=m.sp;if(s.kind!=="melee")return;
+ const reach=s.attack.dash?m.w/2+.6:s.startGap+m.w/2,dx=(p.x-m.x)*m.facing;
+ if(dx>-.5&&dx<reach&&Math.abs(p.y-m.y)<2.2&&!m.atk.hit){m.atk.hit=true;player.flash=.25;stats.hits++}}
+function fire(m){const s=m.sp,p=player;
+ if(s.shot==="line")shots.push({x:m.x+m.facing*1.2,y:m.y+1.25,vx:m.facing*s.shotSpeed,vy:0,g:0,life:rangeOf(m)/s.shotSpeed+.1,c:s.color});
+ else if(s.shot==="arc"){const T0=Math.max(.6,Math.abs(p.x-m.x)/s.shotSpeed),g=18,vy=((p.y+.8)-(m.y+2)+.5*g*T0*T0)/T0;
+  shots.push({x:m.x,y:m.y+2,vx:(p.x-m.x)/T0,vy,g,life:T0+.05,c:s.color})}
+ else if(s.shot==="bomb")shots.push({bomb:true,x:p.x,y:p.y,life:1.3,c:s.color});
+}
+
+// ---- 플레이어 ----
+const keys={};
+addEventListener("keydown",e=>{if(e.target.tagName==="TEXTAREA"||e.target.tagName==="INPUT")return;keys[e.code]=true;
+ if(["Space","ArrowUp","KeyW"].includes(e.code)){e.preventDefault();jumpPressed=true}
+ if(e.code==="KeyR")loadMap(mapSel.value);if(e.code==="KeyP")togglePause()});
+addEventListener("keyup",e=>{keys[e.code]=false});
+let jumpPressed=false;
+function updatePlayer(dt){
+ const p=player;const dir=(keys.ArrowRight||keys.KeyD?1:0)-(keys.ArrowLeft||keys.KeyA?1:0);
+ if(p.grounded)p.jumps=0;
+ if(jumpPressed){jumpPressed=false;
+  if((keys.ArrowDown||keys.KeyS)&&p.grounded&&p.ground&&p.ground.oneWay)dropThrough(p);
+  else if(p.grounded||p.jumps<2){p.vy=PLAYER_JUMP_V;p.grounded=false;p.jumps=p.grounded?1:p.jumps+1}}
+ p.flash=Math.max(0,p.flash-dt);step(p,dt,dir*PLAYER_RUN);
+}
+const stats={hits:0,hops:0,spots:0,giveUps:0,teleports:0};
+function startHunt(m){m.hunting=true;m.huntSince=time;m.seen=false;m.offSince=null}
+
+// ---- 그리기 ----
+const cv=document.getElementById("c"),ctx=cv.getContext("2d"),hud=document.getElementById("hud");
+function resize(){const r=cv.getBoundingClientRect();cv.width=r.width*devicePixelRatio;cv.height=r.height*devicePixelRatio}
+addEventListener("resize",resize);
+const sx=x=>(x-cam.x)*cam.scale,sy=y=>cv.height/devicePixelRatio-(y-cam.y)*cam.scale;
+function draw(){
+ const W=cv.width/devicePixelRatio,H=cv.height/devicePixelRatio;
+ ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);ctx.clearRect(0,0,W,H);
+ // 격자
+ ctx.strokeStyle="#1b1e24";ctx.lineWidth=1;ctx.beginPath();
+ for(let x=Math.floor(cam.x);x<cam.x+W/cam.scale;x++){ctx.moveTo(sx(x),0);ctx.lineTo(sx(x),H)}
+ for(let y=Math.floor(cam.y);y<cam.y+H/cam.scale;y++){ctx.moveTo(0,sy(y));ctx.lineTo(W,sy(y))}ctx.stroke();
+ for(const r of rects){ctx.fillStyle=r.oneWay?"#3d5568":"#3a3f49";ctx.fillRect(sx(r.x),sy(r.y+r.h),r.w*cam.scale,r.h*cam.scale);
+  ctx.fillStyle=r.oneWay?"#7aa6c9":"#6b7280";ctx.fillRect(sx(r.x),sy(r.y+r.h),r.w*cam.scale,2)}
+ const showPath=document.getElementById("showPath").checked;
+ if(showPath){ctx.lineWidth=2;for(const s of segs){ctx.strokeStyle=s.oneWay?"rgba(122,166,201,.35)":"rgba(160,170,180,.25)";ctx.beginPath();ctx.moveTo(sx(s.x0),sy(s.y)-3);ctx.lineTo(sx(s.x1),sy(s.y)-3);ctx.stroke()}}
+ // 사거리
+ for(const m of actors){if(m.sp.kind==="melee")continue;const r=rangeOf(m);ctx.strokeStyle=m.sp.color+(m.alert?"aa":"44");ctx.setLineDash([5,5]);ctx.lineWidth=1.2;
+  if(m.sp.shot==="line"){ctx.strokeRect(sx(m.x-r),sy(m.y+2),2*r*cam.scale,4*cam.scale)}
+  else if(m.sp.shot==="arc"){ctx.strokeRect(sx(m.x-r),sy(m.y+12),2*r*cam.scale,24*cam.scale)}
+  else{ctx.beginPath();ctx.arc(sx(m.x),sy(m.y+1),r*cam.scale,0,7);ctx.stroke()}ctx.setLineDash([])}
+ // 경로
+ if(showPath)for(const m of actors){if(!m.plan||!m.hunting)continue;ctx.strokeStyle=m.sp.color;ctx.lineWidth=1.5;ctx.setLineDash([3,3]);ctx.beginPath();ctx.moveTo(sx(m.x),sy(m.y+.3));
+  for(const e of m.plan){const a={y:e.ay},b={y:e.by};ctx.lineTo(sx(e.tx),sy(a.y+.3));const lx=e.lx??e.tx;
+   if(e.kind==="jump")ctx.quadraticCurveTo(sx((e.tx+lx)/2),sy(Math.max(a.y,b.y)+2),sx(lx),sy(b.y+.3));else ctx.lineTo(sx(lx),sy(b.y+.3))}
+  ctx.stroke();ctx.setLineDash([])}
+ const drawActor=(a,fill,label)=>{ctx.fillStyle=a.flash>0?"#fff":fill;ctx.fillRect(sx(a.x-a.w/2),sy(a.y+a.h),a.w*cam.scale,a.h*cam.scale);
+  ctx.fillStyle="#111";const fx=a.x+(a.facing||1)*a.w*.3;ctx.fillRect(sx(fx)-2,sy(a.y+a.h*.8)-2,4,4);
+  if(label){ctx.fillStyle="#ddd";ctx.font="11px Malgun Gothic";ctx.textAlign="center";ctx.fillText(label,sx(a.x),sy(a.y+a.h)-4)}};
+ for(const m of actors){drawActor(m,m.sp.color,m.sp.name+" · "+m.state);
+  if(time<m.markUntil){const pop=Math.min(1,(time-(m.markUntil-T.alertMarkSeconds))/.12),sc=cam.scale*(1.4-.4*pop),bx=sx(m.x),by=sy(m.y+m.h+.6+.15*(1-pop));
+   ctx.fillStyle="#2a1a0e";ctx.fillRect(bx-.19*sc,by-1.0*sc,.38*sc,.66*sc);ctx.fillRect(bx-.19*sc,by-.28*sc,.38*sc,.3*sc);
+   ctx.fillStyle="#ffd23a";ctx.fillRect(bx-.12*sc,by-.94*sc,.24*sc,.54*sc);ctx.fillRect(bx-.12*sc,by-.22*sc,.24*sc,.18*sc)}
+  if(m.atk){ctx.strokeStyle="#ff5a4a";ctx.lineWidth=2;ctx.strokeRect(sx(m.x-m.w/2)-2,sy(m.y+m.h)-2,m.w*cam.scale+4,m.h*cam.scale+4)}}
+ drawActor(player,"#f4f1e8","플레이어");
+ if(T.screenLeash){ctx.strokeStyle="rgba(255,255,255,.45)";ctx.setLineDash([8,6]);ctx.lineWidth=1.5;
+  ctx.strokeRect(sx(gcam.x-GAME_HW),sy(gcam.y+GAME_HH),2*GAME_HW*cam.scale,2*GAME_HH*cam.scale);ctx.setLineDash([]);
+  ctx.fillStyle="rgba(255,255,255,.55)";ctx.font="11px Malgun Gothic";ctx.textAlign="left";ctx.fillText("게임 화면 30×16.9",sx(gcam.x-GAME_HW)+4,sy(gcam.y+GAME_HH)+14);
+  for(const m of actors)if(m.returning){ctx.strokeStyle=m.sp.color+"99";ctx.setLineDash([2,4]);ctx.beginPath();ctx.moveTo(sx(m.x),sy(m.y+m.h/2));ctx.lineTo(sx(m.spawnX),sy(m.spawnY+.2));ctx.stroke();ctx.setLineDash([]);
+   ctx.strokeStyle=m.sp.color;ctx.strokeRect(sx(m.spawnX)-4,sy(m.spawnY)-8,8,8)}}
+ for(const s of shots){ctx.fillStyle=s.c;if(s.bomb){ctx.globalAlpha=.35;ctx.fillRect(sx(s.x-1),sy(s.y+2),2*cam.scale,2*cam.scale);ctx.globalAlpha=1}
+  else{ctx.beginPath();ctx.arc(sx(s.x),sy(s.y),4,0,7);ctx.fill()}}
+ if(drag){ctx.strokeStyle=mode==="erase"?"#e4785c":"#e0a84b";ctx.strokeRect(Math.min(drag.sx,mouse.x),Math.min(drag.sy,mouse.y),Math.abs(mouse.x-drag.sx),Math.abs(mouse.y-drag.sy))}
+ const hunting=actors.filter(m=>m.hunting).length,back=actors.filter(m=>m.returning).length;
+ hud.textContent=`시간 ${time.toFixed(1)}s   추격 중 ${hunting}/${actors.filter(m=>m.sp.kind==="melee").length}   복귀 중 ${back} (포기 ${stats.giveUps}, 순간이동 ${stats.teleports})   플레이어 피격 ${stats.hits}${paused?"   [일시정지]":""}\n마우스 ${mouse.wx.toFixed(1)}, ${mouse.wy.toFixed(1)}`;
+}
+
+// ---- 루프 ----
+let last=performance.now(),acc=0;const DT=1/120;
+function frame(now){acc+=Math.min(.1,(now-last)/1000);last=now;
+ while(acc>=DT){acc-=DT;if(!paused){time+=DT;updatePlayer(DT);gcam.x=player.x;gcam.y=player.y+player.h/2;for(const m of actors)updateMonster(m,DT);
+  for(const s of shots){s.life-=DT;if(!s.bomb){s.vy-=s.g*DT;s.x+=s.vx*DT;s.y+=s.vy*DT;if(occluded(s.x-s.vx*DT,s.y-s.vy*DT,s.x,s.y))s.life=0}
+   if(s.life<=0&&!s.done){s.done=true;const p=player;if(Math.abs(p.x-s.x)<1.2&&p.y-.2<s.y+(s.bomb?2:.3)&&p.y+p.h>s.y-(s.bomb?0:.3)){p.flash=.25;stats.hits++}}
+   else if(!s.bomb&&!s.done&&Math.abs(player.x-s.x)<.6&&s.y>player.y&&s.y<player.y+player.h){s.done=true;s.life=0;player.flash=.25;stats.hits++}}
+  for(let i=shots.length-1;i>=0;i--)if(shots[i].life<=0)shots.splice(i,1)}}
+ // 카메라 추적
+ const W=cv.width/devicePixelRatio/cam.scale;const Hh=cv.height/devicePixelRatio/cam.scale;if(!panning){cam.x+=((player.x-W/2)-cam.x)*.08;cam.y+=((player.y-Hh*.35)-cam.y)*.08}
+ draw();renderTable();requestAnimationFrame(frame)}
+
+// ---- 입력: 편집 ----
+cv.addEventListener("contextmenu",e=>e.preventDefault());
+cv.addEventListener("mousemove",e=>{const r=cv.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top;
+ mouse.wx=mouse.x/cam.scale+cam.x;mouse.wy=(cv.height/devicePixelRatio-mouse.y)/cam.scale+cam.y;
+ if(panning){cam.x=panning.cx-(mouse.x-panning.x)/cam.scale;cam.y=panning.cy+(mouse.y-panning.y)/cam.scale}});
+cv.addEventListener("mousedown",e=>{if(e.button===2){panning={x:mouse.x,y:mouse.y,cx:cam.x,cy:cam.y};return}
+ if(mode==="solid"||mode==="oneway"||mode==="erase")drag={sx:mouse.x,sy:mouse.y,wx:mouse.wx,wy:mouse.wy};
+ if(mode==="spawn"){spawnMonster(spawnSel.value,Math.round(mouse.wx*2)/2,mouse.wy)}
+ if(mode==="play"){player.x=mouse.wx;player.y=mouse.wy;player.vy=0}});
+addEventListener("mouseup",e=>{panning=null;if(!drag)return;
+ const x0=Math.min(drag.wx,mouse.wx),x1=Math.max(drag.wx,mouse.wx),y0=Math.min(drag.wy,mouse.wy),y1=Math.max(drag.wy,mouse.wy);
+ const snap=v=>Math.round(v*2)/2;
+ if(mode==="erase"){rects=rects.filter(r=>!(r.x<x1&&r.x+r.w>x0&&r.y<y1&&r.y+r.h>y0))}
+ else if(x1-x0>.3){const oneWay=mode==="oneway";rects.push(R(snap(x0),oneWay?snap(y1)-.4:snap(y0),Math.max(.5,snap(x1)-snap(x0)),oneWay?.4:Math.max(.5,snap(y1)-snap(y0)),oneWay))}
+ drag=null;rebuild();for(const m of actors)m.plan=null});
+cv.addEventListener("wheel",e=>{e.preventDefault();const f=e.deltaY<0?1.1:1/1.1,wx=mouse.wx,wy=mouse.wy;cam.scale=Math.min(60,Math.max(8,cam.scale*f));
+ cam.x=wx-mouse.x/cam.scale;cam.y=wy-(cv.height/devicePixelRatio-mouse.y)/cam.scale},{passive:false});
+document.querySelectorAll("button.mode").forEach(b=>b.onclick=()=>{mode=b.dataset.mode;document.querySelectorAll("button.mode").forEach(x=>x.classList.toggle("on",x===b))});
+function togglePause(){paused=!paused;document.getElementById("btnPause").classList.toggle("on",paused)}
+document.getElementById("btnPause").onclick=togglePause;
+document.getElementById("btnReset").onclick=()=>loadMap(mapSel.value);
+
+// ---- 패널 ----
+const mapSel=document.getElementById("mapSel"),spawnSel=document.getElementById("spawnSel");
+for(const k of Object.keys(MAPS))mapSel.add(new Option(k,k));mapSel.onchange=()=>loadMap(mapSel.value);
+for(const s of SPECIES)spawnSel.add(new Option(`${s.name} (${s.kind==="melee"?"근접":s.kind==="ranged"?"원거리":"고정"})`,s.id));
+function slider(host,label,get,set,min,max,step,hint){
+ const d=document.createElement("div");d.className="row";
+ d.innerHTML=`<label>${label}<span class="v"></span></label><input type=range min=${min} max=${max} step=${step}><input type=number min=${min} max=${max} step=${step}>${hint?`<div class=hint>${hint}</div>`:""}`;
+ const [r,n]=d.querySelectorAll("input"),v=d.querySelector(".v");
+ const sync=()=>{const x=get();r.value=x;n.value=x;v.textContent=(+x).toFixed(step<.1?2:2).replace(/\.?0+$/,"")};
+ r.oninput=()=>{set(+r.value);sync();changed()};n.onchange=()=>{set(+n.value);sync();changed()};
+ sync();host.appendChild(d);return sync}
+let syncers=[];
+function buildPanel(){
+ syncers=[];const pc=document.getElementById("pursuitControls"),rc=document.getElementById("rangeControls");pc.innerHTML=rc.innerHTML="";
+ for(const[k,l,a,b,s,h]of PURSUIT_UI)syncers.push(slider(pc,l,()=>T[k],v=>T[k]=v,a,b,s,h));
+ const sc=document.getElementById("speciesControls");sc.innerHTML="";
+ for(const sp of SPECIES.filter(x=>x.kind==="melee")){
+  T.species[sp.id]=T.species[sp.id]||{jumpHeight:T.jumpHeight,randomHop:T.randomHop};
+  syncers.push(slider(sc,sp.name+" 점프 최대 높이",()=>T.species[sp.id].jumpHeight,v=>T.species[sp.id].jumpHeight=v,1,10,.1,""));
+  const d=document.createElement("div");d.className="chk";d.innerHTML=`<input type="checkbox" id="hop-${sp.id}" ${T.species[sp.id].randomHop?"checked":""}><label for="hop-${sp.id}">${sp.name} 이동 중 무작위 점프</label>`;
+  d.querySelector("input").onchange=e=>{T.species[sp.id].randomHop=e.target.checked;changed()};sc.appendChild(d)}
+ for(const s of SPECIES.filter(s=>s.kind!=="melee"))
+  syncers.push(slider(rc,`${s.name} 사정범위 (현재 ${s.range})`,()=>T.ranges[s.id],v=>T.ranges[s.id]=v,s.range*.5,s.range*3,.5,
+   s.shot==="line"?"가로 직선 사거리. 탄환 비행 거리도 같이 늘린다":s.shot==="arc"?"발 기준 가로 거리":"직선거리(2D) 감지·포격 거리"));
+ document.getElementById("dropThrough").checked=T.dropThrough;document.getElementById("walkOff").checked=T.walkOffLedges;document.getElementById("alertEnabled").checked=T.alertEnabled;
+ document.getElementById("screenLeash").checked=T.screenLeash;
+ changed();
+}
+document.getElementById("dropThrough").onchange=e=>{T.dropThrough=e.target.checked;changed()};
+document.getElementById("walkOff").onchange=e=>{T.walkOffLedges=e.target.checked;changed()};
+document.getElementById("alertEnabled").onchange=e=>{T.alertEnabled=e.target.checked;changed()};
+document.getElementById("screenLeash").onchange=e=>{T.screenLeash=e.target.checked;changed()};
+function exportJson(){
+ const melee=SPECIES.filter(s=>s.kind==="melee");
+ return{schema:"enemy-pursuit-v1",status:"tuning-draft",tuner:"tools/combat/monster_pursuit_tuner/index.html",
+  pursuit:{appliesTo:melee.map(s=>s.id),persistAfterDetection:true,knowsTargetPositionAfterDetection:true,leash:"screenLeash",
+   chaseSpeedScale:T.chaseSpeedScale,jumpHeight:T.jumpHeight,jumpAirSpeed:T.jumpAirSpeed,jumpWindupSeconds:T.jumpWindupSeconds,
+   dropThrough:T.dropThrough,walkOffLedges:T.walkOffLedges,maxDropHeight:T.maxDropHeight,replanSeconds:T.replanSeconds,detectionScale:T.detectionScale,targetFacingDeadzone:T.targetFacingDeadzone,
+   randomHop:T.randomHop,randomHopIntervalMin:T.randomHopIntervalMin,randomHopIntervalMax:T.randomHopIntervalMax,randomHopHeightMin:T.randomHopHeightMin,randomHopHeightMax:T.randomHopHeightMax,pathJumpDelayMin:T.pathJumpDelayMin,pathJumpDelayMax:T.pathJumpDelayMax},
+  species:Object.assign({note:"per-species jump ceiling and random hop while walking; missing fields use pursuit.jumpHeight / pursuit.randomHop"},
+   Object.fromEntries(SPECIES.filter(s=>s.kind==="melee").map(s=>[s.id,{jumpHeight:T.species[s.id].jumpHeight,randomHop:T.species[s.id].randomHop}]))),
+  screenLeash:{enabled:T.screenLeash,offscreen:"the body box is entirely outside the view camera rectangle",leaveScreenSeconds:T.leaveScreenSeconds,
+   startsAfterFirstOnScreen:"a hunter detected or alerted off screen is judged only after it has entered the screen once",unseenGiveUpSeconds:T.unseenGiveUpSeconds,
+   return:"walk the pursuit route to the spawn point at the normal walk speed; no random hops",returnTeleportSeconds:T.returnTeleportSeconds,noRouteTeleportSeconds:T.noRouteTeleportSeconds,
+   teleport:"only while both the enemy and its spawn point are off screen, after returnTeleportSeconds or after standing with no route for noRouteTeleportSeconds",
+   health:"kept",redetect:"while returning, only when the enemy is on screen and detects the target; shows the reaction again; chain alerts are ignored until it arrives",neverDuringAttackOrJump:true},
+  individuality:{seed:"stage generation seed + species id + spawn position; the same seed replays the same values",appliesTo:"pursuit.appliesTo",individualVariance:T.individualVariance},
+  alert:{alertEnabled:T.alertEnabled,receivers:SPECIES.filter(s=>s.kind!=="stationary").map(s=>s.id),reactionDelayMin:T.reactionDelayMin,reactionDelayMax:T.reactionDelayMax,
+   alertRadius:T.alertRadius,propagation:"one-step-from-first-spotter; sight not required",alertDelayPerUnit:T.alertDelayPerUnit,alertJitter:T.alertJitter,alertMarkSeconds:T.alertMarkSeconds,markArt:"temporary-code-drawn"},
+  rangedRange:Object.fromEntries(SPECIES.filter(s=>s.kind!=="melee").map(s=>[s.id,{current:s.range,proposed:T.ranges[s.id]}]))};
+}
+function changed(){navCache.clear();for(const m of actors||[])m.plan=null;document.getElementById("out").value=JSON.stringify(exportJson(),null,2)}
+document.getElementById("btnCopy").onclick=()=>{const t=document.getElementById("out");t.select();navigator.clipboard?.writeText(t.value)};
+document.getElementById("btnDefaults").onclick=()=>{T=JSON.parse(JSON.stringify(DEFAULTS));buildPanel()};
+document.getElementById("btnLoad").onclick=()=>{try{const j=JSON.parse(document.getElementById("out").value),p=j.pursuit;
+ for(const k of Object.keys(DEFAULTS))if(k in p)T[k]=p[k];
+ if(j.individuality)T.individualVariance=j.individuality.individualVariance;
+ if(j.screenLeash){T.screenLeash=j.screenLeash.enabled;for(const k of["leaveScreenSeconds","unseenGiveUpSeconds","returnTeleportSeconds","noRouteTeleportSeconds"])if(k in j.screenLeash)T[k]=j.screenLeash[k]}
+ if(j.species)for(const[k,v]of Object.entries(j.species))if(k!=="note")T.species[k]={jumpHeight:v.jumpHeight??T.jumpHeight,randomHop:v.randomHop??T.randomHop};
+ if(j.alert)for(const k of["alertEnabled","reactionDelayMin","reactionDelayMax","alertRadius","alertDelayPerUnit","alertJitter","alertMarkSeconds"])if(k in j.alert)T[k]=j.alert[k];
+ for(const[k,v]of Object.entries(j.rangedRange||{}))T.ranges[k]=v.proposed;buildPanel()}catch(e){alert("JSON을 읽지 못했습니다: "+e.message)}};
+let tableAt=0;
+function renderTable(){if(performance.now()-tableAt<250)return;tableAt=performance.now();
+ const rows=SPECIES.filter(s=>s.kind==="melee").map(s=>{const v=s.walk*T.chaseSpeedScale,V=Math.max(v,T.jumpAirSpeed),gap=V*airTime(0,(T.species[s.id]||{}).jumpHeight??T.jumpHeight);
+  return`<tr><td><span class=dot style="background:${s.color}"></span>${s.name}</td><td>${s.walk}</td><td>${v.toFixed(2)}</td><td>${(s.sense*T.detectionScale).toFixed(1)}</td><td>${gap.toFixed(1)}</td></tr>`}).join("");
+ document.getElementById("speciesTable").innerHTML=`<tr><th>종</th><th>기본 속도</th><th>추격 속도</th><th>감지</th><th>평지 틈 최대</th></tr>${rows}`}
+
+resize();loadMap(Object.keys(MAPS)[0]);buildPanel();requestAnimationFrame(frame);
+</script>
+</body>
+</html>

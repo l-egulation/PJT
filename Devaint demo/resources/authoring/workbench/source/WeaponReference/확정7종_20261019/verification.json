@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-19",
+  "sourceSha256": "ae1f9f09999975bec53b792c98b988372e7b8997013726266f757e3efc2cb270",
+  "assetUnitTests": 4,
+  "restoreUnitTests": 5,
+  "runtimeIntegration": "Node VM with actual PNG loading, deterministic clock and DOM controls",
+  "runtimeCases": [
+    "all seven weapons and all motions",
+    "isolated hits",
+    "rapid click clock",
+    "single buffered input for five weapons",
+    "late input does not rewind",
+    "rapier and shield preserved chains",
+    "greatsword fast buffered recovery",
+    "previous hit FX tail overlap",
+    "pause seek key and all-weapons controls"
+  ],
+  "cleanSeparateRestore": {
+    "files": 514,
+    "sourcePixelsAndTimesExact": true,
+    "viewerPassed": true
+  },
+  "rebuild": {
+    "dataExact": true,
+    "sheetsExact": true,
+    "gifLinkLocal": true
+  },
+  "diffWhitespaceCheck": "passed"
+}

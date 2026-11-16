@@ -1,0 +1,31 @@
+{
+  "kind": "smoke-release-revision12",
+  "status": "pending; not applied",
+  "items": [
+    {
+      "id": "A07-soft-tail",
+      "number": 7,
+      "file": "smoke12-07-soft-tail.wav",
+      "sha256": "b493800d1175c7dd531208b97f6b1bb659df9349dcded71381b417780e5fcacb",
+      "duration": 0.78,
+      "source": {
+        "file": "../smoke-release-10/smoke10-07.wav",
+        "sha256": "3f79db2ee3ebf92ba1f151c33a46f0572a4947c92c18605e146c4e6b27bf3fed"
+      },
+      "edit": {
+        "cropSeconds": [
+          0,
+          0.78
+        ],
+        "decaySeconds": 0.38,
+        "tailFadeSeconds": 0.27,
+        "lateReleaseExcluded": true,
+        "localLevelCeilingWindowSeconds": 0.05,
+        "playbackRate": 1,
+        "repeat": false,
+        "addedSound": false,
+        "normalization": false
+      }
+    }
+  ]
+}

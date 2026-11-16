@@ -1,0 +1,264 @@
+{
+  "tool": "built-in image_gen",
+  "baseDesignApproval": "five distinct glass materials; finer acquisition sprites; separate simpler drops; cap-opening cutscene approved",
+  "records": [
+    {
+      "id": "red-closed",
+      "kind": "closed",
+      "color": "red",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-099312be-ecf3-4f2d-915c-c991f11f8bd8.png",
+      "prompt": "PRODUCTION ASSET EXTRACTION. Input is approved five-ink concept strip. Extract/recreate ONLY the specified ONE item as a standalone PNG. Preserve the exact approved game-sprite design, silhouette, material, stopper and color, moderately fine pixel density of the source acquisition art (not tiny drop art), controlled discrete shading and contained inner glow. NO redesign, no new decoration. One object only, centered horizontally on a SQUARE CANVAS with its lowest base at about 86% canvas height. No clipping. TRUE CLEAN TRANSPARENT BACKGROUND: all exterior pixels alpha ZERO, no gray/white haze, no checkerboard, no aura or cast shadow, no disconnected noise or sparkles. Actual sprite pixels should be opaque, transparent-looking glass is painted in neutral or tinted colors, not holes. Crisp pixel outlines, no feathered alpha mask. No labels/text/numbers/frame/scene. Keep the STOPPER CLOSED on the neck for this asset. Choose ONLY item 1 from left: SQUARE ruby-red ink bottle in CLEAR COLORLESS glass, SILVER/neutral-gray edge reflections, charcoal-gray squat stopper. No blue glass. Small vivid red inner glow and a fine ruby current. Broad clipped square shoulders. About 60% canvas width and 70% height.",
+      "runtime": "runtime/acquisition/red-closed.png"
+    },
+    {
+      "id": "red-open",
+      "color": "red",
+      "kind": "open",
+      "reference": "C:/Users/SSAFY/Desktop/자율 프로젝트/03_개발/GitLab/ui-polish-mr-20261107/resources/ui/village-ink-return-20261107/runtime/acquisition/red-closed.png",
+      "prompt": "PRECISE SPRITE EDIT FOR GAME ANIMATION. The provided PNG is ONE approved closed ink-bottle sprite. Remove ONLY its detachable top stopper/cap, leaving the glass collar and entire bottle exactly as they are. Reveal a clean open elliptical mouth inside the existing neck rim, matching its glass color and pixel shading. No cap floating anywhere: cap is a separate different asset and must be fully absent from this image. Keep the liquid/ink, glow, fine pixel art, bottle shape, material, scale, baseline and x/y position IDENTICAL to the input. Keep EXACT SAME CANVAS WIDTH AND HEIGHT and do not auto-center or enlarge the remaining open bottle after removing the stopper. All pixels outside the bottle fully transparent, no shadow, no gray/white alpha haze, no background, no text, no other objects. Preserve painted opaque tinted glass interior convention. Crisp clean transparent PNG sprite. Do not redesign or change the material. This is the OPEN FULL BOTTLE state, still filled with ink.",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-0c486b9c-9cb5-4096-afae-093572d66393.png",
+      "runtime": "runtime/acquisition/red-open.png"
+    },
+    {
+      "id": "red-cap",
+      "color": "red",
+      "kind": "cap",
+      "reference": "C:/Users/SSAFY/Desktop/자율 프로젝트/03_개발/GitLab/ui-polish-mr-20261107/resources/ui/village-ink-return-20261107/runtime/acquisition/red-closed.png",
+      "prompt": "PRECISE DETACHABLE CAP EXTRACTION. The input is one approved closed ink-bottle sprite. Produce ONLY ITS TOP STOPPER/CAP as an isolated transparent PNG, preserving exact shape, material, pixel colors, highlights and the original cap's dimensions. Remove the ENTIRE GLASS BOTTLE, collar/rim, ink and everything else. The glass neck ring/collar is NOT part of the cap and must not be included. Important registration requirement: use the EXACT SAME CANVAS WIDTH AND HEIGHT as input, and retain the cap at EXACTLY the same x/y pixel position it occupies in input. Do NOT move the cap to the canvas center, do not enlarge it to fill canvas. Preserve lots of empty transparent space below. This aligned layer should overlay the open-body asset at zero offset to recreate the closed bottle. Only the small original cap, not the collar. No shadow, background, haze, text, particles, duplicate objects. All exterior alpha fully zero, crisp clean pixel edge. It is a technical separation for cap-lifting animation, no redesign.",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-97ab0b42-16e8-4fde-930e-013afc73321b.png",
+      "runtime": "runtime/acquisition/red-cap.png"
+    },
+    {
+      "id": "red-empty",
+      "color": "red",
+      "kind": "empty",
+      "runtime": "runtime/acquisition/red-empty.png",
+      "ref": "C:/Users/SSAFY/Desktop/자율 프로젝트/03_개발/GitLab/ui-polish-mr-20261107/resources/ui/village-ink-return-20261107/runtime/acquisition/red-open.png",
+      "prompt": "PRECISE REGISTERED GAME SPRITE STATE EDIT. This is an approved OPEN ink bottle. Produce the SAME OPEN BOTTLE AFTER ITS INK HAS BEEN POURED OUT. Remove ONLY the contained colored ink liquid, bright core and flowing colored current. Bottle is now empty. Keep all glass walls, glass tint, neck rim, open mouth, outlines, highlights, material colors, contour and location unchanged. Preserve EXACT SAME CANVAS WIDTH/HEIGHT, exact bottle x/y position and baseline. No cap, no liquid stream outside. Clear/smoky tinted empty glass should retain subtle inner neutral/tinted shading and actual interior is painted as game sprite, not a hole erasing the back wall. No glowing core left. Some extremely faint residual color stain near bottom is acceptable, no remaining puddle. True transparent exterior, no ghost background or haze, alpha zero outside contour, crisp pixel edges. This is a technical state variant for an animation, not a redesign.",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-8428b11f-d117-48b6-a1af-89037ec1a9ee.png"
+    },
+    {
+      "id": "red-drop",
+      "color": "red",
+      "kind": "drop",
+      "runtime": "runtime/drops/red.png",
+      "ref": "C:/Users/SSAFY/Desktop/자율 프로젝트/03_개발/GitLab/ui-polish-mr-20261107/resources/ui/village-ink-return-20261107/source/references/drops-approved.png",
+      "prompt": "PRODUCTION INDIVIDUAL GAME PICKUP SPRITE. From the upper row of the provided approved drop-icon sheet, extract ONLY ITEM 1 from left. SQUARE ruby-red ink bottle in CLEAR COLORLESS glass, SILVER/neutral-gray edge reflections, charcoal-gray squat stopper. No blue glass. Small vivid red inner glow and a fine ruby current. Broad clipped square shoulders. About 60% canvas width and 70% height. This is the SMALL DROP VERSION, not the fine acquisition art. Faithfully preserve the approved silhouette/material and draw controlled intentional native-style pixel clusters, around 32 logical pixels tall, approximately 8-12 tones, one dark pixel contour, one simple short bright ink current and compact 2-3 pixel lower core, simplified glass edges. Single isolated object centered on square transparent canvas, good padding, no enlarged acquisition detail. Preserve distinct material: red clear silver-gray glass; gold white frosted glass; green dark-green glass; cyan alone blue glass; purple opal lilac white glass. No new decorations. Do not include labels, numbering, other bottles, character, floor, panel or scene. FULLY CLEAN TRANSPARENCY: exterior alpha exactly zero, no gray/white fuzz, no halo, no cast shadow. Internal sprite pixels opaque as standard pickup art. No broad outer bloom, bright ink light contained inside. Just one ready-to-use standalone drop sprite.",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-c62181a3-8a27-4b75-b9de-177f31fc9ca8.png"
+    },
+    {
+      "id": "yellow-closed",
+      "kind": "closed",
+      "color": "yellow",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-54717fbb-a41e-4dfe-a7af-51ee7fe73641.png",
+      "prompt": "PRODUCTION ASSET EXTRACTION. Input is approved five-ink concept strip. Extract/recreate ONLY the specified ONE item as a standalone PNG. Preserve the exact approved game-sprite design, silhouette, material, stopper and color, moderately fine pixel density of the source acquisition art (not tiny drop art), controlled discrete shading and contained inner glow. NO redesign, no new decoration. One object only, centered horizontally on a SQUARE CANVAS with its lowest base at about 86% canvas height. No clipping. TRUE CLEAN TRANSPARENT BACKGROUND: all exterior pixels alpha ZERO, no gray/white haze, no checkerboard, no aura or cast shadow, no disconnected noise or sparkles. Actual sprite pixels should be opaque, transparent-looking glass is painted in neutral or tinted colors, not holes. Crisp pixel outlines, no feathered alpha mask. No labels/text/numbers/frame/scene. Keep the STOPPER CLOSED on the neck for this asset. Choose ONLY item 2 from left: ROUND golden-amber ink bottle in MILKY WHITE FROSTED glass, pale cool-gray shadow tones and gray-charcoal cap. The white bottle itself is translucent, not beige armor. Golden ink softly illuminates lower body with a fine amber current. About 64% canvas width and 64% height.",
+      "runtime": "runtime/acquisition/yellow-closed.png"
+    },
+    {
+      "id": "yellow-open",
+      "color": "yellow",
+      "kind": "open",
+      "reference": "C:/Users/SSAFY/Desktop/자율 프로젝트/03_개발/GitLab/ui-polish-mr-20261107/resources/ui/village-ink-return-20261107/runtime/acquisition/yellow-closed.png",
+      "prompt": "PRECISE SPRITE EDIT FOR GAME ANIMATION. The provided PNG is ONE approved closed ink-bottle sprite. Remove ONLY its detachable top stopper/cap, leaving the glass collar and entire bottle exactly as they are. Reveal a clean open elliptical mouth inside the existing neck rim, matching its glass color and pixel shading. No cap floating anywhere: cap is a separate different asset and must be fully absent from this image. Keep the liquid/ink, glow, fine pixel art, bottle shape, material, scale, baseline and x/y position IDENTICAL to the input. Keep EXACT SAME CANVAS WIDTH AND HEIGHT and do not auto-center or enlarge the remaining open bottle after removing the stopper. All pixels outside the bottle fully transparent, no shadow, no gray/white alpha haze, no background, no text, no other objects. Preserve painted opaque tinted glass interior convention. Crisp clean transparent PNG sprite. Do not redesign or change the material. This is the OPEN FULL BOTTLE state, still filled with ink.",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-463ea3b2-207e-4ca1-bfed-5bdbd2a51861.png",
+      "runtime": "runtime/acquisition/yellow-open.png"
+    },
+    {
+      "id": "yellow-cap",
+      "color": "yellow",
+      "kind": "cap",
+      "reference": "C:/Users/SSAFY/Desktop/자율 프로젝트/03_개발/GitLab/ui-polish-mr-20261107/resources/ui/village-ink-return-20261107/runtime/acquisition/yellow-closed.png",
+      "prompt": "PRECISE DETACHABLE CAP EXTRACTION. The input is one approved closed ink-bottle sprite. Produce ONLY ITS TOP STOPPER/CAP as an isolated transparent PNG, preserving exact shape, material, pixel colors, highlights and the original cap's dimensions. Remove the ENTIRE GLASS BOTTLE, collar/rim, ink and everything else. The glass neck ring/collar is NOT part of the cap and must not be included. Important registration requirement: use the EXACT SAME CANVAS WIDTH AND HEIGHT as input, and retain the cap at EXACTLY the same x/y pixel position it occupies in input. Do NOT move the cap to the canvas center, do not enlarge it to fill canvas. Preserve lots of empty transparent space below. This aligned layer should overlay the open-body asset at zero offset to recreate the closed bottle. Only the small original cap, not the collar. No shadow, background, haze, text, particles, duplicate objects. All exterior alpha fully zero, crisp clean pixel edge. It is a technical separation for cap-lifting animation, no redesign.",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-09b4cac5-a7ae-4175-be04-47cf03e184f5.png",
+      "runtime": "runtime/acquisition/yellow-cap.png"
+    },
+    {
+      "id": "yellow-empty",
+      "color": "yellow",
+      "kind": "empty",
+      "runtime": "runtime/acquisition/yellow-empty.png",
+      "ref": "C:/Users/SSAFY/Desktop/자율 프로젝트/03_개발/GitLab/ui-polish-mr-20261107/resources/ui/village-ink-return-20261107/runtime/acquisition/yellow-open.png",
+      "prompt": "PRECISE REGISTERED GAME SPRITE STATE EDIT. This is an approved OPEN ink bottle. Produce the SAME OPEN BOTTLE AFTER ITS INK HAS BEEN POURED OUT. Remove ONLY the contained colored ink liquid, bright core and flowing colored current. Bottle is now empty. Keep all glass walls, glass tint, neck rim, open mouth, outlines, highlights, material colors, contour and location unchanged. Preserve EXACT SAME CANVAS WIDTH/HEIGHT, exact bottle x/y position and baseline. No cap, no liquid stream outside. Clear/smoky tinted empty glass should retain subtle inner neutral/tinted shading and actual interior is painted as game sprite, not a hole erasing the back wall. No glowing core left. Some extremely faint residual color stain near bottom is acceptable, no remaining puddle. True transparent exterior, no ghost background or haze, alpha zero outside contour, crisp pixel edges. This is a technical state variant for an animation, not a redesign.",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-719887c9-8760-4adb-b30c-a78e5a9cf8de.png"
+    },
+    {
+      "id": "yellow-drop",
+      "color": "yellow",
+      "kind": "drop",
+      "runtime": "runtime/drops/yellow.png",
+      "ref": "C:/Users/SSAFY/Desktop/자율 프로젝트/03_개발/GitLab/ui-polish-mr-20261107/resources/ui/village-ink-return-20261107/source/references/drops-approved.png",
+      "prompt": "PRODUCTION INDIVIDUAL GAME PICKUP SPRITE. From the upper row of the provided approved drop-icon sheet, extract ONLY ITEM 2 from left. ROUND golden-amber ink bottle in MILKY WHITE FROSTED glass, pale cool-gray shadow tones and gray-charcoal cap. The white bottle itself is translucent, not beige armor. Golden ink softly illuminates lower body with a fine amber current. About 64% canvas width and 64% height. This is the SMALL DROP VERSION, not the fine acquisition art. Faithfully preserve the approved silhouette/material and draw controlled intentional native-style pixel clusters, around 32 logical pixels tall, approximately 8-12 tones, one dark pixel contour, one simple short bright ink current and compact 2-3 pixel lower core, simplified glass edges. Single isolated object centered on square transparent canvas, good padding, no enlarged acquisition detail. Preserve distinct material: red clear silver-gray glass; gold white frosted glass; green dark-green glass; cyan alone blue glass; purple opal lilac white glass. No new decorations. Do not include labels, numbering, other bottles, character, floor, panel or scene. FULLY CLEAN TRANSPARENCY: exterior alpha exactly zero, no gray/white fuzz, no halo, no cast shadow. Internal sprite pixels opaque as standard pickup art. No broad outer bloom, bright ink light contained inside. Just one ready-to-use standalone drop sprite.",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-4290a1f5-cf56-461a-ac43-e3cfba4c7438.png"
+    },
+    {
+      "id": "green-closed",
+      "kind": "closed",
+      "color": "green",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-b0b525d3-7875-44fb-9e52-17dc9c5ec51a.png",
+      "prompt": "PRODUCTION ASSET EXTRACTION. Input is approved five-ink concept strip. Extract/recreate ONLY the specified ONE item as a standalone PNG. Preserve the exact approved game-sprite design, silhouette, material, stopper and color, moderately fine pixel density of the source acquisition art (not tiny drop art), controlled discrete shading and contained inner glow. NO redesign, no new decoration. One object only, centered horizontally on a SQUARE CANVAS with its lowest base at about 86% canvas height. No clipping. TRUE CLEAN TRANSPARENT BACKGROUND: all exterior pixels alpha ZERO, no gray/white haze, no checkerboard, no aura or cast shadow, no disconnected noise or sparkles. Actual sprite pixels should be opaque, transparent-looking glass is painted in neutral or tinted colors, not holes. Crisp pixel outlines, no feathered alpha mask. No labels/text/numbers/frame/scene. Keep the STOPPER CLOSED on the neck for this asset. Choose ONLY item 3 from left: TRIANGULAR emerald ink bottle in DEEP FOREST GREEN smoky glass, matching dark green-black cap. No blue reflections. Green contained light and fine forked ink-current. Wide flat base, sloping shoulders. About 62% canvas width and 70% height.",
+      "runtime": "runtime/acquisition/green-closed.png"
+    },
+    {
+      "id": "green-open",
+      "color": "green",
+      "kind": "open",
+      "reference": "C:/Users/SSAFY/Desktop/자율 프로젝트/03_개발/GitLab/ui-polish-mr-20261107/resources/ui/village-ink-return-20261107/runtime/acquisition/green-closed.png",
+      "prompt": "PRECISE SPRITE EDIT FOR GAME ANIMATION. The provided PNG is ONE approved closed ink-bottle sprite. Remove ONLY its detachable top stopper/cap, leaving the glass collar and entire bottle exactly as they are. Reveal a clean open elliptical mouth inside the existing neck rim, matching its glass color and pixel shading. No cap floating anywhere: cap is a separate different asset and must be fully absent from this image. Keep the liquid/ink, glow, fine pixel art, bottle shape, material, scale, baseline and x/y position IDENTICAL to the input. Keep EXACT SAME CANVAS WIDTH AND HEIGHT and do not auto-center or enlarge the remaining open bottle after removing the stopper. All pixels outside the bottle fully transparent, no shadow, no gray/white alpha haze, no background, no text, no other objects. Preserve painted opaque tinted glass interior convention. Crisp clean transparent PNG sprite. Do not redesign or change the material. This is the OPEN FULL BOTTLE state, still filled with ink.",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-8077dbfe-e7a7-4587-9ebf-60f5f2d69696.png",
+      "runtime": "runtime/acquisition/green-open.png"
+    },
+    {
+      "id": "green-cap",
+      "color": "green",
+      "kind": "cap",
+      "reference": "C:/Users/SSAFY/Desktop/자율 프로젝트/03_개발/GitLab/ui-polish-mr-20261107/resources/ui/village-ink-return-20261107/runtime/acquisition/green-closed.png",
+      "prompt": "PRECISE DETACHABLE CAP EXTRACTION. The input is one approved closed ink-bottle sprite. Produce ONLY ITS TOP STOPPER/CAP as an isolated transparent PNG, preserving exact shape, material, pixel colors, highlights and the original cap's dimensions. Remove the ENTIRE GLASS BOTTLE, collar/rim, ink and everything else. The glass neck ring/collar is NOT part of the cap and must not be included. Important registration requirement: use the EXACT SAME CANVAS WIDTH AND HEIGHT as input, and retain the cap at EXACTLY the same x/y pixel position it occupies in input. Do NOT move the cap to the canvas center, do not enlarge it to fill canvas. Preserve lots of empty transparent space below. This aligned layer should overlay the open-body asset at zero offset to recreate the closed bottle. Only the small original cap, not the collar. No shadow, background, haze, text, particles, duplicate objects. All exterior alpha fully zero, crisp clean pixel edge. It is a technical separation for cap-lifting animation, no redesign.",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-416d50e9-134b-4a76-883e-b00c9738530a.png",
+      "runtime": "runtime/acquisition/green-cap.png"
+    },
+    {
+      "id": "green-empty",
+      "color": "green",
+      "kind": "empty",
+      "runtime": "runtime/acquisition/green-empty.png",
+      "ref": "C:/Users/SSAFY/Desktop/자율 프로젝트/03_개발/GitLab/ui-polish-mr-20261107/resources/ui/village-ink-return-20261107/runtime/acquisition/green-open.png",
+      "prompt": "PRECISE REGISTERED GAME SPRITE STATE EDIT. This is an approved OPEN ink bottle. Produce the SAME OPEN BOTTLE AFTER ITS INK HAS BEEN POURED OUT. Remove ONLY the contained colored ink liquid, bright core and flowing colored current. Bottle is now empty. Keep all glass walls, glass tint, neck rim, open mouth, outlines, highlights, material colors, contour and location unchanged. Preserve EXACT SAME CANVAS WIDTH/HEIGHT, exact bottle x/y position and baseline. No cap, no liquid stream outside. Clear/smoky tinted empty glass should retain subtle inner neutral/tinted shading and actual interior is painted as game sprite, not a hole erasing the back wall. No glowing core left. Some extremely faint residual color stain near bottom is acceptable, no remaining puddle. True transparent exterior, no ghost background or haze, alpha zero outside contour, crisp pixel edges. This is a technical state variant for an animation, not a redesign.",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-e36f8234-7227-45f0-a336-217547a01780.png"
+    },
+    {
+      "id": "green-drop",
+      "color": "green",
+      "kind": "drop",
+      "runtime": "runtime/drops/green.png",
+      "ref": "C:/Users/SSAFY/Desktop/자율 프로젝트/03_개발/GitLab/ui-polish-mr-20261107/resources/ui/village-ink-return-20261107/source/references/drops-approved.png",
+      "prompt": "PRODUCTION INDIVIDUAL GAME PICKUP SPRITE. From the upper row of the provided approved drop-icon sheet, extract ONLY ITEM 3 from left. TRIANGULAR emerald ink bottle in DEEP FOREST GREEN smoky glass, matching dark green-black cap. No blue reflections. Green contained light and fine forked ink-current. Wide flat base, sloping shoulders. About 62% canvas width and 70% height. This is the SMALL DROP VERSION, not the fine acquisition art. Faithfully preserve the approved silhouette/material and draw controlled intentional native-style pixel clusters, around 32 logical pixels tall, approximately 8-12 tones, one dark pixel contour, one simple short bright ink current and compact 2-3 pixel lower core, simplified glass edges. Single isolated object centered on square transparent canvas, good padding, no enlarged acquisition detail. Preserve distinct material: red clear silver-gray glass; gold white frosted glass; green dark-green glass; cyan alone blue glass; purple opal lilac white glass. No new decorations. Do not include labels, numbering, other bottles, character, floor, panel or scene. FULLY CLEAN TRANSPARENCY: exterior alpha exactly zero, no gray/white fuzz, no halo, no cast shadow. Internal sprite pixels opaque as standard pickup art. No broad outer bloom, bright ink light contained inside. Just one ready-to-use standalone drop sprite.",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-2cf755ed-5133-453b-bc26-d344af602e34.png"
+    },
+    {
+      "id": "blue-closed",
+      "kind": "closed",
+      "color": "blue",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-ed9632c6-36b0-47e6-a137-d141eeb1f664.png",
+      "prompt": "PRODUCTION ASSET EXTRACTION. Input is approved five-ink concept strip. Extract/recreate ONLY the specified ONE item as a standalone PNG. Preserve the exact approved game-sprite design, silhouette, material, stopper and color, moderately fine pixel density of the source acquisition art (not tiny drop art), controlled discrete shading and contained inner glow. NO redesign, no new decoration. One object only, centered horizontally on a SQUARE CANVAS with its lowest base at about 86% canvas height. No clipping. TRUE CLEAN TRANSPARENT BACKGROUND: all exterior pixels alpha ZERO, no gray/white haze, no checkerboard, no aura or cast shadow, no disconnected noise or sparkles. Actual sprite pixels should be opaque, transparent-looking glass is painted in neutral or tinted colors, not holes. Crisp pixel outlines, no feathered alpha mask. No labels/text/numbers/frame/scene. Keep the STOPPER CLOSED on the neck for this asset. Choose ONLY item 4 from left: WIDE HORIZONTAL OVAL cyan ink bottle in COBALT BLUE glass, neck offset to the UPPER RIGHT and plain dark purple-gray cap. Cyan inner light and fine cyan current. Preserve short wide silhouette. About 76% canvas width and 57% height, same baseline.",
+      "runtime": "runtime/acquisition/blue-closed.png"
+    },
+    {
+      "id": "blue-open",
+      "color": "blue",
+      "kind": "open",
+      "reference": "C:/Users/SSAFY/Desktop/자율 프로젝트/03_개발/GitLab/ui-polish-mr-20261107/resources/ui/village-ink-return-20261107/runtime/acquisition/blue-closed.png",
+      "prompt": "PRECISE SPRITE EDIT FOR GAME ANIMATION. The provided PNG is ONE approved closed ink-bottle sprite. Remove ONLY its detachable top stopper/cap, leaving the glass collar and entire bottle exactly as they are. Reveal a clean open elliptical mouth inside the existing neck rim, matching its glass color and pixel shading. No cap floating anywhere: cap is a separate different asset and must be fully absent from this image. Keep the liquid/ink, glow, fine pixel art, bottle shape, material, scale, baseline and x/y position IDENTICAL to the input. Keep EXACT SAME CANVAS WIDTH AND HEIGHT and do not auto-center or enlarge the remaining open bottle after removing the stopper. All pixels outside the bottle fully transparent, no shadow, no gray/white alpha haze, no background, no text, no other objects. Preserve painted opaque tinted glass interior convention. Crisp clean transparent PNG sprite. Do not redesign or change the material. This is the OPEN FULL BOTTLE state, still filled with ink.",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-ec4fcd2f-87b7-4519-b4f6-cfb495f46018.png",
+      "runtime": "runtime/acquisition/blue-open.png"
+    },
+    {
+      "id": "blue-cap",
+      "color": "blue",
+      "kind": "cap",
+      "reference": "C:/Users/SSAFY/Desktop/자율 프로젝트/03_개발/GitLab/ui-polish-mr-20261107/resources/ui/village-ink-return-20261107/runtime/acquisition/blue-closed.png",
+      "prompt": "PRECISE DETACHABLE CAP EXTRACTION. The input is one approved closed ink-bottle sprite. Produce ONLY ITS TOP STOPPER/CAP as an isolated transparent PNG, preserving exact shape, material, pixel colors, highlights and the original cap's dimensions. Remove the ENTIRE GLASS BOTTLE, collar/rim, ink and everything else. The glass neck ring/collar is NOT part of the cap and must not be included. Important registration requirement: use the EXACT SAME CANVAS WIDTH AND HEIGHT as input, and retain the cap at EXACTLY the same x/y pixel position it occupies in input. Do NOT move the cap to the canvas center, do not enlarge it to fill canvas. Preserve lots of empty transparent space below. This aligned layer should overlay the open-body asset at zero offset to recreate the closed bottle. Only the small original cap, not the collar. No shadow, background, haze, text, particles, duplicate objects. All exterior alpha fully zero, crisp clean pixel edge. It is a technical separation for cap-lifting animation, no redesign.",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-fae90346-9c24-43f4-b997-6135407ca5f6.png",
+      "runtime": "runtime/acquisition/blue-cap.png"
+    },
+    {
+      "id": "blue-empty",
+      "color": "blue",
+      "kind": "empty",
+      "runtime": "runtime/acquisition/blue-empty.png",
+      "ref": "C:/Users/SSAFY/Desktop/자율 프로젝트/03_개발/GitLab/ui-polish-mr-20261107/resources/ui/village-ink-return-20261107/runtime/acquisition/blue-open.png",
+      "prompt": "PRECISE REGISTERED GAME SPRITE STATE EDIT. This is an approved OPEN ink bottle. Produce the SAME OPEN BOTTLE AFTER ITS INK HAS BEEN POURED OUT. Remove ONLY the contained colored ink liquid, bright core and flowing colored current. Bottle is now empty. Keep all glass walls, glass tint, neck rim, open mouth, outlines, highlights, material colors, contour and location unchanged. Preserve EXACT SAME CANVAS WIDTH/HEIGHT, exact bottle x/y position and baseline. No cap, no liquid stream outside. Clear/smoky tinted empty glass should retain subtle inner neutral/tinted shading and actual interior is painted as game sprite, not a hole erasing the back wall. No glowing core left. Some extremely faint residual color stain near bottom is acceptable, no remaining puddle. True transparent exterior, no ghost background or haze, alpha zero outside contour, crisp pixel edges. This is a technical state variant for an animation, not a redesign.",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-7fd6afe0-4b41-4109-82a0-8c38881ece5b.png"
+    },
+    {
+      "id": "blue-drop",
+      "color": "blue",
+      "kind": "drop",
+      "runtime": "runtime/drops/blue.png",
+      "ref": "C:/Users/SSAFY/Desktop/자율 프로젝트/03_개발/GitLab/ui-polish-mr-20261107/resources/ui/village-ink-return-20261107/source/references/drops-approved.png",
+      "prompt": "PRODUCTION INDIVIDUAL GAME PICKUP SPRITE. From the upper row of the provided approved drop-icon sheet, extract ONLY ITEM 4 from left. WIDE HORIZONTAL OVAL cyan ink bottle in COBALT BLUE glass, neck offset to the UPPER RIGHT and plain dark purple-gray cap. Cyan inner light and fine cyan current. Preserve short wide silhouette. About 76% canvas width and 57% height, same baseline. This is the SMALL DROP VERSION, not the fine acquisition art. Faithfully preserve the approved silhouette/material and draw controlled intentional native-style pixel clusters, around 32 logical pixels tall, approximately 8-12 tones, one dark pixel contour, one simple short bright ink current and compact 2-3 pixel lower core, simplified glass edges. Single isolated object centered on square transparent canvas, good padding, no enlarged acquisition detail. Preserve distinct material: red clear silver-gray glass; gold white frosted glass; green dark-green glass; cyan alone blue glass; purple opal lilac white glass. No new decorations. Do not include labels, numbering, other bottles, character, floor, panel or scene. FULLY CLEAN TRANSPARENCY: exterior alpha exactly zero, no gray/white fuzz, no halo, no cast shadow. Internal sprite pixels opaque as standard pickup art. No broad outer bloom, bright ink light contained inside. Just one ready-to-use standalone drop sprite.",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-c8cbf1e2-a3e8-4771-9a51-64bd0864777f.png"
+    },
+    {
+      "id": "purple-closed",
+      "kind": "closed",
+      "color": "purple",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-6a33dc11-ca81-4859-b8d3-115875754a87.png",
+      "prompt": "PRODUCTION ASSET EXTRACTION. Input is approved five-ink concept strip. Extract/recreate ONLY the specified ONE item as a standalone PNG. Preserve the exact approved game-sprite design, silhouette, material, stopper and color, moderately fine pixel density of the source acquisition art (not tiny drop art), controlled discrete shading and contained inner glow. NO redesign, no new decoration. One object only, centered horizontally on a SQUARE CANVAS with its lowest base at about 86% canvas height. No clipping. TRUE CLEAN TRANSPARENT BACKGROUND: all exterior pixels alpha ZERO, no gray/white haze, no checkerboard, no aura or cast shadow, no disconnected noise or sparkles. Actual sprite pixels should be opaque, transparent-looking glass is painted in neutral or tinted colors, not holes. Crisp pixel outlines, no feathered alpha mask. No labels/text/numbers/frame/scene. Keep the STOPPER CLOSED on the neck for this asset. Choose ONLY item 5 from left: TALL PEAR violet ink bottle in PALE OPAL LILAC/WHITE translucent glass, pale gray-lilac small cap. No blue perimeter. Violet ink pool with fine curved lavender current. About 48% canvas width and 76% height.",
+      "runtime": "runtime/acquisition/purple-closed.png"
+    },
+    {
+      "id": "purple-open",
+      "color": "purple",
+      "kind": "open",
+      "reference": "C:/Users/SSAFY/Desktop/자율 프로젝트/03_개발/GitLab/ui-polish-mr-20261107/resources/ui/village-ink-return-20261107/runtime/acquisition/purple-closed.png",
+      "prompt": "PRECISE SPRITE EDIT FOR GAME ANIMATION. The provided PNG is ONE approved closed ink-bottle sprite. Remove ONLY its detachable top stopper/cap, leaving the glass collar and entire bottle exactly as they are. Reveal a clean open elliptical mouth inside the existing neck rim, matching its glass color and pixel shading. No cap floating anywhere: cap is a separate different asset and must be fully absent from this image. Keep the liquid/ink, glow, fine pixel art, bottle shape, material, scale, baseline and x/y position IDENTICAL to the input. Keep EXACT SAME CANVAS WIDTH AND HEIGHT and do not auto-center or enlarge the remaining open bottle after removing the stopper. All pixels outside the bottle fully transparent, no shadow, no gray/white alpha haze, no background, no text, no other objects. Preserve painted opaque tinted glass interior convention. Crisp clean transparent PNG sprite. Do not redesign or change the material. This is the OPEN FULL BOTTLE state, still filled with ink.",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-1113bd01-1f86-4a0e-bf36-6d6372ce3da0.png",
+      "runtime": "runtime/acquisition/purple-open.png"
+    },
+    {
+      "id": "purple-cap",
+      "color": "purple",
+      "kind": "cap",
+      "reference": "C:/Users/SSAFY/Desktop/자율 프로젝트/03_개발/GitLab/ui-polish-mr-20261107/resources/ui/village-ink-return-20261107/runtime/acquisition/purple-closed.png",
+      "prompt": "PRECISE DETACHABLE CAP EXTRACTION. The input is one approved closed ink-bottle sprite. Produce ONLY ITS TOP STOPPER/CAP as an isolated transparent PNG, preserving exact shape, material, pixel colors, highlights and the original cap's dimensions. Remove the ENTIRE GLASS BOTTLE, collar/rim, ink and everything else. The glass neck ring/collar is NOT part of the cap and must not be included. Important registration requirement: use the EXACT SAME CANVAS WIDTH AND HEIGHT as input, and retain the cap at EXACTLY the same x/y pixel position it occupies in input. Do NOT move the cap to the canvas center, do not enlarge it to fill canvas. Preserve lots of empty transparent space below. This aligned layer should overlay the open-body asset at zero offset to recreate the closed bottle. Only the small original cap, not the collar. No shadow, background, haze, text, particles, duplicate objects. All exterior alpha fully zero, crisp clean pixel edge. It is a technical separation for cap-lifting animation, no redesign.",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-607dd5cd-9459-453d-a803-f9b5c0c6a7c8.png",
+      "runtime": "runtime/acquisition/purple-cap.png"
+    },
+    {
+      "id": "purple-empty",
+      "color": "purple",
+      "kind": "empty",
+      "runtime": "runtime/acquisition/purple-empty.png",
+      "ref": "C:/Users/SSAFY/Desktop/자율 프로젝트/03_개발/GitLab/ui-polish-mr-20261107/resources/ui/village-ink-return-20261107/runtime/acquisition/purple-open.png",
+      "prompt": "PRECISE REGISTERED GAME SPRITE STATE EDIT. This is an approved OPEN ink bottle. Produce the SAME OPEN BOTTLE AFTER ITS INK HAS BEEN POURED OUT. Remove ONLY the contained colored ink liquid, bright core and flowing colored current. Bottle is now empty. Keep all glass walls, glass tint, neck rim, open mouth, outlines, highlights, material colors, contour and location unchanged. Preserve EXACT SAME CANVAS WIDTH/HEIGHT, exact bottle x/y position and baseline. No cap, no liquid stream outside. Clear/smoky tinted empty glass should retain subtle inner neutral/tinted shading and actual interior is painted as game sprite, not a hole erasing the back wall. No glowing core left. Some extremely faint residual color stain near bottom is acceptable, no remaining puddle. True transparent exterior, no ghost background or haze, alpha zero outside contour, crisp pixel edges. This is a technical state variant for an animation, not a redesign.",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-e604f68c-a3e2-46da-813b-7c0fd163d72f.png"
+    },
+    {
+      "id": "purple-drop",
+      "color": "purple",
+      "kind": "drop",
+      "runtime": "runtime/drops/purple.png",
+      "ref": "C:/Users/SSAFY/Desktop/자율 프로젝트/03_개발/GitLab/ui-polish-mr-20261107/resources/ui/village-ink-return-20261107/source/references/drops-approved.png",
+      "prompt": "PRODUCTION INDIVIDUAL GAME PICKUP SPRITE. From the upper row of the provided approved drop-icon sheet, extract ONLY ITEM 5 from left. TALL PEAR violet ink bottle in PALE OPAL LILAC/WHITE translucent glass, pale gray-lilac small cap. No blue perimeter. Violet ink pool with fine curved lavender current. About 48% canvas width and 76% height. This is the SMALL DROP VERSION, not the fine acquisition art. Faithfully preserve the approved silhouette/material and draw controlled intentional native-style pixel clusters, around 32 logical pixels tall, approximately 8-12 tones, one dark pixel contour, one simple short bright ink current and compact 2-3 pixel lower core, simplified glass edges. Single isolated object centered on square transparent canvas, good padding, no enlarged acquisition detail. Preserve distinct material: red clear silver-gray glass; gold white frosted glass; green dark-green glass; cyan alone blue glass; purple opal lilac white glass. No new decorations. Do not include labels, numbering, other bottles, character, floor, panel or scene. FULLY CLEAN TRANSPARENCY: exterior alpha exactly zero, no gray/white fuzz, no halo, no cast shadow. Internal sprite pixels opaque as standard pickup art. No broad outer bloom, bright ink light contained inside. Just one ready-to-use standalone drop sprite.",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-8b672e85-6ddd-4e6d-9dfb-01ce374f82da.png"
+    },
+    {
+      "id": "title-banner",
+      "kind": "ui",
+      "runtime": "runtime/ui/title-banner.png",
+      "ref": "C:/Users/SSAFY/Desktop/자율 프로젝트/03_개발/GitLab/ui-polish-mr-20261107/resources/ui/village-ink-return-20261107/source/references/cutscene-proposal.png",
+      "prompt": "Extract/recreate ONLY the small charcoal stepped pixel TITLE PLAQUE from panel 02 of the reference storyboard as a standalone transparent PNG. Exact ivory Korean text '마을 잉크 획득' centered, clean readable Korean bitmap typography. Compact long dark-charcoal plaque with thin muted ivory/silver outline and restrained stepped corners, not ornate medieval scroll, approximately 5.5:1 silhouette ratio. Similar pixel scale to approved game UI. No number counter, no bottle, no other scene or panel. Transparent outside plaque, no gray/white haze or shadow or glow, exterior alpha zero. Horizontal canvas with comfortable transparent padding. One isolated title banner ready for game UI.",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-16505e52-33ff-4cc0-8193-de0aa7d67ab5.png"
+    },
+    {
+      "id": "title-banner-blank",
+      "kind": "ui",
+      "runtime": "runtime/ui/title-banner-blank.png",
+      "ref": "C:/Users/SSAFY/Desktop/자율 프로젝트/03_개발/GitLab/ui-polish-mr-20261107/resources/ui/village-ink-return-20261107/source/references/cutscene-proposal.png",
+      "prompt": "Extract/recreate ONLY the compact long TITLE PLAQUE BACKGROUND from panel 02 of the reference. Same charcoal-gray stepped pixel shape and thin muted ivory/silver outline. Completely EMPTY INSIDE: remove all Korean lettering, no text of any kind, no numbers, no dashes, so text can be drawn dynamically by game. Approximately 5.5:1 plaque silhouette ratio, flat dark interior, crisp restrained fine pixel corners. No scene, bottle, counters, other objects. Real transparent background, exterior alpha zero with clean edge and NO gray/white haze, no shadow or glow. Horizontal padded canvas.",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-bc075135-0169-4c6a-b347-fc8f38ba4265.png"
+    },
+    {
+      "id": "counter-banner-blank",
+      "kind": "ui",
+      "runtime": "runtime/ui/counter-banner-blank.png",
+      "ref": "C:/Users/SSAFY/Desktop/자율 프로젝트/03_개발/GitLab/ui-polish-mr-20261107/resources/ui/village-ink-return-20261107/source/references/cutscene-proposal.png",
+      "prompt": "Extract/recreate ONLY the small BOTTOM NUMBER COUNTER PLAQUE BACKGROUND below the bottle in panel 02 of reference. A low charcoal-gray horizontal panel with modest stepped corners and thin muted ivory/silver pixel outline, approximately 2.5:1 silhouette. Center COMPLETELY EMPTY with room for dynamic game text '0 / 5' through '5 / 5', but DO NOT ACTUALLY INCLUDE ANY DIGIT, SLASH OR TEXT. No bottle, drops, title banner or scene. Fine practical pixel game UI style. Real clean transparent background outside panel, no white/gray fringe, no shadow or glow, no labels.",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-4ed6a758-7dc4-4539-bc4f-44868e846416.png"
+    },
+    {
+      "id": "progress-drop-empty",
+      "kind": "ui",
+      "runtime": "runtime/ui/progress-drop-empty.png",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-3ee814f1-a556-46c5-a17b-d9fe9ffe7db5.png",
+      "prompt": "Extract and redraw ONE EMPTY INK-DROP COLLECTION MARK from the supplied game's progress indicator. Just one tiny upright teardrop outline icon, pointed top and round lower belly, fine hand-authored pixel edges, muted warm ivory/light-gray outline with a thin charcoal outer edge. Hollow TRANSPARENT CENTER, no fill. Match the provided 5-mark UI reference, no bottle, no scene, no labels. Square transparent canvas with generous padding; one centered drop shape about 60% wide and 75% high. Real alpha zero outside AND inside hollow drop, absolutely no shadow, gray/white alpha haze, bloom, texture, particle or background. This is a small clean game progress UI sprite."
+    },
+    {
+      "id": "progress-drop-filled",
+      "kind": "ui",
+      "runtime": "runtime/ui/progress-drop-filled.png",
+      "path": "C:\\Users\\SSAFY\\.codex\\generated_images\\01a1b4c0-8ee1-7281-b820-1eac5dca108b\\exec-41bba1c3-5b73-4753-8de8-5971e2b120e5.png",
+      "prompt": "Extract and redraw ONE FILLED INK-DROP COLLECTION MARK based on supplied game's first two drops, but make its interior NEUTRAL WHITE so the game can tint it red, gold, green, blue or purple. One upright teardrop with pointed top and round belly, very thin dark charcoal outline, flat white/very light gray fill, tiny restrained edge-shading only, no shine or glow. Fine clean pixel edge, same silhouette/proportions as provided empty drops. Square transparent canvas, centered object about 60% wide and 75% high, no text/bottle/scene, no cast shadow, no haze, exterior alpha zero. One reusable tintable UI collection drop."
+    }
+  ]
+}

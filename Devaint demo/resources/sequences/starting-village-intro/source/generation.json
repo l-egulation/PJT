@@ -1,0 +1,27 @@
+{
+  "format": "deviant-hub-production-source-v1",
+  "model": "gpt-image-2",
+  "workflow": "imagegen skill CLI edit with two existing style references",
+  "quality": "high",
+  "sourcesPreserved": true,
+  "references": [
+    {
+      "path": "environments/village/runtime/buildings/reference-map-phase2/color/house_balcony.png",
+      "sha256": "b1dc62b22801d735cedb5008b4e5b420a44e9aa7285e5ad4b47219b4d2a11f36"
+    },
+    {
+      "path": "environments/village/runtime/buildings/reference-map-phase2/sketch/house_balcony.png",
+      "sha256": "6516cf9ac7592cd0dca092ddbbcf3a79ebce229510f656b0d723f18901bf505b"
+    }
+  ],
+  "environmentValuesRecorded": false,
+  "exporter": "tools/export_starting_hub.py",
+  "presentationStatus": "reviewed-native-output-not-user-art-approved-not-unity-integrated",
+  "derivatives": {
+    "color": "alpha threshold and nearest-neighbor native export",
+    "sketch": "same color source marks and alpha; paper/graphite conversion and original contour reinforcement",
+    "ui": "exact 32px native white masks matching current game UI conventions"
+  },
+  "purpose": "three static backdrop images; existing character and dialogue layers remain separate",
+  "replacesFullLegacyOpeningPackage": false
+}

@@ -1,0 +1,106 @@
+<!doctype html><html lang="ko"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>마을 잉크 에셋</title><style>
+body{margin:0;background:#202126;color:#eee;font:14px "Malgun Gothic",sans-serif}
+main{max-width:1320px;margin:auto;padding:24px}h1{font-size:24px;margin:0 0 12px}
+p{color:#bdbdc6}button,a{font:inherit}button{padding:8px 14px;margin:0 6px 8px 0}
+.grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.ink{min-width:0}.scene{position:relative;aspect-ratio:1;background:var(--surface,#45454b);overflow:hidden}
+.scene img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;image-rendering:pixelated}
+.cap{transition:transform .4s}.open .cap,.empty .cap{transform:translateY(-15%)}
+.body-empty{display:none}.empty .body-full{display:none}.empty .body-empty{display:block}
+.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;margin-top:12px}
+.tile{background:var(--surface,#45454b);padding:5px}.tile img{width:100%;aspect-ratio:1;object-fit:contain;image-rendering:pixelated}
+.tile a{display:block;color:#dedee7;text-decoration:none;font-size:12px}
+.drop{height:70px;display:flex;align-items:end;gap:12px;background:var(--surface,#45454b);padding:10px;margin-top:10px}
+.drop img{image-rendering:pixelated;object-fit:contain}.ui{display:flex;gap:20px;flex-wrap:wrap}
+.ui img{width:320px;max-width:100%;height:120px;object-fit:contain;background:var(--surface,#45454b)}
+h2{margin-top:26px;font-size:18px}h3{font-size:14px}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style><main><h1>마을 잉크 에셋</h1>
+<p>닫힌 병 원본과 분리된 열린 병, 빈 병, 뚜껑, 드롭 이미지. 조립 미리보기는 같은 원본 캔버스를 겹칩니다.</p>
+<div><button data-state="closed">뚜껑 닫기</button><button data-state="open">뚜껑 열기</button>
+<button data-state="empty">잉크 비우기</button><button id="surface">배경 바꾸기</button></div>
+<div class="grid">
+<section class="ink"><h3>붉은 잉크</h3><div class="scene">
+<img class="body-full" src="../runtime/acquisition/red-open.png" alt="열린 병">
+<img class="body-empty" src="../runtime/acquisition/red-empty.png" alt="빈 병">
+<img class="cap" src="../runtime/acquisition/red-cap.png" alt="분리 뚜껑">
+</div><div class="tiles">
+<div class="tile"><a href="../runtime/acquisition/red-closed.png">닫힌 병<img src="../runtime/acquisition/red-closed.png" alt="닫힌 병"></a></div>
+<div class="tile"><a href="../runtime/acquisition/red-open.png">열린 병<img src="../runtime/acquisition/red-open.png" alt="열린 병"></a></div>
+<div class="tile"><a href="../runtime/acquisition/red-cap.png">뚜껑<img src="../runtime/acquisition/red-cap.png" alt="뚜껑"></a></div>
+<div class="tile"><a href="../runtime/acquisition/red-empty.png">빈 병<img src="../runtime/acquisition/red-empty.png" alt="빈 병"></a></div>
+</div><div class="drop">
+<a href="../runtime/drops/red.png"><img src="../runtime/drops/red.png"
+style="width:49.12px;height:49.12px" alt="드롭 32px 예시"></a>
+<span>드롭<br>높이 32px 예시</span></div></section>
+<section class="ink"><h3>금빛 잉크</h3><div class="scene">
+<img class="body-full" src="../runtime/acquisition/yellow-open.png" alt="열린 병">
+<img class="body-empty" src="../runtime/acquisition/yellow-empty.png" alt="빈 병">
+<img class="cap" src="../runtime/acquisition/yellow-cap.png" alt="분리 뚜껑">
+</div><div class="tiles">
+<div class="tile"><a href="../runtime/acquisition/yellow-closed.png">닫힌 병<img src="../runtime/acquisition/yellow-closed.png" alt="닫힌 병"></a></div>
+<div class="tile"><a href="../runtime/acquisition/yellow-open.png">열린 병<img src="../runtime/acquisition/yellow-open.png" alt="열린 병"></a></div>
+<div class="tile"><a href="../runtime/acquisition/yellow-cap.png">뚜껑<img src="../runtime/acquisition/yellow-cap.png" alt="뚜껑"></a></div>
+<div class="tile"><a href="../runtime/acquisition/yellow-empty.png">빈 병<img src="../runtime/acquisition/yellow-empty.png" alt="빈 병"></a></div>
+</div><div class="drop">
+<a href="../runtime/drops/yellow.png"><img src="../runtime/drops/yellow.png"
+style="width:49.06px;height:49.06px" alt="드롭 32px 예시"></a>
+<span>드롭<br>높이 32px 예시</span></div></section>
+<section class="ink"><h3>녹색 잉크</h3><div class="scene">
+<img class="body-full" src="../runtime/acquisition/green-open.png" alt="열린 병">
+<img class="body-empty" src="../runtime/acquisition/green-empty.png" alt="빈 병">
+<img class="cap" src="../runtime/acquisition/green-cap.png" alt="분리 뚜껑">
+</div><div class="tiles">
+<div class="tile"><a href="../runtime/acquisition/green-closed.png">닫힌 병<img src="../runtime/acquisition/green-closed.png" alt="닫힌 병"></a></div>
+<div class="tile"><a href="../runtime/acquisition/green-open.png">열린 병<img src="../runtime/acquisition/green-open.png" alt="열린 병"></a></div>
+<div class="tile"><a href="../runtime/acquisition/green-cap.png">뚜껑<img src="../runtime/acquisition/green-cap.png" alt="뚜껑"></a></div>
+<div class="tile"><a href="../runtime/acquisition/green-empty.png">빈 병<img src="../runtime/acquisition/green-empty.png" alt="빈 병"></a></div>
+</div><div class="drop">
+<a href="../runtime/drops/green.png"><img src="../runtime/drops/green.png"
+style="width:47.71px;height:47.71px" alt="드롭 32px 예시"></a>
+<span>드롭<br>높이 32px 예시</span></div></section>
+<section class="ink"><h3>푸른 잉크</h3><div class="scene">
+<img class="body-full" src="../runtime/acquisition/blue-open.png" alt="열린 병">
+<img class="body-empty" src="../runtime/acquisition/blue-empty.png" alt="빈 병">
+<img class="cap" src="../runtime/acquisition/blue-cap.png" alt="분리 뚜껑">
+</div><div class="tiles">
+<div class="tile"><a href="../runtime/acquisition/blue-closed.png">닫힌 병<img src="../runtime/acquisition/blue-closed.png" alt="닫힌 병"></a></div>
+<div class="tile"><a href="../runtime/acquisition/blue-open.png">열린 병<img src="../runtime/acquisition/blue-open.png" alt="열린 병"></a></div>
+<div class="tile"><a href="../runtime/acquisition/blue-cap.png">뚜껑<img src="../runtime/acquisition/blue-cap.png" alt="뚜껑"></a></div>
+<div class="tile"><a href="../runtime/acquisition/blue-empty.png">빈 병<img src="../runtime/acquisition/blue-empty.png" alt="빈 병"></a></div>
+</div><div class="drop">
+<a href="../runtime/drops/blue.png"><img src="../runtime/drops/blue.png"
+style="width:55.05px;height:55.05px" alt="드롭 32px 예시"></a>
+<span>드롭<br>높이 32px 예시</span></div></section>
+<section class="ink"><h3>보랏빛 잉크</h3><div class="scene">
+<img class="body-full" src="../runtime/acquisition/purple-open.png" alt="열린 병">
+<img class="body-empty" src="../runtime/acquisition/purple-empty.png" alt="빈 병">
+<img class="cap" src="../runtime/acquisition/purple-cap.png" alt="분리 뚜껑">
+</div><div class="tiles">
+<div class="tile"><a href="../runtime/acquisition/purple-closed.png">닫힌 병<img src="../runtime/acquisition/purple-closed.png" alt="닫힌 병"></a></div>
+<div class="tile"><a href="../runtime/acquisition/purple-open.png">열린 병<img src="../runtime/acquisition/purple-open.png" alt="열린 병"></a></div>
+<div class="tile"><a href="../runtime/acquisition/purple-cap.png">뚜껑<img src="../runtime/acquisition/purple-cap.png" alt="뚜껑"></a></div>
+<div class="tile"><a href="../runtime/acquisition/purple-empty.png">빈 병<img src="../runtime/acquisition/purple-empty.png" alt="빈 병"></a></div>
+</div><div class="drop">
+<a href="../runtime/drops/purple.png"><img src="../runtime/drops/purple.png"
+style="width:46.55px;height:46.55px" alt="드롭 32px 예시"></a>
+<span>드롭<br>높이 32px 예시</span></div></section>
+</div><h2>획득 UI 장식판</h2><div class="ui">
+<a href="../runtime/ui/notebook-paper.png"><img src="../runtime/ui/notebook-paper.png" alt="notebook-paper"></a>
+<a href="../runtime/ui/executioner-notebook.png"><img src="../runtime/ui/executioner-notebook.png" alt="executioner-notebook"></a>
+<a href="../runtime/ui/eroders-notebook.png"><img src="../runtime/ui/eroders-notebook.png" alt="eroders-notebook"></a>
+<a href="../runtime/ui/well-ink-notebook.png"><img src="../runtime/ui/well-ink-notebook.png" alt="well-ink-notebook"></a>
+<a href="../runtime/ui/title-banner.png"><img src="../runtime/ui/title-banner.png" alt="title-banner"></a>
+<a href="../runtime/ui/title-banner-blank.png"><img src="../runtime/ui/title-banner-blank.png" alt="title-banner-blank"></a>
+<a href="../runtime/ui/counter-banner-blank.png"><img src="../runtime/ui/counter-banner-blank.png" alt="counter-banner-blank"></a>
+<a href="../runtime/ui/progress-drop-empty.png"><img src="../runtime/ui/progress-drop-empty.png" alt="progress-drop-empty"></a>
+<a href="../runtime/ui/progress-drop-filled.png"><img src="../runtime/ui/progress-drop-filled.png" alt="progress-drop-filled"></a>
+</div><p><a href="../runtime/layout.json">원본 캔버스와 정렬 좌표</a></p></main><script>
+for(const b of document.querySelectorAll("[data-state]")){b.onclick=()=>{
+for(const s of document.querySelectorAll(".scene")){s.classList.remove("open","empty");
+if(b.dataset.state!=="closed")s.classList.add(b.dataset.state)}}}
+let light=false;document.getElementById("surface").onclick=()=>{light=!light;
+document.body.style.setProperty("--surface",light?"#f0eade":"#45454b")};
+</script></html>

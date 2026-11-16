@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ad4fd355d95510e8cd7adceb5373717, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Deviant.Inventory.Unity::Deviant.Inventory.Unity.PixelInventoryTheme
+  windowFrame: {fileID: 21300000, guid: ffbbaa8c6e12562a8e0c7faa84306fc6, type: 3}
+  windowFooter: {fileID: 21300000, guid: 20c9fe4c8f935afc85e726c3cd792676, type: 3}
+  cardFrame: {fileID: 21300000, guid: 4a7c1ac17eb15e91af1e541e7ddf0871, type: 3}
+  selectedCardFrame: {fileID: 21300000, guid: cbeee5e3d84c57c58b12de9b25130887, type: 3}
+  slotFrame: {fileID: 21300000, guid: b133e658601755db9ef2031e681f9629, type: 3}
+  selectedSlotFrame: {fileID: 21300000, guid: 80e44f7b44505103aac692d1cd7d5162, type: 3}
+  buttonFrame: {fileID: 21300000, guid: 5145f14894115ff184777a24eb89146f, type: 3}
+  primaryButtonFrame: {fileID: 21300000, guid: 2eec0904a02f55f0b2b3741e43fdf29d, type: 3}
+  portrait: {fileID: 21300000, guid: d1349085d40257eda7de0a77267bd30e, type: 3}
+  bag: {fileID: 21300000, guid: 05a5b29913085e2f812b14857ceaabf5, type: 3}
+  titleLogo: {fileID: 21300000, guid: 53e322d879ac545ba174182badd73c0e, type: 3}
+  closeIcon: {fileID: 21300000, guid: 6bcc5b6ddb995b45be4fa199127deef5, type: 3}
+  regularFont: {fileID: 12800000, guid: 621ae7a2a3cd51768c7b4dc396af4e57, type: 3}
+  boldFont: {fileID: 12800000, guid: f5ced015cdd357e1b2c2ed6268c60e32, type: 3}
+  itemIcons:
+  - id: stat.basic
+    sprite: {fileID: 21300000, guid: f63745c8614e559f89be830409a91c46, type: 3}
+  - id: stat.special
+    sprite: {fileID: 21300000, guid: 07dc7b023c75525383e440333464b635, type: 3}
+  - id: stat.speed
+    sprite: {fileID: 21300000, guid: a9687f443c77547e8f0463a105c92be6, type: 3}
+  - id: stat.cooldown
+    sprite: {fileID: 21300000, guid: 440a5c72c6e15fce9385071be65818f7, type: 3}
+  - id: special.range
+    sprite: {fileID: 21300000, guid: 3e8f35bc94d65f838bb002cc44d9f761, type: 3}
+  - id: special.move
+    sprite: {fileID: 21300000, guid: 6bd910aec2905e99bf14dd977837a3c8, type: 3}
+  - id: special.follow
+    sprite: {fileID: 21300000, guid: d902d948fe3d5078922ce853bed0daf1, type: 3}
+  - id: form.whip
+    sprite: {fileID: 21300000, guid: 6bd910aec2905e99bf14dd977837a3c8, type: 3}
+  weaponIcons:
+  - id: base_sword
+    sprite: {fileID: 21300000, guid: c07a9424a97a515ca3c476d414ec8b58, type: 3}
+  - id: whip
+    sprite: {fileID: 21300000, guid: ac13afa796765ab580e46483cdae9504, type: 3}
+  - id: rapier
+    sprite: {fileID: 21300000, guid: 966cff2fc35a55a2bf365f3a5ea1c405, type: 3}
+  - id: dagger
+    sprite: {fileID: 21300000, guid: fcba47bfdb925a018d5a1c74f851bb47, type: 3}
+  - id: hammer
+    sprite: {fileID: 21300000, guid: d3d4c0da83d0573ea1173d1574230cec, type: 3}
+  - id: shield
+    sprite: {fileID: 21300000, guid: 87bcdcadab505581aa9ecc57ff1b927b, type: 3}
+  - id: greatsword
+    sprite: {fileID: 21300000, guid: 9b814515fb545a4d828cbfdeb0241918, type: 3}
+  - id: launcher
+    sprite: {fileID: 21300000, guid: 220d1dec221355ec9ae472eaf80baace, type: 3}
+  - id: bomb
+    sprite: {fileID: 21300000, guid: 282b273c51f45d09ac86a3c1b14fe3fd, type: 3}
+  - id: shuriken
+    sprite: {fileID: 21300000, guid: 1670750f404b55ad8b5f4ba6ac7f6ed7, type: 3}

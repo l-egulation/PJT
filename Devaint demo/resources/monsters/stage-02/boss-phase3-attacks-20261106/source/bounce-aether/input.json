@@ -1,0 +1,125 @@
+{
+  "format": "stage2-bounce-aether-input-v3",
+  "status": "prompt-v3-output-A-user-approved",
+  "pattern": "Bounce",
+  "startImage": "bounce-start-white-3x.png",
+  "startImageSha256": "8a9a2af8f7d23bc20d1528865d6eb7b40d5e50cd5bda8badcb721fcbf9743061",
+  "sourceReference": "../approved-fused-idle-original.png",
+  "endImage": null,
+  "endImageReason": "Let the compact repeated cast articulate naturally; hold the fifth release without forcing a homing end pose.",
+  "sourceCanvas": [
+    384,
+    256
+  ],
+  "inputCanvas": [
+    1536,
+    1152
+  ],
+  "logicalPaddingCanvas": [
+    512,
+    384
+  ],
+  "sourcePasteOffset": [
+    64,
+    64
+  ],
+  "integerNearestScale": 3,
+  "inputGroundY": 888,
+  "inputPivot": [
+    768,
+    888
+  ],
+  "prompt": "prompt.txt",
+  "suggestedDurationSeconds": 2.9,
+  "releaseSeconds": [
+    0.5,
+    1,
+    1.5,
+    2,
+    2.5
+  ],
+  "gameContract": {
+    "BounceTell": 0.5,
+    "BounceCount": 5,
+    "shotOrigin": "existing hand",
+    "combatChanges": false,
+    "visualPoseDirectionsAreNotCombatAimChanges": true
+  },
+  "referenceMainCommit": "7f2fbe8ed90aca1f943d124db52e637c32ae029b",
+  "identityLocks": {
+    "rigidMask": true,
+    "mouth": false,
+    "armCount": 1,
+    "existingArm": "image-left raised hand beside mask",
+    "oppositeArm": "anatomically absent",
+    "overheadCrossbow": "preserve exact approved shape",
+    "headPositionScaleAngleFixed": true,
+    "maskPixelLayoutLocked": true,
+    "armMayNotOccludeMask": true,
+    "oneArmCrossesChestForOppositeDirection": true
+  },
+  "aetherOutputReceived": true,
+  "selectedFrames": null,
+  "timingsFinalized": false,
+  "imageApiCalled": false,
+  "sourcePixelsRepainted": false,
+  "visualReleaseDirections": [
+    "upper-left",
+    "upper-right",
+    "upper-left",
+    "upper-right",
+    "upper-left"
+  ],
+  "diagonalDegreesAboveHorizontal": [
+    40,
+    40
+  ],
+  "headDetailReference": {
+    "file": "approved-head-detail-8x.png",
+    "sourceCrop": [
+      163,
+      50,
+      223,
+      112
+    ],
+    "integerNearestScale": 8,
+    "role": "identity detail only; not first-frame image",
+    "sourcePixelsRepainted": false
+  },
+  "previousPrompt": [
+    "previous/prompt-v1-forward.txt",
+    "previous/prompt-v2-alternating-soft.txt"
+  ],
+  "reviewRequirement": "Reject changed mask designs; inspect received native output against approved head crop. If necessary reuse the approved mask pixels at fixed alignment, preserving original generated source.",
+  "previousAttempts": [
+    {
+      "prompt": "previous/prompt-v2-alternating-soft.txt",
+      "output": "../bounce-aether-01/",
+      "timingReview": "../../preview/bounce-candidates/candidates.json",
+      "userFeedback": "뭔가 좀 더 절도 있었으면 좋겠어",
+      "observed": [
+        "continuous soft sway without held firing poses",
+        "right releases near horizontal at chest height",
+        "left releases about 25 degrees up",
+        "frames 32-35 return to idle",
+        "violet eye accents replaced by dark slits; no mouth; one arm kept",
+        "drawn at about 96% of approved size"
+      ]
+    }
+  ],
+  "beatsPerShot": [
+    "coil",
+    "snap",
+    "lock",
+    "recoil"
+  ],
+  "lockHoldSeconds": 0.12,
+  "aetherOutput": {
+    "folder": "../bounce-aether-02/",
+    "extraction": "../bounce-aether-02/extraction.json",
+    "timingReview": "../../preview/bounce-v3-candidates/candidates.json",
+    "userFeedback": "이거 ㄱㄱ",
+    "cleanup": "../../runtime/bounce-a/motion.json"
+  },
+  "selectedTiming": "A"
+}

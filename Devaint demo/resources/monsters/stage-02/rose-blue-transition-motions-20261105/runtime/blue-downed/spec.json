@@ -1,0 +1,41 @@
+{
+  "source": "pixelated_1793861096158.png",
+  "nativeCanvas": [
+    390,
+    264
+  ],
+  "sourcePixelScale": 3,
+  "poses": [
+    "00.png",
+    "01.png",
+    "02.png"
+  ],
+  "sequence": [
+    0,
+    1,
+    2,
+    1
+  ],
+  "durationsMs": [
+    360,
+    240,
+    420,
+    300
+  ],
+  "loopMs": 1320,
+  "maxHeadDropPx": 2,
+  "shoulderDropPx": 1,
+  "fixedRegion": "all y>=190 and resting hand/knee x<177,y>=164",
+  "palette": "user input colors preserved; no remapping",
+  "background": "neutral near-white only; no hole filling",
+  "status": "preview; Unity not applied",
+  "edgeCleanup": {
+    "recoloredPixels": 164,
+    "method": "Replace washed-out edge colors with neighboring inward material; protect pale skin and wraps; unchanged alpha"
+  },
+  "contourCleanup": {
+    "removedPixels": 59,
+    "addedPixels": 10,
+    "method": "Exterior pixel-corner smoothing and 1px planted-leg contour correction; protected face and hands; no blur"
+  }
+}

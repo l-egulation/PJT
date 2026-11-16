@@ -1,0 +1,2282 @@
+{
+  "format": "stage2-boss-motion-size-review-v1",
+  "status": "size-review-not-unity-integration",
+  "worldPivot": [
+    192,
+    232
+  ],
+  "playerVisibleHeight": 64,
+  "scalePolicy": "Original approved pixels preserved; defaultScale is the user size choice. Baked PNGs are separate runtime files.",
+  "sizeRevision": "476ca1b6d178",
+  "sizeSettings": "../source/stage2-boss-motion-sizes.json",
+  "entries": [
+    {
+      "id": "player",
+      "name": "플레이어 · 크기 기준",
+      "group": "기준",
+      "frames": [
+        {
+          "file": "assets/player/00.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            159,
+            168,
+            225,
+            232
+          ],
+          "source": "outputs/waterway/blue-transition-approved-20261105/edge-clean-v2/player.png",
+          "sha256": "8f7a2fe9eb18599c1608da735f82541bec36b763c4a1844f54073afaff151f5c",
+          "appliedFile": "../runtime/player/00.png"
+        }
+      ],
+      "durations": [
+        1000
+      ],
+      "representative": 0,
+      "note": "실제 캐릭터 높이 64px · 투명 캔버스 384×256",
+      "sourcePivot": [
+        192,
+        232
+      ],
+      "reference": null,
+      "sequence": [
+        0
+      ],
+      "defaultScale": 100
+    },
+    {
+      "id": "rose-idle",
+      "name": "로즈 · 기본",
+      "group": "로즈",
+      "frames": [
+        {
+          "file": "assets/rose-idle/00.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            136,
+            112,
+            248,
+            232
+          ],
+          "source": "outputs/waterway/blue-transition-approved-20261105/edge-clean-v2/rose-idle.png",
+          "sha256": "ed56b7ce06c8da146d04244aee4965b38e7efb8689951e2f1de666174ed956cc",
+          "appliedFile": "../runtime/rose-idle/00.png"
+        }
+      ],
+      "durations": [
+        1000
+      ],
+      "representative": 0,
+      "note": "",
+      "sourcePivot": [
+        192,
+        232
+      ],
+      "reference": "rose-idle",
+      "sequence": [
+        0
+      ],
+      "defaultScale": 100
+    },
+    {
+      "id": "rose-shot",
+      "name": "로즈 · 공중 사격",
+      "group": "로즈",
+      "frames": [
+        {
+          "file": "assets/rose-shot/00.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            142,
+            45,
+            242,
+            184
+          ],
+          "source": "outputs/waterway/blue-transition-approved-20261105/edge-clean-v2/rose-shot.png",
+          "sha256": "9b95c4743b3ac804a85f7c788570ba49b24cb45d7c89b4b0ac45ee98526a0a85",
+          "appliedFile": "../runtime/rose-shot/00.png"
+        }
+      ],
+      "durations": [
+        1000
+      ],
+      "representative": 0,
+      "note": "공중 높이 48px 유지",
+      "sourcePivot": [
+        192,
+        232
+      ],
+      "reference": "rose-idle",
+      "sequence": [
+        0
+      ],
+      "defaultScale": 101
+    },
+    {
+      "id": "rose-collapse",
+      "name": "로즈 · 쓰러짐 B",
+      "group": "로즈",
+      "frames": [
+        {
+          "file": "assets/rose-collapse/00.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            135,
+            111,
+            246,
+            231
+          ],
+          "source": "outputs/waterway/rose-first-absorption-preview-20261105/assets/rose-0-approved94.png",
+          "sha256": "c0d3568622dd9179cf18a41c73b9e1614a9cd5a11ca2c1f35a6bcbb12733ec70",
+          "appliedFile": "../runtime/rose-collapse/00.png"
+        },
+        {
+          "file": "assets/rose-collapse/01.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            132,
+            117,
+            243,
+            231
+          ],
+          "source": "outputs/waterway/rose-first-absorption-preview-20261105/assets/rose-1-approved94.png",
+          "sha256": "6c738f0ad188e5065ba9724cf1fc008bc40ad57ff9d83233b6427a0a35a86b38",
+          "appliedFile": "../runtime/rose-collapse/01.png"
+        },
+        {
+          "file": "assets/rose-collapse/02.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            128,
+            127,
+            240,
+            231
+          ],
+          "source": "outputs/waterway/rose-collapse-B-scale94-20261105/02.png",
+          "sha256": "e4cfc742a9b164905eef303b0ef4a5b617e15fd54f9815c8ac73f80c36e25585",
+          "appliedFile": "../runtime/rose-collapse/02.png"
+        },
+        {
+          "file": "assets/rose-collapse/03.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            121,
+            135,
+            240,
+            231
+          ],
+          "source": "outputs/waterway/rose-collapse-B-scale94-20261105/03.png",
+          "sha256": "b0f4bb60b7e2152d7088388f3cf528e30ca66567f03d829f7107a107742cc4a4",
+          "appliedFile": "../runtime/rose-collapse/03.png"
+        },
+        {
+          "file": "assets/rose-collapse/04.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            122,
+            145,
+            239,
+            231
+          ],
+          "source": "outputs/waterway/rose-collapse-B-scale94-20261105/04.png",
+          "sha256": "dbdfe10a2ee400ef2f82ce4a5e9ac14879ec3efcba60aaf928e5353341db51a6",
+          "appliedFile": "../runtime/rose-collapse/04.png"
+        },
+        {
+          "file": "assets/rose-collapse/05.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            125,
+            149,
+            240,
+            231
+          ],
+          "source": "outputs/waterway/rose-collapse-B-scale94-20261105/05.png",
+          "sha256": "d49b6e5a493985ef9f7019cd6fb726ac6d5524536097b7c490e18c9f5c9a0214",
+          "appliedFile": "../runtime/rose-collapse/05.png"
+        },
+        {
+          "file": "assets/rose-collapse/06.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            128,
+            148,
+            240,
+            231
+          ],
+          "source": "outputs/waterway/rose-collapse-B-scale94-20261105/06.png",
+          "sha256": "1c59afb2b4dee23e79d8b4f7210cc471fa9fc8ba9be2568d9215bb6cdc3f1705",
+          "appliedFile": "../runtime/rose-collapse/06.png"
+        },
+        {
+          "file": "assets/rose-collapse/07.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            128,
+            148,
+            240,
+            231
+          ],
+          "source": "outputs/waterway/rose-collapse-B-scale94-20261105/07.png",
+          "sha256": "80839c267e6b5405f52bccca977cecbbd2dd21293859671278a3c938d08333b4",
+          "appliedFile": "../runtime/rose-collapse/07.png"
+        }
+      ],
+      "durations": [
+        350,
+        90,
+        60,
+        40,
+        40,
+        120,
+        90,
+        900
+      ],
+      "representative": 7,
+      "note": "채택한 94% 보정이 이미 반영된 본 · 슬라이더 100%가 현재 승인 크기",
+      "sourcePivot": [
+        192,
+        232
+      ],
+      "reference": "rose-idle",
+      "sequence": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "defaultScale": 100
+    },
+    {
+      "id": "rose-capture",
+      "name": "로즈 · 석궁 낙하·붙잡힘 B",
+      "group": "로즈",
+      "frames": [
+        {
+          "file": "assets/rose-capture/00.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            135,
+            112,
+            247,
+            232
+          ],
+          "source": "outputs/waterway/rose-capture-polish10-20261106/frames/00.png",
+          "sha256": "5c7d0d7d6f24c6f5b62b2ff52dcb12834900e235bc94d881834ab7506193ca5b",
+          "appliedFile": "../runtime/rose-capture/00.png"
+        },
+        {
+          "file": "assets/rose-capture/01.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            130,
+            115,
+            246,
+            232
+          ],
+          "source": "outputs/waterway/rose-capture-polish10-20261106/frames/01.png",
+          "sha256": "e4e26f2991fe90c91446be9e07d2c18288d542e0d22d01a6dc9e20f3c353c116",
+          "appliedFile": "../runtime/rose-capture/01.png"
+        },
+        {
+          "file": "assets/rose-capture/02.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            128,
+            116,
+            246,
+            232
+          ],
+          "source": "outputs/waterway/rose-capture-polish10-20261106/frames/02.png",
+          "sha256": "f60a11d9a8a99132fff65aef3c4ca89bfc7d15c64644a3ee520d82bbb5c3442f",
+          "appliedFile": "../runtime/rose-capture/02.png"
+        },
+        {
+          "file": "assets/rose-capture/03.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            125,
+            117,
+            246,
+            232
+          ],
+          "source": "outputs/waterway/rose-capture-polish10-20261106/frames/03.png",
+          "sha256": "d3866c0acb5f2ef8e2d666d65e296efded1e8a864f694f54c0204156b2b14be9",
+          "appliedFile": "../runtime/rose-capture/03.png"
+        },
+        {
+          "file": "assets/rose-capture/04.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            122,
+            118,
+            245,
+            237
+          ],
+          "source": "outputs/waterway/rose-capture-polish10-20261106/frames/04.png",
+          "sha256": "bc6da9ce85a6c76c151160c2491a0407f6dc1602f6ccdd5c1799ca7a548bf2df",
+          "appliedFile": "../runtime/rose-capture/04.png"
+        },
+        {
+          "file": "assets/rose-capture/05.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            124,
+            115,
+            244,
+            245
+          ],
+          "source": "outputs/waterway/rose-capture-polish10-20261106/frames/05.png",
+          "sha256": "0e51618c3121b55140cdf7d1e4e27cf25b7fd6247609aa275ee2956c7697c2ed",
+          "appliedFile": "../runtime/rose-capture/05.png"
+        },
+        {
+          "file": "assets/rose-capture/06.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            127,
+            106,
+            234,
+            245
+          ],
+          "source": "outputs/waterway/rose-capture-polish10-20261106/frames/06.png",
+          "sha256": "22fa89375607393d6cc1403024ba222bf69359e4f9838bdd501f7b7b3c6feed3",
+          "appliedFile": "../runtime/rose-capture/06.png"
+        },
+        {
+          "file": "assets/rose-capture/07.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            134,
+            102,
+            232,
+            245
+          ],
+          "source": "outputs/waterway/rose-capture-polish10-20261106/frames/07.png",
+          "sha256": "d70f3fb7870b428aecdd26c079363c6b6a5f37187763eceb94a04445eaf0dde5",
+          "appliedFile": "../runtime/rose-capture/07.png"
+        },
+        {
+          "file": "assets/rose-capture/08.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            173,
+            94,
+            233,
+            216
+          ],
+          "source": "outputs/waterway/rose-capture-polish10-20261106/frames/08.png",
+          "sha256": "b003da41b9bcd53966e4520a6d7516aa7b15ca581eb6ede4aab81deef9ef574b",
+          "appliedFile": "../runtime/rose-capture/08.png"
+        },
+        {
+          "file": "assets/rose-capture/09.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            173,
+            92,
+            233,
+            214
+          ],
+          "source": "outputs/waterway/rose-capture-polish10-20261106/frames/09.png",
+          "sha256": "7afb7e24a44b00385ea8237f65caf1f19cf6cfc4fc39f03834a216cfa7c4915d",
+          "appliedFile": "../runtime/rose-capture/09.png"
+        }
+      ],
+      "durations": [
+        180,
+        70,
+        50,
+        50,
+        50,
+        50,
+        60,
+        60,
+        70,
+        900
+      ],
+      "representative": 9,
+      "note": "10프레임 정리본 · 떠오른 높이와 석궁 경로 유지",
+      "sourcePivot": [
+        192,
+        232
+      ],
+      "reference": "rose-idle",
+      "sequence": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "defaultScale": 108
+    },
+    {
+      "id": "blue-idle",
+      "name": "블루 · 기본",
+      "group": "블루",
+      "frames": [
+        {
+          "file": "assets/blue-idle/00.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            155,
+            93,
+            229,
+            232
+          ],
+          "source": "outputs/waterway/blue-transition-approved-20261105/edge-clean-v2/blue-idle.png",
+          "sha256": "0889332306733e634c834f67abcafdce8f15c9acd1ae4e227e5ab56835a7913a",
+          "appliedFile": "../runtime/blue-idle/00.png"
+        }
+      ],
+      "durations": [
+        1000
+      ],
+      "representative": 0,
+      "note": "",
+      "sourcePivot": [
+        192,
+        232
+      ],
+      "reference": "blue-idle",
+      "sequence": [
+        0
+      ],
+      "defaultScale": 100
+    },
+    {
+      "id": "blue-palm",
+      "name": "블루 · 구체 생성·손바닥 발사",
+      "group": "블루",
+      "frames": [
+        {
+          "file": "assets/blue-palm/00.png",
+          "canvas": [
+            320,
+            200
+          ],
+          "bounds": [
+            134,
+            18,
+            226,
+            180
+          ],
+          "source": "resources/monsters/stage-02/boss-siblings-lineup-20261103/blue-palm-return/frames/01.png",
+          "sha256": "d82e39ea705c2a4dcde081ca67e3be2a9744c88cdbab308fc5cd143833c16ee6",
+          "appliedFile": "../runtime/blue-palm/00.png"
+        },
+        {
+          "file": "assets/blue-palm/01.png",
+          "canvas": [
+            320,
+            200
+          ],
+          "bounds": [
+            136,
+            20,
+            228,
+            181
+          ],
+          "source": "resources/monsters/stage-02/boss-siblings-lineup-20261103/blue-palm-return/frames/07.png",
+          "sha256": "e9a1f28b3928cbf6d490a7758b7298bdb324becbfa56d086911a1e5c0e6aa90f",
+          "appliedFile": "../runtime/blue-palm/01.png"
+        },
+        {
+          "file": "assets/blue-palm/02.png",
+          "canvas": [
+            320,
+            200
+          ],
+          "bounds": [
+            137,
+            21,
+            230,
+            182
+          ],
+          "source": "resources/monsters/stage-02/boss-siblings-lineup-20261103/blue-palm-return/frames/09.png",
+          "sha256": "53db8729a190191ec137cce67e3a7db0ef2e85505e9bfed9eeaffd4b4b48cfe4",
+          "appliedFile": "../runtime/blue-palm/02.png"
+        },
+        {
+          "file": "assets/blue-palm/03.png",
+          "canvas": [
+            320,
+            200
+          ],
+          "bounds": [
+            138,
+            22,
+            232,
+            184
+          ],
+          "source": "resources/monsters/stage-02/boss-siblings-lineup-20261103/blue-palm-return/frames/11.png",
+          "sha256": "0d9d15c30de460a390cacff06507999ea3280697571ca6e75a6fc0efc55e9cff",
+          "appliedFile": "../runtime/blue-palm/03.png"
+        },
+        {
+          "file": "assets/blue-palm/04.png",
+          "canvas": [
+            320,
+            200
+          ],
+          "bounds": [
+            142,
+            22,
+            233,
+            184
+          ],
+          "source": "resources/monsters/stage-02/boss-siblings-lineup-20261103/blue-palm-return/frames/13.png",
+          "sha256": "46f167a858adabbf32e3ff010f8e1b6bb417a34c75be82911d3e1ff80523bce6",
+          "appliedFile": "../runtime/blue-palm/04.png"
+        },
+        {
+          "file": "assets/blue-palm/05.png",
+          "canvas": [
+            320,
+            200
+          ],
+          "bounds": [
+            144,
+            23,
+            234,
+            185
+          ],
+          "source": "resources/monsters/stage-02/boss-siblings-lineup-20261103/blue-palm-return/frames/14.png",
+          "sha256": "f4e68b58ad8f3b4db541619cf517e957935ed75bdda7b32298559d3e9ffbcab0",
+          "appliedFile": "../runtime/blue-palm/05.png"
+        },
+        {
+          "file": "assets/blue-palm/06.png",
+          "canvas": [
+            320,
+            200
+          ],
+          "bounds": [
+            146,
+            23,
+            234,
+            185
+          ],
+          "source": "resources/monsters/stage-02/boss-siblings-lineup-20261103/blue-palm-return/frames/15.png",
+          "sha256": "be4fcdab1922dc1294d948208cabb873bb3d9ee8a868b46ae74ea92bb6a49155",
+          "appliedFile": "../runtime/blue-palm/06.png"
+        },
+        {
+          "file": "assets/blue-palm/07.png",
+          "canvas": [
+            320,
+            200
+          ],
+          "bounds": [
+            124,
+            23,
+            237,
+            185
+          ],
+          "source": "resources/monsters/stage-02/boss-siblings-lineup-20261103/blue-palm-return/frames/16.png",
+          "sha256": "d2d4cdd4d9cf9e9655cfb39522300bfb82bbcaade937690c5d53acffcd45f9d1",
+          "appliedFile": "../runtime/blue-palm/07.png"
+        },
+        {
+          "file": "assets/blue-palm/08.png",
+          "canvas": [
+            320,
+            200
+          ],
+          "bounds": [
+            124,
+            23,
+            238,
+            186
+          ],
+          "source": "resources/monsters/stage-02/boss-siblings-lineup-20261103/blue-palm-return/frames/18.png",
+          "sha256": "5ad8b4a57605afd8f81acc33d1f467595ea3e61a8aa2bafd1ad970bb24f805d7",
+          "appliedFile": "../runtime/blue-palm/08.png"
+        },
+        {
+          "file": "assets/blue-palm/09.png",
+          "canvas": [
+            320,
+            200
+          ],
+          "bounds": [
+            124,
+            23,
+            234,
+            186
+          ],
+          "source": "resources/monsters/stage-02/boss-siblings-lineup-20261103/blue-palm-return/frames/21.png",
+          "sha256": "c22c3b4c31bdc86b47b1f7bbd49b14760cb8ff0562d96e04baa41b7b3285d648",
+          "appliedFile": "../runtime/blue-palm/09.png"
+        },
+        {
+          "file": "assets/blue-palm/10.png",
+          "canvas": [
+            320,
+            200
+          ],
+          "bounds": [
+            124,
+            22,
+            232,
+            185
+          ],
+          "source": "resources/monsters/stage-02/boss-siblings-lineup-20261103/blue-palm-return/frames/24.png",
+          "sha256": "4fa69dbfbb478558c2736a0222267c5614b0920edc8278c356543d6e3a7a2886",
+          "appliedFile": "../runtime/blue-palm/10.png"
+        },
+        {
+          "file": "assets/blue-palm/11.png",
+          "canvas": [
+            320,
+            200
+          ],
+          "bounds": [
+            126,
+            21,
+            233,
+            184
+          ],
+          "source": "resources/monsters/stage-02/boss-siblings-lineup-20261103/blue-palm-return/frames/26.png",
+          "sha256": "d5c1f20b70cf2ddd4055ffbf8c2b16f4d419d6dd892aaebbfe0cff2f9f517779",
+          "appliedFile": "../runtime/blue-palm/11.png"
+        },
+        {
+          "file": "assets/blue-palm/12.png",
+          "canvas": [
+            320,
+            200
+          ],
+          "bounds": [
+            129,
+            20,
+            236,
+            182
+          ],
+          "source": "resources/monsters/stage-02/boss-siblings-lineup-20261103/blue-palm-return/frames/28.png",
+          "sha256": "fc42e7a8c9e1cc952c7d8509540c5b50f3874b831ec3e9823255065dd1b1ffbc",
+          "appliedFile": "../runtime/blue-palm/12.png"
+        },
+        {
+          "file": "assets/blue-palm/13.png",
+          "canvas": [
+            320,
+            200
+          ],
+          "bounds": [
+            133,
+            19,
+            230,
+            181
+          ],
+          "source": "resources/monsters/stage-02/boss-siblings-lineup-20261103/blue-palm-return/frames/30.png",
+          "sha256": "ad46bf4e8454e76e11d4d0210cb0b16e44d448e20b2cfb187dead2fc04739343",
+          "appliedFile": "../runtime/blue-palm/13.png"
+        },
+        {
+          "file": "assets/blue-palm/14.png",
+          "canvas": [
+            320,
+            200
+          ],
+          "bounds": [
+            134,
+            18,
+            226,
+            179
+          ],
+          "source": "resources/monsters/stage-02/boss-siblings-lineup-20261103/blue-palm-return/frames/33.png",
+          "sha256": "41eede08b2ccb3b829a30a6401edf21576d36cb0463462037d56e2f112d8c7db",
+          "appliedFile": "../runtime/blue-palm/14.png"
+        },
+        {
+          "file": "assets/blue-palm/15.png",
+          "canvas": [
+            320,
+            200
+          ],
+          "bounds": [
+            134,
+            17,
+            226,
+            179
+          ],
+          "source": "resources/monsters/stage-02/boss-siblings-lineup-20261103/blue-palm-return/frames/36.png",
+          "sha256": "29ed7c7e24a728412cb31c950f85766522d8a33e2c698ae5f53d4a326a6b2441",
+          "appliedFile": "../runtime/blue-palm/15.png"
+        }
+      ],
+      "durations": [
+        700,
+        70,
+        70,
+        70,
+        60,
+        45,
+        35,
+        55,
+        80,
+        80,
+        80,
+        65,
+        65,
+        65,
+        75,
+        220
+      ],
+      "representative": 7,
+      "note": "기존 발사 본체 · 구체 효과 제외 · 기존 공중 높이 48px · 본체 크기 비교용",
+      "sourcePivot": [
+        180,
+        228
+      ],
+      "reference": "blue-idle",
+      "sequence": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "defaultScale": 100
+    },
+    {
+      "id": "blue-landing",
+      "name": "블루 · 낙하·착지",
+      "group": "블루",
+      "frames": [
+        {
+          "file": "assets/blue-landing/00.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            141,
+            100,
+            244,
+            232
+          ],
+          "source": "outputs/waterway/blue-recovery-orb-free-clean-20261105/landing-00.png",
+          "sha256": "777df5f081ef0082f7d641598f19215b64f167694f3cf834ddd4e88bffe0c4c9",
+          "appliedFile": "../runtime/blue-landing/00.png"
+        },
+        {
+          "file": "assets/blue-landing/01.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            136,
+            91,
+            248,
+            232
+          ],
+          "source": "outputs/waterway/blue-recovery-orb-free-clean-20261105/landing-01.png",
+          "sha256": "5c7122ae184e1102e168d4ce0acf81e19658b8b9686f0723da4994046734c3c1",
+          "appliedFile": "../runtime/blue-landing/01.png"
+        },
+        {
+          "file": "assets/blue-landing/02.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            132,
+            112,
+            252,
+            232
+          ],
+          "source": "outputs/waterway/blue-recovery-orb-free-clean-20261105/landing-02.png",
+          "sha256": "8808572e342fbee1fda59b2e9fce44f626341daa6897e7b6e7fd33d8f29dcc5c",
+          "appliedFile": "../runtime/blue-landing/02.png"
+        },
+        {
+          "file": "assets/blue-landing/03.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            137,
+            142,
+            248,
+            232
+          ],
+          "source": "outputs/waterway/blue-recovery-orb-free-clean-20261105/landing-03.png",
+          "sha256": "1c369e8a405fee2342bbedeaf192c199380f8994bc7008978064dbd34b095c30",
+          "appliedFile": "../runtime/blue-landing/03.png"
+        },
+        {
+          "file": "assets/blue-landing/04.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            141,
+            148,
+            243,
+            232
+          ],
+          "source": "outputs/waterway/blue-recovery-orb-free-clean-20261105/landing-04.png",
+          "sha256": "611a261f07fd47395f5603dee63dcee3007393985ee489b0f6ee7d8e3ef123c5",
+          "appliedFile": "../runtime/blue-landing/04.png"
+        },
+        {
+          "file": "assets/blue-landing/05.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            144,
+            147,
+            241,
+            232
+          ],
+          "source": "outputs/waterway/blue-recovery-orb-free-clean-20261105/landing-05.png",
+          "sha256": "a6bb4045a5784c4eb06fdbd13f4c6c90dd102c36b27383618c7a1c01940a2843",
+          "appliedFile": "../runtime/blue-landing/05.png"
+        },
+        {
+          "file": "assets/blue-landing/06.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            142,
+            146,
+            243,
+            232
+          ],
+          "source": "outputs/waterway/blue-recovery-orb-free-clean-20261105/landing-06.png",
+          "sha256": "10116865288ec76dad8d6ebb98e13c700193c6a4cdd033b11b0a97e3e1e53871",
+          "appliedFile": "../runtime/blue-landing/06.png"
+        },
+        {
+          "file": "assets/blue-landing/07.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            141,
+            145,
+            244,
+            232
+          ],
+          "source": "outputs/waterway/blue-recovery-orb-free-clean-20261105/landing-07.png",
+          "sha256": "ddc5ec45b54ac0f24269216a9794805c830199bd59b0d3f9aeec6c2d83e42715",
+          "appliedFile": "../runtime/blue-landing/07.png"
+        }
+      ],
+      "durations": [
+        70,
+        50,
+        50,
+        60,
+        70,
+        90,
+        90,
+        650
+      ],
+      "representative": 3,
+      "note": "착지 자세 8장 · 화면 위에서 이동하는 연출은 제외",
+      "sourcePivot": [
+        192,
+        232
+      ],
+      "reference": "blue-idle",
+      "sequence": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "defaultScale": 100
+    },
+    {
+      "id": "blue-recovery",
+      "name": "블루 · 착지 후 회복",
+      "group": "블루",
+      "frames": [
+        {
+          "file": "assets/blue-recovery/00.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            141,
+            146,
+            243,
+            232
+          ],
+          "source": "outputs/waterway/blue-recovery-orb-free-clean-20261105/source-21.png",
+          "sha256": "2a05063ca3ca312fbc8284881ef61b4dde00780acbb61962300e2d4f9f605f8d",
+          "appliedFile": "../runtime/blue-recovery/00.png"
+        },
+        {
+          "file": "assets/blue-recovery/01.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            144,
+            143,
+            241,
+            232
+          ],
+          "source": "outputs/waterway/blue-recovery-orb-free-clean-20261105/source-22.png",
+          "sha256": "f9fba3a534a9a2effc1b70f76f2f7c104c5680dc6da460387561dc260db0cd82",
+          "appliedFile": "../runtime/blue-recovery/01.png"
+        },
+        {
+          "file": "assets/blue-recovery/02.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            146,
+            139,
+            235,
+            233
+          ],
+          "source": "outputs/waterway/blue-recovery-orb-free-clean-20261105/source-23.png",
+          "sha256": "282e39733e5f3bc1961891417e172fcd91ba67733db9678012e67b2db2af4a92",
+          "appliedFile": "../runtime/blue-recovery/02.png"
+        },
+        {
+          "file": "assets/blue-recovery/03.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            149,
+            133,
+            234,
+            232
+          ],
+          "source": "outputs/waterway/blue-recovery-orb-free-clean-20261105/source-24.png",
+          "sha256": "309b3c25385344265d557f022d76f0e3774d008da54ba36c9b6c3b793554ec28",
+          "appliedFile": "../runtime/blue-recovery/03.png"
+        },
+        {
+          "file": "assets/blue-recovery/04.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            152,
+            124,
+            234,
+            232
+          ],
+          "source": "outputs/waterway/blue-recovery-orb-free-clean-20261105/source-25.png",
+          "sha256": "799c94fa011b2606c5e42376f007849c4b0943c6b906a251516596daa6460a9b",
+          "appliedFile": "../runtime/blue-recovery/04.png"
+        },
+        {
+          "file": "assets/blue-recovery/05.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            152,
+            115,
+            234,
+            232
+          ],
+          "source": "outputs/waterway/blue-recovery-orb-free-clean-20261105/source-26.png",
+          "sha256": "77e75c5c15e0bad4851164e562d77244065ac4478f60a10aebb26ff1280eaa63",
+          "appliedFile": "../runtime/blue-recovery/05.png"
+        },
+        {
+          "file": "assets/blue-recovery/06.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            152,
+            111,
+            234,
+            232
+          ],
+          "source": "outputs/waterway/blue-recovery-orb-free-clean-20261105/source-27.png",
+          "sha256": "d81e1acdec8ba85f5c94fe3e05b926d0d3d03941aaa10ee00f528ce6754ec803",
+          "appliedFile": "../runtime/blue-recovery/06.png"
+        },
+        {
+          "file": "assets/blue-recovery/07.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            150,
+            107,
+            231,
+            232
+          ],
+          "source": "outputs/waterway/blue-recovery-orb-free-clean-20261105/source-28.png",
+          "sha256": "73371e26bc657dd2fda68b339d1df869cf95bf31940d4d10e30ada107217f10a",
+          "appliedFile": "../runtime/blue-recovery/07.png"
+        },
+        {
+          "file": "assets/blue-recovery/08.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            147,
+            103,
+            228,
+            232
+          ],
+          "source": "outputs/waterway/blue-recovery-orb-free-clean-20261105/source-29.png",
+          "sha256": "ffbc33cd6e4c8953ce6701ab828398e82e42052374e7309ddb966fe86b1ac0a2",
+          "appliedFile": "../runtime/blue-recovery/08.png"
+        },
+        {
+          "file": "assets/blue-recovery/09.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            142,
+            97,
+            224,
+            232
+          ],
+          "source": "outputs/waterway/blue-recovery-orb-free-clean-20261105/source-30.png",
+          "sha256": "863276943db0f591e7de834d87c20a905eef754d246dbd4080876c414c71f119",
+          "appliedFile": "../runtime/blue-recovery/09.png"
+        },
+        {
+          "file": "assets/blue-recovery/10.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            148,
+            94,
+            222,
+            232
+          ],
+          "source": "outputs/waterway/blue-recovery-orb-free-clean-20261105/source-31.png",
+          "sha256": "f10d786cc12d8fa2cb63622ccb4995616017ba136015aa86e95dddb3474a5ddf",
+          "appliedFile": "../runtime/blue-recovery/10.png"
+        },
+        {
+          "file": "assets/blue-recovery/11.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            148,
+            94,
+            222,
+            232
+          ],
+          "source": "outputs/waterway/blue-recovery-orb-free-clean-20261105/source-32.png",
+          "sha256": "2e6d9e18a39e103e9427a6918d6f24bd2875c78898b5974c0091c5dc3125fec4",
+          "appliedFile": "../runtime/blue-recovery/11.png"
+        },
+        {
+          "file": "assets/blue-recovery/12.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            148,
+            93,
+            222,
+            232
+          ],
+          "source": "outputs/waterway/blue-recovery-orb-free-clean-20261105/source-33.png",
+          "sha256": "e6614d39047e19c216b38f195f26d79a780258f1cec3e28ba796b7b97b370e4d",
+          "appliedFile": "../runtime/blue-recovery/12.png"
+        },
+        {
+          "file": "assets/blue-recovery/13.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            148,
+            93,
+            222,
+            232
+          ],
+          "source": "outputs/waterway/blue-recovery-orb-free-clean-20261105/source-34.png",
+          "sha256": "30602fd0fdb968d278c8562253c29486b7dfda99bf781c176bc4fff35c3b309a",
+          "appliedFile": "../runtime/blue-recovery/13.png"
+        },
+        {
+          "file": "assets/blue-recovery/14.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            148,
+            93,
+            223,
+            232
+          ],
+          "source": "outputs/waterway/blue-recovery-orb-free-clean-20261105/source-35.png",
+          "sha256": "f1a201cf0e317975aff3b983f1f663ce54f0b736adcf554b13f0769ac86848fd",
+          "appliedFile": "../runtime/blue-recovery/14.png"
+        },
+        {
+          "file": "assets/blue-recovery/15.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            148,
+            93,
+            223,
+            232
+          ],
+          "source": "outputs/waterway/blue-recovery-orb-free-clean-20261105/source-36.png",
+          "sha256": "b0078ab5739e1af93e40dc52f0515b02f818efe5e2a9fd151e6d0534db61efab",
+          "appliedFile": "../runtime/blue-recovery/15.png"
+        }
+      ],
+      "durations": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        650
+      ],
+      "representative": 15,
+      "note": "원본의 부드러운 흐름 16프레임 · 구체 제거 정리본",
+      "sourcePivot": [
+        192,
+        232
+      ],
+      "reference": "blue-idle",
+      "sequence": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "defaultScale": 100
+    },
+    {
+      "id": "blue-down-breathe",
+      "name": "블루 · 한쪽 무릎 대기",
+      "group": "블루",
+      "frames": [
+        {
+          "file": "assets/blue-down-breathe/00.png",
+          "canvas": [
+            390,
+            264
+          ],
+          "bounds": [
+            130,
+            103,
+            260,
+            239
+          ],
+          "source": "outputs/waterway/blue-down-breathe-20261105/00.png",
+          "sha256": "00c46e721c38c56cecdeff2f5a61487cb402b306fafa450b1193d019952d0e67",
+          "appliedFile": "../runtime/blue-down-breathe/00.png"
+        },
+        {
+          "file": "assets/blue-down-breathe/01.png",
+          "canvas": [
+            390,
+            264
+          ],
+          "bounds": [
+            130,
+            104,
+            260,
+            239
+          ],
+          "source": "outputs/waterway/blue-down-breathe-20261105/01.png",
+          "sha256": "001f727056b1f2185b49c45f5572198fd1c99a169146b9148eed7729b3f42c2d",
+          "appliedFile": "../runtime/blue-down-breathe/01.png"
+        },
+        {
+          "file": "assets/blue-down-breathe/02.png",
+          "canvas": [
+            390,
+            264
+          ],
+          "bounds": [
+            130,
+            105,
+            260,
+            239
+          ],
+          "source": "outputs/waterway/blue-down-breathe-20261105/02.png",
+          "sha256": "39a552f75ed94b1d13243db62fd632f4ddb99408075a0a175e22fe38156b122f",
+          "appliedFile": "../runtime/blue-down-breathe/02.png"
+        }
+      ],
+      "durations": [
+        360,
+        240,
+        420,
+        300
+      ],
+      "representative": 0,
+      "note": "이전 상태불능 호흡 3장 · 바닥 기준을 유지해 크기 조정",
+      "sourcePivot": [
+        195,
+        239
+      ],
+      "reference": "blue-idle",
+      "sequence": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "defaultScale": 64
+    },
+    {
+      "id": "blue-collapse",
+      "name": "블루 · 쓰러짐 7프레임",
+      "group": "블루",
+      "frames": [
+        {
+          "file": "assets/blue-collapse/00.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            153,
+            93,
+            227,
+            232
+          ],
+          "source": "outputs/waterway/blue-collapse-clean7-v4-20261106/00.png",
+          "sha256": "ea3fe2a7f6c9b5babf17ce2ef9922d49b89c33235e52e7c806bc5513e238f644",
+          "appliedFile": "../runtime/blue-collapse/00.png"
+        },
+        {
+          "file": "assets/blue-collapse/01.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            152,
+            95,
+            229,
+            232
+          ],
+          "source": "outputs/waterway/blue-collapse-clean7-v4-20261106/01.png",
+          "sha256": "66cec28a3873ef1a0202b7b0d34da884ef8179e3612037b69d5d64ff8a766ef7",
+          "appliedFile": "../runtime/blue-collapse/01.png"
+        },
+        {
+          "file": "assets/blue-collapse/02.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            147,
+            105,
+            234,
+            232
+          ],
+          "source": "outputs/waterway/blue-collapse-clean7-v4-20261106/02.png",
+          "sha256": "7549d277ca907676fe2367c1eb64993e390fe91a284ab1298f47286db16e89bf",
+          "appliedFile": "../runtime/blue-collapse/02.png"
+        },
+        {
+          "file": "assets/blue-collapse/03.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            142,
+            126,
+            242,
+            232
+          ],
+          "source": "outputs/waterway/blue-collapse-clean7-v4-20261106/03.png",
+          "sha256": "189be9ac1ec8bcfabe9f769557cdd49ee954f35f8a32ab7f56c2665151f4c067",
+          "appliedFile": "../runtime/blue-collapse/03.png"
+        },
+        {
+          "file": "assets/blue-collapse/04.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            150,
+            133,
+            246,
+            232
+          ],
+          "source": "outputs/waterway/blue-collapse-clean7-v4-20261106/04.png",
+          "sha256": "1d97a9a79289874369b750e18ea5452cd3c190d4253ef54c2483003171a6ecbc",
+          "appliedFile": "../runtime/blue-collapse/04.png"
+        },
+        {
+          "file": "assets/blue-collapse/05.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            150,
+            137,
+            246,
+            234
+          ],
+          "source": "outputs/waterway/blue-collapse-clean7-v4-20261106/05.png",
+          "sha256": "5ae704c2e253e0ebcebb45cbbcd2b48a5f00ebc74611e57d0895d7249bc0932b",
+          "appliedFile": "../runtime/blue-collapse/05.png"
+        },
+        {
+          "file": "assets/blue-collapse/06.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            150,
+            140,
+            246,
+            234
+          ],
+          "source": "outputs/waterway/blue-collapse-clean7-v4-20261106/06.png",
+          "sha256": "2b743e9a1c3626b6cc54ccf0d6b47d26453f890b2bcd28586ed457af37c7671a",
+          "appliedFile": "../runtime/blue-collapse/06.png"
+        }
+      ],
+      "durations": [
+        300,
+        70,
+        40,
+        90,
+        40,
+        50,
+        900
+      ],
+      "representative": 6,
+      "note": "채택 7프레임 · 마지막 자세 유지",
+      "sourcePivot": [
+        192,
+        232
+      ],
+      "reference": "blue-idle",
+      "sequence": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "defaultScale": 92
+    },
+    {
+      "id": "blue-rise",
+      "name": "블루 · 지친 채 일어서기",
+      "group": "블루",
+      "frames": [
+        {
+          "file": "assets/blue-rise/00.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            149,
+            145,
+            245,
+            234
+          ],
+          "source": "outputs/waterway/blue-rise-approved18-clean-20261106/frames/00.png",
+          "sha256": "128e818dd6bfeb69bd7ecaf312658ebf14798bda2daab909183e7428e3af4ca8",
+          "appliedFile": "../runtime/blue-rise/00.png"
+        },
+        {
+          "file": "assets/blue-rise/01.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            149,
+            143,
+            245,
+            234
+          ],
+          "source": "outputs/waterway/blue-rise-approved18-clean-20261106/frames/01.png",
+          "sha256": "807c70399d3667c94e3f4cd81e25ac8b2214d4c94edee138db96ecfb5905bece",
+          "appliedFile": "../runtime/blue-rise/01.png"
+        },
+        {
+          "file": "assets/blue-rise/02.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            149,
+            144,
+            243,
+            234
+          ],
+          "source": "outputs/waterway/blue-rise-approved18-clean-20261106/frames/02.png",
+          "sha256": "6da9b6313fb1afc0a6c757d6ca46ef6bc967e08ffeae58a87ae41d637146fd05",
+          "appliedFile": "../runtime/blue-rise/02.png"
+        },
+        {
+          "file": "assets/blue-rise/03.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            149,
+            144,
+            241,
+            234
+          ],
+          "source": "outputs/waterway/blue-rise-approved18-clean-20261106/frames/03.png",
+          "sha256": "18289bed72e78cfeb03017069b08e4fd8833677c8b8b2524374e9027c0f4b371",
+          "appliedFile": "../runtime/blue-rise/03.png"
+        },
+        {
+          "file": "assets/blue-rise/04.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            149,
+            144,
+            238,
+            234
+          ],
+          "source": "outputs/waterway/blue-rise-approved18-clean-20261106/frames/04.png",
+          "sha256": "5e26cbe0de6628ff36df95d2db340ded5227ca0c49c247fec6059cd045b34c88",
+          "appliedFile": "../runtime/blue-rise/04.png"
+        },
+        {
+          "file": "assets/blue-rise/05.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            149,
+            145,
+            238,
+            234
+          ],
+          "source": "outputs/waterway/blue-rise-approved18-clean-20261106/frames/05.png",
+          "sha256": "ab04029bade5a0e671d739588e1c9d7b1cd57fed1eaed15685e79360eda4e2a0",
+          "appliedFile": "../runtime/blue-rise/05.png"
+        },
+        {
+          "file": "assets/blue-rise/06.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            149,
+            145,
+            238,
+            234
+          ],
+          "source": "outputs/waterway/blue-rise-approved18-clean-20261106/frames/06.png",
+          "sha256": "43639711c66ae43cd96616760c1c9c540da1cb39efda8110c74318cf88b01c40",
+          "appliedFile": "../runtime/blue-rise/06.png"
+        },
+        {
+          "file": "assets/blue-rise/07.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            149,
+            145,
+            238,
+            234
+          ],
+          "source": "outputs/waterway/blue-rise-approved18-clean-20261106/frames/07.png",
+          "sha256": "1836f7eb13bb05d05005dea6f6a95a20406503042384537bc228aced97404c62",
+          "appliedFile": "../runtime/blue-rise/07.png"
+        },
+        {
+          "file": "assets/blue-rise/08.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            151,
+            141,
+            238,
+            233
+          ],
+          "source": "outputs/waterway/blue-rise-approved18-clean-20261106/frames/08.png",
+          "sha256": "29c19c00ed51b48062421dd8489cbadf4b932498c4c8fe2c5f8886b1e31dc4c0",
+          "appliedFile": "../runtime/blue-rise/08.png"
+        },
+        {
+          "file": "assets/blue-rise/09.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            155,
+            138,
+            238,
+            232
+          ],
+          "source": "outputs/waterway/blue-rise-approved18-clean-20261106/frames/09.png",
+          "sha256": "56df54e2a13aef6e43be6da5889a98eb5329df1896296bd21491ed9e07262c95",
+          "appliedFile": "../runtime/blue-rise/09.png"
+        },
+        {
+          "file": "assets/blue-rise/10.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            155,
+            133,
+            238,
+            232
+          ],
+          "source": "outputs/waterway/blue-rise-approved18-clean-20261106/frames/10.png",
+          "sha256": "2aee260a113495cd252fae694dc0d40ac1d10a6c32cdc022a4b8e34133cf7739",
+          "appliedFile": "../runtime/blue-rise/10.png"
+        },
+        {
+          "file": "assets/blue-rise/11.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            154,
+            128,
+            239,
+            232
+          ],
+          "source": "outputs/waterway/blue-rise-approved18-clean-20261106/frames/11.png",
+          "sha256": "0bb32a8ddde63b1eb512baa4fee1ed10cdd0699109c7f957e7ded771f0235c9c",
+          "appliedFile": "../runtime/blue-rise/11.png"
+        },
+        {
+          "file": "assets/blue-rise/12.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            154,
+            122,
+            239,
+            232
+          ],
+          "source": "outputs/waterway/blue-rise-approved18-clean-20261106/frames/12.png",
+          "sha256": "20335fe4c519a25651170ad2bb6c46dde09630bf671cee738953f83a33cfe6a9",
+          "appliedFile": "../runtime/blue-rise/12.png"
+        },
+        {
+          "file": "assets/blue-rise/13.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            155,
+            115,
+            234,
+            232
+          ],
+          "source": "outputs/waterway/blue-rise-approved18-clean-20261106/frames/13.png",
+          "sha256": "94f0a60461353c442764494e317a1e40a0d116e715b829d516fe529b05068e0a",
+          "appliedFile": "../runtime/blue-rise/13.png"
+        },
+        {
+          "file": "assets/blue-rise/14.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            155,
+            109,
+            228,
+            232
+          ],
+          "source": "outputs/waterway/blue-rise-approved18-clean-20261106/frames/14.png",
+          "sha256": "080bc48719ab9d0110c8b47696d82ad0cb41aa1826441020920c923c2b3afae3",
+          "appliedFile": "../runtime/blue-rise/14.png"
+        },
+        {
+          "file": "assets/blue-rise/15.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            156,
+            104,
+            221,
+            232
+          ],
+          "source": "outputs/waterway/blue-rise-approved18-clean-20261106/frames/15.png",
+          "sha256": "80a1bb2cfa497540a35a4a847d2c7be684dd1551ee0ca9e00f5d839e1d8936c8",
+          "appliedFile": "../runtime/blue-rise/15.png"
+        },
+        {
+          "file": "assets/blue-rise/16.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            158,
+            99,
+            221,
+            232
+          ],
+          "source": "outputs/waterway/blue-rise-approved18-clean-20261106/frames/16.png",
+          "sha256": "dabc5fd3e3dca123e01c3480383f593a10a6e091433a1fcfc162065993292f3e",
+          "appliedFile": "../runtime/blue-rise/16.png"
+        },
+        {
+          "file": "assets/blue-rise/17.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            159,
+            96,
+            221,
+            232
+          ],
+          "source": "outputs/waterway/blue-rise-approved18-clean-20261106/frames/17.png",
+          "sha256": "e08d86ff21ea9cff153b3256adbdae5f791229095b5f69cfbc4bd2fc37ed4ee6",
+          "appliedFile": "../runtime/blue-rise/17.png"
+        }
+      ],
+      "durations": [
+        300,
+        120,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        900
+      ],
+      "representative": 17,
+      "note": "18프레임 · 손을 내린 지친 끝 자세",
+      "sourcePivot": [
+        192,
+        232
+      ],
+      "reference": "blue-idle",
+      "sequence": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "defaultScale": 100
+    },
+    {
+      "id": "blue-cast",
+      "name": "블루 · 흡수 시전 C",
+      "group": "블루",
+      "frames": [
+        {
+          "file": "assets/blue-cast/00.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            158,
+            96,
+            220,
+            232
+          ],
+          "source": "outputs/waterway/blue-absorption-cast-polish16-20261106/frames/00.png",
+          "sha256": "7a0b79d3db0c1998435da27972f6aeffcf30690ad82df07d9ddac4d4930eed76",
+          "appliedFile": "../runtime/blue-cast/00.png"
+        },
+        {
+          "file": "assets/blue-cast/01.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            157,
+            97,
+            220,
+            232
+          ],
+          "source": "outputs/waterway/blue-absorption-cast-polish16-20261106/frames/01.png",
+          "sha256": "683cbe13e502c1b7e800f15759748e1beccca4764132e1937e5dadf48e2ce0de",
+          "appliedFile": "../runtime/blue-cast/01.png"
+        },
+        {
+          "file": "assets/blue-cast/02.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            154,
+            96,
+            220,
+            232
+          ],
+          "source": "outputs/waterway/blue-absorption-cast-polish16-20261106/frames/02.png",
+          "sha256": "26a57f4e69e3f5070a098a7370cbea6b5cdaa4c58272414dde4a6e7c58c6d945",
+          "appliedFile": "../runtime/blue-cast/02.png"
+        },
+        {
+          "file": "assets/blue-cast/03.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            151,
+            96,
+            220,
+            232
+          ],
+          "source": "outputs/waterway/blue-absorption-cast-polish16-20261106/frames/03.png",
+          "sha256": "b1fa545d8e7171969800b53e0002abbcce7bcce3f4582dd1dafbbe4207514afe",
+          "appliedFile": "../runtime/blue-cast/03.png"
+        },
+        {
+          "file": "assets/blue-cast/04.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            148,
+            96,
+            220,
+            232
+          ],
+          "source": "outputs/waterway/blue-absorption-cast-polish16-20261106/frames/04.png",
+          "sha256": "e04abe536e12fe551aefba524fdb75c621fa1e08f735bba0b2a9a1c8b8ad90d7",
+          "appliedFile": "../runtime/blue-cast/04.png"
+        },
+        {
+          "file": "assets/blue-cast/05.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            142,
+            95,
+            220,
+            232
+          ],
+          "source": "outputs/waterway/blue-absorption-cast-polish16-20261106/frames/05.png",
+          "sha256": "a4ba36744307efc44d22bd268542c6c333e52abf85963302eefb7a23d613199f",
+          "appliedFile": "../runtime/blue-cast/05.png"
+        },
+        {
+          "file": "assets/blue-cast/06.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            139,
+            95,
+            220,
+            232
+          ],
+          "source": "outputs/waterway/blue-absorption-cast-polish16-20261106/frames/06.png",
+          "sha256": "2f8f73907de49df541f2c05e8681bda7be51757195a3f60818128c22fdf46ff6",
+          "appliedFile": "../runtime/blue-cast/06.png"
+        },
+        {
+          "file": "assets/blue-cast/07.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            134,
+            94,
+            220,
+            232
+          ],
+          "source": "outputs/waterway/blue-absorption-cast-polish16-20261106/frames/07.png",
+          "sha256": "5aa68dc2d2cdb97ed2b3e6cc25fa6c1ed83f5dd60e07dfcb05e894c9b580a71c",
+          "appliedFile": "../runtime/blue-cast/07.png"
+        },
+        {
+          "file": "assets/blue-cast/08.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            131,
+            93,
+            220,
+            232
+          ],
+          "source": "outputs/waterway/blue-absorption-cast-polish16-20261106/frames/08.png",
+          "sha256": "c05a920327d9a1e1dd2884ac1e860606859f34ea32087248ae032fdc7ecf2d2b",
+          "appliedFile": "../runtime/blue-cast/08.png"
+        },
+        {
+          "file": "assets/blue-cast/09.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            130,
+            93,
+            220,
+            232
+          ],
+          "source": "outputs/waterway/blue-absorption-cast-polish16-20261106/frames/09.png",
+          "sha256": "199fd7297d057835e03f8e846a2b8de2a9436b927d1f0247e7bc7ccf80524aaa",
+          "appliedFile": "../runtime/blue-cast/09.png"
+        },
+        {
+          "file": "assets/blue-cast/10.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            127,
+            93,
+            220,
+            232
+          ],
+          "source": "outputs/waterway/blue-absorption-cast-polish16-20261106/frames/10.png",
+          "sha256": "2102709898ff70e30c3b19ba40eafcbd0e0c77729bbfe50bf6c0d26c54d5225b",
+          "appliedFile": "../runtime/blue-cast/10.png"
+        },
+        {
+          "file": "assets/blue-cast/11.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            127,
+            94,
+            220,
+            232
+          ],
+          "source": "outputs/waterway/blue-absorption-cast-polish16-20261106/frames/11.png",
+          "sha256": "67c0b87cb55e74ebbce5fe8c810c49e7dc31ea8a2af717be3adb152c79776bc6",
+          "appliedFile": "../runtime/blue-cast/11.png"
+        },
+        {
+          "file": "assets/blue-cast/12.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            126,
+            94,
+            220,
+            232
+          ],
+          "source": "outputs/waterway/blue-absorption-cast-polish16-20261106/frames/12.png",
+          "sha256": "4492f985995860badbfb43bfce60e8f343914650b08d055e45e553cce32df7cc",
+          "appliedFile": "../runtime/blue-cast/12.png"
+        },
+        {
+          "file": "assets/blue-cast/13.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            127,
+            93,
+            220,
+            232
+          ],
+          "source": "outputs/waterway/blue-absorption-cast-polish16-20261106/frames/13.png",
+          "sha256": "0aab9f4d2e2551bab7df099e961d6e76073e16135b7bb2ec0763eba06ce2763b",
+          "appliedFile": "../runtime/blue-cast/13.png"
+        },
+        {
+          "file": "assets/blue-cast/14.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            127,
+            93,
+            220,
+            232
+          ],
+          "source": "outputs/waterway/blue-absorption-cast-polish16-20261106/frames/14.png",
+          "sha256": "7bd55b86377e79c7d015e1c30c6ca2f470cd29acc9036b96fa3a0adb29f09ded",
+          "appliedFile": "../runtime/blue-cast/14.png"
+        },
+        {
+          "file": "assets/blue-cast/15.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            127,
+            93,
+            220,
+            232
+          ],
+          "source": "outputs/waterway/blue-absorption-cast-polish16-20261106/frames/15.png",
+          "sha256": "c2a45cb4aae89f809b2f6749672f1b6b821e3b3f268e8a58ace4f0319cfbf151",
+          "appliedFile": "../runtime/blue-cast/15.png"
+        }
+      ],
+      "durations": [
+        180,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        900
+      ],
+      "representative": 15,
+      "note": "16프레임 · 바닥에 선 채 한쪽 팔을 뻗음",
+      "sourcePivot": [
+        192,
+        232
+      ],
+      "reference": "blue-idle",
+      "sequence": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "defaultScale": 100
+    },
+    {
+      "id": "blue-roar",
+      "name": "블루 · 변신 전 포효 1번",
+      "group": "블루",
+      "frames": [
+        {
+          "file": "assets/blue-roar/00.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            156,
+            70,
+            229,
+            223
+          ],
+          "source": "outputs/waterway/blue-transition-approved-20261105/edge-clean-v2/blue-roar-01.png",
+          "sha256": "3a53952388a092dc719f147336e0d7baf556c4400c1baacb709d188e0c85c186",
+          "appliedFile": "../runtime/blue-roar/00.png"
+        }
+      ],
+      "durations": [
+        1000
+      ],
+      "representative": 0,
+      "note": "채택한 크기 보정 · 공중 자세 유지",
+      "sourcePivot": [
+        192,
+        232
+      ],
+      "reference": "blue-idle",
+      "sequence": [
+        0
+      ],
+      "defaultScale": 106
+    },
+    {
+      "id": "fused-idle",
+      "name": "강화 블루 · 기본",
+      "group": "강화 블루",
+      "frames": [
+        {
+          "file": "assets/fused-idle/00.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            139,
+            17,
+            246,
+            232
+          ],
+          "source": "outputs/waterway/blue-transition-approved-20261105/edge-clean-v2/fused-blue-idle.png",
+          "sha256": "0e9a137b80718ba4ae083da68f3a78fc1091e9a66deed1ec6a45348f1499d466",
+          "appliedFile": "../runtime/fused-idle/00.png"
+        }
+      ],
+      "durations": [
+        1000
+      ],
+      "representative": 0,
+      "note": "몸체와 머리 위 마법 석궁 포함",
+      "sourcePivot": [
+        192,
+        232
+      ],
+      "reference": "fused-idle",
+      "sequence": [
+        0
+      ],
+      "defaultScale": 100
+    },
+    {
+      "id": "fused-arrival",
+      "name": "강화 블루 · 포효 완료·등장 4번",
+      "group": "강화 블루",
+      "frames": [
+        {
+          "file": "assets/fused-arrival/00.png",
+          "canvas": [
+            384,
+            256
+          ],
+          "bounds": [
+            125,
+            6,
+            285,
+            230
+          ],
+          "source": "outputs/waterway/blue-transition-approved-20261105/edge-clean-v2/fused-blue-arrival-04.png",
+          "sha256": "e6b2e25ab7ccc05e63133be10d00ecb6989ab59927933479ae1d5bdd39aa1ad0",
+          "appliedFile": "../runtime/fused-arrival/00.png"
+        }
+      ],
+      "durations": [
+        1000
+      ],
+      "representative": 0,
+      "note": "주변 효과를 제거한 승인 정리본",
+      "sourcePivot": [
+        192,
+        232
+      ],
+      "reference": "fused-idle",
+      "sequence": [
+        0
+      ],
+      "defaultScale": 97
+    }
+  ]
+}

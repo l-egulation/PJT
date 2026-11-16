@@ -1,0 +1,1700 @@
+{
+  "schema": "deviant-modular-stone32-v1",
+  "pixelsPerUnit": 32,
+  "cellSize": [
+    32,
+    32
+  ],
+  "brickSize": [
+    32,
+    16
+  ],
+  "halfBrickSize": [
+    16,
+    16
+  ],
+  "mortar": 1,
+  "oneWay": {
+    "visibleHeight": 12,
+    "collisionHeight": 4,
+    "contactRow": 0
+  },
+  "pivot": [
+    0.5,
+    0.5
+  ],
+  "atlas": {
+    "file": "atlas-32.png",
+    "padding": 2,
+    "extrusion": 2,
+    "stride": 36,
+    "rects": [
+      {
+        "id": "stone-00-v0",
+        "x": 2,
+        "y": 2,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-00-v1",
+        "x": 38,
+        "y": 2,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-00-v2",
+        "x": 74,
+        "y": 2,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-00-v3",
+        "x": 110,
+        "y": 2,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-01-v0",
+        "x": 146,
+        "y": 2,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-01-v1",
+        "x": 182,
+        "y": 2,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-01-v2",
+        "x": 218,
+        "y": 2,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-01-v3",
+        "x": 254,
+        "y": 2,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-04-v0",
+        "x": 290,
+        "y": 2,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-04-v1",
+        "x": 326,
+        "y": 2,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-04-v2",
+        "x": 362,
+        "y": 2,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-04-v3",
+        "x": 398,
+        "y": 2,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-05-v0",
+        "x": 434,
+        "y": 2,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-05-v1",
+        "x": 470,
+        "y": 2,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-05-v2",
+        "x": 506,
+        "y": 2,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-05-v3",
+        "x": 542,
+        "y": 2,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-07-v0",
+        "x": 2,
+        "y": 38,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-07-v1",
+        "x": 38,
+        "y": 38,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-07-v2",
+        "x": 74,
+        "y": 38,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-07-v3",
+        "x": 110,
+        "y": 38,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-10-v0",
+        "x": 146,
+        "y": 38,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-10-v1",
+        "x": 182,
+        "y": 38,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-10-v2",
+        "x": 218,
+        "y": 38,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-10-v3",
+        "x": 254,
+        "y": 38,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-11-v0",
+        "x": 290,
+        "y": 38,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-11-v1",
+        "x": 326,
+        "y": 38,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-11-v2",
+        "x": 362,
+        "y": 38,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-11-v3",
+        "x": 398,
+        "y": 38,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-14-v0",
+        "x": 434,
+        "y": 38,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-14-v1",
+        "x": 470,
+        "y": 38,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-14-v2",
+        "x": 506,
+        "y": 38,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-14-v3",
+        "x": 542,
+        "y": 38,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-15-v0",
+        "x": 2,
+        "y": 74,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-15-v1",
+        "x": 38,
+        "y": 74,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-15-v2",
+        "x": 74,
+        "y": 74,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-15-v3",
+        "x": 110,
+        "y": 74,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-17-v0",
+        "x": 146,
+        "y": 74,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-17-v1",
+        "x": 182,
+        "y": 74,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-17-v2",
+        "x": 218,
+        "y": 74,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-17-v3",
+        "x": 254,
+        "y": 74,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-1C-v0",
+        "x": 290,
+        "y": 74,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-1C-v1",
+        "x": 326,
+        "y": 74,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-1C-v2",
+        "x": 362,
+        "y": 74,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-1C-v3",
+        "x": 398,
+        "y": 74,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-1D-v0",
+        "x": 434,
+        "y": 74,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-1D-v1",
+        "x": 470,
+        "y": 74,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-1D-v2",
+        "x": 506,
+        "y": 74,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-1D-v3",
+        "x": 542,
+        "y": 74,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-1F-v0",
+        "x": 2,
+        "y": 110,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-1F-v1",
+        "x": 38,
+        "y": 110,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-1F-v2",
+        "x": 74,
+        "y": 110,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-1F-v3",
+        "x": 110,
+        "y": 110,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-40-v0",
+        "x": 146,
+        "y": 110,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-40-v1",
+        "x": 182,
+        "y": 110,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-40-v2",
+        "x": 218,
+        "y": 110,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-40-v3",
+        "x": 254,
+        "y": 110,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-41-v0",
+        "x": 290,
+        "y": 110,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-41-v1",
+        "x": 326,
+        "y": 110,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-41-v2",
+        "x": 362,
+        "y": 110,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-41-v3",
+        "x": 398,
+        "y": 110,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-44-v0",
+        "x": 434,
+        "y": 110,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-44-v1",
+        "x": 470,
+        "y": 110,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-44-v2",
+        "x": 506,
+        "y": 110,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-44-v3",
+        "x": 542,
+        "y": 110,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-45-v0",
+        "x": 2,
+        "y": 146,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-45-v1",
+        "x": 38,
+        "y": 146,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-45-v2",
+        "x": 74,
+        "y": 146,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-45-v3",
+        "x": 110,
+        "y": 146,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-47-v0",
+        "x": 146,
+        "y": 146,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-47-v1",
+        "x": 182,
+        "y": 146,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-47-v2",
+        "x": 218,
+        "y": 146,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-47-v3",
+        "x": 254,
+        "y": 146,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-50-v0",
+        "x": 290,
+        "y": 146,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-50-v1",
+        "x": 326,
+        "y": 146,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-50-v2",
+        "x": 362,
+        "y": 146,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-50-v3",
+        "x": 398,
+        "y": 146,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-51-v0",
+        "x": 434,
+        "y": 146,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-51-v1",
+        "x": 470,
+        "y": 146,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-51-v2",
+        "x": 506,
+        "y": 146,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-51-v3",
+        "x": 542,
+        "y": 146,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-54-v0",
+        "x": 2,
+        "y": 182,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-54-v1",
+        "x": 38,
+        "y": 182,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-54-v2",
+        "x": 74,
+        "y": 182,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-54-v3",
+        "x": 110,
+        "y": 182,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-55-v0",
+        "x": 146,
+        "y": 182,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-55-v1",
+        "x": 182,
+        "y": 182,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-55-v2",
+        "x": 218,
+        "y": 182,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-55-v3",
+        "x": 254,
+        "y": 182,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-57-v0",
+        "x": 290,
+        "y": 182,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-57-v1",
+        "x": 326,
+        "y": 182,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-57-v2",
+        "x": 362,
+        "y": 182,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-57-v3",
+        "x": 398,
+        "y": 182,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-5C-v0",
+        "x": 434,
+        "y": 182,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-5C-v1",
+        "x": 470,
+        "y": 182,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-5C-v2",
+        "x": 506,
+        "y": 182,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-5C-v3",
+        "x": 542,
+        "y": 182,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-5D-v0",
+        "x": 2,
+        "y": 218,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-5D-v1",
+        "x": 38,
+        "y": 218,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-5D-v2",
+        "x": 74,
+        "y": 218,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-5D-v3",
+        "x": 110,
+        "y": 218,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-5F-v0",
+        "x": 146,
+        "y": 218,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-5F-v1",
+        "x": 182,
+        "y": 218,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-5F-v2",
+        "x": 218,
+        "y": 218,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-5F-v3",
+        "x": 254,
+        "y": 218,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-70-v0",
+        "x": 290,
+        "y": 218,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-70-v1",
+        "x": 326,
+        "y": 218,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-70-v2",
+        "x": 362,
+        "y": 218,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-70-v3",
+        "x": 398,
+        "y": 218,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-71-v0",
+        "x": 434,
+        "y": 218,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-71-v1",
+        "x": 470,
+        "y": 218,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-71-v2",
+        "x": 506,
+        "y": 218,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-71-v3",
+        "x": 542,
+        "y": 218,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-74-v0",
+        "x": 2,
+        "y": 254,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-74-v1",
+        "x": 38,
+        "y": 254,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-74-v2",
+        "x": 74,
+        "y": 254,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-74-v3",
+        "x": 110,
+        "y": 254,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-75-v0",
+        "x": 146,
+        "y": 254,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-75-v1",
+        "x": 182,
+        "y": 254,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-75-v2",
+        "x": 218,
+        "y": 254,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-75-v3",
+        "x": 254,
+        "y": 254,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-77-v0",
+        "x": 290,
+        "y": 254,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-77-v1",
+        "x": 326,
+        "y": 254,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-77-v2",
+        "x": 362,
+        "y": 254,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-77-v3",
+        "x": 398,
+        "y": 254,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-7C-v0",
+        "x": 434,
+        "y": 254,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-7C-v1",
+        "x": 470,
+        "y": 254,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-7C-v2",
+        "x": 506,
+        "y": 254,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-7C-v3",
+        "x": 542,
+        "y": 254,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-7D-v0",
+        "x": 2,
+        "y": 290,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-7D-v1",
+        "x": 38,
+        "y": 290,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-7D-v2",
+        "x": 74,
+        "y": 290,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-7D-v3",
+        "x": 110,
+        "y": 290,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-7F-v0",
+        "x": 146,
+        "y": 290,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-7F-v1",
+        "x": 182,
+        "y": 290,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-7F-v2",
+        "x": 218,
+        "y": 290,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-7F-v3",
+        "x": 254,
+        "y": 290,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-C1-v0",
+        "x": 290,
+        "y": 290,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-C1-v1",
+        "x": 326,
+        "y": 290,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-C1-v2",
+        "x": 362,
+        "y": 290,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-C1-v3",
+        "x": 398,
+        "y": 290,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-C5-v0",
+        "x": 434,
+        "y": 290,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-C5-v1",
+        "x": 470,
+        "y": 290,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-C5-v2",
+        "x": 506,
+        "y": 290,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-C5-v3",
+        "x": 542,
+        "y": 290,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-C7-v0",
+        "x": 2,
+        "y": 326,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-C7-v1",
+        "x": 38,
+        "y": 326,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-C7-v2",
+        "x": 74,
+        "y": 326,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-C7-v3",
+        "x": 110,
+        "y": 326,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-D1-v0",
+        "x": 146,
+        "y": 326,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-D1-v1",
+        "x": 182,
+        "y": 326,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-D1-v2",
+        "x": 218,
+        "y": 326,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-D1-v3",
+        "x": 254,
+        "y": 326,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-D5-v0",
+        "x": 290,
+        "y": 326,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-D5-v1",
+        "x": 326,
+        "y": 326,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-D5-v2",
+        "x": 362,
+        "y": 326,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-D5-v3",
+        "x": 398,
+        "y": 326,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-D7-v0",
+        "x": 434,
+        "y": 326,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-D7-v1",
+        "x": 470,
+        "y": 326,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-D7-v2",
+        "x": 506,
+        "y": 326,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-D7-v3",
+        "x": 542,
+        "y": 326,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-DD-v0",
+        "x": 2,
+        "y": 362,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-DD-v1",
+        "x": 38,
+        "y": 362,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-DD-v2",
+        "x": 74,
+        "y": 362,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-DD-v3",
+        "x": 110,
+        "y": 362,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-DF-v0",
+        "x": 146,
+        "y": 362,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-DF-v1",
+        "x": 182,
+        "y": 362,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-DF-v2",
+        "x": 218,
+        "y": 362,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-DF-v3",
+        "x": 254,
+        "y": 362,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-F1-v0",
+        "x": 290,
+        "y": 362,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-F1-v1",
+        "x": 326,
+        "y": 362,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-F1-v2",
+        "x": 362,
+        "y": 362,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-F1-v3",
+        "x": 398,
+        "y": 362,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-F5-v0",
+        "x": 434,
+        "y": 362,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-F5-v1",
+        "x": 470,
+        "y": 362,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-F5-v2",
+        "x": 506,
+        "y": 362,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-F5-v3",
+        "x": 542,
+        "y": 362,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-F7-v0",
+        "x": 2,
+        "y": 398,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-F7-v1",
+        "x": 38,
+        "y": 398,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-F7-v2",
+        "x": 74,
+        "y": 398,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-F7-v3",
+        "x": 110,
+        "y": 398,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-FD-v0",
+        "x": 146,
+        "y": 398,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-FD-v1",
+        "x": 182,
+        "y": 398,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-FD-v2",
+        "x": 218,
+        "y": 398,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-FD-v3",
+        "x": 254,
+        "y": 398,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-FF-v0",
+        "x": 290,
+        "y": 398,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-FF-v1",
+        "x": 326,
+        "y": 398,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-FF-v2",
+        "x": 362,
+        "y": 398,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "stone-FF-v3",
+        "x": 398,
+        "y": 398,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "single-free-free",
+        "x": 434,
+        "y": 398,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "single-wall-free",
+        "x": 470,
+        "y": 398,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "single-free-wall",
+        "x": 506,
+        "y": 398,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "single-wall-wall",
+        "x": 542,
+        "y": 398,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "left-free",
+        "x": 2,
+        "y": 434,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "left-wall",
+        "x": 38,
+        "y": 434,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "middle-a",
+        "x": 74,
+        "y": 434,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "middle-b",
+        "x": 110,
+        "y": 434,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "middle-c",
+        "x": 146,
+        "y": 434,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "right-free",
+        "x": 182,
+        "y": 434,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": "right-wall",
+        "x": 218,
+        "y": 434,
+        "width": 32,
+        "height": 32
+      }
+    ]
+  },
+  "canonicalLookup": [
+    0,
+    1,
+    0,
+    1,
+    4,
+    5,
+    4,
+    7,
+    0,
+    1,
+    0,
+    1,
+    4,
+    5,
+    4,
+    7,
+    16,
+    17,
+    16,
+    17,
+    20,
+    21,
+    20,
+    23,
+    16,
+    17,
+    16,
+    17,
+    28,
+    29,
+    28,
+    31,
+    0,
+    1,
+    0,
+    1,
+    4,
+    5,
+    4,
+    7,
+    0,
+    1,
+    0,
+    1,
+    4,
+    5,
+    4,
+    7,
+    16,
+    17,
+    16,
+    17,
+    20,
+    21,
+    20,
+    23,
+    16,
+    17,
+    16,
+    17,
+    28,
+    29,
+    28,
+    31,
+    64,
+    65,
+    64,
+    65,
+    68,
+    69,
+    68,
+    71,
+    64,
+    65,
+    64,
+    65,
+    68,
+    69,
+    68,
+    71,
+    80,
+    81,
+    80,
+    81,
+    84,
+    85,
+    84,
+    87,
+    80,
+    81,
+    80,
+    81,
+    92,
+    93,
+    92,
+    95,
+    64,
+    65,
+    64,
+    65,
+    68,
+    69,
+    68,
+    71,
+    64,
+    65,
+    64,
+    65,
+    68,
+    69,
+    68,
+    71,
+    112,
+    113,
+    112,
+    113,
+    116,
+    117,
+    116,
+    119,
+    112,
+    113,
+    112,
+    113,
+    124,
+    125,
+    124,
+    127,
+    0,
+    1,
+    0,
+    1,
+    4,
+    5,
+    4,
+    7,
+    0,
+    1,
+    0,
+    1,
+    4,
+    5,
+    4,
+    7,
+    16,
+    17,
+    16,
+    17,
+    20,
+    21,
+    20,
+    23,
+    16,
+    17,
+    16,
+    17,
+    28,
+    29,
+    28,
+    31,
+    0,
+    1,
+    0,
+    1,
+    4,
+    5,
+    4,
+    7,
+    0,
+    1,
+    0,
+    1,
+    4,
+    5,
+    4,
+    7,
+    16,
+    17,
+    16,
+    17,
+    20,
+    21,
+    20,
+    23,
+    16,
+    17,
+    16,
+    17,
+    28,
+    29,
+    28,
+    31,
+    64,
+    193,
+    64,
+    193,
+    68,
+    197,
+    68,
+    199,
+    64,
+    193,
+    64,
+    193,
+    68,
+    197,
+    68,
+    199,
+    80,
+    209,
+    80,
+    209,
+    84,
+    213,
+    84,
+    215,
+    80,
+    209,
+    80,
+    209,
+    92,
+    221,
+    92,
+    223,
+    64,
+    193,
+    64,
+    193,
+    68,
+    197,
+    68,
+    199,
+    64,
+    193,
+    64,
+    193,
+    68,
+    197,
+    68,
+    199,
+    112,
+    241,
+    112,
+    241,
+    116,
+    245,
+    116,
+    247,
+    112,
+    241,
+    112,
+    241,
+    124,
+    253,
+    124,
+    255
+  ],
+  "platformNames": [
+    "single-free-free",
+    "single-wall-free",
+    "single-free-wall",
+    "single-wall-wall",
+    "left-free",
+    "left-wall",
+    "middle-a",
+    "middle-b",
+    "middle-c",
+    "right-free",
+    "right-wall"
+  ],
+  "sourceNormalization": "Generated material crops normalized once to 32x16, 16x16 and 32x8. No runtime scaling.",
+  "integration": "not applied"
+}

@@ -1,0 +1,94 @@
+{
+ "status": "candidate_unapproved",
+ "body": {
+  "rule": "charging: F046 0~0.05s then hold F048 (aim) until release; release: F049 0.07*k, F051 0.17*k, F052 0.17*k with k=0.3/0.41; auto-fire at 0.8 so no held full state",
+  "no_new_character_art": true
+ },
+ "orb": {
+  "pivot": "center",
+  "stages_by_amount": [
+   0,
+   0.25,
+   0.5,
+   0.75,
+   1
+  ],
+  "seconds": [
+   0.06,
+   0.06
+  ],
+  "anchor": "F048 muzzle (1.3125,0.875) + 0.12 forward"
+ },
+ "suck": {
+  "pivot": "center",
+  "seconds": [
+   0.05,
+   0.05,
+   0.05
+  ],
+  "while": "charging, amount<1"
+ },
+ "full": {
+  "pivot": "center",
+  "seconds": [
+   0.03,
+   0.04,
+   0.05
+  ],
+  "trigger": "amount reaches 1 (0.8s; auto-fire same instant)"
+ },
+ "shot": {
+  "pivot_px": [
+   28,
+   12
+  ],
+  "sizes": {
+   "S": [
+    0,
+    0.34
+   ],
+   "M": [
+    0.34,
+    0.67
+   ],
+   "L": [
+    0.67,
+    1
+   ]
+  },
+  "seconds": [
+   0.04,
+   0.04
+  ],
+  "note": "visual diameter tracks collision 0.3->0.6; hit box unchanged"
+ },
+ "pop": {
+  "amount<0.5": "basic approved pop (launcher-basic-breakdown-20261106/candidate-v1/pop)",
+  "amount>=0.5": "bigpop",
+  "bigpop_pivot_px": [
+   8,
+   36
+  ],
+  "bigpop_seconds": [
+   0.03,
+   0.04,
+   0.05,
+   0.06
+  ],
+  "anchor": "fire-time F049 muzzle (1.15625,0.875), world-fixed"
+ },
+ "burst": {
+  "pivot": "center",
+  "seconds": [
+   0.03,
+   0.04,
+   0.05,
+   0.06,
+   0.07,
+   0.08
+  ],
+  "covers": "2x2 impact box (64px) with diagonal spokes to corners",
+  "replaces": "orange translucent debug square",
+  "trigger": "enemy hit only (terrain/expiry no burst, same as rule)"
+ }
+}

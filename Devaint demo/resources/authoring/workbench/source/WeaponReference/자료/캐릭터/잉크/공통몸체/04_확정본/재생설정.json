@@ -1,0 +1,322 @@
+{
+  "version": 1,
+  "status": "사용자 최종확정",
+  "canvas": [
+    128,
+    128
+  ],
+  "frame_count": 12,
+  "palette": [
+    "#FDEEDA",
+    "#D2B396",
+    "#1B1616",
+    "#02648C",
+    "#025673",
+    "#EBA516"
+  ],
+  "motions": {
+    "대기": {
+      "canvas": [
+        128,
+        128
+      ],
+      "frame_count": 12,
+      "sheet_grid": [
+        4,
+        3
+      ],
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": true,
+      "on_complete": "loop",
+      "embedded_vertical_motion": false,
+      "embedded_horizontal_motion": false,
+      "frames": [
+        "대기/01.png",
+        "대기/02.png",
+        "대기/03.png",
+        "대기/04.png",
+        "대기/05.png",
+        "대기/06.png",
+        "대기/07.png",
+        "대기/08.png",
+        "대기/09.png",
+        "대기/10.png",
+        "대기/11.png",
+        "대기/12.png"
+      ]
+    },
+    "걷기": {
+      "canvas": [
+        128,
+        128
+      ],
+      "frame_count": 12,
+      "sheet_grid": [
+        4,
+        3
+      ],
+      "durations_ms": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "loop": true,
+      "on_complete": "loop",
+      "embedded_vertical_motion": false,
+      "embedded_horizontal_motion": false,
+      "frames": [
+        "걷기/01.png",
+        "걷기/02.png",
+        "걷기/03.png",
+        "걷기/04.png",
+        "걷기/05.png",
+        "걷기/06.png",
+        "걷기/07.png",
+        "걷기/08.png",
+        "걷기/09.png",
+        "걷기/10.png",
+        "걷기/11.png",
+        "걷기/12.png"
+      ]
+    },
+    "달리기": {
+      "canvas": [
+        128,
+        128
+      ],
+      "frame_count": 12,
+      "sheet_grid": [
+        4,
+        3
+      ],
+      "durations_ms": [
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60
+      ],
+      "loop": true,
+      "on_complete": "loop",
+      "embedded_vertical_motion": false,
+      "embedded_horizontal_motion": false,
+      "frames": [
+        "달리기/01.png",
+        "달리기/02.png",
+        "달리기/03.png",
+        "달리기/04.png",
+        "달리기/05.png",
+        "달리기/06.png",
+        "달리기/07.png",
+        "달리기/08.png",
+        "달리기/09.png",
+        "달리기/10.png",
+        "달리기/11.png",
+        "달리기/12.png"
+      ]
+    },
+    "점프": {
+      "canvas": [
+        128,
+        128
+      ],
+      "frame_count": 12,
+      "sheet_grid": [
+        4,
+        3
+      ],
+      "durations_ms": [
+        60,
+        70,
+        70,
+        60,
+        70,
+        80,
+        100,
+        70,
+        60,
+        60,
+        70,
+        90
+      ],
+      "loop": false,
+      "on_complete": "idle",
+      "embedded_vertical_motion": true,
+      "embedded_horizontal_motion": false,
+      "frames": [
+        "점프/01.png",
+        "점프/02.png",
+        "점프/03.png",
+        "점프/04.png",
+        "점프/05.png",
+        "점프/06.png",
+        "점프/07.png",
+        "점프/08.png",
+        "점프/09.png",
+        "점프/10.png",
+        "점프/11.png",
+        "점프/12.png"
+      ]
+    },
+    "낙하착지": {
+      "canvas": [
+        128,
+        128
+      ],
+      "frame_count": 12,
+      "sheet_grid": [
+        4,
+        3
+      ],
+      "durations_ms": [
+        70,
+        60,
+        60,
+        60,
+        50,
+        50,
+        70,
+        60,
+        70,
+        70,
+        70,
+        80
+      ],
+      "loop": false,
+      "on_complete": "idle",
+      "embedded_vertical_motion": true,
+      "embedded_horizontal_motion": false,
+      "frames": [
+        "낙하착지/01.png",
+        "낙하착지/02.png",
+        "낙하착지/03.png",
+        "낙하착지/04.png",
+        "낙하착지/05.png",
+        "낙하착지/06.png",
+        "낙하착지/07.png",
+        "낙하착지/08.png",
+        "낙하착지/09.png",
+        "낙하착지/10.png",
+        "낙하착지/11.png",
+        "낙하착지/12.png"
+      ]
+    },
+    "대시": {
+      "canvas": [
+        128,
+        128
+      ],
+      "frame_count": 12,
+      "sheet_grid": [
+        4,
+        3
+      ],
+      "durations_ms": [
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "loop": false,
+      "on_complete": "idle",
+      "embedded_vertical_motion": false,
+      "embedded_horizontal_motion": true,
+      "frames": [
+        "대시/01.png",
+        "대시/02.png",
+        "대시/03.png",
+        "대시/04.png",
+        "대시/05.png",
+        "대시/06.png",
+        "대시/07.png",
+        "대시/08.png",
+        "대시/09.png",
+        "대시/10.png",
+        "대시/11.png",
+        "대시/12.png"
+      ]
+    },
+    "죽음_2": {
+      "canvas": [
+        128,
+        128
+      ],
+      "frame_count": 12,
+      "sheet_grid": [
+        4,
+        3
+      ],
+      "durations_ms": [
+        80,
+        90,
+        90,
+        100,
+        100,
+        90,
+        90,
+        70,
+        70,
+        90,
+        100,
+        180
+      ],
+      "loop": false,
+      "on_complete": "hold_last",
+      "embedded_vertical_motion": false,
+      "embedded_horizontal_motion": false,
+      "frames": [
+        "죽음_2/01.png",
+        "죽음_2/02.png",
+        "죽음_2/03.png",
+        "죽음_2/04.png",
+        "죽음_2/05.png",
+        "죽음_2/06.png",
+        "죽음_2/07.png",
+        "죽음_2/08.png",
+        "죽음_2/09.png",
+        "죽음_2/10.png",
+        "죽음_2/11.png",
+        "죽음_2/12.png"
+      ]
+    }
+  },
+  "revision": "2026-10-13 부위별 픽셀 보정",
+  "confirmed_date": "2026-10-13"
+}

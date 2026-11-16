@@ -1,0 +1,35 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>6번 레이저 결 제거 · 합성 폭발</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,'Malgun Gothic',sans-serif;--bg:#121416;--panel:#1b1f22;--line:#343b40;--text:#e8ebed;--muted:#a3adb3;--accent:#f0b56a;--accent-ink:#2a1a06}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text)}main{max-width:1240px;margin:auto;padding:28px 20px 60px}
+h1{font-size:28px;margin:6px 0 8px;letter-spacing:-.5px}h2{font-size:17px;margin:0 0 12px}p{line-height:1.6}.muted{color:var(--muted)}.eyebrow{font-size:11px;letter-spacing:3px;color:var(--accent)}
+button,select,input{font:inherit}button{border:1px solid var(--line);border-radius:8px;background:#242a2e;color:var(--text);padding:9px 12px;cursor:pointer}button:hover{border-color:var(--accent)}button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);font-weight:700}.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.tabs button[aria-selected=true]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);font-weight:700}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:18px}.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px}.card.active{border-color:var(--accent);box-shadow:inset 3px 0 var(--accent)}.card.current{border-style:dashed}
+.top{display:flex;justify-content:space-between;align-items:center;gap:6px}.num{font-size:12px;color:var(--muted)}.voice{font-size:23px;font-weight:800}.card h3{margin:8px 0 2px;font-size:15px}.card p{font-size:13px;color:#c3cbd0;margin:6px 0 10px}.src{font-size:11px;color:var(--muted);overflow-wrap:anywhere}
+.wave{height:34px;display:flex;align-items:center;gap:1px;margin:8px 0}.wave i{flex:1;background:#8a7a62;border-radius:1px;display:block}.card button{font-size:12px;padding:7px 9px}
+.star{background:transparent;border:0;font-size:20px;padding:0 4px}.star.on{color:var(--accent)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;position:sticky;top:12px;align-self:start}
+.field{display:flex;flex-direction:column;gap:6px;margin:12px 0;font-size:13px}.field input{width:100%;accent-color:var(--accent)}.val{float:right;color:var(--accent)}
+.status{min-height:42px;font-size:13px;color:var(--accent);margin:10px 0;line-height:1.5}.note{font-size:12px;color:var(--muted);line-height:1.6}
+.ctx{margin:10px 0;padding:10px;border:1px solid var(--line);border-radius:9px;background:#161a1c}.ctx strong{font-size:13px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.panel{position:static;grid-row:1}}@media(max-width:520px){main{padding:18px 16px}h1{font-size:23px}}
+</style>
+<main><div class="eyebrow">DEVIANT / EXPLOSION CANDIDATES</div><h1>6번 레이저 결 제거 · 합성 폭발</h1>
+<p class="muted">고르신 6번에서 레이저처럼 들리는 부분, 즉 아래로 미끄러지는 음정과 그 배음만 골라 뺀 안(그대로·조금 어둡게)과, 참고 영상 측정값대로 코드에서 직접 만든 합성 폭발 2개입니다. 크기는 지금 소리와 같게 맞췄습니다. 「참고 파일 불러오기」로 영상과 A/B 할 수 있습니다. 크기는 그 자리의 지금 소리와 같게 맞췄으며, 게임에는 적용하지 않았습니다.</p>
+<div class="row"><button id="export">선택 파일 저장</button><button id="import">선택 파일 불러오기</button><input id="importFile" type="file" accept=".json,application/json" hidden></div>
+<div id="tabs" class="tabs" role="tablist"></div>
+<div class="layout"><section><p id="uses" class="note"></p><div id="cards" class="cards"></div></section>
+<aside class="panel"><h2>듣기</h2><div id="selected" style="font-weight:700;font-size:17px"></div>
+<div class="row" style="margin-top:10px"><button id="solo" class="primary">단독</button><button id="ab">지금 소리 → 이 후보</button><button id="stop">정지</button></div>
+<div class="row" style="margin-top:8px"><button id="burst">3개 겹침 · 0.15초 간격</button><button id="all">지금 → 후보 전부 순서대로</button></div>
+<div class="ctx"><strong>참고 소리 (내 녹화 파일)</strong><div class="row" style="margin-top:6px"><button id="refLoad">참고 파일 불러오기</button><button id="refPlay" disabled>참고 듣기</button><button id="refAB" disabled>참고 → 이 후보</button></div><p id="refInfo" class="note">영상(mp4)이나 음원 파일을 고르면 이 브라우저 안에서만 재생합니다. 파일은 저장되지 않습니다.</p><input id="refFile" type="file" accept="audio/*,video/*" hidden></div><div id="contexts"></div>
+<div id="status" class="status" role="status" aria-live="polite">후보를 고른 뒤 재생하세요.</div>
+<label class="field">폭발음 음량 <span id="expVal" class="val"></span><input id="expGain" type="range" min="0" max="200" step="5" value="100"></label>
+<label class="field">공격음 음량 <span id="atkVal" class="val"></span><input id="atkGain" type="range" min="0" max="150" step="5" value="100"></label>
+<label class="field">전체 음량 <span id="masVal" class="val"></span><input id="masGain" type="range" min="0" max="100" step="5" value="75"></label>
+<label class="field">메모<textarea id="memo" rows="3" style="width:100%;background:#15181a;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px"></textarea></label>
+<p class="note">폭발음 음량은 후보와 지금 소리에 똑같이 적용됩니다. 공격음 100%는 게임 기본 80%입니다. 공격 뒤 폭발 시각은 비교용 예시이며, 실제 게임에서는 거리와 충돌에 따라 달라집니다. 겹침 재생은 출력 리미터를 지납니다.</p></aside></div>
+</main><script id="data" type="application/json">__DATA__</script><script>__APP__</script></html>

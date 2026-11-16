@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 2,
+  "maximumEventAge": 0.25,
+  "basic": {
+    "segments": [
+      {
+        "low": 0,
+        "high": 0.055,
+        "duration": 0.07,
+        "curve": "decay"
+      }
+    ]
+  },
+  "special": {
+    "segments": [
+      {
+        "low": 0.07400000000000001,
+        "high": 0.083,
+        "duration": 0.12,
+        "curve": "decay"
+      }
+    ]
+  },
+  "dash": {
+    "segments": [
+      {
+        "low": 0.031,
+        "high": 0.13699999999999998,
+        "duration": 0.08070000000000001,
+        "curve": "decay"
+      }
+    ]
+  },
+  "jump": {
+    "segments": [
+      {
+        "low": 0,
+        "high": 0.12,
+        "duration": 0.05,
+        "curve": "decay"
+      }
+    ]
+  },
+  "hit": {
+    "segments": [
+      {
+        "low": 0.055,
+        "high": 0.142,
+        "duration": 0.1,
+        "curve": "decay"
+      }
+    ]
+  },
+  "heavyHit": {
+    "segments": [
+      {
+        "low": 0.2,
+        "high": 0.204,
+        "duration": 0.09720000000000001,
+        "curve": "decay"
+      }
+    ]
+  },
+  "hurt": {
+    "segments": [
+      {
+        "low": 0.391,
+        "high": 0.395,
+        "duration": 0.0998,
+        "curve": "decay"
+      },
+      {
+        "low": 0,
+        "high": 0,
+        "duration": 0.0985,
+        "curve": "hold"
+      },
+      {
+        "low": 0.405,
+        "high": 0.4,
+        "duration": 0.05,
+        "curve": "decay"
+      }
+    ]
+  },
+  "parry": {
+    "segments": [
+      {
+        "low": 0,
+        "high": 0.495,
+        "duration": 0.0222,
+        "curve": "hold"
+      },
+      {
+        "low": 0,
+        "high": 0,
+        "duration": 0.0184,
+        "curve": "hold"
+      },
+      {
+        "low": 0.593,
+        "high": 0,
+        "duration": 0.0146,
+        "curve": "hold"
+      },
+      {
+        "low": 0,
+        "high": 0,
+        "duration": 0.0985,
+        "curve": "hold"
+      },
+      {
+        "low": 0,
+        "high": 0.4,
+        "duration": 0.05,
+        "curve": "hold"
+      }
+    ]
+  },
+  "triggerStart": 0,
+  "readyStrength": 0,
+  "chargingStrength": 0,
+  "kickStrength": 5,
+  "kickFrequency": 29,
+  "kickDuration": 0.15
+}

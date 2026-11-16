@@ -1,0 +1,176 @@
+{
+  "schema": "stage2-monster-damage-reaction-v1",
+  "status": "user-approved-design-runtime-integrated",
+  "baselinePlayerMaxHP": 100,
+  "playerReactionMeaning": "movement input lock only; existing attack/jump/dash policies remain in force",
+  "monsters": {
+    "K4": {
+      "attacks": {
+        "spray": {
+          "damagePerHit": 10,
+          "playerMovementLockSeconds": 0.06,
+          "maxHitsPerTarget": 3,
+          "hitIntervalSeconds": 0.3,
+          "activeSeconds": 0.65,
+          "damageOnFirstOverlap": true,
+          "resetHitCountOnReentry": false
+        }
+      },
+      "playerKnockback": {
+        "mode": "small-push-each-hit",
+        "distanceUnits": 0.15,
+        "durationSeconds": 0.08
+      },
+      "enemyReaction": {
+        "hitstunSeconds": 0.3,
+        "cancelBodyAttackOnHit": true
+      },
+      "closeRangeBehavior": {
+        "voluntaryRetreat": false,
+        "attack": "continue-normal-spray",
+        "contactDamage": false,
+        "expandOrMoveAttackBoxTowardBody": false,
+        "minimumRangeSuppression": false
+      }
+    },
+    "B3": {
+      "attacks": {
+        "charge": {
+          "damagePerHit": 12,
+          "playerMovementLockSeconds": null,
+          "maxHitsPerTarget": 1,
+          "damageMoment": "first-contact",
+          "control": "carry-until-charge-stops"
+        },
+        "slam": {
+          "damagePerHit": 22,
+          "playerMovementLockSeconds": 0.18,
+          "maxHitsPerTarget": 1,
+          "activeSeconds": 0.15
+        }
+      },
+      "carry": {
+        "releaseAt": "charge-stop",
+        "evadeDuringSlamWindup": true,
+        "playerBlockedByTerrain": {
+          "charge": "stop-immediately",
+          "carry": "release-immediately",
+          "next": "slam-windup-450ms-with-escape-opportunity",
+          "extraContactDamage": false
+        }
+      },
+      "enemyReaction": {
+        "hitstunSeconds": 0.3,
+        "cancelBodyAttackOnHit": true
+      },
+      "chargeMovement": {
+        "chargeSpeed": 12,
+        "chargeMaxTravelUnits": 6,
+        "chargeMaxTravelSeconds": 0.5,
+        "chargeStopMode": "fixed-distance",
+        "chargeFacing": "locked-at-charge-start",
+        "stopBeforeWall": true,
+        "stopBeforeLedge": true,
+        "releaseCarryOnStop": true,
+        "afterStop": "slam-windup-with-player-escape-opportunity"
+      }
+    },
+    "M3": {
+      "attacks": {
+        "thrust": {
+          "damagePerHit": 8,
+          "playerMovementLockSeconds": 0.06,
+          "maxHitsPerTarget": 3,
+          "thrustStartPeriodSeconds": 0.15,
+          "maxHitsPerTargetPerThrust": 1,
+          "activeSecondsPerThrust": 0.07,
+          "activeWindowSource": "data/combat/stage2_monster_attack_timing.json"
+        }
+      },
+      "playerKnockback": {
+        "mode": "small-push-each-hit",
+        "distanceUnits": 0.15,
+        "durationSeconds": 0.08
+      },
+      "enemyReaction": {
+        "hitstunSeconds": 0.3,
+        "cancelBodyAttackOnHit": true
+      }
+    },
+    "R-selected": {
+      "attacks": {
+        "projectile": {
+          "damagePerHit": 14,
+          "playerMovementLockSeconds": 0.12,
+          "maxHitsPerTargetPerProjectile": 1
+        }
+      },
+      "enemyReaction": {
+        "hitstunSeconds": 0.3,
+        "cancelBodyAttackOnHit": true
+      },
+      "projectileCancellation": {
+        "beforeRelease": "body-hit-cancels-throw",
+        "afterReleaseOnCasterHit": "continue-flight",
+        "afterCasterDeath": "continue-flight-and-damage"
+      },
+      "directHit": {
+        "damageApplications": 1,
+        "projectile": "despawn-immediately",
+        "groundHazard": {
+          "create": false
+        }
+      }
+    },
+    "H3": {
+      "attacks": {
+        "orb": {
+          "damagePerHit": 15,
+          "playerMovementLockSeconds": 0.1,
+          "maxHitsPerTargetPerOrb": 1
+        },
+        "groundHazard": {
+          "damagePerHit": 5,
+          "playerMovementLockSeconds": 0,
+          "tickIntervalSeconds": 0.5,
+          "durationSeconds": 4.0,
+          "firstDamageDelaySeconds": 0.5,
+          "overlapPolicy": "shared-per-player-cooldown-across-all-H3-hazards",
+          "sharedPlayerDamageIntervalSeconds": 0.5,
+          "damagePerSharedTick": 5,
+          "perCasterLimitMode": "unlimited",
+          "maxActiveHazardsPerCaster": null,
+          "waitForExistingHazardsToExpireBeforeNextAttack": false,
+          "playerEligibility": {
+            "mustBeGrounded": true,
+            "mustOverlapHazardBox": true,
+            "airborneDamage": false
+          }
+        }
+      },
+      "enemyReaction": {
+        "hitstunSeconds": 0.3,
+        "cancelBodyAttackOnHit": false
+      },
+      "attackContinuation": "caster hit does not cancel attack",
+      "hitstunVsAttackClock": "movement-stops-for-hitstun-but-orb-formation-and-release-clock-continues",
+      "deathCleanup": "remove-all-remaining-orbs-and-ground-hazards",
+      "directHit": {
+        "damageApplications": 1,
+        "projectile": "despawn-immediately",
+        "groundHazard": {
+          "create": true,
+          "floorSelection": "nearest-floor-directly-below-direct-hit-position",
+          "referenceTime": "direct-hit-time",
+          "usesOriginallyAimedFloor": false,
+          "noValidFloor": "skip-hazard-creation-retain-direct-hit-damage"
+        }
+      }
+    }
+  },
+  "unresolved": [
+    "remaining sprite-to-phase mapping outside M3"
+  ],
+  "statsSource": "data/combat/stage2_monster_stats.json",
+  "projectileRulesSource": "data/combat/stage2_projectile_rules.json"
+}

@@ -1,0 +1,3516 @@
+{
+  "schema": 1,
+  "bodyReferenceHeightPx": 88,
+  "ppu": 32,
+  "teleportVanishMs": 650,
+  "teleportArrivalMs": 770,
+  "teleportHitMs": 1020,
+  "teleportEndMs": 1650,
+  "rockWrapMs": 1455,
+  "rockHitMs": 1500,
+  "rockBodyEndMs": 2210,
+  "fragmentAxes": [
+    27.5263006994862,
+    11.930679309181926,
+    32.83266581478722,
+    -35.387815736171405,
+    22.547865691508292
+  ],
+  "debris": {
+    "source": "debris-5-atlas.png",
+    "cell": [
+      16,
+      16
+    ],
+    "pivot": [
+      8,
+      8
+    ],
+    "gravity": 3200,
+    "impactTimesMs": [
+      1000,
+      1500,
+      2500
+    ],
+    "bursts": [
+      {
+        "attack": 1,
+        "count": 10,
+        "particles": [
+          {
+            "image": 0,
+            "delayMs": 0,
+            "vx": -80,
+            "vy": 240,
+            "scale": 0.32,
+            "angle": 0.0,
+            "spin": -9,
+            "flightMs": 150,
+            "originX": 0.0
+          },
+          {
+            "image": 1,
+            "delayMs": 5,
+            "vx": 193,
+            "vy": 377,
+            "scale": 0.69,
+            "angle": 2.399,
+            "spin": 11,
+            "flightMs": 236,
+            "originX": 3.5
+          },
+          {
+            "image": 2,
+            "delayMs": 10,
+            "vx": -306,
+            "vy": 314,
+            "scale": 0.56,
+            "angle": 4.798,
+            "spin": -13,
+            "flightMs": 196,
+            "originX": -7.0
+          },
+          {
+            "image": 3,
+            "delayMs": 0,
+            "vx": 419,
+            "vy": 251,
+            "scale": 0.43,
+            "angle": 0.914,
+            "spin": 15,
+            "flightMs": 157,
+            "originX": 10.5
+          },
+          {
+            "image": 4,
+            "delayMs": 5,
+            "vx": -112,
+            "vy": 388,
+            "scale": 0.8,
+            "angle": 3.313,
+            "spin": -17,
+            "flightMs": 242,
+            "originX": 0.0
+          },
+          {
+            "image": 0,
+            "delayMs": 10,
+            "vx": 225,
+            "vy": 325,
+            "scale": 0.67,
+            "angle": 5.712,
+            "spin": 9,
+            "flightMs": 203,
+            "originX": 3.5
+          },
+          {
+            "image": 1,
+            "delayMs": 0,
+            "vx": -338,
+            "vy": 262,
+            "scale": 0.54,
+            "angle": 1.828,
+            "spin": -11,
+            "flightMs": 164,
+            "originX": -7.0
+          },
+          {
+            "image": 2,
+            "delayMs": 5,
+            "vx": 451,
+            "vy": 399,
+            "scale": 0.41,
+            "angle": 4.227,
+            "spin": 13,
+            "flightMs": 249,
+            "originX": 10.5
+          },
+          {
+            "image": 3,
+            "delayMs": 10,
+            "vx": -144,
+            "vy": 336,
+            "scale": 0.78,
+            "angle": 0.343,
+            "spin": -15,
+            "flightMs": 210,
+            "originX": 0.0
+          },
+          {
+            "image": 4,
+            "delayMs": 0,
+            "vx": 257,
+            "vy": 273,
+            "scale": 0.65,
+            "angle": 2.742,
+            "spin": 17,
+            "flightMs": 171,
+            "originX": 3.5
+          }
+        ]
+      },
+      {
+        "attack": 2,
+        "count": 12,
+        "particles": [
+          {
+            "image": 0,
+            "delayMs": 0,
+            "vx": -86.4,
+            "vy": 259.2,
+            "scale": 0.32,
+            "angle": 0.0,
+            "spin": -9,
+            "flightMs": 162,
+            "originX": 0.0
+          },
+          {
+            "image": 1,
+            "delayMs": 5,
+            "vx": 208.44,
+            "vy": 407.16,
+            "scale": 0.69,
+            "angle": 2.399,
+            "spin": 11,
+            "flightMs": 254,
+            "originX": 3.5
+          },
+          {
+            "image": 2,
+            "delayMs": 10,
+            "vx": -330.48,
+            "vy": 339.12,
+            "scale": 0.56,
+            "angle": 4.798,
+            "spin": -13,
+            "flightMs": 212,
+            "originX": -7.0
+          },
+          {
+            "image": 3,
+            "delayMs": 0,
+            "vx": 452.52,
+            "vy": 271.08,
+            "scale": 0.43,
+            "angle": 0.914,
+            "spin": 15,
+            "flightMs": 169,
+            "originX": 10.5
+          },
+          {
+            "image": 4,
+            "delayMs": 5,
+            "vx": -120.96,
+            "vy": 419.04,
+            "scale": 0.8,
+            "angle": 3.313,
+            "spin": -17,
+            "flightMs": 262,
+            "originX": 0.0
+          },
+          {
+            "image": 0,
+            "delayMs": 10,
+            "vx": 243.0,
+            "vy": 351.0,
+            "scale": 0.67,
+            "angle": 5.712,
+            "spin": 9,
+            "flightMs": 219,
+            "originX": 3.5
+          },
+          {
+            "image": 1,
+            "delayMs": 0,
+            "vx": -365.04,
+            "vy": 282.96,
+            "scale": 0.54,
+            "angle": 1.828,
+            "spin": -11,
+            "flightMs": 177,
+            "originX": -7.0
+          },
+          {
+            "image": 2,
+            "delayMs": 5,
+            "vx": 487.08,
+            "vy": 430.92,
+            "scale": 0.41,
+            "angle": 4.227,
+            "spin": 13,
+            "flightMs": 269,
+            "originX": 10.5
+          },
+          {
+            "image": 3,
+            "delayMs": 10,
+            "vx": -155.52,
+            "vy": 362.88,
+            "scale": 0.78,
+            "angle": 0.343,
+            "spin": -15,
+            "flightMs": 227,
+            "originX": 0.0
+          },
+          {
+            "image": 4,
+            "delayMs": 0,
+            "vx": 277.56,
+            "vy": 294.84,
+            "scale": 0.65,
+            "angle": 2.742,
+            "spin": 17,
+            "flightMs": 184,
+            "originX": 3.5
+          },
+          {
+            "image": 0,
+            "delayMs": 5,
+            "vx": -399.6,
+            "vy": 442.8,
+            "scale": 0.52,
+            "angle": 5.141,
+            "spin": -9,
+            "flightMs": 277,
+            "originX": -7.0
+          },
+          {
+            "image": 1,
+            "delayMs": 10,
+            "vx": 521.64,
+            "vy": 374.76,
+            "scale": 0.39,
+            "angle": 1.257,
+            "spin": 11,
+            "flightMs": 234,
+            "originX": 10.5
+          }
+        ]
+      },
+      {
+        "attack": 3,
+        "count": 18,
+        "particles": [
+          {
+            "image": 0,
+            "delayMs": 0,
+            "vx": -100.0,
+            "vy": 300.0,
+            "scale": 0.38,
+            "angle": 0.0,
+            "spin": -9,
+            "flightMs": 188,
+            "originX": 0.0
+          },
+          {
+            "image": 1,
+            "delayMs": 5,
+            "vx": 241.25,
+            "vy": 471.25,
+            "scale": 0.83,
+            "angle": 2.399,
+            "spin": 11,
+            "flightMs": 295,
+            "originX": 3.5
+          },
+          {
+            "image": 2,
+            "delayMs": 10,
+            "vx": -382.5,
+            "vy": 392.5,
+            "scale": 0.67,
+            "angle": 4.798,
+            "spin": -13,
+            "flightMs": 245,
+            "originX": -7.0
+          },
+          {
+            "image": 3,
+            "delayMs": 0,
+            "vx": 523.75,
+            "vy": 313.75,
+            "scale": 0.52,
+            "angle": 0.914,
+            "spin": 15,
+            "flightMs": 196,
+            "originX": 10.5
+          },
+          {
+            "image": 4,
+            "delayMs": 5,
+            "vx": -140.0,
+            "vy": 485.0,
+            "scale": 0.96,
+            "angle": 3.313,
+            "spin": -17,
+            "flightMs": 303,
+            "originX": 0.0
+          },
+          {
+            "image": 0,
+            "delayMs": 10,
+            "vx": 281.25,
+            "vy": 406.25,
+            "scale": 0.8,
+            "angle": 5.712,
+            "spin": 9,
+            "flightMs": 254,
+            "originX": 3.5
+          },
+          {
+            "image": 1,
+            "delayMs": 0,
+            "vx": -422.5,
+            "vy": 327.5,
+            "scale": 0.65,
+            "angle": 1.828,
+            "spin": -11,
+            "flightMs": 205,
+            "originX": -7.0
+          },
+          {
+            "image": 2,
+            "delayMs": 5,
+            "vx": 563.75,
+            "vy": 498.75,
+            "scale": 0.49,
+            "angle": 4.227,
+            "spin": 13,
+            "flightMs": 312,
+            "originX": 10.5
+          },
+          {
+            "image": 3,
+            "delayMs": 10,
+            "vx": -180.0,
+            "vy": 420.0,
+            "scale": 0.94,
+            "angle": 0.343,
+            "spin": -15,
+            "flightMs": 262,
+            "originX": 0.0
+          },
+          {
+            "image": 4,
+            "delayMs": 0,
+            "vx": 321.25,
+            "vy": 341.25,
+            "scale": 0.78,
+            "angle": 2.742,
+            "spin": 17,
+            "flightMs": 213,
+            "originX": 3.5
+          },
+          {
+            "image": 0,
+            "delayMs": 5,
+            "vx": -462.5,
+            "vy": 512.5,
+            "scale": 0.62,
+            "angle": 5.141,
+            "spin": -9,
+            "flightMs": 320,
+            "originX": -7.0
+          },
+          {
+            "image": 1,
+            "delayMs": 10,
+            "vx": 603.75,
+            "vy": 433.75,
+            "scale": 0.47,
+            "angle": 1.257,
+            "spin": 11,
+            "flightMs": 271,
+            "originX": 10.5
+          },
+          {
+            "image": 2,
+            "delayMs": 0,
+            "vx": -220.0,
+            "vy": 355.0,
+            "scale": 0.91,
+            "angle": 3.656,
+            "spin": -13,
+            "flightMs": 222,
+            "originX": 0.0
+          },
+          {
+            "image": 3,
+            "delayMs": 5,
+            "vx": 361.25,
+            "vy": 526.25,
+            "scale": 0.76,
+            "angle": 6.055,
+            "spin": 15,
+            "flightMs": 329,
+            "originX": 3.5
+          },
+          {
+            "image": 4,
+            "delayMs": 10,
+            "vx": -502.5,
+            "vy": 447.5,
+            "scale": 0.6,
+            "angle": 2.171,
+            "spin": -17,
+            "flightMs": 280,
+            "originX": -7.0
+          },
+          {
+            "image": 0,
+            "delayMs": 0,
+            "vx": 118.75,
+            "vy": 368.75,
+            "scale": 0.44,
+            "angle": 4.57,
+            "spin": 9,
+            "flightMs": 230,
+            "originX": 10.5
+          },
+          {
+            "image": 1,
+            "delayMs": 5,
+            "vx": -260.0,
+            "vy": 540.0,
+            "scale": 0.89,
+            "angle": 0.686,
+            "spin": -11,
+            "flightMs": 338,
+            "originX": 0.0
+          },
+          {
+            "image": 2,
+            "delayMs": 10,
+            "vx": 401.25,
+            "vy": 461.25,
+            "scale": 0.73,
+            "angle": 3.085,
+            "spin": 13,
+            "flightMs": 288,
+            "originX": 3.5
+          }
+        ]
+      }
+    ]
+  },
+  "clips": [
+    {
+      "id": "idle",
+      "loop": true,
+      "durationMs": 360,
+      "frames": [
+        {
+          "path": "Chapter2EliteArt/idle/00",
+          "startMs": 0,
+          "holdMs": 180,
+          "source": 1
+        },
+        {
+          "path": "Chapter2EliteArt/idle/01",
+          "startMs": 180,
+          "holdMs": 180,
+          "source": 2
+        }
+      ]
+    },
+    {
+      "id": "teleport",
+      "loop": false,
+      "durationMs": 1650,
+      "frames": [
+        {
+          "path": "Chapter2EliteArt/teleport/00",
+          "startMs": -360.0,
+          "holdMs": 180.0,
+          "source": 1
+        },
+        {
+          "path": "Chapter2EliteArt/teleport/01",
+          "startMs": -180.0,
+          "holdMs": 180.0,
+          "source": 10
+        },
+        {
+          "path": "Chapter2EliteArt/teleport/02",
+          "startMs": 0.0,
+          "holdMs": 65.0,
+          "source": 17
+        },
+        {
+          "path": "Chapter2EliteArt/teleport/03",
+          "startMs": 65.0,
+          "holdMs": 65.0,
+          "source": 19
+        },
+        {
+          "path": "Chapter2EliteArt/teleport/04",
+          "startMs": 130.0,
+          "holdMs": 65.0,
+          "source": 21
+        },
+        {
+          "path": "Chapter2EliteArt/teleport/05",
+          "startMs": 195.0,
+          "holdMs": 65.0,
+          "source": 25
+        },
+        {
+          "path": "Chapter2EliteArt/teleport/06",
+          "startMs": 260.0,
+          "holdMs": 130.0,
+          "source": 29
+        },
+        {
+          "path": "Chapter2EliteArt/teleport/07",
+          "startMs": 390.0,
+          "holdMs": 130.0,
+          "source": 37
+        },
+        {
+          "path": "Chapter2EliteArt/teleport/08",
+          "startMs": 520.0,
+          "holdMs": 130.0,
+          "source": 43
+        },
+        {
+          "path": "Chapter2EliteArt/teleport/09",
+          "startMs": 870.0,
+          "holdMs": 16.0,
+          "source": 44
+        },
+        {
+          "path": "Chapter2EliteArt/teleport/10",
+          "startMs": 886.0,
+          "holdMs": 18.2857,
+          "source": 46
+        },
+        {
+          "path": "Chapter2EliteArt/teleport/11",
+          "startMs": 904.2857,
+          "holdMs": 25.7143,
+          "source": 50
+        },
+        {
+          "path": "Chapter2EliteArt/teleport/12",
+          "startMs": 930.0,
+          "holdMs": 30.0,
+          "source": 53
+        },
+        {
+          "path": "Chapter2EliteArt/teleport/13",
+          "startMs": 960.0,
+          "holdMs": 20.0,
+          "source": 56
+        },
+        {
+          "path": "Chapter2EliteArt/teleport/14",
+          "startMs": 980.0,
+          "holdMs": 40.0,
+          "source": 58
+        },
+        {
+          "path": "Chapter2EliteArt/teleport/15",
+          "startMs": 1020.0,
+          "holdMs": 90.0,
+          "source": 60
+        },
+        {
+          "path": "Chapter2EliteArt/teleport/16",
+          "startMs": 1110.0,
+          "holdMs": 60.0,
+          "source": 73
+        },
+        {
+          "path": "Chapter2EliteArt/teleport/17",
+          "startMs": 1170.0,
+          "holdMs": 40.0,
+          "source": 77
+        },
+        {
+          "path": "Chapter2EliteArt/teleport/18",
+          "startMs": 1210.0,
+          "holdMs": 40.0,
+          "source": 79
+        },
+        {
+          "path": "Chapter2EliteArt/teleport/19",
+          "startMs": 1250.0,
+          "holdMs": 100.0,
+          "source": 81
+        },
+        {
+          "path": "Chapter2EliteArt/teleport/20",
+          "startMs": 1350,
+          "holdMs": 70,
+          "source": 82
+        },
+        {
+          "path": "Chapter2EliteArt/teleport/21",
+          "startMs": 1420,
+          "holdMs": 90,
+          "source": 84
+        },
+        {
+          "path": "Chapter2EliteArt/teleport/22",
+          "startMs": 1510,
+          "holdMs": 70,
+          "source": 87
+        },
+        {
+          "path": "Chapter2EliteArt/teleport/23",
+          "startMs": 1580,
+          "holdMs": 70,
+          "source": 90
+        }
+      ]
+    },
+    {
+      "id": "combo",
+      "loop": false,
+      "durationMs": 3300,
+      "frames": [
+        {
+          "path": "Chapter2EliteArt/combo/00",
+          "startMs": 0,
+          "holdMs": 170,
+          "source": 1
+        },
+        {
+          "path": "Chapter2EliteArt/combo/01",
+          "startMs": 170,
+          "holdMs": 80,
+          "source": 7
+        },
+        {
+          "path": "Chapter2EliteArt/combo/02",
+          "startMs": 250,
+          "holdMs": 70,
+          "source": 12
+        },
+        {
+          "path": "Chapter2EliteArt/combo/03",
+          "startMs": 320,
+          "holdMs": 60,
+          "source": 14
+        },
+        {
+          "path": "Chapter2EliteArt/combo/04",
+          "startMs": 380,
+          "holdMs": 70,
+          "source": 16
+        },
+        {
+          "path": "Chapter2EliteArt/combo/05",
+          "startMs": 450,
+          "holdMs": 70,
+          "source": 18
+        },
+        {
+          "path": "Chapter2EliteArt/combo/06",
+          "startMs": 520,
+          "holdMs": 70,
+          "source": 21
+        },
+        {
+          "path": "Chapter2EliteArt/combo/07",
+          "startMs": 590,
+          "holdMs": 260,
+          "source": 25
+        },
+        {
+          "path": "Chapter2EliteArt/combo/08",
+          "startMs": 850,
+          "holdMs": 75,
+          "source": 38
+        },
+        {
+          "path": "Chapter2EliteArt/combo/09",
+          "startMs": 925,
+          "holdMs": 35,
+          "source": 40
+        },
+        {
+          "path": "Chapter2EliteArt/combo/10",
+          "startMs": 960,
+          "holdMs": 40,
+          "source": 41
+        },
+        {
+          "path": "Chapter2EliteArt/combo/11",
+          "startMs": 1000,
+          "holdMs": 70,
+          "source": 42
+        },
+        {
+          "path": "Chapter2EliteArt/combo/12",
+          "startMs": 1070,
+          "holdMs": 30,
+          "source": 45
+        },
+        {
+          "path": "Chapter2EliteArt/combo/13",
+          "startMs": 1100,
+          "holdMs": 30,
+          "source": 52
+        },
+        {
+          "path": "Chapter2EliteArt/combo/14",
+          "startMs": 1130,
+          "holdMs": 20,
+          "source": 62
+        },
+        {
+          "path": "Chapter2EliteArt/combo/15",
+          "startMs": 1150,
+          "holdMs": 36,
+          "source": 14
+        },
+        {
+          "path": "Chapter2EliteArt/combo/16",
+          "startMs": 1186,
+          "holdMs": 20,
+          "source": 16
+        },
+        {
+          "path": "Chapter2EliteArt/combo/17",
+          "startMs": 1206,
+          "holdMs": 22,
+          "source": 18
+        },
+        {
+          "path": "Chapter2EliteArt/combo/18",
+          "startMs": 1228,
+          "holdMs": 22,
+          "source": 20
+        },
+        {
+          "path": "Chapter2EliteArt/combo/19",
+          "startMs": 1250,
+          "holdMs": 24,
+          "source": 22
+        },
+        {
+          "path": "Chapter2EliteArt/combo/20",
+          "startMs": 1274,
+          "holdMs": 48,
+          "source": 26
+        },
+        {
+          "path": "Chapter2EliteArt/combo/21",
+          "startMs": 1322,
+          "holdMs": 72,
+          "source": 34
+        },
+        {
+          "path": "Chapter2EliteArt/combo/22",
+          "startMs": 1394,
+          "holdMs": 48,
+          "source": 38
+        },
+        {
+          "path": "Chapter2EliteArt/combo/23",
+          "startMs": 1442,
+          "holdMs": 28,
+          "source": 40
+        },
+        {
+          "path": "Chapter2EliteArt/combo/24",
+          "startMs": 1470,
+          "holdMs": 30,
+          "source": 41
+        },
+        {
+          "path": "Chapter2EliteArt/combo/25",
+          "startMs": 1500,
+          "holdMs": 70,
+          "source": 42
+        },
+        {
+          "path": "Chapter2EliteArt/combo/26",
+          "startMs": 1570,
+          "holdMs": 40,
+          "source": 48
+        },
+        {
+          "path": "Chapter2EliteArt/combo/27",
+          "startMs": 1610,
+          "holdMs": 40,
+          "source": 62
+        },
+        {
+          "path": "Chapter2EliteArt/combo/28",
+          "startMs": 1650,
+          "holdMs": 50,
+          "source": 31
+        },
+        {
+          "path": "Chapter2EliteArt/combo/29",
+          "startMs": 1700,
+          "holdMs": 50,
+          "source": 33
+        },
+        {
+          "path": "Chapter2EliteArt/combo/30",
+          "startMs": 1750,
+          "holdMs": 50,
+          "source": 4
+        },
+        {
+          "path": "Chapter2EliteArt/combo/31",
+          "startMs": 1800,
+          "holdMs": 50,
+          "source": 5
+        },
+        {
+          "path": "Chapter2EliteArt/combo/32",
+          "startMs": 1850,
+          "holdMs": 50,
+          "source": 6
+        },
+        {
+          "path": "Chapter2EliteArt/combo/33",
+          "startMs": 1900,
+          "holdMs": 50,
+          "source": 7
+        },
+        {
+          "path": "Chapter2EliteArt/combo/34",
+          "startMs": 1950,
+          "holdMs": 50,
+          "source": 8
+        },
+        {
+          "path": "Chapter2EliteArt/combo/35",
+          "startMs": 2000,
+          "holdMs": 50,
+          "source": 9
+        },
+        {
+          "path": "Chapter2EliteArt/combo/36",
+          "startMs": 2050,
+          "holdMs": 50,
+          "source": 10
+        },
+        {
+          "path": "Chapter2EliteArt/combo/37",
+          "startMs": 2100,
+          "holdMs": 70,
+          "source": 11
+        },
+        {
+          "path": "Chapter2EliteArt/combo/38",
+          "startMs": 2170,
+          "holdMs": 90,
+          "source": 12
+        },
+        {
+          "path": "Chapter2EliteArt/combo/39",
+          "startMs": 2260,
+          "holdMs": 100,
+          "source": 13
+        },
+        {
+          "path": "Chapter2EliteArt/combo/40",
+          "startMs": 2360,
+          "holdMs": 70,
+          "source": 14
+        },
+        {
+          "path": "Chapter2EliteArt/combo/41",
+          "startMs": 2430,
+          "holdMs": 70,
+          "source": 15
+        },
+        {
+          "path": "Chapter2EliteArt/combo/42",
+          "startMs": 2500,
+          "holdMs": 80,
+          "source": 16
+        },
+        {
+          "path": "Chapter2EliteArt/combo/43",
+          "startMs": 2580,
+          "holdMs": 80,
+          "source": 20
+        },
+        {
+          "path": "Chapter2EliteArt/combo/44",
+          "startMs": 2660,
+          "holdMs": 80,
+          "source": 28
+        },
+        {
+          "path": "Chapter2EliteArt/combo/45",
+          "startMs": 2740,
+          "holdMs": 90,
+          "source": 32
+        },
+        {
+          "path": "Chapter2EliteArt/combo/46",
+          "startMs": 2830,
+          "holdMs": 90,
+          "source": 33
+        },
+        {
+          "path": "Chapter2EliteArt/combo/47",
+          "startMs": 2920,
+          "holdMs": 90,
+          "source": 34
+        },
+        {
+          "path": "Chapter2EliteArt/combo/48",
+          "startMs": 3010,
+          "holdMs": 90,
+          "source": 35
+        },
+        {
+          "path": "Chapter2EliteArt/combo/49",
+          "startMs": 3100,
+          "holdMs": 80,
+          "source": 36
+        },
+        {
+          "path": "Chapter2EliteArt/combo/50",
+          "startMs": 3180,
+          "holdMs": 80,
+          "source": 100
+        },
+        {
+          "path": "Chapter2EliteArt/combo/51",
+          "startMs": 3260,
+          "holdMs": 40,
+          "source": 1
+        }
+      ]
+    },
+    {
+      "id": "punch",
+      "loop": false,
+      "durationMs": 2210,
+      "frames": [
+        {
+          "path": "Chapter2EliteArt/punch/00",
+          "startMs": 0,
+          "holdMs": 1100,
+          "source": 1
+        },
+        {
+          "path": "Chapter2EliteArt/punch/01",
+          "startMs": 1100,
+          "holdMs": 20,
+          "source": 14
+        },
+        {
+          "path": "Chapter2EliteArt/punch/02",
+          "startMs": 1120,
+          "holdMs": 20,
+          "source": 16
+        },
+        {
+          "path": "Chapter2EliteArt/punch/03",
+          "startMs": 1140,
+          "holdMs": 20,
+          "source": 18
+        },
+        {
+          "path": "Chapter2EliteArt/punch/04",
+          "startMs": 1160,
+          "holdMs": 20,
+          "source": 20
+        },
+        {
+          "path": "Chapter2EliteArt/punch/05",
+          "startMs": 1180,
+          "holdMs": 20,
+          "source": 22
+        },
+        {
+          "path": "Chapter2EliteArt/punch/06",
+          "startMs": 1200,
+          "holdMs": 20,
+          "source": 24
+        },
+        {
+          "path": "Chapter2EliteArt/punch/07",
+          "startMs": 1220,
+          "holdMs": 20,
+          "source": 26
+        },
+        {
+          "path": "Chapter2EliteArt/punch/08",
+          "startMs": 1240,
+          "holdMs": 20,
+          "source": 28
+        },
+        {
+          "path": "Chapter2EliteArt/punch/09",
+          "startMs": 1260,
+          "holdMs": 20,
+          "source": 30
+        },
+        {
+          "path": "Chapter2EliteArt/punch/10",
+          "startMs": 1280,
+          "holdMs": 20,
+          "source": 32
+        },
+        {
+          "path": "Chapter2EliteArt/punch/11",
+          "startMs": 1300,
+          "holdMs": 20,
+          "source": 34
+        },
+        {
+          "path": "Chapter2EliteArt/punch/12",
+          "startMs": 1320,
+          "holdMs": 40,
+          "source": 36
+        },
+        {
+          "path": "Chapter2EliteArt/punch/13",
+          "startMs": 1360,
+          "holdMs": 30,
+          "source": 40
+        },
+        {
+          "path": "Chapter2EliteArt/punch/14",
+          "startMs": 1390,
+          "holdMs": 65,
+          "source": 43
+        },
+        {
+          "path": "Chapter2EliteArt/punch/15",
+          "startMs": 1455,
+          "holdMs": 20,
+          "source": 44
+        },
+        {
+          "path": "Chapter2EliteArt/punch/16",
+          "startMs": 1475,
+          "holdMs": 25,
+          "source": 45
+        },
+        {
+          "path": "Chapter2EliteArt/punch/17",
+          "startMs": 1500,
+          "holdMs": 70,
+          "source": 46
+        },
+        {
+          "path": "Chapter2EliteArt/punch/18",
+          "startMs": 1570,
+          "holdMs": 65,
+          "source": 52
+        },
+        {
+          "path": "Chapter2EliteArt/punch/19",
+          "startMs": 1635,
+          "holdMs": 40,
+          "source": 58
+        },
+        {
+          "path": "Chapter2EliteArt/punch/20",
+          "startMs": 1675,
+          "holdMs": 50,
+          "source": 62
+        },
+        {
+          "path": "Chapter2EliteArt/punch/21",
+          "startMs": 1725,
+          "holdMs": 50,
+          "source": 66
+        },
+        {
+          "path": "Chapter2EliteArt/punch/22",
+          "startMs": 1775,
+          "holdMs": 85,
+          "source": 70
+        },
+        {
+          "path": "Chapter2EliteArt/punch/23",
+          "startMs": 1860,
+          "holdMs": 80,
+          "source": 76
+        },
+        {
+          "path": "Chapter2EliteArt/punch/24",
+          "startMs": 1940,
+          "holdMs": 80,
+          "source": 82
+        },
+        {
+          "path": "Chapter2EliteArt/punch/25",
+          "startMs": 2020,
+          "holdMs": 65,
+          "source": 88
+        },
+        {
+          "path": "Chapter2EliteArt/punch/26",
+          "startMs": 2085,
+          "holdMs": 60,
+          "source": 94
+        },
+        {
+          "path": "Chapter2EliteArt/punch/27",
+          "startMs": 2145,
+          "holdMs": 65,
+          "source": 100
+        }
+      ]
+    },
+    {
+      "id": "formation",
+      "loop": false,
+      "durationMs": 1450.0,
+      "frames": [
+        {
+          "path": "Chapter2EliteArt/formation/00",
+          "startMs": 0,
+          "holdMs": 90.625,
+          "source": 1
+        },
+        {
+          "path": "Chapter2EliteArt/formation/01",
+          "startMs": 90.625,
+          "holdMs": 90.625,
+          "source": 2
+        },
+        {
+          "path": "Chapter2EliteArt/formation/02",
+          "startMs": 181.25,
+          "holdMs": 90.625,
+          "source": 3
+        },
+        {
+          "path": "Chapter2EliteArt/formation/03",
+          "startMs": 271.875,
+          "holdMs": 90.625,
+          "source": 4
+        },
+        {
+          "path": "Chapter2EliteArt/formation/04",
+          "startMs": 362.5,
+          "holdMs": 90.625,
+          "source": 5
+        },
+        {
+          "path": "Chapter2EliteArt/formation/05",
+          "startMs": 453.125,
+          "holdMs": 90.625,
+          "source": 6
+        },
+        {
+          "path": "Chapter2EliteArt/formation/06",
+          "startMs": 543.75,
+          "holdMs": 90.625,
+          "source": 7
+        },
+        {
+          "path": "Chapter2EliteArt/formation/07",
+          "startMs": 634.375,
+          "holdMs": 90.625,
+          "source": 8
+        },
+        {
+          "path": "Chapter2EliteArt/formation/08",
+          "startMs": 725.0,
+          "holdMs": 90.625,
+          "source": 9
+        },
+        {
+          "path": "Chapter2EliteArt/formation/09",
+          "startMs": 815.625,
+          "holdMs": 90.625,
+          "source": 10
+        },
+        {
+          "path": "Chapter2EliteArt/formation/10",
+          "startMs": 906.25,
+          "holdMs": 90.625,
+          "source": 11
+        },
+        {
+          "path": "Chapter2EliteArt/formation/11",
+          "startMs": 996.875,
+          "holdMs": 90.625,
+          "source": 12
+        },
+        {
+          "path": "Chapter2EliteArt/formation/12",
+          "startMs": 1087.5,
+          "holdMs": 90.625,
+          "source": 13
+        },
+        {
+          "path": "Chapter2EliteArt/formation/13",
+          "startMs": 1178.125,
+          "holdMs": 90.625,
+          "source": 14
+        },
+        {
+          "path": "Chapter2EliteArt/formation/14",
+          "startMs": 1268.75,
+          "holdMs": 90.625,
+          "source": 15
+        },
+        {
+          "path": "Chapter2EliteArt/formation/15",
+          "startMs": 1359.375,
+          "holdMs": 90.625,
+          "source": 16
+        }
+      ]
+    },
+    {
+      "id": "shatter",
+      "loop": false,
+      "durationMs": 40,
+      "frames": [
+        {
+          "path": "Chapter2EliteArt/shatter/00",
+          "startMs": 0,
+          "holdMs": 20,
+          "source": 1
+        },
+        {
+          "path": "Chapter2EliteArt/shatter/01",
+          "startMs": 20,
+          "holdMs": 20,
+          "source": 2
+        }
+      ]
+    },
+    {
+      "id": "blink",
+      "loop": false,
+      "durationMs": 120,
+      "frames": [
+        {
+          "path": "Chapter2EliteArt/blink/00",
+          "startMs": 0,
+          "holdMs": 20,
+          "source": 1
+        },
+        {
+          "path": "Chapter2EliteArt/blink/01",
+          "startMs": 20,
+          "holdMs": 35,
+          "source": 2
+        },
+        {
+          "path": "Chapter2EliteArt/blink/02",
+          "startMs": 55,
+          "holdMs": 40,
+          "source": 3
+        },
+        {
+          "path": "Chapter2EliteArt/blink/03",
+          "startMs": 95,
+          "holdMs": 25,
+          "source": 4
+        }
+      ]
+    },
+    {
+      "id": "teleHit",
+      "loop": false,
+      "durationMs": 140,
+      "frames": [
+        {
+          "path": "Chapter2EliteArt/teleHit/00",
+          "startMs": 0,
+          "holdMs": 15,
+          "source": 1
+        },
+        {
+          "path": "Chapter2EliteArt/teleHit/01",
+          "startMs": 15,
+          "holdMs": 40,
+          "source": 2
+        },
+        {
+          "path": "Chapter2EliteArt/teleHit/02",
+          "startMs": 55,
+          "holdMs": 50,
+          "source": 3
+        },
+        {
+          "path": "Chapter2EliteArt/teleHit/03",
+          "startMs": 105,
+          "holdMs": 35,
+          "source": 4
+        }
+      ]
+    },
+    {
+      "id": "groundWave",
+      "loop": false,
+      "durationMs": 220,
+      "frames": [
+        {
+          "path": "Chapter2EliteArt/groundWave/00",
+          "startMs": 0,
+          "holdMs": 5,
+          "source": 1
+        },
+        {
+          "path": "Chapter2EliteArt/groundWave/01",
+          "startMs": 5,
+          "holdMs": 10,
+          "source": 2
+        },
+        {
+          "path": "Chapter2EliteArt/groundWave/02",
+          "startMs": 15,
+          "holdMs": 40,
+          "source": 3
+        },
+        {
+          "path": "Chapter2EliteArt/groundWave/03",
+          "startMs": 55,
+          "holdMs": 45,
+          "source": 4
+        },
+        {
+          "path": "Chapter2EliteArt/groundWave/04",
+          "startMs": 100,
+          "holdMs": 45,
+          "source": 5
+        },
+        {
+          "path": "Chapter2EliteArt/groundWave/05",
+          "startMs": 145,
+          "holdMs": 35,
+          "source": 6
+        },
+        {
+          "path": "Chapter2EliteArt/groundWave/06",
+          "startMs": 180,
+          "holdMs": 25,
+          "source": 7
+        },
+        {
+          "path": "Chapter2EliteArt/groundWave/07",
+          "startMs": 205,
+          "holdMs": 15,
+          "source": 8
+        }
+      ]
+    },
+    {
+      "id": "wrap",
+      "loop": false,
+      "durationMs": 65,
+      "frames": [
+        {
+          "path": "Chapter2EliteArt/wrap/00",
+          "startMs": 0,
+          "holdMs": 15,
+          "source": 1
+        },
+        {
+          "path": "Chapter2EliteArt/wrap/01",
+          "startMs": 15,
+          "holdMs": 15,
+          "source": 2
+        },
+        {
+          "path": "Chapter2EliteArt/wrap/02",
+          "startMs": 30,
+          "holdMs": 35,
+          "source": 3
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "loop": false,
+      "durationMs": 140,
+      "frames": [
+        {
+          "path": "Chapter2EliteArt/contact/00",
+          "startMs": 0,
+          "holdMs": 25,
+          "source": 1
+        },
+        {
+          "path": "Chapter2EliteArt/contact/01",
+          "startMs": 25,
+          "holdMs": 25,
+          "source": 2
+        },
+        {
+          "path": "Chapter2EliteArt/contact/02",
+          "startMs": 50,
+          "holdMs": 25,
+          "source": 3
+        },
+        {
+          "path": "Chapter2EliteArt/contact/03",
+          "startMs": 75,
+          "holdMs": 25,
+          "source": 4
+        },
+        {
+          "path": "Chapter2EliteArt/contact/04",
+          "startMs": 100,
+          "holdMs": 20,
+          "source": 5
+        },
+        {
+          "path": "Chapter2EliteArt/contact/05",
+          "startMs": 120,
+          "holdMs": 20,
+          "source": 6
+        }
+      ]
+    },
+    {
+      "id": "fragment",
+      "loop": false,
+      "durationMs": 5,
+      "frames": [
+        {
+          "path": "Chapter2EliteArt/fragment/00",
+          "startMs": 0,
+          "holdMs": 1,
+          "source": 1
+        },
+        {
+          "path": "Chapter2EliteArt/fragment/01",
+          "startMs": 1,
+          "holdMs": 1,
+          "source": 2
+        },
+        {
+          "path": "Chapter2EliteArt/fragment/02",
+          "startMs": 2,
+          "holdMs": 1,
+          "source": 3
+        },
+        {
+          "path": "Chapter2EliteArt/fragment/03",
+          "startMs": 3,
+          "holdMs": 1,
+          "source": 4
+        },
+        {
+          "path": "Chapter2EliteArt/fragment/04",
+          "startMs": 4,
+          "holdMs": 1,
+          "source": 5
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "path": "Chapter2EliteArt/idle/00",
+      "resource": "runtime/idle/00.png",
+      "canvas": [
+        240,
+        135
+      ],
+      "pivot": [
+        120,
+        120
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/idle/01",
+      "resource": "runtime/idle/01.png",
+      "canvas": [
+        240,
+        135
+      ],
+      "pivot": [
+        120,
+        120
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleport/00",
+      "resource": "runtime/teleport/00.png",
+      "canvas": [
+        240,
+        135
+      ],
+      "pivot": [
+        120,
+        120
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleport/01",
+      "resource": "runtime/teleport/01.png",
+      "canvas": [
+        240,
+        135
+      ],
+      "pivot": [
+        120,
+        120
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleport/02",
+      "resource": "runtime/teleport/02.png",
+      "canvas": [
+        240,
+        135
+      ],
+      "pivot": [
+        120,
+        120
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleport/03",
+      "resource": "runtime/teleport/03.png",
+      "canvas": [
+        240,
+        135
+      ],
+      "pivot": [
+        120,
+        120
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleport/04",
+      "resource": "runtime/teleport/04.png",
+      "canvas": [
+        240,
+        135
+      ],
+      "pivot": [
+        120,
+        120
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleport/05",
+      "resource": "runtime/teleport/05.png",
+      "canvas": [
+        240,
+        135
+      ],
+      "pivot": [
+        120,
+        120
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleport/06",
+      "resource": "runtime/teleport/06.png",
+      "canvas": [
+        240,
+        135
+      ],
+      "pivot": [
+        120,
+        120
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleport/07",
+      "resource": "runtime/teleport/07.png",
+      "canvas": [
+        240,
+        135
+      ],
+      "pivot": [
+        120,
+        120
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleport/08",
+      "resource": "runtime/teleport/08.png",
+      "canvas": [
+        240,
+        135
+      ],
+      "pivot": [
+        120,
+        120
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleport/09",
+      "resource": "runtime/teleport/09.png",
+      "canvas": [
+        240,
+        135
+      ],
+      "pivot": [
+        120,
+        120
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleport/10",
+      "resource": "runtime/teleport/10.png",
+      "canvas": [
+        240,
+        135
+      ],
+      "pivot": [
+        120,
+        120
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleport/11",
+      "resource": "runtime/teleport/11.png",
+      "canvas": [
+        240,
+        135
+      ],
+      "pivot": [
+        120,
+        120
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleport/12",
+      "resource": "runtime/teleport/12.png",
+      "canvas": [
+        240,
+        135
+      ],
+      "pivot": [
+        120,
+        120
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleport/13",
+      "resource": "runtime/teleport/13.png",
+      "canvas": [
+        240,
+        135
+      ],
+      "pivot": [
+        120,
+        120
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleport/14",
+      "resource": "runtime/teleport/14.png",
+      "canvas": [
+        240,
+        135
+      ],
+      "pivot": [
+        120,
+        120
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleport/15",
+      "resource": "runtime/teleport/15.png",
+      "canvas": [
+        240,
+        135
+      ],
+      "pivot": [
+        120,
+        120
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleport/16",
+      "resource": "runtime/teleport/16.png",
+      "canvas": [
+        240,
+        135
+      ],
+      "pivot": [
+        120,
+        120
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleport/17",
+      "resource": "runtime/teleport/17.png",
+      "canvas": [
+        240,
+        135
+      ],
+      "pivot": [
+        120,
+        120
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleport/18",
+      "resource": "runtime/teleport/18.png",
+      "canvas": [
+        240,
+        135
+      ],
+      "pivot": [
+        120,
+        120
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleport/19",
+      "resource": "runtime/teleport/19.png",
+      "canvas": [
+        240,
+        135
+      ],
+      "pivot": [
+        120,
+        120
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleport/20",
+      "resource": "runtime/teleport/20.png",
+      "canvas": [
+        240,
+        135
+      ],
+      "pivot": [
+        120,
+        120
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleport/21",
+      "resource": "runtime/teleport/21.png",
+      "canvas": [
+        240,
+        135
+      ],
+      "pivot": [
+        120,
+        120
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleport/22",
+      "resource": "runtime/teleport/22.png",
+      "canvas": [
+        240,
+        135
+      ],
+      "pivot": [
+        120,
+        120
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleport/23",
+      "resource": "runtime/teleport/23.png",
+      "canvas": [
+        240,
+        135
+      ],
+      "pivot": [
+        120,
+        120
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/00",
+      "resource": "runtime/combo/00.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/01",
+      "resource": "runtime/combo/01.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/02",
+      "resource": "runtime/combo/02.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/03",
+      "resource": "runtime/combo/03.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/04",
+      "resource": "runtime/combo/04.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/05",
+      "resource": "runtime/combo/05.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/06",
+      "resource": "runtime/combo/06.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/07",
+      "resource": "runtime/combo/07.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/08",
+      "resource": "runtime/combo/08.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/09",
+      "resource": "runtime/combo/09.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/10",
+      "resource": "runtime/combo/10.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/11",
+      "resource": "runtime/combo/11.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/12",
+      "resource": "runtime/combo/12.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/13",
+      "resource": "runtime/combo/13.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/14",
+      "resource": "runtime/combo/14.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/15",
+      "resource": "runtime/combo/15.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/16",
+      "resource": "runtime/combo/16.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/17",
+      "resource": "runtime/combo/17.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/18",
+      "resource": "runtime/combo/18.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/19",
+      "resource": "runtime/combo/19.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/20",
+      "resource": "runtime/combo/20.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/21",
+      "resource": "runtime/combo/21.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/22",
+      "resource": "runtime/combo/22.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/23",
+      "resource": "runtime/combo/23.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/24",
+      "resource": "runtime/combo/24.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/25",
+      "resource": "runtime/combo/25.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/26",
+      "resource": "runtime/combo/26.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/27",
+      "resource": "runtime/combo/27.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/28",
+      "resource": "runtime/combo/28.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/29",
+      "resource": "runtime/combo/29.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/30",
+      "resource": "runtime/combo/30.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/31",
+      "resource": "runtime/combo/31.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/32",
+      "resource": "runtime/combo/32.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/33",
+      "resource": "runtime/combo/33.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/34",
+      "resource": "runtime/combo/34.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/35",
+      "resource": "runtime/combo/35.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/36",
+      "resource": "runtime/combo/36.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/37",
+      "resource": "runtime/combo/37.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/38",
+      "resource": "runtime/combo/38.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/39",
+      "resource": "runtime/combo/39.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/40",
+      "resource": "runtime/combo/40.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/41",
+      "resource": "runtime/combo/41.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/42",
+      "resource": "runtime/combo/42.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/43",
+      "resource": "runtime/combo/43.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/44",
+      "resource": "runtime/combo/44.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/45",
+      "resource": "runtime/combo/45.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/46",
+      "resource": "runtime/combo/46.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/47",
+      "resource": "runtime/combo/47.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/48",
+      "resource": "runtime/combo/48.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/49",
+      "resource": "runtime/combo/49.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/50",
+      "resource": "runtime/combo/50.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/combo/51",
+      "resource": "runtime/combo/51.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/00",
+      "resource": "runtime/punch/00.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/01",
+      "resource": "runtime/punch/01.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/02",
+      "resource": "runtime/punch/02.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/03",
+      "resource": "runtime/punch/03.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/04",
+      "resource": "runtime/punch/04.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/05",
+      "resource": "runtime/punch/05.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/06",
+      "resource": "runtime/punch/06.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/07",
+      "resource": "runtime/punch/07.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/08",
+      "resource": "runtime/punch/08.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/09",
+      "resource": "runtime/punch/09.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/10",
+      "resource": "runtime/punch/10.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/11",
+      "resource": "runtime/punch/11.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/12",
+      "resource": "runtime/punch/12.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/13",
+      "resource": "runtime/punch/13.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/14",
+      "resource": "runtime/punch/14.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/15",
+      "resource": "runtime/punch/15.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/16",
+      "resource": "runtime/punch/16.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/17",
+      "resource": "runtime/punch/17.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/18",
+      "resource": "runtime/punch/18.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/19",
+      "resource": "runtime/punch/19.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/20",
+      "resource": "runtime/punch/20.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/21",
+      "resource": "runtime/punch/21.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/22",
+      "resource": "runtime/punch/22.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/23",
+      "resource": "runtime/punch/23.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/24",
+      "resource": "runtime/punch/24.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/25",
+      "resource": "runtime/punch/25.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/26",
+      "resource": "runtime/punch/26.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/punch/27",
+      "resource": "runtime/punch/27.png",
+      "canvas": [
+        240,
+        160
+      ],
+      "pivot": [
+        120,
+        144
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/formation/00",
+      "resource": "runtime/formation/00.png",
+      "canvas": [
+        320,
+        320
+      ],
+      "pivot": [
+        164.5,
+        158.5
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/formation/01",
+      "resource": "runtime/formation/01.png",
+      "canvas": [
+        320,
+        320
+      ],
+      "pivot": [
+        164.5,
+        158.5
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/formation/02",
+      "resource": "runtime/formation/02.png",
+      "canvas": [
+        320,
+        320
+      ],
+      "pivot": [
+        164.5,
+        158.5
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/formation/03",
+      "resource": "runtime/formation/03.png",
+      "canvas": [
+        320,
+        320
+      ],
+      "pivot": [
+        164.5,
+        158.5
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/formation/04",
+      "resource": "runtime/formation/04.png",
+      "canvas": [
+        320,
+        320
+      ],
+      "pivot": [
+        164.5,
+        158.5
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/formation/05",
+      "resource": "runtime/formation/05.png",
+      "canvas": [
+        320,
+        320
+      ],
+      "pivot": [
+        164.5,
+        158.5
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/formation/06",
+      "resource": "runtime/formation/06.png",
+      "canvas": [
+        320,
+        320
+      ],
+      "pivot": [
+        164.5,
+        158.5
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/formation/07",
+      "resource": "runtime/formation/07.png",
+      "canvas": [
+        320,
+        320
+      ],
+      "pivot": [
+        164.5,
+        158.5
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/formation/08",
+      "resource": "runtime/formation/08.png",
+      "canvas": [
+        320,
+        320
+      ],
+      "pivot": [
+        164.5,
+        158.5
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/formation/09",
+      "resource": "runtime/formation/09.png",
+      "canvas": [
+        320,
+        320
+      ],
+      "pivot": [
+        164.5,
+        158.5
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/formation/10",
+      "resource": "runtime/formation/10.png",
+      "canvas": [
+        320,
+        320
+      ],
+      "pivot": [
+        164.5,
+        158.5
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/formation/11",
+      "resource": "runtime/formation/11.png",
+      "canvas": [
+        320,
+        320
+      ],
+      "pivot": [
+        164.5,
+        158.5
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/formation/12",
+      "resource": "runtime/formation/12.png",
+      "canvas": [
+        320,
+        320
+      ],
+      "pivot": [
+        164.5,
+        158.5
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/formation/13",
+      "resource": "runtime/formation/13.png",
+      "canvas": [
+        320,
+        320
+      ],
+      "pivot": [
+        164.5,
+        158.5
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/formation/14",
+      "resource": "runtime/formation/14.png",
+      "canvas": [
+        320,
+        320
+      ],
+      "pivot": [
+        164.5,
+        158.5
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/formation/15",
+      "resource": "runtime/formation/15.png",
+      "canvas": [
+        320,
+        320
+      ],
+      "pivot": [
+        164.5,
+        158.5
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/shatter/00",
+      "resource": "runtime/shatter/00.png",
+      "canvas": [
+        256,
+        224
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/shatter/01",
+      "resource": "runtime/shatter/01.png",
+      "canvas": [
+        256,
+        224
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/blink/00",
+      "resource": "runtime/blink/00.png",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        64
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/blink/01",
+      "resource": "runtime/blink/01.png",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        64
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/blink/02",
+      "resource": "runtime/blink/02.png",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        64
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/blink/03",
+      "resource": "runtime/blink/03.png",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        64
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleHit/00",
+      "resource": "runtime/teleHit/00.png",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        63
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleHit/01",
+      "resource": "runtime/teleHit/01.png",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        47,
+        63
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleHit/02",
+      "resource": "runtime/teleHit/02.png",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        40,
+        63
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/teleHit/03",
+      "resource": "runtime/teleHit/03.png",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        64
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/groundWave/00",
+      "resource": "runtime/groundWave/00.png",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        105
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/groundWave/01",
+      "resource": "runtime/groundWave/01.png",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        105
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/groundWave/02",
+      "resource": "runtime/groundWave/02.png",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        105
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/groundWave/03",
+      "resource": "runtime/groundWave/03.png",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        105
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/groundWave/04",
+      "resource": "runtime/groundWave/04.png",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        105
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/groundWave/05",
+      "resource": "runtime/groundWave/05.png",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        105
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/groundWave/06",
+      "resource": "runtime/groundWave/06.png",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        105
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/groundWave/07",
+      "resource": "runtime/groundWave/07.png",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        105
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/wrap/00",
+      "resource": "runtime/wrap/00.png",
+      "canvas": [
+        96,
+        96
+      ],
+      "pivot": [
+        20,
+        48
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/wrap/01",
+      "resource": "runtime/wrap/01.png",
+      "canvas": [
+        96,
+        96
+      ],
+      "pivot": [
+        20,
+        48
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/wrap/02",
+      "resource": "runtime/wrap/02.png",
+      "canvas": [
+        96,
+        96
+      ],
+      "pivot": [
+        20,
+        48
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/contact/00",
+      "resource": "runtime/contact/00.png",
+      "canvas": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        48
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/contact/01",
+      "resource": "runtime/contact/01.png",
+      "canvas": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        48
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/contact/02",
+      "resource": "runtime/contact/02.png",
+      "canvas": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        48
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/contact/03",
+      "resource": "runtime/contact/03.png",
+      "canvas": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        48
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/contact/04",
+      "resource": "runtime/contact/04.png",
+      "canvas": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        48
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/contact/05",
+      "resource": "runtime/contact/05.png",
+      "canvas": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        48
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/fragment/00",
+      "resource": "runtime/fragment/00.png",
+      "canvas": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/fragment/01",
+      "resource": "runtime/fragment/01.png",
+      "canvas": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/fragment/02",
+      "resource": "runtime/fragment/02.png",
+      "canvas": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/fragment/03",
+      "resource": "runtime/fragment/03.png",
+      "canvas": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "ppu": 32
+    },
+    {
+      "path": "Chapter2EliteArt/fragment/04",
+      "resource": "runtime/fragment/04.png",
+      "canvas": [
+        16,
+        16
+      ],
+      "pivot": [
+        8,
+        8
+      ],
+      "ppu": 32
+    }
+  ],
+  "sourceAsset": "monsters.stage-02.elite.stone-fist",
+  "rockCenterOffsetPx": [
+    113.5,
+    52.0
+  ],
+  "rockDiameterPx": 64.0
+}

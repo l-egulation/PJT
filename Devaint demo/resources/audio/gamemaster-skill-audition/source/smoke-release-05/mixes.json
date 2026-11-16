@@ -1,0 +1,129 @@
+{
+  "kind": "smoke-release-revision5",
+  "status": "pending; not applied",
+  "items": [
+    {
+      "id": "S10",
+      "file": "S10.wav",
+      "sha256": "d1c6fc1e627ad6def1de593715cf1520cd7d7e4be863e76a8f821a2cfb7110a0",
+      "duration": 1.1,
+      "status": "pending",
+      "basedOn": "S4",
+      "sources": [
+        {
+          "archiveEntry": "Explosion_Fire_Gas/gas_leak_med_burst_01.wav",
+          "sha256": "4b2aeb359ccc396720362515de3d3352db2718977694eedd43588efc88b6d4ff",
+          "start": 0.1,
+          "end": 1.1
+        },
+        {
+          "archiveEntry": "Whooshes/whoosh_low_deep_soft_01.wav",
+          "sha256": "6aa55bc4d6dc924c66c4621f84b80566aef64bbe31628408f1128b4c088f3f5d"
+        }
+      ],
+      "parts": {
+        "puff": {
+          "file": "S10-puff.wav",
+          "sha256": "1f7042365c10bade3e103eefea3dff938f93e3e681da6d150537631c5ef6d098",
+          "duration": 0.08
+        },
+        "spread": {
+          "file": "S10-spread.wav",
+          "sha256": "a5209c237babcd1ef596a5dfd05ac74a7294adfab07ebc393f2b571c1f06522b",
+          "duration": 1.1
+        }
+      },
+      "edit": {
+        "puffDuration": 0.08,
+        "spreadStart": 0.025,
+        "totalDuration": 1.1,
+        "spreadPitchRate": 0.86,
+        "spreadLowpass": 2900,
+        "puffGain": 0.34,
+        "spreadGain": 0.5,
+        "commonGain": 0.20671413099796526,
+        "spreadAttack": 0.03,
+        "spreadDecay": "continuous cosine power 2.2",
+        "noNewSound": true
+      }
+    },
+    {
+      "id": "S11",
+      "file": "S11.wav",
+      "sha256": "df85fe062fda3a1bc3c2af602b7e0c495019e3d184df81dfeaac94e0531187cc",
+      "duration": 1.1,
+      "status": "pending",
+      "basedOn": "S5",
+      "sources": [
+        {
+          "archiveEntry": "Explosion_Fire_Gas/gas_leak_long_burst_01.wav",
+          "sha256": "b9ae64a7184827191f8e453fd98f6abd7b138e2fae2157bd7d030a8e6a8302fa",
+          "start": 0.12,
+          "end": 1.12
+        },
+        {
+          "archiveEntry": "Whooshes/whoosh_low_deep_soft_02.wav",
+          "sha256": "833e5b5705f6bd13a4daea1bc407145502c6207eb80732e3e5b701cc59ac2dfa"
+        }
+      ],
+      "parts": {
+        "puff": {
+          "file": "S11-puff.wav",
+          "sha256": "a8842a3dc9124a29333569cec1275e3b556360be50a68aeb1e18ef1aa06a6b6d",
+          "duration": 0.08
+        },
+        "spread": {
+          "file": "S11-spread.wav",
+          "sha256": "75047ac7ab3b4cd46b193ae378250447861a4c74cc500be44d6acc121708de08",
+          "duration": 1.1
+        }
+      },
+      "edit": {
+        "puffDuration": 0.08,
+        "spreadStart": 0.025,
+        "totalDuration": 1.1,
+        "spreadPitchRate": 0.86,
+        "spreadLowpass": 2500,
+        "puffGain": 0.48,
+        "spreadGain": 0.5,
+        "commonGain": 0.18891996552472912,
+        "spreadAttack": 0.03,
+        "spreadDecay": "continuous cosine power 2.2",
+        "noNewSound": true
+      }
+    }
+  ],
+  "confirmedBomb": {
+    "candidate": "B3",
+    "file": "source/focused-mixes-01/B3.wav",
+    "sha256": "822a47da3fe91fdce647b2196cb4103857468f142e35ae09c70bfdf7aa827af1",
+    "status": "user-confirmed; not applied",
+    "instruction": "폭탄 b3할게",
+    "mix": {
+      "id": "B3",
+      "label": "큰 물풍선 방향",
+      "file": "B3.wav",
+      "duration": 1.05,
+      "sha256": "822a47da3fe91fdce647b2196cb4103857468f142e35ae09c70bfdf7aa827af1",
+      "peak": 0.47998046875,
+      "sources": [
+        "Magic_Spells/water_blast_projectile_spell_04.wav",
+        "Water/water_splash_object_body_05.wav"
+      ],
+      "edit": {
+        "kind": "layered-water-release",
+        "mainStart": 0.09939583333333334,
+        "wetStart": 0.25066666666666665,
+        "wetOnset": 0.025,
+        "mainGain": 0.72,
+        "wetGain": 0.82,
+        "decay": 0.175,
+        "noExplosionRecording": true,
+        "noThud": true,
+        "noCartoonPop": true,
+        "noSyntheticNoise": true
+      }
+    }
+  },
+  "comparisonGapSeconds": 1
+}

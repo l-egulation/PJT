@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>잉크 주인공 · A10 톱니 대검 변신 · 128px</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#ece7df;color:#282525;font-family:system-ui,'Malgun Gothic',sans-serif}main{max-width:1120px;padding:32px 24px;margin:auto}h1{font-size:27px;margin:0 0 10px}p{line-height:1.65;margin:8px 0} .layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;margin-top:24px}.stage{background:#fff;border:1px solid #d6cfc4;border-radius:16px;display:flex;justify-content:center;align-items:center;overflow:hidden;cursor:pointer;min-height:512px}canvas{image-rendering:pixelated;width:512px;height:512px;max-width:100%;object-fit:contain;display:block}aside{padding:22px;border:1px solid #d6cfc4;border-radius:16px;background:#f8f5ef}button,select{font:inherit;padding:11px 15px;border:1px solid #bdb4a6;border-radius:9px;background:#fff;cursor:pointer}button.primary{background:#025673;color:white;border-color:#025673}.buttons{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}label{display:block;margin-top:20px;font-size:14px}input[type=range]{width:100%;margin:15px 0}#status{font-weight:650}#error{color:#9b2828}a{color:#025673} .tiles{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:28px}.tile{padding:6px;border-radius:8px;background:white;border:1px solid #d6cfc4;text-align:center;cursor:pointer}.tile img{width:100%;image-rendering:pixelated;display:block}.tile.active{border:2px solid #02648C;padding:5px}.tile span{font-size:12px}.checker{background-color:#fff;background-image:linear-gradient(45deg,#e1e1e1 25%,transparent 25%),linear-gradient(-45deg,#e1e1e1 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#e1e1e1 75%),linear-gradient(-45deg,transparent 75%,#e1e1e1 75%);background-size:24px 24px;background-position:0 0,0 12px,12px -12px,-12px 0}.dark{background:#333239}.caption{font-size:13px;color:#655c54}@media(max-width:800px){.layout{grid-template-columns:1fr}.stage{min-height:320px}canvas{width:384px;height:384px}.tiles{grid-template-columns:repeat(4,1fr)}}
+</style>
+<main>
+<h1>베기 기본 무기 A10 · 확정본</h1>
+<p>손이 잉크 톱니 대검으로 변하는 확정 모션입니다. 클릭하여 재생하거나 프레임별로 확인할 수 있습니다.</p>
+<div class="layout">
+<div id="stage" class="stage" role="button" tabindex="0" aria-label="클릭하여 변신 재생"><canvas id="canvas" width="128" height="128"></canvas></div>
+<aside>
+<div id="status" aria-live="polite">이미지 불러오는 중…</div><p id="description">1 / 12 프레임</p>
+<div class="buttons"><button id="play" class="primary" disabled>변신 재생</button><button id="reset" disabled>기본 프레임</button></div>
+<label for="frame">프레임 직접 보기</label><input id="frame" type="range" min="1" max="12" value="1" disabled>
+<label for="speed">재생 속도</label><select id="speed"><option value="1">기본 · 0.93초</option><option value="0.5">절반 속도 · 1.86초</option><option value="2">2배 속도 · 0.465초</option></select>
+<label for="background">배경</label><select id="background"><option value="white">흰색</option><option value="dark">어두운 배경</option><option value="checker">투명 확인</option></select>
+<p class="caption">프레임 128×128 · 12장<br>확대는 정수 배율로 표시합니다.<br>완료 후 마지막 프레임을 유지합니다.</p>
+<p><a href="../../04_확정본/잉크_베기무기/변신_12프레임_128px.png" download>투명 스프라이트 시트</a><br><a href="../../04_확정본/잉크_베기무기/변신_12프레임_흰배경.png" download>흰 배경 스프라이트 시트</a><br><a href="../../../../../../../확정7종_20261019/index.html" download>GIF 미리보기</a></p>
+<p><a href="픽셀편집.html">12프레임 직접 픽셀 수정하기</a></p><p id="error" hidden></p>
+</aside></div>
+<div id="tiles" class="tiles"></div>
+<p class="caption">왼쪽 위부터 순서대로 12프레임. 시트는 4열 × 3행, 512×384px입니다.</p>
+</main>
+<script>
+const timings=[80,70,70,60,50,50,60,70,80,90,70,180];
+const names=['맨손 원본','잉크가 뭉침','손에서 이어짐','작게 휘어짐','휘어진 잉크가 늘어남','빠르게 펴짐','첫 톱니 형성','두 번째 톱니 형성','끝 톱니 형성','잔움직임 정리','최종 칼날 정착','완료 상태 유지'];
+const canvas=document.getElementById('canvas'),context=canvas.getContext('2d');context.imageSmoothingEnabled=false;
+const stage=document.getElementById('stage'),slider=document.getElementById('frame'),status=document.getElementById('status'),description=document.getElementById('description'),play=document.getElementById('play'),reset=document.getElementById('reset'),speed=document.getElementById('speed'),tiles=document.getElementById('tiles');
+let frames=[],ready=false,playing=false,current=0,start=0,animationId=0;
+function render(index){current=index;context.clearRect(0,0,128,128);context.drawImage(frames[index],0,0);slider.value=index+1;status.textContent=playing?'변신 중':index===11?'변신 완료':'프레임 확인';description.textContent=`${index+1} / 12 · ${names[index]}`;[...tiles.children].forEach((tile,i)=>tile.classList.toggle('active',i===index));}
+function stop(){playing=false;cancelAnimationFrame(animationId);play.textContent='변신 재생';}
+function tick(now){if(!playing)return;let elapsed=(now-start)*Number(speed.value),sum=0,index=11;for(let i=0;i<12;i++){sum+=timings[i];if(elapsed<sum){index=i;break;}}if(elapsed>=930){stop();render(11);return;}if(current!==index)render(index);animationId=requestAnimationFrame(tick);}
+function begin(){if(!ready)return;stop();playing=true;start=performance.now();play.textContent='다시 재생';render(0);animationId=requestAnimationFrame(tick);}
+play.addEventListener('click',begin);stage.addEventListener('click',begin);stage.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();begin();}});
+reset.addEventListener('click',()=>{stop();render(0);});slider.addEventListener('input',()=>{stop();render(Number(slider.value)-1);});speed.addEventListener('change',()=>{if(playing)begin();});
+document.getElementById('background').addEventListener('change',event=>{stage.classList.remove('dark','checker');if(event.target.value!=='white')stage.classList.add(event.target.value);});
+Promise.all(Array.from({length:12},(_,i)=>new Promise((resolve,reject)=>{const image=new Image();image.onload=()=>image.naturalWidth===128&&image.naturalHeight===128?resolve(image):reject(new Error('프레임 크기가 맞지 않습니다.'));image.onerror=()=>reject(new Error(`${i+1}번 프레임을 불러오지 못했습니다. frames 폴더와 HTML을 같은 경로에 두세요.`));image.src=`../../04_확정본/잉크_베기무기/frames/${String(i+1).padStart(2,'0')}.png`;}))).then(images=>{frames=images;frames.forEach((image,i)=>{const tile=document.createElement('button');tile.className='tile';tile.setAttribute('aria-label',`${i+1}프레임 ${names[i]}`);tile.appendChild(image.cloneNode());const text=document.createElement('span');text.textContent=String(i+1).padStart(2,'0');tile.appendChild(text);tile.addEventListener('click',()=>{stop();render(i);});tiles.appendChild(tile);});ready=true;play.disabled=false;reset.disabled=false;slider.disabled=false;render(0);}).catch(error=>{status.textContent='불러오기 실패';const box=document.getElementById('error');box.hidden=false;box.textContent=error.message;});
+</script>
+</html>
+
+
+
+
+
+

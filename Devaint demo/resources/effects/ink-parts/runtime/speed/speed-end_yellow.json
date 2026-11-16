@@ -1,0 +1,262 @@
+{
+ "frames": [
+  {
+   "filename": "speed-end_yellow 0",
+   "frame": {
+    "x": 0,
+    "y": 0,
+    "w": 176,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 176,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 176,
+    "h": 96
+   },
+   "duration": 40
+  },
+  {
+   "filename": "speed-end_yellow 1",
+   "frame": {
+    "x": 176,
+    "y": 0,
+    "w": 176,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 176,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 176,
+    "h": 96
+   },
+   "duration": 40
+  },
+  {
+   "filename": "speed-end_yellow 2",
+   "frame": {
+    "x": 352,
+    "y": 0,
+    "w": 176,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 176,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 176,
+    "h": 96
+   },
+   "duration": 40
+  },
+  {
+   "filename": "speed-end_yellow 3",
+   "frame": {
+    "x": 0,
+    "y": 96,
+    "w": 176,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 176,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 176,
+    "h": 96
+   },
+   "duration": 40
+  },
+  {
+   "filename": "speed-end_yellow 4",
+   "frame": {
+    "x": 176,
+    "y": 96,
+    "w": 176,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 176,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 176,
+    "h": 96
+   },
+   "duration": 40
+  },
+  {
+   "filename": "speed-end_yellow 5",
+   "frame": {
+    "x": 352,
+    "y": 96,
+    "w": 176,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 176,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 176,
+    "h": 96
+   },
+   "duration": 40
+  },
+  {
+   "filename": "speed-end_yellow 6",
+   "frame": {
+    "x": 0,
+    "y": 192,
+    "w": 176,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 176,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 176,
+    "h": 96
+   },
+   "duration": 40
+  },
+  {
+   "filename": "speed-end_yellow 7",
+   "frame": {
+    "x": 176,
+    "y": 192,
+    "w": 176,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 176,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 176,
+    "h": 96
+   },
+   "duration": 40
+  },
+  {
+   "filename": "speed-end_yellow 8",
+   "frame": {
+    "x": 352,
+    "y": 192,
+    "w": 176,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 176,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 176,
+    "h": 96
+   },
+   "duration": 40
+  },
+  {
+   "filename": "speed-end_yellow 9",
+   "frame": {
+    "x": 0,
+    "y": 288,
+    "w": 176,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 176,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 176,
+    "h": 96
+   },
+   "duration": 40
+  }
+ ],
+ "meta": {
+  "app": "https://github.com/patch-gg/pixelfx",
+  "version": "1",
+  "image": "speed-end_yellow.png",
+  "format": "RGBA8888",
+  "size": {
+   "w": 528,
+   "h": 384
+  },
+  "scale": "1",
+  "frameTags": [
+   {
+    "name": "speed-end_yellow",
+    "from": 0,
+    "to": 9,
+    "direction": "forward"
+   }
+  ],
+  "pixelfx": {
+   "id": "ink/speed-end",
+   "name": "Speed end (ink)",
+   "fps": 25,
+   "loop": false,
+   "frames": 10,
+   "frameSize": [
+    176,
+    96
+   ],
+   "pivot": [
+    160,
+    88
+   ],
+   "columns": 3,
+   "color": "yellow",
+   "facing": "right",
+   "anchor": "player-feet"
+  }
+ }
+}

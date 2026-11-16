@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1페이즈 공격 모션</title>
+<style>
+:root{--bg:#f4f2f6;--panel:#fff;--line:#d6cfdd;--text:#211b2a;--dim:#6b6175;--accent:#c4572f}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:14px/1.5 system-ui,"Malgun Gothic",sans-serif}
+main{max-width:1180px;margin:0 auto;padding:16px 16px 40px}
+h1{font-size:20px;margin:0 0 4px}h2{font-size:16px;margin:0 0 2px}p{margin:4px 0;color:var(--dim)}
+.bar{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin:8px 0}
+button,select{background:#fff;color:var(--text);border:1px solid var(--line);padding:5px 10px;font:inherit;cursor:pointer;border-radius:4px}
+.card{background:var(--panel);border:1px solid var(--line);padding:12px;border-radius:6px;margin:12px 0}
+canvas{width:100%;max-width:1152px;height:auto;image-rendering:pixelated;display:block;border:1px solid var(--line)}
+input[type=range]{flex:1;min-width:160px}
+.meta{font:12px ui-monospace,monospace;color:var(--accent);min-height:1.4em}
+.sheet{width:100%;image-rendering:pixelated;border:1px solid var(--line)}
+details{margin-top:8px}
+</style>
+</head>
+<body>
+<main>
+<h1>1페이즈 공격 모션 · Rose 공중 3연사 · Blue 잉크 터뜨리기</h1>
+<p>Aether 결과(채팅 크기 2000×1125)를 게임 크기에 맞춰 한 번에 키우고, 배경·화살·섬광·먼지를 지운 뒤 승인 그림의 팔레트로만 다시 칠했습니다. 게임 시간표대로 재생하고 화살·잉크 폭발 이펙트를 함께 그립니다. 주황 세로선은 발사·폭발 시각, 회색 선은 게임에서 보스가 사라지는 시각입니다.</p>
+<div class="bar">
+  <label>배경 <select id="bg"><option value="#ffffff" selected>흰색</option><option value="#808080">회색</option><option value="#24202c">어두운색</option></select></label>
+  <label><input type="checkbox" id="fx" checked> 이펙트</label>
+  <label><input type="checkbox" id="vanish"> 게임처럼 사라지기</label>
+</div>
+<div id="cards"></div>
+</main>
+<script>
+const $=s=>document.querySelector(s);
+const load=src=>new Promise((ok,no)=>{const i=new Image();i.onload=()=>ok(i);i.onerror=()=>no(src);i.src=src});
+const NAMES={'rose-triple-shot':'Rose · 공중 3연사','blue-ink-burst':'Blue · 잉크 터뜨리기'};
+let V,img={};
+function sheetFrame(name,age){const s=V[name],d=s.durationsMs,t=d.reduce((a,b)=>a+b,0);let ms=age*1000;if(s.loop)ms%=t;else if(ms>=t)return -1;for(let i=0;i<d.length;i++){if(ms<d[i])return i;ms-=d[i]}return -1}
+function drawSheet(ctx,name,age,x,y,scale=1,flip=false){const s=V[name],f=sheetFrame(name,age);if(f<0)return;ctx.save();ctx.translate(x,y);ctx.scale(flip?-scale:scale,scale);ctx.drawImage(img[name],f%s.columns*s.cellWidth,Math.floor(f/s.columns)*s.cellHeight,s.cellWidth,s.cellHeight,-s.pivotX,-s.pivotY,s.cellWidth,s.cellHeight);ctx.restore()}
+function frameAt(c,ms){let a=0;for(let i=0;i<c.durationsMs.length;i++){a+=c.durationsMs[i];if(ms<a)return i}return c.durationsMs.length-1}
+const W=640,H=270,OX=256,OY=0; // sprite canvas (384x256) drawn at (OX,OY) inside the stage
+function draw(card){
+  const {c,ctx,id}=card,ms=card.t;ctx.imageSmoothingEnabled=false;ctx.fillStyle=$('#bg').value;ctx.fillRect(0,0,W,H);
+  ctx.fillStyle='rgba(120,120,120,.25)';ctx.fillRect(0,OY+232,W,1);
+  const hidden=$('#vanish').checked&&ms>=c.vanishMs;
+  const i=frameAt(c,ms),f=c.frames[i];
+  if(!hidden){const im=f==='idle'?card.idle:card.cells[f];ctx.drawImage(im,OX,OY)}
+  if($('#fx').checked){
+    if(id==='rose-triple-shot')for(const cue of c.cuesMs){const age=(ms-cue)/1000;if(age<0)continue;const x=OX+120-age*768;if(x<-80)continue;drawSheet(ctx,'rose-arrow-flight',age,x,OY+78,1,false)}
+    if(id==='blue-ink-burst'){const age=(ms-c.cuesMs[0])/1000;if(age>=0)drawSheet(ctx,'machine-ink-blast',age,OX+192,OY+232-112+112,1)}
+    if($('#vanish').checked&&ms>=c.vanishMs&&id==='blue-ink-burst')drawSheet(ctx,'blue-vanish',(ms-c.vanishMs)/1000,OX+192,OY+232)
+  }
+  card.seek.value=ms;card.info.textContent=`${(ms/1000).toFixed(2)}초 · ${i}번째 장 (원본 ${f==='idle'?'승인 기본 자세':String(f).padStart(2,'0')+'번 칸'}) · ${card.run?'재생 중':'멈춤'}`;
+  const tl=card.tl.getContext('2d');tl.clearRect(0,0,tl.canvas.width,10);const sc=tl.canvas.width/c.totalMs;
+  tl.fillStyle='#ddd';tl.fillRect(0,3,tl.canvas.width,4);tl.fillStyle='#c4572f';for(const q of c.cuesMs)tl.fillRect(q*sc,0,2,10);tl.fillStyle='#888';tl.fillRect(c.vanishMs*sc,0,2,10);tl.fillStyle='#211b2a';tl.fillRect(ms*sc,0,2,10);
+}
+(async()=>{
+  V=await (await fetch('assets/vfx.json')).json();for(const k of Object.keys(V))img[k]=await load('assets/'+k+'.png');
+  const C=await (await fetch('candidates.json')).json();const cards=[];
+  for(const [id,c] of Object.entries(C)){
+    const el=document.createElement('div');el.className='card';
+    el.innerHTML=`<h2>${NAMES[id]}</h2><p>${c.gameNote} · 총 ${(c.totalMs/1000).toFixed(2)}초 · ${c.frames.length}장</p><canvas width="${W}" height="${H}"></canvas><canvas class="tl" width="1000" height="10" style="height:10px;border:0"></canvas>
+    <div class="bar"><button class="play">일시정지</button><button class="prev">◀ 한 장</button><button class="next">한 장 ▶</button><label><input type="checkbox" class="loop" checked> 반복</label><select class="speed"><option value="0.25">0.25배</option><option value="0.5">0.5배</option><option value="1" selected>1배</option></select><input type="range" class="seek" min="0" max="${c.totalMs-1}" step="10"></div>
+    <div class="meta"></div><details><summary>정리한 36칸 전체 보기</summary><img class="sheet" src="${id}/clean-white.png"><img class="sheet" src="${id}/clean-dark.png"></details>`;
+    $('#cards').append(el);
+    const cells={};for(const f of new Set(c.frames.filter(x=>x!=='idle')))cells[f]=await load(`${id}/clean/${String(f).padStart(2,'0')}.png`);
+    const idle=id==='blue-ink-burst'?await load('../source/blue-ink-burst/approved-blue-idle.png'):null;
+    const card={id,c,el,ctx:el.querySelector('canvas').getContext('2d'),tl:el.querySelector('.tl'),seek:el.querySelector('.seek'),info:el.querySelector('.meta'),cells,idle,t:0,run:true};
+    const stop=()=>{card.run=false;el.querySelector('.play').textContent='재생'};
+    el.querySelector('.play').onclick=()=>{card.run=!card.run;if(card.run&&card.t>=c.totalMs-1)card.t=0;el.querySelector('.play').textContent=card.run?'일시정지':'재생';draw(card)};
+    const step=d=>{stop();let i=Math.max(0,Math.min(c.frames.length-1,frameAt(c,card.t)+d));card.t=c.durationsMs.slice(0,i).reduce((a,b)=>a+b,0);draw(card)};
+    el.querySelector('.prev').onclick=()=>step(-1);el.querySelector('.next').onclick=()=>step(1);
+    card.seek.oninput=e=>{stop();card.t=Number(e.target.value);draw(card)};
+    cards.push(card);draw(card);
+  }
+  $('#bg').onchange=$('#fx').onchange=$('#vanish').onchange=()=>cards.forEach(draw);
+  let last=performance.now();
+  (function tick(now){const dt=Math.min(100,now-last);last=now;for(const k of cards){if(!k.run)continue;k.t+=dt*Number(k.el.querySelector('.speed').value);if(k.t>=k.c.totalMs){if(k.el.querySelector('.loop').checked)k.t=0;else{k.t=k.c.totalMs-1;k.run=false;k.el.querySelector('.play').textContent='재생'}}draw(k)}requestAnimationFrame(tick)})(last);
+  window.p1={cards,draw};
+})();
+</script>
+</body>
+</html>

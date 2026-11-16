@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2페이즈 전투 QA · 흡수 컷씬</title>
+<link rel="stylesheet" href="cutscene.css">
+<main>
+  <header><div><span class="eyebrow">STAGE 02 / MAIN 8cc629a15</span><h1>2페이즈 전투 → 흡수 컷씬</h1></div><span class="draft">HTML 플레이 테스트 · 연출 시안</span></header>
+  <p class="intro">최신 main의 4종 패턴과 팀원 VFX에 채택 모션·크기를 연결했습니다. 전투에서 한쪽을 쓰러뜨리거나, 아래 분기로 컷씬만 볼 수 있어요.</p>
+  <p class="intro"><a href="bridge/" style="color:#b6d3f3">새 블루 흡수 연결 모션 · 18프레임 확대 검토 →</a></p>
+  <p class="intro"><a href="../../boss-arena-cutscenes-20261106/preview/intro/" style="color:#b6d3f3">← 보스방 입장 컷씬</a>　<a href="../../boss-arena-cutscenes-20261106/preview/phase-shift/" style="color:#b6d3f3">← 1→2페이즈 전환 컷씬</a></p>
+  <div class="qa"><button id="battle-start">전투 시작 / 다시 시작</button><label>패턴 <select id="pattern"><option value="0">전체 · 무작위</option><option value="1">① 반사 화살·화염구</option><option value="2">② 급강하·유도 화살</option><option value="3">③ 가속 교환탄</option><option value="4">④ 양옆 압박</option></select></label><button id="practice">이 패턴 바로 시험</button><label><input id="invincible" type="checkbox"> 무적</label><label><input id="hitbox" type="checkbox"> 판정 표시</label><button data-ko="blue">블루 격파</button><button data-ko="rose">로즈 격파</button><button data-ko="both">동시 격파</button></div>
+  <div class="branches" role="group" aria-label="컷씬 분기"><button data-branch="blue-first" class="selected">블루가 먼저 쓰러짐</button><button data-branch="rose-first">로즈가 먼저 쓰러짐</button></div>
+  <div class="stage"><canvas id="stage" width="960" height="540" tabindex="0" aria-label="2페이즈 흡수 컷씬"></canvas><div id="error" role="alert" hidden></div></div>
+  <div class="playbar"><button id="play">재생</button><button id="restart">처음부터</button><label>속도 <select id="speed"><option value="0.5">0.5배</option><option value="1" selected>1배</option><option value="1.5">1.5배</option></select></label><label><input id="shake" type="checkbox" checked> 화면 흔들림</label><label><input id="loop" type="checkbox"> 반복</label><span id="status" role="status">불러오는 중…</span></div>
+  <div class="seekbar"><input id="seek" type="range" min="0" max="15.8" step="0.01" value="0" aria-label="컷씬 시간"><output id="clock">0.00 / 15.80s</output></div>
+  <nav id="cues" aria-label="장면 바로 보기"></nav>
+  <p class="notes">전투: A/D 또는 ← → 이동 · Space 2단 점프 · Shift 대시 · J 평타 25 · K 강베기 35 · P 일시정지. 교환탄 HP 100, 접촉 피해 없음, 한쪽 파괴 시 남은 탄이 0.28초에 적중합니다. 컷씬: Space 재생·정지 / ← → 0.1초 이동. 마지막 자세 유지. 대사는 1차 초안입니다.</p>
+  <p class="notes">보스 HP 각각 1000 / 어느 쪽을 격파해도 흡수로 전환 / 컷씬 중 HP 회복 없음. 전투는 최신 main 규칙을 옮긴 HTML 근사 구현이며 Unity 실행 화면이 아닙니다. 새 흡수 연출과 기본 공격 고정 25는 이 검토용 설정입니다.</p>
+  <details><summary>대사 바꿔서 보기</summary><p>문장을 바꾸면 해당 말풍선에 바로 반영됩니다. ‘대사 JSON 저장’으로 수정안을 남길 수 있어요.</p><div id="dialogues"></div><button id="export-dialogue">대사 JSON 저장</button></details>
+</main>
+<script type="module" src="cutscene.js"></script>
+</html>

@@ -1,0 +1,146 @@
+{
+  "status": "user-selected candidate 2 (layered) for every weapon basic attack and skill hit; candidates 1 and 3 not used",
+  "selected": 2,
+  "levelMatch": {
+    "method": "ITU-R BS.1770 K-weighting, maximum over sliding 100 ms window",
+    "reference": "sfx_hit_hammer_01_v01.wav",
+    "referenceGain": 0.8,
+    "targetDb": -34.88
+  },
+  "commonRules": [
+    "original speed, no pitch/rate change",
+    "no added bass layer, saturation or distortion",
+    "12 dB/oct causal high-pass only below the attack-swing band",
+    "start at source transient",
+    "end at source decay (-54 dB) or event/floor boundary with long fade",
+    "no common duration limit"
+  ],
+  "rejectedFamilies": [
+    "ink-hit-wet-revision (all)",
+    "ink-hit-directions 1-10 (all)"
+  ],
+  "candidates": [
+    {
+      "number": 1,
+      "name": "뭉친 덩어리 한 방",
+      "approach": "원음 하나 · 거의 무가공",
+      "layers": [
+        {
+          "role": "전체",
+          "archiveEntry": "Snow_Ice/snowball_hit_impact_04.wav",
+          "sourceSha256": "49d4caa2e2c1077f5f3c7927f0cc72e38583ccb8423503106a943789f7b8ee90",
+          "startSeconds": 0.0027083333333333334,
+          "keptSeconds": 0.3468125,
+          "highpassHz": 200,
+          "endRule": "-54 dB below peak",
+          "fadeInSeconds": 0.001,
+          "fadeOutSeconds": 0.025
+        }
+      ],
+      "pitchOrRateChange": false,
+      "distortionOrSaturation": false,
+      "addedBass": false,
+      "stats": {
+        "durationSeconds": 0.3468,
+        "outputGainDb": -11.74,
+        "peak": 0.1079,
+        "kWeighted100msMax": -34.88,
+        "kWeighted400msMax": -40.86,
+        "below120HzShareDb": -17.1,
+        "below200HzShareDb": -9.1
+      },
+      "sha256": "3f4bb358a1b13910b77761f69162c2ccfde82325163e2c602d82427de9c601bf",
+      "intent": "잉크를 액체가 아니라 꽉 찬 덩어리로 해석한다. 날카롭지만 금속·나무 울림이 없는 접촉으로 “맞았다”를 전달한다.",
+      "limits": "원음의 60~70 Hz 울림을 걷어내 무게는 공격음 쪽에 맡긴다. 눈 부스러기 질감이 거칠게 들릴 수 있고, 잉크 연상은 가장 약하다."
+    },
+    {
+      "number": 2,
+      "name": "접촉점 + 잉크 두께",
+      "approach": "역할을 나눈 2레이어",
+      "layers": [
+        {
+          "role": "접촉점: 맞는 순간과 형태",
+          "archiveEntry": "Foley/foley_sports_bag_grab_pickup_catch_02.wav",
+          "sourceSha256": "58c93116abd1fb8bb00a512cb61da56dcfa972ee4911f8ba8109e8f12e02e471",
+          "startSeconds": 0.024020833333333335,
+          "keptSeconds": 0.14391666666666666,
+          "highpassHz": 140,
+          "endRule": "event meets floor (-33.8 dB below peak) +4 dB, then fade",
+          "fadeInSeconds": 0.001,
+          "fadeOutSeconds": 0.04,
+          "levelRelativeDb": 0
+        },
+        {
+          "role": "잉크 두께: 점성 질감과 꼬리",
+          "archiveEntry": "Guns_Weapons/Bullets/bullet_impact_mud_06.wav",
+          "sourceSha256": "0546e319910b1c69cf0c951ff1f4fd436c0bee3873fd98ea1f240db34ca29eaf",
+          "startSeconds": 0.057958333333333334,
+          "keptSeconds": 0.24670833333333334,
+          "highpassHz": 150,
+          "endRule": "-54 dB below peak",
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.03,
+          "offsetSeconds": 0.002,
+          "levelRelativeDb": -6.0,
+          "note": "0~58 ms bullet fly-in removed; starts 1 ms before the splat transient"
+        }
+      ],
+      "pitchOrRateChange": false,
+      "distortionOrSaturation": false,
+      "addedBass": false,
+      "stats": {
+        "durationSeconds": 0.2487,
+        "outputGainDb": -16.95,
+        "peak": 0.0854,
+        "kWeighted100msMax": -34.88,
+        "kWeighted400msMax": -40.89,
+        "below120HzShareDb": -13.7,
+        "below200HzShareDb": -5.7
+      },
+      "sha256": "7fe9b21e864823eb8662473661dfc4e6acc4a04b0975e716df799cbf8574d583",
+      "intent": "앞의 접촉은 짧고 분명하게, 잉크 몸의 두께는 점성 질감으로만 준다. 이전 반려안과 반대로 앞부분 저음을 키우지 않는다.",
+      "limits": "두 녹음의 공간감이 달라 붙여 들릴 수 있다. 진흙 원음 앞의 총알 바람 소리 구간은 잘라냈다(본 타격 직전에서 시작).",
+      "gameRuntime": {
+        "file": "runtime/game/sfx_hit_common_01_v01.wav",
+        "sha256": "5b2aed6dba335cc5dbb918641173a954f712d2834bab4a71913f7cef4bfcc98a",
+        "bytes": 23920,
+        "scale": 1.25,
+        "defaultRuntimeVolume": 0.8,
+        "peak": 0.1068
+      }
+    },
+    {
+      "number": 3,
+      "name": "움켜쥐는 흡수",
+      "approach": "원음 하나 · 짧은 사건",
+      "layers": [
+        {
+          "role": "전체",
+          "archiveEntry": "Foley/foley_combat_fight_grab_throw_02.wav",
+          "sourceSha256": "29478029bd7210deba613ec5cf2173844be191739d835dd337f79b41cb2b3e82",
+          "startSeconds": 0.010895833333333334,
+          "keptSeconds": 0.14891666666666667,
+          "highpassHz": 120,
+          "endRule": "event meets floor (-23.8 dB below peak) +4 dB, then fade",
+          "fadeInSeconds": 0.001,
+          "fadeOutSeconds": 0.1
+        }
+      ],
+      "pitchOrRateChange": false,
+      "distortionOrSaturation": false,
+      "addedBass": false,
+      "stats": {
+        "durationSeconds": 0.1489,
+        "outputGainDb": -17.84,
+        "peak": 0.1005,
+        "kWeighted100msMax": -34.88,
+        "kWeighted400msMax": -40.9,
+        "below120HzShareDb": -14.9,
+        "below200HzShareDb": -8.5
+      },
+      "sha256": "a7de9008785523d94649695fd4df852312ddc71ca0910f30cf84d59cb29084ca",
+      "intent": "잉크 몸이 공격을 흡수한다는 해석. 여러 마리·연타에서 가장 덜 쌓이도록 짧은 길이를 원음 그대로 쓴다.",
+      "limits": "움켜쥔 뒤 이어지는 던지기 동작 소리는 쓰지 않으므로 끝을 바닥 잡음 위에서 0.1초 동안 서서히 줄였다. 타격감이 약하게 들릴 수 있다."
+    }
+  ]
+}

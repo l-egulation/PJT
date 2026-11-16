@@ -1,0 +1,42 @@
+{
+  "numeric_source": "melee_weapon_design.json#base_sword_default",
+  "numeric_values_role": "initial_approved_regression_provenance",
+  "hitbox": {
+    "right_offset": [
+      1.671875,
+      1.25
+    ],
+    "left_offset": [
+      -1.671875,
+      1.25
+    ],
+    "far_edge_from_body_front": 2.5,
+    "vertical_anchor": "feet_to_2.5_units",
+    "size": [
+      2.96875,
+      2.5
+    ]
+  },
+  "cooldown_start": "effect_activation",
+  "special_ink": null,
+  "status": "user_approved_initial_design",
+  "pending": [],
+  "weapon": "basic_sword",
+  "base_cooldown_seconds": 5,
+  "recovery_seconds": 0.3,
+  "total_motion_seconds": 0.7,
+  "name": "강베기",
+  "active_seconds": 0.1,
+  "base_damage": 30,
+  "unity_applied": false,
+  "windup_seconds": 0.3,
+  "target_count": "all_valid_targets",
+  "hits_per_target_per_attack": 1,
+  "horizontal_input_during_motion": "disabled",
+  "automatic_forward_movement": false,
+  "vertical_physics": "unchanged",
+  "facing_lock": "motion_start",
+  "additional_control_effect": "none",
+  "applies_basic_hit_stagger": false,
+  "occlusion": "solid_world_blocks_one_way_platform_does_not"
+}

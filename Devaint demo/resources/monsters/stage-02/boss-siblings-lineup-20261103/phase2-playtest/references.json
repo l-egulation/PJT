@@ -1,0 +1,128 @@
+{
+  "purpose": "phase2-playtest-before-final-animation-assets",
+  "logicalScreen": [
+    960,
+    540
+  ],
+  "worldUnits": [
+    30,
+    18
+  ],
+  "pixelsPerUnit": 32,
+  "floorY": 444,
+  "status": "pending-user-playtest",
+  "phase3": "absorption-transition-only",
+  "timingSource": "../phase1-playtest/current-tuning.json",
+  "playerSource": "../phase1-playtest/player-baseline.json",
+  "implementationAssumptions": [
+    "Match Unity trial horizontal arrows at foot+1u; direction fixed at pattern start.",
+    "Bomb centered on player body; tracks until 0.5s before explosion.",
+    "Root zone contacts only the floor, one root per zone.",
+    "Ordinary arrow parry reverses the projectile and ends homing.",
+    "Swap active interval 0.15s; absorption placeholder 2s after center push."
+  ],
+  "sourceFiles": [
+    {
+      "path": "docs/design/chapter2-rose-blue-boss.md",
+      "sha256": "0a7734d689b3d3645b601f08b351517ff7e39eb4f501c2ab777e79958160c814"
+    },
+    {
+      "path": "data/combat/chapter2_rose_blue.json",
+      "sha256": "8485c14d798d177dc43cd6ec940a646fcaafdcbe7da2507a474a07748205125b"
+    },
+    {
+      "path": "unity/Assets/Chapter2/Runtime/RoseBlueEncounter.Patterns.cs",
+      "sha256": "75327af2013c916e41202672c217b55b4cdf266623f1606507de305ac6d9798b"
+    }
+  ],
+  "playtestOverrides": {
+    "basicDamagePerHit": 25,
+    "specialDamageUnchanged": 35,
+    "varianceUnchanged": [
+      0.9,
+      1.1
+    ],
+    "scope": "phase2 HTML only; user requested"
+  },
+  "movementVariant": {
+    "default": true,
+    "comparison": "toggle mobile checkbox; resets battle",
+    "scope": "HTML playtest only, pending approval",
+    "patterns": [
+      "Rose diagonal aerial shot, teleport back to pre-pattern position; Blue tracks player with bomb",
+      "Blue vanishes and locks Player X at drop onset; Rose fires one limited-turn homing arrow",
+      "700-800px separation; accelerating projectiles collide after about 2.8s; HP 100/75; counter damage preserved",
+      "single cross relocation to opposite flanks, center funnel then locked snipe then fixed ground blast; 1.5s recovery"
+    ],
+    "recoveryMarkerSeconds": 0.9
+  },
+  "exchangeSurvivorImpactSeconds": 0.28,
+  "revivalShield": {
+    "scope": "HTML pending balance playtest",
+    "healSeconds": 6,
+    "sharedShieldHp": 100,
+    "breakDoesNotCancelHealing": true,
+    "roseCanDieAfterBreak": false,
+    "shieldResetsEachRevive": true,
+    "damageOverflow": false
+  },
+  "swapCombo": {
+    "scope": "HTML balance playtest",
+    "flanks": {
+      "tell": 0.5,
+      "end": 1.4,
+      "damage": 12,
+      "centralGapPx": 180,
+      "sweepInSeconds": 0.8
+    },
+    "snipe": {
+      "trackStart": 1.05,
+      "lock": 1.45,
+      "fire": 1.8,
+      "speedPx": 1200,
+      "damage": 15,
+      "parry": false
+    },
+    "blueMark": {
+      "lockAt": 1.8,
+      "blastAt": 2.45,
+      "widthPx": 112,
+      "damage": 15
+    },
+    "recovery": {
+      "start": 2.65,
+      "seconds": 1.5
+    },
+    "nextPattern": 4.15
+  },
+  "rootDuo": {
+    "scope": "HTML user playtest only",
+    "vanishSeconds": 1.86,
+    "dropSeconds": 0.14,
+    "rootAt": 2,
+    "firstArrowAt": 2,
+    "shotSpeedPx": 640,
+    "guidanceSeconds": 0.65,
+    "turnRateRad": 3.141592653589793,
+    "parry": true,
+    "arrowLife": 2.5,
+    "shotCount": 1,
+    "damage": 20,
+    "warning": "Blue vanishes; no floor warning",
+    "target": "Player X at drop onset, fixed through landing",
+    "dashAvoidsRoot": true
+  },
+  "exchangeRamp": {
+    "scope": "HTML only",
+    "roseHp": 100,
+    "blueHp": 75,
+    "flightSeconds": 2.8,
+    "speedFactor": "1 + 0.6 * flightAge",
+    "impactDamageUnchanged": [
+      200,
+      150
+    ],
+    "survivorImpactSeconds": 0.28
+  },
+  "mainCommit": "a9dd5a47"
+}

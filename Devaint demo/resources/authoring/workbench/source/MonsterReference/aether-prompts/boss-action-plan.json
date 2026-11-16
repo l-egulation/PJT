@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "status": "M02-B01-B02-extracted-candidates-review-pending-gameplay-not-implemented",
+  "receivedCandidates": {"output": "local-assets/boss-frame-extract-v1", "clips": ["M02", "B01", "B02"], "sourceFramesPerClip": 36, "sourceDurationMs": 3000, "candidateFrameCounts": [12, 18, 24, 36], "pixelNormalization": "pending", "approval": "pending", "missing": ["M01", "B03"]},
+  "monster": "05_clock-executioner",
+  "base": "approved/05_clock-executioner/base/frames/00.png",
+  "build": "aether-prompts/build-boss-actions.py",
+  "output": "local-assets/boss-aether-actions-v1",
+  "inputFraming": {"logicalCanvas": [384, 352], "sourceOffset": [64, 80], "groundY": 320, "integerScale": 4, "facing": "screen-left"},
+  "scope": "잠행·솟구치기·공격 1/2/3의 에테르 입력 자료. 대기·죽음 제작은 이번 범위에서 제외.",
+  "movement": "걷기를 제작하지 않고, 잠행 후 다른 지점의 솟구치기로 이동한다. 본체 클립 안에 수평 이동을 생성하지 않는다.",
+  "hitReaction": "보스는 별도 피격 자세로 전환하지 않고 기존 흰 점멸·파편·타격음을 사용한다. 보존된 hit 그림은 삭제하지 않는다. 일반 몹·엘리트의 피격 자세는 변경하지 않는다.",
+  "fxPolicy": "본체와 FX를 분리한다. 낙점 예고·시침·지면 파쇄·근거리 폭발·등장 잉크 튐은 게임에서 별도로 동기화한다. FX를 제작할 때는 최대 3색·윤곽선 없음의 기존 기준을 따른다.",
+  "jobs": [
+    {"id": "M01", "name": "잉크 잠행", "start": "boss-4x-white.png", "end": "puddle-4x-white.png", "prompt": "prompts/05_clock-executioner-ink-submerge.txt", "suggestedDurationMs": 1300, "damage": "잠행 자체에 피해 없음", "note": "발부터 불균일하게 녹아내리고 본체 전체가 같은 웅덩이로 변한다. 온전한 몸체의 하강·잘라내기·통째 축소는 제외."},
+    {"id": "M02", "name": "솟구치기 공격", "start": "puddle-4x-white.png", "end": "boss-4x-white.png", "prompt": "prompts/05_clock-executioner-ink-emerge.txt", "suggestedDurationMs": 1500, "damage": "몸체 형성 후 무게를 받는 순간 주변 잉크 피해 한 번", "warning": "도착 지점의 잉크 고임은 먼저 표시하고 피해는 주지 않는다. 예고 시작 후 위치를 고정하며 플레이어와 겹치는 출현은 피한다.", "note": "기본형으로 자연스럽게 연결하고 잠깐 회복. 예고 길이·반경·무적 시점은 미확정."},
+    {"id": "B01", "name": "낙하시침", "start": "boss-4x-white.png", "end": "boss-4x-white.png", "prompt": "prompts/05_clock-executioner-needle-rain.txt", "suggestedDurationMs": 2050, "damage": "고정된 바닥 예고 지점에 낙하하는 시침", "note": "큰 양팔 벌리기가 예고. 기존 attack-motion-definitions.json의 공격 의도·이벤트를 유지하며 입력 여백은 이 계획을 사용."},
+    {"id": "B02", "name": "양손 지면 파쇄", "start": "boss-4x-white.png", "end": "boss-4x-white.png", "prompt": "prompts/05_clock-executioner-two-fist-slam.txt", "suggestedDurationMs": 2020, "damage": "동시 주먹 접촉 후 전방으로 순서대로 진행하는 지면 피해", "note": "두 주먹을 머리 위로 모아 동시에 내려찍는다. 기존 공격 의도·이벤트를 유지하며 입력 여백은 이 계획을 사용."},
+    {"id": "B03", "name": "잉크 포효", "start": "boss-4x-white.png", "end": "boss-4x-white.png", "prompt": "prompts/05_clock-executioner-ink-roar.txt", "suggestedDurationMs": 1900, "damage": "몸통을 젖혀 펴는 순간 근거리 잉크 폭발", "warning": "짧게 어깨를 당겨 힘을 모은 뒤 가슴을 크게 펴는 동작. 보스에서 멀어지면 피한다.", "note": "생성 보정 v2: 깊은 웅크림과 처지는 회복을 제외하고, 머리가 기본형보다 높아지는 뒤로 젖힌 자세를 클립 약 1/3 동안 유지한다. 주먹은 낮게 유지하며 새 입·팔 벌리기·바닥 내려찍기를 넣지 않는다. 준비·회복 길이와 피해 반경은 미확정."}
+  ],
+  "timingPolicy": "제작용 동작 길이 초안이다. 에테르 결과 추출 후 프레임·정지 구간을 선정하며 최종 밸런스로 취급하지 않는다.",
+  "generationPolicy": "다섯 동작을 각각 생성한다. 모든 시작·끝 이미지는 동일 크기·배율·발 원점을 사용한다. 웅덩이는 연결용 참조이며 확정 게임 FX가 아니다. 이 자료 제작만으로 모션 생성·픽셀 검증·Unity 적용 완료를 주장하지 않는다."
+}

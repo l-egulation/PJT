@@ -1,0 +1,885 @@
+{
+  "status": "applied locally on user request 2026-11-16; not committed",
+  "reason": {
+    "skills": "user: hammer skills and greatsword charged slam sound cut off mid-way; then other truncated skills found by the pre-fade scan",
+    "basic": "user: hammer basic floor slam too loud"
+  },
+  "rule": {
+    "skills": "same start sample, filters and level as the original cut; keep recording decay to -54 dB (or recording end) with a 40 ms end fade; event times/gains/safe gain unchanged",
+    "basic": "K-weighted 100 ms maximum equal to sfx_weapon_hammer_basic_0_01_v01 (hammer 1st hit)"
+  },
+  "skills": [
+    {
+      "id": "hammer_default",
+      "replaces": "audio/gamemaster-skills-selected/runtime/hammer_default_10.wav",
+      "file": "runtime/hammer_default_tail_10.wav",
+      "sha256": "73e419e99413369c9721979e38c221ae8d10087262b70efd2483f0ae6ee106ca",
+      "bytes": 136460,
+      "samples": 68208,
+      "oldSeconds": 0.6381,
+      "newSeconds": 1.421,
+      "safeGain": 1,
+      "matchBeforeOldFade": 0.000134,
+      "matchedSeconds": 0.4857,
+      "layers": [
+        {
+          "audio": "cut/4dbd85d292bd6abda659",
+          "archiveEntry": "Whooshes/whoosh_low_deep_04.wav",
+          "sourceSha256": "d5ae42607afd53206f1f784f57020653bcb2934ae9aeb24477a41ab22ca73ef8",
+          "startSample": 335,
+          "parts": null,
+          "levelGain": 0.334006,
+          "reproductionResidual": 7.7e-05,
+          "endRule": "recording decay to -54 dB",
+          "endFadeSeconds": 0.04,
+          "oldSeconds": 0.203,
+          "newSeconds": 0.203,
+          "time": 0.3527291666666667,
+          "gain": 1.0
+        },
+        {
+          "audio": "cut/cbe522bf136cc3a5d12c",
+          "archiveEntry": "Impacts_Smashable/rock_impact_heavy_slam_01.wav",
+          "sourceSha256": "82d3befb666b97a4983cdc758dd103b814ad0722c00c14ff03c06034a0fe88d4",
+          "startSample": 3408,
+          "parts": null,
+          "levelGain": 0.182313,
+          "reproductionResidual": 9e-05,
+          "endRule": "recording decay to -54 dB",
+          "endFadeSeconds": 0.04,
+          "oldSeconds": 0.285,
+          "newSeconds": 1.0679,
+          "time": 0.35308333333333336,
+          "gain": 0.42
+        }
+      ]
+    },
+    {
+      "id": "hammer_range",
+      "replaces": "audio/gamemaster-skills-selected/runtime/hammer_range_10.wav",
+      "file": "runtime/hammer_range_tail_10.wav",
+      "sha256": "c3f18fe237c22f901ce7a2c9f38454ed7b50657b87044658ead7ec856e570b51",
+      "bytes": 181772,
+      "samples": 90864,
+      "oldSeconds": 1.3545,
+      "newSeconds": 1.893,
+      "safeGain": 1,
+      "matchBeforeOldFade": 0.000224,
+      "matchedSeconds": 1.0098,
+      "layers": [
+        {
+          "audio": "cut/6ae558dbb27cd9470d3d",
+          "archiveEntry": "Impacts_Smashable/rock_impact_heavy_slam_04.wav",
+          "sourceSha256": "df6a88ca68f96bf10f5c06b935a188bfa9564a89c93e0312038d12bbfed3bbd5",
+          "startSample": 4944,
+          "parts": null,
+          "levelGain": 0.189651,
+          "reproductionResidual": 8.8e-05,
+          "endRule": "recording decay to -54 dB",
+          "endFadeSeconds": 0.04,
+          "oldSeconds": 0.365,
+          "newSeconds": 0.9035,
+          "time": 0.9894791666666667,
+          "gain": 1.0
+        },
+        {
+          "audio": "cut/5ce3e31d645c79f26172",
+          "archiveEntry": "Whooshes/whoosh_low_deep_01.wav",
+          "sourceSha256": "23acec8fa8ccbf69b4aacd6034a9a0d17b3ee2afd488b51d045da38d410fe592",
+          "startSample": 335,
+          "parts": null,
+          "levelGain": 0.428152,
+          "reproductionResidual": 6.2e-05,
+          "endRule": "recording decay to -54 dB",
+          "endFadeSeconds": 0.04,
+          "oldSeconds": 0.1943,
+          "newSeconds": 0.1943,
+          "time": 0.8855208333333333,
+          "gain": 0.42
+        }
+      ]
+    },
+    {
+      "id": "hammer_follow_up",
+      "replaces": "audio/gamemaster-skills-selected/runtime/hammer_follow_up_03.wav",
+      "file": "runtime/hammer_follow_up_tail_03.wav",
+      "sha256": "3610a9229be00e85480e927fa3fdcd3a2aec5dafe87686a7ce3ccaadcc27393a",
+      "bytes": 205900,
+      "samples": 102928,
+      "oldSeconds": 1.7743,
+      "newSeconds": 2.1443,
+      "safeGain": 1,
+      "matchBeforeOldFade": 3.5e-05,
+      "matchedSeconds": 0.6544,
+      "layers": [
+        {
+          "audio": "r2/7d447ea1553d8ffb1dcf",
+          "archiveEntry": "Impacts_Smashable/rock_impact_heavy_slam_03.wav",
+          "sourceSha256": "414cbb6fc047f4feadfa5ce1977afd99493927b0a3c11bba15937c39facb3b5a",
+          "startSample": 7296,
+          "parts": null,
+          "levelGain": 0.466102,
+          "reproductionResidual": 3.5e-05,
+          "endRule": "recording decay to -54 dB",
+          "endFadeSeconds": 0.04,
+          "oldSeconds": 0.272,
+          "newSeconds": 1.147,
+          "time": 0.45237499999999997,
+          "gain": 1.0
+        },
+        {
+          "audio": "r2/f3b8f276f431d0d2c1e1",
+          "archiveEntry": "Impacts_Smashable/rock_avalanche_landslide_debris_01.wav",
+          "sourceSha256": "deb75a82f629d88f24a59a9fa2decef9211cd7960e3d23122a02ac10d9d5c8f6",
+          "startSample": 1536,
+          "parts": null,
+          "levelGain": 0.321262,
+          "reproductionResidual": 5.9e-05,
+          "endRule": "continuous recording: kept to old fade start, then 0.4 s fade",
+          "endFadeSeconds": 0.4,
+          "oldSeconds": 0.372,
+          "newSeconds": 0.742,
+          "time": 0.8023333333333333,
+          "gain": 0.9
+        },
+        {
+          "audio": "r2/f3b8f276f431d0d2c1e1",
+          "archiveEntry": "Impacts_Smashable/rock_avalanche_landslide_debris_01.wav",
+          "sourceSha256": "deb75a82f629d88f24a59a9fa2decef9211cd7960e3d23122a02ac10d9d5c8f6",
+          "startSample": 1536,
+          "parts": null,
+          "levelGain": 0.321262,
+          "reproductionResidual": 5.9e-05,
+          "endRule": "continuous recording: kept to old fade start, then 0.4 s fade",
+          "endFadeSeconds": 0.4,
+          "oldSeconds": 0.372,
+          "newSeconds": 0.742,
+          "time": 1.1023333333333334,
+          "gain": 0.9
+        },
+        {
+          "audio": "r2/f3b8f276f431d0d2c1e1",
+          "archiveEntry": "Impacts_Smashable/rock_avalanche_landslide_debris_01.wav",
+          "sourceSha256": "deb75a82f629d88f24a59a9fa2decef9211cd7960e3d23122a02ac10d9d5c8f6",
+          "startSample": 1536,
+          "parts": null,
+          "levelGain": 0.321262,
+          "reproductionResidual": 5.9e-05,
+          "endRule": "continuous recording: kept to old fade start, then 0.4 s fade",
+          "endFadeSeconds": 0.4,
+          "oldSeconds": 0.372,
+          "newSeconds": 0.742,
+          "time": 1.4023333333333334,
+          "gain": 0.9
+        }
+      ]
+    },
+    {
+      "id": "greatsword_default",
+      "replaces": "audio/gamemaster-skills-selected/runtime/greatsword_default_06.wav",
+      "file": "runtime/greatsword_default_tail_06.wav",
+      "sha256": "69c060bf8b99d33dec4f52b9a343d8864a2e39e569667227598c02c58e2ab565",
+      "bytes": 122060,
+      "samples": 61008,
+      "oldSeconds": 0.4881,
+      "newSeconds": 1.271,
+      "safeGain": 1,
+      "matchBeforeOldFade": 0.000152,
+      "matchedSeconds": 0.393,
+      "layers": [
+        {
+          "audio": "cut/f719a4ea7dac1e2f4912",
+          "archiveEntry": "Whooshes/whoosh_swish_high_big_04.wav",
+          "sourceSha256": "f594fda391f61e0ed9cb8c3841769f937a666dd8c90dba0bef5a91b6b3d3056e",
+          "startSample": 0,
+          "parts": null,
+          "levelGain": 0.298087,
+          "reproductionResidual": 7e-05,
+          "endRule": "recording decay to -54 dB",
+          "endFadeSeconds": 0.04,
+          "oldSeconds": 0.27,
+          "newSeconds": 0.27,
+          "time": 0.19297916666666667,
+          "gain": 1.0
+        },
+        {
+          "audio": "cut/cbe522bf136cc3a5d12c",
+          "archiveEntry": "Impacts_Smashable/rock_impact_heavy_slam_01.wav",
+          "sourceSha256": "82d3befb666b97a4983cdc758dd103b814ad0722c00c14ff03c06034a0fe88d4",
+          "startSample": 3408,
+          "parts": null,
+          "levelGain": 0.182313,
+          "reproductionResidual": 9e-05,
+          "endRule": "recording decay to -54 dB",
+          "endFadeSeconds": 0.04,
+          "oldSeconds": 0.285,
+          "newSeconds": 1.0679,
+          "time": 0.20308333333333334,
+          "gain": 0.42
+        }
+      ]
+    },
+    {
+      "id": "greatsword_default",
+      "replaces": "audio/gamemaster-skills-selected/runtime/greatsword_default_07.wav",
+      "file": "runtime/greatsword_default_tail_07.wav",
+      "sha256": "046fcde38569373a42d2bd456ae5ff9a552c84ed9a31877bff9d6c853e2f78c6",
+      "bytes": 144612,
+      "samples": 72284,
+      "oldSeconds": 0.4897,
+      "newSeconds": 1.5059,
+      "safeGain": 1,
+      "matchBeforeOldFade": 0.00015,
+      "matchedSeconds": 0.3298,
+      "layers": [
+        {
+          "audio": "cut/5ce3e31d645c79f26172",
+          "archiveEntry": "Whooshes/whoosh_low_deep_01.wav",
+          "sourceSha256": "23acec8fa8ccbf69b4aacd6034a9a0d17b3ee2afd488b51d045da38d410fe592",
+          "startSample": 335,
+          "parts": null,
+          "levelGain": 0.428152,
+          "reproductionResidual": 6.2e-05,
+          "endRule": "recording decay to -54 dB",
+          "endFadeSeconds": 0.04,
+          "oldSeconds": 0.1943,
+          "newSeconds": 0.1943,
+          "time": 0.20552083333333332,
+          "gain": 1.0
+        },
+        {
+          "audio": "cut/9fe99c10fe81aafdc043",
+          "archiveEntry": "Impacts_Smashable/rock_impact_heavy_slam_02.wav",
+          "sourceSha256": "c76a179fbc9179c811aaea188abe432b13329952af4e62c7d1e7f726140e503c",
+          "startSample": 2256,
+          "parts": null,
+          "levelGain": 0.131892,
+          "reproductionResidual": 0.000124,
+          "endRule": "recording decay to -54 dB",
+          "endFadeSeconds": 0.04,
+          "oldSeconds": 0.285,
+          "newSeconds": 1.3012,
+          "time": 0.20475,
+          "gain": 0.42
+        }
+      ]
+    },
+    {
+      "id": "launcher_followup_special",
+      "replaces": "audio/gamemaster-skills-selected/runtime/launcher_followup_special_02.wav",
+      "file": "runtime/launcher_followup_special_tail_02.wav",
+      "sha256": "0664b619789cd727a669de7c81c542e5c87abe709fa02b5a9dec5a8e954fe501",
+      "bytes": 75134,
+      "samples": 37545,
+      "oldSeconds": 0.3735,
+      "newSeconds": 0.7822,
+      "safeGain": 1,
+      "matchBeforeOldFade": 5e-05,
+      "matchedSeconds": 0.3035,
+      "layers": [
+        {
+          "audio": "r2/c0482b6e59408374d1a3",
+          "archiveEntry": "Guns_Weapons/Guns/gun_grenade_launcher_shot_02.wav",
+          "sourceSha256": "b949df1765378ee7e3b6970bb09a27c9df6ff3587d1e5d3a8edb14033e1362c0",
+          "startSample": 6527,
+          "parts": null,
+          "levelGain": 0.273019,
+          "reproductionResidual": 5e-05,
+          "endRule": "recording decay to -54 dB",
+          "endFadeSeconds": 0.04,
+          "oldSeconds": 0.2787,
+          "newSeconds": 0.6874,
+          "time": 0.09479166666666668,
+          "gain": 1.0
+        }
+      ]
+    },
+    {
+      "id": "rapier_default",
+      "replaces": "audio/gamemaster-skills-selected/runtime/rapier_default_01.wav",
+      "file": "runtime/rapier_default_tail_01.wav",
+      "sha256": "9a0df2d20f96ad0e9c69a6d57968a91fa6cda8efdb2de33d37742cbf1a36dcfe",
+      "bytes": 27542,
+      "samples": 13749,
+      "oldSeconds": 0.2864,
+      "newSeconds": 0.2864,
+      "safeGain": 1,
+      "matchBeforeOldFade": 7.2e-05,
+      "matchedSeconds": 0.2164,
+      "layers": [
+        {
+          "audio": "cut/427645badb955b9fbd25",
+          "archiveEntry": "Whooshes/whoosh_swish_small_harsh_03.wav",
+          "sourceSha256": "3d5534259dbe3df8109fa86c89af99b2a7498aebbdb6a571780e3a299c39010f",
+          "startSample": 1104,
+          "parts": null,
+          "levelGain": 0.291788,
+          "reproductionResidual": 7.2e-05,
+          "endRule": "recording ends before -54 dB: 80 ms fade at recording end",
+          "endFadeSeconds": 0.0337,
+          "oldSeconds": 0.1349,
+          "newSeconds": 0.1349,
+          "time": 0.15152083333333335,
+          "gain": 1.0
+        }
+      ]
+    },
+    {
+      "id": "rapier_range",
+      "replaces": "audio/gamemaster-skills-selected/runtime/rapier_range_01.wav",
+      "file": "runtime/rapier_range_tail_01.wav",
+      "sha256": "6f5275be49e3111018c9369a6146a5c9c72ea9f02d12fdcca381a5fc99986ed2",
+      "bytes": 37142,
+      "samples": 18549,
+      "oldSeconds": 0.3864,
+      "newSeconds": 0.3864,
+      "safeGain": 1,
+      "matchBeforeOldFade": 7.2e-05,
+      "matchedSeconds": 0.3164,
+      "layers": [
+        {
+          "audio": "cut/427645badb955b9fbd25",
+          "archiveEntry": "Whooshes/whoosh_swish_small_harsh_03.wav",
+          "sourceSha256": "3d5534259dbe3df8109fa86c89af99b2a7498aebbdb6a571780e3a299c39010f",
+          "startSample": 1104,
+          "parts": null,
+          "levelGain": 0.291788,
+          "reproductionResidual": 7.2e-05,
+          "endRule": "recording ends before -54 dB: 80 ms fade at recording end",
+          "endFadeSeconds": 0.0337,
+          "oldSeconds": 0.1349,
+          "newSeconds": 0.1349,
+          "time": 0.2515208333333333,
+          "gain": 1.0
+        }
+      ]
+    },
+    {
+      "id": "rapier_movement",
+      "replaces": "audio/gamemaster-skills-selected/runtime/rapier_movement_01.wav",
+      "file": "runtime/rapier_movement_tail_01.wav",
+      "sha256": "065fd15118b217aeac55e2f7625f4dc18ae40cdcc6be874ee013f49e71d2d5e7",
+      "bytes": 17942,
+      "samples": 8949,
+      "oldSeconds": 0.1864,
+      "newSeconds": 0.1864,
+      "safeGain": 1,
+      "matchBeforeOldFade": 7.2e-05,
+      "matchedSeconds": 0.1164,
+      "layers": [
+        {
+          "audio": "cut/427645badb955b9fbd25",
+          "archiveEntry": "Whooshes/whoosh_swish_small_harsh_03.wav",
+          "sourceSha256": "3d5534259dbe3df8109fa86c89af99b2a7498aebbdb6a571780e3a299c39010f",
+          "startSample": 1104,
+          "parts": null,
+          "levelGain": 0.291788,
+          "reproductionResidual": 7.2e-05,
+          "endRule": "recording ends before -54 dB: 80 ms fade at recording end",
+          "endFadeSeconds": 0.0337,
+          "oldSeconds": 0.1349,
+          "newSeconds": 0.1349,
+          "time": 0.05152083333333334,
+          "gain": 1.0
+        }
+      ]
+    },
+    {
+      "id": "rapier_follow_up",
+      "replaces": "audio/gamemaster-skills-selected/runtime/rapier_follow_up_01.wav",
+      "file": "runtime/rapier_follow_up_tail_01.wav",
+      "sha256": "c66dffa5656489e166112a24e2e98570e8be2a3f187a1762f312e4692257f9ea",
+      "bytes": 68822,
+      "samples": 34389,
+      "oldSeconds": 0.7164,
+      "newSeconds": 0.7164,
+      "safeGain": 1,
+      "matchBeforeOldFade": 7.2e-05,
+      "matchedSeconds": 0.1664,
+      "layers": [
+        {
+          "audio": "cut/427645badb955b9fbd25",
+          "archiveEntry": "Whooshes/whoosh_swish_small_harsh_03.wav",
+          "sourceSha256": "3d5534259dbe3df8109fa86c89af99b2a7498aebbdb6a571780e3a299c39010f",
+          "startSample": 1104,
+          "parts": null,
+          "levelGain": 0.291788,
+          "reproductionResidual": 7.2e-05,
+          "endRule": "recording ends before -54 dB: 80 ms fade at recording end",
+          "endFadeSeconds": 0.0337,
+          "oldSeconds": 0.1349,
+          "newSeconds": 0.1349,
+          "time": 0.10152083333333334,
+          "gain": 1.0
+        },
+        {
+          "audio": "cut/427645badb955b9fbd25",
+          "archiveEntry": "Whooshes/whoosh_swish_small_harsh_03.wav",
+          "sourceSha256": "3d5534259dbe3df8109fa86c89af99b2a7498aebbdb6a571780e3a299c39010f",
+          "startSample": 1104,
+          "parts": null,
+          "levelGain": 0.291788,
+          "reproductionResidual": 7.2e-05,
+          "endRule": "recording ends before -54 dB: 80 ms fade at recording end",
+          "endFadeSeconds": 0.0337,
+          "oldSeconds": 0.1349,
+          "newSeconds": 0.1349,
+          "time": 0.22152083333333336,
+          "gain": 1.0
+        },
+        {
+          "audio": "cut/427645badb955b9fbd25",
+          "archiveEntry": "Whooshes/whoosh_swish_small_harsh_03.wav",
+          "sourceSha256": "3d5534259dbe3df8109fa86c89af99b2a7498aebbdb6a571780e3a299c39010f",
+          "startSample": 1104,
+          "parts": null,
+          "levelGain": 0.291788,
+          "reproductionResidual": 7.2e-05,
+          "endRule": "recording ends before -54 dB: 80 ms fade at recording end",
+          "endFadeSeconds": 0.0337,
+          "oldSeconds": 0.1349,
+          "newSeconds": 0.1349,
+          "time": 0.34152083333333333,
+          "gain": 1.0
+        },
+        {
+          "audio": "cut/427645badb955b9fbd25",
+          "archiveEntry": "Whooshes/whoosh_swish_small_harsh_03.wav",
+          "sourceSha256": "3d5534259dbe3df8109fa86c89af99b2a7498aebbdb6a571780e3a299c39010f",
+          "startSample": 1104,
+          "parts": null,
+          "levelGain": 0.291788,
+          "reproductionResidual": 7.2e-05,
+          "endRule": "recording ends before -54 dB: 80 ms fade at recording end",
+          "endFadeSeconds": 0.0337,
+          "oldSeconds": 0.1349,
+          "newSeconds": 0.1349,
+          "time": 0.4615208333333333,
+          "gain": 1.0
+        },
+        {
+          "audio": "cut/427645badb955b9fbd25",
+          "archiveEntry": "Whooshes/whoosh_swish_small_harsh_03.wav",
+          "sourceSha256": "3d5534259dbe3df8109fa86c89af99b2a7498aebbdb6a571780e3a299c39010f",
+          "startSample": 1104,
+          "parts": null,
+          "levelGain": 0.291788,
+          "reproductionResidual": 7.2e-05,
+          "endRule": "recording ends before -54 dB: 80 ms fade at recording end",
+          "endFadeSeconds": 0.0337,
+          "oldSeconds": 0.1349,
+          "newSeconds": 0.1349,
+          "time": 0.5815208333333334,
+          "gain": 1.0
+        }
+      ]
+    },
+    {
+      "id": "rapier_movement__teleport",
+      "replaces": "audio/gamemaster-skills-selected/runtime/rapier_movement__teleport_01.wav",
+      "file": "runtime/rapier_movement__teleport_tail_01.wav",
+      "sha256": "e8c0d51ea77f647f3ea67a91220edab053667caf952a26eba51fb81f84a3dd2d",
+      "bytes": 56920,
+      "samples": 28438,
+      "oldSeconds": 0.187,
+      "newSeconds": 0.5925,
+      "safeGain": 1,
+      "matchBeforeOldFade": 0.000134,
+      "matchedSeconds": 0.117,
+      "layers": [
+        {
+          "audio": "r2/16705b7fd7f3f196f2a3",
+          "archiveEntry": null,
+          "sourceSha256": null,
+          "startSample": null,
+          "parts": [
+            {
+              "audio": "r2/8cefa20becb8544949f3",
+              "onset": 0,
+              "gain": 0.8,
+              "reverse": true,
+              "kept": "old cut reversed"
+            },
+            {
+              "audio": "r2/497e1986c73c2d5d2b22",
+              "onset": 0.1,
+              "gain": 0.35,
+              "reverse": false,
+              "extended": {
+                "audio": "r2/497e1986c73c2d5d2b22",
+                "archiveEntry": "Water/water_splash_small_item_02.wav",
+                "sourceSha256": "febe53c521e7e6780fe7f00f6226b72d482b9ed0bbcf7198038840a69559da78",
+                "startSample": 5760,
+                "parts": null,
+                "levelGain": 0.742557,
+                "reproductionResidual": 4.7e-05,
+                "endRule": "recording decay to -54 dB",
+                "endFadeSeconds": 0.04,
+                "oldSeconds": 0.087,
+                "newSeconds": 0.5542
+              }
+            }
+          ],
+          "levelGain": 1.920112,
+          "reproductionResidual": 7.6e-05,
+          "endRule": "recording decay to -54 dB",
+          "endFadeSeconds": 0.04,
+          "oldSeconds": 0.187,
+          "newSeconds": 0.5925,
+          "time": 0.0,
+          "gain": 0.9
+        }
+      ]
+    },
+    {
+      "id": "rapier_follow_up__teleport",
+      "replaces": "audio/gamemaster-skills-selected/runtime/rapier_follow_up__teleport_01.wav",
+      "file": "runtime/rapier_follow_up__teleport_tail_01.wav",
+      "sha256": "e8c0d51ea77f647f3ea67a91220edab053667caf952a26eba51fb81f84a3dd2d",
+      "bytes": 56920,
+      "samples": 28438,
+      "oldSeconds": 0.187,
+      "newSeconds": 0.5925,
+      "safeGain": 1,
+      "matchBeforeOldFade": 0.000134,
+      "matchedSeconds": 0.117,
+      "layers": [
+        {
+          "audio": "r2/16705b7fd7f3f196f2a3",
+          "archiveEntry": null,
+          "sourceSha256": null,
+          "startSample": null,
+          "parts": [
+            {
+              "audio": "r2/8cefa20becb8544949f3",
+              "onset": 0,
+              "gain": 0.8,
+              "reverse": true,
+              "kept": "old cut reversed"
+            },
+            {
+              "audio": "r2/497e1986c73c2d5d2b22",
+              "onset": 0.1,
+              "gain": 0.35,
+              "reverse": false,
+              "extended": {
+                "audio": "r2/497e1986c73c2d5d2b22",
+                "archiveEntry": "Water/water_splash_small_item_02.wav",
+                "sourceSha256": "febe53c521e7e6780fe7f00f6226b72d482b9ed0bbcf7198038840a69559da78",
+                "startSample": 5760,
+                "parts": null,
+                "levelGain": 0.742557,
+                "reproductionResidual": 4.7e-05,
+                "endRule": "recording decay to -54 dB",
+                "endFadeSeconds": 0.04,
+                "oldSeconds": 0.087,
+                "newSeconds": 0.5542
+              }
+            }
+          ],
+          "levelGain": 1.920112,
+          "reproductionResidual": 7.6e-05,
+          "endRule": "recording decay to -54 dB",
+          "endFadeSeconds": 0.04,
+          "oldSeconds": 0.187,
+          "newSeconds": 0.5925,
+          "time": 0.0,
+          "gain": 0.9
+        }
+      ]
+    },
+    {
+      "id": "shuriken_move_special__teleport",
+      "replaces": "audio/gamemaster-skills-selected/runtime/shuriken_move_special__teleport_02.wav",
+      "file": "runtime/shuriken_move_special__teleport_tail_02.wav",
+      "sha256": "e8c0d51ea77f647f3ea67a91220edab053667caf952a26eba51fb81f84a3dd2d",
+      "bytes": 56920,
+      "samples": 28438,
+      "oldSeconds": 0.187,
+      "newSeconds": 0.5925,
+      "safeGain": 1,
+      "matchBeforeOldFade": 0.000134,
+      "matchedSeconds": 0.117,
+      "layers": [
+        {
+          "audio": "r2/16705b7fd7f3f196f2a3",
+          "archiveEntry": null,
+          "sourceSha256": null,
+          "startSample": null,
+          "parts": [
+            {
+              "audio": "r2/8cefa20becb8544949f3",
+              "onset": 0,
+              "gain": 0.8,
+              "reverse": true,
+              "kept": "old cut reversed"
+            },
+            {
+              "audio": "r2/497e1986c73c2d5d2b22",
+              "onset": 0.1,
+              "gain": 0.35,
+              "reverse": false,
+              "extended": {
+                "audio": "r2/497e1986c73c2d5d2b22",
+                "archiveEntry": "Water/water_splash_small_item_02.wav",
+                "sourceSha256": "febe53c521e7e6780fe7f00f6226b72d482b9ed0bbcf7198038840a69559da78",
+                "startSample": 5760,
+                "parts": null,
+                "levelGain": 0.742557,
+                "reproductionResidual": 4.7e-05,
+                "endRule": "recording decay to -54 dB",
+                "endFadeSeconds": 0.04,
+                "oldSeconds": 0.087,
+                "newSeconds": 0.5542
+              }
+            }
+          ],
+          "levelGain": 1.920112,
+          "reproductionResidual": 7.6e-05,
+          "endRule": "recording decay to -54 dB",
+          "endFadeSeconds": 0.04,
+          "oldSeconds": 0.187,
+          "newSeconds": 0.5925,
+          "time": 0.0,
+          "gain": 0.9
+        }
+      ]
+    },
+    {
+      "id": "shuriken_move_special__return",
+      "replaces": "audio/gamemaster-skills-selected/runtime/shuriken_move_special__return_02.wav",
+      "file": "runtime/shuriken_move_special__return_tail_02.wav",
+      "sha256": "e8c0d51ea77f647f3ea67a91220edab053667caf952a26eba51fb81f84a3dd2d",
+      "bytes": 56920,
+      "samples": 28438,
+      "oldSeconds": 0.187,
+      "newSeconds": 0.5925,
+      "safeGain": 1,
+      "matchBeforeOldFade": 0.000134,
+      "matchedSeconds": 0.117,
+      "layers": [
+        {
+          "audio": "r2/16705b7fd7f3f196f2a3",
+          "archiveEntry": null,
+          "sourceSha256": null,
+          "startSample": null,
+          "parts": [
+            {
+              "audio": "r2/8cefa20becb8544949f3",
+              "onset": 0,
+              "gain": 0.8,
+              "reverse": true,
+              "kept": "old cut reversed"
+            },
+            {
+              "audio": "r2/497e1986c73c2d5d2b22",
+              "onset": 0.1,
+              "gain": 0.35,
+              "reverse": false,
+              "extended": {
+                "audio": "r2/497e1986c73c2d5d2b22",
+                "archiveEntry": "Water/water_splash_small_item_02.wav",
+                "sourceSha256": "febe53c521e7e6780fe7f00f6226b72d482b9ed0bbcf7198038840a69559da78",
+                "startSample": 5760,
+                "parts": null,
+                "levelGain": 0.742557,
+                "reproductionResidual": 4.7e-05,
+                "endRule": "recording decay to -54 dB",
+                "endFadeSeconds": 0.04,
+                "oldSeconds": 0.087,
+                "newSeconds": 0.5542
+              }
+            }
+          ],
+          "levelGain": 1.920112,
+          "reproductionResidual": 7.6e-05,
+          "endRule": "recording decay to -54 dB",
+          "endFadeSeconds": 0.04,
+          "oldSeconds": 0.187,
+          "newSeconds": 0.5925,
+          "time": 0.0,
+          "gain": 0.9
+        }
+      ]
+    },
+    {
+      "id": "greatsword_movement",
+      "replaces": "audio/gamemaster-skills-selected/runtime/greatsword_movement_04.wav",
+      "file": "runtime/greatsword_movement_tail_04.wav",
+      "sha256": "e1e3c2a635f198b923fc8091711981d62c2a70cc0603f00430f6edcbcd17a9f6",
+      "bytes": 249644,
+      "samples": 124800,
+      "oldSeconds": 2.2,
+      "newSeconds": 2.6,
+      "safeGain": 1,
+      "matchBeforeOldFade": 6.7e-05,
+      "matchedSeconds": 0.2842,
+      "layers": [
+        {
+          "audio": "r2/73a601e10f9069330f1a",
+          "loop": true,
+          "time": 0.2,
+          "gain": 1.0,
+          "loopSeconds": 2,
+          "endRule": "loop kept to old fade start, then 0.4 s fade"
+        },
+        {
+          "audio": "r2/b602f3265b7b0e98c93e",
+          "archiveEntry": "Whooshes/whoosh_swish_high_big_04.wav",
+          "sourceSha256": "f594fda391f61e0ed9cb8c3841769f937a666dd8c90dba0bef5a91b6b3d3056e",
+          "startSample": 1536,
+          "parts": null,
+          "levelGain": 1.067222,
+          "reproductionResidual": 4.3e-05,
+          "endRule": "recording decay to -54 dB",
+          "endFadeSeconds": 0.04,
+          "oldSeconds": 0.172,
+          "newSeconds": 0.2353,
+          "time": 0.18220833333333333,
+          "gain": 0.65
+        },
+        {
+          "audio": "r2/b602f3265b7b0e98c93e",
+          "archiveEntry": "Whooshes/whoosh_swish_high_big_04.wav",
+          "sourceSha256": "f594fda391f61e0ed9cb8c3841769f937a666dd8c90dba0bef5a91b6b3d3056e",
+          "startSample": 1536,
+          "parts": null,
+          "levelGain": 1.067222,
+          "reproductionResidual": 4.3e-05,
+          "endRule": "recording decay to -54 dB",
+          "endFadeSeconds": 0.04,
+          "oldSeconds": 0.172,
+          "newSeconds": 0.2353,
+          "time": 0.43220833333333336,
+          "gain": 0.65
+        },
+        {
+          "audio": "r2/b602f3265b7b0e98c93e",
+          "archiveEntry": "Whooshes/whoosh_swish_high_big_04.wav",
+          "sourceSha256": "f594fda391f61e0ed9cb8c3841769f937a666dd8c90dba0bef5a91b6b3d3056e",
+          "startSample": 1536,
+          "parts": null,
+          "levelGain": 1.067222,
+          "reproductionResidual": 4.3e-05,
+          "endRule": "recording decay to -54 dB",
+          "endFadeSeconds": 0.04,
+          "oldSeconds": 0.172,
+          "newSeconds": 0.2353,
+          "time": 0.6822083333333333,
+          "gain": 0.65
+        },
+        {
+          "audio": "r2/b602f3265b7b0e98c93e",
+          "archiveEntry": "Whooshes/whoosh_swish_high_big_04.wav",
+          "sourceSha256": "f594fda391f61e0ed9cb8c3841769f937a666dd8c90dba0bef5a91b6b3d3056e",
+          "startSample": 1536,
+          "parts": null,
+          "levelGain": 1.067222,
+          "reproductionResidual": 4.3e-05,
+          "endRule": "recording decay to -54 dB",
+          "endFadeSeconds": 0.04,
+          "oldSeconds": 0.172,
+          "newSeconds": 0.2353,
+          "time": 0.9322083333333333,
+          "gain": 0.65
+        },
+        {
+          "audio": "r2/b602f3265b7b0e98c93e",
+          "archiveEntry": "Whooshes/whoosh_swish_high_big_04.wav",
+          "sourceSha256": "f594fda391f61e0ed9cb8c3841769f937a666dd8c90dba0bef5a91b6b3d3056e",
+          "startSample": 1536,
+          "parts": null,
+          "levelGain": 1.067222,
+          "reproductionResidual": 4.3e-05,
+          "endRule": "recording decay to -54 dB",
+          "endFadeSeconds": 0.04,
+          "oldSeconds": 0.172,
+          "newSeconds": 0.2353,
+          "time": 1.1822083333333333,
+          "gain": 0.65
+        },
+        {
+          "audio": "r2/b602f3265b7b0e98c93e",
+          "archiveEntry": "Whooshes/whoosh_swish_high_big_04.wav",
+          "sourceSha256": "f594fda391f61e0ed9cb8c3841769f937a666dd8c90dba0bef5a91b6b3d3056e",
+          "startSample": 1536,
+          "parts": null,
+          "levelGain": 1.067222,
+          "reproductionResidual": 4.3e-05,
+          "endRule": "recording decay to -54 dB",
+          "endFadeSeconds": 0.04,
+          "oldSeconds": 0.172,
+          "newSeconds": 0.2353,
+          "time": 1.4322083333333333,
+          "gain": 0.65
+        },
+        {
+          "audio": "r2/b602f3265b7b0e98c93e",
+          "archiveEntry": "Whooshes/whoosh_swish_high_big_04.wav",
+          "sourceSha256": "f594fda391f61e0ed9cb8c3841769f937a666dd8c90dba0bef5a91b6b3d3056e",
+          "startSample": 1536,
+          "parts": null,
+          "levelGain": 1.067222,
+          "reproductionResidual": 4.3e-05,
+          "endRule": "recording decay to -54 dB",
+          "endFadeSeconds": 0.04,
+          "oldSeconds": 0.172,
+          "newSeconds": 0.2353,
+          "time": 1.6822083333333333,
+          "gain": 0.65
+        },
+        {
+          "audio": "r2/b602f3265b7b0e98c93e",
+          "archiveEntry": "Whooshes/whoosh_swish_high_big_04.wav",
+          "sourceSha256": "f594fda391f61e0ed9cb8c3841769f937a666dd8c90dba0bef5a91b6b3d3056e",
+          "startSample": 1536,
+          "parts": null,
+          "levelGain": 1.067222,
+          "reproductionResidual": 4.3e-05,
+          "endRule": "recording decay to -54 dB",
+          "endFadeSeconds": 0.04,
+          "oldSeconds": 0.172,
+          "newSeconds": 0.2353,
+          "time": 1.9322083333333333,
+          "gain": 0.65
+        }
+      ]
+    }
+  ],
+  "basic": {
+    "id": "hammer_basic_1",
+    "replaces": "audio/gamemaster-selected/runtime/sfx_weapon_hammer_basic_1_01_v01.wav",
+    "sourceSha256": "12020188378d022ded43a07346c8e5e40148b9fa7343723cac3d5987f17d0f63",
+    "file": "runtime/sfx_weapon_hammer_basic_1_01_v02.wav",
+    "sha256": "8ded761b39bca9364c1548ada5bceb9bf1f03a1ae0c350540f0195c0fba4564c",
+    "bytes": 88558,
+    "gainDb": -4.04,
+    "rule": "K-weighted 100 ms maximum equal to sfx_weapon_hammer_basic_0_01_v01 (hammer 1st hit)",
+    "superseded": "v03 replaces this in Unity (user: make the 2nd-hit thud the same as 횡강타)"
+  },
+  "basicV3": {
+    "id": "hammer_basic_1",
+    "replaces": "runtime/sfx_weapon_hammer_basic_1_01_v02.wav",
+    "file": "runtime/sfx_weapon_hammer_basic_1_01_v03.wav",
+    "sha256": "247410e0c01406aac2095f82aec872ad0067f9398c7a54917bdb40d474ed3367",
+    "bytes": 173436,
+    "layers": [
+      {
+        "role": "2타 휘두름 (기존 그대로)",
+        "file": "revision-02/hammer-05-hit-2-swing.wav",
+        "sha256": "8106be4d1a963e6197fbe40186ef30583ae3d51e1d75a6de02bdcda5deecb22f",
+        "offsetSeconds": 0.0
+      },
+      {
+        "role": "쿵 → 횡강타 소리",
+        "file": "audio/skill-natural-tails/runtime/hammer_default_tail_10.wav",
+        "sha256": "73e419e99413369c9721979e38c221ae8d10087262b70efd2483f0ae6ee106ca",
+        "offsetSeconds": 0.1461,
+        "alignedTo": "old impact layer peak (7d492743e8a0) at 0.5485 s"
+      }
+    ],
+    "runtimePlaybackRate": 1.152542372881356,
+    "mixGainDb": -1.65,
+    "rule": "K-weighted 100 ms maximum of the runtime file equal to v02 (= hammer 1st hit)"
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "name": "12f B · 접지 강조",
+  "description": "접지와 교차 사이의 자세를 추가해 디딤을 강조",
+  "frame_count": 12,
+  "source_frames": [
+    4,
+    5,
+    6,
+    8,
+    10,
+    12,
+    13,
+    14,
+    15,
+    17,
+    19,
+    21
+  ],
+  "canvas": [
+    128,
+    128
+  ],
+  "cycle_ms": 1200,
+  "fps": 10.0,
+  "palette": [
+    "#FDEEDA",
+    "#D2B396",
+    "#FEB085",
+    "#722F18",
+    "#02648C",
+    "#025673",
+    "#EBA516",
+    "#1B1616"
+  ],
+  "grid_columns": 4,
+  "grid_rows": 3,
+  "head_eyes_corrected": true,
+  "alpha_binary": true,
+  "loop_boundary_changed_pixels": 456,
+  "revision": "미세 정리 v6",
+  "changes": [
+    {
+      "frame": "walk_01.png",
+      "changed_pixels": 5,
+      "operations": {
+        "isolated_sleeve_shadow": 3,
+        "cheek_material": 2
+      }
+    },
+    {
+      "frame": "walk_02.png",
+      "changed_pixels": 1,
+      "operations": {
+        "isolated_sleeve_shadow": 1
+      }
+    },
+    {
+      "frame": "walk_03.png",
+      "changed_pixels": 6,
+      "operations": {
+        "isolated_sleeve_shadow": 6
+      }
+    },
+    {
+      "frame": "walk_04.png",
+      "changed_pixels": 2,
+      "operations": {
+        "cheek_material": 2
+      }
+    },
+    {
+      "frame": "walk_05.png",
+      "changed_pixels": 1,
+      "operations": {
+        "collar_dark_speck": 1
+      }
+    },
+    {
+      "frame": "walk_06.png",
+      "changed_pixels": 1,
+      "operations": {
+        "isolated_sleeve_shadow": 1
+      }
+    },
+    {
+      "frame": "walk_07.png",
+      "changed_pixels": 8,
+      "operations": {
+        "isolated_sleeve_shadow": 5,
+        "collar_dark_speck": 1,
+        "cheek_material": 2
+      }
+    },
+    {
+      "frame": "walk_08.png",
+      "changed_pixels": 4,
+      "operations": {
+        "isolated_sleeve_shadow": 4
+      }
+    },
+    {
+      "frame": "walk_09.png",
+      "changed_pixels": 1,
+      "operations": {
+        "isolated_sleeve_shadow": 1
+      }
+    },
+    {
+      "frame": "walk_10.png",
+      "changed_pixels": 0,
+      "operations": {}
+    },
+    {
+      "frame": "walk_11.png",
+      "changed_pixels": 1,
+      "operations": {
+        "isolated_sleeve_shadow": 1
+      }
+    },
+    {
+      "frame": "walk_12.png",
+      "changed_pixels": 1,
+      "operations": {
+        "isolated_sleeve_shadow": 1
+      }
+    }
+  ],
+  "feet_and_lower_rows_unchanged": true,
+  "source_hashes": {
+    "walk_01.png": "a0f1fe2e5b78107b13144a710b55a06793fbb65c7984163e38ebfaf3aefa9c10",
+    "walk_02.png": "424a4074dd3798e98350e4a578446f9e1159683394a3da7a3658d879a2ab778a",
+    "walk_03.png": "16b7791cb47d0f03afa7d9a58d7b62ffd1bf8e7ecd753b22e2bb855f24ace6dc",
+    "walk_04.png": "0f77f7fcfe43ed11ac7e47352a5b436a8fda26da3c3f10006d3d673d05508239",
+    "walk_05.png": "36f7d9b658d9f63b24ffe216b7d4e7ca3894c6ed69e64bc410f24583865a9d03",
+    "walk_06.png": "992342191849db312dbac0f2206571faefd6e23af473eaf6a6520b5278296c6c",
+    "walk_07.png": "2f46db1aa276b09a35752b096eb241e2aee29ad99a5cc34a1938f6c475bba7c5",
+    "walk_08.png": "e760c2874519ea8b7de1b615b06fa8fd7e43c05c3d9d4539649731b84ddeecea",
+    "walk_09.png": "a54cfa408e3bc6b66777664c2dccee16d70a1030f3cff591b30b1cfabb0e0d91",
+    "walk_10.png": "d762887aaf9329bcf9725d8c3db000b0ff343886a0a79580cf9c59f4569bb6db",
+    "walk_11.png": "60b4cb8e8525aea03a08493ac24638a4c84027f93b3fb5bf0c3b38c923a7e770",
+    "walk_12.png": "1481df768eeee28ae2fc230d72eb2ed8393ed52aa31e442bee7f5348af4f7389"
+  },
+  "existing_dark_and_gold_pixels_unchanged": true,
+  "existing_gold_pixels_unchanged": true
+}

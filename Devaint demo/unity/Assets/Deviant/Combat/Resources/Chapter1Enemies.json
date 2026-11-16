@@ -1,0 +1,334 @@
+{
+  "monsters": [
+    {
+      "id": "01_field_mouse",
+      "sourceSha256": "b193aeff865860f348e78e7deb0486f26af76cfb20d4bfc69bfda4acbf6af3fe",
+      "maxHP": 150,
+      "damage": 10,
+      "walkSpeed": 3,
+      "senseX": 10,
+      "senseY": 4,
+      "sensePeriod": 0.1,
+      "pathPeriod": 0.25,
+      "leash": 16,
+      "reengageTargetLimit": 14,
+      "searchWait": 1.5,
+      "stagger": 0.3,
+      "epsilon": 0.0001,
+      "cliffMargin": 0.03125,
+      "startGap": 0.75,
+      "startHeight": 0.75,
+      "minimumStartDistance": 0,
+      "prepare": 0.35,
+      "active": 0.1,
+      "brake": 0.0,
+      "recovery": 0.45,
+      "interval": 1.2,
+      "chargeDistance": 0,
+      "chargeSpeed": 0,
+      "moveCycle": 0.5,
+      "deathDuration": 0.6,
+      "bodySize": [
+        1.09375,
+        1.0625
+      ],
+      "bodyOffset": [
+        0.234375,
+        0.53125
+      ],
+      "attackSize": [
+        1.25,
+        1.25
+      ],
+      "attackOffset": [
+        1.15625,
+        0.625
+      ],
+      "attackFrameDurations": [
+        0.1,
+        0.1,
+        0.15,
+        0.1,
+        0.12,
+        0.11,
+        0.11,
+        0.11
+      ]
+    },
+    {
+      "id": "02_mole",
+      "sourceSha256": "b193aeff865860f348e78e7deb0486f26af76cfb20d4bfc69bfda4acbf6af3fe",
+      "maxHP": 200,
+      "damage": 15,
+      "walkSpeed": 2,
+      "senseX": 10,
+      "senseY": 4,
+      "sensePeriod": 0.1,
+      "pathPeriod": 0.25,
+      "leash": 16,
+      "reengageTargetLimit": 14,
+      "searchWait": 1.5,
+      "stagger": 0.3,
+      "epsilon": 0.0001,
+      "cliffMargin": 0.03125,
+      "startGap": 1,
+      "startHeight": 1,
+      "minimumStartDistance": 0,
+      "prepare": 0.55,
+      "active": 0.15,
+      "brake": 0.0,
+      "recovery": 0.65,
+      "interval": 1.7,
+      "chargeDistance": 0,
+      "chargeSpeed": 0,
+      "moveCycle": 0.75,
+      "deathDuration": 0.6,
+      "bodySize": [
+        2.625,
+        1.875
+      ],
+      "bodyOffset": [
+        0.0,
+        0.9375
+      ],
+      "attackSize": [
+        1.75,
+        1.5
+      ],
+      "attackOffset": [
+        1.9375,
+        0.75
+      ],
+      "attackFrameDurations": [
+        0.1,
+        0.15,
+        0.15,
+        0.15,
+        0.075,
+        0.075,
+        0.35,
+        0.3
+      ]
+    },
+    {
+      "id": "05_boar",
+      "sourceSha256": "b193aeff865860f348e78e7deb0486f26af76cfb20d4bfc69bfda4acbf6af3fe",
+      "maxHP": 300,
+      "damage": 20,
+      "walkSpeed": 2.5,
+      "senseX": 10,
+      "senseY": 4,
+      "sensePeriod": 0.1,
+      "pathPeriod": 0.25,
+      "leash": 16,
+      "reengageTargetLimit": 14,
+      "searchWait": 1.5,
+      "stagger": 0.3,
+      "epsilon": 0.0001,
+      "cliffMargin": 0.03125,
+      "startGap": 5,
+      "startHeight": 0.5,
+      "minimumStartDistance": 3,
+      "prepare": 0.65,
+      "active": 0.6,
+      "brake": 0.15,
+      "recovery": 0.8,
+      "interval": 2.6,
+      "chargeDistance": 5,
+      "chargeSpeed": 7.407407407407407,
+      "moveCycle": 0.6,
+      "deathDuration": 0.6,
+      "bodySize": [
+        3.25,
+        2.3125
+      ],
+      "bodyOffset": [
+        0.125,
+        1.15625
+      ],
+      "attackSize": [
+        0.75,
+        1.0
+      ],
+      "attackOffset": [
+        1.875,
+        0.75
+      ],
+      "attackFrameDurations": [
+        0.15,
+        0.2,
+        0.3,
+        0.2,
+        0.2,
+        0.2,
+        0.15,
+        0.8
+      ]
+    },
+    {
+      "id": "07_scarecrow",
+      "sourceSha256": "b193aeff865860f348e78e7deb0486f26af76cfb20d4bfc69bfda4acbf6af3fe",
+      "maxHP": 200,
+      "damage": 12,
+      "walkSpeed": 1.5,
+      "senseX": 10,
+      "senseY": 4,
+      "sensePeriod": 0.1,
+      "pathPeriod": 0.25,
+      "leash": 16,
+      "reengageTargetLimit": 14,
+      "searchWait": 1.5,
+      "stagger": 0.3,
+      "epsilon": 0.0001,
+      "cliffMargin": 0.03125,
+      "startGap": 1.5,
+      "startHeight": 1,
+      "minimumStartDistance": 0,
+      "prepare": 0.45,
+      "active": 0.12,
+      "brake": 0.0,
+      "recovery": 0.55,
+      "interval": 1.5,
+      "chargeDistance": 0,
+      "chargeSpeed": 0,
+      "moveCycle": 1.0,
+      "deathDuration": 0.6,
+      "bodySize": [
+        1.6875,
+        1.65625
+      ],
+      "bodyOffset": [
+        0.0,
+        0.828125
+      ],
+      "attackSize": [
+        2.25,
+        1.5
+      ],
+      "attackOffset": [
+        1.71875,
+        1.0
+      ],
+      "attackFrameDurations": [
+        0.1,
+        0.15,
+        0.2,
+        0.12,
+        0.15,
+        0.15,
+        0.15,
+        0.1
+      ]
+    },
+    {
+      "id": "08_hay_bale",
+      "sourceSha256": "b193aeff865860f348e78e7deb0486f26af76cfb20d4bfc69bfda4acbf6af3fe",
+      "maxHP": 400,
+      "damage": 25,
+      "walkSpeed": 1,
+      "senseX": 10,
+      "senseY": 4,
+      "sensePeriod": 0.1,
+      "pathPeriod": 0.25,
+      "leash": 16,
+      "reengageTargetLimit": 14,
+      "searchWait": 1.5,
+      "stagger": 0.3,
+      "epsilon": 0.0001,
+      "cliffMargin": 0.03125,
+      "startGap": 1.5,
+      "startHeight": 1,
+      "minimumStartDistance": 0,
+      "prepare": 1.35,
+      "active": 0.15,
+      "brake": 0.0,
+      "recovery": 1.0,
+      "interval": 3.2,
+      "chargeDistance": 0,
+      "chargeSpeed": 0,
+      "moveCycle": 1.125,
+      "deathDuration": 0.6,
+      "bodySize": [
+        2.9375,
+        2.125
+      ],
+      "bodyOffset": [
+        0.0,
+        1.0625
+      ],
+      "attackSize": [
+        3.0,
+        1.25
+      ],
+      "attackOffset": [
+        2.46875,
+        0.625
+      ],
+      "attackFrameDurations": [
+        0.1,
+        0.1,
+        1.0,
+        0.15,
+        0.15,
+        0.35,
+        0.35,
+        0.3
+      ]
+    },
+    {
+      "id": "10_water_bucket",
+      "sourceSha256": "b193aeff865860f348e78e7deb0486f26af76cfb20d4bfc69bfda4acbf6af3fe",
+      "maxHP": 300,
+      "damage": 18,
+      "walkSpeed": 1.25,
+      "senseX": 10,
+      "senseY": 4,
+      "sensePeriod": 0.1,
+      "pathPeriod": 0.25,
+      "leash": 16,
+      "reengageTargetLimit": 14,
+      "searchWait": 1.5,
+      "stagger": 0.3,
+      "epsilon": 0.0001,
+      "cliffMargin": 0.03125,
+      "startGap": 2,
+      "startHeight": 1,
+      "minimumStartDistance": 0,
+      "prepare": 0.7,
+      "active": 0.25,
+      "brake": 0.0,
+      "recovery": 0.9,
+      "interval": 2.5,
+      "chargeDistance": 0,
+      "chargeSpeed": 0,
+      "moveCycle": 1.2,
+      "deathDuration": 0.6,
+      "bodySize": [
+        1.59375,
+        1.59375
+      ],
+      "bodyOffset": [
+        -0.015625,
+        0.796875
+      ],
+      "attackSize": [
+        3.25,
+        1.5
+      ],
+      "attackOffset": [
+        2.15625,
+        0.75
+      ],
+      "attackFrameDurations": [
+        0.2,
+        0.25,
+        0.25,
+        0.08,
+        0.09,
+        0.08,
+        0.45,
+        0.45
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "format": "deviant-resource-import-v1",
+  "sourceType": "encoding-recovery",
+  "recipe": {
+    "source": "authoring/workbench/source/MonsterReference/local-assets/hanging-clock-boss-battle-v1/assets/asset-manifest.json",
+    "sourceSha256": "6d19fad7aba627cc9f48b27b7ad5ddb6010c890f0275898c4c45db4b7b38a53d",
+    "operation": "LF-to-CRLF",
+    "consumer": "ClockExecutionerPreview/preview.json and ClockExecutionerTelegraph/telegraphs.json"
+  },
+  "records": [
+    {
+      "package": null,
+      "path": "clock-preview-crlf",
+      "target": "monsters/stage-01/bosses/clock-executioner/source/battle-preview/asset-manifest.json",
+      "bytes": 25354,
+      "sha256": "42b0f9795dcb53d8231a115f665614537aa11a895e436ea44bfab84e4ffedd87"
+    }
+  ]
+}

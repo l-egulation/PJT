@@ -1,0 +1,75 @@
+{
+  "format": "stage2-idle-breath-v1",
+  "id": "rose-idle-breath",
+  "name": "로즈 · 들썩 대기",
+  "status": "user-approved-not-unity-integrated",
+  "canvas": [
+    384,
+    256
+  ],
+  "pivot": [
+    192,
+    232
+  ],
+  "repeat": true,
+  "totalMs": 900,
+  "mood": "가볍고 들뜬 호흡",
+  "source": "../../../../monsters/stage-02/boss-siblings-lineup-20261103/runtime/pixel-poses/rose-idle.png",
+  "sourceSha256": "e1d2150d42b489a5c6a1b9fe601ab0aac4ed82b11437589e803fe69ffe218ebb",
+  "cuts": {
+    "lowerLine": "waist",
+    "waistRow": 179,
+    "waistRemovalCost": 4,
+    "neckRow": 143,
+    "neckRemovalCost": 7
+  },
+  "method": "row deletion only: no resampling, redraw or new colours; rows below the waist line identical to the approved idle",
+  "frames": [
+    {
+      "file": "frames/00.png",
+      "durationMs": 150,
+      "shoulderDown": 0,
+      "headDown": 0,
+      "sha256": "e1d2150d42b489a5c6a1b9fe601ab0aac4ed82b11437589e803fe69ffe218ebb"
+    },
+    {
+      "file": "frames/01.png",
+      "durationMs": 150,
+      "shoulderDown": 1,
+      "headDown": 1,
+      "sha256": "f26a2ff29fd4e972ba2d36f3b5877abce07d2c96f533c3b5faaf1f1e7605d119"
+    },
+    {
+      "file": "frames/02.png",
+      "durationMs": 150,
+      "shoulderDown": 1,
+      "headDown": 2,
+      "sha256": "a6b3c72050ededd6259c95fd89da6f1e338a7e51bb8ae4c49b13606d627fca52"
+    },
+    {
+      "file": "frames/03.png",
+      "durationMs": 150,
+      "shoulderDown": 1,
+      "headDown": 2,
+      "sha256": "a6b3c72050ededd6259c95fd89da6f1e338a7e51bb8ae4c49b13606d627fca52"
+    },
+    {
+      "file": "frames/04.png",
+      "durationMs": 150,
+      "shoulderDown": 0,
+      "headDown": 1,
+      "sha256": "48222f723f838779b2061c0b5a20506360189ec451242a368e12a5523684a8cb"
+    },
+    {
+      "file": "frames/05.png",
+      "durationMs": 150,
+      "shoulderDown": 0,
+      "headDown": 0,
+      "sha256": "e1d2150d42b489a5c6a1b9fe601ab0aac4ed82b11437589e803fe69ffe218ebb"
+    }
+  ],
+  "approval": {
+    "date": "2026-11-07",
+    "user": "일단 채택할게"
+  }
+}

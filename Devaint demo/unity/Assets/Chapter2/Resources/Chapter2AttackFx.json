@@ -1,0 +1,632 @@
+{
+  "windupCue": {
+    "melee": [
+      "K4",
+      "B3",
+      "M3"
+    ],
+    "shakeStepSeconds": 0.06,
+    "shakeWidenFrom": 0.6,
+    "flashSeconds": 0.1,
+    "flashColor": [
+      242,
+      239,
+      233
+    ],
+    "tintColor": [
+      214,
+      44,
+      32
+    ],
+    "tintMax": 0.55
+  },
+  "clips": [
+    {
+      "id": "b3-impact",
+      "frames": [
+        "Chapter2AttackFx/b3-impact/00",
+        "Chapter2AttackFx/b3-impact/01",
+        "Chapter2AttackFx/b3-impact/02",
+        "Chapter2AttackFx/b3-impact/03",
+        "Chapter2AttackFx/b3-impact/04",
+        "Chapter2AttackFx/b3-impact/05",
+        "Chapter2AttackFx/b3-impact/06",
+        "Chapter2AttackFx/b3-impact/07"
+      ],
+      "milliseconds": [
+        30,
+        35,
+        45,
+        50,
+        60,
+        70,
+        85,
+        100
+      ],
+      "pivot": [
+        112,
+        103
+      ],
+      "loop": false,
+      "sources": [
+        "runtime/b3-impact/00.png",
+        "runtime/b3-impact/01.png",
+        "runtime/b3-impact/02.png",
+        "runtime/b3-impact/03.png",
+        "runtime/b3-impact/04.png",
+        "runtime/b3-impact/05.png",
+        "runtime/b3-impact/06.png",
+        "runtime/b3-impact/07.png"
+      ]
+    },
+    {
+      "id": "m3-star",
+      "frames": [
+        "Chapter2AttackFx/m3-star/00",
+        "Chapter2AttackFx/m3-star/01",
+        "Chapter2AttackFx/m3-star/02",
+        "Chapter2AttackFx/m3-star/03",
+        "Chapter2AttackFx/m3-star/04",
+        "Chapter2AttackFx/m3-star/05"
+      ],
+      "milliseconds": [
+        10,
+        20,
+        40,
+        20,
+        20,
+        20
+      ],
+      "pivot": [
+        32,
+        32
+      ],
+      "loop": false,
+      "sources": [
+        "runtime/m3-star/00.png",
+        "runtime/m3-star/01.png",
+        "runtime/m3-star/02.png",
+        "runtime/m3-star/03.png",
+        "runtime/m3-star/04.png",
+        "runtime/m3-star/05.png"
+      ]
+    },
+    {
+      "id": "k4-ink",
+      "frames": [
+        "Chapter2AttackFx/k4-ink/00",
+        "Chapter2AttackFx/k4-ink/01",
+        "Chapter2AttackFx/k4-ink/02",
+        "Chapter2AttackFx/k4-ink/03",
+        "Chapter2AttackFx/k4-ink/04",
+        "Chapter2AttackFx/k4-ink/05",
+        "Chapter2AttackFx/k4-ink/06",
+        "Chapter2AttackFx/k4-ink/07",
+        "Chapter2AttackFx/k4-ink/08",
+        "Chapter2AttackFx/k4-ink/09",
+        "Chapter2AttackFx/k4-ink/10",
+        "Chapter2AttackFx/k4-ink/11",
+        "Chapter2AttackFx/k4-ink/12",
+        "Chapter2AttackFx/k4-ink/13",
+        "Chapter2AttackFx/k4-ink/14",
+        "Chapter2AttackFx/k4-ink/15",
+        "Chapter2AttackFx/k4-ink/16",
+        "Chapter2AttackFx/k4-ink/17",
+        "Chapter2AttackFx/k4-ink/18",
+        "Chapter2AttackFx/k4-ink/19",
+        "Chapter2AttackFx/k4-ink/20",
+        "Chapter2AttackFx/k4-ink/21",
+        "Chapter2AttackFx/k4-ink/22",
+        "Chapter2AttackFx/k4-ink/23",
+        "Chapter2AttackFx/k4-ink/24",
+        "Chapter2AttackFx/k4-ink/25",
+        "Chapter2AttackFx/k4-ink/26",
+        "Chapter2AttackFx/k4-ink/27"
+      ],
+      "milliseconds": [
+        22,
+        21,
+        22,
+        22,
+        21,
+        22,
+        22,
+        21,
+        22,
+        22,
+        21,
+        22,
+        22,
+        21,
+        22,
+        22,
+        21,
+        22,
+        22,
+        21,
+        25,
+        25,
+        25,
+        27,
+        28,
+        28,
+        28,
+        31
+      ],
+      "pivot": [
+        248,
+        64
+      ],
+      "loop": false,
+      "sources": [
+        "runtime/k4-ink/00.png",
+        "runtime/k4-ink/01.png",
+        "runtime/k4-ink/02.png",
+        "runtime/k4-ink/03.png",
+        "runtime/k4-ink/04.png",
+        "runtime/k4-ink/05.png",
+        "runtime/k4-ink/06.png",
+        "runtime/k4-ink/07.png",
+        "runtime/k4-ink/08.png",
+        "runtime/k4-ink/09.png",
+        "runtime/k4-ink/10.png",
+        "runtime/k4-ink/11.png",
+        "runtime/k4-ink/12.png",
+        "runtime/k4-ink/13.png",
+        "runtime/k4-ink/14.png",
+        "runtime/k4-ink/15.png",
+        "runtime/k4-ink/16.png",
+        "runtime/k4-ink/17.png",
+        "runtime/k4-ink/18.png",
+        "runtime/k4-ink/19.png",
+        "runtime/k4-ink/20.png",
+        "runtime/k4-ink/21.png",
+        "runtime/k4-ink/22.png",
+        "runtime/k4-ink/23.png",
+        "runtime/k4-ink/24.png",
+        "runtime/k4-ink/25.png",
+        "runtime/k4-ink/26.png",
+        "runtime/k4-ink/27.png"
+      ]
+    },
+    {
+      "id": "h3-formation",
+      "frames": [
+        "Chapter2AttackFx/h3-formation/00",
+        "Chapter2AttackFx/h3-formation/01",
+        "Chapter2AttackFx/h3-formation/02",
+        "Chapter2AttackFx/h3-formation/03",
+        "Chapter2AttackFx/h3-formation/04",
+        "Chapter2AttackFx/h3-formation/05",
+        "Chapter2AttackFx/h3-formation/06",
+        "Chapter2AttackFx/h3-formation/07"
+      ],
+      "milliseconds": [
+        100,
+        150,
+        200,
+        200,
+        200,
+        200,
+        250,
+        300
+      ],
+      "pivot": [
+        64.0,
+        48.0
+      ],
+      "loop": false,
+      "sources": [
+        "runtime/h3-formation/00.png",
+        "runtime/h3-formation/01.png",
+        "runtime/h3-formation/02.png",
+        "runtime/h3-formation/03.png",
+        "runtime/h3-formation/04.png",
+        "runtime/h3-formation/05.png",
+        "runtime/h3-formation/06.png",
+        "runtime/h3-formation/07.png"
+      ]
+    },
+    {
+      "id": "h3-orb",
+      "frames": [
+        "Chapter2AttackFx/h3-orb/00"
+      ],
+      "milliseconds": [
+        1000
+      ],
+      "pivot": [
+        32.0,
+        32.0
+      ],
+      "loop": false,
+      "sources": [
+        "runtime/h3-orb/00.png"
+      ]
+    },
+    {
+      "id": "h3-burst",
+      "frames": [
+        "Chapter2AttackFx/h3-burst/00",
+        "Chapter2AttackFx/h3-burst/01",
+        "Chapter2AttackFx/h3-burst/02",
+        "Chapter2AttackFx/h3-burst/03",
+        "Chapter2AttackFx/h3-burst/04",
+        "Chapter2AttackFx/h3-burst/05"
+      ],
+      "milliseconds": [
+        50,
+        50,
+        50,
+        50,
+        50,
+        50
+      ],
+      "pivot": [
+        80,
+        52
+      ],
+      "loop": false,
+      "sources": [
+        "runtime/h3-burst/00.png",
+        "runtime/h3-burst/01.png",
+        "runtime/h3-burst/02.png",
+        "runtime/h3-burst/03.png",
+        "runtime/h3-burst/04.png",
+        "runtime/h3-burst/05.png"
+      ]
+    },
+    {
+      "id": "h3-puddle",
+      "frames": [
+        "Chapter2AttackFx/h3-puddle/00",
+        "Chapter2AttackFx/h3-puddle/01",
+        "Chapter2AttackFx/h3-puddle/02",
+        "Chapter2AttackFx/h3-puddle/03",
+        "Chapter2AttackFx/h3-puddle/04",
+        "Chapter2AttackFx/h3-puddle/05",
+        "Chapter2AttackFx/h3-puddle/06",
+        "Chapter2AttackFx/h3-puddle/07",
+        "Chapter2AttackFx/h3-puddle/08",
+        "Chapter2AttackFx/h3-puddle/09",
+        "Chapter2AttackFx/h3-puddle/10",
+        "Chapter2AttackFx/h3-puddle/11"
+      ],
+      "milliseconds": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "pivot": [
+        80,
+        52
+      ],
+      "loop": true,
+      "sources": [
+        "runtime/h3-puddle/00.png",
+        "runtime/h3-puddle/01.png",
+        "runtime/h3-puddle/02.png",
+        "runtime/h3-puddle/03.png",
+        "runtime/h3-puddle/04.png",
+        "runtime/h3-puddle/05.png",
+        "runtime/h3-puddle/06.png",
+        "runtime/h3-puddle/07.png",
+        "runtime/h3-puddle/08.png",
+        "runtime/h3-puddle/09.png",
+        "runtime/h3-puddle/10.png",
+        "runtime/h3-puddle/11.png"
+      ]
+    },
+    {
+      "id": "h3-fade",
+      "frames": [
+        "Chapter2AttackFx/h3-fade/00",
+        "Chapter2AttackFx/h3-fade/01",
+        "Chapter2AttackFx/h3-fade/02",
+        "Chapter2AttackFx/h3-fade/03"
+      ],
+      "milliseconds": [
+        50,
+        50,
+        50,
+        50
+      ],
+      "pivot": [
+        80,
+        52
+      ],
+      "loop": false,
+      "sources": [
+        "runtime/h3-fade/00.png",
+        "runtime/h3-fade/01.png",
+        "runtime/h3-fade/02.png",
+        "runtime/h3-fade/03.png"
+      ]
+    },
+    {
+      "id": "r-can",
+      "frames": [
+        "Chapter2AttackFx/r-can/00"
+      ],
+      "milliseconds": [
+        800
+      ],
+      "pivot": [
+        32,
+        32
+      ],
+      "loop": false,
+      "sources": [
+        "runtime/r-can/00.png"
+      ]
+    },
+    {
+      "id": "r-break",
+      "frames": [
+        "Chapter2AttackFx/r-break/00",
+        "Chapter2AttackFx/r-break/01",
+        "Chapter2AttackFx/r-break/02",
+        "Chapter2AttackFx/r-break/03",
+        "Chapter2AttackFx/r-break/04",
+        "Chapter2AttackFx/r-break/05",
+        "Chapter2AttackFx/r-break/06",
+        "Chapter2AttackFx/r-break/07"
+      ],
+      "milliseconds": [
+        40,
+        40,
+        60,
+        60,
+        80,
+        80,
+        100,
+        100
+      ],
+      "pivot": [
+        64,
+        72
+      ],
+      "loop": false,
+      "sources": [
+        "runtime/r-break/00.png",
+        "runtime/r-break/01.png",
+        "runtime/r-break/02.png",
+        "runtime/r-break/03.png",
+        "runtime/r-break/04.png",
+        "runtime/r-break/05.png",
+        "runtime/r-break/06.png",
+        "runtime/r-break/07.png"
+      ]
+    }
+  ],
+  "bodyClips": [
+    {
+      "monster": "K4",
+      "id": "attack",
+      "paths": [
+        "Chapter2Monsters/K4/attack-separated/00",
+        "Chapter2Monsters/K4/attack-separated/01",
+        "Chapter2Monsters/K4/attack-separated/02",
+        "Chapter2Monsters/K4/attack-separated/03",
+        "Chapter2Monsters/K4/attack-separated/04",
+        "Chapter2Monsters/K4/attack-separated/05",
+        "Chapter2Monsters/K4/attack-separated/06",
+        "Chapter2Monsters/K4/attack-separated/07",
+        "Chapter2Monsters/K4/attack-separated/08",
+        "Chapter2Monsters/K4/attack-separated/09",
+        "Chapter2Monsters/K4/attack-separated/10",
+        "Chapter2Monsters/K4/attack-separated/11",
+        "Chapter2Monsters/K4/attack-separated/12",
+        "Chapter2Monsters/K4/attack-separated/13",
+        "Chapter2Monsters/K4/attack-separated/14",
+        "Chapter2Monsters/K4/attack-separated/15",
+        "Chapter2Monsters/K4/attack-separated/16",
+        "Chapter2Monsters/K4/attack-separated/17",
+        "Chapter2Monsters/K4/attack-separated/18"
+      ],
+      "milliseconds": [
+        61,
+        61,
+        61,
+        61,
+        62,
+        61,
+        61,
+        61,
+        61,
+        2100,
+        78,
+        78,
+        77,
+        78,
+        78,
+        78,
+        77,
+        78,
+        78
+      ],
+      "loop": false
+    },
+    {
+      "monster": "R-selected",
+      "id": "attack",
+      "paths": [
+        "Chapter2Monsters/R-selected/attack-separated/00",
+        "Chapter2Monsters/R-selected/attack-separated/01",
+        "Chapter2Monsters/R-selected/attack-separated/02",
+        "Chapter2Monsters/R-selected/attack-separated/03",
+        "Chapter2Monsters/R-selected/attack-separated/04",
+        "Chapter2Monsters/R-selected/attack-separated/05",
+        "Chapter2Monsters/R-selected/attack-separated/06",
+        "Chapter2Monsters/R-selected/attack-separated/07",
+        "Chapter2Monsters/R-selected/attack-separated/08",
+        "Chapter2Monsters/R-selected/attack-separated/09",
+        "Chapter2Monsters/R-selected/attack-separated/10",
+        "Chapter2Monsters/R-selected/attack-separated/11",
+        "Chapter2Monsters/R-selected/attack-separated/12",
+        "Chapter2Monsters/R-selected/attack-separated/13",
+        "Chapter2Monsters/R-selected/attack-separated/14",
+        "Chapter2Monsters/R-selected/attack-separated/15",
+        "Chapter2Monsters/R-selected/attack-separated/16",
+        "Chapter2Monsters/R-selected/attack-separated/17",
+        "Chapter2Monsters/R-selected/attack-separated/18"
+      ],
+      "milliseconds": [
+        40,
+        60,
+        60,
+        70,
+        80,
+        90,
+        80,
+        120,
+        40,
+        40,
+        70,
+        50,
+        50,
+        100,
+        100,
+        100,
+        80,
+        100,
+        710
+      ],
+      "loop": false
+    },
+    {
+      "monster": "H3",
+      "id": "attack",
+      "paths": [
+        "Chapter2Monsters/H3/attack-separated/00",
+        "Chapter2Monsters/H3/attack-separated/01",
+        "Chapter2Monsters/H3/attack-separated/02",
+        "Chapter2Monsters/H3/attack-separated/03",
+        "Chapter2Monsters/H3/attack-separated/04",
+        "Chapter2Monsters/H3/attack-separated/05",
+        "Chapter2Monsters/H3/attack-separated/06",
+        "Chapter2Monsters/H3/attack-separated/07",
+        "Chapter2Monsters/H3/attack-separated/08",
+        "Chapter2Monsters/H3/attack-separated/09",
+        "Chapter2Monsters/H3/attack-separated/10",
+        "Chapter2Monsters/H3/attack-separated/11",
+        "Chapter2Monsters/H3/attack-separated/12",
+        "Chapter2Monsters/H3/attack-separated/13",
+        "Chapter2Monsters/H3/attack-separated/14",
+        "Chapter2Monsters/H3/attack-separated/15",
+        "Chapter2Monsters/H3/attack-separated/00",
+        "Chapter2Monsters/H3/attack-separated/01",
+        "Chapter2Monsters/H3/attack-separated/02",
+        "Chapter2Monsters/H3/attack-separated/03",
+        "Chapter2Monsters/H3/attack-separated/04",
+        "Chapter2Monsters/H3/attack-separated/05",
+        "Chapter2Monsters/H3/attack-separated/06",
+        "Chapter2Monsters/H3/attack-separated/07",
+        "Chapter2Monsters/H3/attack-separated/08",
+        "Chapter2Monsters/H3/attack-separated/09",
+        "Chapter2Monsters/H3/attack-separated/10",
+        "Chapter2Monsters/H3/attack-separated/11",
+        "Chapter2Monsters/H3/attack-separated/12",
+        "Chapter2Monsters/H3/attack-separated/13",
+        "Chapter2Monsters/H3/attack-separated/14",
+        "Chapter2Monsters/H3/attack-separated/15",
+        "Chapter2Monsters/H3/attack-separated/00",
+        "Chapter2Monsters/H3/attack-separated/01",
+        "Chapter2Monsters/H3/attack-separated/02",
+        "Chapter2Monsters/H3/attack-separated/03",
+        "Chapter2Monsters/H3/attack-separated/04",
+        "Chapter2Monsters/H3/attack-separated/05",
+        "Chapter2Monsters/H3/attack-separated/06",
+        "Chapter2Monsters/H3/attack-separated/07",
+        "Chapter2Monsters/H3/attack-separated/08",
+        "Chapter2Monsters/H3/attack-separated/09",
+        "Chapter2Monsters/H3/attack-separated/10",
+        "Chapter2Monsters/H3/attack-separated/11",
+        "Chapter2Monsters/H3/attack-separated/12",
+        "Chapter2Monsters/H3/attack-separated/13",
+        "Chapter2Monsters/H3/attack-separated/14",
+        "Chapter2Monsters/H3/attack-separated/15",
+        "Chapter2Monsters/H3/attack-separated/00",
+        "Chapter2Monsters/H3/attack-separated/01",
+        "Chapter2Monsters/H3/attack-separated/02",
+        "Chapter2Monsters/H3/attack-separated/03",
+        "Chapter2Monsters/H3/attack-separated/04",
+        "Chapter2Monsters/H3/attack-separated/05",
+        "Chapter2Monsters/H3/attack-separated/06",
+        "Chapter2Monsters/H3/attack-separated/07",
+        "Chapter2Monsters/H3/attack-separated/08",
+        "Chapter2Monsters/H3/attack-separated/09"
+      ],
+      "milliseconds": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": false
+    }
+  ]
+}

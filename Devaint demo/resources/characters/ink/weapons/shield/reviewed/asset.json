@@ -1,0 +1,54 @@
+{
+  "format": "deviant-resource-asset-v1",
+  "id": "characters.ink.weapons.shield-reviewed",
+  "path": "characters/ink/weapons/shield/reviewed",
+  "status": "user-approved",
+  "approval": "browser-shield-five-actions-approved",
+  "gameIntegration": "unity-integration-under-validation",
+  "sources": [
+    "approved Canvas shield previews and generated art; originals in source/"
+  ],
+  "files": [
+    "runtime/basic.png",
+    "runtime/burst.png",
+    "runtime/clips.json",
+    "runtime/decoy.png",
+    "runtime/guard-12-back.png",
+    "runtime/guard-12-front.png",
+    "runtime/guard-18-back.png",
+    "runtime/guard-18-front.png",
+    "runtime/guard-24-back.png",
+    "runtime/guard-24-front.png",
+    "runtime/guard-30-back.png",
+    "runtime/guard-30-front.png",
+    "runtime/guard-6-back.png",
+    "runtime/guard-6-front.png",
+    "runtime/guard-break-back.png",
+    "runtime/guard-break-front.png",
+    "runtime/guard-hit.png",
+    "runtime/guard-summon.png",
+    "runtime/parry-empty.png",
+    "runtime/parry-success.png",
+    "runtime/rush.png",
+    "source/bake.html",
+    "source/bake.js",
+    "source/decoy-native-v2-source.png",
+    "source/guard-fracture.js",
+    "source/parry.png",
+    "source/rush.png",
+    "source/shield-basic-contact.js",
+    "source/sim-approved-fx.js",
+    "source/sphere.png",
+    "runtime-wide-20261108/rush.png",
+    "runtime-wide-20261108/burst.png",
+    "runtime-wide-20261108/clips.json"
+  ],
+  "generatedSets": {
+    "runtime-wide-20261108": {
+      "runtime": "runtime-wide-20261108",
+      "basedOn": "runtime",
+      "note": "방패 밀기(rush)·터짐(burst)을 넓은 칸(480x400·480x512, 한 줄 8칸)으로 다시 구운 판. 256x320 칸에서 왼쪽·아래가 잘려 네모난 판이 보였다. 나머지 시트와 기존 runtime 판은 그대로.",
+      "tool": "source/bake.js (CELL 표), 굽기는 source/bake.html"
+    }
+  }
+}

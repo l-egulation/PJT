@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "ppu": 32,
+  "origin": "map-left-floor",
+  "anchor": "bottom-center",
+  "objects": [
+    {
+      "id": 0,
+      "key": "house",
+      "x": 6.5,
+      "y": 0,
+      "sourceId": 0
+    },
+    {
+      "id": 1,
+      "key": "low_wall",
+      "x": 74.28125,
+      "y": 0,
+      "sourceId": 2
+    },
+    {
+      "id": 2,
+      "key": "low_wall",
+      "x": 78.40625,
+      "y": 0,
+      "sourceId": 3
+    },
+    {
+      "id": 3,
+      "key": "palette_atelier",
+      "x": 24.1875,
+      "y": -0.15625,
+      "sourceId": 4
+    },
+    {
+      "id": 4,
+      "key": "supply_office",
+      "x": 38.375,
+      "y": -0.125,
+      "sourceId": 5
+    },
+    {
+      "id": 5,
+      "key": "reclaim_workshop",
+      "x": 53.78125,
+      "y": -0.09375,
+      "sourceId": 6
+    },
+    {
+      "id": 6,
+      "key": "record_desk",
+      "x": 10.75,
+      "y": 0,
+      "sourceId": 7
+    },
+    {
+      "id": 7,
+      "key": "return_well",
+      "x": 14.5,
+      "y": 0,
+      "sourceId": 8
+    },
+    {
+      "id": 8,
+      "key": "palette_bench",
+      "x": 30.1875,
+      "y": -0.03125,
+      "sourceId": 9
+    },
+    {
+      "id": 9,
+      "key": "supply_counter",
+      "x": 45.125,
+      "y": 0,
+      "sourceId": 10
+    },
+    {
+      "id": 10,
+      "key": "reclaim_bench",
+      "x": 60.625,
+      "y": 0,
+      "sourceId": 11
+    },
+    {
+      "id": 11,
+      "key": "departure_table",
+      "x": 69.125,
+      "y": 0,
+      "sourceId": 12
+    },
+    {
+      "id": 12,
+      "key": "handcart",
+      "x": 72.9375,
+      "y": -0.03125,
+      "sourceId": 13
+    },
+    {
+      "id": 13,
+      "key": "departure_sign",
+      "x": 80.375,
+      "y": 0,
+      "sourceId": 14
+    }
+  ],
+  "worldWidthUnits": 84,
+  "worldWidthPixels": 2688,
+  "unityPlacement": {
+    "pixelsPerUnit": 32,
+    "pivot": [
+      0.5,
+      0
+    ],
+    "origin": "map-left-floor",
+    "position": "mapRoot + (x,y,0)",
+    "note": "Keep supplied small negative ground-contact offsets. Terrain top is local Y=0."
+  }
+}

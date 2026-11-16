@@ -1,0 +1,24 @@
+{
+  "pass": true,
+  "method": "Actual game movement/camera and background functions in Node VM at120Hz; no browser UI or Unity rerun.",
+  "mode": "weak bounded vertical parallax; terrain anchoring disabled",
+  "cases": [
+    {
+      "label": "ground-to-platform",
+      "skyTravelPx": 1,
+      "forestTravelPx": 3,
+      "lowTreesTravelPx": 3,
+      "finalHeroY": 160
+    },
+    {
+      "label": "cave-floor-jump",
+      "skyTravelPx": 0,
+      "forestTravelPx": 0,
+      "lowTreesTravelPx": 0,
+      "finalHeroY": 672
+    }
+  ],
+  "globalForestTravelLimitPx": 10,
+  "globalSkyTravelLimitPx": 4,
+  "characterPreserved": true
+}

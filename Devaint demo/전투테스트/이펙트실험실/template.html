@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>잉크 파츠 이펙트 실험실</title>
+<style>
+:root{--bg:#191612;--panel:#221e19;--line:#3b342c;--text:#f1e8da;--dim:#a99d8b;--acc:#eba516;
+  --red:#d8664c;--yellow:#e3b030;--green:#5fb37a;--blue:#3a9cc4;--purple:#9a5cc8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:13px/1.5 "Malgun Gothic","Apple SD Gothic Neo",system-ui,sans-serif}
+.wrap{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:14px;padding:14px;max-width:1800px;margin:0 auto}
+@media(max-width:1180px){.wrap{grid-template-columns:1fr}}
+.stage{min-width:0}
+canvas#view{width:100%;aspect-ratio:16/9;image-rendering:pixelated;background:#f3e9d8;display:block;border-radius:6px;outline:1px solid var(--line)}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.keys{color:var(--dim);font-size:12px}
+.keys b{color:var(--text);background:#2e2822;border:1px solid var(--line);border-radius:4px;padding:0 5px;font-weight:600}
+.status{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;font-size:12px}
+.chip{padding:2px 9px;border-radius:999px;background:#2c261f;border:1px solid var(--line);color:var(--dim)}
+.chip b{color:var(--text)}
+.log{margin-top:10px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:12px;min-height:118px}
+.log div{color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.log div:first-child{color:var(--text)}
+.log i{font-style:normal;font-weight:700}
+.intro{margin-top:10px;color:var(--dim);font-size:12.5px}
+.intro p{margin:4px 0}
+.intro b{color:var(--text)}
+aside{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px;align-self:start;max-height:calc(100vh - 28px);overflow:auto}
+h2{font-size:13px;margin:14px 0 6px;color:var(--acc)}
+h2:first-child{margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.part{position:relative;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 2px 5px;background:#2c261f;border:2px solid var(--line);border-radius:8px;cursor:pointer;color:var(--text);font:inherit}
+.part:hover{border-color:#6b5d4c}
+.part .ic{width:48px;height:48px;border-radius:8px;display:grid;place-items:center;background:#efe5d3;border:3px solid}
+.part img{width:32px;height:32px;image-rendering:pixelated}
+.part span{font-size:11px;line-height:1.2;text-align:center;min-height:2.4em;display:flex;align-items:center}
+.part.on{border-color:var(--c)}
+.part.on::after{content:"장착";position:absolute;top:3px;right:4px;font-size:9.5px;font-weight:700;color:#1b1407;background:var(--c);border-radius:4px;padding:0 4px}
+.part.sel{box-shadow:0 0 0 2px var(--acc)}
+.part span{flex-direction:column;justify-content:center}
+.part small{font-size:9.5px;color:var(--dim)}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:6px 0}
+label.toggle{display:flex;gap:6px;align-items:center;cursor:pointer;color:var(--dim);font-size:12px}
+label.toggle input{accent-color:var(--acc)}
+button{font:inherit;color:var(--text);background:#2c261f;border:1px solid var(--line);border-radius:6px;padding:5px 10px;cursor:pointer}
+button:hover{border-color:#6b5d4c}
+button.main{background:var(--acc);color:#1b1407;border-color:var(--acc);font-weight:700}
+.card{margin-top:10px;background:#1b1814;border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.card .head{display:flex;gap:10px;align-items:center}
+.card .head .ic{width:56px;height:56px;border-radius:10px;display:grid;place-items:center;flex:none;background:#efe5d3;border:3px solid}
+.card .head img{width:40px;height:40px;image-rendering:pixelated}
+.card h3{margin:0;font-size:16px}
+.tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:999px;margin-right:4px;color:#1b1407;font-weight:700}
+.tag.trig{background:#3b342c;color:var(--text);font-weight:500}
+.card dl{margin:8px 0 0;display:grid;grid-template-columns:62px 1fr;gap:4px 8px}
+.card dt{color:var(--dim)}
+.card dd{margin:0}
+.card code{font:11.5px Consolas,monospace;color:var(--acc)}
+.muted{color:var(--dim)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="stage">
+    <canvas id="view" width="1920" height="1080"></canvas>
+    <div class="bar">
+      <span class="keys"><b>A D</b> 이동 <b>J</b>·클릭 공격 <b>Q</b> 무기 바꾸기(바꾸면 자동 공격) <b>H</b> 내가 맞기(보호막 확인) <b>T</b> 느리게 <b>Backspace</b> 처음부터</span>
+    </div>
+    <div class="status" id="status"></div>
+    <div class="log" id="log"></div>
+    <div class="intro">
+      <p><b>쓰는 법</b> · 오른쪽에서 파츠 그림을 누르면 그 파츠를 끼우고, 그 파츠가 발동하는 상황(적중·무기 교체·표식 격발·처치)을 자동으로 한 번 보여 줍니다. 그다음엔 직접 움직이며 쳐 봐도 됩니다.</p>
+      <p><b>실험실 규칙</b> · 무기 A(검)로 맞히면 몬스터 머리 위에 표식이 쌓이고(최대 5개, 8초), 무기를 바꿔 무기 B(망치)로 맞히면 표식이 터집니다(격발). 표식을 누가 주는지는 아직 기획 미정이라 실험실에서만 이렇게 정했습니다. 몬스터 체력은 처치가 잘 보이도록 낮췄고, 파츠는 두 무기에 함께 적용됩니다.</p>
+      <p><b>이펙트</b> · 모두 pixelfx 로 만든 시트(25fps, 게임 화소 1:1)를 그대로 재생합니다. 이동 속도·둔화·속박·끌어당김·사거리는 실제 움직임도 흉내 냅니다. 「표식을 터트릴 시」 파츠를 끼우면 격발이 그 파츠 색으로 터집니다(여러 색을 함께 끼우면 덩어리마다 색이 섞여 터집니다). 쿨타임 감소·인계된 사거리는 이펙트 없이 두기로 한 것들이라 기록에만 나옵니다.</p>
+    </div>
+  </div>
+  <aside>
+    <h2>잉크 파츠 20종</h2>
+    <div class="row">
+      <label class="toggle"><input type="checkbox" id="multi"> 여러 파츠 같이 끼우기</label>
+      <button id="clearBtn">모두 빼기</button>
+    </div>
+    <div class="grid" id="grid"></div>
+    <div class="card" id="card"></div>
+  </aside>
+</div>
+<script>
+'use strict';
+const A = __ASSETS__;
+const VW = 960, VH = 540, S = 2, GROUND = 418, WORLD_W = 1400, PPU = 32;
+const INK = { red: '#d8664c', yellow: '#e3b030', green: '#5fb37a', blue: '#3a9cc4', purple: '#9a5cc8' };
+const INK_NAME = { red: '빨강', yellow: '노랑', green: '초록', blue: '파랑', purple: '보라' };
+const TRIG = { hit: '몬스터 적중 시', switch: '무기 교체 시', detonate: '표식을 터트릴 시', kill: '몬스터 처치 시' };
+const MARK_MAX = 5, MARK_LIFE = 8, DET_DMG = 10;
+
+/* ───────────── 파츠: 발동 조건·내부 쿨타임·실험실에서 하는 일 ───────────── */
+// fx: 쓰는 시트, how: 실험실에서 발동시키는 법, note: 판단에 필요한 메모. run 은 발동 순간 호출된다
+const PART = {
+  ink2_red_01: { icd: .25, fx: '<code>follow-cut</code> 칼자국 (v1~v3 돌려 씀)', how: '무기 A·B 어느 쪽이든 몬스터를 맞히면 0.1초 뒤 같은 자리를 한 번 더 벱니다.',
+    note: '원타격 → 추가타 간격은 데이터에 없어 0.1초로 둠.', run: c => later(.1, () => { if (c.e.dead) return;
+      spawnFx(`follow-cut_red_v${1 + (Math.random() * 3 | 0)}`, { x: c.px, y: c.py, face: c.dir }); damage(c.e, Math.round(c.dmg * .2), c.dir, c.px, c.py, '#f09a7c'); }) },
+  ink2_red_04: { icd: 2, fx: '<code>emp-hit</code> 강해진 한 방 빛 별', how: 'Q 로 무기를 바꾸면 바꾼 무기가 곧바로 자동 공격합니다. 그 한 방이 30% 강해집니다.',
+    note: '머리 위 칼날 표식은 뺐습니다. 바꾸자마자 공격이 나가 표식이 보일 틈이 없습니다.', run: () => { P.empower = { src: 'red_04', mul: 1.3 }; } },
+  ink2_red_07: { icd: .5, fx: '격발이 빨강으로 터짐 + <code>burst-thorn</code> 발밑에서 솟아 꿰뚫는 가시', how: 'A 로 표식을 쌓고 Q 로 바꿔 B 로 터트리면, 격발이 흩어진 뒤 가시가 솟습니다.',
+    note: '격발과 동시에 틀면 묻혀서 0.375초 뒤 두 번째 타격으로 둠(실제 시점 미정).', run: c => later(.375, () => { if (c.e.dead) return;
+      spawnFx('burst-thorn_red', { x: c.e.x, y: GROUND - 28, face: c.dir }); damage(c.e, 7, c.dir, c.e.x, GROUND - 34, '#f09a7c'); hitstop(.045); }) },
+  ink2_red_10: { icd: 0, fx: '<code>charge-rise</code> 기다림 → <code>charge-release</code> 공격 시작 → <code>emp-hit</code>', how: '몬스터를 처치하면 몸에 붉은 기운이 오르고, 다음 공격 때 손으로 모여 강한 한 방이 됩니다.',
+    note: '반복 처치는 수치를 더하지 않고 갱신.', run: () => { P.empower = { src: 'red_10', mul: 1.25 }; } },
+  ink2_yellow_01: { icd: .25, fx: '<code>speed-burst</code> → <code>speed-trail</code>(켜져 있는 동안) → <code>speed-end</code>', how: '맞힐 때마다 3초간 이동 속도 +12%. 맞힌 뒤 A·D 로 움직여 보세요.',
+    note: '칠 때마다 갱신이라 전투 중엔 거의 항상 켜집니다. 줄기가 시끄러운지 보는 파츠.', run: () => speedBuff('yellow_01', .12, 3) },
+  ink2_yellow_04: { icd: 2, fx: '이동 속도 줄기 (위와 같음)', how: 'Q 로 무기를 바꾸면 1.5초간 이동 속도 +35%.', run: () => speedBuff('yellow_04', .35, 1.5) },
+  ink2_yellow_07: { icd: .5, fx: '격발이 노랑으로 터짐 + 이동 속도 줄기', how: '표식을 터트리면 3초간 이동 속도 +30%.', run: () => speedBuff('yellow_07', .3, 3) },
+  ink2_yellow_09: { icd: 0, fx: '이동 속도 줄기 (위와 같음)', how: '처치하면 4초간 이동 속도 +22%.', run: () => speedBuff('yellow_09', .22, 4) },
+  ink2_green_03: { icd: 0, fx: '<code>heal</code> 발밑에서 오르는 고리', how: '맞힐 때마다 준 피해의 5%만큼 회복.',
+    note: '흡혈은 칠 때마다 터집니다. 이 파츠엔 고리를 안 트는 게 나은지 보는 파츠(애매 후보).', run: c => heal(Math.max(1, Math.round(c.dmg * .05))) },
+  ink2_green_04: { icd: 2, fx: '<code>shield-up</code> → <code>shield</code>(유지) → <code>shield-break</code>(깨질 때)', how: 'Q 로 바꾸면 보호막 12 가 4초간 생깁니다. H 로 맞아 보면 깨지는 모습이 나옵니다.',
+    scene: 'shield', note: '시간이 다 되면 조용히 흐려지고, 맞아서 0 이 될 때만 깨짐 시트를 씁니다.', run: () => shieldOn(12, 4) },
+  ink2_green_07: { icd: 1, fx: '격발이 초록으로 터짐 + <code>heal</code>', how: '표식을 터트리면 체력 8 회복.', run: () => heal(8) },
+  ink2_green_09: { icd: .5, fx: '<code>heal</code>', how: '처치하면 최대 체력의 5% 회복.', run: () => heal(Math.round(P.maxHp * .05)) },
+  ink2_blue_02: { icd: .25, nofx: true, fx: '없음', how: '맞힐 때마다 스킬 쿨타임 −0.3초. 실험실엔 스킬이 없어 기록에만 나옵니다.',
+    note: '쿨타임은 스킬 칸 UI 로 보이므로 이펙트를 만들지 않기로 함.', run: () => {} },
+  ink2_blue_04: { icd: 2, nofx: true, fx: '없음 (사거리만 실제로 늘어남)', how: 'Q 로 바꾸면 자동 공격의 사거리가 40% 늘어납니다. 조금 떨어진 몬스터가 맞는 것이 표시.',
+    note: '숫자만 바뀌는 버프라 이펙트를 두지 않기로 함.', run: () => { P.reachNext = .4; } },
+  ink2_blue_08: { icd: .5, fx: '격발이 파랑으로 터짐 (버프 자체 이펙트는 없음, 반경만 실제로 늘어남)', how: '표식을 터트리면 4초간 공격 범위가 35% 넓어집니다.',
+    note: '버프 이펙트는 두지 않기로 함. 파랑 격발이 유일한 표시.', run: () => { P.reachT = 4; } },
+  ink2_blue_09: { icd: .5, nofx: true, fx: '없음', how: '처치하면 스킬 쿨타임 −0.8초. 실험실엔 스킬이 없어 기록에만 나옵니다.',
+    note: '쿨타임은 스킬 칸 UI 로 보이므로 이펙트를 만들지 않기로 함.', run: () => {} },
+  ink2_purple_01: { icd: .25, fx: '<code>slow</code> 느린 물결 + 몸 보라 물들임(게임 쪽)', how: '맞힌 몬스터가 2초간 20% 느려집니다.',
+    note: '칠 때마다 다시 걸려 물결이 계속 붙어 있게 됩니다(물들임만으로 되는지 보는 파츠).', run: c => { c.e.slowT = 2; ensureFx(c.e, 'slow', () => spawnFx('slow_purple', { follow: () => [c.e.x, GROUND], loop: true, alive: () => c.e.slowT > 0 && !c.e.dead })); } },
+  ink2_purple_04: { icd: 2, fx: '<code>pull-rope</code> 빛 줄로 당기기', how: 'Q 로 바꾸면 주변(반경 3칸) 몬스터를 1칸(32px) 끌어당긴 뒤 무기가 바뀝니다.',
+    note: '줄 시트는 72px 거리 기준이라, 거리가 다르면 가로로 늘려 그립니다.', run: () => pullAround(P.x, P.face) },
+  ink2_purple_07: { icd: 3, fx: '격발이 보라로 터짐 + <code>root</code> 땅에서 솟는 빛 말뚝', how: '표식을 터트리면 1초간 그 몬스터가 묶입니다(밀리지도 돌아가지도 않음).',
+    run: c => { c.e.rootT = 1; spawnFx('root_purple', { x: c.e.x, y: GROUND, face: c.dir }); } },
+  ink2_purple_09: { icd: .5, fx: '<code>pull-rope</code> (쓰러진 자리에서)', how: '처치하면 쓰러진 자리 주변 몬스터를 1칸 끌어당깁니다.',
+    note: '줄이 쓰러진 몬스터 발밑에서 나갑니다.', run: c => pullAround(c.e.x, c.dir, c.e) },
+};
+// 파츠를 누르면 보여 줄 상황: [시각, 동작]. 동작은 sword(공격)·switch(무기 교체)·walkL/walkR(걷기)·halt(멈춤)·weak(앞 몬스터 체력 5)·ouch(내가 맞기)·end
+const SCENE = {
+  hit: [[.2, 'sword'], [.75, 'sword'], [1.3, 'sword'], [1.9, 'walkL'], [3.1, 'end']],
+  switch: [[.3, 'switch'], [.9, 'walkL'], [2.2, 'halt'], [2.5, 'switch'], [3.4, 'end']],
+  detonate: [[.2, 'sword'], [.6, 'sword'], [1.0, 'sword'], [1.7, 'switch'], [2.9, 'walkL'], [4.0, 'end']],
+  kill: [[0, 'weak'], [.3, 'sword'], [1.1, 'walkR'], [1.4, 'halt'], [1.6, 'sword'], [2.4, 'walkL'], [3.5, 'end']],
+  shield: [[.3, 'switch'], [1.3, 'ouch'], [2.1, 'ouch'], [3.0, 'end']],
+};
+
+/* ───────────── 이미지 ───────────── */
+const imgs = new Map();
+function img(src) { let i = imgs.get(src); if (!i) { i = new Image(); i.src = src; imgs.set(src, i); } return i; }
+for (const k in A.frames) img(A.frames[k].src);
+for (const m of A.monsters) for (const mo of [m.idle, m.hit, m.death]) if (mo) mo.frames.forEach(img);
+for (const k of ['sky', 'tall', 'mid', 'body']) img(A.bg[k]);
+A.bg.clouds.forEach(img); A.bg.caps.forEach(c => img(c.src));
+for (const k in A.fx) img(A.fx[k].src);
+const silCache = new Map();
+function silhouette(im, color) {
+  const key = im.src.length + ':' + im.src.slice(-40) + color;
+  let c = silCache.get(key);
+  if (!c) {
+    c = document.createElement('canvas'); c.width = im.width; c.height = im.height;
+    const x = c.getContext('2d'); x.drawImage(im, 0, 0);
+    x.globalCompositeOperation = 'source-in'; x.fillStyle = color; x.fillRect(0, 0, c.width, c.height);
+    silCache.set(key, c);
+  }
+  return c;
+}
+function opaqueBounds(im) {
+  const c = document.createElement('canvas'); c.width = im.width; c.height = im.height;
+  const x = c.getContext('2d'); x.drawImage(im, 0, 0);
+  const d = x.getImageData(0, 0, c.width, c.height).data;
+  let x0 = c.width, y0 = c.height, x1 = 0, y1 = 0;
+  for (let y = 0; y < c.height; y++) for (let xx = 0; xx < c.width; xx++)
+    if (d[(y * c.width + xx) * 4 + 3] > 40) { x0 = Math.min(x0, xx); x1 = Math.max(x1, xx); y0 = Math.min(y0, y); y1 = Math.max(y1, y); }
+  return { x0, y0, x1: x1 + 1, y1: y1 + 1 };
+}
+
+/* ───────────── 소리 ───────────── */
+let ac = null; const buffers = {};
+function initAudio() {
+  if (ac) return; ac = new (window.AudioContext || window.webkitAudioContext)();
+  for (const [k, src] of Object.entries(A.sfx)) {
+    const bin = atob(src.split(',')[1]); const u = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) u[i] = bin.charCodeAt(i);
+    ac.decodeAudioData(u.buffer).then(b => buffers[k] = b).catch(() => {});
+  }
+}
+function play(k, vol = .5) {
+  if (!ac || !buffers[k]) return;
+  const s = ac.createBufferSource(), g = ac.createGain(); s.buffer = buffers[k]; s.playbackRate.value = G.speed ** .35;
+  g.gain.value = vol; s.connect(g).connect(ac.destination); s.start();
+}
+
+/* ───────────── 상태 ───────────── */
+const G = { speed: 1, hitstop: 0, camX: 0, time: 0, scene: null, later: [], walk: 0 };
+const keys = new Set(); let pressed = [];
+const P = { x: 350, face: 1, weapon: 'A', state: 'idle', t: 0, atk: null, combo: 0, queue: false, hp: 70, maxHp: 100,
+  shield: 0, shieldT: 0, speed: {}, empower: null, reachNext: 0, reachT: 0, hurt: 0 };
+const equipped = new Set();
+const lastFire = {};
+let effects = [], nums = [], trails = [];
+
+const SPAWN = [['01_thorn-root', 432], ['01_thorn-root', 482], ['02_broom-stalker', 600], ['03_gutter-spitter', 700], ['04_well-warden', 860]];
+const enemies = [];
+function spawnEnemies() {
+  enemies.length = 0;
+  for (const [id, x] of SPAWN) {
+    const m = A.monsters.find(m => m.id === id); if (!m) continue;
+    const max = m.elite ? 200 : 90;
+    enemies.push({ m, x, home: x, hp: max, max, face: -1, t: Math.random() * 2, hurt: 0, flash: 0, kb: 0, kbT: 0, dead: false, deadT: 0,
+      box: null, alpha: 1, respawn: 0, marks: [], markT: 0, slowT: 0, rootT: 0, pull: null, fxOn: {} });
+  }
+}
+function frameAt(mo, t, loop = true) {
+  const total = mo.ms.reduce((a, b) => a + b, 0) / 1000;
+  let u = loop ? t % total : Math.min(t, total - 1e-4), i = 0;
+  while (i < mo.ms.length - 1 && u >= mo.ms[i] / 1000) { u -= mo.ms[i] / 1000; i++; }
+  return i;
+}
+function hurtbox(e) {
+  if (!e.box) { const im = img(e.m.idle.frames[0]); if (!im.complete) return null; e.box = opaqueBounds(im); }
+  const mo = e.m.idle, b = e.box, ox = mo.px * mo.w, oy = (1 - mo.py) * mo.h;
+  const l = e.face < 0 ? b.x0 - ox : ox - b.x1, r = e.face < 0 ? b.x1 - ox : ox - b.x0;
+  return { l: e.x + l, r: e.x + r, top: GROUND - oy + b.y0, bottom: GROUND - oy + b.y1 };
+}
+function later(dt, fn) { G.later.push({ t: dt, fn }); }
+
+/* ───────────── 이펙트 시트 재생 ───────────── */
+// 시트는 오른쪽 기준. face < 0 이면 피벗을 축으로 좌우 반전한다. follow 를 주면 그 자리를 따라간다
+function spawnFx(key, o = {}) {
+  const s = A.fx[key]; if (!s) return null;
+  const f = { key, s, t: 0, start: o.start || 0, face: o.face || 1, sx: o.sx || 1, x: o.x, y: o.y, follow: o.follow, loop: !!o.loop,
+    alive: o.alive, alpha: 1, fade: 0, onEnd: o.onEnd };
+  effects.push(f); return f;
+}
+function ensureFx(owner, name, make) {
+  const f = owner.fxOn[name];
+  if (f && effects.includes(f) && !f.fade) return f;
+  return owner.fxOn[name] = make();
+}
+function updateEffects(w) {
+  for (const f of effects) {
+    f.t += w;
+    if (f.alive && !f.alive() && !f.fade) f.fade = .2;
+    if (f.fade) { f.fade -= w; f.alpha = Math.max(0, f.fade / .2); if (f.fade <= 0) f.done = true; }
+    if (!f.loop && f.start + Math.floor(f.t * f.s.fps + 1e-6) >= f.s.n) f.done = true;
+  }
+  for (const f of effects) if (f.done && f.onEnd) f.onEnd();
+  effects = effects.filter(f => !f.done);
+}
+function drawEffects() {
+  for (const f of effects) {
+    const s = f.s, im = img(s.src);
+    let i = f.start + Math.floor(f.t * s.fps + 1e-6); i = f.loop ? i % s.n : Math.min(i, s.n - 1);
+    const [x, y] = f.follow ? f.follow() : [f.x, f.y];
+    ctx.save(); ctx.globalAlpha = f.alpha; ctx.translate(Math.round(x), Math.round(y)); ctx.scale((typeof f.face === 'function' ? f.face() : f.face) * f.sx, 1);
+    ctx.drawImage(im, (i % s.cols) * s.fw, Math.floor(i / s.cols) * s.fh, s.fw, s.fh, -s.px, -s.py, s.fw, s.fh);
+    ctx.restore();
+  }
+  ctx.globalAlpha = 1;
+}
+
+/* ───────────── 파츠 발동 ───────────── */
+function fire(trigger, c = {}) {
+  for (const p of A.parts) {
+    if (p.trigger !== trigger || !equipped.has(p.id)) continue;
+    const def = PART[p.id];
+    if (G.time - (lastFire[p.id] ?? -99) < def.icd) continue;
+    lastFire[p.id] = G.time;
+    def.run(c);
+    log(p, def.nofx ? '이펙트 없음 · ' + def.how.split('. ')[0] : def.fx.replace(/<[^>]+>/g, ''));
+  }
+}
+function speedBuff(src, amt, dur) {
+  const was = speedBonus() > 0;
+  P.speed[src] = { amt, t: dur };
+  if (!was) spawnFx('speed-burst_yellow', { follow: () => [P.x, GROUND], face: P.face });
+  ensureFx(P, 'trail', () => spawnFx('speed-trail_yellow', { follow: () => [P.x, GROUND], face: () => P.face, loop: true, alive: () => speedBonus() > 0 }));
+}
+function speedBonus() { return Math.max(0, ...Object.values(P.speed).map(b => b.amt)); }
+function heal(n) {
+  const before = P.hp; P.hp = Math.min(P.maxHp, P.hp + n);
+  spawnFx('heal_green', { follow: () => [P.x, GROUND], face: P.face });
+  number(P.x, GROUND - 60, '+' + Math.max(n, P.hp - before), '#8fe0a2');
+}
+function shieldOn(n, dur) {
+  P.shield = n; P.shieldT = dur;
+  const up = spawnFx('shield-up_green', { follow: () => [P.x, GROUND] });
+  up.onEnd = () => { if (P.shield > 0) ensureFx(P, 'shield', () => spawnFx('shield_green', { follow: () => [P.x, GROUND], loop: true, alive: () => P.shield > 0 })); };
+}
+function pullAround(cx, dir, except) {
+  const R = 3 * PPU;
+  for (const e of enemies) {
+    if (e.dead || e === except) continue; const h = hurtbox(e); if (!h) continue;
+    const near = Math.max(h.l, Math.min(cx, h.r));
+    if (Math.abs(near - cx) > R || Math.abs(e.x - cx) < 4) continue;
+    const side = Math.sign(e.x - cx), dist = Math.abs(e.x - cx);
+    spawnFx('pull-rope_purple', { x: cx, y: GROUND, face: side, sx: dist / 72 });
+    e.pull = { t: 0, from: e.x, dx: -side * PPU };
+  }
+}
+const pullPos = u => u < .26 ? 0 : u > .46 ? 1 : 1 - (1 - (u - .26) / .2) ** 3;   // pull-rope 시트 시점(0.26~0.46초)
+
+/* ───────────── 주인공 ───────────── */
+const FORMS = A.player;
+function clipLen(c) { return c.seconds.reduce((a, b) => a + b, 0); }
+function clipFrame(c, t, loop) {
+  const total = clipLen(c); let u = loop ? t % total : Math.min(t, total - 1e-4), i = 0;
+  while (i < c.seconds.length - 1 && u >= c.seconds[i]) { u -= c.seconds[i]; i++; }
+  return c.frames[i];
+}
+const ATK = {
+  sword1: { form: 'base_sword', clip: 'attack1', reach: [2, 74], lunge: 7, dmg: 12, stop: .045, snd: 'sword1' },
+  sword2: { form: 'base_sword', clip: 'attack2', reach: [2, 80], lunge: 9, dmg: 16, stop: .045, snd: 'sword2' },
+  ham1:   { form: 'hammer', clip: 'attack1', reach: [-4, 82], lunge: 8, dmg: 22, stop: .075, snd: 'heavy' },
+  ham2:   { form: 'hammer', clip: 'attack2', reach: [-6, 92], lunge: 12, dmg: 30, stop: .075, snd: 'heavy' },
+};
+const formOf = () => P.weapon === 'A' ? 'base_sword' : 'hammer';
+function startAttack(kind) {
+  const a = ATK[kind], c = FORMS[a.form].clips[a.clip];
+  let reach = 1 + (P.reachT > 0 ? .35 : 0);
+  if (P.reachNext) { reach += P.reachNext; P.reachNext = 0; }
+  P.state = 'attack'; P.t = 0; P.queue = false;
+  P.atk = { kind, a, c, impact: c.impact > 0 ? c.impact : clipLen(c) * .45, fxStart: c.fxStart > 0 ? c.fxStart : 0, done: false, fx: false, x0: P.x, reach, empower: P.empower };
+  if (P.empower) {
+    if (P.empower.src === 'red_10') spawnFx('charge-release_red', { follow: () => [P.x, GROUND], face: P.face });
+    P.empower = null;
+  }
+  play(a.snd);
+}
+function attack() {
+  initAudio();
+  if (P.state === 'attack') { if (P.t > P.atk.impact - .06) P.queue = true; return; }
+  const kind = P.weapon === 'A' ? (P.combo % 2 ? 'sword2' : 'sword1') : (P.combo % 2 ? 'ham2' : 'ham1');
+  P.combo++; startAttack(kind);
+}
+function switchWeapon() {
+  initAudio();
+  fire('switch');                                      // 교체 파츠는 바꾸기 직전(무기 A 쪽)에서 발동한다
+  P.weapon = P.weapon === 'A' ? 'B' : 'A'; P.combo = 0;
+  startAttack(P.weapon === 'A' ? 'sword1' : 'ham1');   // 바꾼 무기는 곧바로 자동 공격 (전투 규칙)
+  P.combo = 1;
+  logText(`무기 ${P.weapon === 'A' ? 'A 검' : 'B 망치'} 로 교체 → 자동 공격`);
+}
+function updatePlayer(dt) {
+  const left = keys.has('KeyA') || keys.has('ArrowLeft') || G.walk < 0, right = keys.has('KeyD') || keys.has('ArrowRight') || G.walk > 0;
+  const dir = (right ? 1 : 0) - (left ? 1 : 0);
+  P.t += dt;
+  if (P.state === 'attack') {
+    const k = P.atk;
+    if (P.t < k.impact) P.x = k.x0 + P.face * k.a.lunge * Math.min(1, P.t / k.impact);
+    if (!k.fx && P.t >= k.fxStart) { k.fx = true; const e = FORMS[k.a.form].effects[k.a.clip]; if (e) trails.push({ e, x: P.x, face: P.face, t: 0 }); }
+    if (!k.done && P.t >= k.impact) { k.done = true; resolveAttack(k); }
+    if (P.t >= clipLen(k.c)) {
+      P.state = 'idle'; P.t = 0;
+      if (P.queue) attack();
+    }
+  } else {
+    if (P.t > .6 && P.state === 'idle') P.combo = 0;
+    if (dir) { P.face = dir; P.x += dir * 150 * (1 + speedBonus()) * dt; if (P.state !== 'run') { P.state = 'run'; P.t = 0; } }
+    else if (P.state !== 'idle') { P.state = 'idle'; P.t = 0; }
+  }
+  P.x = Math.max(40, Math.min(WORLD_W - 40, P.x));
+  for (const [k, b] of Object.entries(P.speed)) if ((b.t -= dt) <= 0) delete P.speed[k];
+  if (P.fxOn.trail && speedBonus() === 0 && !P.fxOn.ended) { P.fxOn.ended = true; spawnFx('speed-end_yellow', { follow: () => [P.x, GROUND], face: P.face }); }
+  if (speedBonus() > 0) P.fxOn.ended = false;
+  if (P.shieldT > 0 && (P.shieldT -= dt) <= 0) P.shield = 0;
+  P.reachT = Math.max(0, P.reachT - dt); P.hurt = Math.max(0, P.hurt - dt);
+}
+P.fxOn = {};
+function playerFrame() {
+  const f = FORMS[formOf()];
+  if (P.state === 'attack') return clipFrame(P.atk.c, P.t, false);
+  return clipFrame(f.clips[P.state === 'run' ? 'run' : 'idle'], P.t, true);
+}
+
+/* ───────────── 타격 판정 ───────────── */
+function resolveAttack(k) {
+  const reach = k.a.reach[1] * k.reach;
+  const lo = P.x + P.face * k.a.reach[0], hi = P.x + P.face * reach;
+  const [a, b] = lo < hi ? [lo, hi] : [hi, lo];
+  let stop = 0;
+  for (const e of enemies) {
+    if (e.dead) continue; const h = hurtbox(e); if (!h) continue;
+    if (h.r < a || h.l > b) continue;
+    const px = P.face > 0 ? Math.max(h.l + 3, Math.min(h.r - 3, P.x + P.face * 30)) : Math.min(h.r - 3, Math.max(h.l + 3, P.x + P.face * 30));
+    const py = h.top + (h.bottom - h.top) * .45, dir = P.face;
+    const mul = k.empower ? k.empower.mul : 1, dmg = Math.round(k.a.dmg * mul);
+    if (k.empower) spawnFx('emp-hit_red', { x: px, y: py, face: dir });
+    e.hurt = A.reaction.basicStaggerSeconds; e.flash = e.flashMax = k.a.stop > .05 ? .09 : .06; e.face = -dir;
+    if (!e.rootT) { e.kb = 8 / A.reaction.basicPushSeconds * dir; e.kbT = A.reaction.basicPushSeconds; }
+    const killed = damage(e, dmg, dir, px, py, k.empower ? '#ffd34a' : '#ffffff');
+    stop = Math.max(stop, k.a.stop);
+    if (!killed) {
+      if (P.weapon === 'A') addMark(e);
+      else if (e.marks.length) { detonate(e, dir); stop = Math.max(stop, .075); }
+    }
+    fire('hit', { e, px, py, dir, dmg });
+  }
+  hitstop(stop);
+}
+function damage(e, n, dir, px, py, color) {
+  if (e.dead) return false;
+  e.hp -= n; number(px, Math.min(py - 14, (hurtbox(e)?.top ?? py) - 11), String(n), color);
+  if (e.hp <= 0) {
+    e.dead = true; e.deadT = 0; e.respawn = 2.4; e.slowT = 0; e.rootT = 0; e.marks = [];
+    logText(`${e.m.name} 처치`);
+    fire('kill', { e, px, py, dir, dmg: n });
+    return true;
+  }
+  return false;
+}
+function hitstop(s) { G.hitstop = Math.max(G.hitstop, s); }
+function addMark(e) {
+  if (e.marks.length < MARK_MAX) e.marks.push({ t: 0 });
+  e.markT = MARK_LIFE;
+}
+function markSlot(e, i, n) {
+  const h = hurtbox(e); const y = Math.min(GROUND - 70, (h ? h.top : GROUND - 60) - 10);
+  return [e.x + (i - (n - 1) / 2) * 8, y];
+}
+// 「표식을 터트릴 시」 파츠를 끼웠으면 격발을 그 파츠 색으로, 여러 색이면 덩어리마다 색이 섞인 판으로 터트린다
+const DET_ORDER = ['red', 'yellow', 'green', 'blue', 'purple'];
+function burstColor() {
+  const cs = A.parts.filter(p => p.trigger === 'detonate' && equipped.has(p.id)).map(p => p.color);
+  const on = DET_ORDER.filter(c => cs.includes(c));
+  return on.length ? on.join('-') : 'base';
+}
+function detonate(e, dir) {
+  const n = e.marks.length, color = burstColor(), key = `mark-burst_${color}_m${n}`;
+  spawnFx(key, { x: e.x, y: GROUND - 28, face: dir, start: A.fx[key].hold });
+  e.marks = []; e.markT = 0;
+  logText(`표식 ${n}개 격발 (${color === 'base' ? '기본 흰색' : color.split('-').map(c => INK_NAME[c]).join('+') + ' 판'})`);
+  damage(e, DET_DMG, dir, e.x, GROUND - 34, '#e8e1d6');
+  fire('detonate', { e, dir, n, px: e.x, py: GROUND - 34, dmg: DET_DMG });
+}
+function playerHit() {
+  initAudio();
+  let n = 10;
+  if (P.shield > 0) {
+    const used = Math.min(P.shield, n); P.shield -= used; n -= used;
+    number(P.x, GROUND - 62, '보호 ' + used, '#a6dcb1');
+    if (P.shield <= 0) { P.shieldT = 0; spawnFx('shield-break_green', { follow: () => [P.x, GROUND] }); logText('보호막 깨짐 → shield-break'); }
+  }
+  if (n > 0) { P.hp = Math.max(1, P.hp - n); P.hurt = .2; number(P.x, GROUND - 62, '-' + n, '#ff8a7a'); }
+}
+
+/* ───────────── 갱신 ───────────── */
+function update(dt) {
+  G.time += dt;
+  for (const n of nums) n.t += dt; nums = nums.filter(n => n.t < n.life);
+  for (const e of enemies) e.flash = Math.max(0, e.flash - dt);
+  updateScene(dt);
+  let w = dt;
+  if (G.hitstop > 0) { const used = Math.min(G.hitstop, dt); G.hitstop -= used; w = dt - used; }
+  if (w <= 0) return;
+  for (const l of G.later) l.t -= w;
+  const due = G.later.filter(l => l.t <= 0); G.later = G.later.filter(l => l.t > 0); due.forEach(l => l.fn());
+  for (const k of pressed) k === 'switch' ? switchWeapon() : attack(); pressed = [];
+  updatePlayer(w);
+  updateEffects(w);
+  for (const t of trails) t.t += w; trails = trails.filter(t => t.t < clipLen(t.e));
+  for (const e of enemies) {
+    e.t += w;
+    if (e.dead) {
+      e.deadT += w;
+      if ((e.respawn -= w) <= 0) Object.assign(e, { dead: false, hp: e.max, x: e.home, alpha: 0, hurt: 0, kb: 0, pull: null });
+      continue;
+    }
+    e.alpha = Math.min(1, e.alpha + w * 3);
+    e.hurt = Math.max(0, e.hurt - w); e.slowT = Math.max(0, e.slowT - w); e.rootT = Math.max(0, e.rootT - w);
+    for (const m of e.marks) m.t += w;
+    if (e.marks.length && (e.markT -= w) <= 0) { e.expiring = { n: e.marks.length, t: 0 }; e.marks = []; }
+    if (e.expiring && (e.expiring.t += w) > 1) e.expiring = null;
+    const slow = e.slowT > 0 ? .8 : 1;
+    if (e.pull) {
+      e.pull.t += w; e.x = e.pull.from + e.pull.dx * pullPos(e.pull.t);
+      if (e.pull.t > .5) { e.home = e.x; e.pull = null; }
+    } else if (e.rootT > 0) { e.kbT = 0; }
+    else if (e.kbT > 0) { const u = Math.min(w, e.kbT); e.x += e.kb * u; e.kbT -= u; }
+    else if (!e.hurt && Math.abs(e.x - e.home) > 1) e.x += Math.sign(e.home - e.x) * Math.min(Math.abs(e.home - e.x), 40 * slow * w);
+    if (!e.hurt) e.face = P.x < e.x ? -1 : 1;
+  }
+  const target = Math.max(0, Math.min(WORLD_W - VW, P.x - VW * .42));
+  G.camX += (target - G.camX) * Math.min(1, w * 6);
+}
+
+/* ───────────── 그리기 ───────────── */
+const view = document.getElementById('view'), vctx = view.getContext('2d');
+const buf = document.createElement('canvas'); buf.width = VW; buf.height = VH;
+const ctx = buf.getContext('2d');
+const FAR_TOP = 22;
+function drawBackground() {
+  ctx.drawImage(img(A.bg.sky), 0, 0, VW, VH);
+  A.bg.clouds.forEach((src, i) => { const c = img(src); const x = ((i * 303 - G.camX * .055 + G.time * (2 + i)) % 1800 + 1800) % 1800 - 360; ctx.drawImage(c, Math.round(x - c.width / 2), Math.round(40 + (i % 3) * 65 - c.height / 2)); });
+  const far = img(A.bg.tall), bottom = FAR_TOP + far.height;
+  const layer = (im, scroll, alpha) => {
+    const w = im.width; if (!w) return; ctx.globalAlpha = alpha;
+    const group = Math.floor(scroll / (2 * w));
+    for (let i = 0; i < 4; i++) {
+      const x = Math.round((group * 2 + i) * w - scroll), y = bottom - im.height;
+      if (i % 2) { ctx.save(); ctx.translate(x + w, y); ctx.scale(-1, 1); ctx.drawImage(im, 0, 0); ctx.restore(); }
+      else ctx.drawImage(im, x, y);
+    }
+    ctx.globalAlpha = 1;
+  };
+  layer(far, G.camX * .18, .5);
+  layer(img(A.bg.mid), G.camX * .45, .8);
+}
+function drawGround() {
+  const cam = Math.round(G.camX), body = img(A.bg.body);
+  for (let x = -((cam % body.width) + body.width) % body.width; x < VW; x += body.width)
+    for (let y = GROUND; y < VH; y += body.height) ctx.drawImage(body, x, y);
+  const caps = A.bg.caps, order = [2, 0, 3, 1, 0, 2, 1, 3];
+  let wx = 0, n = 0;
+  while (wx < cam - 64) { wx += caps[order[n % order.length]].step; n++; }
+  for (; wx < cam + VW + 64; n++) { const c = caps[order[n % order.length]]; ctx.drawImage(img(c.src), Math.round(wx - cam - c.ax), Math.round(GROUND - c.ay)); wx += c.step; }
+}
+function drawSprite(im, x, y, ox, oy, flip, k = 1) {
+  ctx.save(); ctx.translate(Math.round(x), Math.round(y)); ctx.scale(flip ? -k : k, k);
+  if (k < 1) ctx.imageSmoothingEnabled = true;
+  ctx.drawImage(im, -ox, -oy); ctx.restore(); ctx.imageSmoothingEnabled = false;
+}
+function drawEnemy(e) {
+  const m = e.m; let mo = m.idle, fi;
+  if (e.dead) { if (!m.death) { if (e.deadT > .35) return; } else mo = m.death; fi = frameAt(mo, e.deadT, false); }
+  else if (e.hurt > 0 && m.hit) { mo = m.hit; fi = 0; }
+  else fi = frameAt(mo, e.t * (e.slowT > 0 ? .8 : 1), true);
+  const im = img(mo.frames[fi]); const ox = mo.px * mo.w, oy = (1 - mo.py) * mo.h, flip = e.face > 0;
+  ctx.globalAlpha = e.dead ? Math.max(0, 1 - Math.max(0, e.deadT - (m.death ? m.death.ms.reduce((a, b) => a + b) / 1000 : 0)) * 3) : e.alpha;
+  if (e.dead && !m.death) ctx.globalAlpha = 1 - e.deadT / .35;
+  drawSprite(im, e.x, GROUND, ox, oy, flip);
+  if (e.slowT > 0) { ctx.globalAlpha = .4 * Math.min(1, e.slowT / .2); drawSprite(silhouette(im, '#9a5cc8'), e.x, GROUND, ox, oy, flip); }
+  if (e.flash > 0) {
+    const u = e.flash / e.flashMax; ctx.globalAlpha = u > .4 ? 1 : u / .4;
+    const dark = silhouette(im, '#171716'), white = silhouette(im, '#ffffff');
+    for (const [dx, dy] of [[-1, 0], [1, 0], [0, -1], [0, 1]]) drawSprite(dark, e.x + dx, GROUND + dy, ox, oy, flip);
+    drawSprite(white, e.x, GROUND, ox, oy, flip);
+  }
+  ctx.globalAlpha = 1;
+  if (!e.dead && e.hp < e.max) {
+    const h = hurtbox(e); if (h) { const w = Math.max(30, Math.min(70, h.r - h.l)), bx = Math.round(e.x - w / 2), by = GROUND + 4;
+      ctx.fillStyle = '#171716'; ctx.fillRect(bx - 1, by - 1, w + 2, 5); ctx.fillStyle = '#d6d0c7'; ctx.fillRect(bx, by, w, 3);
+      ctx.fillStyle = e.m.elite ? '#c9472f' : '#575451'; ctx.fillRect(bx, by, Math.round(w * Math.max(0, e.hp) / e.max), 3); }
+  }
+}
+// 표식 방울: 쌓일 때 land → 떠 있는 동안 idle(방울마다 시작 장을 엇갈림) → 만료 시 expire
+function drawMarks(e) {
+  const drawSheet = (key, i, x, y) => { const s = A.fx[key]; ctx.drawImage(img(s.src), (i % s.cols) * s.fw, Math.floor(i / s.cols) * s.fh, s.fw, s.fh, Math.round(x) - s.px, Math.round(y) - s.py, s.fw, s.fh); };
+  const n = e.marks.length, land = A.fx['mark-drop-land_base'], idle = A.fx['mark-drop-idle_base'], exp = A.fx['mark-drop-expire_base'];
+  e.marks.forEach((m, i) => {
+    const [x, y] = markSlot(e, i, n), f = Math.floor(m.t * 25);
+    if (f < land.n - 1) drawSheet('mark-drop-land_base', f, x, y);
+    else drawSheet('mark-drop-idle_base', (f + i * 9) % idle.n, x, y);
+  });
+  if (e.expiring) for (let i = 0; i < e.expiring.n; i++) {
+    const f = Math.floor((e.expiring.t - i * .05) * 25); if (f < 0 || f >= exp.n) continue;
+    const [x, y] = markSlot(e, i, e.expiring.n); drawSheet('mark-drop-expire_base', f, x, y);
+  }
+}
+function drawPlayer() {
+  const f = A.frames[playerFrame()], im = img(f.src);
+  drawSprite(im, P.x, GROUND, f.px * f.w, (1 - f.py) * f.h, P.face < 0, f.k);
+  if (P.hurt > 0) { ctx.globalAlpha = .6; drawSprite(silhouette(im, '#ff8a7a'), P.x, GROUND, f.px * f.w, (1 - f.py) * f.h, P.face < 0, f.k); ctx.globalAlpha = 1; }
+}
+function drawTrails() {
+  for (const t of trails) {
+    let u = t.t, i = 0; while (i < t.e.seconds.length - 1 && u >= t.e.seconds[i]) { u -= t.e.seconds[i]; i++; }
+    const f = A.frames[t.e.frames[i]], im = img(f.src), s = t.e.scale * f.k;
+    ctx.save(); ctx.translate(Math.round(t.x), GROUND); ctx.scale(t.face, 1); ctx.imageSmoothingEnabled = f.k < 1;
+    ctx.drawImage(im, t.e.x * PPU, -t.e.y * PPU, f.w * s, f.h * s); ctx.restore(); ctx.imageSmoothingEnabled = false;
+  }
+}
+// 승전의 칼끝 기다림: 처치 뒤 다음 공격까지 몸에 붉은 기운
+function syncCharge() {
+  const want = P.empower && P.empower.src === 'red_10';
+  if (want) ensureFx(P, 'charge', () => spawnFx('charge-rise_red', { follow: () => [P.x, GROUND], face: () => P.face, loop: true, alive: () => P.empower && P.empower.src === 'red_10' }));
+}
+/* 숫자: 3x5 픽셀 글꼴 (숫자·+·-), 글자는 작은 글씨 */
+const DIGITS = { 0: '111101101101111', 1: '010110010010111', 2: '111001111100111', 3: '111001111001111', 4: '101101111001001', 5: '111100111001111', 6: '111100111101111', 7: '111001001010010', 8: '111101111101111', 9: '111101111001111', '+': '000010111010000', '-': '000000111000000' };
+const numCache = new Map();
+function numCanvas(text, color) {
+  const key = text + color; let c = numCache.get(key); if (c) return c;
+  c = document.createElement('canvas'); const x = c.getContext('2d');
+  if (/^[0-9+\-]+$/.test(text)) {
+    const s = 2, w = text.length * 4 - 1; c.width = (w + 2) * s; c.height = 7 * s;
+    const put = (ox, oy, col) => { x.fillStyle = col; [...text].forEach((ch, i) => { const g = DIGITS[ch]; for (let p = 0; p < 15; p++) if (g[p] === '1') x.fillRect((ox + i * 4 + p % 3) * s, (oy + (p / 3 | 0)) * s, s, s); }); };
+    for (const [dx, dy] of [[0, 1], [2, 1], [1, 0], [1, 2]]) put(dx, dy, '#171716');
+    put(1, 1, color);
+  } else {
+    x.font = 'bold 11px "Malgun Gothic",sans-serif'; c.width = Math.ceil(x.measureText(text).width) + 4; c.height = 15;
+    x.font = 'bold 11px "Malgun Gothic",sans-serif'; x.textBaseline = 'top'; x.lineWidth = 3; x.strokeStyle = '#171716'; x.strokeText(text, 2, 1); x.fillStyle = color; x.fillText(text, 2, 1);
+  }
+  numCache.set(key, c); return c;
+}
+function number(x, y, text, color) { nums.push({ x: x + (Math.random() - .5) * 8, y, c: numCanvas(String(text), color), t: 0, life: .7 }); }
+function render() {
+  ctx.imageSmoothingEnabled = false;
+  syncCharge();
+  drawBackground();
+  ctx.save(); ctx.translate(-Math.round(G.camX), 0);
+  for (const e of enemies) drawEnemy(e);
+  drawPlayer(); drawTrails();
+  ctx.restore();
+  drawGround();
+  ctx.save(); ctx.translate(-Math.round(G.camX), 0);
+  drawEffects();
+  for (const e of enemies) if (!e.dead || e.expiring) drawMarks(e);
+  for (const n of nums) {
+    const u = n.t / n.life, rise = (1 - (1 - Math.min(1, u * 1.4)) ** 3) * 20;
+    ctx.globalAlpha = u > .7 ? (1 - u) / .3 : 1;
+    ctx.drawImage(n.c, Math.round(n.x - n.c.width / 2), Math.round(n.y - rise - n.c.height));
+  }
+  ctx.globalAlpha = 1;
+  ctx.restore();
+  vctx.setTransform(S, 0, 0, S, 0, 0); vctx.imageSmoothingEnabled = false; vctx.drawImage(buf, 0, 0);
+}
+
+/* ───────────── 상황 자동 재생 ───────────── */
+function runScene(trigger) {
+  spawnEnemies(); effects = []; nums = []; trails = []; G.later = []; G.hitstop = 0; G.walk = 0;
+  Object.assign(P, { x: 350, face: 1, weapon: 'A', state: 'idle', t: 0, combo: 0, queue: false, hp: 70, shield: 0, shieldT: 0, speed: {}, empower: null, reachNext: 0, reachT: 0, fxOn: {} });
+  for (const k in lastFire) delete lastFire[k];
+  G.camX = Math.max(0, P.x - VW * .42);
+  G.scene = { t: 0, i: 0, steps: SCENE[trigger] || [] };
+}
+function updateScene(dt) {
+  const sc = G.scene; if (!sc) return; sc.t += dt;
+  while (sc.i < sc.steps.length && sc.t >= sc.steps[sc.i][0]) {
+    const a = sc.steps[sc.i++][1];
+    if (a === 'sword') pressed.push('attack');
+    else if (a === 'switch') pressed.push('switch');
+    else if (a === 'walkL') G.walk = -1;
+    else if (a === 'walkR') G.walk = 1;
+    else if (a === 'halt') G.walk = 0;
+    else if (a === 'ouch') playerHit();
+    else if (a === 'end') { G.walk = 0; G.scene = null; }
+    else if (a === 'weak') enemies[0].hp = 5;
+  }
+}
+
+/* ───────────── 입력 ───────────── */
+addEventListener('keydown', ev => {
+  if (ev.target.tagName === 'INPUT') return;
+  initAudio();
+  if (ev.code === 'KeyJ') { if (!ev.repeat) pressed.push('attack'); ev.preventDefault(); return; }
+  if (ev.code === 'KeyQ') { if (!ev.repeat) pressed.push('switch'); ev.preventDefault(); return; }
+  if (ev.code === 'KeyH') { if (!ev.repeat) playerHit(); return; }
+  if (ev.code === 'KeyT') { G.speed = G.speed === 1 ? .5 : G.speed === .5 ? .25 : 1; logText(`재생 속도 ${G.speed}×`); return; }
+  if (ev.code === 'Backspace') { runScene(null); ev.preventDefault(); return; }
+  if (ev.code.startsWith('Arrow')) ev.preventDefault();
+  G.scene = null; G.walk = 0;
+  keys.add(ev.code);
+});
+addEventListener('keyup', ev => keys.delete(ev.code));
+view.addEventListener('mousedown', ev => { if (ev.button === 0) pressed.push('attack'); });
+addEventListener('blur', () => keys.clear());
+
+/* ───────────── 패널 ───────────── */
+const $ = id => document.getElementById(id);
+const logLines = [];
+function pushLog(html) { logLines.unshift(html); logLines.length = Math.min(logLines.length, 7); $('log').innerHTML = logLines.map(l => `<div>${l}</div>`).join(''); }
+function log(p, text) { pushLog(`<i style="color:${INK[p.color]}">${p.name}</i> 발동 · ${text}`); }
+function logText(t) { pushLog(`<span class="muted">${t}</span>`); }
+let selected = null;
+function buildGrid() {
+  const order = ['red', 'yellow', 'green', 'blue', 'purple'], trig = ['hit', 'switch', 'detonate', 'kill'];
+  const sorted = [...A.parts].sort((a, b) => order.indexOf(a.color) - order.indexOf(b.color) || trig.indexOf(a.trigger) - trig.indexOf(b.trigger));
+  $('grid').innerHTML = '';
+  for (const p of sorted) {
+    const b = document.createElement('button'); b.className = 'part'; b.style.setProperty('--c', INK[p.color]); b.dataset.id = p.id;
+    b.innerHTML = `<div class="ic" style="border-color:${INK[p.color]}"><img src="${p.icon}" alt=""></div><span>${p.name}${PART[p.id].nofx ? '<small>이펙트 없음</small>' : ''}</span>`;
+    b.title = `${p.name} · ${TRIG[p.trigger]}`;
+    b.onclick = () => pick(p);
+    $('grid').appendChild(b);
+  }
+}
+function pick(p) {
+  initAudio();
+  if ($('multi').checked) { equipped.has(p.id) && selected === p.id ? equipped.delete(p.id) : equipped.add(p.id); }
+  else { equipped.clear(); equipped.add(p.id); }
+  selected = p.id; syncGrid(); showCard(p);
+  if (equipped.has(p.id)) { runScene(PART[p.id].scene || p.trigger); logText(`${p.name} 장착 → ${TRIG[p.trigger]} 상황 재생`); }
+}
+function syncGrid() { for (const b of $('grid').children) { b.classList.toggle('on', equipped.has(b.dataset.id)); b.classList.toggle('sel', b.dataset.id === selected); } }
+function showCard(p) {
+  const d = PART[p.id];
+  $('card').innerHTML = `<div class="head"><div class="ic" style="border-color:${INK[p.color]}"><img src="${p.icon}" alt=""></div>
+    <div><h3>${p.name}</h3><span class="tag" style="background:${INK[p.color]}">${INK_NAME[p.color]}</span><span class="tag trig">${TRIG[p.trigger]}</span><span class="tag trig">내부 쿨타임 ${d.icd}초</span></div></div>
+    <dl><dt>효과</dt><dd>${p.description}</dd>
+    <dt>이펙트</dt><dd>${d.fx}</dd>
+    <dt>실험실</dt><dd>${d.how}</dd>
+    ${d.note ? `<dt>메모</dt><dd class="muted">${d.note}</dd>` : ''}</dl>
+    <div class="row" style="margin-top:10px"><button class="main" id="replay">상황 다시 보기</button><span class="muted">${equipped.has(p.id) ? '장착 중' : '빠져 있음'}</span></div>`;
+  $('replay').onclick = () => { if (!equipped.has(p.id)) { equipped.add(p.id); syncGrid(); } runScene(d.scene || p.trigger); };
+}
+function syncStatus() {
+  const chip = (k, v) => `<span class="chip">${k} <b>${v}</b></span>`;
+  const sp = speedBonus(), list = [chip('무기', P.weapon === 'A' ? 'A 검' : 'B 망치'), chip('체력', `${P.hp}/${P.maxHp}`)];
+  if (P.shield > 0) list.push(chip('보호막', `${P.shield} · ${P.shieldT.toFixed(1)}초`));
+  if (sp > 0) list.push(chip('이동 속도', `+${Math.round(sp * 100)}%`));
+  if (P.empower) list.push(chip('다음 공격', `+${Math.round((P.empower.mul - 1) * 100)}%`));
+  if (P.reachNext) list.push(chip('다음 공격 사거리', `+${Math.round(P.reachNext * 100)}%`));
+  if (P.reachT > 0) list.push(chip('공격 반경', `+35% · ${P.reachT.toFixed(1)}초`));
+  list.push(chip('장착', equipped.size ? [...equipped].map(id => A.parts.find(p => p.id === id).name).join(', ') : '없음'));
+  $('status').innerHTML = list.join('');
+}
+$('clearBtn').onclick = () => { equipped.clear(); syncGrid(); logText('파츠를 모두 뺐습니다.'); };
+
+/* ───────────── 시작 ───────────── */
+buildGrid(); spawnEnemies();
+$('card').innerHTML = '<p class="muted" style="margin:0">파츠 그림을 누르면 설명이 나오고, 그 파츠가 발동하는 상황이 바로 재생됩니다.</p>';
+logText('파츠를 골라 보세요. J 공격 · Q 무기 바꾸기');
+let last = performance.now(), statusT = 0;
+function loop(now) {
+  const raw = Math.min(.05, (now - last) / 1000); last = now;
+  update(raw * G.speed); render();
+  if ((statusT -= raw) <= 0) { statusT = .1; syncStatus(); }
+  requestAnimationFrame(loop);
+}
+Promise.all([...imgs.values()].map(i => i.decode().catch(() => {}))).then(() => requestAnimationFrame(loop));
+window.__LAB = { G, P, enemies, equipped, effects: () => effects, pick: id => pick(A.parts.find(p => p.id === id)), step: (dt, n = 1) => { for (let i = 0; i < n; i++) update(dt); render(); } };
+</script>
+</body>
+</html>

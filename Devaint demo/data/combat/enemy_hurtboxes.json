@@ -1,0 +1,60 @@
+{
+  "status": "temporary_design_values_agent_selected_with_user_delegation",
+  "unity_applied": false,
+  "units": "Unity local units, root scale 1",
+  "fixed_across_animation": true,
+  "is_trigger": true,
+  "source_faces_left": true,
+  "presets": [
+    {
+      "id": "test_boar",
+      "size": [
+        2.65,
+        1.9
+      ],
+      "offset_facing_left": [
+        -0.18,
+        0.95
+      ],
+      "offset_facing_right": [
+        0.18,
+        0.95
+      ],
+      "test_size_class": "medium"
+    },
+    {
+      "id": "test_ink_eye",
+      "size": [
+        1.3,
+        1.2
+      ],
+      "offset_facing_left": [
+        -0.45,
+        1.25
+      ],
+      "offset_facing_right": [
+        0.45,
+        1.25
+      ],
+      "test_size_class": "small"
+    },
+    {
+      "id": "test_boss_dummy",
+      "size": [
+        5.3,
+        3.8
+      ],
+      "offset_facing_left": [
+        -0.36,
+        1.9
+      ],
+      "offset_facing_right": [
+        0.36,
+        1.9
+      ],
+      "test_size_class": "large",
+      "transform_scale": 1
+    }
+  ],
+  "replacement_policy": "Replace per-species data after final art and pivot measurements. These are not final monster specifications."
+}

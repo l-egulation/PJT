@@ -1,0 +1,158 @@
+{
+  "format": "stage2-fan-aether-input-v4",
+  "promptVersion": 4,
+  "previousPrompts": [
+    "previous/prompt-v1-zoomed-face.txt",
+    "previous/prompt-v2-framing-plain.txt",
+    "previous/prompt-v3-storm-flailing.txt"
+  ],
+  "v4Reason": "User on the v2/v3 results: \"뭔가 다 ㄱㅊ은데 팔 휘적휘적은 없어도 될거 같은딩..! 궁극기가 뭔데!\", then \"동작을 저걸 빼고 다른 멋있는걸 넣으란 소리야 / 프롬프트를 새로 넣어달라는거지\". v4 keeps the eruption sweep and cloth burst, removes the slashes and recocks, and uses a motionless arm in the billowing cloth, a slow clench and one release. The v3 output drew white smoke and wind swirls, so v4 forbids drawn effects more strongly.",
+  "receivedAttempts": [
+    {
+      "folder": "../fan-aether-01/",
+      "prompt": "previous/prompt-v2-framing-plain.txt",
+      "notes": "no zoom (body 97x177 cell px, about 1:1 with approved); plain motion; preserved only"
+    },
+    {
+      "folder": "../fan-aether-02/",
+      "prompt": "previous/prompt-v3-storm-flailing.txt",
+      "notes": "arm flailing judged unnecessary; white smoke and swirls drawn in frames 06-23 (up to ~11.6k light-grey px); crossbow merges with smoke in 18; preserved only"
+    }
+  ],
+  "v3Reason": "User: \"광역기인데 동작도 더 안 화려 해도 될까?\" v3 keeps the framing, mask and one-arm locks but makes it spectacular: wide eruption sweep from the hip, cloth billowing in a rising magic wind, a claw grasp of the storm, three slashing commands with cloth whipping back, then the wind settling.",
+  "v2Reason": "User: \"갑자기 확대 돼 면서 얼굴도 생기고 이상해졌어\". Received sheets that zoomed in from frame 01 (homing 1.39x, rain 1.53x full height vs input 207 px) drew a human face (rain mouth); the unzoomed bounce sheets did not. v2 adds a framing lock and drops the head-detail reference from the Aether input.",
+  "status": "v4-output-B4-user-approved",
+  "pattern": "ExpandingFan",
+  "startImage": "fan-start-white-3x.png",
+  "startImageSha256": "8a9a2af8f7d23bc20d1528865d6eb7b40d5e50cd5bda8badcb721fcbf9743061",
+  "sourceReference": "../approved-fused-idle-original.png",
+  "endImage": null,
+  "endImageReason": "The final forward pointing pose is described in the prompt; no forced end frame.",
+  "sourceCanvas": [
+    384,
+    256
+  ],
+  "inputCanvas": [
+    1536,
+    1152
+  ],
+  "logicalPaddingCanvas": [
+    512,
+    384
+  ],
+  "sourcePasteOffset": [
+    64,
+    64
+  ],
+  "integerNearestScale": 3,
+  "inputGroundY": 888,
+  "inputPivot": [
+    768,
+    888
+  ],
+  "prompt": "prompt.txt",
+  "suggestedDurationSeconds": 3.2,
+  "bodyBeatsPromptSeconds": {
+    "eruptionLocked": 0.45,
+    "stillUntil": 1.6,
+    "clenchUntil": 2.0,
+    "releaseLocked": 2.1
+  },
+  "retimeToGame": {
+    "eruptionLocked": 0.5,
+    "stillUntil": 2.5,
+    "clench": [
+      2.5,
+      3.0
+    ],
+    "releaseLocked": 3.0,
+    "holdUntil": 4.3,
+    "note": "Aether draws about 3 s; the review retimes the received frames to the game clock without changing combat data."
+  },
+  "gameContract": {
+    "source": "docs/design/chapter2-rose-blue-boss.md pattern 5, data/combat/chapter2_rose_blue.json, RoseBlue/Patterns.cs, Runtime/RoseBlueEncounter.Patterns.cs @ main 7f2fbe8ed",
+    "FanTell": 0.5,
+    "FanExpandSeconds": 2,
+    "FanWidth": 24.375,
+    "FanCount": 6,
+    "FanCreateGap": 0.1,
+    "FanRadius": 2,
+    "FanArcDegrees": 120,
+    "arrowsForm": [
+      2.5,
+      2.6,
+      2.7,
+      2.8,
+      2.9,
+      3.0
+    ],
+    "fire": [
+      3.0,
+      3.5,
+      3.6,
+      4.1,
+      4.2,
+      4.3
+    ],
+    "arrowsFormAt": "Blue.Position + up*Blue.size.y + 2u arc, upper 120 degrees",
+    "bossTeleportedToCentre": true,
+    "artFacesImageLeft": "Face() sets flipX when facing right",
+    "combatChanges": false
+  },
+  "referenceMainCommit": "7f2fbe8ed90aca1f943d124db52e637c32ae029b",
+  "identityLocks": {
+    "rigidMask": true,
+    "mouth": false,
+    "mouthWasDrawnInRainOutput": true,
+    "armCount": 1,
+    "existingArm": "image-left raised hand beside mask",
+    "oppositeArm": "anatomically absent",
+    "overheadCrossbow": "preserve exact approved shape",
+    "headPositionScaleAngleFixed": true,
+    "armMayNotOccludeMask": true,
+    "handMayNotOverlapCrossbow": true
+  },
+  "handSpaceOnApproved": {
+    "crossbowLeftPartBottomY": 44,
+    "hoodTopY": 54,
+    "freeZone": [
+      140,
+      45,
+      175,
+      75
+    ],
+    "note": "approved 384x256 canvas coordinates"
+  },
+  "headDetailReference": {
+    "file": "approved-head-detail-8x.png",
+    "sourceCrop": [
+      163,
+      50,
+      223,
+      112
+    ],
+    "integerNearestScale": 8,
+    "role": "review only; do NOT attach to Aether (suspected to pull the generation toward a zoomed, detailed face)"
+  },
+  "aetherOutputReceived": true,
+  "selectedFrames": null,
+  "timingsFinalized": false,
+  "imageApiCalled": false,
+  "sourcePixelsRepainted": false,
+  "aetherOutput": {
+    "folder": "../fan-aether-03/",
+    "extraction": "../fan-aether-03/extraction.json",
+    "cleanAll": "../../preview/fan-candidates/clean-all.json",
+    "timingReview": "../../preview/fan-candidates/candidates.json",
+    "inGamePreview": "../../preview/fan-sim/index.html",
+    "userFeedback": "잘 뽑은거같아",
+    "observed": [
+      "no zoom (same size as bounce)",
+      "no mouth; generated mask kept",
+      "no drawn smoke",
+      "01-31 used; 32-35 return to idle"
+    ],
+    "runtime": "../../runtime/fan-final/motion.json"
+  },
+  "selectedTiming": "B4"
+}

@@ -1,0 +1,5943 @@
+{
+  "sets": [
+    {
+      "form": "base_sword",
+      "gameplayForm": "base_sword",
+      "launcherMode": -1,
+      "clips": [
+        {
+          "name": "idle",
+          "frames": [
+            "CharacterApproved11/base_sword/F030",
+            "CharacterApproved11/base_sword/F031",
+            "CharacterApproved11/base_sword/F032",
+            "CharacterApproved11/base_sword/F033"
+          ],
+          "seconds": [
+            0.18,
+            0.14,
+            0.18,
+            0.14
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "walk",
+          "frames": [
+            "CharacterApproved11/base_sword/F022",
+            "CharacterApproved11/base_sword/F023",
+            "CharacterApproved11/base_sword/F024",
+            "CharacterApproved11/base_sword/F025",
+            "CharacterApproved11/base_sword/F026",
+            "CharacterApproved11/base_sword/F027",
+            "CharacterApproved11/base_sword/F028",
+            "CharacterApproved11/base_sword/F029"
+          ],
+          "seconds": [
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "run",
+          "frames": [
+            "CharacterApproved11/base_sword/F016",
+            "CharacterApproved11/base_sword/F017",
+            "CharacterApproved11/base_sword/F018",
+            "CharacterApproved11/base_sword/F019",
+            "CharacterApproved11/base_sword/F020",
+            "CharacterApproved11/base_sword/F021"
+          ],
+          "seconds": [
+            0.065,
+            0.055,
+            0.065,
+            0.055,
+            0.065,
+            0.055
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump",
+          "frames": [
+            "CharacterApproved11/base_sword/F005",
+            "CharacterApproved11/base_sword/F006",
+            "CharacterApproved11/base_sword/F007",
+            "CharacterApproved11/base_sword/F008",
+            "CharacterApproved11/base_sword/F009",
+            "CharacterApproved11/base_sword/F010",
+            "CharacterApproved11/base_sword/F011",
+            "CharacterApproved11/base_sword/F012",
+            "CharacterApproved11/base_sword/F013",
+            "CharacterApproved11/base_sword/F014",
+            "CharacterApproved11/base_sword/F015"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "dash",
+          "frames": [
+            "CharacterApproved11/base_sword/F000",
+            "CharacterApproved11/base_sword/F001",
+            "CharacterApproved11/base_sword/F002",
+            "CharacterApproved11/base_sword/F003",
+            "CharacterApproved11/base_sword/F004"
+          ],
+          "seconds": [
+            0.03,
+            0.055,
+            0.055,
+            0.05,
+            0.08
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "death",
+          "frames": [
+            "CharacterApproved11/base_sword/F034",
+            "CharacterApproved11/base_sword/F035",
+            "CharacterApproved11/base_sword/F036",
+            "CharacterApproved11/base_sword/F037",
+            "CharacterApproved11/base_sword/F038",
+            "CharacterApproved11/base_sword/F039",
+            "CharacterApproved11/base_sword/F040",
+            "CharacterApproved11/base_sword/F041",
+            "CharacterApproved11/base_sword/F042",
+            "CharacterApproved11/base_sword/F043",
+            "CharacterApproved11/base_sword/F044",
+            "CharacterApproved11/base_sword/F045"
+          ],
+          "seconds": [
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.04,
+            0.04,
+            0.06,
+            0.06,
+            0.18
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "CharacterApproved11/base_sword/F005",
+            "CharacterApproved11/base_sword/F006"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "CharacterApproved11/base_sword/F007",
+            "CharacterApproved11/base_sword/F008"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "CharacterApproved11/base_sword/F009"
+          ],
+          "seconds": [
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "CharacterApproved11/base_sword/F010"
+          ],
+          "seconds": [
+            0.06
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "CharacterApproved11/base_sword/F011",
+            "CharacterApproved11/base_sword/F012"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "land",
+          "frames": [
+            "CharacterApproved11/base_sword/F013",
+            "CharacterApproved11/base_sword/F014",
+            "CharacterApproved11/base_sword/F015"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "attack1",
+          "frames": [
+            "CharacterApproved11/base_sword/F046",
+            "CharacterApproved11/base_sword/F047",
+            "CharacterApproved11/base_sword/F048",
+            "CharacterApproved11/base_sword/F049"
+          ],
+          "seconds": [
+            0.04,
+            0.09,
+            0.04,
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": 0.13,
+          "fxStart": 0.13
+        },
+        {
+          "name": "attack2",
+          "frames": [
+            "CharacterApproved11/base_sword/F050",
+            "CharacterApproved11/base_sword/F051",
+            "CharacterApproved11/base_sword/F052",
+            "CharacterApproved11/base_sword/F053",
+            "CharacterApproved11/base_sword/F054"
+          ],
+          "seconds": [
+            0.08,
+            0.04,
+            0.09,
+            0.07,
+            0.08
+          ],
+          "contact": -1,
+          "sourceImpact": 0.06,
+          "fxStart": 0.06
+        },
+        {
+          "name": "attack_dash_thrust",
+          "frames": [
+            "CharacterWeaponSkills/base_sword/attack_dash_thrust_01",
+            "CharacterWeaponSkills/base_sword/attack_dash_thrust_02",
+            "CharacterWeaponSkills/base_sword/attack_dash_thrust_03",
+            "CharacterWeaponSkills/base_sword/attack_dash_thrust_04",
+            "CharacterWeaponSkills/base_sword/attack_dash_thrust_05",
+            "CharacterWeaponSkills/base_sword/attack_dash_thrust_06",
+            "CharacterWeaponSkills/base_sword/attack_dash_thrust_07",
+            "CharacterWeaponSkills/base_sword/attack_dash_thrust_08",
+            "CharacterWeaponSkills/base_sword/attack_dash_thrust_09",
+            "CharacterWeaponSkills/base_sword/attack_dash_thrust_10"
+          ],
+          "seconds": [
+            0.03,
+            0.03,
+            0.04,
+            0.05,
+            0.2,
+            0.04,
+            0.05,
+            0.05,
+            0.06,
+            0.05
+          ],
+          "contact": -1,
+          "sourceImpact": 0.15,
+          "fxStart": -1
+        }
+      ],
+      "effects": [
+        {
+          "attack": "attack1",
+          "frames": [
+            "EffectsApproved11/base_sword/attack1/F000",
+            "EffectsApproved11/base_sword/attack1/F001",
+            "EffectsApproved11/base_sword/attack1/F002",
+            "EffectsApproved11/base_sword/attack1/F003",
+            "EffectsApproved11/base_sword/attack1/F004",
+            "EffectsApproved11/base_sword/attack1/F005"
+          ],
+          "seconds": [
+            0.02,
+            0.02,
+            0.04,
+            0.03,
+            0.02,
+            0.02
+          ],
+          "flipX": false,
+          "x": [
+            -2.5,
+            -2.5,
+            -2.5,
+            -2.5,
+            -2.5,
+            -2.5
+          ],
+          "y": [
+            3.84375,
+            3.84375,
+            3.84375,
+            3.84375,
+            3.84375,
+            3.84375
+          ]
+        },
+        {
+          "attack": "attack2",
+          "frames": [
+            "EffectsApproved11/base_sword/attack2/F000",
+            "EffectsApproved11/base_sword/attack2/F001",
+            "EffectsApproved11/base_sword/attack2/F002",
+            "EffectsApproved11/base_sword/attack2/F003",
+            "EffectsApproved11/base_sword/attack2/F004",
+            "EffectsApproved11/base_sword/attack2/F005"
+          ],
+          "seconds": [
+            0.02,
+            0.02,
+            0.04,
+            0.04,
+            0.03,
+            0.03
+          ],
+          "flipX": false,
+          "x": [
+            -2.5,
+            -2.5,
+            -2.5,
+            -2.5,
+            -2.5,
+            -2.5
+          ],
+          "y": [
+            3.84375,
+            3.84375,
+            3.84375,
+            3.84375,
+            3.84375,
+            3.84375
+          ]
+        }
+      ],
+      "iconUvRect": [
+        0.2760416666666667,
+        0.14375000000000004,
+        0.34375,
+        0.4
+      ]
+    },
+    {
+      "form": "whip",
+      "gameplayForm": "whip",
+      "launcherMode": -1,
+      "clips": [
+        {
+          "name": "idle",
+          "frames": [
+            "CharacterApproved11/whip/F006",
+            "CharacterApproved11/whip/F019",
+            "CharacterApproved11/whip/F020",
+            "CharacterApproved11/whip/F021"
+          ],
+          "seconds": [
+            0.18,
+            0.14,
+            0.18,
+            0.14
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "walk",
+          "frames": [
+            "CharacterApproved11/whip/F039",
+            "CharacterApproved11/whip/F040",
+            "CharacterApproved11/whip/F041",
+            "CharacterApproved11/whip/F042",
+            "CharacterApproved11/whip/F043",
+            "CharacterApproved11/whip/F044",
+            "CharacterApproved11/whip/F045",
+            "CharacterApproved11/whip/F046"
+          ],
+          "seconds": [
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "run",
+          "frames": [
+            "CharacterApproved11/whip/F033",
+            "CharacterApproved11/whip/F034",
+            "CharacterApproved11/whip/F035",
+            "CharacterApproved11/whip/F036",
+            "CharacterApproved11/whip/F037",
+            "CharacterApproved11/whip/F038"
+          ],
+          "seconds": [
+            0.065,
+            0.055,
+            0.065,
+            0.055,
+            0.065,
+            0.055
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump",
+          "frames": [
+            "CharacterApproved11/whip/F022",
+            "CharacterApproved11/whip/F023",
+            "CharacterApproved11/whip/F024",
+            "CharacterApproved11/whip/F025",
+            "CharacterApproved11/whip/F026",
+            "CharacterApproved11/whip/F027",
+            "CharacterApproved11/whip/F028",
+            "CharacterApproved11/whip/F029",
+            "CharacterApproved11/whip/F030",
+            "CharacterApproved11/whip/F031",
+            "CharacterApproved11/whip/F032"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "dash",
+          "frames": [
+            "CharacterApproved11/whip/F014",
+            "CharacterApproved11/whip/F015",
+            "CharacterApproved11/whip/F016",
+            "CharacterApproved11/whip/F017",
+            "CharacterApproved11/whip/F018"
+          ],
+          "seconds": [
+            0.03,
+            0.055,
+            0.055,
+            0.05,
+            0.08
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "death",
+          "frames": [
+            "CharacterApproved11/whip/F047",
+            "CharacterApproved11/whip/F048",
+            "CharacterApproved11/whip/F049",
+            "CharacterApproved11/whip/F050",
+            "CharacterApproved11/whip/F051",
+            "CharacterApproved11/whip/F052",
+            "CharacterApproved11/whip/F053",
+            "CharacterApproved11/whip/F054",
+            "CharacterApproved11/whip/F055",
+            "CharacterApproved11/whip/F056",
+            "CharacterApproved11/whip/F057",
+            "CharacterApproved11/whip/F058"
+          ],
+          "seconds": [
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.04,
+            0.04,
+            0.06,
+            0.06,
+            0.18
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "CharacterApproved11/whip/F022",
+            "CharacterApproved11/whip/F023"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "CharacterApproved11/whip/F024",
+            "CharacterApproved11/whip/F025"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "CharacterApproved11/whip/F026"
+          ],
+          "seconds": [
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "CharacterApproved11/whip/F027"
+          ],
+          "seconds": [
+            0.06
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "CharacterApproved11/whip/F028",
+            "CharacterApproved11/whip/F029"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "land",
+          "frames": [
+            "CharacterApproved11/whip/F030",
+            "CharacterApproved11/whip/F031",
+            "CharacterApproved11/whip/F032"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "attack1",
+          "frames": [
+            "CharacterApproved11/whip/F000",
+            "CharacterApproved11/whip/F001",
+            "CharacterApproved11/whip/F002",
+            "CharacterApproved11/whip/F003",
+            "CharacterApproved11/whip/F004",
+            "CharacterApproved11/whip/F005",
+            "CharacterApproved11/whip/F006"
+          ],
+          "seconds": [
+            0.07,
+            0.04,
+            0.04,
+            0.04,
+            0.075,
+            0.1,
+            0.21
+          ],
+          "contact": -1,
+          "sourceImpact": 0.09,
+          "fxStart": 0.09
+        },
+        {
+          "name": "attack2",
+          "frames": [
+            "CharacterApproved11/whip/F007",
+            "CharacterApproved11/whip/F008",
+            "CharacterApproved11/whip/F009",
+            "CharacterApproved11/whip/F010",
+            "CharacterApproved11/whip/F011",
+            "CharacterApproved11/whip/F012",
+            "CharacterApproved11/whip/F013",
+            "CharacterApproved11/whip/F006"
+          ],
+          "seconds": [
+            0.06,
+            0.13,
+            0.04,
+            0.04,
+            0.06,
+            0.12,
+            0.055,
+            0.21
+          ],
+          "contact": -1,
+          "sourceImpact": 0.23,
+          "fxStart": 0.23
+        }
+      ],
+      "effects": [
+        {
+          "attack": "attack1",
+          "frames": [
+            "EffectsApproved11/whip/attack1/F000",
+            "EffectsApproved11/whip/attack1/F001",
+            "EffectsApproved11/whip/attack1/F002",
+            "EffectsApproved11/whip/attack1/F003",
+            "EffectsApproved11/whip/attack1/F004",
+            "EffectsApproved11/whip/attack1/F005",
+            "EffectsApproved11/whip/attack1/F006",
+            "EffectsApproved11/whip/attack1/F007",
+            "EffectsApproved11/whip/attack1/F008",
+            "EffectsApproved11/whip/attack1/F009",
+            "EffectsApproved11/whip/attack1/F010",
+            "EffectsApproved11/whip/attack1/F011",
+            "EffectsApproved11/whip/attack1/F012",
+            "EffectsApproved11/whip/attack1/F013",
+            "EffectsApproved11/whip/attack1/F014"
+          ],
+          "seconds": [
+            0.02,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01
+          ],
+          "flipX": false,
+          "x": [
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0
+          ],
+          "y": [
+            4.59375,
+            4.59375,
+            4.59375,
+            4.59375,
+            4.59375,
+            4.59375,
+            4.59375,
+            4.59375,
+            4.59375,
+            4.59375,
+            4.59375,
+            4.59375,
+            4.59375,
+            4.59375,
+            4.59375
+          ]
+        },
+        {
+          "attack": "attack2",
+          "frames": [
+            "EffectsApproved11/whip/attack2/F000",
+            "EffectsApproved11/whip/attack2/F001",
+            "EffectsApproved11/whip/attack2/F002",
+            "EffectsApproved11/whip/attack2/F003",
+            "EffectsApproved11/whip/attack2/F004",
+            "EffectsApproved11/whip/attack2/F005",
+            "EffectsApproved11/whip/attack2/F006",
+            "EffectsApproved11/whip/attack2/F007",
+            "EffectsApproved11/whip/attack2/F008",
+            "EffectsApproved11/whip/attack2/F009",
+            "EffectsApproved11/whip/attack2/F010",
+            "EffectsApproved11/whip/attack2/F011",
+            "EffectsApproved11/whip/attack2/F012",
+            "EffectsApproved11/whip/attack2/F013"
+          ],
+          "seconds": [
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01
+          ],
+          "flipX": false,
+          "x": [
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0
+          ],
+          "y": [
+            4.59375,
+            4.59375,
+            4.59375,
+            4.59375,
+            4.59375,
+            4.59375,
+            4.59375,
+            4.59375,
+            4.59375,
+            4.59375,
+            4.59375,
+            4.59375,
+            4.59375,
+            4.59375
+          ]
+        }
+      ],
+      "iconUvRect": [
+        0.140625,
+        0.15384615384615385,
+        0.19921875,
+        0.6153846153846154
+      ]
+    },
+    {
+      "form": "rapier",
+      "gameplayForm": "rapier",
+      "launcherMode": -1,
+      "clips": [
+        {
+          "name": "idle",
+          "frames": [
+            "CharacterApproved11/rapier/F030",
+            "CharacterApproved11/rapier/F031",
+            "CharacterApproved11/rapier/F032",
+            "CharacterApproved11/rapier/F033"
+          ],
+          "seconds": [
+            0.18,
+            0.14,
+            0.18,
+            0.14
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "walk",
+          "frames": [
+            "CharacterApproved11/rapier/F022",
+            "CharacterApproved11/rapier/F023",
+            "CharacterApproved11/rapier/F024",
+            "CharacterApproved11/rapier/F025",
+            "CharacterApproved11/rapier/F026",
+            "CharacterApproved11/rapier/F027",
+            "CharacterApproved11/rapier/F028",
+            "CharacterApproved11/rapier/F029"
+          ],
+          "seconds": [
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "run",
+          "frames": [
+            "CharacterApproved11/rapier/F016",
+            "CharacterApproved11/rapier/F017",
+            "CharacterApproved11/rapier/F018",
+            "CharacterApproved11/rapier/F019",
+            "CharacterApproved11/rapier/F020",
+            "CharacterApproved11/rapier/F021"
+          ],
+          "seconds": [
+            0.065,
+            0.055,
+            0.065,
+            0.055,
+            0.065,
+            0.055
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump",
+          "frames": [
+            "CharacterApproved11/rapier/F005",
+            "CharacterApproved11/rapier/F006",
+            "CharacterApproved11/rapier/F007",
+            "CharacterApproved11/rapier/F008",
+            "CharacterApproved11/rapier/F009",
+            "CharacterApproved11/rapier/F010",
+            "CharacterApproved11/rapier/F011",
+            "CharacterApproved11/rapier/F012",
+            "CharacterApproved11/rapier/F013",
+            "CharacterApproved11/rapier/F014",
+            "CharacterApproved11/rapier/F015"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "dash",
+          "frames": [
+            "CharacterApproved11/rapier/F000",
+            "CharacterApproved11/rapier/F001",
+            "CharacterApproved11/rapier/F002",
+            "CharacterApproved11/rapier/F003",
+            "CharacterApproved11/rapier/F004"
+          ],
+          "seconds": [
+            0.03,
+            0.055,
+            0.055,
+            0.05,
+            0.08
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "death",
+          "frames": [
+            "CharacterApproved11/rapier/F041",
+            "CharacterApproved11/rapier/F042",
+            "CharacterApproved11/rapier/F043",
+            "CharacterApproved11/rapier/F044",
+            "CharacterApproved11/rapier/F045",
+            "CharacterApproved11/rapier/F046",
+            "CharacterApproved11/rapier/F047",
+            "CharacterApproved11/rapier/F048",
+            "CharacterApproved11/rapier/F049",
+            "CharacterApproved11/rapier/F050",
+            "CharacterApproved11/rapier/F051",
+            "CharacterApproved11/rapier/F052"
+          ],
+          "seconds": [
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.04,
+            0.04,
+            0.06,
+            0.06,
+            0.18
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "CharacterApproved11/rapier/F005",
+            "CharacterApproved11/rapier/F006"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "CharacterApproved11/rapier/F007",
+            "CharacterApproved11/rapier/F008"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "CharacterApproved11/rapier/F009"
+          ],
+          "seconds": [
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "CharacterApproved11/rapier/F010"
+          ],
+          "seconds": [
+            0.06
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "CharacterApproved11/rapier/F011",
+            "CharacterApproved11/rapier/F012"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "land",
+          "frames": [
+            "CharacterApproved11/rapier/F013",
+            "CharacterApproved11/rapier/F014",
+            "CharacterApproved11/rapier/F015"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "attack1",
+          "frames": [
+            "CharacterApproved11/rapier/F034",
+            "CharacterApproved11/rapier/F035",
+            "CharacterApproved11/rapier/F036"
+          ],
+          "seconds": [
+            0.04,
+            0.05,
+            0.045
+          ],
+          "contact": -1,
+          "sourceImpact": 0.04,
+          "fxStart": 0.04
+        },
+        {
+          "name": "attack2",
+          "frames": [
+            "CharacterApproved11/rapier/F037",
+            "CharacterApproved11/rapier/F036"
+          ],
+          "seconds": [
+            0.045,
+            0.04
+          ],
+          "contact": -1,
+          "sourceImpact": 0.0,
+          "fxStart": 0.0
+        },
+        {
+          "name": "attack3",
+          "frames": [
+            "CharacterApproved11/rapier/F038",
+            "CharacterApproved11/rapier/F039",
+            "CharacterApproved11/rapier/F040"
+          ],
+          "seconds": [
+            0.14,
+            0.075,
+            0.095
+          ],
+          "contact": -1,
+          "sourceImpact": 0.14,
+          "fxStart": 0.14
+        }
+      ],
+      "effects": [
+        {
+          "attack": "attack1",
+          "frames": [
+            "EffectsApproved11/rapier/attack1/F000",
+            "EffectsApproved11/rapier/attack1/F001",
+            "EffectsApproved11/rapier/attack1/F002",
+            "EffectsApproved11/rapier/attack1/F003",
+            "EffectsApproved11/rapier/attack1/F004",
+            "EffectsApproved11/rapier/attack1/F005",
+            "EffectsApproved11/rapier/attack1/F006",
+            "EffectsApproved11/rapier/attack1/F007"
+          ],
+          "seconds": [
+            0.01,
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.02
+          ],
+          "flipX": false,
+          "x": [
+            0.15625,
+            0.15625,
+            0.15625,
+            0.15625,
+            0.15625,
+            0.15625,
+            0.15625,
+            0.15625
+          ],
+          "y": [
+            2.84375,
+            2.84375,
+            2.84375,
+            2.84375,
+            2.84375,
+            2.84375,
+            2.84375,
+            2.84375
+          ]
+        },
+        {
+          "attack": "attack2",
+          "frames": [
+            "EffectsApproved11/rapier/attack2/F000",
+            "EffectsApproved11/rapier/attack2/F001",
+            "EffectsApproved11/rapier/attack2/F002",
+            "EffectsApproved11/rapier/attack2/F003",
+            "EffectsApproved11/rapier/attack2/F004",
+            "EffectsApproved11/rapier/attack2/F005",
+            "EffectsApproved11/rapier/attack2/F006",
+            "EffectsApproved11/rapier/attack2/F007"
+          ],
+          "seconds": [
+            0.01,
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.02
+          ],
+          "flipX": false,
+          "x": [
+            0.15625,
+            0.15625,
+            0.15625,
+            0.15625,
+            0.15625,
+            0.15625,
+            0.15625,
+            0.15625
+          ],
+          "y": [
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0
+          ]
+        },
+        {
+          "attack": "attack3",
+          "frames": [
+            "EffectsApproved11/rapier/attack3/F000",
+            "EffectsApproved11/rapier/attack3/F001",
+            "EffectsApproved11/rapier/attack3/F002",
+            "EffectsApproved11/rapier/attack3/F003",
+            "EffectsApproved11/rapier/attack3/F004",
+            "EffectsApproved11/rapier/attack3/F005",
+            "EffectsApproved11/rapier/attack3/F006",
+            "EffectsApproved11/rapier/attack3/F007"
+          ],
+          "seconds": [
+            0.01,
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.02
+          ],
+          "flipX": false,
+          "x": [
+            0.125,
+            0.125,
+            0.125,
+            0.125,
+            0.125,
+            0.125,
+            0.125,
+            0.125
+          ],
+          "y": [
+            2.84375,
+            2.84375,
+            2.84375,
+            2.84375,
+            2.84375,
+            2.84375,
+            2.84375,
+            2.84375
+          ]
+        }
+      ],
+      "iconUvRect": [
+        0.203125,
+        0.12,
+        0.4166666666666667,
+        0.64
+      ]
+    },
+    {
+      "form": "dagger",
+      "gameplayForm": "dagger",
+      "launcherMode": -1,
+      "clips": [
+        {
+          "name": "idle",
+          "frames": [
+            "CharacterApproved11/dagger/F005",
+            "CharacterApproved11/dagger/F006",
+            "CharacterApproved11/dagger/F007",
+            "CharacterApproved11/dagger/F008"
+          ],
+          "seconds": [
+            0.18,
+            0.14,
+            0.18,
+            0.14
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "walk",
+          "frames": [
+            "CharacterApproved11/dagger/F026",
+            "CharacterApproved11/dagger/F027",
+            "CharacterApproved11/dagger/F028",
+            "CharacterApproved11/dagger/F029",
+            "CharacterApproved11/dagger/F030",
+            "CharacterApproved11/dagger/F031",
+            "CharacterApproved11/dagger/F032",
+            "CharacterApproved11/dagger/F033"
+          ],
+          "seconds": [
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "run",
+          "frames": [
+            "CharacterApproved11/dagger/F020",
+            "CharacterApproved11/dagger/F021",
+            "CharacterApproved11/dagger/F022",
+            "CharacterApproved11/dagger/F023",
+            "CharacterApproved11/dagger/F024",
+            "CharacterApproved11/dagger/F025"
+          ],
+          "seconds": [
+            0.065,
+            0.055,
+            0.065,
+            0.055,
+            0.065,
+            0.055
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump",
+          "frames": [
+            "CharacterApproved11/dagger/F009",
+            "CharacterApproved11/dagger/F010",
+            "CharacterApproved11/dagger/F011",
+            "CharacterApproved11/dagger/F012",
+            "CharacterApproved11/dagger/F013",
+            "CharacterApproved11/dagger/F014",
+            "CharacterApproved11/dagger/F015",
+            "CharacterApproved11/dagger/F016",
+            "CharacterApproved11/dagger/F017",
+            "CharacterApproved11/dagger/F018",
+            "CharacterApproved11/dagger/F019"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "dash",
+          "frames": [
+            "CharacterApproved11/dagger/F000",
+            "CharacterApproved11/dagger/F001",
+            "CharacterApproved11/dagger/F002",
+            "CharacterApproved11/dagger/F003",
+            "CharacterApproved11/dagger/F004"
+          ],
+          "seconds": [
+            0.03,
+            0.055,
+            0.055,
+            0.05,
+            0.08
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "death",
+          "frames": [
+            "CharacterApproved11/dagger/F048",
+            "CharacterApproved11/dagger/F049",
+            "CharacterApproved11/dagger/F050",
+            "CharacterApproved11/dagger/F051",
+            "CharacterApproved11/dagger/F052",
+            "CharacterApproved11/dagger/F053",
+            "CharacterApproved11/dagger/F054",
+            "CharacterApproved11/dagger/F055",
+            "CharacterApproved11/dagger/F056",
+            "CharacterApproved11/dagger/F057",
+            "CharacterApproved11/dagger/F058",
+            "CharacterApproved11/dagger/F059"
+          ],
+          "seconds": [
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.04,
+            0.04,
+            0.06,
+            0.06,
+            0.18
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "CharacterApproved11/dagger/F009",
+            "CharacterApproved11/dagger/F010"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "CharacterApproved11/dagger/F011",
+            "CharacterApproved11/dagger/F012"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "CharacterApproved11/dagger/F013"
+          ],
+          "seconds": [
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "CharacterApproved11/dagger/F014"
+          ],
+          "seconds": [
+            0.06
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "CharacterApproved11/dagger/F015",
+            "CharacterApproved11/dagger/F016"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "land",
+          "frames": [
+            "CharacterApproved11/dagger/F017",
+            "CharacterApproved11/dagger/F018",
+            "CharacterApproved11/dagger/F019"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "attack1",
+          "frames": [
+            "CharacterApproved11/dagger/F034",
+            "CharacterApproved11/dagger/F035",
+            "CharacterApproved11/dagger/F036"
+          ],
+          "seconds": [
+            0.045,
+            0.075,
+            0.045
+          ],
+          "contact": -1,
+          "sourceImpact": 0.045,
+          "fxStart": 0.045
+        },
+        {
+          "name": "attack2",
+          "frames": [
+            "CharacterApproved11/dagger/F037",
+            "CharacterApproved11/dagger/F038",
+            "CharacterApproved11/dagger/F039"
+          ],
+          "seconds": [
+            0.045,
+            0.075,
+            0.045
+          ],
+          "contact": -1,
+          "sourceImpact": 0.045,
+          "fxStart": 0.045
+        },
+        {
+          "name": "attack3",
+          "frames": [
+            "CharacterApproved11/dagger/F040",
+            "CharacterApproved11/dagger/F041",
+            "CharacterApproved11/dagger/F042",
+            "CharacterApproved11/dagger/F043"
+          ],
+          "seconds": [
+            0.05,
+            0.05,
+            0.11,
+            0.05
+          ],
+          "contact": -1,
+          "sourceImpact": 0.1,
+          "fxStart": 0.1
+        },
+        {
+          "name": "attack4",
+          "frames": [
+            "CharacterApproved11/dagger/F044",
+            "CharacterApproved11/dagger/F045",
+            "CharacterApproved11/dagger/F046",
+            "CharacterApproved11/dagger/F047"
+          ],
+          "seconds": [
+            0.055,
+            0.2,
+            0.09,
+            0.065
+          ],
+          "contact": -1,
+          "sourceImpact": 0.255,
+          "fxStart": 0.255
+        }
+      ],
+      "effects": [
+        {
+          "attack": "attack1",
+          "frames": [
+            "EffectsApproved11/dagger/attack1/F000",
+            "EffectsApproved11/dagger/attack1/F001",
+            "EffectsApproved11/dagger/attack1/F002",
+            "EffectsApproved11/dagger/attack1/F003",
+            "EffectsApproved11/dagger/attack1/F004",
+            "EffectsApproved11/dagger/attack1/F005"
+          ],
+          "seconds": [
+            0.02,
+            0.02,
+            0.03,
+            0.04,
+            0.03,
+            0.016
+          ],
+          "flipX": false,
+          "x": [
+            -2.5,
+            -2.5,
+            -2.5,
+            -2.5,
+            -2.5,
+            -2.5
+          ],
+          "y": [
+            4.15625,
+            4.15625,
+            4.15625,
+            4.15625,
+            4.15625,
+            4.15625
+          ]
+        },
+        {
+          "attack": "attack2",
+          "frames": [
+            "EffectsApproved11/dagger/attack2/F000",
+            "EffectsApproved11/dagger/attack2/F001",
+            "EffectsApproved11/dagger/attack2/F002",
+            "EffectsApproved11/dagger/attack2/F003",
+            "EffectsApproved11/dagger/attack2/F004",
+            "EffectsApproved11/dagger/attack2/F005"
+          ],
+          "seconds": [
+            0.02,
+            0.02,
+            0.03,
+            0.04,
+            0.03,
+            0.016
+          ],
+          "flipX": false,
+          "x": [
+            -2.5,
+            -2.5,
+            -2.5,
+            -2.5,
+            -2.5,
+            -2.5
+          ],
+          "y": [
+            4.15625,
+            4.15625,
+            4.15625,
+            4.15625,
+            4.15625,
+            4.15625
+          ]
+        },
+        {
+          "attack": "attack3",
+          "frames": [
+            "EffectsApproved11/dagger/attack3/F000",
+            "EffectsApproved11/dagger/attack3/F001",
+            "EffectsApproved11/dagger/attack3/F002",
+            "EffectsApproved11/dagger/attack3/F003",
+            "EffectsApproved11/dagger/attack3/F004",
+            "EffectsApproved11/dagger/attack3/F005"
+          ],
+          "seconds": [
+            0.02,
+            0.02,
+            0.03,
+            0.04,
+            0.03,
+            0.016
+          ],
+          "flipX": false,
+          "x": [
+            -2.5,
+            -2.5,
+            -2.5,
+            -2.5,
+            -2.5,
+            -2.5
+          ],
+          "y": [
+            4.15625,
+            4.15625,
+            4.15625,
+            4.15625,
+            4.15625,
+            4.15625
+          ]
+        },
+        {
+          "attack": "attack4",
+          "frames": [
+            "EffectsApproved11/dagger/attack4/F000",
+            "EffectsApproved11/dagger/attack4/F001",
+            "EffectsApproved11/dagger/attack4/F002",
+            "EffectsApproved11/dagger/attack4/F003",
+            "EffectsApproved11/dagger/attack4/F004",
+            "EffectsApproved11/dagger/attack4/F005"
+          ],
+          "seconds": [
+            0.02,
+            0.02,
+            0.03,
+            0.04,
+            0.03,
+            0.016
+          ],
+          "flipX": false,
+          "x": [
+            -2.5,
+            -2.5,
+            -2.5,
+            -2.5,
+            -2.5,
+            -2.5
+          ],
+          "y": [
+            4.15625,
+            4.15625,
+            4.15625,
+            4.15625,
+            4.15625,
+            4.15625
+          ]
+        }
+      ],
+      "iconUvRect": [
+        0.2760416666666667,
+        0.14375000000000004,
+        0.265625,
+        0.4
+      ]
+    },
+    {
+      "form": "hammer",
+      "gameplayForm": "hammer",
+      "launcherMode": -1,
+      "clips": [
+        {
+          "name": "idle",
+          "frames": [
+            "CharacterApproved11/hammer/F000",
+            "CharacterApproved11/hammer/F001",
+            "CharacterApproved11/hammer/F002",
+            "CharacterApproved11/hammer/F003"
+          ],
+          "seconds": [
+            0.18,
+            0.14,
+            0.18,
+            0.14
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "walk",
+          "frames": [
+            "CharacterApproved11/hammer/F004",
+            "CharacterApproved11/hammer/F005",
+            "CharacterApproved11/hammer/F006",
+            "CharacterApproved11/hammer/F007",
+            "CharacterApproved11/hammer/F008",
+            "CharacterApproved11/hammer/F009",
+            "CharacterApproved11/hammer/F010",
+            "CharacterApproved11/hammer/F011"
+          ],
+          "seconds": [
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "run",
+          "frames": [
+            "CharacterApproved11/hammer/F012",
+            "CharacterApproved11/hammer/F013",
+            "CharacterApproved11/hammer/F014",
+            "CharacterApproved11/hammer/F015",
+            "CharacterApproved11/hammer/F016",
+            "CharacterApproved11/hammer/F017"
+          ],
+          "seconds": [
+            0.065,
+            0.055,
+            0.065,
+            0.055,
+            0.065,
+            0.055
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump",
+          "frames": [
+            "CharacterApproved11/hammer/F018",
+            "CharacterApproved11/hammer/F019",
+            "CharacterApproved11/hammer/F020",
+            "CharacterApproved11/hammer/F021",
+            "CharacterApproved11/hammer/F022",
+            "CharacterApproved11/hammer/F023",
+            "CharacterApproved11/hammer/F024",
+            "CharacterApproved11/hammer/F025",
+            "CharacterApproved11/hammer/F026",
+            "CharacterApproved11/hammer/F027",
+            "CharacterApproved11/hammer/F028"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "dash",
+          "frames": [
+            "CharacterApproved11/hammer/F029",
+            "CharacterApproved11/hammer/F030",
+            "CharacterApproved11/hammer/F031",
+            "CharacterApproved11/hammer/F032",
+            "CharacterApproved11/hammer/F033"
+          ],
+          "seconds": [
+            0.03,
+            0.055,
+            0.055,
+            0.05,
+            0.08
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "death",
+          "frames": [
+            "CharacterApproved11/hammer/F034",
+            "CharacterApproved11/hammer/F035",
+            "CharacterApproved11/hammer/F036",
+            "CharacterApproved11/hammer/F037",
+            "CharacterApproved11/hammer/F038",
+            "CharacterApproved11/hammer/F039",
+            "CharacterApproved11/hammer/F040",
+            "CharacterApproved11/hammer/F041",
+            "CharacterApproved11/hammer/F042",
+            "CharacterApproved11/hammer/F043",
+            "CharacterApproved11/hammer/F044",
+            "CharacterApproved11/hammer/F045"
+          ],
+          "seconds": [
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.04,
+            0.04,
+            0.06,
+            0.06,
+            0.18
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "CharacterApproved11/hammer/F018",
+            "CharacterApproved11/hammer/F019"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "CharacterApproved11/hammer/F020",
+            "CharacterApproved11/hammer/F021"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "CharacterApproved11/hammer/F022"
+          ],
+          "seconds": [
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "CharacterApproved11/hammer/F023"
+          ],
+          "seconds": [
+            0.06
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "CharacterApproved11/hammer/F024",
+            "CharacterApproved11/hammer/F025"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "land",
+          "frames": [
+            "CharacterApproved11/hammer/F026",
+            "CharacterApproved11/hammer/F027",
+            "CharacterApproved11/hammer/F028"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "attack1",
+          "frames": [
+            "CharacterHammerReview/hammer/attack_1_01",
+            "CharacterHammerReview/hammer/attack_1_02",
+            "CharacterHammerReview/hammer/attack_1_03",
+            "CharacterHammerReview/hammer/attack_1_04",
+            "CharacterHammerReview/hammer/attack_1_05",
+            "CharacterHammerReview/hammer/attack_1_06"
+          ],
+          "seconds": [
+            0.09,
+            0.06,
+            0.04,
+            0.03,
+            0.08,
+            0.04
+          ],
+          "contact": -1,
+          "sourceImpact": 0.22,
+          "fxStart": -1
+        },
+        {
+          "name": "attack2",
+          "frames": [
+            "CharacterHammerReview/hammer/attack_2_01",
+            "CharacterHammerReview/hammer/attack_2_02",
+            "CharacterHammerReview/hammer/attack_2_03",
+            "CharacterHammerReview/hammer/attack_2_04",
+            "CharacterHammerReview/hammer/attack_2_05",
+            "CharacterHammerReview/hammer/attack_2_06",
+            "CharacterHammerReview/hammer/attack_2_07",
+            "CharacterHammerReview/hammer/attack_2_08",
+            "CharacterHammerReview/hammer/attack_2_09"
+          ],
+          "seconds": [
+            0.08,
+            0.1,
+            0.12,
+            0.03,
+            0.09,
+            0.07,
+            0.06,
+            0.08,
+            0.05
+          ],
+          "contact": -1,
+          "sourceImpact": 0.33,
+          "fxStart": -1
+        },
+        {
+          "name": "attack_default_slam",
+          "frames": [
+            "CharacterHammerReview/hammer/hammer_default_01",
+            "CharacterHammerReview/hammer/hammer_default_02",
+            "CharacterHammerReview/hammer/hammer_default_03",
+            "CharacterHammerReview/hammer/hammer_default_04",
+            "CharacterHammerReview/hammer/hammer_default_05",
+            "CharacterHammerReview/hammer/hammer_default_06",
+            "CharacterHammerReview/hammer/hammer_default_07",
+            "CharacterHammerReview/hammer/hammer_default_08",
+            "CharacterHammerReview/hammer/hammer_default_09",
+            "CharacterHammerReview/hammer/hammer_default_10",
+            "CharacterHammerReview/hammer/hammer_default_11",
+            "CharacterHammerReview/hammer/hammer_default_12",
+            "CharacterHammerReview/hammer/hammer_default_13",
+            "CharacterHammerReview/hammer/hammer_default_14"
+          ],
+          "seconds": [
+            0.06,
+            0.09,
+            0.11,
+            0.08,
+            0.02,
+            0.02,
+            0.02,
+            0.07,
+            0.05,
+            0.06,
+            0.06,
+            0.08,
+            0.13,
+            0.1
+          ],
+          "contact": -1,
+          "sourceImpact": 0.4,
+          "fxStart": -1
+        },
+        {
+          "name": "attack_rush_push",
+          "frames": [
+            "CharacterWeaponSkills/hammer/hammer_movement_01",
+            "CharacterWeaponSkills/hammer/hammer_movement_02",
+            "CharacterWeaponSkills/hammer/hammer_movement_03",
+            "CharacterWeaponSkills/hammer/hammer_movement_04",
+            "CharacterWeaponSkills/hammer/hammer_movement_05",
+            "CharacterWeaponSkills/hammer/hammer_movement_06",
+            "CharacterWeaponSkills/hammer/hammer_movement_07",
+            "CharacterWeaponSkills/hammer/hammer_movement_08",
+            "CharacterWeaponSkills/hammer/hammer_movement_09",
+            "CharacterWeaponSkills/hammer/hammer_movement_10",
+            "CharacterWeaponSkills/hammer/hammer_movement_11",
+            "CharacterWeaponSkills/hammer/hammer_movement_12",
+            "CharacterWeaponSkills/hammer/hammer_movement_13",
+            "CharacterWeaponSkills/hammer/hammer_movement_14"
+          ],
+          "seconds": [
+            0.04,
+            0.05,
+            0.05,
+            0.06,
+            0.04,
+            0.04,
+            0.04,
+            0.18,
+            0.08,
+            0.04,
+            0.05,
+            0.06,
+            0.06,
+            0.06
+          ],
+          "contact": -1,
+          "sourceImpact": 0.2,
+          "fxStart": -1
+        }
+      ],
+      "effects": [
+        {
+          "attack": "attack1",
+          "frames": [
+            "EffectsApproved11/hammer/attack1/F000",
+            "EffectsApproved11/hammer/attack1/F001",
+            "EffectsApproved11/hammer/attack1/F002",
+            "EffectsApproved11/hammer/attack1/F003",
+            "EffectsApproved11/hammer/attack1/F004",
+            "EffectsApproved11/hammer/attack1/F005",
+            "EffectsApproved11/hammer/attack1/F006",
+            "EffectsApproved11/hammer/attack1/F007"
+          ],
+          "seconds": [
+            0.01,
+            0.01,
+            0.01,
+            0.03,
+            0.03,
+            0.04,
+            0.04,
+            0.04
+          ],
+          "flipX": false,
+          "x": [
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0
+          ],
+          "y": [
+            4.71875,
+            4.71875,
+            4.71875,
+            4.71875,
+            4.71875,
+            4.71875,
+            4.71875,
+            4.71875
+          ]
+        },
+        {
+          "attack": "attack2",
+          "frames": [
+            "EffectsApproved11/hammer/attack2/F000",
+            "EffectsApproved11/hammer/attack2/F001",
+            "EffectsApproved11/hammer/attack2/F002",
+            "EffectsApproved11/hammer/attack2/F003",
+            "EffectsApproved11/hammer/attack2/F004",
+            "EffectsApproved11/hammer/attack2/F005",
+            "EffectsApproved11/hammer/attack2/F006",
+            "EffectsApproved11/hammer/attack2/F007"
+          ],
+          "seconds": [
+            0.01,
+            0.01,
+            0.01,
+            0.03,
+            0.03,
+            0.04,
+            0.04,
+            0.04
+          ],
+          "flipX": false,
+          "x": [
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0,
+            -3.0
+          ],
+          "y": [
+            4.71875,
+            4.71875,
+            4.71875,
+            4.71875,
+            4.71875,
+            4.71875,
+            4.71875,
+            4.71875
+          ]
+        }
+      ],
+      "iconUvRect": [
+        0.3080357142857143,
+        0.21354166666666663,
+        0.3125,
+        0.3333333333333333
+      ]
+    },
+    {
+      "form": "shield",
+      "gameplayForm": "shield",
+      "launcherMode": -1,
+      "clips": [
+        {
+          "name": "idle",
+          "frames": [
+            "CharacterApproved11/shield/F000",
+            "CharacterApproved11/shield/F001",
+            "CharacterApproved11/shield/F002",
+            "CharacterApproved11/shield/F003"
+          ],
+          "seconds": [
+            0.18,
+            0.14,
+            0.18,
+            0.14
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "walk",
+          "frames": [
+            "CharacterApproved11/shield/F004",
+            "CharacterApproved11/shield/F005",
+            "CharacterApproved11/shield/F006",
+            "CharacterApproved11/shield/F007",
+            "CharacterApproved11/shield/F008",
+            "CharacterApproved11/shield/F009",
+            "CharacterApproved11/shield/F010",
+            "CharacterApproved11/shield/F011"
+          ],
+          "seconds": [
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "run",
+          "frames": [
+            "CharacterApproved11/shield/F012",
+            "CharacterApproved11/shield/F013",
+            "CharacterApproved11/shield/F014",
+            "CharacterApproved11/shield/F015",
+            "CharacterApproved11/shield/F016",
+            "CharacterApproved11/shield/F017"
+          ],
+          "seconds": [
+            0.065,
+            0.055,
+            0.065,
+            0.055,
+            0.065,
+            0.055
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump",
+          "frames": [
+            "CharacterApproved11/shield/F018",
+            "CharacterApproved11/shield/F019",
+            "CharacterApproved11/shield/F020",
+            "CharacterApproved11/shield/F021",
+            "CharacterApproved11/shield/F022",
+            "CharacterApproved11/shield/F023",
+            "CharacterApproved11/shield/F024",
+            "CharacterApproved11/shield/F025",
+            "CharacterApproved11/shield/F026",
+            "CharacterApproved11/shield/F027",
+            "CharacterApproved11/shield/F028"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "dash",
+          "frames": [
+            "CharacterApproved11/shield/F029",
+            "CharacterApproved11/shield/F030",
+            "CharacterApproved11/shield/F031",
+            "CharacterApproved11/shield/F032",
+            "CharacterApproved11/shield/F033"
+          ],
+          "seconds": [
+            0.03,
+            0.055,
+            0.055,
+            0.05,
+            0.08
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "death",
+          "frames": [
+            "CharacterApproved11/shield/F034",
+            "CharacterApproved11/shield/F035",
+            "CharacterApproved11/shield/F036",
+            "CharacterApproved11/shield/F037",
+            "CharacterApproved11/shield/F038",
+            "CharacterApproved11/shield/F039",
+            "CharacterApproved11/shield/F040",
+            "CharacterApproved11/shield/F041",
+            "CharacterApproved11/shield/F042",
+            "CharacterApproved11/shield/F043",
+            "CharacterApproved11/shield/F044",
+            "CharacterApproved11/shield/F045"
+          ],
+          "seconds": [
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.04,
+            0.04,
+            0.06,
+            0.06,
+            0.18
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "CharacterApproved11/shield/F018",
+            "CharacterApproved11/shield/F019"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "CharacterApproved11/shield/F020",
+            "CharacterApproved11/shield/F021"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "CharacterApproved11/shield/F022"
+          ],
+          "seconds": [
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "CharacterApproved11/shield/F023"
+          ],
+          "seconds": [
+            0.06
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "CharacterApproved11/shield/F024",
+            "CharacterApproved11/shield/F025"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "land",
+          "frames": [
+            "CharacterApproved11/shield/F026",
+            "CharacterApproved11/shield/F027",
+            "CharacterApproved11/shield/F028"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "attack1",
+          "frames": [
+            "CharacterApproved11/shield/F046",
+            "CharacterApproved11/shield/F047",
+            "CharacterApproved11/shield/F048",
+            "CharacterApproved11/shield/F049",
+            "CharacterApproved11/shield/F050",
+            "CharacterApproved11/shield/F051"
+          ],
+          "seconds": [
+            0.05,
+            0.09,
+            0.11,
+            0.1,
+            0.11,
+            0.14
+          ],
+          "contact": -1,
+          "sourceImpact": 0.25,
+          "fxStart": 0.25
+        }
+      ],
+      "effects": [
+        {
+          "attack": "attack1",
+          "frames": [
+            "EffectsApproved11/shield/attack1/F000",
+            "EffectsApproved11/shield/attack1/F001",
+            "EffectsApproved11/shield/attack1/F002",
+            "EffectsApproved11/shield/attack1/F003",
+            "EffectsApproved11/shield/attack1/F004",
+            "EffectsApproved11/shield/attack1/F005",
+            "EffectsApproved11/shield/attack1/F006",
+            "EffectsApproved11/shield/attack1/F007"
+          ],
+          "seconds": [
+            0.01,
+            0.01,
+            0.01,
+            0.04,
+            0.04,
+            0.04,
+            0.04,
+            0.04
+          ],
+          "flipX": false,
+          "x": [
+            -2.59375,
+            -2.59375,
+            -2.59375,
+            -2.59375,
+            -2.59375,
+            -2.59375,
+            -2.59375,
+            -2.59375
+          ],
+          "y": [
+            3.8125,
+            3.8125,
+            3.8125,
+            3.8125,
+            3.8125,
+            3.8125,
+            3.8125,
+            3.8125
+          ]
+        }
+      ],
+      "iconUvRect": [
+        0.35,
+        0.23750000000000004,
+        0.3,
+        0.4
+      ]
+    },
+    {
+      "form": "greatsword",
+      "gameplayForm": "greatsword",
+      "launcherMode": -1,
+      "clips": [
+        {
+          "name": "idle",
+          "frames": [
+            "CharacterApproved11/greatsword/F000",
+            "CharacterApproved11/greatsword/F001",
+            "CharacterApproved11/greatsword/F002",
+            "CharacterApproved11/greatsword/F003"
+          ],
+          "seconds": [
+            0.18,
+            0.14,
+            0.18,
+            0.14
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "walk",
+          "frames": [
+            "CharacterApproved11/greatsword/F004",
+            "CharacterApproved11/greatsword/F005",
+            "CharacterApproved11/greatsword/F006",
+            "CharacterApproved11/greatsword/F007",
+            "CharacterApproved11/greatsword/F008",
+            "CharacterApproved11/greatsword/F009",
+            "CharacterApproved11/greatsword/F010",
+            "CharacterApproved11/greatsword/F011"
+          ],
+          "seconds": [
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "run",
+          "frames": [
+            "CharacterApproved11/greatsword/F012",
+            "CharacterApproved11/greatsword/F013",
+            "CharacterApproved11/greatsword/F014",
+            "CharacterApproved11/greatsword/F015",
+            "CharacterApproved11/greatsword/F016",
+            "CharacterApproved11/greatsword/F017"
+          ],
+          "seconds": [
+            0.065,
+            0.055,
+            0.065,
+            0.055,
+            0.065,
+            0.055
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump",
+          "frames": [
+            "CharacterApproved11/greatsword/F018",
+            "CharacterApproved11/greatsword/F019",
+            "CharacterApproved11/greatsword/F020",
+            "CharacterApproved11/greatsword/F021",
+            "CharacterApproved11/greatsword/F022",
+            "CharacterApproved11/greatsword/F023",
+            "CharacterApproved11/greatsword/F024",
+            "CharacterApproved11/greatsword/F025",
+            "CharacterApproved11/greatsword/F026",
+            "CharacterApproved11/greatsword/F027",
+            "CharacterApproved11/greatsword/F028"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "dash",
+          "frames": [
+            "CharacterApproved11/greatsword/F029",
+            "CharacterApproved11/greatsword/F030",
+            "CharacterApproved11/greatsword/F031",
+            "CharacterApproved11/greatsword/F032",
+            "CharacterApproved11/greatsword/F033"
+          ],
+          "seconds": [
+            0.03,
+            0.055,
+            0.055,
+            0.05,
+            0.08
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "death",
+          "frames": [
+            "CharacterApproved11/greatsword/F034",
+            "CharacterApproved11/greatsword/F035",
+            "CharacterApproved11/greatsword/F036",
+            "CharacterApproved11/greatsword/F037",
+            "CharacterApproved11/greatsword/F038",
+            "CharacterApproved11/greatsword/F039",
+            "CharacterApproved11/greatsword/F040",
+            "CharacterApproved11/greatsword/F041",
+            "CharacterApproved11/greatsword/F042",
+            "CharacterApproved11/greatsword/F043",
+            "CharacterApproved11/greatsword/F044",
+            "CharacterApproved11/greatsword/F045"
+          ],
+          "seconds": [
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.04,
+            0.04,
+            0.06,
+            0.06,
+            0.18
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "CharacterApproved11/greatsword/F018",
+            "CharacterApproved11/greatsword/F019"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "CharacterApproved11/greatsword/F020",
+            "CharacterApproved11/greatsword/F021"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "CharacterApproved11/greatsword/F022"
+          ],
+          "seconds": [
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "CharacterApproved11/greatsword/F023"
+          ],
+          "seconds": [
+            0.06
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "CharacterApproved11/greatsword/F024",
+            "CharacterApproved11/greatsword/F025"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "land",
+          "frames": [
+            "CharacterApproved11/greatsword/F026",
+            "CharacterApproved11/greatsword/F027",
+            "CharacterApproved11/greatsword/F028"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "attack1",
+          "frames": [
+            "CharacterApproved11/greatsword/F046",
+            "CharacterApproved11/greatsword/F047",
+            "CharacterApproved11/greatsword/F048",
+            "CharacterApproved11/greatsword/F049"
+          ],
+          "seconds": [
+            0.07,
+            0.1,
+            0.08,
+            0.11
+          ],
+          "contact": -1,
+          "sourceImpact": 0.21,
+          "fxStart": 0.21
+        },
+        {
+          "name": "attack2",
+          "frames": [
+            "CharacterApproved11/greatsword/F050",
+            "CharacterApproved11/greatsword/F051"
+          ],
+          "seconds": [
+            0.14,
+            0.15
+          ],
+          "contact": -1,
+          "sourceImpact": 0.1,
+          "fxStart": 0.1
+        },
+        {
+          "name": "attack3",
+          "frames": [
+            "CharacterApproved11/greatsword/F052",
+            "CharacterApproved11/greatsword/F053",
+            "CharacterApproved11/greatsword/F054",
+            "CharacterApproved11/greatsword/F055",
+            "CharacterApproved11/greatsword/F056",
+            "CharacterApproved11/greatsword/F057"
+          ],
+          "seconds": [
+            0.1,
+            0.14,
+            0.04,
+            0.16,
+            0.06,
+            0.08
+          ],
+          "contact": -1,
+          "sourceImpact": 0.28,
+          "fxStart": 0.0
+        }
+      ],
+      "effects": [
+        {
+          "attack": "attack1",
+          "frames": [
+            "EffectsApproved11/greatsword/attack1/F000",
+            "EffectsApproved11/greatsword/attack1/F001",
+            "EffectsApproved11/greatsword/attack1/F002",
+            "EffectsApproved11/greatsword/attack1/F003",
+            "EffectsApproved11/greatsword/attack1/F004",
+            "EffectsApproved11/greatsword/attack1/F005",
+            "EffectsApproved11/greatsword/attack1/F006",
+            "EffectsApproved11/greatsword/attack1/F007",
+            "EffectsApproved11/greatsword/attack1/F008",
+            "EffectsApproved11/greatsword/attack1/F009",
+            "EffectsApproved11/greatsword/attack1/F010",
+            "EffectsApproved11/greatsword/attack1/F011",
+            "EffectsApproved11/greatsword/attack1/F012",
+            "EffectsApproved11/greatsword/attack1/F013",
+            "EffectsApproved11/greatsword/attack1/F014",
+            "EffectsApproved11/greatsword/attack1/F015"
+          ],
+          "seconds": [
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.03,
+            0.01,
+            0.09,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01
+          ],
+          "flipX": false,
+          "x": [
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0
+          ],
+          "y": [
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625
+          ]
+        },
+        {
+          "attack": "attack2",
+          "frames": [
+            "EffectsApproved11/greatsword/attack2/F000",
+            "EffectsApproved11/greatsword/attack2/F001",
+            "EffectsApproved11/greatsword/attack2/F002",
+            "EffectsApproved11/greatsword/attack2/F003",
+            "EffectsApproved11/greatsword/attack2/F004",
+            "EffectsApproved11/greatsword/attack2/F005",
+            "EffectsApproved11/greatsword/attack2/F006",
+            "EffectsApproved11/greatsword/attack2/F007",
+            "EffectsApproved11/greatsword/attack2/F008",
+            "EffectsApproved11/greatsword/attack2/F009",
+            "EffectsApproved11/greatsword/attack2/F010",
+            "EffectsApproved11/greatsword/attack2/F011",
+            "EffectsApproved11/greatsword/attack2/F012"
+          ],
+          "seconds": [
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.03,
+            0.01,
+            0.05,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01
+          ],
+          "flipX": false,
+          "x": [
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0
+          ],
+          "y": [
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625
+          ]
+        },
+        {
+          "attack": "attack3",
+          "frames": [
+            "EffectsApproved11/greatsword/attack3/F000",
+            "EffectsApproved11/greatsword/attack3/F001",
+            "EffectsApproved11/greatsword/attack3/F002",
+            "EffectsApproved11/greatsword/attack3/F003",
+            "EffectsApproved11/greatsword/attack3/F004",
+            "EffectsApproved11/greatsword/attack3/F005",
+            "EffectsApproved11/greatsword/attack3/F006",
+            "EffectsApproved11/greatsword/attack3/F007",
+            "EffectsApproved11/greatsword/attack3/F008",
+            "EffectsApproved11/greatsword/attack3/F009",
+            "EffectsApproved11/greatsword/attack3/F010",
+            "EffectsApproved11/greatsword/attack3/F011",
+            "EffectsApproved11/greatsword/attack3/F012",
+            "EffectsApproved11/greatsword/attack3/F013",
+            "EffectsApproved11/greatsword/attack3/F014",
+            "EffectsApproved11/greatsword/attack3/F015",
+            "EffectsApproved11/greatsword/attack3/F016",
+            "EffectsApproved11/greatsword/attack3/F017",
+            "EffectsApproved11/greatsword/attack3/F018",
+            "EffectsApproved11/greatsword/attack3/F019",
+            "EffectsApproved11/greatsword/attack3/F020",
+            "EffectsApproved11/greatsword/attack3/F021",
+            "EffectsApproved11/greatsword/attack3/F022",
+            "EffectsApproved11/greatsword/attack3/F023",
+            "EffectsApproved11/greatsword/attack3/F024",
+            "EffectsApproved11/greatsword/attack3/F025",
+            "EffectsApproved11/greatsword/attack3/F026",
+            "EffectsApproved11/greatsword/attack3/F027",
+            "EffectsApproved11/greatsword/attack3/F028",
+            "EffectsApproved11/greatsword/attack3/F029",
+            "EffectsApproved11/greatsword/attack3/F030",
+            "EffectsApproved11/greatsword/attack3/F031",
+            "EffectsApproved11/greatsword/attack3/F032",
+            "EffectsApproved11/greatsword/attack3/F033",
+            "EffectsApproved11/greatsword/attack3/F034",
+            "EffectsApproved11/greatsword/attack3/F035",
+            "EffectsApproved11/greatsword/attack3/F036",
+            "EffectsApproved11/greatsword/attack3/F037",
+            "EffectsApproved11/greatsword/attack3/F038",
+            "EffectsApproved11/greatsword/attack3/F039",
+            "EffectsApproved11/greatsword/attack3/F040",
+            "EffectsApproved11/greatsword/attack3/F041",
+            "EffectsApproved11/greatsword/attack3/F042",
+            "EffectsApproved11/greatsword/attack3/F043",
+            "EffectsApproved11/greatsword/attack3/F044",
+            "EffectsApproved11/greatsword/attack3/F045"
+          ],
+          "seconds": [
+            0.01,
+            0.02,
+            0.01,
+            0.03,
+            0.01,
+            0.01,
+            0.02,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.05,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.03,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.01
+          ],
+          "flipX": false,
+          "x": [
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0,
+            -5.0
+          ],
+          "y": [
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625,
+            4.5625
+          ]
+        }
+      ],
+      "iconUvRect": [
+        0.3794642857142857,
+        0.23958333333333337,
+        0.45089285714285715,
+        0.3333333333333333
+      ]
+    },
+    {
+      "form": "launcher",
+      "gameplayForm": "launcher",
+      "launcherMode": 0,
+      "clips": [
+        {
+          "name": "idle",
+          "frames": [
+            "CharacterApproved11/launcher/F000",
+            "CharacterApproved11/launcher/F001",
+            "CharacterApproved11/launcher/F002",
+            "CharacterApproved11/launcher/F003"
+          ],
+          "seconds": [
+            0.18,
+            0.14,
+            0.18,
+            0.14
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625
+          ],
+          "muzzleY": [
+            0.875,
+            0.875,
+            0.875,
+            0.875
+          ]
+        },
+        {
+          "name": "walk",
+          "frames": [
+            "CharacterApproved11/launcher/F004",
+            "CharacterApproved11/launcher/F005",
+            "CharacterApproved11/launcher/F006",
+            "CharacterApproved11/launcher/F007",
+            "CharacterApproved11/launcher/F008",
+            "CharacterApproved11/launcher/F009",
+            "CharacterApproved11/launcher/F010",
+            "CharacterApproved11/launcher/F011"
+          ],
+          "seconds": [
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625
+          ],
+          "muzzleY": [
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            0.875
+          ]
+        },
+        {
+          "name": "run",
+          "frames": [
+            "CharacterApproved11/launcher/F012",
+            "CharacterApproved11/launcher/F013",
+            "CharacterApproved11/launcher/F014",
+            "CharacterApproved11/launcher/F015",
+            "CharacterApproved11/launcher/F016",
+            "CharacterApproved11/launcher/F017"
+          ],
+          "seconds": [
+            0.065,
+            0.055,
+            0.065,
+            0.055,
+            0.065,
+            0.055
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625
+          ],
+          "muzzleY": [
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            0.875
+          ]
+        },
+        {
+          "name": "jump",
+          "frames": [
+            "CharacterApproved11/launcher/F018",
+            "CharacterApproved11/launcher/F019",
+            "CharacterApproved11/launcher/F020",
+            "CharacterApproved11/launcher/F021",
+            "CharacterApproved11/launcher/F022",
+            "CharacterApproved11/launcher/F023",
+            "CharacterApproved11/launcher/F024",
+            "CharacterApproved11/launcher/F025",
+            "CharacterApproved11/launcher/F026",
+            "CharacterApproved11/launcher/F027",
+            "CharacterApproved11/launcher/F028"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625
+          ],
+          "muzzleY": [
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            0.875
+          ]
+        },
+        {
+          "name": "dash",
+          "frames": [
+            "CharacterApproved11/launcher/F029",
+            "CharacterApproved11/launcher/F030",
+            "CharacterApproved11/launcher/F031",
+            "CharacterApproved11/launcher/F032",
+            "CharacterApproved11/launcher/F033"
+          ],
+          "seconds": [
+            0.03,
+            0.055,
+            0.055,
+            0.05,
+            0.08
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625
+          ],
+          "muzzleY": [
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            0.875
+          ]
+        },
+        {
+          "name": "death",
+          "frames": [
+            "CharacterApproved11/launcher/F034",
+            "CharacterApproved11/launcher/F035",
+            "CharacterApproved11/launcher/F036",
+            "CharacterApproved11/launcher/F037",
+            "CharacterApproved11/launcher/F038",
+            "CharacterApproved11/launcher/F039",
+            "CharacterApproved11/launcher/F040",
+            "CharacterApproved11/launcher/F041",
+            "CharacterApproved11/launcher/F042",
+            "CharacterApproved11/launcher/F043",
+            "CharacterApproved11/launcher/F044",
+            "CharacterApproved11/launcher/F045"
+          ],
+          "seconds": [
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.04,
+            0.04,
+            0.06,
+            0.06,
+            0.18
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625
+          ],
+          "muzzleY": [
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            0.875
+          ]
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "CharacterApproved11/launcher/F018",
+            "CharacterApproved11/launcher/F019"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.15625,
+            1.15625
+          ],
+          "muzzleY": [
+            0.875,
+            0.875
+          ]
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "CharacterApproved11/launcher/F020",
+            "CharacterApproved11/launcher/F021"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.15625,
+            1.15625
+          ],
+          "muzzleY": [
+            0.875,
+            0.875
+          ]
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "CharacterApproved11/launcher/F022"
+          ],
+          "seconds": [
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.15625
+          ],
+          "muzzleY": [
+            0.875
+          ]
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "CharacterApproved11/launcher/F023"
+          ],
+          "seconds": [
+            0.06
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.15625
+          ],
+          "muzzleY": [
+            0.875
+          ]
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "CharacterApproved11/launcher/F024",
+            "CharacterApproved11/launcher/F025"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.15625,
+            1.15625
+          ],
+          "muzzleY": [
+            0.875,
+            0.875
+          ]
+        },
+        {
+          "name": "land",
+          "frames": [
+            "CharacterApproved11/launcher/F026",
+            "CharacterApproved11/launcher/F027",
+            "CharacterApproved11/launcher/F028"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.15625,
+            1.15625,
+            1.15625
+          ],
+          "muzzleY": [
+            0.875,
+            0.875,
+            0.875
+          ]
+        },
+        {
+          "name": "attack_single",
+          "frames": [
+            "CharacterApproved11/launcher/F046",
+            "CharacterApproved11/launcher/F048",
+            "CharacterApproved11/launcher/F049",
+            "CharacterApproved11/launcher/F051",
+            "CharacterApproved11/launcher/F052"
+          ],
+          "seconds": [
+            0.05,
+            0.04,
+            0.07,
+            0.17,
+            0.17
+          ],
+          "contact": 2,
+          "sourceImpact": 0.09,
+          "fxStart": -1,
+          "muzzleX": [
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625
+          ],
+          "muzzleY": [
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            0.875
+          ],
+          "sourceRelease": 0.16
+        },
+        {
+          "name": "attack1",
+          "frames": [
+            "CharacterApproved11/launcher/F046",
+            "CharacterApproved11/launcher/F047",
+            "CharacterApproved11/launcher/F049",
+            "CharacterApproved11/launcher/F050"
+          ],
+          "seconds": [
+            0.03,
+            0.06,
+            0.04,
+            0.08
+          ],
+          "contact": 2,
+          "sourceImpact": 0.09,
+          "fxStart": -1,
+          "muzzleX": [
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625
+          ],
+          "muzzleY": [
+            0.875,
+            0.875,
+            0.875,
+            0.875
+          ],
+          "sourceRelease": 0.13
+        },
+        {
+          "name": "attack2",
+          "frames": [
+            "CharacterApproved11/launcher/F047",
+            "CharacterApproved11/launcher/F049",
+            "CharacterApproved11/launcher/F050"
+          ],
+          "seconds": [
+            0.06,
+            0.04,
+            0.08
+          ],
+          "contact": 1,
+          "sourceImpact": 0.06,
+          "fxStart": -1,
+          "muzzleX": [
+            1.15625,
+            1.15625,
+            1.15625
+          ],
+          "muzzleY": [
+            0.875,
+            0.875,
+            0.875
+          ],
+          "sourceRelease": 0.1
+        },
+        {
+          "name": "attack3",
+          "frames": [
+            "CharacterApproved11/launcher/F047",
+            "CharacterApproved11/launcher/F049",
+            "CharacterApproved11/launcher/F050",
+            "CharacterApproved11/launcher/F052"
+          ],
+          "seconds": [
+            0.06,
+            0.04,
+            0.08,
+            0.07
+          ],
+          "contact": 1,
+          "sourceImpact": 0.06,
+          "fxStart": -1,
+          "muzzleX": [
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625
+          ],
+          "muzzleY": [
+            0.875,
+            0.875,
+            0.875,
+            0.875
+          ],
+          "sourceRelease": 0.1
+        }
+      ],
+      "effects": [],
+      "iconUvRect": [
+        0.296875,
+        0.23750000000000004,
+        0.2864583333333333,
+        0.4
+      ]
+    },
+    {
+      "form": "launcher_laser",
+      "gameplayForm": "launcher",
+      "launcherMode": 1,
+      "clips": [
+        {
+          "name": "idle",
+          "frames": [
+            "CharacterApproved11/launcher_laser/F000",
+            "CharacterApproved11/launcher_laser/F001",
+            "CharacterApproved11/launcher_laser/F002",
+            "CharacterApproved11/launcher_laser/F003"
+          ],
+          "seconds": [
+            0.18,
+            0.14,
+            0.18,
+            0.14
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125
+          ],
+          "muzzleY": [
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875
+          ]
+        },
+        {
+          "name": "walk",
+          "frames": [
+            "CharacterApproved11/launcher_laser/F004",
+            "CharacterApproved11/launcher_laser/F005",
+            "CharacterApproved11/launcher_laser/F006",
+            "CharacterApproved11/launcher_laser/F007",
+            "CharacterApproved11/launcher_laser/F008",
+            "CharacterApproved11/launcher_laser/F009",
+            "CharacterApproved11/launcher_laser/F010",
+            "CharacterApproved11/launcher_laser/F011"
+          ],
+          "seconds": [
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125
+          ],
+          "muzzleY": [
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875
+          ]
+        },
+        {
+          "name": "run",
+          "frames": [
+            "CharacterApproved11/launcher_laser/F012",
+            "CharacterApproved11/launcher_laser/F013",
+            "CharacterApproved11/launcher_laser/F014",
+            "CharacterApproved11/launcher_laser/F015",
+            "CharacterApproved11/launcher_laser/F016",
+            "CharacterApproved11/launcher_laser/F017"
+          ],
+          "seconds": [
+            0.065,
+            0.055,
+            0.065,
+            0.055,
+            0.065,
+            0.055
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125
+          ],
+          "muzzleY": [
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875
+          ]
+        },
+        {
+          "name": "jump",
+          "frames": [
+            "CharacterApproved11/launcher_laser/F018",
+            "CharacterApproved11/launcher_laser/F019",
+            "CharacterApproved11/launcher_laser/F020",
+            "CharacterApproved11/launcher_laser/F021",
+            "CharacterApproved11/launcher_laser/F022",
+            "CharacterApproved11/launcher_laser/F023",
+            "CharacterApproved11/launcher_laser/F024",
+            "CharacterApproved11/launcher_laser/F025",
+            "CharacterApproved11/launcher_laser/F026",
+            "CharacterApproved11/launcher_laser/F027",
+            "CharacterApproved11/launcher_laser/F028"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125
+          ],
+          "muzzleY": [
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875
+          ]
+        },
+        {
+          "name": "dash",
+          "frames": [
+            "CharacterApproved11/launcher_laser/F029",
+            "CharacterApproved11/launcher_laser/F030",
+            "CharacterApproved11/launcher_laser/F031",
+            "CharacterApproved11/launcher_laser/F032",
+            "CharacterApproved11/launcher_laser/F033"
+          ],
+          "seconds": [
+            0.03,
+            0.055,
+            0.055,
+            0.05,
+            0.08
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125
+          ],
+          "muzzleY": [
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875
+          ]
+        },
+        {
+          "name": "death",
+          "frames": [
+            "CharacterApproved11/launcher_laser/F034",
+            "CharacterApproved11/launcher_laser/F035",
+            "CharacterApproved11/launcher_laser/F036",
+            "CharacterApproved11/launcher_laser/F037",
+            "CharacterApproved11/launcher_laser/F038",
+            "CharacterApproved11/launcher_laser/F039",
+            "CharacterApproved11/launcher_laser/F040",
+            "CharacterApproved11/launcher_laser/F041",
+            "CharacterApproved11/launcher_laser/F042",
+            "CharacterApproved11/launcher_laser/F043",
+            "CharacterApproved11/launcher_laser/F044",
+            "CharacterApproved11/launcher_laser/F045"
+          ],
+          "seconds": [
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.04,
+            0.04,
+            0.06,
+            0.06,
+            0.18
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125
+          ],
+          "muzzleY": [
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875
+          ]
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "CharacterApproved11/launcher_laser/F018",
+            "CharacterApproved11/launcher_laser/F019"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.3125,
+            1.3125
+          ],
+          "muzzleY": [
+            0.96875,
+            0.96875
+          ]
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "CharacterApproved11/launcher_laser/F020",
+            "CharacterApproved11/launcher_laser/F021"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.3125,
+            1.3125
+          ],
+          "muzzleY": [
+            0.96875,
+            0.96875
+          ]
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "CharacterApproved11/launcher_laser/F022"
+          ],
+          "seconds": [
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.3125
+          ],
+          "muzzleY": [
+            0.96875
+          ]
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "CharacterApproved11/launcher_laser/F023"
+          ],
+          "seconds": [
+            0.06
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.3125
+          ],
+          "muzzleY": [
+            0.96875
+          ]
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "CharacterApproved11/launcher_laser/F024",
+            "CharacterApproved11/launcher_laser/F025"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.3125,
+            1.3125
+          ],
+          "muzzleY": [
+            0.96875,
+            0.96875
+          ]
+        },
+        {
+          "name": "land",
+          "frames": [
+            "CharacterApproved11/launcher_laser/F026",
+            "CharacterApproved11/launcher_laser/F027",
+            "CharacterApproved11/launcher_laser/F028"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.3125,
+            1.3125,
+            1.3125
+          ],
+          "muzzleY": [
+            0.96875,
+            0.96875,
+            0.96875
+          ]
+        },
+        {
+          "name": "attack_single",
+          "frames": [
+            "CharacterApproved11/launcher_laser/F046",
+            "CharacterApproved11/launcher_laser/F047",
+            "CharacterApproved11/launcher_laser/F048",
+            "CharacterApproved11/launcher_laser/F049",
+            "CharacterApproved11/launcher_laser/F046"
+          ],
+          "seconds": [
+            0.02,
+            0.06,
+            1.0,
+            0.05,
+            0.04
+          ],
+          "contact": 2,
+          "sourceImpact": 0.08,
+          "fxStart": -1,
+          "muzzleX": [
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125
+          ],
+          "muzzleY": [
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875
+          ],
+          "sourceRelease": 1.08
+        },
+        {
+          "name": "attack1",
+          "frames": [
+            "CharacterApproved11/launcher_laser/F046",
+            "CharacterApproved11/launcher_laser/F047",
+            "CharacterApproved11/launcher_laser/F048",
+            "CharacterApproved11/launcher_laser/F049",
+            "CharacterApproved11/launcher_laser/F046"
+          ],
+          "seconds": [
+            0.02,
+            0.06,
+            1.0,
+            0.05,
+            0.04
+          ],
+          "contact": 2,
+          "sourceImpact": 0.08,
+          "fxStart": -1,
+          "muzzleX": [
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125,
+            1.3125
+          ],
+          "muzzleY": [
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875
+          ],
+          "sourceRelease": 1.08
+        }
+      ],
+      "effects": [],
+      "iconUvRect": [
+        0.296875,
+        0.23750000000000004,
+        0.28125,
+        0.4
+      ]
+    },
+    {
+      "form": "launcher_shotgun",
+      "gameplayForm": "launcher",
+      "launcherMode": 2,
+      "clips": [
+        {
+          "name": "idle",
+          "frames": [
+            "CharacterApproved11/launcher_shotgun/F000",
+            "CharacterApproved11/launcher_shotgun/F001",
+            "CharacterApproved11/launcher_shotgun/F002",
+            "CharacterApproved11/launcher_shotgun/F003"
+          ],
+          "seconds": [
+            0.18,
+            0.14,
+            0.18,
+            0.14
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125
+          ],
+          "muzzleY": [
+            1.125,
+            1.125,
+            1.125,
+            1.125
+          ]
+        },
+        {
+          "name": "walk",
+          "frames": [
+            "CharacterApproved11/launcher_shotgun/F004",
+            "CharacterApproved11/launcher_shotgun/F005",
+            "CharacterApproved11/launcher_shotgun/F006",
+            "CharacterApproved11/launcher_shotgun/F007",
+            "CharacterApproved11/launcher_shotgun/F008",
+            "CharacterApproved11/launcher_shotgun/F009",
+            "CharacterApproved11/launcher_shotgun/F010",
+            "CharacterApproved11/launcher_shotgun/F011"
+          ],
+          "seconds": [
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125
+          ],
+          "muzzleY": [
+            1.125,
+            1.125,
+            1.125,
+            1.125,
+            1.125,
+            1.125,
+            1.125,
+            1.125
+          ]
+        },
+        {
+          "name": "run",
+          "frames": [
+            "CharacterApproved11/launcher_shotgun/F012",
+            "CharacterApproved11/launcher_shotgun/F013",
+            "CharacterApproved11/launcher_shotgun/F014",
+            "CharacterApproved11/launcher_shotgun/F015",
+            "CharacterApproved11/launcher_shotgun/F016",
+            "CharacterApproved11/launcher_shotgun/F017"
+          ],
+          "seconds": [
+            0.065,
+            0.055,
+            0.065,
+            0.055,
+            0.065,
+            0.055
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125
+          ],
+          "muzzleY": [
+            1.125,
+            1.125,
+            1.125,
+            1.125,
+            1.125,
+            1.125
+          ]
+        },
+        {
+          "name": "jump",
+          "frames": [
+            "CharacterApproved11/launcher_shotgun/F018",
+            "CharacterApproved11/launcher_shotgun/F019",
+            "CharacterApproved11/launcher_shotgun/F020",
+            "CharacterApproved11/launcher_shotgun/F021",
+            "CharacterApproved11/launcher_shotgun/F022",
+            "CharacterApproved11/launcher_shotgun/F023",
+            "CharacterApproved11/launcher_shotgun/F024",
+            "CharacterApproved11/launcher_shotgun/F025",
+            "CharacterApproved11/launcher_shotgun/F026",
+            "CharacterApproved11/launcher_shotgun/F027",
+            "CharacterApproved11/launcher_shotgun/F028"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125
+          ],
+          "muzzleY": [
+            1.125,
+            1.125,
+            1.125,
+            1.125,
+            1.125,
+            1.125,
+            1.125,
+            1.125,
+            1.125,
+            1.125,
+            1.125
+          ]
+        },
+        {
+          "name": "dash",
+          "frames": [
+            "CharacterApproved11/launcher_shotgun/F029",
+            "CharacterApproved11/launcher_shotgun/F030",
+            "CharacterApproved11/launcher_shotgun/F031",
+            "CharacterApproved11/launcher_shotgun/F032",
+            "CharacterApproved11/launcher_shotgun/F033"
+          ],
+          "seconds": [
+            0.03,
+            0.055,
+            0.055,
+            0.05,
+            0.08
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125
+          ],
+          "muzzleY": [
+            1.125,
+            1.125,
+            1.125,
+            1.125,
+            1.125
+          ]
+        },
+        {
+          "name": "death",
+          "frames": [
+            "CharacterApproved11/launcher_shotgun/F034",
+            "CharacterApproved11/launcher_shotgun/F035",
+            "CharacterApproved11/launcher_shotgun/F036",
+            "CharacterApproved11/launcher_shotgun/F037",
+            "CharacterApproved11/launcher_shotgun/F038",
+            "CharacterApproved11/launcher_shotgun/F039",
+            "CharacterApproved11/launcher_shotgun/F040",
+            "CharacterApproved11/launcher_shotgun/F041",
+            "CharacterApproved11/launcher_shotgun/F042",
+            "CharacterApproved11/launcher_shotgun/F043",
+            "CharacterApproved11/launcher_shotgun/F044",
+            "CharacterApproved11/launcher_shotgun/F045"
+          ],
+          "seconds": [
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.04,
+            0.04,
+            0.06,
+            0.06,
+            0.18
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125
+          ],
+          "muzzleY": [
+            1.125,
+            1.125,
+            1.125,
+            1.125,
+            1.125,
+            1.125,
+            1.125,
+            1.125,
+            1.125,
+            1.125,
+            1.125,
+            1.125
+          ]
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "CharacterApproved11/launcher_shotgun/F018",
+            "CharacterApproved11/launcher_shotgun/F019"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.03125,
+            1.03125
+          ],
+          "muzzleY": [
+            1.125,
+            1.125
+          ]
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "CharacterApproved11/launcher_shotgun/F020",
+            "CharacterApproved11/launcher_shotgun/F021"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.03125,
+            1.03125
+          ],
+          "muzzleY": [
+            1.125,
+            1.125
+          ]
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "CharacterApproved11/launcher_shotgun/F022"
+          ],
+          "seconds": [
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.03125
+          ],
+          "muzzleY": [
+            1.125
+          ]
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "CharacterApproved11/launcher_shotgun/F023"
+          ],
+          "seconds": [
+            0.06
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.03125
+          ],
+          "muzzleY": [
+            1.125
+          ]
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "CharacterApproved11/launcher_shotgun/F024",
+            "CharacterApproved11/launcher_shotgun/F025"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.03125,
+            1.03125
+          ],
+          "muzzleY": [
+            1.125,
+            1.125
+          ]
+        },
+        {
+          "name": "land",
+          "frames": [
+            "CharacterApproved11/launcher_shotgun/F026",
+            "CharacterApproved11/launcher_shotgun/F027",
+            "CharacterApproved11/launcher_shotgun/F028"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            1.03125,
+            1.03125,
+            1.03125
+          ],
+          "muzzleY": [
+            1.125,
+            1.125,
+            1.125
+          ]
+        },
+        {
+          "name": "attack_single",
+          "frames": [
+            "CharacterApproved11/launcher_shotgun/F046",
+            "CharacterApproved11/launcher_shotgun/F047",
+            "CharacterApproved11/launcher_shotgun/F049",
+            "CharacterApproved11/launcher_shotgun/F050",
+            "CharacterApproved11/launcher_shotgun/F051",
+            "CharacterApproved11/launcher_shotgun/F046"
+          ],
+          "seconds": [
+            0.09,
+            0.03,
+            0.17,
+            0.12,
+            0.13,
+            0.11
+          ],
+          "contact": 2,
+          "sourceImpact": 0.12,
+          "fxStart": -1,
+          "muzzleX": [
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125
+          ],
+          "muzzleY": [
+            1.125,
+            1.125,
+            1.125,
+            1.125,
+            1.125,
+            1.125
+          ],
+          "sourceRelease": 0.29
+        },
+        {
+          "name": "attack1",
+          "frames": [
+            "CharacterApproved11/launcher_shotgun/F046",
+            "CharacterApproved11/launcher_shotgun/F047",
+            "CharacterApproved11/launcher_shotgun/F048",
+            "CharacterApproved11/launcher_shotgun/F050"
+          ],
+          "seconds": [
+            0.05,
+            0.03,
+            0.13,
+            0.07
+          ],
+          "contact": 2,
+          "sourceImpact": 0.08,
+          "fxStart": -1,
+          "muzzleX": [
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125
+          ],
+          "muzzleY": [
+            1.125,
+            1.125,
+            1.125,
+            1.125
+          ],
+          "sourceRelease": 0.21
+        },
+        {
+          "name": "attack2",
+          "frames": [
+            "CharacterApproved11/launcher_shotgun/F047",
+            "CharacterApproved11/launcher_shotgun/F048",
+            "CharacterApproved11/launcher_shotgun/F050"
+          ],
+          "seconds": [
+            0.03,
+            0.13,
+            0.07
+          ],
+          "contact": 1,
+          "sourceImpact": 0.03,
+          "fxStart": -1,
+          "muzzleX": [
+            1.03125,
+            1.03125,
+            1.03125
+          ],
+          "muzzleY": [
+            1.125,
+            1.125,
+            1.125
+          ],
+          "sourceRelease": 0.16
+        },
+        {
+          "name": "attack3",
+          "frames": [
+            "CharacterApproved11/launcher_shotgun/F047",
+            "CharacterApproved11/launcher_shotgun/F048",
+            "CharacterApproved11/launcher_shotgun/F050",
+            "CharacterApproved11/launcher_shotgun/F051",
+            "CharacterApproved11/launcher_shotgun/F046"
+          ],
+          "seconds": [
+            0.03,
+            0.13,
+            0.07,
+            0.07,
+            0.07
+          ],
+          "contact": 1,
+          "sourceImpact": 0.03,
+          "fxStart": -1,
+          "muzzleX": [
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125,
+            1.03125
+          ],
+          "muzzleY": [
+            1.125,
+            1.125,
+            1.125,
+            1.125,
+            1.125
+          ],
+          "sourceRelease": 0.16
+        }
+      ],
+      "effects": [],
+      "iconUvRect": [
+        0.296875,
+        0.23750000000000004,
+        0.328125,
+        0.4
+      ]
+    },
+    {
+      "form": "launcher_grenade",
+      "gameplayForm": "launcher",
+      "launcherMode": 3,
+      "clips": [
+        {
+          "name": "idle",
+          "frames": [
+            "CharacterApproved11/launcher_grenade/F000",
+            "CharacterApproved11/launcher_grenade/F001",
+            "CharacterApproved11/launcher_grenade/F002",
+            "CharacterApproved11/launcher_grenade/F003"
+          ],
+          "seconds": [
+            0.18,
+            0.14,
+            0.18,
+            0.14
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875
+          ],
+          "muzzleY": [
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625
+          ]
+        },
+        {
+          "name": "walk",
+          "frames": [
+            "CharacterApproved11/launcher_grenade/F004",
+            "CharacterApproved11/launcher_grenade/F005",
+            "CharacterApproved11/launcher_grenade/F006",
+            "CharacterApproved11/launcher_grenade/F007",
+            "CharacterApproved11/launcher_grenade/F008",
+            "CharacterApproved11/launcher_grenade/F009",
+            "CharacterApproved11/launcher_grenade/F010",
+            "CharacterApproved11/launcher_grenade/F011"
+          ],
+          "seconds": [
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875
+          ],
+          "muzzleY": [
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625
+          ]
+        },
+        {
+          "name": "run",
+          "frames": [
+            "CharacterApproved11/launcher_grenade/F012",
+            "CharacterApproved11/launcher_grenade/F013",
+            "CharacterApproved11/launcher_grenade/F014",
+            "CharacterApproved11/launcher_grenade/F015",
+            "CharacterApproved11/launcher_grenade/F016",
+            "CharacterApproved11/launcher_grenade/F017"
+          ],
+          "seconds": [
+            0.065,
+            0.055,
+            0.065,
+            0.055,
+            0.065,
+            0.055
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875
+          ],
+          "muzzleY": [
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625
+          ]
+        },
+        {
+          "name": "jump",
+          "frames": [
+            "CharacterApproved11/launcher_grenade/F018",
+            "CharacterApproved11/launcher_grenade/F019",
+            "CharacterApproved11/launcher_grenade/F020",
+            "CharacterApproved11/launcher_grenade/F021",
+            "CharacterApproved11/launcher_grenade/F022",
+            "CharacterApproved11/launcher_grenade/F023",
+            "CharacterApproved11/launcher_grenade/F024",
+            "CharacterApproved11/launcher_grenade/F025",
+            "CharacterApproved11/launcher_grenade/F026",
+            "CharacterApproved11/launcher_grenade/F027",
+            "CharacterApproved11/launcher_grenade/F028"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875
+          ],
+          "muzzleY": [
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625
+          ]
+        },
+        {
+          "name": "dash",
+          "frames": [
+            "CharacterApproved11/launcher_grenade/F029",
+            "CharacterApproved11/launcher_grenade/F030",
+            "CharacterApproved11/launcher_grenade/F031",
+            "CharacterApproved11/launcher_grenade/F032",
+            "CharacterApproved11/launcher_grenade/F033"
+          ],
+          "seconds": [
+            0.03,
+            0.055,
+            0.055,
+            0.05,
+            0.08
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875
+          ],
+          "muzzleY": [
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625
+          ]
+        },
+        {
+          "name": "death",
+          "frames": [
+            "CharacterApproved11/launcher_grenade/F034",
+            "CharacterApproved11/launcher_grenade/F035",
+            "CharacterApproved11/launcher_grenade/F036",
+            "CharacterApproved11/launcher_grenade/F037",
+            "CharacterApproved11/launcher_grenade/F038",
+            "CharacterApproved11/launcher_grenade/F039",
+            "CharacterApproved11/launcher_grenade/F040",
+            "CharacterApproved11/launcher_grenade/F041",
+            "CharacterApproved11/launcher_grenade/F042",
+            "CharacterApproved11/launcher_grenade/F043",
+            "CharacterApproved11/launcher_grenade/F044",
+            "CharacterApproved11/launcher_grenade/F045"
+          ],
+          "seconds": [
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.04,
+            0.04,
+            0.06,
+            0.06,
+            0.18
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875
+          ],
+          "muzzleY": [
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625
+          ]
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "CharacterApproved11/launcher_grenade/F018",
+            "CharacterApproved11/launcher_grenade/F019"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            0.96875,
+            0.96875
+          ],
+          "muzzleY": [
+            1.15625,
+            1.15625
+          ]
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "CharacterApproved11/launcher_grenade/F020",
+            "CharacterApproved11/launcher_grenade/F021"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            0.96875,
+            0.96875
+          ],
+          "muzzleY": [
+            1.15625,
+            1.15625
+          ]
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "CharacterApproved11/launcher_grenade/F022"
+          ],
+          "seconds": [
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            0.96875
+          ],
+          "muzzleY": [
+            1.15625
+          ]
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "CharacterApproved11/launcher_grenade/F023"
+          ],
+          "seconds": [
+            0.06
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            0.96875
+          ],
+          "muzzleY": [
+            1.15625
+          ]
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "CharacterApproved11/launcher_grenade/F024",
+            "CharacterApproved11/launcher_grenade/F025"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            0.96875,
+            0.96875
+          ],
+          "muzzleY": [
+            1.15625,
+            1.15625
+          ]
+        },
+        {
+          "name": "land",
+          "frames": [
+            "CharacterApproved11/launcher_grenade/F026",
+            "CharacterApproved11/launcher_grenade/F027",
+            "CharacterApproved11/launcher_grenade/F028"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "fxStart": -1,
+          "muzzleX": [
+            0.96875,
+            0.96875,
+            0.96875
+          ],
+          "muzzleY": [
+            1.15625,
+            1.15625,
+            1.15625
+          ]
+        },
+        {
+          "name": "attack_single",
+          "frames": [
+            "CharacterApproved11/launcher_grenade/F046",
+            "CharacterApproved11/launcher_grenade/F047",
+            "CharacterApproved11/launcher_grenade/F049",
+            "CharacterApproved11/launcher_grenade/F050",
+            "CharacterApproved11/launcher_grenade/F051",
+            "CharacterApproved11/launcher_grenade/F053",
+            "CharacterApproved11/launcher_grenade/F046"
+          ],
+          "seconds": [
+            0.05,
+            0.04,
+            0.16,
+            0.11,
+            0.1,
+            0.08,
+            0.08
+          ],
+          "contact": 2,
+          "sourceImpact": 0.09,
+          "fxStart": -1,
+          "muzzleX": [
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875
+          ],
+          "muzzleY": [
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625
+          ],
+          "sourceRelease": 0.25
+        },
+        {
+          "name": "attack1",
+          "frames": [
+            "CharacterApproved11/launcher_grenade/F046",
+            "CharacterApproved11/launcher_grenade/F047",
+            "CharacterApproved11/launcher_grenade/F048",
+            "CharacterApproved11/launcher_grenade/F050"
+          ],
+          "seconds": [
+            0.05,
+            0.04,
+            0.16,
+            0.09
+          ],
+          "contact": 2,
+          "sourceImpact": 0.09,
+          "fxStart": -1,
+          "muzzleX": [
+            0.96875,
+            0.96875,
+            1.03125,
+            0.96875
+          ],
+          "muzzleY": [
+            1.15625,
+            1.15625,
+            1.125,
+            1.15625
+          ],
+          "sourceRelease": 0.25
+        },
+        {
+          "name": "attack2",
+          "frames": [
+            "CharacterApproved11/launcher_grenade/F047",
+            "CharacterApproved11/launcher_grenade/F048",
+            "CharacterApproved11/launcher_grenade/F050"
+          ],
+          "seconds": [
+            0.04,
+            0.16,
+            0.09
+          ],
+          "contact": 1,
+          "sourceImpact": 0.04,
+          "fxStart": -1,
+          "muzzleX": [
+            0.96875,
+            1.03125,
+            0.96875
+          ],
+          "muzzleY": [
+            1.15625,
+            1.125,
+            1.15625
+          ],
+          "sourceRelease": 0.2
+        },
+        {
+          "name": "attack3",
+          "frames": [
+            "CharacterApproved11/launcher_grenade/F047",
+            "CharacterApproved11/launcher_grenade/F048",
+            "CharacterApproved11/launcher_grenade/F050",
+            "CharacterApproved11/launcher_grenade/F052",
+            "CharacterApproved11/launcher_grenade/F053",
+            "CharacterApproved11/launcher_grenade/F046"
+          ],
+          "seconds": [
+            0.04,
+            0.16,
+            0.09,
+            0.06,
+            0.07,
+            0.08
+          ],
+          "contact": 1,
+          "sourceImpact": 0.04,
+          "fxStart": -1,
+          "muzzleX": [
+            0.96875,
+            1.03125,
+            0.96875,
+            0.96875,
+            0.96875,
+            0.96875
+          ],
+          "muzzleY": [
+            1.15625,
+            1.125,
+            1.15625,
+            1.15625,
+            1.15625,
+            1.15625
+          ],
+          "sourceRelease": 0.2
+        }
+      ],
+      "effects": [],
+      "iconUvRect": [
+        0.296875,
+        0.23750000000000004,
+        0.3229166666666667,
+        0.4
+      ]
+    },
+    {
+      "form": "shuriken",
+      "gameplayForm": "shuriken",
+      "launcherMode": -1,
+      "throwing": true,
+      "clips": [
+        {
+          "name": "idle",
+          "frames": [
+            "CharacterApproved13/shuriken/F000",
+            "CharacterApproved13/shuriken/F001",
+            "CharacterApproved13/shuriken/F002",
+            "CharacterApproved13/shuriken/F003"
+          ],
+          "seconds": [
+            0.18,
+            0.14,
+            0.18,
+            0.14
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "walk",
+          "frames": [
+            "CharacterApproved13/shuriken/F004",
+            "CharacterApproved13/shuriken/F005",
+            "CharacterApproved13/shuriken/F006",
+            "CharacterApproved13/shuriken/F007",
+            "CharacterApproved13/shuriken/F008",
+            "CharacterApproved13/shuriken/F009",
+            "CharacterApproved13/shuriken/F010",
+            "CharacterApproved13/shuriken/F011"
+          ],
+          "seconds": [
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "run",
+          "frames": [
+            "CharacterApproved13/shuriken/F012",
+            "CharacterApproved13/shuriken/F013",
+            "CharacterApproved13/shuriken/F014",
+            "CharacterApproved13/shuriken/F015",
+            "CharacterApproved13/shuriken/F016",
+            "CharacterApproved13/shuriken/F017"
+          ],
+          "seconds": [
+            0.065,
+            0.055,
+            0.065,
+            0.055,
+            0.065,
+            0.055
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump",
+          "frames": [
+            "CharacterApproved13/shuriken/F018",
+            "CharacterApproved13/shuriken/F019",
+            "CharacterApproved13/shuriken/F020",
+            "CharacterApproved13/shuriken/F021",
+            "CharacterApproved13/shuriken/F022",
+            "CharacterApproved13/shuriken/F023",
+            "CharacterApproved13/shuriken/F024",
+            "CharacterApproved13/shuriken/F025",
+            "CharacterApproved13/shuriken/F026",
+            "CharacterApproved13/shuriken/F027",
+            "CharacterApproved13/shuriken/F028"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "dash",
+          "frames": [
+            "CharacterApproved13/shuriken/F029",
+            "CharacterApproved13/shuriken/F030",
+            "CharacterApproved13/shuriken/F031",
+            "CharacterApproved13/shuriken/F032",
+            "CharacterApproved13/shuriken/F033"
+          ],
+          "seconds": [
+            0.03,
+            0.055,
+            0.055,
+            0.05,
+            0.08
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "hurt",
+          "frames": [
+            "CharacterApproved13/shuriken/F034",
+            "CharacterApproved13/shuriken/F035",
+            "CharacterApproved13/shuriken/F036",
+            "CharacterApproved13/shuriken/F037",
+            "CharacterApproved13/shuriken/F038"
+          ],
+          "seconds": [
+            0.05,
+            0.065,
+            0.09,
+            0.065,
+            0.11
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "death",
+          "frames": [
+            "CharacterApproved13/shuriken/F039",
+            "CharacterApproved13/shuriken/F040",
+            "CharacterApproved13/shuriken/F041",
+            "CharacterApproved13/shuriken/F042",
+            "CharacterApproved13/shuriken/F043",
+            "CharacterApproved13/shuriken/F044",
+            "CharacterApproved13/shuriken/F045",
+            "CharacterApproved13/shuriken/F046",
+            "CharacterApproved13/shuriken/F047",
+            "CharacterApproved13/shuriken/F048",
+            "CharacterApproved13/shuriken/F049",
+            "CharacterApproved13/shuriken/F050"
+          ],
+          "seconds": [
+            0.02,
+            0.02,
+            0.04,
+            0.04,
+            0.04,
+            0.04,
+            0.04,
+            0.05,
+            0.05,
+            0.06,
+            0.06,
+            0.18
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "attack1",
+          "frames": [
+            "CharacterApproved13/shuriken/F051",
+            "CharacterApproved13/shuriken/F052",
+            "CharacterApproved13/shuriken/F053",
+            "CharacterApproved13/shuriken/F054",
+            "CharacterApproved13/shuriken/F055",
+            "CharacterApproved13/shuriken/F056",
+            "CharacterApproved13/shuriken/F057",
+            "CharacterApproved13/shuriken/F058"
+          ],
+          "seconds": [
+            0.06,
+            0.055,
+            0.065,
+            0.08,
+            0.035,
+            0.04,
+            0.04,
+            0.14
+          ],
+          "contact": 5,
+          "sourceImpact": 0.295,
+          "sourceRelease": 0.295,
+          "fxStart": -1
+        },
+        {
+          "name": "attack1_chain",
+          "frames": [
+            "CharacterApproved13/shuriken/F052",
+            "CharacterApproved13/shuriken/F053",
+            "CharacterApproved13/shuriken/F054",
+            "CharacterApproved13/shuriken/F055",
+            "CharacterApproved13/shuriken/F056",
+            "CharacterApproved13/shuriken/F057",
+            "CharacterApproved13/shuriken/F058"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.065,
+            0.035,
+            0.04,
+            0.04,
+            0.14
+          ],
+          "contact": 4,
+          "sourceImpact": 0.2,
+          "sourceRelease": 0.2,
+          "fxStart": -1
+        },
+        {
+          "name": "attack2",
+          "frames": [
+            "CharacterApproved13/shuriken/F059",
+            "CharacterApproved13/shuriken/F060",
+            "CharacterApproved13/shuriken/F061",
+            "CharacterApproved13/shuriken/F062",
+            "CharacterApproved13/shuriken/F063",
+            "CharacterApproved13/shuriken/F064"
+          ],
+          "seconds": [
+            0.12,
+            0.04,
+            0.04,
+            0.045,
+            0.045,
+            0.06
+          ],
+          "contact": 2,
+          "sourceImpact": 0.16,
+          "sourceRelease": 0.16,
+          "fxStart": -1
+        },
+        {
+          "name": "recover1",
+          "frames": [
+            "CharacterApproved13/shuriken/F064",
+            "CharacterApproved13/shuriken/F065",
+            "CharacterApproved13/shuriken/F066"
+          ],
+          "seconds": [
+            0.08,
+            0.08,
+            0.14
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "recover2",
+          "frames": [
+            "CharacterApproved13/shuriken/F065",
+            "CharacterApproved13/shuriken/F066"
+          ],
+          "seconds": [
+            0.08,
+            0.14
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "CharacterApproved13/shuriken/F018",
+            "CharacterApproved13/shuriken/F019"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "CharacterApproved13/shuriken/F020",
+            "CharacterApproved13/shuriken/F021"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "CharacterApproved13/shuriken/F022"
+          ],
+          "seconds": [
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "CharacterApproved13/shuriken/F023"
+          ],
+          "seconds": [
+            0.06
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "CharacterApproved13/shuriken/F024",
+            "CharacterApproved13/shuriken/F025"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "land",
+          "frames": [
+            "CharacterApproved13/shuriken/F026",
+            "CharacterApproved13/shuriken/F027",
+            "CharacterApproved13/shuriken/F028"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        }
+      ],
+      "effects": [],
+      "iconUvRect": [
+        0.21875,
+        0.24375000000000002,
+        0.25,
+        0.4
+      ]
+    },
+    {
+      "form": "bomb",
+      "gameplayForm": "bomb",
+      "launcherMode": -1,
+      "throwing": true,
+      "clips": [
+        {
+          "name": "idle",
+          "frames": [
+            "CharacterApproved13/bomb/F000",
+            "CharacterApproved13/bomb/F001",
+            "CharacterApproved13/bomb/F002",
+            "CharacterApproved13/bomb/F003"
+          ],
+          "seconds": [
+            0.18,
+            0.14,
+            0.18,
+            0.14
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "walk",
+          "frames": [
+            "CharacterApproved13/bomb/F004",
+            "CharacterApproved13/bomb/F005",
+            "CharacterApproved13/bomb/F006",
+            "CharacterApproved13/bomb/F007",
+            "CharacterApproved13/bomb/F008",
+            "CharacterApproved13/bomb/F009",
+            "CharacterApproved13/bomb/F010",
+            "CharacterApproved13/bomb/F011"
+          ],
+          "seconds": [
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065,
+            0.08,
+            0.065
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "run",
+          "frames": [
+            "CharacterApproved13/bomb/F012",
+            "CharacterApproved13/bomb/F013",
+            "CharacterApproved13/bomb/F014",
+            "CharacterApproved13/bomb/F015",
+            "CharacterApproved13/bomb/F016",
+            "CharacterApproved13/bomb/F017"
+          ],
+          "seconds": [
+            0.065,
+            0.055,
+            0.065,
+            0.055,
+            0.065,
+            0.055
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump",
+          "frames": [
+            "CharacterApproved13/bomb/F018",
+            "CharacterApproved13/bomb/F019",
+            "CharacterApproved13/bomb/F020",
+            "CharacterApproved13/bomb/F021",
+            "CharacterApproved13/bomb/F022",
+            "CharacterApproved13/bomb/F023",
+            "CharacterApproved13/bomb/F024",
+            "CharacterApproved13/bomb/F025",
+            "CharacterApproved13/bomb/F026",
+            "CharacterApproved13/bomb/F027",
+            "CharacterApproved13/bomb/F028"
+          ],
+          "seconds": [
+            0.04,
+            0.04,
+            0.07,
+            0.07,
+            0.07,
+            0.06,
+            0.09,
+            0.09,
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "dash",
+          "frames": [
+            "CharacterApproved13/bomb/F029",
+            "CharacterApproved13/bomb/F030",
+            "CharacterApproved13/bomb/F031",
+            "CharacterApproved13/bomb/F032",
+            "CharacterApproved13/bomb/F033"
+          ],
+          "seconds": [
+            0.03,
+            0.055,
+            0.055,
+            0.05,
+            0.08
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "hurt",
+          "frames": [
+            "CharacterApproved13/bomb/F034",
+            "CharacterApproved13/bomb/F035",
+            "CharacterApproved13/bomb/F036",
+            "CharacterApproved13/bomb/F037",
+            "CharacterApproved13/bomb/F038"
+          ],
+          "seconds": [
+            0.05,
+            0.065,
+            0.09,
+            0.065,
+            0.11
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "death",
+          "frames": [
+            "CharacterApproved13/bomb/F039",
+            "CharacterApproved13/bomb/F040",
+            "CharacterApproved13/bomb/F041",
+            "CharacterApproved13/bomb/F042",
+            "CharacterApproved13/bomb/F043",
+            "CharacterApproved13/bomb/F044",
+            "CharacterApproved13/bomb/F045",
+            "CharacterApproved13/bomb/F046",
+            "CharacterApproved13/bomb/F047",
+            "CharacterApproved13/bomb/F048",
+            "CharacterApproved13/bomb/F049",
+            "CharacterApproved13/bomb/F050"
+          ],
+          "seconds": [
+            0.02,
+            0.02,
+            0.04,
+            0.04,
+            0.04,
+            0.04,
+            0.04,
+            0.05,
+            0.05,
+            0.06,
+            0.06,
+            0.18
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "attack1",
+          "frames": [
+            "CharacterApproved13/bomb/F051",
+            "CharacterApproved13/bomb/F052",
+            "CharacterApproved13/bomb/F053",
+            "CharacterApproved13/bomb/F054",
+            "CharacterApproved13/bomb/F055",
+            "CharacterApproved13/bomb/F056",
+            "CharacterApproved13/bomb/F057",
+            "CharacterApproved13/bomb/F058",
+            "CharacterApproved13/bomb/F059"
+          ],
+          "seconds": [
+            0.07,
+            0.065,
+            0.075,
+            0.095,
+            0.045,
+            0.1,
+            0.07,
+            0.095,
+            0.15
+          ],
+          "contact": 5,
+          "sourceImpact": 0.35,
+          "sourceRelease": 0.35,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_start",
+          "frames": [
+            "CharacterApproved13/bomb/F018",
+            "CharacterApproved13/bomb/F019"
+          ],
+          "seconds": [
+            0.04,
+            0.04
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_rise",
+          "frames": [
+            "CharacterApproved13/bomb/F020",
+            "CharacterApproved13/bomb/F021"
+          ],
+          "seconds": [
+            0.07,
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "jump_apex",
+          "frames": [
+            "CharacterApproved13/bomb/F022"
+          ],
+          "seconds": [
+            0.07
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "fall_start",
+          "frames": [
+            "CharacterApproved13/bomb/F023"
+          ],
+          "seconds": [
+            0.06
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "fall_loop",
+          "frames": [
+            "CharacterApproved13/bomb/F024",
+            "CharacterApproved13/bomb/F025"
+          ],
+          "seconds": [
+            0.09,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        },
+        {
+          "name": "land",
+          "frames": [
+            "CharacterApproved13/bomb/F026",
+            "CharacterApproved13/bomb/F027",
+            "CharacterApproved13/bomb/F028"
+          ],
+          "seconds": [
+            0.045,
+            0.055,
+            0.09
+          ],
+          "contact": -1,
+          "sourceImpact": -1,
+          "sourceRelease": -1,
+          "fxStart": -1
+        }
+      ],
+      "effects": [],
+      "iconUvRect": [
+        0.2890625,
+        0.15625,
+        0.375,
+        0.5
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "canvas": [
+    128,
+    128
+  ],
+  "combo_window_ms": 120,
+  "queue_second_click_during_attack1": true,
+  "shared_pose_source_frame": 6,
+  "clips": {
+    "공격1_올려베기": {
+      "source_frames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "durations_ms": [
+        80,
+        110,
+        70,
+        40,
+        50,
+        120
+      ],
+      "total_ms": 470,
+      "frame_count": 6
+    },
+    "공격2_내려베기": {
+      "source_frames": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "durations_ms": [
+        40,
+        100,
+        40,
+        110,
+        100,
+        110,
+        120
+      ],
+      "total_ms": 620,
+      "frame_count": 7
+    },
+    "공격1_복귀": {
+      "source_frames": [
+        5,
+        12,
+        1
+      ],
+      "durations_ms": [
+        80,
+        100,
+        80
+      ],
+      "total_ms": 260,
+      "frame_count": 3
+    }
+  }
+}

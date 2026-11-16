@@ -1,0 +1,96 @@
+{
+  "version": "chapter1-close-forest-v8-20261021",
+  "assembly": "chapter1-close-forest-v8-20261021",
+  "interiorColor": "#241f1d",
+  "source": "imagegen CLI gpt-image-2 terrain and platforms edited to a subdued woodland palette; compact cap joins and dark earth",
+  "usage": "HTML editor and Unity Chapter1 terrain artwork; layouts remain independent",
+  "tileSize": 32,
+  "assets": [
+    {
+      "source": "ground.png",
+      "embedded": "assets/Terrain32.png",
+      "width": 256,
+      "height": 256,
+      "landingRow": 9,
+      "sha256": "6634775460f456db39fa6b808e2811d7fed2bddcd416723c4da763304339c427"
+    },
+    {
+      "source": "solid-platform.png",
+      "embedded": "assets/SolidPlatform.png",
+      "width": 512,
+      "height": 64,
+      "landingRow": 9,
+      "sha256": "fa46fc55877db978721eba6c3180ddeecff8fd6827398271c8c00dc29f539efa"
+    },
+    {
+      "source": "drop-through.png",
+      "embedded": "assets/DropPlatform.png",
+      "width": 512,
+      "height": 64,
+      "landingRow": 11,
+      "sha256": "93b4a3bfcfbcbb7017226e2a9057784e65305dc5f31673d5e12a0efcf78428d9"
+    }
+  ],
+  "background": {
+    "version": "chapter1-atmospheric-forest-20261021",
+    "source": "imagegen CLI gpt-image-2; pale distant forest, asymmetric alpha inset near trees; straight periodic repeat",
+    "layers": [
+      {
+        "id": "forest_depth",
+        "width": 1440,
+        "height": 810,
+        "parallax": 0.16,
+        "vertical": 0.01,
+        "phase": 0,
+        "baseCrop": 200,
+        "minVertical": 192,
+        "maxVertical": 240,
+        "order": -60,
+        "coverBottom": true,
+        "contentBottom": 1,
+        "bottomMargin": 24,
+        "repeatUnmirrored": true
+      },
+      {
+        "id": "forest_near",
+        "width": 1440,
+        "height": 810,
+        "parallax": 0.52,
+        "vertical": 0.015,
+        "phase": 620,
+        "baseCrop": 200,
+        "minVertical": 192,
+        "maxVertical": 240,
+        "order": -30,
+        "coverBottom": true,
+        "contentBottom": 1,
+        "bottomMargin": 24,
+        "repeatUnmirrored": true
+      }
+    ],
+    "files": [
+      {
+        "name": "forest_depth.png",
+        "sha256": "bceece749c29a4cfbe0f0ca78e3a159f58285d4dfffd7c45bb393cdfc1dd29ca",
+        "width": 480,
+        "height": 270,
+        "guid": "b8bc2ba4faadde86cf67625e3fd59012"
+      },
+      {
+        "name": "forest_near.png",
+        "sha256": "792ddec5c0ba247e1631554dcde344a94995f03513d4b9e1c79d24f6fee0e63b",
+        "width": 480,
+        "height": 270,
+        "guid": "727eeb23c640b4326522cd0d8cdbf287"
+      }
+    ]
+  },
+  "release": "1chapter-map-ver2",
+  "displayName": "1chapter 맵 ver2",
+  "productionFolder": "02_에셋/배경/숲/1chapter_맵_ver2",
+  "layout": {
+    "version": "A-24-relief-v2-20261021",
+    "source": "data/relief-layout.json",
+    "unityApplied": false
+  }
+}

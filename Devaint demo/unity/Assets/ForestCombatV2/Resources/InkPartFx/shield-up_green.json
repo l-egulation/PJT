@@ -1,0 +1,217 @@
+{
+ "frames": [
+  {
+   "filename": "shield-up_green 0",
+   "frame": {
+    "x": 0,
+    "y": 0,
+    "w": 152,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 152,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 152,
+    "h": 96
+   },
+   "duration": 40
+  },
+  {
+   "filename": "shield-up_green 1",
+   "frame": {
+    "x": 152,
+    "y": 0,
+    "w": 152,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 152,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 152,
+    "h": 96
+   },
+   "duration": 40
+  },
+  {
+   "filename": "shield-up_green 2",
+   "frame": {
+    "x": 304,
+    "y": 0,
+    "w": 152,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 152,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 152,
+    "h": 96
+   },
+   "duration": 40
+  },
+  {
+   "filename": "shield-up_green 3",
+   "frame": {
+    "x": 0,
+    "y": 96,
+    "w": 152,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 152,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 152,
+    "h": 96
+   },
+   "duration": 40
+  },
+  {
+   "filename": "shield-up_green 4",
+   "frame": {
+    "x": 152,
+    "y": 96,
+    "w": 152,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 152,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 152,
+    "h": 96
+   },
+   "duration": 40
+  },
+  {
+   "filename": "shield-up_green 5",
+   "frame": {
+    "x": 304,
+    "y": 96,
+    "w": 152,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 152,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 152,
+    "h": 96
+   },
+   "duration": 40
+  },
+  {
+   "filename": "shield-up_green 6",
+   "frame": {
+    "x": 0,
+    "y": 192,
+    "w": 152,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 152,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 152,
+    "h": 96
+   },
+   "duration": 40
+  },
+  {
+   "filename": "shield-up_green 7",
+   "frame": {
+    "x": 152,
+    "y": 192,
+    "w": 152,
+    "h": 96
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 152,
+    "h": 96
+   },
+   "sourceSize": {
+    "w": 152,
+    "h": 96
+   },
+   "duration": 40
+  }
+ ],
+ "meta": {
+  "app": "https://github.com/patch-gg/pixelfx",
+  "version": "1",
+  "image": "shield-up_green.png",
+  "format": "RGBA8888",
+  "size": {
+   "w": 456,
+   "h": 288
+  },
+  "scale": "1",
+  "frameTags": [
+   {
+    "name": "shield-up_green",
+    "from": 0,
+    "to": 7,
+    "direction": "forward"
+   }
+  ],
+  "pixelfx": {
+   "id": "ink/shield-up",
+   "name": "Shield up (barrier dome)",
+   "fps": 25,
+   "loop": false,
+   "frames": 8,
+   "frameSize": [
+    152,
+    96
+   ],
+   "pivot": [
+    76,
+    86
+   ],
+   "columns": 3,
+   "color": "green",
+   "anchor": "player-feet"
+  }
+ }
+}

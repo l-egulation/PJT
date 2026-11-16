@@ -1,0 +1,87 @@
+{
+  "method": "deterministic source-pixel crop, silhouette segmentation and foreground partition",
+  "newImageGeneration": false,
+  "sourceOriginalBytesPreserved": true,
+  "layerAlpha": "binary matte preserving source fringe",
+  "reconstructionProof": [
+    {
+      "group": "health",
+      "differentPixels": 0,
+      "maxChannelDifference": 0,
+      "coveredPixels": 37464
+    },
+    {
+      "group": "gold_icon",
+      "differentPixels": 0,
+      "maxChannelDifference": 0,
+      "coveredPixels": 1671
+    },
+    {
+      "group": "gold_value_240",
+      "differentPixels": 0,
+      "maxChannelDifference": 0,
+      "coveredPixels": 972
+    },
+    {
+      "group": "pigment_icon",
+      "differentPixels": 0,
+      "maxChannelDifference": 0,
+      "coveredPixels": 1690
+    },
+    {
+      "group": "pigment_value_18",
+      "differentPixels": 0,
+      "maxChannelDifference": 0,
+      "coveredPixels": 567
+    },
+    {
+      "group": "inventory",
+      "differentPixels": 0,
+      "maxChannelDifference": 0,
+      "coveredPixels": 3525
+    },
+    {
+      "group": "pause",
+      "differentPixels": 0,
+      "maxChannelDifference": 0,
+      "coveredPixels": 3584
+    },
+    {
+      "group": "minimap",
+      "differentPixels": 0,
+      "maxChannelDifference": 0,
+      "coveredPixels": 56384
+    },
+    {
+      "group": "sword",
+      "differentPixels": 0,
+      "maxChannelDifference": 0,
+      "coveredPixels": 33496
+    },
+    {
+      "group": "hammer",
+      "differentPixels": 0,
+      "maxChannelDifference": 0,
+      "coveredPixels": 35182
+    },
+    {
+      "group": "run_heading",
+      "differentPixels": 0,
+      "maxChannelDifference": 0,
+      "coveredPixels": 17942
+    },
+    {
+      "group": "run_sword",
+      "differentPixels": 0,
+      "maxChannelDifference": 0,
+      "coveredPixels": 67781
+    },
+    {
+      "group": "run_hammer",
+      "differentPixels": 0,
+      "maxChannelDifference": 0,
+      "coveredPixels": 67972
+    }
+  ],
+  "acceptanceScope": "Each approved component reconstructed from its runtime layers at native pixels."
+}

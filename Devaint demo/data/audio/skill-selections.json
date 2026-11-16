@@ -1,0 +1,2735 @@
+{
+  "format": "selected-skill-audio-v1",
+  "selectionSha256": "88317317af3573dba5d52ead4b7493f084e43bc2482ab65b734141bc25d4749c",
+  "smokeSha256": "d837c9ea1022198144c1bbe3c0292e21cb8d4df6f3a98bc84a3797e07e9e627d",
+  "variantPolicy": "round-robin approved stars per action",
+  "resolved": [
+    {
+      "id": "base_sword_default",
+      "number": 5,
+      "approvedRevision": 1,
+      "layers": [
+        {
+          "id": "main",
+          "name": "강한 베기",
+          "audio": "cut/1539dd5cce8cd9b2c394",
+          "times": [
+            0.155
+          ],
+          "gain": 1,
+          "offsetMs": 0
+        }
+      ],
+      "settings": {
+        "main": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "base_sword_range",
+      "number": 5,
+      "approvedRevision": 1,
+      "layers": [
+        {
+          "id": "main",
+          "name": "검기 방출",
+          "audio": "cut/1539dd5cce8cd9b2c394",
+          "times": [
+            0.2
+          ],
+          "gain": 1,
+          "offsetMs": 0
+        }
+      ],
+      "settings": {
+        "main": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "base_sword_movement",
+      "number": 4,
+      "approvedRevision": 1,
+      "layers": [
+        {
+          "id": "main",
+          "name": "돌진 찌르기",
+          "audio": "cut/1716d1eca819fc7cf2d8",
+          "times": [
+            0.15
+          ],
+          "gain": 1,
+          "offsetMs": 0
+        }
+      ],
+      "settings": {
+        "main": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "base_sword_follow_up",
+      "number": 1,
+      "approvedRevision": 5,
+      "layers": [
+        {
+          "id": "main",
+          "name": "강한 베기",
+          "audio": "cut/1539dd5cce8cd9b2c394",
+          "times": [
+            0.2
+          ],
+          "gain": 1,
+          "offsetMs": 0
+        }
+      ],
+      "settings": {
+        "main": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "whip_default",
+      "number": 1,
+      "approvedRevision": 1,
+      "layers": [
+        {
+          "id": "main",
+          "name": "감아 묶기",
+          "audio": "cut/cfcb489d6eece78d6f62",
+          "times": [
+            0.25
+          ],
+          "gain": 1,
+          "offsetMs": 0
+        }
+      ],
+      "settings": {
+        "main": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "whip_range",
+      "number": 1,
+      "approvedRevision": 1,
+      "layers": [
+        {
+          "id": "main",
+          "name": "그물 펼치기",
+          "audio": "cut/cfcb489d6eece78d6f62",
+          "times": [
+            0.35
+          ],
+          "gain": 1,
+          "offsetMs": 0
+        }
+      ],
+      "settings": {
+        "main": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "whip_movement",
+      "number": 1,
+      "approvedRevision": 1,
+      "layers": [
+        {
+          "id": "main",
+          "name": "매듭 발동",
+          "audio": "cut/cfcb489d6eece78d6f62",
+          "times": [
+            0.15
+          ],
+          "gain": 1,
+          "offsetMs": 0
+        }
+      ],
+      "settings": {
+        "main": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "whip_follow_up",
+      "number": 1,
+      "approvedRevision": 5,
+      "layers": [
+        {
+          "id": "wrap",
+          "name": "처음 감기",
+          "audio": "cut/cfcb489d6eece78d6f62",
+          "times": [
+            0.25
+          ],
+          "gain": 1,
+          "anchor": "absolute",
+          "align": "peak"
+        }
+      ],
+      "settings": {},
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "rapier_default",
+      "number": 1,
+      "approvedRevision": 3,
+      "layers": [
+        {
+          "id": "release",
+          "name": "찌르기",
+          "audio": "cut/427645badb955b9fbd25",
+          "times": [
+            0.2
+          ],
+          "gain": 1,
+          "anchor": "absolute",
+          "align": "peak"
+        }
+      ],
+      "settings": {
+        "release": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "rapier_range",
+      "number": 1,
+      "approvedRevision": 1,
+      "layers": [
+        {
+          "id": "main",
+          "name": "긴 찌르기",
+          "audio": "cut/427645badb955b9fbd25",
+          "times": [
+            0.3
+          ],
+          "gain": 1,
+          "offsetMs": 0
+        }
+      ],
+      "settings": {
+        "main": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "rapier_movement",
+      "number": 1,
+      "approvedRevision": 2,
+      "layers": [
+        {
+          "id": "teleport",
+          "name": "순간이동",
+          "audio": "r2/16705b7fd7f3f196f2a3",
+          "times": [
+            0.010000000000000009
+          ],
+          "gain": 0.9,
+          "anchor": "absolute",
+          "align": "onset",
+          "group": "teleport"
+        },
+        {
+          "id": "attack",
+          "name": "찌르기",
+          "audio": "cut/427645badb955b9fbd25",
+          "times": [
+            0.1
+          ],
+          "gain": 1,
+          "anchor": "absolute",
+          "align": "peak"
+        }
+      ],
+      "settings": {
+        "teleport": {
+          "offsetMs": 0,
+          "volume": 100
+        },
+        "attack": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [
+        "teleport"
+      ],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "rapier_follow_up",
+      "number": 1,
+      "approvedRevision": 2,
+      "layers": [
+        {
+          "id": "teleport",
+          "name": "순간이동",
+          "audio": "r2/16705b7fd7f3f196f2a3",
+          "times": [
+            0.010000000000000009
+          ],
+          "gain": 0.9,
+          "anchor": "absolute",
+          "align": "onset",
+          "group": "teleport"
+        },
+        {
+          "id": "attack",
+          "name": "찌르기",
+          "audio": "cut/427645badb955b9fbd25",
+          "times": [
+            0.15,
+            0.27,
+            0.39,
+            0.51,
+            0.63
+          ],
+          "gain": 1,
+          "anchor": "absolute",
+          "align": "peak"
+        }
+      ],
+      "settings": {
+        "teleport": {
+          "offsetMs": 0,
+          "volume": 100
+        },
+        "attack": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [
+        "teleport"
+      ],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "dagger_default",
+      "number": 1,
+      "approvedRevision": 1,
+      "layers": [
+        {
+          "id": "main",
+          "name": "은신 진입",
+          "audio": "cut/ae9e56902456b35501b7",
+          "times": [
+            0.1
+          ],
+          "gain": 1,
+          "offsetMs": 0
+        }
+      ],
+      "settings": {
+        "main": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "dagger_range",
+      "number": 1,
+      "approvedRevision": 11,
+      "layers": [
+        {
+          "id": "smoke",
+          "audio": "approved/smoke",
+          "times": [
+            0
+          ],
+          "gain": 1,
+          "anchor": "activation",
+          "align": "onset"
+        }
+      ],
+      "settings": {},
+      "eventTriggers": [
+        "activated"
+      ],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "dagger_movement",
+      "number": 1,
+      "approvedRevision": 1,
+      "layers": [
+        {
+          "id": "main",
+          "name": "도약 한 번",
+          "audio": "cut/529815c3679a8159529f",
+          "times": [
+            0.08
+          ],
+          "gain": 1,
+          "offsetMs": 0
+        }
+      ],
+      "settings": {
+        "main": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "dagger_follow_up",
+      "number": 1,
+      "approvedRevision": 1,
+      "layers": [
+        {
+          "id": "main",
+          "name": "6연속 베기",
+          "audio": "cut/529815c3679a8159529f",
+          "times": [
+            0.15,
+            0.27,
+            0.39,
+            0.51,
+            0.63,
+            0.75
+          ],
+          "gain": 1,
+          "offsetMs": 0
+        }
+      ],
+      "settings": {
+        "main": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "hammer_default",
+      "number": 10,
+      "approvedRevision": 1,
+      "layers": [
+        {
+          "id": "main",
+          "name": "무거운 횡타",
+          "audio": "cut/4dbd85d292bd6abda659",
+          "times": [
+            0.4
+          ],
+          "gain": 1,
+          "offsetMs": 0
+        },
+        {
+          "id": "detail",
+          "name": "지면 충격",
+          "audio": "cut/cbe522bf136cc3a5d12c",
+          "times": [
+            0.4
+          ],
+          "gain": 0.42,
+          "offsetMs": 0
+        }
+      ],
+      "settings": {
+        "main": {
+          "offsetMs": 0,
+          "volume": 100
+        },
+        "detail": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "hammer_range",
+      "number": 10,
+      "approvedRevision": 1,
+      "layers": [
+        {
+          "id": "main",
+          "name": "지면 강타",
+          "audio": "cut/6ae558dbb27cd9470d3d",
+          "times": [
+            1
+          ],
+          "gain": 1,
+          "offsetMs": 0
+        },
+        {
+          "id": "detail",
+          "name": "보조 움직임",
+          "audio": "cut/5ce3e31d645c79f26172",
+          "times": [
+            0.9299999999999999
+          ],
+          "gain": 0.42,
+          "offsetMs": 0
+        }
+      ],
+      "settings": {
+        "main": {
+          "offsetMs": 0,
+          "volume": 100
+        },
+        "detail": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "hammer_movement",
+      "number": 1,
+      "approvedRevision": 1,
+      "layers": [
+        {
+          "id": "main",
+          "name": "돌진 밀치기",
+          "audio": "cut/b682a65a989d93d99938",
+          "times": [
+            0.2
+          ],
+          "gain": 1,
+          "offsetMs": 0
+        }
+      ],
+      "settings": {
+        "main": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "hammer_follow_up",
+      "number": 3,
+      "approvedRevision": 2,
+      "layers": [
+        {
+          "id": "slam",
+          "name": "첫 강타",
+          "audio": "r2/7d447ea1553d8ffb1dcf",
+          "times": [
+            0.6
+          ],
+          "gain": 1,
+          "anchor": "absolute",
+          "align": "peak"
+        },
+        {
+          "id": "aftershock",
+          "name": "땅속 여진",
+          "audio": "r2/f3b8f276f431d0d2c1e1",
+          "times": [
+            0.9,
+            1.2,
+            1.5
+          ],
+          "gain": 0.9,
+          "anchor": "absolute",
+          "align": "peak"
+        }
+      ],
+      "settings": {
+        "slam": {
+          "offsetMs": 0,
+          "volume": 100
+        },
+        "aftershock": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "shield_default",
+      "number": 1,
+      "approvedRevision": 3,
+      "layers": [
+        {
+          "id": "parry",
+          "name": "받아치기 · 퉁",
+          "audio": "r3/ec34993e2f2b120625eb",
+          "times": [
+            0
+          ],
+          "gain": 0.9,
+          "anchor": "impactDemo",
+          "align": "peak"
+        }
+      ],
+      "settings": {
+        "parry": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [
+        "parry"
+      ],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "shield_range",
+      "number": 1,
+      "approvedRevision": 4,
+      "layers": [
+        {
+          "id": "deploy",
+          "name": "짧은 우웅",
+          "audio": "r4/63d74983542f07e2232f",
+          "times": [
+            0.1
+          ],
+          "gain": 1,
+          "anchor": "absolute",
+          "align": "onset"
+        }
+      ],
+      "settings": {
+        "deploy": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "shield_movement",
+      "number": 4,
+      "approvedRevision": 4,
+      "layers": [
+        {
+          "id": "push",
+          "name": "짧은 방패 밀기 · 웅",
+          "audio": "r4/9b5530fc9cd107146d93",
+          "times": [
+            0.15
+          ],
+          "gain": 1,
+          "anchor": "absolute",
+          "align": "onset"
+        }
+      ],
+      "settings": {
+        "push": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "shield_follow_up",
+      "number": 3,
+      "approvedRevision": 9,
+      "layers": [
+        {
+          "id": "place",
+          "name": "설치 순간 · 묵직한 접촉",
+          "audio": "r9/e91b45bafe3851fe4dfc",
+          "times": [
+            0
+          ],
+          "gain": 0.9,
+          "anchor": "activation",
+          "align": "onset"
+        },
+        {
+          "id": "settle",
+          "name": "설치 직후 · 잉크 정착",
+          "audio": "r9/1a63f0e789854bbc8ad3",
+          "times": [
+            0.018
+          ],
+          "gain": 0.62,
+          "anchor": "activation",
+          "align": "onset"
+        }
+      ],
+      "settings": {
+        "place": {
+          "offsetMs": 0,
+          "volume": 100
+        },
+        "settle": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [
+        "placed"
+      ],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "greatsword_default",
+      "number": 6,
+      "approvedRevision": 1,
+      "layers": [
+        {
+          "id": "main",
+          "name": "모아 내려찍기",
+          "audio": "cut/f719a4ea7dac1e2f4912",
+          "times": [
+            0.25
+          ],
+          "gain": 1,
+          "offsetMs": 0
+        },
+        {
+          "id": "detail",
+          "name": "지면 충격",
+          "audio": "cut/cbe522bf136cc3a5d12c",
+          "times": [
+            0.25
+          ],
+          "gain": 0.42,
+          "offsetMs": 0
+        }
+      ],
+      "settings": {
+        "main": {
+          "offsetMs": 0,
+          "volume": 100
+        },
+        "detail": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "greatsword_default",
+      "number": 7,
+      "approvedRevision": 1,
+      "layers": [
+        {
+          "id": "main",
+          "name": "모아 내려찍기",
+          "audio": "cut/5ce3e31d645c79f26172",
+          "times": [
+            0.25
+          ],
+          "gain": 1,
+          "offsetMs": 0
+        },
+        {
+          "id": "detail",
+          "name": "지면 충격",
+          "audio": "cut/9fe99c10fe81aafdc043",
+          "times": [
+            0.25
+          ],
+          "gain": 0.42,
+          "offsetMs": 0
+        }
+      ],
+      "settings": {
+        "main": {
+          "offsetMs": 0,
+          "volume": 100
+        },
+        "detail": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "greatsword_range",
+      "number": 1,
+      "approvedRevision": 4,
+      "layers": [
+        {
+          "id": "summon",
+          "name": "검 소환 · 낮은 바람",
+          "audio": "r3/6b96669d59c56bd49007",
+          "times": [
+            0.25
+          ],
+          "gain": 0.75,
+          "anchor": "absolute",
+          "align": "onset"
+        },
+        {
+          "id": "impact",
+          "name": "넓고 묵직한 쿵",
+          "audio": "r4/88c52daceac93f05c927",
+          "times": [
+            0.45
+          ],
+          "gain": 1,
+          "anchor": "absolute",
+          "align": "peak"
+        }
+      ],
+      "settings": {
+        "summon": {
+          "offsetMs": 0,
+          "volume": 100
+        },
+        "impact": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "greatsword_movement",
+      "number": 4,
+      "approvedRevision": 2,
+      "layers": [
+        {
+          "id": "spin",
+          "name": "연속 회전",
+          "audio": "r2/73a601e10f9069330f1a",
+          "times": [
+            0
+          ],
+          "gain": 1,
+          "anchor": "activation",
+          "align": "onset",
+          "loop": true,
+          "duration": "sustain"
+        },
+        {
+          "id": "blade",
+          "name": "칼날 회전 악센트",
+          "audio": "r2/b602f3265b7b0e98c93e",
+          "times": [
+            0
+          ],
+          "gain": 0.65,
+          "anchor": "activation",
+          "align": "peak",
+          "repeatEvery": 0.25,
+          "duration": "sustain"
+        }
+      ],
+      "settings": {
+        "spin": {
+          "offsetMs": 0,
+          "volume": 100
+        },
+        "blade": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "greatsword_follow_up",
+      "number": 1,
+      "approvedRevision": 1,
+      "layers": [
+        {
+          "id": "main",
+          "name": "투척 후 회전",
+          "audio": "cut/f719a4ea7dac1e2f4912",
+          "times": [
+            0.4,
+            0.805,
+            1.05,
+            1.295
+          ],
+          "gain": 1,
+          "offsetMs": 0
+        }
+      ],
+      "settings": {
+        "main": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "launcher_basic_special",
+      "number": 1,
+      "approvedRevision": 4,
+      "layers": [
+        {
+          "id": "release",
+          "name": "짧은 포 발사",
+          "audio": "r3/d90ff1b62e9fc8b70d3c",
+          "times": [
+            0
+          ],
+          "gain": 0.9,
+          "anchor": "release",
+          "align": "peak"
+        }
+      ],
+      "settings": {
+        "release": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "launcher_range_special",
+      "number": 9,
+      "approvedRevision": 8,
+      "layers": [
+        {
+          "id": "laser",
+          "name": "밝고 두께 있는 레이저",
+          "audio": "r8/f707cbe070c475590eaa",
+          "times": [
+            0.15
+          ],
+          "gain": 1,
+          "anchor": "absolute",
+          "align": "onset"
+        }
+      ],
+      "settings": {
+        "laser": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "launcher_move_special",
+      "number": 1,
+      "approvedRevision": 3,
+      "layers": [
+        {
+          "id": "shotgun",
+          "audio": "r3/75bbfe1bef12bf384e7e",
+          "times": [
+            0.15
+          ],
+          "gain": 0.95,
+          "anchor": "absolute",
+          "align": "peak"
+        }
+      ],
+      "settings": {
+        "shotgun": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "launcher_followup_special",
+      "number": 2,
+      "approvedRevision": 3,
+      "layers": [
+        {
+          "id": "launch",
+          "name": "유탄 · 뽕",
+          "audio": "r2/c0482b6e59408374d1a3",
+          "times": [
+            0.2
+          ],
+          "gain": 1,
+          "anchor": "absolute",
+          "align": "peak"
+        },
+        {
+          "id": "explosion",
+          "name": "낮고 작은 퍼퍼벙",
+          "audio": "r3/1143dfcb80b098da443e",
+          "times": [
+            0
+          ],
+          "gain": 0.8,
+          "anchor": "impactDemo",
+          "align": "onset"
+        }
+      ],
+      "settings": {
+        "launch": {
+          "offsetMs": 0,
+          "volume": 100
+        },
+        "explosion": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [
+        "explosion"
+      ],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "bomb_basic_special",
+      "number": 2,
+      "approvedRevision": 12,
+      "layers": [
+        {
+          "id": "main",
+          "name": "02 시안 · 3연속 투척",
+          "audio": "cut/a31b196d9c473760ce1f",
+          "times": [
+            0.2,
+            0.35,
+            0.5
+          ],
+          "gain": 1,
+          "offsetMs": 0
+        },
+        {
+          "id": "explosion",
+          "name": "확정 · 폭탄 B3",
+          "audio": "approved/bomb-B3",
+          "times": [
+            0,
+            0.14999999999999997,
+            0.3
+          ],
+          "gain": 0.8,
+          "anchor": "impactDemo",
+          "align": "onset",
+          "group": "triple_explosion"
+        }
+      ],
+      "settings": {
+        "main": {
+          "offsetMs": 0,
+          "volume": 100
+        },
+        "explosion": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [
+        "explosion"
+      ],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "bomb_range_special",
+      "number": 8,
+      "approvedRevision": 11,
+      "layers": [
+        {
+          "id": "throw",
+          "name": "무거운 폭탄 투척",
+          "audio": "r2/7e32ac8f244255145e22",
+          "times": [
+            0.3
+          ],
+          "gain": 1.9,
+          "anchor": "absolute",
+          "align": "peak"
+        },
+        {
+          "id": "explosion",
+          "name": "충격 없는 물 분출·퍼짐",
+          "audio": "r11/380a9a7cdb2eb0736ec9",
+          "times": [
+            0
+          ],
+          "gain": 0.8,
+          "anchor": "impactDemo",
+          "align": "onset",
+          "group": "large_explosion"
+        }
+      ],
+      "settings": {
+        "throw": {
+          "offsetMs": 0,
+          "volume": 100
+        },
+        "explosion": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [
+        "explosion"
+      ],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "bomb_move_special",
+      "number": 1,
+      "approvedRevision": 12,
+      "layers": [
+        {
+          "id": "explosion",
+          "name": "확정 · 대형 폭탄 8번 폭발",
+          "audio": "r11/380a9a7cdb2eb0736ec9",
+          "times": [
+            0
+          ],
+          "gain": 0.8,
+          "anchor": "sustainEnd",
+          "align": "onset",
+          "group": "large_explosion"
+        }
+      ],
+      "settings": {
+        "explosion": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [
+        "explosion"
+      ],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "bomb_followup_special",
+      "number": 2,
+      "approvedRevision": 12,
+      "layers": [
+        {
+          "id": "throw",
+          "name": "무거운 폭탄 투척",
+          "audio": "r2/55710de3ef4974819786",
+          "times": [
+            0.2
+          ],
+          "gain": 1.9,
+          "anchor": "absolute",
+          "align": "peak"
+        },
+        {
+          "id": "explosion",
+          "name": "확정 · 대형 폭탄 8번 폭발",
+          "audio": "r11/380a9a7cdb2eb0736ec9",
+          "times": [
+            1.5
+          ],
+          "gain": 0.8,
+          "anchor": "impactDemo",
+          "align": "onset",
+          "group": "large_explosion"
+        }
+      ],
+      "settings": {
+        "throw": {
+          "offsetMs": 0,
+          "volume": 100
+        },
+        "explosion": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [
+        "explosion"
+      ],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "shuriken_basic_special",
+      "number": 2,
+      "approvedRevision": 1,
+      "layers": [
+        {
+          "id": "throw",
+          "name": "큰 수리검 투척",
+          "audio": "r3/d29bc90cfee18212cbd3",
+          "times": [
+            0.2
+          ],
+          "gain": 0.9,
+          "anchor": "absolute",
+          "align": "onset",
+          "group": "shuriken_throw"
+        }
+      ],
+      "settings": {
+        "main": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "shuriken_range_special",
+      "number": 1,
+      "approvedRevision": 12,
+      "layers": [
+        {
+          "id": "throw",
+          "name": "폭발 수리검 투척",
+          "audio": "r2/7d0b9d353e3cae70c9c8",
+          "times": [
+            0.2
+          ],
+          "gain": 1,
+          "anchor": "absolute",
+          "align": "onset"
+        },
+        {
+          "id": "explosion",
+          "name": "확정 · 폭탄 B3",
+          "audio": "approved/bomb-B3",
+          "times": [
+            0
+          ],
+          "gain": 0.8,
+          "anchor": "impactDemo",
+          "align": "onset",
+          "group": "normal_explosion"
+        }
+      ],
+      "settings": {
+        "throw": {
+          "offsetMs": 0,
+          "volume": 100
+        },
+        "explosion": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [
+        "explosion"
+      ],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "shuriken_move_special",
+      "number": 2,
+      "approvedRevision": 3,
+      "layers": [
+        {
+          "id": "attack",
+          "name": "투척",
+          "audio": "cut/85a0f4fdbbf93ee8320b",
+          "times": [
+            0.2
+          ],
+          "gain": 1,
+          "anchor": "absolute",
+          "align": "peak"
+        },
+        {
+          "id": "hit",
+          "name": "첫 적중",
+          "audio": "r3/0c347b0d5b834705b042",
+          "times": [
+            0
+          ],
+          "gain": 0.6,
+          "anchor": "impactDemo",
+          "align": "peak"
+        },
+        {
+          "id": "teleport",
+          "name": "적중 직후 순간이동",
+          "audio": "r2/16705b7fd7f3f196f2a3",
+          "times": [
+            0.03
+          ],
+          "gain": 0.9,
+          "anchor": "impactDemo",
+          "align": "onset",
+          "group": "teleport"
+        },
+        {
+          "id": "return",
+          "name": "5초 뒤 원위치 복귀",
+          "audio": "r2/16705b7fd7f3f196f2a3",
+          "times": [
+            5
+          ],
+          "gain": 0.9,
+          "anchor": "impactDemo",
+          "align": "onset",
+          "group": "teleport"
+        }
+      ],
+      "settings": {
+        "attack": {
+          "offsetMs": 0,
+          "volume": 100
+        },
+        "hit": {
+          "offsetMs": 0,
+          "volume": 100
+        },
+        "teleport": {
+          "offsetMs": 0,
+          "volume": 100
+        },
+        "return": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [
+        "hit",
+        "teleport",
+        "return"
+      ],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    },
+    {
+      "id": "shuriken_followup_special",
+      "number": 1,
+      "approvedRevision": 4,
+      "layers": [
+        {
+          "id": "throw",
+          "name": "큰 수리검 투척",
+          "audio": "r3/d29bc90cfee18212cbd3",
+          "times": [
+            0.2
+          ],
+          "gain": 0.9,
+          "anchor": "absolute",
+          "align": "onset",
+          "group": "shuriken_throw"
+        },
+        {
+          "id": "spin",
+          "name": "02 회전음 · 1.12배",
+          "audio": "r2/3b6ca36bbb5a545b7ea6",
+          "times": [
+            0
+          ],
+          "gain": 0.9,
+          "anchor": "activation",
+          "align": "onset",
+          "loop": true,
+          "duration": "sustain",
+          "rate": 1.12,
+          "fadeSeconds": 0.12,
+          "previousRevision": 2
+        }
+      ],
+      "settings": {
+        "throw": {
+          "offsetMs": 0,
+          "volume": 100
+        },
+        "spin": {
+          "offsetMs": 0,
+          "volume": 100
+        }
+      },
+      "eventTriggers": [],
+      "override": "latest explicit common sound / louder throw / smoke directions take precedence"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "base_sword_default",
+      "number": 5,
+      "file": "base_sword_default_05.wav",
+      "sha256": "62e178284df6434651b3e03bbb741b042af63ebe035254536f365248115c1985",
+      "bytes": 28384,
+      "samples": 14170,
+      "events": [
+        {
+          "audio": "cut/1539dd5cce8cd9b2c394",
+          "sourceSha256": "1539dd5cce8cd9b2c39426a64b7f2195aebd4d1789c894f00ddee123e17e52eb",
+          "time": 0.10443749999999999,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.19077083333333333
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "base_sword_range",
+      "number": 5,
+      "file": "base_sword_range_05.wav",
+      "sha256": "e39629c5d9f6b67f0e79f1c402ab83c26ccbd427d4bbd3a867d3af370b245d70",
+      "bytes": 32704,
+      "samples": 16330,
+      "events": [
+        {
+          "audio": "cut/1539dd5cce8cd9b2c394",
+          "sourceSha256": "1539dd5cce8cd9b2c39426a64b7f2195aebd4d1789c894f00ddee123e17e52eb",
+          "time": 0.1494375,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.19077083333333333
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "base_sword_movement",
+      "number": 4,
+      "file": "base_sword_movement_04.wav",
+      "sha256": "9f34125f27e30cd1e4d59cbdcbee5e54bd2db661fad9c2301ff796a4cde62005",
+      "bytes": 26502,
+      "samples": 13229,
+      "events": [
+        {
+          "audio": "cut/1716d1eca819fc7cf2d8",
+          "sourceSha256": "1716d1eca819fc7cf2d81ff43c63a07622cbc48bb2b2e226f08c78c13c6b6245",
+          "time": 0.108625,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.16697916666666668
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "base_sword_follow_up",
+      "number": 1,
+      "file": "base_sword_follow_up_01.wav",
+      "sha256": "e39629c5d9f6b67f0e79f1c402ab83c26ccbd427d4bbd3a867d3af370b245d70",
+      "bytes": 32704,
+      "samples": 16330,
+      "events": [
+        {
+          "audio": "cut/1539dd5cce8cd9b2c394",
+          "sourceSha256": "1539dd5cce8cd9b2c39426a64b7f2195aebd4d1789c894f00ddee123e17e52eb",
+          "time": 0.1494375,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.19077083333333333
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "whip_default",
+      "number": 1,
+      "file": "whip_default_01.wav",
+      "sha256": "41adecb659d7bbaa22dba7d434104ea73144620d6f04e989ad88fba6ca965aec",
+      "bytes": 35406,
+      "samples": 17681,
+      "events": [
+        {
+          "audio": "cut/cfcb489d6eece78d6f62",
+          "sourceSha256": "cfcb489d6eece78d6f6204c965377b4b04df8be8d2ea2c71c5e9b911b41cd082",
+          "time": 0.206125,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.16222916666666667
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "whip_range",
+      "number": 1,
+      "file": "whip_range_01.wav",
+      "sha256": "32c25eef4e3a56ca472699e1fd0306deaf9c2aa7bfa761180b532024a7b67db3",
+      "bytes": 45006,
+      "samples": 22481,
+      "events": [
+        {
+          "audio": "cut/cfcb489d6eece78d6f62",
+          "sourceSha256": "cfcb489d6eece78d6f6204c965377b4b04df8be8d2ea2c71c5e9b911b41cd082",
+          "time": 0.306125,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.16222916666666667
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "whip_movement",
+      "number": 1,
+      "file": "whip_movement_01.wav",
+      "sha256": "ac075df2f536f8b6595017e0d772dcaff6f2e0f1a1d5f8d2e54cae410c6f1891",
+      "bytes": 25806,
+      "samples": 12881,
+      "events": [
+        {
+          "audio": "cut/cfcb489d6eece78d6f62",
+          "sourceSha256": "cfcb489d6eece78d6f6204c965377b4b04df8be8d2ea2c71c5e9b911b41cd082",
+          "time": 0.106125,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.16222916666666667
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "whip_follow_up",
+      "number": 1,
+      "file": "whip_follow_up_01.wav",
+      "sha256": "41adecb659d7bbaa22dba7d434104ea73144620d6f04e989ad88fba6ca965aec",
+      "bytes": 35406,
+      "samples": 17681,
+      "events": [
+        {
+          "audio": "cut/cfcb489d6eece78d6f62",
+          "sourceSha256": "cfcb489d6eece78d6f6204c965377b4b04df8be8d2ea2c71c5e9b911b41cd082",
+          "time": 0.206125,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.16222916666666667
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "rapier_default",
+      "number": 1,
+      "file": "rapier_default_01.wav",
+      "sha256": "106d4e30e6b4f407732a6b0467ba805b585083fa9c3216af74d2998f17a7e6a5",
+      "bytes": 27542,
+      "samples": 13749,
+      "events": [
+        {
+          "audio": "cut/427645badb955b9fbd25",
+          "sourceSha256": "427645badb955b9fbd25aa8244b7be144bd84abcc33f1fc712edcf75a71debca",
+          "time": 0.15152083333333335,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.13491666666666666
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "rapier_range",
+      "number": 1,
+      "file": "rapier_range_01.wav",
+      "sha256": "28f6a8719d44731d498129913085fb0bd48f24d0269e38daf1c0502252a196ba",
+      "bytes": 37142,
+      "samples": 18549,
+      "events": [
+        {
+          "audio": "cut/427645badb955b9fbd25",
+          "sourceSha256": "427645badb955b9fbd25aa8244b7be144bd84abcc33f1fc712edcf75a71debca",
+          "time": 0.2515208333333333,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.13491666666666666
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "rapier_movement",
+      "number": 1,
+      "file": "rapier_movement_01.wav",
+      "sha256": "fe0cf4a20f3220c69bfa1056cf2821e353dfd91e50f9d3acab3c30b433c7c4f8",
+      "bytes": 17942,
+      "samples": 8949,
+      "events": [
+        {
+          "audio": "cut/427645badb955b9fbd25",
+          "sourceSha256": "427645badb955b9fbd25aa8244b7be144bd84abcc33f1fc712edcf75a71debca",
+          "time": 0.05152083333333334,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.13491666666666666
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "rapier_movement__teleport",
+      "number": 1,
+      "file": "rapier_movement__teleport_01.wav",
+      "sha256": "365f7f0df948064ede673fb4f9c3281ea646deb17ef8541b6773dbb22801e664",
+      "bytes": 17996,
+      "samples": 8976,
+      "events": [
+        {
+          "audio": "r2/16705b7fd7f3f196f2a3",
+          "sourceSha256": "16705b7fd7f3f196f2a36245a739a56af054e7c66a1d854623f768dd87be0390",
+          "time": 0.0,
+          "gain": 0.9,
+          "rate": 1,
+          "duration": 0.187
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "rapier_follow_up",
+      "number": 1,
+      "file": "rapier_follow_up_01.wav",
+      "sha256": "e7569d7de982cb7545da09f71b80793a738d7dc4f00dc61562756bbda88ddb88",
+      "bytes": 68822,
+      "samples": 34389,
+      "events": [
+        {
+          "audio": "cut/427645badb955b9fbd25",
+          "sourceSha256": "427645badb955b9fbd25aa8244b7be144bd84abcc33f1fc712edcf75a71debca",
+          "time": 0.10152083333333334,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.13491666666666666
+        },
+        {
+          "audio": "cut/427645badb955b9fbd25",
+          "sourceSha256": "427645badb955b9fbd25aa8244b7be144bd84abcc33f1fc712edcf75a71debca",
+          "time": 0.22152083333333336,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.13491666666666666
+        },
+        {
+          "audio": "cut/427645badb955b9fbd25",
+          "sourceSha256": "427645badb955b9fbd25aa8244b7be144bd84abcc33f1fc712edcf75a71debca",
+          "time": 0.34152083333333333,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.13491666666666666
+        },
+        {
+          "audio": "cut/427645badb955b9fbd25",
+          "sourceSha256": "427645badb955b9fbd25aa8244b7be144bd84abcc33f1fc712edcf75a71debca",
+          "time": 0.4615208333333333,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.13491666666666666
+        },
+        {
+          "audio": "cut/427645badb955b9fbd25",
+          "sourceSha256": "427645badb955b9fbd25aa8244b7be144bd84abcc33f1fc712edcf75a71debca",
+          "time": 0.5815208333333334,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.13491666666666666
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "rapier_follow_up__teleport",
+      "number": 1,
+      "file": "rapier_follow_up__teleport_01.wav",
+      "sha256": "365f7f0df948064ede673fb4f9c3281ea646deb17ef8541b6773dbb22801e664",
+      "bytes": 17996,
+      "samples": 8976,
+      "events": [
+        {
+          "audio": "r2/16705b7fd7f3f196f2a3",
+          "sourceSha256": "16705b7fd7f3f196f2a36245a739a56af054e7c66a1d854623f768dd87be0390",
+          "time": 0.0,
+          "gain": 0.9,
+          "rate": 1,
+          "duration": 0.187
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "dagger_default",
+      "number": 1,
+      "file": "dagger_default_01.wav",
+      "sha256": "8ec8c63bd7909b0374ecd49774a4fe3ca17b5ffbf535cd70901ea658ae19064b",
+      "bytes": 23460,
+      "samples": 11708,
+      "events": [
+        {
+          "audio": "cut/ae9e56902456b35501b7",
+          "sourceSha256": "ae9e56902456b35501b70383b74b07840f17b4036dcc9a151632efc3a82d1ea5",
+          "time": 0.05891666666666667,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.185
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "dagger_range",
+      "number": 1,
+      "file": "dagger_range_01.wav",
+      "sha256": "c00744703f8b1cc40f0178e56ba45d9f6e6f64d5491303b7a2ffd8e58c346401",
+      "bytes": 46,
+      "samples": 1,
+      "events": [],
+      "safeGain": 1
+    },
+    {
+      "id": "dagger_range__activated",
+      "number": 1,
+      "file": "dagger_range__activated_01.wav",
+      "sha256": "d837c9ea1022198144c1bbe3c0292e21cb8d4df6f3a98bc84a3797e07e9e627d",
+      "bytes": 74924,
+      "samples": 37440,
+      "events": [
+        {
+          "audio": "approved/smoke",
+          "sourceSha256": "d837c9ea1022198144c1bbe3c0292e21cb8d4df6f3a98bc84a3797e07e9e627d",
+          "time": 0.0,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.78
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "dagger_movement",
+      "number": 1,
+      "file": "dagger_movement_01.wav",
+      "sha256": "3817af5c88a980d989b824b60fbf217926dd15e0b1496cf5f80bccdc9784fe3c",
+      "bytes": 25052,
+      "samples": 12504,
+      "events": [
+        {
+          "audio": "cut/529815c3679a8159529f",
+          "sourceSha256": "529815c3679a8159529f8c4259de01ac304706ad1272da97d028dce6f02d1c7f",
+          "time": 0.035479166666666666,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.22502083333333334
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "dagger_follow_up",
+      "number": 1,
+      "file": "dagger_follow_up_01.wav",
+      "sha256": "b38ea7c93156442d98cf4f57c818823df3309d128e2a491e78166dfd3dcae303",
+      "bytes": 89372,
+      "samples": 44664,
+      "events": [
+        {
+          "audio": "cut/529815c3679a8159529f",
+          "sourceSha256": "529815c3679a8159529f8c4259de01ac304706ad1272da97d028dce6f02d1c7f",
+          "time": 0.10547916666666665,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.22502083333333334
+        },
+        {
+          "audio": "cut/529815c3679a8159529f",
+          "sourceSha256": "529815c3679a8159529f8c4259de01ac304706ad1272da97d028dce6f02d1c7f",
+          "time": 0.22547916666666667,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.22502083333333334
+        },
+        {
+          "audio": "cut/529815c3679a8159529f",
+          "sourceSha256": "529815c3679a8159529f8c4259de01ac304706ad1272da97d028dce6f02d1c7f",
+          "time": 0.34547916666666667,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.22502083333333334
+        },
+        {
+          "audio": "cut/529815c3679a8159529f",
+          "sourceSha256": "529815c3679a8159529f8c4259de01ac304706ad1272da97d028dce6f02d1c7f",
+          "time": 0.46547916666666667,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.22502083333333334
+        },
+        {
+          "audio": "cut/529815c3679a8159529f",
+          "sourceSha256": "529815c3679a8159529f8c4259de01ac304706ad1272da97d028dce6f02d1c7f",
+          "time": 0.5854791666666667,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.22502083333333334
+        },
+        {
+          "audio": "cut/529815c3679a8159529f",
+          "sourceSha256": "529815c3679a8159529f8c4259de01ac304706ad1272da97d028dce6f02d1c7f",
+          "time": 0.7054791666666667,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.22502083333333334
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "hammer_default",
+      "number": 10,
+      "file": "hammer_default_10.wav",
+      "sha256": "027a6dc8adbae7ae835ae29e2e2a3eb95215ad82f0d1e1d18eebc43dea586149",
+      "bytes": 61300,
+      "samples": 30628,
+      "events": [
+        {
+          "audio": "cut/4dbd85d292bd6abda659",
+          "sourceSha256": "4dbd85d292bd6abda65919e0d790fdc0d2b5a4077fb22b279d9a65c3de2a0f0c",
+          "time": 0.3527291666666667,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.20302083333333334
+        },
+        {
+          "audio": "cut/cbe522bf136cc3a5d12c",
+          "sourceSha256": "cbe522bf136cc3a5d12c48c7b873e5c1ca048f565e27c0b078f4e89bcfb05cb2",
+          "time": 0.35308333333333336,
+          "gain": 0.42,
+          "rate": 1,
+          "duration": 0.285
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "hammer_range",
+      "number": 10,
+      "file": "hammer_range_10.wav",
+      "sha256": "7a7b3e39989f20e31114006d2207bee6b4935768e3fe19d533370be621b93a9e",
+      "bytes": 130074,
+      "samples": 65015,
+      "events": [
+        {
+          "audio": "cut/6ae558dbb27cd9470d3d",
+          "sourceSha256": "6ae558dbb27cd9470d3da1d7fd7aa24f7cd0071569bca3eb9b9f6e4c16a752f5",
+          "time": 0.9894791666666667,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.365
+        },
+        {
+          "audio": "cut/5ce3e31d645c79f26172",
+          "sourceSha256": "5ce3e31d645c79f2617203256c479100d718e1ccf7fd2e40ae78ce581ccd0971",
+          "time": 0.8855208333333333,
+          "gain": 0.42,
+          "rate": 1,
+          "duration": 0.19425
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "hammer_movement",
+      "number": 1,
+      "file": "hammer_movement_01.wav",
+      "sha256": "80ed871bac21d339a7fff762cbedc3e73495d69f63c61c1154833e5188c87780",
+      "bytes": 33226,
+      "samples": 16591,
+      "events": [
+        {
+          "audio": "cut/b682a65a989d93d99938",
+          "sourceSha256": "b682a65a989d93d999385ccf5b0f850c4772acc44a6eee3ac695379a8df32826",
+          "time": 0.15891666666666668,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.18672916666666667
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "hammer_follow_up",
+      "number": 3,
+      "file": "hammer_follow_up_03.wav",
+      "sha256": "637e6500cc389085fed05768f89cc198505b44765cd8f10041107b38fd9e4a3e",
+      "bytes": 170380,
+      "samples": 85168,
+      "events": [
+        {
+          "audio": "r2/7d447ea1553d8ffb1dcf",
+          "sourceSha256": "7d447ea1553d8ffb1dcf14c8bf44e3ce88b11b68143478e53ab04bc310b0aeb7",
+          "time": 0.45237499999999997,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.272
+        },
+        {
+          "audio": "r2/f3b8f276f431d0d2c1e1",
+          "sourceSha256": "f3b8f276f431d0d2c1e1304bcb5f011cf0435df72b13c62d987a208f9ad147cc",
+          "time": 0.8023333333333333,
+          "gain": 0.9,
+          "rate": 1,
+          "duration": 0.372
+        },
+        {
+          "audio": "r2/f3b8f276f431d0d2c1e1",
+          "sourceSha256": "f3b8f276f431d0d2c1e1304bcb5f011cf0435df72b13c62d987a208f9ad147cc",
+          "time": 1.1023333333333334,
+          "gain": 0.9,
+          "rate": 1,
+          "duration": 0.372
+        },
+        {
+          "audio": "r2/f3b8f276f431d0d2c1e1",
+          "sourceSha256": "f3b8f276f431d0d2c1e1304bcb5f011cf0435df72b13c62d987a208f9ad147cc",
+          "time": 1.4023333333333334,
+          "gain": 0.9,
+          "rate": 1,
+          "duration": 0.372
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "shield_default",
+      "number": 1,
+      "file": "shield_default_01.wav",
+      "sha256": "c00744703f8b1cc40f0178e56ba45d9f6e6f64d5491303b7a2ffd8e58c346401",
+      "bytes": 46,
+      "samples": 1,
+      "events": [],
+      "safeGain": 1
+    },
+    {
+      "id": "shield_default__parry",
+      "number": 1,
+      "file": "shield_default__parry_01.wav",
+      "sha256": "493912e592fffe5004d0d4642cf3aa04a6982ea4c02d142d900635f0b49dd9f2",
+      "bytes": 33850,
+      "samples": 16903,
+      "events": [
+        {
+          "audio": "r3/ec34993e2f2b120625eb",
+          "sourceSha256": "ec34993e2f2b120625ebae7f3e3b034766618638388ed4432d1e913671d164f5",
+          "time": -0.017395833333333333,
+          "gain": 0.9,
+          "rate": 1,
+          "duration": 0.36954166666666666
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "shield_range",
+      "number": 1,
+      "file": "shield_range_01.wav",
+      "sha256": "91b28e5b0db9ddc4c30dac80642f28edd67b18c48130ac43e3bf2d3a1dd9e5f5",
+      "bytes": 55724,
+      "samples": 27840,
+      "events": [
+        {
+          "audio": "r4/63d74983542f07e2232f",
+          "sourceSha256": "63d74983542f07e2232fd3655e0d4ed1c53ca3c90780ab900903e770dfe3b4f5",
+          "time": 0.1,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.48
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "shield_movement",
+      "number": 4,
+      "file": "shield_movement_04.wav",
+      "sha256": "e923be8a0df10183fc608bac4f56906290745ccb49823c569a8b3e443496f06c",
+      "bytes": 49196,
+      "samples": 24576,
+      "events": [
+        {
+          "audio": "r4/9b5530fc9cd107146d93",
+          "sourceSha256": "9b5530fc9cd107146d9398fc8f5c20b77b83ea33190185439ee187ffae1ec970",
+          "time": 0.15,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.362
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "shield_follow_up",
+      "number": 3,
+      "file": "shield_follow_up_03.wav",
+      "sha256": "c00744703f8b1cc40f0178e56ba45d9f6e6f64d5491303b7a2ffd8e58c346401",
+      "bytes": 46,
+      "samples": 1,
+      "events": [],
+      "safeGain": 1
+    },
+    {
+      "id": "shield_follow_up__placed",
+      "number": 3,
+      "file": "shield_follow_up__placed_03.wav",
+      "sha256": "4e79ec06b6ee72017a2a2b0dc0a4918de82aef8cf3a59f392317aa825a752b28",
+      "bytes": 78572,
+      "samples": 39264,
+      "events": [
+        {
+          "audio": "r9/e91b45bafe3851fe4dfc",
+          "sourceSha256": "e91b45bafe3851fe4dfc99b358c180349067ee81935d0b38332565f8ba6804a8",
+          "time": 0.0,
+          "gain": 0.9,
+          "rate": 1,
+          "duration": 0.46
+        },
+        {
+          "audio": "r9/1a63f0e789854bbc8ad3",
+          "sourceSha256": "1a63f0e789854bbc8ad3b45963230138d6e961c31a77bce90e87e7d488cb2108",
+          "time": 0.018,
+          "gain": 0.62,
+          "rate": 1,
+          "duration": 0.8
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "greatsword_default",
+      "number": 6,
+      "file": "greatsword_default_06.wav",
+      "sha256": "7c4c2a16de6f4294b660420da63046e0ad0fe6109f479fbb0980e73dab05f8a0",
+      "bytes": 46900,
+      "samples": 23428,
+      "events": [
+        {
+          "audio": "cut/f719a4ea7dac1e2f4912",
+          "sourceSha256": "f719a4ea7dac1e2f49121efcd4bc00eff8629b9078b70280fa616f8ec1b5af7b",
+          "time": 0.19297916666666667,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.27
+        },
+        {
+          "audio": "cut/cbe522bf136cc3a5d12c",
+          "sourceSha256": "cbe522bf136cc3a5d12c48c7b873e5c1ca048f565e27c0b078f4e89bcfb05cb2",
+          "time": 0.20308333333333334,
+          "gain": 0.42,
+          "rate": 1,
+          "duration": 0.285
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "greatsword_default",
+      "number": 7,
+      "file": "greatsword_default_07.wav",
+      "sha256": "efaa8b2adcc359f9fdbd3d99dbca762ef7c56361aa5813d950f3d16450909a9b",
+      "bytes": 47058,
+      "samples": 23507,
+      "events": [
+        {
+          "audio": "cut/5ce3e31d645c79f26172",
+          "sourceSha256": "5ce3e31d645c79f2617203256c479100d718e1ccf7fd2e40ae78ce581ccd0971",
+          "time": 0.20552083333333332,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.19425
+        },
+        {
+          "audio": "cut/9fe99c10fe81aafdc043",
+          "sourceSha256": "9fe99c10fe81aafdc043c17a9f21ac0dc2a36354de46a08cc211de738540f4c6",
+          "time": 0.20475,
+          "gain": 0.42,
+          "rate": 1,
+          "duration": 0.2849791666666667
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "greatsword_range",
+      "number": 1,
+      "file": "greatsword_range_01.wav",
+      "sha256": "86a07411c9e2e1ef62f1da53a1ddb9dcf9ceabd3631e8e34b7f40865730b1e5f",
+      "bytes": 118854,
+      "samples": 59405,
+      "events": [
+        {
+          "audio": "r3/6b96669d59c56bd49007",
+          "sourceSha256": "6b96669d59c56bd490070d63fe1b259af042fe31f00d95c0b6e5ee99c174e646",
+          "time": 0.25,
+          "gain": 0.75,
+          "rate": 1,
+          "duration": 0.16477083333333334
+        },
+        {
+          "audio": "r4/88c52daceac93f05c927",
+          "sourceSha256": "88c52daceac93f05c927feda340a66db7d18ab9c521587171f060d42b533d33a",
+          "time": 0.402625,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.8349791666666667
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "greatsword_movement",
+      "number": 4,
+      "file": "greatsword_movement_04.wav",
+      "sha256": "21a945f984d567fa8d110144dfa20430aea3e0d61c7c9ab27466fab9d0ace15a",
+      "bytes": 211244,
+      "samples": 105600,
+      "events": [
+        {
+          "audio": "r2/73a601e10f9069330f1a",
+          "sourceSha256": "73a601e10f9069330f1aff19ab3cfc76b516361e2faccd570a6765042fb0adf8",
+          "time": 0.2,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 2,
+          "loop": true,
+          "fadeSeconds": 0.035
+        },
+        {
+          "audio": "r2/b602f3265b7b0e98c93e",
+          "sourceSha256": "b602f3265b7b0e98c93efb37ca2a125b1a0e136944f1277c7f2b1e391a8187a2",
+          "time": 0.18220833333333333,
+          "gain": 0.65,
+          "rate": 1,
+          "duration": 0.172
+        },
+        {
+          "audio": "r2/b602f3265b7b0e98c93e",
+          "sourceSha256": "b602f3265b7b0e98c93efb37ca2a125b1a0e136944f1277c7f2b1e391a8187a2",
+          "time": 0.43220833333333336,
+          "gain": 0.65,
+          "rate": 1,
+          "duration": 0.172
+        },
+        {
+          "audio": "r2/b602f3265b7b0e98c93e",
+          "sourceSha256": "b602f3265b7b0e98c93efb37ca2a125b1a0e136944f1277c7f2b1e391a8187a2",
+          "time": 0.6822083333333333,
+          "gain": 0.65,
+          "rate": 1,
+          "duration": 0.172
+        },
+        {
+          "audio": "r2/b602f3265b7b0e98c93e",
+          "sourceSha256": "b602f3265b7b0e98c93efb37ca2a125b1a0e136944f1277c7f2b1e391a8187a2",
+          "time": 0.9322083333333333,
+          "gain": 0.65,
+          "rate": 1,
+          "duration": 0.172
+        },
+        {
+          "audio": "r2/b602f3265b7b0e98c93e",
+          "sourceSha256": "b602f3265b7b0e98c93efb37ca2a125b1a0e136944f1277c7f2b1e391a8187a2",
+          "time": 1.1822083333333333,
+          "gain": 0.65,
+          "rate": 1,
+          "duration": 0.172
+        },
+        {
+          "audio": "r2/b602f3265b7b0e98c93e",
+          "sourceSha256": "b602f3265b7b0e98c93efb37ca2a125b1a0e136944f1277c7f2b1e391a8187a2",
+          "time": 1.4322083333333333,
+          "gain": 0.65,
+          "rate": 1,
+          "duration": 0.172
+        },
+        {
+          "audio": "r2/b602f3265b7b0e98c93e",
+          "sourceSha256": "b602f3265b7b0e98c93efb37ca2a125b1a0e136944f1277c7f2b1e391a8187a2",
+          "time": 1.6822083333333333,
+          "gain": 0.65,
+          "rate": 1,
+          "duration": 0.172
+        },
+        {
+          "audio": "r2/b602f3265b7b0e98c93e",
+          "sourceSha256": "b602f3265b7b0e98c93efb37ca2a125b1a0e136944f1277c7f2b1e391a8187a2",
+          "time": 1.9322083333333333,
+          "gain": 0.65,
+          "rate": 1,
+          "duration": 0.172
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "greatsword_follow_up",
+      "number": 1,
+      "file": "greatsword_follow_up_01.wav",
+      "sha256": "a05ccb657ce154b87714e634e33360c920bee49df553c8046cd4bc950b156cda",
+      "bytes": 144810,
+      "samples": 72383,
+      "events": [
+        {
+          "audio": "cut/f719a4ea7dac1e2f4912",
+          "sourceSha256": "f719a4ea7dac1e2f49121efcd4bc00eff8629b9078b70280fa616f8ec1b5af7b",
+          "time": 0.34297916666666667,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.27
+        },
+        {
+          "audio": "cut/f719a4ea7dac1e2f4912",
+          "sourceSha256": "f719a4ea7dac1e2f49121efcd4bc00eff8629b9078b70280fa616f8ec1b5af7b",
+          "time": 0.7479791666666668,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.27
+        },
+        {
+          "audio": "cut/f719a4ea7dac1e2f4912",
+          "sourceSha256": "f719a4ea7dac1e2f49121efcd4bc00eff8629b9078b70280fa616f8ec1b5af7b",
+          "time": 0.9929791666666667,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.27
+        },
+        {
+          "audio": "cut/f719a4ea7dac1e2f4912",
+          "sourceSha256": "f719a4ea7dac1e2f49121efcd4bc00eff8629b9078b70280fa616f8ec1b5af7b",
+          "time": 1.2379791666666666,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.27
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "launcher_basic_special",
+      "number": 1,
+      "file": "launcher_basic_special_01.wav",
+      "sha256": "cc89d41cba6c5d8c9f5ef3073a93faa86445c09bff752ee1410e52be7037c947",
+      "bytes": 57786,
+      "samples": 28871,
+      "events": [
+        {
+          "audio": "r3/d90ff1b62e9fc8b70d3c",
+          "sourceSha256": "d90ff1b62e9fc8b70d3cf8d6b63419a82376fd45ec3296bc330c18205589d4f8",
+          "time": 0.18150000000000002,
+          "gain": 0.9,
+          "rate": 1,
+          "duration": 0.4199791666666667
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "launcher_range_special",
+      "number": 9,
+      "file": "launcher_range_special_09.wav",
+      "sha256": "295790d12169239f911f13c99dd9ad6d898d1d6147b53ec4a4b87756acc69c58",
+      "bytes": 72428,
+      "samples": 36192,
+      "events": [
+        {
+          "audio": "r8/f707cbe070c475590eaa",
+          "sourceSha256": "f707cbe070c475590eaa8cf383418a275790c8bdeea1a9b7d0206e933594ea94",
+          "time": 0.15,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.604
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "launcher_move_special",
+      "number": 1,
+      "file": "launcher_move_special_01.wav",
+      "sha256": "71bf625e84d01f1f068c87d0f17bd35b128384dc485d82d39cf85903de1742f9",
+      "bytes": 61008,
+      "samples": 30482,
+      "events": [
+        {
+          "audio": "r3/75bbfe1bef12bf384e7e",
+          "sourceSha256": "75bbfe1bef12bf384e7e05837d5a6873715aebeae4d2d6ed945d5b307d1708ac",
+          "time": 0.1350625,
+          "gain": 0.95,
+          "rate": 1,
+          "duration": 0.49997916666666664
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "launcher_followup_special",
+      "number": 2,
+      "file": "launcher_followup_special_02.wav",
+      "sha256": "fad76222054f6042de3a940227759a47054a2a1f32c390a8ebbe72d1f213418d",
+      "bytes": 35904,
+      "samples": 17930,
+      "events": [
+        {
+          "audio": "r2/c0482b6e59408374d1a3",
+          "sourceSha256": "c0482b6e59408374d1a3b894df715584878d225b90d7af66351b8dded5623027",
+          "time": 0.09479166666666668,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.27875
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "launcher_followup_special__explosion",
+      "number": 2,
+      "file": "launcher_followup_special__explosion_02.wav",
+      "sha256": "3112258beb3f424b496de5c29e488ab6ef65753d252ed4edbaf9771e4fd57d7b",
+      "bytes": 51882,
+      "samples": 25919,
+      "events": [
+        {
+          "audio": "r3/1143dfcb80b098da443e",
+          "sourceSha256": "1143dfcb80b098da443e0284edaa8bb1e59cc1e27457746f9bd73bc5ac1fbcc7",
+          "time": 0.0,
+          "gain": 0.8,
+          "rate": 1,
+          "duration": 0.5399791666666667
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "bomb_basic_special",
+      "number": 2,
+      "file": "bomb_basic_special_02.wav",
+      "sha256": "0b3538a78e4fa3ec619dd3abf1402bc660b39d5df8381240513d2336d3c9a75f",
+      "bytes": 68120,
+      "samples": 34038,
+      "events": [
+        {
+          "audio": "cut/a31b196d9c473760ce1f",
+          "sourceSha256": "a31b196d9c473760ce1f46070435286aa05a724981ac50e7cbe24e900487045a",
+          "time": 0.156125,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.253
+        },
+        {
+          "audio": "cut/a31b196d9c473760ce1f",
+          "sourceSha256": "a31b196d9c473760ce1f46070435286aa05a724981ac50e7cbe24e900487045a",
+          "time": 0.306125,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.253
+        },
+        {
+          "audio": "cut/a31b196d9c473760ce1f",
+          "sourceSha256": "a31b196d9c473760ce1f46070435286aa05a724981ac50e7cbe24e900487045a",
+          "time": 0.456125,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.253
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "bomb_basic_special__explosion",
+      "number": 2,
+      "file": "bomb_basic_special__explosion_02.wav",
+      "sha256": "98acb4772b6f3236502d7f43a70f5bfae0f3bd9d9e795a57d52c95b5b1eeb949",
+      "bytes": 100844,
+      "samples": 50400,
+      "events": [
+        {
+          "audio": "approved/bomb-B3",
+          "sourceSha256": "822a47da3fe91fdce647b2196cb4103857468f142e35ae09c70bfdf7aa827af1",
+          "time": 0.0,
+          "gain": 0.8,
+          "rate": 1,
+          "duration": 1.05
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "bomb_range_special",
+      "number": 8,
+      "file": "bomb_range_special_08.wav",
+      "sha256": "9320cf270db426de4d2841be856c77d62b4b445a771073bb958a3bad285208f5",
+      "bytes": 49322,
+      "samples": 24639,
+      "events": [
+        {
+          "audio": "r2/7e32ac8f244255145e22",
+          "sourceSha256": "7e32ac8f244255145e2279b128f9849b064438e8a9ecedc0b7f356bce2c99998",
+          "time": 0.291375,
+          "gain": 1.9,
+          "rate": 1,
+          "duration": 0.2219375
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "bomb_range_special__explosion",
+      "number": 8,
+      "file": "bomb_range_special__explosion_08.wav",
+      "sha256": "8e003bee1b4a9395637de529afe7ebd31689b12904522f81bbf20c9dfe75e5f6",
+      "bytes": 116204,
+      "samples": 58080,
+      "events": [
+        {
+          "audio": "r11/380a9a7cdb2eb0736ec9",
+          "sourceSha256": "380a9a7cdb2eb0736ec917ef5814536a52c993bf290bde4dd1cce0565720dffe",
+          "time": 0.0,
+          "gain": 0.8,
+          "rate": 1,
+          "duration": 1.21
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "bomb_move_special",
+      "number": 1,
+      "file": "bomb_move_special_01.wav",
+      "sha256": "c00744703f8b1cc40f0178e56ba45d9f6e6f64d5491303b7a2ffd8e58c346401",
+      "bytes": 46,
+      "samples": 1,
+      "events": [],
+      "safeGain": 1
+    },
+    {
+      "id": "bomb_move_special__explosion",
+      "number": 1,
+      "file": "bomb_move_special__explosion_01.wav",
+      "sha256": "8e003bee1b4a9395637de529afe7ebd31689b12904522f81bbf20c9dfe75e5f6",
+      "bytes": 116204,
+      "samples": 58080,
+      "events": [
+        {
+          "audio": "r11/380a9a7cdb2eb0736ec9",
+          "sourceSha256": "380a9a7cdb2eb0736ec917ef5814536a52c993bf290bde4dd1cce0565720dffe",
+          "time": 0.0,
+          "gain": 0.8,
+          "rate": 1,
+          "duration": 1.21
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "bomb_followup_special",
+      "number": 2,
+      "file": "bomb_followup_special_02.wav",
+      "sha256": "98fab6ec8116c1018ee42f8c1a5110c49ecb61d944ed42c6f15364f41fbd7559",
+      "bytes": 36934,
+      "samples": 18445,
+      "events": [
+        {
+          "audio": "r2/55710de3ef4974819786",
+          "sourceSha256": "55710de3ef497481978671c6985e7720fa8884b586c5c8e215279f19be102a72",
+          "time": 0.18912500000000002,
+          "gain": 1.9,
+          "rate": 1,
+          "duration": 0.19514583333333332
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "bomb_followup_special__explosion",
+      "number": 2,
+      "file": "bomb_followup_special__explosion_02.wav",
+      "sha256": "8e003bee1b4a9395637de529afe7ebd31689b12904522f81bbf20c9dfe75e5f6",
+      "bytes": 116204,
+      "samples": 58080,
+      "events": [
+        {
+          "audio": "r11/380a9a7cdb2eb0736ec9",
+          "sourceSha256": "380a9a7cdb2eb0736ec917ef5814536a52c993bf290bde4dd1cce0565720dffe",
+          "time": 0.0,
+          "gain": 0.8,
+          "rate": 1,
+          "duration": 1.21
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "shuriken_basic_special",
+      "number": 2,
+      "file": "shuriken_basic_special_02.wav",
+      "sha256": "63eec7ac13e93187b94ce007d3d06c15e646d7ffc31c15796a2d26e8e418519b",
+      "bytes": 35062,
+      "samples": 17509,
+      "events": [
+        {
+          "audio": "r3/d29bc90cfee18212cbd3",
+          "sourceSha256": "d29bc90cfee18212cbd3336a0426575850be0f92cdd55cf31d713ad238c47bb3",
+          "time": 0.2,
+          "gain": 0.9,
+          "rate": 1,
+          "duration": 0.16477083333333334
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "shuriken_range_special",
+      "number": 1,
+      "file": "shuriken_range_special_01.wav",
+      "sha256": "12e22ddcfd546722f50fc23415573ebfd5b53fed03544b8d442fdab3b1330d29",
+      "bytes": 32196,
+      "samples": 16076,
+      "events": [
+        {
+          "audio": "r2/7d0b9d353e3cae70c9c8",
+          "sourceSha256": "7d0b9d353e3cae70c9c8dfae549458b297c508b12dd9271ed177b6da57b44ac7",
+          "time": 0.2,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.13491666666666666
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "shuriken_range_special__explosion",
+      "number": 1,
+      "file": "shuriken_range_special__explosion_01.wav",
+      "sha256": "98acb4772b6f3236502d7f43a70f5bfae0f3bd9d9e795a57d52c95b5b1eeb949",
+      "bytes": 100844,
+      "samples": 50400,
+      "events": [
+        {
+          "audio": "approved/bomb-B3",
+          "sourceSha256": "822a47da3fe91fdce647b2196cb4103857468f142e35ae09c70bfdf7aa827af1",
+          "time": 0.0,
+          "gain": 0.8,
+          "rate": 1,
+          "duration": 1.05
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "shuriken_move_special",
+      "number": 2,
+      "file": "shuriken_move_special_02.wav",
+      "sha256": "0c71d2c5253450a033f191ff161c4af6f27d46cef21680b89f11324f0a60469f",
+      "bytes": 32858,
+      "samples": 16407,
+      "events": [
+        {
+          "audio": "cut/85a0f4fdbbf93ee8320b",
+          "sourceSha256": "85a0f4fdbbf93ee8320bad4f655dfb5a7daaf9f57979222d1bb2cb440568796a",
+          "time": 0.16075,
+          "gain": 1.0,
+          "rate": 1,
+          "duration": 0.1810625
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "shuriken_move_special__hit",
+      "number": 2,
+      "file": "shuriken_move_special__hit_02.wav",
+      "sha256": "2317711da97432efa18f14ef6a18e2f38706274755796e2fdd5cf4606bd1f77d",
+      "bytes": 10126,
+      "samples": 5041,
+      "events": [
+        {
+          "audio": "r3/0c347b0d5b834705b042",
+          "sourceSha256": "0c347b0d5b834705b04233480eb5563a506243afeb96df477c21e4e1e95c8cf3",
+          "time": -0.014958333333333334,
+          "gain": 0.6,
+          "rate": 1,
+          "duration": 0.11997916666666666
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "shuriken_move_special__teleport",
+      "number": 2,
+      "file": "shuriken_move_special__teleport_02.wav",
+      "sha256": "365f7f0df948064ede673fb4f9c3281ea646deb17ef8541b6773dbb22801e664",
+      "bytes": 17996,
+      "samples": 8976,
+      "events": [
+        {
+          "audio": "r2/16705b7fd7f3f196f2a3",
+          "sourceSha256": "16705b7fd7f3f196f2a36245a739a56af054e7c66a1d854623f768dd87be0390",
+          "time": 0.0,
+          "gain": 0.9,
+          "rate": 1,
+          "duration": 0.187
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "shuriken_move_special__return",
+      "number": 2,
+      "file": "shuriken_move_special__return_02.wav",
+      "sha256": "365f7f0df948064ede673fb4f9c3281ea646deb17ef8541b6773dbb22801e664",
+      "bytes": 17996,
+      "samples": 8976,
+      "events": [
+        {
+          "audio": "r2/16705b7fd7f3f196f2a3",
+          "sourceSha256": "16705b7fd7f3f196f2a36245a739a56af054e7c66a1d854623f768dd87be0390",
+          "time": 0.0,
+          "gain": 0.9,
+          "rate": 1,
+          "duration": 0.187
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "shuriken_followup_special",
+      "number": 1,
+      "file": "shuriken_followup_special_01.wav",
+      "sha256": "0ae292dc2225c1444c5de03801f2160df3baa266b5c93047e951c0707beaddd2",
+      "bytes": 211244,
+      "samples": 105600,
+      "events": [
+        {
+          "audio": "r3/d29bc90cfee18212cbd3",
+          "sourceSha256": "d29bc90cfee18212cbd3336a0426575850be0f92cdd55cf31d713ad238c47bb3",
+          "time": 0.2,
+          "gain": 0.9,
+          "rate": 1,
+          "duration": 0.16477083333333334
+        },
+        {
+          "audio": "r2/3b6ca36bbb5a545b7ea6",
+          "sourceSha256": "3b6ca36bbb5a545b7ea6d94043f468c892dd242bd2f72ce77fc6ab9d60a93c2e",
+          "time": 0.2,
+          "gain": 0.9,
+          "rate": 1.12,
+          "duration": 2,
+          "loop": true,
+          "fadeSeconds": 0.12
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "explosion_bomb",
+      "number": 1,
+      "file": "explosion_bomb_01.wav",
+      "sha256": "98acb4772b6f3236502d7f43a70f5bfae0f3bd9d9e795a57d52c95b5b1eeb949",
+      "bytes": 100844,
+      "samples": 50400,
+      "events": [
+        {
+          "audio": "approved/bomb-B3",
+          "sourceSha256": "822a47da3fe91fdce647b2196cb4103857468f142e35ae09c70bfdf7aa827af1",
+          "time": 0.0,
+          "gain": 0.8,
+          "rate": 1,
+          "duration": 1.05
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "explosion_large",
+      "number": 1,
+      "file": "explosion_large_01.wav",
+      "sha256": "8e003bee1b4a9395637de529afe7ebd31689b12904522f81bbf20c9dfe75e5f6",
+      "bytes": 116204,
+      "samples": 58080,
+      "events": [
+        {
+          "audio": "r11/380a9a7cdb2eb0736ec9",
+          "sourceSha256": "380a9a7cdb2eb0736ec917ef5814536a52c993bf290bde4dd1cce0565720dffe",
+          "time": 0.0,
+          "gain": 0.8,
+          "rate": 1,
+          "duration": 1.21
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "explosion_grenade",
+      "number": 1,
+      "file": "explosion_grenade_01.wav",
+      "sha256": "3112258beb3f424b496de5c29e488ab6ef65753d252ed4edbaf9771e4fd57d7b",
+      "bytes": 51882,
+      "samples": 25919,
+      "events": [
+        {
+          "audio": "r3/1143dfcb80b098da443e",
+          "sourceSha256": "1143dfcb80b098da443e0284edaa8bb1e59cc1e27457746f9bd73bc5ac1fbcc7",
+          "time": 0.0,
+          "gain": 0.8,
+          "rate": 1,
+          "duration": 0.5399791666666667
+        }
+      ],
+      "safeGain": 1
+    },
+    {
+      "id": "explosion_fragment",
+      "number": 1,
+      "file": "explosion_fragment_01.wav",
+      "sha256": "c00744703f8b1cc40f0178e56ba45d9f6e6f64d5491303b7a2ffd8e58c346401",
+      "bytes": 46,
+      "samples": 1,
+      "events": [],
+      "safeGain": 1
+    }
+  ],
+  "status": "applied-locally",
+  "validation": {
+    "unityVersion": "6000.6.5f1",
+    "selectedSkillTestsPassed": 2,
+    "legacySceneTestsSkipped": 2,
+    "legacySkipReason": "retired scene fixtures absent",
+    "deployedFilesVerified": 59
+  }
+}

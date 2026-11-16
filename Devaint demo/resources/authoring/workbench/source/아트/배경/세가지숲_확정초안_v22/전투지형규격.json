@@ -1,0 +1,31 @@
+{
+  "segmentWidth": 2048,
+  "initialFlatRange": [
+    768,
+    1152
+  ],
+  "continuousFlatAcrossSegmentsRange": [
+    1344,
+    1920
+  ],
+  "terrainChangePerSegment": 1,
+  "pitWidth": [
+    384,
+    512
+  ],
+  "pitDepth": 32,
+  "raisedAreaWidth": [
+    320,
+    384
+  ],
+  "raisedAreaHeight": 32,
+  "platformWidths": [
+    256,
+    320,
+    384
+  ],
+  "platformHeightAboveGround": 96,
+  "platformsPerSegment": 2,
+  "tileSize": 32,
+  "note": "No sprite stretching. Existing ledge tiles repeated at native size. Art and cast preserved."
+}

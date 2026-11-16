@@ -1,0 +1,131 @@
+{
+  "schema": "stage2-idle-motion-study-v1",
+  "status": "reference-only-excluded-from-production-baseline",
+  "frameCanvas": [
+    384,
+    224
+  ],
+  "baseline": 192,
+  "uniqueFrames": 4,
+  "playbackOrder": [
+    0,
+    1,
+    2,
+    3,
+    2,
+    1
+  ],
+  "views": [
+    "front",
+    "three-quarter-left",
+    "side-left"
+  ],
+  "note": "Generated redraw-loop study retained only as reference. User requests fixed pixel bases followed by local pixel edits instead. Current preparation spec: data/presentation/stage2_pixel_base.json. No new idle frames in step1.",
+  "assets": [
+    {
+      "id": "K4",
+      "name": "등짐분사수",
+      "role": "근거리·접근 분사",
+      "height": 112,
+      "frameMs": 180,
+      "motion": "Very small chest breathing and hose settling. Tank, nozzle geometry and both planted boots stay fixed. No spraying, pressure swell, stepping or walking.",
+      "selectedSourceFrames": [
+        1,
+        2,
+        3
+      ],
+      "playbackOrder": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "descriptionKo": "양발을 고정하고 작게 호흡하며 호스가 가라앉는 대기. 등통과 노즐 형태를 유지하고 분사하지 않는다."
+    },
+    {
+      "id": "B3",
+      "name": "쐐기보행기",
+      "role": "큰 근거리·전진 압박",
+      "height": 100,
+      "frameMs": 220,
+      "motion": "Extremely restrained body weight settling through the copper supports. Exactly FIVE profile ground contacts remain stationary, including inner brown support. Wedge and rear plates stay rigid and their dimensions never change. No charge preparation, stomping or walking.",
+      "selectedSourceFrames": [
+        1,
+        2,
+        3
+      ],
+      "playbackOrder": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "descriptionKo": "다섯 접점을 고정하고 몸의 무게가 조금 내려앉았다 돌아오는 대기. 돌진·찍기 전조와 구분한다."
+    },
+    {
+      "id": "M3",
+      "name": "먹침필경사",
+      "role": "근거리·긴 찌르기",
+      "height": 59,
+      "frameMs": 200,
+      "motion": "Low torso breathes subtly with legs quietly braced. The solid long attached stabbing mouth-plate remains the same length and level, no thrust, firearm, extra arm, crossing step or walking.",
+      "descriptionKo": "발을 벌린 낮은 몸의 작은 호흡. 침은 몸에 붙은 근접 공격 기관이며 발사하지 않는다."
+    },
+    {
+      "id": "H3",
+      "name": "늘어진수의",
+      "role": "원거리·잉크 공 투척",
+      "height": 151,
+      "frameMs": 220,
+      "motion": "Small ivory/mulberry shroud fold sways and tiny hanging hand movement, preserving the long legless taper and ochre T-slot mask. No added feet, casting or forming an orb, no walking. Flutter is visible in cloth contours, not just moving an unchanged whole image.",
+      "descriptionKo": "발 없이 늘어진 수의의 주름과 손이 조금씩 움직이는 대기. 잉크 공을 모으는 공격 전조와 구분한다."
+    },
+    {
+      "id": "R-selected",
+      "name": "신호투척수",
+      "role": "원거리·물체 투척",
+      "height": 106,
+      "frameMs": 180,
+      "motion": "Gentle chest breath and apron settling. One ochre canister remains held beside the hip, cap/body scale unchanged, two boots stationary. No raised throwing arm, extra canister, windup or walking. The old154px included an overhead item; this low carry body remains106px.",
+      "selectedSourceFrames": [
+        0,
+        1,
+        2
+      ],
+      "playbackOrder": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "descriptionKo": "한 손에 물건을 내려 든 채 가슴과 앞치마가 조금 움직이는 대기. 투척 준비로 팔을 올리지 않는다."
+    },
+    {
+      "id": "A3",
+      "name": "편측거구",
+      "role": "엘리트",
+      "height": 155,
+      "frameMs": 240,
+      "motion": "Slow heavy chest/shoulder breath and slight hand settling. Preserve huge slate-blue arm on image LEFT, tiny other arm, ochre body and sage trousers. Huge arm hangs low without punching. Planted boots and fist mass stay consistent; no stepping or crouching charge.",
+      "descriptionKo": "거대한 팔을 낮게 늘어뜨리고 가슴·어깨가 천천히 움직이는 무거운 호흡. 두 발은 고정한다."
+    },
+    {
+      "id": "I4-rose",
+      "name": "남매·자주색 전방",
+      "role": "보스·석궁 견제",
+      "height": 102,
+      "frameMs": 200,
+      "motion": "Small breath in shoulders and ragged tunic. The SAME long ivory-brown crossbow is carried low at the waist with both hands, rigid unchanged geometry, no aiming, reloading or shot. Two wrapped shins/boots stay planted. No blue body or inter-body bridge.",
+      "descriptionKo": "석궁을 낮게 휴대한 채 어깨와 옷자락이 조금 움직이는 대기. 발사·장전은 하지 않는다."
+    },
+    {
+      "id": "I4-blue",
+      "name": "남매·푸른색 후방",
+      "role": "보스·원거리 잉크술",
+      "height": 127,
+      "frameMs": 220,
+      "motion": "Calm occult idle: torso breathes and one small dense ink bead above the open palm changes its three chunky facets slightly. Same bead size and calm uncharged state, no glowing rim, projectile or cast. Preserve blue hood, bone mask, two wrapped shins/boots and two hands. No crossbow or other sibling. Feet remain planted.",
+      "descriptionKo": "손바닥 위에 작은 잉크 구체를 띄운 원거리 술사 대기. 가슴과 손·옷자락이 조금 움직이며 구체를 발사하거나 크게 충전하지 않는다."
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "referenceResolution": [
+    1280,
+    720
+  ],
+  "worldResolution": [
+    640,
+    360
+  ],
+  "frame": {
+    "x": 80,
+    "y": 594,
+    "width": 1120,
+    "height": 112
+  },
+  "nameplate": {
+    "x": 112,
+    "y": 558,
+    "width": 208,
+    "height": 51
+  },
+  "sprites": [
+    {
+      "id": "dialogue_frame",
+      "file": "00_공통/대화GUI/gui_dialogue_frame.png",
+      "size": [
+        320,
+        112
+      ],
+      "borderLTRB": [
+        20,
+        20,
+        20,
+        20
+      ]
+    },
+    {
+      "id": "nameplate_frame",
+      "file": "00_공통/대화GUI/gui_nameplate_frame.png",
+      "size": [
+        208,
+        51
+      ],
+      "borderLTRB": [
+        9,
+        9,
+        9,
+        9
+      ]
+    },
+    {
+      "id": "keycap_normal",
+      "file": "00_공통/대화GUI/gui_keycap_normal.png",
+      "size": [
+        55,
+        51
+      ],
+      "borderLTRB": [
+        9,
+        9,
+        9,
+        9
+      ]
+    },
+    {
+      "id": "keycap_pressed",
+      "file": "00_공통/대화GUI/gui_keycap_pressed.png",
+      "size": [
+        55,
+        51
+      ],
+      "borderLTRB": [
+        9,
+        9,
+        9,
+        9
+      ]
+    },
+    {
+      "id": "keycap_wide",
+      "file": "00_공통/대화GUI/gui_keycap_wide.png",
+      "size": [
+        126,
+        51
+      ],
+      "borderLTRB": [
+        9,
+        9,
+        9,
+        9
+      ]
+    },
+    {
+      "id": "interaction_label_frame",
+      "file": "00_공통/대화GUI/gui_interaction_label_frame.png",
+      "size": [
+        162,
+        45
+      ],
+      "borderLTRB": [
+        9,
+        9,
+        9,
+        9
+      ]
+    },
+    {
+      "id": "prompt_pointer",
+      "file": "00_공통/대화GUI/gui_prompt_pointer.png",
+      "size": [
+        18,
+        14
+      ],
+      "borderLTRB": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "continue_arrow",
+      "file": "00_공통/대화GUI/gui_continue_arrow.png",
+      "size": [
+        14,
+        18
+      ],
+      "borderLTRB": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "typewriter": {
+    "charactersPerSecond": 28,
+    "linesPerPage": 2,
+    "advance": "출력 중 입력은 현재 페이지 완성, 다음 입력은 다음 페이지/대사. 길게 누른 입력은 반복 넘김 금지."
+  },
+  "key": "E",
+  "unityBorderOrder": "Sprite Editor Border = Left, Bottom, Right, Top. borderLTRB는 Left, Top, Right, Bottom 순서이므로 순서를 바꿔 입력."
+}

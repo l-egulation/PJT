@@ -1,0 +1,3 @@
+export const sequenceTiming={flashGap:.32,flashLife:.24,moveTime:1.6,warning:.8,blastGap:.14,blastLife:.45,damage:15};
+export function createSequence(count=7,random=Math.random){const safe=Math.min(count-1,Math.floor(random()*count)),order=Array.from({length:count},(_,i)=>i).filter(i=>i!==safe);for(let i=order.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[order[i],order[j]]=[order[j],order[i]];}return {safe,order};}
+export function sequenceSchedule(order){const t=sequenceTiming,flashEnd=(order.length-1)*t.flashGap+t.flashLife,warningAt=flashEnd+t.moveTime,blastAt=warningAt+t.warning;return {flashEnd,warningAt,blastAt,end:blastAt+(order.length-1)*t.blastGap+t.blastLife};}

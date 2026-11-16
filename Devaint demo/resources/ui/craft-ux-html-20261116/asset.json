@@ -1,0 +1,69 @@
+{
+  "format": "deviant-resource-asset-v1",
+  "id": "ui.craft-ux-html-20261116",
+  "path": "ui/craft-ux-html-20261116",
+  "name": "가방에서 바로 제작하는 인벤토리 조작 프로토타입",
+  "status": "interactive-html-prototype",
+  "approval": "user-approved-20261116",
+  "gameIntegration": "not-integrated",
+  "sources": [
+    "Existing Unity ApprovedBagCraft / ApprovedCore states, reviewed 2026-11-16",
+    "Existing approved-theme-v3 and inventory art used by relative reference; no original media edited"
+  ],
+  "files": [
+    "preview/app.js",
+    "preview/art-data.js",
+    "preview/index.html",
+    "preview/team-guide.html",
+    "preview/guide-images/01-bag.jpg",
+    "preview/guide-images/02-inks.jpg",
+    "preview/guide-images/03-craft-slot.jpg",
+    "preview/guide-images/04-craft-ink.jpg",
+    "preview/guide-images/06-craft-action.jpg",
+    "preview/guide-images/07-confirm.jpg",
+    "preview/guide-images/08-complete.jpg",
+    "preview/guide-images/09-equipped.jpg",
+    "preview/guide-images/10-stored.jpg",
+    "preview/guide-images/11-equip-target.jpg",
+    "preview/guide-images/12-slot-first.jpg",
+    "preview/guide-images/13-unity-record.png"
+  ],
+  "dependencies": [
+    "ui.approved-theme-v3",
+    "ui.inventory",
+    "ui.combat-hud-expanded-20261106",
+    "ui.combat-hud-pixel-icons-20261113"
+  ],
+  "scope": "Approved single interactive inventory HTML. Bag categories: sketches (all weapons; unconfirmed grayscale, confirmed color) and inks. Shared arrow/F navigation, inline palette editing, R clear, one craft confirmation, compact footer guidance. Completed-weapon screen merges target selection with F equip/replace and C store then returns directly to combat. Equipment shows equipped slots above stored weapons; slot-first replacement preserves the target. Selected ink uses its own color; other ink entries match the crafting picker. The standalone HTML does not use real saves or combat simulation. The combat-state preview uses a five-second timer after a simulated accepted monster hit, pauses in inventory, and locks equipment changes like Unity.",
+  "usageGuide": "preview/team-guide.html",
+  "guideFormat": "image-first-screen-walkthrough",
+  "guideScreenshots": {
+    "purpose": "Permanent UI instruction figures captured directly from the approved HTML preview, plus one Unity footer instruction figure. No screenshot pixel editing.",
+    "files": {
+      "preview/guide-images/01-bag.jpg": "ae23c1972b6d026d71bd441a872267b0c727ced37750caaa9f1ac7bd24bd3625",
+      "preview/guide-images/02-inks.jpg": "7664181fb9ad9b393629837dd6004d0dbc51bb788216ce309b3484a37ff2cf3b",
+      "preview/guide-images/03-craft-slot.jpg": "fb3f2ad9bdb933723689f5be2eea29d4842f991d2f85ca3dce2e1e23ede0a4ca",
+      "preview/guide-images/04-craft-ink.jpg": "e8f2c221d1e2c9fa09cd98090c31ac7aa4adb8ca0997c76e73f44122a0eb2fe1",
+      "preview/guide-images/06-craft-action.jpg": "18489369d98bf42f48e3d4cbc79b1b8b42977652221433a1e7599988d3c7c725",
+      "preview/guide-images/07-confirm.jpg": "8c6eaba9740a4b5ff022a8b3fb5c659d6fc8ac02ffa99b0affc3e267b9214ff7",
+      "preview/guide-images/08-complete.jpg": "485be5d39c34b90c1919c19368b722aa5e1324f2c6b03ee4d6922a745c633845",
+      "preview/guide-images/09-equipped.jpg": "cfffb4f30f5686c10b6fec3b8b060891a2be7079ae5422287470ce47bf1b604a",
+      "preview/guide-images/10-stored.jpg": "db86786a8a150a714f089508856723bf4559ec08e4a53a3e4e119ca203bbebc5",
+      "preview/guide-images/11-equip-target.jpg": "a2cfdf78988c000eab2904899a33ad540a66ebbb2ba55201cd8f493f1da5d598",
+      "preview/guide-images/12-slot-first.jpg": "f6ef10eb5812108a919a1625bb3371f212c967b5b25371ca4de8012f1c7deede",
+      "preview/guide-images/13-unity-record.png": "79c81a19f5a2ef53951886c4767c681a96ec2ed693e7c16fb6698bc6abf4489b"
+    }
+  },
+  "cooldownProposal": {
+    "status": "implemented",
+    "unityIntegration": "runtime-code-implemented-playtest-pending",
+    "entry": "preview/index.html#cooldown-live",
+    "states": [
+      "monster-hit simulation starts five seconds",
+      "further hits refresh five seconds; whiffs do not",
+      "inventory dims equipped slots and explains the combat lock",
+      "expiry unlocks equipment and combat HUD X"
+    ],
+    "rules": "Five seconds of combat state after an accepted player attack hit on a monster. Whiffs do not count. Further hits refresh five seconds. Equip, replace, unequip and X are disabled in combat. Inventory pauses simulation and the timer. Equipment changes do not start a delay."
+  }
+}

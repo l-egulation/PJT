@@ -1,0 +1,29 @@
+{
+  "capacity": 5,
+  "note": "획득/가방/장착 검증용 확정 지급. 정식 보상표나 공용 기능 파츠 콘텐츠를 확정하지 않는다.",
+  "items": [
+    {"id":"stat.basic","name":"힘의 잉크","description":"기본 공격 피해 +20%","kind":1,"value":1,"tint":[0.95,0.35,0.48,1]},
+    {"id":"stat.special","name":"기술의 잉크","description":"특수 공격 피해 +20% · 발사기에서는 비활성","kind":1,"value":2,"tint":[0.75,0.45,0.95,1]},
+    {"id":"stat.speed","name":"속도의 잉크","description":"기본 공격 속도 +10%","kind":1,"value":3,"tint":[0.25,0.8,0.85,1]},
+    {"id":"stat.cooldown","name":"회복의 잉크","description":"특수 쿨타임 감소 10% · 발사기에서는 비활성","kind":1,"value":4,"tint":[0.4,0.65,0.95,1]},
+    {"id":"special.range","name":"범위의 잉크","description":"현재 무기의 범위 기술로 변경","kind":2,"value":1,"tint":[1,0.8,0.35,1]},
+    {"id":"special.move","name":"이동의 잉크","description":"현재 무기의 이동 기술로 변경","kind":2,"value":2,"tint":[0.55,0.9,0.6,1]},
+    {"id":"special.follow","name":"후속타의 잉크","description":"현재 무기의 후속타 기술로 변경","kind":2,"value":3,"tint":[0.9,0.6,0.85,1]},
+    {"id":"form.base_sword","name":"검 형태","description":"검 종류의 무기를 검으로 변경","kind":0,"formId":"base_sword","category":"검","tint":[0.95,0.9,0.7,1]},
+    {"id":"form.whip","name":"채찍 형태","description":"검 종류의 무기를 채찍으로 변경","kind":0,"formId":"whip","category":"검","tint":[0.95,0.9,0.7,1]},
+    {"id":"form.rapier","name":"레이피어 형태","description":"검 종류의 무기를 레이피어로 변경","kind":0,"formId":"rapier","category":"검","tint":[0.95,0.9,0.7,1]},
+    {"id":"form.dagger","name":"단검 형태","description":"검 종류의 무기를 한손 단검으로 변경","kind":0,"formId":"dagger","category":"검","tint":[0.95,0.9,0.7,1]},
+    {"id":"form.hammer","name":"망치 형태","description":"둔기 종류의 무기를 망치로 변경","kind":0,"formId":"hammer","category":"둔기","tint":[0.8,0.7,0.95,1]},
+    {"id":"form.shield","name":"방패 형태","description":"둔기 종류의 무기를 방패로 변경","kind":0,"formId":"shield","category":"둔기","tint":[0.8,0.7,0.95,1]},
+    {"id":"form.greatsword","name":"대검 형태","description":"둔기 종류의 무기를 대검으로 변경","kind":0,"formId":"greatsword","category":"둔기","tint":[0.8,0.7,0.95,1]},
+    {"id":"form.launcher","name":"발사기 형태","description":"원거리 종류의 무기를 발사기로 변경","kind":0,"formId":"launcher","category":"원거리","tint":[0.6,0.8,0.75,1]},
+    {"id":"form.bomb","name":"폭탄 형태","description":"원거리 종류의 무기를 폭탄으로 변경","kind":0,"formId":"bomb","category":"원거리","tint":[0.6,0.8,0.75,1]},
+    {"id":"form.shuriken","name":"수리검 형태","description":"원거리 종류의 무기를 수리검으로 변경","kind":0,"formId":"shuriken","category":"원거리","tint":[0.6,0.8,0.75,1]}
+  ],
+  "tables": [
+    {"key":"melee","deathSeconds":0,"entries":[{"itemId":"stat.basic","amount":1},{"itemId":"special.range","amount":1}]},
+    {"key":"ranged","deathSeconds":0,"entries":[{"itemId":"stat.speed","amount":1},{"itemId":"form.whip","amount":1}]},
+    {"key":"field_mouse","deathSeconds":0,"entries":[{"itemId":"stat.basic","amount":1}]},
+    {"key":"boss","deathSeconds":0,"entries":[{"itemId":"stat.special","amount":1},{"itemId":"stat.cooldown","amount":1},{"itemId":"special.follow","amount":1}]}
+  ]
+}

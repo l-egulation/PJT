@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 2,
+  "id": "player",
+  "runSpeed": 7.5,
+  "dashSpeed": 22.5,
+  "dashDuration": 0.2,
+  "dashCurve": {
+    "holdFraction": 0.25,
+    "easeOutPower": 3.0
+  },
+  "dashRecovery": 1.0,
+  "dashInvulnerability": 0.15,
+  "dashJumpCarrySpeed": 5.0,
+  "dashJumpCarryDuration": 0.1,
+  "firstJumpVelocity": 20.0,
+  "secondJumpVelocity": 20.0,
+  "riseGravity": 66.6666667,
+  "fallGravity": 104.1666667,
+  "jumpApexSeconds": 0.06,
+  "jumpAssist": {
+    "groundBufferDuration": 0.12,
+    "wallCoyoteDuration": 0.1,
+    "releaseVelocityScale": 1.0
+  },
+  "horizontalControl": {
+    "groundAccelerationSeconds": 0.05,
+    "groundDecelerationSeconds": 0.03,
+    "airAccelerationSeconds": 0.1,
+    "airDecelerationSeconds": 0.08
+  },
+  "wallJump": {
+    "horizontalSpeed": 15.0,
+    "carryDuration": 0.35,
+    "bufferDuration": 0.1,
+    "detachDuration": 0.0,
+    "awayHorizontalSpeed": 18.0,
+    "releaseCarryDuration": 0.15,
+    "controlRecoveryDuration": 0.2,
+    "arrivalClingDuration": 0.0,
+    "ledgeHopHeight": 1.6,
+    "ledgeClimbSeconds": 0.48,
+    "ledgeClimbForward": 0.67,
+    "jumpCheckDistance": 0.15
+  },
+  "wallSlide": {
+    "clingDuration": 0.0,
+    "startSpeed": 2.0,
+    "maxSpeed": 6.0,
+    "acceleration": 8.0,
+    "staminaDuration": 1.0
+  }
+}
